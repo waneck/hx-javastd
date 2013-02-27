@@ -168,7 +168,7 @@ extern class NGCCRuntime implements org.xml.sax.ContentHandler implements com.su
 	
 	@:overload private function unexpectedX(token : String) : Void;
 	
-	@:overload public function trace(s : String) : Void;
+	//@:overload public function _trace(s : String) : Void;
 	
 	@:overload public function traceln(s : String) : Void;
 	

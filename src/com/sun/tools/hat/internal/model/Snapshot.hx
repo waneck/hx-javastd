@@ -41,7 +41,7 @@ extern class Snapshot
 	
 	@:overload public function new(buf : com.sun.tools.hat.internal.parser.ReadBuffer) : Void;
 	
-	@:overload public function setSiteTrace(obj : com.sun.tools.hat.internal.model.JavaHeapObject, trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
+	@:overload public function setSiteTrace(obj : com.sun.tools.hat.internal.model.JavaHeapObject, _trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
 	
 	@:overload public function getSiteTrace(obj : com.sun.tools.hat.internal.model.JavaHeapObject) : com.sun.tools.hat.internal.model.StackTrace;
 	

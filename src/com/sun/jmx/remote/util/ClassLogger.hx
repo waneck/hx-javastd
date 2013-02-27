@@ -49,11 +49,11 @@ extern class ClassLogger
 	
 	@:overload @:final public function debug(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function trace(func : String, msg : String) : Void;
+	//@:overload @:final public function _trace(func : String, msg : String) : Void;
 	
-	@:overload @:final public function trace(func : String, t : java.lang.Throwable) : Void;
+	//@:overload @:final public function _trace(func : String, t : java.lang.Throwable) : Void;
 	
-	@:overload @:final public function trace(func : String, msg : String, t : java.lang.Throwable) : Void;
+	//@:overload @:final public function _trace(func : String, msg : String, t : java.lang.Throwable) : Void;
 	
 	@:overload @:final public function error(func : String, msg : String) : Void;
 	

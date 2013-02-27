@@ -55,7 +55,7 @@ extern class ReflectionFactory
 	* @param field the field
 	* @param override true if caller has overridden aaccessibility
 	*/
-	@:overload public function newFieldAccessor(field : java.lang.reflect.Field, override : Bool) : sun.reflect.FieldAccessor;
+	@:overload public function newFieldAccessor(field : java.lang.reflect.Field, _override : Bool) : sun.reflect.FieldAccessor;
 	
 	@:overload public function newMethodAccessor(method : java.lang.reflect.Method) : sun.reflect.MethodAccessor;
 	

@@ -120,7 +120,7 @@ extern class HeadlessToolkit extends java.awt.Toolkit implements sun.awt.Compone
 	
 	@:overload override public function getScreenInsets(gc : java.awt.GraphicsConfiguration) : java.awt.Insets;
 	
-	@:overload override public function setDynamicLayout(dynamic : Bool) : Void;
+	@:overload override public function setDynamicLayout(_dynamic : Bool) : Void;
 	
 	@:overload override private function isDynamicLayoutSet() : Bool;
 	

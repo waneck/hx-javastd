@@ -60,7 +60,7 @@ package com.sun.media.sound;
 	
 	@:overload public static function debug(str : String) : Void;
 	
-	@:overload public static function trace(str : String) : Void;
+	@:native('trace') @:overload public static function _trace(str : String) : Void;
 	
 	@:overload public static function verbose(str : String) : Void;
 	

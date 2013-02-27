@@ -71,7 +71,7 @@ extern class ContextStack
 	/**
 	* Enable/disable tracing.
 	*/
-	@:overload public function setTrace(trace : Bool) : Void;
+	@:overload public function setTrace(_trace : Bool) : Void;
 	
 	/**
 	* Check trace flag.

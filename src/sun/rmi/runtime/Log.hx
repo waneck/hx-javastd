@@ -62,7 +62,7 @@ extern class Log
 	* Since this is an internal API, no checks are made to ensure
 	* that multiple logs do not exist for the same logger.
 	*/
-	@:overload public static function getLog(loggerName : String, oldLogName : String, override : Int) : Log;
+	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Int) : Log;
 	
 	/**
 	* Access logs associated with boolean properties
@@ -71,7 +71,7 @@ extern class Log
 	* Since this is an internal API, no checks are made to ensure
 	* that multiple logs do not exist for the same logger.
 	*/
-	@:overload public static function getLog(loggerName : String, oldLogName : String, override : Bool) : Log;
+	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Bool) : Log;
 	
 	
 }

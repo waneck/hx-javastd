@@ -27,7 +27,7 @@ extern class LdapPoolManager
 {
 	public static var debug(default, null) : Bool;
 	
-	public static var trace(default, null) : Bool;
+	@:native('trace') public static var _trace(default, null) : Bool;
 	
 	@:overload public static function showStats(out : java.io.PrintStream) : Void;
 	

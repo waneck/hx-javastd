@@ -68,7 +68,7 @@ package com.sun.tools.hat.internal.server;
 	
 	@:overload private function printStatic(member : com.sun.tools.hat.internal.model.JavaStatic) : Void;
 	
-	@:overload private function printStackTrace(trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
+	@:overload private function printStackTrace(_trace : com.sun.tools.hat.internal.model.StackTrace) : Void;
 	
 	@:overload private function printHex(addr : haxe.Int64) : Void;
 	

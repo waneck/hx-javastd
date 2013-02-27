@@ -371,7 +371,7 @@ extern class Toolkit
 	* @see       java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.4
 	*/
-	@:require(java4) @:overload public function setDynamicLayout(dynamic : Bool) : Void;
+	@:require(java4) @:overload public function setDynamicLayout(_dynamic : Bool) : Void;
 	
 	/**
 	* Returns whether the layout of Containers is validated dynamically
