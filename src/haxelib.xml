@@ -1,0 +1,6 @@
+<project name="javastd" url="https://github.com/waneck/hx-javastd" license="MIT">
+    <user name="waneck"/>
+    <tag v="java"/>
+		<description>JDK 7.0 externs for Haxe, and haxe standard library implementations for the Java backend</description>
+    <version name="3.0.0">First version. Still in beta</version>
+</project>
