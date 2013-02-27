@@ -1,0 +1,408 @@
+package com.sun.tools.classfile;
+/*
+* Copyright (c) 2009, Oracle and/or its affiliates. All rights reserved.
+* DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+*
+* This code is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License version 2 only, as
+* published by the Free Software Foundation.  Oracle designates this
+* particular file as subject to the "Classpath" exception as provided
+* by Oracle in the LICENSE file that accompanied this code.
+*
+* This code is distributed in the hope that it will be useful, but WITHOUT
+* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+* FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+* version 2 for more details (a copy is included in the LICENSE file that
+* accompanied this code).
+*
+* You should have received a copy of the GNU General Public License version
+* 2 along with this work; if not, write to the Free Software Foundation,
+* Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+*
+* Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+* or visit www.oracle.com if you need additional information or have any
+* questions.
+*/
+/**
+* See JVMS, chapter 6.
+*
+* <p>In addition to providing all the standard opcodes defined in JVMS,
+* this class also provides legacy support for the PicoJava extensions.
+*
+*  <p><b>This is NOT part of any supported API.
+*  If you write code that depends on this, you do so at your own risk.
+*  This code and its internal interfaces are subject to change or
+*  deletion without notice.</b>
+*/
+extern enum Opcode
+{
+	NOP;
+	ACONST_NULL;
+	ICONST_M1;
+	ICONST_0;
+	ICONST_1;
+	ICONST_2;
+	ICONST_3;
+	ICONST_4;
+	ICONST_5;
+	LCONST_0;
+	LCONST_1;
+	FCONST_0;
+	FCONST_1;
+	FCONST_2;
+	DCONST_0;
+	DCONST_1;
+	BIPUSH;
+	SIPUSH;
+	LDC;
+	LDC_W;
+	LDC2_W;
+	ILOAD;
+	LLOAD;
+	FLOAD;
+	DLOAD;
+	ALOAD;
+	ILOAD_0;
+	ILOAD_1;
+	ILOAD_2;
+	ILOAD_3;
+	LLOAD_0;
+	LLOAD_1;
+	LLOAD_2;
+	LLOAD_3;
+	FLOAD_0;
+	FLOAD_1;
+	FLOAD_2;
+	FLOAD_3;
+	DLOAD_0;
+	DLOAD_1;
+	DLOAD_2;
+	DLOAD_3;
+	ALOAD_0;
+	ALOAD_1;
+	ALOAD_2;
+	ALOAD_3;
+	IALOAD;
+	LALOAD;
+	FALOAD;
+	DALOAD;
+	AALOAD;
+	BALOAD;
+	CALOAD;
+	SALOAD;
+	ISTORE;
+	LSTORE;
+	FSTORE;
+	DSTORE;
+	ASTORE;
+	ISTORE_0;
+	ISTORE_1;
+	ISTORE_2;
+	ISTORE_3;
+	LSTORE_0;
+	LSTORE_1;
+	LSTORE_2;
+	LSTORE_3;
+	FSTORE_0;
+	FSTORE_1;
+	FSTORE_2;
+	FSTORE_3;
+	DSTORE_0;
+	DSTORE_1;
+	DSTORE_2;
+	DSTORE_3;
+	ASTORE_0;
+	ASTORE_1;
+	ASTORE_2;
+	ASTORE_3;
+	IASTORE;
+	LASTORE;
+	FASTORE;
+	DASTORE;
+	AASTORE;
+	BASTORE;
+	CASTORE;
+	SASTORE;
+	POP;
+	POP2;
+	DUP;
+	DUP_X1;
+	DUP_X2;
+	DUP2;
+	DUP2_X1;
+	DUP2_X2;
+	SWAP;
+	IADD;
+	LADD;
+	FADD;
+	DADD;
+	ISUB;
+	LSUB;
+	FSUB;
+	DSUB;
+	IMUL;
+	LMUL;
+	FMUL;
+	DMUL;
+	IDIV;
+	LDIV;
+	FDIV;
+	DDIV;
+	IREM;
+	LREM;
+	FREM;
+	DREM;
+	INEG;
+	LNEG;
+	FNEG;
+	DNEG;
+	ISHL;
+	LSHL;
+	ISHR;
+	LSHR;
+	IUSHR;
+	LUSHR;
+	IAND;
+	LAND;
+	IOR;
+	LOR;
+	IXOR;
+	LXOR;
+	IINC;
+	I2L;
+	I2F;
+	I2D;
+	L2I;
+	L2F;
+	L2D;
+	F2I;
+	F2L;
+	F2D;
+	D2I;
+	D2L;
+	D2F;
+	I2B;
+	I2C;
+	I2S;
+	LCMP;
+	FCMPL;
+	FCMPG;
+	DCMPL;
+	DCMPG;
+	IFEQ;
+	IFNE;
+	IFLT;
+	IFGE;
+	IFGT;
+	IFLE;
+	IF_ICMPEQ;
+	IF_ICMPNE;
+	IF_ICMPLT;
+	IF_ICMPGE;
+	IF_ICMPGT;
+	IF_ICMPLE;
+	IF_ACMPEQ;
+	IF_ACMPNE;
+	GOTO;
+	JSR;
+	RET;
+	TABLESWITCH;
+	LOOKUPSWITCH;
+	IRETURN;
+	LRETURN;
+	FRETURN;
+	DRETURN;
+	ARETURN;
+	RETURN;
+	GETSTATIC;
+	PUTSTATIC;
+	GETFIELD;
+	PUTFIELD;
+	INVOKEVIRTUAL;
+	INVOKESPECIAL;
+	INVOKESTATIC;
+	INVOKEINTERFACE;
+	INVOKEDYNAMIC;
+	NEW;
+	NEWARRAY;
+	ANEWARRAY;
+	ARRAYLENGTH;
+	ATHROW;
+	CHECKCAST;
+	INSTANCEOF;
+	MONITORENTER;
+	MONITOREXIT;
+	MULTIANEWARRAY;
+	IFNULL;
+	IFNONNULL;
+	GOTO_W;
+	JSR_W;
+	ILOAD_W;
+	LLOAD_W;
+	FLOAD_W;
+	DLOAD_W;
+	ALOAD_W;
+	ISTORE_W;
+	LSTORE_W;
+	FSTORE_W;
+	DSTORE_W;
+	ASTORE_W;
+	IINC_W;
+	RET_W;
+	LOAD_UBYTE;
+	LOAD_BYTE;
+	LOAD_CHAR;
+	LOAD_SHORT;
+	LOAD_WORD;
+	RET_FROM_SUB;
+	LOAD_CHAR_OE;
+	LOAD_SHORT_OE;
+	LOAD_WORD_OE;
+	NCLOAD_UBYTE;
+	NCLOAD_BYTE;
+	NCLOAD_CHAR;
+	NCLOAD_SHORT;
+	NCLOAD_WORD;
+	NCLOAD_CHAR_OE;
+	NCLOAD_SHORT_OE;
+	NCLOAD_WORD_OE;
+	CACHE_FLUSH;
+	STORE_BYTE;
+	STORE_SHORT;
+	STORE_WORD;
+	STORE_SHORT_OE;
+	STORE_WORD_OE;
+	NCSTORE_BYTE;
+	NCSTORE_SHORT;
+	NCSTORE_WORD;
+	NCSTORE_SHORT_OE;
+	NCSTORE_WORD_OE;
+	ZERO_LINE;
+	ENTER_SYNC_METHOD;
+	PRIV_LOAD_UBYTE;
+	PRIV_LOAD_BYTE;
+	PRIV_LOAD_CHAR;
+	PRIV_LOAD_SHORT;
+	PRIV_LOAD_WORD;
+	PRIV_RET_FROM_TRAP;
+	PRIV_READ_DCACHE_TAG;
+	PRIV_READ_DCACHE_DATA;
+	PRIV_LOAD_CHAR_OE;
+	PRIV_LOAD_SHORT_OE;
+	PRIV_LOAD_WORD_OE;
+	PRIV_READ_ICACHE_TAG;
+	PRIV_READ_ICACHE_DATA;
+	PRIV_NCLOAD_UBYTE;
+	PRIV_NCLOAD_BYTE;
+	PRIV_NCLOAD_CHAR;
+	PRIV_NCLOAD_SHORT;
+	PRIV_NCLOAD_WORD;
+	PRIV_POWERDOWN;
+	PRIV_READ_SCACHE_DATA;
+	PRIV_NCLOAD_CHAR_OE;
+	PRIV_NCLOAD_SHORT_OE;
+	PRIV_NCLOAD_WORD_OE;
+	PRIV_CACHE_FLUSH;
+	PRIV_CACHE_INDEX_FLUSH;
+	PRIV_STORE_BYTE;
+	PRIV_STORE_SHORT;
+	PRIV_STORE_WORD;
+	PRIV_WRITE_DCACHE_TAG;
+	PRIV_WRITE_DCACHE_DATA;
+	PRIV_STORE_SHORT_OE;
+	PRIV_STORE_WORD_OE;
+	PRIV_WRITE_ICACHE_TAG;
+	PRIV_WRITE_ICACHE_DATA;
+	PRIV_NCSTORE_BYTE;
+	PRIV_NCSTORE_SHORT;
+	PRIV_NCSTORE_WORD;
+	PRIV_RESET;
+	PRIV_WRITE_SCACHE_DATA;
+	PRIV_NCSTORE_SHORT_OE;
+	PRIV_NCSTORE_WORD_OE;
+	PRIV_ZERO_LINE;
+	PRIV_READ_REG_0;
+	PRIV_READ_REG_1;
+	PRIV_READ_REG_2;
+	PRIV_READ_REG_3;
+	PRIV_READ_REG_4;
+	PRIV_READ_REG_5;
+	PRIV_READ_REG_6;
+	PRIV_READ_REG_7;
+	PRIV_READ_REG_8;
+	PRIV_READ_REG_9;
+	PRIV_READ_REG_10;
+	PRIV_READ_REG_11;
+	PRIV_READ_REG_12;
+	PRIV_READ_REG_13;
+	PRIV_READ_REG_14;
+	PRIV_READ_REG_15;
+	PRIV_READ_REG_16;
+	PRIV_READ_REG_17;
+	PRIV_READ_REG_18;
+	PRIV_READ_REG_19;
+	PRIV_READ_REG_20;
+	PRIV_READ_REG_21;
+	PRIV_READ_REG_22;
+	PRIV_READ_REG_23;
+	PRIV_READ_REG_24;
+	PRIV_READ_REG_25;
+	PRIV_READ_REG_26;
+	PRIV_READ_REG_27;
+	PRIV_READ_REG_28;
+	PRIV_READ_REG_29;
+	PRIV_READ_REG_30;
+	PRIV_READ_REG_31;
+	PRIV_WRITE_REG_0;
+	PRIV_WRITE_REG_1;
+	PRIV_WRITE_REG_2;
+	PRIV_WRITE_REG_3;
+	PRIV_WRITE_REG_4;
+	PRIV_WRITE_REG_5;
+	PRIV_WRITE_REG_6;
+	PRIV_WRITE_REG_7;
+	PRIV_WRITE_REG_8;
+	PRIV_WRITE_REG_9;
+	PRIV_WRITE_REG_10;
+	PRIV_WRITE_REG_11;
+	PRIV_WRITE_REG_12;
+	PRIV_WRITE_REG_13;
+	PRIV_WRITE_REG_14;
+	PRIV_WRITE_REG_15;
+	PRIV_WRITE_REG_16;
+	PRIV_WRITE_REG_17;
+	PRIV_WRITE_REG_18;
+	PRIV_WRITE_REG_19;
+	PRIV_WRITE_REG_20;
+	PRIV_WRITE_REG_21;
+	PRIV_WRITE_REG_22;
+	PRIV_WRITE_REG_23;
+	PRIV_WRITE_REG_24;
+	PRIV_WRITE_REG_25;
+	PRIV_WRITE_REG_26;
+	PRIV_WRITE_REG_27;
+	PRIV_WRITE_REG_28;
+	PRIV_WRITE_REG_29;
+	PRIV_WRITE_REG_30;
+	PRIV_WRITE_REG_31;
+	
+}
+
+@:native('com$sun$tools$classfile$Opcode$Set') extern enum Opcode_Set
+{
+	/** Standard opcodes. */
+	STANDARD;
+	/** Legacy support for PicoJava opcodes. */
+	PICOJAVA;
+	
+}
+
+@:native('com$sun$tools$classfile$Opcode$Set') extern enum Opcode_Set
+{
+	/** Standard opcodes. */
+	STANDARD;
+	/** Legacy support for PicoJava opcodes. */
+	PICOJAVA;
+	
+}
+

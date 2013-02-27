@@ -1,0 +1,397 @@
+package sun.awt.image;
+/*
+* Copyright (c) 1997, 2007, Oracle and/or its affiliates. All rights reserved.
+* DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
+*
+* This code is free software; you can redistribute it and/or modify it
+* under the terms of the GNU General Public License version 2 only, as
+* published by the Free Software Foundation.  Oracle designates this
+* particular file as subject to the "Classpath" exception as provided
+* by Oracle in the LICENSE file that accompanied this code.
+*
+* This code is distributed in the hope that it will be useful, but WITHOUT
+* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+* FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+* version 2 for more details (a copy is included in the LICENSE file that
+* accompanied this code).
+*
+* You should have received a copy of the GNU General Public License version
+* 2 along with this work; if not, write to the Free Software Foundation,
+* Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
+*
+* Please contact Oracle, 500 Oracle Parkway, Redwood Shores, CA 94065 USA
+* or visit www.oracle.com if you need additional information or have any
+* questions.
+*/
+extern class BytePackedRaster extends sun.awt.image.SunWritableRaster
+{
+	/**
+	* Constructs a BytePackedRaster with the given SampleModel.
+	* The Raster's upper left corner is origin and it is the same
+	* size as the SampleModel.  A DataBuffer large enough to describe the
+	* Raster is automatically created.  SampleModel must be of type
+	* MultiPixelPackedSampleModel.
+	* @param sampleModel     The SampleModel that specifies the layout.
+	* @param origin          The Point that specified the origin.
+	*/
+	@:overload public function new(sampleModel : java.awt.image.SampleModel, origin : java.awt.Point) : Void;
+	
+	/**
+	* Constructs a BytePackedRaster with the given SampleModel
+	* and DataBuffer.  The Raster's upper left corner is origin and
+	* it is the same size as the SampleModel.  The DataBuffer is not
+	* initialized and must be a DataBufferByte compatible with SampleModel.
+	* SampleModel must be of type MultiPixelPackedSampleModel.
+	* @param sampleModel     The SampleModel that specifies the layout.
+	* @param dataBuffer      The DataBufferShort that contains the image data.
+	* @param origin          The Point that specifies the origin.
+	*/
+	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, origin : java.awt.Point) : Void;
+	
+	/**
+	* Constructs a BytePackedRaster with the given SampleModel,
+	* DataBuffer, and parent.  DataBuffer must be a DataBufferByte and
+	* SampleModel must be of type MultiPixelPackedSampleModel.
+	* When translated into the base Raster's
+	* coordinate system, aRegion must be contained by the base Raster.
+	* Origin is the coordinate in the new Raster's coordinate system of
+	* the origin of the base Raster.  (The base Raster is the Raster's
+	* ancestor which has no parent.)
+	*
+	* Note that this constructor should generally be called by other
+	* constructors or create methods, it should not be used directly.
+	* @param sampleModel     The SampleModel that specifies the layout.
+	* @param dataBuffer      The DataBufferShort that contains the image data.
+	* @param aRegion         The Rectangle that specifies the image area.
+	* @param origin          The Point that specifies the origin.
+	* @param parent          The parent (if any) of this raster.
+	*
+	* @exception RasterFormatException if the parameters do not conform
+	* to requirements of this Raster type.
+	*/
+	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : BytePackedRaster) : Void;
+	
+	/**
+	* Returns the data bit offset for the Raster.  The data
+	* bit offset is the bit index into the data array element
+	* corresponding to the first sample of the first scanline.
+	*/
+	@:overload public function getDataBitOffset() : Int;
+	
+	/**
+	* Returns the scanline stride -- the number of data array elements between
+	* a given sample and the sample in the same column
+	* of the next row.
+	*/
+	@:overload public function getScanlineStride() : Int;
+	
+	/**
+	* Returns pixel bit stride -- the number of bits between two
+	* samples on the same scanline.
+	*/
+	@:overload public function getPixelBitStride() : Int;
+	
+	/**
+	* Returns a reference to the entire data array.
+	*/
+	@:overload public function getDataStorage() : java.NativeArray<java.StdTypes.Int8>;
+	
+	/**
+	* Returns the data element at the specified
+	* location.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinate is out of bounds.
+	* A ClassCastException will be thrown if the input object is non null
+	* and references anything other than an array of transferType.
+	* @param x        The X coordinate of the pixel location.
+	* @param y        The Y coordinate of the pixel location.
+	* @param outData  An object reference to an array of type defined by
+	*                 getTransferType() and length getNumDataElements().
+	*                 If null an array of appropriate type and size will be
+	*                 allocated.
+	* @return         An object reference to an array of type defined by
+	*                 getTransferType() with the request pixel data.
+	*/
+	@:overload override public function getDataElements(x : Int, y : Int, obj : Dynamic) : Dynamic;
+	
+	/**
+	* Returns the pixel data for the specified rectangle of pixels in a
+	* primitive array of type TransferType.
+	* For image data supported by the Java 2D API, this
+	* will be one of DataBuffer.TYPE_BYTE, DataBuffer.TYPE_USHORT, or
+	* DataBuffer.TYPE_INT.  Data may be returned in a packed format,
+	* thus increasing efficiency for data transfers.
+	*
+	* An ArrayIndexOutOfBoundsException may be thrown
+	* if the coordinates are not in bounds.
+	* A ClassCastException will be thrown if the input object is non null
+	* and references anything other than an array of TransferType.
+	* @see java.awt.image.SampleModel#getDataElements(int, int, int, int, Object, DataBuffer)
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param w        Width of the pixel rectangle.
+	* @param h        Height of the pixel rectangle.
+	* @param outData  An object reference to an array of type defined by
+	*                 getTransferType() and length w*h*getNumDataElements().
+	*                 If null, an array of appropriate type and size will be
+	*                 allocated.
+	* @return         An object reference to an array of type defined by
+	*                 getTransferType() with the requested pixel data.
+	*/
+	@:overload override public function getDataElements(x : Int, y : Int, w : Int, h : Int, outData : Dynamic) : Dynamic;
+	
+	/**
+	* Returns an array  of data elements from the specified rectangular
+	* region.
+	*
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinates are out of bounds.
+	* A ClassCastException will be thrown if the input object is non null
+	* and references anything other than an array of transferType.
+	* <pre>
+	*       byte[] bandData = (byte[])raster.getPixelData(x, y, w, h, null);
+	*       int pixel;
+	*       // To find a data element at location (x2, y2)
+	*       pixel = bandData[((y2-y)*w + (x2-x))];
+	* </pre>
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param width    Width of the pixel rectangle.
+	* @param height   Height of the pixel rectangle.
+	* @param outData  An object reference to an array of type defined by
+	*                 getTransferType() and length w*h*getNumDataElements().
+	*                 If null an array of appropriate type and size will be
+	*                 allocated.
+	* @return         An object reference to an array of type defined by
+	*                 getTransferType() with the request pixel data.
+	*/
+	@:overload public function getPixelData(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Dynamic;
+	
+	/**
+	* Returns a byte array containing the specified data elements
+	* from the data array.  The band index will be ignored.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinates are out of bounds.
+	* <pre>
+	*       byte[] byteData = getByteData(x, y, band, w, h, null);
+	*       // To find a data element at location (x2, y2)
+	*       byte element = byteData[(y2-y)*w + (x2-x)];
+	* </pre>
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param width    Width of the pixel rectangle.
+	* @param height   Height of the pixel rectangle.
+	* @param band     The band to return, is ignored.
+	* @param outData  If non-null, data elements
+	*                 at the specified locations are returned in this array.
+	* @return         Byte array with data elements.
+	*/
+	@:overload public function getByteData(x : Int, y : Int, w : Int, h : Int, band : Int, outData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	
+	/**
+	* Returns a byte array containing the specified data elements
+	* from the data array.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinates are out of bounds.
+	* <pre>
+	*       byte[] byteData = raster.getByteData(x, y, w, h, null);
+	*       byte pixel;
+	*       // To find a data element at location (x2, y2)
+	*       pixel = byteData[((y2-y)*w + (x2-x))];
+	* </pre>
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param width    Width of the pixel rectangle.
+	* @param height   Height of the pixel rectangle.
+	* @param outData  If non-null, data elements
+	*                 at the specified locations are returned in this array.
+	* @return         Byte array with data elements.
+	*/
+	@:overload public function getByteData(x : Int, y : Int, w : Int, h : Int, outData : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	
+	/**
+	* Stores the data elements at the specified location.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinate is out of bounds.
+	* A ClassCastException will be thrown if the input object is non null
+	* and references anything other than an array of transferType.
+	* @param x        The X coordinate of the pixel location.
+	* @param y        The Y coordinate of the pixel location.
+	* @param inData   An object reference to an array of type defined by
+	*                 getTransferType() and length getNumDataElements()
+	*                 containing the pixel data to place at x,y.
+	*/
+	@:overload override public function setDataElements(x : Int, y : Int, obj : Dynamic) : Void;
+	
+	/**
+	* Stores the Raster data at the specified location.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinates are out of bounds.
+	* @param x          The X coordinate of the pixel location.
+	* @param y          The Y coordinate of the pixel location.
+	* @param inRaster   Raster of data to place at x,y location.
+	*/
+	@:overload override public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
+	
+	/**
+	* Copies pixels from Raster srcRaster to this WritableRaster.
+	* For each (x, y) address in srcRaster, the corresponding pixel
+	* is copied to address (x+dx, y+dy) in this WritableRaster,
+	* unless (x+dx, y+dy) falls outside the bounds of this raster.
+	* srcRaster must have the same number of bands as this WritableRaster.
+	* The copy is a simple copy of source samples to the corresponding
+	* destination samples.  For details, see
+	* {@link WritableRaster#setRect(Raster)}.
+	*
+	* @param dx        The X translation factor from src space to dst space
+	*                  of the copy.
+	* @param dy        The Y translation factor from src space to dst space
+	*                  of the copy.
+	* @param srcRaster The Raster from which to copy pixels.
+	*/
+	@:overload override public function setRect(dx : Int, dy : Int, srcRaster : java.awt.image.Raster) : Void;
+	
+	/**
+	* Stores an array of data elements into the specified rectangular
+	* region.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinates are out of bounds.
+	* A ClassCastException will be thrown if the input object is non null
+	* and references anything other than an array of transferType.
+	* The data elements in the
+	* data array are assumed to be packed.  That is, a data element
+	* at location (x2, y2) would be found at:
+	* <pre>
+	*      inData[((y2-y)*w + (x2-x))]
+	* </pre>
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param w        Width of the pixel rectangle.
+	* @param h        Height of the pixel rectangle.
+	* @param inData   An object reference to an array of type defined by
+	*                 getTransferType() and length w*h*getNumDataElements()
+	*                 containing the pixel data to place between x,y and
+	*                 x+h, y+h.
+	*/
+	@:overload override public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Void;
+	
+	/**
+	* Stores a byte array of data elements into the specified rectangular
+	* region.  The band index will be ignored.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinates are out of bounds.
+	* The data elements in the
+	* data array are assumed to be packed.  That is, a data element
+	* at location (x2, y2) would be found at:
+	* <pre>
+	*      inData[((y2-y)*w + (x2-x))]
+	* </pre>
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param w        Width of the pixel rectangle.
+	* @param h        Height of the pixel rectangle.
+	* @param band     The band to set, is ignored.
+	* @param inData   The data elements to be stored.
+	*/
+	@:overload public function putByteData(x : Int, y : Int, w : Int, h : Int, band : Int, inData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	
+	/**
+	* Stores a byte array of data elements into the specified rectangular
+	* region.
+	* An ArrayIndexOutOfBounds exception will be thrown at runtime
+	* if the pixel coordinates are out of bounds.
+	* The data elements in the
+	* data array are assumed to be packed.  That is, a data element
+	* at location (x2, y2) would be found at:
+	* <pre>
+	*      inData[((y2-y)*w + (x2-x))]
+	* </pre>
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param w        Width of the pixel rectangle.
+	* @param h        Height of the pixel rectangle.
+	* @param inData   The data elements to be stored.
+	*/
+	@:overload public function putByteData(x : Int, y : Int, w : Int, h : Int, inData : java.NativeArray<java.StdTypes.Int8>) : Void;
+	
+	/**
+	* Returns an int array containing all samples for a rectangle of pixels,
+	* one sample per array element.
+	* An ArrayIndexOutOfBoundsException may be thrown
+	* if the coordinates are not in bounds.
+	* @param x,&nbsp;y   the coordinates of the upper-left pixel location
+	* @param w      Width of the pixel rectangle
+	* @param h      Height of the pixel rectangle
+	* @param iArray An optionally pre-allocated int array
+	* @return the samples for the specified rectangle of pixels.
+	*/
+	@:overload override public function getPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>) : java.NativeArray<Int>;
+	
+	/**
+	* Sets all samples for a rectangle of pixels from an int array containing
+	* one sample per array element.
+	* An ArrayIndexOutOfBoundsException may be thrown if the coordinates are
+	* not in bounds.
+	* @param x        The X coordinate of the upper left pixel location.
+	* @param y        The Y coordinate of the upper left pixel location.
+	* @param w        Width of the pixel rectangle.
+	* @param h        Height of the pixel rectangle.
+	* @param iArray   The input int pixel array.
+	*/
+	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, iArray : java.NativeArray<Int>) : Void;
+	
+	/**
+	* Creates a subraster given a region of the raster.  The x and y
+	* coordinates specify the horizontal and vertical offsets
+	* from the upper-left corner of this raster to the upper-left corner
+	* of the subraster.  Note that the subraster will reference the same
+	* DataBuffer as the parent raster, but using different offsets. The
+	* bandList is ignored.
+	* @param x               X offset.
+	* @param y               Y offset.
+	* @param width           Width (in pixels) of the subraster.
+	* @param height          Height (in pixels) of the subraster.
+	* @param x0              Translated X origin of the subraster.
+	* @param y0              Translated Y origin of the subraster.
+	* @param bandList        Array of band indices.
+	* @exception RasterFormatException
+	*            if the specified bounding box is outside of the parent raster.
+	*/
+	@:overload override public function createChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
+	
+	/**
+	* Creates a Writable subRaster given a region of the Raster. The x and y
+	* coordinates specify the horizontal and vertical offsets
+	* from the upper-left corner of this Raster to the upper-left corner
+	* of the subRaster.  The bandList is ignored.
+	* A translation to the subRaster may also be specified.
+	* Note that the subRaster will reference the same
+	* DataBuffer as the parent Raster, but using different offsets.
+	* @param x               X offset.
+	* @param y               Y offset.
+	* @param width           Width (in pixels) of the subraster.
+	* @param height          Height (in pixels) of the subraster.
+	* @param x0              Translated X origin of the subraster.
+	* @param y0              Translated Y origin of the subraster.
+	* @param bandList        Array of band indices.
+	* @exception RasterFormatException
+	*            if the specified bounding box is outside of the parent Raster.
+	*/
+	@:overload override public function createWritableChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
+	
+	/**
+	* Creates a raster with the same layout but using a different
+	* width and height, and with new zeroed data arrays.
+	*/
+	@:overload override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	
+	/**
+	* Creates a raster with the same layout and the same
+	* width and height, and with new zeroed data arrays.
+	*/
+	@:overload override public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
+	
+	@:overload public function toString() : String;
+	
+	
+}
