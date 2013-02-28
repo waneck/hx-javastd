@@ -49,23 +49,23 @@ extern class MemberEnter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor 
 	*/
 	@:overload private function memberEnter(tree : com.sun.tools.javac.tree.JCTree, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : Void;
 	
-	@:overload public function visitTopLevel(tree : JCCompilationUnit) : Void;
+	@:overload public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
 	
-	@:overload public function visitImport(tree : JCImport) : Void;
+	@:overload public function visitImport(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCImport) : Void;
 	
-	@:overload public function visitMethodDef(tree : JCMethodDecl) : Void;
+	@:overload public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
 	
-	@:overload public function visitVarDef(tree : JCVariableDecl) : Void;
+	@:overload public function visitVarDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
 	
 	/** Default member enter visitor method: do nothing
 	*/
 	@:overload public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload public function visitErroneous(tree : JCErroneous) : Void;
+	@:overload public function visitErroneous(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCErroneous) : Void;
 	
-	@:overload public function getMethodEnv(tree : JCMethodDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload public function getMethodEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function getInitEnv(tree : JCVariableDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload public function getInitEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
 	/** Complete entering a class.
 	*  @param sym         The symbol of the class to be completed.
@@ -78,11 +78,11 @@ extern class MemberEnter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor 
 {
 	@:overload public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload public function visitIdent(tree : JCIdent) : Void;
+	@:overload public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
 	
-	@:overload public function visitSelect(tree : JCFieldAccess) : Void;
+	@:overload public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
-	@:overload public function visitTypeApply(tree : JCTypeApply) : Void;
+	@:overload public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
 	
 	
 }

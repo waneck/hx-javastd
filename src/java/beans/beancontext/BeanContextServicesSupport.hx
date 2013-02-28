@@ -95,7 +95,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* @param targetChild the child to create the Child on behalf of
 	* @param peer        the peer if the targetChild and peer are related by BeanContextProxy
 	*/
-	@:overload override private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : BCSChild;
+	@:overload override private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild;
 	
 	/**
 	* subclasses can override this method to create new subclasses of
@@ -198,7 +198,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may envelope this method in order to implement their
 	* own child removal side-effects.
 	*/
-	@:overload private function childJustRemovedHook(child : Dynamic, bcsc : BCSChild) : Void;
+	@:overload private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* called from setBeanContext to notify a BeanContextChild

@@ -870,7 +870,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JSlider$AccessibleJSlider') extern class JSlider_AccessibleJSlider extends AccessibleJComponent implements javax.accessibility.AccessibleValue
+@:native('javax$swing$JSlider$AccessibleJSlider') extern class JSlider_AccessibleJSlider extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Get the state set of this object.
@@ -879,14 +879,14 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
 	*
 	* @return an instance of AccessibleRole describing the role of the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -896,7 +896,7 @@ extern class JSlider extends javax.swing.JComponent implements javax.swing.Swing
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the accessible value of this object.

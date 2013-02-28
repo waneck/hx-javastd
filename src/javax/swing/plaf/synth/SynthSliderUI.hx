@@ -59,7 +59,7 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createTrackListener(s : javax.swing.JSlider) : TrackListener;
+	@:overload override private function createTrackListener(s : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
 	/**
 	* @inheritDoc
@@ -198,17 +198,17 @@ extern class SynthSliderUI extends javax.swing.plaf.basic.BasicSliderUI implemen
 /**
 * Track mouse movements.
 */
-@:native('javax$swing$plaf$synth$SynthSliderUI$SynthTrackListener') @:internal extern class SynthSliderUI_SynthTrackListener extends TrackListener
+@:native('javax$swing$plaf$synth$SynthSliderUI$SynthTrackListener') @:internal extern class SynthSliderUI_SynthTrackListener extends javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener
 {
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

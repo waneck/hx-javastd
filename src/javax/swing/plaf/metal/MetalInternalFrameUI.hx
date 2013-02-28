@@ -74,9 +74,9 @@ extern class MetalInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFr
 	
 	
 }
-@:native('javax$swing$plaf$metal$MetalInternalFrameUI$BorderListener1') @:internal extern class MetalInternalFrameUI_BorderListener1 extends BorderListener implements javax.swing.SwingConstants
+@:native('javax$swing$plaf$metal$MetalInternalFrameUI$BorderListener1') @:internal extern class MetalInternalFrameUI_BorderListener1 extends javax.swing.plaf.basic.BasicInternalFrameUI.BasicInternalFrameUI_BorderListener implements javax.swing.SwingConstants
 {
-	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

@@ -34,9 +34,9 @@ extern class ModelGenerator extends com.sun.xml.internal.ws.policy.sourcemodel.P
 	
 	
 }
-@:native('com$sun$xml$internal$ws$api$policy$ModelGenerator$SourceModelCreator') extern class ModelGenerator_SourceModelCreator extends PolicySourceModelCreator
+@:native('com$sun$xml$internal$ws$api$policy$ModelGenerator$SourceModelCreator') extern class ModelGenerator_SourceModelCreator extends com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator
 {
-	@:overload private function create(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload override private function create(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	
 }

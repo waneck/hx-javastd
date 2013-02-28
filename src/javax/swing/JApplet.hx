@@ -406,7 +406,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 * This class implements accessibility support for the
 * <code>JApplet</code> class.
 */
-@:native('javax$swing$JApplet$AccessibleJApplet') extern class JApplet_AccessibleJApplet extends AccessibleApplet
+@:native('javax$swing$JApplet$AccessibleJApplet') extern class JApplet_AccessibleJApplet extends java.applet.Applet.Applet_AccessibleApplet
 {
 	
 }

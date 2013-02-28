@@ -180,12 +180,12 @@ extern class WSDLBoundOperationImpl extends com.sun.xml.internal.ws.model.wsdl.A
 	
 	@:overload public function setResponseNamespace(ns : String) : Void;
 	
-	@:overload public function setAnonymous(anonymous : ANONYMOUS) : Void;
+	@:overload public function setAnonymous(anonymous : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation.WSDLBoundOperation_ANONYMOUS) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload public function getAnonymous() : ANONYMOUS;
+	@:overload public function getAnonymous() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation.WSDLBoundOperation_ANONYMOUS;
 	
 	
 }

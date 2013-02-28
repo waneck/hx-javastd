@@ -83,7 +83,7 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 {
 	@:overload public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<Binding>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
 	
 	@:overload public function getNamespaceURI(prefix : String) : String;
 	
@@ -123,7 +123,7 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 {
 	@:overload public function new(nsContext : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload public function iterator() : java.util.Iterator<Binding>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
 	
 	@:overload public function getNamespaceURI(prefix : String) : String;
 	

@@ -31,7 +31,7 @@ extern class Exceptions_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload public function getException(index : Int, constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var number_of_exceptions(default, null) : Int;
 	

@@ -1428,7 +1428,7 @@ extern class Container extends java.awt.Component
 * AccessibleContainer interface.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Container$AccessibleAWTContainer') extern class Container_AccessibleAWTContainer extends AccessibleAWTComponent
+@:require(java3) @:native('java$awt$Container$AccessibleAWTContainer') extern class Container_AccessibleAWTContainer extends java.awt.Component.Component_AccessibleAWTComponent
 {
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -1437,7 +1437,7 @@ extern class Container extends java.awt.Component
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth <code>Accessible</code> child of the object.
@@ -1445,7 +1445,7 @@ extern class Container extends java.awt.Component
 	* @param i zero-based index of child
 	* @return the nth <code>Accessible</code> child of the object
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -1457,7 +1457,7 @@ extern class Container extends java.awt.Component
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	private var accessibleContainerHandler : java.awt.event.ContainerListener;
 	
@@ -1466,7 +1466,7 @@ extern class Container extends java.awt.Component
 	*
 	* @param listener  the PropertyChangeListener to be added
 	*/
-	@:overload public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
+	@:overload override public function addPropertyChangeListener(listener : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

@@ -433,7 +433,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getPackageAnnotations() : com.sun.tools.javac.util.List<JCTree_JCAnnotation>;
 	
@@ -471,7 +471,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload public function getQualifiedIdentifier() : JCTree;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -557,7 +557,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getModifiers() : JCTree_JCModifiers;
 	
@@ -612,7 +612,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getModifiers() : JCTree_JCModifiers;
 	
@@ -660,7 +660,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getModifiers() : JCTree_JCModifiers;
 	
@@ -685,7 +685,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -711,7 +711,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getStatements() : com.sun.tools.javac.util.List<JCTree_JCStatement>;
 	
@@ -736,7 +736,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getCondition() : JCTree_JCExpression;
 	
@@ -761,7 +761,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getCondition() : JCTree_JCExpression;
 	
@@ -790,7 +790,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getCondition() : JCTree_JCExpression;
 	
@@ -821,7 +821,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getVariable() : JCTree_JCVariableDecl;
 	
@@ -848,7 +848,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getLabel() : com.sun.tools.javac.util.Name;
 	
@@ -873,7 +873,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -898,7 +898,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -923,7 +923,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -952,7 +952,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getBlock() : JCTree_JCBlock;
 	
@@ -981,7 +981,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getParameter() : JCTree_JCVariableDecl;
 	
@@ -1008,7 +1008,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getCondition() : JCTree_JCExpression;
 	
@@ -1037,7 +1037,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getCondition() : JCTree_JCExpression;
 	
@@ -1063,7 +1063,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -1086,7 +1086,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getLabel() : com.sun.tools.javac.util.Name;
 	
@@ -1109,7 +1109,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getLabel() : com.sun.tools.javac.util.Name;
 	
@@ -1130,7 +1130,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -1151,7 +1151,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -1174,7 +1174,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getCondition() : JCTree_JCExpression;
 	
@@ -1203,7 +1203,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
 	
@@ -1244,7 +1244,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getEnclosingExpression() : JCTree_JCExpression;
 	
@@ -1277,7 +1277,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getType() : JCTree_JCExpression;
 	
@@ -1302,7 +1302,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -1325,7 +1325,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getVariable() : JCTree_JCExpression;
 	
@@ -1352,7 +1352,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getVariable() : JCTree_JCExpression;
 	
@@ -1379,7 +1379,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -1408,7 +1408,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getLeftOperand() : JCTree_JCExpression;
 	
@@ -1435,7 +1435,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getType() : JCTree;
 	
@@ -1460,7 +1460,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getType() : JCTree;
 	
@@ -1485,7 +1485,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -1515,7 +1515,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getExpression() : JCTree_JCExpression;
 	
@@ -1542,7 +1542,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getName() : com.sun.tools.javac.util.Name;
 	
@@ -1566,7 +1566,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getValue() : Dynamic;
 	
@@ -1591,7 +1591,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getPrimitiveTypeKind() : javax.lang.model.type.TypeKind;
 	
@@ -1612,7 +1612,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getType() : JCTree;
 	
@@ -1635,7 +1635,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getType() : JCTree;
 	
@@ -1658,7 +1658,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getTypeAlternatives() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
 	
@@ -1683,7 +1683,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getName() : com.sun.tools.javac.util.Name;
 	
@@ -1705,7 +1705,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getBound() : JCTree;
 	
@@ -1723,7 +1723,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1741,7 +1741,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getAnnotationType() : JCTree;
 	
@@ -1763,7 +1763,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getFlags() : java.util.Set<javax.lang.model.element.Modifier>;
 	
@@ -1783,7 +1783,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getErrorTrees() : com.sun.tools.javac.util.List<JCTree>;
 	
@@ -1804,7 +1804,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept(v : JCTree_Visitor) : Void;
 	
-	@:overload override public function getKind() : Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	

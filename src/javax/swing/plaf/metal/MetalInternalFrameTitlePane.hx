@@ -89,17 +89,17 @@ extern class MetalInternalFrameTitlePane extends javax.swing.plaf.basic.BasicInt
 	
 	
 }
-@:native('javax$swing$plaf$metal$MetalInternalFrameTitlePane$MetalTitlePaneLayout') @:internal extern class MetalInternalFrameTitlePane_MetalTitlePaneLayout extends TitlePaneLayout
+@:native('javax$swing$plaf$metal$MetalInternalFrameTitlePane$MetalTitlePaneLayout') @:internal extern class MetalInternalFrameTitlePane_MetalTitlePaneLayout extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_TitlePaneLayout
 {
-	@:overload public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
+	@:overload override public function addLayoutComponent(name : String, c : java.awt.Component) : Void;
 	
-	@:overload public function removeLayoutComponent(c : java.awt.Component) : Void;
+	@:overload override public function removeLayoutComponent(c : java.awt.Component) : Void;
 	
-	@:overload public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload override public function preferredLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
+	@:overload override public function minimumLayoutSize(c : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload override public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }

@@ -292,7 +292,7 @@ package javax.management.monitor;
 *  PACKAGE CLASSES
 * ------------------------------------------
 */
-@:native('javax$management$monitor$CounterMonitor$CounterMonitorObservedObject') @:internal extern class CounterMonitor_CounterMonitorObservedObject extends ObservedObject
+@:native('javax$management$monitor$CounterMonitor$CounterMonitorObservedObject') @:internal extern class CounterMonitor_CounterMonitorObservedObject extends javax.management.monitor.Monitor.Monitor_ObservedObject
 {
 	@:overload public function new(observedObject : javax.management.ObjectName) : Void;
 	
@@ -320,9 +320,9 @@ package javax.management.monitor;
 	
 	@:overload @:final @:synchronized public function setEventAlreadyNotified(eventAlreadyNotified : Bool) : Void;
 	
-	@:overload @:final @:synchronized public function getType() : NumericalType;
+	@:overload @:final @:synchronized public function getType() : javax.management.monitor.Monitor.Monitor_NumericalType;
 	
-	@:overload @:final @:synchronized public function setType(type : NumericalType) : Void;
+	@:overload @:final @:synchronized public function setType(type : javax.management.monitor.Monitor.Monitor_NumericalType) : Void;
 	
 	
 }

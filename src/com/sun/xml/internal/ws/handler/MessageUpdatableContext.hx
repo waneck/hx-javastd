@@ -28,9 +28,9 @@ extern class MessageUpdatableContext implements javax.xml.ws.handler.MessageCont
 	/** Creates a new instance of MessageUpdatableContext */
 	@:overload public function new(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload public function setScope(name : String, scope : Scope) : Void;
+	@:overload public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
 	
-	@:overload public function getScope(name : String) : Scope;
+	@:overload public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
 	
 	/* java.util.Map methods below here */
 	@:overload public function clear() : Void;

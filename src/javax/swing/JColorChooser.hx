@@ -346,7 +346,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 * Java Accessibility API appropriate to color chooser user-interface
 * elements.
 */
-@:native('javax$swing$JColorChooser$AccessibleJColorChooser') extern class JColorChooser_AccessibleJColorChooser extends AccessibleJComponent
+@:native('javax$swing$JColorChooser$AccessibleJColorChooser') extern class JColorChooser_AccessibleJColorChooser extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -355,7 +355,7 @@ extern class JColorChooser extends javax.swing.JComponent implements javax.acces
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

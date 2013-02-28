@@ -59,32 +59,32 @@ package javax.sound.sampled;
 	/**
 	* A type of port that gets audio from a built-in microphone or a microphone jack.
 	*/
-	public static var MICROPHONE(default, null) : Port_Info;
+	public static var MICROPHONE(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that gets audio from a line-level audio input jack.
 	*/
-	public static var LINE_IN(default, null) : Port_Info;
+	public static var LINE_IN(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that gets audio from a CD-ROM drive.
 	*/
-	public static var COMPACT_DISC(default, null) : Port_Info;
+	public static var COMPACT_DISC(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that sends audio to a built-in speaker or a speaker jack.
 	*/
-	public static var SPEAKER(default, null) : Port_Info;
+	public static var SPEAKER(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that sends audio to a headphone jack.
 	*/
-	public static var HEADPHONE(default, null) : Port_Info;
+	public static var HEADPHONE(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* A type of port that sends audio to a line-level audio output jack.
 	*/
-	public static var LINE_OUT(default, null) : Port_Info;
+	public static var LINE_OUT(default, null) : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Constructs a port's info object from the information given.

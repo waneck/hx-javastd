@@ -47,11 +47,11 @@ extern class WSEndpointImpl<T> extends com.sun.xml.internal.ws.api.server.WSEndp
 	
 	@:overload override public function setExecutor(exec : java.util.concurrent.Executor) : Void;
 	
-	@:overload public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
-	@:overload public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
-	@:overload override public function createPipeHead() : PipeHead;
+	@:overload override public function createPipeHead() : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
 	
 	@:overload @:synchronized override public function dispose() : Void;
 	

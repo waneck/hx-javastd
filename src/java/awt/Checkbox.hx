@@ -382,7 +382,7 @@ package java.awt;
 * Java Accessibility API appropriate to checkbox user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Checkbox$AccessibleAWTCheckbox') extern class Checkbox_AccessibleAWTCheckbox extends AccessibleAWTComponent implements java.awt.event.ItemListener implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
+@:require(java3) @:native('java$awt$Checkbox$AccessibleAWTCheckbox') extern class Checkbox_AccessibleAWTCheckbox extends java.awt.Component.Component_AccessibleAWTComponent implements java.awt.event.ItemListener implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
 {
 	@:overload public function new() : Void;
 	
@@ -400,7 +400,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -410,7 +410,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.
@@ -478,7 +478,7 @@ package java.awt;
 	* the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state set of this object.
@@ -487,7 +487,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

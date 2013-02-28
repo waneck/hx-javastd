@@ -403,7 +403,7 @@ package java.awt;
 * Java Accessibility API appropriate to choice user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Choice$AccessibleAWTChoice') extern class Choice_AccessibleAWTChoice extends AccessibleAWTComponent implements javax.accessibility.AccessibleAction
+@:require(java3) @:native('java$awt$Choice$AccessibleAWTChoice') extern class Choice_AccessibleAWTChoice extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.AccessibleAction
 {
 	@:overload public function new() : Void;
 	
@@ -416,7 +416,7 @@ package java.awt;
 	* @return this object
 	* @see AccessibleAction
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the role of this object.
@@ -425,7 +425,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible actions available in this object

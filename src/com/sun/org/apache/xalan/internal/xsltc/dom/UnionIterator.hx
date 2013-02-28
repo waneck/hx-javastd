@@ -37,17 +37,17 @@ extern class UnionIterator extends com.sun.org.apache.xalan.internal.xsltc.dom.M
 	
 	@:overload override public function step() : Int;
 	
-	@:overload override public function cloneHeapNode() : HeapNode;
+	@:overload override public function cloneHeapNode() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	@:overload override public function setMark() : Void;
 	
 	@:overload override public function gotoMark() : Void;
 	
-	@:overload public function isLessThan(heapNode : HeapNode) : Bool;
+	@:overload public function isLessThan(heapNode : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode) : Bool;
 	
-	@:overload override public function setStartNode(node : Int) : HeapNode;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
-	@:overload override public function reset() : HeapNode;
+	@:overload override public function reset() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	
 }

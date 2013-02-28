@@ -47,7 +47,7 @@ extern class CharTrie extends sun.text.normalizer.Trie
 	* @throws IOException thrown when data reading fails
 	* @draft 2.1
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, dataManipulate : DataManipulate) : Void;
+	@:overload public function new(inputStream : java.io.InputStream, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Make a dummy CharTrie.
@@ -63,7 +63,7 @@ extern class CharTrie extends sun.text.normalizer.Trie
 	*                      have associated supplementary data
 	* @param dataManipulate object which provides methods to parse the char data
 	*/
-	@:overload public function new(initialValue : Int, leadUnitValue : Int, dataManipulate : DataManipulate) : Void;
+	@:overload public function new(initialValue : Int, leadUnitValue : Int, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Java friend implementation

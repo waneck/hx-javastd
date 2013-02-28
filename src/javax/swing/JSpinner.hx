@@ -824,9 +824,9 @@ package javax.swing;
 }
 @:native('javax$swing$JSpinner$ListEditor$ListFormatter$Filter') @:internal extern class JSpinner_ListEditor_ListFormatter_Filter extends javax.swing.text.DocumentFilter
 {
-	@:overload public function replace(fb : FilterBypass, offset : Int, length : Int, string : String, attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, string : String, attrs : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function insertString(fb : FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
 	
 }
@@ -856,7 +856,7 @@ package javax.swing;
 * support for the <code>JSpinner</code> class.
 * @since 1.5
 */
-@:require(java5) @:native('javax$swing$JSpinner$AccessibleJSpinner') extern class JSpinner_AccessibleJSpinner extends AccessibleJComponent implements javax.accessibility.AccessibleValue implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleText implements javax.accessibility.AccessibleEditableText implements javax.swing.event.ChangeListener
+@:require(java5) @:native('javax$swing$JSpinner$AccessibleJSpinner') extern class JSpinner_AccessibleJSpinner extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleValue implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleText implements javax.accessibility.AccessibleEditableText implements javax.swing.event.ChangeListener
 {
 	/**
 	* AccessibleJSpinner constructor
@@ -889,14 +889,14 @@ package javax.swing;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -908,7 +908,7 @@ package javax.swing;
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the AccessibleAction associated with this object that supports
@@ -917,7 +917,7 @@ package javax.swing;
 	* @return AccessibleAction if supported by object; else return null
 	* @see AccessibleAction
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Gets the AccessibleText associated with this object presenting
@@ -926,7 +926,7 @@ package javax.swing;
 	* @return AccessibleText if supported by object; else return null
 	* @see AccessibleText
 	*/
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the AccessibleValue associated with this object.
@@ -935,7 +935,7 @@ package javax.swing;
 	* @see AccessibleValue
 	*
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the value of this object as a Number.  If the value has not been

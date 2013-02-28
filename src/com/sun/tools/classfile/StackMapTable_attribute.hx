@@ -29,7 +29,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload public function new(name_index : Int, entries : java.NativeArray<StackMapTable_attribute_stack_map_frame>) : Void;
 	
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var number_of_entries(default, null) : Int;
 	
@@ -57,7 +57,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload @:abstract public function getOffsetDelta() : Int;
 	
-	@:overload @:abstract public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var frame_type(default, null) : Int;
 	
@@ -83,7 +83,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 }
 @:native('com$sun$tools$classfile$StackMapTable_attribute$same_frame') extern class StackMapTable_attribute_same_frame extends StackMapTable_attribute_stack_map_frame
 {
-	@:overload override public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -93,7 +93,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 {
 	@:overload override public function length() : Int;
 	
-	@:overload override public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -105,7 +105,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 {
 	@:overload override public function length() : Int;
 	
-	@:overload override public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -119,7 +119,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 {
 	@:overload override public function length() : Int;
 	
-	@:overload override public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -131,7 +131,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 {
 	@:overload override public function length() : Int;
 	
-	@:overload override public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -143,7 +143,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 {
 	@:overload override public function length() : Int;
 	
-	@:overload override public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -157,7 +157,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 {
 	@:overload override public function length() : Int;
 	
-	@:overload override public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	

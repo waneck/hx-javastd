@@ -100,7 +100,7 @@ extern class PopupMenu extends java.awt.Menu
 * The class used to obtain the accessible role for this object.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$PopupMenu$AccessibleAWTPopupMenu') extern class PopupMenu_AccessibleAWTPopupMenu extends AccessibleAWTMenu
+@:require(java3) @:native('java$awt$PopupMenu$AccessibleAWTPopupMenu') extern class PopupMenu_AccessibleAWTPopupMenu extends java.awt.Menu.Menu_AccessibleAWTMenu
 {
 	/**
 	* Get the role of this object.
@@ -108,7 +108,7 @@ extern class PopupMenu extends java.awt.Menu
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

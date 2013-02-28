@@ -31,7 +31,7 @@ extern class SourceFile_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload public function getSourceFile(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function accept<R, P>(visitor : Visitor<R, P>, p : P) : R;
+	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
 	
 	public var sourcefile_index(default, null) : Int;
 	

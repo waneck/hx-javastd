@@ -1029,7 +1029,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*/
 	@:overload override private function exportDone(source : javax.swing.JComponent, data : java.awt.datatransfer.Transferable, action : Int) : Void;
 	
-	@:overload public function importData(support : TransferSupport) : Bool;
+	@:overload public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
 	
 	/**
 	* This method causes a transfer to a component from a clipboard or a

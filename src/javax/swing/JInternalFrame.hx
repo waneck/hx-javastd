@@ -1183,7 +1183,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JInternalFrame$AccessibleJInternalFrame') extern class JInternalFrame_AccessibleJInternalFrame extends AccessibleJComponent implements javax.accessibility.AccessibleValue
+@:native('javax$swing$JInternalFrame$AccessibleJInternalFrame') extern class JInternalFrame_AccessibleJInternalFrame extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Get the accessible name of this object.
@@ -1192,7 +1192,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* object does not have a name
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -1201,7 +1201,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the AccessibleValue associated with this object.  In the
@@ -1211,7 +1211,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the value of this object as a Number.
@@ -1368,7 +1368,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JInternalFrame$JDesktopIcon$AccessibleJDesktopIcon') extern class JInternalFrame_JDesktopIcon_AccessibleJDesktopIcon extends AccessibleJComponent implements javax.accessibility.AccessibleValue
+@:native('javax$swing$JInternalFrame$JDesktopIcon$AccessibleJDesktopIcon') extern class JInternalFrame_JDesktopIcon_AccessibleJDesktopIcon extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Gets the role of this object.
@@ -1377,7 +1377,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the AccessibleValue associated with this object.  In the
@@ -1387,7 +1387,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the value of this object as a <code>Number</code>.

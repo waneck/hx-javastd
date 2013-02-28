@@ -338,7 +338,7 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 	* @param a The set of attributes to be represented in the
 	*  the compact form.
 	*/
-	@:overload override private function createSmallAttributeSet(a : javax.swing.text.AttributeSet) : SmallAttributeSet;
+	@:overload override private function createSmallAttributeSet(a : javax.swing.text.AttributeSet) : javax.swing.text.StyleContext.StyleContext_SmallAttributeSet;
 	
 	/**
 	* Creates a large set of attributes that should trade off
@@ -465,7 +465,7 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 * Small set of attributes that does conversion of requests
 * for attributes of type StyleConstants.
 */
-@:native('javax$swing$text$html$StyleSheet$SmallConversionSet') @:internal extern class StyleSheet_SmallConversionSet extends SmallAttributeSet
+@:native('javax$swing$text$html$StyleSheet$SmallConversionSet') @:internal extern class StyleSheet_SmallConversionSet extends javax.swing.text.StyleContext.StyleContext_SmallAttributeSet
 {
 	/**
 	* Creates a new attribute set based on a supplied set of attributes.
@@ -481,7 +481,7 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 	* @return true if the attribute is defined
 	* @see AttributeSet#isDefined
 	*/
-	@:overload public function isDefined(key : Dynamic) : Bool;
+	@:overload override public function isDefined(key : Dynamic) : Bool;
 	
 	/**
 	* Gets the value of an attribute.
@@ -490,7 +490,7 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 	* @return the attribute value
 	* @see AttributeSet#getAttribute
 	*/
-	@:overload public function getAttribute(key : Dynamic) : Dynamic;
+	@:overload override public function getAttribute(key : Dynamic) : Dynamic;
 	
 	
 }

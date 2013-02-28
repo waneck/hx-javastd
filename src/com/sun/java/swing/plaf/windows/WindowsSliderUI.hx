@@ -34,7 +34,7 @@ extern class WindowsSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 	* the HOT, PRESSED, and FOCUSED states.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function createTrackListener(slider : javax.swing.JSlider) : TrackListener;
+	@:require(java6) @:overload override private function createTrackListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
 	@:overload override public function paintTrack(g : java.awt.Graphics) : Void;
 	
@@ -52,17 +52,17 @@ extern class WindowsSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 	
 	
 }
-@:native('com$sun$java$swing$plaf$windows$WindowsSliderUI$WindowsTrackListener') @:internal extern class WindowsSliderUI_WindowsTrackListener extends TrackListener
+@:native('com$sun$java$swing$plaf$windows$WindowsSliderUI$WindowsTrackListener') @:internal extern class WindowsSliderUI_WindowsTrackListener extends javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener
 {
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	@:overload public function updatePressed(newPressed : Bool) : Void;
 	

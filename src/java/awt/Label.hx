@@ -176,7 +176,7 @@ package java.awt;
 * Java Accessibility API appropriate to label user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Label$AccessibleAWTLabel') extern class Label_AccessibleAWTLabel extends AccessibleAWTComponent
+@:require(java3) @:native('java$awt$Label$AccessibleAWTLabel') extern class Label_AccessibleAWTLabel extends java.awt.Component.Component_AccessibleAWTComponent
 {
 	@:overload public function new() : Void;
 	
@@ -187,7 +187,7 @@ package java.awt;
 	* object does not have a name
 	* @see AccessibleContext#setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -195,7 +195,7 @@ package java.awt;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

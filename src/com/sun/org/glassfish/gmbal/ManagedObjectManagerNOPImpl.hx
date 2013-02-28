@@ -71,7 +71,7 @@ package com.sun.org.glassfish.gmbal;
 	
 	@:overload public function addAnnotation(element : java.lang.reflect.AnnotatedElement, annotation : java.lang.annotation.Annotation) : Void;
 	
-	@:overload public function setRegistrationDebug(level : RegistrationDebugLevel) : Void;
+	@:overload public function setRegistrationDebug(level : com.sun.org.glassfish.gmbal.ManagedObjectManager.ManagedObjectManager_RegistrationDebugLevel) : Void;
 	
 	@:overload public function setRuntimeDebug(flag : Bool) : Void;
 	

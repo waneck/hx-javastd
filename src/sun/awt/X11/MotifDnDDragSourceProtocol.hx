@@ -38,7 +38,7 @@ package sun.awt.X11;
 	*/
 	@:overload override public function processClientMessage(xclient : sun.awt.X11.XClientMessageEvent) : Bool;
 	
-	@:overload override public function getTargetWindowInfo(window : haxe.Int64) : TargetWindowInfo;
+	@:overload override public function getTargetWindowInfo(window : haxe.Int64) : sun.awt.X11.XDragSourceProtocol.XDragSourceProtocol_TargetWindowInfo;
 	
 	@:overload override public function sendEnterMessage(formats : java.NativeArray<haxe.Int64>, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;
 	

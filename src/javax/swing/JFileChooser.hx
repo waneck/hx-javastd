@@ -1157,7 +1157,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 * Java Accessibility API appropriate to file chooser user-interface
 * elements.
 */
-@:native('javax$swing$JFileChooser$AccessibleJFileChooser') extern class JFileChooser_AccessibleJFileChooser extends AccessibleJComponent
+@:native('javax$swing$JFileChooser$AccessibleJFileChooser') extern class JFileChooser_AccessibleJFileChooser extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Gets the role of this object.
@@ -1166,7 +1166,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

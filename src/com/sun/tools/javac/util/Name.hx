@@ -60,16 +60,16 @@ extern class Name implements javax.lang.model.element.Name
 	
 	/** Return the concatenation of this name and name `n'.
 	*/
-	@:overload public function append(n : Name) : Name;
+	@:overload public function append(n : javax.lang.model.element.Name) : javax.lang.model.element.Name;
 	
 	/** Return the concatenation of this name, the given ASCII
 	*  character, and name `n'.
 	*/
-	@:overload public function append(c : java.StdTypes.Char16, n : Name) : Name;
+	@:overload public function append(c : java.StdTypes.Char16, n : javax.lang.model.element.Name) : javax.lang.model.element.Name;
 	
 	/** An arbitrary but consistent complete order among all Names.
 	*/
-	@:overload public function compareTo(other : Name) : Int;
+	@:overload public function compareTo(other : javax.lang.model.element.Name) : Int;
 	
 	/** Return true if this is the empty name.
 	*/
@@ -81,12 +81,12 @@ extern class Name implements javax.lang.model.element.Name
 	
 	/** Does this name start with prefix?
 	*/
-	@:overload public function startsWith(prefix : Name) : Bool;
+	@:overload public function startsWith(prefix : javax.lang.model.element.Name) : Bool;
 	
 	/** Returns the sub-name starting at position start, up to and
 	*  excluding position end.
 	*/
-	@:overload public function subName(start : Int, end : Int) : Name;
+	@:overload public function subName(start : Int, end : Int) : javax.lang.model.element.Name;
 	
 	/** Return the string representation of this name.
 	*/
@@ -134,21 +134,21 @@ extern class Name implements javax.lang.model.element.Name
 	
 	/** Get the name from the characters in cs[start..start+len-1].
 	*/
-	@:overload @:abstract public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Name;
+	@:overload @:abstract public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : javax.lang.model.element.Name;
 	
 	/** Get the name for the characters in string s.
 	*/
-	@:overload public function fromString(s : String) : Name;
+	@:overload public function fromString(s : String) : javax.lang.model.element.Name;
 	
 	/** Get the name for the bytes in array cs.
 	*  Assume that bytes are in utf8 format.
 	*/
-	@:overload public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>) : Name;
+	@:overload public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>) : javax.lang.model.element.Name;
 	
 	/** get the name for the bytes in cs[start..start+len-1].
 	*  Assume that bytes are in utf8 format.
 	*/
-	@:overload @:abstract public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : Name;
+	@:overload @:abstract public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : javax.lang.model.element.Name;
 	
 	/** Release any resources used by this table.
 	*/

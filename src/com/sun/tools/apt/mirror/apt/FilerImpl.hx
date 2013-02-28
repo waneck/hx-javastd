@@ -45,12 +45,12 @@ extern class FilerImpl implements com.sun.mirror.apt.Filer
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function createTextFile(loc : Location, pkg : String, relPath : java.io.File, charsetName : String) : java.io.PrintWriter;
+	@:overload public function createTextFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File, charsetName : String) : java.io.PrintWriter;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function createBinaryFile(loc : Location, pkg : String, relPath : java.io.File) : java.io.OutputStream;
+	@:overload public function createBinaryFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File) : java.io.OutputStream;
 	
 	@:overload public function getSourceFileNames() : java.util.Set<String>;
 	

@@ -29,7 +29,7 @@ extern class LocalVariableTable_attribute extends com.sun.tools.classfile.Attrib
 	
 	@:overload public function new(name_index : Int, local_variable_table : java.NativeArray<LocalVariableTable_attribute_Entry>) : Void;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var local_variable_table_length(default, null) : Int;
 	

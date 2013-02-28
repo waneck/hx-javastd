@@ -64,7 +64,7 @@ extern class CharArrayIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIn
 	
 	
 }
-@:native('com$sun$xml$internal$fastinfoset$util$CharArrayIntMap$Entry') @:internal extern class CharArrayIntMap_Entry extends BaseEntry
+@:native('com$sun$xml$internal$fastinfoset$util$CharArrayIntMap$Entry') @:internal extern class CharArrayIntMap_Entry extends com.sun.xml.internal.fastinfoset.util.KeyIntMap.KeyIntMap_BaseEntry
 {
 	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int, hash : Int, value : Int, next : CharArrayIntMap_Entry) : Void;
 	

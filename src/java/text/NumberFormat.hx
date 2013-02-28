@@ -482,57 +482,57 @@ extern class NumberFormat extends java.text.Format
 	/**
 	* Constant identifying the integer field.
 	*/
-	public static var INTEGER(default, null) : NumberFormat_Field;
+	public static var INTEGER(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the fraction field.
 	*/
-	public static var FRACTION(default, null) : NumberFormat_Field;
+	public static var FRACTION(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the exponent field.
 	*/
-	public static var EXPONENT(default, null) : NumberFormat_Field;
+	public static var EXPONENT(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the decimal separator field.
 	*/
-	public static var DECIMAL_SEPARATOR(default, null) : NumberFormat_Field;
+	public static var DECIMAL_SEPARATOR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the sign field.
 	*/
-	public static var SIGN(default, null) : NumberFormat_Field;
+	public static var SIGN(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the grouping separator field.
 	*/
-	public static var GROUPING_SEPARATOR(default, null) : NumberFormat_Field;
+	public static var GROUPING_SEPARATOR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the exponent symbol field.
 	*/
-	public static var EXPONENT_SYMBOL(default, null) : NumberFormat_Field;
+	public static var EXPONENT_SYMBOL(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the percent field.
 	*/
-	public static var PERCENT(default, null) : NumberFormat_Field;
+	public static var PERCENT(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the permille field.
 	*/
-	public static var PERMILLE(default, null) : NumberFormat_Field;
+	public static var PERMILLE(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the currency field.
 	*/
-	public static var CURRENCY(default, null) : NumberFormat_Field;
+	public static var CURRENCY(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the exponent sign field.
 	*/
-	public static var EXPONENT_SIGN(default, null) : NumberFormat_Field;
+	public static var EXPONENT_SIGN(default, null) : java.text.Format.Format_Field;
 	
 	
 }

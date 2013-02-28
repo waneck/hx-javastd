@@ -36,9 +36,9 @@ extern class JavadocMemberEnter extends com.sun.tools.javac.comp.MemberEnter
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload override public function visitMethodDef(tree : JCMethodDecl) : Void;
+	@:overload public function visitMethodDef(tree : JCMethodDecl) : Void;
 	
-	@:overload override public function visitVarDef(tree : JCVariableDecl) : Void;
+	@:overload public function visitVarDef(tree : JCVariableDecl) : Void;
 	
 	
 }

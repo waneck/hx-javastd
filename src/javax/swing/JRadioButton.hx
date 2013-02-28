@@ -154,7 +154,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JRadioButton$AccessibleJRadioButton') extern class JRadioButton_AccessibleJRadioButton extends AccessibleJToggleButton
+@:native('javax$swing$JRadioButton$AccessibleJRadioButton') extern class JRadioButton_AccessibleJRadioButton extends javax.swing.JToggleButton.JToggleButton_AccessibleJToggleButton
 {
 	/**
 	* Get the role of this object.
@@ -162,7 +162,7 @@ extern class JRadioButton extends javax.swing.JToggleButton implements javax.acc
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

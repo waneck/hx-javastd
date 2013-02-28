@@ -40,7 +40,7 @@ extern class BootstrapMethods_attribute extends com.sun.tools.classfile.Attribut
 	
 	@:overload public static function length(bootstrap_method_specifiers : java.NativeArray<BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Int;
 	
-	@:overload public function accept<R, P>(visitor : Visitor<R, P>, p : P) : R;
+	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
 	
 	
 }

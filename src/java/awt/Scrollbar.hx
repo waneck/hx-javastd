@@ -778,7 +778,7 @@ package java.awt;
 * user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Scrollbar$AccessibleAWTScrollBar') extern class Scrollbar_AccessibleAWTScrollBar extends AccessibleAWTComponent implements javax.accessibility.AccessibleValue
+@:require(java3) @:native('java$awt$Scrollbar$AccessibleAWTScrollBar') extern class Scrollbar_AccessibleAWTScrollBar extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Get the state set of this object.
@@ -787,7 +787,7 @@ package java.awt;
 	*     containing the current state of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -795,7 +795,7 @@ package java.awt;
 	* @return an instance of <code>AccessibleRole</code>
 	*     describing the role of the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the <code>AccessibleValue</code> associated with this
@@ -806,7 +806,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the accessible value of this object.

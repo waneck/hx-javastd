@@ -658,7 +658,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JLabel$AccessibleJLabel') extern class JLabel_AccessibleJLabel extends AccessibleJComponent implements javax.accessibility.AccessibleText implements javax.accessibility.AccessibleExtendedComponent
+@:native('javax$swing$JLabel$AccessibleJLabel') extern class JLabel_AccessibleJLabel extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleText implements javax.accessibility.AccessibleExtendedComponent
 {
 	/**
 	* Get the accessible name of this object.
@@ -667,7 +667,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* object does not have a name
 	* @see AccessibleContext#setAccessibleName
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -676,14 +676,14 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleIcons associated with this object if one
 	* or more exist.  Otherwise return null.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:require(java3) @:overload override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Get the AccessibleRelationSet associated with this object if one
@@ -691,10 +691,10 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see AccessibleRelation
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
+	@:require(java3) @:overload override public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
 	
 	/* AccessibleText ---------- */
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -819,7 +819,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getToolTipText() : String;
+	@:require(java4) @:overload override public function getToolTipText() : String;
 	
 	/**
 	* Returns the titled border text
@@ -828,7 +828,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTitledBorderText() : String;
+	@:require(java4) @:overload override public function getTitledBorderText() : String;
 	
 	/**
 	* Returns key bindings associated with this object
@@ -838,7 +838,7 @@ extern class JLabel extends javax.swing.JComponent implements javax.swing.SwingC
 	* @see AccessibleKeyBinding
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
+	@:require(java4) @:overload override public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
 	
 	
 }

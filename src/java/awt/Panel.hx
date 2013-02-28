@@ -77,7 +77,7 @@ package java.awt;
 * Java Accessibility API appropriate to panel user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Panel$AccessibleAWTPanel') extern class Panel_AccessibleAWTPanel extends AccessibleAWTContainer
+@:require(java3) @:native('java$awt$Panel$AccessibleAWTPanel') extern class Panel_AccessibleAWTPanel extends java.awt.Container.Container_AccessibleAWTContainer
 {
 	/**
 	* Get the role of this object.
@@ -85,7 +85,7 @@ package java.awt;
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

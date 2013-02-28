@@ -180,7 +180,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JButton$AccessibleJButton') extern class JButton_AccessibleJButton extends AccessibleAbstractButton
+@:native('javax$swing$JButton$AccessibleJButton') extern class JButton_AccessibleJButton extends javax.swing.AbstractButton.AbstractButton_AccessibleAbstractButton
 {
 	/**
 	* Get the role of this object.
@@ -189,7 +189,7 @@ extern class JButton extends javax.swing.AbstractButton implements javax.accessi
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

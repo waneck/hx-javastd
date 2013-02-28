@@ -43,7 +43,7 @@ extern class SOAPBindingCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	
 	@:overload override public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload override public function copy() : SOAPBindingCodec;
+	@:overload override public function copy() : com.sun.xml.internal.ws.api.pipe.SOAPBindingCodec;
 	
 	@:overload override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	

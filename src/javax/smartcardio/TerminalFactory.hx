@@ -192,7 +192,7 @@ extern class TerminalFactory
 }
 @:native('javax$smartcardio$TerminalFactory$NoneCardTerminals') @:internal extern class TerminalFactory_NoneCardTerminals extends javax.smartcardio.CardTerminals
 {
-	@:overload public function list(state : State) : java.util.List<javax.smartcardio.CardTerminal>;
+	@:overload public function list(state : javax.smartcardio.CardTerminals.CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
 	
 	@:overload override public function waitForChange(timeout : haxe.Int64) : Bool;
 	

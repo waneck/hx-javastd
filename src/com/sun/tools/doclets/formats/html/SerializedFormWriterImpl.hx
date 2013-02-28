@@ -137,14 +137,14 @@ extern class SerializedFormWriterImpl extends com.sun.tools.doclets.formats.html
 	*
 	* @return an instance of a SerialFieldWriter.
 	*/
-	@:overload public function getSerialFieldWriter(classDoc : com.sun.javadoc.ClassDoc) : SerialFieldWriter;
+	@:overload public function getSerialFieldWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialFieldWriter;
 	
 	/**
 	* Return an instance of a SerialMethodWriter.
 	*
 	* @return an instance of a SerialMethodWriter.
 	*/
-	@:overload public function getSerialMethodWriter(classDoc : com.sun.javadoc.ClassDoc) : SerialMethodWriter;
+	@:overload public function getSerialMethodWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialMethodWriter;
 	
 	
 }

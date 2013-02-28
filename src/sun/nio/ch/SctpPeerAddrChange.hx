@@ -33,7 +33,7 @@ extern class SctpPeerAddrChange extends com.sun.nio.sctp.PeerAddressChangeNotifi
 	
 	@:overload override public function association() : com.sun.nio.sctp.Association;
 	
-	@:overload override public function event() : AddressChangeEvent;
+	@:overload override public function event() : com.sun.nio.sctp.PeerAddressChangeNotification.PeerAddressChangeNotification_AddressChangeEvent;
 	
 	@:overload public function toString() : String;
 	

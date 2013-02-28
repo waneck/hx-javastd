@@ -59,7 +59,7 @@ package javax.sound.sampled;
 	* @return a mixer info object that describes this mixer
 	* @see Mixer.Info
 	*/
-	@:overload public function getMixerInfo() : Mixer_Info;
+	@:overload public function getMixerInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Obtains information about the set of source lines supported

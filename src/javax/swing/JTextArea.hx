@@ -422,7 +422,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JTextArea$AccessibleJTextArea') extern class JTextArea_AccessibleJTextArea extends AccessibleJTextComponent
+@:native('javax$swing$JTextArea$AccessibleJTextArea') extern class JTextArea_AccessibleJTextArea extends javax.swing.text.JTextComponent.JTextComponent_AccessibleJTextComponent
 {
 	/**
 	* Gets the state set of this object.
@@ -431,7 +431,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

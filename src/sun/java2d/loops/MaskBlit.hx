@@ -62,7 +62,7 @@ extern class MaskBlit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$MaskBlit$General') @:internal extern class MaskBlit_General extends MaskBlit implements GeneralBinaryOp
+@:native('sun$java2d$loops$MaskBlit$General') @:internal extern class MaskBlit_General extends MaskBlit implements sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp
 {
 	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	

@@ -29,7 +29,7 @@ extern class ConstantValue_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload public function new(name_index : Int, constantvalue_index : Int) : Void;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var constantvalue_index(default, null) : Int;
 	

@@ -766,7 +766,7 @@ package java.util;
 /**
 * An optimized version of AbstractList.ListItr
 */
-@:native('java$util$Vector$ListItr') @:internal extern class Vector_ListItr extends Vector_Itr implements java.util.ListIterator<Dynamic>
+@:native('java$util$Vector$ListItr') @:internal extern class Vector_ListItr extends java.util.AbstractList.AbstractList_Itr implements java.util.ListIterator<Dynamic>
 {
 	@:overload public function hasPrevious() : Bool;
 	

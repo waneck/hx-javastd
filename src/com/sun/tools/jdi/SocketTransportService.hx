@@ -43,7 +43,7 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 	/**
 	* Return the capabilities of this transport service
 	*/
-	@:overload override public function capabilities() : Capabilities;
+	@:overload override public function capabilities() : com.sun.jdi.connect.spi.TransportService.TransportService_Capabilities;
 	
 	/**
 	* Attach to the specified address with optional attach and handshake
@@ -54,22 +54,22 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 	/**
 	* Listen on the specified address
 	*/
-	@:overload override public function startListening(address : String) : ListenKey;
+	@:overload override public function startListening(address : String) : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Listen on the default address
 	*/
-	@:overload override public function startListening() : ListenKey;
+	@:overload override public function startListening() : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Stop the listener
 	*/
-	@:overload public function stopListening(listener : ListenKey) : Void;
+	@:overload public function stopListening(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
 	
 	/**
 	* Accept a connection from a debuggee and handshake with it.
 	*/
-	@:overload public function accept(listener : ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
+	@:overload public function accept(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
 	
 	@:overload public function toString() : String;
 	
@@ -79,13 +79,13 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 * The listener returned by startListening encapsulates
 * the ServerSocket.
 */
-@:native('com$sun$tools$jdi$SocketTransportService$SocketListenKey') @:internal extern class SocketTransportService_SocketListenKey extends ListenKey
+@:native('com$sun$tools$jdi$SocketTransportService$SocketListenKey') @:internal extern class SocketTransportService_SocketListenKey extends com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey
 {
 	/*
 	* Returns the string representation of the address that this
 	* listen key represents.
 	*/
-	@:overload public function address() : String;
+	@:overload override public function address() : String;
 	
 	@:overload public function toString() : String;
 	

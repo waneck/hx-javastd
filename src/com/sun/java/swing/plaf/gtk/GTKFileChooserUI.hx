@@ -264,7 +264,7 @@ package com.sun.java.swing.plaf.gtk;
 /**
 * Render different filters
 */
-@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$FilterComboBoxRenderer') extern class GTKFileChooserUI_FilterComboBoxRenderer extends javax.swing.DefaultListCellRenderer implements javax.swing.plaf.UIResource
+@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$FilterComboBoxRenderer') extern class GTKFileChooserUI_FilterComboBoxRenderer extends javax.swing.DefaultListCellRenderer implements javax.swing.DefaultListCellRenderer.DefaultListCellRenderer_UIResource
 {
 	@:overload override public function getName() : String;
 	

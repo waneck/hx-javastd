@@ -162,13 +162,13 @@ package com.sun.media.sound;
 * An own class to distinguish the class name from
 * the transmitter of other devices
 */
-@:native('com$sun$media$sound$RealTimeSequencer$SequencerTransmitter') @:internal extern class RealTimeSequencer_SequencerTransmitter extends BasicTransmitter
+@:native('com$sun$media$sound$RealTimeSequencer$SequencerTransmitter') @:internal extern class RealTimeSequencer_SequencerTransmitter extends com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_BasicTransmitter
 {
 	
 }
-@:native('com$sun$media$sound$RealTimeSequencer$SequencerReceiver') @:internal extern class RealTimeSequencer_SequencerReceiver extends AbstractReceiver
+@:native('com$sun$media$sound$RealTimeSequencer$SequencerReceiver') @:internal extern class RealTimeSequencer_SequencerReceiver extends com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_AbstractReceiver
 {
-	@:overload private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload override private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
 	
 }

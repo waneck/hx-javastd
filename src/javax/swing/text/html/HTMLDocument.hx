@@ -126,7 +126,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @exception BadLocationException  if the given position does not
 	*   represent a valid location in the associated document.
 	*/
-	@:overload private function insert(offset : Int, data : java.NativeArray<ElementSpec>) : Void;
+	@:overload private function insert(offset : Int, data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
 	
 	/**
 	* Updates document structure as a result of text insertion.  This
@@ -137,7 +137,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param chng a description of the document change
 	* @param attr the attributes
 	*/
-	@:overload override private function insertUpdate(chng : DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload private function insertUpdate(chng : DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Replaces the contents of the document with the given
@@ -147,7 +147,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @param data  the new contents of the document
 	*/
-	@:overload private function create(data : java.NativeArray<ElementSpec>) : Void;
+	@:overload private function create(data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
 	
 	/**
 	* Sets attributes for a paragraph.
@@ -1076,7 +1076,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*/
 	@:overload private function addSpecialElement(t : javax.swing.text.html.HTML.HTML_Tag, a : javax.swing.text.MutableAttributeSet) : Void;
 	
-	private var parseBuffer : java.util.Vector<ElementSpec>;
+	private var parseBuffer : java.util.Vector<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>;
 	
 	private var charAttr : javax.swing.text.MutableAttributeSet;
 	

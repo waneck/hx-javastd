@@ -190,7 +190,7 @@ package javax.management.monitor;
 *  PACKAGE CLASSES
 * ------------------------------------------
 */
-@:native('javax$management$monitor$StringMonitor$StringMonitorObservedObject') @:internal extern class StringMonitor_StringMonitorObservedObject extends ObservedObject
+@:native('javax$management$monitor$StringMonitor$StringMonitorObservedObject') @:internal extern class StringMonitor_StringMonitorObservedObject extends javax.management.monitor.Monitor.Monitor_ObservedObject
 {
 	@:overload public function new(observedObject : javax.management.ObjectName) : Void;
 	

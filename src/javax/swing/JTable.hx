@@ -2866,7 +2866,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JTable$AccessibleJTable') extern class JTable_AccessibleJTable extends AccessibleJComponent implements javax.accessibility.AccessibleSelection implements javax.swing.event.ListSelectionListener implements javax.swing.event.TableModelListener implements javax.swing.event.TableColumnModelListener implements javax.swing.event.CellEditorListener implements java.beans.PropertyChangeListener implements javax.accessibility.AccessibleExtendedTable
+@:native('javax$swing$JTable$AccessibleJTable') extern class JTable_AccessibleJTable extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleSelection implements javax.swing.event.ListSelectionListener implements javax.swing.event.TableModelListener implements javax.swing.event.TableColumnModelListener implements javax.swing.event.CellEditorListener implements java.beans.PropertyChangeListener implements javax.accessibility.AccessibleExtendedTable
 {
 	/**
 	* AccessibleJTable constructor
@@ -2959,7 +2959,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Gets the role of this object.
@@ -2968,7 +2968,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -2980,7 +2980,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -2989,7 +2989,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	*
 	* @return the number of accessible children in the object
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth <code>Accessible</code> child of the object.
@@ -2997,7 +2997,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of <code>Accessible</code> children
@@ -3116,7 +3116,7 @@ extern class JTable extends javax.swing.JComponent implements javax.swing.event.
 	* @return this object
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleTable() : javax.accessibility.AccessibleTable;
+	@:require(java3) @:overload override public function getAccessibleTable() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Returns the caption for the table.

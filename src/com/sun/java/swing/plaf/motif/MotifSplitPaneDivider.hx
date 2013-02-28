@@ -79,11 +79,11 @@ extern class MotifSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPane
 * is in the thumb. Motif only allows dragging when the thumb is clicked
 * in.
 */
-@:native('com$sun$java$swing$plaf$motif$MotifSplitPaneDivider$MotifMouseHandler') @:internal extern class MotifSplitPaneDivider_MotifMouseHandler extends MouseHandler
+@:native('com$sun$java$swing$plaf$motif$MotifSplitPaneDivider$MotifMouseHandler') @:internal extern class MotifSplitPaneDivider_MotifMouseHandler extends javax.swing.plaf.basic.BasicSplitPaneDivider.BasicSplitPaneDivider_MouseHandler
 {
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

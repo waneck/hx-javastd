@@ -2256,7 +2256,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JTree$AccessibleJTree') extern class JTree_AccessibleJTree extends AccessibleJComponent implements javax.accessibility.AccessibleSelection implements javax.swing.event.TreeSelectionListener implements javax.swing.event.TreeModelListener implements javax.swing.event.TreeExpansionListener
+@:native('javax$swing$JTree$AccessibleJTree') extern class JTree_AccessibleJTree extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleSelection implements javax.swing.event.TreeSelectionListener implements javax.swing.event.TreeModelListener implements javax.swing.event.TreeExpansionListener
 {
 	@:overload public function new() : Void;
 	
@@ -2329,7 +2329,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -2340,7 +2340,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return the <code>Accessible</code>, if it exists,
 	*    at the specified location; else <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of top-level children nodes of this
@@ -2348,7 +2348,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return the number of accessible children nodes in the tree.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -2356,7 +2356,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the index of this object in its accessible parent.
@@ -2365,7 +2365,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* top-level object does not have an accessible parent.
 	* @see #getAccessibleParent
 	*/
-	@:overload public function getAccessibleIndexInParent() : Int;
+	@:overload override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -2375,7 +2375,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the number of items currently selected.

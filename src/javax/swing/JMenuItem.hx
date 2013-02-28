@@ -460,7 +460,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JMenuItem$AccessibleJMenuItem') extern class JMenuItem_AccessibleJMenuItem extends AccessibleAbstractButton implements javax.swing.event.ChangeListener
+@:native('javax$swing$JMenuItem$AccessibleJMenuItem') extern class JMenuItem_AccessibleJMenuItem extends javax.swing.AbstractButton.AbstractButton_AccessibleAbstractButton implements javax.swing.event.ChangeListener
 {
 	/**
 	* Get the role of this object.
@@ -468,7 +468,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Supports the change listener interface and fires property changes.

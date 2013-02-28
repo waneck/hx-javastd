@@ -65,7 +65,7 @@ extern class DOMXMLSignature extends javax.xml.crypto.dom.DOMStructure implement
 	
 	@:overload public function getObjects() : java.util.List<Dynamic>;
 	
-	@:overload public function getSignatureValue() : SignatureValue;
+	@:overload public function getSignatureValue() : javax.xml.crypto.dsig.XMLSignature.XMLSignature_SignatureValue;
 	
 	@:overload public function getKeySelectorResult() : javax.xml.crypto.KeySelectorResult;
 	
@@ -81,7 +81,7 @@ extern class DOMXMLSignature extends javax.xml.crypto.dom.DOMStructure implement
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMXMLSignature$DOMSignatureValue') extern class DOMXMLSignature_DOMSignatureValue extends javax.xml.crypto.dom.DOMStructure implements SignatureValue
+@:native('org$jcp$xml$dsig$internal$dom$DOMXMLSignature$DOMSignatureValue') extern class DOMXMLSignature_DOMSignatureValue extends javax.xml.crypto.dom.DOMStructure implements javax.xml.crypto.dsig.XMLSignature.XMLSignature_SignatureValue
 {
 	@:overload public function getId() : String;
 	

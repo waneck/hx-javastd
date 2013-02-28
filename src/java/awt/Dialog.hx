@@ -774,7 +774,7 @@ extern class Dialog extends java.awt.Window
 * Java Accessibility API appropriate to dialog user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Dialog$AccessibleAWTDialog') extern class Dialog_AccessibleAWTDialog extends AccessibleAWTWindow
+@:require(java3) @:native('java$awt$Dialog$AccessibleAWTDialog') extern class Dialog_AccessibleAWTDialog extends java.awt.Window.Window_AccessibleAWTWindow
 {
 	/**
 	* Get the role of this object.
@@ -783,7 +783,7 @@ extern class Dialog extends java.awt.Window
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -792,7 +792,7 @@ extern class Dialog extends java.awt.Window
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

@@ -27,17 +27,17 @@ extern class Gregorian extends sun.util.calendar.BaseCalendar
 {
 	@:overload override public function getName() : String;
 	
-	@:overload override public function getCalendarDate() : Gregorian_Date;
+	@:overload override public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64) : Gregorian_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : Gregorian_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : Gregorian_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate() : Gregorian_Date;
+	@:overload override public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : Gregorian_Date;
+	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	
 }

@@ -207,7 +207,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JCheckBoxMenuItem$AccessibleJCheckBoxMenuItem') extern class JCheckBoxMenuItem_AccessibleJCheckBoxMenuItem extends AccessibleJMenuItem
+@:native('javax$swing$JCheckBoxMenuItem$AccessibleJCheckBoxMenuItem') extern class JCheckBoxMenuItem_AccessibleJCheckBoxMenuItem extends javax.swing.JMenuItem.JMenuItem_AccessibleJMenuItem
 {
 	/**
 	* Get the role of this object.
@@ -215,7 +215,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

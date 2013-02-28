@@ -45,7 +45,7 @@ extern class DurationDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Ab
 	* @return normalized date representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String, durationType : Int) : DateTimeData;
+	@:overload private function parse(str : String, durationType : Int) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
 	/**
 	* Compares 2 given durations. (refer to W3C Schema Datatypes "3.2.6 duration")
@@ -61,13 +61,13 @@ extern class DurationDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Ab
 	* If the strict parameter is false, return LESS_THAN if date1 is less than OR equal to date2 and
 	* return GREATER_THAN if date1 is greater than OR equal to date2
 	*/
-	@:overload private function compareDates(date1 : DateTimeData, date2 : DateTimeData, strict : Bool) : java.StdTypes.Int16;
+	@:overload private function compareDates(date1 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, date2 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, strict : Bool) : java.StdTypes.Int16;
 	
 	@:overload override private function parseSecond(buffer : String, start : Int, end : Int) : Float;
 	
-	@:overload private function dateToString(date : DateTimeData) : String;
+	@:overload private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
-	@:overload private function getDuration(date : DateTimeData) : javax.xml.datatype.Duration;
+	@:overload private function getDuration(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.Duration;
 	
 	
 }

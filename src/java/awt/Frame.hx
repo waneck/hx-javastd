@@ -703,7 +703,7 @@ package java.awt;
 * Java Accessibility API appropriate to frame user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Frame$AccessibleAWTFrame') extern class Frame_AccessibleAWTFrame extends AccessibleAWTWindow
+@:require(java3) @:native('java$awt$Frame$AccessibleAWTFrame') extern class Frame_AccessibleAWTFrame extends java.awt.Window.Window_AccessibleAWTWindow
 {
 	/**
 	* Get the role of this object.
@@ -712,7 +712,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -721,7 +721,7 @@ package java.awt;
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

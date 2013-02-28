@@ -584,7 +584,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JRootPane$AccessibleJRootPane') extern class JRootPane_AccessibleJRootPane extends AccessibleJComponent
+@:native('javax$swing$JRootPane$AccessibleJRootPane') extern class JRootPane_AccessibleJRootPane extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -592,14 +592,14 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return an instance of AccessibleRole describing the role of
 	* the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -611,7 +611,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	
 }

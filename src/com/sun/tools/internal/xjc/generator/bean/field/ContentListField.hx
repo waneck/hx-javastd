@@ -37,7 +37,7 @@ extern class ContentListField extends com.sun.tools.internal.xjc.generator.bean.
 	
 	@:overload override public function generateAccessors() : Void;
 	
-	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : ContentListField_Accessor;
+	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractListField.AbstractListField_Accessor;
 	
 	@:overload override private function getType(aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	

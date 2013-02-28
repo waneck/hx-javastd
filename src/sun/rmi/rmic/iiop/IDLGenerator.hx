@@ -65,7 +65,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* @param ot the OutputType for which directory nesting is to be defined.
 	* @return the new identifier.
 	*/
-	@:overload private function getOutputId(ot : OutputType) : sun.tools.java.Identifier;
+	@:overload private function getOutputId(ot : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : sun.tools.java.Identifier;
 	
 	/**
 	* Return the file name extension for the given file name (e.g. ".java").
@@ -74,7 +74,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* method to return false.
 	* @param outputType One of the items returned by getOutputTypesFor(...)
 	*/
-	@:overload private function getFileNameExtensionFor(outputType : OutputType) : String;
+	@:overload private function getFileNameExtensionFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : String;
 	
 	/**
 	* Examine and consume command line arguments.
@@ -93,7 +93,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* @param alreadyChecked A set of Types which have already been checked.
 	* @return Array of OutputTypes to generate
 	*/
-	@:overload override private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<OutputType>;
+	@:overload override private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Generator.Generator_OutputType>;
 	
 	/**
 	* Get all referenced types of a given tyoe for which an IDL file needs
@@ -135,7 +135,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	*  Intended to be passed to Type.collectMatching(filter,alreadyChecked).
 	* @param p The output stream.
 	*/
-	@:overload private function writeOutputFor(ot : OutputType, alreadyChecked : java.util.HashSet<Dynamic>, p : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload private function writeOutputFor(ot : sun.rmi.rmic.iiop.Generator.Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, p : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	/**
 	* Write an IDL interface definition for a Java implementation class
@@ -461,7 +461,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* @param ot Given OutputType.
 	* @param p The output stream.
 	*/
-	@:overload private function writeSequence(ot : OutputType, p : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload private function writeSequence(ot : sun.rmi.rmic.iiop.Generator.Generator_OutputType, p : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	/**
 	* Write valuetype for a boxed IDLEntity.

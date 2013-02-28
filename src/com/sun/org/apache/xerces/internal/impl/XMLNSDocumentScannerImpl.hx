@@ -105,7 +105,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 /**
 * Driver to handle content scanning.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XMLNSDocumentScannerImpl$NSContentDriver') extern class XMLNSDocumentScannerImpl_NSContentDriver extends ContentDriver
+@:native('com$sun$org$apache$xerces$internal$impl$XMLNSDocumentScannerImpl$NSContentDriver') extern class XMLNSDocumentScannerImpl_NSContentDriver extends com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.XMLDocumentScannerImpl_ContentDriver
 {
 	/**
 	* Scan for root element hook. This method is a hook for
@@ -120,7 +120,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload private function scanRootElementHook() : Bool;
+	@:overload override private function scanRootElementHook() : Bool;
 	
 	
 }

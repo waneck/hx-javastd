@@ -565,7 +565,7 @@ extern class DateFormat extends java.text.Format
 	* @return Field instance representing calendarField.
 	* @see java.util.Calendar
 	*/
-	@:overload public static function ofCalendarField(calendarField : Int) : DateFormat_Field;
+	@:overload public static function ofCalendarField(calendarField : Int) : java.text.Format.Format_Field;
 	
 	/**
 	* Creates a <code>Field</code>.
@@ -603,97 +603,97 @@ extern class DateFormat extends java.text.Format
 	/**
 	* Constant identifying the era field.
 	*/
-	public static var ERA(default, null) : DateFormat_Field;
+	public static var ERA(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the year field.
 	*/
-	public static var YEAR(default, null) : DateFormat_Field;
+	public static var YEAR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the month field.
 	*/
-	public static var MONTH(default, null) : DateFormat_Field;
+	public static var MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of month field.
 	*/
-	public static var DAY_OF_MONTH(default, null) : DateFormat_Field;
+	public static var DAY_OF_MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour of day field, where the legal values
 	* are 1 to 24.
 	*/
-	public static var HOUR_OF_DAY1(default, null) : DateFormat_Field;
+	public static var HOUR_OF_DAY1(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour of day field, where the legal values
 	* are 0 to 23.
 	*/
-	public static var HOUR_OF_DAY0(default, null) : DateFormat_Field;
+	public static var HOUR_OF_DAY0(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the minute field.
 	*/
-	public static var MINUTE(default, null) : DateFormat_Field;
+	public static var MINUTE(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the second field.
 	*/
-	public static var SECOND(default, null) : DateFormat_Field;
+	public static var SECOND(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the millisecond field.
 	*/
-	public static var MILLISECOND(default, null) : DateFormat_Field;
+	public static var MILLISECOND(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of week field.
 	*/
-	public static var DAY_OF_WEEK(default, null) : DateFormat_Field;
+	public static var DAY_OF_WEEK(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of year field.
 	*/
-	public static var DAY_OF_YEAR(default, null) : DateFormat_Field;
+	public static var DAY_OF_YEAR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the day of week field.
 	*/
-	public static var DAY_OF_WEEK_IN_MONTH(default, null) : DateFormat_Field;
+	public static var DAY_OF_WEEK_IN_MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the week of year field.
 	*/
-	public static var WEEK_OF_YEAR(default, null) : DateFormat_Field;
+	public static var WEEK_OF_YEAR(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the week of month field.
 	*/
-	public static var WEEK_OF_MONTH(default, null) : DateFormat_Field;
+	public static var WEEK_OF_MONTH(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the time of day indicator
 	* (e.g. "a.m." or "p.m.") field.
 	*/
-	public static var AM_PM(default, null) : DateFormat_Field;
+	public static var AM_PM(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour field, where the legal values are
 	* 1 to 12.
 	*/
-	public static var HOUR1(default, null) : DateFormat_Field;
+	public static var HOUR1(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the hour field, where the legal values are
 	* 0 to 11.
 	*/
-	public static var HOUR0(default, null) : DateFormat_Field;
+	public static var HOUR0(default, null) : java.text.Format.Format_Field;
 	
 	/**
 	* Constant identifying the time zone field.
 	*/
-	public static var TIME_ZONE(default, null) : DateFormat_Field;
+	public static var TIME_ZONE(default, null) : java.text.Format.Format_Field;
 	
 	
 }

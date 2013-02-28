@@ -237,7 +237,7 @@ package javax.swing.text;
 * ExtendedReplaceHolder keeps track of the offset and length passed
 * into canReplace.
 */
-@:native('javax$swing$text$InternationalFormatter$ExtendedReplaceHolder') @:internal extern class InternationalFormatter_ExtendedReplaceHolder extends ReplaceHolder
+@:native('javax$swing$text$InternationalFormatter$ExtendedReplaceHolder') @:internal extern class InternationalFormatter_ExtendedReplaceHolder extends javax.swing.text.DefaultFormatter.DefaultFormatter_ReplaceHolder
 {
 	
 }

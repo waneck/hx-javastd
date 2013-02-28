@@ -31,7 +31,7 @@ package sun.security.smartcardio;
 */
 @:require(java6) @:internal extern class PCSCTerminals extends javax.smartcardio.CardTerminals
 {
-	@:overload @:synchronized public function list(state : State) : java.util.List<javax.smartcardio.CardTerminal>;
+	@:overload @:synchronized public function list(state : javax.smartcardio.CardTerminals.CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
 	
 	@:overload @:synchronized override public function waitForChange(timeout : haxe.Int64) : Bool;
 	

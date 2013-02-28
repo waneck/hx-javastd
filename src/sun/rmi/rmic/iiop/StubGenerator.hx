@@ -110,7 +110,7 @@ extern class StubGenerator extends sun.rmi.rmic.iiop.Generator
 	* @param alreadyChecked A set of Types which have already been checked.
 	*  Intended to be passed to topType.collectMatching(filter,alreadyChecked).
 	*/
-	@:overload override private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<OutputType>;
+	@:overload override private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Generator.Generator_OutputType>;
 	
 	/**
 	* Return the file name extension for the given file name (e.g. ".java").
@@ -119,7 +119,7 @@ extern class StubGenerator extends sun.rmi.rmic.iiop.Generator
 	* method to return false.
 	* @param outputType One of the items returned by getOutputTypesFor(...)
 	*/
-	@:overload private function getFileNameExtensionFor(outputType : OutputType) : String;
+	@:overload private function getFileNameExtensionFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : String;
 	
 	/**
 	* Write the output for the given OutputFileName into the output stream.
@@ -128,17 +128,17 @@ extern class StubGenerator extends sun.rmi.rmic.iiop.Generator
 	*  Intended to be passed to Type.collectMatching(filter,alreadyChecked).
 	* @param writer The output stream.
 	*/
-	@:overload private function writeOutputFor(outputType : OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload private function writeOutputFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	/**
 	* Write a stub for the specified type.
 	*/
-	@:overload private function writeStub(outputType : OutputType, p : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload private function writeStub(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, p : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	/**
 	* Write the Tie for the remote class to a stream.
 	*/
-	@:overload private function writeTie(outputType : OutputType, p : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload private function writeTie(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, p : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	@:overload public function catchWrongPolicy(p : sun.rmi.rmic.IndentingWriter) : Void;
 	

@@ -463,7 +463,7 @@ package java.util;
 */
 @:native('java$util$Hashtable$Entry') @:internal extern class Hashtable_Entry<K, V> implements java.util.Map.Map_Entry<K, V>
 {
-	@:overload private function new(hash : Int, key : K, value : V, next : Hashtable_Entry<K, V>) : Void;
+	@:overload private function new(hash : Int, key : K, value : V, next : java.util.Map.Map_Entry<K, V>) : Void;
 	
 	@:overload private function clone() : Dynamic;
 	

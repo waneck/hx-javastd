@@ -43,7 +43,7 @@ extern class PulseAudioMixer implements javax.sound.sampled.Mixer
 	
 	@:overload public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
 	
-	@:overload public function getMixerInfo() : Info;
+	@:overload public function getMixerInfo() : javax.sound.sampled.Mixer.Mixer_Info;
 	
 	@:overload public function getSourceLineInfo() : java.NativeArray<javax.sound.sampled.Line.Line_Info>;
 	

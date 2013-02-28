@@ -215,7 +215,7 @@ package javax.tools;
 	* @throws IOException if location is an output location and path
 	* does not represent an existing directory
 	*/
-	@:overload public function setLocation(location : Location, path : java.lang.Iterable<java.io.File>) : Void;
+	@:overload public function setLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location, path : java.lang.Iterable<java.io.File>) : Void;
 	
 	/**
 	* Gets the path associated with the given location.
@@ -225,7 +225,7 @@ package javax.tools;
 	* associated path
 	* @see #setLocation
 	*/
-	@:overload public function getLocation(location : Location) : java.lang.Iterable<java.io.File>;
+	@:overload public function getLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.Iterable<java.io.File>;
 	
 	
 }

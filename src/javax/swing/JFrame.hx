@@ -656,7 +656,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 * Java Accessibility API appropriate to frame user-interface
 * elements.
 */
-@:native('javax$swing$JFrame$AccessibleJFrame') extern class JFrame_AccessibleJFrame extends AccessibleAWTFrame
+@:native('javax$swing$JFrame$AccessibleJFrame') extern class JFrame_AccessibleJFrame extends java.awt.Frame.Frame_AccessibleAWTFrame
 {
 	/**
 	* Get the accessible name of this object.
@@ -664,7 +664,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the state of this object.
@@ -673,7 +673,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

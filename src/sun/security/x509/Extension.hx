@@ -85,7 +85,7 @@ extern class Extension implements java.security.cert.Extension
 	*
 	* @param ext the extension to create from.
 	*/
-	@:overload public function new(ext : Extension) : Void;
+	@:overload public function new(ext : java.security.cert.Extension) : Void;
 	
 	/**
 	* Constructs an Extension from individual components of ObjectIdentifier,
@@ -96,7 +96,7 @@ extern class Extension implements java.security.cert.Extension
 	* @param rawExtensionValue the raw DER-encoded extension value (this
 	* is not the encoded OctetString).
 	*/
-	@:overload public static function newExtension(extensionId : sun.security.util.ObjectIdentifier, critical : Bool, rawExtensionValue : java.NativeArray<java.StdTypes.Int8>) : Extension;
+	@:overload public static function newExtension(extensionId : sun.security.util.ObjectIdentifier, critical : Bool, rawExtensionValue : java.NativeArray<java.StdTypes.Int8>) : java.security.cert.Extension;
 	
 	@:overload public function encode(out : java.io.OutputStream) : Void;
 	

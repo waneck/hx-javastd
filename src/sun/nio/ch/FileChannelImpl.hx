@@ -57,7 +57,7 @@ extern class FileChannelImpl extends java.nio.channels.FileChannel
 	
 	@:overload override public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : Int;
 	
-	@:overload public function map(mode : MapMode, position : haxe.Int64, size : haxe.Int64) : java.nio.MappedByteBuffer;
+	@:overload public function map(mode : java.nio.channels.FileChannel.FileChannel_MapMode, position : haxe.Int64, size : haxe.Int64) : java.nio.MappedByteBuffer;
 	
 	/**
 	* Invoked by sun.management.ManagementFactoryHelper to create the management

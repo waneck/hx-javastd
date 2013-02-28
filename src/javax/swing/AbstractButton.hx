@@ -1325,7 +1325,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 * Please see {@link java.beans.XMLEncoder}.
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$AbstractButton$AccessibleAbstractButton') extern class AbstractButton_AccessibleAbstractButton extends AccessibleJComponent implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue implements javax.accessibility.AccessibleText implements javax.accessibility.AccessibleExtendedComponent
+@:require(java4) @:native('javax$swing$AbstractButton$AccessibleAbstractButton') extern class AbstractButton_AccessibleAbstractButton extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue implements javax.accessibility.AccessibleText implements javax.accessibility.AccessibleExtendedComponent
 {
 	/**
 	* Returns the accessible name of this object.
@@ -1334,14 +1334,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*              <code>null</code> if this
 	*              object does not have a name
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the AccessibleIcons associated with this object if one
 	* or more exist.  Otherwise return null.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:require(java3) @:overload override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Get the state set of this object.
@@ -1350,7 +1350,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the AccessibleRelationSet associated with this object if one
@@ -1358,7 +1358,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleRelation
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
+	@:require(java3) @:overload override public function getAccessibleRelationSet() : javax.accessibility.AccessibleRelationSet;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -1368,7 +1368,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -1378,7 +1378,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.  The
@@ -1435,7 +1435,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/* AccessibleText ---------- */
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -1570,7 +1570,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getToolTipText() : String;
+	@:require(java4) @:overload override public function getToolTipText() : String;
 	
 	/**
 	* Returns the titled border text
@@ -1579,7 +1579,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getTitledBorderText() : String;
+	@:require(java4) @:overload override public function getTitledBorderText() : String;
 	
 	/**
 	* Returns key bindings associated with this object
@@ -1589,7 +1589,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleKeyBinding
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
+	@:require(java4) @:overload override public function getAccessibleKeyBinding() : javax.accessibility.AccessibleKeyBinding;
 	
 	/**
 	* Sets the foreground color of this object.
@@ -1597,7 +1597,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload @:public public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -1607,7 +1607,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload @:public public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public override public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Sets the background color of this object.
@@ -1615,7 +1615,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload @:public public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Sets the enabled state of the object.
@@ -1623,7 +1623,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload @:public public function setEnabled(b : Bool) : Void;
+	@:overload @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Gets the background color of this object.
@@ -1632,7 +1632,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload @:public public function getBackground() : java.awt.Color;
+	@:overload @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -1643,7 +1643,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload @:public public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the Cursor of this object.
@@ -1651,7 +1651,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param cursor  the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload @:public public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle object.
@@ -1661,7 +1661,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload @:public public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public override public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -1670,7 +1670,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload @:public public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -1681,7 +1681,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload @:public public function isShowing() : Bool;
+	@:overload @:public override public function isShowing() : Bool;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -1690,14 +1690,14 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload @:public public function getForeground() : java.awt.Color;
+	@:overload @:public override public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload @:public public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public override public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -1706,7 +1706,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload @:public public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept focus,
@@ -1714,7 +1714,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload @:public public function requestFocus() : Void;
+	@:overload @:public override public function requestFocus() : Void;
 	
 	/**
 	* Gets the FontMetrics of this object.
@@ -1723,7 +1723,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload @:public public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -1734,7 +1734,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload @:public public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public override public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects that
@@ -1747,7 +1747,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
 	/**
 	* Sets the Font of this object.
@@ -1755,7 +1755,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload @:public public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the Font of this object.
@@ -1763,7 +1763,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload @:public public function getFont() : java.awt.Font;
+	@:overload @:public override public function getFont() : java.awt.Font;
 	
 	/**
 	* Determines if the object is enabled.  Objects that are enabled
@@ -1776,7 +1776,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -1789,7 +1789,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload @:public public function getLocation() : java.awt.Point;
+	@:overload @:public override public function getLocation() : java.awt.Point;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -1799,7 +1799,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload @:public public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the Cursor of this object.
@@ -1807,7 +1807,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload @:public public function getCursor() : java.awt.Cursor;
+	@:overload @:public override public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -1824,7 +1824,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
@@ -1832,7 +1832,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload @:public public function setVisible(b : Bool) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -1840,7 +1840,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* @param d The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload @:public public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public override public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension object.
@@ -1852,7 +1852,7 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	* null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload @:public public function getSize() : java.awt.Dimension;
+	@:overload @:public override public function getSize() : java.awt.Dimension;
 	
 	
 }

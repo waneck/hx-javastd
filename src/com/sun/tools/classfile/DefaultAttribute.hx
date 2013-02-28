@@ -33,7 +33,7 @@ extern class DefaultAttribute extends com.sun.tools.classfile.Attribute
 {
 	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, name_index : Int, info : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function accept<R, P>(visitor : Visitor<R, P>, p : P) : R;
+	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
 	
 	public var info(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	

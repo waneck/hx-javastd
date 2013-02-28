@@ -632,7 +632,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JMenu$AccessibleJMenu') extern class JMenu_AccessibleJMenu extends AccessibleJMenuItem implements javax.accessibility.AccessibleSelection
+@:native('javax$swing$JMenu$AccessibleJMenu') extern class JMenu_AccessibleJMenu extends javax.swing.JMenuItem.JMenuItem_AccessibleJMenuItem implements javax.accessibility.AccessibleSelection
 {
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -641,7 +641,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the nth Accessible child of the object.
@@ -649,7 +649,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the role of this object.
@@ -658,7 +658,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -668,7 +668,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns 1 if a sub-menu is currently selected in this menu.

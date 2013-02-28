@@ -40,11 +40,11 @@ extern class MotifMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 	
 	
 }
-@:native('com$sun$java$swing$plaf$motif$MotifMenuUI$MotifChangeHandler') extern class MotifMenuUI_MotifChangeHandler extends ChangeHandler
+@:native('com$sun$java$swing$plaf$motif$MotifMenuUI$MotifChangeHandler') extern class MotifMenuUI_MotifChangeHandler extends javax.swing.plaf.basic.BasicMenuUI.BasicMenuUI_ChangeHandler
 {
 	@:overload public function new(m : javax.swing.JMenu, ui : MotifMenuUI) : Void;
 	
-	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload override public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }

@@ -56,7 +56,7 @@ package javax.sound.sampled;
 	* @param values the set of possible values for the control
 	* @param value the initial control value
 	*/
-	@:overload private function new(type : EnumControl_Type, values : java.NativeArray<Dynamic>, value : Dynamic) : Void;
+	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, values : java.NativeArray<Dynamic>, value : Dynamic) : Void;
 	
 	/**
 	* Sets the current value for the control.  The default implementation
@@ -109,7 +109,7 @@ package javax.sound.sampled;
 	* invoke <code>{@link EnumControl#getValues}</code> on an
 	* enumerated control of type <code>REVERB</code>.)
 	*/
-	public static var REVERB(default, null) : EnumControl_Type;
+	public static var REVERB(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Constructs a new enumerated control type.

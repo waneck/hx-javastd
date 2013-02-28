@@ -58,7 +58,7 @@ extern class DocCommentScanner extends com.sun.tools.javac.parser.Scanner
 	* Process a doc comment and make the string content available.
 	* Strips leading whitespace and stars.
 	*/
-	@:overload private function processComment(style : CommentStyle) : Void;
+	@:overload private function processComment(style : com.sun.tools.javac.parser.Scanner.Scanner_CommentStyle) : Void;
 	
 	/** Build a map for translating between line numbers and
 	* positions in the input.

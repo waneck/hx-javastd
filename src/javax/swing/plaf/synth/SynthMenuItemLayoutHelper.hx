@@ -51,13 +51,13 @@ package javax.swing.plaf.synth;
 {
 	public static var MAX_ACC_OR_ARROW_WIDTH(default, null) : sun.swing.StringUIClientPropertyKey;
 	
-	public static var LTR_ALIGNMENT_1(default, null) : ColumnAlignment;
+	public static var LTR_ALIGNMENT_1(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	public static var LTR_ALIGNMENT_2(default, null) : ColumnAlignment;
+	public static var LTR_ALIGNMENT_2(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	public static var RTL_ALIGNMENT_1(default, null) : ColumnAlignment;
+	public static var RTL_ALIGNMENT_1(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	public static var RTL_ALIGNMENT_2(default, null) : ColumnAlignment;
+	public static var RTL_ALIGNMENT_2(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
 	@:overload public function new(context : javax.swing.plaf.synth.SynthContext, accContext : javax.swing.plaf.synth.SynthContext, mi : javax.swing.JMenuItem, checkIcon : javax.swing.Icon, arrowIcon : javax.swing.Icon, viewRect : java.awt.Rectangle, gap : Int, accDelimiter : String, isLeftToRight : Bool, useCheckAndArrow : Bool, propertyPrefix : String) : Void;
 	
@@ -81,13 +81,13 @@ package javax.swing.plaf.synth;
 	
 	@:overload public function getMaxAccOrArrowWidth() : Int;
 	
-	@:overload private function prepareForLayout(lr : LayoutResult) : Void;
+	@:overload private function prepareForLayout(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
-	@:overload override public function getLTRColumnAlignment() : ColumnAlignment;
+	@:overload override public function getLTRColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload override public function getRTLColumnAlignment() : ColumnAlignment;
+	@:overload override public function getRTLColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload private function layoutIconAndTextInLabelRect(lr : LayoutResult) : Void;
+	@:overload private function layoutIconAndTextInLabelRect(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
 	
 }

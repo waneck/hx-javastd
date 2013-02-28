@@ -90,16 +90,16 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	private var fScanEndElement : Bool;
 	
 	/** XML declaration driver. */
-	private var fXMLDeclDriver : Driver;
+	private var fXMLDeclDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Prolog driver. */
-	private var fPrologDriver : Driver;
+	private var fPrologDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** DTD driver. */
-	private var fDTDDriver : Driver;
+	private var fDTDDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Trailing miscellaneous section driver. */
-	private var fTrailingMiscDriver : Driver;
+	private var fTrailingMiscDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	private var fStartPos : Int;
 	
@@ -251,7 +251,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	@:overload public function getNamespaceContext() : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	/** Creates a content driver. */
-	@:overload override private function createContentDriver() : Driver;
+	@:overload override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Scans a doctype declaration. */
 	@:overload private function scanDoctypeDecl(supportDTD : Bool) : Bool;
@@ -282,7 +282,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 *
 * @author Andy Clark, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$XMLDeclDriver') extern class XMLDocumentScannerImpl_XMLDeclDriver implements Driver
+@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$XMLDeclDriver') extern class XMLDocumentScannerImpl_XMLDeclDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
 	@:overload public function next() : Int;
 	
@@ -293,7 +293,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 *
 * @author Andy Clark, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$PrologDriver') extern class XMLDocumentScannerImpl_PrologDriver implements Driver
+@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$PrologDriver') extern class XMLDocumentScannerImpl_PrologDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
 	/**
 	* Drives the parser to the next state/event on the input. Parser is guaranteed
@@ -320,7 +320,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 *
 * @author Andy Clark, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$DTDDriver') extern class XMLDocumentScannerImpl_DTDDriver implements Driver
+@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$DTDDriver') extern class XMLDocumentScannerImpl_DTDDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
 	@:overload public function next() : Int;
 	
@@ -346,7 +346,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 * @author Andy Clark, IBM
 * @author Eric Ye, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$ContentDriver') extern class XMLDocumentScannerImpl_ContentDriver extends FragmentContentDriver
+@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$ContentDriver') extern class XMLDocumentScannerImpl_ContentDriver extends com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_FragmentContentDriver
 {
 	/**
 	* Scan for DOCTYPE hook. This method is a hook for subclasses
@@ -356,7 +356,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* @return True if the "DOCTYPE" was scanned; false if "DOCTYPE"
 	*          was not scanned.
 	*/
-	@:overload private function scanForDoctypeHook() : Bool;
+	@:overload override private function scanForDoctypeHook() : Bool;
 	
 	/**
 	* Element depth iz zero. This methos is a hook for subclasses
@@ -371,7 +371,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload private function elementDepthIsZeroHook() : Bool;
+	@:overload override private function elementDepthIsZeroHook() : Bool;
 	
 	/**
 	* Scan for root element hook. This method is a hook for
@@ -385,7 +385,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload private function scanRootElementHook() : Bool;
+	@:overload override private function scanRootElementHook() : Bool;
 	
 	/**
 	* End of file hook. This method is a hook for subclasses to
@@ -394,7 +394,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* However, when scanning a full XML document, an end of file
 	* is always premature.
 	*/
-	@:overload private function endOfFileHook(e : java.io.EOFException) : Void;
+	@:overload override private function endOfFileHook(e : java.io.EOFException) : Void;
 	
 	@:overload private function resolveExternalSubsetAndRead() : Void;
 	
@@ -406,7 +406,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 * @author Andy Clark, IBM
 * @author Eric Ye, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$TrailingMiscDriver') extern class XMLDocumentScannerImpl_TrailingMiscDriver implements Driver
+@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentScannerImpl$TrailingMiscDriver') extern class XMLDocumentScannerImpl_TrailingMiscDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
 	@:overload public function next() : Int;
 	

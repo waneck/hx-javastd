@@ -31,7 +31,7 @@ extern class SctpAssocChange extends com.sun.nio.sctp.AssociationChangeNotificat
 	
 	@:overload override public function association() : com.sun.nio.sctp.Association;
 	
-	@:overload override public function event() : AssocChangeEvent;
+	@:overload override public function event() : com.sun.nio.sctp.AssociationChangeNotification.AssociationChangeNotification_AssocChangeEvent;
 	
 	@:overload public function toString() : String;
 	

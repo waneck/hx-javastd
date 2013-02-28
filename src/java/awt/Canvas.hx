@@ -167,7 +167,7 @@ package java.awt;
 * Java Accessibility API appropriate to canvas user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Canvas$AccessibleAWTCanvas') extern class Canvas_AccessibleAWTCanvas extends AccessibleAWTComponent
+@:require(java3) @:native('java$awt$Canvas$AccessibleAWTCanvas') extern class Canvas_AccessibleAWTCanvas extends java.awt.Component.Component_AccessibleAWTComponent
 {
 	/**
 	* Get the role of this object.
@@ -176,7 +176,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

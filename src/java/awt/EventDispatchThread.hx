@@ -42,7 +42,7 @@ package java.awt;
 {
 	@:overload public function new(modalComponent : java.awt.Component) : Void;
 	
-	@:overload public function acceptEvent(event : java.awt.AWTEvent) : FilterAction;
+	@:overload public function acceptEvent(event : java.awt.AWTEvent) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }

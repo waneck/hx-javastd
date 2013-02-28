@@ -647,7 +647,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JProgressBar$AccessibleJProgressBar') extern class JProgressBar_AccessibleJProgressBar extends AccessibleJComponent implements javax.accessibility.AccessibleValue
+@:native('javax$swing$JProgressBar$AccessibleJProgressBar') extern class JProgressBar_AccessibleJProgressBar extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Gets the state set of this object.
@@ -656,7 +656,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the role of this object.
@@ -664,7 +664,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the <code>AccessibleValue</code> associated with this object.  In the
@@ -674,7 +674,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the accessible value of this object.

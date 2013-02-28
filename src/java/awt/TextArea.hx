@@ -397,7 +397,7 @@ package java.awt;
 * Java Accessibility API appropriate to text area user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$TextArea$AccessibleAWTTextArea') extern class TextArea_AccessibleAWTTextArea extends AccessibleAWTTextComponent
+@:require(java3) @:native('java$awt$TextArea$AccessibleAWTTextArea') extern class TextArea_AccessibleAWTTextArea extends java.awt.TextComponent.TextComponent_AccessibleAWTTextComponent
 {
 	/**
 	* Gets the state set of this object.
@@ -406,7 +406,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

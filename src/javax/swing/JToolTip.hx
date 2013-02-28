@@ -135,14 +135,14 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JToolTip$AccessibleJToolTip') extern class JToolTip_AccessibleJToolTip extends AccessibleJComponent
+@:native('javax$swing$JToolTip$AccessibleJToolTip') extern class JToolTip_AccessibleJToolTip extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the accessible description of this object.
 	*
 	* @return a localized String describing this object.
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload override public function getAccessibleDescription() : String;
 	
 	/**
 	* Get the role of this object.
@@ -150,7 +150,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

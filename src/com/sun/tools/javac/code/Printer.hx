@@ -51,7 +51,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale locale settings
 	* @return unique id representing this captured type
 	*/
-	@:overload @:abstract private function capturedVarId(t : CapturedType, locale : java.util.Locale) : String;
+	@:overload @:abstract private function capturedVarId(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
 	/**
 	* Create a printer with default i18n support provided by Messages. By default,
@@ -98,25 +98,25 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	*/
 	@:overload public function visit(s : com.sun.tools.javac.code.Symbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitCapturedType(t : CapturedType, locale : java.util.Locale) : String;
+	@:overload public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitForAll(t : ForAll, locale : java.util.Locale) : String;
+	@:overload public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, locale : java.util.Locale) : String;
 	
-	@:overload public function visitUndetVar(t : UndetVar, locale : java.util.Locale) : String;
+	@:overload public function visitUndetVar(t : com.sun.tools.javac.code.Type.Type_UndetVar, locale : java.util.Locale) : String;
 	
-	@:overload public function visitArrayType(t : ArrayType, locale : java.util.Locale) : String;
+	@:overload public function visitArrayType(t : com.sun.tools.javac.code.Type.Type_ArrayType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassType(t : ClassType, locale : java.util.Locale) : String;
+	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitMethodType(t : MethodType, locale : java.util.Locale) : String;
+	@:overload public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitPackageType(t : PackageType, locale : java.util.Locale) : String;
+	@:overload public function visitPackageType(t : com.sun.tools.javac.code.Type.Type_PackageType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitWildcardType(t : WildcardType, locale : java.util.Locale) : String;
+	@:overload public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitErrorType(t : ErrorType, locale : java.util.Locale) : String;
+	@:overload public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitTypeVar(t : TypeVar, locale : java.util.Locale) : String;
+	@:overload public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, locale : java.util.Locale) : String;
 	
 	@:overload public function visitType(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
 	
@@ -130,7 +130,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param locale the locale in which the string is to be rendered
 	* @return localized string representation
 	*/
-	@:overload private function className(t : ClassType, longform : Bool, locale : java.util.Locale) : String;
+	@:overload private function className(t : com.sun.tools.javac.code.Type.Type_ClassType, longform : Bool, locale : java.util.Locale) : String;
 	
 	/**
 	* Converts a set of method argument types into their corresponding
@@ -143,17 +143,17 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	*/
 	@:overload private function printMethodArgs(args : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, varArgs : Bool, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassSymbol(sym : ClassSymbol, locale : java.util.Locale) : String;
+	@:overload public function visitClassSymbol(sym : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitMethodSymbol(s : MethodSymbol, locale : java.util.Locale) : String;
+	@:overload public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitOperatorSymbol(s : OperatorSymbol, locale : java.util.Locale) : String;
+	@:overload public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitPackageSymbol(s : PackageSymbol, locale : java.util.Locale) : String;
+	@:overload public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitTypeSymbol(s : TypeSymbol, locale : java.util.Locale) : String;
+	@:overload public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitVarSymbol(s : VarSymbol, locale : java.util.Locale) : String;
+	@:overload public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, locale : java.util.Locale) : String;
 	
 	@:overload public function visitSymbol(s : com.sun.tools.javac.code.Symbol, locale : java.util.Locale) : String;
 	

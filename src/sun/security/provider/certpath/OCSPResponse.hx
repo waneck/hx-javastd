@@ -116,7 +116,7 @@ extern class OCSPResponse
 	/*
 	* Return the certificate's revocation status code
 	*/
-	@:overload public function getCertStatus() : CertStatus;
+	@:overload public function getCertStatus() : sun.security.provider.certpath.OCSP.OCSP_RevocationStatus_CertStatus;
 	
 	@:overload public function getRevocationTime() : java.util.Date;
 	

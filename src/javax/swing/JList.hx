@@ -1669,7 +1669,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JList$AccessibleJList') extern class JList_AccessibleJList extends AccessibleJComponent implements javax.accessibility.AccessibleSelection implements java.beans.PropertyChangeListener implements javax.swing.event.ListSelectionListener implements javax.swing.event.ListDataListener
+@:native('javax$swing$JList$AccessibleJList') extern class JList_AccessibleJList extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleSelection implements java.beans.PropertyChangeListener implements javax.swing.event.ListSelectionListener implements javax.swing.event.ListDataListener
 {
 	@:overload public function new() : Void;
 	
@@ -1723,7 +1723,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -1732,7 +1732,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the <code>Accessible</code> child contained at
@@ -1742,7 +1742,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @return the <code>Accessible</code> at the specified
 	*    location, if it exists
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -1751,7 +1751,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -1759,7 +1759,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -1769,7 +1769,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the number of items currently selected.

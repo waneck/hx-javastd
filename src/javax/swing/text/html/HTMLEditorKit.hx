@@ -650,7 +650,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 * document. If you have another thread modifying the text these
 * methods may have inconsistent behavior, or return the wrong thing.
 */
-@:native('javax$swing$text$html$HTMLEditorKit$HTMLTextAction') extern class HTMLEditorKit_HTMLTextAction extends StyledTextAction
+@:native('javax$swing$text$html$HTMLEditorKit$HTMLTextAction') extern class HTMLEditorKit_HTMLTextAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	@:overload public function new(name : String) : Void;
 	
@@ -737,7 +737,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	*
 	* @param ae the event
 	*/
-	@:overload public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
+	@:overload override public function actionPerformed(ae : java.awt.event.ActionEvent) : Void;
 	
 	/** HTML to insert. */
 	private var html : String;

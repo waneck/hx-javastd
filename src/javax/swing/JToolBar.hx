@@ -455,7 +455,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 * <code>JToolBar</code> class.  It provides an implementation of the
 * Java Accessibility API appropriate to toolbar user-interface elements.
 */
-@:native('javax$swing$JToolBar$AccessibleJToolBar') extern class JToolBar_AccessibleJToolBar extends AccessibleJComponent
+@:native('javax$swing$JToolBar$AccessibleJToolBar') extern class JToolBar_AccessibleJToolBar extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the state of this object.
@@ -464,14 +464,14 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
 	*
 	* @return an instance of AccessibleRole describing the role of the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

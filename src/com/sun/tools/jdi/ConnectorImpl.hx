@@ -25,7 +25,7 @@ package com.sun.tools.jdi;
 */
 @:internal extern class ConnectorImpl implements com.sun.jdi.connect.Connector
 {
-	@:overload public function defaultArguments() : java.util.Map<String, Argument>;
+	@:overload public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
 	
 	@:overload public function toString() : String;
 	

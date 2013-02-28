@@ -51,7 +51,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*
 	* @param c  the container for the content
 	*/
-	@:overload public function new(c : Content) : Void;
+	@:overload public function new(c : javax.swing.text.AbstractDocument.AbstractDocument_Content) : Void;
 	
 	/**
 	* Inserts some content into the document.
@@ -87,7 +87,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*
 	* @return the element base
 	*/
-	@:overload private function createDefaultRoot() : AbstractElement;
+	@:overload private function createDefaultRoot() : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
 	
 	/**
 	* Get the paragraph element containing the given position.  Since this
@@ -103,7 +103,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	* @param chng the change event describing the dit
 	* @param attr the set of attributes for the inserted text
 	*/
-	@:overload private function insertUpdate(chng : DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Updates any document structure as a result of text removal.
@@ -114,7 +114,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*
 	* @param chng the change event describing the edit
 	*/
-	@:overload private function removeUpdate(chng : DefaultDocumentEvent) : Void;
+	@:overload private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	
 }

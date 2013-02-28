@@ -83,7 +83,7 @@ extern interface PathFileManager extends javax.tools.JavaFileManager
 	* associated search path
 	* @see #setLocation
 	*/
-	@:overload public function getLocation(location : Location) : java.lang.Iterable<java.nio.file.Path>;
+	@:overload public function getLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.Iterable<java.nio.file.Path>;
 	
 	/**
 	* Associate the given search path with the given location.  Any
@@ -98,7 +98,7 @@ extern interface PathFileManager extends javax.tools.JavaFileManager
 	* @throws IOException if location is an output location and searchpath
 	* does not represent an existing directory
 	*/
-	@:overload public function setLocation(location : Location, searchPath : java.lang.Iterable<java.nio.file.Path>) : Void;
+	@:overload public function setLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location, searchPath : java.lang.Iterable<java.nio.file.Path>) : Void;
 	
 	
 }

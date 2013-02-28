@@ -47,7 +47,7 @@ extern class IntTrie extends sun.text.normalizer.Trie
 	* @throws IOException thrown when data reading fails
 	* @draft 2.1
 	*/
-	@:overload public function new(inputStream : java.io.InputStream, datamanipulate : DataManipulate) : Void;
+	@:overload public function new(inputStream : java.io.InputStream, datamanipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Gets the value associated with the codepoint.

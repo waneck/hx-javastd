@@ -45,19 +45,19 @@ extern class StackMapWriter extends com.sun.tools.javap.InstructionDetailWriter
 }
 @:native('com$sun$tools$javap$StackMapWriter$StackMapBuilder') @:internal extern class StackMapWriter_StackMapBuilder implements com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<Null<Int>, Null<Int>>
 {
-	@:overload public function visit_same_frame(frame : same_frame, pc : Null<Int>) : Null<Int>;
+	@:overload public function visit_same_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame(frame : same_locals_1_stack_item_frame, pc : Null<Int>) : Null<Int>;
+	@:overload public function visit_same_locals_1_stack_item_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame_extended(frame : same_locals_1_stack_item_frame_extended, pc : Null<Int>) : Null<Int>;
+	@:overload public function visit_same_locals_1_stack_item_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame_extended, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_chop_frame(frame : chop_frame, pc : Null<Int>) : Null<Int>;
+	@:overload public function visit_chop_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_chop_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_same_frame_extended(frame : same_frame_extended, pc : Null<Int>) : Null<Int>;
+	@:overload public function visit_same_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame_extended, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_append_frame(frame : append_frame, pc : Null<Int>) : Null<Int>;
+	@:overload public function visit_append_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_append_frame, pc : Null<Int>) : Null<Int>;
 	
-	@:overload public function visit_full_frame(frame : full_frame, pc : Null<Int>) : Null<Int>;
+	@:overload public function visit_full_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_full_frame, pc : Null<Int>) : Null<Int>;
 	
 	
 }

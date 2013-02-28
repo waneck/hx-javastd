@@ -110,37 +110,37 @@ extern class ClassWriter
 */
 @:native('com$sun$tools$classfile$ClassWriter$ConstantPoolWriter') extern class ClassWriter_ConstantPoolWriter implements com.sun.tools.classfile.ConstantPool.ConstantPool_Visitor<Null<Int>, ClassWriter_ClassOutputStream>
 {
-	@:overload private function write(info : CPInfo, out : ClassWriter_ClassOutputStream) : Int;
+	@:overload private function write(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CPInfo, out : ClassWriter_ClassOutputStream) : Int;
 	
-	@:overload public function visitClass(info : CONSTANT_Class_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitClass(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Class_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitDouble(info : CONSTANT_Double_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitDouble(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Double_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitFieldref(info : CONSTANT_Fieldref_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitFieldref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Fieldref_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitFloat(info : CONSTANT_Float_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitFloat(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Float_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitInteger(info : CONSTANT_Integer_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitInteger(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Integer_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitInterfaceMethodref(info : CONSTANT_InterfaceMethodref_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitInterfaceMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InterfaceMethodref_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitInvokeDynamic(info : CONSTANT_InvokeDynamic_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitInvokeDynamic(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_InvokeDynamic_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitLong(info : CONSTANT_Long_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitLong(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Long_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitNameAndType(info : CONSTANT_NameAndType_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitNameAndType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_NameAndType_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitMethodHandle(info : CONSTANT_MethodHandle_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitMethodHandle(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodHandle_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitMethodType(info : CONSTANT_MethodType_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitMethodType(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_MethodType_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitMethodref(info : CONSTANT_Methodref_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitMethodref(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Methodref_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitString(info : CONSTANT_String_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitString(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_String_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload public function visitUtf8(info : CONSTANT_Utf8_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload public function visitUtf8(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CONSTANT_Utf8_info, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
-	@:overload private function writeRef(info : CPRefInfo, out : ClassWriter_ClassOutputStream) : Null<Int>;
+	@:overload private function writeRef(info : com.sun.tools.classfile.ConstantPool.ConstantPool_CPRefInfo, out : ClassWriter_ClassOutputStream) : Null<Int>;
 	
 	
 }
@@ -259,19 +259,19 @@ extern class ClassWriter
 	
 	@:overload public function write(anno : com.sun.tools.classfile.Annotation, out : ClassWriter_ClassOutputStream) : Void;
 	
-	@:overload public function write(pair : element_value_pair, out : ClassWriter_ClassOutputStream) : Void;
+	@:overload public function write(pair : com.sun.tools.classfile.Annotation.Annotation_element_value_pair, out : ClassWriter_ClassOutputStream) : Void;
 	
-	@:overload public function write(ev : element_value, out : ClassWriter_ClassOutputStream) : Void;
+	@:overload public function write(ev : com.sun.tools.classfile.Annotation.Annotation_element_value, out : ClassWriter_ClassOutputStream) : Void;
 	
-	@:overload public function visitPrimitive(ev : Primitive_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
+	@:overload public function visitPrimitive(ev : com.sun.tools.classfile.Annotation.Annotation_Primitive_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
 	
-	@:overload public function visitEnum(ev : Enum_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
+	@:overload public function visitEnum(ev : com.sun.tools.classfile.Annotation.Annotation_Enum_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
 	
-	@:overload public function visitClass(ev : Class_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
+	@:overload public function visitClass(ev : com.sun.tools.classfile.Annotation.Annotation_Class_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
 	
-	@:overload public function visitAnnotation(ev : Annotation_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
+	@:overload public function visitAnnotation(ev : com.sun.tools.classfile.Annotation.Annotation_Annotation_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
 	
-	@:overload public function visitArray(ev : Array_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
+	@:overload public function visitArray(ev : com.sun.tools.classfile.Annotation.Annotation_Array_element_value, out : ClassWriter_ClassOutputStream) : java.lang.Void;
 	
 	
 }

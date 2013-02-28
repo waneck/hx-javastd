@@ -110,13 +110,13 @@ extern class MetalToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI
 {
 	
 }
-@:native('javax$swing$plaf$metal$MetalToolBarUI$MetalDockingListener') extern class MetalToolBarUI_MetalDockingListener extends DockingListener
+@:native('javax$swing$plaf$metal$MetalToolBarUI$MetalDockingListener') extern class MetalToolBarUI_MetalDockingListener extends javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DockingListener
 {
 	@:overload public function new(t : javax.swing.JToolBar) : Void;
 	
-	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

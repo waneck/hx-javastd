@@ -25,7 +25,7 @@ package com.sun.xml.internal.xsom.impl;
 */
 extern class ModelGroupImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl implements com.sun.xml.internal.xsom.XSModelGroup implements com.sun.xml.internal.xsom.impl.Ref.Ref_Term
 {
-	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _compositor : Compositor, _children : java.NativeArray<com.sun.xml.internal.xsom.impl.ParticleImpl>) : Void;
+	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _compositor : com.sun.xml.internal.xsom.XSModelGroup.XSModelGroup_Compositor, _children : java.NativeArray<com.sun.xml.internal.xsom.impl.ParticleImpl>) : Void;
 	
 	@:overload public function getChild(idx : Int) : com.sun.xml.internal.xsom.impl.ParticleImpl;
 	
@@ -33,7 +33,7 @@ extern class ModelGroupImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl
 	
 	@:overload public function getChildren() : java.NativeArray<com.sun.xml.internal.xsom.impl.ParticleImpl>;
 	
-	@:overload public function getCompositor() : Compositor;
+	@:overload public function getCompositor() : com.sun.xml.internal.xsom.XSModelGroup.XSModelGroup_Compositor;
 	
 	@:overload public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
 	

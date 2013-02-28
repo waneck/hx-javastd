@@ -300,11 +300,11 @@ package sun.awt.X11;
 	
 	
 }
-@:native('sun$awt$X11$XTextAreaPeer$AWTTextPane$XAWTScrollBar') @:internal extern class XTextAreaPeer_AWTTextPane_XAWTScrollBar extends ScrollBar
+@:native('sun$awt$X11$XTextAreaPeer$AWTTextPane$XAWTScrollBar') @:internal extern class XTextAreaPeer_AWTTextPane_XAWTScrollBar extends javax.swing.JScrollPane.JScrollPane_ScrollBar
 {
 	@:overload public function new(i : Int) : Void;
 	
-	@:overload public function updateUI() : Void;
+	@:overload override public function updateUI() : Void;
 	
 	
 }

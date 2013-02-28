@@ -214,7 +214,7 @@ extern class ClassReader implements Completer
 {
 	@:overload public function new(enumType : com.sun.tools.javac.code.Type, enumerator : com.sun.tools.javac.util.Name) : Void;
 	
-	@:overload public function accept(v : Visitor) : Void;
+	@:overload public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -222,7 +222,7 @@ extern class ClassReader implements Completer
 }
 @:native('com$sun$tools$javac$jvm$ClassReader$ArrayAttributeProxy') @:internal extern class ClassReader_ArrayAttributeProxy extends com.sun.tools.javac.code.Attribute
 {
-	@:overload public function accept(v : Visitor) : Void;
+	@:overload public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -234,7 +234,7 @@ extern class ClassReader implements Completer
 {
 	@:overload public function new(type : com.sun.tools.javac.code.Type, values : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<com.sun.tools.javac.util.Name, com.sun.tools.javac.code.Attribute>>) : Void;
 	
-	@:overload public function accept(v : Visitor) : Void;
+	@:overload public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function toString() : String;
 	

@@ -452,7 +452,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$table$JTableHeader$AccessibleJTableHeader') extern class JTableHeader_AccessibleJTableHeader extends AccessibleJComponent
+@:native('javax$swing$table$JTableHeader$AccessibleJTableHeader') extern class JTableHeader_AccessibleJTableHeader extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -461,7 +461,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -472,7 +472,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return the Accessible, if it exists, at the specified location;
 	* else null
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -481,7 +481,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -489,7 +489,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	
 }

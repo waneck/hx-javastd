@@ -29,7 +29,7 @@ extern class AnnotationDefault_attribute extends com.sun.tools.classfile.Attribu
 	
 	@:overload public function new(name_index : Int, default_value : com.sun.tools.classfile.Annotation.Annotation_element_value) : Void;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var default_value(default, null) : com.sun.tools.classfile.Annotation.Annotation_element_value;
 	

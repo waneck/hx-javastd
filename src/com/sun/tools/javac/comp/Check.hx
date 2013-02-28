@@ -124,17 +124,17 @@ extern class Check
 */
 @:native('com$sun$tools$javac$comp$Check$Validator') @:internal extern class Check_Validator extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 {
-	@:overload public function visitTypeArray(tree : JCArrayTypeTree) : Void;
+	@:overload public function visitTypeArray(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayTypeTree) : Void;
 	
-	@:overload public function visitTypeApply(tree : JCTypeApply) : Void;
+	@:overload public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
 	
-	@:overload public function visitTypeParameter(tree : JCTypeParameter) : Void;
+	@:overload public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
 	
-	@:overload public function visitWildcard(tree : JCWildcard) : Void;
+	@:overload public function visitWildcard(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCWildcard) : Void;
 	
-	@:overload public function visitSelect(tree : JCFieldAccess) : Void;
+	@:overload public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
-	@:overload public function visitSelectInternal(tree : JCFieldAccess) : Void;
+	@:overload public function visitSelectInternal(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
 	/** Default visitor method: do nothing.
 	*/

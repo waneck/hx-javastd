@@ -36,7 +36,7 @@ extern class MonthDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstr
 	* @return normalized date representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String) : DateTimeData;
+	@:overload private function parse(str : String) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
 	/**
 	* Converts month object representation to String
@@ -44,9 +44,9 @@ extern class MonthDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstr
 	* @param date   month object
 	* @return lexical representation of month: --MM with an optional time zone sign
 	*/
-	@:overload private function dateToString(date : DateTimeData) : String;
+	@:overload private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
-	@:overload private function getXMLGregorianCalendar(date : DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload private function getXMLGregorianCalendar(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }

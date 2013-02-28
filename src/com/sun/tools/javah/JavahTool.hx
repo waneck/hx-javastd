@@ -31,7 +31,7 @@ extern class JavahTool implements com.sun.tools.javah.NativeHeaderTool
 	* risk.  This code and its internal interfaces are subject to change
 	* or deletion without notice.</b></p>
 	*/
-	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : NativeHeaderTask;
+	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : com.sun.tools.javah.NativeHeaderTool.NativeHeaderTool_NativeHeaderTask;
 	
 	@:overload public function getStandardFileManager(diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, locale : java.util.Locale, charset : java.nio.charset.Charset) : javax.tools.StandardJavaFileManager;
 	

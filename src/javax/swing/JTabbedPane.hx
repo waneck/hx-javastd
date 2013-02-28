@@ -1073,7 +1073,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JTabbedPane$AccessibleJTabbedPane') extern class JTabbedPane_AccessibleJTabbedPane extends AccessibleJComponent implements javax.accessibility.AccessibleSelection implements javax.swing.event.ChangeListener
+@:native('javax$swing$JTabbedPane$AccessibleJTabbedPane') extern class JTabbedPane_AccessibleJTabbedPane extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleSelection implements javax.swing.event.ChangeListener
 {
 	/**
 	* Returns the accessible name of this object, or {@code null} if
@@ -1082,7 +1082,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the accessible name of this object, nor {@code null}.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAccessibleName() : String;
+	@:require(java6) @:overload override public function getAccessibleName() : String;
 	
 	/**
 	*  Constructs an AccessibleJTabbedPane
@@ -1097,14 +1097,14 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return an instance of AccessibleRole describing the role of
 	*          the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children in the object.
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the specified Accessible child of the object.
@@ -1113,7 +1113,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the Accessible child of the object
 	* @exception IllegalArgumentException if index is out of bounds
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the <code>AccessibleSelection</code> associated with
@@ -1124,7 +1124,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the <code>Accessible</code> child contained at
@@ -1134,7 +1134,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return the <code>Accessible</code> at the specified
 	*    location, if it exists
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	@:overload public function getAccessibleSelectionCount() : Int;
 	

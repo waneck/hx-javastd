@@ -123,7 +123,7 @@ package sun.text.normalizer;
 	* @exception NoSuchElementException - if no more elements exist.
 	* @see com.ibm.icu.util.RangeValueIterator.Element
 	*/
-	@:overload @:final public function next(element : Element) : Bool;
+	@:overload @:final public function next(element : sun.text.normalizer.RangeValueIterator.RangeValueIterator_Element) : Bool;
 	
 	/**
 	* Resets the iterator to the beginning of the iteration

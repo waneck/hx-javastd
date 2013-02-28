@@ -577,7 +577,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 * Java Accessibility API appropriate to popup menu user-interface
 * elements.
 */
-@:native('javax$swing$JPopupMenu$AccessibleJPopupMenu') extern class JPopupMenu_AccessibleJPopupMenu extends AccessibleJComponent implements java.beans.PropertyChangeListener
+@:native('javax$swing$JPopupMenu$AccessibleJPopupMenu') extern class JPopupMenu_AccessibleJPopupMenu extends javax.swing.JComponent.JComponent_AccessibleJComponent implements java.beans.PropertyChangeListener
 {
 	/**
 	* AccessibleJPopupMenu constructor
@@ -592,7 +592,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @return an instance of AccessibleRole describing the role of
 	* the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* This method gets called when a bound property is changed.

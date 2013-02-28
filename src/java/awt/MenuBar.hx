@@ -197,7 +197,7 @@ package java.awt;
 * Java Accessibility API appropriate to menu bar user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$MenuBar$AccessibleAWTMenuBar') extern class MenuBar_AccessibleAWTMenuBar extends AccessibleAWTMenuComponent
+@:require(java3) @:native('java$awt$MenuBar$AccessibleAWTMenuBar') extern class MenuBar_AccessibleAWTMenuBar extends java.awt.MenuComponent.MenuComponent_AccessibleAWTMenuComponent
 {
 	/**
 	* Get the role of this object.
@@ -206,7 +206,7 @@ package java.awt;
 	* object
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:require(java4) @:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

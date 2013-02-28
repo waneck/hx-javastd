@@ -426,7 +426,7 @@ package java.applet;
 * Java Accessibility API appropriate to applet user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$applet$Applet$AccessibleApplet') extern class Applet_AccessibleApplet extends AccessibleAWTPanel
+@:require(java3) @:native('java$applet$Applet$AccessibleApplet') extern class Applet_AccessibleApplet extends java.awt.Panel.Panel_AccessibleAWTPanel
 {
 	/**
 	* Get the role of this object.
@@ -434,7 +434,7 @@ package java.applet;
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -443,7 +443,7 @@ package java.applet;
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

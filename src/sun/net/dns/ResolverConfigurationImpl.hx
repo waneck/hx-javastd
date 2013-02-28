@@ -29,7 +29,7 @@ extern class ResolverConfigurationImpl extends sun.net.dns.ResolverConfiguration
 	
 	@:overload override public function nameservers() : java.util.List<String>;
 	
-	@:overload override public function options() : Options;
+	@:overload override public function options() : sun.net.dns.ResolverConfiguration.ResolverConfiguration_Options;
 	
 	
 }

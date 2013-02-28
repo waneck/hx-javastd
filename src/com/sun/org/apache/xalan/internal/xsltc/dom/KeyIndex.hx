@@ -308,7 +308,7 @@ extern class KeyIndex extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIte
 	*
 	* @return the cloned heap node
 	*/
-	@:overload override public function cloneHeapNode() : HeapNode;
+	@:overload override public function cloneHeapNode() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	/**
 	* Remembers the current node for the next call to
@@ -329,7 +329,7 @@ extern class KeyIndex extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIte
 	*         this heap node is before the current node of the
 	*         argument heap node in document order.
 	*/
-	@:overload public function isLessThan(heapNode : HeapNode) : Bool;
+	@:overload public function isLessThan(heapNode : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode) : Bool;
 	
 	/**
 	* <p>Sets context with respect to which this heap node is
@@ -339,12 +339,12 @@ extern class KeyIndex extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIte
 	* create new instances of this class to represent the effect of
 	* changing the context.</p>
 	*/
-	@:overload override public function setStartNode(node : Int) : HeapNode;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	/**
 	* Reset the heap node back to its beginning.
 	*/
-	@:overload override public function reset() : HeapNode;
+	@:overload override public function reset() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	
 }

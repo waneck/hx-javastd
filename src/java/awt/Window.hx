@@ -1852,7 +1852,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 * Java Accessibility API appropriate to window user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Window$AccessibleAWTWindow') extern class Window_AccessibleAWTWindow extends AccessibleAWTContainer
+@:require(java3) @:native('java$awt$Window$AccessibleAWTWindow') extern class Window_AccessibleAWTWindow extends java.awt.Container.Container_AccessibleAWTContainer
 {
 	/**
 	* Get the role of this object.
@@ -1861,7 +1861,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* object
 	* @see javax.accessibility.AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -1870,7 +1870,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* state set of the object
 	* @see javax.accessibility.AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

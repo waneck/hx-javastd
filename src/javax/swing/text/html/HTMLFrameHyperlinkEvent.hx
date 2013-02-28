@@ -34,7 +34,7 @@ extern class HTMLFrameHyperlinkEvent extends javax.swing.event.HyperlinkEvent
 	* @param targetURL the affected URL
 	* @param targetFrame the Frame to display the document in
 	*/
-	@:overload public function new(source : Dynamic, type : EventType, targetURL : java.net.URL, targetFrame : String) : Void;
+	@:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, targetURL : java.net.URL, targetFrame : String) : Void;
 	
 	/**
 	* Creates a new object representing a hypertext link event.
@@ -45,7 +45,7 @@ extern class HTMLFrameHyperlinkEvent extends javax.swing.event.HyperlinkEvent
 	* @param desc a description
 	* @param targetFrame the Frame to display the document in
 	*/
-	@:overload public function new(source : Dynamic, type : EventType, targetURL : java.net.URL, desc : String, targetFrame : String) : Void;
+	@:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, targetURL : java.net.URL, desc : String, targetFrame : String) : Void;
 	
 	/**
 	* Creates a new object representing a hypertext link event.
@@ -57,7 +57,7 @@ extern class HTMLFrameHyperlinkEvent extends javax.swing.event.HyperlinkEvent
 	*                      of the event
 	* @param targetFrame the Frame to display the document in
 	*/
-	@:overload public function new(source : Dynamic, type : EventType, targetURL : java.net.URL, sourceElement : javax.swing.text.Element, targetFrame : String) : Void;
+	@:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, targetURL : java.net.URL, sourceElement : javax.swing.text.Element, targetFrame : String) : Void;
 	
 	/**
 	* Creates a new object representing a hypertext link event.
@@ -70,7 +70,7 @@ extern class HTMLFrameHyperlinkEvent extends javax.swing.event.HyperlinkEvent
 	*                      of the event
 	* @param targetFrame the Frame to display the document in
 	*/
-	@:overload public function new(source : Dynamic, type : EventType, targetURL : java.net.URL, desc : String, sourceElement : javax.swing.text.Element, targetFrame : String) : Void;
+	@:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, targetURL : java.net.URL, desc : String, sourceElement : javax.swing.text.Element, targetFrame : String) : Void;
 	
 	/**
 	* Creates a new object representing a hypertext link event.
@@ -85,7 +85,7 @@ extern class HTMLFrameHyperlinkEvent extends javax.swing.event.HyperlinkEvent
 	* @param targetFrame the Frame to display the document in
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(source : Dynamic, type : EventType, targetURL : java.net.URL, desc : String, sourceElement : javax.swing.text.Element, inputEvent : java.awt.event.InputEvent, targetFrame : String) : Void;
+	@:require(java7) @:overload public function new(source : Dynamic, type : javax.swing.event.HyperlinkEvent.HyperlinkEvent_EventType, targetURL : java.net.URL, desc : String, sourceElement : javax.swing.text.Element, inputEvent : java.awt.event.InputEvent, targetFrame : String) : Void;
 	
 	/**
 	* returns the target for the link.

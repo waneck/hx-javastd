@@ -756,7 +756,7 @@ package java.awt;
 * Java Accessibility API appropriate to list user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$List$AccessibleAWTList') extern class List_AccessibleAWTList extends AccessibleAWTComponent implements javax.accessibility.AccessibleSelection implements java.awt.event.ItemListener implements java.awt.event.ActionListener
+@:require(java3) @:native('java$awt$List$AccessibleAWTList') extern class List_AccessibleAWTList extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.AccessibleSelection implements java.awt.event.ItemListener implements java.awt.event.ActionListener
 {
 	@:overload public function new() : Void;
 	
@@ -771,7 +771,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -780,7 +780,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the Accessible child contained at the local coordinate
@@ -788,7 +788,7 @@ package java.awt;
 	*
 	* @return the Accessible at the specified location, if it exists
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -797,7 +797,7 @@ package java.awt;
 	*
 	* @return the number of accessible children in the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the nth Accessible child of the object.
@@ -805,7 +805,7 @@ package java.awt;
 	* @param i zero-based index of child
 	* @return the nth Accessible child of the object
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -815,7 +815,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns the number of items currently selected.
@@ -886,7 +886,7 @@ package java.awt;
 * user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$List$AccessibleAWTList$AccessibleAWTListChild') extern class List_AccessibleAWTList_AccessibleAWTListChild extends AccessibleAWTComponent implements javax.accessibility.Accessible
+@:require(java3) @:native('java$awt$List$AccessibleAWTList$AccessibleAWTListChild') extern class List_AccessibleAWTList_AccessibleAWTListChild extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.Accessible
 {
 	@:overload public function new(parent : List, indexInParent : Int) : Void;
 	
@@ -906,7 +906,7 @@ package java.awt;
 	* the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state set of this object.  The AccessibleStateSet of an
@@ -921,7 +921,7 @@ package java.awt;
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the locale of the component. If the component does not
@@ -935,7 +935,7 @@ package java.awt;
 	* been added to a containment hierarchy such that the locale can
 	* be determined from the containing parent.
 	*/
-	@:overload public function getLocale() : java.util.Locale;
+	@:overload override public function getLocale() : java.util.Locale;
 	
 	/**
 	* Get the 0-based index of this object in its accessible parent.
@@ -947,14 +947,14 @@ package java.awt;
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload public function getAccessibleIndexInParent() : Int;
+	@:overload override public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Return the specified Accessible child of the object.  The
@@ -966,7 +966,7 @@ package java.awt;
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Get the background color of this object.
@@ -975,7 +975,7 @@ package java.awt;
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload public function getBackground() : java.awt.Color;
+	@:overload override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Set the background color of this object.
@@ -983,7 +983,7 @@ package java.awt;
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload public function setBackground(c : java.awt.Color) : Void;
+	@:overload override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Get the foreground color of this object.
@@ -992,7 +992,7 @@ package java.awt;
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload public function getForeground() : java.awt.Color;
+	@:overload override public function getForeground() : java.awt.Color;
 	
 	/**
 	* Set the foreground color of this object.
@@ -1000,7 +1000,7 @@ package java.awt;
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload public function setForeground(c : java.awt.Color) : Void;
+	@:overload override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Get the Cursor of this object.
@@ -1008,7 +1008,7 @@ package java.awt;
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload public function getCursor() : java.awt.Cursor;
+	@:overload override public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Set the Cursor of this object.
@@ -1019,7 +1019,7 @@ package java.awt;
 	* @param cursor the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Get the Font of this object.
@@ -1027,7 +1027,7 @@ package java.awt;
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload public function getFont() : java.awt.Font;
+	@:overload override public function getFont() : java.awt.Font;
 	
 	/**
 	* Set the Font of this object.
@@ -1035,7 +1035,7 @@ package java.awt;
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload public function setFont(f : java.awt.Font) : Void;
+	@:overload override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Get the FontMetrics of this object.
@@ -1044,7 +1044,7 @@ package java.awt;
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determine if the object is enabled.  Objects that are enabled
@@ -1057,7 +1057,7 @@ package java.awt;
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isEnabled() : Bool;
+	@:overload override public function isEnabled() : Bool;
 	
 	/**
 	* Set the enabled state of the object.
@@ -1065,7 +1065,7 @@ package java.awt;
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload public function setEnabled(b : Bool) : Void;
+	@:overload override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determine if the object is visible.  Note: this means that the
@@ -1082,7 +1082,7 @@ package java.awt;
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isVisible() : Bool;
+	@:overload override public function isVisible() : Bool;
 	
 	/**
 	* Set the visible state of the object.
@@ -1090,7 +1090,7 @@ package java.awt;
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload public function setVisible(b : Bool) : Void;
+	@:overload override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determine if the object is showing.  This is determined by
@@ -1102,7 +1102,7 @@ package java.awt;
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload public function isShowing() : Bool;
+	@:overload override public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this object's
@@ -1114,7 +1114,7 @@ package java.awt;
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload public function contains(p : java.awt.Point) : Bool;
+	@:overload override public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -1124,7 +1124,7 @@ package java.awt;
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload public function getLocationOnScreen() : java.awt.Point;
+	@:overload override public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent in the
@@ -1137,14 +1137,14 @@ package java.awt;
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload public function getLocation() : java.awt.Point;
+	@:overload override public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload public function setLocation(p : java.awt.Point) : Void;
+	@:overload override public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -1155,7 +1155,7 @@ package java.awt;
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload public function getBounds() : java.awt.Rectangle;
+	@:overload override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle
@@ -1165,7 +1165,7 @@ package java.awt;
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload override public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension
@@ -1177,7 +1177,7 @@ package java.awt;
 	* component; null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload public function getSize() : java.awt.Dimension;
+	@:overload override public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -1185,7 +1185,7 @@ package java.awt;
 	* @param d - The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload public function setSize(d : java.awt.Dimension) : Void;
+	@:overload override public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -1196,7 +1196,7 @@ package java.awt;
 	* @return the <code>Accessible</code>, if it exists,
 	*     at the specified location; otherwise <code>null</code>
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects
@@ -1210,7 +1210,7 @@ package java.awt;
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload public function isFocusTraversable() : Bool;
+	@:overload override public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept
@@ -1218,7 +1218,7 @@ package java.awt;
 	* to take focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload public function requestFocus() : Void;
+	@:overload override public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from
@@ -1227,7 +1227,7 @@ package java.awt;
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives
@@ -1236,7 +1236,7 @@ package java.awt;
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }

@@ -231,7 +231,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	
 	
 }
-@:native('com$sun$tools$javac$util$AbstractDiagnosticFormatter$SimpleConfiguration') extern class AbstractDiagnosticFormatter_SimpleConfiguration implements Configuration
+@:native('com$sun$tools$javac$util$AbstractDiagnosticFormatter$SimpleConfiguration') extern class AbstractDiagnosticFormatter_SimpleConfiguration implements com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration
 {
 	private var multilineLimits : java.util.Map<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, Null<Int>>;
 	

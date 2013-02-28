@@ -65,7 +65,7 @@ package javax.swing.plaf.nimbus;
 	*
 	* @return a PaintContext associated with this paint operation.
 	*/
-	@:overload override private function getPaintContext() : PaintContext;
+	@:overload override private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	/**
 	* Returns the insets of the border.

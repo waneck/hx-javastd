@@ -45,9 +45,9 @@ extern class CommentImpl extends com.sun.org.apache.xerces.internal.dom.CommentI
 	
 	@:overload public function isComment() : Bool;
 	
-	@:overload public function splitText(offset : Int) : org.w3c.dom.Text;
+	@:overload public function splitText(offset : Int) : javax.xml.soap.Text;
 	
-	@:overload public function replaceWholeText(content : String) : org.w3c.dom.Text;
+	@:overload public function replaceWholeText(content : String) : javax.xml.soap.Text;
 	
 	@:overload public function getWholeText() : String;
 	

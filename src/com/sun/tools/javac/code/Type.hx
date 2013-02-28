@@ -69,7 +69,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	/** The defining class / interface / package / type variable
 	*/
-	public var tsym : TypeSymbol;
+	public var tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol;
 	
 	/**
 	* The constant value of this type, null if this type does not
@@ -92,7 +92,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	/** Define a type given its tag and type symbol
 	*/
-	@:overload public function new(tag : Int, tsym : TypeSymbol) : Void;
+	@:overload public function new(tag : Int, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
 	/** map a type function over all immediate descendants of this type
 	*/
@@ -234,7 +234,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	*/
 	@:overload public function complete() : Void;
 	
-	@:overload public function asElement() : TypeSymbol;
+	@:overload public function asElement() : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol;
 	
 	@:overload public function getKind() : javax.lang.model.type.TypeKind;
 	
@@ -264,11 +264,11 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
 	
-	@:overload public function new(type : Type, kind : com.sun.tools.javac.code.BoundKind, tsym : TypeSymbol) : Void;
+	@:overload public function new(type : Type, kind : com.sun.tools.javac.code.BoundKind, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
-	@:overload public function new(t : Type_WildcardType, bound : Type_TypeVar) : Void;
+	@:overload public function new(t : javax.lang.model.type.WildcardType, bound : Type_TypeVar) : Void;
 	
-	@:overload public function new(type : Type, kind : com.sun.tools.javac.code.BoundKind, tsym : TypeSymbol, bound : Type_TypeVar) : Void;
+	@:overload public function new(type : Type, kind : com.sun.tools.javac.code.BoundKind, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, bound : Type_TypeVar) : Void;
 	
 	@:overload override public function contains(t : Type) : Bool;
 	
@@ -318,7 +318,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	*/
 	public var all_interfaces_field : com.sun.tools.javac.util.List<Type>;
 	
-	@:overload public function new(outer : Type, typarams : com.sun.tools.javac.util.List<Type>, tsym : TypeSymbol) : Void;
+	@:overload public function new(outer : Type, typarams : com.sun.tools.javac.util.List<Type>, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
 	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
 	
@@ -363,7 +363,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 }
 @:native('com$sun$tools$javac$code$Type$ErasedClassType') extern class Type_ErasedClassType extends Type_ClassType
 {
-	@:overload public function new(outer : Type, tsym : TypeSymbol) : Void;
+	@:overload public function new(outer : Type, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
 	@:overload override public function hasErasedSupertypes() : Bool;
 	
@@ -387,7 +387,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 {
 	public var elemtype : Type;
 	
-	@:overload public function new(elemtype : Type, arrayClass : TypeSymbol) : Void;
+	@:overload public function new(elemtype : Type, arrayClass : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
 	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
 	
@@ -407,7 +407,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload override public function isRaw() : Bool;
 	
-	@:overload public function makeVarargs() : Type_ArrayType;
+	@:overload public function makeVarargs() : javax.lang.model.type.ArrayType;
 	
 	@:overload override public function map(f : Type_Mapping) : Type;
 	
@@ -431,7 +431,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	public var thrown : com.sun.tools.javac.util.List<Type>;
 	
-	@:overload public function new(argtypes : com.sun.tools.javac.util.List<Type>, restype : Type, thrown : com.sun.tools.javac.util.List<Type>, methodClass : TypeSymbol) : Void;
+	@:overload public function new(argtypes : com.sun.tools.javac.util.List<Type>, restype : Type, thrown : com.sun.tools.javac.util.List<Type>, methodClass : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
 	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
 	
@@ -464,7 +464,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload public function getTypeVariables() : com.sun.tools.javac.util.List<Type_TypeVar>;
 	
-	@:overload override public function asElement() : TypeSymbol;
+	@:overload override public function asElement() : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol;
 	
 	@:overload override public function getKind() : javax.lang.model.type.TypeKind;
 	
@@ -507,7 +507,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload public function new(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol, lower : Type) : Void;
 	
-	@:overload public function new(tsym : TypeSymbol, bound : Type, lower : Type) : Void;
+	@:overload public function new(tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, bound : Type, lower : Type) : Void;
 	
 	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
 	
@@ -695,11 +695,11 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 }
 @:native('com$sun$tools$javac$code$Type$ErrorType') extern class Type_ErrorType extends Type_ClassType implements javax.lang.model.type.ErrorType
 {
-	@:overload public function new(originalType : Type, tsym : TypeSymbol) : Void;
+	@:overload public function new(originalType : Type, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
-	@:overload public function new(c : ClassSymbol, originalType : Type) : Void;
+	@:overload public function new(c : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, originalType : Type) : Void;
 	
-	@:overload public function new(name : com.sun.tools.javac.util.Name, container : TypeSymbol, originalType : Type) : Void;
+	@:overload public function new(name : com.sun.tools.javac.util.Name, container : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, originalType : Type) : Void;
 	
 	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
 	

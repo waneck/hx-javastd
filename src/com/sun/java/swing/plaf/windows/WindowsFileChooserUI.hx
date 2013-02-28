@@ -171,7 +171,7 @@ extern class WindowsFileChooserUI extends javax.swing.plaf.basic.BasicFileChoose
 	
 	
 }
-@:native('com$sun$java$swing$plaf$windows$WindowsFileChooserUI$WindowsNewFolderAction') extern class WindowsFileChooserUI_WindowsNewFolderAction extends NewFolderAction
+@:native('com$sun$java$swing$plaf$windows$WindowsFileChooserUI$WindowsNewFolderAction') extern class WindowsFileChooserUI_WindowsNewFolderAction extends javax.swing.plaf.basic.BasicFileChooserUI.BasicFileChooserUI_NewFolderAction
 {
 	
 }
@@ -257,10 +257,10 @@ extern class WindowsFileChooserUI extends javax.swing.plaf.basic.BasicFileChoose
 	
 	
 }
-@:native('com$sun$java$swing$plaf$windows$WindowsFileChooserUI$WindowsFileView') extern class WindowsFileChooserUI_WindowsFileView extends BasicFileView
+@:native('com$sun$java$swing$plaf$windows$WindowsFileChooserUI$WindowsFileView') extern class WindowsFileChooserUI_WindowsFileView extends javax.swing.plaf.basic.BasicFileChooserUI.BasicFileChooserUI_BasicFileView
 {
 	/* FileView type descriptions */
-	@:overload public function getIcon(f : java.io.File) : javax.swing.Icon;
+	@:overload override public function getIcon(f : java.io.File) : javax.swing.Icon;
 	
 	
 }

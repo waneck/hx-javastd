@@ -72,7 +72,7 @@ package javax.sound.sampled;
 	*     than {@code maximum} or {@code initialValue} does not fall
 	*     within the allowable range
 	*/
-	@:overload private function new(type : FloatControl_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String, minLabel : String, midLabel : String, maxLabel : String) : Void;
+	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String, minLabel : String, midLabel : String, maxLabel : String) : Void;
 	
 	/**
 	* Constructs a new float control object with the given parameters.
@@ -94,7 +94,7 @@ package javax.sound.sampled;
 	*     than {@code maximum} or {@code initialValue} does not fall
 	*     within the allowable range
 	*/
-	@:overload private function new(type : FloatControl_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String) : Void;
+	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, minimum : Single, maximum : Single, precision : Single, updatePeriod : Int, initialValue : Single, units : String) : Void;
 	
 	/**
 	* Sets the current value for the control.  The default implementation
@@ -246,7 +246,7 @@ package javax.sound.sampled;
 	* @see #REVERB_RETURN
 	* @see #VOLUME
 	*/
-	public static var MASTER_GAIN(default, null) : FloatControl_Type;
+	public static var MASTER_GAIN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the auxiliary send gain on a line.
@@ -254,7 +254,7 @@ package javax.sound.sampled;
 	* @see #MASTER_GAIN
 	* @see #AUX_RETURN
 	*/
-	public static var AUX_SEND(default, null) : FloatControl_Type;
+	public static var AUX_SEND(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the auxiliary return gain on a line.
@@ -262,7 +262,7 @@ package javax.sound.sampled;
 	* @see #MASTER_GAIN
 	* @see #AUX_SEND
 	*/
-	public static var AUX_RETURN(default, null) : FloatControl_Type;
+	public static var AUX_RETURN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the pre-reverb gain on a line.
@@ -273,7 +273,7 @@ package javax.sound.sampled;
 	* @see #REVERB_RETURN
 	* @see EnumControl.Type#REVERB
 	*/
-	public static var REVERB_SEND(default, null) : FloatControl_Type;
+	public static var REVERB_SEND(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the post-reverb gain on a line.
@@ -283,12 +283,12 @@ package javax.sound.sampled;
 	* @see #MASTER_GAIN
 	* @see #REVERB_SEND
 	*/
-	public static var REVERB_RETURN(default, null) : FloatControl_Type;
+	public static var REVERB_RETURN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/*
 	* $$kk: 08.30.99: ISSUE: what units?  linear or dB?
 	*/
-	public static var VOLUME(default, null) : FloatControl_Type;
+	public static var VOLUME(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the relative pan (left-right positioning)
@@ -299,7 +299,7 @@ package javax.sound.sampled;
 	*
 	* @see #BALANCE
 	*/
-	public static var PAN(default, null) : FloatControl_Type;
+	public static var PAN(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for the relative balance of a stereo signal
@@ -308,7 +308,7 @@ package javax.sound.sampled;
 	*
 	* @see #PAN
 	*/
-	public static var BALANCE(default, null) : FloatControl_Type;
+	public static var BALANCE(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control that changes the sample rate of audio playback.  The net effect
@@ -326,7 +326,7 @@ package javax.sound.sampled;
 	* rate has the effect of doubling the frequencies in the sound's spectrum,
 	* which raises the pitch by an octave.
 	*/
-	public static var SAMPLE_RATE(default, null) : FloatControl_Type;
+	public static var SAMPLE_RATE(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Constructs a new float control type.

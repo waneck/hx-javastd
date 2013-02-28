@@ -38,7 +38,7 @@ extern class StreamHeader11 extends com.sun.xml.internal.ws.message.stream.Strea
 	
 	@:overload public function new(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload @:final override private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<Attribute>;
+	@:overload @:final override private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<com.sun.xml.internal.ws.message.stream.StreamHeader.StreamHeader_Attribute>;
 	
 	
 }

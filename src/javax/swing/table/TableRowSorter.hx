@@ -97,19 +97,19 @@ extern class TableRowSorter<M> extends javax.swing.DefaultRowSorter<M, Null<Int>
 * Implementation of DefaultRowSorter.ModelWrapper that delegates to a
 * TableModel.
 */
-@:native('javax$swing$table$TableRowSorter$TableRowSorterModelWrapper') @:internal extern class TableRowSorter_TableRowSorterModelWrapper extends ModelWrapper<Dynamic, Null<Int>>
+@:native('javax$swing$table$TableRowSorter$TableRowSorterModelWrapper') @:internal extern class TableRowSorter_TableRowSorterModelWrapper extends javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<Dynamic, Null<Int>>
 {
-	@:overload public function getModel() : Dynamic;
+	@:overload override public function getModel() : Dynamic;
 	
-	@:overload public function getColumnCount() : Int;
+	@:overload override public function getColumnCount() : Int;
 	
-	@:overload public function getRowCount() : Int;
+	@:overload override public function getRowCount() : Int;
 	
-	@:overload public function getValueAt(row : Int, column : Int) : Dynamic;
+	@:overload override public function getValueAt(row : Int, column : Int) : Dynamic;
 	
-	@:overload public function getStringValueAt(row : Int, column : Int) : String;
+	@:overload override public function getStringValueAt(row : Int, column : Int) : String;
 	
-	@:overload public function getIdentifier(index : Int) : Null<Int>;
+	@:overload override public function getIdentifier(index : Int) : Null<Int>;
 	
 	
 }

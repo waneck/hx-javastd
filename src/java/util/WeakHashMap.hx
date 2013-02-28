@@ -250,7 +250,7 @@ extern class WeakHashMap<K, V> extends java.util.AbstractMap<K, V> implements ja
 	@:overload public function hasNext() : Bool;
 	
 	/** The common parts of next() across different types of iterators */
-	@:overload private function nextEntry() : WeakHashMap_Entry<Dynamic, Dynamic>;
+	@:overload private function nextEntry() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	@:overload public function remove() : Void;
 	

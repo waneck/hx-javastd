@@ -92,7 +92,7 @@ extern class Date extends java.util.Date
 	* @throws IllegalArgumentException if the date given is not in the
 	*         JDBC date escape format (yyyy-[m]m-[d]d)
 	*/
-	@:overload public static function valueOf(s : String) : Date;
+	@:overload public static function valueOf(s : String) : java.util.Date;
 	
 	/**
 	* Formats a date in the date escape format yyyy-mm-dd.

@@ -730,25 +730,25 @@ extern class Types
 {
 	@:overload @:final public function visit(t : com.sun.tools.javac.code.Type, s : S) : R;
 	
-	@:overload public function visitClassType(t : ClassType, s : S) : R;
+	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, s : S) : R;
 	
-	@:overload public function visitWildcardType(t : WildcardType, s : S) : R;
+	@:overload public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, s : S) : R;
 	
-	@:overload public function visitArrayType(t : ArrayType, s : S) : R;
+	@:overload public function visitArrayType(t : com.sun.tools.javac.code.Type.Type_ArrayType, s : S) : R;
 	
-	@:overload public function visitMethodType(t : MethodType, s : S) : R;
+	@:overload public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, s : S) : R;
 	
-	@:overload public function visitPackageType(t : PackageType, s : S) : R;
+	@:overload public function visitPackageType(t : com.sun.tools.javac.code.Type.Type_PackageType, s : S) : R;
 	
-	@:overload public function visitTypeVar(t : TypeVar, s : S) : R;
+	@:overload public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, s : S) : R;
 	
-	@:overload public function visitCapturedType(t : CapturedType, s : S) : R;
+	@:overload public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, s : S) : R;
 	
-	@:overload public function visitForAll(t : ForAll, s : S) : R;
+	@:overload public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, s : S) : R;
 	
-	@:overload public function visitUndetVar(t : UndetVar, s : S) : R;
+	@:overload public function visitUndetVar(t : com.sun.tools.javac.code.Type.Type_UndetVar, s : S) : R;
 	
-	@:overload public function visitErrorType(t : ErrorType, s : S) : R;
+	@:overload public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, s : S) : R;
 	
 	@:overload public function visitClassType(t : Type_ClassType, s : S) : R;
 	
@@ -790,17 +790,17 @@ extern class Types
 {
 	@:overload @:final public function visit(s : com.sun.tools.javac.code.Symbol, arg : S) : R;
 	
-	@:overload public function visitClassSymbol(s : ClassSymbol, arg : S) : R;
+	@:overload public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, arg : S) : R;
 	
-	@:overload public function visitMethodSymbol(s : MethodSymbol, arg : S) : R;
+	@:overload public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, arg : S) : R;
 	
-	@:overload public function visitOperatorSymbol(s : OperatorSymbol, arg : S) : R;
+	@:overload public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, arg : S) : R;
 	
-	@:overload public function visitPackageSymbol(s : PackageSymbol, arg : S) : R;
+	@:overload public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, arg : S) : R;
 	
-	@:overload public function visitTypeSymbol(s : TypeSymbol, arg : S) : R;
+	@:overload public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, arg : S) : R;
 	
-	@:overload public function visitVarSymbol(s : VarSymbol, arg : S) : R;
+	@:overload public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, arg : S) : R;
 	
 	@:overload public function visitPackageSymbol(s : Symbol_PackageSymbol, arg : Dynamic) : R;
 	
@@ -833,11 +833,11 @@ extern class Types
 */
 @:native('com$sun$tools$javac$code$Types$SimpleVisitor') extern class Types_SimpleVisitor<R, S> extends Types_DefaultTypeVisitor<R, S>
 {
-	@:overload override public function visitCapturedType(t : CapturedType, s : S) : R;
+	@:overload public function visitCapturedType(t : CapturedType, s : S) : R;
 	
-	@:overload override public function visitForAll(t : ForAll, s : S) : R;
+	@:overload public function visitForAll(t : ForAll, s : S) : R;
 	
-	@:overload override public function visitUndetVar(t : UndetVar, s : S) : R;
+	@:overload public function visitUndetVar(t : UndetVar, s : S) : R;
 	
 	
 }

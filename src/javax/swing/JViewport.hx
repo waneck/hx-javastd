@@ -595,7 +595,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JViewport$AccessibleJViewport') extern class JViewport_AccessibleJViewport extends AccessibleJComponent
+@:native('javax$swing$JViewport$AccessibleJViewport') extern class JViewport_AccessibleJViewport extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -603,7 +603,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* @return an instance of AccessibleRole describing the role of
 	* the object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -72,7 +72,7 @@ extern class XMenuBarPeer extends sun.awt.X11.XBaseMenuWindow implements java.aw
 	/**
 	* @see XBaseMenuWindow.map
 	*/
-	@:overload override private function map() : XMenuBarPeer_MappingData;
+	@:overload override private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* @see XBaseMenuWindow.getSubmenuBounds

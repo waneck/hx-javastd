@@ -762,7 +762,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JEditorPane$AccessibleJEditorPane') extern class JEditorPane_AccessibleJEditorPane extends AccessibleJTextComponent
+@:native('javax$swing$JEditorPane$AccessibleJEditorPane') extern class JEditorPane_AccessibleJEditorPane extends javax.swing.text.JTextComponent.JTextComponent_AccessibleJTextComponent
 {
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -774,7 +774,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload public function getAccessibleDescription() : String;
+	@:overload override public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the state set of this object.
@@ -783,7 +783,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }
@@ -804,7 +804,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 */
 @:native('javax$swing$JEditorPane$AccessibleJEditorPaneHTML') extern class JEditorPane_AccessibleJEditorPaneHTML extends JEditorPane_AccessibleJEditorPane
 {
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	@:overload private function new() : Void;
 	
@@ -813,7 +813,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload public function getAccessibleChildrenCount() : Int;
+	@:overload override public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -825,7 +825,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -835,7 +835,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	
 }

@@ -89,7 +89,7 @@ extern class MarshallerImpl extends javax.xml.bind.helpers.AbstractMarshallerImp
 	
 	@:overload override public function getListener() : Listener;
 	
-	@:overload override public function setListener(listener : Listener) : Void;
+	@:overload public function setListener(listener : Listener) : Void;
 	
 	private static var INDENT_STRING(default, null) : String;
 	

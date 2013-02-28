@@ -498,7 +498,7 @@ extern class MessageFormat extends java.text.Format
 	* indicating the index in the <code>arguments</code> array of the
 	* argument from which the text was generated.
 	*/
-	public static var ARGUMENT(default, null) : MessageFormat_Field;
+	public static var ARGUMENT(default, null) : java.text.Format.Format_Field;
 	
 	
 }

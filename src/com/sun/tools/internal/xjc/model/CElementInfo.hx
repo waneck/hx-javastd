@@ -98,7 +98,7 @@ extern class CElementInfo extends com.sun.tools.internal.xjc.model.AbstractCElem
 	
 	@:overload public function fullName() : String;
 	
-	@:overload public function accept<T>(visitor : Visitor<T>) : T;
+	@:overload public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
 	
 	@:overload public function getOwnerPackage() : com.sun.codemodel.internal.JPackage;
 	

@@ -427,7 +427,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JLayeredPane$AccessibleJLayeredPane') extern class JLayeredPane_AccessibleJLayeredPane extends AccessibleJComponent
+@:native('javax$swing$JLayeredPane$AccessibleJLayeredPane') extern class JLayeredPane_AccessibleJLayeredPane extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -436,7 +436,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

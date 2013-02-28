@@ -27,17 +27,17 @@ extern class JulianCalendar extends sun.util.calendar.BaseCalendar
 {
 	@:overload override public function getName() : String;
 	
-	@:overload override public function getCalendarDate() : JulianCalendar_Date;
+	@:overload override public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64) : JulianCalendar_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : JulianCalendar_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : JulianCalendar_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate() : JulianCalendar_Date;
+	@:overload override public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : JulianCalendar_Date;
+	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	/**
 	* @param jyear normalized Julian year
@@ -61,7 +61,7 @@ extern class JulianCalendar extends sun.util.calendar.BaseCalendar
 	
 	@:overload override private function new(zone : java.util.TimeZone) : Void;
 	
-	@:overload override public function setEra(era : sun.util.calendar.Era) : JulianCalendar_Date;
+	@:overload override public function setEra(era : sun.util.calendar.Era) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	@:overload private function setKnownEra(era : sun.util.calendar.Era) : Void;
 	

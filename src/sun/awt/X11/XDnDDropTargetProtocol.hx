@@ -70,7 +70,7 @@ package sun.awt.X11;
 	
 	@:overload override public function isDragOverComponent() : Bool;
 	
-	@:overload public function adjustEventForForwarding(xclient : sun.awt.X11.XClientMessageEvent, entry : EmbedderRegistryEntry) : Void;
+	@:overload public function adjustEventForForwarding(xclient : sun.awt.X11.XClientMessageEvent, entry : sun.awt.X11.XDropTargetProtocol.XDropTargetProtocol_EmbedderRegistryEntry) : Void;
 	
 	/*
 	* The methods/fields defined below are executed/accessed only on

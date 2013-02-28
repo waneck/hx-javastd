@@ -52,7 +52,7 @@ package javax.sound.sampled;
 	* @param falseStateLabel the label for the state represented by <code>false</code>,
 	* such as "false" or "off."
 	*/
-	@:overload private function new(type : BooleanControl_Type, initialValue : Bool, trueStateLabel : String, falseStateLabel : String) : Void;
+	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, initialValue : Bool, trueStateLabel : String, falseStateLabel : String) : Void;
 	
 	/**
 	* Constructs a new boolean control object with the given parameters.
@@ -62,7 +62,7 @@ package javax.sound.sampled;
 	* @param type the type of control represented by this float control object
 	* @param initialValue the initial control value
 	*/
-	@:overload private function new(type : BooleanControl_Type, initialValue : Bool) : Void;
+	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, initialValue : Bool) : Void;
 	
 	/**
 	* Sets the current value for the control.  The default
@@ -108,7 +108,7 @@ package javax.sound.sampled;
 	* Represents a control for the mute status of a line.
 	* Note that mute status does not affect gain.
 	*/
-	public static var MUTE(default, null) : BooleanControl_Type;
+	public static var MUTE(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Represents a control for whether reverberation is applied
@@ -116,7 +116,7 @@ package javax.sound.sampled;
 	* the reverberation settings for a line, but does affect whether
 	* these settings are used.
 	*/
-	public static var APPLY_REVERB(default, null) : BooleanControl_Type;
+	public static var APPLY_REVERB(default, null) : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Constructs a new boolean control type.

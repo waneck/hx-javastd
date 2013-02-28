@@ -676,7 +676,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JSplitPane$AccessibleJSplitPane') extern class JSplitPane_AccessibleJSplitPane extends AccessibleJComponent implements javax.accessibility.AccessibleValue
+@:native('javax$swing$JSplitPane$AccessibleJSplitPane') extern class JSplitPane_AccessibleJSplitPane extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Gets the state set of this object.
@@ -685,7 +685,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -695,7 +695,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the accessible value of this object.
@@ -732,7 +732,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	* the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

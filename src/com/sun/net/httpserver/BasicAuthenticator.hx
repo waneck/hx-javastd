@@ -46,7 +46,7 @@ extern class BasicAuthenticator extends com.sun.net.httpserver.Authenticator
 	*/
 	@:overload public function getRealm() : String;
 	
-	@:overload override public function authenticate(t : com.sun.net.httpserver.HttpExchange) : Result;
+	@:overload override public function authenticate(t : com.sun.net.httpserver.HttpExchange) : com.sun.net.httpserver.Authenticator.Authenticator_Result;
 	
 	/**
 	* called for each incoming request to verify the

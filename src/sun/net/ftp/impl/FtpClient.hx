@@ -429,7 +429,7 @@ extern class FtpClient extends sun.net.ftp.FtpClient
 	* @return This FtpClient
 	* @throws IOException if an error occurs during transmission.
 	*/
-	@:overload public function setType(type : TransferType) : sun.net.ftp.FtpClient;
+	@:overload public function setType(type : sun.net.ftp.FtpClient.FtpClient_TransferType) : sun.net.ftp.FtpClient;
 	
 	/**
 	* Issues a LIST command to the server to get the current directory

@@ -47,7 +47,7 @@ extern class WindowsScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function createArrowButtonListener() : ArrowButtonListener;
+	@:require(java6) @:overload override private function createArrowButtonListener() : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ArrowButtonListener;
 	
 	@:overload override private function paintTrack(g : java.awt.Graphics, c : javax.swing.JComponent, trackBounds : java.awt.Rectangle) : Void;
 	

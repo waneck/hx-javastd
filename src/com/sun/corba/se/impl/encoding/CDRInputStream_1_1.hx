@@ -47,7 +47,7 @@ extern class CDRInputStream_1_1 extends com.sun.corba.se.impl.encoding.CDRInputS
 	
 	
 }
-@:native('com$sun$corba$se$impl$encoding$CDRInputStream_1_1$FragmentableStreamMemento') @:internal extern class CDRInputStream_1_1_FragmentableStreamMemento extends StreamMemento
+@:native('com$sun$corba$se$impl$encoding$CDRInputStream_1_1$FragmentableStreamMemento') @:internal extern class CDRInputStream_1_1_FragmentableStreamMemento extends com.sun.corba.se.impl.encoding.CDRInputStream_1_0.CDRInputStream_1_0_StreamMemento
 {
 	@:overload public function new() : Void;
 	

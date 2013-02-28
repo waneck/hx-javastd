@@ -31,7 +31,7 @@ extern class SourceDebugExtension_attribute extends com.sun.tools.classfile.Attr
 	
 	@:overload public function getValue() : String;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var debug_extension(default, null) : java.NativeArray<java.StdTypes.Int8>;
 	

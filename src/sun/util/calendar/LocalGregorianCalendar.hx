@@ -27,17 +27,17 @@ extern class LocalGregorianCalendar extends sun.util.calendar.BaseCalendar
 {
 	@:overload override public function getName() : String;
 	
-	@:overload override public function getCalendarDate() : LocalGregorianCalendar_Date;
+	@:overload override public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64) : LocalGregorianCalendar_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : LocalGregorianCalendar_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : LocalGregorianCalendar_Date;
+	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate() : LocalGregorianCalendar_Date;
+	@:overload override public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : LocalGregorianCalendar_Date;
+	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	@:overload override public function validate(date : sun.util.calendar.CalendarDate) : Bool;
 	
@@ -61,11 +61,11 @@ extern class LocalGregorianCalendar extends sun.util.calendar.BaseCalendar
 	
 	@:overload override private function new(zone : java.util.TimeZone) : Void;
 	
-	@:overload override public function setEra(era : sun.util.calendar.Era) : LocalGregorianCalendar_Date;
+	@:overload override public function setEra(era : sun.util.calendar.Era) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function addYear(localYear : Int) : LocalGregorianCalendar_Date;
+	@:overload override public function addYear(localYear : Int) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function setYear(localYear : Int) : LocalGregorianCalendar_Date;
+	@:overload override public function setYear(localYear : Int) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	@:overload override public function getNormalizedYear() : Int;
 	

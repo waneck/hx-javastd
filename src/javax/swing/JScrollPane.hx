@@ -789,7 +789,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JScrollPane$AccessibleJScrollPane') extern class JScrollPane_AccessibleJScrollPane extends AccessibleJComponent implements javax.swing.event.ChangeListener implements java.beans.PropertyChangeListener
+@:native('javax$swing$JScrollPane$AccessibleJScrollPane') extern class JScrollPane_AccessibleJScrollPane extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.swing.event.ChangeListener implements java.beans.PropertyChangeListener
 {
 	private var viewPort : javax.swing.JViewport;
 	
@@ -810,7 +810,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Invoked when the target of the listener has changed its state.

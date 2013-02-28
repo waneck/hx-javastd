@@ -498,7 +498,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JTextField$AccessibleJTextField') extern class JTextField_AccessibleJTextField extends AccessibleJTextComponent
+@:native('javax$swing$JTextField$AccessibleJTextField') extern class JTextField_AccessibleJTextField extends javax.swing.text.JTextComponent.JTextComponent_AccessibleJTextComponent
 {
 	/**
 	* Gets the state set of this object.
@@ -507,7 +507,7 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

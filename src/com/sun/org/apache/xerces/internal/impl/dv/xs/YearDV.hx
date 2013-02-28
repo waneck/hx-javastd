@@ -36,7 +36,7 @@ extern class YearDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstra
 	* @return normalized date representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String) : DateTimeData;
+	@:overload private function parse(str : String) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
 	/**
 	* Converts year object representation to String
@@ -44,9 +44,9 @@ extern class YearDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstra
 	* @param date   year object
 	* @return lexical representation of month: CCYY with optional time zone sign
 	*/
-	@:overload private function dateToString(date : DateTimeData) : String;
+	@:overload private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
-	@:overload private function getXMLGregorianCalendar(date : DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload private function getXMLGregorianCalendar(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }

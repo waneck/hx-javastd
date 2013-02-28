@@ -115,7 +115,7 @@ extern class RadialGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(cx : Single, cy : Single, radius : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : CycleMethod) : Void;
+	@:overload public function new(cx : Single, cy : Single, radius : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
 	
 	/**
 	* Constructs a {@code RadialGradientPaint} with a default
@@ -145,7 +145,7 @@ extern class RadialGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(center : java.awt.geom.Point2D, radius : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : CycleMethod) : Void;
+	@:overload public function new(center : java.awt.geom.Point2D, radius : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
 	
 	/**
 	* Constructs a {@code RadialGradientPaint} with a default
@@ -182,7 +182,7 @@ extern class RadialGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(cx : Single, cy : Single, radius : Single, fx : Single, fy : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : CycleMethod) : Void;
+	@:overload public function new(cx : Single, cy : Single, radius : Single, fx : Single, fy : Single, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
 	
 	/**
 	* Constructs a {@code RadialGradientPaint} with a default
@@ -214,7 +214,7 @@ extern class RadialGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(center : java.awt.geom.Point2D, radius : Single, focus : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : CycleMethod) : Void;
+	@:overload public function new(center : java.awt.geom.Point2D, radius : Single, focus : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
 	
 	/**
 	* Constructs a {@code RadialGradientPaint}.
@@ -250,7 +250,7 @@ extern class RadialGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(center : java.awt.geom.Point2D, radius : Single, focus : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : CycleMethod, colorSpace : ColorSpaceType, gradientTransform : java.awt.geom.AffineTransform) : Void;
+	@:overload public function new(center : java.awt.geom.Point2D, radius : Single, focus : java.awt.geom.Point2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod, colorSpace : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType, gradientTransform : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Constructs a {@code RadialGradientPaint} with a default
@@ -303,7 +303,7 @@ extern class RadialGradientPaint extends java.awt.MultipleGradientPaint
 	* or a {@code fractions} value is less than 0.0 or greater than 1.0,
 	* or the {@code fractions} are not provided in strictly increasing order
 	*/
-	@:overload public function new(gradientBounds : java.awt.geom.Rectangle2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : CycleMethod) : Void;
+	@:overload public function new(gradientBounds : java.awt.geom.Rectangle2D, fractions : java.NativeArray<Single>, colors : java.NativeArray<java.awt.Color>, cycleMethod : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod) : Void;
 	
 	/**
 	* Creates and returns a {@link PaintContext} used to

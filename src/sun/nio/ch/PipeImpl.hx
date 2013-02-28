@@ -25,9 +25,9 @@ package sun.nio.ch;
 */
 @:internal extern class PipeImpl extends java.nio.channels.Pipe
 {
-	@:overload override public function source() : SourceChannel;
+	@:overload override public function source() : java.nio.channels.Pipe.Pipe_SourceChannel;
 	
-	@:overload override public function sink() : SinkChannel;
+	@:overload override public function sink() : java.nio.channels.Pipe.Pipe_SinkChannel;
 	
 	
 }

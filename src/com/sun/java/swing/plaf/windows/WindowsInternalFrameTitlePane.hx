@@ -63,9 +63,9 @@ extern class WindowsInternalFrameTitlePane extends javax.swing.plaf.basic.BasicI
 	
 	
 }
-@:native('com$sun$java$swing$plaf$windows$WindowsInternalFrameTitlePane$WindowsPropertyChangeHandler') extern class WindowsInternalFrameTitlePane_WindowsPropertyChangeHandler extends PropertyChangeHandler
+@:native('com$sun$java$swing$plaf$windows$WindowsInternalFrameTitlePane$WindowsPropertyChangeHandler') extern class WindowsInternalFrameTitlePane_WindowsPropertyChangeHandler extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_PropertyChangeHandler
 {
-	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload override public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

@@ -48,9 +48,9 @@ package com.sun.media.sound;
 	
 	
 }
-@:native('com$sun$media$sound$MidiOutDevice$MidiOutReceiver') @:internal extern class MidiOutDevice_MidiOutReceiver extends AbstractReceiver
+@:native('com$sun$media$sound$MidiOutDevice$MidiOutReceiver') @:internal extern class MidiOutDevice_MidiOutReceiver extends com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_AbstractReceiver
 {
-	@:overload private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload override private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
 	
 }

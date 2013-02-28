@@ -1408,7 +1408,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JOptionPane$AccessibleJOptionPane') extern class JOptionPane_AccessibleJOptionPane extends AccessibleJComponent
+@:native('javax$swing$JOptionPane$AccessibleJOptionPane') extern class JOptionPane_AccessibleJOptionPane extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -1416,7 +1416,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

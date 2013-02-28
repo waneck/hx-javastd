@@ -140,7 +140,7 @@ package javax.swing.text;
 	* Returns the index of the first character of the run
 	* with respect to the given attributes containing the current character.
 	*/
-	@:overload public function getRunStart(attributes : java.util.Set<Attribute>) : Int;
+	@:overload public function getRunStart(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns the index of the first character following the run
@@ -158,13 +158,13 @@ package javax.swing.text;
 	* Returns the index of the first character following the run
 	* with respect to the given attributes containing the current character.
 	*/
-	@:overload public function getRunLimit(attributes : java.util.Set<Attribute>) : Int;
+	@:overload public function getRunLimit(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns a map with the attributes defined on the current
 	* character.
 	*/
-	@:overload public function getAttributes() : java.util.Map<Attribute, Dynamic>;
+	@:overload public function getAttributes() : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>;
 	
 	/**
 	* Returns the value of the named attribute for the current character.
@@ -178,7 +178,7 @@ package javax.swing.text;
 	* iterator's text range. The set is empty if no
 	* attributes are defined.
 	*/
-	@:overload public function getAllAttributeKeys() : java.util.Set<Attribute>;
+	@:overload public function getAllAttributeKeys() : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>;
 	
 	
 }

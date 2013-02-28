@@ -23,7 +23,7 @@ package com.sun.corba.se.spi.transport;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern interface CorbaConnection extends com.sun.corba.se.pept.transport.Connection extends com.sun.corba.se.spi.legacy.connection.Connection
+extern interface CorbaConnection extends com.sun.corba.se.spi.legacy.connection.Connection extends com.sun.corba.se.spi.legacy.connection.Connection
 {
 	/**
 	* @author Harold Carr

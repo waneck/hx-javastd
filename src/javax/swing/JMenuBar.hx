@@ -348,7 +348,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JMenuBar$AccessibleJMenuBar') extern class JMenuBar_AccessibleJMenuBar extends AccessibleJComponent implements javax.accessibility.AccessibleSelection
+@:native('javax$swing$JMenuBar$AccessibleJMenuBar') extern class JMenuBar_AccessibleJMenuBar extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleSelection
 {
 	/**
 	* Get the accessible state set of this object.
@@ -356,7 +356,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return an instance of AccessibleState containing the current state
 	*         of the object
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -364,7 +364,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleSelection associated with this object.  In the
@@ -374,7 +374,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
+	@:overload override public function getAccessibleSelection() : javax.accessibility.AccessibleSelection;
 	
 	/**
 	* Returns 1 if a menu is currently selected in this menu bar.

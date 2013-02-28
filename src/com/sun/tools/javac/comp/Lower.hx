@@ -60,77 +60,77 @@ extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 	*/
 	@:overload public function translate<T : com.sun.tools.javac.tree.JCTree>(trees : com.sun.tools.javac.util.List<T>, type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.util.List<T>;
 	
-	@:overload override public function visitTopLevel(tree : JCCompilationUnit) : Void;
+	@:overload public function visitTopLevel(tree : JCCompilationUnit) : Void;
 	
-	@:overload override public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
 	
-	@:overload override public function visitMethodDef(tree : JCMethodDecl) : Void;
+	@:overload public function visitMethodDef(tree : JCMethodDecl) : Void;
 	
-	@:overload override public function visitTypeCast(tree : JCTypeCast) : Void;
+	@:overload public function visitTypeCast(tree : JCTypeCast) : Void;
 	
-	@:overload override public function visitNewClass(tree : JCNewClass) : Void;
+	@:overload public function visitNewClass(tree : JCNewClass) : Void;
 	
 	/** Visitor method for conditional expressions.
 	*/
-	@:overload override public function visitConditional(tree : JCConditional) : Void;
+	@:overload public function visitConditional(tree : JCConditional) : Void;
 	
 	/** Visitor method for if statements.
 	*/
-	@:overload override public function visitIf(tree : JCIf) : Void;
+	@:overload public function visitIf(tree : JCIf) : Void;
 	
 	/** Visitor method for assert statements. Translate them away.
 	*/
-	@:overload override public function visitAssert(tree : JCAssert) : Void;
+	@:overload public function visitAssert(tree : JCAssert) : Void;
 	
-	@:overload override public function visitApply(tree : JCMethodInvocation) : Void;
+	@:overload public function visitApply(tree : JCMethodInvocation) : Void;
 	
 	/** Visitor method for parenthesized expressions.
 	*  If the subexpression has changed, omit the parens.
 	*/
-	@:overload override public function visitParens(tree : JCParens) : Void;
+	@:overload public function visitParens(tree : JCParens) : Void;
 	
-	@:overload override public function visitIndexed(tree : JCArrayAccess) : Void;
+	@:overload public function visitIndexed(tree : JCArrayAccess) : Void;
 	
-	@:overload override public function visitAssign(tree : JCAssign) : Void;
+	@:overload public function visitAssign(tree : JCAssign) : Void;
 	
-	@:overload override public function visitAssignop(tree : JCAssignOp) : Void;
+	@:overload public function visitAssignop(tree : JCAssignOp) : Void;
 	
-	@:overload override public function visitUnary(tree : JCUnary) : Void;
+	@:overload public function visitUnary(tree : JCUnary) : Void;
 	
-	@:overload override public function visitBinary(tree : JCBinary) : Void;
+	@:overload public function visitBinary(tree : JCBinary) : Void;
 	
-	@:overload override public function visitIdent(tree : JCIdent) : Void;
+	@:overload public function visitIdent(tree : JCIdent) : Void;
 	
 	/** Translate away the foreach loop.  */
-	@:overload override public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
+	@:overload public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
 	
-	@:overload override public function visitVarDef(tree : JCVariableDecl) : Void;
+	@:overload public function visitVarDef(tree : JCVariableDecl) : Void;
 	
-	@:overload override public function visitBlock(tree : JCBlock) : Void;
+	@:overload public function visitBlock(tree : JCBlock) : Void;
 	
-	@:overload override public function visitDoLoop(tree : JCDoWhileLoop) : Void;
+	@:overload public function visitDoLoop(tree : JCDoWhileLoop) : Void;
 	
-	@:overload override public function visitWhileLoop(tree : JCWhileLoop) : Void;
+	@:overload public function visitWhileLoop(tree : JCWhileLoop) : Void;
 	
-	@:overload override public function visitForLoop(tree : JCForLoop) : Void;
+	@:overload public function visitForLoop(tree : JCForLoop) : Void;
 	
-	@:overload override public function visitReturn(tree : JCReturn) : Void;
+	@:overload public function visitReturn(tree : JCReturn) : Void;
 	
-	@:overload override public function visitSwitch(tree : JCSwitch) : Void;
+	@:overload public function visitSwitch(tree : JCSwitch) : Void;
 	
 	@:overload public function visitEnumSwitch(tree : JCSwitch) : com.sun.tools.javac.tree.JCTree;
 	
 	@:overload public function visitStringSwitch(tree : JCSwitch) : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload override public function visitNewArray(tree : JCNewArray) : Void;
+	@:overload public function visitNewArray(tree : JCNewArray) : Void;
 	
-	@:overload override public function visitSelect(tree : JCFieldAccess) : Void;
+	@:overload public function visitSelect(tree : JCFieldAccess) : Void;
 	
-	@:overload override public function visitLetExpr(tree : LetExpr) : Void;
+	@:overload public function visitLetExpr(tree : LetExpr) : Void;
 	
-	@:overload override public function visitAnnotation(tree : JCAnnotation) : Void;
+	@:overload public function visitAnnotation(tree : JCAnnotation) : Void;
 	
-	@:overload override public function visitTry(tree : JCTry) : Void;
+	@:overload public function visitTry(tree : JCTry) : Void;
 	
 	/** Translate a toplevel class and return a list consisting of
 	*  the translated class and translated versions of all inner classes.

@@ -33,7 +33,7 @@ extern class EnclosingMethod_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload public function getMethodName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var class_index(default, null) : Int;
 	

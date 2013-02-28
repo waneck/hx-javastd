@@ -36,7 +36,7 @@ extern class AnnotationDescImpl implements com.sun.javadoc.AnnotationDesc
 	* included, not those assuming their default values.
 	* Returns an empty array if there are none.
 	*/
-	@:overload public function elementValues() : java.NativeArray<ElementValuePair>;
+	@:overload public function elementValues() : java.NativeArray<com.sun.javadoc.AnnotationDesc.AnnotationDesc_ElementValuePair>;
 	
 	/**
 	* Returns a string representation of this annotation.
@@ -54,7 +54,7 @@ extern class AnnotationDescImpl implements com.sun.javadoc.AnnotationDesc
 * Represents an association between an annotation type element
 * and one of its values.
 */
-@:native('com$sun$tools$javadoc$AnnotationDescImpl$ElementValuePairImpl') extern class AnnotationDescImpl_ElementValuePairImpl implements ElementValuePair
+@:native('com$sun$tools$javadoc$AnnotationDescImpl$ElementValuePairImpl') extern class AnnotationDescImpl_ElementValuePairImpl implements com.sun.javadoc.AnnotationDesc.AnnotationDesc_ElementValuePair
 {
 	/**
 	* Returns the annotation type element.

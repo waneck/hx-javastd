@@ -283,7 +283,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 * elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$ScrollPane$AccessibleAWTScrollPane') extern class ScrollPane_AccessibleAWTScrollPane extends AccessibleAWTContainer
+@:require(java3) @:native('java$awt$ScrollPane$AccessibleAWTScrollPane') extern class ScrollPane_AccessibleAWTScrollPane extends java.awt.Container.Container_AccessibleAWTContainer
 {
 	/**
 	* Get the role of this object.
@@ -292,7 +292,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

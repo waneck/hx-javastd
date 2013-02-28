@@ -31,7 +31,7 @@ package com.sun.tools.apt.mirror.type;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload public function getKind() : Kind;
+	@:overload public function getKind() : com.sun.mirror.type.PrimitiveType.PrimitiveType_Kind;
 	
 	/**
 	* {@inheritDoc}

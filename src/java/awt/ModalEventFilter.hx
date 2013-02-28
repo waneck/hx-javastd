@@ -31,27 +31,27 @@ package java.awt;
 	
 	@:overload private function new(modalDialog : java.awt.Dialog) : Void;
 	
-	@:overload public function acceptEvent(event : java.awt.AWTEvent) : FilterAction;
+	@:overload public function acceptEvent(event : java.awt.AWTEvent) : java.awt.EventFilter.EventFilter_FilterAction;
 	
-	@:overload @:abstract private function acceptWindow(w : java.awt.Window) : FilterAction;
+	@:overload @:abstract private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
 @:native('java$awt$ModalEventFilter$ToolkitModalEventFilter') @:internal extern class ModalEventFilter_ToolkitModalEventFilter extends ModalEventFilter
 {
-	@:overload override private function acceptWindow(w : java.awt.Window) : FilterAction;
+	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
 @:native('java$awt$ModalEventFilter$ApplicationModalEventFilter') @:internal extern class ModalEventFilter_ApplicationModalEventFilter extends ModalEventFilter
 {
-	@:overload override private function acceptWindow(w : java.awt.Window) : FilterAction;
+	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
 @:native('java$awt$ModalEventFilter$DocumentModalEventFilter') @:internal extern class ModalEventFilter_DocumentModalEventFilter extends ModalEventFilter
 {
-	@:overload override private function acceptWindow(w : java.awt.Window) : FilterAction;
+	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }

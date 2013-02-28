@@ -42,7 +42,7 @@ extern class DummyListField extends com.sun.tools.internal.xjc.generator.bean.fi
 	
 	@:overload override public function generateAccessors() : Void;
 	
-	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : DummyListField_Accessor;
+	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractListField.AbstractListField_Accessor;
 	
 	
 }

@@ -30,9 +30,9 @@ package com.sun.xml.internal.ws.handler;
 	
 	@:overload private function updatePacket() : Void;
 	
-	@:overload public function setScope(name : String, scope : Scope) : Void;
+	@:overload public function setScope(name : String, scope : javax.xml.ws.handler.MessageContext.MessageContext_Scope) : Void;
 	
-	@:overload public function getScope(name : String) : Scope;
+	@:overload public function getScope(name : String) : javax.xml.ws.handler.MessageContext.MessageContext_Scope;
 	
 	@:overload public function size() : Int;
 	

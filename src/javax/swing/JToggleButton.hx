@@ -193,7 +193,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JToggleButton$AccessibleJToggleButton') extern class JToggleButton_AccessibleJToggleButton extends AccessibleAbstractButton implements java.awt.event.ItemListener
+@:native('javax$swing$JToggleButton$AccessibleJToggleButton') extern class JToggleButton_AccessibleJToggleButton extends javax.swing.AbstractButton.AbstractButton_AccessibleAbstractButton implements java.awt.event.ItemListener
 {
 	@:overload public function new() : Void;
 	
@@ -209,7 +209,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -35,9 +35,9 @@ package com.sun.tools.javadoc;
 	*/
 	@:require(java5) private var env(default, null) : com.sun.tools.javadoc.DocEnv;
 	
-	private var type(default, null) : com.sun.tools.javac.code.Type;
+	private var type(default, null) : com.sun.javadoc.Type;
 	
-	@:overload private function new(env : com.sun.tools.javadoc.DocEnv, type : com.sun.tools.javac.code.Type) : Void;
+	@:overload private function new(env : com.sun.tools.javadoc.DocEnv, type : com.sun.javadoc.Type) : Void;
 	
 	@:overload public function typeName() : String;
 	

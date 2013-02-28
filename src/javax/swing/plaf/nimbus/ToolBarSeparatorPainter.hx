@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class ToolBarSeparatorPainter extends javax.swing.plaf.nimbus.AbstractRegionPainter
 {
-	@:overload override private function getPaintContext() : PaintContext;
+	@:overload override private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	@:overload override private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
 	

@@ -84,7 +84,7 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	/**
 	* You should be always getting {@link TextPredictor} from {@link XmlVisitor}.
 	*/
-	@:overload public function getPredictor() : TextPredictor;
+	@:overload public function getPredictor() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
 	
 	@:overload public function getContext() : UnmarshallingContext;
 	

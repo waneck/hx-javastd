@@ -91,7 +91,7 @@ extern class Compile extends com.sun.tools.corba.se.idl.Compile
 	
 	public var list : java.util.Hashtable<Dynamic, Dynamic>;
 	
-	public static var compiler : Compile;
+	public static var compiler : com.sun.tools.corba.se.idl.Compile;
 	
 	
 }

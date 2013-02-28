@@ -304,7 +304,7 @@ package java.awt;
 * Java Accessibility API appropriate to button user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Button$AccessibleAWTButton') extern class Button_AccessibleAWTButton extends AccessibleAWTComponent implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
+@:require(java3) @:native('java$awt$Button$AccessibleAWTButton') extern class Button_AccessibleAWTButton extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Get the accessible name of this object.
@@ -312,7 +312,7 @@ package java.awt;
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -322,7 +322,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -332,7 +332,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.  The
@@ -395,7 +395,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

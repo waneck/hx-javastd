@@ -33,7 +33,7 @@ extern class Signature_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload public function getParsedSignature() : com.sun.tools.classfile.Signature;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var signature_index(default, null) : Int;
 	

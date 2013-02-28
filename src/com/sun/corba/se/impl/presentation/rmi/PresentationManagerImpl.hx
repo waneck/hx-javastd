@@ -29,7 +29,7 @@ extern class PresentationManagerImpl implements com.sun.corba.se.spi.presentatio
 	
 	@:overload @:synchronized public function getDynamicMethodMarshaller(method : java.lang.reflect.Method) : com.sun.corba.se.spi.presentation.rmi.DynamicMethodMarshaller;
 	
-	@:overload @:synchronized public function getClassData(cls : Class<Dynamic>) : ClassData;
+	@:overload @:synchronized public function getClassData(cls : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData;
 	
 	@:overload public function getStubFactoryFactory(isDynamic : Bool) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
 	

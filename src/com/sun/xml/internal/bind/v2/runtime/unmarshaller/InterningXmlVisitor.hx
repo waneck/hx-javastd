@@ -43,7 +43,7 @@ extern class InterningXmlVisitor implements com.sun.xml.internal.bind.v2.runtime
 	
 	@:overload public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
-	@:overload public function getPredictor() : TextPredictor;
+	@:overload public function getPredictor() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
 	
 	
 }

@@ -1322,7 +1322,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$JTextComponent$AccessibleJTextComponent') extern class JTextComponent_AccessibleJTextComponent extends AccessibleJComponent implements javax.accessibility.AccessibleText implements javax.swing.event.CaretListener implements javax.swing.event.DocumentListener implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleEditableText implements javax.accessibility.AccessibleExtendedText
+@:native('javax$swing$text$JTextComponent$AccessibleJTextComponent') extern class JTextComponent_AccessibleJTextComponent extends javax.swing.JComponent.JComponent_AccessibleJComponent implements javax.accessibility.AccessibleText implements javax.swing.event.CaretListener implements javax.swing.event.DocumentListener implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleEditableText implements javax.accessibility.AccessibleExtendedText
 {
 	/**
 	* Constructs an AccessibleJTextComponent.  Adds a listener to track
@@ -1381,7 +1381,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the role of this object.
@@ -1390,7 +1390,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* object (AccessibleRole.TEXT)
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleText associated with this object.  In the
@@ -1400,7 +1400,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -1535,7 +1535,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @return the AccessibleEditableText interface
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
+	@:require(java4) @:overload override public function getAccessibleEditableText() : javax.accessibility.AccessibleEditableText;
 	
 	/**
 	* Sets the text contents to the specified string.
@@ -1702,7 +1702,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	*/
 	@:require(java6) @:overload public function getTextBounds(startIndex : Int, endIndex : Int) : java.awt.Rectangle;
 	
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Returns the number of accessible actions available in this object

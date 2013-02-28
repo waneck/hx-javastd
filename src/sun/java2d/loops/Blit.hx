@@ -76,7 +76,7 @@ extern class Blit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$Blit$GeneralXorBlit') @:internal extern class Blit_GeneralXorBlit extends Blit implements GeneralBinaryOp
+@:native('sun$java2d$loops$Blit$GeneralXorBlit') @:internal extern class Blit_GeneralXorBlit extends Blit implements sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp
 {
 	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	

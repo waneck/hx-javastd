@@ -190,7 +190,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JRadioButtonMenuItem$AccessibleJRadioButtonMenuItem') extern class JRadioButtonMenuItem_AccessibleJRadioButtonMenuItem extends AccessibleJMenuItem
+@:native('javax$swing$JRadioButtonMenuItem$AccessibleJRadioButtonMenuItem') extern class JRadioButtonMenuItem_AccessibleJRadioButtonMenuItem extends javax.swing.JMenuItem.JMenuItem_AccessibleJMenuItem
 {
 	/**
 	* Get the role of this object.
@@ -198,7 +198,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

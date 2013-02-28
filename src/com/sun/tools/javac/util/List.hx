@@ -32,39 +32,39 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	/** The remainder of the list except for its first element, supposed
 	*  to be immutable.
 	*/
-	public var tail : List<A>;
+	public var tail : java.util.List<A>;
 	
 	/** Construct an empty list.
 	*/
-	@:overload public static function nil<A>() : List<A>;
+	@:overload public static function nil<A>() : java.util.List<A>;
 	
 	/** Construct a list consisting of given element.
 	*/
-	@:overload public static function of<A>(x1 : A) : List<A>;
+	@:overload public static function of<A>(x1 : A) : java.util.List<A>;
 	
 	/** Construct a list consisting of given elements.
 	*/
-	@:overload public static function of<A>(x1 : A, x2 : A) : List<A>;
+	@:overload public static function of<A>(x1 : A, x2 : A) : java.util.List<A>;
 	
 	/** Construct a list consisting of given elements.
 	*/
-	@:overload public static function of<A>(x1 : A, x2 : A, x3 : A) : List<A>;
+	@:overload public static function of<A>(x1 : A, x2 : A, x3 : A) : java.util.List<A>;
 	
 	/** Construct a list consisting of given elements.
 	*/
-	@:overload public static function of<A>(x1 : A, x2 : A, x3 : A, rest : java.NativeArray<A>) : List<A>;
+	@:overload public static function of<A>(x1 : A, x2 : A, x3 : A, rest : java.NativeArray<A>) : java.util.List<A>;
 	
 	/**
 	* Construct a list consisting all elements of given array.
 	* @param array an array; if {@code null} return an empty list
 	*/
-	@:overload public static function from<A>(array : java.NativeArray<A>) : List<A>;
+	@:overload public static function from<A>(array : java.NativeArray<A>) : java.util.List<A>;
 	
 	/** Construct a list consisting of a given number of identical elements.
 	*  @param len    The number of elements in the list.
 	*  @param init   The value of each element.
 	*/
-	@:overload public static function fill<A>(len : Int, init : A) : List<A>;
+	@:overload public static function fill<A>(len : Int, init : A) : java.util.List<A>;
 	
 	/** Does list have no elements?
 	*/
@@ -80,39 +80,39 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	
 	@:overload override public function size() : Int;
 	
-	@:overload public function setTail(tail : List<A>) : List<A>;
+	@:overload public function setTail(tail : java.util.List<A>) : java.util.List<A>;
 	
 	/** Prepend given element to front of list, forming and returning
 	*  a new list.
 	*/
-	@:overload public function prepend(x : A) : List<A>;
+	@:overload public function prepend(x : A) : java.util.List<A>;
 	
 	/** Prepend given list of elements to front of list, forming and returning
 	*  a new list.
 	*/
-	@:overload public function prependList(xs : List<A>) : List<A>;
+	@:overload public function prependList(xs : java.util.List<A>) : java.util.List<A>;
 	
 	/** Reverse list.
 	* If the list is empty or a singleton, then the same list is returned.
 	* Otherwise a new list is formed.
 	*/
-	@:overload public function reverse() : List<A>;
+	@:overload public function reverse() : java.util.List<A>;
 	
 	/** Append given element at length, forming and returning
 	*  a new list.
 	*/
-	@:overload public function append(x : A) : List<A>;
+	@:overload public function append(x : A) : java.util.List<A>;
 	
 	/** Append given list at length, forming and returning
 	*  a new list.
 	*/
-	@:overload public function appendList(x : List<A>) : List<A>;
+	@:overload public function appendList(x : java.util.List<A>) : java.util.List<A>;
 	
 	/**
 	* Append given list buffer at length, forming and returning a new
 	* list.
 	*/
-	@:overload public function appendList(x : com.sun.tools.javac.util.ListBuffer<A>) : List<A>;
+	@:overload public function appendList(x : com.sun.tools.javac.util.ListBuffer<A>) : java.util.List<A>;
 	
 	/** Copy successive elements of this list into given vector until
 	*  list is exhausted or end of vector is reached.
@@ -141,7 +141,7 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	
 	/** Are the two lists the same?
 	*/
-	@:native('equals') @:overload public static function _equals(xs : List<Dynamic>, ys : List<Dynamic>) : Bool;
+	@:native('equals') @:overload public static function _equals(xs : java.util.List<Dynamic>, ys : java.util.List<Dynamic>) : Bool;
 	
 	/** Does the list contain the specified element?
 	*/
@@ -151,7 +151,7 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	*/
 	@:overload public function last() : A;
 	
-	@:overload public static function convert<T>(klass : Class<T>, list : List<Dynamic>) : List<T>;
+	@:overload public static function convert<T>(klass : Class<T>, list : java.util.List<Dynamic>) : java.util.List<T>;
 	
 	@:overload override public function iterator() : java.util.Iterator<A>;
 	

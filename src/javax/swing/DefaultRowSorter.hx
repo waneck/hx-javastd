@@ -98,7 +98,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*         <code>sortKeys</code> are null or have a column index outside
 	*         the range of the model
 	*/
-	@:overload override public function setSortKeys(sortKeys : java.util.List<SortKey>) : Void;
+	@:overload override public function setSortKeys(sortKeys : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>) : Void;
 	
 	/**
 	* Returns the current sort keys.  This returns an unmodifiable
@@ -108,7 +108,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	*
 	* @return the current sort order
 	*/
-	@:overload override public function getSortKeys() : java.util.List<SortKey>;
+	@:overload override public function getSortKeys() : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>;
 	
 	/**
 	* Sets the maximum number of sort keys.  The number of sort keys

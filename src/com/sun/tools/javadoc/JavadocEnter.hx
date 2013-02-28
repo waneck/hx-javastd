@@ -38,9 +38,9 @@ extern class JavadocEnter extends com.sun.tools.javac.comp.Enter
 	
 	@:overload override public function main(trees : com.sun.tools.javac.util.List<JCCompilationUnit>) : Void;
 	
-	@:overload override public function visitTopLevel(tree : JCCompilationUnit) : Void;
+	@:overload public function visitTopLevel(tree : JCCompilationUnit) : Void;
 	
-	@:overload override public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
 	
 	/** Don't complain about a duplicate class. */
 	@:overload override private function duplicateClass(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, c : ClassSymbol) : Void;

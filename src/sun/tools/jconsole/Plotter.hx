@@ -105,13 +105,13 @@ extern class Plotter extends javax.swing.JComponent implements javax.accessibili
 	
 	
 }
-@:native('sun$tools$jconsole$Plotter$AccessiblePlotter') extern class Plotter_AccessiblePlotter extends AccessibleJComponent
+@:native('sun$tools$jconsole$Plotter$AccessiblePlotter') extern class Plotter_AccessiblePlotter extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	@:overload private function new() : Void;
 	
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -232,7 +232,7 @@ extern class JPasswordField extends javax.swing.JTextField
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JPasswordField$AccessibleJPasswordField') extern class JPasswordField_AccessibleJPasswordField extends AccessibleJTextField
+@:native('javax$swing$JPasswordField$AccessibleJPasswordField') extern class JPasswordField_AccessibleJPasswordField extends javax.swing.JTextField.JTextField_AccessibleJTextField
 {
 	/**
 	* Gets the role of this object.
@@ -241,7 +241,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*   object (AccessibleRole.PASSWORD_TEXT)
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the <code>AccessibleText</code> for the <code>JPasswordField</code>.
@@ -256,7 +256,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:require(java6) @:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Returns the <code>String</code> at a given <code>index</code>.
@@ -274,7 +274,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAtIndex(part : Int, index : Int) : String;
+	@:require(java6) @:overload override public function getAtIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the <code>String</code> after a given <code>index</code>.
@@ -292,7 +292,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getAfterIndex(part : Int, index : Int) : String;
+	@:require(java6) @:overload override public function getAfterIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the <code>String</code> before a given <code>index</code>.
@@ -310,7 +310,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBeforeIndex(part : Int, index : Int) : String;
+	@:require(java6) @:overload override public function getBeforeIndex(part : Int, index : Int) : String;
 	
 	/**
 	* Returns the text between two <code>indices</code>.
@@ -322,7 +322,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextRange(startIndex : Int, endIndex : Int) : String;
+	@:require(java6) @:overload override public function getTextRange(startIndex : Int, endIndex : Int) : String;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> at a given
@@ -344,7 +344,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload override public function getTextSequenceAt(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> after a given
@@ -366,7 +366,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload override public function getTextSequenceAfter(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	/**
 	* Returns the <code>AccessibleTextSequence</code> before a given
@@ -388,7 +388,7 @@ extern class JPasswordField extends javax.swing.JTextField
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
+	@:require(java6) @:overload override public function getTextSequenceBefore(part : Int, index : Int) : javax.accessibility.AccessibleTextSequence;
 	
 	
 }

@@ -409,7 +409,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 * elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$TextComponent$AccessibleAWTTextComponent') extern class TextComponent_AccessibleAWTTextComponent extends AccessibleAWTComponent implements javax.accessibility.AccessibleText implements java.awt.event.TextListener
+@:require(java3) @:native('java$awt$TextComponent$AccessibleAWTTextComponent') extern class TextComponent_AccessibleAWTTextComponent extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.AccessibleText implements java.awt.event.TextListener
 {
 	/**
 	* Constructs an AccessibleAWTTextComponent.  Adds a listener to track
@@ -435,7 +435,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the role of this object.
@@ -444,7 +444,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	* object (AccessibleRole.TEXT)
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleText associated with this object.  In the
@@ -454,7 +454,7 @@ extern class TextComponent extends java.awt.Component implements javax.accessibi
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index

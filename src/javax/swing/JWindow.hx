@@ -508,7 +508,7 @@ extern class JWindow extends java.awt.Window implements javax.accessibility.Acce
 * Java Accessibility API appropriate to window user-interface
 * elements.
 */
-@:native('javax$swing$JWindow$AccessibleJWindow') extern class JWindow_AccessibleJWindow extends AccessibleAWTWindow
+@:native('javax$swing$JWindow$AccessibleJWindow') extern class JWindow_AccessibleJWindow extends java.awt.Window.Window_AccessibleAWTWindow
 {
 	
 }

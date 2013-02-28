@@ -31,7 +31,7 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 	*/
 	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload override private function getDuration(date : DateTimeData) : javax.xml.datatype.Duration;
+	@:overload private function getDuration(date : DateTimeData) : javax.xml.datatype.Duration;
 	
 	
 }

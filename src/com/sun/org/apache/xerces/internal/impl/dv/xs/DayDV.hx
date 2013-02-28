@@ -31,7 +31,7 @@ extern class DayDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstrac
 	* @return normalized date representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String) : DateTimeData;
+	@:overload private function parse(str : String) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
 	/**
 	* Converts gDay object representation to String
@@ -39,9 +39,9 @@ extern class DayDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstrac
 	* @param date   gDay object
 	* @return lexical representation of gDay: ---DD with an optional time zone sign
 	*/
-	@:overload private function dateToString(date : DateTimeData) : String;
+	@:overload private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
-	@:overload private function getXMLGregorianCalendar(date : DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload private function getXMLGregorianCalendar(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }

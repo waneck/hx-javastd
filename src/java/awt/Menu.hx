@@ -233,7 +233,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 * Java Accessibility API appropriate to menu user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$Menu$AccessibleAWTMenu') extern class Menu_AccessibleAWTMenu extends AccessibleAWTMenuItem
+@:require(java3) @:native('java$awt$Menu$AccessibleAWTMenu') extern class Menu_AccessibleAWTMenu extends java.awt.MenuItem.MenuItem_AccessibleAWTMenuItem
 {
 	/**
 	* Get the role of this object.
@@ -241,7 +241,7 @@ extern class Menu extends java.awt.MenuItem implements java.awt.MenuContainer im
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

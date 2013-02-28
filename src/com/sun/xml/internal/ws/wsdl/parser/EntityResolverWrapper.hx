@@ -27,7 +27,7 @@ package com.sun.xml.internal.ws.wsdl.parser;
 {
 	@:overload public function new(core : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : Parser;
+	@:overload public function resolveEntity(publicId : String, systemId : String) : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser;
 	
 	
 }

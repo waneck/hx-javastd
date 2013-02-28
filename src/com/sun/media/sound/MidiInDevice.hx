@@ -50,7 +50,7 @@ package com.sun.media.sound;
 * An own class to distinguish the class name from
 * the transmitter of other devices
 */
-@:native('com$sun$media$sound$MidiInDevice$MidiInTransmitter') @:internal extern class MidiInDevice_MidiInTransmitter extends BasicTransmitter
+@:native('com$sun$media$sound$MidiInDevice$MidiInTransmitter') @:internal extern class MidiInDevice_MidiInTransmitter extends com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_BasicTransmitter
 {
 	
 }

@@ -456,7 +456,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, modalityType : ModalityType) : Void;
+	@:require(java6) @:overload public function new(owner : java.awt.Window, modalityType : java.awt.Dialog.Dialog_ModalityType) : Void;
 	
 	/**
 	* Creates a modeless dialog with the specified title and owner
@@ -995,7 +995,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 * Java Accessibility API appropriate to dialog user-interface
 * elements.
 */
-@:native('javax$swing$JDialog$AccessibleJDialog') extern class JDialog_AccessibleJDialog extends AccessibleAWTDialog
+@:native('javax$swing$JDialog$AccessibleJDialog') extern class JDialog_AccessibleJDialog extends java.awt.Dialog.Dialog_AccessibleAWTDialog
 {
 	/**
 	* Get the accessible name of this object.
@@ -1003,7 +1003,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the state of this object.
@@ -1012,7 +1012,7 @@ extern class JDialog extends java.awt.Dialog implements javax.swing.WindowConsta
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

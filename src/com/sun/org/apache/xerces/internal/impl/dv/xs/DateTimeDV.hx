@@ -40,9 +40,9 @@ extern class DateTimeDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Ab
 	* @return normalized dateTime representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String) : DateTimeData;
+	@:overload private function parse(str : String) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
-	@:overload private function getXMLGregorianCalendar(date : DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload private function getXMLGregorianCalendar(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }

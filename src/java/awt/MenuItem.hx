@@ -360,7 +360,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 * Java Accessibility API appropriate to menu item user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$MenuItem$AccessibleAWTMenuItem') extern class MenuItem_AccessibleAWTMenuItem extends AccessibleAWTMenuComponent implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
+@:require(java3) @:native('java$awt$MenuItem$AccessibleAWTMenuItem') extern class MenuItem_AccessibleAWTMenuItem extends java.awt.MenuComponent.MenuComponent_AccessibleAWTMenuComponent implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Get the accessible name of this object.
@@ -368,7 +368,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @return the localized name of the object -- can be null if this
 	* object does not have a name
 	*/
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -376,7 +376,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -386,7 +386,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -396,7 +396,7 @@ extern class MenuItem extends java.awt.MenuComponent implements javax.accessibil
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.  The

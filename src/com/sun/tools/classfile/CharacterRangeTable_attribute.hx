@@ -53,7 +53,7 @@ extern class CharacterRangeTable_attribute extends com.sun.tools.classfile.Attri
 	
 	@:overload public function new(name_index : Int, character_range_table : java.NativeArray<CharacterRangeTable_attribute_Entry>) : Void;
 	
-	@:overload public function accept<R, D>(visitor : Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var character_range_table(default, null) : java.NativeArray<CharacterRangeTable_attribute_Entry>;
 	

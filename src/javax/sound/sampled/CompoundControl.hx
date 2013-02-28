@@ -39,7 +39,7 @@ package javax.sound.sampled;
 	* @param type the type of control represented this compound control object
 	* @param memberControls the set of member controls
 	*/
-	@:overload private function new(type : CompoundControl_Type, memberControls : java.NativeArray<javax.sound.sampled.Control>) : Void;
+	@:overload private function new(type : javax.sound.sampled.Control.Control_Type, memberControls : java.NativeArray<javax.sound.sampled.Control>) : Void;
 	
 	/**
 	* Returns the set of member controls that comprise the compound control.

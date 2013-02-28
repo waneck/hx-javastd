@@ -66,7 +66,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* Sets the renderer that is responsible for drawing nodes in the tree.
 	* @param nd the renderer
 	*/
-	@:overload public function setNodeDimensions(nd : NodeDimensions) : Void;
+	@:overload public function setNodeDimensions(nd : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions) : Void;
 	
 	/**
 	* Marks the path <code>path</code> expanded state to

@@ -44,7 +44,7 @@ extern class DateDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.DateTi
 	
 	@:overload private function dateToString(date : DateTimeData) : String;
 	
-	@:overload override private function getXMLGregorianCalendar(date : DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload private function getXMLGregorianCalendar(date : DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }

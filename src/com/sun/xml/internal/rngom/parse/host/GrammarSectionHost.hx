@@ -46,7 +46,7 @@ package com.sun.xml.internal.rngom.parse.host;
 */
 extern class GrammarSectionHost extends com.sun.xml.internal.rngom.parse.host.Base implements com.sun.xml.internal.rngom.ast.builder.GrammarSection<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload public function define(name : String, combine : Combine, _pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, _pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, _loc : com.sun.xml.internal.rngom.ast.om.Location, _anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
 	@:overload public function makeDiv() : com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>;
 	

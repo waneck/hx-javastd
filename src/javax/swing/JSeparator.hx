@@ -150,7 +150,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JSeparator$AccessibleJSeparator') extern class JSeparator_AccessibleJSeparator extends AccessibleJComponent
+@:native('javax$swing$JSeparator$AccessibleJSeparator') extern class JSeparator_AccessibleJSeparator extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -158,7 +158,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

@@ -67,7 +67,7 @@ extern class StringIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIntMa
 	
 	
 }
-@:native('com$sun$xml$internal$fastinfoset$util$StringIntMap$Entry') extern class StringIntMap_Entry extends BaseEntry
+@:native('com$sun$xml$internal$fastinfoset$util$StringIntMap$Entry') extern class StringIntMap_Entry extends com.sun.xml.internal.fastinfoset.util.KeyIntMap.KeyIntMap_BaseEntry
 {
 	@:overload public function new(key : String, hash : Int, value : Int, next : StringIntMap_Entry) : Void;
 	

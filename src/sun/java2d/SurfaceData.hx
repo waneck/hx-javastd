@@ -27,11 +27,11 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 {
 	@:overload private function new(surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
-	@:overload private function new(state : State, surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
+	@:overload private function new(state : sun.java2d.StateTrackable.StateTrackable_State, surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
 	@:overload private function new(trackable : sun.java2d.StateTrackableDelegate, surfaceType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
-	@:overload private function new(state : State) : Void;
+	@:overload private function new(state : sun.java2d.StateTrackable.StateTrackable_State) : Void;
 	
 	/**
 	* Subclasses can set a "blit proxy key" which will be used
@@ -138,7 +138,7 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	*/
 	@:overload public static function restoreContents(img : java.awt.Image) : SurfaceData;
 	
-	@:overload public function getState() : State;
+	@:overload public function getState() : sun.java2d.StateTrackable.StateTrackable_State;
 	
 	@:overload public function getStateTracker() : sun.java2d.StateTracker;
 	

@@ -33,7 +33,7 @@ extern class XMenuWindow extends sun.awt.X11.XBaseMenuWindow
 	/**
 	* @see XBaseMenuWindow.map()
 	*/
-	@:overload override private function map() : XMenuWindow_MappingData;
+	@:overload override private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* @see XBaseMenuWindow.getSubmenuBounds()

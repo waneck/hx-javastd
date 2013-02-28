@@ -173,9 +173,9 @@ extern class AbstractMarshallerImpl implements javax.xml.bind.Marshaller
 	
 	@:overload public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
 	
-	@:overload public function setListener(listener : Listener) : Void;
+	@:overload public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
 	
-	@:overload public function getListener() : Listener;
+	@:overload public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
 	
 	/**
 	* <p>

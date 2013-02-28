@@ -94,17 +94,17 @@ extern class Enter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 	*  @param tree     The class definition.
 	*  @param env      The environment current outside of the class definition.
 	*/
-	@:overload public function classEnv(tree : JCClassDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload public function classEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl, env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function getTopLevelEnv(tree : JCCompilationUnit) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
+	@:overload public function getTopLevelEnv(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
 	/** Visitor argument: the current environment.
 	*/
 	private var env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function visitTopLevel(tree : JCCompilationUnit) : Void;
+	@:overload public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
 	
-	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
 	/** Complain about a duplicate class. */
 	@:overload private function duplicateClass(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, c : ClassSymbol) : Void;
@@ -113,7 +113,7 @@ extern class Enter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 	*  Enter a symbol for type parameter in local scope, after checking that it
 	*  is unique.
 	*/
-	@:overload public function visitTypeParameter(tree : JCTypeParameter) : Void;
+	@:overload public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
 	
 	/** Default class enter visitor method: do nothing.
 	*/
@@ -122,14 +122,14 @@ extern class Enter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 	/** Main method: enter all classes in a list of toplevel trees.
 	*  @param trees      The list of trees to be processed.
 	*/
-	@:overload public function main(trees : com.sun.tools.javac.util.List<JCCompilationUnit>) : Void;
+	@:overload public function main(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit>) : Void;
 	
 	/** Main method: enter one class from a list of toplevel trees and
 	*  place the rest on uncompleted for later processing.
 	*  @param trees      The list of trees to be processed.
 	*  @param c          The class symbol to be processed.
 	*/
-	@:overload public function complete(trees : com.sun.tools.javac.util.List<JCCompilationUnit>, c : ClassSymbol) : Void;
+	@:overload public function complete(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit>, c : ClassSymbol) : Void;
 	
 	
 }

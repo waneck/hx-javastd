@@ -274,7 +274,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 * user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$CheckboxMenuItem$AccessibleAWTCheckboxMenuItem') extern class CheckboxMenuItem_AccessibleAWTCheckboxMenuItem extends AccessibleAWTMenuItem implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
+@:require(java3) @:native('java$awt$CheckboxMenuItem$AccessibleAWTCheckboxMenuItem') extern class CheckboxMenuItem_AccessibleAWTCheckboxMenuItem extends java.awt.MenuItem.MenuItem_AccessibleAWTMenuItem implements javax.accessibility.AccessibleAction implements javax.accessibility.AccessibleValue
 {
 	/**
 	* Get the AccessibleAction associated with this object.  In the
@@ -284,7 +284,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the AccessibleValue associated with this object.  In the
@@ -294,7 +294,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*
 	* @return this object
 	*/
-	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Returns the number of Actions available in this object.
@@ -303,14 +303,14 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	*
 	* @return the number of Actions in this object
 	*/
-	@:overload public function getAccessibleActionCount() : Int;
+	@:overload override public function getAccessibleActionCount() : Int;
 	
 	/**
 	* Return a description of the specified action of the object.
 	*
 	* @param i zero-based index of the actions
 	*/
-	@:overload public function getAccessibleActionDescription(i : Int) : String;
+	@:overload override public function getAccessibleActionDescription(i : Int) : String;
 	
 	/**
 	* Perform the specified Action on the object
@@ -318,7 +318,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @param i zero-based index of actions
 	* @return true if the action was performed; otherwise false.
 	*/
-	@:overload public function doAccessibleAction(i : Int) : Bool;
+	@:overload override public function doAccessibleAction(i : Int) : Bool;
 	
 	/**
 	* Get the value of this object as a Number.  If the value has not been
@@ -327,7 +327,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @return value of the object
 	* @see #setCurrentAccessibleValue
 	*/
-	@:overload public function getCurrentAccessibleValue() : java.lang.Number;
+	@:overload override public function getCurrentAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Set the value of this object as a Number.
@@ -335,7 +335,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @return true if the value was set; otherwise false
 	* @see #getCurrentAccessibleValue
 	*/
-	@:overload public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
+	@:overload override public function setCurrentAccessibleValue(n : java.lang.Number) : Bool;
 	
 	/**
 	* Get the minimum value of this object as a Number.
@@ -344,7 +344,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* have a minimum value
 	* @see #getMaximumAccessibleValue
 	*/
-	@:overload public function getMinimumAccessibleValue() : java.lang.Number;
+	@:overload override public function getMinimumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the maximum value of this object as a Number.
@@ -353,7 +353,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* have a maximum value
 	* @see #getMinimumAccessibleValue
 	*/
-	@:overload public function getMaximumAccessibleValue() : java.lang.Number;
+	@:overload override public function getMaximumAccessibleValue() : java.lang.Number;
 	
 	/**
 	* Get the role of this object.
@@ -361,7 +361,7 @@ extern class CheckboxMenuItem extends java.awt.MenuItem implements java.awt.Item
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

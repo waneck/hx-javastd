@@ -32,7 +32,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param styles resources and style definitions which may
 	*  be shared across documents
 	*/
-	@:overload public function new(c : Content, styles : javax.swing.text.StyleContext) : Void;
+	@:overload public function new(c : javax.swing.text.AbstractDocument.AbstractDocument_Content, styles : javax.swing.text.StyleContext) : Void;
 	
 	/**
 	* Constructs a styled document with the default content
@@ -254,14 +254,14 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param chng a description of the document change
 	* @param attr the attributes
 	*/
-	@:overload private function insertUpdate(chng : DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Updates document structure as a result of text removal.
 	*
 	* @param chng a description of the document change
 	*/
-	@:overload private function removeUpdate(chng : DefaultDocumentEvent) : Void;
+	@:overload private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Creates the root element to be used to represent the
@@ -269,7 +269,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	*
 	* @return the element base
 	*/
-	@:overload private function createDefaultRoot() : AbstractElement;
+	@:overload private function createDefaultRoot() : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
 	
 	/**
 	* Gets the foreground color from an attribute set.
@@ -341,7 +341,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$DefaultStyledDocument$SectionElement') extern class DefaultStyledDocument_SectionElement extends BranchElement
+@:native('javax$swing$text$DefaultStyledDocument$SectionElement') extern class DefaultStyledDocument_SectionElement extends javax.swing.text.AbstractDocument.AbstractDocument_BranchElement
 {
 	/**
 	* Creates a new SectionElement.
@@ -353,7 +353,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	*
 	* @return the name
 	*/
-	@:overload public function getName() : String;
+	@:overload override public function getName() : String;
 	
 	
 }
@@ -563,7 +563,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param data the data to insert
 	* @param de the event capturing this edit
 	*/
-	@:overload public function insert(offset : Int, length : Int, data : java.NativeArray<DefaultStyledDocument_ElementSpec>, de : DefaultDocumentEvent) : Void;
+	@:overload public function insert(offset : Int, length : Int, data : java.NativeArray<DefaultStyledDocument_ElementSpec>, de : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Removes content.
@@ -572,7 +572,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param length the length >= 0
 	* @param de the event capturing this edit
 	*/
-	@:overload public function remove(offset : Int, length : Int, de : DefaultDocumentEvent) : Void;
+	@:overload public function remove(offset : Int, length : Int, de : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Changes content.
@@ -581,7 +581,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param length the length >= 0
 	* @param de the event capturing this edit
 	*/
-	@:overload public function change(offset : Int, length : Int, de : DefaultDocumentEvent) : Void;
+	@:overload public function change(offset : Int, length : Int, de : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Inserts an update into the document.
@@ -661,7 +661,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 */
 @:native('javax$swing$text$DefaultStyledDocument$StyleChangeUndoableEdit') @:internal extern class DefaultStyledDocument_StyleChangeUndoableEdit extends javax.swing.undo.AbstractUndoableEdit
 {
-	@:overload public function new(element : AbstractElement, newStyle : javax.swing.text.Style) : Void;
+	@:overload public function new(element : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement, newStyle : javax.swing.text.Style) : Void;
 	
 	/**
 	* Redoes a change.
@@ -678,7 +678,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	@:overload override public function undo() : Void;
 	
 	/** Element to change resolve parent of. */
-	private var element : AbstractElement;
+	private var element : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
 	
 	/** New style. */
 	private var newStyle : javax.swing.text.Style;

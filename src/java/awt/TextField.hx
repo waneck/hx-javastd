@@ -447,7 +447,7 @@ package java.awt;
 * Java Accessibility API appropriate to text field user-interface elements.
 * @since 1.3
 */
-@:require(java3) @:native('java$awt$TextField$AccessibleAWTTextField') extern class TextField_AccessibleAWTTextField extends AccessibleAWTTextComponent
+@:require(java3) @:native('java$awt$TextField$AccessibleAWTTextField') extern class TextField_AccessibleAWTTextField extends java.awt.TextComponent.TextComponent_AccessibleAWTTextComponent
 {
 	/**
 	* Gets the state set of this object.
@@ -456,7 +456,7 @@ package java.awt;
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

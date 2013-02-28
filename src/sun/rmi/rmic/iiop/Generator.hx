@@ -127,7 +127,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* which need to do something other than default construction
 	* must override this method.
 	*/
-	@:overload private function newInstance() : Generator;
+	@:overload private function newInstance() : sun.rmi.rmic.Generator;
 	
 	/**
 	* Default constructor for subclasses to use.

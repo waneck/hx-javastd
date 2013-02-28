@@ -35,13 +35,13 @@ extern class ExtendedBufferCapabilities extends java.awt.BufferCapabilities
 	* Creates an ExtendedBufferCapabilities instance with front/back/flip caps
 	* from the passed caps, and VSYNC_DEFAULT v-sync mode.
 	*/
-	@:overload public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : FlipContents) : Void;
+	@:overload public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
 	/**
 	* Creates an ExtendedBufferCapabilities instance with front/back/flip caps
 	* from the passed image/flip caps, and the v-sync type.
 	*/
-	@:overload public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : FlipContents, t : ExtendedBufferCapabilities_VSyncType) : Void;
+	@:overload public function new(front : java.awt.ImageCapabilities, back : java.awt.ImageCapabilities, flip : java.awt.BufferCapabilities.BufferCapabilities_FlipContents, t : ExtendedBufferCapabilities_VSyncType) : Void;
 	
 	/**
 	* Creates an ExtendedBufferCapabilities instance with front/back/flip caps

@@ -178,9 +178,9 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	
 	@:overload public function getAttachmentUnmarshaller() : javax.xml.bind.attachment.AttachmentUnmarshaller;
 	
-	@:overload public function setListener(listener : Listener) : Void;
+	@:overload public function setListener(listener : javax.xml.bind.Unmarshaller.Unmarshaller_Listener) : Void;
 	
-	@:overload public function getListener() : Listener;
+	@:overload public function getListener() : javax.xml.bind.Unmarshaller.Unmarshaller_Listener;
 	
 	/**
 	* Unmarshal global XML data from the specified DOM tree and return the resulting

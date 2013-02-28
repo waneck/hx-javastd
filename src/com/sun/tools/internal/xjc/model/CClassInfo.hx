@@ -176,7 +176,7 @@ extern class CClassInfo extends com.sun.tools.internal.xjc.model.AbstractCElemen
 	/** list all constructor declarations. */
 	@:overload public function getConstructors() : java.util.Collection<com.sun.tools.internal.xjc.model.Constructor>;
 	
-	@:overload @:final public function accept<T>(visitor : Visitor<T>) : T;
+	@:overload @:final public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
 	
 	@:overload public function getOwnerPackage() : com.sun.codemodel.internal.JPackage;
 	

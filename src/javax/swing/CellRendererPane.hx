@@ -125,7 +125,7 @@ extern class CellRendererPane extends java.awt.Container implements javax.access
 * This class implements accessibility support for the
 * <code>CellRendererPane</code> class.
 */
-@:native('javax$swing$CellRendererPane$AccessibleCellRendererPane') extern class CellRendererPane_AccessibleCellRendererPane extends AccessibleAWTContainer
+@:native('javax$swing$CellRendererPane$AccessibleCellRendererPane') extern class CellRendererPane_AccessibleCellRendererPane extends java.awt.Container.Container_AccessibleAWTContainer
 {
 	/**
 	* Get the role of this object.
@@ -134,7 +134,7 @@ extern class CellRendererPane extends java.awt.Container implements javax.access
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

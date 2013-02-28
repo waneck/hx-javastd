@@ -992,7 +992,7 @@ extern class XMLCipher
 	
 	
 }
-@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$TransformsImpl') @:internal extern class XMLCipher_Factory_TransformsImpl extends com.sun.org.apache.xml.internal.security.transforms.Transforms implements com.sun.org.apache.xml.internal.security.encryption.Transforms
+@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$TransformsImpl') @:internal extern class XMLCipher_Factory_TransformsImpl extends com.sun.org.apache.xml.internal.security.transforms.Transforms implements com.sun.org.apache.xml.internal.security.transforms.Transforms
 {
 	/**
 	* Construct Transforms

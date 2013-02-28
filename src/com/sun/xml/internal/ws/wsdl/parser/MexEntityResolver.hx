@@ -27,7 +27,7 @@ extern class MexEntityResolver implements com.sun.xml.internal.ws.api.wsdl.parse
 {
 	@:overload public function new(wsdls : java.util.List<javax.xml.transform.Source>) : Void;
 	
-	@:overload public function resolveEntity(publicId : String, systemId : String) : Parser;
+	@:overload public function resolveEntity(publicId : String, systemId : String) : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser;
 	
 	
 }

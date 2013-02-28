@@ -61,7 +61,7 @@ extern class StreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.StreamS
 	
 	@:overload public function decode(_in : java.nio.channels.ReadableByteChannel, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload @:final public function copy() : StreamSOAPCodec;
+	@:overload @:final public function copy() : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
 	
 	@:overload @:abstract private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
 	
@@ -72,7 +72,7 @@ extern class StreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.StreamS
 	/**
 	* Creates a new {@link StreamSOAPCodec} instance.
 	*/
-	@:overload public static function create(version : com.sun.xml.internal.ws.api.SOAPVersion) : StreamSOAPCodec;
+	@:overload public static function create(version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec;
 	
 	/**
 	* Get the MIME type associated with this Codec.

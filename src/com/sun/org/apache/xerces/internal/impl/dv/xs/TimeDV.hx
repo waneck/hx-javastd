@@ -37,7 +37,7 @@ extern class TimeDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstra
 	* @return normalized time representation
 	* @exception SchemaDateTimeException Invalid lexical representation
 	*/
-	@:overload private function parse(str : String) : DateTimeData;
+	@:overload private function parse(str : String) : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData;
 	
 	/**
 	* Converts time object representation to String
@@ -45,9 +45,9 @@ extern class TimeDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Abstra
 	* @param date   time object
 	* @return lexical representation of time: hh:mm:ss.sss with an optional time zone sign
 	*/
-	@:overload private function dateToString(date : DateTimeData) : String;
+	@:overload private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
-	@:overload private function getXMLGregorianCalendar(date : DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload private function getXMLGregorianCalendar(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
 	
 }
