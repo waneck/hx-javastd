@@ -34,7 +34,7 @@ package com.sun.xml.internal.ws.encoding;
 	
 	public static var SOAP11_CONTENT_TYPE(default, null) : String;
 	
-	@:overload public function getMimeType() : String;
+	@:overload override public function getMimeType() : String;
 	
 	@:overload @:final private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
 	

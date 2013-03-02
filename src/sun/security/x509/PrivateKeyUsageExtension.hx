@@ -114,7 +114,7 @@ extern class PrivateKeyUsageExtension extends java.security.cert.Extension imple
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.

@@ -98,7 +98,7 @@ extern class IssuerAlternativeNameExtension extends java.security.cert.Extension
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on encoding error.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.

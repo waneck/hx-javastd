@@ -87,7 +87,7 @@ extern class CRLDistributionPointsExtension extends java.security.cert.Extension
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Write the extension to the DerOutputStream.

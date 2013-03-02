@@ -135,7 +135,7 @@ extern class KeyUsageExtension extends java.security.cert.Extension implements s
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this

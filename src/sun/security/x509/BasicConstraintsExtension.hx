@@ -97,7 +97,7 @@ extern class BasicConstraintsExtension extends java.security.cert.Extension impl
 	*
 	* @param out the DerOutputStream to encode the extension to.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.

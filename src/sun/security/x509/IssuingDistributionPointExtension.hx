@@ -94,7 +94,7 @@ extern class IssuingDistributionPointExtension extends java.security.cert.Extens
 	* @param out the output stream.
 	* @exception IOException on encoding error.
 	*/
-	@:overload public function encode(out : java.io.OutputStream) : Void;
+	@:overload override public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Sets the attribute value.

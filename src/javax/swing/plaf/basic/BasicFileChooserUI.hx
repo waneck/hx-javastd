@@ -330,7 +330,7 @@ extern class BasicFileChooserUI extends javax.swing.plaf.FileChooserUI
 {
 	@:overload public function setPattern(globPattern : String) : Void;
 	
-	@:overload public function accept(f : java.io.File) : Bool;
+	@:overload override public function accept(f : java.io.File) : Bool;
 	
 	@:overload public function getDescription() : String;
 	
@@ -358,7 +358,7 @@ extern class BasicFileChooserUI extends javax.swing.plaf.FileChooserUI
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function accept(f : java.io.File) : Bool;
+	@:overload override public function accept(f : java.io.File) : Bool;
 	
 	@:overload public function getDescription() : String;
 	
