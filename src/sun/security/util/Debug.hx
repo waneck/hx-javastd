@@ -31,13 +31,13 @@ extern class Debug
 	* Get a Debug object corresponding to whether or not the given
 	* option is set. Set the prefix to be the same as option.
 	*/
-	@:overload public static function getInstance(option : String) : Debug;
+	@:overload public static function getInstance(option : String) : sun.security.util.Debug;
 	
 	/**
 	* Get a Debug object corresponding to whether or not the given
 	* option is set. Set the prefix to be prefix.
 	*/
-	@:overload public static function getInstance(option : String, prefix : String) : Debug;
+	@:overload public static function getInstance(option : String, prefix : String) : sun.security.util.Debug;
 	
 	/**
 	* True if the system property "security.debug" contains the

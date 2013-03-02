@@ -173,9 +173,9 @@ extern class DOMUtils
 {
 	@:overload public function new(nl : org.w3c.dom.NodeList) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

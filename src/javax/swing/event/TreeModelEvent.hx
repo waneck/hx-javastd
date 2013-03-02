@@ -225,7 +225,7 @@ extern class TreeModelEvent extends java.util.EventObject
 	*
 	* @return a String representation of this object
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

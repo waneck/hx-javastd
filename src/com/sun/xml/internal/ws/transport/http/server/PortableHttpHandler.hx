@@ -30,7 +30,7 @@ package com.sun.xml.internal.ws.transport.http.server;
 	/**
 	* Called by HttpServer when there is a matching request for the context
 	*/
-	@:overload override public function handle(msg : javax.xml.ws.spi.http.HttpExchange) : Void;
+	@:overload public function handle(msg : javax.xml.ws.spi.http.HttpExchange) : Void;
 	
 	@:overload public function handleExchange(msg : javax.xml.ws.spi.http.HttpExchange) : Void;
 	

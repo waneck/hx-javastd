@@ -27,13 +27,13 @@ extern class Stylesheet extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	* Reference to the stylesheet from which this stylesheet was
 	* imported (if any).
 	*/
-	public var _importedFrom : Stylesheet;
+	public var _importedFrom : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
 	/**
 	* Reference to the stylesheet from which this stylesheet was
 	* included (if any).
 	*/
-	public var _includedFrom : Stylesheet;
+	public var _includedFrom : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
 	public static var UNKNOWN_OUTPUT(default, null) : Int;
 	
@@ -78,7 +78,7 @@ extern class Stylesheet extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	
 	@:overload public function setImportPrecedence(precedence : Int) : Void;
 	
-	@:overload override public function getImportPrecedence() : Int;
+	@:overload public function getImportPrecedence() : Int;
 	
 	/**
 	* Get the minimum of the precedence of this stylesheet, any stylesheet
@@ -89,17 +89,17 @@ extern class Stylesheet extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	
 	@:overload public function checkForLoop(systemId : String) : Bool;
 	
-	@:overload override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload public function setParentStylesheet(parent : Stylesheet) : Void;
+	@:overload public function setParentStylesheet(parent : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
-	@:overload public function getParentStylesheet() : Stylesheet;
+	@:overload public function getParentStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
-	@:overload public function setImportingStylesheet(parent : Stylesheet) : Void;
+	@:overload public function setImportingStylesheet(parent : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
-	@:overload public function setIncludingStylesheet(parent : Stylesheet) : Void;
+	@:overload public function setIncludingStylesheet(parent : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
-	@:overload public function addIncludedStylesheet(child : Stylesheet) : Void;
+	@:overload public function addIncludedStylesheet(child : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet) : Void;
 	
 	@:overload public function setSystemId(systemId : String) : Void;
 	
@@ -126,7 +126,7 @@ extern class Stylesheet extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	* @param prefix Namespace prefix.
 	* @param uri Namespace URI.
 	*/
-	@:overload override private function addPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload private function addPrefixMapping(prefix : String, uri : String) : Void;
 	
 	@:overload public function isExtension(uri : String) : Bool;
 	
@@ -137,7 +137,7 @@ extern class Stylesheet extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	* entry to the symbol table mapping the name <tt>__stylesheet_</tt>
 	* to an instance of this class.
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Parse all direct children of the <xsl:stylesheet/> element.
@@ -151,12 +151,12 @@ extern class Stylesheet extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	/**
 	* Type check all the children of this node.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate the stylesheet into JVM bytecodes.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Translate the stylesheet into JVM bytecodes.
@@ -167,7 +167,7 @@ extern class Stylesheet extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	
 	@:overload public function addVariable(global : com.sun.org.apache.xalan.internal.xsltc.compiler.Variable) : Int;
 	
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	@:overload public function getNamespace(prefix : String) : String;
 	

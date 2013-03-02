@@ -121,7 +121,7 @@ extern class InstructionFinder
 	* @return iterator of matches where e.nextElement() returns an array of instruction handles
 	* describing the matched area
 	*/
-	@:overload @:final public function search(pattern : String, from : com.sun.org.apache.bcel.internal.generic.InstructionHandle, constraint : InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
+	@:overload @:final public function search(pattern : String, from : com.sun.org.apache.bcel.internal.generic.InstructionHandle, constraint : com.sun.org.apache.bcel.internal.util.InstructionFinder.InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Start search beginning from the start of the given instruction list.
@@ -151,7 +151,7 @@ extern class InstructionFinder
 	* @param constraint constraints to be checked on matching code
 	* @return instruction handle or `null' if the match failed
 	*/
-	@:overload @:final public function search(pattern : String, constraint : InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
+	@:overload @:final public function search(pattern : String, constraint : com.sun.org.apache.bcel.internal.util.InstructionFinder.InstructionFinder_CodeConstraint) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* @return the inquired instruction list

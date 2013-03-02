@@ -34,7 +34,7 @@ extern class BIXSubstitutable extends com.sun.tools.internal.xjc.reader.xmlschem
 	* @author Kohsuke Kawaguchi
 	* @since 2.1.1
 	*/
-	@:require(java1) @:overload @:final override public function getName() : javax.xml.namespace.QName;
+	@:require(java1) @:overload @:final public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of the conversion declaration. */
 	public static var NAME(default, null) : javax.xml.namespace.QName;

@@ -40,9 +40,9 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	/**
 	* All instances of {@link RuntimeBuiltinLeafInfoImpl}s keyed by their type.
 	*/
-	public static var LEAVES(default, null) : java.util.Map<java.lang.reflect.Type, RuntimeBuiltinLeafInfoImpl<Dynamic>>;
+	public static var LEAVES(default, null) : java.util.Map<java.lang.reflect.Type, com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl<Dynamic>>;
 	
-	public static var STRING(default, null) : RuntimeBuiltinLeafInfoImpl<String>;
+	public static var STRING(default, null) : com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl<String>;
 	
 	/**
 	* List of all {@link RuntimeBuiltinLeafInfoImpl}s.
@@ -51,7 +51,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	* This corresponds to the built-in Java classes that are specified to be
 	* handled differently than ordinary classes. See table 8-2 "Mapping of Standard Java classes".
 	*/
-	public static var builtinBeanInfos(default, null) : java.util.List<RuntimeBuiltinLeafInfoImpl<Dynamic>>;
+	public static var builtinBeanInfos(default, null) : java.util.List<com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl<Dynamic>>;
 	
 	public static var MAP_ANYURI_TO_URI(default, null) : String;
 	
@@ -144,7 +144,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	* @return
 	*      can be null.
 	*/
-	@:overload @:public override public function getUpstream() : Locatable;
+	@:overload @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
 	/**
 	* Gets the element name of the class, if the class is bound
@@ -183,7 +183,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 /**
 * Those built-in types that print to {@link String}.
 */
-@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$StringImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_StringImpl<T> extends RuntimeBuiltinLeafInfoImpl<T>
+@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$StringImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_StringImpl<T> extends com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl<T>
 {
 	@:overload private function new(type : Class<Dynamic>, typeNames : java.NativeArray<javax.xml.namespace.QName>) : Void;
 	
@@ -198,7 +198,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 /**
 * Those built-in types that print to {@link Pcdata}.
 */
-@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$PcdataImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_PcdataImpl<T> extends RuntimeBuiltinLeafInfoImpl<T>
+@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$PcdataImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_PcdataImpl<T> extends com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl<T>
 {
 	@:overload private function new(type : Class<Dynamic>, typeNames : java.NativeArray<javax.xml.namespace.QName>) : Void;
 	
@@ -215,7 +215,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 *
 * This class is given a name so that failing to load this class won't cause a fatal problem.
 */
-@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$UUIDImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_UUIDImpl extends RuntimeBuiltinLeafInfoImpl_StringImpl<java.util.UUID>
+@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$UUIDImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_UUIDImpl extends com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl.RuntimeBuiltinLeafInfoImpl_StringImpl<java.util.UUID>
 {
 	@:overload public function new() : Void;
 	
@@ -225,7 +225,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	
 	
 }
-@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$StringImplImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_StringImplImpl extends RuntimeBuiltinLeafInfoImpl_StringImpl<String>
+@:native('com$sun$xml$internal$bind$v2$model$impl$RuntimeBuiltinLeafInfoImpl$StringImplImpl') @:internal extern class RuntimeBuiltinLeafInfoImpl_StringImplImpl extends com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl.RuntimeBuiltinLeafInfoImpl_StringImpl<String>
 {
 	@:overload public function new(type : Class<Dynamic>, typeNames : java.NativeArray<javax.xml.namespace.QName>) : Void;
 	

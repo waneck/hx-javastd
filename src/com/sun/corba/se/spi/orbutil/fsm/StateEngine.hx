@@ -51,11 +51,11 @@ extern interface StateEngine
 	* This method can only be called before done().  An attempt to
 	* call it after done() results in an IllegalStateException.
 	*/
-	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : StateEngine;
+	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, guard : com.sun.corba.se.spi.orbutil.fsm.Guard, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Add a transition with a guard that always evaluates to true.
 	*/
-	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : StateEngine;
+	@:overload public function add(oldState : com.sun.corba.se.spi.orbutil.fsm.State, input : com.sun.corba.se.spi.orbutil.fsm.Input, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Set the default transition and action for a state.
 	* This transition will be used if no more specific transition was
@@ -64,16 +64,16 @@ extern interface StateEngine
 	* This method can only be called before done().  An attempt to
 	* call it after done() results in an IllegalStateException.
 	*/
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : StateEngine;
+	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, action : com.sun.corba.se.spi.orbutil.fsm.Action, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Equivalent to setDefault( oldState, act, newState ) where act is an
 	* action that does nothing.
 	*/
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : StateEngine;
+	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State, newState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Euaivalent to setDefault( oldState, oldState )
 	*/
-	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State) : StateEngine;
+	@:overload public function setDefault(oldState : com.sun.corba.se.spi.orbutil.fsm.State) : com.sun.corba.se.spi.orbutil.fsm.StateEngine;
 	
 	/** Set the default action used in this state engine.  This is the
 	* action that is called whenever there is no applicable transition.

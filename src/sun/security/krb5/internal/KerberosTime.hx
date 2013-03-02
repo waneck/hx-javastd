@@ -87,15 +87,15 @@ extern class KerberosTime implements java.lang.Cloneable
 	
 	@:overload public function inClockSkew() : Bool;
 	
-	@:overload public function inClockSkew(clockSkew : Int, now : KerberosTime) : Bool;
+	@:overload public function inClockSkew(clockSkew : Int, now : sun.security.krb5.internal.KerberosTime) : Bool;
 	
-	@:overload public function inClockSkew(time : KerberosTime) : Bool;
+	@:overload public function inClockSkew(time : sun.security.krb5.internal.KerberosTime) : Bool;
 	
-	@:overload public function greaterThanWRTClockSkew(time : KerberosTime, clockSkew : Int) : Bool;
+	@:overload public function greaterThanWRTClockSkew(time : sun.security.krb5.internal.KerberosTime, clockSkew : Int) : Bool;
 	
-	@:overload public function greaterThanWRTClockSkew(time : KerberosTime) : Bool;
+	@:overload public function greaterThanWRTClockSkew(time : sun.security.krb5.internal.KerberosTime) : Bool;
 	
-	@:overload public function greaterThan(time : KerberosTime) : Bool;
+	@:overload public function greaterThan(time : sun.security.krb5.internal.KerberosTime) : Bool;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
@@ -119,7 +119,7 @@ extern class KerberosTime implements java.lang.Cloneable
 	* @return an instance of KerberosTime.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : KerberosTime;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.KerberosTime;
 	
 	@:overload public static function getDefaultSkew() : Int;
 	

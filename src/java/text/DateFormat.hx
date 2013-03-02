@@ -198,7 +198,7 @@ extern class DateFormat extends java.text.Format
 	* pattern character 'z'.
 	* @see java.text.Format
 	*/
-	@:overload @:final override public function format(obj : Dynamic, toAppendTo : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:final public function format(obj : Dynamic, toAppendTo : java.lang.StringBuffer, fieldPosition : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats a Date into a date/time string.
@@ -297,7 +297,7 @@ extern class DateFormat extends java.text.Format
 	*         error, returns null.
 	* @exception NullPointerException if <code>pos</code> is null.
 	*/
-	@:overload override public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
+	@:overload public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
 	
 	/**
 	* Constant for full style pattern.
@@ -329,7 +329,7 @@ extern class DateFormat extends java.text.Format
 	* for the default locale.
 	* @return a time formatter.
 	*/
-	@:overload @:final public static function getTimeInstance() : DateFormat;
+	@:overload @:final public static function getTimeInstance() : java.text.DateFormat;
 	
 	/**
 	* Gets the time formatter with the given formatting style
@@ -338,7 +338,7 @@ extern class DateFormat extends java.text.Format
 	* SHORT for "h:mm a" in the US locale.
 	* @return a time formatter.
 	*/
-	@:overload @:final public static function getTimeInstance(style : Int) : DateFormat;
+	@:overload @:final public static function getTimeInstance(style : Int) : java.text.DateFormat;
 	
 	/**
 	* Gets the time formatter with the given formatting style
@@ -348,14 +348,14 @@ extern class DateFormat extends java.text.Format
 	* @param aLocale the given locale.
 	* @return a time formatter.
 	*/
-	@:overload @:final public static function getTimeInstance(style : Int, aLocale : java.util.Locale) : DateFormat;
+	@:overload @:final public static function getTimeInstance(style : Int, aLocale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Gets the date formatter with the default formatting style
 	* for the default locale.
 	* @return a date formatter.
 	*/
-	@:overload @:final public static function getDateInstance() : DateFormat;
+	@:overload @:final public static function getDateInstance() : java.text.DateFormat;
 	
 	/**
 	* Gets the date formatter with the given formatting style
@@ -364,7 +364,7 @@ extern class DateFormat extends java.text.Format
 	* SHORT for "M/d/yy" in the US locale.
 	* @return a date formatter.
 	*/
-	@:overload @:final public static function getDateInstance(style : Int) : DateFormat;
+	@:overload @:final public static function getDateInstance(style : Int) : java.text.DateFormat;
 	
 	/**
 	* Gets the date formatter with the given formatting style
@@ -374,14 +374,14 @@ extern class DateFormat extends java.text.Format
 	* @param aLocale the given locale.
 	* @return a date formatter.
 	*/
-	@:overload @:final public static function getDateInstance(style : Int, aLocale : java.util.Locale) : DateFormat;
+	@:overload @:final public static function getDateInstance(style : Int, aLocale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Gets the date/time formatter with the default formatting style
 	* for the default locale.
 	* @return a date/time formatter.
 	*/
-	@:overload @:final public static function getDateTimeInstance() : DateFormat;
+	@:overload @:final public static function getDateTimeInstance() : java.text.DateFormat;
 	
 	/**
 	* Gets the date/time formatter with the given date and time
@@ -392,7 +392,7 @@ extern class DateFormat extends java.text.Format
 	* SHORT for "h:mm a" in the US locale.
 	* @return a date/time formatter.
 	*/
-	@:overload @:final public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int) : DateFormat;
+	@:overload @:final public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int) : java.text.DateFormat;
 	
 	/**
 	* Gets the date/time formatter with the given formatting styles
@@ -402,13 +402,13 @@ extern class DateFormat extends java.text.Format
 	* @param aLocale the given locale.
 	* @return a date/time formatter.
 	*/
-	@:overload @:final public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int, aLocale : java.util.Locale) : DateFormat;
+	@:overload @:final public static function getDateTimeInstance(dateStyle : Int, timeStyle : Int, aLocale : java.util.Locale) : java.text.DateFormat;
 	
 	/**
 	* Get a default date/time formatter that uses the SHORT style for both the
 	* date and the time.
 	*/
-	@:overload @:final public static function getInstance() : DateFormat;
+	@:overload @:final public static function getInstance() : java.text.DateFormat;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -530,7 +530,7 @@ extern class DateFormat extends java.text.Format
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Create a new date format.
@@ -701,9 +701,9 @@ extern class DateFormat extends java.text.Format
 * Obtains a DateFormat instance from a DateFormatProvider
 * implementation.
 */
-@:native('java$text$DateFormat$DateFormatGetter') @:internal extern class DateFormat_DateFormatGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DateFormatProvider, DateFormat>
+@:native('java$text$DateFormat$DateFormatGetter') @:internal extern class DateFormat_DateFormatGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DateFormatProvider, java.text.DateFormat>
 {
-	@:overload public function getObject(dateFormatProvider : java.text.spi.DateFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : DateFormat;
+	@:overload public function getObject(dateFormatProvider : java.text.spi.DateFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DateFormat;
 	
 	
 }

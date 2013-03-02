@@ -25,7 +25,7 @@ package sun.awt.X11;
 */
 @:internal extern class XWindowPeer extends sun.awt.X11.XPanelPeer implements java.awt.peer.WindowPeer implements sun.awt.DisplayChangedListener
 {
-	private var prevTransientFor : XWindowPeer;
+	private var prevTransientFor : sun.awt.X11.XWindowPeer;
 	
 	@:overload @:final public function getWindowType() : java.awt.Window.Window_Type;
 	
@@ -43,7 +43,7 @@ package sun.awt.X11;
 	
 	@:overload public function getTargetMinimumSize() : java.awt.Dimension;
 	
-	@:overload public function getOwnerPeer() : XWindowPeer;
+	@:overload public function getOwnerPeer() : sun.awt.X11.XWindowPeer;
 	
 	@:overload override public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
 	
@@ -116,13 +116,13 @@ package sun.awt.X11;
 	
 	@:overload public function repositionSecurityWarning() : Void;
 	
-	@:overload override private function setMouseAbove(above : Bool) : Void;
+	@:overload private function setMouseAbove(above : Bool) : Void;
 	
-	@:overload override public function setFullScreenExclusiveModeState(state : Bool) : Void;
+	@:overload public function setFullScreenExclusiveModeState(state : Bool) : Void;
 	
 	@:overload public function updateSecurityWarningVisibility() : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	@:overload override public function handleVisibilityEvent(xev : sun.awt.X11.XEvent) : Void;
 	
@@ -142,13 +142,13 @@ package sun.awt.X11;
 	* Override this methods to get notifications when top-level window state changes. The state is
 	* meant in terms of ICCCM: WithdrawnState, IconicState, NormalState
 	*/
-	@:overload override private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
+	@:overload private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
 	
 	@:overload public function setModalBlocked(d : java.awt.Dialog, blocked : Bool) : Void;
 	
-	@:overload public function setModalBlocked(d : java.awt.Dialog, blocked : Bool, javaToplevels : java.util.Vector<XWindowPeer>) : Void;
+	@:overload public function setModalBlocked(d : java.awt.Dialog, blocked : Bool, javaToplevels : java.util.Vector<sun.awt.X11.XWindowPeer>) : Void;
 	
-	@:overload public function requestWindowFocus(actualFocusedWindow : XWindowPeer) : Bool;
+	@:overload public function requestWindowFocus(actualFocusedWindow : sun.awt.X11.XWindowPeer) : Bool;
 	
 	@:overload public function requestWindowFocus() : Bool;
 	
@@ -166,9 +166,9 @@ package sun.awt.X11;
 	
 	@:overload public function setNETWMState(state : sun.awt.X11.XAtomList) : Void;
 	
-	@:overload override public function getMWMHints() : sun.awt.X11.PropMwmHints;
+	@:overload public function getMWMHints() : sun.awt.X11.PropMwmHints;
 	
-	@:overload override public function setMWMHints(hints : sun.awt.X11.PropMwmHints) : Void;
+	@:overload public function setMWMHints(hints : sun.awt.X11.PropMwmHints) : Void;
 	
 	@:overload private function updateDropTarget() : Void;
 	

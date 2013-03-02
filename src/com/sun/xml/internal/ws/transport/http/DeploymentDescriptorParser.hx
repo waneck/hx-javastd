@@ -36,7 +36,7 @@ extern class DeploymentDescriptorParser<A>
 	* @param adapterFactory
 	*      Creates {@link HttpAdapter} (or its derived class.)
 	*/
-	@:overload public function new(cl : java.lang.ClassLoader, loader : com.sun.xml.internal.ws.transport.http.ResourceLoader, container : com.sun.xml.internal.ws.api.server.Container, adapterFactory : DeploymentDescriptorParser_AdapterFactory<A>) : Void;
+	@:overload public function new(cl : java.lang.ClassLoader, loader : com.sun.xml.internal.ws.transport.http.ResourceLoader, container : com.sun.xml.internal.ws.api.server.Container, adapterFactory : com.sun.xml.internal.ws.transport.http.DeploymentDescriptorParser.DeploymentDescriptorParser_AdapterFactory<A>) : Void;
 	
 	/**
 	* Parses the {@code sun-jaxws.xml} file and configures

@@ -65,15 +65,15 @@ package sun.net.httpserver;
 }
 @:internal extern class PlaceholderOutputStream extends java.io.OutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

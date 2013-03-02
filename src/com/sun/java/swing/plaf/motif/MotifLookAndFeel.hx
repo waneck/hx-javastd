@@ -57,11 +57,11 @@ extern class MotifLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* values, otherwise we create color objects whose values match
 	* the default CDE/Motif colors.
 	*/
-	@:overload override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload override private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	
 }

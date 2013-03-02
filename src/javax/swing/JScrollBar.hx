@@ -117,7 +117,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* Overrides <code>JComponent.updateUI</code>.
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the LookAndFeel class for this component.
@@ -126,7 +126,7 @@ extern class JScrollBar extends javax.swing.JComponent implements java.awt.Adjus
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns the component's orientation (horizontal or vertical).

@@ -61,7 +61,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*   algorithm and mechanism type
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, mechanismType : String) : TransformService;
+	@:overload public static function getInstance(algorithm : String, mechanismType : String) : javax.xml.crypto.dsig.TransformService;
 	
 	/**
 	* Returns a <code>TransformService</code> that supports the specified
@@ -83,7 +83,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*   available from the specified <code>Provider</code> object
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, mechanismType : String, provider : java.security.Provider) : TransformService;
+	@:overload public static function getInstance(algorithm : String, mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.TransformService;
 	
 	/**
 	* Returns a <code>TransformService</code> that supports the specified
@@ -109,7 +109,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	*   available from the specified provider
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, mechanismType : String, provider : String) : TransformService;
+	@:overload public static function getInstance(algorithm : String, mechanismType : String, provider : String) : javax.xml.crypto.dsig.TransformService;
 	
 	/**
 	* Returns the mechanism type supported by this <code>TransformService</code>.

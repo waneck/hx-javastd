@@ -26,7 +26,7 @@ package com.sun.tools.internal.jxc.apt;
 extern class InlineAnnotationReaderImpl extends com.sun.xml.internal.bind.v2.model.annotation.AbstractInlineAnnotationReaderImpl<com.sun.mirror.type.TypeMirror, com.sun.mirror.declaration.TypeDeclaration, com.sun.mirror.declaration.FieldDeclaration, com.sun.mirror.declaration.MethodDeclaration>
 {
 	/** The singleton instance. */
-	public static var theInstance(default, null) : InlineAnnotationReaderImpl;
+	public static var theInstance(default, null) : com.sun.tools.internal.jxc.apt.InlineAnnotationReaderImpl;
 	
 	@:overload public function getClassAnnotation<A : java.lang.annotation.Annotation>(a : Class<A>, clazz : com.sun.mirror.declaration.TypeDeclaration, srcPos : com.sun.xml.internal.bind.v2.model.annotation.Locatable) : A;
 	

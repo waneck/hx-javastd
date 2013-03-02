@@ -31,9 +31,9 @@ extern class ArrayQueue<T> extends java.util.AbstractList<T>
 	
 	@:overload override public function add(o : T) : Bool;
 	
-	@:overload override public function remove(i : Int) : T;
+	@:overload public function remove(i : Int) : T;
 	
-	@:overload override public function get(i : Int) : T;
+	@:overload public function get(i : Int) : T;
 	
 	@:overload override public function size() : Int;
 	

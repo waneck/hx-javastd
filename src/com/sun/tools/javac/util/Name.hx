@@ -34,9 +34,9 @@ package com.sun.tools.javac.util;
 */
 extern class Name implements javax.lang.model.element.Name
 {
-	public var table(default, null) : Name_Table;
+	public var table(default, null) : com.sun.tools.javac.util.Name.Name_Table;
 	
-	@:overload private function new(table : Name_Table) : Void;
+	@:overload private function new(table : com.sun.tools.javac.util.Name.Name_Table) : Void;
 	
 	/**
 	* @inheritDoc

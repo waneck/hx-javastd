@@ -29,7 +29,7 @@ extern class SingleCertificateResolver extends com.sun.org.apache.xml.internal.s
 	@:overload public function new(x509cert : java.security.cert.X509Certificate) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function getIterator() : java.util.Iterator<Dynamic>;
+	@:overload public function getIterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

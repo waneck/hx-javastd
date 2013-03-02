@@ -48,7 +48,7 @@ extern class RETest
 }
 @:internal extern class RETestCase
 {
-	@:overload public function new(test : RETest, tag : String, pattern : String, toMatch : String, badPattern : Bool, shouldMatch : Bool, parens : java.NativeArray<String>) : Void;
+	@:overload public function new(test : com.sun.org.apache.regexp.internal.RETest, tag : String, pattern : String, toMatch : String, badPattern : Bool, shouldMatch : Bool, parens : java.NativeArray<String>) : Void;
 	
 	@:overload public function runTest() : Void;
 	

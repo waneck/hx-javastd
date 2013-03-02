@@ -37,19 +37,19 @@ package java.awt;
 	
 	
 }
-@:native('java$awt$ModalEventFilter$ToolkitModalEventFilter') @:internal extern class ModalEventFilter_ToolkitModalEventFilter extends ModalEventFilter
+@:native('java$awt$ModalEventFilter$ToolkitModalEventFilter') @:internal extern class ModalEventFilter_ToolkitModalEventFilter extends java.awt.ModalEventFilter
 {
 	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
-@:native('java$awt$ModalEventFilter$ApplicationModalEventFilter') @:internal extern class ModalEventFilter_ApplicationModalEventFilter extends ModalEventFilter
+@:native('java$awt$ModalEventFilter$ApplicationModalEventFilter') @:internal extern class ModalEventFilter_ApplicationModalEventFilter extends java.awt.ModalEventFilter
 {
 	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }
-@:native('java$awt$ModalEventFilter$DocumentModalEventFilter') @:internal extern class ModalEventFilter_DocumentModalEventFilter extends ModalEventFilter
+@:native('java$awt$ModalEventFilter$DocumentModalEventFilter') @:internal extern class ModalEventFilter_DocumentModalEventFilter extends java.awt.ModalEventFilter
 {
 	@:overload override private function acceptWindow(w : java.awt.Window) : java.awt.EventFilter.EventFilter_FilterAction;
 	

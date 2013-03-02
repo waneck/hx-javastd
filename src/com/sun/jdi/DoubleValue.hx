@@ -32,7 +32,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface DoubleValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<DoubleValue>
+@:require(java3) extern interface DoubleValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<com.sun.jdi.DoubleValue>
 {
 	/**
 	* Returns this DoubleValue as a <code>double</code>.

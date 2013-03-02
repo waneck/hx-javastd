@@ -25,7 +25,7 @@ package com.sun.tools.javac.api;
 */
 extern class ClientCodeWrapper
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : ClientCodeWrapper;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.api.ClientCodeWrapper;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -127,7 +127,7 @@ extern class ClientCodeWrapper
 	
 	
 }
-@:native('com$sun$tools$javac$api$ClientCodeWrapper$WrappedJavaFileObject') extern class ClientCodeWrapper_WrappedJavaFileObject extends ClientCodeWrapper_WrappedFileObject implements javax.tools.JavaFileObject
+@:native('com$sun$tools$javac$api$ClientCodeWrapper$WrappedJavaFileObject') extern class ClientCodeWrapper_WrappedJavaFileObject extends com.sun.tools.javac.api.ClientCodeWrapper.ClientCodeWrapper_WrappedFileObject implements javax.tools.JavaFileObject
 {
 	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	

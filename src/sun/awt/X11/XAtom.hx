@@ -192,7 +192,7 @@ package sun.awt.X11;
 	
 	public static var XA_LAST_PREDEFINED(default, null) : haxe.Int64;
 	
-	@:overload public static function get(name : String) : XAtom;
+	@:overload public static function get(name : String) : sun.awt.X11.XAtom;
 	
 	@:overload @:final public function getName() : String;
 	
@@ -332,7 +332,7 @@ package sun.awt.X11;
 	/**
 	* Sets property value of type ATOM list to the list of atoms.
 	*/
-	@:overload public function setAtomListProperty(window : sun.awt.X11.XBaseWindow, atoms : java.NativeArray<XAtom>) : Void;
+	@:overload public function setAtomListProperty(window : sun.awt.X11.XBaseWindow, atoms : java.NativeArray<sun.awt.X11.XAtom>) : Void;
 	
 	/**
 	* Sets property value of type ATOM list to the list of atoms specified by XAtomList

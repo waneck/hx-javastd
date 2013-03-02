@@ -76,7 +76,7 @@ extern class MTOMFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getID() : String;
+	@:overload public function getID() : String;
 	
 	/**
 	* Gets the threshold value used to determine when binary data

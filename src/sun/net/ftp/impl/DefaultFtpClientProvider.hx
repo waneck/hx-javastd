@@ -29,7 +29,7 @@ package sun.net.ftp.impl;
 */
 extern class DefaultFtpClientProvider extends sun.net.ftp.FtpClientProvider
 {
-	@:overload override public function createFtpClient() : sun.net.ftp.FtpClient;
+	@:overload public function createFtpClient() : sun.net.ftp.FtpClient;
 	
 	
 }

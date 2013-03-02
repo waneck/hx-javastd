@@ -33,7 +33,7 @@ package com.sun.tools.javap;
 */
 extern class AttributeWriter extends com.sun.tools.javap.BasicWriter implements com.sun.tools.classfile.Attribute.Attribute_Visitor<java.lang.Void, java.lang.Void>
 {
-	@:overload public static function instance(context : com.sun.tools.javap.Context) : AttributeWriter;
+	@:overload public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.AttributeWriter;
 	
 	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
 	

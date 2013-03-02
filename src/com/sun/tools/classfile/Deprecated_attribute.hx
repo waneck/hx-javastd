@@ -29,7 +29,7 @@ extern class Deprecated_attribute extends com.sun.tools.classfile.Attribute
 	
 	@:overload public function new(name_index : Int) : Void;
 	
-	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	
 }

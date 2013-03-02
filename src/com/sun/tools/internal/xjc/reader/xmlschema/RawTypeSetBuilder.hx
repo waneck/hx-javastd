@@ -61,7 +61,7 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 	
 	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
 	@:overload override private function isListOfValues() : Bool;
 	
@@ -82,7 +82,7 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 	
 	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
 	@:overload override private function isListOfValues() : Bool;
 	
@@ -103,7 +103,7 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 	
 	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
 	@:overload override private function isListOfValues() : Bool;
 	
@@ -131,7 +131,7 @@ extern class RawTypeSetBuilder implements com.sun.xml.internal.xsom.visitor.XSTe
 	*/
 	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	
-	@:overload private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
 	@:overload override private function isListOfValues() : Bool;
 	

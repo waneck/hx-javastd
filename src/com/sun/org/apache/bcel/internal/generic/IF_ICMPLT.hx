@@ -70,7 +70,7 @@ extern class IF_ICMPLT extends com.sun.org.apache.bcel.internal.generic.IfInstru
 	/**
 	* @return negation of instruction
 	*/
-	@:overload override public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
+	@:overload public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -80,7 +80,7 @@ extern class IF_ICMPLT extends com.sun.org.apache.bcel.internal.generic.IfInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

@@ -27,7 +27,7 @@ extern class SoftAudioBuffer
 {
 	@:overload public function new(size : Int, format : javax.sound.sampled.AudioFormat) : Void;
 	
-	@:overload public function swap(swap : SoftAudioBuffer) : Void;
+	@:overload public function swap(swap : com.sun.media.sound.SoftAudioBuffer) : Void;
 	
 	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
 	

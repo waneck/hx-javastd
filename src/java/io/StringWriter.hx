@@ -107,7 +107,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : StringWriter;
+	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : java.io.StringWriter;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -141,7 +141,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : StringWriter;
+	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.StringWriter;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -159,7 +159,7 @@ package java.io;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : StringWriter;
+	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : java.io.StringWriter;
 	
 	/**
 	* Return the buffer's current value as a string.

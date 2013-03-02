@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class Effect
 {
-	@:overload private static function getArrayCache() : Effect_ArrayCache;
+	@:overload private static function getArrayCache() : javax.swing.plaf.nimbus.Effect.Effect_ArrayCache;
 	
 	
 }

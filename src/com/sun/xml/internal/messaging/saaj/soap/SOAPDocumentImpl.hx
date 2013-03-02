@@ -35,47 +35,47 @@ extern class SOAPDocumentImpl extends com.sun.org.apache.xerces.internal.dom.Doc
 	
 	@:overload public function getSOAPPart() : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl;
 	
-	@:overload public function getDocument() : SOAPDocumentImpl;
+	@:overload public function getDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
 	
-	@:overload override public function getDoctype() : org.w3c.dom.DocumentType;
+	@:overload public function getDoctype() : org.w3c.dom.DocumentType;
 	
-	@:overload override public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
-	@:overload override public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload public function getDocumentElement() : org.w3c.dom.Element;
 	
 	@:overload private function doGetDocumentElement() : org.w3c.dom.Element;
 	
-	@:overload override public function createElement(tagName : String) : org.w3c.dom.Element;
+	@:overload public function createElement(tagName : String) : org.w3c.dom.Element;
 	
-	@:overload override public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
+	@:overload public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
 	
-	@:overload override public function createTextNode(data : String) : org.w3c.dom.Text;
+	@:overload public function createTextNode(data : String) : org.w3c.dom.Text;
 	
-	@:overload override public function createComment(data : String) : org.w3c.dom.Comment;
+	@:overload public function createComment(data : String) : org.w3c.dom.Comment;
 	
-	@:overload override public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
+	@:overload public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
 	
-	@:overload override public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
+	@:overload public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
-	@:overload override public function createAttribute(name : String) : org.w3c.dom.Attr;
+	@:overload public function createAttribute(name : String) : org.w3c.dom.Attr;
 	
-	@:overload override public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
+	@:overload public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
 	
-	@:overload override public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
+	@:overload public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
 	
-	@:overload override public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
+	@:overload public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
 	
-	@:overload override public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
-	@:overload override public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
-	@:overload override public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
-	@:overload override public function getElementById(elementId : String) : org.w3c.dom.Element;
+	@:overload public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
-	@:overload public function cloneNode(newdoc : SOAPDocumentImpl, deep : Bool) : Void;
+	@:overload public function cloneNode(newdoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, deep : Bool) : Void;
 	
 	
 }

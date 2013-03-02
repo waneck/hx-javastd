@@ -55,7 +55,7 @@ extern class TreePath implements java.io.Serializable
 	* @throws IllegalArgumentException if {@code lastPathComponent} is
 	*         {@code null}
 	*/
-	@:overload private function new(parent : TreePath, lastPathComponent : Dynamic) : Void;
+	@:overload private function new(parent : javax.swing.tree.TreePath, lastPathComponent : Dynamic) : Void;
 	
 	/**
 	* Creates a {@code TreePath} from an array. The returned
@@ -124,7 +124,7 @@ extern class TreePath implements java.io.Serializable
 	*
 	* @param o the object to compare
 	*/
-	@:overload public function equals(o : Dynamic) : Bool;
+	@:overload override public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code of this {@code TreePath}. The hash code of a
@@ -153,7 +153,7 @@ extern class TreePath implements java.io.Serializable
 	* @param aTreePath the {@code TreePath} to check
 	* @return true if <code>aTreePath</code> is a descendant of this path
 	*/
-	@:overload public function isDescendant(aTreePath : TreePath) : Bool;
+	@:overload public function isDescendant(aTreePath : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns a new path containing all the elements of this path
@@ -163,7 +163,7 @@ extern class TreePath implements java.io.Serializable
 	* @param child the path element to add
 	* @throws NullPointerException if {@code child} is {@code null}
 	*/
-	@:overload public function pathByAddingChild(child : Dynamic) : TreePath;
+	@:overload public function pathByAddingChild(child : Dynamic) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the {@code TreePath} of the parent. A return value of
@@ -171,7 +171,7 @@ extern class TreePath implements java.io.Serializable
 	*
 	* @return the parent path
 	*/
-	@:overload public function getParentPath() : TreePath;
+	@:overload public function getParentPath() : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns a string that displays and identifies this

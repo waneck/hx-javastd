@@ -129,7 +129,7 @@ exception statement from your version.
 	* line.
 	* @return description of the line
 	*/
-	@:overload @:public override public function getLineInfo() : Line_Info;
+	@:overload @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Obtains a control of the specified type,

@@ -35,7 +35,7 @@ extern class XRTreeFragSelectWrapper extends com.sun.org.apache.xpath.internal.o
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* For support of literal objects in xpaths.
@@ -46,7 +46,7 @@ extern class XRTreeFragSelectWrapper extends com.sun.org.apache.xpath.internal.o
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Detaches the <code>DTMIterator</code> from the set which it iterated

@@ -71,7 +71,7 @@ extern class XNull extends com.sun.org.apache.xpath.internal.objects.XNodeSet
 	*
 	* @return The object as a result tree fragment.
 	*/
-	@:overload override public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Tell if two objects are functionally equal.

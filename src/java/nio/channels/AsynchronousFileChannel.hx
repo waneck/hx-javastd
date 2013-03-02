@@ -148,7 +148,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	*          SecurityManager#checkWrite(String)} method is invoked to check
 	*          write access if the file is opened for writing
 	*/
-	@:overload public static function open(file : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, executor : java.util.concurrent.ExecutorService, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : AsynchronousFileChannel;
+	@:overload public static function open(file : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, executor : java.util.concurrent.ExecutorService, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.AsynchronousFileChannel;
 	
 	/**
 	* Opens or creates a file for reading and/or writing, returning an
@@ -192,7 +192,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	*          SecurityManager#checkWrite(String)} method is invoked to check
 	*          write access if the file is opened for writing
 	*/
-	@:overload public static function open(file : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : AsynchronousFileChannel;
+	@:overload public static function open(file : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.channels.AsynchronousFileChannel;
 	
 	/**
 	* Returns the current size of this channel's file.
@@ -231,7 +231,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function truncate(size : haxe.Int64) : AsynchronousFileChannel;
+	@:overload @:abstract public function truncate(size : haxe.Int64) : java.nio.channels.AsynchronousFileChannel;
 	
 	/**
 	* Forces any updates to this channel's file to be written to the storage

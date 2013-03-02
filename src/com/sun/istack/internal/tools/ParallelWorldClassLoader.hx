@@ -27,11 +27,11 @@ extern class ParallelWorldClassLoader extends java.lang.ClassLoader implements j
 {
 	@:overload public function new(parent : java.lang.ClassLoader, prefix : String) : Void;
 	
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload private function findClass(name : String) : Class<Dynamic>;
 	
-	@:overload override private function findResource(name : String) : java.net.URL;
+	@:overload private function findResource(name : String) : java.net.URL;
 	
-	@:overload override private function findResources(name : String) : java.util.Enumeration<java.net.URL>;
+	@:overload private function findResources(name : String) : java.util.Enumeration<java.net.URL>;
 	
 	@:overload @:synchronized public function close() : Void;
 	

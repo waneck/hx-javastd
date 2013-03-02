@@ -44,7 +44,7 @@ extern class ShadowedSymbolTable extends com.sun.org.apache.xerces.internal.util
 	*
 	* @param symbol The new symbol.
 	*/
-	@:overload override public function addSymbol(symbol : String) : String;
+	@:overload public function addSymbol(symbol : String) : String;
 	
 	/**
 	* Adds the specified symbol to the symbol table and returns a
@@ -56,7 +56,7 @@ extern class ShadowedSymbolTable extends com.sun.org.apache.xerces.internal.util
 	* @param offset The offset into the buffer of the new symbol.
 	* @param length The length of the new symbol in the buffer.
 	*/
-	@:overload override public function addSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : String;
+	@:overload public function addSymbol(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : String;
 	
 	/**
 	* Returns a hashcode value for the specified symbol. The value
@@ -66,7 +66,7 @@ extern class ShadowedSymbolTable extends com.sun.org.apache.xerces.internal.util
 	*
 	* @param symbol The symbol to hash.
 	*/
-	@:overload override public function hash(symbol : String) : Int;
+	@:overload public function hash(symbol : String) : Int;
 	
 	/**
 	* Returns a hashcode value for the specified symbol information.
@@ -79,7 +79,7 @@ extern class ShadowedSymbolTable extends com.sun.org.apache.xerces.internal.util
 	*               of the symbol.
 	* @param length The length of the symbol.
 	*/
-	@:overload override public function hash(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
+	@:overload public function hash(buffer : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Int;
 	
 	
 }

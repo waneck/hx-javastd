@@ -31,15 +31,15 @@ package sun.security.pkcs11;
 * @author  Andreas Sterbenz
 * @since   1.5
 */
-@:require(java5) @:internal extern class Session implements java.lang.Comparable<Session>
+@:require(java5) @:internal extern class Session implements java.lang.Comparable<sun.security.pkcs11.Session>
 {
-	@:overload public function compareTo(other : Session) : Int;
+	@:overload public function compareTo(other : sun.security.pkcs11.Session) : Int;
 	
 	
 }
-@:internal extern class SessionRef extends java.lang.ref.PhantomReference<Session> implements java.lang.Comparable<SessionRef>
+@:internal extern class SessionRef extends java.lang.ref.PhantomReference<sun.security.pkcs11.Session> implements java.lang.Comparable<sun.security.pkcs11.Session.SessionRef>
 {
-	@:overload public function compareTo(other : SessionRef) : Int;
+	@:overload public function compareTo(other : sun.security.pkcs11.Session.SessionRef) : Int;
 	
 	
 }

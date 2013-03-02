@@ -25,39 +25,39 @@ package sun.net.httpserver;
 */
 @:internal extern class HttpExchangeImpl extends com.sun.net.httpserver.HttpExchange
 {
-	@:overload override public function getRequestHeaders() : com.sun.net.httpserver.Headers;
+	@:overload public function getRequestHeaders() : com.sun.net.httpserver.Headers;
 	
-	@:overload override public function getResponseHeaders() : com.sun.net.httpserver.Headers;
+	@:overload public function getResponseHeaders() : com.sun.net.httpserver.Headers;
 	
-	@:overload override public function getRequestURI() : java.net.URI;
+	@:overload public function getRequestURI() : java.net.URI;
 	
-	@:overload override public function getRequestMethod() : String;
+	@:overload public function getRequestMethod() : String;
 	
-	@:overload override public function getHttpContext() : sun.net.httpserver.HttpContextImpl;
+	@:overload public function getHttpContext() : sun.net.httpserver.HttpContextImpl;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function getRequestBody() : java.io.InputStream;
+	@:overload public function getRequestBody() : java.io.InputStream;
 	
-	@:overload override public function getResponseCode() : Int;
+	@:overload public function getResponseCode() : Int;
 	
-	@:overload override public function getResponseBody() : java.io.OutputStream;
+	@:overload public function getResponseBody() : java.io.OutputStream;
 	
-	@:overload override public function sendResponseHeaders(rCode : Int, contentLen : haxe.Int64) : Void;
+	@:overload public function sendResponseHeaders(rCode : Int, contentLen : haxe.Int64) : Void;
 	
-	@:overload override public function getRemoteAddress() : java.net.InetSocketAddress;
+	@:overload public function getRemoteAddress() : java.net.InetSocketAddress;
 	
-	@:overload override public function getLocalAddress() : java.net.InetSocketAddress;
+	@:overload public function getLocalAddress() : java.net.InetSocketAddress;
 	
-	@:overload override public function getProtocol() : String;
+	@:overload public function getProtocol() : String;
 	
-	@:overload override public function getAttribute(name : String) : Dynamic;
+	@:overload public function getAttribute(name : String) : Dynamic;
 	
-	@:overload override public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
 	
-	@:overload override public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
+	@:overload public function setStreams(i : java.io.InputStream, o : java.io.OutputStream) : Void;
 	
-	@:overload override public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
+	@:overload public function getPrincipal() : com.sun.net.httpserver.HttpPrincipal;
 	
 	
 }

@@ -61,9 +61,9 @@ extern class AttributeClass
 	
 	public static var TAG_MEMBER_ATTRNAME(default, null) : Int;
 	
-	public static var ATTRIBUTES_CHARSET(default, null) : AttributeClass;
+	public static var ATTRIBUTES_CHARSET(default, null) : sun.print.AttributeClass;
 	
-	public static var ATTRIBUTES_NATURAL_LANGUAGE(default, null) : AttributeClass;
+	public static var ATTRIBUTES_NATURAL_LANGUAGE(default, null) : sun.print.AttributeClass;
 	
 	/*
 	* value passed in by IPPPrintService.readIPPResponse is a sequence

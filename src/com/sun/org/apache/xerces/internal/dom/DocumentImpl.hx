@@ -67,7 +67,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* using DOMs retrieved from several different sources, potentially
 	* with different underlying representations.
 	*/
-	@:overload override public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* NON-DOM extension:
@@ -166,7 +166,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param useCapture True iff listener is registered on
 	*  capturing phase rather than at-target or bubbling
 	*/
-	@:overload override private function addEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload private function addEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p> Deregister an event listener previously
@@ -179,9 +179,9 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param useCapture True iff listener is registered on
 	*  capturing phase rather than at-target or bubbling
 	*/
-	@:overload override private function removeEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
+	@:overload private function removeEventListener(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, type : String, listener : org.w3c.dom.events.EventListener, useCapture : Bool) : Void;
 	
-	@:overload override private function copyEventListeners(src : com.sun.org.apache.xerces.internal.dom.NodeImpl, tgt : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
+	@:overload private function copyEventListeners(src : com.sun.org.apache.xerces.internal.dom.NodeImpl, tgt : com.sun.org.apache.xerces.internal.dom.NodeImpl) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -233,7 +233,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @return true if the event's <code>preventDefault()</code>
 	*              method was invoked by an EventListener; otherwise false.
 	*/
-	@:overload override private function dispatchEvent(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, event : org.w3c.dom.events.Event) : Bool;
+	@:overload private function dispatchEvent(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, event : org.w3c.dom.events.Event) : Bool;
 	
 	/**
 	* NON-DOM INTERNAL: DOMNodeInsertedIntoDocument and ...RemovedFrom...
@@ -267,7 +267,7 @@ extern class DocumentImpl extends com.sun.org.apache.xerces.internal.dom.CoreDoc
 	* @param node node to dispatch to
 	* @param ea description of Attr affected by current operation
 	*/
-	@:overload private function dispatchAggregateEvents(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, ea : DocumentImpl_EnclosingAttr) : Void;
+	@:overload private function dispatchAggregateEvents(node : com.sun.org.apache.xerces.internal.dom.NodeImpl, ea : com.sun.org.apache.xerces.internal.dom.DocumentImpl.DocumentImpl_EnclosingAttr) : Void;
 	
 	/**
 	* NON-DOM INTERNAL: Generate the "aggregated" post-mutation events

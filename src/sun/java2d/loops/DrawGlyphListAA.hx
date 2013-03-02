@@ -31,11 +31,11 @@ extern class DrawGlyphListAA extends sun.java2d.loops.GraphicsPrimitive
 	*   2) must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : DrawGlyphListAA;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawGlyphListAA;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -49,7 +49,7 @@ extern class DrawGlyphListAA extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$DrawGlyphListAA$General') extern class DrawGlyphListAA_General extends DrawGlyphListAA
+@:native('sun$java2d$loops$DrawGlyphListAA$General') extern class DrawGlyphListAA_General extends sun.java2d.loops.DrawGlyphListAA
 {
 	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -57,9 +57,9 @@ extern class DrawGlyphListAA extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$DrawGlyphListAA$TraceDrawGlyphListAA') @:internal extern class DrawGlyphListAA_TraceDrawGlyphListAA extends DrawGlyphListAA
+@:native('sun$java2d$loops$DrawGlyphListAA$TraceDrawGlyphListAA') @:internal extern class DrawGlyphListAA_TraceDrawGlyphListAA extends sun.java2d.loops.DrawGlyphListAA
 {
-	@:overload public function new(target : DrawGlyphListAA) : Void;
+	@:overload public function new(target : sun.java2d.loops.DrawGlyphListAA) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

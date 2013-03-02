@@ -23,7 +23,7 @@ package com.sun.xml.internal.ws.policy;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.policy.PolicyAssertion> implements java.lang.Comparable<AssertionSet>
+extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.policy.PolicyAssertion> implements java.lang.Comparable<com.sun.xml.internal.ws.policy.AssertionSet>
 {
 	/**
 	* Creates and returns new assertion set holding content of all provided policy assertion sets.
@@ -36,7 +36,7 @@ extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.
 	*        May be {@code null} - empty assertion set is returned in such case.
 	* @return new instance of assertion set holding the content of all provided policy assertion sets.
 	*/
-	@:overload public static function createMergedAssertionSet(alternatives : java.util.Collection<AssertionSet>) : AssertionSet;
+	@:overload public static function createMergedAssertionSet(alternatives : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.AssertionSet;
 	
 	/**
 	* Creates and returns new assertion set holding a set of provided policy assertions.
@@ -44,9 +44,9 @@ extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.
 	* @param assertions collection of provided policy assertions to be stored in the assertion set. May be {@code null}.
 	* @return new instance of assertion set holding the provided policy assertions
 	*/
-	@:overload public static function createAssertionSet(assertions : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : AssertionSet;
+	@:overload public static function createAssertionSet(assertions : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : com.sun.xml.internal.ws.policy.AssertionSet;
 	
-	@:overload public static function emptyAssertionSet() : AssertionSet;
+	@:overload public static function emptyAssertionSet() : com.sun.xml.internal.ws.policy.AssertionSet;
 	
 	/**
 	* Returns an iterator over a set of child policy assertion objects.
@@ -84,7 +84,7 @@ extern class AssertionSet implements java.lang.Iterable<com.sun.xml.internal.ws.
 	* An {@code Comparable<T>.compareTo(T o)} interface method implementation.
 	* @param that other alternative to compare with
 	*/
-	@:overload public function compareTo(that : AssertionSet) : Int;
+	@:overload public function compareTo(that : com.sun.xml.internal.ws.policy.AssertionSet) : Int;
 	
 	/**
 	* An {@code Object.equals(Object obj)} method override.

@@ -47,14 +47,14 @@ package com.sun.xml.internal.bind.v2.schemagen;
 /**
 * Represents a terminal tree node, such as element, wildcard, etc.
 */
-@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Term') @:internal extern class Tree_Term extends Tree
+@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Term') @:internal extern class Tree_Term extends com.sun.xml.internal.bind.v2.schemagen.Tree
 {
 	
 }
 /**
 * "T?"
 */
-@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Optional') @:internal extern class Tree_Optional extends Tree
+@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Optional') @:internal extern class Tree_Optional extends com.sun.xml.internal.bind.v2.schemagen.Tree
 {
 	@:overload override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
 	
@@ -63,7 +63,7 @@ package com.sun.xml.internal.bind.v2.schemagen;
 /**
 * "T+"
 */
-@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Repeated') @:internal extern class Tree_Repeated extends Tree
+@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Repeated') @:internal extern class Tree_Repeated extends com.sun.xml.internal.bind.v2.schemagen.Tree
 {
 	@:overload override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
 	
@@ -72,7 +72,7 @@ package com.sun.xml.internal.bind.v2.schemagen;
 /**
 * "S|T", "S,T", and "S&amp;T".
 */
-@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Group') @:internal extern class Tree_Group extends Tree
+@:native('com$sun$xml$internal$bind$v2$schemagen$Tree$Group') @:internal extern class Tree_Group extends com.sun.xml.internal.bind.v2.schemagen.Tree
 {
 	@:overload override private function write(parent : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ContentModelContainer, isOptional : Bool, repeated : Bool) : Void;
 	

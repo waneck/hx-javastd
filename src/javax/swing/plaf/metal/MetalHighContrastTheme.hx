@@ -31,37 +31,37 @@ package javax.swing.plaf.metal;
 */
 @:internal extern class MetalHighContrastTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 {
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
-	@:overload override private function getPrimary1() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getPrimary1() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override private function getPrimary2() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getPrimary2() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override private function getPrimary3() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getPrimary3() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getPrimaryControlHighlight() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getPrimaryControlHighlight() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override private function getSecondary2() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getSecondary2() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override private function getSecondary3() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getSecondary3() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getControlHighlight() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getControlHighlight() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getFocusColor() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getFocusColor() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getTextHighlightColor() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getTextHighlightColor() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getHighlightedTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getHighlightedTextColor() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getMenuSelectedBackground() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getMenuSelectedBackground() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getMenuSelectedForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getMenuSelectedForeground() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getAcceleratorForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getAcceleratorForeground() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function getAcceleratorSelectedForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getAcceleratorSelectedForeground() : javax.swing.plaf.ColorUIResource;
 	
-	@:overload override public function addCustomEntriesToTable(table : javax.swing.UIDefaults) : Void;
+	@:overload public function addCustomEntriesToTable(table : javax.swing.UIDefaults) : Void;
 	
 	
 }

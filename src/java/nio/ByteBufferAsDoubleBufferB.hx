@@ -30,29 +30,29 @@ package java.nio;
 	
 	private var offset(default, null) : Int;
 	
-	@:overload override public function slice() : java.nio.DoubleBuffer;
+	@:overload public function slice() : java.nio.DoubleBuffer;
 	
-	@:overload override public function duplicate() : java.nio.DoubleBuffer;
+	@:overload public function duplicate() : java.nio.DoubleBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.DoubleBuffer;
+	@:overload public function asReadOnlyBuffer() : java.nio.DoubleBuffer;
 	
 	@:overload private function ix(i : Int) : Int;
 	
-	@:overload override public function get() : Float;
+	@:overload public function get() : Float;
 	
-	@:overload override public function get(i : Int) : Float;
+	@:overload public function get(i : Int) : Float;
 	
-	@:overload override public function put(x : Float) : java.nio.DoubleBuffer;
+	@:overload public function put(x : Float) : java.nio.DoubleBuffer;
 	
-	@:overload override public function put(i : Int, x : Float) : java.nio.DoubleBuffer;
+	@:overload public function put(i : Int, x : Float) : java.nio.DoubleBuffer;
 	
-	@:overload override public function compact() : java.nio.DoubleBuffer;
+	@:overload public function compact() : java.nio.DoubleBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload public function order() : java.nio.ByteOrder;
 	
 	
 }

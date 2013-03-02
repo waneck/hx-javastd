@@ -37,7 +37,7 @@ extern class EndElementEvent extends com.sun.xml.internal.stream.events.DummyEve
 	
 	@:overload public function setName(qname : javax.xml.namespace.QName) : Void;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	/** Returns an Iterator of namespaces that have gone out
 	* of scope.  Returns an empty iterator if no namespaces have gone

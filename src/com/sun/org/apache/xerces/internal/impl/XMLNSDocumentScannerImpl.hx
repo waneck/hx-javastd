@@ -34,15 +34,15 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	
 	/** Resets the fields of this scanner.
 	*/
-	@:overload override public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
+	@:overload public function reset(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
-	@:overload override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** return the next state on the input
 	*
 	* @return int
 	*/
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
 	/**
 	* The scanner is responsible for removing DTD validator
@@ -76,7 +76,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	* @return True if element is empty. (i.e. It matches
 	*          production [44].
 	*/
-	@:overload override private function scanStartElement() : Bool;
+	@:overload private function scanStartElement() : Bool;
 	
 	/**
 	* Scans an attribute.
@@ -98,7 +98,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	@:overload private function scanAttribute(attributes : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl) : Void;
 	
 	/** Creates a content driver. */
-	@:overload override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:overload private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	
 }
@@ -120,7 +120,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload override private function scanRootElementHook() : Bool;
+	@:overload private function scanRootElementHook() : Bool;
 	
 	
 }

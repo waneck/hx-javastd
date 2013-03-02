@@ -64,7 +64,7 @@ extern class Timestamp extends java.util.Date
 	* @see #Timestamp(long time)
 	* @see java.util.Calendar
 	*/
-	@:overload override public function setTime(time : haxe.Int64) : Void;
+	@:overload public function setTime(time : haxe.Int64) : Void;
 	
 	/**
 	* Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT
@@ -74,7 +74,7 @@ extern class Timestamp extends java.util.Date
 	*          represented by this date.
 	* @see #setTime
 	*/
-	@:overload override public function getTime() : haxe.Int64;
+	@:overload public function getTime() : haxe.Int64;
 	
 	/**
 	* Converts a <code>String</code> object in JDBC timestamp escape format to a
@@ -88,7 +88,7 @@ extern class Timestamp extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if the given argument
 	* does not have the format <code>yyyy-[m]m-[d]d hh:mm:ss[.f...]</code>
 	*/
-	@:overload public static function valueOf(s : String) : Timestamp;
+	@:overload public static function valueOf(s : String) : java.sql.Timestamp;
 	
 	/**
 	* Formats a timestamp in JDBC timestamp escape format.
@@ -98,7 +98,7 @@ extern class Timestamp extends java.util.Date
 	* @return a <code>String</code> object in
 	*           <code>yyyy-mm-dd hh:mm:ss.fffffffff</code> format
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Gets this <code>Timestamp</code> object's <code>nanos</code> value.
@@ -128,7 +128,7 @@ extern class Timestamp extends java.util.Date
 	*         object is equal to this <code>Timestamp</code> object;
 	*         <code>false</code> otherwise
 	*/
-	@:overload public function equals(ts : Timestamp) : Bool;
+	@:overload public function equals(ts : java.sql.Timestamp) : Bool;
 	
 	/**
 	* Tests to see if this <code>Timestamp</code> object is
@@ -148,7 +148,7 @@ extern class Timestamp extends java.util.Date
 	*         is equal to this <code>Timestamp</code> object;
 	*         <code>false</code> otherwise
 	*/
-	@:overload override public function equals(ts : Dynamic) : Bool;
+	@:overload public function equals(ts : Dynamic) : Bool;
 	
 	/**
 	* Indicates whether this <code>Timestamp</code> object is
@@ -158,7 +158,7 @@ extern class Timestamp extends java.util.Date
 	* @return <code>true</code> if this <code>Timestamp</code> object is earlier;
 	*        <code>false</code> otherwise
 	*/
-	@:overload public function before(ts : Timestamp) : Bool;
+	@:overload public function before(ts : java.sql.Timestamp) : Bool;
 	
 	/**
 	* Indicates whether this <code>Timestamp</code> object is
@@ -168,7 +168,7 @@ extern class Timestamp extends java.util.Date
 	* @return <code>true</code> if this <code>Timestamp</code> object is later;
 	*        <code>false</code> otherwise
 	*/
-	@:overload public function after(ts : Timestamp) : Bool;
+	@:overload public function after(ts : java.sql.Timestamp) : Bool;
 	
 	/**
 	* Compares this <code>Timestamp</code> object to the given
@@ -183,7 +183,7 @@ extern class Timestamp extends java.util.Date
 	*          <code>Timestamp</code> object is after the given argument.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload public function compareTo(ts : Timestamp) : Int;
+	@:require(java4) @:overload public function compareTo(ts : java.sql.Timestamp) : Int;
 	
 	/**
 	* Compares this <code>Timestamp</code> object to the given
@@ -208,7 +208,7 @@ extern class Timestamp extends java.util.Date
 	* implementation and therefore does not include nanos in its computation.
 	*
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	
 }

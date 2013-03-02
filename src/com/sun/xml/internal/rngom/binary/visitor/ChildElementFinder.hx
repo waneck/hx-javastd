@@ -51,11 +51,11 @@ extern class ChildElementFinder extends com.sun.xml.internal.rngom.binary.visito
 	*/
 	@:overload public function getChildren() : java.util.Set<Dynamic>;
 	
-	@:overload override public function visitElement(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload public function visitElement(nc : com.sun.xml.internal.rngom.nc.NameClass, content : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload override public function visitAttribute(ns : com.sun.xml.internal.rngom.nc.NameClass, value : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload public function visitAttribute(ns : com.sun.xml.internal.rngom.nc.NameClass, value : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
-	@:overload override public function visitList(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
+	@:overload public function visitList(p : com.sun.xml.internal.rngom.binary.Pattern) : Void;
 	
 	
 }

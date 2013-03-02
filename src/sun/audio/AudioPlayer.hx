@@ -29,7 +29,7 @@ extern class AudioPlayer extends java.lang.Thread
 	* The default audio player. This audio player is initialized
 	* automatically.
 	*/
-	public static var player(default, null) : AudioPlayer;
+	public static var player(default, null) : sun.audio.AudioPlayer;
 	
 	/**
 	* Start playing a stream. The stream will continue to play

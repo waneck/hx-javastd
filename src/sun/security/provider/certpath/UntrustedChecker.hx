@@ -30,13 +30,13 @@ extern class UntrustedChecker extends java.security.cert.PKIXCertPathChecker
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function init(forward : Bool) : Void;
+	@:overload public function init(forward : Bool) : Void;
 	
-	@:overload override public function isForwardCheckingSupported() : Bool;
+	@:overload public function isForwardCheckingSupported() : Bool;
 	
-	@:overload override public function getSupportedExtensions() : java.util.Set<String>;
+	@:overload public function getSupportedExtensions() : java.util.Set<String>;
 	
-	@:overload override public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
+	@:overload public function check(cert : java.security.cert.Certificate, unresolvedCritExts : java.util.Collection<String>) : Void;
 	
 	
 }

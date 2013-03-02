@@ -69,7 +69,7 @@ extern class InnerClass implements java.lang.Cloneable implements com.sun.org.ap
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : InnerClass) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.InnerClass) : Void;
 	
 	/**
 	* @param inner_class_index Class index in constant pool of inner class
@@ -149,7 +149,7 @@ extern class InnerClass implements java.lang.Cloneable implements com.sun.org.ap
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : InnerClass;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.InnerClass;
 	
 	
 }

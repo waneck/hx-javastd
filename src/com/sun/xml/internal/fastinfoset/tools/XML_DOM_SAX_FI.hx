@@ -29,9 +29,9 @@ extern class XML_DOM_SAX_FI extends com.sun.xml.internal.fastinfoset.tools.Trans
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function parse(document : java.io.InputStream, finf : java.io.OutputStream, workingDirectory : String) : Void;
+	@:overload public function parse(document : java.io.InputStream, finf : java.io.OutputStream, workingDirectory : String) : Void;
 	
-	@:overload override public function parse(document : java.io.InputStream, finf : java.io.OutputStream) : Void;
+	@:overload public function parse(document : java.io.InputStream, finf : java.io.OutputStream) : Void;
 	
 	@:overload public static function main(args : java.NativeArray<String>) : Void;
 	

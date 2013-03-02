@@ -38,7 +38,7 @@ extern class ArrayTypeImpl extends com.sun.tools.apt.mirror.type.TypeMirrorImpl 
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

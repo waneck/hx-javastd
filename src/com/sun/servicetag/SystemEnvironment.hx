@@ -35,7 +35,7 @@ package com.sun.servicetag;
 //// (e.g. NetBeans and SunStudio) will use the version in JDK.
 extern class SystemEnvironment
 {
-	@:overload @:synchronized public static function getSystemEnvironment() : SystemEnvironment;
+	@:overload @:synchronized public static function getSystemEnvironment() : com.sun.servicetag.SystemEnvironment;
 	
 	/**
 	* Sets the hostname.

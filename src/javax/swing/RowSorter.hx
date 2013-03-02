@@ -156,7 +156,7 @@ package javax.swing;
 	*        is a shorthand for specifying an empty list,
 	*        indicating that the view should be unsorted
 	*/
-	@:overload @:abstract public function setSortKeys(keys : java.util.List<RowSorter_SortKey>) : Void;
+	@:overload @:abstract public function setSortKeys(keys : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>) : Void;
 	
 	/**
 	* Returns the current sort keys.  This must return a {@code
@@ -167,7 +167,7 @@ package javax.swing;
 	*
 	* @return the current sort order
 	*/
-	@:overload @:abstract public function getSortKeys() : java.util.List<RowSorter_SortKey>;
+	@:overload @:abstract public function getSortKeys() : java.util.List<javax.swing.RowSorter.RowSorter_SortKey>;
 	
 	/**
 	* Returns the number of rows in the view.  If the contents have

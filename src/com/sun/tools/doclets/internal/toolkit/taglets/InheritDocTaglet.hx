@@ -53,35 +53,35 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inField() : Bool;
+	@:overload public function inField() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inConstructor() : Bool;
+	@:overload public function inConstructor() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inOverview() : Bool;
+	@:overload public function inOverview() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inPackage() : Bool;
+	@:overload public function inPackage() : Bool;
 	
 	/**
 	* Will return false because this inline tag may
 	* only appear in Methods.
 	* @return false since this is not a method.
 	*/
-	@:overload override public function inType() : Bool;
+	@:overload public function inType() : Bool;
 	
 	/**
 	* Given the <code>Tag</code> representation of this custom
@@ -91,7 +91,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param tagletWriter the taglet writer for output.
 	* @return the TagletOutput representation of this <code>Tag</code>.
 	*/
-	@:overload override public function getTagletOutput(tag : com.sun.javadoc.Tag, tagletWriter : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public function getTagletOutput(tag : com.sun.javadoc.Tag, tagletWriter : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

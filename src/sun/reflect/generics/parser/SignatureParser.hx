@@ -35,7 +35,7 @@ extern class SignatureParser
 	* Static factory method. Produces a parser instance.
 	* @return an instance of <tt>SignatureParser</tt>
 	*/
-	@:overload public static function make() : SignatureParser;
+	@:overload public static function make() : sun.reflect.generics.parser.SignatureParser;
 	
 	/**
 	* Parses a class signature (as defined in the JVMS, chapter 4)

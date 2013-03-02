@@ -44,7 +44,7 @@ extern class MethodHandles
 	* This lookup object is a <em>capability</em> which may be delegated to trusted agents.
 	* Do not store it in place where untrusted code can access it.
 	*/
-	@:overload public static function lookup() : MethodHandles_Lookup;
+	@:overload public static function lookup() : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
 	
 	/**
 	* Returns a {@link Lookup lookup object} which is trusted minimally.
@@ -59,7 +59,7 @@ extern class MethodHandles
 	* Since all classes have equal access to public names,
 	* such a change would confer no new access rights.
 	*/
-	@:overload public static function publicLookup() : MethodHandles_Lookup;
+	@:overload public static function publicLookup() : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
 	
 	/**
 	* Produces a method handle giving read access to elements of an array.
@@ -1059,7 +1059,7 @@ assertEquals("boojum", (String) catTrace.invokeExact("boo", "jum"));
 	* @return a lookup object which reports the desired lookup class
 	* @throws NullPointerException if the argument is null
 	*/
-	//@:overload public function _in(requestedLookupClass : Class<Dynamic>) : MethodHandles_Lookup;
+	//@:overload public function _in(requestedLookupClass : Class<Dynamic>) : java.lang.invoke.MethodHandles.MethodHandles_Lookup;
 	
 	/**
 	* Displays the name of the class from which lookups are to be made.

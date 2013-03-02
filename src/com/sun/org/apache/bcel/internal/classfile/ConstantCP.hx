@@ -65,7 +65,7 @@ extern class ConstantCP extends com.sun.org.apache.bcel.internal.classfile.Const
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantCP) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantCP) : Void;
 	
 	/**
 	* @param class_index Reference to the class containing the field

@@ -30,7 +30,7 @@ extern class MenuSelectionManager
 	*
 	* @return a MenuSelectionManager object
 	*/
-	@:overload public static function defaultManager() : MenuSelectionManager;
+	@:overload public static function defaultManager() : javax.swing.MenuSelectionManager;
 	
 	/**
 	* Only one ChangeEvent is needed per button model instance since the

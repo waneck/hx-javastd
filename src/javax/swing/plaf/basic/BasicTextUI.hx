@@ -531,7 +531,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* @param width true if the width preference has changed
 	* @param height true if the height preference has changed
 	*/
-	@:overload public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
+	@:overload override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
 	/**
 	* Determines the desired alignment for this view along an axis.
@@ -555,7 +555,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*
 	* @param parent the parent view
 	*/
-	@:overload public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Returns the number of views in this view.  Since
@@ -1029,7 +1029,7 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	*/
 	@:overload override private function exportDone(source : javax.swing.JComponent, data : java.awt.datatransfer.Transferable, action : Int) : Void;
 	
-	@:overload public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
+	@:overload override public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
 	
 	/**
 	* This method causes a transfer to a component from a clipboard or a
@@ -1073,12 +1073,12 @@ extern class BasicTextUI extends javax.swing.plaf.TextUI implements javax.swing.
 	* If the EditorKit is not for text/plain or text/html, that format
 	* is supported through the "richer flavors" part of BasicTransferable.
 	*/
-	@:overload override private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* The only richer format supported is the file list flavor
 	*/
-	@:overload override private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	
 }

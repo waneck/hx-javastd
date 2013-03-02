@@ -49,7 +49,7 @@ package javax.swing.text.html;
 	
 	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

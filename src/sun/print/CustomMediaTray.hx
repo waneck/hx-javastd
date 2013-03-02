@@ -40,12 +40,12 @@ package sun.print;
 	/**
 	* Returns the string table for class CustomMediaTray.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class CustomMediaTray.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	
 }

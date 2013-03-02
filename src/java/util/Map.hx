@@ -273,7 +273,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of a key or value in
 	*         the specified map prevents it from being stored in this map
 	*/
-	@:overload @:public public function putAll(m : Map<K, V>) : Void;
+	@:overload public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Removes all of the mappings from this map (optional operation).
@@ -334,7 +334,7 @@ package java.util;
 	*
 	* @return a set view of the mappings contained in this map
 	*/
-	@:overload public function entrySet() : java.util.Set<Map_Entry<K, V>>;
+	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<K, V>>;
 	
 	
 }

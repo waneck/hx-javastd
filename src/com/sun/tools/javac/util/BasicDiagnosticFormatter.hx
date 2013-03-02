@@ -71,7 +71,7 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	
 	@:overload private function formatMeta(c : java.StdTypes.Char16, d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
-	@:overload override public function getConfiguration() : BasicDiagnosticFormatter_BasicConfiguration;
+	@:overload override public function getConfiguration() : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration;
 	
 	
 }
@@ -79,9 +79,9 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 {
 	private var indentationLevels : java.util.Map<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, Null<Int>>;
 	
-	private var availableFormats : java.util.Map<BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, String>;
+	private var availableFormats : java.util.Map<com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, String>;
 	
-	private var sourcePosition : BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
+	private var sourcePosition : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
 	
 	@:overload public function new(options : com.sun.tools.javac.util.Options) : Void;
 	
@@ -109,14 +109,14 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	*
 	* @param sourcePos a positioning value for source line
 	*/
-	@:overload public function setSourcePosition(sourcePos : BasicDiagnosticFormatter_BasicConfiguration_SourcePosition) : Void;
+	@:overload public function setSourcePosition(sourcePos : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition) : Void;
 	
 	/**
 	* Get the source line positioning used by this formatter
 	*
 	* @return the positioning value used by this formatter
 	*/
-	@:overload public function getSourcePosition() : BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
+	@:overload public function getSourcePosition() : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_SourcePosition;
 	
 	/**
 	* Set a metachar string for a specific format
@@ -124,14 +124,14 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	* @param kind the format kind to be set
 	* @param s the metachar string specifying the format
 	*/
-	@:overload public function setFormat(kind : BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, s : String) : Void;
+	@:overload public function setFormat(kind : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, s : String) : Void;
 	
 	/**
 	* Get a metachar string for a specific format
 	*
 	* @param sourcePos a positioning value for source line
 	*/
-	@:overload public function getFormat(kind : BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind) : String;
+	@:overload public function getFormat(kind : com.sun.tools.javac.util.BasicDiagnosticFormatter.BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind) : String;
 	
 	
 }

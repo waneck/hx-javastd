@@ -56,13 +56,13 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	/**
 	* Pass callback to the SAX Handler
 	*/
-	@:overload override private function startDocumentInternal() : Void;
+	@:overload private function startDocumentInternal() : Void;
 	
 	/**
 	* Do nothing.
 	* @see org.xml.sax.ext.LexicalHandler#startDTD(String, String, String)
 	*/
-	@:overload override public function startDTD(arg0 : String, arg1 : String, arg2 : String) : Void;
+	@:overload public function startDTD(arg0 : String, arg1 : String, arg2 : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -80,7 +80,7 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	*
 	* @see ExtendedLexicalHandler#comment(String)
 	*/
-	@:overload override public function comment(comment : String) : Void;
+	@:overload public function comment(comment : String) : Void;
 	
 	/**
 	* Do nothing as this is an abstract class. All subclasses will need to
@@ -180,22 +180,22 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	* @param node the Node to serialize
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function characters(node : org.w3c.dom.Node) : Void;
+	@:overload public function characters(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @see org.xml.sax.ErrorHandler#fatalError(SAXParseException)
 	*/
-	@:overload override public function fatalError(exc : org.xml.sax.SAXParseException) : Void;
+	@:overload public function fatalError(exc : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* @see org.xml.sax.ErrorHandler#error(SAXParseException)
 	*/
-	@:overload override public function error(exc : org.xml.sax.SAXParseException) : Void;
+	@:overload public function error(exc : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* @see org.xml.sax.ErrorHandler#warning(SAXParseException)
 	*/
-	@:overload override public function warning(exc : org.xml.sax.SAXParseException) : Void;
+	@:overload public function warning(exc : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Try's to reset the super class and reset this class for
@@ -205,7 +205,7 @@ extern class ToSAXHandler extends com.sun.org.apache.xml.internal.serializer.Ser
 	* @return true if the class was successfuly reset.
 	* @see Serializer#reset()
 	*/
-	@:overload override public function reset() : Bool;
+	@:overload public function reset() : Bool;
 	
 	/**
 	* Add a unique attribute

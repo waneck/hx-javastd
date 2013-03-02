@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class PSVIDOMImplementationImpl extends com.sun.org.apache.xerces.internal.dom.CoreDOMImplementationImpl
 {
 	/** NON-DOM: Obtain and return the single shared object */
-	@:native('getDOMImplementation') @:overload public static function _getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* Test if the DOM implementation supports a specific "feature" --
@@ -38,7 +38,7 @@ extern class PSVIDOMImplementationImpl extends com.sun.org.apache.xerces.interna
 	* @return    true iff this implementation is compatable with the specified
 	* feature and version.
 	*/
-	@:overload override public function hasFeature(feature : String, version : String) : Bool;
+	@:overload public function hasFeature(feature : String, version : String) : Bool;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -60,7 +60,7 @@ extern class PSVIDOMImplementationImpl extends com.sun.org.apache.xerces.interna
 	*                         already been used with a different document.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
+	@:overload public function createDocument(namespaceURI : String, qualifiedName : String, doctype : org.w3c.dom.DocumentType) : org.w3c.dom.Document;
 	
 	
 }

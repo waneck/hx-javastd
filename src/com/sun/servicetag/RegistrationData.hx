@@ -302,7 +302,7 @@ extern class RegistrationData
 	*
 	* @throws IOException if an error occurred when reading from the input stream.
 	*/
-	@:overload public static function loadFromXML(_in : java.io.InputStream) : RegistrationData;
+	@:overload public static function loadFromXML(_in : java.io.InputStream) : com.sun.servicetag.RegistrationData;
 	
 	/**
 	* Writes the registration data to the specified output stream

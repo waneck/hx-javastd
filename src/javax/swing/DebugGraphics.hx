@@ -63,12 +63,12 @@ extern class DebugGraphics extends java.awt.Graphics
 	/**
 	* Overrides <code>Graphics.create</code> to return a DebugGraphics object.
 	*/
-	@:overload override public function create() : java.awt.Graphics;
+	@:overload public function create() : java.awt.Graphics;
 	
 	/**
 	* Overrides <code>Graphics.create</code> to return a DebugGraphics object.
 	*/
-	@:overload override public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
+	@:overload public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
 	
 	/**
 	* Sets the Color used to flash drawing operations.
@@ -113,206 +113,206 @@ extern class DebugGraphics extends java.awt.Graphics
 	
 	/** Sets the Font used for text drawing operations.
 	*/
-	@:overload override public function setFont(aFont : java.awt.Font) : Void;
+	@:overload public function setFont(aFont : java.awt.Font) : Void;
 	
 	/** Returns the Font used for text drawing operations.
 	* @see #setFont
 	*/
-	@:overload override public function getFont() : java.awt.Font;
+	@:overload public function getFont() : java.awt.Font;
 	
 	/** Sets the color to be used for drawing and filling lines and shapes.
 	*/
-	@:overload override public function setColor(aColor : java.awt.Color) : Void;
+	@:overload public function setColor(aColor : java.awt.Color) : Void;
 	
 	/** Returns the Color used for text drawing operations.
 	* @see #setColor
 	*/
-	@:overload override public function getColor() : java.awt.Color;
+	@:overload public function getColor() : java.awt.Color;
 	
 	/**
 	* Overrides <code>Graphics.getFontMetrics</code>.
 	*/
-	@:overload override public function getFontMetrics() : java.awt.FontMetrics;
+	@:overload public function getFontMetrics() : java.awt.FontMetrics;
 	
 	/**
 	* Overrides <code>Graphics.getFontMetrics</code>.
 	*/
-	@:overload override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Overrides <code>Graphics.translate</code>.
 	*/
-	@:overload override public function translate(x : Int, y : Int) : Void;
+	@:overload public function translate(x : Int, y : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.setPaintMode</code>.
 	*/
-	@:overload override public function setPaintMode() : Void;
+	@:overload public function setPaintMode() : Void;
 	
 	/**
 	* Overrides <code>Graphics.setXORMode</code>.
 	*/
-	@:overload override public function setXORMode(aColor : java.awt.Color) : Void;
+	@:overload public function setXORMode(aColor : java.awt.Color) : Void;
 	
 	/**
 	* Overrides <code>Graphics.getClipBounds</code>.
 	*/
-	@:overload override public function getClipBounds() : java.awt.Rectangle;
+	@:overload public function getClipBounds() : java.awt.Rectangle;
 	
 	/**
 	* Overrides <code>Graphics.clipRect</code>.
 	*/
-	@:overload override public function clipRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function clipRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.setClip</code>.
 	*/
-	@:overload override public function setClip(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function setClip(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.getClip</code>.
 	*/
-	@:overload override public function getClip() : java.awt.Shape;
+	@:overload public function getClip() : java.awt.Shape;
 	
 	/**
 	* Overrides <code>Graphics.setClip</code>.
 	*/
-	@:overload override public function setClip(clip : java.awt.Shape) : Void;
+	@:overload public function setClip(clip : java.awt.Shape) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawRect</code>.
 	*/
-	@:overload override public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.fillRect</code>.
 	*/
-	@:overload override public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function fillRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.clearRect</code>.
 	*/
-	@:overload override public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function clearRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawRoundRect</code>.
 	*/
-	@:overload override public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload public function drawRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.fillRoundRect</code>.
 	*/
-	@:overload override public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
+	@:overload public function fillRoundRect(x : Int, y : Int, width : Int, height : Int, arcWidth : Int, arcHeight : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawLine</code>.
 	*/
-	@:overload override public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.draw3DRect</code>.
 	*/
-	@:overload override public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Overrides <code>Graphics.fill3DRect</code>.
 	*/
-	@:overload override public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawOval</code>.
 	*/
-	@:overload override public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function drawOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.fillOval</code>.
 	*/
-	@:overload override public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function fillOval(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawArc</code>.
 	*/
-	@:overload override public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload public function drawArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.fillArc</code>.
 	*/
-	@:overload override public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
+	@:overload public function fillArc(x : Int, y : Int, width : Int, height : Int, startAngle : Int, arcAngle : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawPolyline</code>.
 	*/
-	@:overload override public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawPolygon</code>.
 	*/
-	@:overload override public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.fillPolygon</code>.
 	*/
-	@:overload override public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawString</code>.
 	*/
-	@:overload override public function drawString(aString : String, x : Int, y : Int) : Void;
+	@:overload public function drawString(aString : String, x : Int, y : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawString</code>.
 	*/
-	@:overload override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
+	@:overload public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawBytes</code>.
 	*/
-	@:overload override public function drawBytes(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload public function drawBytes(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawChars</code>.
 	*/
-	@:overload override public function drawChars(data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload public function drawChars(data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.drawImage</code>.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Overrides <code>Graphics.drawImage</code>.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Overrides <code>Graphics.drawImage</code>.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Overrides <code>Graphics.drawImage</code>.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Overrides <code>Graphics.drawImage</code>.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Overrides <code>Graphics.drawImage</code>.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Overrides <code>Graphics.copyArea</code>.
 	*/
-	@:overload override public function copyArea(x : Int, y : Int, width : Int, height : Int, destX : Int, destY : Int) : Void;
+	@:overload public function copyArea(x : Int, y : Int, width : Int, height : Int, destX : Int, destY : Int) : Void;
 	
 	/**
 	* Overrides <code>Graphics.dispose</code>.
 	*/
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	/**
 	* Returns the drawingBuffer value.

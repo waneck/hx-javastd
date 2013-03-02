@@ -41,27 +41,27 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	
 }
 
-@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$StartMessage') @:internal extern class MIMEEvent_StartMessage extends MIMEEvent
+@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$StartMessage') @:internal extern class MIMEEvent_StartMessage extends com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent
 {
 	
 }
-@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$StartPart') @:internal extern class MIMEEvent_StartPart extends MIMEEvent
+@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$StartPart') @:internal extern class MIMEEvent_StartPart extends com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent
 {
 	
 }
-@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$EndPart') @:internal extern class MIMEEvent_EndPart extends MIMEEvent
+@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$EndPart') @:internal extern class MIMEEvent_EndPart extends com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent
 {
 	
 }
-@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$Headers') @:internal extern class MIMEEvent_Headers extends MIMEEvent
+@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$Headers') @:internal extern class MIMEEvent_Headers extends com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent
 {
 	
 }
-@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$Content') @:internal extern class MIMEEvent_Content extends MIMEEvent
+@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$Content') @:internal extern class MIMEEvent_Content extends com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent
 {
 	
 }
-@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$EndMessage') @:internal extern class MIMEEvent_EndMessage extends MIMEEvent
+@:native('com$sun$xml$internal$org$jvnet$mimepull$MIMEEvent$EndMessage') @:internal extern class MIMEEvent_EndMessage extends com.sun.xml.internal.org.jvnet.mimepull.MIMEEvent
 {
 	
 }

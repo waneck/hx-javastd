@@ -64,9 +64,9 @@ extern class DGrammarPattern extends com.sun.xml.internal.rngom.digested.DPatter
 	*/
 	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.rngom.digested.DDefine>;
 	
-	@:overload override public function isNullable() : Bool;
+	@:overload public function isNullable() : Bool;
 	
-	@:overload override public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
+	@:overload public function accept<V>(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<V>) : V;
 	
 	
 }

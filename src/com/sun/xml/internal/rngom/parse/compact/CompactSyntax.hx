@@ -121,7 +121,7 @@ extern class CompactSyntax implements com.sun.xml.internal.rngom.parse.Context i
 	
 	@:overload @:final public function NsNameExceptClass(context : Int, a : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>, pa : java.NativeArray<com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
-	@:overload @:final public function NsName() : CompactSyntax_LocatedString;
+	@:overload @:final public function NsName() : com.sun.xml.internal.rngom.parse.compact.CompactSyntax.CompactSyntax_LocatedString;
 	
 	@:overload @:final public function AnyNameExceptClass(context : Int, a : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>, pa : java.NativeArray<com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>>) : com.sun.xml.internal.rngom.ast.om.ParsedNameClass;
 	
@@ -173,11 +173,11 @@ extern class CompactSyntax implements com.sun.xml.internal.rngom.parse.Context i
 	
 	@:overload @:final public function DatatypeName() : com.sun.xml.internal.rngom.parse.compact.Token;
 	
-	@:overload @:final public function Identifier() : CompactSyntax_LocatedString;
+	@:overload @:final public function Identifier() : com.sun.xml.internal.rngom.parse.compact.CompactSyntax.CompactSyntax_LocatedString;
 	
 	@:overload @:final public function Prefix() : String;
 	
-	@:overload @:final public function UnprefixedName() : CompactSyntax_LocatedString;
+	@:overload @:final public function UnprefixedName() : com.sun.xml.internal.rngom.parse.compact.CompactSyntax.CompactSyntax_LocatedString;
 	
 	@:overload @:final public function Params(dpb : com.sun.xml.internal.rngom.ast.builder.DataPatternBuilder<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>) : Void;
 	
@@ -211,7 +211,7 @@ extern class CompactSyntax implements com.sun.xml.internal.rngom.parse.Context i
 	
 	@:overload @:final public function Literal() : String;
 	
-	@:overload @:final public function LocatedLiteral() : CompactSyntax_LocatedString;
+	@:overload @:final public function LocatedLiteral() : com.sun.xml.internal.rngom.parse.compact.CompactSyntax.CompactSyntax_LocatedString;
 	
 	@:overload @:final public function Keyword() : com.sun.xml.internal.rngom.parse.compact.Token;
 	

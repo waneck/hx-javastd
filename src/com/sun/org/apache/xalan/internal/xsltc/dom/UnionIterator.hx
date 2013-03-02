@@ -25,7 +25,7 @@ extern class UnionIterator extends com.sun.org.apache.xalan.internal.xsltc.dom.M
 {
 	@:overload public function new(dom : com.sun.org.apache.xalan.internal.xsltc.DOM) : Void;
 	
-	@:overload public function addIterator(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : UnionIterator;
+	@:overload public function addIterator(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : com.sun.org.apache.xalan.internal.xsltc.dom.UnionIterator;
 	
 	
 }
@@ -35,19 +35,19 @@ extern class UnionIterator extends com.sun.org.apache.xalan.internal.xsltc.dom.M
 	
 	@:overload public function new(iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
 	
-	@:overload override public function step() : Int;
+	@:overload public function step() : Int;
 	
-	@:overload override public function cloneHeapNode() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
+	@:overload public function cloneHeapNode() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
-	@:overload override public function setMark() : Void;
+	@:overload public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload public function gotoMark() : Void;
 	
 	@:overload public function isLessThan(heapNode : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode) : Bool;
 	
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
-	@:overload override public function reset() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
+	@:overload public function reset() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	
 }

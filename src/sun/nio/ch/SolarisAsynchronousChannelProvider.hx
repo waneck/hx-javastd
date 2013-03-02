@@ -27,13 +27,13 @@ extern class SolarisAsynchronousChannelProvider extends java.nio.channels.spi.As
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function openAsynchronousChannelGroup(nThreads : Int, factory : java.util.concurrent.ThreadFactory) : java.nio.channels.AsynchronousChannelGroup;
+	@:overload public function openAsynchronousChannelGroup(nThreads : Int, factory : java.util.concurrent.ThreadFactory) : java.nio.channels.AsynchronousChannelGroup;
 	
-	@:overload override public function openAsynchronousChannelGroup(executor : java.util.concurrent.ExecutorService, initialSize : Int) : java.nio.channels.AsynchronousChannelGroup;
+	@:overload public function openAsynchronousChannelGroup(executor : java.util.concurrent.ExecutorService, initialSize : Int) : java.nio.channels.AsynchronousChannelGroup;
 	
-	@:overload override public function openAsynchronousServerSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousServerSocketChannel;
+	@:overload public function openAsynchronousServerSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousServerSocketChannel;
 	
-	@:overload override public function openAsynchronousSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousSocketChannel;
+	@:overload public function openAsynchronousSocketChannel(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousSocketChannel;
 	
 	
 }

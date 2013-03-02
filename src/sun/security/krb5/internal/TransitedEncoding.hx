@@ -79,7 +79,7 @@ extern class TransitedEncoding
 	* @return an instance of TransitedEncoding.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : TransitedEncoding;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.TransitedEncoding;
 	
 	
 }

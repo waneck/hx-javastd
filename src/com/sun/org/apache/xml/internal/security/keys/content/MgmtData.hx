@@ -46,7 +46,7 @@ extern class MgmtData extends com.sun.org.apache.xml.internal.security.utils.Sig
 	@:overload public function getMgmtData() : String;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

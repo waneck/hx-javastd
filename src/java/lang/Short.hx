@@ -38,7 +38,7 @@ package java.lang;
 * @see     java.lang.Number
 * @since   JDK1.1
 */
-@:require(java1) extern class Short extends java.lang.Number implements java.lang.Comparable<Short>
+@:require(java1) extern class Short extends java.lang.Number implements java.lang.Comparable<Null<java.StdTypes.Int16>>
 {
 	/**
 	* A constant holding the minimum value a {@code short} can
@@ -56,7 +56,7 @@ package java.lang;
 	* The {@code Class} instance representing the primitive type
 	* {@code short}.
 	*/
-	public static var TYPE(default, null) : Class<Short>;
+	public static var TYPE(default, null) : Class<Null<java.StdTypes.Int16>>;
 	
 	/**
 	* Returns a new {@code String} object representing the
@@ -155,7 +155,7 @@ package java.lang;
 	* @throws          NumberFormatException If the {@code String} does
 	*                  not contain a parsable {@code short}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Short;
+	@:overload public static function valueOf(s : String, radix : Int) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Returns a {@code Short} object holding the
@@ -179,7 +179,7 @@ package java.lang;
 	* @throws  NumberFormatException If the {@code String} does
 	*          not contain a parsable {@code short}.
 	*/
-	@:overload public static function valueOf(s : String) : Short;
+	@:overload public static function valueOf(s : String) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Returns a {@code Short} instance representing the specified
@@ -197,7 +197,7 @@ package java.lang;
 	* @return a {@code Short} instance representing {@code s}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(s : java.StdTypes.Int16) : Short;
+	@:require(java5) @:overload public static function valueOf(s : java.StdTypes.Int16) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Decodes a {@code String} into a {@code Short}.
@@ -241,7 +241,7 @@ package java.lang;
 	*            contain a parsable {@code short}.
 	* @see java.lang.Short#parseShort(java.lang.String, int)
 	*/
-	@:overload public static function decode(nm : String) : Short;
+	@:overload public static function decode(nm : String) : Null<java.StdTypes.Int16>;
 	
 	/**
 	* Constructs a newly allocated {@code Short} object that
@@ -348,7 +348,7 @@ package java.lang;
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherShort : Short) : Int;
+	@:require(java2) @:overload public function compareTo(anotherShort : Null<java.StdTypes.Int16>) : Int;
 	
 	/**
 	* Compares two {@code short} values numerically.

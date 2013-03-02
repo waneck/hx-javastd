@@ -33,27 +33,27 @@ extern class LongExpression extends sun.tools.tree.ConstantExpression
 	/**
 	* Get the value
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload public function getValue() : Dynamic;
 	
 	/**
 	* Check if the expression is equal to a value
 	*/
-	@:overload override public function equals(i : Int) : Bool;
+	@:overload public function equals(i : Int) : Bool;
 	
 	/**
 	* Check if the expression is equal to its default static value
 	*/
-	@:overload override public function equalsDefault() : Bool;
+	@:overload public function equalsDefault() : Bool;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

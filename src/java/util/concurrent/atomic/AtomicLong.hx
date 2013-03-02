@@ -151,13 +151,13 @@ extern class AtomicLong extends java.lang.Number implements java.io.Serializable
 	*/
 	@:overload public function toString() : String;
 	
-	@:overload override public function intValue() : Int;
+	@:overload public function intValue() : Int;
 	
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload public function longValue() : haxe.Int64;
 	
-	@:overload override public function floatValue() : Single;
+	@:overload public function floatValue() : Single;
 	
-	@:overload override public function doubleValue() : Float;
+	@:overload public function doubleValue() : Float;
 	
 	
 }

@@ -47,7 +47,7 @@ package javax.swing.plaf.synth;
 	* @param c the JTextPane object
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the

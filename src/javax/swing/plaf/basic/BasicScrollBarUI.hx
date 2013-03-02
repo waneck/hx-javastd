@@ -56,11 +56,11 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 	
 	private var isDragging : Bool;
 	
-	private var trackListener : BasicScrollBarUI_TrackListener;
+	private var trackListener : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_TrackListener;
 	
-	private var buttonListener : BasicScrollBarUI_ArrowButtonListener;
+	private var buttonListener : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ArrowButtonListener;
 	
-	private var modelListener : BasicScrollBarUI_ModelListener;
+	private var modelListener : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ModelListener;
 	
 	private var thumbRect : java.awt.Rectangle;
 	
@@ -74,7 +74,7 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 	
 	private static var INCREASE_HIGHLIGHT(default, null) : Int;
 	
-	private var scrollListener : BasicScrollBarUI_ScrollListener;
+	private var scrollListener : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ScrollListener;
 	
 	private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
@@ -130,13 +130,13 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 	
 	@:overload private function uninstallDefaults() : Void;
 	
-	@:overload private function createTrackListener() : BasicScrollBarUI_TrackListener;
+	@:overload private function createTrackListener() : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_TrackListener;
 	
-	@:overload private function createArrowButtonListener() : BasicScrollBarUI_ArrowButtonListener;
+	@:overload private function createArrowButtonListener() : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ArrowButtonListener;
 	
-	@:overload private function createModelListener() : BasicScrollBarUI_ModelListener;
+	@:overload private function createModelListener() : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ModelListener;
 	
-	@:overload private function createScrollListener() : BasicScrollBarUI_ScrollListener;
+	@:overload private function createScrollListener() : javax.swing.plaf.basic.BasicScrollBarUI.BasicScrollBarUI_ScrollListener;
 	
 	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
@@ -306,7 +306,7 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 	
 	@:transient private var currentMouseX : Int;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* If the mouse is pressed above the "thumb" component
@@ -315,7 +315,7 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 	* thumb then page up if the mouse is in the upper half
 	* of the track.
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Set the models value to the position of the thumb's top of Vertical
@@ -323,9 +323,9 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 	* left-to-right/right-to-left scrollbar relative to the origin of the
 	* track.
 	*/
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse exits the scrollbar.
@@ -333,7 +333,7 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 	* @param e MouseEvent further describing the event
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:require(java5) @:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -342,9 +342,9 @@ extern class BasicScrollBarUI extends javax.swing.plaf.ScrollBarUI implements ja
 */
 @:native('javax$swing$plaf$basic$BasicScrollBarUI$ArrowButtonListener') extern class BasicScrollBarUI_ArrowButtonListener extends java.awt.event.MouseAdapter
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

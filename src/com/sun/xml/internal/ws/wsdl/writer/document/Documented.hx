@@ -29,7 +29,7 @@ extern interface Documented extends com.sun.xml.internal.txw2.TypedXmlWriter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function documentation(value : String) : Documented;
+	@:overload public function documentation(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Documented;
 	
 	
 }

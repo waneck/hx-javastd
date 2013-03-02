@@ -80,7 +80,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws NullPointerException if {@code rtype} or {@code ptypes} or any element of {@code ptypes} is null
 	* @throws IllegalArgumentException if any element of {@code ptypes} is {@code void.class}
 	*/
-	@:overload public static function methodType(rtype : Class<Dynamic>, ptypes : java.NativeArray<Class<Dynamic>>) : MethodType;
+	@:overload public static function methodType(rtype : Class<Dynamic>, ptypes : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with the given components.
@@ -89,7 +89,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws NullPointerException if {@code rtype} or {@code ptypes} or any element of {@code ptypes} is null
 	* @throws IllegalArgumentException if any element of {@code ptypes} is {@code void.class}
 	*/
-	@:overload public static function methodType(rtype : Class<Dynamic>, ptypes : java.util.List<Class<Dynamic>>) : MethodType;
+	@:overload public static function methodType(rtype : Class<Dynamic>, ptypes : java.util.List<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with the given components.
@@ -99,7 +99,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws NullPointerException if {@code rtype} or {@code ptype0} or {@code ptypes} or any element of {@code ptypes} is null
 	* @throws IllegalArgumentException if {@code ptype0} or {@code ptypes} or any element of {@code ptypes} is {@code void.class}
 	*/
-	@:overload public static function methodType(rtype : Class<Dynamic>, ptype0 : Class<Dynamic>, ptypes : java.NativeArray<Class<Dynamic>>) : MethodType;
+	@:overload public static function methodType(rtype : Class<Dynamic>, ptype0 : Class<Dynamic>, ptypes : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with the given components.
@@ -108,7 +108,7 @@ extern class MethodType implements java.io.Serializable
 	* @return a method type with the given return value
 	* @throws NullPointerException if {@code rtype} is null
 	*/
-	@:overload public static function methodType(rtype : Class<Dynamic>) : MethodType;
+	@:overload public static function methodType(rtype : Class<Dynamic>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with the given components.
@@ -118,7 +118,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws NullPointerException if {@code rtype} or {@code ptype0} is null
 	* @throws IllegalArgumentException if {@code ptype0} is {@code void.class}
 	*/
-	@:overload public static function methodType(rtype : Class<Dynamic>, ptype0 : Class<Dynamic>) : MethodType;
+	@:overload public static function methodType(rtype : Class<Dynamic>, ptype0 : Class<Dynamic>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with the given components.
@@ -127,7 +127,7 @@ extern class MethodType implements java.io.Serializable
 	* and the specified return type.
 	* @throws NullPointerException if {@code rtype} or {@code ptypes} is null
 	*/
-	@:overload public static function methodType(rtype : Class<Dynamic>, ptypes : MethodType) : MethodType;
+	@:overload public static function methodType(rtype : Class<Dynamic>, ptypes : java.lang.invoke.MethodType) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type whose components are {@code Object} with an optional trailing {@code Object[]} array.
@@ -140,7 +140,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws IllegalArgumentException if {@code objectArgCount} is negative or greater than 255 (or 254, if {@code finalArray} is true)
 	* @see #genericMethodType(int)
 	*/
-	@:overload public static function genericMethodType(objectArgCount : Int, finalArray : Bool) : MethodType;
+	@:overload public static function genericMethodType(objectArgCount : Int, finalArray : Bool) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type whose components are all {@code Object}.
@@ -151,7 +151,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws IllegalArgumentException if {@code objectArgCount} is negative or greater than 255
 	* @see #genericMethodType(int, boolean)
 	*/
-	@:overload public static function genericMethodType(objectArgCount : Int) : MethodType;
+	@:overload public static function genericMethodType(objectArgCount : Int) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with a single different parameter type.
@@ -163,7 +163,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws IllegalArgumentException if {@code nptype} is {@code void.class}
 	* @throws NullPointerException if {@code nptype} is null
 	*/
-	@:overload public function changeParameterType(num : Int, nptype : Class<Dynamic>) : MethodType;
+	@:overload public function changeParameterType(num : Int, nptype : Class<Dynamic>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with additional parameter types.
@@ -176,7 +176,7 @@ extern class MethodType implements java.io.Serializable
 	*                                  or if the resulting method type would have more than 255 parameter slots
 	* @throws NullPointerException if {@code ptypesToInsert} or any of its elements is null
 	*/
-	@:overload public function insertParameterTypes(num : Int, ptypesToInsert : java.NativeArray<Class<Dynamic>>) : MethodType;
+	@:overload public function insertParameterTypes(num : Int, ptypesToInsert : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with additional parameter types.
@@ -187,7 +187,7 @@ extern class MethodType implements java.io.Serializable
 	*                                  or if the resulting method type would have more than 255 parameter slots
 	* @throws NullPointerException if {@code ptypesToInsert} or any of its elements is null
 	*/
-	@:overload public function appendParameterTypes(ptypesToInsert : java.NativeArray<Class<Dynamic>>) : MethodType;
+	@:overload public function appendParameterTypes(ptypesToInsert : java.NativeArray<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with additional parameter types.
@@ -200,7 +200,7 @@ extern class MethodType implements java.io.Serializable
 	*                                  or if the resulting method type would have more than 255 parameter slots
 	* @throws NullPointerException if {@code ptypesToInsert} or any of its elements is null
 	*/
-	@:overload public function insertParameterTypes(num : Int, ptypesToInsert : java.util.List<Class<Dynamic>>) : MethodType;
+	@:overload public function insertParameterTypes(num : Int, ptypesToInsert : java.util.List<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with additional parameter types.
@@ -211,7 +211,7 @@ extern class MethodType implements java.io.Serializable
 	*                                  or if the resulting method type would have more than 255 parameter slots
 	* @throws NullPointerException if {@code ptypesToInsert} or any of its elements is null
 	*/
-	@:overload public function appendParameterTypes(ptypesToInsert : java.util.List<Class<Dynamic>>) : MethodType;
+	@:overload public function appendParameterTypes(ptypesToInsert : java.util.List<Class<Dynamic>>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with some parameter types omitted.
@@ -223,7 +223,7 @@ extern class MethodType implements java.io.Serializable
 	*                                  or if {@code end} is negative or greater than {@code parameterCount()}
 	*                                  or if {@code start} is greater than {@code end}
 	*/
-	@:overload public function dropParameterTypes(start : Int, end : Int) : MethodType;
+	@:overload public function dropParameterTypes(start : Int, end : Int) : java.lang.invoke.MethodType;
 	
 	/**
 	* Finds or creates a method type with a different return type.
@@ -232,7 +232,7 @@ extern class MethodType implements java.io.Serializable
 	* @return the same type, except with the return type change
 	* @throws NullPointerException if {@code nrtype} is null
 	*/
-	@:overload public function changeReturnType(nrtype : Class<Dynamic>) : MethodType;
+	@:overload public function changeReturnType(nrtype : Class<Dynamic>) : java.lang.invoke.MethodType;
 	
 	/**
 	* Reports if this type contains a primitive argument or return value.
@@ -256,7 +256,7 @@ extern class MethodType implements java.io.Serializable
 	* All primitive types (including {@code void}) will remain unchanged.
 	* @return a version of the original type with all reference types replaced
 	*/
-	@:overload public function erase() : MethodType;
+	@:overload public function erase() : java.lang.invoke.MethodType;
 	
 	/**
 	* Converts all types, both reference and primitive, to {@code Object}.
@@ -265,7 +265,7 @@ extern class MethodType implements java.io.Serializable
 	* as {@code type.generic()}.
 	* @return a version of the original type with all types replaced
 	*/
-	@:overload public function generic() : MethodType;
+	@:overload public function generic() : java.lang.invoke.MethodType;
 	
 	/**
 	* Converts all primitive types to their corresponding wrapper types.
@@ -276,7 +276,7 @@ extern class MethodType implements java.io.Serializable
 	* as {@code type.generic()}.
 	* @return a version of the original type with all primitive types replaced
 	*/
-	@:overload public function wrap() : MethodType;
+	@:overload public function wrap() : java.lang.invoke.MethodType;
 	
 	/**
 	* Converts all wrapper types to their corresponding primitive types.
@@ -285,7 +285,7 @@ extern class MethodType implements java.io.Serializable
 	* A return type of {@code java.lang.Void} is changed to {@code void}.
 	* @return a version of the original type with all wrapper types replaced
 	*/
-	@:overload public function unwrap() : MethodType;
+	@:overload public function unwrap() : java.lang.invoke.MethodType;
 	
 	/**
 	* Returns the parameter type at the specified index, within this method type.
@@ -374,7 +374,7 @@ extern class MethodType implements java.io.Serializable
 	* @throws IllegalArgumentException if the string is not well-formed
 	* @throws TypeNotPresentException if a named type cannot be found
 	*/
-	@:overload public static function fromMethodDescriptorString(descriptor : String, loader : java.lang.ClassLoader) : MethodType;
+	@:overload public static function fromMethodDescriptorString(descriptor : String, loader : java.lang.ClassLoader) : java.lang.invoke.MethodType;
 	
 	/**
 	* Produces a bytecode descriptor representation of the method type.

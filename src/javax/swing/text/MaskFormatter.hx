@@ -293,7 +293,7 @@ package javax.swing.text;
 	* @see #setValueContainsLiteralCharacters
 	* @return Object representation of text
 	*/
-	@:overload override public function stringToValue(value : String) : Dynamic;
+	@:overload public function stringToValue(value : String) : Dynamic;
 	
 	/**
 	* Returns a String representation of the Object <code>value</code>
@@ -306,7 +306,7 @@ package javax.swing.text;
 	* @see #setValueContainsLiteralCharacters
 	* @return String representation of value
 	*/
-	@:overload override public function valueToString(value : Dynamic) : String;
+	@:overload public function valueToString(value : Dynamic) : String;
 	
 	/**
 	* Installs the <code>DefaultFormatter</code> onto a particular
@@ -338,7 +338,7 @@ package javax.swing.text;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload override public function install(ftf : javax.swing.JFormattedTextField) : Void;
+	@:overload public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	
 }
@@ -380,7 +380,7 @@ package javax.swing.text;
 /**
 * Used to represent a fixed character in the mask.
 */
-@:native('javax$swing$text$MaskFormatter$LiteralCharacter') @:internal extern class MaskFormatter_LiteralCharacter extends MaskFormatter_MaskCharacter
+@:native('javax$swing$text$MaskFormatter$LiteralCharacter') @:internal extern class MaskFormatter_LiteralCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
 	@:overload public function new(fixedChar : java.StdTypes.Char16) : Void;
 	
@@ -393,7 +393,7 @@ package javax.swing.text;
 /**
 * Represents a number, uses <code>Character.isDigit</code>.
 */
-@:native('javax$swing$text$MaskFormatter$DigitMaskCharacter') @:internal extern class MaskFormatter_DigitMaskCharacter extends MaskFormatter_MaskCharacter
+@:native('javax$swing$text$MaskFormatter$DigitMaskCharacter') @:internal extern class MaskFormatter_DigitMaskCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
 	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
@@ -403,7 +403,7 @@ package javax.swing.text;
 * Represents a character, lower case letters are mapped to upper case
 * using <code>Character.toUpperCase</code>.
 */
-@:native('javax$swing$text$MaskFormatter$UpperCaseCharacter') @:internal extern class MaskFormatter_UpperCaseCharacter extends MaskFormatter_MaskCharacter
+@:native('javax$swing$text$MaskFormatter$UpperCaseCharacter') @:internal extern class MaskFormatter_UpperCaseCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
 	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
@@ -415,7 +415,7 @@ package javax.swing.text;
 * Represents a character, upper case letters are mapped to lower case
 * using <code>Character.toLowerCase</code>.
 */
-@:native('javax$swing$text$MaskFormatter$LowerCaseCharacter') @:internal extern class MaskFormatter_LowerCaseCharacter extends MaskFormatter_MaskCharacter
+@:native('javax$swing$text$MaskFormatter$LowerCaseCharacter') @:internal extern class MaskFormatter_LowerCaseCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
 	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
@@ -427,7 +427,7 @@ package javax.swing.text;
 * Represents either a character or digit, uses
 * <code>Character.isLetterOrDigit</code>.
 */
-@:native('javax$swing$text$MaskFormatter$AlphaNumericCharacter') @:internal extern class MaskFormatter_AlphaNumericCharacter extends MaskFormatter_MaskCharacter
+@:native('javax$swing$text$MaskFormatter$AlphaNumericCharacter') @:internal extern class MaskFormatter_AlphaNumericCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
 	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
@@ -436,7 +436,7 @@ package javax.swing.text;
 /**
 * Represents a letter, uses <code>Character.isLetter</code>.
 */
-@:native('javax$swing$text$MaskFormatter$CharCharacter') @:internal extern class MaskFormatter_CharCharacter extends MaskFormatter_MaskCharacter
+@:native('javax$swing$text$MaskFormatter$CharCharacter') @:internal extern class MaskFormatter_CharCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
 	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	
@@ -445,7 +445,7 @@ package javax.swing.text;
 /**
 * Represents a hex character, 0-9a-fA-F. a-f is mapped to A-F
 */
-@:native('javax$swing$text$MaskFormatter$HexCharacter') @:internal extern class MaskFormatter_HexCharacter extends MaskFormatter_MaskCharacter
+@:native('javax$swing$text$MaskFormatter$HexCharacter') @:internal extern class MaskFormatter_HexCharacter extends javax.swing.text.MaskFormatter.MaskFormatter_MaskCharacter
 {
 	@:overload override public function isValidCharacter(aChar : java.StdTypes.Char16) : Bool;
 	

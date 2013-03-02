@@ -12,19 +12,19 @@ extern class NotFoundReason implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _missing_node(default, null) : Int;
 	
-	public static var missing_node(default, null) : NotFoundReason;
+	public static var missing_node(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
 	public static var _not_context(default, null) : Int;
 	
-	public static var not_context(default, null) : NotFoundReason;
+	public static var not_context(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
 	public static var _not_object(default, null) : Int;
 	
-	public static var not_object(default, null) : NotFoundReason;
+	public static var not_object(default, null) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : NotFoundReason;
+	@:overload public static function from_int(value : Int) : org.omg.CosNaming.NamingContextPackage.NotFoundReason;
 	
 	@:overload private function new(value : Int) : Void;
 	

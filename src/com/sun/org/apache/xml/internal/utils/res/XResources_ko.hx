@@ -35,7 +35,7 @@ extern class XResources_ko extends com.sun.org.apache.xml.internal.utils.res.XRe
 	*
 	* @return The association list.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

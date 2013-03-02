@@ -291,17 +291,17 @@ extern class ZipFile implements java.util.zip.ZipConstants implements java.io.Cl
 	
 	private var rem : haxe.Int64;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	@:overload public function size() : haxe.Int64;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	@:overload private function finalize() : Void;
 	

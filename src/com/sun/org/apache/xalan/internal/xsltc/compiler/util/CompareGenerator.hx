@@ -27,21 +27,21 @@ extern class CompareGenerator extends com.sun.org.apache.xalan.internal.xsltc.co
 	
 	@:overload public function loadLastNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	@:overload public function getHandlerIndex() : Int;
 	
 	@:overload public function getIteratorIndex() : Int;
 	
-	@:overload override public function storeIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function storeIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function loadIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function loadIterator() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function getLocalIndex(name : String) : Int;
+	@:overload public function getLocalIndex(name : String) : Int;
 	
 	
 }

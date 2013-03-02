@@ -32,15 +32,15 @@ package com.sun.media.sound;
 */
 @:internal extern class MidiInDevice extends com.sun.media.sound.AbstractMidiDevice implements java.lang.Runnable
 {
-	@:overload @:synchronized override private function implOpen() : Void;
+	@:overload @:synchronized private function implOpen() : Void;
 	
-	@:overload @:synchronized override private function implClose() : Void;
+	@:overload @:synchronized private function implClose() : Void;
 	
-	@:overload override public function getMicrosecondPosition() : haxe.Int64;
+	@:overload public function getMicrosecondPosition() : haxe.Int64;
 	
-	@:overload override private function hasTransmitters() : Bool;
+	@:overload private function hasTransmitters() : Bool;
 	
-	@:overload override private function createTransmitter() : javax.sound.midi.Transmitter;
+	@:overload private function createTransmitter() : javax.sound.midi.Transmitter;
 	
 	@:overload public function run() : Void;
 	

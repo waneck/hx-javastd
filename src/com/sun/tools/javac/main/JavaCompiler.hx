@@ -26,10 +26,10 @@ package com.sun.tools.javac.main;
 extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassReader_SourceCompleter
 {
 	/** The context key for the compiler. */
-	private static var compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<JavaCompiler>;
+	private static var compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.main.JavaCompiler>;
 	
 	/** Get the JavaCompiler instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : JavaCompiler;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.main.JavaCompiler;
 	
 	/** The current version number as a string.
 	*/
@@ -119,7 +119,7 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* Annotation processing may require and provide a new instance
 	* of the compiler to be used for the analyze and generate phases.
 	*/
-	private var delegateCompiler : JavaCompiler;
+	private var delegateCompiler : com.sun.tools.javac.main.JavaCompiler;
 	
 	/**
 	* Command line options.
@@ -189,12 +189,12 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	/**
 	* The policy for the order in which to perform the compilation
 	*/
-	private var compilePolicy : JavaCompiler_CompilePolicy;
+	private var compilePolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompilePolicy;
 	
 	/**
 	* The policy for what to do with implicitly read source files
 	*/
-	private var implicitSourcePolicy : JavaCompiler_ImplicitSourcePolicy;
+	private var implicitSourcePolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_ImplicitSourcePolicy;
 	
 	/**
 	* Report activity related to compilePolicy
@@ -205,7 +205,7 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	* Policy of how far to continue processing. null means until first
 	* error.
 	*/
-	public var shouldStopPolicy : JavaCompiler_CompileState;
+	public var shouldStopPolicy : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState;
 	
 	/** A queue of all as yet unattributed classes.
 	*/
@@ -217,15 +217,15 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	*/
 	private var inputFiles : java.util.Set<javax.tools.JavaFileObject>;
 	
-	@:overload private function shouldStop(cs : JavaCompiler_CompileState) : Bool;
+	@:overload private function shouldStop(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState) : Bool;
 	
 	/** The number of errors reported so far.
 	*/
 	@:overload public function errorCount() : Int;
 	
-	@:overload @:final private function stopIfError<T>(cs : JavaCompiler_CompileState, queue : java.util.Queue<T>) : java.util.Queue<T>;
+	@:overload @:final private function stopIfError<T>(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState, queue : java.util.Queue<T>) : java.util.Queue<T>;
 	
-	@:overload @:final private function stopIfError<T>(cs : JavaCompiler_CompileState, list : com.sun.tools.javac.util.List<T>) : com.sun.tools.javac.util.List<T>;
+	@:overload @:final private function stopIfError<T>(cs : com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState, list : com.sun.tools.javac.util.List<T>) : com.sun.tools.javac.util.List<T>;
 	
 	/** The number of warnings reported so far.
 	*/
@@ -311,14 +311,14 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	*/
 	@:overload public function initProcessAnnotations(processors : java.lang.Iterable<javax.annotation.processing.Processor>) : Void;
 	
-	@:overload public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>) : JavaCompiler;
+	@:overload public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>) : com.sun.tools.javac.main.JavaCompiler;
 	
 	/**
 	* Process any anotations found in the specifed compilation units.
 	* @param roots a list of compilation units
 	* @return an instance of the compiler in which to complete the compilation
 	*/
-	@:overload public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>, classnames : com.sun.tools.javac.util.List<String>) : JavaCompiler;
+	@:overload public function processAnnotations(roots : com.sun.tools.javac.util.List<JCCompilationUnit>, classnames : com.sun.tools.javac.util.List<String>) : com.sun.tools.javac.main.JavaCompiler;
 	
 	/**
 	* Attribute a list of parse trees, such as found on the "todo" list.
@@ -392,7 +392,7 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 	*/
 	@:overload private function printCount(kind : String, count : Int) : Void;
 	
-	@:overload public function initRound(prev : JavaCompiler) : Void;
+	@:overload public function initRound(prev : com.sun.tools.javac.main.JavaCompiler) : Void;
 	
 	@:overload public static function enableLogging() : Void;
 	
@@ -473,7 +473,7 @@ extern class JavaCompiler implements com.sun.tools.javac.jvm.ClassReader.ClassRe
 /** Partial map to record which compiler phases have been executed
 * for each compilation unit. Used for ATTR and FLOW phases.
 */
-@:native('com$sun$tools$javac$main$JavaCompiler$CompileStates') extern class JavaCompiler_CompileStates extends java.util.HashMap<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, JavaCompiler_CompileState>
+@:native('com$sun$tools$javac$main$JavaCompiler$CompileStates') extern class JavaCompiler_CompileStates extends java.util.HashMap<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>, com.sun.tools.javac.main.JavaCompiler.JavaCompiler_CompileState>
 {
 	
 }

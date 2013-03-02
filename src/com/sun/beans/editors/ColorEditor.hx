@@ -31,11 +31,11 @@ extern class ColorEditor extends java.awt.Panel implements java.beans.PropertyEd
 	
 	@:overload override public function preferredSize() : java.awt.Dimension;
 	
-	@:overload override public function keyUp(e : java.awt.Event, key : Int) : Bool;
+	@:overload public function keyUp(e : java.awt.Event, key : Int) : Bool;
 	
 	@:overload public function setAsText(s : String) : Void;
 	
-	@:overload override public function action(e : java.awt.Event, arg : Dynamic) : Bool;
+	@:overload public function action(e : java.awt.Event, arg : Dynamic) : Bool;
 	
 	@:overload public function getJavaInitializationString() : String;
 	
@@ -55,7 +55,7 @@ extern class ColorEditor extends java.awt.Panel implements java.beans.PropertyEd
 	
 	@:overload override public function addPropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
-	@:overload override public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
+	@:overload public function removePropertyChangeListener(l : java.beans.PropertyChangeListener) : Void;
 	
 	
 }

@@ -33,10 +33,10 @@ extern class ClassWriter extends com.sun.tools.javac.jvm.ClassFile
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	private static var classWriterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<ClassWriter>;
+	private static var classWriterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.jvm.ClassWriter>;
 	
 	/** Get the ClassWriter instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : ClassWriter;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.jvm.ClassWriter;
 	
 	/** Return flags as a string, separated by " ".
 	*/
@@ -98,23 +98,23 @@ extern class ClassWriter extends com.sun.tools.javac.jvm.ClassFile
 {
 	
 }
-@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$SameFrame') @:internal extern class ClassWriter_StackMapTableFrame_SameFrame extends ClassWriter_StackMapTableFrame
+@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$SameFrame') @:internal extern class ClassWriter_StackMapTableFrame_SameFrame extends com.sun.tools.javac.jvm.ClassWriter.ClassWriter_StackMapTableFrame
 {
 	
 }
-@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$SameLocals1StackItemFrame') @:internal extern class ClassWriter_StackMapTableFrame_SameLocals1StackItemFrame extends ClassWriter_StackMapTableFrame
+@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$SameLocals1StackItemFrame') @:internal extern class ClassWriter_StackMapTableFrame_SameLocals1StackItemFrame extends com.sun.tools.javac.jvm.ClassWriter.ClassWriter_StackMapTableFrame
 {
 	
 }
-@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$ChopFrame') @:internal extern class ClassWriter_StackMapTableFrame_ChopFrame extends ClassWriter_StackMapTableFrame
+@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$ChopFrame') @:internal extern class ClassWriter_StackMapTableFrame_ChopFrame extends com.sun.tools.javac.jvm.ClassWriter.ClassWriter_StackMapTableFrame
 {
 	
 }
-@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$AppendFrame') @:internal extern class ClassWriter_StackMapTableFrame_AppendFrame extends ClassWriter_StackMapTableFrame
+@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$AppendFrame') @:internal extern class ClassWriter_StackMapTableFrame_AppendFrame extends com.sun.tools.javac.jvm.ClassWriter.ClassWriter_StackMapTableFrame
 {
 	
 }
-@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$FullFrame') @:internal extern class ClassWriter_StackMapTableFrame_FullFrame extends ClassWriter_StackMapTableFrame
+@:native('com$sun$tools$javac$jvm$ClassWriter$StackMapTableFrame$FullFrame') @:internal extern class ClassWriter_StackMapTableFrame_FullFrame extends com.sun.tools.javac.jvm.ClassWriter.ClassWriter_StackMapTableFrame
 {
 	
 }

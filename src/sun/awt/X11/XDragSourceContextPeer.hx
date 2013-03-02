@@ -25,7 +25,7 @@ package sun.awt.X11;
 */
 extern class XDragSourceContextPeer extends sun.awt.dnd.SunDragSourceContextPeer implements sun.awt.X11.XDragSourceProtocolListener
 {
-	@:overload override private function startDrag(transferable : java.awt.datatransfer.Transferable, formats : java.NativeArray<haxe.Int64>, formatMap : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload private function startDrag(transferable : java.awt.datatransfer.Transferable, formats : java.NativeArray<haxe.Int64>, formatMap : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	@:overload public function getProxyModeSourceWindow() : haxe.Int64;
 	
@@ -34,9 +34,9 @@ extern class XDragSourceContextPeer extends sun.awt.dnd.SunDragSourceContextPeer
 	/**
 	* set cursor
 	*/
-	@:overload override public function setCursor(c : java.awt.Cursor) : Void;
+	@:overload public function setCursor(c : java.awt.Cursor) : Void;
 	
-	@:overload override private function setNativeCursor(nativeCtxt : haxe.Int64, c : java.awt.Cursor, cType : Int) : Void;
+	@:overload private function setNativeCursor(nativeCtxt : haxe.Int64, c : java.awt.Cursor, cType : Int) : Void;
 	
 	@:overload private function needsBogusExitBeforeDrop() : Bool;
 	

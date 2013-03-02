@@ -70,7 +70,7 @@ extern class Deprecated extends com.sun.org.apache.bcel.internal.classfile.Attri
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : Deprecated) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Deprecated) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to CONSTANT_Utf8
@@ -87,7 +87,7 @@ extern class Deprecated extends com.sun.org.apache.bcel.internal.classfile.Attri
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump source file attribute to file stream in binary format.
@@ -95,7 +95,7 @@ extern class Deprecated extends com.sun.org.apache.bcel.internal.classfile.Attri
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return data bytes.
@@ -110,12 +110,12 @@ extern class Deprecated extends com.sun.org.apache.bcel.internal.classfile.Attri
 	/**
 	* @return attribute name
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

@@ -30,7 +30,7 @@ extern class FileSystem
 	/**
 	* Opens the file system
 	*/
-	@:overload public static function open() : FileSystem;
+	@:overload public static function open() : sun.management.FileSystem;
 	
 	/**
 	* Tells whether or not the specified file is located on a

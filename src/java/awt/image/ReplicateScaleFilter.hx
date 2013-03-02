@@ -87,7 +87,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload override public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
+	@:overload public function setProperties(props : java.util.Hashtable<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Override the dimensions of the source image and pass the dimensions
@@ -101,7 +101,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* with the filtering operation.
 	* @see ImageConsumer
 	*/
-	@:overload override public function setDimensions(w : Int, h : Int) : Void;
+	@:overload public function setDimensions(w : Int, h : Int) : Void;
 	
 	/**
 	* Choose which rows and columns of the delivered byte pixels are
@@ -115,7 +115,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
+	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<java.StdTypes.Int8>, off : Int, scansize : Int) : Void;
 	
 	/**
 	* Choose which rows and columns of the delivered int pixels are
@@ -129,7 +129,7 @@ extern class ReplicateScaleFilter extends java.awt.image.ImageFilter
 	* this method directly since that operation could interfere
 	* with the filtering operation.
 	*/
-	@:overload override public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
+	@:overload public function setPixels(x : Int, y : Int, w : Int, h : Int, model : java.awt.image.ColorModel, pixels : java.NativeArray<Int>, off : Int, scansize : Int) : Void;
 	
 	
 }

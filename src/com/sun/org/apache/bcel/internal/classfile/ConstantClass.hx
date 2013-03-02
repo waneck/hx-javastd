@@ -69,7 +69,7 @@ extern class ConstantClass extends com.sun.org.apache.bcel.internal.classfile.Co
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantClass) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantClass) : Void;
 	
 	/**
 	* @param name_index Name index in constant pool.  Should refer to a

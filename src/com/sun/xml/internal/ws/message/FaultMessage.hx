@@ -27,7 +27,7 @@ extern class FaultMessage extends com.sun.xml.internal.ws.api.message.FilterMess
 {
 	@:overload public function new(delegate : com.sun.xml.internal.ws.api.message.Message, detailEntryName : javax.xml.namespace.QName) : Void;
 	
-	@:overload override public function getFirstDetailEntryName() : javax.xml.namespace.QName;
+	@:overload public function getFirstDetailEntryName() : javax.xml.namespace.QName;
 	
 	
 }

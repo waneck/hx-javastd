@@ -33,11 +33,11 @@ package com.sun.xml.internal.ws.server.provider;
 	* invoke() is used to create a new {@link Message} that traverses
 	* through the Pipeline to transport.
 	*/
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	
 }

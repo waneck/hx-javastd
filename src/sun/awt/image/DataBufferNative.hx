@@ -60,7 +60,7 @@ extern class DataBufferNative extends java.awt.image.DataBuffer
 	* from the index value and the native getElem() method is
 	* called with the internal surfaceData object.
 	*/
-	@:overload override public function getElem(bank : Int, i : Int) : Int;
+	@:overload public function getElem(bank : Int, i : Int) : Int;
 	
 	@:overload @:native private function setElem(x : Int, y : Int, val : Int, sData : sun.java2d.SurfaceData) : Void;
 	
@@ -72,7 +72,7 @@ extern class DataBufferNative extends java.awt.image.DataBuffer
 	* from the index value and the native setElem() method is
 	* called with the internal surfaceData object.
 	*/
-	@:overload override public function setElem(bank : Int, i : Int, val : Int) : Void;
+	@:overload public function setElem(bank : Int, i : Int, val : Int) : Void;
 	
 	
 }

@@ -27,7 +27,7 @@ extern class ExtendedCharsets extends sun.nio.cs.AbstractCharsetProvider
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function init() : Void;
+	@:overload private function init() : Void;
 	
 	@:overload public static function aliasesFor(charsetName : String) : java.NativeArray<String>;
 	

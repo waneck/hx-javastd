@@ -69,7 +69,7 @@ extern class SelectorProvider
 	*
 	* @return  The system-wide default selector provider
 	*/
-	@:overload public static function provider() : SelectorProvider;
+	@:overload public static function provider() : java.nio.channels.spi.SelectorProvider;
 	
 	/**
 	* Opens a datagram channel.  </p>

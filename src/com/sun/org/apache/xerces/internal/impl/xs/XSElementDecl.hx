@@ -54,7 +54,7 @@ extern class XSElementDecl implements com.sun.org.apache.xerces.internal.xs.XSEl
 	
 	public var fDefault : com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo;
 	
-	public var fSubGroup : XSElementDecl;
+	public var fSubGroup : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl;
 	
 	@:overload public function setConstraintType(constraintType : java.StdTypes.Int16) : Void;
 	

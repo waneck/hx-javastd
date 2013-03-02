@@ -59,7 +59,7 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	* @param buf contains partial content for a part
 	* @return Data
 	*/
-	@:overload public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : Data;
+	@:overload public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : com.sun.xml.internal.org.jvnet.mimepull.Data;
 	
 	
 }

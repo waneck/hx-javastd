@@ -233,7 +233,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #getPreviousValue
 	* @see #setCalendarField
 	*/
-	@:overload override public function getNextValue() : Dynamic;
+	@:overload public function getNextValue() : Dynamic;
 	
 	/**
 	* Returns the previous <code>Date</code> in the sequence, or <code>null</code>
@@ -247,7 +247,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #getNextValue
 	* @see #setCalendarField
 	*/
-	@:overload override public function getPreviousValue() : Dynamic;
+	@:overload public function getPreviousValue() : Dynamic;
 	
 	/**
 	* Returns the current element in this sequence of <code>Date</code>s.
@@ -265,7 +265,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #setValue
 	* @see #getDate
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload public function getValue() : Dynamic;
 	
 	/**
 	* Sets the current <code>Date</code> for this sequence.
@@ -289,7 +289,7 @@ extern class SpinnerDateModel extends javax.swing.AbstractSpinnerModel implement
 	* @see #getValue
 	* @see #addChangeListener
 	*/
-	@:overload override public function setValue(value : Dynamic) : Void;
+	@:overload public function setValue(value : Dynamic) : Void;
 	
 	
 }

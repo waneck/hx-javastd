@@ -27,7 +27,7 @@ extern class ConnectDialog extends sun.tools.jconsole.InternalDialog implements 
 {
 	@:overload public function new(jConsole : sun.tools.jconsole.JConsole) : Void;
 	
-	@:overload override public function revalidate() : Void;
+	@:overload public function revalidate() : Void;
 	
 	@:overload public static function getLabelWidth(text : String) : Int;
 	
@@ -47,7 +47,7 @@ extern class ConnectDialog extends sun.tools.jconsole.InternalDialog implements 
 	
 	@:overload public function keyTyped(e : java.awt.event.KeyEvent) : Void;
 	
-	@:overload override public function setVisible(b : Bool) : Void;
+	@:overload public function setVisible(b : Bool) : Void;
 	
 	@:overload public function keyPressed(e : java.awt.event.KeyEvent) : Void;
 	
@@ -61,25 +61,25 @@ extern class ConnectDialog extends sun.tools.jconsole.InternalDialog implements 
 }
 @:native('sun$tools$jconsole$ConnectDialog$LocalTabJTable') @:internal extern class ConnectDialog_LocalTabJTable extends javax.swing.JTable
 {
-	@:overload public function new(model : ConnectDialog_ManagedVmTableModel) : Void;
+	@:overload public function new(model : sun.tools.jconsole.ConnectDialog.ConnectDialog_ManagedVmTableModel) : Void;
 	
-	@:overload override public function getToolTipText(e : java.awt.event.MouseEvent) : String;
+	@:overload public function getToolTipText(e : java.awt.event.MouseEvent) : String;
 	
-	@:overload override public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
 	
 }
 @:native('sun$tools$jconsole$ConnectDialog$ManagedVmTableModel') @:internal extern class ConnectDialog_ManagedVmTableModel extends javax.swing.table.AbstractTableModel
 {
-	@:overload override public function getColumnCount() : Int;
+	@:overload public function getColumnCount() : Int;
 	
-	@:overload override public function getColumnName(col : Int) : String;
+	@:overload public function getColumnName(col : Int) : String;
 	
-	@:overload @:synchronized override public function getRowCount() : Int;
+	@:overload @:synchronized public function getRowCount() : Int;
 	
-	@:overload @:synchronized override public function getValueAt(row : Int, col : Int) : Dynamic;
+	@:overload @:synchronized public function getValueAt(row : Int, col : Int) : Dynamic;
 	
-	@:overload override public function getColumnClass(column : Int) : Class<Dynamic>;
+	@:overload public function getColumnClass(column : Int) : Class<Dynamic>;
 	
 	@:overload public function new() : Void;
 	

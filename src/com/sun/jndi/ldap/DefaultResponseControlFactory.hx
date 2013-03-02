@@ -62,7 +62,7 @@ extern class DefaultResponseControlFactory extends javax.naming.ldap.ControlFact
 	*            error condition while attempting to create the LDAP control,
 	*            and no other control factories are to be tried.
 	*/
-	@:overload override public function getControlInstance(ctl : javax.naming.ldap.Control) : javax.naming.ldap.Control;
+	@:overload public function getControlInstance(ctl : javax.naming.ldap.Control) : javax.naming.ldap.Control;
 	
 	
 }

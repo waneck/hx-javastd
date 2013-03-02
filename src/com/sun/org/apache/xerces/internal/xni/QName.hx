@@ -110,14 +110,14 @@ extern class QName implements java.lang.Cloneable
 	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String) : Void;
 	
 	/** Constructs a copy of the specified QName. */
-	@:overload public function new(qname : QName) : Void;
+	@:overload public function new(qname : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* Convenience method to set the values of the qname components.
 	*
 	* @param QName The qualified name to be copied.
 	*/
-	@:overload public function setValues(qname : QName) : Void;
+	@:overload public function setValues(qname : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
 	/**
 	* Convenience method to set the values of the qname components.

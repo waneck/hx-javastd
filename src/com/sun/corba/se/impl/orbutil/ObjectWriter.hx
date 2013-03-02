@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.orbutil;
 */
 extern class ObjectWriter
 {
-	@:overload public static function make(isIndenting : Bool, initialLevel : Int, increment : Int) : ObjectWriter;
+	@:overload public static function make(isIndenting : Bool, initialLevel : Int, increment : Int) : com.sun.corba.se.impl.orbutil.ObjectWriter;
 	
 	@:overload @:abstract public function startObject(obj : Dynamic) : Void;
 	
@@ -71,7 +71,7 @@ extern class ObjectWriter
 *       append*\n *
 *   )\n
 */
-@:native('com$sun$corba$se$impl$orbutil$ObjectWriter$IndentingObjectWriter') @:internal extern class ObjectWriter_IndentingObjectWriter extends ObjectWriter
+@:native('com$sun$corba$se$impl$orbutil$ObjectWriter$IndentingObjectWriter') @:internal extern class ObjectWriter_IndentingObjectWriter extends com.sun.corba.se.impl.orbutil.ObjectWriter
 {
 	@:overload public function new(initialLevel : Int, increment : Int) : Void;
 	
@@ -87,7 +87,7 @@ extern class ObjectWriter
 	
 	
 }
-@:native('com$sun$corba$se$impl$orbutil$ObjectWriter$SimpleObjectWriter') @:internal extern class ObjectWriter_SimpleObjectWriter extends ObjectWriter
+@:native('com$sun$corba$se$impl$orbutil$ObjectWriter$SimpleObjectWriter') @:internal extern class ObjectWriter_SimpleObjectWriter extends com.sun.corba.se.impl.orbutil.ObjectWriter
 {
 	@:overload override public function startObject(obj : Dynamic) : Void;
 	

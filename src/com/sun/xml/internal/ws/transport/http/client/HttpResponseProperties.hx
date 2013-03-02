@@ -31,7 +31,7 @@ package com.sun.xml.internal.ws.transport.http.client;
 	
 	@:overload public function getResponseCode() : Int;
 	
-	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

@@ -34,9 +34,9 @@ extern class ProgressCodeWriter extends com.sun.codemodel.internal.writer.Filter
 	*/
 	@:overload public function new(output : com.sun.codemodel.internal.CodeWriter, progress : java.io.PrintStream) : Void;
 	
-	@:overload override public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
+	@:overload public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
 	
-	@:overload override public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
+	@:overload public function openSource(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.Writer;
 	
 	
 }

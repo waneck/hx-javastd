@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.naming.namingutil;
 */
 extern class INSURLHandler
 {
-	@:overload @:synchronized public static function getINSURLHandler() : INSURLHandler;
+	@:overload @:synchronized public static function getINSURLHandler() : com.sun.corba.se.impl.naming.namingutil.INSURLHandler;
 	
 	@:overload public function parseURL(aUrl : String) : com.sun.corba.se.impl.naming.namingutil.INSURL;
 	

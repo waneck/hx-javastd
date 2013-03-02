@@ -46,11 +46,11 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 	
 	@:overload private function new(staxStreamReader : javax.xml.stream.XMLStreamReader, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
-	@:overload override public function bridge() : Void;
+	@:overload public function bridge() : Void;
 	
-	@:overload override private function getCurrentLocation() : javax.xml.stream.Location;
+	@:overload private function getCurrentLocation() : javax.xml.stream.Location;
 	
-	@:overload override private function getCurrentQName() : String;
+	@:overload private function getCurrentQName() : String;
 	
 	@:overload private function handleCharacters() : Void;
 	

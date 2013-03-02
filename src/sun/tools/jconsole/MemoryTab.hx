@@ -73,15 +73,15 @@ package sun.tools.jconsole;
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function setValue(poolIndex : Int, poolPlotter : MemoryTab_PoolPlotter, value : haxe.Int64, threshold : haxe.Int64, max : haxe.Int64) : Void;
+	@:overload public function setValue(poolIndex : Int, poolPlotter : sun.tools.jconsole.MemoryTab.MemoryTab_PoolPlotter, value : haxe.Int64, threshold : haxe.Int64, max : haxe.Int64) : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	@:overload override public function getPreferredSize() : java.awt.Dimension;
 	
 	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function getToolTipText(e : java.awt.event.MouseEvent) : String;
+	@:overload public function getToolTipText(e : java.awt.event.MouseEvent) : String;
 	
 	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	

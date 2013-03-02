@@ -30,7 +30,7 @@ package sun.awt.X11;
 */
 @:internal extern class XRootWindow extends sun.awt.X11.XBaseWindow
 {
-	@:overload override public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	@:overload override private function getWMName() : String;
 	

@@ -77,7 +77,7 @@ extern class XWindow extends sun.awt.X11.XBaseWindow implements sun.awt.X11Compo
 	
 	@:overload public function repaint() : Void;
 	
-	@:overload override private function flush() : Void;
+	@:overload private function flush() : Void;
 	
 	@:overload public function popup(x : Int, y : Int, width : Int, height : Int) : Void;
 	

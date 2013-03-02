@@ -38,7 +38,7 @@ extern class PrintJob2D extends java.awt.PrintJob implements java.awt.print.Prin
 	* the PrintGraphics interface.
 	* @see PrintGraphics
 	*/
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Returns the dimensions of the page in pixels.
@@ -47,30 +47,30 @@ extern class PrintJob2D extends java.awt.PrintJob implements java.awt.print.Prin
 	* Except (since 1.3) when the application specifies a resolution.
 	* In that case it it scaled accordingly.
 	*/
-	@:overload override public function getPageDimension() : java.awt.Dimension;
+	@:overload public function getPageDimension() : java.awt.Dimension;
 	
 	/**
 	* Returns the resolution of the page in pixels per inch.
 	* Note that this doesn't have to correspond to the physical
 	* resolution of the printer.
 	*/
-	@:overload override public function getPageResolution() : Int;
+	@:overload public function getPageResolution() : Int;
 	
 	/**
 	* Returns true if the last page will be printed first.
 	*/
-	@:overload override public function lastPageFirst() : Bool;
+	@:overload public function lastPageFirst() : Bool;
 	
 	/**
 	* Ends the print job and does any necessary cleanup.
 	*/
-	@:overload @:synchronized override public function end() : Void;
+	@:overload @:synchronized public function end() : Void;
 	
 	/**
 	* Ends this print job once it is no longer referenced.
 	* @see #end
 	*/
-	@:overload override public function finalize() : Void;
+	@:overload public function finalize() : Void;
 	
 	/**
 	* Prints the page at the specified index into the specified

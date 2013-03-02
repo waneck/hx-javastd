@@ -28,7 +28,7 @@ extern class JavadocClassReader extends com.sun.tools.javac.jvm.ClassReader
 	/** Javadoc uses an extended class reader that records package.html entries
 	*  @author Neal Gafter
 	*/
-	@:overload public static function instance0(context : com.sun.tools.javac.util.Context) : JavadocClassReader;
+	@:overload public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocClassReader;
 	
 	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -37,7 +37,7 @@ extern class JavadocClassReader extends com.sun.tools.javac.jvm.ClassReader
 	/**
 	* Override getPackageFileKinds to include search for package.html
 	*/
-	@:overload override private function getPackageFileKinds() : java.util.EnumSet<javax.tools.JavaFileObject.JavaFileObject_Kind>;
+	@:overload private function getPackageFileKinds() : java.util.EnumSet<javax.tools.JavaFileObject.JavaFileObject_Kind>;
 	
 	/**
 	* Override extraFileActions to check for package documentation

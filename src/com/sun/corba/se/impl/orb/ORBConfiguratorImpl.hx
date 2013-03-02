@@ -33,7 +33,7 @@ extern class ORBConfiguratorImpl implements com.sun.corba.se.spi.orb.ORBConfigur
 {
 	public var userConfigurators : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload override public function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
+	@:overload public function makeParser() : com.sun.corba.se.spi.orb.PropertyParser;
 	
 	
 }

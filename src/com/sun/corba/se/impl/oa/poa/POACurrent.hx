@@ -27,7 +27,7 @@ extern class POACurrent extends org.omg.CORBA.portable.ObjectImpl implements org
 {
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload override public function _ids() : java.NativeArray<String>;
+	@:overload public function _ids() : java.NativeArray<String>;
 	
 	@:overload public function get_POA() : org.omg.PortableServer.POA;
 	

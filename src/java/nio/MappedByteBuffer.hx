@@ -55,7 +55,7 @@ extern class MappedByteBuffer extends java.nio.ByteBuffer
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function load() : MappedByteBuffer;
+	@:overload @:final public function load() : java.nio.MappedByteBuffer;
 	
 	/**
 	* Forces any changes made to this buffer's content to be written to the
@@ -75,7 +75,7 @@ extern class MappedByteBuffer extends java.nio.ByteBuffer
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function force() : MappedByteBuffer;
+	@:overload @:final public function force() : java.nio.MappedByteBuffer;
 	
 	
 }

@@ -246,7 +246,7 @@ package java.nio;
 * @author JSR-51 Expert Group
 * @since 1.4
 */
-@:require(java4) extern class IntBuffer extends java.nio.Buffer implements java.lang.Comparable<IntBuffer>
+@:require(java4) extern class IntBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.IntBuffer>
 {
 	/**
 	* Allocates a new int buffer.
@@ -265,7 +265,7 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the <tt>capacity</tt> is a negative integer
 	*/
-	@:overload public static function allocate(capacity : Int) : IntBuffer;
+	@:overload public static function allocate(capacity : Int) : java.nio.IntBuffer;
 	
 	/**
 	* Wraps an int array into a buffer.
@@ -298,7 +298,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public static function wrap(array : java.NativeArray<Int>, offset : Int, length : Int) : IntBuffer;
+	@:overload public static function wrap(array : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
 	
 	/**
 	* Wraps an int array into a buffer.
@@ -316,7 +316,7 @@ package java.nio;
 	*
 	* @return  The new int buffer
 	*/
-	@:overload public static function wrap(array : java.NativeArray<Int>) : IntBuffer;
+	@:overload public static function wrap(array : java.NativeArray<Int>) : java.nio.IntBuffer;
 	
 	/**
 	* Creates a new int buffer whose content is a shared subsequence of
@@ -335,7 +335,7 @@ package java.nio;
 	*
 	* @return  The new int buffer
 	*/
-	@:overload @:abstract public function slice() : IntBuffer;
+	@:overload @:abstract public function slice() : java.nio.IntBuffer;
 	
 	/**
 	* Creates a new int buffer that shares this buffer's content.
@@ -352,7 +352,7 @@ package java.nio;
 	*
 	* @return  The new int buffer
 	*/
-	@:overload @:abstract public function duplicate() : IntBuffer;
+	@:overload @:abstract public function duplicate() : java.nio.IntBuffer;
 	
 	/**
 	* Creates a new, read-only int buffer that shares this buffer's
@@ -372,7 +372,7 @@ package java.nio;
 	*
 	* @return  The new, read-only int buffer
 	*/
-	@:overload @:abstract public function asReadOnlyBuffer() : IntBuffer;
+	@:overload @:abstract public function asReadOnlyBuffer() : java.nio.IntBuffer;
 	
 	/**
 	* Relative <i>get</i> method.  Reads the int at this buffer's
@@ -402,7 +402,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(i : Int) : IntBuffer;
+	@:overload @:abstract public function put(i : Int) : java.nio.IntBuffer;
 	
 	/**
 	* Absolute <i>get</i> method.  Reads the int at the given
@@ -440,7 +440,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(index : Int, i : Int) : IntBuffer;
+	@:overload @:abstract public function put(index : Int, i : Int) : java.nio.IntBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -491,7 +491,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public function get(dst : java.NativeArray<Int>, offset : Int, length : Int) : IntBuffer;
+	@:overload public function get(dst : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -509,7 +509,7 @@ package java.nio;
 	*          If there are fewer than <tt>length</tt> ints
 	*          remaining in this buffer
 	*/
-	@:overload public function get(dst : java.NativeArray<Int>) : IntBuffer;
+	@:overload public function get(dst : java.NativeArray<Int>) : java.nio.IntBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -552,7 +552,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : IntBuffer) : IntBuffer;
+	@:overload public function put(src : java.nio.IntBuffer) : java.nio.IntBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -604,7 +604,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : IntBuffer;
+	@:overload public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -625,7 +625,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:final public function put(src : java.NativeArray<Int>) : IntBuffer;
+	@:overload @:final public function put(src : java.NativeArray<Int>) : java.nio.IntBuffer;
 	
 	/**
 	* Tells whether or not this buffer is backed by an accessible int
@@ -722,7 +722,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function compact() : IntBuffer;
+	@:overload @:abstract public function compact() : java.nio.IntBuffer;
 	
 	/**
 	* Tells whether or not this int buffer is direct. </p>
@@ -810,7 +810,7 @@ package java.nio;
 	* @return  A negative integer, zero, or a positive integer as this buffer
 	*          is less than, equal to, or greater than the given buffer
 	*/
-	@:overload public function compareTo(that : IntBuffer) : Int;
+	@:overload public function compareTo(that : java.nio.IntBuffer) : Int;
 	
 	/**
 	* Retrieves this buffer's byte order.

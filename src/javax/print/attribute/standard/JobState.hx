@@ -28,12 +28,12 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	/**
 	* The job state is unknown.
 	*/
-	public static var UNKNOWN(default, null) : JobState;
+	public static var UNKNOWN(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* The job is a candidate to start processing, but is not yet processing.
 	*/
-	public static var PENDING(default, null) : JobState;
+	public static var PENDING(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* The job is not a candidate for processing for any number of reasons but
@@ -41,7 +41,7 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	* present. The job's {@link JobStateReasons JobStateReasons} attribute must
 	* indicate why the job is no longer a candidate for processing.
 	*/
-	public static var PENDING_HELD(default, null) : JobState;
+	public static var PENDING_HELD(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* The job is processing. One or more of the following activities is
@@ -75,7 +75,7 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	* the PROCESSING_TO_STOP_POINT value to indicate that the printer is in the
 	* process of canceling or aborting the job.
 	*/
-	public static var PROCESSING(default, null) : JobState;
+	public static var PROCESSING(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* The job has stopped while processing for any number of reasons and will
@@ -93,7 +93,7 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	* printer's {@link PrinterState PrinterState} and {@link
 	* PrinterStateReasons PrinterStateReasons} attributes.
 	*/
-	public static var PROCESSING_STOPPED(default, null) : JobState;
+	public static var PROCESSING_STOPPED(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* The job has been canceled by some human agency, the printer has completed
@@ -106,7 +106,7 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	* PROCESSING_TO_STOP_POINT value, if present, must be removed, but the
 	* CANCELED_BY_<I>xxx</I> value, if present, must remain.
 	*/
-	public static var CANCELED(default, null) : JobState;
+	public static var CANCELED(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* The job has been aborted by the system (usually while the job was in the
@@ -119,7 +119,7 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	* the PROCESSING_TO_STOP_POINT value, if present, must be removed, but the
 	* ABORTED_BY_SYSTEM value, if present, must remain.
 	*/
-	public static var ABORTED(default, null) : JobState;
+	public static var ABORTED(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* The job has completed successfully or with warnings or errors after
@@ -130,7 +130,7 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	* COMPLETED_SUCCESSFULLY, COMPLETED_WITH_WARNINGS, or
 	* COMPLETED_WITH_ERRORS.
 	*/
-	public static var COMPLETED(default, null) : JobState;
+	public static var COMPLETED(default, null) : javax.print.attribute.standard.JobState;
 	
 	/**
 	* Construct a new job state enumeration value with the given integer value.
@@ -142,12 +142,12 @@ extern class JobState extends javax.print.attribute.EnumSyntax implements javax.
 	/**
 	* Returns the string table for class JobState.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class JobState.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

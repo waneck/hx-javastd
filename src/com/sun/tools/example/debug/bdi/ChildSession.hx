@@ -36,9 +36,9 @@ package com.sun.tools.example.debug.bdi;
 	
 	@:overload public function new(runtime : com.sun.tools.example.debug.bdi.ExecutionManager, connector : com.sun.jdi.connect.LaunchingConnector, arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>, input : com.sun.tools.example.debug.bdi.InputListener, output : com.sun.tools.example.debug.bdi.OutputListener, error : com.sun.tools.example.debug.bdi.OutputListener, diagnostics : com.sun.tools.example.debug.bdi.OutputListener) : Void;
 	
-	@:overload override public function attach() : Bool;
+	@:overload public function attach() : Bool;
 	
-	@:overload override public function detach() : Void;
+	@:overload public function detach() : Void;
 	
 	
 }
@@ -47,13 +47,13 @@ package com.sun.tools.example.debug.bdi;
 */
 @:native('com$sun$tools$example$debug$bdi$ChildSession$OutputReader') @:internal extern class ChildSession_OutputReader extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }
 @:native('com$sun$tools$example$debug$bdi$ChildSession$InputWriter') @:internal extern class ChildSession_InputWriter extends java.lang.Thread
 {
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }

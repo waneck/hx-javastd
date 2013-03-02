@@ -43,7 +43,7 @@ package sun.font;
 */
 @:internal extern class CMap
 {
-	public static var theNullCmap(default, null) : CMap_NullCMapClass;
+	public static var theNullCmap(default, null) : sun.font.CMap.CMap_NullCMapClass;
 	
 	
 }
@@ -62,36 +62,36 @@ package sun.font;
 * idRangeOFfset[segCount]
 * ushort glyphIdArray[]
 */
-@:native('sun$font$CMap$CMapFormat4') @:internal extern class CMap_CMapFormat4 extends CMap
+@:native('sun$font$CMap$CMapFormat4') @:internal extern class CMap_CMapFormat4 extends sun.font.CMap
 {
 	
 }
-@:native('sun$font$CMap$CMapFormat0') @:internal extern class CMap_CMapFormat0 extends CMap
+@:native('sun$font$CMap$CMapFormat0') @:internal extern class CMap_CMapFormat0 extends sun.font.CMap
 {
 	
 }
-@:native('sun$font$CMap$CMapFormat2') @:internal extern class CMap_CMapFormat2 extends CMap
+@:native('sun$font$CMap$CMapFormat2') @:internal extern class CMap_CMapFormat2 extends sun.font.CMap
 {
 	
 }
-@:native('sun$font$CMap$CMapFormat6') @:internal extern class CMap_CMapFormat6 extends CMap
+@:native('sun$font$CMap$CMapFormat6') @:internal extern class CMap_CMapFormat6 extends sun.font.CMap
 {
 	
 }
-@:native('sun$font$CMap$CMapFormat8') @:internal extern class CMap_CMapFormat8 extends CMap
+@:native('sun$font$CMap$CMapFormat8') @:internal extern class CMap_CMapFormat8 extends sun.font.CMap
 {
 	
 }
-@:native('sun$font$CMap$CMapFormat10') @:internal extern class CMap_CMapFormat10 extends CMap
+@:native('sun$font$CMap$CMapFormat10') @:internal extern class CMap_CMapFormat10 extends sun.font.CMap
 {
 	
 }
-@:native('sun$font$CMap$CMapFormat12') @:internal extern class CMap_CMapFormat12 extends CMap
+@:native('sun$font$CMap$CMapFormat12') @:internal extern class CMap_CMapFormat12 extends sun.font.CMap
 {
 	
 }
 /* Used to substitute for bad Cmaps. */
-@:native('sun$font$CMap$NullCMapClass') @:internal extern class CMap_NullCMapClass extends CMap
+@:native('sun$font$CMap$NullCMapClass') @:internal extern class CMap_NullCMapClass extends sun.font.CMap
 {
 	
 }

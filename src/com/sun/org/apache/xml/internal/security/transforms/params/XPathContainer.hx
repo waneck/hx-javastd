@@ -43,7 +43,7 @@ extern class XPathContainer extends com.sun.org.apache.xml.internal.security.uti
 	@:overload public function getXPath() : String;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

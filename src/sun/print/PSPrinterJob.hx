@@ -51,38 +51,38 @@ extern class PSPrinterJob extends sun.print.RasterPrinterJob
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload override public function printDialog() : Bool;
+	@:overload public function printDialog() : Bool;
 	
 	/**
 	* Invoked by the RasterPrinterJob super class
 	* this method is called to mark the start of a
 	* document.
 	*/
-	@:overload override private function startDoc() : Void;
+	@:overload private function startDoc() : Void;
 	
 	/**
 	* Invoked if the application cancelled the printjob.
 	*/
-	@:overload override private function abortDoc() : Void;
+	@:overload private function abortDoc() : Void;
 	
 	/**
 	* Invoked by the RasterPrintJob super class
 	* this method is called after that last page
 	* has been imaged.
 	*/
-	@:overload override private function endDoc() : Void;
+	@:overload private function endDoc() : Void;
 	
 	/**
 	* The RasterPrintJob super class calls this method
 	* at the start of each page.
 	*/
-	@:overload override private function startPage(pageFormat : java.awt.print.PageFormat, painter : java.awt.print.Printable, index : Int, paperChanged : Bool) : Void;
+	@:overload private function startPage(pageFormat : java.awt.print.PageFormat, painter : java.awt.print.Printable, index : Int, paperChanged : Bool) : Void;
 	
 	/**
 	* The RastePrintJob super class calls this method
 	* at the end of each page.
 	*/
-	@:overload override private function endPage(format : java.awt.print.PageFormat, painter : java.awt.print.Printable, index : Int) : Void;
+	@:overload private function endPage(format : java.awt.print.PageFormat, painter : java.awt.print.Printable, index : Int) : Void;
 	
 	/**
 	* Convert the 24 bit BGR image buffer represented by
@@ -105,7 +105,7 @@ extern class PSPrinterJob extends sun.print.RasterPrinterJob
 	* specified by the caller. Currently the data
 	* is 24 bits per pixel in BGR format.
 	*/
-	@:overload override private function printBand(bgrData : java.NativeArray<java.StdTypes.Int8>, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload private function printBand(bgrData : java.NativeArray<java.StdTypes.Int8>, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Examine the metrics captured by the
@@ -119,7 +119,7 @@ extern class PSPrinterJob extends sun.print.RasterPrinterJob
 	* <code>null</code>. Returning <code>null</code>
 	* causes the print job to be rasterized.
 	*/
-	@:overload override private function createPathGraphics(peekGraphics : sun.print.PeekGraphics, printerJob : java.awt.print.PrinterJob, painter : java.awt.print.Printable, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : java.awt.Graphics2D;
+	@:overload private function createPathGraphics(peekGraphics : sun.print.PeekGraphics, printerJob : java.awt.print.PrinterJob, painter : java.awt.print.Printable, pageFormat : java.awt.print.PageFormat, pageIndex : Int) : java.awt.Graphics2D;
 	
 	/**
 	* Intersect the gstate's current path with the
@@ -213,33 +213,33 @@ extern class PSPrinterJob extends sun.print.RasterPrinterJob
 	* Return the x resolution of the coordinates
 	* to be rendered.
 	*/
-	@:overload override private function getXRes() : Float;
+	@:overload private function getXRes() : Float;
 	
 	/**
 	* Return the y resolution of the coordinates
 	* to be rendered.
 	*/
-	@:overload override private function getYRes() : Float;
+	@:overload private function getYRes() : Float;
 	
 	/**
 	* For PostScript the origin is in the upper-left of the
 	* paper not at the imageable area corner.
 	*/
-	@:overload override private function getPhysicalPrintableX(p : java.awt.print.Paper) : Float;
+	@:overload private function getPhysicalPrintableX(p : java.awt.print.Paper) : Float;
 	
 	/**
 	* For PostScript the origin is in the upper-left of the
 	* paper not at the imageable area corner.
 	*/
-	@:overload override private function getPhysicalPrintableY(p : java.awt.print.Paper) : Float;
+	@:overload private function getPhysicalPrintableY(p : java.awt.print.Paper) : Float;
 	
-	@:overload override private function getPhysicalPrintableWidth(p : java.awt.print.Paper) : Float;
+	@:overload private function getPhysicalPrintableWidth(p : java.awt.print.Paper) : Float;
 	
-	@:overload override private function getPhysicalPrintableHeight(p : java.awt.print.Paper) : Float;
+	@:overload private function getPhysicalPrintableHeight(p : java.awt.print.Paper) : Float;
 	
-	@:overload override private function getPhysicalPageWidth(p : java.awt.print.Paper) : Float;
+	@:overload private function getPhysicalPageWidth(p : java.awt.print.Paper) : Float;
 	
-	@:overload override private function getPhysicalPageHeight(p : java.awt.print.Paper) : Float;
+	@:overload private function getPhysicalPageHeight(p : java.awt.print.Paper) : Float;
 	
 	/**
 	* Returns how many times each page in the book
@@ -247,9 +247,9 @@ extern class PSPrinterJob extends sun.print.RasterPrinterJob
 	* If the printer makes copies itself then this
 	* method should return 1.
 	*/
-	@:overload override private function getNoncollatedCopies() : Int;
+	@:overload private function getNoncollatedCopies() : Int;
 	
-	@:overload override private function getCollatedCopies() : Int;
+	@:overload private function getCollatedCopies() : Int;
 	
 	/*
 	* Fill the path defined by <code>pathIter</code>

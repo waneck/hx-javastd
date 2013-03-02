@@ -431,7 +431,7 @@ package java.util.concurrent;
 	*         cannot be accepted for execution
 	* @throws NullPointerException if {@code command} is null
 	*/
-	@:overload override public function execute(command : java.lang.Runnable) : Void;
+	@:overload public function execute(command : java.lang.Runnable) : Void;
 	
 	/**
 	* Initiates an orderly shutdown in which previously submitted
@@ -444,7 +444,7 @@ package java.util.concurrent;
 	*
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload override public function shutdown() : Void;
+	@:overload public function shutdown() : Void;
 	
 	/**
 	* Attempts to stop all actively executing tasks, halts the
@@ -463,9 +463,9 @@ package java.util.concurrent;
 	*
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload override public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
-	@:overload override public function isShutdown() : Bool;
+	@:overload public function isShutdown() : Bool;
 	
 	/**
 	* Returns true if this executor is in the process of terminating
@@ -480,9 +480,9 @@ package java.util.concurrent;
 	*/
 	@:overload public function isTerminating() : Bool;
 	
-	@:overload override public function isTerminated() : Bool;
+	@:overload public function isTerminated() : Bool;
 	
-	@:overload override public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
 	/**
 	* Invokes {@code shutdown} when this executor is no longer
@@ -871,7 +871,7 @@ package java.util.concurrent;
 	* @param r the runnable task requested to be executed
 	* @param e the executor attempting to execute this task
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : ThreadPoolExecutor) : Void;
+	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }
@@ -893,7 +893,7 @@ package java.util.concurrent;
 	* @param e the executor attempting to execute this task
 	* @throws RejectedExecutionException always.
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : ThreadPoolExecutor) : Void;
+	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }
@@ -914,7 +914,7 @@ package java.util.concurrent;
 	* @param r the runnable task requested to be executed
 	* @param e the executor attempting to execute this task
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : ThreadPoolExecutor) : Void;
+	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }
@@ -939,7 +939,7 @@ package java.util.concurrent;
 	* @param r the runnable task requested to be executed
 	* @param e the executor attempting to execute this task
 	*/
-	@:overload public function rejectedExecution(r : java.lang.Runnable, e : ThreadPoolExecutor) : Void;
+	@:overload public function rejectedExecution(r : java.lang.Runnable, e : java.util.concurrent.ThreadPoolExecutor) : Void;
 	
 	
 }

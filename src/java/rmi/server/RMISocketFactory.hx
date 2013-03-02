@@ -86,7 +86,7 @@ package java.rmi.server;
 	* @see java.lang.SecurityManager#checkSetFactory()
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function setSocketFactory(fac : RMISocketFactory) : Void;
+	@:require(java1) @:overload @:synchronized public static function setSocketFactory(fac : java.rmi.server.RMISocketFactory) : Void;
 	
 	/**
 	* Returns the socket factory set by the <code>setSocketFactory</code>
@@ -96,7 +96,7 @@ package java.rmi.server;
 	* @see #setSocketFactory(RMISocketFactory)
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function getSocketFactory() : RMISocketFactory;
+	@:require(java1) @:overload @:synchronized public static function getSocketFactory() : java.rmi.server.RMISocketFactory;
 	
 	/**
 	* Returns a reference to the default socket factory used
@@ -106,7 +106,7 @@ package java.rmi.server;
 	* @return the default RMI socket factory
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload @:synchronized public static function getDefaultSocketFactory() : RMISocketFactory;
+	@:require(java1) @:overload @:synchronized public static function getDefaultSocketFactory() : java.rmi.server.RMISocketFactory;
 	
 	/**
 	* Sets the failure handler to be called by the RMI runtime if server

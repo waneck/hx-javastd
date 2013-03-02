@@ -77,7 +77,7 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : Unknown) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Unknown) : Void;
 	
 	/**
 	* Create a non-standard attribute.
@@ -96,7 +96,7 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump unknown bytes to file stream.
@@ -104,7 +104,7 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return data bytes.
@@ -124,12 +124,12 @@ extern class Unknown extends com.sun.org.apache.bcel.internal.classfile.Attribut
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	
 }

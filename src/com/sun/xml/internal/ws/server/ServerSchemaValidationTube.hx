@@ -31,13 +31,13 @@ extern class ServerSchemaValidationTube extends com.sun.xml.internal.ws.util.pip
 	
 	@:overload override private function isNoValidation() : Bool;
 	
-	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload private function new(that : ServerSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.server.ServerSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
+	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	
 	
 }

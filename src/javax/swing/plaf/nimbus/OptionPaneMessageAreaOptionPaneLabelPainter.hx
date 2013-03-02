@@ -27,9 +27,9 @@ package javax.swing.plaf.nimbus;
 {
 	@:overload public function new(ctx : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext, state : Int) : Void;
 	
-	@:overload override private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
+	@:overload private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload @:final override private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
+	@:overload @:final private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	
 }

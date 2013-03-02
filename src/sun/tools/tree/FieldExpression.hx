@@ -32,7 +32,7 @@ extern class FieldExpression extends sun.tools.tree.UnaryExpression
 	
 	@:overload public function new(where : haxe.Int64, right : sun.tools.tree.Expression, field : sun.tools.java.MemberDefinition) : Void;
 	
-	@:overload override public function getImplementation() : sun.tools.tree.Expression;
+	@:overload public function getImplementation() : sun.tools.tree.Expression;
 	
 	/**
 	* Convert an '.' expression to a qualified identifier
@@ -42,12 +42,12 @@ extern class FieldExpression extends sun.tools.tree.UnaryExpression
 	/**
 	* Check if the present name is part of a scoping prefix.
 	*/
-	@:overload override public function checkAmbigName(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, loc : sun.tools.tree.UnaryExpression) : sun.tools.tree.Vset;
+	@:overload public function checkAmbigName(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, loc : sun.tools.tree.UnaryExpression) : sun.tools.tree.Vset;
 	
 	/**
 	* Check the expression
 	*/
-	@:overload override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Return a <code>FieldUpdater</code> object to be used in updating the
@@ -62,7 +62,7 @@ extern class FieldExpression extends sun.tools.tree.UnaryExpression
 	* <p>
 	* Must be called after 'checkValue', else 'right' will be invalid.
 	*/
-	@:overload override public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
 	/**
 	* Return a <code>FieldUpdater</code> object to be used in updating the
@@ -75,17 +75,17 @@ extern class FieldExpression extends sun.tools.tree.UnaryExpression
 	* <p>
 	* Must be called after 'checkValue', else 'right' will be invalid.
 	*/
-	@:overload override public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
 	/**
 	* Check the expression if it appears on the LHS of an assignment
 	*/
-	@:overload override public function checkLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload public function checkLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Check the expression if it appears on the LHS of an op= expression
 	*/
-	@:overload override public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : sun.tools.tree.Expression) : sun.tools.tree.Vset;
+	@:overload public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : sun.tools.tree.Expression) : sun.tools.tree.Vset;
 	
 	/**
 	* There is a simple assignment being made to the given final field.
@@ -105,30 +105,30 @@ extern class FieldExpression extends sun.tools.tree.UnaryExpression
 	/**
 	* Check if constant:  Will it inline away?
 	*/
-	@:overload override public function isConstant() : Bool;
+	@:overload public function isConstant() : Bool;
 	
 	/**
 	* Inline
 	*/
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function inlineLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function inlineLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* The cost of inlining this expression
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

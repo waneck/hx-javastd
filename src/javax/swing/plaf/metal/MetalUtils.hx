@@ -33,13 +33,13 @@ package javax.swing.plaf.metal;
 	* Instance used for painting.  This is the only instance that is
 	* ever created.
 	*/
-	public static var INSTANCE(default, null) : MetalUtils_GradientPainter;
+	public static var INSTANCE(default, null) : javax.swing.plaf.metal.MetalUtils.MetalUtils_GradientPainter;
 	
 	@:overload public function paint(c : java.awt.Component, g : java.awt.Graphics2D, gradient : java.util.List<Dynamic>, x : Int, y : Int, w : Int, h : Int, isVertical : Bool) : Void;
 	
-	@:overload override private function paintToImage(c : java.awt.Component, image : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload private function paintToImage(c : java.awt.Component, image : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload override private function paintImage(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, imageW : Int, imageH : Int, image : java.awt.Image, args : java.NativeArray<Dynamic>) : Void;
+	@:overload private function paintImage(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, imageW : Int, imageH : Int, image : java.awt.Image, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -48,7 +48,7 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalUtils$OceanDisabledButtonImageFilter') @:internal extern class MetalUtils_OceanDisabledButtonImageFilter extends java.awt.image.RGBImageFilter
 {
-	@:overload override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
+	@:overload public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
 	
 	
 }
@@ -57,7 +57,7 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalUtils$OceanToolBarImageFilter') @:internal extern class MetalUtils_OceanToolBarImageFilter extends java.awt.image.RGBImageFilter
 {
-	@:overload override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
+	@:overload public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
 	
 	
 }

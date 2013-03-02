@@ -31,9 +31,9 @@ extern class DuplicateAttributeVerifier
 	
 	public var _currentIteration : Int;
 	
-	public var _poolHead(default, null) : DuplicateAttributeVerifier_Entry;
+	public var _poolHead(default, null) : com.sun.xml.internal.fastinfoset.util.DuplicateAttributeVerifier.DuplicateAttributeVerifier_Entry;
 	
-	public var _poolCurrent : DuplicateAttributeVerifier_Entry;
+	public var _poolCurrent : com.sun.xml.internal.fastinfoset.util.DuplicateAttributeVerifier.DuplicateAttributeVerifier_Entry;
 	
 	@:overload public function new() : Void;
 	

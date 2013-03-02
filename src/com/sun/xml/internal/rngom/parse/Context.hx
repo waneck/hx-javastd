@@ -54,7 +54,7 @@ extern interface Context extends org.relaxng.datatype.ValidationContext
 	/**
 	* Returns the immutable snapshot of this {@link Context}.
 	*/
-	@:overload public function copy() : Context;
+	@:overload public function copy() : com.sun.xml.internal.rngom.parse.Context;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class InterfaceEntry extends com.sun.tools.corba.se.idl.SymtabEntry imple
 	**/
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : InterfaceEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
@@ -102,7 +102,7 @@ extern class InterfaceEntry extends com.sun.tools.corba.se.idl.SymtabEntry imple
 	Note that the methods vector is a subset of this vector. */
 	@:overload public function contained() : java.util.Vector<Dynamic>;
 	
-	@:overload public function replaceForwardDecl(oldEntry : com.sun.tools.corba.se.idl.ForwardEntry, newEntry : InterfaceEntry) : Bool;
+	@:overload public function replaceForwardDecl(oldEntry : com.sun.tools.corba.se.idl.ForwardEntry, newEntry : com.sun.tools.corba.se.idl.InterfaceEntry) : Bool;
 	
 	/** This method returns a vector of the elements in the state block.
 	If it is null, this is not a stateful interface.  If it is non-null,

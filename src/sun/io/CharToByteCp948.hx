@@ -25,7 +25,7 @@ package sun.io;
 */
 extern class CharToByteCp948 extends sun.io.CharToByteDBCS_ASCII
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
 	@:overload public function new() : Void;
 	

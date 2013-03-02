@@ -38,7 +38,7 @@ package com.sun.xml.internal.ws.addressing;
 	
 	@:overload public function new(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload public function new(that : WsaTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload public function new(that : com.sun.xml.internal.ws.addressing.WsaTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	

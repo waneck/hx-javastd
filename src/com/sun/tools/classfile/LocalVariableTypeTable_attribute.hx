@@ -25,15 +25,15 @@ package com.sun.tools.classfile;
 */
 extern class LocalVariableTypeTable_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, local_variable_table : java.NativeArray<LocalVariableTypeTable_attribute_Entry>) : Void;
+	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, local_variable_table : java.NativeArray<com.sun.tools.classfile.LocalVariableTypeTable_attribute.LocalVariableTypeTable_attribute_Entry>) : Void;
 	
-	@:overload public function new(name_index : Int, local_variable_table : java.NativeArray<LocalVariableTypeTable_attribute_Entry>) : Void;
+	@:overload public function new(name_index : Int, local_variable_table : java.NativeArray<com.sun.tools.classfile.LocalVariableTypeTable_attribute.LocalVariableTypeTable_attribute_Entry>) : Void;
 	
 	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var local_variable_table_length(default, null) : Int;
 	
-	public var local_variable_table(default, null) : java.NativeArray<LocalVariableTypeTable_attribute_Entry>;
+	public var local_variable_table(default, null) : java.NativeArray<com.sun.tools.classfile.LocalVariableTypeTable_attribute.LocalVariableTypeTable_attribute_Entry>;
 	
 	
 }

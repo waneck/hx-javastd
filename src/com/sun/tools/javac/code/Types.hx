@@ -47,9 +47,9 @@ extern class Types
 	* This code and its internal interfaces are subject to change or
 	* deletion without notice.</b>
 	*/
-	private static var typesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Types>;
+	private static var typesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.Types>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Types;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.Types;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -606,7 +606,7 @@ extern class Types
 	
 	
 }
-@:native('com$sun$tools$javac$code$Types$MembersClosureCache') @:internal extern class Types_MembersClosureCache extends Types_SimpleVisitor<CompoundScope, Null<Bool>>
+@:native('com$sun$tools$javac$code$Types$MembersClosureCache') @:internal extern class Types_MembersClosureCache extends com.sun.tools.javac.code.Types.Types_SimpleVisitor<CompoundScope, Null<Bool>>
 {
 	/** members closure visitor methods **/
 	@:overload public function visitType(t : com.sun.tools.javac.code.Type, skipInterface : Null<Bool>) : CompoundScope;
@@ -623,7 +623,7 @@ extern class Types
 	
 	
 }
-@:native('com$sun$tools$javac$code$Types$HasSameArgs') @:internal extern class Types_HasSameArgs extends Types_TypeRelation
+@:native('com$sun$tools$javac$code$Types$HasSameArgs') @:internal extern class Types_HasSameArgs extends com.sun.tools.javac.code.Types.Types_TypeRelation
 {
 	@:overload public function new(strict : Bool) : Void;
 	
@@ -637,7 +637,7 @@ extern class Types
 	
 	
 }
-@:native('com$sun$tools$javac$code$Types$Subst') @:internal extern class Types_Subst extends Types_UnaryVisitor<com.sun.tools.javac.code.Type>
+@:native('com$sun$tools$javac$code$Types$Subst') @:internal extern class Types_Subst extends com.sun.tools.javac.code.Types.Types_UnaryVisitor<com.sun.tools.javac.code.Type>
 {
 	@:overload public function new(from : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, to : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Void;
 	
@@ -667,7 +667,7 @@ extern class Types
 	
 	
 }
-@:native('com$sun$tools$javac$code$Types$Adapter') @:internal extern class Types_Adapter extends Types_SimpleVisitor<java.lang.Void, com.sun.tools.javac.code.Type>
+@:native('com$sun$tools$javac$code$Types$Adapter') @:internal extern class Types_Adapter extends com.sun.tools.javac.code.Types.Types_SimpleVisitor<java.lang.Void, com.sun.tools.javac.code.Type>
 {
 	@:overload public function adapt(source : com.sun.tools.javac.code.Type, target : com.sun.tools.javac.code.Type) : Void;
 	
@@ -687,7 +687,7 @@ extern class Types
 {
 	
 }
-@:native('com$sun$tools$javac$code$Types$Rewriter') @:internal extern class Types_Rewriter extends Types_UnaryVisitor<com.sun.tools.javac.code.Type>
+@:native('com$sun$tools$javac$code$Types$Rewriter') @:internal extern class Types_Rewriter extends com.sun.tools.javac.code.Types.Types_UnaryVisitor<com.sun.tools.javac.code.Type>
 {
 	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, s : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
@@ -750,27 +750,7 @@ extern class Types
 	
 	@:overload public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, s : S) : R;
 	
-	@:overload public function visitClassType(t : Type_ClassType, s : S) : R;
-	
-	@:overload public function visitMethodType(t : Type_MethodType, s : S) : R;
-	
-	@:overload public function visitUndetVar(t : Type_UndetVar, s : S) : R;
-	
-	@:overload public function visitErrorType(t : Type_ErrorType, s : S) : R;
-	
-	@:overload public function visitForAll(t : Type_ForAll, s : S) : R;
-	
-	@:overload public function visitCapturedType(t : Type_CapturedType, s : S) : R;
-	
-	@:overload public function visitType(t : Type, s : S) : R;
-	
-	@:overload public function visitWildcardType(t : Type_WildcardType, s : S) : R;
-	
-	@:overload public function visitTypeVar(t : Type_TypeVar, s : S) : R;
-	
-	@:overload public function visitArrayType(t : Type_ArrayType, s : S) : R;
-	
-	@:overload public function visitPackageType(t : Type_PackageType, s : S) : R;
+	@:overload public function visitType(t : com.sun.tools.javac.code.Type, s : S) : R;
 	
 	
 }
@@ -802,19 +782,7 @@ extern class Types
 	
 	@:overload public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, arg : S) : R;
 	
-	@:overload public function visitPackageSymbol(s : Symbol_PackageSymbol, arg : Dynamic) : R;
-	
-	@:overload public function visitClassSymbol(s : Symbol_ClassSymbol, arg : Dynamic) : R;
-	
-	@:overload public function visitTypeSymbol(s : Symbol_TypeSymbol, arg : Dynamic) : R;
-	
-	@:overload public function visitOperatorSymbol(s : Symbol_OperatorSymbol, arg : Dynamic) : R;
-	
-	@:overload public function visitSymbol(s : Symbol, arg : Dynamic) : R;
-	
-	@:overload public function visitMethodSymbol(s : Symbol_MethodSymbol, arg : Dynamic) : R;
-	
-	@:overload public function visitVarSymbol(s : Symbol_VarSymbol, arg : Dynamic) : R;
+	@:overload public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : Dynamic) : R;
 	
 	
 }
@@ -831,7 +799,7 @@ extern class Types
 * type itself) of the operation implemented by this visitor; use
 * Void if a second argument is not needed.
 */
-@:native('com$sun$tools$javac$code$Types$SimpleVisitor') extern class Types_SimpleVisitor<R, S> extends Types_DefaultTypeVisitor<R, S>
+@:native('com$sun$tools$javac$code$Types$SimpleVisitor') extern class Types_SimpleVisitor<R, S> extends com.sun.tools.javac.code.Types.Types_DefaultTypeVisitor<R, S>
 {
 	@:overload public function visitCapturedType(t : CapturedType, s : S) : R;
 	
@@ -846,7 +814,7 @@ extern class Types
 * form Type&nbsp;&times;&nbsp;Type&nbsp;&rarr;&nbsp;Boolean.
 * <!-- In plain text: Type x Type -> Boolean -->
 */
-@:native('com$sun$tools$javac$code$Types$TypeRelation') extern class Types_TypeRelation extends Types_SimpleVisitor<Null<Bool>, com.sun.tools.javac.code.Type>
+@:native('com$sun$tools$javac$code$Types$TypeRelation') extern class Types_TypeRelation extends com.sun.tools.javac.code.Types.Types_SimpleVisitor<Null<Bool>, com.sun.tools.javac.code.Type>
 {
 	
 }
@@ -858,7 +826,7 @@ extern class Types
 * @param <R> the return type of the operation implemented by this
 * visitor; use Void if no return type is needed.
 */
-@:native('com$sun$tools$javac$code$Types$UnaryVisitor') extern class Types_UnaryVisitor<R> extends Types_SimpleVisitor<R, java.lang.Void>
+@:native('com$sun$tools$javac$code$Types$UnaryVisitor') extern class Types_UnaryVisitor<R> extends com.sun.tools.javac.code.Types.Types_SimpleVisitor<R, java.lang.Void>
 {
 	@:overload @:final public function visit(t : com.sun.tools.javac.code.Type) : R;
 	
@@ -874,7 +842,7 @@ extern class Types
 * type itself) of this mapping; use Void if a second argument is
 * not needed.
 */
-@:native('com$sun$tools$javac$code$Types$MapVisitor') extern class Types_MapVisitor<S> extends Types_DefaultTypeVisitor<com.sun.tools.javac.code.Type, S>
+@:native('com$sun$tools$javac$code$Types$MapVisitor') extern class Types_MapVisitor<S> extends com.sun.tools.javac.code.Types.Types_DefaultTypeVisitor<com.sun.tools.javac.code.Type, S>
 {
 	@:overload @:final public function visit(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.code.Type;
 	

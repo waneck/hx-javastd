@@ -61,9 +61,9 @@ extern class DXMLPrinter
 	
 	private var afterEnd : Bool;
 	
-	private var visitor : DXMLPrinter_DXMLPrinterVisitor;
+	private var visitor : com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_DXMLPrinterVisitor;
 	
-	private var ncVisitor : DXMLPrinter_NameClassXMLPrinterVisitor;
+	private var ncVisitor : com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_NameClassXMLPrinterVisitor;
 	
 	private var domPrinter : com.sun.xml.internal.rngom.digested.DOMPrinter;
 	
@@ -130,7 +130,7 @@ extern class DXMLPrinter
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$DXMLPrinterVisitor') extern class DXMLPrinter_DXMLPrinterVisitor extends DXMLPrinter_XMLWriter implements com.sun.xml.internal.rngom.digested.DPatternVisitor<java.lang.Void>
+@:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$DXMLPrinterVisitor') extern class DXMLPrinter_DXMLPrinterVisitor extends com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_XMLWriter implements com.sun.xml.internal.rngom.digested.DPatternVisitor<java.lang.Void>
 {
 	@:overload private function on(p : com.sun.xml.internal.rngom.digested.DPattern) : Void;
 	
@@ -178,7 +178,7 @@ extern class DXMLPrinter
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$NameClassXMLPrinterVisitor') extern class DXMLPrinter_NameClassXMLPrinterVisitor extends DXMLPrinter_XMLWriter implements com.sun.xml.internal.rngom.nc.NameClassVisitor<java.lang.Void>
+@:native('com$sun$xml$internal$rngom$digested$DXMLPrinter$NameClassXMLPrinterVisitor') extern class DXMLPrinter_NameClassXMLPrinterVisitor extends com.sun.xml.internal.rngom.digested.DXMLPrinter.DXMLPrinter_XMLWriter implements com.sun.xml.internal.rngom.nc.NameClassVisitor<java.lang.Void>
 {
 	@:overload public function visitChoice(nc1 : com.sun.xml.internal.rngom.nc.NameClass, nc2 : com.sun.xml.internal.rngom.nc.NameClass) : java.lang.Void;
 	

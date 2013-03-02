@@ -31,7 +31,7 @@ package javax.swing;
 	
 	@:overload override public function get(key : Dynamic) : Dynamic;
 	
-	@:overload override public function get(key : Dynamic, l : java.util.Locale) : Dynamic;
+	@:overload public function get(key : Dynamic, l : java.util.Locale) : Dynamic;
 	
 	@:overload override public function size() : Int;
 	
@@ -43,7 +43,7 @@ package javax.swing;
 	
 	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
-	@:overload override private function getUIError(msg : String) : Void;
+	@:overload private function getUIError(msg : String) : Void;
 	
 	@:overload override public function remove(key : Dynamic) : Dynamic;
 	

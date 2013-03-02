@@ -31,9 +31,9 @@ package javax.swing.plaf.synth;
 	
 	@:overload override public function getPainter(ss : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
 	
-	@:overload public function setPainters(info : java.NativeArray<ParsedSynthStyle_PainterInfo>) : Void;
+	@:overload public function setPainters(info : java.NativeArray<javax.swing.plaf.synth.ParsedSynthStyle.ParsedSynthStyle_PainterInfo>) : Void;
 	
-	@:overload public function addTo(style : sun.swing.plaf.synth.DefaultSynthStyle) : sun.swing.plaf.synth.DefaultSynthStyle;
+	@:overload override public function addTo(style : sun.swing.plaf.synth.DefaultSynthStyle) : sun.swing.plaf.synth.DefaultSynthStyle;
 	
 	@:overload override public function toString() : String;
 	
@@ -43,15 +43,15 @@ package javax.swing.plaf.synth;
 {
 	@:overload override public function new() : Void;
 	
-	@:overload public function new(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : Void;
+	@:overload override public function new(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : Void;
 	
-	@:overload public function setPainters(painterInfo : java.NativeArray<ParsedSynthStyle_PainterInfo>) : Void;
+	@:overload public function setPainters(painterInfo : java.NativeArray<javax.swing.plaf.synth.ParsedSynthStyle.ParsedSynthStyle_PainterInfo>) : Void;
 	
-	@:overload public function getPainters() : java.NativeArray<ParsedSynthStyle_PainterInfo>;
+	@:overload public function getPainters() : java.NativeArray<javax.swing.plaf.synth.ParsedSynthStyle.ParsedSynthStyle_PainterInfo>;
 	
 	@:overload override public function clone() : Dynamic;
 	
-	@:overload public function addTo(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
+	@:overload override public function addTo(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
 	
 	@:overload override public function toString() : String;
 	

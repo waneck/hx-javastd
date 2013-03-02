@@ -31,7 +31,7 @@ extern class JVar extends com.sun.codemodel.internal.JExpressionImpl implements 
 	* @param init
 	*        JExpression to be used to initialize this field
 	*/
-	@:overload public function init(init : com.sun.codemodel.internal.JExpression) : JVar;
+	@:overload public function init(init : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JVar;
 	
 	/**
 	* Get the name of this variable

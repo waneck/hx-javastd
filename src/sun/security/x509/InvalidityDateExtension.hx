@@ -109,7 +109,7 @@ extern class InvalidityDateExtension extends java.security.cert.Extension implem
 	* @param out the DerOutputStream to write the extension to
 	* @exception IOException on encoding errors
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this
@@ -122,7 +122,7 @@ extern class InvalidityDateExtension extends java.security.cert.Extension implem
 	*/
 	@:overload public function getName() : String;
 	
-	@:overload public static function toImpl(ext : java.security.cert.Extension) : InvalidityDateExtension;
+	@:overload public static function toImpl(ext : java.security.cert.Extension) : sun.security.x509.InvalidityDateExtension;
 	
 	
 }

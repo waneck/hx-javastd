@@ -33,13 +33,13 @@ extern class StringArray extends com.sun.xml.internal.fastinfoset.util.ValueArra
 	
 	@:overload public function new() : Void;
 	
-	@:overload @:final override public function clear() : Void;
+	@:overload @:final public function clear() : Void;
 	
 	@:overload @:final public function getArray() : java.NativeArray<String>;
 	
-	@:overload @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyArray(readOnlyArray : StringArray, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.StringArray, clear : Bool) : Void;
 	
 	@:overload @:final public function getCompleteArray() : java.NativeArray<String>;
 	

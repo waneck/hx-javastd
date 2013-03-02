@@ -56,7 +56,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @param format The output format or serialzation parameters
 	* to use.
 	*/
-	@:overload override public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	/**
 	* Get a description of the given element.
@@ -81,7 +81,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override private function startDocumentInternal() : Void;
+	@:overload private function startDocumentInternal() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -153,7 +153,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function writeAttrString(writer : java.io.Writer, string : String, encoding : String) : Void;
+	@:overload public function writeAttrString(writer : java.io.Writer, string : String, encoding : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -211,7 +211,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final override public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:final public function cdata(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	*  Receive notification of a processing instruction.
@@ -233,7 +233,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload @:final override public function entityReference(name : String) : Void;
+	@:overload @:final public function entityReference(name : String) : Void;
 	
 	/**
 	* @see ExtendedContentHandler#endElement(String)
@@ -251,7 +251,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function processAttributes(writer : java.io.Writer, nAttrs : Int) : Void;
+	@:overload public function processAttributes(writer : java.io.Writer, nAttrs : Int) : Void;
 	
 	/**
 	* For the enclosing elements starting tag write out out any attributes
@@ -259,7 +259,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	*@throws org.xml.sax.SAXException
 	*/
-	@:overload override private function closeStartTag() : Void;
+	@:overload private function closeStartTag() : Void;
 	
 	/**
 	* Initialize the serializer with the specified output stream and output
@@ -283,7 +283,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @param output The output stream
 	*/
-	@:overload override public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* This method is used when a prefix/uri namespace mapping
@@ -296,36 +296,36 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @see ExtendedContentHandler#namespaceAfterStartElement(String, String)
 	*/
-	@:overload override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
-	@:overload override public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report the end of DTD declarations.
 	* @throws org.xml.sax.SAXException The application may raise an exception.
 	* @see #startDTD
 	*/
-	@:overload override public function endDTD() : Void;
+	@:overload public function endDTD() : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload override public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
+	@:overload public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload override public function elementDecl(name : String, model : String) : Void;
+	@:overload public function elementDecl(name : String, model : String) : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload override public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* This method does nothing.
 	*/
-	@:overload override public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* This method is used to add an attribute to the currently open element.
@@ -339,9 +339,9 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*/
 	@:overload override public function addUniqueAttribute(name : String, value : String, flags : Int) : Void;
 	
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function reset() : Bool;
+	@:overload public function reset() : Bool;
 	
 	
 }
@@ -389,7 +389,7 @@ extern class ToHTMLStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @param existingTrie the Trie that this one is a copy of.
 	*/
-	@:overload public function new(existingTrie : ToHTMLStream_Trie) : Void;
+	@:overload public function new(existingTrie : com.sun.org.apache.xml.internal.serializer.ToHTMLStream.ToHTMLStream_Trie) : Void;
 	
 	/**
 	* Get an object that matches the key.

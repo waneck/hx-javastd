@@ -110,23 +110,23 @@ extern class AlgIdDSA extends sun.security.x509.AlgorithmId implements java.secu
 	* Returns "DSA", indicating the Digital Signature Algorithm (DSA) as
 	* defined by the Digital Signature Standard (DSS), FIPS 186.
 	*/
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	/**
 	* Parses algorithm parameters P, Q, and G.  They're found
 	* in the "params" member, which never needs to be changed.
 	*/
-	@:overload override private function decodeParams() : Void;
+	@:overload private function decodeParams() : Void;
 	
 	/*
 	* Returns a formatted string describing the parameters.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/*
 	* Returns a string describing the parameters.
 	*/
-	@:overload override private function paramsToString() : String;
+	@:overload private function paramsToString() : String;
 	
 	
 }

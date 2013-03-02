@@ -27,9 +27,9 @@ extern class POAPolicyMediatorBase_R extends com.sun.corba.se.impl.oa.poa.POAPol
 {
 	private var activeObjectMap : com.sun.corba.se.impl.oa.poa.ActiveObjectMap;
 	
-	@:overload override public function returnServant() : Void;
+	@:overload public function returnServant() : Void;
 	
-	@:overload override public function clearAOM() : Void;
+	@:overload public function clearAOM() : Void;
 	
 	@:overload private function internalKeyToServant(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : org.omg.PortableServer.Servant;
 	
@@ -37,15 +37,15 @@ extern class POAPolicyMediatorBase_R extends com.sun.corba.se.impl.oa.poa.POAPol
 	
 	@:overload private function activateServant(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload @:final override public function activateObject(id : java.NativeArray<java.StdTypes.Int8>, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload @:final public function activateObject(id : java.NativeArray<java.StdTypes.Int8>, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload override public function deactivateObject(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
+	@:overload public function deactivateObject(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
 	
 	@:overload private function deactivateHelper(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, s : org.omg.PortableServer.Servant) : Void;
 	
 	@:overload public function deactivateObject(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key) : org.omg.PortableServer.Servant;
 	
-	@:overload override public function servantToId(servant : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function servantToId(servant : org.omg.PortableServer.Servant) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

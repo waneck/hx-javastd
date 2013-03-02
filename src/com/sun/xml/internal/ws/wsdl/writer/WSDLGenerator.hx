@@ -224,7 +224,7 @@ extern class WSDLGenerator
 	* @return the {@link Result} for JAXB to generate the schema into
 	* @throws java.io.IOException thrown if on IO error occurs
 	*/
-	@:overload override public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
+	@:overload public function createOutput(namespaceUri : String, suggestedFileName : String) : javax.xml.transform.Result;
 	
 	
 }

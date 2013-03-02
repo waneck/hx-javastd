@@ -67,7 +67,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @exception NoSuchAlgorithmException if the requested cipher mode is
 	* invalid
 	*/
-	@:overload override private function engineSetMode(mode : String) : Void;
+	@:overload private function engineSetMode(mode : String) : Void;
 	
 	/**
 	* Sets the padding mechanism of this cipher. This algorithm only uses
@@ -78,14 +78,14 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @exception NoSuchPaddingException if the requested padding mechanism
 	* is invalid
 	*/
-	@:overload override private function engineSetPadding(paddingScheme : String) : Void;
+	@:overload private function engineSetPadding(paddingScheme : String) : Void;
 	
 	/**
 	* Returns the block size (in bytes).
 	*
 	* @return the block size (in bytes)
 	*/
-	@:overload override private function engineGetBlockSize() : Int;
+	@:overload private function engineGetBlockSize() : Int;
 	
 	/**
 	* Returns the length in bytes that an output buffer would need to be in
@@ -105,7 +105,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @return the required output buffer size (in bytes)
 	*
 	*/
-	@:overload override private function engineGetOutputSize(inputLen : Int) : Int;
+	@:overload private function engineGetOutputSize(inputLen : Int) : Int;
 	
 	/**
 	* Returns the initialization vector (IV) in a new buffer.
@@ -119,7 +119,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* underlying algorithm does not use an IV, or if the IV has not yet
 	* been set.
 	*/
-	@:overload override private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the parameters used with this cipher.
@@ -134,7 +134,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @return the parameters used with this cipher, or null if this cipher
 	* does not use any parameters.
 	*/
-	@:overload override private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:overload private function engineGetParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Initializes this cipher with a key and a source
@@ -156,7 +156,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @exception InvalidKeyException if the given key is inappropriate for
 	* initializing this cipher
 	*/
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with a key, a set of
@@ -178,9 +178,9 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @exception InvalidAlgorithmParameterException if the given algorithm
 	* parameters are inappropriate for this cipher
 	*/
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -199,7 +199,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @return the new buffer with the result
 	*
 	*/
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Continues a multiple-part encryption or decryption operation
@@ -224,7 +224,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @exception ShortBufferException if the given output buffer is too small
 	* to hold the result
 	*/
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation,
@@ -255,7 +255,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @exception BadPaddingException if decrypting and padding is choosen,
 	* but the last input data does not have proper padding bytes.
 	*/
-	@:overload override private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Encrypts or decrypts data in a single-part operation,
@@ -292,7 +292,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* @exception BadPaddingException if decrypting and padding is choosen,
 	* but the last input data does not have proper padding bytes.
 	*/
-	@:overload override private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
+	@:overload private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int, output : java.NativeArray<java.StdTypes.Int8>, outputOffset : Int) : Int;
 	
 	/**
 	*  Returns the key size of the given key object.
@@ -303,7 +303,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	*
 	* @exception InvalidKeyException if <code>key</code> is invalid.
 	*/
-	@:overload override private function engineGetKeySize(key : java.security.Key) : Int;
+	@:overload private function engineGetKeySize(key : java.security.Key) : Int;
 	
 	/**
 	* Wrap a key.
@@ -321,7 +321,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* wrap the key with this cipher (e.g., a hardware protected key is
 	* being passed to a software only cipher).
 	*/
-	@:overload override private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Unwrap a previously wrapped key.
@@ -344,7 +344,7 @@ extern class PBEWithMD5AndTripleDESCipher extends javax.crypto.CipherSpi
 	* represent a wrapped key of type <code>wrappedKeyType</code> for
 	* the <code>wrappedKeyAlgorithm</code>.
 	*/
-	@:overload override private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
 	
 }

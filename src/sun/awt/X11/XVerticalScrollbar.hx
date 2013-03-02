@@ -30,11 +30,11 @@ package sun.awt.X11;
 {
 	@:overload public function new(sb : sun.awt.X11.XScrollbarClient) : Void;
 	
-	@:overload override public function setSize(width : Int, height : Int) : Void;
+	@:overload public function setSize(width : Int, height : Int) : Void;
 	
-	@:overload override private function rebuildArrows() : Void;
+	@:overload private function rebuildArrows() : Void;
 	
-	@:overload override private function getThumbArea() : java.awt.Rectangle;
+	@:overload private function getThumbArea() : java.awt.Rectangle;
 	
 	
 }

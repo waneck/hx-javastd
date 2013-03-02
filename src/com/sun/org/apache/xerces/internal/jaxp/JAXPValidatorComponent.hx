@@ -25,15 +25,15 @@ package com.sun.org.apache.xerces.internal.jaxp;
 	*/
 	@:overload public function new(validatorHandler : javax.xml.validation.ValidatorHandler) : Void;
 	
-	@:overload override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
@@ -62,13 +62,13 @@ package com.sun.org.apache.xerces.internal.jaxp;
 */
 @:native('com$sun$org$apache$xerces$internal$jaxp$JAXPValidatorComponent$SAX2XNI') @:internal extern class JAXPValidatorComponent_SAX2XNI extends org.xml.sax.helpers.DefaultHandler
 {
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload override public function startElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(uri : String, localName : String, qname : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(uri : String, localName : String, qname : String) : Void;
+	@:overload public function endElement(uri : String, localName : String, qname : String) : Void;
 	
 	
 }
@@ -91,30 +91,30 @@ package com.sun.org.apache.xerces.internal.jaxp;
 	
 	@:overload public function getContentHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload override public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function xmlDecl(version : String, encoding : String, standalone : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function startDocument(locator : com.sun.org.apache.xerces.internal.xni.XMLLocator, encoding : String, namespaceContext : com.sun.org.apache.xerces.internal.xni.NamespaceContext, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function endDocument(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	
 }
 @:native('com$sun$org$apache$xerces$internal$jaxp$JAXPValidatorComponent$DraconianErrorHandler') @:internal extern class JAXPValidatorComponent_DraconianErrorHandler implements org.xml.sax.ErrorHandler
 {
 	/** Returns the one and only instance of this error handler. */
-	@:overload public static function getInstance() : JAXPValidatorComponent_DraconianErrorHandler;
+	@:overload public static function getInstance() : com.sun.org.apache.xerces.internal.jaxp.JAXPValidatorComponent.JAXPValidatorComponent_DraconianErrorHandler;
 	
 	/** Warning: Ignore. */
 	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;

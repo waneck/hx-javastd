@@ -17,19 +17,19 @@ extern class ParameterMode implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _PARAM_IN(default, null) : Int;
 	
-	public static var PARAM_IN(default, null) : ParameterMode;
+	public static var PARAM_IN(default, null) : org.omg.CORBA.ParameterMode;
 	
 	public static var _PARAM_OUT(default, null) : Int;
 	
-	public static var PARAM_OUT(default, null) : ParameterMode;
+	public static var PARAM_OUT(default, null) : org.omg.CORBA.ParameterMode;
 	
 	public static var _PARAM_INOUT(default, null) : Int;
 	
-	public static var PARAM_INOUT(default, null) : ParameterMode;
+	public static var PARAM_INOUT(default, null) : org.omg.CORBA.ParameterMode;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : ParameterMode;
+	@:overload public static function from_int(value : Int) : org.omg.CORBA.ParameterMode;
 	
 	@:overload private function new(value : Int) : Void;
 	

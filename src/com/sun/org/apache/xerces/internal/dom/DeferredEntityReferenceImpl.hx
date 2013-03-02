@@ -85,7 +85,7 @@ extern class DeferredEntityReferenceImpl extends com.sun.org.apache.xerces.inter
 	@:overload override private function synchronizeData() : Void;
 	
 	/** Synchronize the children. */
-	@:overload override private function synchronizeChildren() : Void;
+	@:overload private function synchronizeChildren() : Void;
 	
 	
 }

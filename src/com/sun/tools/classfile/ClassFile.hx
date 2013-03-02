@@ -33,13 +33,13 @@ package com.sun.tools.classfile;
 */
 extern class ClassFile
 {
-	@:overload public static function read(file : java.io.File) : ClassFile;
+	@:overload public static function read(file : java.io.File) : com.sun.tools.classfile.ClassFile;
 	
-	@:overload public static function read(file : java.io.File, attributeFactory : com.sun.tools.classfile.Attribute.Attribute_Factory) : ClassFile;
+	@:overload public static function read(file : java.io.File, attributeFactory : com.sun.tools.classfile.Attribute.Attribute_Factory) : com.sun.tools.classfile.ClassFile;
 	
-	@:overload public static function read(_in : java.io.InputStream) : ClassFile;
+	@:overload public static function read(_in : java.io.InputStream) : com.sun.tools.classfile.ClassFile;
 	
-	@:overload public static function read(_in : java.io.InputStream, attributeFactory : com.sun.tools.classfile.Attribute.Attribute_Factory) : ClassFile;
+	@:overload public static function read(_in : java.io.InputStream, attributeFactory : com.sun.tools.classfile.Attribute.Attribute_Factory) : com.sun.tools.classfile.ClassFile;
 	
 	@:overload public function new(magic : Int, minor_version : Int, major_version : Int, constant_pool : com.sun.tools.classfile.ConstantPool, access_flags : com.sun.tools.classfile.AccessFlags, this_class : Int, super_class : Int, interfaces : java.NativeArray<Int>, fields : java.NativeArray<com.sun.tools.classfile.Field>, methods : java.NativeArray<com.sun.tools.classfile.Method>, attributes : com.sun.tools.classfile.Attributes) : Void;
 	

@@ -29,7 +29,7 @@ package javax.swing;
 */
 @:internal extern class DebugGraphicsFilter extends java.awt.image.RGBImageFilter
 {
-	@:overload override public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
+	@:overload public function filterRGB(x : Int, y : Int, rgb : Int) : Int;
 	
 	
 }

@@ -27,9 +27,9 @@ extern class SoftMixingMixerProvider extends javax.sound.sampled.spi.MixerProvid
 {
 	private static var mutex(default, null) : Dynamic;
 	
-	@:overload override public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
+	@:overload public function getMixer(info : javax.sound.sampled.Mixer.Mixer_Info) : javax.sound.sampled.Mixer;
 	
-	@:overload override public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
+	@:overload public function getMixerInfo() : java.NativeArray<javax.sound.sampled.Mixer.Mixer_Info>;
 	
 	
 }

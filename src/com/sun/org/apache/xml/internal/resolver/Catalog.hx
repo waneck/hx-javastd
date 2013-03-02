@@ -253,7 +253,7 @@ extern class Catalog
 	*
 	* @param newCatalog The new Catalog.
 	*/
-	@:overload private function copyReaders(newCatalog : Catalog) : Void;
+	@:overload private function copyReaders(newCatalog : com.sun.org.apache.xml.internal.resolver.Catalog) : Void;
 	
 	/**
 	* Create a new Catalog object.
@@ -267,7 +267,7 @@ extern class Catalog
 	* a new Catalog. Do not simply use "new Subclass()" since that will
 	* confuse future subclasses.</p>
 	*/
-	@:overload private function newCatalog() : Catalog;
+	@:overload private function newCatalog() : com.sun.org.apache.xml.internal.resolver.Catalog;
 	
 	/**
 	* Returns the current base URI.

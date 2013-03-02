@@ -24,7 +24,7 @@ package com.sun.org.apache.xml.internal.serializer.utils;
 extern class SerializerMessages extends java.util.ListResourceBundle
 {
 	/** The lookup table for error messages.   */
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

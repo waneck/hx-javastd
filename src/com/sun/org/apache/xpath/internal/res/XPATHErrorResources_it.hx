@@ -350,7 +350,7 @@ extern class XPATHErrorResources_it extends java.util.ListResourceBundle
 	*
 	* @return The association list.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	/** Field BAD_CODE          */
 	public static var BAD_CODE(default, null) : String;

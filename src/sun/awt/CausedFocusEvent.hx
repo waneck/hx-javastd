@@ -25,11 +25,11 @@ package sun.awt;
 */
 extern class CausedFocusEvent extends java.awt.event.FocusEvent
 {
-	@:overload public function getCause() : CausedFocusEvent_Cause;
+	@:overload public function getCause() : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause;
 	
 	@:overload override public function toString() : String;
 	
-	@:overload public function new(source : java.awt.Component, id : Int, temporary : Bool, opposite : java.awt.Component, cause : CausedFocusEvent_Cause) : Void;
+	@:overload public function new(source : java.awt.Component, id : Int, temporary : Bool, opposite : java.awt.Component, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Void;
 	
 	/**
 	* Retargets the original focus event to the new target.  If the

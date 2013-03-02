@@ -112,7 +112,7 @@ extern interface Blob
 	* this method
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function position(pattern : Blob, start : haxe.Int64) : haxe.Int64;
+	@:require(java2) @:overload public function position(pattern : java.sql.Blob, start : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Writes the given array of bytes to the <code>BLOB</code> value that

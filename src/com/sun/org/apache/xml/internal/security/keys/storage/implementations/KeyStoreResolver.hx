@@ -30,7 +30,7 @@ extern class KeyStoreResolver extends com.sun.org.apache.xml.internal.security.k
 	@:overload public function new(keyStore : java.security.KeyStore) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function getIterator() : java.util.Iterator<Dynamic>;
+	@:overload public function getIterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Method main

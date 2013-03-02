@@ -59,7 +59,7 @@ extern class PKCS11
 {
 	@:overload public static function loadNative() : Void;
 	
-	@:overload @:synchronized public static function getInstance(pkcs11ModulePath : String, functionList : String, pInitArgs : sun.security.pkcs11.wrapper.CK_C_INITIALIZE_ARGS, omitInitialize : Bool) : PKCS11;
+	@:overload @:synchronized public static function getInstance(pkcs11ModulePath : String, functionList : String, pInitArgs : sun.security.pkcs11.wrapper.CK_C_INITIALIZE_ARGS, omitInitialize : Bool) : sun.security.pkcs11.wrapper.PKCS11;
 	
 	/**
 	* C_Finalize indicates that an application is done with the
@@ -991,7 +991,7 @@ extern class PKCS11
 	
 	
 }
-@:native('sun$security$pkcs11$wrapper$PKCS11$SynchronizedPKCS11') @:internal extern class PKCS11_SynchronizedPKCS11 extends PKCS11
+@:native('sun$security$pkcs11$wrapper$PKCS11$SynchronizedPKCS11') @:internal extern class PKCS11_SynchronizedPKCS11 extends sun.security.pkcs11.wrapper.PKCS11
 {
 	@:overload @:synchronized override public function C_Finalize(pReserved : Dynamic) : Void;
 	

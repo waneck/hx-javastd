@@ -36,7 +36,7 @@ extern class BindingInput extends com.sun.tools.internal.ws.wsdl.framework.Entit
 	
 	@:overload public function setName(name : String) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload public function getElementName() : javax.xml.namespace.QName;
 	
 	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
@@ -54,11 +54,11 @@ extern class BindingInput extends com.sun.tools.internal.ws.wsdl.framework.Entit
 	
 	@:overload public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
 	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload public function validateThis() : Void;
 	
 	@:overload public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
 	

@@ -35,7 +35,7 @@ extern class JavaCodebaseComponentImpl extends com.sun.corba.se.spi.ior.TaggedCo
 	
 	@:overload public function new(URLs : String) : Void;
 	
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload override public function getId() : Int;
 	

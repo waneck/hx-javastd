@@ -48,9 +48,9 @@ extern class ObjectReferenceFactoryImpl extends com.sun.corba.se.impl.ior.Object
 	*/
 	@:overload public function _write(os : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload override public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
+	@:overload public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
 	
-	@:overload override public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
+	@:overload public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
 	
 	
 }

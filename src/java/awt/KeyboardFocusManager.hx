@@ -72,7 +72,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @return this thread's context's KeyboardFocusManager
 	* @see #setCurrentKeyboardFocusManager
 	*/
-	@:overload public static function getCurrentKeyboardFocusManager() : KeyboardFocusManager;
+	@:overload public static function getCurrentKeyboardFocusManager() : java.awt.KeyboardFocusManager;
 	
 	/**
 	* Sets the current KeyboardFocusManager instance for the calling thread's
@@ -91,7 +91,7 @@ extern class KeyboardFocusManager implements java.awt.KeyEventDispatcher impleme
 	* @throws SecurityException if the calling thread does not have permission
 	*         to replace the current KeyboardFocusManager
 	*/
-	@:overload public static function setCurrentKeyboardFocusManager(newManager : KeyboardFocusManager) : Void;
+	@:overload public static function setCurrentKeyboardFocusManager(newManager : java.awt.KeyboardFocusManager) : Void;
 	
 	/**
 	* Initializes a KeyboardFocusManager.

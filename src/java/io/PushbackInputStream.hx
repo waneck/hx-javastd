@@ -112,7 +112,7 @@ package java.io;
 	*             or an I/O error occurs.
 	* @see        java.io.InputStream#read()
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream into
@@ -137,7 +137,7 @@ package java.io;
 	*             or an I/O error occurs.
 	* @see        java.io.InputStream#read(byte[], int, int)
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Pushes back a byte by copying it to the front of the pushback buffer.
@@ -203,7 +203,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.InputStream#available()
 	*/
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	/**
 	* Skips over and discards <code>n</code> bytes of data from this
@@ -227,7 +227,7 @@ package java.io;
 	* @see        java.io.InputStream#skip(long n)
 	* @since      1.2
 	*/
-	@:require(java2) @:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:require(java2) @:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Tests if this input stream supports the <code>mark</code> and
@@ -238,7 +238,7 @@ package java.io;
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload public function markSupported() : Bool;
 	
 	/**
 	* Marks the current position in this input stream.
@@ -250,7 +250,7 @@ package java.io;
 	*                      the mark position becomes invalid.
 	* @see     java.io.InputStream#reset()
 	*/
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:synchronized public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
@@ -264,7 +264,7 @@ package java.io;
 	* @see     java.io.InputStream#mark(int)
 	* @see     java.io.IOException
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:synchronized public function reset() : Void;
 	
 	/**
 	* Closes this input stream and releases any system resources
@@ -275,7 +275,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:synchronized public function close() : Void;
 	
 	
 }

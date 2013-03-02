@@ -86,7 +86,7 @@ extern class ByteVector
 	* @param b a byte.
 	* @return this byte vector.
 	*/
-	@:overload public function putByte(b : Int) : ByteVector;
+	@:overload public function putByte(b : Int) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
 	
 	/**
 	* Puts a short into this byte vector. The byte vector is automatically
@@ -95,7 +95,7 @@ extern class ByteVector
 	* @param s a short.
 	* @return this byte vector.
 	*/
-	@:overload public function putShort(s : Int) : ByteVector;
+	@:overload public function putShort(s : Int) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
 	
 	/**
 	* Puts an int into this byte vector. The byte vector is automatically
@@ -104,7 +104,7 @@ extern class ByteVector
 	* @param i an int.
 	* @return this byte vector.
 	*/
-	@:overload public function putInt(i : Int) : ByteVector;
+	@:overload public function putInt(i : Int) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
 	
 	/**
 	* Puts a long into this byte vector. The byte vector is automatically
@@ -113,7 +113,7 @@ extern class ByteVector
 	* @param l a long.
 	* @return this byte vector.
 	*/
-	@:overload public function putLong(l : haxe.Int64) : ByteVector;
+	@:overload public function putLong(l : haxe.Int64) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
 	
 	/**
 	* Puts an UTF8 string into this byte vector. The byte vector is
@@ -122,7 +122,7 @@ extern class ByteVector
 	* @param s a String.
 	* @return this byte vector.
 	*/
-	@:overload public function putUTF8(s : String) : ByteVector;
+	@:overload public function putUTF8(s : String) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
 	
 	/**
 	* Puts an array of bytes into this byte vector. The byte vector is
@@ -134,7 +134,7 @@ extern class ByteVector
 	* @param len number of bytes of b that must be copied.
 	* @return this byte vector.
 	*/
-	@:overload public function putByteArray(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : ByteVector;
+	@:overload public function putByteArray(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : com.sun.xml.internal.ws.org.objectweb.asm.ByteVector;
 	
 	
 }

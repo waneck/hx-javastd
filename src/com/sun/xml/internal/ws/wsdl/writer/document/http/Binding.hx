@@ -29,7 +29,7 @@ extern interface Binding extends com.sun.xml.internal.txw2.TypedXmlWriter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function verb(value : String) : Binding;
+	@:overload public function verb(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.http.Binding;
 	
 	
 }

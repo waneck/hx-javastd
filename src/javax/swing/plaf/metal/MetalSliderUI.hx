@@ -45,7 +45,7 @@ extern class MetalSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 	
 	private static var thumbColor : java.awt.Color;
 	
-	@:native('highlightColor') private static var _highlightColor : java.awt.Color;
+	private static var highlightColor : java.awt.Color;
 	
 	private static var darkShadowColor : java.awt.Color;
 	

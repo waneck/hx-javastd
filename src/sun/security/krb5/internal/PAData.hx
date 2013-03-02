@@ -64,7 +64,7 @@ extern class PAData
 	* @return the etype, or defaultEType if not enough info
 	* @throws Asn1Exception|IOException if there is an encoding error
 	*/
-	@:overload public static function getPreferredEType(pas : java.NativeArray<PAData>, defaultEType : Int) : Int;
+	@:overload public static function getPreferredEType(pas : java.NativeArray<sun.security.krb5.internal.PAData>, defaultEType : Int) : Int;
 	
 	/**
 	* Fetches salt and s2kparams value for eType in a series of PA-DATAs.
@@ -75,7 +75,7 @@ extern class PAData
 	* (This is useful when PA-DATAs from KRB-ERROR and AS-REP are combined).
 	* @return salt and s2kparams. can be null if not found
 	*/
-	@:overload public static function getSaltAndParams(eType : Int, pas : java.NativeArray<PAData>) : PAData_SaltAndParams;
+	@:overload public static function getSaltAndParams(eType : Int, pas : java.NativeArray<sun.security.krb5.internal.PAData>) : sun.security.krb5.internal.PAData.PAData_SaltAndParams;
 	
 	@:overload public function toString() : String;
 	

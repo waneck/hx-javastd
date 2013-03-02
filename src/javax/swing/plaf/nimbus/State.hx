@@ -64,7 +64,7 @@ extern class State<T>
 	
 	
 }
-@:native('javax$swing$plaf$nimbus$State$StandardState') @:internal extern class State_StandardState extends State<javax.swing.JComponent>
+@:native('javax$swing$plaf$nimbus$State$StandardState') @:internal extern class State_StandardState extends javax.swing.plaf.nimbus.State<javax.swing.JComponent>
 {
 	@:overload public function getState() : Int;
 	

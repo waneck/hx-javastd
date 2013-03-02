@@ -79,13 +79,13 @@ extern class XML11DTDProcessor extends com.sun.org.apache.xerces.internal.impl.d
 	
 	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool) : Void;
 	
-	@:overload override private function isValidNmtoken(nmtoken : String) : Bool;
+	@:overload private function isValidNmtoken(nmtoken : String) : Bool;
 	
-	@:overload override private function isValidName(name : String) : Bool;
+	@:overload private function isValidName(name : String) : Bool;
 	
-	@:overload override private function createDTDScanner(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl;
+	@:overload private function createDTDScanner(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl;
 	
-	@:overload override private function getScannerVersion() : java.StdTypes.Int16;
+	@:overload private function getScannerVersion() : java.StdTypes.Int16;
 	
 	
 }

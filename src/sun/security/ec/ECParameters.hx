@@ -81,19 +81,19 @@ package sun.security.ec;
 	
 	@:overload public static function decodeParameters(params : java.NativeArray<java.StdTypes.Int8>) : java.security.spec.ECParameterSpec;
 	
-	@:overload override private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload private function engineInit(paramSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload private function engineInit(params : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
+	@:overload private function engineInit(params : java.NativeArray<java.StdTypes.Int8>, decodingMethod : String) : Void;
 	
-	@:overload override private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(spec : Class<T>) : T;
+	@:overload private function engineGetParameterSpec<T : java.security.spec.AlgorithmParameterSpec>(spec : Class<T>) : T;
 	
-	@:overload override private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGetEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGetEncoded(encodingMethod : String) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineToString() : String;
+	@:overload private function engineToString() : String;
 	
 	
 }

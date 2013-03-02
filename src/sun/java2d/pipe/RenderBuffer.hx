@@ -53,7 +53,7 @@ extern class RenderBuffer
 	/**
 	* Allocates a fresh buffer using the machine endianness.
 	*/
-	@:overload public static function allocate(numBytes : Int) : RenderBuffer;
+	@:overload public static function allocate(numBytes : Int) : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* Returns the base address of the underlying memory buffer.
@@ -74,59 +74,59 @@ extern class RenderBuffer
 	
 	@:overload @:final public function clear() : Void;
 	
-	@:overload @:final public function skip(numBytes : haxe.Int64) : RenderBuffer;
+	@:overload @:final public function skip(numBytes : haxe.Int64) : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* putByte() methods...
 	*/
-	@:overload @:final public function putByte(x : java.StdTypes.Int8) : RenderBuffer;
+	@:overload @:final public function putByte(x : java.StdTypes.Int8) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<java.StdTypes.Int8>) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<java.StdTypes.Int8>) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* putShort() methods...
 	*/
-	@:overload @:final public function putShort(x : java.StdTypes.Int16) : RenderBuffer;
+	@:overload @:final public function putShort(x : java.StdTypes.Int16) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<java.StdTypes.Int16>) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<java.StdTypes.Int16>) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* putInt() methods...
 	*/
-	@:overload @:final public function putInt(pos : Int, x : Int) : RenderBuffer;
+	@:overload @:final public function putInt(pos : Int, x : Int) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload @:final public function putInt(x : Int) : RenderBuffer;
+	@:overload @:final public function putInt(x : Int) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<Int>) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<Int>) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<Int>, offset : Int, length : Int) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<Int>, offset : Int, length : Int) : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* putFloat() methods...
 	*/
-	@:overload @:final public function putFloat(x : Single) : RenderBuffer;
+	@:overload @:final public function putFloat(x : Single) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<Single>) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<Single>) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<Single>, offset : Int, length : Int) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<Single>, offset : Int, length : Int) : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* putLong() methods...
 	*/
-	@:overload @:final public function putLong(x : haxe.Int64) : RenderBuffer;
+	@:overload @:final public function putLong(x : haxe.Int64) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<haxe.Int64>) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<haxe.Int64>) : sun.java2d.pipe.RenderBuffer;
 	
-	@:overload public function put(x : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : RenderBuffer;
+	@:overload public function put(x : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : sun.java2d.pipe.RenderBuffer;
 	
 	/**
 	* putDouble() method(s)...
 	*/
-	@:overload @:final public function putDouble(x : Float) : RenderBuffer;
+	@:overload @:final public function putDouble(x : Float) : sun.java2d.pipe.RenderBuffer;
 	
 	
 }

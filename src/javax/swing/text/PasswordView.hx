@@ -45,7 +45,7 @@ extern class PasswordView extends javax.swing.text.FieldView
 	* @return the X location of the end of the range >= 0
 	* @exception BadLocationException if p0 or p1 are out of range
 	*/
-	@:overload override private function drawUnselectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
+	@:overload private function drawUnselectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
 	
 	/**
 	* Renders the given range in the model as selected text.  This
@@ -62,7 +62,7 @@ extern class PasswordView extends javax.swing.text.FieldView
 	* @return the X location of the end of the range >= 0
 	* @exception BadLocationException if p0 or p1 are out of range
 	*/
-	@:overload override private function drawSelectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
+	@:overload private function drawSelectedText(g : java.awt.Graphics, x : Int, y : Int, p0 : Int, p1 : Int) : Int;
 	
 	/**
 	* Renders the echo character, or whatever graphic should be used
@@ -89,7 +89,7 @@ extern class PasswordView extends javax.swing.text.FieldView
 	*   represent a valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -102,7 +102,7 @@ extern class PasswordView extends javax.swing.text.FieldView
 	*  given point in the view
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -114,7 +114,7 @@ extern class PasswordView extends javax.swing.text.FieldView
 	*           that is returned, although there is no guarantee.
 	*           The parent may choose to resize or break the view.
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload public function getPreferredSpan(axis : Int) : Single;
 	
 	
 }

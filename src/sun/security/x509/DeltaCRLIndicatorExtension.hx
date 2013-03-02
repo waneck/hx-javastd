@@ -55,7 +55,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	/**
 	* Attribute name.
 	*/
-	@:native('NAME') public static var _NAME(default, null) : String;
+	public static var NAME(default, null) : String;
 	
 	/**
 	* Creates a delta CRL indicator extension with the integer value .
@@ -89,7 +89,7 @@ ate and Certificate Revocation List (CRL) Profile</a>.
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload public function encode(out : java.io.OutputStream) : Void;
 	
 	
 }

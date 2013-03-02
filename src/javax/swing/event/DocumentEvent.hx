@@ -64,7 +64,7 @@ extern interface DocumentEvent
 	*
 	* @return the type
 	*/
-	@:overload public function getType() : DocumentEvent_EventType;
+	@:overload public function getType() : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Gets the change information for the given element.
@@ -95,7 +95,7 @@ extern interface DocumentEvent
 	* @return the change information, or null if the
 	*   element was not modified
 	*/
-	@:overload public function getChange(elem : javax.swing.text.Element) : DocumentEvent_ElementChange;
+	@:overload public function getChange(elem : javax.swing.text.Element) : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange;
 	
 	
 }
@@ -107,17 +107,17 @@ extern interface DocumentEvent
 	/**
 	* Insert type.
 	*/
-	public static var INSERT(default, null) : DocumentEvent_EventType;
+	public static var INSERT(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Remove type.
 	*/
-	public static var REMOVE(default, null) : DocumentEvent_EventType;
+	public static var REMOVE(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Change type.
 	*/
-	public static var CHANGE(default, null) : DocumentEvent_EventType;
+	public static var CHANGE(default, null) : javax.swing.event.DocumentEvent.DocumentEvent_EventType;
 	
 	/**
 	* Converts the type to a string.

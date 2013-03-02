@@ -145,7 +145,7 @@ extern class CachingParserPool
 	* @param grammarType Type of the grammars to be retrieved.
 	* @return            The initial grammar set the validator may place in its "bucket"
 	*/
-	@:overload override public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
 	/**
 	* Retrieve a particular grammar.
@@ -154,7 +154,7 @@ extern class CachingParserPool
 	* @param gDesc Description of the grammar to be retrieved
 	* @return      Grammar corresponding to gDesc, or null if none exists.
 	*/
-	@:overload override public function retrieveGrammar(gDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload public function retrieveGrammar(gDesc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Give the grammarPool the option of caching these grammars.
@@ -164,14 +164,14 @@ extern class CachingParserPool
 	* @param grammars    The Grammars that may be cached (unordered, Grammars previously
 	*                    given to the validator may be included).
 	*/
-	@:overload override public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
+	@:overload public function cacheGrammars(grammarType : String, grammars : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>) : Void;
 	
 	/**
 	* Returns the grammar associated to the specified description.
 	*
 	* @param desc The description of the grammar.
 	*/
-	@:overload override public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
 	/**
 	* Returns true if the grammar pool contains a grammar associated
@@ -179,7 +179,7 @@ extern class CachingParserPool
 	*
 	* @param desc The description of the grammar.
 	*/
-	@:overload override public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
+	@:overload public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
 	
 	
 }

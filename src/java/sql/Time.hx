@@ -69,7 +69,7 @@ extern class Time extends java.util.Date
 	*             a negative number is milliseconds before
 	*               January 1, 1970, 00:00:00 GMT
 	*/
-	@:overload override public function setTime(time : haxe.Int64) : Void;
+	@:overload public function setTime(time : haxe.Int64) : Void;
 	
 	/**
 	* Converts a string in JDBC time escape format to a <code>Time</code> value.
@@ -77,14 +77,14 @@ extern class Time extends java.util.Date
 	* @param s time in format "hh:mm:ss"
 	* @return a corresponding <code>Time</code> object
 	*/
-	@:overload public static function valueOf(s : String) : Time;
+	@:overload public static function valueOf(s : String) : java.sql.Time;
 	
 	/**
 	* Formats a time in JDBC time escape format.
 	*
 	* @return a <code>String</code> in hh:mm:ss format
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* This method is deprecated and should not be used because SQL <code>TIME</code>
@@ -95,7 +95,7 @@ extern class Time extends java.util.Date
 	*           method is invoked
 	* @see #setYear
 	*/
-	@:overload override public function getYear() : Int;
+	@:overload public function getYear() : Int;
 	
 	/**
 	* This method is deprecated and should not be used because SQL <code>TIME</code>
@@ -106,7 +106,7 @@ extern class Time extends java.util.Date
 	*           method is invoked
 	* @see #setMonth
 	*/
-	@:overload override public function getMonth() : Int;
+	@:overload public function getMonth() : Int;
 	
 	/**
 	* This method is deprecated and should not be used because SQL <code>TIME</code>
@@ -116,7 +116,7 @@ extern class Time extends java.util.Date
 	* @exception java.lang.IllegalArgumentException if this
 	*           method is invoked
 	*/
-	@:overload override public function getDay() : Int;
+	@:overload public function getDay() : Int;
 	
 	/**
 	* This method is deprecated and should not be used because SQL <code>TIME</code>
@@ -127,7 +127,7 @@ extern class Time extends java.util.Date
 	*           method is invoked
 	* @see #setDate
 	*/
-	@:overload override public function getDate() : Int;
+	@:overload public function getDate() : Int;
 	
 	/**
 	* This method is deprecated and should not be used because SQL <code>TIME</code>
@@ -138,7 +138,7 @@ extern class Time extends java.util.Date
 	*           method is invoked
 	* @see #getYear
 	*/
-	@:overload override public function setYear(i : Int) : Void;
+	@:overload public function setYear(i : Int) : Void;
 	
 	/**
 	* This method is deprecated and should not be used because SQL <code>TIME</code>
@@ -149,7 +149,7 @@ extern class Time extends java.util.Date
 	*           method is invoked
 	* @see #getMonth
 	*/
-	@:overload override public function setMonth(i : Int) : Void;
+	@:overload public function setMonth(i : Int) : Void;
 	
 	/**
 	* This method is deprecated and should not be used because SQL <code>TIME</code>
@@ -160,7 +160,7 @@ extern class Time extends java.util.Date
 	*           method is invoked
 	* @see #getDate
 	*/
-	@:overload override public function setDate(i : Int) : Void;
+	@:overload public function setDate(i : Int) : Void;
 	
 	
 }

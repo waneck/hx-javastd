@@ -68,7 +68,7 @@ extern class CGIHandler
 	
 	
 }
-@:internal extern class CGIForwardCommand implements CGICommandHandler
+@:internal extern class CGIForwardCommand implements sun.rmi.transport.proxy.CGIClientException.CGICommandHandler
 {
 	/**
 	* "forward" command: Forward request body to local port on the server,
@@ -80,7 +80,7 @@ extern class CGIHandler
 	
 	
 }
-@:internal extern class CGIGethostnameCommand implements CGICommandHandler
+@:internal extern class CGIGethostnameCommand implements sun.rmi.transport.proxy.CGIClientException.CGICommandHandler
 {
 	/**
 	* "gethostname" command: Return the host name of the server as the
@@ -92,7 +92,7 @@ extern class CGIHandler
 	
 	
 }
-@:internal extern class CGIPingCommand implements CGICommandHandler
+@:internal extern class CGIPingCommand implements sun.rmi.transport.proxy.CGIClientException.CGICommandHandler
 {
 	/**
 	* "ping" command: Return an OK status to indicate that connection
@@ -104,7 +104,7 @@ extern class CGIHandler
 	
 	
 }
-@:internal extern class CGITryHostnameCommand implements CGICommandHandler
+@:internal extern class CGITryHostnameCommand implements sun.rmi.transport.proxy.CGIClientException.CGICommandHandler
 {
 	/**
 	* "tryhostname" command: Return a human readable message describing

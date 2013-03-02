@@ -23,7 +23,7 @@ extern class ShortListImpl extends java.util.AbstractList<Dynamic> implements co
 	/**
 	* An immutable empty list.
 	*/
-	public static var EMPTY_LIST(default, null) : ShortListImpl;
+	public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.ShortListImpl;
 	
 	/**
 	* Construct an XSObjectList implementation
@@ -51,14 +51,14 @@ extern class ShortListImpl extends java.util.AbstractList<Dynamic> implements co
 	
 	@:overload public function item(index : Int) : java.StdTypes.Int16;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/*
 	* List methods
 	*/
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	
 }

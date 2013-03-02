@@ -71,13 +71,13 @@ package javax.swing.text.html;
 	* Returns a true/false value that represents
 	* whether the view is visible or not.
 	*/
-	@:overload override public function isVisible() : Bool;
+	@:overload public function isVisible() : Bool;
 	
 	/**
 	* Do nothing if the view is not visible, otherwise
 	* invoke the superclass to perform layout.
 	*/
-	@:overload override private function layout(width : Int, height : Int) : Void;
+	@:overload private function layout(width : Int, height : Int) : Void;
 	
 	/**
 	* Determines the preferred span for this view.  Returns

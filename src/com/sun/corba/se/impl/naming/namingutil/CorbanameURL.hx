@@ -32,7 +32,7 @@ extern class CorbanameURL extends com.sun.corba.se.impl.naming.namingutil.INSURL
 	*/
 	@:overload public function new(aURL : String) : Void;
 	
-	@:overload override public function isCorbanameURL() : Bool;
+	@:overload public function isCorbanameURL() : Bool;
 	
 	
 }

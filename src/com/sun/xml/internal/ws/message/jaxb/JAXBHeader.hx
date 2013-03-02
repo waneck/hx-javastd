@@ -33,13 +33,13 @@ extern class JAXBHeader extends com.sun.xml.internal.ws.message.AbstractHeaderIm
 	
 	@:overload override public function getLocalPart() : String;
 	
-	@:overload override public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload public function getAttribute(nsUri : String, localName : String) : String;
 	
 	@:overload override public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload public function readAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload override public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload public function readAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
 	@:overload override public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	

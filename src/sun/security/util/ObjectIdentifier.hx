@@ -60,12 +60,12 @@ extern class ObjectIdentifier implements java.io.Serializable
 	* Old doc: Create a new ObjectIdentifier for internal use. The values are
 	* neither checked nor cloned.
 	*/
-	@:overload public static function newInternal(values : java.NativeArray<Int>) : ObjectIdentifier;
+	@:overload public static function newInternal(values : java.NativeArray<Int>) : sun.security.util.ObjectIdentifier;
 	
 	/**
 	* @deprecated Use equals((Object)oid)
 	*/
-	@:overload public function equals(other : ObjectIdentifier) : Bool;
+	@:overload public function equals(other : sun.security.util.ObjectIdentifier) : Bool;
 	
 	/**
 	* Compares this identifier with another, for equality.

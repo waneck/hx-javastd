@@ -84,7 +84,7 @@ extern class RowSetWarning extends java.sql.SQLException
 	*         <code>null</code> is returned (default value)
 	* @see #setNextWarning
 	*/
-	@:overload public function getNextWarning() : RowSetWarning;
+	@:overload public function getNextWarning() : javax.sql.rowset.RowSetWarning;
 	
 	/**
 	* Sets <i>warning</i> as the next warning, that is, the warning chained
@@ -95,7 +95,7 @@ extern class RowSetWarning extends java.sql.SQLException
 	*     represents the finish point in the warning chain
 	* @see #getNextWarning
 	*/
-	@:overload public function setNextWarning(warning : RowSetWarning) : Void;
+	@:overload public function setNextWarning(warning : javax.sql.rowset.RowSetWarning) : Void;
 	
 	
 }

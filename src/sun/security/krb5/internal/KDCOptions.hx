@@ -185,7 +185,7 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : KDCOptions;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.KDCOptions;
 	
 	/**
 	* Sets the value(true/false) for one of the <code>KDCOptions</code>.
@@ -195,7 +195,7 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception ArrayIndexOutOfBoundsException if array index out of bound occurs.
 	* @see sun.security.krb5.internal.Krb5
 	*/
-	@:overload override public function set(option : Int, value : Bool) : Void;
+	@:overload public function set(option : Int, value : Bool) : Void;
 	
 	/**
 	* Gets the value(true/false) for one of the <code>KDCOptions</code>.
@@ -205,7 +205,7 @@ extern class KDCOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception ArrayIndexOutOfBoundsException if array index out of bound occurs.
 	* @see sun.security.krb5.internal.Krb5
 	*/
-	@:overload override public function get(option : Int) : Bool;
+	@:overload public function get(option : Int) : Bool;
 	
 	
 }

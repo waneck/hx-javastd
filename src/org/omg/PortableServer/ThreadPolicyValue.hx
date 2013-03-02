@@ -16,15 +16,15 @@ extern class ThreadPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _ORB_CTRL_MODEL(default, null) : Int;
 	
-	public static var ORB_CTRL_MODEL(default, null) : ThreadPolicyValue;
+	public static var ORB_CTRL_MODEL(default, null) : org.omg.PortableServer.ThreadPolicyValue;
 	
 	public static var _SINGLE_THREAD_MODEL(default, null) : Int;
 	
-	public static var SINGLE_THREAD_MODEL(default, null) : ThreadPolicyValue;
+	public static var SINGLE_THREAD_MODEL(default, null) : org.omg.PortableServer.ThreadPolicyValue;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : ThreadPolicyValue;
+	@:overload public static function from_int(value : Int) : org.omg.PortableServer.ThreadPolicyValue;
 	
 	@:overload private function new(value : Int) : Void;
 	

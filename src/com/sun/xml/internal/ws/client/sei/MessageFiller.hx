@@ -37,7 +37,7 @@ package com.sun.xml.internal.ws.client.sei;
 /**
 * Adds a parameter as an MIME attachment to {@link Message}.
 */
-@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$AttachmentFiller') @:internal extern class MessageFiller_AttachmentFiller extends MessageFiller
+@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$AttachmentFiller') @:internal extern class MessageFiller_AttachmentFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller
 {
 	private var param(default, null) : com.sun.xml.internal.ws.model.ParameterImpl;
 	
@@ -56,23 +56,23 @@ package com.sun.xml.internal.ws.client.sei;
 	*      Gets a value from an object that represents a parameter passed
 	*      as a method argument.
 	*/
-	@:overload public static function createAttachmentFiller(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : MessageFiller;
+	@:overload public static function createAttachmentFiller(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : com.sun.xml.internal.ws.client.sei.MessageFiller;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$ByteArrayFiller') @:internal extern class MessageFiller_ByteArrayFiller extends MessageFiller_AttachmentFiller
+@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$ByteArrayFiller') @:internal extern class MessageFiller_ByteArrayFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller.MessageFiller_AttachmentFiller
 {
 	@:overload private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$DataHandlerFiller') @:internal extern class MessageFiller_DataHandlerFiller extends MessageFiller_AttachmentFiller
+@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$DataHandlerFiller') @:internal extern class MessageFiller_DataHandlerFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller.MessageFiller_AttachmentFiller
 {
 	@:overload private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$JAXBFiller') @:internal extern class MessageFiller_JAXBFiller extends MessageFiller_AttachmentFiller
+@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$JAXBFiller') @:internal extern class MessageFiller_JAXBFiller extends com.sun.xml.internal.ws.client.sei.MessageFiller.MessageFiller_AttachmentFiller
 {
 	@:overload private function new(param : com.sun.xml.internal.ws.model.ParameterImpl, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	
@@ -81,7 +81,7 @@ package com.sun.xml.internal.ws.client.sei;
 /**
 * Adds a parameter as an header.
 */
-@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$Header') @:internal extern class MessageFiller_Header extends MessageFiller
+@:native('com$sun$xml$internal$ws$client$sei$MessageFiller$Header') @:internal extern class MessageFiller_Header extends com.sun.xml.internal.ws.client.sei.MessageFiller
 {
 	@:overload private function new(methodPos : Int, bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, getter : com.sun.xml.internal.ws.client.sei.ValueGetter) : Void;
 	

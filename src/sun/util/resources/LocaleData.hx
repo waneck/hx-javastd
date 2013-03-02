@@ -100,7 +100,7 @@ extern class LocaleData
 }
 @:native('sun$util$resources$LocaleData$LocaleDataResourceBundleControl') @:internal extern class LocaleData_LocaleDataResourceBundleControl extends java.util.ResourceBundle.ResourceBundle_Control
 {
-	@:overload public static function getRBControlInstance() : LocaleData_LocaleDataResourceBundleControl;
+	@:overload public static function getRBControlInstance() : sun.util.resources.LocaleData.LocaleData_LocaleDataResourceBundleControl;
 	
 	/*
 	* This method overrides the default implementation to search
@@ -112,7 +112,7 @@ extern class LocaleData
 	* @returns a list of candidate locales to search from.
 	* @exception NullPointerException if baseName or locale is null.
 	*/
-	@:overload override public function getCandidateLocales(baseName : String, locale : java.util.Locale) : java.util.List<java.util.Locale>;
+	@:overload public function getCandidateLocales(baseName : String, locale : java.util.Locale) : java.util.List<java.util.Locale>;
 	
 	/*
 	* Overrides "getFallbackLocale" to return null so
@@ -122,7 +122,7 @@ extern class LocaleData
 	* @return null for the fallback locale.
 	* @exception NullPointerException if baseName or locale is null.
 	*/
-	@:overload override public function getFallbackLocale(baseName : String, locale : java.util.Locale) : java.util.Locale;
+	@:overload public function getFallbackLocale(baseName : String, locale : java.util.Locale) : java.util.Locale;
 	
 	
 }

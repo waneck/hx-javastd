@@ -521,7 +521,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : PrintWriter;
+	@:require(java5) @:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* A convenience method to write a formatted string to this writer using
@@ -570,7 +570,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : PrintWriter;
+	@:require(java5) @:overload public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* Writes a formatted string to this writer using the specified format
@@ -612,7 +612,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(format : String, args : java.NativeArray<Dynamic>) : PrintWriter;
+	@:require(java5) @:overload public function format(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* Writes a formatted string to this writer using the specified format
@@ -655,7 +655,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : PrintWriter;
+	@:require(java5) @:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintWriter;
 	
 	/**
 	* Appends the specified character sequence to this writer.
@@ -681,7 +681,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : PrintWriter;
+	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : java.io.PrintWriter;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -715,7 +715,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : PrintWriter;
+	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.PrintWriter;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -733,7 +733,7 @@ extern class PrintWriter extends java.io.Writer
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : PrintWriter;
+	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : java.io.PrintWriter;
 	
 	
 }

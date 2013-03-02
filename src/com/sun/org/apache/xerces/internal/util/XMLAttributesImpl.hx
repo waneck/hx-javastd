@@ -84,13 +84,13 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	private var fLength : Int;
 	
 	/** Attribute information. */
-	private var fAttributes : java.NativeArray<XMLAttributesImpl_Attribute>;
+	private var fAttributes : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute>;
 	
 	/**
 	* Hashtable of attribute information.
 	* Provides an alternate view of the attribute specification.
 	*/
-	private var fAttributeTableView : java.NativeArray<XMLAttributesImpl_Attribute>;
+	private var fAttributeTableView : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute>;
 	
 	/**
 	* Tracks whether each chain in the hash table is stale
@@ -657,7 +657,7 @@ extern class XMLAttributesImpl implements com.sun.org.apache.xerces.internal.xni
 	public var augs : com.sun.org.apache.xerces.internal.xni.Augmentations;
 	
 	/** Pointer to the next attribute in the chain. **/
-	public var next : XMLAttributesImpl_Attribute;
+	public var next : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl.XMLAttributesImpl_Attribute;
 	
 	
 }

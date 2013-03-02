@@ -21,13 +21,13 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class Field
 {
 	/** Field XPath. */
-	private var fXPath : Field_XPath;
+	private var fXPath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath;
 	
 	/** Identity constraint. */
 	private var fIdentityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
 	/** Constructs a field. */
-	@:overload public function new(xpath : Field_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
+	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
 	
 	/** Returns the field XPath. */
 	@:overload public function getXPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath;
@@ -69,15 +69,15 @@ extern class Field
 	private var fStore : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore;
 	
 	/** Constructs a field matcher. */
-	@:overload public function new(xpath : Field_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, store : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore) : Void;
+	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Field.Field_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, store : com.sun.org.apache.xerces.internal.impl.xs.identity.ValueStore) : Void;
 	
 	/**
 	* This method is called when the XPath handler matches the
 	* XPath expression.
 	*/
-	@:overload override private function matched(actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList, isNil : Bool) : Void;
+	@:overload private function matched(actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList, isNil : Bool) : Void;
 	
-	@:overload override private function handleContent(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload private function handleContent(type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	
 }

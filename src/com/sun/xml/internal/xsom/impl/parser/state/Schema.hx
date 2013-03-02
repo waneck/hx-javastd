@@ -34,23 +34,23 @@ extern class Schema extends com.sun.xml.internal.xsom.impl.parser.state.NGCCHand
 	
 	private var $qname : String;
 	
-	@:overload @:final override public function getRuntime() : com.sun.xml.internal.xsom.impl.parser.state.NGCCRuntime;
+	@:overload @:final public function getRuntime() : com.sun.xml.internal.xsom.impl.parser.state.NGCCRuntime;
 	
 	@:overload public function new(parent : com.sun.xml.internal.xsom.impl.parser.state.NGCCHandler, source : com.sun.xml.internal.xsom.impl.parser.state.NGCCEventSource, runtime : com.sun.xml.internal.xsom.impl.parser.NGCCRuntimeEx, cookie : Int, _includeMode : Bool, _expectedNamespace : String) : Void;
 	
 	@:overload public function new(runtime : com.sun.xml.internal.xsom.impl.parser.NGCCRuntimeEx, _includeMode : Bool, _expectedNamespace : String) : Void;
 	
-	@:overload override public function enterElement($__uri : String, $__local : String, $__qname : String, $attrs : org.xml.sax.Attributes) : Void;
+	@:overload public function enterElement($__uri : String, $__local : String, $__qname : String, $attrs : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function leaveElement($__uri : String, $__local : String, $__qname : String) : Void;
+	@:overload public function leaveElement($__uri : String, $__local : String, $__qname : String) : Void;
 	
-	@:overload override public function enterAttribute($__uri : String, $__local : String, $__qname : String) : Void;
+	@:overload public function enterAttribute($__uri : String, $__local : String, $__qname : String) : Void;
 	
-	@:overload override public function leaveAttribute($__uri : String, $__local : String, $__qname : String) : Void;
+	@:overload public function leaveAttribute($__uri : String, $__local : String, $__qname : String) : Void;
 	
-	@:overload override public function text($value : String) : Void;
+	@:overload public function text($value : String) : Void;
 	
-	@:overload override public function onChildCompleted($__result__ : Dynamic, $__cookie__ : Int, $__needAttCheck__ : Bool) : Void;
+	@:overload public function onChildCompleted($__result__ : Dynamic, $__cookie__ : Int, $__needAttCheck__ : Bool) : Void;
 	
 	@:overload public function accepted() : Bool;
 	

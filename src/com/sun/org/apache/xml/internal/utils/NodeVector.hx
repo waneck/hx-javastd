@@ -176,7 +176,7 @@ extern class NodeVector implements java.io.Serializable implements java.lang.Clo
 	*
 	* @param nodes NodeVector to append to this list
 	*/
-	@:overload public function appendNodes(nodes : NodeVector) : Void;
+	@:overload public function appendNodes(nodes : com.sun.org.apache.xml.internal.utils.NodeVector) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.

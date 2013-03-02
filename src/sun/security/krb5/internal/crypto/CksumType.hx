@@ -30,12 +30,12 @@ package sun.security.krb5.internal.crypto;
 */
 extern class CksumType
 {
-	@:overload public static function getInstance(cksumTypeConst : Int) : CksumType;
+	@:overload public static function getInstance(cksumTypeConst : Int) : sun.security.krb5.internal.crypto.CksumType;
 	
 	/**
 	* Returns default checksum type.
 	*/
-	@:overload public static function getInstance() : CksumType;
+	@:overload public static function getInstance() : sun.security.krb5.internal.crypto.CksumType;
 	
 	@:overload @:abstract public function confounderSize() : Int;
 	

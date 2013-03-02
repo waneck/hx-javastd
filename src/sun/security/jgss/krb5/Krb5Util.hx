@@ -59,7 +59,7 @@ extern class Krb5Util
 	*
 	* NOTE: This method is also used by JSSE Kerberos Cipher Suites
 	*/
-	@:overload public static function getServiceCreds(caller : sun.security.jgss.GSSCaller, serverPrincipal : String, acc : java.security.AccessControlContext) : Krb5Util_ServiceCreds;
+	@:overload public static function getServiceCreds(caller : sun.security.jgss.GSSCaller, serverPrincipal : String, acc : java.security.AccessControlContext) : sun.security.jgss.krb5.Krb5Util.Krb5Util_ServiceCreds;
 	
 	@:overload public static function credsToTicket(serviceCreds : sun.security.krb5.Credentials) : javax.security.auth.kerberos.KerberosTicket;
 	

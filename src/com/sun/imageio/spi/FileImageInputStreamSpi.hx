@@ -27,9 +27,9 @@ extern class FileImageInputStreamSpi extends javax.imageio.spi.ImageInputStreamS
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getDescription(locale : java.util.Locale) : String;
+	@:overload public function getDescription(locale : java.util.Locale) : String;
 	
-	@:overload override public function createInputStreamInstance(input : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageInputStream;
+	@:overload public function createInputStreamInstance(input : Dynamic, useCache : Bool, cacheDir : java.io.File) : javax.imageio.stream.ImageInputStream;
 	
 	
 }

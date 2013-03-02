@@ -40,7 +40,7 @@ extern class GenericListeningConnector extends com.sun.tools.jdi.ConnectorImpl i
 	* Create an instance of this Connector. The resulting ListeningConnector will
 	* have "address" and "timeout" connector arguments.
 	*/
-	@:overload public static function create(ts : com.sun.jdi.connect.spi.TransportService) : GenericListeningConnector;
+	@:overload public static function create(ts : com.sun.jdi.connect.spi.TransportService) : com.sun.tools.jdi.GenericListeningConnector;
 	
 	@:overload public function startListening(address : String, args : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : String;
 	
@@ -52,11 +52,11 @@ extern class GenericListeningConnector extends com.sun.tools.jdi.ConnectorImpl i
 	
 	@:overload public function supportsMultipleConnections() : Bool;
 	
-	@:overload override public function name() : String;
+	@:overload public function name() : String;
 	
-	@:overload override public function description() : String;
+	@:overload public function description() : String;
 	
-	@:overload override public function transport() : com.sun.jdi.connect.Transport;
+	@:overload public function transport() : com.sun.jdi.connect.Transport;
 	
 	
 }

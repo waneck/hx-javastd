@@ -36,11 +36,11 @@ package sun.security.ssl;
 	
 	
 }
-@:native('sun$security$ssl$TrustManagerFactoryImpl$SimpleFactory') extern class TrustManagerFactoryImpl_SimpleFactory extends TrustManagerFactoryImpl
+@:native('sun$security$ssl$TrustManagerFactoryImpl$SimpleFactory') extern class TrustManagerFactoryImpl_SimpleFactory extends sun.security.ssl.TrustManagerFactoryImpl
 {
 	
 }
-@:native('sun$security$ssl$TrustManagerFactoryImpl$PKIXFactory') extern class TrustManagerFactoryImpl_PKIXFactory extends TrustManagerFactoryImpl
+@:native('sun$security$ssl$TrustManagerFactoryImpl$PKIXFactory') extern class TrustManagerFactoryImpl_PKIXFactory extends sun.security.ssl.TrustManagerFactoryImpl
 {
 	
 }

@@ -27,9 +27,9 @@ extern class PropertyParser
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function add(propName : String, action : com.sun.corba.se.spi.orb.Operation, fieldName : String) : PropertyParser;
+	@:overload public function add(propName : String, action : com.sun.corba.se.spi.orb.Operation, fieldName : String) : com.sun.corba.se.spi.orb.PropertyParser;
 	
-	@:overload public function addPrefix(propName : String, action : com.sun.corba.se.spi.orb.Operation, fieldName : String, componentType : Class<Dynamic>) : PropertyParser;
+	@:overload public function addPrefix(propName : String, action : com.sun.corba.se.spi.orb.Operation, fieldName : String, componentType : Class<Dynamic>) : com.sun.corba.se.spi.orb.PropertyParser;
 	
 	/** Return a map from field name to value.
 	*/

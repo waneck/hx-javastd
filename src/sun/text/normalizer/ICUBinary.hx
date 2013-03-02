@@ -84,7 +84,7 @@ extern class ICUBinary
 	*            when header authentication fails.
 	* @draft 2.1
 	*/
-	@:overload @:final public static function readHeader(inputStream : java.io.InputStream, dataFormatIDExpected : java.NativeArray<java.StdTypes.Int8>, authenticate : ICUBinary_Authenticate) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final public static function readHeader(inputStream : java.io.InputStream, dataFormatIDExpected : java.NativeArray<java.StdTypes.Int8>, authenticate : sun.text.normalizer.ICUBinary.ICUBinary_Authenticate) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

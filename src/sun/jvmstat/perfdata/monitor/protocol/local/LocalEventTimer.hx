@@ -37,7 +37,7 @@ package sun.jvmstat.perfdata.monitor.protocol.local;
 	*
 	* @return LocalEventTimer - the singleton LocalEventTimer instance
 	*/
-	@:overload @:synchronized public static function getInstance() : LocalEventTimer;
+	@:overload @:synchronized public static function getInstance() : sun.jvmstat.perfdata.monitor.protocol.local.LocalEventTimer;
 	
 	
 }

@@ -53,7 +53,7 @@ extern class Service extends com.sun.tools.internal.ws.processor.model.ModelObje
 	
 	@:overload public function setJavaInterface(i : com.sun.tools.internal.ws.processor.model.java.JavaInterface) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	
 }

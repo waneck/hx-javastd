@@ -37,7 +37,7 @@ extern class DOMCanonicalXMLC14N11Method extends org.jcp.xml.dsig.internal.dom.A
 	
 	public static var C14N_11_WITH_COMMENTS(default, null) : String;
 	
-	@:overload override public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
+	@:overload public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
 	
 	@:overload override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	

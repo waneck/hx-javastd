@@ -59,7 +59,7 @@ extern class Pool<T>
 /**
 * JAXB {@link javax.xml.bind.Marshaller} pool.
 */
-@:native('com$sun$xml$internal$ws$util$Pool$Marshaller') extern class Pool_Marshaller extends Pool<javax.xml.bind.Marshaller>
+@:native('com$sun$xml$internal$ws$util$Pool$Marshaller') extern class Pool_Marshaller extends com.sun.xml.internal.ws.util.Pool<javax.xml.bind.Marshaller>
 {
 	@:overload public function new(context : javax.xml.bind.JAXBContext) : Void;
 	
@@ -70,7 +70,7 @@ extern class Pool<T>
 /**
 * JAXB {@link javax.xml.bind.Marshaller} pool.
 */
-@:native('com$sun$xml$internal$ws$util$Pool$Unmarshaller') extern class Pool_Unmarshaller extends Pool<javax.xml.bind.Unmarshaller>
+@:native('com$sun$xml$internal$ws$util$Pool$Unmarshaller') extern class Pool_Unmarshaller extends com.sun.xml.internal.ws.util.Pool<javax.xml.bind.Unmarshaller>
 {
 	@:overload public function new(context : javax.xml.bind.JAXBContext) : Void;
 	
@@ -81,7 +81,7 @@ extern class Pool<T>
 /**
 * {@link Tube} pool.
 */
-@:native('com$sun$xml$internal$ws$util$Pool$TubePool') extern class Pool_TubePool extends Pool<com.sun.xml.internal.ws.api.pipe.Tube>
+@:native('com$sun$xml$internal$ws$util$Pool$TubePool') extern class Pool_TubePool extends com.sun.xml.internal.ws.util.Pool<com.sun.xml.internal.ws.api.pipe.Tube>
 {
 	@:overload public function new(master : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	

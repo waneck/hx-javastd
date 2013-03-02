@@ -143,23 +143,23 @@ extern class MultiDOM implements com.sun.org.apache.xalan.internal.xsltc.DOM
 	
 	@:overload override public function next() : Int;
 	
-	@:overload override public function setRestartable(flag : Bool) : Void;
+	@:overload public function setRestartable(flag : Bool) : Void;
 	
 	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function getLast() : Int;
+	@:overload public function getLast() : Int;
 	
-	@:overload override public function getPosition() : Int;
+	@:overload public function getPosition() : Int;
 	
-	@:overload override public function isReverse() : Bool;
+	@:overload public function isReverse() : Bool;
 	
 	@:overload override public function setMark() : Void;
 	
 	@:overload override public function gotoMark() : Void;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }
@@ -171,13 +171,13 @@ extern class MultiDOM implements com.sun.org.apache.xalan.internal.xsltc.DOM
 {
 	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, returnType : Int, value : String, op : Bool) : Void;
 	
-	@:overload override public function isReverse() : Bool;
+	@:overload public function isReverse() : Bool;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	@:overload override public function next() : Int;
 	

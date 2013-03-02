@@ -44,11 +44,11 @@ extern class ClassTreeTool extends javax.swing.JPanel
 	
 	@:overload public function sessionContinue(e : java.util.EventObject) : Void;
 	
-	@:overload override public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
+	@:overload public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
 	
-	@:overload override public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
+	@:overload public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
 	
-	@:overload override public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
+	@:overload public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
 	
 	
 }

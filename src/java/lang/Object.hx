@@ -139,7 +139,7 @@ package java.lang;
 	* @see     #hashCode()
 	* @see     java.util.HashMap
 	*/
-	@:overload public function equals(obj : Object) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Creates and returns a copy of this object.  The precise meaning
@@ -201,7 +201,7 @@ package java.lang;
 	*               be cloned.
 	* @see java.lang.Cloneable
 	*/
-	@:overload @:native private function clone() : Object;
+	@:overload @:native private function clone() : Dynamic;
 	
 	/**
 	* Returns a string representation of the object. In general, the

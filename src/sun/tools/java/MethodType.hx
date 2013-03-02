@@ -35,15 +35,15 @@ package sun.tools.java;
 */
 extern class MethodType extends sun.tools.java.Type
 {
-	@:overload override public function getReturnType() : sun.tools.java.Type;
+	@:overload public function getReturnType() : sun.tools.java.Type;
 	
-	@:overload override public function getArgumentTypes() : java.NativeArray<sun.tools.java.Type>;
+	@:overload public function getArgumentTypes() : java.NativeArray<sun.tools.java.Type>;
 	
-	@:overload override public function equalArguments(t : sun.tools.java.Type) : Bool;
+	@:overload public function equalArguments(t : sun.tools.java.Type) : Bool;
 	
-	@:overload override public function stackSize() : Int;
+	@:overload public function stackSize() : Int;
 	
-	@:overload override public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
+	@:overload public function typeString(id : String, abbrev : Bool, ret : Bool) : String;
 	
 	
 }

@@ -490,7 +490,7 @@ extern class BasicTabbedPaneUI extends javax.swing.plaf.TabbedPaneUI implements 
 	
 	
 }
-@:native('javax$swing$plaf$basic$BasicTabbedPaneUI$TabbedPaneScrollLayout') @:internal extern class BasicTabbedPaneUI_TabbedPaneScrollLayout extends BasicTabbedPaneUI_TabbedPaneLayout
+@:native('javax$swing$plaf$basic$BasicTabbedPaneUI$TabbedPaneScrollLayout') @:internal extern class BasicTabbedPaneUI_TabbedPaneScrollLayout extends javax.swing.plaf.basic.BasicTabbedPaneUI.BasicTabbedPaneUI_TabbedPaneLayout
 {
 	@:overload override private function preferredTabAreaHeight(tabPlacement : Int, width : Int) : Int;
 	
@@ -504,15 +504,15 @@ extern class BasicTabbedPaneUI extends javax.swing.plaf.TabbedPaneUI implements 
 }
 @:native('javax$swing$plaf$basic$BasicTabbedPaneUI$ScrollableTabSupport') @:internal extern class BasicTabbedPaneUI_ScrollableTabSupport implements java.awt.event.ActionListener implements javax.swing.event.ChangeListener
 {
-	public var viewport : BasicTabbedPaneUI_ScrollableTabViewport;
+	public var viewport : javax.swing.plaf.basic.BasicTabbedPaneUI.BasicTabbedPaneUI_ScrollableTabViewport;
 	
-	public var tabPanel : BasicTabbedPaneUI_ScrollableTabPanel;
+	public var tabPanel : javax.swing.plaf.basic.BasicTabbedPaneUI.BasicTabbedPaneUI_ScrollableTabPanel;
 	
 	public var scrollForwardButton : javax.swing.JButton;
 	
 	public var scrollBackwardButton : javax.swing.JButton;
 	
-	public var croppedEdge : BasicTabbedPaneUI_CroppedEdge;
+	public var croppedEdge : javax.swing.plaf.basic.BasicTabbedPaneUI.BasicTabbedPaneUI_CroppedEdge;
 	
 	public var leadingTabIndex : Int;
 	

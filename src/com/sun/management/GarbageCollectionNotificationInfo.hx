@@ -113,7 +113,7 @@ extern class GarbageCollectionNotificationInfo implements javax.management.openm
 	*         by {@code cd} if {@code cd} is not {@code null};
 	*         {@code null} otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : GarbageCollectionNotificationInfo;
+	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.GarbageCollectionNotificationInfo;
 	
 	@:overload public function toCompositeData(ct : javax.management.openmbean.CompositeType) : javax.management.openmbean.CompositeData;
 	

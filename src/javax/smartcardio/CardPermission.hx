@@ -70,7 +70,7 @@ extern class CardPermission extends java.security.Permission
 	* @return true if and only if this CardPermission object implies the
 	*   specified permission.
 	*/
-	@:overload public function implies(permission : java.security.Permission) : Bool;
+	@:overload override public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Compares the specified object with this CardPermission for equality.

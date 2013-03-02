@@ -39,7 +39,7 @@ extern class PackageSummaryBuilder extends com.sun.tools.doclets.internal.toolki
 	*
 	* @return an instance of a PackageSummaryBuilder.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, pkg : com.sun.javadoc.PackageDoc, packageWriter : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter) : PackageSummaryBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, pkg : com.sun.javadoc.PackageDoc, packageWriter : com.sun.tools.doclets.internal.toolkit.PackageSummaryWriter) : com.sun.tools.doclets.internal.toolkit.builders.PackageSummaryBuilder;
 	
 	/**
 	* Build the package summary.

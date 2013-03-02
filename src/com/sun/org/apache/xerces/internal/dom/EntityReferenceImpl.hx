@@ -71,7 +71,7 @@ extern class EntityReferenceImpl extends com.sun.org.apache.xerces.internal.dom.
 	* This doesn't support editing the Entity though, since this only called
 	* once for all.
 	*/
-	@:overload override private function synchronizeChildren() : Void;
+	@:overload private function synchronizeChildren() : Void;
 	
 	/**
 	* NON-DOM: sets the node and its children value.

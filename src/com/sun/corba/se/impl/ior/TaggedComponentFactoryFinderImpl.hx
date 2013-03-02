@@ -30,7 +30,7 @@ extern class TaggedComponentFactoryFinderImpl extends com.sun.corba.se.impl.ior.
 	*/
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload override public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
 	@:overload public function create(orb : org.omg.CORBA.ORB, comp : org.omg.IOP.TaggedComponent) : com.sun.corba.se.spi.ior.TaggedComponent;
 	

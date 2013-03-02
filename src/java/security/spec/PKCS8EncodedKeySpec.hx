@@ -75,7 +75,7 @@ package java.security.spec;
 	* @return the PKCS #8 encoding of the key. Returns a new array
 	* each time this method is called.
 	*/
-	@:overload override public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the name of the encoding format associated with this
@@ -83,7 +83,7 @@ package java.security.spec;
 	*
 	* @return the string <code>"PKCS#8"</code>.
 	*/
-	@:overload @:final override public function getFormat() : String;
+	@:overload @:final public function getFormat() : String;
 	
 	
 }

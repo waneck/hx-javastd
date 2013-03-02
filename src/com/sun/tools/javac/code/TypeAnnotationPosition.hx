@@ -54,7 +54,7 @@ extern class TypeAnnotationPosition
 	
 	public var type_index : Int;
 	
-	public var wildcard_position : TypeAnnotationPosition;
+	public var wildcard_position : com.sun.tools.javac.code.TypeAnnotationPosition;
 	
 	@:overload public function toString() : String;
 	

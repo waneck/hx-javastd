@@ -38,7 +38,7 @@ extern class ConstructorRepository extends sun.reflect.generics.repository.Gener
 	* @return a <tt>ConstructorRepository</tt> that manages the generic type
 	* information represented in the signature <tt>rawSig</tt>
 	*/
-	@:overload public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : ConstructorRepository;
+	@:overload public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.repository.ConstructorRepository;
 	
 	/*
 	* When queried for a particular piece of type information, the

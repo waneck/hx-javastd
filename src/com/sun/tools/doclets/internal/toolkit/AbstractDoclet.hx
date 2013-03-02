@@ -41,7 +41,7 @@ extern class AbstractDoclet
 	* @param root   the {@link RootDoc} that points to the source to document.
 	* @return true if the doclet executed without error.  False otherwise.
 	*/
-	@:overload public function start(doclet : AbstractDoclet, root : com.sun.javadoc.RootDoc) : Bool;
+	@:overload public function start(doclet : com.sun.tools.doclets.internal.toolkit.AbstractDoclet, root : com.sun.javadoc.RootDoc) : Bool;
 	
 	/**
 	* Indicate that this doclet supports the 1.5 language features.

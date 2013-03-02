@@ -34,7 +34,7 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	* @param nsVersion The policy version
 	* @return Newly created policy source model instance.
 	*/
-	@:overload public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion) : PolicySourceModel;
+	@:overload public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Factory method that creates new policy source model instance and initializes it according to parameters provided.
@@ -47,7 +47,7 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	* @param policyName global policy identifier - absolute policy expression URI. May be {@code null}.
 	* @return Newly created policy source model instance with its name and id properly set.
 	*/
-	@:overload public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String) : PolicySourceModel;
+	@:overload public static function createPolicySourceModel(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, policyId : String, policyName : String) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Constructor that creates a new policy source model instance with given
@@ -111,7 +111,7 @@ extern class PolicySourceModel implements java.lang.Cloneable
 	*/
 	@:overload public function toString() : String;
 	
-	@:overload private function clone() : PolicySourceModel;
+	@:overload private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
 	/**
 	* Returns a boolean value indicating whether this policy source model contains references to another policy source models.

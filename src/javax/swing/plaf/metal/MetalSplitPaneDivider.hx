@@ -42,19 +42,19 @@ package javax.swing.plaf.metal;
 {
 	@:overload public function new(ui : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Creates and return an instance of JButton that can be used to
 	* collapse the left component in the metal split pane.
 	*/
-	@:overload override private function createLeftOneTouchButton() : javax.swing.JButton;
+	@:overload private function createLeftOneTouchButton() : javax.swing.JButton;
 	
 	/**
 	* Creates and return an instance of JButton that can be used to
 	* collapse the right component in the metal split pane.
 	*/
-	@:overload override private function createRightOneTouchButton() : javax.swing.JButton;
+	@:overload private function createRightOneTouchButton() : javax.swing.JButton;
 	
 	
 }

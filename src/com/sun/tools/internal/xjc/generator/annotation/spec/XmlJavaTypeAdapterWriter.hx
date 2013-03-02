@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlJavaTypeAdapterWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter>
 {
-	@:overload public function type(value : Class<Dynamic>) : XmlJavaTypeAdapterWriter;
+	@:overload public function type(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlJavaTypeAdapterWriter;
 	
-	@:overload public function type(value : com.sun.codemodel.internal.JType) : XmlJavaTypeAdapterWriter;
+	@:overload public function type(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlJavaTypeAdapterWriter;
 	
-	@:overload public function value(value : Class<Dynamic>) : XmlJavaTypeAdapterWriter;
+	@:overload public function value(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlJavaTypeAdapterWriter;
 	
-	@:overload public function value(value : com.sun.codemodel.internal.JType) : XmlJavaTypeAdapterWriter;
+	@:overload public function value(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlJavaTypeAdapterWriter;
 	
 	
 }

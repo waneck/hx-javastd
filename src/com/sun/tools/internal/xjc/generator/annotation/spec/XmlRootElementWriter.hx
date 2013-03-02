@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlRootElementWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlRootElement>
 {
-	@:overload public function name(value : String) : XmlRootElementWriter;
+	@:overload public function name(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlRootElementWriter;
 	
-	@:overload public function namespace(value : String) : XmlRootElementWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlRootElementWriter;
 	
 	
 }

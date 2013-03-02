@@ -36,9 +36,9 @@ extern class DocEnv
 	* @author Neal Gafter (rewrite)
 	* @author Scott Seligman (generics)
 	*/
-	@:require(java4) private static var docEnvKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<DocEnv>;
+	@:require(java4) private static var docEnvKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javadoc.DocEnv>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : DocEnv;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.DocEnv;
 	
 	/** Access filter (public, protected, ...).  */
 	private var showAccess : com.sun.tools.javadoc.ModifierFilter;

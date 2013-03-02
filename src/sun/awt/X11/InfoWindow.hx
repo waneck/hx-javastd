@@ -33,7 +33,7 @@ extern class InfoWindow extends java.awt.Window
 	
 	@:overload private function show(corner : java.awt.Point, indent : Int) : Void;
 	
-	@:overload override public function hide() : Void;
+	@:overload public function hide() : Void;
 	
 	
 }
@@ -53,9 +53,9 @@ extern class InfoWindow extends java.awt.Window
 	
 	
 }
-@:native('sun$awt$X11$InfoWindow$Tooltip') extern class InfoWindow_Tooltip extends InfoWindow
+@:native('sun$awt$X11$InfoWindow$Tooltip') extern class InfoWindow_Tooltip extends sun.awt.X11.InfoWindow
 {
-	@:overload public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : InfoWindow_Balloon_LiveArguments) : Void;
+	@:overload public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : sun.awt.X11.InfoWindow.InfoWindow_Balloon_LiveArguments) : Void;
 	
 	@:overload public function enter() : Void;
 	
@@ -63,24 +63,24 @@ extern class InfoWindow extends java.awt.Window
 	
 	
 }
-@:native('sun$awt$X11$InfoWindow$Tooltip$LiveArguments') extern interface InfoWindow_Tooltip_LiveArguments extends InfoWindow_LiveArguments
+@:native('sun$awt$X11$InfoWindow$Tooltip$LiveArguments') extern interface InfoWindow_Tooltip_LiveArguments extends sun.awt.X11.InfoWindow.InfoWindow_LiveArguments
 {
 	/** The tooltip to be displayed. */
 	@:overload public function getTooltipString() : String;
 	
 	
 }
-@:native('sun$awt$X11$InfoWindow$Balloon') extern class InfoWindow_Balloon extends InfoWindow
+@:native('sun$awt$X11$InfoWindow$Balloon') extern class InfoWindow_Balloon extends sun.awt.X11.InfoWindow
 {
-	@:overload public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : InfoWindow_Balloon_LiveArguments) : Void;
+	@:overload public function new(parent : java.awt.Frame, target : Dynamic, liveArguments : sun.awt.X11.InfoWindow.InfoWindow_Balloon_LiveArguments) : Void;
 	
 	@:overload public function display(caption : String, text : String, messageType : String) : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	
 }
-@:native('sun$awt$X11$InfoWindow$Balloon$LiveArguments') extern interface InfoWindow_Balloon_LiveArguments extends InfoWindow_LiveArguments
+@:native('sun$awt$X11$InfoWindow$Balloon$LiveArguments') extern interface InfoWindow_Balloon_LiveArguments extends sun.awt.X11.InfoWindow.InfoWindow_LiveArguments
 {
 	/** The action to be performed upon clicking the baloon. */
 	@:overload public function getActionCommand() : String;
@@ -89,7 +89,7 @@ extern class InfoWindow extends java.awt.Window
 }
 @:native('sun$awt$X11$InfoWindow$Balloon$ActionPerformer') @:internal extern class InfoWindow_Balloon_ActionPerformer extends java.awt.event.MouseAdapter
 {
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

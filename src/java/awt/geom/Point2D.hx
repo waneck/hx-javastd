@@ -72,7 +72,7 @@ extern class Point2D implements java.lang.Cloneable
 	* this <code>Point2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLocation(p : Point2D) : Void;
+	@:require(java2) @:overload public function setLocation(p : java.awt.geom.Point2D) : Void;
 	
 	/**
 	* Returns the square of the distance between two points.
@@ -124,7 +124,7 @@ extern class Point2D implements java.lang.Cloneable
 	* <code>Point2D</code> to a specified <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function distanceSq(pt : Point2D) : Float;
+	@:require(java2) @:overload public function distanceSq(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Returns the distance from this <code>Point2D</code> to
@@ -150,7 +150,7 @@ extern class Point2D implements java.lang.Cloneable
 	* the specified <code>Point2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function distance(pt : Point2D) : Float;
+	@:require(java2) @:overload public function distance(pt : java.awt.geom.Point2D) : Float;
 	
 	/**
 	* Creates a new object of the same class and with the
@@ -188,7 +188,7 @@ extern class Point2D implements java.lang.Cloneable
 * precision.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Point2D$Float') extern class Point2D_Float extends Point2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Point2D$Float') extern class Point2D_Float extends java.awt.geom.Point2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of this <code>Point2D</code>.
@@ -266,7 +266,7 @@ extern class Point2D implements java.lang.Cloneable
 * <code>double</code> precision.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Point2D$Double') extern class Point2D_Double extends Point2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Point2D$Double') extern class Point2D_Double extends java.awt.geom.Point2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of this <code>Point2D</code>.

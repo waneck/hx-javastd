@@ -31,11 +31,11 @@ extern class SunDropTargetEvent extends java.awt.event.MouseEvent
 	
 	@:overload public function dispatch() : Void;
 	
-	@:overload override public function consume() : Void;
+	@:overload public function consume() : Void;
 	
 	@:overload public function getDispatcher() : sun.awt.dnd.SunDropTargetContextPeer.SunDropTargetContextPeer_EventDispatcher;
 	
-	@:overload override public function paramString() : String;
+	@:overload public function paramString() : String;
 	
 	
 }

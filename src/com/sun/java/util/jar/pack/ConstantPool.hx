@@ -33,56 +33,56 @@ package com.sun.java.util.jar.pack;
 	*  Used for well-known strings like "SourceFile", "<init>", etc.
 	*  Also used to back up more complex constant pool entries, like Class.
 	*/
-	@:overload @:synchronized public static function getUtf8Entry(value : String) : ConstantPool_Utf8Entry;
+	@:overload @:synchronized public static function getUtf8Entry(value : String) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Utf8Entry;
 	
 	/** Factory for Class constants. */
-	@:overload @:synchronized public static function getClassEntry(name : String) : ConstantPool_ClassEntry;
+	@:overload @:synchronized public static function getClassEntry(name : String) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_ClassEntry;
 	
 	/** Factory for literal constants (String, Integer, etc.). */
-	@:overload @:synchronized public static function getLiteralEntry(value : java.lang.Comparable<Dynamic>) : ConstantPool_LiteralEntry;
+	@:overload @:synchronized public static function getLiteralEntry(value : java.lang.Comparable<Dynamic>) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_LiteralEntry;
 	
 	/** Factory for literal constants (String, Integer, etc.). */
-	@:overload @:synchronized public static function getStringEntry(value : String) : ConstantPool_StringEntry;
+	@:overload @:synchronized public static function getStringEntry(value : String) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_StringEntry;
 	
 	/** Factory for signature (type) constants. */
-	@:overload @:synchronized public static function getSignatureEntry(type : String) : ConstantPool_SignatureEntry;
+	@:overload @:synchronized public static function getSignatureEntry(type : String) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_SignatureEntry;
 	
-	@:overload public static function getSignatureEntry(formRef : ConstantPool_Utf8Entry, classRefs : java.NativeArray<ConstantPool_ClassEntry>) : ConstantPool_SignatureEntry;
+	@:overload public static function getSignatureEntry(formRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Utf8Entry, classRefs : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_ClassEntry>) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_SignatureEntry;
 	
 	/** Factory for descriptor (name-and-type) constants. */
-	@:overload @:synchronized public static function getDescriptorEntry(nameRef : ConstantPool_Utf8Entry, typeRef : ConstantPool_SignatureEntry) : ConstantPool_DescriptorEntry;
+	@:overload @:synchronized public static function getDescriptorEntry(nameRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Utf8Entry, typeRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_SignatureEntry) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_DescriptorEntry;
 	
-	@:overload public static function getDescriptorEntry(nameRef : ConstantPool_Utf8Entry, typeRef : ConstantPool_Utf8Entry) : ConstantPool_DescriptorEntry;
+	@:overload public static function getDescriptorEntry(nameRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Utf8Entry, typeRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Utf8Entry) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_DescriptorEntry;
 	
 	/** Factory for member reference constants. */
-	@:overload @:synchronized public static function getMemberEntry(tag : java.StdTypes.Int8, classRef : ConstantPool_ClassEntry, descRef : ConstantPool_DescriptorEntry) : ConstantPool_MemberEntry;
+	@:overload @:synchronized public static function getMemberEntry(tag : java.StdTypes.Int8, classRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_ClassEntry, descRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_DescriptorEntry) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_MemberEntry;
 	
-	private static var noRefs(default, null) : java.NativeArray<ConstantPool_Entry>;
+	private static var noRefs(default, null) : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
-	private static var noClassRefs(default, null) : java.NativeArray<ConstantPool_ClassEntry>;
+	private static var noClassRefs(default, null) : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_ClassEntry>;
 	
-	@:overload public static function makeIndex(debugName : String, cpMap : java.NativeArray<ConstantPool_Entry>) : ConstantPool_Index;
+	@:overload public static function makeIndex(debugName : String, cpMap : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
-	@:overload public static function makeIndex(debugName : String, cpMapList : java.util.Collection<ConstantPool_Entry>) : ConstantPool_Index;
+	@:overload public static function makeIndex(debugName : String, cpMapList : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
 	/** Sort this index (destructively) into canonical order. */
-	@:overload public static function sort(ix : ConstantPool_Index) : Void;
+	@:overload public static function sort(ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
 	
 	/** Return a set of indexes partitioning these entries.
 	*  The keys array must of length this.size(), and marks entries.
 	*  The result array is as long as one plus the largest key value.
 	*  Entries with a negative key are dropped from the partition.
 	*/
-	@:overload public static function partition(ix : ConstantPool_Index, keys : java.NativeArray<Int>) : java.NativeArray<ConstantPool_Index>;
+	@:overload public static function partition(ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index, keys : java.NativeArray<Int>) : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index>;
 	
-	@:overload public static function partitionByTag(ix : ConstantPool_Index) : java.NativeArray<ConstantPool_Index>;
+	@:overload public static function partitionByTag(ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index>;
 	
 	/** Close the set cpRefs under the getRef(*) relation.
 	*  Also, if flattenSigs, replace all signatures in cpRefs
 	*  by their equivalent Utf8s.
 	*  Also, discard null from cpRefs.
 	*/
-	@:overload public static function completeReferencesIn(cpRefs : java.util.Set<ConstantPool_Entry>, flattenSigs : Bool) : Void;
+	@:overload public static function completeReferencesIn(cpRefs : java.util.Set<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>, flattenSigs : Bool) : Void;
 	
 	@:overload public static function tagName(tag : Int) : String;
 	
@@ -99,9 +99,9 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload @:final public function getTag() : java.StdTypes.Int8;
 	
-	@:overload public function getRef(i : Int) : ConstantPool_Entry;
+	@:overload public function getRef(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function eq(that : ConstantPool_Entry) : Bool;
+	@:overload public function eq(that : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Bool;
 	
 	@:overload @:abstract public function equals(o : Dynamic) : Bool;
 	
@@ -123,7 +123,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$Utf8Entry') extern class ConstantPool_Utf8Entry extends ConstantPool_Entry
+@:native('com$sun$java$util$jar$pack$ConstantPool$Utf8Entry') extern class ConstantPool_Utf8Entry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry
 {
 	@:overload override private function computeValueHash() : Int;
 	
@@ -135,7 +135,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$LiteralEntry') extern class ConstantPool_LiteralEntry extends ConstantPool_Entry
+@:native('com$sun$java$util$jar$pack$ConstantPool$LiteralEntry') extern class ConstantPool_LiteralEntry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry
 {
 	@:overload private function new(tag : java.StdTypes.Int8) : Void;
 	
@@ -143,7 +143,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$NumberEntry') extern class ConstantPool_NumberEntry extends ConstantPool_LiteralEntry
+@:native('com$sun$java$util$jar$pack$ConstantPool$NumberEntry') extern class ConstantPool_NumberEntry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_LiteralEntry
 {
 	@:overload override private function computeValueHash() : Int;
 	
@@ -159,9 +159,9 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$StringEntry') extern class ConstantPool_StringEntry extends ConstantPool_LiteralEntry
+@:native('com$sun$java$util$jar$pack$ConstantPool$StringEntry') extern class ConstantPool_StringEntry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_LiteralEntry
 {
-	@:overload override public function getRef(i : Int) : ConstantPool_Entry;
+	@:overload override public function getRef(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
 	@:overload override private function computeValueHash() : Int;
 	
@@ -175,9 +175,9 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$ClassEntry') extern class ConstantPool_ClassEntry extends ConstantPool_Entry
+@:native('com$sun$java$util$jar$pack$ConstantPool$ClassEntry') extern class ConstantPool_ClassEntry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry
 {
-	@:overload override public function getRef(i : Int) : ConstantPool_Entry;
+	@:overload override public function getRef(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
 	@:overload override private function computeValueHash() : Int;
 	
@@ -189,9 +189,9 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$DescriptorEntry') extern class ConstantPool_DescriptorEntry extends ConstantPool_Entry
+@:native('com$sun$java$util$jar$pack$ConstantPool$DescriptorEntry') extern class ConstantPool_DescriptorEntry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry
 {
-	@:overload override public function getRef(i : Int) : ConstantPool_Entry;
+	@:overload override public function getRef(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
 	@:overload override private function computeValueHash() : Int;
 	
@@ -209,9 +209,9 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$MemberEntry') extern class ConstantPool_MemberEntry extends ConstantPool_Entry
+@:native('com$sun$java$util$jar$pack$ConstantPool$MemberEntry') extern class ConstantPool_MemberEntry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry
 {
-	@:overload override public function getRef(i : Int) : ConstantPool_Entry;
+	@:overload override public function getRef(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
 	@:overload override private function computeValueHash() : Int;
 	
@@ -225,13 +225,13 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$ConstantPool$SignatureEntry') extern class ConstantPool_SignatureEntry extends ConstantPool_Entry
+@:native('com$sun$java$util$jar$pack$ConstantPool$SignatureEntry') extern class ConstantPool_SignatureEntry extends com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry
 {
-	@:overload override public function getRef(i : Int) : ConstantPool_Entry;
+	@:overload override public function getRef(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
 	@:overload override private function computeValueHash() : Int;
 	
-	@:overload public function asUtf8Entry() : ConstantPool_Utf8Entry;
+	@:overload public function asUtf8Entry() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Utf8Entry;
 	
 	@:overload override public function equals(o : Dynamic) : Bool;
 	
@@ -250,53 +250,53 @@ package com.sun.java.util.jar.pack;
 	
 }
 /** An Index is a mapping between CP entries and small integers. */
-@:native('com$sun$java$util$jar$pack$ConstantPool$Index') extern class ConstantPool_Index extends java.util.AbstractList<ConstantPool_Entry>
+@:native('com$sun$java$util$jar$pack$ConstantPool$Index') extern class ConstantPool_Index extends java.util.AbstractList<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>
 {
 	private var debugName : String;
 	
-	private var cpMap : java.NativeArray<ConstantPool_Entry>;
+	private var cpMap : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
 	private var flattenSigs : Bool;
 	
-	@:overload private function getMap() : java.NativeArray<ConstantPool_Entry>;
+	@:overload private function getMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
 	@:overload private function new(debugName : String) : Void;
 	
-	@:overload private function new(debugName : String, cpMap : java.NativeArray<ConstantPool_Entry>) : Void;
+	@:overload private function new(debugName : String, cpMap : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload private function setMap(cpMap : java.NativeArray<ConstantPool_Entry>) : Void;
+	@:overload private function setMap(cpMap : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload private function new(debugName : String, cpMapList : java.util.Collection<ConstantPool_Entry>) : Void;
+	@:overload private function new(debugName : String, cpMapList : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload private function setMap(cpMapList : java.util.Collection<ConstantPool_Entry>) : Void;
+	@:overload private function setMap(cpMapList : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function get(i : Int) : ConstantPool_Entry;
+	@:overload public function get(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function getEntry(i : Int) : ConstantPool_Entry;
+	@:overload public function getEntry(i : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function contains(e : ConstantPool_Entry) : Bool;
+	@:overload public function contains(e : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Bool;
 	
-	@:overload public function indexOf(e : ConstantPool_Entry) : Int;
+	@:overload public function indexOf(e : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Int;
 	
-	@:overload public function lastIndexOf(e : ConstantPool_Entry) : Int;
+	@:overload public function lastIndexOf(e : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Int;
 	
 	@:overload public function assertIsSorted() : Bool;
 	
-	private var indexKey : java.NativeArray<ConstantPool_Entry>;
+	private var indexKey : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
 	private var indexValue : java.NativeArray<Int>;
 	
 	@:overload private function clearIndex() : Void;
 	
-	@:overload public function toArray(a : java.NativeArray<ConstantPool_Entry>) : java.NativeArray<ConstantPool_Entry>;
+	@:overload public function toArray(a : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
-	@:overload override public function toArray() : java.NativeArray<ConstantPool_Entry>;
+	@:overload public function toArray() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
 	@:overload public function clone() : Dynamic;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	@:overload public function dumpString() : String;
 	
@@ -306,21 +306,21 @@ package com.sun.java.util.jar.pack;
 @:native('com$sun$java$util$jar$pack$ConstantPool$IndexGroup') extern class ConstantPool_IndexGroup
 {
 	/** Index of all CP entries of all types, in definition order. */
-	@:overload public function getUntypedIndex() : ConstantPool_Index;
+	@:overload public function getUntypedIndex() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
-	@:overload public function untypedIndexOf(e : ConstantPool_Entry) : Int;
+	@:overload public function untypedIndexOf(e : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Int;
 	
-	@:overload public function initIndexByTag(tag : java.StdTypes.Int8, ix : ConstantPool_Index) : Void;
+	@:overload public function initIndexByTag(tag : java.StdTypes.Int8, ix : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index) : Void;
 	
 	/** Index of all CP entries of a given tag. */
-	@:overload public function getIndexByTag(tag : java.StdTypes.Int8) : ConstantPool_Index;
+	@:overload public function getIndexByTag(tag : java.StdTypes.Int8) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
 	/** Index of all CP entries of a given tag and class. */
-	@:overload public function getMemberIndex(tag : java.StdTypes.Int8, classRef : ConstantPool_ClassEntry) : ConstantPool_Index;
+	@:overload public function getMemberIndex(tag : java.StdTypes.Int8, classRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_ClassEntry) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
-	@:overload public function getOverloadingIndex(methodRef : ConstantPool_MemberEntry) : Int;
+	@:overload public function getOverloadingIndex(methodRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_MemberEntry) : Int;
 	
-	@:overload public function getOverloadingForIndex(tag : java.StdTypes.Int8, classRef : ConstantPool_ClassEntry, name : String, which : Int) : ConstantPool_MemberEntry;
+	@:overload public function getOverloadingForIndex(tag : java.StdTypes.Int8, classRef : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_ClassEntry, name : String, which : Int) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_MemberEntry;
 	
 	@:overload public function haveNumbers() : Bool;
 	

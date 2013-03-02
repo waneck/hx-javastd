@@ -596,7 +596,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 *
 * @since 1.6
 */
-@:require(java6) @:native('java$awt$geom$Path2D$Float') extern class Path2D_Float extends Path2D implements java.io.Serializable
+@:require(java6) @:native('java$awt$geom$Path2D$Float') extern class Path2D_Float extends java.awt.geom.Path2D implements java.io.Serializable
 {
 	/**
 	* Constructs a new empty single precision {@code Path2D} object
@@ -802,7 +802,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	
 	
 }
-@:native('java$awt$geom$Path2D$Float$CopyIterator') @:internal extern class Path2D_Float_CopyIterator extends Path2D_Iterator
+@:native('java$awt$geom$Path2D$Float$CopyIterator') @:internal extern class Path2D_Float_CopyIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
 	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
@@ -810,7 +810,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	
 	
 }
-@:native('java$awt$geom$Path2D$Float$TxIterator') @:internal extern class Path2D_Float_TxIterator extends Path2D_Iterator
+@:native('java$awt$geom$Path2D$Float$TxIterator') @:internal extern class Path2D_Float_TxIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
 	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
@@ -824,7 +824,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 *
 * @since 1.6
 */
-@:require(java6) @:native('java$awt$geom$Path2D$Double') extern class Path2D_Double extends Path2D implements java.io.Serializable
+@:require(java6) @:native('java$awt$geom$Path2D$Double') extern class Path2D_Double extends java.awt.geom.Path2D implements java.io.Serializable
 {
 	/**
 	* Constructs a new empty double precision {@code Path2D} object
@@ -959,7 +959,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	
 	
 }
-@:native('java$awt$geom$Path2D$Double$CopyIterator') @:internal extern class Path2D_Double_CopyIterator extends Path2D_Iterator
+@:native('java$awt$geom$Path2D$Double$CopyIterator') @:internal extern class Path2D_Double_CopyIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
 	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
@@ -967,7 +967,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	
 	
 }
-@:native('java$awt$geom$Path2D$Double$TxIterator') @:internal extern class Path2D_Double_TxIterator extends Path2D_Iterator
+@:native('java$awt$geom$Path2D$Double$TxIterator') @:internal extern class Path2D_Double_TxIterator extends java.awt.geom.Path2D.Path2D_Iterator
 {
 	@:overload public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	

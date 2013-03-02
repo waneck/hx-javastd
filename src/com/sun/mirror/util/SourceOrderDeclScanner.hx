@@ -74,23 +74,23 @@ package com.sun.mirror.util;
 {
 	@:overload public function getValue() : Int;
 	
-	@:overload override public function visitTypeParameterDeclaration(d : com.sun.mirror.declaration.TypeParameterDeclaration) : Void;
+	@:overload public function visitTypeParameterDeclaration(d : com.sun.mirror.declaration.TypeParameterDeclaration) : Void;
 	
-	@:overload override public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
+	@:overload public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
 	
-	@:overload override public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
+	@:overload public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
 	
-	@:overload override public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
+	@:overload public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
 	
-	@:overload override public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
+	@:overload public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
 	
-	@:overload override public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
+	@:overload public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
 	
-	@:overload override public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
+	@:overload public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
 	
-	@:overload override public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
+	@:overload public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
 	
-	@:overload override public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
+	@:overload public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
 	
 	
 }

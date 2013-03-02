@@ -106,7 +106,7 @@ extern class RemoteObjectInvocationHandler extends java.rmi.server.RemoteObject 
 **/
 @:native('java$rmi$server$RemoteObjectInvocationHandler$MethodToHash_Maps') @:internal extern class RemoteObjectInvocationHandler_MethodToHash_Maps extends sun.rmi.server.WeakClassHashMap<java.util.Map<java.lang.reflect.Method, Null<haxe.Int64>>>
 {
-	@:overload override private function computeValue(remoteClass : Class<Dynamic>) : java.util.Map<java.lang.reflect.Method, Null<haxe.Int64>>;
+	@:overload private function computeValue(remoteClass : Class<Dynamic>) : java.util.Map<java.lang.reflect.Method, Null<haxe.Int64>>;
 	
 	
 }

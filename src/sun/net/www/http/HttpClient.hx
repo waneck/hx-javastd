@@ -90,17 +90,17 @@ extern class HttpClient extends sun.net.NetworkClient
 	* get an HttpClient to the specifed URL.  If there's currently an
 	* active HttpClient to that server/port, you'll get that one.
 	*/
-	@:overload public static function New(url : java.net.URL) : HttpClient;
+	@:overload public static function New(url : java.net.URL) : sun.net.www.http.HttpClient;
 	
-	@:overload public static function New(url : java.net.URL, useCache : Bool) : HttpClient;
+	@:overload public static function New(url : java.net.URL, useCache : Bool) : sun.net.www.http.HttpClient;
 	
-	@:overload public static function New(url : java.net.URL, p : java.net.Proxy, to : Int, useCache : Bool) : HttpClient;
+	@:overload public static function New(url : java.net.URL, p : java.net.Proxy, to : Int, useCache : Bool) : sun.net.www.http.HttpClient;
 	
-	@:overload public static function New(url : java.net.URL, p : java.net.Proxy, to : Int) : HttpClient;
+	@:overload public static function New(url : java.net.URL, p : java.net.Proxy, to : Int) : sun.net.www.http.HttpClient;
 	
-	@:overload public static function New(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : HttpClient;
+	@:overload public static function New(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : sun.net.www.http.HttpClient;
 	
-	@:overload public static function New(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool, to : Int) : HttpClient;
+	@:overload public static function New(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool, to : Int) : sun.net.www.http.HttpClient;
 	
 	/* return it to the cache as still usable, if:
 	* 1) It's keeping alive, AND

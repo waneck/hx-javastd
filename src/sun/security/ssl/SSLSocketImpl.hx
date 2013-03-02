@@ -41,17 +41,17 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	* @throws  IOException if an error occurs during the connection
 	* @throws  SocketTimeoutException if timeout expires before connecting
 	*/
-	@:overload override public function connect(endpoint : java.net.SocketAddress, timeout : Int) : Void;
+	@:overload public function connect(endpoint : java.net.SocketAddress, timeout : Int) : Void;
 	
 	/**
 	* Starts an SSL handshake on this connection.
 	*/
-	@:overload override public function startHandshake() : Void;
+	@:overload public function startHandshake() : Void;
 	
 	/**
 	* Return whether the socket has been explicitly closed by the application.
 	*/
-	@:overload override public function isClosed() : Bool;
+	@:overload public function isClosed() : Bool;
 	
 	@:overload private function closeSocket() : Void;
 	
@@ -61,7 +61,7 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	* rather than leaving it for finalization, so that your remote
 	* peer does not experience a protocol error.
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	@:overload @:synchronized public function setHost(host : String) : Void;
 	
@@ -70,23 +70,23 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	* Data read from this stream was always integrity protected in
 	* transit, and will usually have been confidentiality protected.
 	*/
-	@:overload @:synchronized override public function getInputStream() : java.io.InputStream;
+	@:overload @:synchronized public function getInputStream() : java.io.InputStream;
 	
 	/**
 	* Gets an output stream to write to the peer on the other side.
 	* Data written on this stream is always integrity protected, and
 	* will usually be confidentiality protected.
 	*/
-	@:overload @:synchronized override public function getOutputStream() : java.io.OutputStream;
+	@:overload @:synchronized public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns the the SSL Session in use by this connection.  These can
 	* be long lived, and frequently correspond to an entire login session
 	* for some user.
 	*/
-	@:overload override public function getSession() : javax.net.ssl.SSLSession;
+	@:overload public function getSession() : javax.net.ssl.SSLSession;
 	
-	@:overload @:synchronized override public function getHandshakeSession() : javax.net.ssl.SSLSession;
+	@:overload @:synchronized public function getHandshakeSession() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Controls whether new connections may cause creation of new SSL
@@ -96,13 +96,13 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	* whether we enable session creations.  Otherwise,
 	* we will need to wait for the next handshake.
 	*/
-	@:overload @:synchronized override public function setEnableSessionCreation(flag : Bool) : Void;
+	@:overload @:synchronized public function setEnableSessionCreation(flag : Bool) : Void;
 	
 	/**
 	* Returns true if new connections may cause creation of new SSL
 	* sessions.
 	*/
-	@:overload @:synchronized override public function getEnableSessionCreation() : Bool;
+	@:overload @:synchronized public function getEnableSessionCreation() : Bool;
 	
 	/**
 	* Sets the flag controlling whether a server mode socket
@@ -112,9 +112,9 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	* whether client authentication is needed.  Otherwise,
 	* we will need to wait for the next handshake.
 	*/
-	@:overload @:synchronized override public function setNeedClientAuth(flag : Bool) : Void;
+	@:overload @:synchronized public function setNeedClientAuth(flag : Bool) : Void;
 	
-	@:overload @:synchronized override public function getNeedClientAuth() : Bool;
+	@:overload @:synchronized public function getNeedClientAuth() : Bool;
 	
 	/**
 	* Sets the flag controlling whether a server mode socket
@@ -124,18 +124,18 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	* whether client authentication is requested.  Otherwise,
 	* we will need to wait for the next handshake.
 	*/
-	@:overload @:synchronized override public function setWantClientAuth(flag : Bool) : Void;
+	@:overload @:synchronized public function setWantClientAuth(flag : Bool) : Void;
 	
-	@:overload @:synchronized override public function getWantClientAuth() : Bool;
+	@:overload @:synchronized public function getWantClientAuth() : Bool;
 	
 	/**
 	* Sets the flag controlling whether the socket is in SSL
 	* client or server mode.  Must be called before any SSL
 	* traffic has started.
 	*/
-	@:overload @:synchronized override public function setUseClientMode(flag : Bool) : Void;
+	@:overload @:synchronized public function setUseClientMode(flag : Bool) : Void;
 	
-	@:overload @:synchronized override public function getUseClientMode() : Bool;
+	@:overload @:synchronized public function getUseClientMode() : Bool;
 	
 	/**
 	* Returns the names of the cipher suites which could be enabled for use
@@ -147,7 +147,7 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	*
 	* @return an array of cipher suite names
 	*/
-	@:overload override public function getSupportedCipherSuites() : java.NativeArray<String>;
+	@:overload public function getSupportedCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Controls which particular cipher suites are enabled for use on
@@ -158,7 +158,7 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	*
 	* @param suites Names of all the cipher suites to enable.
 	*/
-	@:overload @:synchronized override public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
+	@:overload @:synchronized public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Returns the names of the SSL cipher suites which are currently enabled
@@ -170,14 +170,14 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	*
 	* @return an array of cipher suite names
 	*/
-	@:overload @:synchronized override public function getEnabledCipherSuites() : java.NativeArray<String>;
+	@:overload @:synchronized public function getEnabledCipherSuites() : java.NativeArray<String>;
 	
 	/**
 	* Returns the protocols that are supported by this implementation.
 	* A subset of the supported protocols may be enabled for this connection
 	* @return an array of protocol names.
 	*/
-	@:overload override public function getSupportedProtocols() : java.NativeArray<String>;
+	@:overload public function getSupportedProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Controls which protocols are enabled for use on
@@ -188,41 +188,41 @@ extern class SSLSocketImpl extends sun.security.ssl.BaseSSLSocketImpl
 	* @exception IllegalArgumentException when one of the protocols
 	*  named by the parameter is not supported.
 	*/
-	@:overload @:synchronized override public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
+	@:overload @:synchronized public function setEnabledProtocols(protocols : java.NativeArray<String>) : Void;
 	
-	@:overload @:synchronized override public function getEnabledProtocols() : java.NativeArray<String>;
+	@:overload @:synchronized public function getEnabledProtocols() : java.NativeArray<String>;
 	
 	/**
 	* Assigns the socket timeout.
 	* @see java.net.Socket#setSoTimeout
 	*/
-	@:overload override public function setSoTimeout(timeout : Int) : Void;
+	@:overload public function setSoTimeout(timeout : Int) : Void;
 	
 	/**
 	* Registers an event listener to receive notifications that an
 	* SSL handshake has completed on this connection.
 	*/
-	@:overload @:synchronized override public function addHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
+	@:overload @:synchronized public function addHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
 	
 	/**
 	* Removes a previously registered handshake completion listener.
 	*/
-	@:overload @:synchronized override public function removeHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
+	@:overload @:synchronized public function removeHandshakeCompletedListener(listener : javax.net.ssl.HandshakeCompletedListener) : Void;
 	
 	/**
 	* Returns the SSLParameters in effect for this SSLSocket.
 	*/
-	@:overload @:synchronized override public function getSSLParameters() : javax.net.ssl.SSLParameters;
+	@:overload @:synchronized public function getSSLParameters() : javax.net.ssl.SSLParameters;
 	
 	/**
 	* Applies SSLParameters to this socket.
 	*/
-	@:overload @:synchronized override public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
+	@:overload @:synchronized public function setSSLParameters(params : javax.net.ssl.SSLParameters) : Void;
 	
 	/**
 	* Returns a printable representation of this end of the connection.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

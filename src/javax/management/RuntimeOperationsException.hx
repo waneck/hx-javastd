@@ -59,7 +59,7 @@ package javax.management;
 	*
 	* @return the wrapped {@link RuntimeException}.
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

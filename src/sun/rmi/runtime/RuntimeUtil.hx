@@ -38,14 +38,14 @@ extern class RuntimeUtil
 /**
 * A PrivilegedAction for getting the RuntimeUtil instance.
 **/
-@:native('sun$rmi$runtime$RuntimeUtil$GetInstanceAction') extern class RuntimeUtil_GetInstanceAction implements java.security.PrivilegedAction<RuntimeUtil>
+@:native('sun$rmi$runtime$RuntimeUtil$GetInstanceAction') extern class RuntimeUtil_GetInstanceAction implements java.security.PrivilegedAction<sun.rmi.runtime.RuntimeUtil>
 {
 	/**
 	* Creates an action that returns the RuntimeUtil instance.
 	**/
 	@:overload public function new() : Void;
 	
-	@:overload public function run() : RuntimeUtil;
+	@:overload public function run() : sun.rmi.runtime.RuntimeUtil;
 	
 	
 }

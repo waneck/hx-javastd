@@ -79,7 +79,7 @@ extern class PKCS11Exception extends java.lang.Exception
 	* @preconditions
 	* @postconditions (result <> null)
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* Returns the PKCS#11 error code.

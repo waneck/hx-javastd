@@ -44,7 +44,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_ANTIALIAS_DEFAULT}
 	* </ul>
 	*/
-	public static var KEY_ANTIALIASING(default, null) : RenderingHints_Key;
+	public static var KEY_ANTIALIASING(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Antialiasing hint value -- rendering is done with antialiasing.
@@ -81,7 +81,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_RENDER_DEFAULT}
 	* </ul>
 	*/
-	public static var KEY_RENDERING(default, null) : RenderingHints_Key;
+	public static var KEY_RENDERING(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Rendering hint value -- rendering algorithms are chosen
@@ -128,7 +128,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_DITHER_DEFAULT}
 	* </ul>
 	*/
-	public static var KEY_DITHERING(default, null) : RenderingHints_Key;
+	public static var KEY_DITHERING(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Dithering hint value -- do not dither when rendering geometry.
@@ -177,7 +177,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_TEXT_ANTIALIAS_LCD_VBGR}
 	* </ul>
 	*/
-	public static var KEY_TEXT_ANTIALIASING(default, null) : RenderingHints_Key;
+	public static var KEY_TEXT_ANTIALIASING(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Text antialiasing hint value -- text rendering is done with
@@ -351,7 +351,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* @see #KEY_TEXT_ANTIALIASING
 	* @since 1.6
 	*/
-	@:require(java6) public static var KEY_TEXT_LCD_CONTRAST(default, null) : RenderingHints_Key;
+	@:require(java6) public static var KEY_TEXT_LCD_CONTRAST(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Font fractional metrics hint key.
@@ -438,7 +438,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_FRACTIONALMETRICS_DEFAULT}
 	* </ul>
 	*/
-	public static var KEY_FRACTIONALMETRICS(default, null) : RenderingHints_Key;
+	public static var KEY_FRACTIONALMETRICS(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Font fractional metrics hint value -- character glyphs are
@@ -491,7 +491,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_INTERPOLATION_BICUBIC}
 	* </ul>
 	*/
-	public static var KEY_INTERPOLATION(default, null) : RenderingHints_Key;
+	public static var KEY_INTERPOLATION(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Interpolation hint value -- the color sample of the nearest
@@ -579,7 +579,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_ALPHA_INTERPOLATION_DEFAULT}
 	* </ul>
 	*/
-	public static var KEY_ALPHA_INTERPOLATION(default, null) : RenderingHints_Key;
+	public static var KEY_ALPHA_INTERPOLATION(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Alpha interpolation hint value -- alpha blending algorithms
@@ -651,7 +651,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* <li>{@link #VALUE_COLOR_RENDER_DEFAULT}
 	* </ul>
 	*/
-	public static var KEY_COLOR_RENDERING(default, null) : RenderingHints_Key;
+	public static var KEY_COLOR_RENDERING(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Color rendering hint value -- perform the fastest color
@@ -702,7 +702,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* </ul>
 	* @since 1.3
 	*/
-	@:require(java3) public static var KEY_STROKE_CONTROL(default, null) : RenderingHints_Key;
+	@:require(java3) public static var KEY_STROKE_CONTROL(default, null) : java.awt.RenderingHints.RenderingHints_Key;
 	
 	/**
 	* Stroke normalization control hint value -- geometry may be
@@ -745,7 +745,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* @param init a map of key/value pairs to initialize the hints
 	*          or null if the object should be empty
 	*/
-	@:overload public function new(init : java.util.Map<RenderingHints_Key, Dynamic>) : Void;
+	@:overload public function new(init : java.util.Map<java.awt.RenderingHints.RenderingHints_Key, Dynamic>) : Void;
 	
 	/**
 	* Constructs a new object with the specified key/value pair.
@@ -753,7 +753,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* @param value the value of the hint property specified with
 	* <code>key</code>
 	*/
-	@:overload public function new(key : RenderingHints_Key, value : Dynamic) : Void;
+	@:overload public function new(key : java.awt.RenderingHints.RenderingHints_Key, value : Dynamic) : Void;
 	
 	/**
 	* Returns the number of key-value mappings in this
@@ -850,7 +850,7 @@ extern class RenderingHints implements java.util.Map<Dynamic, Dynamic> implement
 	* @param hints the set of key/value pairs to be added to this
 	* <code>RenderingHints</code> object
 	*/
-	@:overload public function add(hints : RenderingHints) : Void;
+	@:overload public function add(hints : java.awt.RenderingHints) : Void;
 	
 	/**
 	* Clears this <code>RenderingHints</code> object of all key/value

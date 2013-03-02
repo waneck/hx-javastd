@@ -31,7 +31,7 @@ extern class JEnumConstant extends com.sun.codemodel.internal.JExpressionImpl im
 	* @param arg
 	*        Argument to add to argument list
 	*/
-	@:overload public function arg(arg : com.sun.codemodel.internal.JExpression) : JEnumConstant;
+	@:overload public function arg(arg : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JEnumConstant;
 	
 	/**
 	* Returns the name of this constant.

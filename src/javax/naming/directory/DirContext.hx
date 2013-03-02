@@ -433,7 +433,7 @@ package javax.naming.directory;
 	*
 	* @see Context#createSubcontext(Name)
 	*/
-	@:overload public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : DirContext;
+	@:overload public function createSubcontext(name : javax.naming.Name, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
 	/**
 	* Creates and binds a new context, along with associated attributes.
@@ -450,7 +450,7 @@ package javax.naming.directory;
 	*          contain all the mandatory attributes required for creation
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : DirContext;
+	@:overload public function createSubcontext(name : String, attrs : javax.naming.directory.Attributes) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves the schema associated with the named object.
@@ -475,7 +475,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchema(name : javax.naming.Name) : DirContext;
+	@:overload public function getSchema(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves the schema associated with the named object.
@@ -487,7 +487,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchema(name : String) : DirContext;
+	@:overload public function getSchema(name : String) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves a context containing the schema objects of the
@@ -522,7 +522,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchemaClassDefinition(name : javax.naming.Name) : DirContext;
+	@:overload public function getSchemaClassDefinition(name : javax.naming.Name) : javax.naming.directory.DirContext;
 	
 	/**
 	* Retrieves a context containing the schema objects of the
@@ -538,7 +538,7 @@ package javax.naming.directory;
 	* @throws  OperationNotSupportedException if schema not supported
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function getSchemaClassDefinition(name : String) : DirContext;
+	@:overload public function getSchemaClassDefinition(name : String) : javax.naming.directory.DirContext;
 	
 	/**
 	* Searches in a single context for objects that contain a

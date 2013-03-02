@@ -58,7 +58,7 @@ package com.sun.xml.internal.ws.handler;
 	* While closing handlers, check getIndex() to get the invoked
 	* handlers.
 	*/
-	@:overload public function callHandlersRequest(direction : HandlerProcessor_Direction, context : C, responseExpected : Bool) : Bool;
+	@:overload public function callHandlersRequest(direction : com.sun.xml.internal.ws.handler.HandlerProcessor.HandlerProcessor_Direction, context : C, responseExpected : Bool) : Bool;
 	
 	/**
 	* TODO: Just putting thoughts,
@@ -70,7 +70,7 @@ package com.sun.xml.internal.ws.handler;
 	* during callHandlersRequest().
 	* CurrentPipe should close all the handlers in the chain.     *
 	*/
-	@:overload public function callHandlersResponse(direction : HandlerProcessor_Direction, context : C, isFault : Bool) : Void;
+	@:overload public function callHandlersResponse(direction : com.sun.xml.internal.ws.handler.HandlerProcessor.HandlerProcessor_Direction, context : C, isFault : Bool) : Void;
 	
 	
 }

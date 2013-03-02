@@ -40,9 +40,9 @@ extern class MemoryCacheImageOutputStream extends javax.imageio.stream.ImageOutp
 	
 	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	@:overload override public function length() : haxe.Int64;
 	

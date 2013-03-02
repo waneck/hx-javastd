@@ -60,7 +60,7 @@ extern class DataTransferer
 	* that in a headless environment, there may be no DataTransferer instance;
 	* instead, null will be returned.
 	*/
-	@:overload public static function getInstance() : DataTransferer;
+	@:overload public static function getInstance() : sun.awt.datatransfer.DataTransferer;
 	
 	/**
 	* Converts an arbitrary text encoding to its canonical name.
@@ -565,7 +565,7 @@ extern class DataTransferer
 * in alphabetical order, charsets are not automatically converted to their
 * canonical forms.
 */
-@:native('sun$awt$datatransfer$DataTransferer$CharsetComparator') extern class DataTransferer_CharsetComparator extends DataTransferer_IndexedComparator
+@:native('sun$awt$datatransfer$DataTransferer$CharsetComparator') extern class DataTransferer_CharsetComparator extends sun.awt.datatransfer.DataTransferer.DataTransferer_IndexedComparator
 {
 	@:overload public function new() : Void;
 	
@@ -644,7 +644,7 @@ extern class DataTransferer
 * flavors' native formats are compared, with greater long values
 * taking precedence.
 */
-@:native('sun$awt$datatransfer$DataTransferer$DataFlavorComparator') extern class DataTransferer_DataFlavorComparator extends DataTransferer_IndexedComparator
+@:native('sun$awt$datatransfer$DataTransferer$DataFlavorComparator') extern class DataTransferer_DataFlavorComparator extends sun.awt.datatransfer.DataTransferer.DataTransferer_IndexedComparator
 {
 	private var flavorToFormatMap(default, null) : java.util.Map<Dynamic, Dynamic>;
 	
@@ -673,7 +673,7 @@ extern class DataTransferer
 * reverse index-based order: an object A is greater than an object B if and
 * only if A is less than B with the direct index-based order.
 */
-@:native('sun$awt$datatransfer$DataTransferer$IndexOrderComparator') extern class DataTransferer_IndexOrderComparator extends DataTransferer_IndexedComparator
+@:native('sun$awt$datatransfer$DataTransferer$IndexOrderComparator') extern class DataTransferer_IndexOrderComparator extends sun.awt.datatransfer.DataTransferer.DataTransferer_IndexedComparator
 {
 	@:overload public function new(indexMap : java.util.Map<Dynamic, Dynamic>) : Void;
 	

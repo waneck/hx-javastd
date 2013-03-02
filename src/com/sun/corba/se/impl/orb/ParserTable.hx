@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.orb;
 */
 extern class ParserTable
 {
-	@:overload public static function get() : ParserTable;
+	@:overload public static function get() : com.sun.corba.se.impl.orb.ParserTable;
 	
 	@:overload public function getParserData() : java.NativeArray<com.sun.corba.se.spi.orb.ParserData>;
 	

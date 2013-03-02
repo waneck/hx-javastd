@@ -30,7 +30,7 @@ extern class XPathParser extends com.sun.java_cup.internal.runtime.lr_parser
 	@:overload public function reduce_table() : java.NativeArray<java.NativeArray<java.StdTypes.Int16>>;
 	
 	/** Instance of action encapsulation class. */
-	private var action_obj : CUP$XPathParser$actions;
+	private var action_obj : com.sun.org.apache.xalan.internal.xsltc.compiler.XPathParser.CUP$XPathParser$actions;
 	
 	/** Action encapsulation object initializer. */
 	@:overload private function init_actions() : Void;

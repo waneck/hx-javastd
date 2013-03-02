@@ -57,31 +57,31 @@ extern class IndentingXMLStreamWriter extends com.sun.xml.internal.txw2.output.D
 	
 	@:overload public function setIndentStep(s : String) : Void;
 	
-	@:overload override public function writeStartDocument() : Void;
+	@:overload public function writeStartDocument() : Void;
 	
-	@:overload override public function writeStartDocument(version : String) : Void;
+	@:overload public function writeStartDocument(version : String) : Void;
 	
-	@:overload override public function writeStartDocument(encoding : String, version : String) : Void;
+	@:overload public function writeStartDocument(encoding : String, version : String) : Void;
 	
-	@:overload override public function writeStartElement(localName : String) : Void;
+	@:overload public function writeStartElement(localName : String) : Void;
 	
-	@:overload override public function writeStartElement(namespaceURI : String, localName : String) : Void;
+	@:overload public function writeStartElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload override public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload public function writeStartElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload override public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
+	@:overload public function writeEmptyElement(namespaceURI : String, localName : String) : Void;
 	
-	@:overload override public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
+	@:overload public function writeEmptyElement(prefix : String, localName : String, namespaceURI : String) : Void;
 	
-	@:overload override public function writeEmptyElement(localName : String) : Void;
+	@:overload public function writeEmptyElement(localName : String) : Void;
 	
-	@:overload override public function writeEndElement() : Void;
+	@:overload public function writeEndElement() : Void;
 	
-	@:overload override public function writeCharacters(text : String) : Void;
+	@:overload public function writeCharacters(text : String) : Void;
 	
-	@:overload override public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	@:overload public function writeCharacters(text : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
-	@:overload override public function writeCData(data : String) : Void;
+	@:overload public function writeCData(data : String) : Void;
 	
 	
 }

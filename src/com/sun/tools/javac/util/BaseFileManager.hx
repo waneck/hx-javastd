@@ -80,7 +80,7 @@ extern class BaseFileManager
 	
 	@:overload public function flushCache(file : javax.tools.JavaFileObject) : Void;
 	
-	private var contentCache(default, null) : java.util.Map<javax.tools.JavaFileObject, BaseFileManager_ContentCacheEntry>;
+	private var contentCache(default, null) : java.util.Map<javax.tools.JavaFileObject, com.sun.tools.javac.util.BaseFileManager.BaseFileManager_ContentCacheEntry>;
 	
 	@:overload public static function getKind(name : String) : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	

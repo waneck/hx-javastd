@@ -63,7 +63,7 @@ extern class MalformedByteSequenceException extends java.io.CharConversionExcept
 	*
 	* @return the localized message for this exception.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

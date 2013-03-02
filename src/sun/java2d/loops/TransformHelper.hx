@@ -36,13 +36,13 @@ extern class TransformHelper extends sun.java2d.loops.GraphicsPrimitive
 	* and the destination surface are the same surface
 	* with overlapping regions of pixels
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType) : TransformHelper;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.TransformHelper;
 	
-	@:overload @:synchronized public static function getFromCache(src : sun.java2d.loops.SurfaceType) : TransformHelper;
+	@:overload @:synchronized public static function getFromCache(src : sun.java2d.loops.SurfaceType) : sun.java2d.loops.TransformHelper;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -56,9 +56,9 @@ extern class TransformHelper extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$TransformHelper$TraceTransformHelper') @:internal extern class TransformHelper_TraceTransformHelper extends TransformHelper
+@:native('sun$java2d$loops$TransformHelper$TraceTransformHelper') @:internal extern class TransformHelper_TraceTransformHelper extends sun.java2d.loops.TransformHelper
 {
-	@:overload public function new(target : TransformHelper) : Void;
+	@:overload public function new(target : sun.java2d.loops.TransformHelper) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

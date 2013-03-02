@@ -145,7 +145,7 @@ package java.awt;
 	* @see     java.awt.Toolkit#createCheckbox(java.awt.Checkbox)
 	* @see     java.awt.Component#getToolkit()
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload public function addNotify() : Void;
 	
 	/**
 	* Gets the label of this check box.
@@ -307,7 +307,7 @@ package java.awt;
 	* @see #getItemListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this check box.
@@ -323,7 +323,7 @@ package java.awt;
 	* @see           #processItemEvent
 	* @since         JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes item events occurring on this check box by
@@ -360,7 +360,7 @@ package java.awt;
 	*
 	* @return    the parameter string of this check box
 	*/
-	@:overload override private function paramString() : String;
+	@:overload private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this Checkbox.
@@ -372,7 +372,7 @@ package java.awt;
 	*         AccessibleContext of this Checkbox
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

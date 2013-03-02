@@ -39,9 +39,9 @@ extern class PulseAudioSourceDataLine extends org.classpath.icedtea.pulseaudio.P
 {
 	public static var DEFAULT_SOURCEDATALINE_NAME(default, null) : String;
 	
-	@:overload @:synchronized override public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
+	@:overload @:synchronized public function open(format : javax.sound.sampled.AudioFormat, bufferSize : Int) : Void;
 	
-	@:overload override public function open(format : javax.sound.sampled.AudioFormat) : Void;
+	@:overload public function open(format : javax.sound.sampled.AudioFormat) : Void;
 	
 	@:overload public function native_set_volume(value : Single) : java.NativeArray<java.StdTypes.Int8>;
 	
@@ -51,7 +51,7 @@ extern class PulseAudioSourceDataLine extends org.classpath.icedtea.pulseaudio.P
 	
 	@:overload @:synchronized public function setCachedVolume(value : Single) : Void;
 	
-	@:overload override private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
+	@:overload private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
 	
 	@:overload public function write(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
@@ -67,9 +67,9 @@ extern class PulseAudioSourceDataLine extends org.classpath.icedtea.pulseaudio.P
 	
 	@:overload override public function flush() : Void;
 	
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:synchronized public function close() : Void;
 	
-	@:overload override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	
 }

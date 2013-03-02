@@ -64,7 +64,7 @@ package javax.management;
 	*/
 	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
-	@:overload override public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	
 }

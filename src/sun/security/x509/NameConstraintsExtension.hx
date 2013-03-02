@@ -71,7 +71,7 @@ extern class NameConstraintsExtension extends java.security.cert.Extension imple
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.
@@ -121,7 +121,7 @@ extern class NameConstraintsExtension extends java.security.cert.Extension imple
 	* @param newConstraints additional NameConstraints to be applied
 	* @throws IOException on error
 	*/
-	@:overload public function merge(newConstraints : NameConstraintsExtension) : Void;
+	@:overload public function merge(newConstraints : sun.security.x509.NameConstraintsExtension) : Void;
 	
 	/**
 	* check whether a certificate conforms to these NameConstraints.

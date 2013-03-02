@@ -31,7 +31,7 @@ package java.lang.invoke;
 {
 	
 }
-@:native('java$lang$invoke$AdapterMethodHandle$AsVarargsCollector') @:internal extern class AdapterMethodHandle_AsVarargsCollector extends AdapterMethodHandle
+@:native('java$lang$invoke$AdapterMethodHandle$AsVarargsCollector') @:internal extern class AdapterMethodHandle_AsVarargsCollector extends java.lang.invoke.AdapterMethodHandle
 {
 	@:overload override public function isVarargsCollector() : Bool;
 	

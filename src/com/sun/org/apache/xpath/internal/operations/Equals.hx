@@ -34,7 +34,7 @@ extern class Equals extends com.sun.org.apache.xpath.internal.operations.Operati
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload public function operate(left : com.sun.org.apache.xpath.internal.objects.XObject, right : com.sun.org.apache.xpath.internal.objects.XObject) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Execute a binary operation by calling execute on each of the operands,
@@ -47,7 +47,7 @@ extern class Equals extends com.sun.org.apache.xpath.internal.operations.Operati
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
+	@:overload public function bool(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : Bool;
 	
 	
 }

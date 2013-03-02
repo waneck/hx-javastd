@@ -83,7 +83,7 @@ extern class SunFontManager implements sun.java2d.FontSupport implements sun.fon
 	*
 	* @return the global SunFontManager instance
 	*/
-	@:overload public static function getInstance() : SunFontManager;
+	@:overload public static function getInstance() : sun.font.SunFontManager;
 	
 	@:overload public function getTrueTypeFilter() : java.io.FilenameFilter;
 	
@@ -217,7 +217,7 @@ extern class SunFontManager implements sun.java2d.FontSupport implements sun.fon
 	/**
 	* default implementation does nothing.
 	*/
-	@:overload public function populateHardcodedFileNameMap() : java.util.HashMap<String, SunFontManager_FamilyDescription>;
+	@:overload public function populateHardcodedFileNameMap() : java.util.HashMap<String, sun.font.SunFontManager.SunFontManager_FamilyDescription>;
 	
 	/* Note this return list excludes logical fonts and JRE fonts */
 	@:overload private function getFontNamesFromPlatform() : java.NativeArray<String>;

@@ -37,9 +37,9 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* All the constants of the {@link EnumConstantImpl} is linked in one list.
 	*/
-	private var next(default, null) : EnumConstantImpl<T, C, F, M>;
+	private var next(default, null) : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>;
 	
-	@:overload public function new(owner : com.sun.xml.internal.bind.v2.model.impl.EnumLeafInfoImpl<T, C, F, M>, name : String, lexical : String, next : EnumConstantImpl<T, C, F, M>) : Void;
+	@:overload public function new(owner : com.sun.xml.internal.bind.v2.model.impl.EnumLeafInfoImpl<T, C, F, M>, name : String, lexical : String, next : com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>) : Void;
 	
 	@:overload public function getEnclosingClass() : com.sun.xml.internal.bind.v2.model.core.EnumLeafInfo<T, C>;
 	

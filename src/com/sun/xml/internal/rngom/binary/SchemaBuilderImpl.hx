@@ -178,7 +178,7 @@ extern class SchemaBuilderImpl implements com.sun.xml.internal.rngom.ast.builder
 }
 @:native('com$sun$xml$internal$rngom$binary$SchemaBuilderImpl$GrammarImpl') @:internal extern class SchemaBuilderImpl_GrammarImpl implements com.sun.xml.internal.rngom.ast.builder.Grammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic> implements com.sun.xml.internal.rngom.ast.builder.Div<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic> implements com.sun.xml.internal.rngom.ast.builder.IncludedGrammar<Dynamic, Dynamic, Dynamic, Dynamic, Dynamic>
 {
-	@:overload private function new(sb : SchemaBuilderImpl, g : SchemaBuilderImpl_GrammarImpl) : Void;
+	@:overload private function new(sb : com.sun.xml.internal.rngom.binary.SchemaBuilderImpl, g : com.sun.xml.internal.rngom.binary.SchemaBuilderImpl.SchemaBuilderImpl_GrammarImpl) : Void;
 	
 	@:overload public function endGrammar(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : com.sun.xml.internal.rngom.ast.om.ParsedPattern;
 	

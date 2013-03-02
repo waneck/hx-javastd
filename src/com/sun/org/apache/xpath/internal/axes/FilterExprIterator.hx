@@ -48,7 +48,7 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	* Get the next node via getNextXXX.  Bottlenecked for derived class override.
 	* @return The next node on the axis, or DTM.NULL.
 	*/
-	@:overload override private function getNextNode() : Int;
+	@:overload private function getNextNode() : Int;
 	
 	/**
 	* Detaches the walker from the set which it iterated over, releasing
@@ -67,7 +67,7 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	/**
 	* Get the inner contained expression of this filter.
@@ -101,12 +101,12 @@ extern class FilterExprIterator extends com.sun.org.apache.xpath.internal.axes.B
 	*
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload override public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

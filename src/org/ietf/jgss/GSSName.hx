@@ -39,7 +39,7 @@ extern interface GSSName
 	*         {@link GSSException#BAD_NAMETYPE GSSException.BAD_NAMETYPE},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function equals(another : GSSName) : Bool;
+	@:overload public function equals(another : org.ietf.jgss.GSSName) : Bool;
 	
 	/**
 	* Creates a name that is canonicalized for some
@@ -58,7 +58,7 @@ extern interface GSSName
 	*         {@link GSSException#BAD_NAME GSSException.BAD_NAME},
 	*         {@link GSSException#FAILURE GSSException.FAILURE}
 	*/
-	@:overload public function canonicalize(mech : org.ietf.jgss.Oid) : GSSName;
+	@:overload public function canonicalize(mech : org.ietf.jgss.Oid) : org.ietf.jgss.GSSName;
 	
 	/**
 	* Returns a canonical contiguous byte representation of a mechanism name

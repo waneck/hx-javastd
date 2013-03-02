@@ -293,7 +293,7 @@ extern class X509Data extends com.sun.org.apache.xml.internal.security.utils.Sig
 	@:overload public function containsUnknownElement() : Bool;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

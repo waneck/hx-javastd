@@ -31,32 +31,32 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	* @param x component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installComponents() : Void;
+	@:overload private function installComponents() : Void;
 	
 	/**
 	* @inheritDoc
@@ -75,7 +75,7 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -86,7 +86,7 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.
@@ -110,19 +110,19 @@ extern class SynthOptionPaneUI extends javax.swing.plaf.basic.BasicOptionPaneUI 
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getSizeButtonsToSameWidth() : Bool;
+	@:overload private function getSizeButtonsToSameWidth() : Bool;
 	
 	/**
 	* Called from {@link #installComponents} to create a {@code Container}
 	* containing the body of the message. The icon is the created by calling
 	* {@link #addIcon}.
 	*/
-	@:overload override private function createMessageArea() : java.awt.Container;
+	@:overload private function createMessageArea() : java.awt.Container;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createSeparator() : java.awt.Container;
+	@:overload private function createSeparator() : java.awt.Container;
 	
 	
 }

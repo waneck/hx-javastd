@@ -29,19 +29,19 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	
 	@:overload public function getLoopHandle() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	@:overload override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload override public function isWildcard() : Bool;
+	@:overload public function isWildcard() : Bool;
 	
-	@:overload override public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
+	@:overload public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
-	@:overload override public function reduceKernelPattern() : Void;
+	@:overload public function reduceKernelPattern() : Void;
 	
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

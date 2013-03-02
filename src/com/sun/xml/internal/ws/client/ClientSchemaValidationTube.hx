@@ -31,7 +31,7 @@ extern class ClientSchemaValidationTube extends com.sun.xml.internal.ws.util.pip
 	
 	@:overload override private function isNoValidation() : Bool;
 	
-	@:overload private function new(that : ClientSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.client.ClientSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	

@@ -42,7 +42,7 @@ extern class UnixFileSystemProvider extends sun.nio.fs.AbstractFileSystemProvide
 	
 	@:overload override public function readAttributes<A : java.nio.file.attribute.BasicFileAttributes>(file : java.nio.file.Path, type : Class<A>, options : java.NativeArray<java.nio.file.LinkOption>) : A;
 	
-	@:overload override private function getFileAttributeView(obj : java.nio.file.Path, name : String, options : java.NativeArray<java.nio.file.LinkOption>) : sun.nio.fs.DynamicFileAttributeView;
+	@:overload private function getFileAttributeView(obj : java.nio.file.Path, name : String, options : java.NativeArray<java.nio.file.LinkOption>) : sun.nio.fs.DynamicFileAttributeView;
 	
 	@:overload override public function newFileChannel(obj : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.FileChannel;
 	

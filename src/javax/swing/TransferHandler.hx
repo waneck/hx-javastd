@@ -224,7 +224,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see #canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function importData(support : TransferHandler_TransferSupport) : Bool;
+	@:require(java6) @:overload public function importData(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
 	
 	/**
 	* Causes a transfer to a component from a clipboard or a
@@ -292,7 +292,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @see javax.swing.TransferHandler.TransferSupport#setDropAction
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function canImport(support : TransferHandler_TransferSupport) : Bool;
+	@:require(java6) @:overload public function canImport(support : javax.swing.TransferHandler.TransferHandler_TransferSupport) : Bool;
 	
 	/**
 	* Indicates whether a component will accept an import of the given
@@ -394,7 +394,7 @@ extern class TransferHandler implements java.io.Serializable
 	*
 	* @return The {@code TransferHandler} or {@code null}
 	*/
-	@:overload public function getTransferHandler() : TransferHandler;
+	@:overload public function getTransferHandler() : javax.swing.TransferHandler;
 	
 	
 }
@@ -510,7 +510,7 @@ extern class TransferHandler implements java.io.Serializable
 	* @throws IllegalStateException if this is not a drop
 	* @see #isDrop()
 	*/
-	@:overload public function getDropLocation() : TransferHandler_DropLocation;
+	@:overload public function getDropLocation() : javax.swing.TransferHandler.TransferHandler_DropLocation;
 	
 	/**
 	* Sets whether or not the drop location should be visually indicated

@@ -215,7 +215,7 @@ extern class Beans
 	/**
 	* Use the given ClassLoader rather than using the system class
 	*/
-	@:overload override private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
+	@:overload private function resolveClass(classDesc : java.io.ObjectStreamClass) : Class<Dynamic>;
 	
 	
 }

@@ -37,7 +37,7 @@ extern class ORBTypeComponentImpl extends com.sun.corba.se.spi.ior.TaggedCompone
 	
 	@:overload public function getORBType() : Int;
 	
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

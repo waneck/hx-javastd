@@ -152,7 +152,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        components along the horizontal axis
 	* @throws IllegalArgumentException if group is {@code null}
 	*/
-	@:overload public function setHorizontalGroup(group : GroupLayout_Group) : Void;
+	@:overload public function setHorizontalGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : Void;
 	
 	/**
 	* Sets the {@code Group} that positions and sizes
@@ -162,14 +162,14 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        components along the vertical axis
 	* @throws IllegalArgumentException if group is {@code null}
 	*/
-	@:overload public function setVerticalGroup(group : GroupLayout_Group) : Void;
+	@:overload public function setVerticalGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : Void;
 	
 	/**
 	* Creates and returns a {@code SequentialGroup}.
 	*
 	* @return a new {@code SequentialGroup}
 	*/
-	@:overload public function createSequentialGroup() : GroupLayout_SequentialGroup;
+	@:overload public function createSequentialGroup() : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} with an alignment of
@@ -179,7 +179,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @return a new {@code ParallelGroup}
 	* @see #createParallelGroup(Alignment)
 	*/
-	@:overload public function createParallelGroup() : GroupLayout_ParallelGroup;
+	@:overload public function createParallelGroup() : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} with the specified
@@ -193,7 +193,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @see #createBaselineGroup
 	* @see ParallelGroup
 	*/
-	@:overload public function createParallelGroup(alignment : GroupLayout_Alignment) : GroupLayout_ParallelGroup;
+	@:overload public function createParallelGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} with the specified
@@ -221,7 +221,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @see #createBaselineGroup
 	* @see GroupLayout.ParallelGroup
 	*/
-	@:overload public function createParallelGroup(alignment : GroupLayout_Alignment, resizable : Bool) : GroupLayout_ParallelGroup;
+	@:overload public function createParallelGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment, resizable : Bool) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Creates and returns a {@code ParallelGroup} that aligns it's
@@ -233,7 +233,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @see #createBaselineGroup
 	* @see ParallelGroup
 	*/
-	@:overload public function createBaselineGroup(resizable : Bool, anchorBaselineToTop : Bool) : GroupLayout_ParallelGroup;
+	@:overload public function createBaselineGroup(resizable : Bool, anchorBaselineToTop : Bool) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Forces the specified components to have the same size
@@ -554,7 +554,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 * @see #createParallelGroup
 * @since 1.6
 */
-@:require(java6) @:native('javax$swing$GroupLayout$Group') extern class GroupLayout_Group extends GroupLayout_Spring
+@:require(java6) @:native('javax$swing$GroupLayout$Group') extern class GroupLayout_Group extends javax.swing.GroupLayout.GroupLayout_Spring
 {
 	/**
 	* Adds a {@code Group} to this {@code Group}.
@@ -562,7 +562,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param group the {@code Group} to add
 	* @return this {@code Group}
 	*/
-	@:overload public function addGroup(group : GroupLayout_Group) : GroupLayout_Group;
+	@:overload public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}.
@@ -570,7 +570,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param component the {@code Component} to add
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(component : java.awt.Component) : GroupLayout_Group;
+	@:overload public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}
@@ -585,7 +585,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*            {@code PREFERRED_SIZE}
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : GroupLayout_Group;
+	@:overload public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a rigid gap to this {@code Group}.
@@ -595,7 +595,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code size} is less than
 	*         {@code 0}
 	*/
-	@:overload public function addGap(size : Int) : GroupLayout_Group;
+	@:overload public function addGap(size : Int) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	/**
 	* Adds a gap to this {@code Group} with the specified size.
@@ -607,7 +607,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         less than {@code 0}
 	* @return this {@code Group}
 	*/
-	@:overload public function addGap(min : Int, pref : Int, max : Int) : GroupLayout_Group;
+	@:overload public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_Group;
 	
 	
 }
@@ -629,12 +629,12 @@ extern class GroupLayout implements java.awt.LayoutManager2
 * @see #createSequentialGroup
 * @since 1.6
 */
-@:require(java6) @:native('javax$swing$GroupLayout$SequentialGroup') extern class GroupLayout_SequentialGroup extends GroupLayout_Group
+@:require(java6) @:native('javax$swing$GroupLayout$SequentialGroup') extern class GroupLayout_SequentialGroup extends javax.swing.GroupLayout.GroupLayout_Group
 {
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGroup(group : GroupLayout_Group) : GroupLayout_SequentialGroup;
+	@:overload override public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds a {@code Group} to this {@code Group}.
@@ -644,12 +644,12 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        be used to calculate the baseline for this {@code Group}
 	* @return this {@code Group}
 	*/
-	@:overload public function addGroup(useAsBaseline : Bool, group : GroupLayout_Group) : GroupLayout_SequentialGroup;
+	@:overload public function addGroup(useAsBaseline : Bool, group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component) : GroupLayout_SequentialGroup;
+	@:overload override public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}.
@@ -659,12 +659,12 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @param component the {@code Component} to add
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(useAsBaseline : Bool, component : java.awt.Component) : GroupLayout_SequentialGroup;
+	@:overload public function addComponent(useAsBaseline : Bool, component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : GroupLayout_SequentialGroup;
+	@:overload override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code Group}
@@ -681,17 +681,17 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*            {@code PREFERRED_SIZE}
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(useAsBaseline : Bool, component : java.awt.Component, min : Int, pref : Int, max : Int) : GroupLayout_SequentialGroup;
+	@:overload public function addComponent(useAsBaseline : Bool, component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(size : Int) : GroupLayout_SequentialGroup;
+	@:overload override public function addGap(size : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(min : Int, pref : Int, max : Int) : GroupLayout_SequentialGroup;
+	@:overload override public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between two
@@ -707,7 +707,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code comp2} is {@code null}
 	* @see LayoutStyle
 	*/
-	@:overload public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement) : GroupLayout_SequentialGroup;
+	@:overload public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between two
@@ -726,7 +726,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code comp2} is {@code null}
 	* @see LayoutStyle
 	*/
-	@:overload public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement, pref : Int, max : Int) : GroupLayout_SequentialGroup;
+	@:overload public function addPreferredGap(comp1 : javax.swing.JComponent, comp2 : javax.swing.JComponent, type : ComponentPlacement, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between the
@@ -747,7 +747,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code LayoutStyle.ComponentPlacement.RELATED} or
 	*         {@code LayoutStyle.ComponentPlacement.UNRELATED}
 	*/
-	@:overload public function addPreferredGap(type : ComponentPlacement) : GroupLayout_SequentialGroup;
+	@:overload public function addPreferredGap(type : ComponentPlacement) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between the
@@ -771,7 +771,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code LayoutStyle.ComponentPlacement.UNRELATED}
 	* @see LayoutStyle
 	*/
-	@:overload public function addPreferredGap(type : ComponentPlacement, pref : Int, max : Int) : GroupLayout_SequentialGroup;
+	@:overload public function addPreferredGap(type : ComponentPlacement, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between an edge
@@ -784,7 +784,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*
 	* @return this {@code SequentialGroup}
 	*/
-	@:overload public function addContainerGap() : GroupLayout_SequentialGroup;
+	@:overload public function addContainerGap() : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	/**
 	* Adds an element representing the preferred gap between one
@@ -800,14 +800,14 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*        {@code PREFERRED_SIZE} or a value &gt;= 0
 	* @return this {@code SequentialGroup}
 	*/
-	@:overload public function addContainerGap(pref : Int, max : Int) : GroupLayout_SequentialGroup;
+	@:overload public function addContainerGap(pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_SequentialGroup;
 	
 	
 }
 /**
 * Used by SequentialGroup in calculating resizability of springs.
 */
-@:native('javax$swing$GroupLayout$SpringDelta') @:internal extern class GroupLayout_SpringDelta implements java.lang.Comparable<GroupLayout_SpringDelta>
+@:native('javax$swing$GroupLayout$SpringDelta') @:internal extern class GroupLayout_SpringDelta implements java.lang.Comparable<javax.swing.GroupLayout.GroupLayout_SpringDelta>
 {
 	public var index(default, null) : Int;
 	
@@ -815,7 +815,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	
 	@:overload public function new(index : Int, delta : Int) : Void;
 	
-	@:overload public function compareTo(o : GroupLayout_SpringDelta) : Int;
+	@:overload public function compareTo(o : javax.swing.GroupLayout.GroupLayout_SpringDelta) : Int;
 	
 	@:overload public function toString() : String;
 	
@@ -903,32 +903,32 @@ extern class GroupLayout implements java.awt.LayoutManager2
 * @see #createBaselineGroup(boolean,boolean)
 * @since 1.6
 */
-@:require(java6) @:native('javax$swing$GroupLayout$ParallelGroup') extern class GroupLayout_ParallelGroup extends GroupLayout_Group
+@:require(java6) @:native('javax$swing$GroupLayout$ParallelGroup') extern class GroupLayout_ParallelGroup extends javax.swing.GroupLayout.GroupLayout_Group
 {
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGroup(group : GroupLayout_Group) : GroupLayout_ParallelGroup;
+	@:overload override public function addGroup(group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component) : GroupLayout_ParallelGroup;
+	@:overload override public function addComponent(component : java.awt.Component) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : GroupLayout_ParallelGroup;
+	@:overload override public function addComponent(component : java.awt.Component, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(pref : Int) : GroupLayout_ParallelGroup;
+	@:overload override public function addGap(pref : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addGap(min : Int, pref : Int, max : Int) : GroupLayout_ParallelGroup;
+	@:overload override public function addGap(min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Adds a {@code Group} to this {@code ParallelGroup} with the
@@ -942,7 +942,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code alignment} is
 	*         {@code null}
 	*/
-	@:overload public function addGroup(alignment : GroupLayout_Alignment, group : GroupLayout_Group) : GroupLayout_ParallelGroup;
+	@:overload public function addGroup(alignment : javax.swing.GroupLayout.GroupLayout_Alignment, group : javax.swing.GroupLayout.GroupLayout_Group) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code ParallelGroup} with
@@ -954,7 +954,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	* @throws IllegalArgumentException if {@code alignment} is
 	*         {@code null}
 	*/
-	@:overload public function addComponent(component : java.awt.Component, alignment : GroupLayout_Alignment) : GroupLayout_ParallelGroup;
+	@:overload public function addComponent(component : java.awt.Component, alignment : javax.swing.GroupLayout.GroupLayout_Alignment) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	/**
 	* Adds a {@code Component} to this {@code ParallelGroup} with the
@@ -969,7 +969,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*         {@code null}
 	* @return this {@code Group}
 	*/
-	@:overload public function addComponent(component : java.awt.Component, alignment : GroupLayout_Alignment, min : Int, pref : Int, max : Int) : GroupLayout_ParallelGroup;
+	@:overload public function addComponent(component : java.awt.Component, alignment : javax.swing.GroupLayout.GroupLayout_Alignment, min : Int, pref : Int, max : Int) : javax.swing.GroupLayout.GroupLayout_ParallelGroup;
 	
 	
 }
@@ -977,25 +977,25 @@ extern class GroupLayout implements java.awt.LayoutManager2
 * An extension of {@code ParallelGroup} that aligns its
 * constituent {@code Spring}s along the baseline.
 */
-@:native('javax$swing$GroupLayout$BaselineGroup') @:internal extern class GroupLayout_BaselineGroup extends GroupLayout_ParallelGroup
+@:native('javax$swing$GroupLayout$BaselineGroup') @:internal extern class GroupLayout_BaselineGroup extends javax.swing.GroupLayout.GroupLayout_ParallelGroup
 {
 	
 }
-@:native('javax$swing$GroupLayout$ComponentSpring') @:internal extern class GroupLayout_ComponentSpring extends GroupLayout_Spring
+@:native('javax$swing$GroupLayout$ComponentSpring') @:internal extern class GroupLayout_ComponentSpring extends javax.swing.GroupLayout.GroupLayout_Spring
 {
 	
 }
 /**
 * Spring representing the preferred distance between two components.
 */
-@:native('javax$swing$GroupLayout$PreferredGapSpring') @:internal extern class GroupLayout_PreferredGapSpring extends GroupLayout_Spring
+@:native('javax$swing$GroupLayout$PreferredGapSpring') @:internal extern class GroupLayout_PreferredGapSpring extends javax.swing.GroupLayout.GroupLayout_Spring
 {
 	
 }
 /**
 * Spring represented a certain amount of space.
 */
-@:native('javax$swing$GroupLayout$GapSpring') @:internal extern class GroupLayout_GapSpring extends GroupLayout_Spring
+@:native('javax$swing$GroupLayout$GapSpring') @:internal extern class GroupLayout_GapSpring extends javax.swing.GroupLayout.GroupLayout_Spring
 {
 	
 }
@@ -1005,11 +1005,11 @@ extern class GroupLayout implements java.awt.LayoutManager2
 * instance of this can either be dynamically created when
 * autocreatePadding is true, or explicitly created by the developer.
 */
-@:native('javax$swing$GroupLayout$AutoPreferredGapSpring') @:internal extern class GroupLayout_AutoPreferredGapSpring extends GroupLayout_Spring
+@:native('javax$swing$GroupLayout$AutoPreferredGapSpring') @:internal extern class GroupLayout_AutoPreferredGapSpring extends javax.swing.GroupLayout.GroupLayout_Spring
 {
-	@:overload public function setSource(source : GroupLayout_ComponentSpring) : Void;
+	@:overload public function setSource(source : javax.swing.GroupLayout.GroupLayout_ComponentSpring) : Void;
 	
-	@:overload public function setSources(sources : java.util.List<GroupLayout_ComponentSpring>) : Void;
+	@:overload public function setSources(sources : java.util.List<javax.swing.GroupLayout.GroupLayout_ComponentSpring>) : Void;
 	
 	@:overload public function setUserCreated(userCreated : Bool) : Void;
 	
@@ -1019,7 +1019,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	
 	@:overload public function calculatePadding(axis : Int) : Void;
 	
-	@:overload public function addTarget(spring : GroupLayout_ComponentSpring, axis : Int) : Void;
+	@:overload public function addTarget(spring : javax.swing.GroupLayout.GroupLayout_ComponentSpring, axis : Int) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -1031,9 +1031,9 @@ extern class GroupLayout implements java.awt.LayoutManager2
 */
 @:native('javax$swing$GroupLayout$AutoPreferredGapMatch') @:internal extern class GroupLayout_AutoPreferredGapMatch
 {
-	public var source(default, null) : GroupLayout_ComponentSpring;
+	public var source(default, null) : javax.swing.GroupLayout.GroupLayout_ComponentSpring;
 	
-	public var target(default, null) : GroupLayout_ComponentSpring;
+	public var target(default, null) : javax.swing.GroupLayout.GroupLayout_ComponentSpring;
 	
 	@:overload public function toString() : String;
 	
@@ -1042,9 +1042,9 @@ extern class GroupLayout implements java.awt.LayoutManager2
 /**
 * An extension of AutopaddingSpring used for container level padding.
 */
-@:native('javax$swing$GroupLayout$ContainerAutoPreferredGapSpring') @:internal extern class GroupLayout_ContainerAutoPreferredGapSpring extends GroupLayout_AutoPreferredGapSpring
+@:native('javax$swing$GroupLayout$ContainerAutoPreferredGapSpring') @:internal extern class GroupLayout_ContainerAutoPreferredGapSpring extends javax.swing.GroupLayout.GroupLayout_AutoPreferredGapSpring
 {
-	@:overload override public function addTarget(spring : GroupLayout_ComponentSpring, axis : Int) : Void;
+	@:overload override public function addTarget(spring : javax.swing.GroupLayout.GroupLayout_ComponentSpring, axis : Int) : Void;
 	
 	@:overload override public function calculatePadding(axis : Int) : Void;
 	
@@ -1052,9 +1052,9 @@ extern class GroupLayout implements java.awt.LayoutManager2
 }
 @:native('javax$swing$GroupLayout$LinkInfo') @:internal extern class GroupLayout_LinkInfo
 {
-	@:overload public function add(child : GroupLayout_ComponentInfo) : Void;
+	@:overload public function add(child : javax.swing.GroupLayout.GroupLayout_ComponentInfo) : Void;
 	
-	@:overload public function remove(info : GroupLayout_ComponentInfo) : Void;
+	@:overload public function remove(info : javax.swing.GroupLayout.GroupLayout_ComponentInfo) : Void;
 	
 	@:overload public function clearCachedSize() : Void;
 	
@@ -1085,7 +1085,7 @@ extern class GroupLayout implements java.awt.LayoutManager2
 	*/
 	@:overload public function isLinked(axis : Int) : Bool;
 	
-	@:overload public function getLinkInfo(axis : Int) : GroupLayout_LinkInfo;
+	@:overload public function getLinkInfo(axis : Int) : javax.swing.GroupLayout.GroupLayout_LinkInfo;
 	
 	@:overload public function clearCachedSize() : Void;
 	

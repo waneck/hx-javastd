@@ -338,12 +338,12 @@ extern class ConcurrentLinkedDeque<E> extends java.util.AbstractCollection<E> im
 	
 }
 /** Forward iterator */
-@:native('java$util$concurrent$ConcurrentLinkedDeque$Itr') @:internal extern class ConcurrentLinkedDeque_Itr extends ConcurrentLinkedDeque_AbstractItr
+@:native('java$util$concurrent$ConcurrentLinkedDeque$Itr') @:internal extern class ConcurrentLinkedDeque_Itr extends java.util.concurrent.ConcurrentLinkedDeque.ConcurrentLinkedDeque_AbstractItr
 {
 	
 }
 /** Descending iterator */
-@:native('java$util$concurrent$ConcurrentLinkedDeque$DescendingItr') @:internal extern class ConcurrentLinkedDeque_DescendingItr extends ConcurrentLinkedDeque_AbstractItr
+@:native('java$util$concurrent$ConcurrentLinkedDeque$DescendingItr') @:internal extern class ConcurrentLinkedDeque_DescendingItr extends java.util.concurrent.ConcurrentLinkedDeque.ConcurrentLinkedDeque_AbstractItr
 {
 	
 }

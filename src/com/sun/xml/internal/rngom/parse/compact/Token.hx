@@ -83,7 +83,7 @@ extern class Token implements java.io.Serializable
 	* token.  Otherwise, see below for a description of the contents of
 	* this field.
 	*/
-	public var next : Token;
+	public var next : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	/**
 	* This field is used to access special tokens that occur prior to this
@@ -97,7 +97,7 @@ extern class Token implements java.io.Serializable
 	* immediately follow it (without an intervening regular token).  If there
 	* is no such token, this field is null.
 	*/
-	public var specialToken : Token;
+	public var specialToken : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	/**
 	* An optional attribute value of the Token.
@@ -141,9 +141,9 @@ extern class Token implements java.io.Serializable
 	* to the following switch statement. Then you can cast matchedToken
 	* variable to the appropriate type and use sit in your lexical actions.
 	*/
-	@:overload public static function newToken(ofKind : Int, image : String) : Token;
+	@:overload public static function newToken(ofKind : Int, image : String) : com.sun.xml.internal.rngom.parse.compact.Token;
 	
-	@:overload public static function newToken(ofKind : Int) : Token;
+	@:overload public static function newToken(ofKind : Int) : com.sun.xml.internal.rngom.parse.compact.Token;
 	
 	
 }

@@ -135,7 +135,7 @@ extern class ImageGraphicAttribute extends java.awt.font.GraphicAttribute
 	* <code>ImageGraphicAttribute</code> equals <code>rhs</code>;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function equals(rhs : ImageGraphicAttribute) : Bool;
+	@:overload public function equals(rhs : java.awt.font.ImageGraphicAttribute) : Bool;
 	
 	
 }

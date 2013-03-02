@@ -70,12 +70,12 @@ extern class TABLESWITCH extends com.sun.org.apache.bcel.internal.generic.Select
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -85,7 +85,7 @@ extern class TABLESWITCH extends com.sun.org.apache.bcel.internal.generic.Select
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

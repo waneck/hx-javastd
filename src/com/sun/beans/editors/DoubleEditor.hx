@@ -29,7 +29,7 @@ package com.sun.beans.editors;
 */
 extern class DoubleEditor extends com.sun.beans.editors.NumberEditor
 {
-	@:overload override public function setAsText(text : String) : Void;
+	@:overload public function setAsText(text : String) : Void;
 	
 	
 }

@@ -37,7 +37,7 @@ package java.awt.font;
 	
 	@:overload public function isDirectionLTR() : Bool;
 	
-	@:overload public function getMetrics() : TextLine_TextLineMetrics;
+	@:overload public function getMetrics() : java.awt.font.TextLine.TextLine_TextLineMetrics;
 	
 	@:overload public function visualToLogical(visualIndex : Int) : Int;
 	
@@ -100,7 +100,7 @@ package java.awt.font;
 	* attributes==null is equivalent to using an empty Map for
 	* attributes
 	*/
-	@:overload public static function fastCreateTextLine(frc : java.awt.font.FontRenderContext, chars : java.NativeArray<java.StdTypes.Char16>, font : java.awt.Font, lm : sun.font.CoreMetrics, attributes : java.util.Map<Dynamic, Dynamic>) : TextLine;
+	@:overload public static function fastCreateTextLine(frc : java.awt.font.FontRenderContext, chars : java.NativeArray<java.StdTypes.Char16>, font : java.awt.Font, lm : sun.font.CoreMetrics, attributes : java.util.Map<Dynamic, Dynamic>) : java.awt.font.TextLine;
 	
 	/**
 	* Returns an array in logical order of the TextLineComponents on
@@ -119,18 +119,18 @@ package java.awt.font;
 	* range.  The range is relative to both the StyledParagraph and the
 	* character array.
 	*/
-	@:overload public static function createLineFromText(chars : java.NativeArray<java.StdTypes.Char16>, styledParagraph : java.awt.font.StyledParagraph, factory : sun.font.TextLabelFactory, isDirectionLTR : Bool, baselineOffsets : java.NativeArray<Single>) : TextLine;
+	@:overload public static function createLineFromText(chars : java.NativeArray<java.StdTypes.Char16>, styledParagraph : java.awt.font.StyledParagraph, factory : sun.font.TextLabelFactory, isDirectionLTR : Bool, baselineOffsets : java.NativeArray<Single>) : java.awt.font.TextLine;
 	
 	/**
 	* Create a TextLine from the text.  chars is just the text in the iterator.
 	*/
-	@:overload public static function standardCreateTextLine(frc : java.awt.font.FontRenderContext, text : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, baselineOffsets : java.NativeArray<Single>) : TextLine;
+	@:overload public static function standardCreateTextLine(frc : java.awt.font.FontRenderContext, text : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, baselineOffsets : java.NativeArray<Single>) : java.awt.font.TextLine;
 	
 	/*
 	* create a new line with characters between charStart and charLimit
 	* justified using the provided width and ratio.
 	*/
-	@:overload public function getJustifiedLine(justificationWidth : Single, justifyRatio : Single, justStart : Int, justLimit : Int) : TextLine;
+	@:overload public function getJustifiedLine(justificationWidth : Single, justifyRatio : Single, justStart : Int, justLimit : Int) : java.awt.font.TextLine;
 	
 	@:overload public static function getAdvanceBetween(components : java.NativeArray<sun.font.TextLineComponent>, start : Int, limit : Int) : Single;
 	

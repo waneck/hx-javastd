@@ -40,7 +40,7 @@ extern class MethodBreakpointSpec extends com.sun.tools.example.debug.bdi.Breakp
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function errorMessageFor(e : java.lang.Exception) : String;
+	@:overload public function errorMessageFor(e : java.lang.Exception) : String;
 	
 	@:overload public function toString() : String;
 	

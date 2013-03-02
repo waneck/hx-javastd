@@ -58,11 +58,11 @@ extern class Template extends com.sun.org.apache.xalan.internal.xsltc.compiler.T
 	*/
 	@:overload public function compareTo(template : Dynamic) : Int;
 	
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
-	@:overload override public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
+	@:overload public function getStylesheet() : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet;
 	
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* When the parser realises that it is dealign with a simplified stylesheet
@@ -78,9 +78,9 @@ extern class Template extends com.sun.org.apache.xalan.internal.xsltc.compiler.T
 	*/
 	@:overload public function parseSimplified(stylesheet : com.sun.org.apache.xalan.internal.xsltc.compiler.Stylesheet, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

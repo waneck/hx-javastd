@@ -60,7 +60,7 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	*/
 	@:overload public function put(uri : String, prefix : String) : Int;
 	
-	@:overload public function getCurrent() : NamespaceContextImpl_Element;
+	@:overload public function getCurrent() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
 	/**
 	* Returns the prefix index of the specified URI.
@@ -111,7 +111,7 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 */
 @:native('com$sun$xml$internal$bind$v2$runtime$output$NamespaceContextImpl$Element') extern class NamespaceContextImpl_Element
 {
-	public var context(default, null) : NamespaceContextImpl;
+	public var context(default, null) : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl;
 	
 	/**
 	* Returns true if this {@link Element} represents the root element that
@@ -119,9 +119,9 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	*/
 	@:overload public function isRootElement() : Bool;
 	
-	@:overload public function push() : NamespaceContextImpl_Element;
+	@:overload public function push() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
-	@:overload public function pop() : NamespaceContextImpl_Element;
+	@:overload public function pop() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
 	@:overload public function setTagName(prefix : Int, localName : String, outerPeer : Dynamic) : Void;
 	
@@ -161,7 +161,7 @@ extern class NamespaceContextImpl implements com.sun.xml.internal.bind.v2.runtim
 	/**
 	* Gets the parent {@link Element}.
 	*/
-	@:overload public function getParent() : NamespaceContextImpl_Element;
+	@:overload public function getParent() : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl.NamespaceContextImpl_Element;
 	
 	
 }

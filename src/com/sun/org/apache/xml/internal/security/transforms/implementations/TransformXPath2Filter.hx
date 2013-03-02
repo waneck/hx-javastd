@@ -29,7 +29,7 @@ extern class TransformXPath2Filter extends com.sun.org.apache.xml.internal.secur
 	*
 	* @inheritDoc
 	*/
-	@:overload override private function engineGetURI() : String;
+	@:overload private function engineGetURI() : String;
 	
 	/**
 	* Method enginePerformTransform
@@ -38,7 +38,7 @@ extern class TransformXPath2Filter extends com.sun.org.apache.xml.internal.secur
 	*
 	* @throws TransformationException
 	*/
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

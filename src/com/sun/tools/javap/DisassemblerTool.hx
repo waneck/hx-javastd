@@ -55,7 +55,7 @@ extern interface DisassemblerTool extends javax.tools.Tool extends javax.tools.O
 	* compilation units are of other kind than
 	* {@linkplain JavaFileObject.Kind#SOURCE source}
 	*/
-	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : DisassemblerTool_DisassemblerTask;
+	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : com.sun.tools.javap.DisassemblerTool.DisassemblerTool_DisassemblerTask;
 	
 	/**
 	* Gets a new instance of the standard file manager implementation

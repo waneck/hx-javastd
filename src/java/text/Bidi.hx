@@ -119,7 +119,7 @@ extern class Bidi
 	* @param lineStart the offset from the start of the paragraph to the start of the line.
 	* @param lineLimit the offset from the start of the paragraph to the limit of the line.
 	*/
-	@:overload public function createLineBidi(lineStart : Int, lineLimit : Int) : Bidi;
+	@:overload public function createLineBidi(lineStart : Int, lineLimit : Int) : java.text.Bidi;
 	
 	/**
 	* Return true if the line is not left-to-right or right-to-left.  This means it either has mixed runs of left-to-right

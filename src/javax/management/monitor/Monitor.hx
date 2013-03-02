@@ -348,7 +348,7 @@ package javax.management.monitor;
 	*  GETTERS/SETTERS
 	* ------------------------------------------
 	*/
-	@:overload public function setMonitorTask(task : Monitor_MonitorTask) : Void;
+	@:overload public function setMonitorTask(task : javax.management.monitor.Monitor.Monitor_MonitorTask) : Void;
 	
 	/*
 	* ------------------------------------------

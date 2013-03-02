@@ -25,7 +25,7 @@ package sun.nio.ch;
 */
 @:internal extern class UnixAsynchronousServerSocketChannelImpl extends sun.nio.ch.AsynchronousServerSocketChannelImpl implements sun.nio.ch.Port.Port_PollableChannel
 {
-	@:overload override public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
+	@:overload public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
 	
 	/**
 	* Invoked by event handling thread when listener socket is polled

@@ -57,7 +57,7 @@ extern class Phaser
 	*
 	* @param parent the parent phaser
 	*/
-	@:overload public function new(parent : Phaser) : Void;
+	@:overload public function new(parent : java.util.concurrent.Phaser) : Void;
 	
 	/**
 	* Creates a new phaser with the given parent and number of
@@ -71,7 +71,7 @@ extern class Phaser
 	* @throws IllegalArgumentException if parties less than zero
 	* or greater than the maximum number of parties supported
 	*/
-	@:overload public function new(parent : Phaser, parties : Int) : Void;
+	@:overload public function new(parent : java.util.concurrent.Phaser, parties : Int) : Void;
 	
 	/**
 	* Adds a new unarrived party to this phaser.  If an ongoing
@@ -268,7 +268,7 @@ extern class Phaser
 	*
 	* @return the parent of this phaser, or {@code null} if none
 	*/
-	@:overload public function getParent() : Phaser;
+	@:overload public function getParent() : java.util.concurrent.Phaser;
 	
 	/**
 	* Returns the root ancestor of this phaser, which is the same as
@@ -276,7 +276,7 @@ extern class Phaser
 	*
 	* @return the root ancestor of this phaser
 	*/
-	@:overload public function getRoot() : Phaser;
+	@:overload public function getRoot() : java.util.concurrent.Phaser;
 	
 	/**
 	* Returns {@code true} if this phaser has been terminated.

@@ -28,7 +28,7 @@ package sun.java2d.xr;
 */
 extern class XRDrawImage extends sun.java2d.pipe.DrawImage
 {
-	@:overload override private function renderImageXform(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, tx : java.awt.geom.AffineTransform, interpType : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgColor : java.awt.Color) : Void;
+	@:overload private function renderImageXform(sg : sun.java2d.SunGraphics2D, img : java.awt.Image, tx : java.awt.geom.AffineTransform, interpType : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgColor : java.awt.Color) : Void;
 	
 	
 }

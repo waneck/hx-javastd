@@ -57,7 +57,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see     java.lang.ThreadGroup#checkAccess()
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function new(parent : ThreadGroup, name : String) : Void;
+	@:require(java0) @:overload public function new(parent : java.lang.ThreadGroup, name : String) : Void;
 	
 	/**
 	* Returns the name of this thread group.
@@ -83,7 +83,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	* @see        java.lang.RuntimePermission
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function getParent() : ThreadGroup;
+	@:require(java0) @:overload @:final public function getParent() : java.lang.ThreadGroup;
 	
 	/**
 	* Returns the maximum priority of this thread group. Threads that are
@@ -176,7 +176,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*          <code>false</code> otherwise.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:final public function parentOf(g : ThreadGroup) : Bool;
+	@:require(java0) @:overload @:final public function parentOf(g : java.lang.ThreadGroup) : Bool;
 	
 	/**
 	* Determines if the currently running thread has permission to
@@ -310,7 +310,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function enumerate(list : java.NativeArray<ThreadGroup>) : Int;
+	@:require(java0) @:overload public function enumerate(list : java.NativeArray<java.lang.ThreadGroup>) : Int;
 	
 	/**
 	* Copies into the specified array references to every active
@@ -345,7 +345,7 @@ extern class ThreadGroup implements java.lang.Thread.Thread_UncaughtExceptionHan
 	*
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public function enumerate(list : java.NativeArray<ThreadGroup>, recurse : Bool) : Int;
+	@:require(java0) @:overload public function enumerate(list : java.NativeArray<java.lang.ThreadGroup>, recurse : Bool) : Int;
 	
 	/**
 	* Stops all threads in this thread group.

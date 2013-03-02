@@ -39,7 +39,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param configuration the current configuration of the doclet.
 	* @return an instance of the BuilderXML.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : LayoutParser;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.LayoutParser;
 	
 	/**
 	* Parse the XML specifying the layout of the documentation.

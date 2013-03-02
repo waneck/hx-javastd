@@ -81,29 +81,29 @@ extern class GIFImageMetadata extends com.sun.imageio.plugins.gif.GIFMetadata
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
-	@:overload override public function getStandardChromaNode() : IIOMetadataNode;
+	@:overload public function getStandardChromaNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardCompressionNode() : IIOMetadataNode;
+	@:overload public function getStandardCompressionNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardDataNode() : IIOMetadataNode;
+	@:overload public function getStandardDataNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload public function getStandardDimensionNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardTextNode() : IIOMetadataNode;
+	@:overload public function getStandardTextNode() : IIOMetadataNode;
 	
-	@:overload override public function getStandardTransparencyNode() : IIOMetadataNode;
+	@:overload public function getStandardTransparencyNode() : IIOMetadataNode;
 	
-	@:overload override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload override private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
+	@:overload private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload override private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
+	@:overload private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	
 }

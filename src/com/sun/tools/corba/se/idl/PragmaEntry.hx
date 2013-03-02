@@ -43,9 +43,9 @@ extern class PragmaEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
-	@:overload private function new(that : PragmaEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.PragmaEntry) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/** Invoke the Include type generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,12 +53,12 @@ extern class PragmaEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the Include type generator.
 	@returns an object which implements the IncludeGen interface.
 	@see IncludeGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	@:overload public function data() : String;
 	

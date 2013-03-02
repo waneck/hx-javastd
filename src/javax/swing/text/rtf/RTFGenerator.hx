@@ -47,7 +47,7 @@ package javax.swing.text.rtf;
 	
 	public static var defaultFontFamily(default, null) : String;
 	
-	private static var textKeywords : java.NativeArray<RTFGenerator_CharacterKeywordPair>;
+	private static var textKeywords : java.NativeArray<javax.swing.text.rtf.RTFGenerator.RTFGenerator_CharacterKeywordPair>;
 	
 	@:overload public static function writeDocument(d : javax.swing.text.Document, to : java.io.OutputStream) : Void;
 	

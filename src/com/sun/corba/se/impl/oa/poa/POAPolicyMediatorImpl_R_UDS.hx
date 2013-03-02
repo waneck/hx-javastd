@@ -25,19 +25,19 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class POAPolicyMediatorImpl_R_UDS extends com.sun.corba.se.impl.oa.poa.POAPolicyMediatorBase_R
 {
-	@:overload override private function internalGetServant(id : java.NativeArray<java.StdTypes.Int8>, operation : String) : Dynamic;
+	@:overload private function internalGetServant(id : java.NativeArray<java.StdTypes.Int8>, operation : String) : Dynamic;
 	
-	@:overload override public function etherealizeAll() : Void;
+	@:overload public function etherealizeAll() : Void;
 	
-	@:overload override public function getServantManager() : org.omg.PortableServer.ServantManager;
+	@:overload public function getServantManager() : org.omg.PortableServer.ServantManager;
 	
-	@:overload override public function setServantManager(servantManager : org.omg.PortableServer.ServantManager) : Void;
+	@:overload public function setServantManager(servantManager : org.omg.PortableServer.ServantManager) : Void;
 	
-	@:overload override public function getDefaultServant() : org.omg.PortableServer.Servant;
+	@:overload public function getDefaultServant() : org.omg.PortableServer.Servant;
 	
-	@:overload override public function setDefaultServant(servant : org.omg.PortableServer.Servant) : Void;
+	@:overload public function setDefaultServant(servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload override public function idToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
+	@:overload public function idToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
 	
 	
 }

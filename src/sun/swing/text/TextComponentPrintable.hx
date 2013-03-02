@@ -62,9 +62,9 @@ extern class TextComponentPrintable implements sun.swing.text.CountingPrintable
 *  we do not call it Segment to avoid confusion with
 *  javax.swing.text.Segment
 */
-@:native('sun$swing$text$TextComponentPrintable$IntegerSegment') @:internal extern class TextComponentPrintable_IntegerSegment implements java.lang.Comparable<TextComponentPrintable_IntegerSegment>
+@:native('sun$swing$text$TextComponentPrintable$IntegerSegment') @:internal extern class TextComponentPrintable_IntegerSegment implements java.lang.Comparable<sun.swing.text.TextComponentPrintable.TextComponentPrintable_IntegerSegment>
 {
-	@:overload public function compareTo(object : TextComponentPrintable_IntegerSegment) : Int;
+	@:overload public function compareTo(object : sun.swing.text.TextComponentPrintable.TextComponentPrintable_IntegerSegment) : Int;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	

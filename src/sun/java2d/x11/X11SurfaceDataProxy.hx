@@ -49,7 +49,7 @@ extern class X11SurfaceDataProxy extends sun.java2d.SurfaceDataProxy implements 
 * Proxy for opaque source images.
 * This proxy can accelerate unscaled Src copies.
 */
-@:native('sun$java2d$x11$X11SurfaceDataProxy$Opaque') extern class X11SurfaceDataProxy_Opaque extends X11SurfaceDataProxy
+@:native('sun$java2d$x11$X11SurfaceDataProxy$Opaque') extern class X11SurfaceDataProxy_Opaque extends sun.java2d.x11.X11SurfaceDataProxy
 {
 	@:overload public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
 	
@@ -64,7 +64,7 @@ extern class X11SurfaceDataProxy extends sun.java2d.SurfaceDataProxy implements 
 * This proxy can accelerate unscaled Src copies or
 * unscaled SrcOver copies that use an opaque bgColor.
 */
-@:native('sun$java2d$x11$X11SurfaceDataProxy$Bitmask') extern class X11SurfaceDataProxy_Bitmask extends X11SurfaceDataProxy
+@:native('sun$java2d$x11$X11SurfaceDataProxy$Bitmask') extern class X11SurfaceDataProxy_Bitmask extends sun.java2d.x11.X11SurfaceDataProxy
 {
 	@:overload public function new(x11gc : sun.awt.X11GraphicsConfig) : Void;
 	

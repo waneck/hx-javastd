@@ -49,12 +49,12 @@ extern class NTLMAuthentication extends sun.net.www.protocol.http.Authentication
 	/**
 	* @return true if this authentication supports preemptive authorization
 	*/
-	@:overload override public function supportsPreemptiveAuthorization() : Bool;
+	@:overload public function supportsPreemptiveAuthorization() : Bool;
 	
 	/**
 	* Not supported. Must use the setHeaders() method
 	*/
-	@:overload override public function getHeaderValue(url : java.net.URL, method : String) : String;
+	@:overload public function getHeaderValue(url : java.net.URL, method : String) : String;
 	
 	/**
 	* Check if the header indicates that the current auth. parameters are stale.
@@ -64,7 +64,7 @@ extern class NTLMAuthentication extends sun.net.www.protocol.http.Authentication
 	* returning false means we have to go back to the user to ask for a new
 	* username password.
 	*/
-	@:overload override public function isAuthorizationStale(header : String) : Bool;
+	@:overload public function isAuthorizationStale(header : String) : Bool;
 	
 	/**
 	* Set header(s) on the given connection.
@@ -74,14 +74,14 @@ extern class NTLMAuthentication extends sun.net.www.protocol.http.Authentication
 	* @param raw The raw header field.
 	* @return true if all goes well, false if no headers were set.
 	*/
-	@:overload @:synchronized override public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
+	@:overload @:synchronized public function setHeaders(conn : sun.net.www.protocol.http.HttpURLConnection, p : sun.net.www.HeaderParser, raw : String) : Bool;
 	
 	
 }
 @:internal extern class B64Encoder extends sun.misc.BASE64Encoder
 {
 	/* to force it to to the entire encoding in one line */
-	@:overload override private function bytesPerLine() : Int;
+	@:overload private function bytesPerLine() : Int;
 	
 	
 }

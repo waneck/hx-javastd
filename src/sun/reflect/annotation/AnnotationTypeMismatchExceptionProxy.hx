@@ -25,7 +25,7 @@ package sun.reflect.annotation;
 */
 @:internal extern class AnnotationTypeMismatchExceptionProxy extends sun.reflect.annotation.ExceptionProxy
 {
-	@:overload override private function generateException() : java.lang.RuntimeException;
+	@:overload private function generateException() : java.lang.RuntimeException;
 	
 	
 }

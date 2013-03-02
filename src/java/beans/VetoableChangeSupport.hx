@@ -246,7 +246,7 @@ extern class VetoableChangeSupport implements java.io.Serializable
 	* @param length  the array length
 	* @return        an array with specified length
 	*/
-	@:overload override private function newArray(length : Int) : java.NativeArray<java.beans.VetoableChangeListener>;
+	@:overload private function newArray(length : Int) : java.NativeArray<java.beans.VetoableChangeListener>;
 	
 	/**
 	* Creates a {@link VetoableChangeListenerProxy VetoableChangeListenerProxy}

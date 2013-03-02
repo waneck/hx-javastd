@@ -126,7 +126,7 @@ extern class Attribute
 	* @return a <i>new</i> {@link Attribute} object corresponding to the given
 	*         bytes.
 	*/
-	@:overload private function read(cr : com.sun.xml.internal.ws.org.objectweb.asm.ClassReader, off : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, codeOff : Int, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : Attribute;
+	@:overload private function read(cr : com.sun.xml.internal.ws.org.objectweb.asm.ClassReader, off : Int, len : Int, buf : java.NativeArray<java.StdTypes.Char16>, codeOff : Int, labels : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Label>) : com.sun.xml.internal.ws.org.objectweb.asm.Attribute;
 	
 	/**
 	* Returns the byte array form of this attribute.

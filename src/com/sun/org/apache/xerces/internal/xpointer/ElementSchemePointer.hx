@@ -159,7 +159,7 @@ package com.sun.org.apache.xerces.internal.xpointer;
 	* XPath expression. This is a convenient way of allowing only
 	* a subset of XPath.
 	*/
-	@:overload private function addToken(tokens : ElementSchemePointer_Tokens, token : Int) : Void;
+	@:overload private function addToken(tokens : com.sun.org.apache.xerces.internal.xpointer.ElementSchemePointer.ElementSchemePointer_Tokens, token : Int) : Void;
 	
 	
 }

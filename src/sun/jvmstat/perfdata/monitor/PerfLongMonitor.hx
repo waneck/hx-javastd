@@ -45,7 +45,7 @@ extern class PerfLongMonitor extends sun.jvmstat.monitor.AbstractMonitor impleme
 	* @return Object - the current value of the the LongInstrument. The
 	*                  return type is guaranteed to be of type Long.
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload public function getValue() : Dynamic;
 	
 	/**
 	* Return the current value of the LongInstrument as an long.

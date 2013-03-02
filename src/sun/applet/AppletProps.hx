@@ -25,7 +25,7 @@ package sun.applet;
 */
 @:internal extern class AppletProps extends java.awt.Frame
 {
-	@:overload override public function action(evt : java.awt.Event, obj : Dynamic) : Bool;
+	@:overload public function action(evt : java.awt.Event, obj : Dynamic) : Bool;
 	
 	
 }
@@ -34,7 +34,7 @@ package sun.applet;
 	/* Dialog class to display property-related errors to user */
 	@:overload public function new(parent : java.awt.Frame, title : String, message : String, buttonText : String) : Void;
 	
-	@:overload override public function action(event : java.awt.Event, object : Dynamic) : Bool;
+	@:overload public function action(event : java.awt.Event, object : Dynamic) : Bool;
 	
 	
 }

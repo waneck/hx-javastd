@@ -34,7 +34,7 @@ package com.sun.tools.hat.internal.server;
 */
 extern class RefsByTypeQuery extends com.sun.tools.hat.internal.server.QueryHandler
 {
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }

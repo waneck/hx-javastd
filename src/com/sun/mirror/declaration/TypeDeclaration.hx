@@ -132,7 +132,7 @@ package com.sun.mirror.declaration;
 	*
 	* @see com.sun.mirror.util.DeclarationFilter
 	*/
-	@:overload public function getNestedTypes() : java.util.Collection<TypeDeclaration>;
+	@:overload public function getNestedTypes() : java.util.Collection<com.sun.mirror.declaration.TypeDeclaration>;
 	
 	
 }

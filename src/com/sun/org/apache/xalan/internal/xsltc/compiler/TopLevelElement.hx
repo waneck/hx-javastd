@@ -32,12 +32,12 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Type check all the children of this node.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate this node into JVM bytecodes.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Translate this node into a fresh instruction list.
@@ -45,13 +45,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	*/
 	@:overload public function compile(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	/**
 	* Add a dependency with other top-level elements like
 	* variables, parameters or keys.
 	*/
-	@:overload public function addDependency(other : TopLevelElement) : Void;
+	@:overload public function addDependency(other : com.sun.org.apache.xalan.internal.xsltc.compiler.TopLevelElement) : Void;
 	
 	/**
 	* Get the list of dependencies with other top-level elements

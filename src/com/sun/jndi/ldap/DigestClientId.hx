@@ -25,11 +25,11 @@ package com.sun.jndi.ldap;
 */
 @:internal extern class DigestClientId extends com.sun.jndi.ldap.SimpleClientId
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

@@ -68,7 +68,7 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	
 	/** Does list have no elements?
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
 	/** Does list have elements?
 	*/
@@ -78,7 +78,7 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	*/
 	@:overload public function length() : Int;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	@:overload public function setTail(tail : java.util.List<A>) : java.util.List<A>;
 	
@@ -117,9 +117,9 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	/** Copy successive elements of this list into given vector until
 	*  list is exhausted or end of vector is reached.
 	*/
-	@:overload override public function toArray<T>(vec : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload public function toArray<T>(vec : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
 	/** Form a string listing all elements with given separator character.
 	*/
@@ -127,7 +127,7 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	
 	/** Form a string listing all elements with comma as the separator character.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/** Compute a hash code, overrides Object
 	*  @see java.util.List#hashCode
@@ -145,7 +145,7 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	
 	/** Does the list contain the specified element?
 	*/
-	@:overload override public function contains(x : Dynamic) : Bool;
+	@:overload public function contains(x : Dynamic) : Bool;
 	
 	/** The last element in the list, if any, or null.
 	*/
@@ -153,7 +153,7 @@ extern class List<A> extends java.util.AbstractCollection<A> implements java.uti
 	
 	@:overload public static function convert<T>(klass : Class<T>, list : java.util.List<Dynamic>) : java.util.List<T>;
 	
-	@:overload override public function iterator() : java.util.Iterator<A>;
+	@:overload public function iterator() : java.util.Iterator<A>;
 	
 	@:overload public function get(index : Int) : A;
 	

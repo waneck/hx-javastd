@@ -34,7 +34,7 @@ extern class Warner
 	* This code and its internal interfaces are subject to change or
 	* deletion without notice.</b>
 	*/
-	public static var noWarnings(default, null) : Warner;
+	public static var noWarnings(default, null) : com.sun.tools.javac.util.Warner;
 	
 	private var warned : Bool;
 	

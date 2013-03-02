@@ -28,12 +28,12 @@ extern class DialogTypeSelection extends javax.print.attribute.EnumSyntax implem
 	/**
 	*
 	*/
-	public static var NATIVE(default, null) : DialogTypeSelection;
+	public static var NATIVE(default, null) : javax.print.attribute.standard.DialogTypeSelection;
 	
 	/**
 	*
 	*/
-	public static var COMMON(default, null) : DialogTypeSelection;
+	public static var COMMON(default, null) : javax.print.attribute.standard.DialogTypeSelection;
 	
 	/**
 	* Construct a new dialog type selection enumeration value with the
@@ -46,12 +46,12 @@ extern class DialogTypeSelection extends javax.print.attribute.EnumSyntax implem
 	/**
 	* Returns the string table for class DialogTypeSelection.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class DialogTypeSelection.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

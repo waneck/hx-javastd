@@ -35,7 +35,7 @@ extern class AbstractSchemaValidationTube extends com.sun.xml.internal.ws.api.pi
 	
 	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : AbstractSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	@:overload @:abstract private function getValidator() : javax.xml.validation.Validator;
 	
@@ -54,7 +54,7 @@ extern class AbstractSchemaValidationTube extends com.sun.xml.internal.ws.api.pi
 	* That should work with any schema processor, not just those which
 	* honour multiple imports for the same namespace."
 	*/
-	@:overload private function getSchemaSources(docs : java.lang.Iterable<com.sun.xml.internal.ws.api.server.SDDocument>, mdresolver : AbstractSchemaValidationTube_MetadataResolverImpl) : java.NativeArray<javax.xml.transform.Source>;
+	@:overload private function getSchemaSources(docs : java.lang.Iterable<com.sun.xml.internal.ws.api.server.SDDocument>, mdresolver : com.sun.xml.internal.ws.util.pipe.AbstractSchemaValidationTube.AbstractSchemaValidationTube_MetadataResolverImpl) : java.NativeArray<javax.xml.transform.Source>;
 	
 	@:overload private function doProcess(packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	

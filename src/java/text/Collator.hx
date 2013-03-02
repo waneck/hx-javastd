@@ -131,7 +131,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @return the Collator for the default locale.(for example, en_US)
 	* @see java.util.Locale#getDefault
 	*/
-	@:overload @:synchronized public static function getInstance() : Collator;
+	@:overload @:synchronized public static function getInstance() : java.text.Collator;
 	
 	/**
 	* Gets the Collator for the desired locale.
@@ -140,7 +140,7 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 	* @see java.util.Locale
 	* @see java.util.ResourceBundle
 	*/
-	@:overload @:synchronized public static function getInstance(desiredLocale : java.util.Locale) : Collator;
+	@:overload @:synchronized public static function getInstance(desiredLocale : java.util.Locale) : java.text.Collator;
 	
 	/**
 	* Compares the source string to the target string according to the
@@ -313,9 +313,9 @@ extern class Collator implements java.util.Comparator<Dynamic> implements java.l
 * Obtains a Collator instance from a CollatorProvider
 * implementation.
 */
-@:native('java$text$Collator$CollatorGetter') @:internal extern class Collator_CollatorGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.CollatorProvider, Collator>
+@:native('java$text$Collator$CollatorGetter') @:internal extern class Collator_CollatorGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.CollatorProvider, java.text.Collator>
 {
-	@:overload public function getObject(collatorProvider : java.text.spi.CollatorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : Collator;
+	@:overload public function getObject(collatorProvider : java.text.spi.CollatorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.Collator;
 	
 	
 }

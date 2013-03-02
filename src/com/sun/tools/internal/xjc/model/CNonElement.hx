@@ -28,7 +28,7 @@ extern interface CNonElement extends com.sun.xml.internal.bind.v2.model.core.Non
 	/**
 	* Guaranteed to return this.
 	*/
-	@:overload public function getInfo() : CNonElement;
+	@:overload public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
 	
 	/**
 	* Guaranteed to return false.

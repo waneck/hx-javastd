@@ -34,7 +34,7 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	* return value will be null, and errors will have been reported to
 	* the supplied BatchEnvironment.
 	*/
-	@:overload public static function forClass(env : sun.rmi.rmic.BatchEnvironment, implClassDef : sun.tools.java.ClassDefinition) : RemoteClass;
+	@:overload public static function forClass(env : sun.rmi.rmic.BatchEnvironment, implClassDef : sun.tools.java.ClassDefinition) : sun.rmi.rmic.RemoteClass;
 	
 	/**
 	* Return the ClassDefinition for this class.
@@ -73,7 +73,7 @@ extern class RemoteClass implements sun.rmi.rmic.RMIConstants
 	* to its "operation number" in the JDK 1.1 version of the
 	* stub/skeleton protocol.
 	*/
-	@:overload public function getRemoteMethods() : java.NativeArray<RemoteClass_Method>;
+	@:overload public function getRemoteMethods() : java.NativeArray<sun.rmi.rmic.RemoteClass.RemoteClass_Method>;
 	
 	/**
 	* Return the "interface hash" used to match a stub/skeleton pair for

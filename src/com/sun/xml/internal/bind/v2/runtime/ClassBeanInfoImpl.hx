@@ -33,7 +33,7 @@ extern class ClassBeanInfoImpl<BeanT> extends com.sun.xml.internal.bind.v2.runti
 	/**
 	* {@link ClassBeanInfoImpl} that represents the super class of {@link #jaxbType}.
 	*/
-	public var superClazz(default, null) : ClassBeanInfoImpl<BeanT>;
+	public var superClazz(default, null) : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<BeanT>;
 	
 	@:overload override private function link(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	

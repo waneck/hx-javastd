@@ -27,9 +27,9 @@ extern class WBMPImageWriterSpi extends javax.imageio.spi.ImageWriterSpi
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getDescription(locale : java.util.Locale) : String;
+	@:overload public function getDescription(locale : java.util.Locale) : String;
 	
-	@:overload override public function onRegistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
+	@:overload public function onRegistration(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
 	
 	@:overload override public function canEncodeImage(type : javax.imageio.ImageTypeSpecifier) : Bool;
 	

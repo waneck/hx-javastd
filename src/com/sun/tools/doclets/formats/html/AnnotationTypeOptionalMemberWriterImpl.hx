@@ -42,7 +42,7 @@ extern class AnnotationTypeOptionalMemberWriterImpl extends com.sun.tools.doclet
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMemberSummaryHeader(classDoc : com.sun.javadoc.ClassDoc, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload public function getMemberSummaryHeader(classDoc : com.sun.javadoc.ClassDoc, memberSummaryTree : com.sun.tools.doclets.internal.toolkit.Content) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
@@ -52,37 +52,37 @@ extern class AnnotationTypeOptionalMemberWriterImpl extends com.sun.tools.doclet
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addSummaryLabel(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload public function addSummaryLabel(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getTableSummary() : String;
+	@:overload public function getTableSummary() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getCaption() : String;
+	@:overload public function getCaption() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getSummaryTableHeader(member : com.sun.javadoc.ProgramElementDoc) : java.NativeArray<String>;
+	@:overload public function getSummaryTableHeader(member : com.sun.javadoc.ProgramElementDoc) : java.NativeArray<String>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addSummaryAnchor(cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload public function addSummaryAnchor(cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getNavSummaryLink(cd : com.sun.javadoc.ClassDoc, link : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavSummaryLink(cd : com.sun.javadoc.ClassDoc, link : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

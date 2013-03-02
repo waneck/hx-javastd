@@ -1212,7 +1212,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            connection, prepared statement, and result set
 	* @see java.sql.Statement#setFetchDirection
 	*/
-	@:overload override public function setFetchDirection(direction : Int) : Void;
+	@:overload public function setFetchDirection(direction : Int) : Void;
 	
 	/**
 	* Returns the fetch direction for this
@@ -1224,7 +1224,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload override public function getFetchDirection() : Int;
+	@:overload public function getFetchDirection() : Int;
 	
 	/**
 	* Gives the JDBC driver a hint as to the number of rows that should
@@ -1243,7 +1243,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            connection, prepared statement, and result set
 	*
 	*/
-	@:overload override public function setFetchSize(rows : Int) : Void;
+	@:overload public function setFetchSize(rows : Int) : Void;
 	
 	/**
 	*
@@ -1255,7 +1255,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload override public function getType() : Int;
+	@:overload public function getType() : Int;
 	
 	/**
 	* Returns the concurrency mode of this rowset's <code>ResultSet</code> object.
@@ -1268,7 +1268,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*            or (2) this rowset does not currently have a valid connection,
 	*            prepared statement, and result set
 	*/
-	@:overload override public function getConcurrency() : Int;
+	@:overload public function getConcurrency() : Int;
 	
 	/**
 	* Indicates whether the current row has been updated.  The value returned
@@ -2841,7 +2841,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if an empty string is provided as the command value
 	* @see #getCommand
 	*/
-	@:overload override public function setCommand(command : String) : Void;
+	@:overload public function setCommand(command : String) : Void;
 	
 	/**
 	* Sets the <code>dataSourceName</code> property for this <code>JdbcRowSet</code>
@@ -2872,7 +2872,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*          <code>dataSourceName</code> property
 	* @see #getDataSourceName
 	*/
-	@:overload override public function setDataSourceName(dsName : String) : Void;
+	@:overload public function setDataSourceName(dsName : String) : Void;
 	
 	/**
 	* Sets the Url property for this <code>JdbcRowSet</code> object
@@ -2914,7 +2914,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*         empty string)
 	* @see #getUrl
 	*/
-	@:overload override public function setUrl(url : String) : Void;
+	@:overload public function setUrl(url : String) : Void;
 	
 	/**
 	* Sets the username property for this <code>JdbcRowSet</code> object
@@ -2936,7 +2936,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*     is supplied to the data source to create a connection. It may be null.
 	* @see #getUsername
 	*/
-	@:overload override public function setUsername(uname : String) : Void;
+	@:overload public function setUsername(uname : String) : Void;
 	
 	/**
 	* Sets the password property for this <code>JdbcRowSet</code> object
@@ -2957,7 +2957,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @param password the <code>String</code> object that represents the password
 	*     that must be supplied to the database to create a connection
 	*/
-	@:overload override public function setPassword(password : String) : Void;
+	@:overload public function setPassword(password : String) : Void;
 	
 	/**
 	* Sets the type for this <code>RowSet</code> object to the specified type.
@@ -2975,7 +2975,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @see #getConcurrency
 	* @see #getType
 	*/
-	@:overload override public function setType(type : Int) : Void;
+	@:overload public function setType(type : Int) : Void;
 	
 	/**
 	* Sets the concurrency for this <code>RowSet</code> object to
@@ -2993,7 +2993,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @see #getConcurrency
 	* @see #isReadOnly
 	*/
-	@:overload override public function setConcurrency(concur : Int) : Void;
+	@:overload public function setConcurrency(concur : Int) : Void;
 	
 	/**
 	* Sets the transaction isolation property for this JDBC <code>RowSet</code> object to the given
@@ -3019,7 +3019,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @see javax.sql.rowset.spi.SyncProvider
 	* @see #getTransactionIsolation
 	*/
-	@:overload override public function setTransactionIsolation(transIso : Int) : Void;
+	@:overload public function setTransactionIsolation(transIso : Int) : Void;
 	
 	/**
 	* Sets the maximum number of rows that this <code>RowSet</code> object may contain to
@@ -3034,7 +3034,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*     if <i>max</i> is less than the <code>fetchSize</code> of the
 	*     <code>RowSet</code>
 	*/
-	@:overload override public function setMaxRows(mRows : Int) : Void;
+	@:overload public function setMaxRows(mRows : Int) : Void;
 	
 	/**
 	* Retrieves the value of the designated <code>SQL XML</code> parameter as a
@@ -3204,7 +3204,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setSQLXML(parameterIndex : Int, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload public function setSQLXML(parameterIndex : Int, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.SQLXML</code> object. The driver converts this to an
@@ -3214,7 +3214,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setSQLXML(parameterName : String, xmlObject : java.sql.SQLXML) : Void;
+	@:require(java6) @:overload public function setSQLXML(parameterName : String, xmlObject : java.sql.SQLXML) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
@@ -3227,7 +3227,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setRowId(parameterIndex : Int, x : java.sql.RowId) : Void;
+	@:require(java6) @:overload public function setRowId(parameterIndex : Int, x : java.sql.RowId) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.RowId</code> object. The
@@ -3239,7 +3239,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLException if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setRowId(parameterName : String, x : java.sql.RowId) : Void;
+	@:require(java6) @:overload public function setRowId(parameterName : String, x : java.sql.RowId) : Void;
 	
 	/**
 	* Sets the designated paramter to the given <code>String</code> object.
@@ -3256,7 +3256,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNString(parameterIndex : Int, value : String) : Void;
+	@:require(java6) @:overload public function setNString(parameterIndex : Int, value : String) : Void;
 	
 	/**
 	* Sets the designated parameter in this <code>RowSet</code> object's command
@@ -3281,7 +3281,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader) : Void;
+	@:require(java6) @:overload public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>java.sql.NClob</code> object. The object
@@ -3294,7 +3294,7 @@ extern class JdbcRowSetImpl extends javax.sql.rowset.BaseRowSet implements javax
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNClob(parameterName : String, value : java.sql.NClob) : Void;
+	@:require(java6) @:overload public function setNClob(parameterName : String, value : java.sql.NClob) : Void;
 	
 	/**
 	* Retrieves the value of the designated column in the current row
@@ -4136,7 +4136,7 @@ bel is the name of the column
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setURL(parameterIndex : Int, x : java.net.URL) : Void;
+	@:require(java4) @:overload public function setURL(parameterIndex : Int, x : java.net.URL) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4161,7 +4161,7 @@ bel is the name of the column
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNClob(parameterIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload public function setNClob(parameterIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain the number
@@ -4186,7 +4186,7 @@ bel is the name of the column
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setNClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4209,7 +4209,7 @@ bel is the name of the column
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNClob(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload public function setNClob(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	** of characters specified by length otherwise a <code>SQLException</code> will becontain  the number
@@ -4232,7 +4232,7 @@ bel is the name of the column
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setNClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>java.sql.NClob</code> object. The driver converts this to
@@ -4245,7 +4245,7 @@ a
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNClob(parameterIndex : Int, value : java.sql.NClob) : Void;
+	@:require(java6) @:overload public function setNClob(parameterIndex : Int, value : java.sql.NClob) : Void;
 	
 	/**
 	* Sets the designated paramter to the given <code>String</code> object.
@@ -4258,7 +4258,7 @@ a
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNString(parameterName : String, value : String) : Void;
+	@:require(java6) @:overload public function setNString(parameterName : String, value : String) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -4273,7 +4273,7 @@ a
 	*  error could occur ; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setNCharacterStream(parameterIndex : Int, value : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -4288,7 +4288,7 @@ a
 	*  error could occur; or if a database access error occurs
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setNCharacterStream(parameterName : String, value : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object. The
@@ -4312,7 +4312,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setNCharacterStream(parameterName : String, value : java.io.Reader) : Void;
+	@:require(java6) @:overload public function setNCharacterStream(parameterName : String, value : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Timestamp</code> value,
@@ -4335,7 +4335,7 @@ a
 	* @see #getTimestamp
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setTimestamp(parameterName : String, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload public function setTimestamp(parameterName : String, x : java.sql.Timestamp, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The <code>reader</code> must contain  the number
@@ -4358,7 +4358,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setClob(parameterName : String, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Clob</code> object.
@@ -4373,7 +4373,7 @@ a
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setClob(parameterName : String, x : java.sql.Clob) : Void;
+	@:require(java6) @:overload public function setClob(parameterName : String, x : java.sql.Clob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4395,7 +4395,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setClob(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload public function setClob(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code> value
@@ -4413,7 +4413,7 @@ a
 	* @see #getDate
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setDate(parameterName : String, x : java.sql.Date) : Void;
+	@:require(java4) @:overload public function setDate(parameterName : String, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Date</code> value,
@@ -4436,7 +4436,7 @@ a
 	* @see #getDate
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setDate(parameterName : String, x : java.sql.Date, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload public function setDate(parameterName : String, x : java.sql.Date, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code> value.
@@ -4452,7 +4452,7 @@ a
 	* @see #getTime
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setTime(parameterName : String, x : java.sql.Time) : Void;
+	@:require(java4) @:overload public function setTime(parameterName : String, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Time</code> value,
@@ -4475,7 +4475,7 @@ a
 	* @see #getTime
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setTime(parameterName : String, x : java.sql.Time, cal : java.util.Calendar) : Void;
+	@:require(java4) @:overload public function setTime(parameterName : String, x : java.sql.Time, cal : java.util.Calendar) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.
@@ -4498,7 +4498,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setClob(parameterIndex : Int, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload public function setClob(parameterIndex : Int, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>Reader</code> object.  The reader must contain  the number
@@ -4519,7 +4519,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setClob(parameterIndex : Int, reader : java.io.Reader, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.  The inputstream must contain  the number
@@ -4545,7 +4545,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.
@@ -4574,7 +4574,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload public function setBlob(parameterIndex : Int, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.  The <code>inputstream</code> must contain  the number
@@ -4602,7 +4602,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBlob(parameterName : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
+	@:require(java6) @:overload public function setBlob(parameterName : String, inputStream : java.io.InputStream, length : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Blob</code> object.
@@ -4617,7 +4617,7 @@ a
 	* this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBlob(parameterName : String, x : java.sql.Blob) : Void;
+	@:require(java6) @:overload public function setBlob(parameterName : String, x : java.sql.Blob) : Void;
 	
 	/**
 	* Sets the designated parameter to a <code>InputStream</code> object.
@@ -4640,7 +4640,7 @@ a
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBlob(parameterName : String, inputStream : java.io.InputStream) : Void;
+	@:require(java6) @:overload public function setBlob(parameterName : String, inputStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object. The second
@@ -4683,7 +4683,7 @@ a
 	* @see #getObject
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
+	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int, scale : Int) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object.
@@ -4706,7 +4706,7 @@ a
 	* @see #getObject
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int) : Void;
+	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic, targetSqlType : Int) : Void;
 	
 	/**
 	* Sets the value of the designated parameter with the given object.
@@ -4744,7 +4744,7 @@ a
 	* @see #getObject
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setObject(parameterName : String, x : Dynamic) : Void;
+	@:require(java4) @:overload public function setObject(parameterName : String, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream, which will have
@@ -4768,7 +4768,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setAsciiStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
+	@:require(java4) @:overload public function setAsciiStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream, which will have
@@ -4791,7 +4791,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setBinaryStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
+	@:require(java4) @:overload public function setBinaryStream(parameterName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Reader</code>
@@ -4816,7 +4816,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setCharacterStream(parameterName : String, reader : java.io.Reader, length : Int) : Void;
+	@:require(java4) @:overload public function setCharacterStream(parameterName : String, reader : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream.
@@ -4840,7 +4840,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setAsciiStream(parameterName : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload public function setAsciiStream(parameterName : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given input stream.
@@ -4863,7 +4863,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setBinaryStream(parameterName : String, x : java.io.InputStream) : Void;
+	@:require(java6) @:overload public function setBinaryStream(parameterName : String, x : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>Reader</code>
@@ -4889,7 +4889,7 @@ a
 	* @throws SQLFeatureNotSupportedException  if the JDBC driver does not support this method
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setCharacterStream(parameterName : String, reader : java.io.Reader) : Void;
+	@:require(java6) @:overload public function setCharacterStream(parameterName : String, reader : java.io.Reader) : Void;
 	
 	/**
 	* Sets the designated parameter to the given
@@ -4906,7 +4906,7 @@ a
 	* @see #getBigDecimal
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setBigDecimal(parameterName : String, x : java.math.BigDecimal) : Void;
+	@:require(java4) @:overload public function setBigDecimal(parameterName : String, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>String</code> value.
@@ -4925,7 +4925,7 @@ a
 	* @see #getString
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setString(parameterName : String, x : String) : Void;
+	@:require(java4) @:overload public function setString(parameterName : String, x : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java array of bytes.
@@ -4943,7 +4943,7 @@ a
 	* @see #getBytes
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setBytes(parameterName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:require(java4) @:overload public function setBytes(parameterName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated parameter to the given <code>java.sql.Timestamp</code> value.
@@ -4960,7 +4960,7 @@ a
 	* @see #getTimestamp
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setTimestamp(parameterName : String, x : java.sql.Timestamp) : Void;
+	@:require(java4) @:overload public function setTimestamp(parameterName : String, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -4975,7 +4975,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setNull(parameterName : String, sqlType : Int) : Void;
+	@:require(java4) @:overload public function setNull(parameterName : String, sqlType : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to SQL <code>NULL</code>.
@@ -5009,7 +5009,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setNull(parameterName : String, sqlType : Int, typeName : String) : Void;
+	@:require(java4) @:overload public function setNull(parameterName : String, sqlType : Int, typeName : String) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>boolean</code> value.
@@ -5025,7 +5025,7 @@ a
 	* this method
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setBoolean(parameterName : String, x : Bool) : Void;
+	@:require(java4) @:overload public function setBoolean(parameterName : String, x : Bool) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>byte</code> value.
@@ -5041,7 +5041,7 @@ a
 	* @see #getByte
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setByte(parameterName : String, x : java.StdTypes.Int8) : Void;
+	@:require(java4) @:overload public function setByte(parameterName : String, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>short</code> value.
@@ -5057,7 +5057,7 @@ a
 	* @see #getShort
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setShort(parameterName : String, x : java.StdTypes.Int16) : Void;
+	@:require(java4) @:overload public function setShort(parameterName : String, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>int</code> value.
@@ -5073,7 +5073,7 @@ a
 	* @see #getInt
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setInt(parameterName : String, x : Int) : Void;
+	@:require(java4) @:overload public function setInt(parameterName : String, x : Int) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>long</code> value.
@@ -5089,7 +5089,7 @@ a
 	* @see #getLong
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setLong(parameterName : String, x : haxe.Int64) : Void;
+	@:require(java4) @:overload public function setLong(parameterName : String, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>float</code> value.
@@ -5105,7 +5105,7 @@ a
 	* @see #getFloat
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setFloat(parameterName : String, x : Single) : Void;
+	@:require(java4) @:overload public function setFloat(parameterName : String, x : Single) : Void;
 	
 	/**
 	* Sets the designated parameter to the given Java <code>double</code> value.
@@ -5121,7 +5121,7 @@ a
 	* @see #getDouble
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function setDouble(parameterName : String, x : Float) : Void;
+	@:require(java4) @:overload public function setDouble(parameterName : String, x : Float) : Void;
 	
 	@:overload public function getObject<T>(columnIndex : Int, type : Class<T>) : T;
 	

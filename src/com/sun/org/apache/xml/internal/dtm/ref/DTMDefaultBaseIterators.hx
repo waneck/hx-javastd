@@ -117,7 +117,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns all immediate children of a given node
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$ChildrenIterator') extern class DTMDefaultBaseIterators_ChildrenIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$ChildrenIterator') extern class DTMDefaultBaseIterators_ChildrenIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Setting start to END should 'close' the iterator,
@@ -148,7 +148,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * this delivers only a single node; if you want all the ancestors,
 * see AncestorIterator.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$ParentIterator') extern class DTMDefaultBaseIterators_ParentIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$ParentIterator') extern class DTMDefaultBaseIterators_ParentIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -188,7 +188,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * of a basic child iterator, but a specialised iterator is used
 * for efficiency (both speed and size of translet).
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedChildrenIterator') extern class DTMDefaultBaseIterators_TypedChildrenIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedChildrenIterator') extern class DTMDefaultBaseIterators_TypedChildrenIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor TypedChildrenIterator
@@ -223,7 +223,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * filter on top of a basic child iterator, but a specialised
 * iterator is used for efficiency (both speed and size of translet).
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NamespaceChildrenIterator') extern class DTMDefaultBaseIterators_NamespaceChildrenIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NamespaceChildrenIterator') extern class DTMDefaultBaseIterators_NamespaceChildrenIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor NamespaceChildrenIterator
@@ -256,7 +256,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * Iterator that returns the namespace nodes as defined by the XPath data model
 * for a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NamespaceIterator') extern class DTMDefaultBaseIterators_NamespaceIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NamespaceIterator') extern class DTMDefaultBaseIterators_NamespaceIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor NamespaceAttributeIterator
@@ -286,7 +286,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * Iterator that returns the namespace nodes as defined by the XPath data model
 * for a given node, filtered by extended type ID.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedNamespaceIterator') extern class DTMDefaultBaseIterators_TypedNamespaceIterator extends DTMDefaultBaseIterators_NamespaceIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedNamespaceIterator') extern class DTMDefaultBaseIterators_TypedNamespaceIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_NamespaceIterator
 {
 	/**
 	* Constructor TypedNamespaceIterator
@@ -309,7 +309,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * Iterator that returns the the root node as defined by the XPath data model
 * for a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$RootIterator') extern class DTMDefaultBaseIterators_RootIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$RootIterator') extern class DTMDefaultBaseIterators_RootIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor RootIterator
@@ -339,7 +339,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * Iterator that returns the namespace nodes as defined by the XPath data model
 * for a given node, filtered by extended type ID.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedRootIterator') extern class DTMDefaultBaseIterators_TypedRootIterator extends DTMDefaultBaseIterators_RootIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedRootIterator') extern class DTMDefaultBaseIterators_TypedRootIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_RootIterator
 {
 	/**
 	* Constructor TypedRootIterator
@@ -360,7 +360,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns attributes within a given namespace for a node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NamespaceAttributeIterator') extern class DTMDefaultBaseIterators_NamespaceAttributeIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NamespaceAttributeIterator') extern class DTMDefaultBaseIterators_NamespaceAttributeIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor NamespaceAttributeIterator
@@ -392,7 +392,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns all siblings of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$FollowingSiblingIterator') extern class DTMDefaultBaseIterators_FollowingSiblingIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$FollowingSiblingIterator') extern class DTMDefaultBaseIterators_FollowingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -416,7 +416,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns all following siblings of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedFollowingSiblingIterator') extern class DTMDefaultBaseIterators_TypedFollowingSiblingIterator extends DTMDefaultBaseIterators_FollowingSiblingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedFollowingSiblingIterator') extern class DTMDefaultBaseIterators_TypedFollowingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_FollowingSiblingIterator
 {
 	/**
 	* Constructor TypedFollowingSiblingIterator
@@ -438,7 +438,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns attribute nodes (of what nodes?)
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$AttributeIterator') extern class DTMDefaultBaseIterators_AttributeIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$AttributeIterator') extern class DTMDefaultBaseIterators_AttributeIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -462,7 +462,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns attribute nodes of a given type
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedAttributeIterator') extern class DTMDefaultBaseIterators_TypedAttributeIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedAttributeIterator') extern class DTMDefaultBaseIterators_TypedAttributeIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor TypedAttributeIterator
@@ -494,7 +494,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns preceding siblings of a given node
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$PrecedingSiblingIterator') extern class DTMDefaultBaseIterators_PrecedingSiblingIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$PrecedingSiblingIterator') extern class DTMDefaultBaseIterators_PrecedingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* The node identity of _startNode for this iterator
@@ -531,7 +531,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * Iterator that returns preceding siblings of a given type for
 * a given node
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedPrecedingSiblingIterator') extern class DTMDefaultBaseIterators_TypedPrecedingSiblingIterator extends DTMDefaultBaseIterators_PrecedingSiblingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedPrecedingSiblingIterator') extern class DTMDefaultBaseIterators_TypedPrecedingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_PrecedingSiblingIterator
 {
 	/**
 	* Constructor TypedPrecedingSiblingIterator
@@ -555,7 +555,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * This includes the node set {root+1, start-1}, but excludes
 * all ancestors, attributes, and namespace nodes.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$PrecedingIterator') extern class DTMDefaultBaseIterators_PrecedingIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$PrecedingIterator') extern class DTMDefaultBaseIterators_PrecedingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* The stack of start node + ancestors up to the root of the tree,
@@ -618,7 +618,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * given node. This includes the node set {root+1, start-1}, but
 * excludes all ancestors.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedPrecedingIterator') extern class DTMDefaultBaseIterators_TypedPrecedingIterator extends DTMDefaultBaseIterators_PrecedingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedPrecedingIterator') extern class DTMDefaultBaseIterators_TypedPrecedingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_PrecedingIterator
 {
 	/**
 	* Constructor TypedPrecedingIterator
@@ -640,7 +640,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns following nodes of for a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$FollowingIterator') extern class DTMDefaultBaseIterators_FollowingIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$FollowingIterator') extern class DTMDefaultBaseIterators_FollowingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	@:overload public function new() : Void;
 	
@@ -666,7 +666,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns following nodes of a given type for a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedFollowingIterator') extern class DTMDefaultBaseIterators_TypedFollowingIterator extends DTMDefaultBaseIterators_FollowingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedFollowingIterator') extern class DTMDefaultBaseIterators_TypedFollowingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_FollowingIterator
 {
 	/**
 	* Constructor TypedFollowingIterator
@@ -689,7 +689,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * Iterator that returns the ancestors of a given node in document
 * order.  (NOTE!  This was changed from the XSLTC code!)
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$AncestorIterator') extern class DTMDefaultBaseIterators_AncestorIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$AncestorIterator') extern class DTMDefaultBaseIterators_AncestorIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Get start to END should 'close' the iterator,
@@ -747,7 +747,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Typed iterator that returns the ancestors of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedAncestorIterator') extern class DTMDefaultBaseIterators_TypedAncestorIterator extends DTMDefaultBaseIterators_AncestorIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedAncestorIterator') extern class DTMDefaultBaseIterators_TypedAncestorIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_AncestorIterator
 {
 	/**
 	* Constructor TypedAncestorIterator
@@ -772,7 +772,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns the descendants of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$DescendantIterator') extern class DTMDefaultBaseIterators_DescendantIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$DescendantIterator') extern class DTMDefaultBaseIterators_DescendantIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -818,7 +818,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Typed iterator that returns the descendants of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedDescendantIterator') extern class DTMDefaultBaseIterators_TypedDescendantIterator extends DTMDefaultBaseIterators_DescendantIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedDescendantIterator') extern class DTMDefaultBaseIterators_TypedDescendantIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_DescendantIterator
 {
 	/**
 	* Constructor TypedDescendantIterator
@@ -841,7 +841,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 * Iterator that returns the descendants of a given node.
 * I'm not exactly clear about this one... -sb
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NthDescendantIterator') extern class DTMDefaultBaseIterators_NthDescendantIterator extends DTMDefaultBaseIterators_DescendantIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$NthDescendantIterator') extern class DTMDefaultBaseIterators_NthDescendantIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_DescendantIterator
 {
 	/**
 	* Constructor NthDescendantIterator
@@ -863,7 +863,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Class SingletonIterator.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$SingletonIterator') extern class DTMDefaultBaseIterators_SingletonIterator extends DTMDefaultBaseIterators_InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$SingletonIterator') extern class DTMDefaultBaseIterators_SingletonIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor SingletonIterator
@@ -918,7 +918,7 @@ extern class DTMDefaultBaseIterators extends com.sun.org.apache.xml.internal.dtm
 /**
 * Iterator that returns a given node only if it is of a given type.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedSingletonIterator') extern class DTMDefaultBaseIterators_TypedSingletonIterator extends DTMDefaultBaseIterators_SingletonIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseIterators$TypedSingletonIterator') extern class DTMDefaultBaseIterators_TypedSingletonIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_SingletonIterator
 {
 	/**
 	* Constructor TypedSingletonIterator

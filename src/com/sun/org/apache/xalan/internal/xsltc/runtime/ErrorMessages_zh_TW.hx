@@ -27,7 +27,7 @@ extern class ErrorMessages_zh_TW extends java.util.ListResourceBundle
 	*
 	* @return The message lookup table.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

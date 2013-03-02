@@ -25,7 +25,7 @@ package java.awt;
 */
 @:internal extern interface EventFilter
 {
-	@:overload public function acceptEvent(ev : java.awt.AWTEvent) : EventFilter_FilterAction;
+	@:overload public function acceptEvent(ev : java.awt.AWTEvent) : java.awt.EventFilter.EventFilter_FilterAction;
 	
 	
 }

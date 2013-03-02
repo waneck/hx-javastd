@@ -29,7 +29,7 @@ package sun.net.httpserver;
 	
 	
 }
-@:internal extern class WriteFinishedEvent extends Event
+@:internal extern class WriteFinishedEvent extends sun.net.httpserver.Event
 {
 	
 }

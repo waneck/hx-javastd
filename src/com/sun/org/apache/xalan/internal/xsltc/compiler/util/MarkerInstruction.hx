@@ -35,7 +35,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 	* kind of {@link org.apche.bcel.generic.Instruction}, so this method does
 	* nothing.
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	/**
 	* The number of JVM stack entries consumed by the instruction.
@@ -45,7 +45,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 	* current {@link com.sun.org.apache.bcel.internal.generic.ClassGen}
 	* @return <code>0</code> always
 	*/
-	@:overload @:final override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:final public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	/**
 	* The number of JVM stack entries produced by the instruction.
@@ -55,7 +55,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 	* current {@link com.sun.org.apache.bcel.internal.generic.ClassGen}
 	* @return <code>0</code> always
 	*/
-	@:overload @:final override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:final public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	/**
 	* Produce a copy of the instruction.  By default a
@@ -63,7 +63,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 	* of {@link #copy()} returns the instruction itself.
 	* @return The instruction itself.
 	*/
-	@:overload override public function copy() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Dump instruction as byte code to stream out.  A {@link MarkerInstruction}
@@ -71,7 +71,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 	* output stream.
 	* @param out Output stream
 	*/
-	@:overload @:final override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload @:final public function dump(out : java.io.DataOutputStream) : Void;
 	
 	
 }

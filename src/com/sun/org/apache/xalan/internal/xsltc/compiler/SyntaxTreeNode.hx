@@ -23,13 +23,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 extern class SyntaxTreeNode implements com.sun.org.apache.xalan.internal.xsltc.compiler.Constants
 {
-	private var _parent : SyntaxTreeNode;
+	private var _parent : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode;
 	
 	private var _qname : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
 	private var _attributes : org.xml.sax.helpers.AttributesImpl;
 	
-	private static var Dummy(default, null) : SyntaxTreeNode;
+	private static var Dummy(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode;
 	
 	private static var IndentIncrement(default, null) : Int;
 	
@@ -181,13 +181,13 @@ extern class SyntaxTreeNode implements com.sun.org.apache.xalan.internal.xsltc.c
 	*
 	* @param parent The parent node.
 	*/
-	@:overload private function setParent(parent : SyntaxTreeNode) : Void;
+	@:overload private function setParent(parent : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode) : Void;
 	
 	/**
 	* Returns this syntax tree node's parent node.
 	* @return The parent syntax tree node.
 	*/
-	@:overload @:final private function getParent() : SyntaxTreeNode;
+	@:overload @:final private function getParent() : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode;
 	
 	/**
 	* Returns 'true' if this syntax tree node is the Sentinal node.
@@ -249,7 +249,7 @@ extern class SyntaxTreeNode implements com.sun.org.apache.xalan.internal.xsltc.c
 	* Add a node to the current scope and return name of a variable or
 	* parameter if the node represents a variable or a parameter.
 	*/
-	@:overload private function updateScope(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser, node : SyntaxTreeNode) : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
+	@:overload private function updateScope(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser, node : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode) : com.sun.org.apache.xalan.internal.xsltc.compiler.QName;
 	
 	/**
 	* Type check the children of this node. The type check phase may add
@@ -305,20 +305,20 @@ extern class SyntaxTreeNode implements com.sun.org.apache.xalan.internal.xsltc.c
 	* Adds a child node to this syntax tree node.
 	* @param element is the new child node.
 	*/
-	@:overload @:final private function addElement(element : SyntaxTreeNode) : Void;
+	@:overload @:final private function addElement(element : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode) : Void;
 	
 	/**
 	* Inserts the first child node of this syntax tree node. The existing
 	* children are shifted back one position.
 	* @param element is the new child node.
 	*/
-	@:overload @:final private function setFirstElement(element : SyntaxTreeNode) : Void;
+	@:overload @:final private function setFirstElement(element : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode) : Void;
 	
 	/**
 	* Removed a child node of this syntax tree node.
 	* @param element is the child node to remove.
 	*/
-	@:overload @:final private function removeElement(element : SyntaxTreeNode) : Void;
+	@:overload @:final private function removeElement(element : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode) : Void;
 	
 	/**
 	* Returns a Vector containing all the child nodes of this node.
@@ -355,7 +355,7 @@ extern class SyntaxTreeNode implements com.sun.org.apache.xalan.internal.xsltc.c
 	* Returns this element's last child
 	* @return The child node.
 	*/
-	@:overload @:final private function lastChild() : SyntaxTreeNode;
+	@:overload @:final private function lastChild() : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode;
 	
 	/**
 	* Displays the contents of this syntax tree node (to stdout).
@@ -386,7 +386,7 @@ extern class SyntaxTreeNode implements com.sun.org.apache.xalan.internal.xsltc.c
 	* @param error The error code (from util/ErrorMsg).
 	* @param message Any additional error message.
 	*/
-	@:overload private function reportError(element : SyntaxTreeNode, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser, errorCode : String, message : String) : Void;
+	@:overload private function reportError(element : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser, errorCode : String, message : String) : Void;
 	
 	/**
 	* Report a recoverable error to the parser.
@@ -396,7 +396,7 @@ extern class SyntaxTreeNode implements com.sun.org.apache.xalan.internal.xsltc.c
 	* @param error The error code (from util/ErrorMsg).
 	* @param message Any additional error message.
 	*/
-	@:overload private function reportWarning(element : SyntaxTreeNode, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser, errorCode : String, message : String) : Void;
+	@:overload private function reportWarning(element : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser, errorCode : String, message : String) : Void;
 	
 	
 }

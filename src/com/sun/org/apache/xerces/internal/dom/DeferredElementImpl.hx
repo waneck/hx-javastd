@@ -34,7 +34,7 @@ extern class DeferredElementImpl extends com.sun.org.apache.xerces.internal.dom.
 	/** Synchronizes the data (name and value) for fast nodes. */
 	@:overload @:final override private function synchronizeData() : Void;
 	
-	@:overload @:final override private function synchronizeChildren() : Void;
+	@:overload @:final private function synchronizeChildren() : Void;
 	
 	
 }

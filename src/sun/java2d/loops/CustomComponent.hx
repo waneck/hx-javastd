@@ -42,19 +42,19 @@ extern class CustomComponent
 }
 @:internal extern class OpaqueCopyAnyToArgb extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OpaqueCopyArgbToAny extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class XorCopyArgbToAny extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, w : Int, h : Int) : Void;
 	
 	
 }

@@ -33,7 +33,7 @@ extern class JStringLiteral extends com.sun.codemodel.internal.JExpressionImpl
 {
 	public var str(default, null) : String;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

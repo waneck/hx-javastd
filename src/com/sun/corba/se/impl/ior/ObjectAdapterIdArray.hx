@@ -31,11 +31,11 @@ extern class ObjectAdapterIdArray extends com.sun.corba.se.impl.ior.ObjectAdapte
 	*/
 	@:overload public function new(name1 : String, name2 : String) : Void;
 	
-	@:overload override public function getNumLevels() : Int;
+	@:overload public function getNumLevels() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getAdapterName() : java.NativeArray<String>;
+	@:overload public function getAdapterName() : java.NativeArray<String>;
 	
 	
 }

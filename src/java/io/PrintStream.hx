@@ -523,7 +523,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : PrintStream;
+	@:require(java5) @:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* A convenience method to write a formatted string to this output stream
@@ -571,7 +571,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : PrintStream;
+	@:require(java5) @:overload public function printf(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* Writes a formatted string to this output stream using the specified
@@ -612,7 +612,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(format : String, args : java.NativeArray<Dynamic>) : PrintStream;
+	@:require(java5) @:overload public function format(format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* Writes a formatted string to this output stream using the specified
@@ -654,7 +654,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : PrintStream;
+	@:require(java5) @:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.io.PrintStream;
 	
 	/**
 	* Appends the specified character sequence to this output stream.
@@ -680,7 +680,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : PrintStream;
+	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : java.io.PrintStream;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this output
@@ -715,7 +715,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : PrintStream;
+	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.PrintStream;
 	
 	/**
 	* Appends the specified character to this output stream.
@@ -733,7 +733,7 @@ extern class PrintStream extends java.io.FilterOutputStream implements java.lang
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : PrintStream;
+	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : java.io.PrintStream;
 	
 	
 }

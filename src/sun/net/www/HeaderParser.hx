@@ -31,7 +31,7 @@ extern class HeaderParser
 	* create a new HeaderParser from this, whose keys (and corresponding values)
 	* range from "start" to "end-1"
 	*/
-	@:overload public function subsequence(start : Int, end : Int) : HeaderParser;
+	@:overload public function subsequence(start : Int, end : Int) : sun.net.www.HeaderParser;
 	
 	@:overload public function findKey(i : Int) : String;
 	

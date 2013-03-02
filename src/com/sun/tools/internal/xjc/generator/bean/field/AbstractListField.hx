@@ -52,7 +52,7 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	*/
 	@:overload @:final private function fixNullRef(block : com.sun.codemodel.internal.JBlock) : Void;
 	
-	@:overload override public function getRawType() : com.sun.codemodel.internal.JType;
+	@:overload public function getRawType() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Concrete class that implements the List interface.
@@ -105,9 +105,9 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	
 	@:overload public function count() : com.sun.codemodel.internal.JExpression;
 	
-	@:overload override public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
+	@:overload public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
 	
-	@:overload override public function hasSetValue() : com.sun.codemodel.internal.JExpression;
+	@:overload public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	
 	
 }

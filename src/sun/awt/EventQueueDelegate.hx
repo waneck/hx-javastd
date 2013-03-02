@@ -25,9 +25,9 @@ package sun.awt;
 */
 extern class EventQueueDelegate
 {
-	@:overload public static function setDelegate(delegate : EventQueueDelegate_Delegate) : Void;
+	@:overload public static function setDelegate(delegate : sun.awt.EventQueueDelegate.EventQueueDelegate_Delegate) : Void;
 	
-	@:overload public static function getDelegate() : EventQueueDelegate_Delegate;
+	@:overload public static function getDelegate() : sun.awt.EventQueueDelegate.EventQueueDelegate_Delegate;
 	
 	
 }

@@ -66,7 +66,7 @@ extern class ByteListImpl extends java.util.AbstractList<Dynamic> implements com
 	/*
 	* List methods
 	*/
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
 	@:overload override public function size() : Int;
 	

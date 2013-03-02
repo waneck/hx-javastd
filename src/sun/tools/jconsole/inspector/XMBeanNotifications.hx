@@ -33,13 +33,13 @@ extern class XMBeanNotifications extends javax.swing.JTable implements javax.man
 	
 	@:overload public function stopCellEditing() : Void;
 	
-	@:overload override public function isCellEditable(row : Int, col : Int) : Bool;
+	@:overload public function isCellEditable(row : Int, col : Int) : Bool;
 	
-	@:overload override public function setValueAt(value : Dynamic, row : Int, column : Int) : Void;
+	@:overload public function setValueAt(value : Dynamic, row : Int, column : Int) : Void;
 	
-	@:overload @:synchronized override public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
+	@:overload @:synchronized public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload @:synchronized override public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload @:synchronized public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
 	@:overload public function getReceivedNotifications(mbean : sun.tools.jconsole.inspector.XMBean) : haxe.Int64;
 	
@@ -69,7 +69,7 @@ extern class XMBeanNotifications extends javax.swing.JTable implements javax.man
 }
 @:native('sun$tools$jconsole$inspector$XMBeanNotifications$UserDataCellRenderer') @:internal extern class XMBeanNotifications_UserDataCellRenderer extends javax.swing.table.DefaultTableCellRenderer
 {
-	@:overload override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	@:overload public function getComponent() : java.awt.Component;
 	
@@ -83,7 +83,7 @@ extern class XMBeanNotifications extends javax.swing.JTable implements javax.man
 }
 @:native('sun$tools$jconsole$inspector$XMBeanNotifications$NotifMouseListener') @:internal extern class XMBeanNotifications_NotifMouseListener extends java.awt.event.MouseAdapter
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -97,7 +97,7 @@ extern class XMBeanNotifications extends javax.swing.JTable implements javax.man
 }
 @:native('sun$tools$jconsole$inspector$XMBeanNotifications$XMBeanNotificationsListener') @:internal extern class XMBeanNotifications_XMBeanNotificationsListener implements javax.management.NotificationListener
 {
-	@:overload public function new(notifications : XMBeanNotifications, xmbean : sun.tools.jconsole.inspector.XMBean, node : javax.swing.tree.DefaultMutableTreeNode, columnNames : java.NativeArray<String>) : Void;
+	@:overload public function new(notifications : sun.tools.jconsole.inspector.XMBeanNotifications, xmbean : sun.tools.jconsole.inspector.XMBean, node : javax.swing.tree.DefaultMutableTreeNode, columnNames : java.NativeArray<String>) : Void;
 	
 	@:overload @:synchronized public function getData() : java.util.List<java.NativeArray<Dynamic>>;
 	

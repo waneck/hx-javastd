@@ -60,7 +60,7 @@ extern class ProgressEvent extends java.util.EventObject
 	*/
 	@:overload public function getState() : sun.net.ProgressSource.ProgressSource_State;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

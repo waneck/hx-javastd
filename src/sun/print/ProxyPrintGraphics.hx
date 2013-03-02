@@ -39,7 +39,7 @@ extern class ProxyPrintGraphics extends sun.print.ProxyGraphics implements java.
 	* @return     a new graphics context that is a copy of
 	*                       this graphics context.
 	*/
-	@:overload override public function create() : java.awt.Graphics;
+	@:overload public function create() : java.awt.Graphics;
 	
 	/**
 	* Creates a new <code>Graphics</code> object based on this
@@ -57,9 +57,9 @@ extern class ProxyPrintGraphics extends sun.print.ProxyGraphics implements java.
 	* @see        java.awt.Graphics#translate
 	* @see        java.awt.Graphics#clipRect
 	*/
-	@:overload override public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
+	@:overload public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
 	
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload public function getGraphics() : java.awt.Graphics;
 	
 	/* Spec implies dispose() should flush the page, but the implementation
 	* has in fact always done this on the getGraphics() call, thereby
@@ -67,7 +67,7 @@ extern class ProxyPrintGraphics extends sun.print.ProxyGraphics implements java.
 	* We will preserve that behaviour and there is consqeuently no need
 	* to take any action in this dispose method.
 	*/
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	
 }

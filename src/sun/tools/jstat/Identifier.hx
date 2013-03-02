@@ -42,7 +42,7 @@ package sun.tools.jstat;
 	
 	@:overload public function isResolved() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

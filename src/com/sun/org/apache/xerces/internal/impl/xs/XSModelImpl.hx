@@ -227,15 +227,15 @@ extern class XSModelImpl extends java.util.AbstractList<Dynamic> implements com.
 	*/
 	@:overload public function item(index : Int) : com.sun.org.apache.xerces.internal.xs.XSNamespaceItem;
 	
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
 	@:overload override public function size() : Int;
 	
 	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload public function listIterator() : java.util.ListIterator<Dynamic>;
 	
-	@:overload override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
 	@:overload override public function toArray() : java.NativeArray<Dynamic>;
 	

@@ -29,17 +29,17 @@ extern class AttGroupDeclImpl extends com.sun.xml.internal.xsom.impl.AttributesH
 	
 	@:overload public function new(_parent : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _name : String) : Void;
 	
-	@:overload override public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
+	@:overload public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
 	
 	@:overload public function getAttributeWildcard() : com.sun.xml.internal.xsom.XSWildcard;
 	
 	@:overload public function getAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
 	
-	@:overload public function redefine(ag : AttGroupDeclImpl) : Void;
+	@:overload public function redefine(ag : com.sun.xml.internal.xsom.impl.AttGroupDeclImpl) : Void;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
 	
 }

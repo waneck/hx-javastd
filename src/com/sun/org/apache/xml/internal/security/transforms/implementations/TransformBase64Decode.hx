@@ -29,7 +29,7 @@ extern class TransformBase64Decode extends com.sun.org.apache.xml.internal.secur
 	*
 	* @inheritDoc
 	*/
-	@:overload override private function engineGetURI() : String;
+	@:overload private function engineGetURI() : String;
 	
 	/**
 	* Method enginePerformTransform
@@ -41,9 +41,9 @@ extern class TransformBase64Decode extends com.sun.org.apache.xml.internal.secur
 	* @throws IOException
 	* @throws TransformationException
 	*/
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

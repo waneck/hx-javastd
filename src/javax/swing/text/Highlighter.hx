@@ -61,7 +61,7 @@ extern interface Highlighter
 	* @return an object that refers to the highlight
 	* @exception BadLocationException for an invalid range specification
 	*/
-	@:overload public function addHighlight(p0 : Int, p1 : Int, p : Highlighter_HighlightPainter) : Dynamic;
+	@:overload public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
 	
 	/**
 	* Removes a highlight from the view.
@@ -93,7 +93,7 @@ extern interface Highlighter
 	*
 	* @return the highlight list
 	*/
-	@:overload public function getHighlights() : java.NativeArray<Highlighter_Highlight>;
+	@:overload public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
 	
 	
 }
@@ -136,7 +136,7 @@ extern interface Highlighter
 	*
 	* @return the painter
 	*/
-	@:overload public function getPainter() : Highlighter_HighlightPainter;
+	@:overload public function getPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
 	
 	
 }

@@ -29,9 +29,9 @@ extern interface Binding extends com.sun.xml.internal.txw2.TypedXmlWriter extend
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function type(value : javax.xml.namespace.QName) : Binding;
+	@:overload public function type(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
 	
-	@:overload public function name(value : String) : Binding;
+	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Binding;
 	
 	@:overload public function operation() : com.sun.xml.internal.ws.wsdl.writer.document.BindingOperationType;
 	

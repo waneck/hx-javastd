@@ -51,7 +51,7 @@ extern class X509CertificatePair
 	* Create a X509CertificatePair from its encoding. Uses cache lookup
 	* if possible.
 	*/
-	@:overload @:synchronized public static function generateCertificatePair(encoded : java.NativeArray<java.StdTypes.Int8>) : X509CertificatePair;
+	@:overload @:synchronized public static function generateCertificatePair(encoded : java.NativeArray<java.StdTypes.Int8>) : sun.security.provider.certpath.X509CertificatePair;
 	
 	/**
 	* Sets the forward component of the certificate pair.

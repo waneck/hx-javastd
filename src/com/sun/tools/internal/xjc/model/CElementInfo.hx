@@ -70,14 +70,14 @@ extern class CElementInfo extends com.sun.tools.internal.xjc.model.AbstractCElem
 	
 	@:overload public function getProperty() : com.sun.tools.internal.xjc.model.CElementPropertyInfo;
 	
-	@:overload override public function getScope() : com.sun.tools.internal.xjc.model.CClassInfo;
+	@:overload public function getScope() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	/**
 	* @deprecated why are you calling a method that returns this?
 	*/
 	@:overload override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload public function getElementName() : javax.xml.namespace.QName;
 	
 	@:overload override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
@@ -88,11 +88,11 @@ extern class CElementInfo extends com.sun.tools.internal.xjc.model.AbstractCElem
 	*/
 	@:overload public function getSqueezedName() : String;
 	
-	@:overload override public function getSubstitutionHead() : CElementInfo;
+	@:overload public function getSubstitutionHead() : com.sun.tools.internal.xjc.model.CElementInfo;
 	
-	@:overload public function getSubstitutionMembers() : java.util.Collection<CElementInfo>;
+	@:overload public function getSubstitutionMembers() : java.util.Collection<com.sun.tools.internal.xjc.model.CElementInfo>;
 	
-	@:overload public function setSubstitutionHead(substitutionHead : CElementInfo) : Void;
+	@:overload public function setSubstitutionHead(substitutionHead : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
 	
 	@:overload public function isBoxedType() : Bool;
 	

@@ -37,7 +37,7 @@ extern class EndpointAddress
 	* Creates a new {@link EndpointAddress} with a reasonably
 	* generic error handling.
 	*/
-	@:overload public static function create(url : String) : EndpointAddress;
+	@:overload public static function create(url : String) : com.sun.xml.internal.ws.api.EndpointAddress;
 	
 	/**
 	* Returns an URL of this endpoint adress.

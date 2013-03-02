@@ -69,11 +69,11 @@ extern class Instruction
 	@:overload public function length() : Int;
 	
 	/** Get the {@link Kind} of this instruction. */
-	@:overload public function getKind() : Instruction_Kind;
+	@:overload public function getKind() : com.sun.tools.classfile.Instruction.Instruction_Kind;
 	
 	/** Invoke a method on the visitor according to the kind of this
 	* instruction, passing in the decoded operands for the instruction. */
-	@:overload public function accept<R, P>(visitor : Instruction_KindVisitor<R, P>, p : P) : R;
+	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Instruction.Instruction_KindVisitor<R, P>, p : P) : R;
 	
 	
 }
@@ -128,37 +128,37 @@ extern class Instruction
 @:native('com$sun$tools$classfile$Instruction$KindVisitor') extern interface Instruction_KindVisitor<R, P>
 {
 	/** See {@link Kind#NO_OPERANDS}, {@link Kind#WIDE_NO_OPERANDS}. */
-	@:overload public function visitNoOperands(instr : Instruction, p : P) : R;
+	@:overload public function visitNoOperands(instr : com.sun.tools.classfile.Instruction, p : P) : R;
 	
 	/** See {@link Kind#ATYPE}. */
-	@:overload public function visitArrayType(instr : Instruction, kind : Instruction_TypeKind, p : P) : R;
+	@:overload public function visitArrayType(instr : com.sun.tools.classfile.Instruction, kind : com.sun.tools.classfile.Instruction.Instruction_TypeKind, p : P) : R;
 	
 	/** See {@link Kind#BRANCH}, {@link Kind#BRANCH_W}. */
-	@:overload public function visitBranch(instr : Instruction, offset : Int, p : P) : R;
+	@:overload public function visitBranch(instr : com.sun.tools.classfile.Instruction, offset : Int, p : P) : R;
 	
 	/** See {@link Kind#CPREF}, {@link Kind#CPREF_W}, {@link Kind#WIDE_CPREF_W}. */
-	@:overload public function visitConstantPoolRef(instr : Instruction, index : Int, p : P) : R;
+	@:overload public function visitConstantPoolRef(instr : com.sun.tools.classfile.Instruction, index : Int, p : P) : R;
 	
 	/** See {@link Kind#CPREF_W_UBYTE}, {@link Kind#CPREF_W_UBYTE_ZERO}, {@link Kind#WIDE_CPREF_W_SHORT}. */
-	@:overload public function visitConstantPoolRefAndValue(instr : Instruction, index : Int, value : Int, p : P) : R;
+	@:overload public function visitConstantPoolRefAndValue(instr : com.sun.tools.classfile.Instruction, index : Int, value : Int, p : P) : R;
 	
 	/** See {@link Kind#LOCAL}. */
-	@:overload public function visitLocal(instr : Instruction, index : Int, p : P) : R;
+	@:overload public function visitLocal(instr : com.sun.tools.classfile.Instruction, index : Int, p : P) : R;
 	
 	/** See {@link Kind#LOCAL_UBYTE}. */
-	@:overload public function visitLocalAndValue(instr : Instruction, index : Int, value : Int, p : P) : R;
+	@:overload public function visitLocalAndValue(instr : com.sun.tools.classfile.Instruction, index : Int, value : Int, p : P) : R;
 	
 	/** See {@link Kind#DYNAMIC}. */
-	@:overload public function visitLookupSwitch(instr : Instruction, default_ : Int, npairs : Int, matches : java.NativeArray<Int>, offsets : java.NativeArray<Int>, p : P) : R;
+	@:overload public function visitLookupSwitch(instr : com.sun.tools.classfile.Instruction, default_ : Int, npairs : Int, matches : java.NativeArray<Int>, offsets : java.NativeArray<Int>, p : P) : R;
 	
 	/** See {@link Kind#DYNAMIC}. */
-	@:overload public function visitTableSwitch(instr : Instruction, default_ : Int, low : Int, high : Int, offsets : java.NativeArray<Int>, p : P) : R;
+	@:overload public function visitTableSwitch(instr : com.sun.tools.classfile.Instruction, default_ : Int, low : Int, high : Int, offsets : java.NativeArray<Int>, p : P) : R;
 	
 	/** See {@link Kind#BYTE}, {@link Kind#SHORT}. */
-	@:overload public function visitValue(instr : Instruction, value : Int, p : P) : R;
+	@:overload public function visitValue(instr : com.sun.tools.classfile.Instruction, value : Int, p : P) : R;
 	
 	/** Instruction is unrecognized. */
-	@:overload public function visitUnknown(instr : Instruction, p : P) : R;
+	@:overload public function visitUnknown(instr : com.sun.tools.classfile.Instruction, p : P) : R;
 	
 	
 }

@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.bdi;
 */
 extern class ModificationWatchpointSpec extends com.sun.tools.example.debug.bdi.WatchpointSpec
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	
 }

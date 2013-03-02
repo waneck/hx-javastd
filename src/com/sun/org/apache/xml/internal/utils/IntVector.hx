@@ -70,7 +70,7 @@ extern class IntVector implements java.lang.Cloneable
 	*
 	* @param v Existing IntVector to copy
 	*/
-	@:overload public function new(v : IntVector) : Void;
+	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.IntVector) : Void;
 	
 	/**
 	* Get the length of the list.

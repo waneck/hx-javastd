@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class IIOPProfileTemplateImpl extends com.sun.corba.se.spi.ior.TaggedProfileTemplateBase implements com.sun.corba.se.spi.ior.iiop.IIOPProfileTemplate
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
-	@:overload override public function create(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.TaggedProfile;
+	@:overload public function create(oktemp : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId) : com.sun.corba.se.spi.ior.TaggedProfile;
 	
 	@:overload public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
@@ -39,13 +39,13 @@ extern class IIOPProfileTemplateImpl extends com.sun.corba.se.spi.ior.TaggedProf
 	
 	@:overload public function new(istr : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload override public function write(okeyTemplate : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function write(okeyTemplate : com.sun.corba.se.spi.ior.ObjectKeyTemplate, id : com.sun.corba.se.spi.ior.ObjectId, os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	/** Write out this IIOPProfileTemplateImpl only.
 	*/
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function getId() : Int;
+	@:overload public function getId() : Int;
 	
 	@:overload public function isEquivalent(temp : com.sun.corba.se.spi.ior.TaggedProfileTemplate) : Bool;
 	

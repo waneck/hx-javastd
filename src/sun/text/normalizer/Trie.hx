@@ -45,7 +45,7 @@ extern class Trie
 	* @throws IOException thrown when input stream does not have the
 	*                        right header.
 	*/
-	@:overload private function new(inputStream : java.io.InputStream, dataManipulate : Trie_DataManipulate) : Void;
+	@:overload private function new(inputStream : java.io.InputStream, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Trie constructor
@@ -54,7 +54,7 @@ extern class Trie
 	* @param dataManipulate object containing the information to parse the
 	*                       trie data
 	*/
-	@:overload private function new(index : java.NativeArray<java.StdTypes.Char16>, options : Int, dataManipulate : Trie_DataManipulate) : Void;
+	@:overload private function new(index : java.NativeArray<java.StdTypes.Char16>, options : Int, dataManipulate : sun.text.normalizer.Trie.Trie_DataManipulate) : Void;
 	
 	/**
 	* Lead surrogate code points' index displacement in the index array.
@@ -117,7 +117,7 @@ extern class Trie
 	* Internal TrieValue which handles the parsing of the data value.
 	* This class is to be implemented by the user
 	*/
-	private var m_dataManipulate_ : Trie_DataManipulate;
+	private var m_dataManipulate_ : sun.text.normalizer.Trie.Trie_DataManipulate;
 	
 	/**
 	* Start index of the data portion of the trie. CharTrie combines
@@ -254,7 +254,7 @@ extern class Trie
 	
 	
 }
-@:native('sun$text$normalizer$Trie$DefaultGetFoldingOffset') @:internal extern class Trie_DefaultGetFoldingOffset implements Trie_DataManipulate
+@:native('sun$text$normalizer$Trie$DefaultGetFoldingOffset') @:internal extern class Trie_DefaultGetFoldingOffset implements sun.text.normalizer.Trie.Trie_DataManipulate
 {
 	@:overload public function getFoldingOffset(value : Int) : Int;
 	

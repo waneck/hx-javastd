@@ -90,12 +90,12 @@ package java.text;
 	/**
 	* This is the implementation function for next().
 	*/
-	@:overload override private function handleNext() : Int;
+	@:overload private function handleNext() : Int;
 	
 	/**
 	* Looks up a character category for a character.
 	*/
-	@:overload override private function lookupCategory(c : Int) : Int;
+	@:overload private function lookupCategory(c : Int) : Int;
 	
 	
 }

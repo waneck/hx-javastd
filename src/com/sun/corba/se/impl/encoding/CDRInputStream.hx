@@ -37,7 +37,7 @@ extern class CDRInputStream extends org.omg.CORBA_2_3.portable.InputStream imple
 	
 	@:overload public function new() : Void;
 	
-	@:overload public function new(is : CDRInputStream) : Void;
+	@:overload public function new(is : com.sun.corba.se.impl.encoding.CDRInputStream) : Void;
 	
 	@:overload public function new(orb : org.omg.CORBA.ORB, byteBuffer : java.nio.ByteBuffer, size : Int, littleEndian : Bool, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, encodingVersion : java.StdTypes.Int8, bufMgr : com.sun.corba.se.impl.encoding.BufferManagerRead) : Void;
 	
@@ -177,7 +177,7 @@ extern class CDRInputStream extends org.omg.CORBA_2_3.portable.InputStream imple
 	
 	@:overload @:final override public function markSupported() : Bool;
 	
-	@:overload @:abstract public function dup() : CDRInputStream;
+	@:overload @:abstract public function dup() : com.sun.corba.se.impl.encoding.CDRInputStream;
 	
 	@:overload @:final public function read_fixed(digits : java.StdTypes.Int16, scale : java.StdTypes.Int16) : java.math.BigDecimal;
 	

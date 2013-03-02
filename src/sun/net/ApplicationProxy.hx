@@ -25,7 +25,7 @@ package sun.net;
 */
 extern class ApplicationProxy extends java.net.Proxy
 {
-	@:overload public static function create(proxy : java.net.Proxy) : ApplicationProxy;
+	@:overload public static function create(proxy : java.net.Proxy) : sun.net.ApplicationProxy;
 	
 	
 }

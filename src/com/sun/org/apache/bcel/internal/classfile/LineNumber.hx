@@ -69,7 +69,7 @@ extern class LineNumber implements java.lang.Cloneable implements com.sun.org.ap
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : LineNumber) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LineNumber) : Void;
 	
 	/**
 	* @param start_pc Program Counter (PC) corresponds to
@@ -122,7 +122,7 @@ extern class LineNumber implements java.lang.Cloneable implements com.sun.org.ap
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : LineNumber;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.LineNumber;
 	
 	
 }

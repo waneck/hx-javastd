@@ -68,7 +68,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Override the SyntaxTreeNode.setParser() method to make sure that the
 	* parser is set for sub-expressions
 	*/
-	@:overload override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Returns a string describing this expression

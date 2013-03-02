@@ -116,7 +116,7 @@ extern interface XSElementDeclaration extends com.sun.org.apache.xerces.internal
 	* [substitution group affiliation]: a top-level element definition if it
 	* exists, otherwise <code>null</code>.
 	*/
-	@:overload public function getSubstitutionGroupAffiliation() : XSElementDeclaration;
+	@:overload public function getSubstitutionGroupAffiliation() : com.sun.org.apache.xerces.internal.xs.XSElementDeclaration;
 	
 	/**
 	* Convenience method that checks if <code>exclusion</code> is a

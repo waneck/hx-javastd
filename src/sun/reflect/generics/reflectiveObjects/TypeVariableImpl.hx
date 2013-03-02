@@ -37,7 +37,7 @@ extern class TypeVariableImpl<D> extends sun.reflect.generics.reflectiveObjects.
 	* @return A type variable with name, bounds, declaration and factory
 	* specified
 	*/
-	@:overload public static function make<T : java.lang.reflect.GenericDeclaration>(decl : T, name : String, bs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : TypeVariableImpl<T>;
+	@:overload public static function make<T : java.lang.reflect.GenericDeclaration>(decl : T, name : String, bs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.reflectiveObjects.TypeVariableImpl<T>;
 	
 	/**
 	* Returns an array of <tt>Type</tt> objects representing the

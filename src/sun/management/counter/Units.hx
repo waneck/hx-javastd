@@ -34,39 +34,39 @@ extern class Units implements java.io.Serializable
 	/**
 	* An Invalid Units value.
 	*/
-	public static var INVALID(default, null) : Units;
+	public static var INVALID(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing unit-less quantities.
 	*/
-	public static var NONE(default, null) : Units;
+	public static var NONE(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing Bytes.
 	*/
-	public static var BYTES(default, null) : Units;
+	public static var BYTES(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing Ticks.
 	*/
-	public static var TICKS(default, null) : Units;
+	public static var TICKS(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing a count of events.
 	*/
-	public static var EVENTS(default, null) : Units;
+	public static var EVENTS(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing String data. Although not really
 	* a unit of measure, this Units value serves to distinguish String
 	* instrumentation objects from instrumentation objects of other types.
 	*/
-	public static var STRING(default, null) : Units;
+	public static var STRING(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Units attribute representing Hertz (frequency).
 	*/
-	public static var HERTZ(default, null) : Units;
+	public static var HERTZ(default, null) : sun.management.counter.Units;
 	
 	/**
 	* Returns a string describing this Unit of measurement attribute
@@ -91,7 +91,7 @@ extern class Units implements java.io.Serializable
 	* @return Units - the Units object for the given <code>value</code>
 	*                 or {@link Units#INVALID} if out of range.
 	*/
-	@:overload public static function toUnits(value : Int) : Units;
+	@:overload public static function toUnits(value : Int) : sun.management.counter.Units;
 	
 	
 }

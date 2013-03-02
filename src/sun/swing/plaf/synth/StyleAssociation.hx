@@ -39,13 +39,13 @@ extern class StyleAssociation
 	* Returns a StyleAssociation that can be used to determine if
 	* a particular string matches the returned association.
 	*/
-	@:overload public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle) : StyleAssociation;
+	@:overload public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle) : sun.swing.plaf.synth.StyleAssociation;
 	
 	/**
 	* Returns a StyleAssociation that can be used to determine if
 	* a particular string matches the returned association.
 	*/
-	@:overload public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle, id : Int) : StyleAssociation;
+	@:overload public static function createStyleAssociation(text : String, style : javax.swing.plaf.synth.SynthStyle, id : Int) : sun.swing.plaf.synth.StyleAssociation;
 	
 	/**
 	* Returns the developer specified identifier for this association, will

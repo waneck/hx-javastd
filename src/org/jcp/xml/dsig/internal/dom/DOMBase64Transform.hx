@@ -33,7 +33,7 @@ extern class DOMBase64Transform extends org.jcp.xml.dsig.internal.dom.ApacheTran
 	*
 	* @author Sean Mullan
 	*/
-	@:overload override public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
+	@:overload public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
 	
 	
 }

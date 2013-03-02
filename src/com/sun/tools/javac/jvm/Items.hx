@@ -53,7 +53,7 @@ extern class Items
 }
 /** An item representing a value on stack.
 */
-@:native('com$sun$tools$javac$jvm$Items$StackItem') @:internal extern class Items_StackItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$StackItem') @:internal extern class Items_StackItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -61,7 +61,7 @@ extern class Items
 }
 /** An item representing an indexed expression.
 */
-@:native('com$sun$tools$javac$jvm$Items$IndexedItem') @:internal extern class Items_IndexedItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$IndexedItem') @:internal extern class Items_IndexedItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -69,7 +69,7 @@ extern class Items
 }
 /** An item representing `this' or `super'.
 */
-@:native('com$sun$tools$javac$jvm$Items$SelfItem') @:internal extern class Items_SelfItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$SelfItem') @:internal extern class Items_SelfItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -77,7 +77,7 @@ extern class Items
 }
 /** An item representing a local variable.
 */
-@:native('com$sun$tools$javac$jvm$Items$LocalItem') @:internal extern class Items_LocalItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$LocalItem') @:internal extern class Items_LocalItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -85,7 +85,7 @@ extern class Items
 }
 /** An item representing a static variable or method.
 */
-@:native('com$sun$tools$javac$jvm$Items$StaticItem') @:internal extern class Items_StaticItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$StaticItem') @:internal extern class Items_StaticItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -93,7 +93,7 @@ extern class Items
 }
 /** An item representing an instance variable or method.
 */
-@:native('com$sun$tools$javac$jvm$Items$MemberItem') @:internal extern class Items_MemberItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$MemberItem') @:internal extern class Items_MemberItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -101,7 +101,7 @@ extern class Items
 }
 /** An item representing a literal.
 */
-@:native('com$sun$tools$javac$jvm$Items$ImmediateItem') @:internal extern class Items_ImmediateItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$ImmediateItem') @:internal extern class Items_ImmediateItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -109,7 +109,7 @@ extern class Items
 }
 /** An item representing an assignment expressions.
 */
-@:native('com$sun$tools$javac$jvm$Items$AssignItem') @:internal extern class Items_AssignItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$AssignItem') @:internal extern class Items_AssignItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	
@@ -117,7 +117,7 @@ extern class Items
 }
 /** An item representing a conditional or unconditional jump.
 */
-@:native('com$sun$tools$javac$jvm$Items$CondItem') @:internal extern class Items_CondItem extends Items_Item
+@:native('com$sun$tools$javac$jvm$Items$CondItem') @:internal extern class Items_CondItem extends com.sun.tools.javac.jvm.Items.Items_Item
 {
 	@:overload override public function toString() : String;
 	

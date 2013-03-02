@@ -58,7 +58,7 @@ extern interface IOR extends java.util.List<Dynamic> extends com.sun.corba.se.sp
 	* that the typeids are the same, they have the same number of profiles,
 	* and each profile is equivalent to the corresponding profile.
 	*/
-	@:overload public function isEquivalent(ior : IOR) : Bool;
+	@:overload public function isEquivalent(ior : com.sun.corba.se.spi.ior.IOR) : Bool;
 	
 	/** Return the IORTemplate for this IOR.  This is simply a list
 	* of all TaggedProfileTemplates derived from the TaggedProfiles

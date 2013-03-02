@@ -43,7 +43,7 @@ extern class Manifest implements java.lang.Cloneable
 	*
 	* @param man the Manifest to copy
 	*/
-	@:overload public function new(man : Manifest) : Void;
+	@:overload public function new(man : java.util.jar.Manifest) : Void;
 	
 	/**
 	* Returns the main Attributes for the Manifest.

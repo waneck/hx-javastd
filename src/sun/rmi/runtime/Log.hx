@@ -62,7 +62,7 @@ extern class Log
 	* Since this is an internal API, no checks are made to ensure
 	* that multiple logs do not exist for the same logger.
 	*/
-	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Int) : Log;
+	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Int) : sun.rmi.runtime.Log;
 	
 	/**
 	* Access logs associated with boolean properties
@@ -71,14 +71,14 @@ extern class Log
 	* Since this is an internal API, no checks are made to ensure
 	* that multiple logs do not exist for the same logger.
 	*/
-	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Bool) : Log;
+	@:overload public static function getLog(loggerName : String, oldLogName : String, _override : Bool) : sun.rmi.runtime.Log;
 	
 	
 }
 /** factory interface enables Logger and LogStream implementations */
 @:native('sun$rmi$runtime$Log$LogFactory') @:internal extern interface Log_LogFactory
 {
-	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : Log;
+	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : sun.rmi.runtime.Log;
 	
 	
 }
@@ -86,7 +86,7 @@ extern class Log
 * Factory to create Log objects which deliver log messages to the
 * java.util.logging API.
 */
-@:native('sun$rmi$runtime$Log$LoggerLogFactory') @:internal extern class Log_LoggerLogFactory implements Log_LogFactory
+@:native('sun$rmi$runtime$Log$LoggerLogFactory') @:internal extern class Log_LoggerLogFactory implements sun.rmi.runtime.Log.Log_LogFactory
 {
 	/*
 	* Accessor to obtain an arbitrary RMI logger with name
@@ -94,14 +94,14 @@ extern class Log
 	* level for the system property with name, the logger level
 	* will be set to the value of system property.
 	*/
-	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : Log;
+	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : sun.rmi.runtime.Log;
 	
 	
 }
 /**
 * Class specialized to log messages to the java.util.logging API
 */
-@:native('sun$rmi$runtime$Log$LoggerLog') @:internal extern class Log_LoggerLog extends Log
+@:native('sun$rmi$runtime$Log$LoggerLog') @:internal extern class Log_LoggerLog extends sun.rmi.runtime.Log
 {
 	@:overload override public function isLoggable(level : java.util.logging.Level) : Bool;
 	
@@ -152,10 +152,10 @@ extern class Log
 * Factory to create Log objects which deliver log messages to the
 * java.rmi.server.LogStream API
 */
-@:native('sun$rmi$runtime$Log$LogStreamLogFactory') @:internal extern class Log_LogStreamLogFactory implements Log_LogFactory
+@:native('sun$rmi$runtime$Log$LogStreamLogFactory') @:internal extern class Log_LogStreamLogFactory implements sun.rmi.runtime.Log.Log_LogFactory
 {
 	/* create a new LogStreamLog for the specified log */
-	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : Log;
+	@:overload public function createLog(loggerName : String, oldLogName : String, level : java.util.logging.Level) : sun.rmi.runtime.Log;
 	
 	
 }
@@ -163,7 +163,7 @@ extern class Log
 * Class specialized to log messages to the
 * java.rmi.server.LogStream API
 */
-@:native('sun$rmi$runtime$Log$LogStreamLog') @:internal extern class Log_LogStreamLog extends Log
+@:native('sun$rmi$runtime$Log$LogStreamLog') @:internal extern class Log_LogStreamLog extends sun.rmi.runtime.Log
 {
 	@:overload @:synchronized override public function isLoggable(level : java.util.logging.Level) : Bool;
 	

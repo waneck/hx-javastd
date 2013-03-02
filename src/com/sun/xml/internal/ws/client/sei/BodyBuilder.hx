@@ -27,7 +27,7 @@ package com.sun.xml.internal.ws.client.sei;
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$Empty') @:internal extern class BodyBuilder_Empty extends BodyBuilder
+@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$Empty') @:internal extern class BodyBuilder_Empty extends com.sun.xml.internal.ws.client.sei.BodyBuilder
 {
 	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
@@ -37,7 +37,7 @@ package com.sun.xml.internal.ws.client.sei;
 * Base class for those {@link BodyBuilder}s that build a {@link Message}
 * from JAXB objects.
 */
-@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$JAXB') @:internal extern class BodyBuilder_JAXB extends BodyBuilder
+@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$JAXB') @:internal extern class BodyBuilder_JAXB extends com.sun.xml.internal.ws.client.sei.BodyBuilder
 {
 	@:overload private function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
@@ -47,7 +47,7 @@ package com.sun.xml.internal.ws.client.sei;
 * Used to create a payload JAXB object just by taking
 * one of the parameters.
 */
-@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$Bare') @:internal extern class BodyBuilder_Bare extends BodyBuilder_JAXB
+@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$Bare') @:internal extern class BodyBuilder_Bare extends com.sun.xml.internal.ws.client.sei.BodyBuilder.BodyBuilder_JAXB
 {
 	
 }
@@ -55,7 +55,7 @@ package com.sun.xml.internal.ws.client.sei;
 * Used to handle a 'wrapper' style request.
 * Common part of rpc/lit and doc/lit.
 */
-@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$Wrapped') @:internal extern class BodyBuilder_Wrapped extends BodyBuilder_JAXB
+@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$Wrapped') @:internal extern class BodyBuilder_Wrapped extends com.sun.xml.internal.ws.client.sei.BodyBuilder.BodyBuilder_JAXB
 {
 	/**
 	* Where in the method argument list do they come from?
@@ -75,7 +75,7 @@ package com.sun.xml.internal.ws.client.sei;
 * Used to create a payload JAXB object by wrapping
 * multiple parameters into one "wrapper bean".
 */
-@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$DocLit') @:internal extern class BodyBuilder_DocLit extends BodyBuilder_Wrapped
+@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$DocLit') @:internal extern class BodyBuilder_DocLit extends com.sun.xml.internal.ws.client.sei.BodyBuilder.BodyBuilder_Wrapped
 {
 	
 }
@@ -87,7 +87,7 @@ package com.sun.xml.internal.ws.client.sei;
 * This is used for rpc/lit, as we don't have a wrapper bean for it.
 * (TODO: Why don't we have a wrapper bean for this, when doc/lit does!?)
 */
-@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$RpcLit') @:internal extern class BodyBuilder_RpcLit extends BodyBuilder_Wrapped
+@:native('com$sun$xml$internal$ws$client$sei$BodyBuilder$RpcLit') @:internal extern class BodyBuilder_RpcLit extends com.sun.xml.internal.ws.client.sei.BodyBuilder.BodyBuilder_Wrapped
 {
 	
 }

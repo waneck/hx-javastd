@@ -30,13 +30,13 @@ package com.sun.java.swing.plaf.motif;
 	*
 	* @author Arnaud Weber
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

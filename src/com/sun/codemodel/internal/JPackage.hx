@@ -23,20 +23,20 @@ package com.sun.codemodel.internal;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class JPackage implements com.sun.codemodel.internal.JDeclaration implements com.sun.codemodel.internal.JGenerable implements com.sun.codemodel.internal.JClassContainer implements com.sun.codemodel.internal.JAnnotatable implements java.lang.Comparable<JPackage> implements com.sun.codemodel.internal.JDocCommentable
+extern class JPackage implements com.sun.codemodel.internal.JDeclaration implements com.sun.codemodel.internal.JGenerable implements com.sun.codemodel.internal.JClassContainer implements com.sun.codemodel.internal.JAnnotatable implements java.lang.Comparable<com.sun.codemodel.internal.JPackage> implements com.sun.codemodel.internal.JDocCommentable
 {
 	@:overload public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
 	
 	/**
 	* Gets the parent package, or null if this class is the root package.
 	*/
-	@:overload public function parent() : JPackage;
+	@:overload public function parent() : com.sun.codemodel.internal.JPackage;
 	
 	@:overload public function isClass() : Bool;
 	
 	@:overload public function isPackage() : Bool;
 	
-	@:overload public function getPackage() : JPackage;
+	@:overload public function getPackage() : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Add a class to this package.
@@ -78,7 +78,7 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	/**
 	* Order is based on the lexicological order of the package name.
 	*/
-	@:overload public function compareTo(that : JPackage) : Int;
+	@:overload public function compareTo(that : com.sun.codemodel.internal.JPackage) : Int;
 	
 	/**
 	* Add an interface to this package.
@@ -158,7 +158,7 @@ extern class JPackage implements com.sun.codemodel.internal.JDeclaration impleme
 	/**
 	* Gets a reference to a sub package of this package.
 	*/
-	@:overload public function subPackage(pkg : String) : JPackage;
+	@:overload public function subPackage(pkg : String) : com.sun.codemodel.internal.JPackage;
 	
 	/**
 	* Returns an iterator that walks the top-level classes defined in this

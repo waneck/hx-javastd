@@ -48,7 +48,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class being documented.
 	* @param writer the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ClassWriter) : ClassBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ClassWriter) : com.sun.tools.doclets.internal.toolkit.builders.ClassBuilder;
 	
 	/**
 	* {@inheritDoc}

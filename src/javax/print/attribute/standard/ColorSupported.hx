@@ -28,13 +28,13 @@ extern class ColorSupported extends javax.print.attribute.EnumSyntax implements 
 	/**
 	* The printer is not capable of any type of color printing.
 	*/
-	public static var NOT_SUPPORTED(default, null) : ColorSupported;
+	public static var NOT_SUPPORTED(default, null) : javax.print.attribute.standard.ColorSupported;
 	
 	/**
 	* The printer is capable of some type of color printing, such as
 	* highlight color or full process color.
 	*/
-	public static var SUPPORTED(default, null) : ColorSupported;
+	public static var SUPPORTED(default, null) : javax.print.attribute.standard.ColorSupported;
 	
 	/**
 	* Construct a new color supported enumeration value with the given

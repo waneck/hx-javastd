@@ -91,23 +91,23 @@ extern class Select extends com.sun.org.apache.bcel.internal.generic.BranchInstr
 	* @param max_offset the maximum offset that may be caused by these instructions
 	* @return additional offset caused by possible change of this instruction's length
 	*/
-	@:overload override private function updatePosition(offset : Int, max_offset : Int) : Int;
+	@:overload private function updatePosition(offset : Int, max_offset : Int) : Int;
 	
 	/**
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload public function toString(verbose : Bool) : String;
 	
 	/**
 	* Set branch target for `i'th case
@@ -118,12 +118,12 @@ extern class Select extends com.sun.org.apache.bcel.internal.generic.BranchInstr
 	* @param old_ih old target
 	* @param new_ih new target
 	*/
-	@:overload override public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
+	@:overload public function updateTarget(old_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, new_ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Void;
 	
 	/**
 	* @return true, if ih is target of this instruction
 	*/
-	@:overload override public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
+	@:overload public function containsTarget(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle) : Bool;
 	
 	/**
 	* @return array of match indices
@@ -142,7 +142,7 @@ extern class Select extends com.sun.org.apache.bcel.internal.generic.BranchInstr
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

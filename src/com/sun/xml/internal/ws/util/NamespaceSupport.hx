@@ -38,7 +38,7 @@ extern class NamespaceSupport
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload public function new(that : NamespaceSupport) : Void;
+	@:overload public function new(that : com.sun.xml.internal.ws.util.NamespaceSupport) : Void;
 	
 	/**
 	* Reset this Namespace support object for reuse.

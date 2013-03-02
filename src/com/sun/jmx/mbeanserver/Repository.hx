@@ -58,7 +58,7 @@ extern class Repository
 	*                repository, and a {@link RuntimeOperationsException}
 	*                is thrown.
 	*/
-	@:overload public function addMBean(object : javax.management.DynamicMBean, name : javax.management.ObjectName, context : Repository_RegistrationContext) : Void;
+	@:overload public function addMBean(object : javax.management.DynamicMBean, name : javax.management.ObjectName, context : com.sun.jmx.mbeanserver.Repository.Repository_RegistrationContext) : Void;
 	
 	/**
 	* Checks whether an MBean of the name specified is already stored in
@@ -115,7 +115,7 @@ extern class Repository
 	* @exception InstanceNotFoundException The MBean does not exist in
 	*            the repository.
 	*/
-	@:overload public function remove(name : javax.management.ObjectName, context : Repository_RegistrationContext) : Void;
+	@:overload public function remove(name : javax.management.ObjectName, context : com.sun.jmx.mbeanserver.Repository.Repository_RegistrationContext) : Void;
 	
 	/**
 	* Gets the number of MBeans stored in the repository.

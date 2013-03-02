@@ -95,7 +95,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* @return a <code>DateFormatSymbols</code> instance.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance() : DateFormatSymbols;
+	@:require(java6) @:overload @:final public static function getInstance() : java.text.DateFormatSymbols;
 	
 	/**
 	* Gets the <code>DateFormatSymbols</code> instance for the specified
@@ -109,7 +109,7 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 	* @exception NullPointerException if <code>locale</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance(locale : java.util.Locale) : DateFormatSymbols;
+	@:require(java6) @:overload @:final public static function getInstance(locale : java.util.Locale) : java.text.DateFormatSymbols;
 	
 	/**
 	* Gets era strings. For example: "AD" and "BC".
@@ -295,9 +295,9 @@ extern class DateFormatSymbols implements java.io.Serializable implements java.l
 * Obtains a DateFormatSymbols instance from a DateFormatSymbolsProvider
 * implementation.
 */
-@:native('java$text$DateFormatSymbols$DateFormatSymbolsGetter') @:internal extern class DateFormatSymbols_DateFormatSymbolsGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DateFormatSymbolsProvider, DateFormatSymbols>
+@:native('java$text$DateFormatSymbols$DateFormatSymbolsGetter') @:internal extern class DateFormatSymbols_DateFormatSymbolsGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DateFormatSymbolsProvider, java.text.DateFormatSymbols>
 {
-	@:overload public function getObject(dateFormatSymbolsProvider : java.text.spi.DateFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : DateFormatSymbols;
+	@:overload public function getObject(dateFormatSymbolsProvider : java.text.spi.DateFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DateFormatSymbols;
 	
 	
 }

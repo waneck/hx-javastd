@@ -13,15 +13,15 @@ extern class BindingType implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _nobject(default, null) : Int;
 	
-	public static var nobject(default, null) : BindingType;
+	public static var nobject(default, null) : org.omg.CosNaming.BindingType;
 	
 	public static var _ncontext(default, null) : Int;
 	
-	public static var ncontext(default, null) : BindingType;
+	public static var ncontext(default, null) : org.omg.CosNaming.BindingType;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : BindingType;
+	@:overload public static function from_int(value : Int) : org.omg.CosNaming.BindingType;
 	
 	@:overload private function new(value : Int) : Void;
 	

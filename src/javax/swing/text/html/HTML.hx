@@ -31,7 +31,7 @@ extern class HTML
 	* This set does not include tags that are
 	* manufactured by the reader.
 	*/
-	@:overload public static function getAllTags() : java.NativeArray<HTML_Tag>;
+	@:overload public static function getAllTags() : java.NativeArray<javax.swing.text.html.HTML.HTML_Tag>;
 	
 	/**
 	* Fetches a tag constant for a well-known tag name (i.e. one of
@@ -52,7 +52,7 @@ extern class HTML
 	* @return a tag constant corresponding to the <code>tagName</code>,
 	*    or <code>null</code> if not found
 	*/
-	@:overload public static function getTag(tagName : String) : HTML_Tag;
+	@:overload public static function getTag(tagName : String) : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/**
 	* Fetches an integer attribute value.  Attribute values
@@ -64,7 +64,7 @@ extern class HTML
 	* @param def the default value to use if the attribute isn't
 	*  defined or there is an error converting to an integer
 	*/
-	@:overload public static function getIntegerAttributeValue(attr : javax.swing.text.AttributeSet, key : HTML_Attribute, def : Int) : Int;
+	@:overload public static function getIntegerAttributeValue(attr : javax.swing.text.AttributeSet, key : javax.swing.text.html.HTML.HTML_Attribute, def : Int) : Int;
 	
 	public static var NULL_ATTRIBUTE_VALUE(default, null) : String;
 	
@@ -72,7 +72,7 @@ extern class HTML
 	* Returns the set of HTML attributes recognized.
 	* @return the set of HTML attributes recognized
 	*/
-	@:overload public static function getAllAttributeKeys() : java.NativeArray<HTML_Attribute>;
+	@:overload public static function getAllAttributeKeys() : java.NativeArray<javax.swing.text.html.HTML.HTML_Attribute>;
 	
 	/**
 	* Fetches an attribute constant for a well-known attribute name
@@ -94,7 +94,7 @@ extern class HTML
 	* @param attName the <code>String</code> requested
 	* @return the <code>Attribute</code> corresponding to <code>attName</code>
 	*/
-	@:overload public static function getAttributeKey(attName : String) : HTML_Attribute;
+	@:overload public static function getAttributeKey(attName : String) : javax.swing.text.html.HTML.HTML_Attribute;
 	
 	
 }
@@ -171,151 +171,151 @@ extern class HTML
 	*/
 	@:overload public function toString() : String;
 	
-	public static var A(default, null) : HTML_Tag;
+	public static var A(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var ADDRESS(default, null) : HTML_Tag;
+	public static var ADDRESS(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var APPLET(default, null) : HTML_Tag;
+	public static var APPLET(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var AREA(default, null) : HTML_Tag;
+	public static var AREA(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var B(default, null) : HTML_Tag;
+	public static var B(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var BASE(default, null) : HTML_Tag;
+	public static var BASE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var BASEFONT(default, null) : HTML_Tag;
+	public static var BASEFONT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var BIG(default, null) : HTML_Tag;
+	public static var BIG(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var BLOCKQUOTE(default, null) : HTML_Tag;
+	public static var BLOCKQUOTE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var BODY(default, null) : HTML_Tag;
+	public static var BODY(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var BR(default, null) : HTML_Tag;
+	public static var BR(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var CAPTION(default, null) : HTML_Tag;
+	public static var CAPTION(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var CENTER(default, null) : HTML_Tag;
+	public static var CENTER(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var CITE(default, null) : HTML_Tag;
+	public static var CITE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var CODE(default, null) : HTML_Tag;
+	public static var CODE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var DD(default, null) : HTML_Tag;
+	public static var DD(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var DFN(default, null) : HTML_Tag;
+	public static var DFN(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var DIR(default, null) : HTML_Tag;
+	public static var DIR(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var DIV(default, null) : HTML_Tag;
+	public static var DIV(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var DL(default, null) : HTML_Tag;
+	public static var DL(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var DT(default, null) : HTML_Tag;
+	public static var DT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var EM(default, null) : HTML_Tag;
+	public static var EM(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var FONT(default, null) : HTML_Tag;
+	public static var FONT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var FORM(default, null) : HTML_Tag;
+	public static var FORM(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var FRAME(default, null) : HTML_Tag;
+	public static var FRAME(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var FRAMESET(default, null) : HTML_Tag;
+	public static var FRAMESET(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var H1(default, null) : HTML_Tag;
+	public static var H1(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var H2(default, null) : HTML_Tag;
+	public static var H2(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var H3(default, null) : HTML_Tag;
+	public static var H3(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var H4(default, null) : HTML_Tag;
+	public static var H4(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var H5(default, null) : HTML_Tag;
+	public static var H5(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var H6(default, null) : HTML_Tag;
+	public static var H6(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var HEAD(default, null) : HTML_Tag;
+	public static var HEAD(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var HR(default, null) : HTML_Tag;
+	public static var HR(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var HTML(default, null) : HTML_Tag;
+	public static var HTML(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var I(default, null) : HTML_Tag;
+	public static var I(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var IMG(default, null) : HTML_Tag;
+	public static var IMG(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var INPUT(default, null) : HTML_Tag;
+	public static var INPUT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var ISINDEX(default, null) : HTML_Tag;
+	public static var ISINDEX(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var KBD(default, null) : HTML_Tag;
+	public static var KBD(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var LI(default, null) : HTML_Tag;
+	public static var LI(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var LINK(default, null) : HTML_Tag;
+	public static var LINK(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var MAP(default, null) : HTML_Tag;
+	public static var MAP(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var MENU(default, null) : HTML_Tag;
+	public static var MENU(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var META(default, null) : HTML_Tag;
+	public static var META(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var NOFRAMES(default, null) : HTML_Tag;
+	public static var NOFRAMES(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var OBJECT(default, null) : HTML_Tag;
+	public static var OBJECT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var OL(default, null) : HTML_Tag;
+	public static var OL(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var OPTION(default, null) : HTML_Tag;
+	public static var OPTION(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var P(default, null) : HTML_Tag;
+	public static var P(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var PARAM(default, null) : HTML_Tag;
+	public static var PARAM(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var PRE(default, null) : HTML_Tag;
+	public static var PRE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var SAMP(default, null) : HTML_Tag;
+	public static var SAMP(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var SCRIPT(default, null) : HTML_Tag;
+	public static var SCRIPT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var SELECT(default, null) : HTML_Tag;
+	public static var SELECT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var SMALL(default, null) : HTML_Tag;
+	public static var SMALL(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var SPAN(default, null) : HTML_Tag;
+	public static var SPAN(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var STRIKE(default, null) : HTML_Tag;
+	public static var STRIKE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var S(default, null) : HTML_Tag;
+	public static var S(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var STRONG(default, null) : HTML_Tag;
+	public static var STRONG(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var STYLE(default, null) : HTML_Tag;
+	public static var STYLE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var SUB(default, null) : HTML_Tag;
+	public static var SUB(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var SUP(default, null) : HTML_Tag;
+	public static var SUP(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var TABLE(default, null) : HTML_Tag;
+	public static var TABLE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var TD(default, null) : HTML_Tag;
+	public static var TD(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var TEXTAREA(default, null) : HTML_Tag;
+	public static var TEXTAREA(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var TH(default, null) : HTML_Tag;
+	public static var TH(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var TITLE(default, null) : HTML_Tag;
+	public static var TITLE(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var TR(default, null) : HTML_Tag;
+	public static var TR(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var TT(default, null) : HTML_Tag;
+	public static var TT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var U(default, null) : HTML_Tag;
+	public static var U(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var UL(default, null) : HTML_Tag;
+	public static var UL(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
-	public static var VAR(default, null) : HTML_Tag;
+	public static var VAR(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/**
 	* All text content must be in a paragraph element.
@@ -327,7 +327,7 @@ extern class HTML
 	* we create a some fake tag types to mark the elements
 	* that were manufactured.
 	*/
-	public static var IMPLIED(default, null) : HTML_Tag;
+	public static var IMPLIED(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/**
 	* All text content is labeled with this tag.
@@ -337,7 +337,7 @@ extern class HTML
 	* we create a some fake tag types to mark the elements
 	* that were manufactured.
 	*/
-	public static var CONTENT(default, null) : HTML_Tag;
+	public static var CONTENT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
 	/**
 	* All comments are labeled with this tag.
@@ -347,11 +347,11 @@ extern class HTML
 	* we create a some fake tag types to mark the elements
 	* that were manufactured.
 	*/
-	public static var COMMENT(default, null) : HTML_Tag;
+	public static var COMMENT(default, null) : javax.swing.text.html.HTML.HTML_Tag;
 	
 	
 }
-@:native('javax$swing$text$html$HTML$UnknownTag') extern class HTML_UnknownTag extends HTML_Tag implements java.io.Serializable
+@:native('javax$swing$text$html$HTML$UnknownTag') extern class HTML_UnknownTag extends javax.swing.text.html.HTML.HTML_Tag implements java.io.Serializable
 {
 	/**
 	* Creates a new <code>UnknownTag</code> with the specified
@@ -392,165 +392,165 @@ extern class HTML
 	*/
 	@:overload public function toString() : String;
 	
-	public static var SIZE(default, null) : HTML_Attribute;
+	public static var SIZE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var COLOR(default, null) : HTML_Attribute;
+	public static var COLOR(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CLEAR(default, null) : HTML_Attribute;
+	public static var CLEAR(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var BACKGROUND(default, null) : HTML_Attribute;
+	public static var BACKGROUND(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var BGCOLOR(default, null) : HTML_Attribute;
+	public static var BGCOLOR(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var TEXT(default, null) : HTML_Attribute;
+	public static var TEXT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var LINK(default, null) : HTML_Attribute;
+	public static var LINK(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var VLINK(default, null) : HTML_Attribute;
+	public static var VLINK(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ALINK(default, null) : HTML_Attribute;
+	public static var ALINK(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var WIDTH(default, null) : HTML_Attribute;
+	public static var WIDTH(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var HEIGHT(default, null) : HTML_Attribute;
+	public static var HEIGHT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ALIGN(default, null) : HTML_Attribute;
+	public static var ALIGN(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var NAME(default, null) : HTML_Attribute;
+	public static var NAME(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var HREF(default, null) : HTML_Attribute;
+	public static var HREF(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var REL(default, null) : HTML_Attribute;
+	public static var REL(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var REV(default, null) : HTML_Attribute;
+	public static var REV(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var TITLE(default, null) : HTML_Attribute;
+	public static var TITLE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var TARGET(default, null) : HTML_Attribute;
+	public static var TARGET(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var SHAPE(default, null) : HTML_Attribute;
+	public static var SHAPE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var COORDS(default, null) : HTML_Attribute;
+	public static var COORDS(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ISMAP(default, null) : HTML_Attribute;
+	public static var ISMAP(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var NOHREF(default, null) : HTML_Attribute;
+	public static var NOHREF(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ALT(default, null) : HTML_Attribute;
+	public static var ALT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ID(default, null) : HTML_Attribute;
+	public static var ID(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var SRC(default, null) : HTML_Attribute;
+	public static var SRC(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var HSPACE(default, null) : HTML_Attribute;
+	public static var HSPACE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var VSPACE(default, null) : HTML_Attribute;
+	public static var VSPACE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var USEMAP(default, null) : HTML_Attribute;
+	public static var USEMAP(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var LOWSRC(default, null) : HTML_Attribute;
+	public static var LOWSRC(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CODEBASE(default, null) : HTML_Attribute;
+	public static var CODEBASE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CODE(default, null) : HTML_Attribute;
+	public static var CODE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ARCHIVE(default, null) : HTML_Attribute;
+	public static var ARCHIVE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var VALUE(default, null) : HTML_Attribute;
+	public static var VALUE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var VALUETYPE(default, null) : HTML_Attribute;
+	public static var VALUETYPE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var TYPE(default, null) : HTML_Attribute;
+	public static var TYPE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CLASS(default, null) : HTML_Attribute;
+	public static var CLASS(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var STYLE(default, null) : HTML_Attribute;
+	public static var STYLE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var LANG(default, null) : HTML_Attribute;
+	public static var LANG(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var FACE(default, null) : HTML_Attribute;
+	public static var FACE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var DIR(default, null) : HTML_Attribute;
+	public static var DIR(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var DECLARE(default, null) : HTML_Attribute;
+	public static var DECLARE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CLASSID(default, null) : HTML_Attribute;
+	public static var CLASSID(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var DATA(default, null) : HTML_Attribute;
+	public static var DATA(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CODETYPE(default, null) : HTML_Attribute;
+	public static var CODETYPE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var STANDBY(default, null) : HTML_Attribute;
+	public static var STANDBY(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var BORDER(default, null) : HTML_Attribute;
+	public static var BORDER(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var SHAPES(default, null) : HTML_Attribute;
+	public static var SHAPES(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var NOSHADE(default, null) : HTML_Attribute;
+	public static var NOSHADE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var COMPACT(default, null) : HTML_Attribute;
+	public static var COMPACT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var START(default, null) : HTML_Attribute;
+	public static var START(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ACTION(default, null) : HTML_Attribute;
+	public static var ACTION(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var METHOD(default, null) : HTML_Attribute;
+	public static var METHOD(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ENCTYPE(default, null) : HTML_Attribute;
+	public static var ENCTYPE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CHECKED(default, null) : HTML_Attribute;
+	public static var CHECKED(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var MAXLENGTH(default, null) : HTML_Attribute;
+	public static var MAXLENGTH(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var MULTIPLE(default, null) : HTML_Attribute;
+	public static var MULTIPLE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var SELECTED(default, null) : HTML_Attribute;
+	public static var SELECTED(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ROWS(default, null) : HTML_Attribute;
+	public static var ROWS(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var COLS(default, null) : HTML_Attribute;
+	public static var COLS(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var DUMMY(default, null) : HTML_Attribute;
+	public static var DUMMY(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CELLSPACING(default, null) : HTML_Attribute;
+	public static var CELLSPACING(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CELLPADDING(default, null) : HTML_Attribute;
+	public static var CELLPADDING(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var VALIGN(default, null) : HTML_Attribute;
+	public static var VALIGN(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var HALIGN(default, null) : HTML_Attribute;
+	public static var HALIGN(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var NOWRAP(default, null) : HTML_Attribute;
+	public static var NOWRAP(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ROWSPAN(default, null) : HTML_Attribute;
+	public static var ROWSPAN(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var COLSPAN(default, null) : HTML_Attribute;
+	public static var COLSPAN(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var PROMPT(default, null) : HTML_Attribute;
+	public static var PROMPT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var HTTPEQUIV(default, null) : HTML_Attribute;
+	public static var HTTPEQUIV(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var CONTENT(default, null) : HTML_Attribute;
+	public static var CONTENT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var LANGUAGE(default, null) : HTML_Attribute;
+	public static var LANGUAGE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var VERSION(default, null) : HTML_Attribute;
+	public static var VERSION(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var N(default, null) : HTML_Attribute;
+	public static var N(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var FRAMEBORDER(default, null) : HTML_Attribute;
+	public static var FRAMEBORDER(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var MARGINWIDTH(default, null) : HTML_Attribute;
+	public static var MARGINWIDTH(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var MARGINHEIGHT(default, null) : HTML_Attribute;
+	public static var MARGINHEIGHT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var SCROLLING(default, null) : HTML_Attribute;
+	public static var SCROLLING(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var NORESIZE(default, null) : HTML_Attribute;
+	public static var NORESIZE(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var ENDTAG(default, null) : HTML_Attribute;
+	public static var ENDTAG(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
-	public static var COMMENT(default, null) : HTML_Attribute;
+	public static var COMMENT(default, null) : javax.swing.text.html.HTML.HTML_Attribute;
 	
 	
 }

@@ -147,13 +147,13 @@ package java.awt;
 	* Creates the peer for the list.  The peer allows us to modify the
 	* list's appearance without changing its functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload public function addNotify() : Void;
 	
 	/**
 	* Removes the peer for this list.  The peer allows us to modify the
 	* list's appearance without changing its functionality.
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload public function removeNotify() : Void;
 	
 	/**
 	* Gets the number of items in the list.
@@ -466,13 +466,13 @@ package java.awt;
 	* @see        java.awt.Component#getPreferredSize
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:require(java1) @:overload public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize()</code>.
 	*/
-	@:overload override public function preferredSize() : java.awt.Dimension;
+	@:overload public function preferredSize() : java.awt.Dimension;
 	
 	/**
 	* Gets the minumum dimensions for a list with the specified
@@ -498,13 +498,13 @@ package java.awt;
 	* @see          java.awt.Component#getMinimumSize()
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:require(java1) @:overload public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize()</code>.
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Adds the specified item listener to receive item events from
@@ -646,7 +646,7 @@ package java.awt;
 	* @see #getItemListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this scrolling list. If an event is
@@ -667,7 +667,7 @@ package java.awt;
 	* @see          #processItemEvent
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes item events occurring on this list by
@@ -726,7 +726,7 @@ package java.awt;
 	* scrolling list. This string is useful for debugging.
 	* @return    the parameter string of this scrolling list
 	*/
-	@:overload override private function paramString() : String;
+	@:overload private function paramString() : String;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
@@ -746,7 +746,7 @@ package java.awt;
 	*         <code>AccessibleContext</code> of this <code>List</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -788,7 +788,7 @@ package java.awt;
 	*
 	* @return the Accessible at the specified location, if it exists
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns the number of accessible children in the object.  If all
@@ -888,7 +888,7 @@ package java.awt;
 */
 @:require(java3) @:native('java$awt$List$AccessibleAWTList$AccessibleAWTListChild') extern class List_AccessibleAWTList_AccessibleAWTListChild extends java.awt.Component.Component_AccessibleAWTComponent implements javax.accessibility.Accessible
 {
-	@:overload public function new(parent : List, indexInParent : Int) : Void;
+	@:overload public function new(parent : java.awt.List, indexInParent : Int) : Void;
 	
 	/**
 	* Gets the AccessibleContext for this object.  In the
@@ -975,7 +975,7 @@ package java.awt;
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload override public function getBackground() : java.awt.Color;
+	@:overload public function getBackground() : java.awt.Color;
 	
 	/**
 	* Set the background color of this object.
@@ -983,7 +983,7 @@ package java.awt;
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Get the foreground color of this object.
@@ -992,7 +992,7 @@ package java.awt;
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload override public function getForeground() : java.awt.Color;
+	@:overload public function getForeground() : java.awt.Color;
 	
 	/**
 	* Set the foreground color of this object.
@@ -1000,7 +1000,7 @@ package java.awt;
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload override public function setForeground(c : java.awt.Color) : Void;
+	@:overload public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Get the Cursor of this object.
@@ -1008,7 +1008,7 @@ package java.awt;
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload override public function getCursor() : java.awt.Cursor;
+	@:overload public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Set the Cursor of this object.
@@ -1019,7 +1019,7 @@ package java.awt;
 	* @param cursor the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload override public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Get the Font of this object.
@@ -1027,7 +1027,7 @@ package java.awt;
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload override public function getFont() : java.awt.Font;
+	@:overload public function getFont() : java.awt.Font;
 	
 	/**
 	* Set the Font of this object.
@@ -1035,7 +1035,7 @@ package java.awt;
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Get the FontMetrics of this object.
@@ -1044,7 +1044,7 @@ package java.awt;
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Determine if the object is enabled.  Objects that are enabled
@@ -1057,7 +1057,7 @@ package java.awt;
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
 	/**
 	* Set the enabled state of the object.
@@ -1065,7 +1065,7 @@ package java.awt;
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload override public function setEnabled(b : Bool) : Void;
+	@:overload public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Determine if the object is visible.  Note: this means that the
@@ -1082,7 +1082,7 @@ package java.awt;
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload override public function isVisible() : Bool;
+	@:overload public function isVisible() : Bool;
 	
 	/**
 	* Set the visible state of the object.
@@ -1090,7 +1090,7 @@ package java.awt;
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload override public function setVisible(b : Bool) : Void;
+	@:overload public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Determine if the object is showing.  This is determined by
@@ -1102,7 +1102,7 @@ package java.awt;
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload override public function isShowing() : Bool;
+	@:overload public function isShowing() : Bool;
 	
 	/**
 	* Checks whether the specified point is within this object's
@@ -1114,7 +1114,7 @@ package java.awt;
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload override public function contains(p : java.awt.Point) : Bool;
+	@:overload public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -1124,7 +1124,7 @@ package java.awt;
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload override public function getLocationOnScreen() : java.awt.Point;
+	@:overload public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Gets the location of the object relative to the parent in the
@@ -1137,14 +1137,14 @@ package java.awt;
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload override public function getLocation() : java.awt.Point;
+	@:overload public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload override public function setLocation(p : java.awt.Point) : Void;
+	@:overload public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -1155,7 +1155,7 @@ package java.awt;
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload override public function getBounds() : java.awt.Rectangle;
+	@:overload public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle
@@ -1165,7 +1165,7 @@ package java.awt;
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload override public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension
@@ -1177,7 +1177,7 @@ package java.awt;
 	* component; null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload override public function getSize() : java.awt.Dimension;
+	@:overload public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -1185,7 +1185,7 @@ package java.awt;
 	* @param d - The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload override public function setSize(d : java.awt.Dimension) : Void;
+	@:overload public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the <code>Accessible</code> child, if one exists,
@@ -1196,7 +1196,7 @@ package java.awt;
 	* @return the <code>Accessible</code>, if it exists,
 	*     at the specified location; otherwise <code>null</code>
 	*/
-	@:overload override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects
@@ -1210,7 +1210,7 @@ package java.awt;
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload public function isFocusTraversable() : Bool;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept
@@ -1218,7 +1218,7 @@ package java.awt;
 	* to take focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload override public function requestFocus() : Void;
+	@:overload public function requestFocus() : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from
@@ -1227,7 +1227,7 @@ package java.awt;
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives
@@ -1236,7 +1236,7 @@ package java.awt;
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	
 }

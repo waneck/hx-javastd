@@ -613,7 +613,7 @@ extern class MethodHandle
 	* @throws WrongMethodTypeException if the conversion cannot be made
 	* @see MethodHandles#explicitCastArguments
 	*/
-	@:overload public function asType(newType : java.lang.invoke.MethodType) : MethodHandle;
+	@:overload public function asType(newType : java.lang.invoke.MethodType) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes an <em>array-spreading</em> method handle, which accepts a trailing array argument
@@ -692,7 +692,7 @@ assertEquals("[A, B, C]", (String) caToString2.invokeExact('A', "BC".toCharArray
 	* @throws WrongMethodTypeException if the implied {@code asType} call fails
 	* @see #asCollector
 	*/
-	@:overload public function asSpreader(arrayType : Class<Dynamic>, arrayLength : Int) : MethodHandle;
+	@:overload public function asSpreader(arrayType : Class<Dynamic>, arrayLength : Int) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes an <em>array-collecting</em> method handle, which accepts a given number of trailing
@@ -763,7 +763,7 @@ assertEquals("[123]", (String) longsToString.invokeExact((long)123));
 	* @see #asSpreader
 	* @see #asVarargsCollector
 	*/
-	@:overload public function asCollector(arrayType : Class<Dynamic>, arrayLength : Int) : MethodHandle;
+	@:overload public function asCollector(arrayType : Class<Dynamic>, arrayLength : Int) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Makes a <em>variable arity</em> adapter which is able to accept
@@ -915,7 +915,7 @@ assertEquals("[three, thee, tee]", Arrays.toString((Object[])ls.get(0)));
 	* @see #isVarargsCollector
 	* @see #asFixedArity
 	*/
-	@:overload public function asVarargsCollector(arrayType : Class<Dynamic>) : MethodHandle;
+	@:overload public function asVarargsCollector(arrayType : Class<Dynamic>) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Determines if this method handle
@@ -977,7 +977,7 @@ assertEquals("[three, thee, tee]", asListFix.invoke((Object)argv).toString());
 	* @see #asVarargsCollector
 	* @see #isVarargsCollector
 	*/
-	@:overload public function asFixedArity() : MethodHandle;
+	@:overload public function asFixedArity() : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Binds a value {@code x} to the first argument of a method handle, without invoking it.
@@ -1006,7 +1006,7 @@ assertEquals("[three, thee, tee]", asListFix.invoke((Object)argv).toString());
 	*         to the leading parameter type of the target
 	* @see MethodHandles#insertArguments
 	*/
-	@:overload public function bindTo(x : Dynamic) : MethodHandle;
+	@:overload public function bindTo(x : Dynamic) : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Returns a string representation of the method handle,

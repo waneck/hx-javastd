@@ -105,7 +105,7 @@ extern class StackMapEntry implements java.lang.Cloneable
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : StackMapEntry;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.StackMapEntry;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely

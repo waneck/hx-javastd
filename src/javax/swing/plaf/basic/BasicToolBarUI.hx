@@ -35,7 +35,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	*/
 	private var toolBar : javax.swing.JToolBar;
 	
-	private var dragWindow : BasicToolBarUI_DragWindow;
+	private var dragWindow : javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DragWindow;
 	
 	private var focusedCompIndex : Int;
 	
@@ -157,7 +157,7 @@ extern class BasicToolBarUI extends javax.swing.plaf.ToolBarUI implements javax.
 	*/
 	@:require(java4) @:overload private function createFloatingWindow(toolbar : javax.swing.JToolBar) : javax.swing.RootPaneContainer;
 	
-	@:overload private function createDragWindow(toolbar : javax.swing.JToolBar) : BasicToolBarUI_DragWindow;
+	@:overload private function createDragWindow(toolbar : javax.swing.JToolBar) : javax.swing.plaf.basic.BasicToolBarUI.BasicToolBarUI_DragWindow;
 	
 	/**
 	* Returns a flag to determine whether rollover button borders

@@ -62,11 +62,11 @@ extern class SunVolatileImage extends java.awt.image.VolatileImage implements su
 	
 	@:overload override public function createGraphics() : java.awt.Graphics2D;
 	
-	@:overload override public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
+	@:overload public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
 	
-	@:overload override public function getWidth(observer : java.awt.image.ImageObserver) : Int;
+	@:overload public function getWidth(observer : java.awt.image.ImageObserver) : Int;
 	
-	@:overload override public function getHeight(observer : java.awt.image.ImageObserver) : Int;
+	@:overload public function getHeight(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* This method creates a BufferedImage intended for use as a "snapshot"

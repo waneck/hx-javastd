@@ -61,7 +61,7 @@ package javax.swing.text.html;
 	* Creates and returns an instance of RegionContainment that can be
 	* used to test if a particular point lies inside a region.
 	*/
-	@:overload private function createRegionContainment(attributes : javax.swing.text.AttributeSet) : Map_RegionContainment;
+	@:overload private function createRegionContainment(attributes : javax.swing.text.AttributeSet) : javax.swing.text.html.Map.Map_RegionContainment;
 	
 	/**
 	* Creates and returns an array of integers from the String
@@ -92,7 +92,7 @@ package javax.swing.text.html;
 /**
 * Used to test for containment in a rectangular region.
 */
-@:native('javax$swing$text$html$Map$RectangleRegionContainment') @:internal extern class Map_RectangleRegionContainment implements Map_RegionContainment
+@:native('javax$swing$text$html$Map$RectangleRegionContainment') @:internal extern class Map_RectangleRegionContainment implements javax.swing.text.html.Map.Map_RegionContainment
 {
 	@:overload public function new(as : javax.swing.text.AttributeSet) : Void;
 	
@@ -105,7 +105,7 @@ package javax.swing.text.html;
 /**
 * Used to test for containment in a polygon region.
 */
-@:native('javax$swing$text$html$Map$PolygonRegionContainment') @:internal extern class Map_PolygonRegionContainment extends java.awt.Polygon implements Map_RegionContainment
+@:native('javax$swing$text$html$Map$PolygonRegionContainment') @:internal extern class Map_PolygonRegionContainment extends java.awt.Polygon implements javax.swing.text.html.Map.Map_RegionContainment
 {
 	@:overload public function new(as : javax.swing.text.AttributeSet) : Void;
 	
@@ -116,7 +116,7 @@ package javax.swing.text.html;
 /**
 * Used to test for containment in a circular region.
 */
-@:native('javax$swing$text$html$Map$CircleRegionContainment') @:internal extern class Map_CircleRegionContainment implements Map_RegionContainment
+@:native('javax$swing$text$html$Map$CircleRegionContainment') @:internal extern class Map_CircleRegionContainment implements javax.swing.text.html.Map.Map_RegionContainment
 {
 	@:overload public function new(as : javax.swing.text.AttributeSet) : Void;
 	
@@ -129,9 +129,9 @@ package javax.swing.text.html;
 * inside a rectangle defined by origin 0, 0, and width equal to
 * width passed in, and height equal to height passed in.
 */
-@:native('javax$swing$text$html$Map$DefaultRegionContainment') @:internal extern class Map_DefaultRegionContainment implements Map_RegionContainment
+@:native('javax$swing$text$html$Map$DefaultRegionContainment') @:internal extern class Map_DefaultRegionContainment implements javax.swing.text.html.Map.Map_RegionContainment
 {
-	@:overload public static function sharedInstance() : Map_DefaultRegionContainment;
+	@:overload public static function sharedInstance() : javax.swing.text.html.Map.Map_DefaultRegionContainment;
 	
 	@:overload public function contains(x : Int, y : Int, width : Int, height : Int) : Bool;
 	

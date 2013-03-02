@@ -31,9 +31,9 @@ package com.sun.corba.se.impl.corba;
 */
 extern class PrincipalImpl extends org.omg.CORBA.Principal
 {
-	@:overload override public function name(value : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function name(value : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function name() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function name() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

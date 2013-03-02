@@ -122,7 +122,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the UI class that implements the
@@ -132,7 +132,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Subclasses that want to handle <code>ChangeEvents</code> differently
@@ -967,7 +967,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	*          cursor is lingering
 	* @return the <code>String</code> containing the tooltip text
 	*/
-	@:overload override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns a string representation of this <code>JTabbedPane</code>.
@@ -990,7 +990,7 @@ extern class JTabbedPane extends javax.swing.JComponent implements java.io.Seria
 	* @return an AccessibleJTabbedPane that serves as the
 	*         AccessibleContext of this JTabbedPane
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	/**
 	* Sets the component that is responsible for rendering the

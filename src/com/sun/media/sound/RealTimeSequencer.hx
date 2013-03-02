@@ -79,7 +79,7 @@ package com.sun.media.sound;
 	
 	@:overload public function getMicrosecondLength() : haxe.Int64;
 	
-	@:overload override public function getMicrosecondPosition() : haxe.Int64;
+	@:overload public function getMicrosecondPosition() : haxe.Int64;
 	
 	@:overload public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
 	
@@ -127,9 +127,9 @@ package com.sun.media.sound;
 	
 	/*
 	*/
-	@:overload override private function implOpen() : Void;
+	@:overload private function implOpen() : Void;
 	
-	@:overload @:synchronized override private function implClose() : Void;
+	@:overload @:synchronized private function implClose() : Void;
 	
 	@:overload private function implStart() : Void;
 	
@@ -146,13 +146,13 @@ package com.sun.media.sound;
 	*/
 	@:overload private function sendControllerEvents(message : javax.sound.midi.MidiMessage) : Void;
 	
-	@:overload override private function hasReceivers() : Bool;
+	@:overload private function hasReceivers() : Bool;
 	
-	@:overload override private function createReceiver() : javax.sound.midi.Receiver;
+	@:overload private function createReceiver() : javax.sound.midi.Receiver;
 	
-	@:overload override private function hasTransmitters() : Bool;
+	@:overload private function hasTransmitters() : Bool;
 	
-	@:overload override private function createTransmitter() : javax.sound.midi.Transmitter;
+	@:overload private function createTransmitter() : javax.sound.midi.Transmitter;
 	
 	@:overload public function setAutoConnect(autoConnectedReceiver : javax.sound.midi.Receiver) : Void;
 	
@@ -168,7 +168,7 @@ package com.sun.media.sound;
 }
 @:native('com$sun$media$sound$RealTimeSequencer$SequencerReceiver') @:internal extern class RealTimeSequencer_SequencerReceiver extends com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_AbstractReceiver
 {
-	@:overload override private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
+	@:overload private function implSend(message : javax.sound.midi.MidiMessage, timeStamp : haxe.Int64) : Void;
 	
 	
 }

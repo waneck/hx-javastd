@@ -28,7 +28,7 @@ extern class ProviderImpl extends javax.xml.ws.spi.Provider
 	/**
 	* Convenient singleton instance.
 	*/
-	public static var INSTANCE(default, null) : ProviderImpl;
+	public static var INSTANCE(default, null) : com.sun.xml.internal.ws.spi.ProviderImpl;
 	
 	@:overload override public function createEndpoint(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	

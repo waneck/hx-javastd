@@ -33,14 +33,14 @@ extern class NullExpression extends sun.tools.tree.ConstantExpression
 	/**
 	* Check if the expression is equal to a value
 	*/
-	@:overload override public function equals(i : Int) : Bool;
+	@:overload public function equals(i : Int) : Bool;
 	
-	@:overload override public function isNull() : Bool;
+	@:overload public function isNull() : Bool;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print

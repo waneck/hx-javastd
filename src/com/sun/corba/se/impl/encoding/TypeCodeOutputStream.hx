@@ -45,7 +45,7 @@ extern class TypeCodeOutputStream extends com.sun.corba.se.impl.encoding.EncapsO
 	return (enclosure == outerEnclosure);
 	}
 	*/
-	@:overload public function getTopLevelStream() : TypeCodeOutputStream;
+	@:overload public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
 	
 	@:overload public function getTopLevelPosition() : Int;
 	
@@ -55,15 +55,15 @@ extern class TypeCodeOutputStream extends com.sun.corba.se.impl.encoding.EncapsO
 	
 	@:overload public function writeRawBuffer(s : org.omg.CORBA.portable.OutputStream, firstLong : Int) : Void;
 	
-	@:overload public function createEncapsulation(_orb : org.omg.CORBA.ORB) : TypeCodeOutputStream;
+	@:overload public function createEncapsulation(_orb : org.omg.CORBA.ORB) : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
 	
 	@:overload private function makeEncapsulation() : Void;
 	
-	@:overload public static function wrapOutputStream(os : java.io.OutputStream) : TypeCodeOutputStream;
+	@:overload public static function wrapOutputStream(os : java.io.OutputStream) : com.sun.corba.se.impl.encoding.TypeCodeOutputStream;
 	
 	@:overload public function getPosition() : Int;
 	
-	@:overload override public function getRealIndex(index : Int) : Int;
+	@:overload public function getRealIndex(index : Int) : Int;
 	
 	/*
 	protected void printBuffer() {

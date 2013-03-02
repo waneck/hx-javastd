@@ -75,7 +75,7 @@ extern class ConstantFloat extends com.sun.org.apache.bcel.internal.classfile.Co
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : ConstantFloat) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantFloat) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely

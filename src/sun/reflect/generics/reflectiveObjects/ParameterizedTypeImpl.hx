@@ -49,7 +49,7 @@ extern class ParameterizedTypeImpl implements java.lang.reflect.ParameterizedTyp
 	* @throws MalformedParameterizedTypeException - if the instantiation
 	* is invalid
 	*/
-	@:overload public static function make(rawType : Class<Dynamic>, actualTypeArguments : java.NativeArray<java.lang.reflect.Type>, ownerType : java.lang.reflect.Type) : ParameterizedTypeImpl;
+	@:overload public static function make(rawType : Class<Dynamic>, actualTypeArguments : java.NativeArray<java.lang.reflect.Type>, ownerType : java.lang.reflect.Type) : sun.reflect.generics.reflectiveObjects.ParameterizedTypeImpl;
 	
 	/**
 	* Returns an array of <tt>Type</tt> objects representing the actual type

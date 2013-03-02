@@ -55,7 +55,7 @@ package javax.net.ssl;
 	* @return the default <code>ServerSocketFactory</code>
 	* @see SSLContext#getDefault
 	*/
-	@:native('getDefault') @:overload @:synchronized public static function _getDefault() : javax.net.ServerSocketFactory;
+	@:overload @:synchronized public static function getDefault() : javax.net.ServerSocketFactory;
 	
 	/**
 	* Returns the list of cipher suites which are enabled by default.
@@ -84,15 +84,15 @@ package javax.net.ssl;
 	
 	
 }
-@:internal extern class DefaultSSLServerSocketFactory extends SSLServerSocketFactory
+@:internal extern class DefaultSSLServerSocketFactory extends javax.net.ssl.SSLServerSocketFactory
 {
-	@:overload override public function createServerSocket() : java.net.ServerSocket;
+	@:overload public function createServerSocket() : java.net.ServerSocket;
 	
-	@:overload override public function createServerSocket(port : Int) : java.net.ServerSocket;
+	@:overload public function createServerSocket(port : Int) : java.net.ServerSocket;
 	
-	@:overload override public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
+	@:overload public function createServerSocket(port : Int, backlog : Int) : java.net.ServerSocket;
 	
-	@:overload override public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
+	@:overload public function createServerSocket(port : Int, backlog : Int, ifAddress : java.net.InetAddress) : java.net.ServerSocket;
 	
 	@:overload override public function getDefaultCipherSuites() : java.NativeArray<String>;
 	

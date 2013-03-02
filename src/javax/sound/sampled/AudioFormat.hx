@@ -28,7 +28,7 @@ extern class AudioFormat
 	/**
 	* The audio encoding technique used by this format.
 	*/
-	private var encoding : AudioFormat_Encoding;
+	private var encoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding;
 	
 	/**
 	* The number of samples played or recorded per second, for sounds that have this format.
@@ -75,7 +75,7 @@ extern class AudioFormat
 	*                                                  is stored in big-endian byte order (<code>false</code>
 	*                                                  means little-endian)
 	*/
-	@:overload public function new(encoding : AudioFormat_Encoding, sampleRate : Single, sampleSizeInBits : Int, channels : Int, frameSize : Int, frameRate : Single, bigEndian : Bool) : Void;
+	@:overload public function new(encoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sampleRate : Single, sampleSizeInBits : Int, channels : Int, frameSize : Int, frameRate : Single, bigEndian : Bool) : Void;
 	
 	/**
 	* Constructs an <code>AudioFormat</code> with the given parameters.
@@ -97,7 +97,7 @@ extern class AudioFormat
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(encoding : AudioFormat_Encoding, sampleRate : Single, sampleSizeInBits : Int, channels : Int, frameSize : Int, frameRate : Single, bigEndian : Bool, properties : java.util.Map<String, Dynamic>) : Void;
+	@:require(java5) @:overload public function new(encoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sampleRate : Single, sampleSizeInBits : Int, channels : Int, frameSize : Int, frameRate : Single, bigEndian : Bool, properties : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Constructs an <code>AudioFormat</code> with a linear PCM encoding and
@@ -124,7 +124,7 @@ extern class AudioFormat
 	* @see Encoding#ULAW
 	* @see Encoding#ALAW
 	*/
-	@:overload public function getEncoding() : AudioFormat_Encoding;
+	@:overload public function getEncoding() : javax.sound.sampled.AudioFormat.AudioFormat_Encoding;
 	
 	/**
 	* Obtains the sample rate.
@@ -269,7 +269,7 @@ extern class AudioFormat
 	* @return {@code true} if this format matches the one specified,
 	*         {@code false} otherwise.
 	*/
-	@:overload public function matches(format : AudioFormat) : Bool;
+	@:overload public function matches(format : javax.sound.sampled.AudioFormat) : Bool;
 	
 	/**
 	* Returns a string that describes the format, such as:
@@ -319,29 +319,29 @@ extern class AudioFormat
 	/**
 	* Specifies signed, linear PCM data.
 	*/
-	public static var PCM_SIGNED(default, null) : AudioFormat_Encoding;
+	public static var PCM_SIGNED(default, null) : javax.sound.sampled.AudioFormat.AudioFormat_Encoding;
 	
 	/**
 	* Specifies unsigned, linear PCM data.
 	*/
-	public static var PCM_UNSIGNED(default, null) : AudioFormat_Encoding;
+	public static var PCM_UNSIGNED(default, null) : javax.sound.sampled.AudioFormat.AudioFormat_Encoding;
 	
 	/**
 	* Specifies floating-point PCM data.
 	*
 	* @since 1.7
 	*/
-	@:require(java7) public static var PCM_FLOAT(default, null) : AudioFormat_Encoding;
+	@:require(java7) public static var PCM_FLOAT(default, null) : javax.sound.sampled.AudioFormat.AudioFormat_Encoding;
 	
 	/**
 	* Specifies u-law encoded data.
 	*/
-	public static var ULAW(default, null) : AudioFormat_Encoding;
+	public static var ULAW(default, null) : javax.sound.sampled.AudioFormat.AudioFormat_Encoding;
 	
 	/**
 	* Specifies a-law encoded data.
 	*/
-	public static var ALAW(default, null) : AudioFormat_Encoding;
+	public static var ALAW(default, null) : javax.sound.sampled.AudioFormat.AudioFormat_Encoding;
 	
 	/**
 	* Constructs a new encoding.

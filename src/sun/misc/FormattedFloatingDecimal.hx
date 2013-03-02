@@ -30,14 +30,14 @@ extern class FormattedFloatingDecimal
 	*/
 	@:overload public function new(d : Float) : Void;
 	
-	@:overload public function new(d : Float, precision : Int, form : FormattedFloatingDecimal_Form) : Void;
+	@:overload public function new(d : Float, precision : Int, form : sun.misc.FormattedFloatingDecimal.FormattedFloatingDecimal_Form) : Void;
 	
 	/*
 	* SECOND IMPORTANT CONSTRUCTOR: SINGLE
 	*/
 	@:overload public function new(f : Single) : Void;
 	
-	@:overload public function new(f : Single, precision : Int, form : FormattedFloatingDecimal_Form) : Void;
+	@:overload public function new(f : Single, precision : Int, form : sun.misc.FormattedFloatingDecimal.FormattedFloatingDecimal_Form) : Void;
 	
 	@:overload public function toString() : String;
 	

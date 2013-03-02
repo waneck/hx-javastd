@@ -45,9 +45,9 @@ extern class RIFFWriter extends java.io.OutputStream
 	
 	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload public function writeList(format : String) : RIFFWriter;
+	@:overload public function writeList(format : String) : com.sun.media.sound.RIFFWriter;
 	
-	@:overload public function writeChunk(format : String) : RIFFWriter;
+	@:overload public function writeChunk(format : String) : com.sun.media.sound.RIFFWriter;
 	
 	@:overload public function writeString(string : String) : Void;
 	
@@ -94,7 +94,7 @@ extern class RIFFWriter extends java.io.OutputStream
 	
 	
 }
-@:native('com$sun$media$sound$RIFFWriter$RandomAccessFileWriter') @:internal extern class RIFFWriter_RandomAccessFileWriter implements RIFFWriter_RandomAccessWriter
+@:native('com$sun$media$sound$RIFFWriter$RandomAccessFileWriter') @:internal extern class RIFFWriter_RandomAccessFileWriter implements com.sun.media.sound.RIFFWriter.RIFFWriter_RandomAccessWriter
 {
 	@:overload public function new(file : java.io.File) : Void;
 	
@@ -118,7 +118,7 @@ extern class RIFFWriter extends java.io.OutputStream
 	
 	
 }
-@:native('com$sun$media$sound$RIFFWriter$RandomAccessByteWriter') @:internal extern class RIFFWriter_RandomAccessByteWriter implements RIFFWriter_RandomAccessWriter
+@:native('com$sun$media$sound$RIFFWriter$RandomAccessByteWriter') @:internal extern class RIFFWriter_RandomAccessByteWriter implements com.sun.media.sound.RIFFWriter.RIFFWriter_RandomAccessWriter
 {
 	@:overload public function new(stream : java.io.OutputStream) : Void;
 	

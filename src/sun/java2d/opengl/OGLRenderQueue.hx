@@ -30,7 +30,7 @@ extern class OGLRenderQueue extends sun.java2d.pipe.RenderQueue
 	* initialized, this method will first construct the single instance
 	* before returning it.
 	*/
-	@:overload @:synchronized public static function getInstance() : OGLRenderQueue;
+	@:overload @:synchronized public static function getInstance() : sun.java2d.opengl.OGLRenderQueue;
 	
 	/**
 	* Flushes the single OGLRenderQueue instance synchronously.  If an

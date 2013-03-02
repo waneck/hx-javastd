@@ -35,7 +35,7 @@ extern class ProxySelector
 	* @return the system-wide <code>ProxySelector</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getDefault() : ProxySelector;
+	@:require(java5) @:overload public static function getDefault() : java.net.ProxySelector;
 	
 	/**
 	* Sets (or unsets) the system-wide proxy selector.
@@ -52,7 +52,7 @@ extern class ProxySelector
 	* @see #getDefault()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function setDefault(ps : ProxySelector) : Void;
+	@:require(java5) @:overload public static function setDefault(ps : java.net.ProxySelector) : Void;
 	
 	/**
 	* Selects all the applicable proxies based on the protocol to

@@ -79,7 +79,7 @@ extern class CPInstruction extends com.sun.org.apache.bcel.internal.generic.Inst
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Long output format:
@@ -90,19 +90,19 @@ extern class CPInstruction extends com.sun.org.apache.bcel.internal.generic.Inst
 	* @param verbose long/short format switch
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload public function toString(verbose : Bool) : String;
 	
 	/**
 	* @return mnemonic for instruction with symbolic references resolved
 	*/
-	@:overload override public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
 	/**
 	* Read needed data (i.e., index) from file.
 	* @param bytes input stream
 	* @param wide wide prefix?
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return index in constant pool referred by this instruction.

@@ -31,7 +31,7 @@ extern class NormalParserAction extends com.sun.corba.se.impl.orb.ParserActionBa
 	* match the propertyName prefix, pass this to op, and return the
 	* result.
 	*/
-	@:overload override public function apply(props : java.util.Properties) : Dynamic;
+	@:overload public function apply(props : java.util.Properties) : Dynamic;
 	
 	
 }

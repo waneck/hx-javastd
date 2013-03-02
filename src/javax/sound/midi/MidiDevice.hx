@@ -31,7 +31,7 @@ extern interface MidiDevice extends java.lang.AutoCloseable
 	*
 	* @return device info
 	*/
-	@:overload public function getDeviceInfo() : MidiDevice_Info;
+	@:overload public function getDeviceInfo() : javax.sound.midi.MidiDevice.MidiDevice_Info;
 	
 	/**
 	* Opens the device, indicating that it should now acquire any

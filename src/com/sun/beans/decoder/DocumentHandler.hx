@@ -133,7 +133,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	/**
 	* Prepares this handler to read objects from XML document.
 	*/
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
 	/**
 	* Parses opening tag of XML element
@@ -148,7 +148,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	*                    if qualified names are not available
 	* @param attributes  the attributes attached to the element
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Parses closing tag of XML element
@@ -162,7 +162,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param qName      the qualified name (with prefix), or the empty string
 	*                   if qualified names are not available
 	*/
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Parses character data inside XML element.
@@ -171,7 +171,7 @@ extern class DocumentHandler extends org.xml.sax.helpers.DefaultHandler
 	* @param start   the start position in the character array
 	* @param length  the number of characters to use
 	*/
-	@:overload override public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function characters(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Handles an exception using current exception listener.

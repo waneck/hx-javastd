@@ -69,9 +69,9 @@ package com.sun.tools.javac.comp;
 */
 extern class Enter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 {
-	private static var enterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Enter>;
+	private static var enterKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Enter>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Enter;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Enter;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -102,9 +102,9 @@ extern class Enter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 	*/
 	private var env : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
+	@:overload override public function visitTopLevel(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
 	
-	@:overload public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
+	@:overload override public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
 	/** Complain about a duplicate class. */
 	@:overload private function duplicateClass(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, c : ClassSymbol) : Void;
@@ -113,11 +113,11 @@ extern class Enter extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 	*  Enter a symbol for type parameter in local scope, after checking that it
 	*  is unique.
 	*/
-	@:overload public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
+	@:overload override public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
 	
 	/** Default class enter visitor method: do nothing.
 	*/
-	@:overload public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
 	/** Main method: enter all classes in a list of toplevel trees.
 	*  @param trees      The list of trees to be processed.

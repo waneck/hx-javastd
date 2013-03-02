@@ -250,7 +250,7 @@ extern class DefaultTreeCellRenderer extends javax.swing.JLabel implements javax
 	* See the <a href="#override">Implementation Note</a>
 	* for more information.
 	*/
-	@:overload override public function repaint(r : java.awt.Rectangle) : Void;
+	@:overload public function repaint(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Overridden for performance reasons.

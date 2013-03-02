@@ -31,7 +31,7 @@ extern class EUC_JP extends java.nio.charset.Charset implements sun.nio.cs.Histo
 	
 	@:overload public function historicalName() : String;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
@@ -45,7 +45,7 @@ extern class EUC_JP extends java.nio.charset.Charset implements sun.nio.cs.Histo
 	
 	@:overload private function decode0212(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	@:overload override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	

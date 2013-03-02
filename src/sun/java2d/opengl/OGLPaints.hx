@@ -28,29 +28,29 @@ package sun.java2d.opengl;
 	
 }
 /************************* GradientPaint support ****************************/
-@:native('sun$java2d$opengl$OGLPaints$Gradient') @:internal extern class OGLPaints_Gradient extends OGLPaints
+@:native('sun$java2d$opengl$OGLPaints$Gradient') @:internal extern class OGLPaints_Gradient extends sun.java2d.opengl.OGLPaints
 {
 	
 }
 /************************** TexturePaint support ****************************/
-@:native('sun$java2d$opengl$OGLPaints$Texture') @:internal extern class OGLPaints_Texture extends OGLPaints
+@:native('sun$java2d$opengl$OGLPaints$Texture') @:internal extern class OGLPaints_Texture extends sun.java2d.opengl.OGLPaints
 {
 	
 }
 /****************** Shared MultipleGradientPaint support ********************/
-@:native('sun$java2d$opengl$OGLPaints$MultiGradient') @:internal extern class OGLPaints_MultiGradient extends OGLPaints
+@:native('sun$java2d$opengl$OGLPaints$MultiGradient') @:internal extern class OGLPaints_MultiGradient extends sun.java2d.opengl.OGLPaints
 {
 	@:overload private function new() : Void;
 	
 	
 }
 /********************** LinearGradientPaint support *************************/
-@:native('sun$java2d$opengl$OGLPaints$LinearGradient') @:internal extern class OGLPaints_LinearGradient extends OGLPaints_MultiGradient
+@:native('sun$java2d$opengl$OGLPaints$LinearGradient') @:internal extern class OGLPaints_LinearGradient extends sun.java2d.opengl.OGLPaints.OGLPaints_MultiGradient
 {
 	
 }
 /********************** RadialGradientPaint support *************************/
-@:native('sun$java2d$opengl$OGLPaints$RadialGradient') @:internal extern class OGLPaints_RadialGradient extends OGLPaints_MultiGradient
+@:native('sun$java2d$opengl$OGLPaints$RadialGradient') @:internal extern class OGLPaints_RadialGradient extends sun.java2d.opengl.OGLPaints.OGLPaints_MultiGradient
 {
 	
 }

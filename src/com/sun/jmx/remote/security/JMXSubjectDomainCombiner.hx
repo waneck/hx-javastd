@@ -37,7 +37,7 @@ extern class JMXSubjectDomainCombiner extends javax.security.auth.SubjectDomainC
 	*/
 	@:overload public function new(s : javax.security.auth.Subject) : Void;
 	
-	@:overload override public function combine(current : java.NativeArray<java.security.ProtectionDomain>, assigned : java.NativeArray<java.security.ProtectionDomain>) : java.NativeArray<java.security.ProtectionDomain>;
+	@:overload public function combine(current : java.NativeArray<java.security.ProtectionDomain>, assigned : java.NativeArray<java.security.ProtectionDomain>) : java.NativeArray<java.security.ProtectionDomain>;
 	
 	/**
 	* Get the current AccessControlContext combined with the supplied subject.

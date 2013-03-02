@@ -138,7 +138,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by application to signal an error.
 	*/
-	@:overload override public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function comment(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A processing instruction. Processing instructions consist of a
@@ -158,7 +158,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function processingInstruction(target : String, data : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of an element.
@@ -170,7 +170,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* An empty element.
@@ -182,7 +182,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function emptyElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Character content.
@@ -193,7 +193,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function characters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Ignorable whitespace. For this method to be called, the document
@@ -209,7 +209,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function ignorableWhitespace(text : com.sun.org.apache.xerces.internal.xni.XMLString, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of an element.
@@ -220,7 +220,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a CDATA section.
@@ -230,7 +230,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function startCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a CDATA section.
@@ -240,7 +240,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* @exception XNIException
 	*                   Thrown by handler to signal an error.
 	*/
-	@:overload override public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload public function endCDATA(augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* <p>
@@ -259,7 +259,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	*                                  it is <strong>really</strong>
 	*                                  a critical error.
 	*/
-	@:overload override public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	
 }
@@ -290,7 +290,7 @@ extern class XPointerHandler extends com.sun.org.apache.xerces.internal.xinclude
 	* XPath expression. This is a convenient way of allowing only
 	* a subset of XPath.
 	*/
-	@:overload private function addToken(tokens : XPointerHandler_Tokens, token : Int) : Void;
+	@:overload private function addToken(tokens : com.sun.org.apache.xerces.internal.xpointer.XPointerHandler.XPointerHandler_Tokens, token : Int) : Void;
 	
 	
 }

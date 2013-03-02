@@ -31,7 +31,7 @@ extern class SynthTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI im
 	* @param c the text field
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc

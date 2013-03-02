@@ -26,10 +26,10 @@ package com.sun.tools.apt.main;
 extern class AptJavaCompiler extends com.sun.tools.javac.main.JavaCompiler
 {
 	/** The context key for the compiler. */
-	@:native('compilerKey') private static var _compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<AptJavaCompiler>;
+	private static var compilerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.apt.main.AptJavaCompiler>;
 	
 	/** Get the JavaCompiler instance for this context. */
-	@:native('instance') @:overload public static function _instance(context : com.sun.tools.javac.util.Context) : AptJavaCompiler;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.main.AptJavaCompiler;
 	
 	@:overload public function getSourceFileNames() : java.util.Set<String>;
 	
@@ -64,15 +64,15 @@ extern class AptJavaCompiler extends com.sun.tools.javac.main.JavaCompiler
 	*  Report an error if this fails.
 	*  @param filename   The file name of the input stream to be opened.
 	*/
-	@:overload override public function readSource(filename : javax.tools.JavaFileObject) : java.lang.CharSequence;
+	@:overload public function readSource(filename : javax.tools.JavaFileObject) : java.lang.CharSequence;
 	
 	/** Parse contents of input stream.
 	*  @param filename     The name of the file from which input stream comes.
 	*  @param input        The input stream to be parsed.
 	*/
-	@:overload override private function parse(filename : javax.tools.JavaFileObject, content : java.lang.CharSequence) : JCCompilationUnit;
+	@:overload private function parse(filename : javax.tools.JavaFileObject, content : java.lang.CharSequence) : JCCompilationUnit;
 	
-	@:overload override private function keepComments() : Bool;
+	@:overload private function keepComments() : Bool;
 	
 	/** Main method: compile a list of files, return all compiled classes
 	*  @param filenames     The names of all files to be compiled.

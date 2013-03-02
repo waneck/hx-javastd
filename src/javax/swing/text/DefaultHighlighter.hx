@@ -74,7 +74,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 	*   to refer to the highlight
 	* @exception BadLocationException if the specified location is invalid
 	*/
-	@:overload public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
+	@:overload override public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
 	
 	/**
 	* Removes a highlight from the view.
@@ -205,7 +205,7 @@ extern class DefaultHighlighter extends javax.swing.text.LayeredHighlighter
 * LayeredHighlightPainter is used when a drawsLayeredHighlights is
 * true. It maintains a rectangle of the region to paint.
 */
-@:native('javax$swing$text$DefaultHighlighter$LayeredHighlightInfo') @:internal extern class DefaultHighlighter_LayeredHighlightInfo extends DefaultHighlighter_HighlightInfo
+@:native('javax$swing$text$DefaultHighlighter$LayeredHighlightInfo') @:internal extern class DefaultHighlighter_LayeredHighlightInfo extends javax.swing.text.DefaultHighlighter.DefaultHighlighter_HighlightInfo
 {
 	
 }

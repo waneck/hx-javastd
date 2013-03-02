@@ -36,7 +36,7 @@ extern class Bridge
 	* @throws SecurityException if the caller does not have the
 	* required permissions and the caller has a non-null security manager.
 	*/
-	@:overload @:final @:synchronized public static function get() : Bridge;
+	@:overload @:final @:synchronized public static function get() : sun.corba.Bridge;
 	
 	/** Obtain the latest user defined ClassLoader from the call stack.
 	* This is required by the RMI-IIOP specification.

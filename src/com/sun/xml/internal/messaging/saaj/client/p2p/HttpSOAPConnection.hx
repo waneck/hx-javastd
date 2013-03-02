@@ -39,11 +39,11 @@ package com.sun.xml.internal.messaging.saaj.client.p2p;
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function call(message : javax.xml.soap.SOAPMessage, endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
+	@:overload public function call(message : javax.xml.soap.SOAPMessage, endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
 	
-	@:overload override public function get(endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
+	@:overload public function get(endPoint : Dynamic) : javax.xml.soap.SOAPMessage;
 	
 	
 }

@@ -4,9 +4,9 @@ extern class XTimeCoord extends sun.awt.X11.XWrapperBase
 {
 	@:overload public static function getSize() : Int;
 	
-	@:overload override public function getDataSize() : Int;
+	@:overload public function getDataSize() : Int;
 	
-	@:overload override public function getPData() : haxe.Int64;
+	@:overload public function getPData() : haxe.Int64;
 	
 	@:overload public function new(addr : haxe.Int64) : Void;
 	

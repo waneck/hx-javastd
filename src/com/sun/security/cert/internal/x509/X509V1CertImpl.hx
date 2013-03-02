@@ -58,7 +58,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* form of encoding; for example, X.509 certificates would
 	* be encoded as ASN.1 DER.
 	*/
-	@:overload override public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Throws an exception if the certificate was not signed using the
@@ -68,7 +68,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	*
 	* @param key the public key used for verification.
 	*/
-	@:overload override public function verify(key : java.security.PublicKey) : Void;
+	@:overload public function verify(key : java.security.PublicKey) : Void;
 	
 	/**
 	* Throws an exception if the certificate was not signed using the
@@ -79,13 +79,13 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @param key the public key used for verification.
 	* @param sigProvider the name of the provider.
 	*/
-	@:overload override public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
+	@:overload public function verify(key : java.security.PublicKey, sigProvider : String) : Void;
 	
 	/**
 	* Checks that the certificate is currently valid, i.e. the current
 	* time is within the specified validity period.
 	*/
-	@:overload override public function checkValidity() : Void;
+	@:overload public function checkValidity() : Void;
 	
 	/**
 	* Checks that the specified date is within the certificate's
@@ -95,7 +95,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @param date the Date to check against to see if this certificate
 	*        is valid at that date/time.
 	*/
-	@:overload override public function checkValidity(date : java.util.Date) : Void;
+	@:overload public function checkValidity(date : java.util.Date) : Void;
 	
 	/**
 	* Returns a printable representation of the certificate.  This does not
@@ -103,28 +103,28 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* other certificate.  The certificate must be fully constructed
 	* before this function may be called.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Gets the publickey from this certificate.
 	*
 	* @return the publickey.
 	*/
-	@:overload override public function getPublicKey() : java.security.PublicKey;
+	@:overload public function getPublicKey() : java.security.PublicKey;
 	
 	/*
 	* Gets the version number from the certificate.
 	*
 	* @return the version number.
 	*/
-	@:overload override public function getVersion() : Int;
+	@:overload public function getVersion() : Int;
 	
 	/**
 	* Gets the serial number from the certificate.
 	*
 	* @return the serial number.
 	*/
-	@:overload override public function getSerialNumber() : java.math.BigInteger;
+	@:overload public function getSerialNumber() : java.math.BigInteger;
 	
 	/**
 	* Gets the subject distinguished name from the certificate.
@@ -132,7 +132,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @return the subject name.
 	* @exception CertificateException if a parsing error occurs.
 	*/
-	@:overload override public function getSubjectDN() : java.security.Principal;
+	@:overload public function getSubjectDN() : java.security.Principal;
 	
 	/**
 	* Gets the issuer distinguished name from the certificate.
@@ -140,7 +140,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @return the issuer name.
 	* @exception CertificateException if a parsing error occurs.
 	*/
-	@:overload override public function getIssuerDN() : java.security.Principal;
+	@:overload public function getIssuerDN() : java.security.Principal;
 	
 	/**
 	* Gets the notBefore date from the validity period of the certificate.
@@ -148,7 +148,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @return the start date of the validity period.
 	* @exception CertificateException if a parsing error occurs.
 	*/
-	@:overload override public function getNotBefore() : java.util.Date;
+	@:overload public function getNotBefore() : java.util.Date;
 	
 	/**
 	* Gets the notAfter date from the validity period of the certificate.
@@ -156,7 +156,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @return the end date of the validity period.
 	* @exception CertificateException if a parsing error occurs.
 	*/
-	@:overload override public function getNotAfter() : java.util.Date;
+	@:overload public function getNotAfter() : java.util.Date;
 	
 	/**
 	* Gets the signature algorithm name for the certificate
@@ -166,7 +166,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @return the signature algorithm name.
 	* @exception CertificateException if a parsing error occurs.
 	*/
-	@:overload override public function getSigAlgName() : String;
+	@:overload public function getSigAlgName() : String;
 	
 	/**
 	* Gets the signature algorithm OID string from the certificate.
@@ -175,7 +175,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	* @return the signature algorithm oid string.
 	* @exception CertificateException if a parsing error occurs.
 	*/
-	@:overload override public function getSigAlgOID() : String;
+	@:overload public function getSigAlgOID() : String;
 	
 	/**
 	* Gets the DER encoded signature algorithm parameters from this
@@ -185,7 +185,7 @@ extern class X509V1CertImpl extends javax.security.cert.X509Certificate implemen
 	*         null if no parameters are present.
 	* @exception CertificateException if a parsing error occurs.
 	*/
-	@:overload override public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getSigAlgParams() : java.NativeArray<java.StdTypes.Int8>;
 	
 	@:overload public function getX509Certificate() : java.security.cert.X509Certificate;
 	

@@ -37,7 +37,7 @@ package sun.security.provider.certpath;
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:synchronized override public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.X509Certificate>;
+	@:overload @:synchronized public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.X509Certificate>;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>X509CRL</code>s that
@@ -51,7 +51,7 @@ package sun.security.provider.certpath;
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:synchronized override public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.X509CRL>;
+	@:overload @:synchronized public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.X509CRL>;
 	
 	
 }

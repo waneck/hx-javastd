@@ -43,7 +43,7 @@ extern class ValueArray
 	
 	@:overload public function setMaximumCapacity(maximumCapacity : Int) : Void;
 	
-	@:overload @:abstract public function setReadOnlyArray(array : ValueArray, clear : Bool) : Void;
+	@:overload @:abstract public function setReadOnlyArray(array : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
 	@:overload @:abstract public function clear() : Void;
 	

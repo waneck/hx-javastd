@@ -31,7 +31,7 @@ extern interface TypeCodeReader extends com.sun.corba.se.impl.encoding.MarshalIn
 	
 	@:overload public function setEnclosingInputStream(enclosure : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload public function getTopLevelStream() : TypeCodeReader;
+	@:overload public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeReader;
 	
 	@:overload public function getTopLevelPosition() : Int;
 	

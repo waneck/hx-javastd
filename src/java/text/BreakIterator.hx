@@ -205,7 +205,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for word breaks
 	*/
-	@:overload public static function getWordInstance() : BreakIterator;
+	@:overload public static function getWordInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -215,7 +215,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for word breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getWordInstance(locale : java.util.Locale) : BreakIterator;
+	@:overload public static function getWordInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -223,7 +223,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for line breaks
 	*/
-	@:overload public static function getLineInstance() : BreakIterator;
+	@:overload public static function getLineInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -233,7 +233,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for line breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getLineInstance(locale : java.util.Locale) : BreakIterator;
+	@:overload public static function getLineInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -241,7 +241,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for character breaks
 	*/
-	@:overload public static function getCharacterInstance() : BreakIterator;
+	@:overload public static function getCharacterInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -251,7 +251,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for character breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getCharacterInstance(locale : java.util.Locale) : BreakIterator;
+	@:overload public static function getCharacterInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -259,7 +259,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* for the {@linkplain Locale#getDefault() default locale}.
 	* @return A break iterator for sentence breaks
 	*/
-	@:overload public static function getSentenceInstance() : BreakIterator;
+	@:overload public static function getSentenceInstance() : java.text.BreakIterator;
 	
 	/**
 	* Returns a new <code>BreakIterator</code> instance
@@ -269,7 +269,7 @@ extern class BreakIterator implements java.lang.Cloneable
 	* @return A break iterator for sentence breaks
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload public static function getSentenceInstance(locale : java.util.Locale) : BreakIterator;
+	@:overload public static function getSentenceInstance(locale : java.util.Locale) : java.text.BreakIterator;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -296,9 +296,9 @@ extern class BreakIterator implements java.lang.Cloneable
 * Obtains a BreakIterator instance from a BreakIteratorProvider
 * implementation.
 */
-@:native('java$text$BreakIterator$BreakIteratorGetter') @:internal extern class BreakIterator_BreakIteratorGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.BreakIteratorProvider, BreakIterator>
+@:native('java$text$BreakIterator$BreakIteratorGetter') @:internal extern class BreakIterator_BreakIteratorGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.BreakIteratorProvider, java.text.BreakIterator>
 {
-	@:overload public function getObject(breakIteratorProvider : java.text.spi.BreakIteratorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : BreakIterator;
+	@:overload public function getObject(breakIteratorProvider : java.text.spi.BreakIteratorProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.BreakIterator;
 	
 	
 }

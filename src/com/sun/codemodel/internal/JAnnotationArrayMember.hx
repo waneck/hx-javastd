@@ -32,7 +32,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : String) : JAnnotationArrayMember;
+	@:overload public function param(value : String) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -41,7 +41,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : Bool) : JAnnotationArrayMember;
+	@:overload public function param(value : Bool) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -50,7 +50,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : java.StdTypes.Int8) : JAnnotationArrayMember;
+	@:overload public function param(value : java.StdTypes.Int8) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -59,7 +59,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : java.StdTypes.Char16) : JAnnotationArrayMember;
+	@:overload public function param(value : java.StdTypes.Char16) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -68,7 +68,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : Float) : JAnnotationArrayMember;
+	@:overload public function param(value : Float) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -77,7 +77,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : haxe.Int64) : JAnnotationArrayMember;
+	@:overload public function param(value : haxe.Int64) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -86,7 +86,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : java.StdTypes.Int16) : JAnnotationArrayMember;
+	@:overload public function param(value : java.StdTypes.Int16) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -95,7 +95,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : Int) : JAnnotationArrayMember;
+	@:overload public function param(value : Int) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an array member to this annotation
@@ -104,7 +104,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : Single) : JAnnotationArrayMember;
+	@:overload public function param(value : Single) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds a enum array member to this annotation
@@ -113,7 +113,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : java.lang.Enum<Dynamic>) : JAnnotationArrayMember;
+	@:overload public function param(value : java.lang.Enum<Dynamic>) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds a enum array member to this annotation
@@ -122,7 +122,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : com.sun.codemodel.internal.JEnumConstant) : JAnnotationArrayMember;
+	@:overload public function param(value : com.sun.codemodel.internal.JEnumConstant) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds an expression array member to this annotation
@@ -131,7 +131,7 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : com.sun.codemodel.internal.JExpression) : JAnnotationArrayMember;
+	@:overload public function param(value : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds a class array member to this annotation
@@ -140,9 +140,9 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @return The JAnnotationArrayMember. More elements can be added by calling
 	*         the same method multiple times
 	*/
-	@:overload public function param(value : Class<Dynamic>) : JAnnotationArrayMember;
+	@:overload public function param(value : Class<Dynamic>) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
-	@:overload public function param(type : com.sun.codemodel.internal.JType) : JAnnotationArrayMember;
+	@:overload public function param(type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
 	/**
 	* Adds a new annotation to the array.
@@ -173,9 +173,9 @@ extern class JAnnotationArrayMember extends com.sun.codemodel.internal.JAnnotati
 	* @deprecated
 	*      use {@link #annotate}
 	*/
-	@:overload public function param(value : com.sun.codemodel.internal.JAnnotationUse) : JAnnotationArrayMember;
+	@:overload public function param(value : com.sun.codemodel.internal.JAnnotationUse) : com.sun.codemodel.internal.JAnnotationArrayMember;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

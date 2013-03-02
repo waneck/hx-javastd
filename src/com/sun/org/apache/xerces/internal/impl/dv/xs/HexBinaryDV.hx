@@ -44,9 +44,9 @@ extern class HexBinaryDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.T
 	
 	@:overload @:synchronized override public function toString() : String;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	
 }

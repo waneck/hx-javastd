@@ -28,13 +28,13 @@ extern class Fidelity extends javax.print.attribute.EnumSyntax implements javax.
 	/**
 	* The job must be printed exactly as specified. or else rejected.
 	*/
-	public static var FIDELITY_TRUE(default, null) : Fidelity;
+	public static var FIDELITY_TRUE(default, null) : javax.print.attribute.standard.Fidelity;
 	
 	/**
 	* The printer should make reasonable attempts to print the job,
 	* even if it cannot print it exactly as specified.
 	*/
-	public static var FIDELITY_FALSE(default, null) : Fidelity;
+	public static var FIDELITY_FALSE(default, null) : javax.print.attribute.standard.Fidelity;
 	
 	/**
 	* Construct a new fidelity enumeration value with the

@@ -147,7 +147,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns a string representation of this
@@ -171,7 +171,7 @@ extern class JRadioButtonMenuItem extends javax.swing.JMenuItem implements javax
 	* @return an AccessibleJRadioButtonMenuItem that serves as the
 	*         AccessibleContext of this JRadioButtonMenuItem
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

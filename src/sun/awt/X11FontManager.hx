@@ -1,7 +1,7 @@
 package sun.awt;
 extern class X11FontManager extends sun.font.SunFontManager
 {
-	@:overload public static function getInstance() : X11FontManager;
+	@:overload public static function getInstance() : sun.awt.X11FontManager;
 	
 	/**
 	* Takes family name property in the following format:

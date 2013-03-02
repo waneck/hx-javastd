@@ -44,7 +44,7 @@ package java.awt;
 	* @exception IllegalArgumentException if frontCaps or backCaps are
 	* <code>null</code>
 	*/
-	@:overload public function new(frontCaps : java.awt.ImageCapabilities, backCaps : java.awt.ImageCapabilities, flipContents : BufferCapabilities_FlipContents) : Void;
+	@:overload public function new(frontCaps : java.awt.ImageCapabilities, backCaps : java.awt.ImageCapabilities, flipContents : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
 	/**
 	* @return the image capabilities of the front (displayed) buffer
@@ -83,7 +83,7 @@ package java.awt;
 	* @see FlipContents#PRIOR
 	* @see FlipContents#COPIED
 	*/
-	@:overload public function getFlipContents() : BufferCapabilities_FlipContents;
+	@:overload public function getFlipContents() : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* @return whether page flipping is only available in full-screen mode.  If this
@@ -125,7 +125,7 @@ package java.awt;
 	* @see #PRIOR
 	* @see #COPIED
 	*/
-	public static var UNDEFINED(default, null) : BufferCapabilities_FlipContents;
+	public static var UNDEFINED(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* When flip contents are <code>BACKGROUND</code>, the
@@ -137,7 +137,7 @@ package java.awt;
 	* @see #PRIOR
 	* @see #COPIED
 	*/
-	public static var BACKGROUND(default, null) : BufferCapabilities_FlipContents;
+	public static var BACKGROUND(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* When flip contents are <code>PRIOR</code>, the
@@ -149,7 +149,7 @@ package java.awt;
 	* @see #BACKGROUND
 	* @see #COPIED
 	*/
-	public static var PRIOR(default, null) : BufferCapabilities_FlipContents;
+	public static var PRIOR(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	/**
 	* When flip contents are <code>COPIED</code>, the
@@ -161,7 +161,7 @@ package java.awt;
 	* @see #BACKGROUND
 	* @see #PRIOR
 	*/
-	public static var COPIED(default, null) : BufferCapabilities_FlipContents;
+	public static var COPIED(default, null) : java.awt.BufferCapabilities.BufferCapabilities_FlipContents;
 	
 	
 }

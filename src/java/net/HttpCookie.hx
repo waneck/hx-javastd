@@ -74,7 +74,7 @@ extern class HttpCookie implements java.lang.Cloneable
 	*                                  reserved for use by the cookie protocol
 	* @throws NullPointerException     if the header string is <tt>null</tt>
 	*/
-	@:overload public static function parse(header : String) : java.util.List<HttpCookie>;
+	@:overload public static function parse(header : String) : java.util.List<java.net.HttpCookie>;
 	
 	/**
 	* Reports whether this http cookie has expired or not.
@@ -506,7 +506,7 @@ extern class HttpCookie implements java.lang.Cloneable
 */
 @:native('java$net$HttpCookie$CookieAttributeAssignor') @:internal extern interface HttpCookie_CookieAttributeAssignor
 {
-	@:overload public function assign(cookie : HttpCookie, attrName : String, attrValue : String) : Void;
+	@:overload public function assign(cookie : java.net.HttpCookie, attrName : String, attrValue : String) : Void;
 	
 	
 }

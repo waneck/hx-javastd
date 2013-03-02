@@ -74,7 +74,7 @@ extern class I2S extends com.sun.org.apache.bcel.internal.generic.ConversionInst
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

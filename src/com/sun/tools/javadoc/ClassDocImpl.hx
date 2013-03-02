@@ -175,7 +175,7 @@ package com.sun.tools.javadoc;
 	* Return the qualified name and any type parameters.
 	* Each parameter is a type variable with optional bounds.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Return the formal type parameters of this class or interface.

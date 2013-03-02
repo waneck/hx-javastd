@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class Wildcard implements sun.reflect.generics.tree.TypeArgument
 {
-	@:overload public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : Wildcard;
+	@:overload public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.Wildcard;
 	
 	@:overload public function getUpperBounds() : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>;
 	

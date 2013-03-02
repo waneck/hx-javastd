@@ -57,7 +57,7 @@ extern class Options
 	*/
 	public var nocompile : Bool;
 	
-	public var target : Options_Target;
+	public var target : com.sun.tools.internal.ws.wscompile.Options.Options_Target;
 	
 	/**
 	* strictly follow the compatibility rules specified in JAXWS spec

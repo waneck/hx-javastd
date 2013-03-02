@@ -31,7 +31,7 @@ package com.sun.xml.internal.ws.policy;
 */
 extern class EffectivePolicyModifier extends com.sun.xml.internal.ws.policy.PolicyMapMutator
 {
-	@:overload public static function createEffectivePolicyModifier() : EffectivePolicyModifier;
+	@:overload public static function createEffectivePolicyModifier() : com.sun.xml.internal.ws.policy.EffectivePolicyModifier;
 	
 	/**
 	* Replaces current effective policy on the service scope (identified by a {@code key} parameter) with the new efective

@@ -36,9 +36,9 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload public function isRequired() : Bool;
 	
-	@:overload override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.core.TypeInfo<TypeT, ClassDeclT>>;
+	@:overload public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.core.TypeInfo<TypeT, ClassDeclT>>;
 	
-	@:overload @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:final public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	@:overload override private function link() : Void;
 	

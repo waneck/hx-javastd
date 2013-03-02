@@ -74,7 +74,7 @@ extern class ConstantDouble extends com.sun.org.apache.bcel.internal.classfile.C
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantDouble) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantDouble) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely

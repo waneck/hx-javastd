@@ -31,7 +31,7 @@ extern class SynthTextAreaUI extends javax.swing.plaf.basic.BasicTextAreaUI impl
 	* @param ta a text area
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(ta : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(ta : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc

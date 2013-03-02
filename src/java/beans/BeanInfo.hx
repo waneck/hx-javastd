@@ -126,7 +126,7 @@ extern interface BeanInfo
 	*
 	* @return an array of BeanInfo objects.  May return null.
 	*/
-	@:overload public function getAdditionalBeanInfo() : java.NativeArray<BeanInfo>;
+	@:overload public function getAdditionalBeanInfo() : java.NativeArray<java.beans.BeanInfo>;
 	
 	/**
 	* This method returns an image object that can be used to

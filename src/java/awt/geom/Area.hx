@@ -71,7 +71,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function add(rhs : Area) : Void;
+	@:require(java2) @:overload public function add(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Subtracts the shape of the specified <code>Area</code> from the
@@ -101,7 +101,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function subtract(rhs : Area) : Void;
+	@:require(java2) @:overload public function subtract(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Sets the shape of this <code>Area</code> to the intersection of
@@ -131,7 +131,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersect(rhs : Area) : Void;
+	@:require(java2) @:overload public function intersect(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Sets the shape of this <code>Area</code> to be the combined area
@@ -162,7 +162,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	* @throws NullPointerException if <code>rhs</code> is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function exclusiveOr(rhs : Area) : Void;
+	@:require(java2) @:overload public function exclusiveOr(rhs : java.awt.geom.Area) : Void;
 	
 	/**
 	* Removes all of the geometry from this <code>Area</code> and
@@ -261,7 +261,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	*          <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function equals(other : Area) : Bool;
+	@:require(java2) @:overload public function equals(other : java.awt.geom.Area) : Bool;
 	
 	/**
 	* Transforms the geometry of this <code>Area</code> using the specified
@@ -285,7 +285,7 @@ extern class Area implements java.awt.Shape implements java.lang.Cloneable
 	*           geometry.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createTransformedArea(t : java.awt.geom.AffineTransform) : Area;
+	@:require(java2) @:overload public function createTransformedArea(t : java.awt.geom.AffineTransform) : java.awt.geom.Area;
 	
 	/**
 	* {@inheritDoc}

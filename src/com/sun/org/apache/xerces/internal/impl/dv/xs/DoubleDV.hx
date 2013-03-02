@@ -30,13 +30,13 @@ extern class DoubleDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Type
 	*
 	* @version $Id: DoubleDV.java,v 1.7 2010-11-01 04:39:46 joehw Exp $
 	*/
-	@:overload override public function getAllowedFacets() : java.StdTypes.Int16;
+	@:overload public function getAllowedFacets() : java.StdTypes.Int16;
 	
-	@:overload override public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
+	@:overload public function getActualValue(content : String, context : com.sun.org.apache.xerces.internal.impl.dv.ValidationContext) : Dynamic;
 	
-	@:overload override public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
+	@:overload public function compare(value1 : Dynamic, value2 : Dynamic) : Int;
 	
-	@:overload override public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
+	@:overload public function isIdentical(value1 : Dynamic, value2 : Dynamic) : Bool;
 	
 	
 }
@@ -48,7 +48,7 @@ extern class DoubleDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Type
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function isIdentical(val : DoubleDV_XDouble) : Bool;
+	@:overload public function isIdentical(val : com.sun.org.apache.xerces.internal.impl.dv.xs.DoubleDV.DoubleDV_XDouble) : Bool;
 	
 	@:overload @:synchronized public function toString() : String;
 	

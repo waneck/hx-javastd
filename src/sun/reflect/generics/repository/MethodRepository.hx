@@ -34,7 +34,7 @@ extern class MethodRepository extends sun.reflect.generics.repository.Constructo
 	* @return a <tt>MethodRepository</tt> that manages the generic type
 	* information represented in the signature <tt>rawSig</tt>
 	*/
-	@:native('make') @:overload public static function _make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : MethodRepository;
+	@:overload public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.repository.MethodRepository;
 	
 	@:overload public function getReturnType() : java.lang.reflect.Type;
 	

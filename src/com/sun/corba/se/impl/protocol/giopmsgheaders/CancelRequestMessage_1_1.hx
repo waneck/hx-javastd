@@ -27,11 +27,11 @@ extern class CancelRequestMessage_1_1 extends com.sun.corba.se.impl.protocol.gio
 {
 	@:overload public function getRequestId() : Int;
 	
-	@:overload override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
-	@:overload override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	//@:overload override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

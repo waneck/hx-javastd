@@ -36,7 +36,7 @@ extern class UnsupportedMediaException extends com.sun.xml.internal.ws.util.exce
 	
 	@:overload public function new(charset : String) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload public function getDefaultResourceBundleName() : String;
 	
 	
 }

@@ -55,12 +55,12 @@ extern class DOMUnsupportedException extends java.lang.Exception
 	/**
 	* Returns the detail message of the error or null if there is no detail message.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* Returns the root cause of the error or null if there is none.
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

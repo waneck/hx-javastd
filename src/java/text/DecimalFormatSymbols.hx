@@ -87,7 +87,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @return a <code>DecimalFormatSymbols</code> instance.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance() : DecimalFormatSymbols;
+	@:require(java6) @:overload @:final public static function getInstance() : java.text.DecimalFormatSymbols;
 	
 	/**
 	* Gets the <code>DecimalFormatSymbols</code> instance for the specified
@@ -101,7 +101,7 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 	* @exception NullPointerException if <code>locale</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getInstance(locale : java.util.Locale) : DecimalFormatSymbols;
+	@:require(java6) @:overload @:final public static function getInstance(locale : java.util.Locale) : java.text.DecimalFormatSymbols;
 	
 	/**
 	* Gets the character used for zero. Different for Arabic, etc.
@@ -329,9 +329,9 @@ extern class DecimalFormatSymbols implements java.lang.Cloneable implements java
 * Obtains a DecimalFormatSymbols instance from a DecimalFormatSymbolsProvider
 * implementation.
 */
-@:native('java$text$DecimalFormatSymbols$DecimalFormatSymbolsGetter') @:internal extern class DecimalFormatSymbols_DecimalFormatSymbolsGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DecimalFormatSymbolsProvider, DecimalFormatSymbols>
+@:native('java$text$DecimalFormatSymbols$DecimalFormatSymbolsGetter') @:internal extern class DecimalFormatSymbols_DecimalFormatSymbolsGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.DecimalFormatSymbolsProvider, java.text.DecimalFormatSymbols>
 {
-	@:overload public function getObject(decimalFormatSymbolsProvider : java.text.spi.DecimalFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : DecimalFormatSymbols;
+	@:overload public function getObject(decimalFormatSymbolsProvider : java.text.spi.DecimalFormatSymbolsProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.DecimalFormatSymbols;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class ValidationProcessor extends com.sun.xml.internal.ws.policy.Assertio
 	* @return singleton An instance of the class.
 	* @throws PolicyException If instantiation failed.
 	*/
-	@:overload public static function getInstance() : ValidationProcessor;
+	@:overload public static function getInstance() : com.sun.xml.internal.ws.api.policy.ValidationProcessor;
 	
 	
 }

@@ -29,11 +29,11 @@ extern class NonConcreteMethodImpl extends com.sun.tools.jdi.MethodImpl
 	
 	@:overload override public function allLineLocations(stratumID : String, sourceName : String) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload override public function allLineLocations(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String) : java.util.List<com.sun.jdi.Location>;
+	@:overload public function allLineLocations(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String) : java.util.List<com.sun.jdi.Location>;
 	
 	@:overload override public function locationsOfLine(stratumID : String, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
 	
-	@:overload override public function locationsOfLine(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
+	@:overload public function locationsOfLine(stratum : com.sun.tools.jdi.SDE.SDE_Stratum, sourceName : String, lineNumber : Int) : java.util.List<com.sun.jdi.Location>;
 	
 	@:overload override public function locationOfCodeIndex(codeIndex : haxe.Int64) : com.sun.jdi.Location;
 	

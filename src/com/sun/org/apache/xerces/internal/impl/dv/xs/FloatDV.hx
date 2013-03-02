@@ -48,7 +48,7 @@ extern class FloatDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.TypeV
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function isIdentical(val : FloatDV_XFloat) : Bool;
+	@:overload public function isIdentical(val : com.sun.org.apache.xerces.internal.impl.dv.xs.FloatDV.FloatDV_XFloat) : Bool;
 	
 	@:overload @:synchronized public function toString() : String;
 	

@@ -43,7 +43,7 @@ extern class XMLStreamException2 extends javax.xml.stream.XMLStreamException
 	/**
 	* {@link XMLStreamException} doesn't return the correct cause.
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

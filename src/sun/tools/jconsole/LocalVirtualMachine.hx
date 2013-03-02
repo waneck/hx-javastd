@@ -41,9 +41,9 @@ extern class LocalVirtualMachine
 	
 	@:overload public function toString() : String;
 	
-	@:overload public static function getAllVirtualMachines() : java.util.Map<Null<Int>, LocalVirtualMachine>;
+	@:overload public static function getAllVirtualMachines() : java.util.Map<Null<Int>, sun.tools.jconsole.LocalVirtualMachine>;
 	
-	@:overload public static function getLocalVirtualMachine(vmid : Int) : LocalVirtualMachine;
+	@:overload public static function getLocalVirtualMachine(vmid : Int) : sun.tools.jconsole.LocalVirtualMachine;
 	
 	
 }

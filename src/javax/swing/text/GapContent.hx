@@ -191,7 +191,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 * it.  The update table holds only a reference
 * to this data.
 */
-@:native('javax$swing$text$GapContent$MarkData') @:internal extern class GapContent_MarkData extends java.lang.ref.WeakReference<GapContent_StickyPosition>
+@:native('javax$swing$text$GapContent$MarkData') @:internal extern class GapContent_MarkData extends java.lang.ref.WeakReference<javax.swing.text.GapContent.GapContent_StickyPosition>
 {
 	/**
 	* Fetch the location in the contiguous sequence
@@ -232,17 +232,17 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	/**
 	* Inserts a mark into the vector
 	*/
-	@:overload public function insertElementAt(m : GapContent_MarkData, index : Int) : Void;
+	@:overload public function insertElementAt(m : javax.swing.text.GapContent.GapContent_MarkData, index : Int) : Void;
 	
 	/**
 	* Add a mark to the end
 	*/
-	@:overload public function addElement(m : GapContent_MarkData) : Void;
+	@:overload public function addElement(m : javax.swing.text.GapContent.GapContent_MarkData) : Void;
 	
 	/**
 	* Fetches the mark at the given index
 	*/
-	@:overload public function elementAt(index : Int) : GapContent_MarkData;
+	@:overload public function elementAt(index : Int) : javax.swing.text.GapContent.GapContent_MarkData;
 	
 	/**
 	* Replaces the elements in the specified range with the passed
@@ -273,7 +273,7 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 	private var undoLocation : Int;
 	
 	/** Mark to reset offset. */
-	private var rec : GapContent_MarkData;
+	private var rec : javax.swing.text.GapContent.GapContent_MarkData;
 	
 	
 }
@@ -284,9 +284,9 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 {
 	@:overload private function new(offset : Int, length : Int) : Void;
 	
-	@:overload override public function undo() : Void;
+	@:overload public function undo() : Void;
 	
-	@:overload override public function redo() : Void;
+	@:overload public function redo() : Void;
 	
 	/** Where string was inserted. */
 	private var offset : Int;
@@ -311,9 +311,9 @@ extern class GapContent extends javax.swing.text.GapVector implements javax.swin
 {
 	@:overload private function new(offset : Int, string : String) : Void;
 	
-	@:overload override public function undo() : Void;
+	@:overload public function undo() : Void;
 	
-	@:overload override public function redo() : Void;
+	@:overload public function redo() : Void;
 	
 	/** Where the string was removed from. */
 	private var offset : Int;

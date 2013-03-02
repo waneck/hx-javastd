@@ -41,7 +41,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @throws IllegalStateException if {@link #close} has been called
 	* and this file manager cannot be reopened
 	*/
-	@:overload public function getClassLoader(location : JavaFileManager_Location) : java.lang.ClassLoader;
+	@:overload public function getClassLoader(location : javax.tools.JavaFileManager.JavaFileManager_Location) : java.lang.ClassLoader;
 	
 	/**
 	* Lists all file objects matching the given criteria in the given
@@ -63,7 +63,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @throws IllegalStateException if {@link #close} has been called
 	* and this file manager cannot be reopened
 	*/
-	@:overload public function list(location : JavaFileManager_Location, packageName : String, kinds : java.util.Set<Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
+	@:overload public function list(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, kinds : java.util.Set<Kind>, recurse : Bool) : java.lang.Iterable<javax.tools.JavaFileObject>;
 	
 	/**
 	* Infers a binary name of a file object based on a location.  The
@@ -77,7 +77,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @throws IllegalStateException if {@link #close} has been called
 	* and this file manager cannot be reopened
 	*/
-	@:overload public function inferBinaryName(location : JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
+	@:overload public function inferBinaryName(location : javax.tools.JavaFileManager.JavaFileManager_Location, file : javax.tools.JavaFileObject) : String;
 	
 	/**
 	* Compares two file objects and return true if they represent the
@@ -116,7 +116,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @param location a location
 	* @return true if the location is known
 	*/
-	@:overload public function hasLocation(location : JavaFileManager_Location) : Bool;
+	@:overload public function hasLocation(location : javax.tools.JavaFileManager.JavaFileManager_Location) : Bool;
 	
 	/**
 	* Gets a {@linkplain JavaFileObject file object} for input
@@ -139,7 +139,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @throws IllegalStateException if {@link #close} has been called
 	* and this file manager cannot be reopened
 	*/
-	@:overload public function getJavaFileForInput(location : JavaFileManager_Location, className : String, kind : Kind) : javax.tools.JavaFileObject;
+	@:overload public function getJavaFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : Kind) : javax.tools.JavaFileObject;
 	
 	/**
 	* Gets a {@linkplain JavaFileObject file object} for output
@@ -173,7 +173,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @throws IllegalStateException {@link #close} has been called
 	* and this file manager cannot be reopened
 	*/
-	@:overload public function getJavaFileForOutput(location : JavaFileManager_Location, className : String, kind : Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
+	@:overload public function getJavaFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, className : String, kind : Kind, sibling : javax.tools.FileObject) : javax.tools.JavaFileObject;
 	
 	/**
 	* Gets a {@linkplain FileObject file object} for input
@@ -214,7 +214,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @throws IllegalStateException if {@link #close} has been called
 	* and this file manager cannot be reopened
 	*/
-	@:overload public function getFileForInput(location : JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
+	@:overload public function getFileForInput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String) : javax.tools.FileObject;
 	
 	/**
 	* Gets a {@linkplain FileObject file object} for output
@@ -256,7 +256,7 @@ extern interface JavaFileManager extends java.io.Closeable extends java.io.Flush
 	* @throws IllegalStateException if {@link #close} has been called
 	* and this file manager cannot be reopened
 	*/
-	@:overload public function getFileForOutput(location : JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
+	@:overload public function getFileForOutput(location : javax.tools.JavaFileManager.JavaFileManager_Location, packageName : String, relativeName : String, sibling : javax.tools.FileObject) : javax.tools.FileObject;
 	
 	/**
 	* Flushes any resources opened for output by this file manager

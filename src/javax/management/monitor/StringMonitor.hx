@@ -74,7 +74,7 @@ package javax.management.monitor;
 	* @return The derived gauge of the specified object.
 	*
 	*/
-	@:overload @:synchronized override public function getDerivedGauge(object : javax.management.ObjectName) : String;
+	@:overload @:synchronized public function getDerivedGauge(object : javax.management.ObjectName) : String;
 	
 	/**
 	* Gets the derived gauge timestamp of the specified object, if
@@ -87,7 +87,7 @@ package javax.management.monitor;
 	* @return The derived gauge timestamp of the specified object.
 	*
 	*/
-	@:overload @:synchronized override public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
+	@:overload @:synchronized public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
 	
 	/**
 	* Returns the derived gauge of the first object in the set of

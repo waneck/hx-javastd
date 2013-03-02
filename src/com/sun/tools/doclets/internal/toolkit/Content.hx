@@ -42,7 +42,7 @@ extern class Content
 	*
 	* @param content content that needs to be added
 	*/
-	@:overload @:abstract public function addContent(content : Content) : Void;
+	@:overload @:abstract public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds a string content to the existing content.

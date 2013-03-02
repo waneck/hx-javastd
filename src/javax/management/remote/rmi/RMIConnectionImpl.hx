@@ -143,13 +143,13 @@ extern class RMIConnectionImpl implements javax.management.remote.rmi.RMIConnect
 }
 @:native('javax$management$remote$rmi$RMIConnectionImpl$CombinedClassLoader') @:internal extern class RMIConnectionImpl_CombinedClassLoader extends java.lang.ClassLoader
 {
-	@:overload override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }
 @:native('javax$management$remote$rmi$RMIConnectionImpl$CombinedClassLoader$ClassLoaderWrapper') @:internal extern class RMIConnectionImpl_CombinedClassLoader_ClassLoaderWrapper extends java.lang.ClassLoader
 {
-	@:overload override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }

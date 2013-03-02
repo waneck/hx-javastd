@@ -23,7 +23,7 @@ package java.util;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Date implements java.io.Serializable implements java.lang.Cloneable implements java.lang.Comparable<Date>
+extern class Date implements java.io.Serializable implements java.lang.Cloneable implements java.lang.Comparable<java.util.Date>
 {
 	/**
 	* Allocates a <code>Date</code> object and initializes it so that
@@ -478,7 +478,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*          <code>false</code> otherwise.
 	* @exception NullPointerException if <code>when</code> is null.
 	*/
-	@:overload public function before(when : Date) : Bool;
+	@:overload public function before(when : java.util.Date) : Bool;
 	
 	/**
 	* Tests if this date is after the specified date.
@@ -490,7 +490,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	*          <code>false</code> otherwise.
 	* @exception NullPointerException if <code>when</code> is null.
 	*/
-	@:overload public function after(when : Date) : Bool;
+	@:overload public function after(when : java.util.Date) : Bool;
 	
 	/**
 	* Compares two dates for equality.
@@ -520,7 +520,7 @@ extern class Date implements java.io.Serializable implements java.lang.Cloneable
 	* @since   1.2
 	* @exception NullPointerException if <code>anotherDate</code> is null.
 	*/
-	@:require(java2) @:overload public function compareTo(anotherDate : Date) : Int;
+	@:require(java2) @:overload public function compareTo(anotherDate : java.util.Date) : Int;
 	
 	/**
 	* Returns a hash code value for this object. The result is the

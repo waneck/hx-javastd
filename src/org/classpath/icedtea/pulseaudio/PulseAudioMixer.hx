@@ -37,7 +37,7 @@ exception statement from your version.
 */
 extern class PulseAudioMixer implements javax.sound.sampled.Mixer
 {
-	@:overload @:synchronized public static function getInstance() : PulseAudioMixer;
+	@:overload @:synchronized public static function getInstance() : org.classpath.icedtea.pulseaudio.PulseAudioMixer;
 	
 	@:overload public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	

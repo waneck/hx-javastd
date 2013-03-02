@@ -43,7 +43,7 @@ extern class XPath2FilterContainer extends com.sun.org.apache.xml.internal.secur
 	* @param xpath2filter
 	* @return the filter.
 	*/
-	@:overload public static function newInstanceIntersect(doc : org.w3c.dom.Document, xpath2filter : String) : XPath2FilterContainer;
+	@:overload public static function newInstanceIntersect(doc : org.w3c.dom.Document, xpath2filter : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer;
 	
 	/**
 	* Creates a new XPath2FilterContainer with the filter type "subtract".
@@ -52,7 +52,7 @@ extern class XPath2FilterContainer extends com.sun.org.apache.xml.internal.secur
 	* @param xpath2filter
 	* @return the filter.
 	*/
-	@:overload public static function newInstanceSubtract(doc : org.w3c.dom.Document, xpath2filter : String) : XPath2FilterContainer;
+	@:overload public static function newInstanceSubtract(doc : org.w3c.dom.Document, xpath2filter : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer;
 	
 	/**
 	* Creates a new XPath2FilterContainer with the filter type "union".
@@ -61,7 +61,7 @@ extern class XPath2FilterContainer extends com.sun.org.apache.xml.internal.secur
 	* @param xpath2filter
 	* @return the filter
 	*/
-	@:overload public static function newInstanceUnion(doc : org.w3c.dom.Document, xpath2filter : String) : XPath2FilterContainer;
+	@:overload public static function newInstanceUnion(doc : org.w3c.dom.Document, xpath2filter : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer;
 	
 	/**
 	* Method newInstances
@@ -81,7 +81,7 @@ extern class XPath2FilterContainer extends com.sun.org.apache.xml.internal.secur
 	*
 	* @throws XMLSecurityException
 	*/
-	@:overload public static function newInstance(element : org.w3c.dom.Element, BaseURI : String) : XPath2FilterContainer;
+	@:overload public static function newInstance(element : org.w3c.dom.Element, BaseURI : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer;
 	
 	/**
 	* Returns <code>true</code> if the <code>Filter</code> attribute has value "intersect".
@@ -126,14 +126,14 @@ extern class XPath2FilterContainer extends com.sun.org.apache.xml.internal.secur
 	*
 	* @return the XPATH2 tag
 	*/
-	@:overload @:final override public function getBaseLocalName() : String;
+	@:overload @:final public function getBaseLocalName() : String;
 	
 	/**
 	* Method getBaseNamespace
 	*
 	* @return XPATH2 tag namespace
 	*/
-	@:overload @:final override public function getBaseNamespace() : String;
+	@:overload @:final public function getBaseNamespace() : String;
 	
 	
 }

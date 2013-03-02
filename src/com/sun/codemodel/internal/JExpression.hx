@@ -43,98 +43,98 @@ extern interface JExpression extends com.sun.codemodel.internal.JGenerable
 	/**
 	* Returns "-[this]" from "[this]".
 	*/
-	@:overload public function minus() : JExpression;
+	@:overload public function minus() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "![this]" from "[this]".
 	*/
-	@:overload public function not() : JExpression;
+	@:overload public function not() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "~[this]" from "[this]".
 	*/
-	@:overload public function complement() : JExpression;
+	@:overload public function complement() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]++" from "[this]".
 	*/
-	@:overload public function incr() : JExpression;
+	@:overload public function incr() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]--" from "[this]".
 	*/
-	@:overload public function decr() : JExpression;
+	@:overload public function decr() : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]+[right]"
 	*/
-	@:overload public function plus(right : JExpression) : JExpression;
+	@:overload public function plus(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]-[right]"
 	*/
-	@:overload public function minus(right : JExpression) : JExpression;
+	@:overload public function minus(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]*[right]"
 	*/
-	@:overload public function mul(right : JExpression) : JExpression;
+	@:overload public function mul(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]/[right]"
 	*/
-	@:overload public function div(right : JExpression) : JExpression;
+	@:overload public function div(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]%[right]"
 	*/
-	@:overload public function mod(right : JExpression) : JExpression;
+	@:overload public function mod(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]&lt;&lt;[right]"
 	*/
-	@:overload public function shl(right : JExpression) : JExpression;
+	@:overload public function shl(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]>>[right]"
 	*/
-	@:overload public function shr(right : JExpression) : JExpression;
+	@:overload public function shr(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this]>>>[right]"
 	*/
-	@:overload public function shrz(right : JExpression) : JExpression;
+	@:overload public function shrz(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/** Bit-wise AND '&amp;'. */
-	@:overload public function band(right : JExpression) : JExpression;
+	@:overload public function band(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/** Bit-wise OR '|'. */
-	@:overload public function bor(right : JExpression) : JExpression;
+	@:overload public function bor(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/** Logical AND '&amp;&amp;'. */
-	@:overload public function cand(right : JExpression) : JExpression;
+	@:overload public function cand(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/** Logical OR '||'. */
-	@:overload public function cor(right : JExpression) : JExpression;
+	@:overload public function cor(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function xor(right : JExpression) : JExpression;
+	@:overload public function xor(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function lt(right : JExpression) : JExpression;
+	@:overload public function lt(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function lte(right : JExpression) : JExpression;
+	@:overload public function lte(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function gt(right : JExpression) : JExpression;
+	@:overload public function gt(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function gte(right : JExpression) : JExpression;
+	@:overload public function gte(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function eq(right : JExpression) : JExpression;
+	@:overload public function eq(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
-	@:overload public function ne(right : JExpression) : JExpression;
+	@:overload public function ne(right : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this] instanceof [right]"
 	*/
-	@:overload public function _instanceof(right : com.sun.codemodel.internal.JType) : JExpression;
+	@:overload public function _instanceof(right : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JExpression;
 	
 	/**
 	* Returns "[this].[method]".
@@ -154,7 +154,7 @@ extern interface JExpression extends com.sun.codemodel.internal.JGenerable
 	
 	@:overload public function ref(field : String) : com.sun.codemodel.internal.JFieldRef;
 	
-	@:overload public function component(index : JExpression) : com.sun.codemodel.internal.JArrayCompRef;
+	@:overload public function component(index : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JArrayCompRef;
 	
 	
 }

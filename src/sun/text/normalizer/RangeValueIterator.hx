@@ -84,7 +84,7 @@ extern interface RangeValueIterator
 	* @see Element
 	* @stable ICU 2.6
 	*/
-	@:overload public function next(element : RangeValueIterator_Element) : Bool;
+	@:overload public function next(element : sun.text.normalizer.RangeValueIterator.RangeValueIterator_Element) : Bool;
 	
 	/**
 	* Resets the iterator to the beginning of the iteration.

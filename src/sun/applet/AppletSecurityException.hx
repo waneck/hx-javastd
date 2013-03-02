@@ -36,7 +36,7 @@ extern class AppletSecurityException extends java.lang.SecurityException
 	
 	@:overload public function new(name : String, arg1 : String, arg2 : String) : Void;
 	
-	@:overload override public function getLocalizedMessage() : String;
+	@:overload public function getLocalizedMessage() : String;
 	
 	
 }

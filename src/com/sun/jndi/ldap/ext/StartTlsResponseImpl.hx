@@ -39,7 +39,7 @@ extern class StartTlsResponseImpl extends javax.naming.ldap.StartTlsResponse
 	* enable.
 	* @see #negotiate
 	*/
-	@:overload override public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
+	@:overload public function setEnabledCipherSuites(suites : java.NativeArray<String>) : Void;
 	
 	/**
 	* Overrides the default hostname verifier used by <tt>negotiate()</tt>
@@ -52,7 +52,7 @@ extern class StartTlsResponseImpl extends javax.naming.ldap.StartTlsResponse
 	* @param verifier The non-null hostname verifier callback.
 	* @see #negotiate
 	*/
-	@:overload override public function setHostnameVerifier(verifier : javax.net.ssl.HostnameVerifier) : Void;
+	@:overload public function setHostnameVerifier(verifier : javax.net.ssl.HostnameVerifier) : Void;
 	
 	/**
 	* Negotiates a TLS session using the default SSL socket factory.
@@ -65,7 +65,7 @@ extern class StartTlsResponseImpl extends javax.naming.ldap.StartTlsResponse
 	* @see #setEnabledCipherSuites
 	* @see #setHostnameVerifier
 	*/
-	@:overload override public function negotiate() : javax.net.ssl.SSLSession;
+	@:overload public function negotiate() : javax.net.ssl.SSLSession;
 	
 	/**
 	* Negotiates a TLS session using an SSL socket factory.
@@ -97,7 +97,7 @@ extern class StartTlsResponseImpl extends javax.naming.ldap.StartTlsResponse
 	* @see #setEnabledCipherSuites
 	* @see #setHostnameVerifier
 	*/
-	@:overload override public function negotiate(factory : javax.net.ssl.SSLSocketFactory) : javax.net.ssl.SSLSession;
+	@:overload public function negotiate(factory : javax.net.ssl.SSLSocketFactory) : javax.net.ssl.SSLSession;
 	
 	/**
 	* Closes the TLS connection gracefully and reverts back to the underlying
@@ -106,7 +106,7 @@ extern class StartTlsResponseImpl extends javax.naming.ldap.StartTlsResponse
 	* @throw IOException If an IO error was encountered while closing the
 	* TLS connection
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* Sets the connection for TLS to use. The TLS connection will be attached

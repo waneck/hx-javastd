@@ -81,7 +81,7 @@ package javax.xml.xpath;
 	* @throws RuntimeException When there is a failure in creating an
 	*   <code>XPathFactory</code> for the default object model.
 	*/
-	@:overload @:final public static function newInstance() : XPathFactory;
+	@:overload @:final public static function newInstance() : javax.xml.xpath.XPathFactory;
 	
 	/**
 	* <p>Get a new <code>XPathFactory</code> instance using the specified object model.</p>
@@ -136,7 +136,7 @@ package javax.xml.xpath;
 	* @throws IllegalArgumentException If <code>uri</code> is <code>null</code>
 	*   or <code>uri.length() == 0</code>.
 	*/
-	@:overload @:final public static function newInstance(uri : String) : XPathFactory;
+	@:overload @:final public static function newInstance(uri : String) : javax.xml.xpath.XPathFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>XPathFactory</code> from a factory class name. <code>XPathFactory</code>
@@ -184,7 +184,7 @@ package javax.xml.xpath;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(uri : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : XPathFactory;
+	@:require(java6) @:overload public static function newInstance(uri : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.xpath.XPathFactory;
 	
 	/**
 	* <p>Is specified object model supported by this <code>XPathFactory</code>?</p>

@@ -27,7 +27,7 @@ extern class ModelMappedInstrument extends com.sun.media.sound.ModelInstrument
 {
 	@:overload public function new(ins : com.sun.media.sound.ModelInstrument, patch : javax.sound.midi.Patch) : Void;
 	
-	@:overload override public function getData() : Dynamic;
+	@:overload public function getData() : Dynamic;
 	
 	@:overload override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
 	

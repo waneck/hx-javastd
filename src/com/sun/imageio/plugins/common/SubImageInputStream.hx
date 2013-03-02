@@ -27,15 +27,15 @@ extern class SubImageInputStream extends javax.imageio.stream.ImageInputStreamIm
 {
 	@:overload public function new(stream : javax.imageio.stream.ImageInputStream, length : Int) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function length() : haxe.Int64;
+	@:overload public function length() : haxe.Int64;
 	
-	@:overload override public function seek(pos : haxe.Int64) : Void;
+	@:overload public function seek(pos : haxe.Int64) : Void;
 	
-	@:overload override private function finalize() : Void;
+	@:overload private function finalize() : Void;
 	
 	
 }

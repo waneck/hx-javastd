@@ -33,7 +33,7 @@ extern class PlotterPanel extends sun.tools.jconsole.BorderedComponent
 	
 	@:overload public function setPlotter(plotter : sun.tools.jconsole.Plotter) : Void;
 	
-	@:overload override public function getComponentPopupMenu() : javax.swing.JPopupMenu;
+	@:overload public function getComponentPopupMenu() : javax.swing.JPopupMenu;
 	
 	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	

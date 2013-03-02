@@ -91,7 +91,7 @@ extern class PlatformLogger
 	/**
 	* Returns a PlatformLogger of a given name.
 	*/
-	@:overload @:synchronized public static function getLogger(name : String) : PlatformLogger;
+	@:overload @:synchronized public static function getLogger(name : String) : sun.util.logging.PlatformLogger;
 	
 	/**
 	* Initialize java.util.logging.Logger objects for all platform loggers.
@@ -206,7 +206,7 @@ extern class PlatformLogger
 * JavaLogger forwards all the calls to its corresponding
 * java.util.logging.Logger object.
 */
-@:native('sun$util$logging$PlatformLogger$JavaLogger') @:internal extern class PlatformLogger_JavaLogger extends PlatformLogger_LoggerProxy
+@:native('sun$util$logging$PlatformLogger$JavaLogger') @:internal extern class PlatformLogger_JavaLogger extends sun.util.logging.PlatformLogger.PlatformLogger_LoggerProxy
 {
 	@:overload override public function isLoggable(level : Int) : Bool;
 	

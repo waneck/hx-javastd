@@ -36,7 +36,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface Field extends com.sun.jdi.TypeComponent extends java.lang.Comparable<Field>
+@:require(java3) extern interface Field extends com.sun.jdi.TypeComponent extends java.lang.Comparable<com.sun.jdi.Field>
 {
 	/**
 	* Returns a text representation of the type

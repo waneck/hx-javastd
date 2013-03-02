@@ -48,7 +48,7 @@ package sun.security.pkcs11;
 	/**
 	* Return the singleton Secmod instance.
 	*/
-	@:overload public static function getInstance() : Secmod;
+	@:overload public static function getInstance() : sun.security.pkcs11.Secmod;
 	
 	/**
 	* Test whether this Secmod has been initialized. Returns true
@@ -77,7 +77,7 @@ package sun.security.pkcs11;
 	*/
 	@:overload public function initialize(configDir : String, nssLibDir : String) : Void;
 	
-	@:overload @:synchronized public function initialize(dbMode : Secmod_DbMode, configDir : String, nssLibDir : String) : Void;
+	@:overload @:synchronized public function initialize(dbMode : sun.security.pkcs11.Secmod.Secmod_DbMode, configDir : String, nssLibDir : String) : Void;
 	
 	/**
 	* Return an immutable list of all available modules.
@@ -85,7 +85,7 @@ package sun.security.pkcs11;
 	* @throws IllegalStateException if this Secmod is misconfigured
 	*   or not initialized
 	*/
-	@:overload @:synchronized public function getModules() : java.util.List<Secmod_Module>;
+	@:overload @:synchronized public function getModules() : java.util.List<sun.security.pkcs11.Secmod.Secmod_Module>;
 	
 	/**
 	* Returns the first module of the specified type. If no such
@@ -94,7 +94,7 @@ package sun.security.pkcs11;
 	* @throws IllegalStateException if this Secmod is misconfigured
 	*   or not initialized
 	*/
-	@:overload public function getModule(type : Secmod_ModuleType) : Secmod_Module;
+	@:overload public function getModule(type : sun.security.pkcs11.Secmod.Secmod_ModuleType) : sun.security.pkcs11.Secmod.Secmod_Module;
 	
 	
 }
@@ -169,7 +169,7 @@ package sun.security.pkcs11;
 	/**
 	* Returns the type of this module.
 	*/
-	@:overload public function getType() : Secmod_ModuleType;
+	@:overload public function getType() : sun.security.pkcs11.Secmod.Secmod_ModuleType;
 	
 	/**
 	* Returns the provider instance that is associated with this
@@ -217,13 +217,13 @@ package sun.security.pkcs11;
 */
 @:native('sun$security$pkcs11$Secmod$KeyStoreLoadParameter') extern class Secmod_KeyStoreLoadParameter implements LoadStoreParameter
 {
-	@:overload public function new(trustType : Secmod_TrustType, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload public function new(trustType : sun.security.pkcs11.Secmod.Secmod_TrustType, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
-	@:overload public function new(trustType : Secmod_TrustType, prot : ProtectionParameter) : Void;
+	@:overload public function new(trustType : sun.security.pkcs11.Secmod.Secmod_TrustType, prot : ProtectionParameter) : Void;
 	
 	@:overload public function getProtectionParameter() : ProtectionParameter;
 	
-	@:overload public function getTrustType() : Secmod_TrustType;
+	@:overload public function getTrustType() : sun.security.pkcs11.Secmod.Secmod_TrustType;
 	
 	
 }

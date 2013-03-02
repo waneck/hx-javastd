@@ -31,7 +31,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Set the parser for this expression.
 	*/
-	@:overload override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Returns a boolean value indicating if the nth position optimization
@@ -54,13 +54,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Returns true if the expression in this predicate contains a call
 	* to position().
 	*/
-	@:overload override public function hasPositionCall() : Bool;
+	@:overload public function hasPositionCall() : Bool;
 	
 	/**
 	* Returns true if the expression in this predicate contains a call
 	* to last().
 	*/
-	@:overload override public function hasLastCall() : Bool;
+	@:overload public function hasLastCall() : Bool;
 	
 	/**
 	* Returns true if this closure is compiled in an inner class (i.e.
@@ -94,7 +94,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	
 	@:overload public function getExpr() : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Type check a predicate expression. If the type of the expression is
@@ -107,7 +107,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* <code>dontOptimize()</code>. If so, the second time it should honor
 	* the new value of <code>_canOptimize</code>.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Returns true if the predicate is a test for the existance of an
@@ -150,7 +150,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* to a newly created filter object and a reference to the predicate's
 	* closure. See class <code>Step</code> for further details.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

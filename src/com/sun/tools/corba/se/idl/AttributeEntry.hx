@@ -43,7 +43,7 @@ extern class AttributeEntry extends com.sun.tools.corba.se.idl.MethodEntry
 	**/
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : AttributeEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.AttributeEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	

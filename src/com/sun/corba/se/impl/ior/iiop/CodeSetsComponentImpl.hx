@@ -39,7 +39,7 @@ extern class CodeSetsComponentImpl extends com.sun.corba.se.spi.ior.TaggedCompon
 	
 	@:overload public function getCodeSetComponentInfo() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
 	
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload override public function getId() : Int;
 	

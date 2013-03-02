@@ -41,9 +41,9 @@ package sun.nio.fs;
 */
 @:native('sun$nio$fs$PollingWatchService$PollingWatchKey') @:internal extern class PollingWatchService_PollingWatchKey extends sun.nio.fs.AbstractWatchKey
 {
-	@:overload override public function isValid() : Bool;
+	@:overload public function isValid() : Bool;
 	
-	@:overload override public function cancel() : Void;
+	@:overload public function cancel() : Void;
 	
 	
 }

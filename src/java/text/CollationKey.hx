@@ -93,7 +93,7 @@ package java.text;
 * @see          RuleBasedCollator
 * @author       Helena Shih
 */
-extern class CollationKey implements java.lang.Comparable<CollationKey>
+extern class CollationKey implements java.lang.Comparable<java.text.CollationKey>
 {
 	/**
 	* Compare this CollationKey to the target CollationKey. The collation rules of the
@@ -105,7 +105,7 @@ extern class CollationKey implements java.lang.Comparable<CollationKey>
 	* zero if this is greater than target.
 	* @see java.text.Collator#compare
 	*/
-	@:overload @:abstract public function compareTo(target : CollationKey) : Int;
+	@:overload @:abstract public function compareTo(target : java.text.CollationKey) : Int;
 	
 	/**
 	* Returns the String that this CollationKey represents.

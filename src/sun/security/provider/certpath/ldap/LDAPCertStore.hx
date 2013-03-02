@@ -57,7 +57,7 @@ extern class LDAPCertStore extends java.security.cert.CertStoreSpi
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:synchronized override public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.X509Certificate>;
+	@:overload @:synchronized public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.X509Certificate>;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>CRL</code>s that
@@ -80,7 +80,7 @@ extern class LDAPCertStore extends java.security.cert.CertStoreSpi
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload @:synchronized override public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.X509CRL>;
+	@:overload @:synchronized public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.X509CRL>;
 	
 	
 }
@@ -133,51 +133,51 @@ extern class LDAPCertStore extends java.security.cert.CertStoreSpi
 */
 @:native('sun$security$provider$certpath$ldap$LDAPCertStore$LDAPCertSelector') @:internal extern class LDAPCertStore_LDAPCertSelector extends java.security.cert.X509CertSelector
 {
-	@:overload override public function getCertificate() : java.security.cert.X509Certificate;
+	@:overload public function getCertificate() : java.security.cert.X509Certificate;
 	
-	@:overload override public function getSerialNumber() : java.math.BigInteger;
+	@:overload public function getSerialNumber() : java.math.BigInteger;
 	
-	@:overload override public function getIssuer() : javax.security.auth.x500.X500Principal;
+	@:overload public function getIssuer() : javax.security.auth.x500.X500Principal;
 	
-	@:overload override public function getIssuerAsString() : String;
+	@:overload public function getIssuerAsString() : String;
 	
-	@:overload override public function getIssuerAsBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getIssuerAsBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getSubject() : javax.security.auth.x500.X500Principal;
+	@:overload public function getSubject() : javax.security.auth.x500.X500Principal;
 	
-	@:overload override public function getSubjectAsString() : String;
+	@:overload public function getSubjectAsString() : String;
 	
-	@:overload override public function getSubjectAsBytes() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getSubjectAsBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getSubjectKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getSubjectKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getAuthorityKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getAuthorityKeyIdentifier() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getCertificateValid() : java.util.Date;
+	@:overload public function getCertificateValid() : java.util.Date;
 	
-	@:overload override public function getPrivateKeyValid() : java.util.Date;
+	@:overload public function getPrivateKeyValid() : java.util.Date;
 	
-	@:overload override public function getSubjectPublicKeyAlgID() : String;
+	@:overload public function getSubjectPublicKeyAlgID() : String;
 	
-	@:overload override public function getSubjectPublicKey() : java.security.PublicKey;
+	@:overload public function getSubjectPublicKey() : java.security.PublicKey;
 	
-	@:overload override public function getKeyUsage() : java.NativeArray<Bool>;
+	@:overload public function getKeyUsage() : java.NativeArray<Bool>;
 	
-	@:overload override public function getExtendedKeyUsage() : java.util.Set<String>;
+	@:overload public function getExtendedKeyUsage() : java.util.Set<String>;
 	
-	@:overload override public function getMatchAllSubjectAltNames() : Bool;
+	@:overload public function getMatchAllSubjectAltNames() : Bool;
 	
-	@:overload override public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:overload public function getSubjectAlternativeNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
-	@:overload override public function getNameConstraints() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getNameConstraints() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getBasicConstraints() : Int;
+	@:overload public function getBasicConstraints() : Int;
 	
-	@:overload override public function getPolicy() : java.util.Set<String>;
+	@:overload public function getPolicy() : java.util.Set<String>;
 	
-	@:overload override public function getPathToNames() : java.util.Collection<java.util.List<Dynamic>>;
+	@:overload public function getPathToNames() : java.util.Collection<java.util.List<Dynamic>>;
 	
-	@:overload override public function match(cert : java.security.cert.Certificate) : Bool;
+	@:overload public function match(cert : java.security.cert.Certificate) : Bool;
 	
 	
 }

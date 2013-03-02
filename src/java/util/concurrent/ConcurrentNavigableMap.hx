@@ -52,42 +52,42 @@ package java.util.concurrent;
 	* @throws NullPointerException     {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : ConcurrentNavigableMap<K, V>;
+	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
 	* @throws NullPointerException     {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headMap(toKey : K, inclusive : Bool) : ConcurrentNavigableMap<K, V>;
+	@:overload public function headMap(toKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
 	* @throws NullPointerException     {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailMap(fromKey : K, inclusive : Bool) : ConcurrentNavigableMap<K, V>;
+	@:overload public function tailMap(fromKey : K, inclusive : Bool) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
 	* @throws NullPointerException     {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function subMap(fromKey : K, toKey : K) : ConcurrentNavigableMap<K, V>;
+	@:overload public function subMap(fromKey : K, toKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
 	* @throws NullPointerException     {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function headMap(toKey : K) : ConcurrentNavigableMap<K, V>;
+	@:overload public function headMap(toKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* @throws ClassCastException       {@inheritDoc}
 	* @throws NullPointerException     {@inheritDoc}
 	* @throws IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload public function tailMap(fromKey : K) : ConcurrentNavigableMap<K, V>;
+	@:overload public function tailMap(fromKey : K) : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* Returns a reverse order view of the mappings contained in this map.
@@ -101,7 +101,7 @@ package java.util.concurrent;
 	*
 	* @return a reverse order view of this map
 	*/
-	@:overload public function descendingMap() : ConcurrentNavigableMap<K, V>;
+	@:overload public function descendingMap() : java.util.concurrent.ConcurrentNavigableMap<K, V>;
 	
 	/**
 	* Returns a {@link NavigableSet} view of the keys contained in this map.

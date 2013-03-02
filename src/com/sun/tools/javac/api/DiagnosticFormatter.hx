@@ -87,13 +87,13 @@ extern interface DiagnosticFormatter<D>
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic position
 	*/
-	@:overload public function formatPosition(diag : D, pk : DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
+	@:overload public function formatPosition(diag : D, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
 	/**
 	* Get a list of all the enabled verbosity options.
 	* @return verbosity options
 	*/
-	@:overload public function getConfiguration() : DiagnosticFormatter_Configuration;
+	@:overload public function getConfiguration() : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration;
 	
 	
 }
@@ -138,14 +138,14 @@ extern interface DiagnosticFormatter<D>
 	* by the formatter.
 	* @param options options to set
 	*/
-	@:overload public function setVisible(visibleParts : java.util.Set<DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
+	@:overload public function setVisible(visibleParts : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>) : Void;
 	
 	/**
 	* Retrieve the set of diagnostic parts that should be displayed
 	* by the formatter.
 	* @return verbosity options
 	*/
-	@:overload public function getVisible() : java.util.Set<DiagnosticFormatter_Configuration_DiagnosticPart>;
+	@:overload public function getVisible() : java.util.Set<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart>;
 	
 	/**
 	* Set a limit for multiline diagnostics.
@@ -155,7 +155,7 @@ extern interface DiagnosticFormatter<D>
 	* @param limit the kind of limit to be set
 	* @param value the limit value
 	*/
-	@:overload public function setMultilineLimit(limit : DiagnosticFormatter_Configuration_MultilineLimit, value : Int) : Void;
+	@:overload public function setMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit, value : Int) : Void;
 	
 	/**
 	* Get a multiline diagnostic limit.
@@ -163,7 +163,7 @@ extern interface DiagnosticFormatter<D>
 	* @param limit the kind of limit to be retrieved
 	* @return limit value or -1 if no limit is set
 	*/
-	@:overload public function getMultilineLimit(limit : DiagnosticFormatter_Configuration_MultilineLimit) : Int;
+	@:overload public function getMultilineLimit(limit : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_MultilineLimit) : Int;
 	
 	
 }

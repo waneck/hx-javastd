@@ -1153,7 +1153,7 @@ extern class Container extends java.awt.Component
 	* @see #isFocusCycleRoot()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function isFocusCycleRoot(container : Container) : Bool;
+	@:require(java4) @:overload override public function isFocusCycleRoot(container : java.awt.Container) : Bool;
 	
 	/**
 	* Sets the focus traversal policy that will manage keyboard traversal of
@@ -1399,13 +1399,13 @@ extern class Container extends java.awt.Component
 	
 	
 }
-@:native('java$awt$Container$MouseEventTargetFilter') @:internal extern class Container_MouseEventTargetFilter implements Container_EventTargetFilter
+@:native('java$awt$Container$MouseEventTargetFilter') @:internal extern class Container_MouseEventTargetFilter implements java.awt.Container.Container_EventTargetFilter
 {
 	@:overload public function accept(comp : java.awt.Component) : Bool;
 	
 	
 }
-@:native('java$awt$Container$DropTargetEventTargetFilter') @:internal extern class Container_DropTargetEventTargetFilter implements Container_EventTargetFilter
+@:native('java$awt$Container$DropTargetEventTargetFilter') @:internal extern class Container_DropTargetEventTargetFilter implements java.awt.Container.Container_EventTargetFilter
 {
 	@:overload public function accept(comp : java.awt.Component) : Bool;
 	

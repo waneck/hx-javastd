@@ -26,7 +26,7 @@ package com.sun.imageio.plugins.jpeg;
 ////import javax.imageio.IIOException;
 @:internal extern class SOFMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload override private function clone() : Dynamic;
+	@:overload private function clone() : Dynamic;
 	
 	
 }

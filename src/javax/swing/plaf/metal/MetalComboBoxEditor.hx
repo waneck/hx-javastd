@@ -51,9 +51,9 @@ extern class MetalComboBoxEditor extends javax.swing.plaf.basic.BasicComboBoxEdi
 }
 @:native('javax$swing$plaf$metal$MetalComboBoxEditor$EditorBorder') @:internal extern class MetalComboBoxEditor_EditorBorder extends javax.swing.border.AbstractBorder
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -72,7 +72,7 @@ extern class MetalComboBoxEditor extends javax.swing.plaf.basic.BasicComboBoxEdi
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$plaf$metal$MetalComboBoxEditor$UIResource') extern class MetalComboBoxEditor_UIResource extends MetalComboBoxEditor implements javax.swing.plaf.UIResource
+@:native('javax$swing$plaf$metal$MetalComboBoxEditor$UIResource') extern class MetalComboBoxEditor_UIResource extends javax.swing.plaf.metal.MetalComboBoxEditor implements javax.swing.plaf.UIResource
 {
 	
 }

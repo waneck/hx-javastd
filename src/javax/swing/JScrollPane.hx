@@ -188,7 +188,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @see JComponent#updateUI
 	* @see UIManager#getUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the L&F class used to
@@ -201,7 +201,7 @@ extern class JScrollPane extends javax.swing.JComponent implements javax.swing.S
 	* @beaninfo
 	*    hidden: true
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Sets the layout manager for this <code>JScrollPane</code>.

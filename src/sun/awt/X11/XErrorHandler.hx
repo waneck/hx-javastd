@@ -36,7 +36,7 @@ extern class XErrorHandler
 * Forwards all the errors to saved error handler (which was
 * set before XToolkit had been initialized).
 */
-@:native('sun$awt$X11$XErrorHandler$XBaseErrorHandler') extern class XErrorHandler_XBaseErrorHandler extends XErrorHandler
+@:native('sun$awt$X11$XErrorHandler$XBaseErrorHandler') extern class XErrorHandler_XBaseErrorHandler extends sun.awt.X11.XErrorHandler
 {
 	@:overload override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
 	
@@ -47,19 +47,19 @@ extern class XErrorHandler
 * but temporary install this function as the error handler to ignore
 * BadWindow error.
 */
-@:native('sun$awt$X11$XErrorHandler$IgnoreBadWindowHandler') extern class XErrorHandler_IgnoreBadWindowHandler extends XErrorHandler_XBaseErrorHandler
+@:native('sun$awt$X11$XErrorHandler$IgnoreBadWindowHandler') extern class XErrorHandler_IgnoreBadWindowHandler extends sun.awt.X11.XErrorHandler.XErrorHandler_XBaseErrorHandler
 {
 	@:overload override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
 	
-	@:overload public static function getInstance() : XErrorHandler_IgnoreBadWindowHandler;
+	@:overload public static function getInstance() : sun.awt.X11.XErrorHandler.XErrorHandler_IgnoreBadWindowHandler;
 	
 	
 }
-@:native('sun$awt$X11$XErrorHandler$VerifyChangePropertyHandler') extern class XErrorHandler_VerifyChangePropertyHandler extends XErrorHandler_XBaseErrorHandler
+@:native('sun$awt$X11$XErrorHandler$VerifyChangePropertyHandler') extern class XErrorHandler_VerifyChangePropertyHandler extends sun.awt.X11.XErrorHandler.XErrorHandler_XBaseErrorHandler
 {
 	@:overload override public function handleError(display : haxe.Int64, err : sun.awt.X11.XErrorEvent) : Int;
 	
-	@:overload public static function getInstance() : XErrorHandler_VerifyChangePropertyHandler;
+	@:overload public static function getInstance() : sun.awt.X11.XErrorHandler.XErrorHandler_VerifyChangePropertyHandler;
 	
 	
 }

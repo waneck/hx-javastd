@@ -206,13 +206,13 @@ extern class XMLContentSpec
 	/**
 	* Constructs a content spec from the values in the specified content spec.
 	*/
-	@:overload public function new(contentSpec : XMLContentSpec) : Void;
+	@:overload public function new(contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Void;
 	
 	/**
 	* Constructs a content spec from the values specified by the given
 	* content spec provider and identifier.
 	*/
-	@:overload public function new(provider : XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
+	@:overload public function new(provider : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec.XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
 	
 	/** Clears the values. */
 	@:overload public function clear() : Void;
@@ -221,14 +221,14 @@ extern class XMLContentSpec
 	@:overload public function setValues(type : java.StdTypes.Int16, value : Dynamic, otherValue : Dynamic) : Void;
 	
 	/** Sets the values of the specified content spec. */
-	@:overload public function setValues(contentSpec : XMLContentSpec) : Void;
+	@:overload public function setValues(contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Void;
 	
 	/**
 	* Sets the values from the values specified by the given content spec
 	* provider and identifier. If the specified content spec cannot be
 	* provided, the values of this content spec are cleared.
 	*/
-	@:overload public function setValues(provider : XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
+	@:overload public function setValues(provider : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec.XMLContentSpec_Provider, contentSpecIndex : Int) : Void;
 	
 	/** Returns a hash code for this node. */
 	@:overload public function hashCode() : Int;
@@ -261,7 +261,7 @@ extern class XMLContentSpec
 	*
 	* @return Returns true if the contentSpecIndex was found.
 	*/
-	@:overload public function getContentSpec(contentSpecIndex : Int, contentSpec : XMLContentSpec) : Bool;
+	@:overload public function getContentSpec(contentSpecIndex : Int, contentSpec : com.sun.org.apache.xerces.internal.impl.dtd.XMLContentSpec) : Bool;
 	
 	
 }

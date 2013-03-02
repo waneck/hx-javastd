@@ -118,7 +118,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function setModel(newModel : javax.swing.ButtonModel) : Void;
+	@:overload public function setModel(newModel : javax.swing.ButtonModel) : Void;
 	
 	/**
 	* Initializes the menu item with the specified text and icon.
@@ -126,7 +126,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @param text the text of the <code>JMenuItem</code>
 	* @param icon the icon of the <code>JMenuItem</code>
 	*/
-	@:overload override private function init(text : String, icon : javax.swing.Icon) : Void;
+	@:overload private function init(text : String, icon : javax.swing.Icon) : Void;
 	
 	/**
 	* Sets the look and feel object that renders this component.
@@ -146,7 +146,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the L&F class used to
@@ -156,7 +156,7 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Identifies the menu item as "armed". If the mouse button is
@@ -221,13 +221,13 @@ extern class JMenuItem extends javax.swing.AbstractButton implements javax.acces
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
+	@:require(java3) @:overload private function configurePropertiesFromAction(a : javax.swing.Action) : Void;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
+	@:require(java6) @:overload private function actionPropertyChanged(action : javax.swing.Action, propertyName : String) : Void;
 	
 	/**
 	* Processes a mouse event forwarded from the

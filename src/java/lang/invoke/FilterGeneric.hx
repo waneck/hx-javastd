@@ -90,7 +90,7 @@ package java.lang.invoke;
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
 	
 	/** Make a copy of self, with new fields. */
-	@:overload @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : FilterGeneric_Adapter;
+	@:overload @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, filter : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_Adapter;
 	
 	
 }
@@ -137,13 +137,13 @@ protected Object invoke_Y0(Object a0, Object a1) { Object[] av = { a0, a1 };
 filter.invokeExact(av); return target.invokeExact(av[0], av[1]); }
 }
 // */
-@:native('java$lang$invoke$FilterGeneric$F0') @:internal extern class FilterGeneric_F0 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F0') @:internal extern class FilterGeneric_F0 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F0;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F0;
 	
 	@:overload private function invoke_F0() : Dynamic;
 	
@@ -309,13 +309,13 @@ System.out.println(VAR.transform(line));
 }
 }
 //}}} */
-@:native('java$lang$invoke$FilterGeneric$F1') @:internal extern class FilterGeneric_F1 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F1') @:internal extern class FilterGeneric_F1 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F1;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F1;
 	
 	@:overload private function invoke_V0(a0 : Dynamic) : Dynamic;
 	
@@ -331,13 +331,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F2') @:internal extern class FilterGeneric_F2 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F2') @:internal extern class FilterGeneric_F2 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F2;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F2;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
@@ -359,13 +359,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F3') @:internal extern class FilterGeneric_F3 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F3') @:internal extern class FilterGeneric_F3 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F3;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F3;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
@@ -393,13 +393,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F4') @:internal extern class FilterGeneric_F4 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F4') @:internal extern class FilterGeneric_F4 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F4;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F4;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
@@ -433,13 +433,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F5') @:internal extern class FilterGeneric_F5 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F5') @:internal extern class FilterGeneric_F5 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F5;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F5;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
@@ -479,13 +479,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F6') @:internal extern class FilterGeneric_F6 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F6') @:internal extern class FilterGeneric_F6 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F6;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F6;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
@@ -531,13 +531,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F7') @:internal extern class FilterGeneric_F7 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F7') @:internal extern class FilterGeneric_F7 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F7;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F7;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
@@ -589,13 +589,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F8') @:internal extern class FilterGeneric_F8 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F8') @:internal extern class FilterGeneric_F8 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F8;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F8;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
@@ -653,13 +653,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F9') @:internal extern class FilterGeneric_F9 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F9') @:internal extern class FilterGeneric_F9 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F9;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F9;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
@@ -723,13 +723,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F10') @:internal extern class FilterGeneric_F10 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F10') @:internal extern class FilterGeneric_F10 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F10;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F10;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	
@@ -799,13 +799,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F11') @:internal extern class FilterGeneric_F11 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F11') @:internal extern class FilterGeneric_F11 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F11;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F11;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic) : Dynamic;
 	
@@ -881,13 +881,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F12') @:internal extern class FilterGeneric_F12 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F12') @:internal extern class FilterGeneric_F12 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F12;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F12;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic) : Dynamic;
 	
@@ -969,13 +969,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F13') @:internal extern class FilterGeneric_F13 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F13') @:internal extern class FilterGeneric_F13 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F13;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F13;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic) : Dynamic;
 	
@@ -1063,13 +1063,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F14') @:internal extern class FilterGeneric_F14 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F14') @:internal extern class FilterGeneric_F14 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F14;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F14;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic) : Dynamic;
 	
@@ -1163,13 +1163,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F15') @:internal extern class FilterGeneric_F15 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F15') @:internal extern class FilterGeneric_F15 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F15;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F15;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic) : Dynamic;
 	
@@ -1269,13 +1269,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F16') @:internal extern class FilterGeneric_F16 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F16') @:internal extern class FilterGeneric_F16 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F16;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F16;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic) : Dynamic;
 	
@@ -1381,13 +1381,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F17') @:internal extern class FilterGeneric_F17 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F17') @:internal extern class FilterGeneric_F17 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F17;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F17;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic) : Dynamic;
 	
@@ -1499,13 +1499,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F18') @:internal extern class FilterGeneric_F18 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F18') @:internal extern class FilterGeneric_F18 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F18;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F18;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic) : Dynamic;
 	
@@ -1623,13 +1623,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F19') @:internal extern class FilterGeneric_F19 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F19') @:internal extern class FilterGeneric_F19 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F19;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F19;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic) : Dynamic;
 	
@@ -1753,13 +1753,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$FilterGeneric$F20') @:internal extern class FilterGeneric_F20 extends FilterGeneric_Adapter
+@:native('java$lang$invoke$FilterGeneric$F20') @:internal extern class FilterGeneric_F20 extends java.lang.invoke.FilterGeneric.FilterGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : FilterGeneric_F20;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, f : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.FilterGeneric.FilterGeneric_F20;
 	
 	@:overload private function invoke_V0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, a10 : Dynamic, a11 : Dynamic, a12 : Dynamic, a13 : Dynamic, a14 : Dynamic, a15 : Dynamic, a16 : Dynamic, a17 : Dynamic, a18 : Dynamic, a19 : Dynamic) : Dynamic;
 	

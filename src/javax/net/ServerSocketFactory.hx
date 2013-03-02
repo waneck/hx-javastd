@@ -35,7 +35,7 @@ extern class ServerSocketFactory
 	*
 	* @return the <code>ServerSocketFactory</code>
 	*/
-	@:overload public static function getDefault() : ServerSocketFactory;
+	@:overload public static function getDefault() : javax.net.ServerSocketFactory;
 	
 	/**
 	* Returns an unbound server socket.  The socket is configured with
@@ -137,7 +137,7 @@ extern class ServerSocketFactory
 	
 	
 }
-@:internal extern class DefaultServerSocketFactory extends ServerSocketFactory
+@:internal extern class DefaultServerSocketFactory extends javax.net.ServerSocketFactory
 {
 	@:overload override public function createServerSocket() : java.net.ServerSocket;
 	

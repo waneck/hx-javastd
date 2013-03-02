@@ -27,9 +27,9 @@ extern class FullServantCacheLocalCRDImpl extends com.sun.corba.se.impl.protocol
 {
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload override public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
+	@:overload public function servant_preinvoke(self : org.omg.CORBA.Object, operation : String, expectedType : Class<Dynamic>) : org.omg.CORBA.portable.ServantObject;
 	
-	@:overload override public function servant_postinvoke(self : org.omg.CORBA.Object, servantobj : org.omg.CORBA.portable.ServantObject) : Void;
+	@:overload public function servant_postinvoke(self : org.omg.CORBA.Object, servantobj : org.omg.CORBA.portable.ServantObject) : Void;
 	
 	
 }

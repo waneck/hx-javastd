@@ -44,7 +44,7 @@ extern interface TaggedProfileTemplate extends java.util.List<Dynamic> extends c
 	* template has the same results as an invocation on a profile
 	* created from temp.  Equivalence may be weaker than equality.
 	*/
-	@:overload public function isEquivalent(temp : TaggedProfileTemplate) : Bool;
+	@:overload public function isEquivalent(temp : com.sun.corba.se.spi.ior.TaggedProfileTemplate) : Bool;
 	
 	/** Return the tagged components in this profile (if any)
 	* in the GIOP marshalled form, which is required for Portable

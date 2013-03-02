@@ -104,7 +104,7 @@ extern class TabularType extends javax.management.openmbean.OpenType<javax.manag
 	* @return <code>true</code> if <var>obj</var> is a value for this
 	* tabular type, <code>false</code> otherwise.
 	*/
-	@:overload override public function isValue(obj : Dynamic) : Bool;
+	@:overload public function isValue(obj : Dynamic) : Bool;
 	
 	/**
 	* Compares the specified <code>obj</code> parameter with this <code>TabularType</code> instance for equality.
@@ -121,7 +121,7 @@ extern class TabularType extends javax.management.openmbean.OpenType<javax.manag
 	*
 	* @return  <code>true</code> if the specified object is equal to this <code>TabularType</code> instance.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this <code>TabularType</code> instance.
@@ -139,7 +139,7 @@ extern class TabularType extends javax.management.openmbean.OpenType<javax.manag
 	*
 	* @return  the hash code value for this <code>TabularType</code> instance
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>TabularType</code> instance.
@@ -153,7 +153,7 @@ extern class TabularType extends javax.management.openmbean.OpenType<javax.manag
 	*
 	* @return  a string representation of this <code>TabularType</code> instance
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

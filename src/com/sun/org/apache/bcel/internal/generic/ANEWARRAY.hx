@@ -70,7 +70,7 @@ extern class ANEWARRAY extends com.sun.org.apache.bcel.internal.generic.CPInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	@:overload public function getLoadClassType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.ObjectType;
 	

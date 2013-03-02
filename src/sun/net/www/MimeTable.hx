@@ -29,7 +29,7 @@ extern class MimeTable implements java.net.FileNameMap
 	* Get the single instance of this class.  First use will load the
 	* table from a data file.
 	*/
-	@:overload public static function getDefaultTable() : MimeTable;
+	@:overload public static function getDefaultTable() : sun.net.www.MimeTable;
 	
 	/**
 	*

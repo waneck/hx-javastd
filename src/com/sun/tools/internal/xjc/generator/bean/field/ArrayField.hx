@@ -33,7 +33,7 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	
 	@:overload override private function getCoreListType() : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
+	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
 	
 	/**
 	* Case from {@link #exposedType} to array of {@link #implType} .
@@ -66,9 +66,9 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 {
 	@:overload override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload override public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
-	@:overload override public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	@:overload override public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	

@@ -1021,7 +1021,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see #getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getBaselineResizeBehavior() : Component_BaselineResizeBehavior;
+	@:require(java6) @:overload public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	/**
 	* Prompts the layout manager to lay out this component. This is
@@ -1638,13 +1638,13 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       #contains(int, int)
 	* @since     JDK1.0
 	*/
-	@:require(java0) @:overload public function getComponentAt(x : Int, y : Int) : Component;
+	@:require(java0) @:overload public function getComponentAt(x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by getComponentAt(int, int).
 	*/
-	@:overload public function locate(x : Int, y : Int) : Component;
+	@:overload public function locate(x : Int, y : Int) : java.awt.Component;
 	
 	/**
 	* Returns the component or subcomponent that contains the
@@ -1653,7 +1653,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 	* @see       java.awt.Component#contains
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload public function getComponentAt(p : java.awt.Point) : Component;
+	@:require(java1) @:overload public function getComponentAt(p : java.awt.Point) : java.awt.Component;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
@@ -3889,7 +3889,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 /**
 * Private class to perform sub-region flipping.
 */
-@:native('java$awt$Component$FlipSubRegionBufferStrategy') @:internal extern class Component_FlipSubRegionBufferStrategy extends Component_FlipBufferStrategy implements sun.awt.SubRegionShowable
+@:native('java$awt$Component$FlipSubRegionBufferStrategy') @:internal extern class Component_FlipSubRegionBufferStrategy extends java.awt.Component.Component_FlipBufferStrategy implements sun.awt.SubRegionShowable
 {
 	@:overload private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
@@ -3905,7 +3905,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 * copy only the area changed during a repaint.
 * @see javax.swing.BufferStrategyPaintManager
 */
-@:native('java$awt$Component$BltSubRegionBufferStrategy') @:internal extern class Component_BltSubRegionBufferStrategy extends Component_BltBufferStrategy implements sun.awt.SubRegionShowable
+@:native('java$awt$Component$BltSubRegionBufferStrategy') @:internal extern class Component_BltSubRegionBufferStrategy extends java.awt.Component.Component_BltBufferStrategy implements sun.awt.SubRegionShowable
 {
 	@:overload private function new(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
@@ -3942,7 +3942,7 @@ extern class Component implements java.awt.image.ImageObserver implements java.a
 }
 @:native('java$awt$Component$DummyRequestFocusController') @:internal extern class Component_DummyRequestFocusController implements sun.awt.RequestFocusController
 {
-	@:overload public function acceptRequestFocus(from : Component, to : Component, temporary : Bool, focusedWindowChangeAllowed : Bool, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
+	@:overload public function acceptRequestFocus(from : java.awt.Component, to : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
 	
 	
 }

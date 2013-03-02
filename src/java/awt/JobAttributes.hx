@@ -77,7 +77,7 @@ package java.awt;
 	*
 	* @param   obj the <code>JobAttributes</code> to copy
 	*/
-	@:overload public function new(obj : JobAttributes) : Void;
+	@:overload public function new(obj : java.awt.JobAttributes) : Void;
 	
 	/**
 	* Constructs a <code>JobAttributes</code> instance with the
@@ -121,7 +121,7 @@ package java.awt;
 	* @throws  IllegalArgumentException if one or more of the above
 	*          conditions is violated
 	*/
-	@:overload public function new(copies : Int, defaultSelection : JobAttributes_DefaultSelectionType, destination : JobAttributes_DestinationType, dialog : JobAttributes_DialogType, fileName : String, maxPage : Int, minPage : Int, multipleDocumentHandling : JobAttributes_MultipleDocumentHandlingType, pageRanges : java.NativeArray<java.NativeArray<Int>>, printer : String, sides : JobAttributes_SidesType) : Void;
+	@:overload public function new(copies : Int, defaultSelection : java.awt.JobAttributes.JobAttributes_DefaultSelectionType, destination : java.awt.JobAttributes.JobAttributes_DestinationType, dialog : java.awt.JobAttributes.JobAttributes_DialogType, fileName : String, maxPage : Int, minPage : Int, multipleDocumentHandling : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType, pageRanges : java.NativeArray<java.NativeArray<Int>>, printer : String, sides : java.awt.JobAttributes.JobAttributes_SidesType) : Void;
 	
 	/**
 	* Creates and returns a copy of this <code>JobAttributes</code>.
@@ -137,7 +137,7 @@ package java.awt;
 	*
 	* @param   obj the <code>JobAttributes</code> to copy
 	*/
-	@:overload public function set(obj : JobAttributes) : Void;
+	@:overload public function set(obj : java.awt.JobAttributes) : Void;
 	
 	/**
 	* Returns the number of copies the application should render for jobs
@@ -174,7 +174,7 @@ package java.awt;
 	* @return  DefaultSelectionType.ALL, DefaultSelectionType.RANGE, or
 	*          DefaultSelectionType.SELECTION
 	*/
-	@:overload public function getDefaultSelection() : JobAttributes_DefaultSelectionType;
+	@:overload public function getDefaultSelection() : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	/**
 	* Specifies whether, for jobs using these attributes, the application
@@ -186,7 +186,7 @@ package java.awt;
 	*          DefaultSelectionType.RANGE, or DefaultSelectionType.SELECTION.
 	* @throws  IllegalArgumentException if defaultSelection is <code>null</code>
 	*/
-	@:overload public function setDefaultSelection(defaultSelection : JobAttributes_DefaultSelectionType) : Void;
+	@:overload public function setDefaultSelection(defaultSelection : java.awt.JobAttributes.JobAttributes_DefaultSelectionType) : Void;
 	
 	/**
 	* Specifies whether output will be to a printer or a file for jobs using
@@ -195,7 +195,7 @@ package java.awt;
 	*
 	* @return  DesintationType.FILE or DesintationType.PRINTER
 	*/
-	@:overload public function getDestination() : JobAttributes_DestinationType;
+	@:overload public function getDestination() : java.awt.JobAttributes.JobAttributes_DestinationType;
 	
 	/**
 	* Specifies whether output will be to a printer or a file for jobs using
@@ -205,7 +205,7 @@ package java.awt;
 	* @param   destination DesintationType.FILE or DesintationType.PRINTER.
 	* @throws  IllegalArgumentException if destination is null.
 	*/
-	@:overload public function setDestination(destination : JobAttributes_DestinationType) : Void;
+	@:overload public function setDestination(destination : java.awt.JobAttributes.JobAttributes_DestinationType) : Void;
 	
 	/**
 	* Returns whether, for jobs using these attributes, the user should see
@@ -221,7 +221,7 @@ package java.awt;
 	* @return  <code>DialogType.COMMON</code>, <code>DialogType.NATIVE</code>, or
 	*          <code>DialogType.NONE</code>
 	*/
-	@:overload public function getDialog() : JobAttributes_DialogType;
+	@:overload public function getDialog() : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	/**
 	* Specifies whether, for jobs using these attributes, the user should see
@@ -238,7 +238,7 @@ package java.awt;
 	*          DialogType.NONE.
 	* @throws  IllegalArgumentException if dialog is null.
 	*/
-	@:overload public function setDialog(dialog : JobAttributes_DialogType) : Void;
+	@:overload public function setDialog(dialog : java.awt.JobAttributes.JobAttributes_DialogType) : Void;
 	
 	/**
 	* Specifies the file name for the output file for jobs using these
@@ -343,7 +343,7 @@ package java.awt;
 	*     MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_COLLATED_COPIES or
 	*     MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES.
 	*/
-	@:overload public function getMultipleDocumentHandling() : JobAttributes_MultipleDocumentHandlingType;
+	@:overload public function getMultipleDocumentHandling() : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
 	
 	/**
 	* Specifies the handling of multiple copies, including collation, for
@@ -356,7 +356,7 @@ package java.awt;
 	*     MultipleDocumentHandlingType.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES.
 	* @throws  IllegalArgumentException if multipleDocumentHandling is null.
 	*/
-	@:overload public function setMultipleDocumentHandling(multipleDocumentHandling : JobAttributes_MultipleDocumentHandlingType) : Void;
+	@:overload public function setMultipleDocumentHandling(multipleDocumentHandling : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType) : Void;
 	
 	/**
 	* Sets the handling of multiple copies, including collation, for jobs
@@ -447,7 +447,7 @@ package java.awt;
 	* @return  SidesType.ONE_SIDED, SidesType.TWO_SIDED_LONG_EDGE, or
 	*          SidesType.TWO_SIDED_SHORT_EDGE.
 	*/
-	@:overload public function getSides() : JobAttributes_SidesType;
+	@:overload public function getSides() : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	/**
 	* Specifies how consecutive pages should be imposed upon the sides of the
@@ -469,7 +469,7 @@ package java.awt;
 	*          SidesType.TWO_SIDED_SHORT_EDGE.
 	* @throws  IllegalArgumentException if sides is null.
 	*/
-	@:overload public function setSides(sides : JobAttributes_SidesType) : Void;
+	@:overload public function setSides(sides : java.awt.JobAttributes.JobAttributes_SidesType) : Void;
 	
 	/**
 	* Sets how consecutive pages should be imposed upon the sides of the
@@ -551,19 +551,19 @@ package java.awt;
 	* The <code>DefaultSelectionType</code> instance to use for
 	* specifying that all pages of the job should be printed.
 	*/
-	public static var ALL(default, null) : JobAttributes_DefaultSelectionType;
+	public static var ALL(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	/**
 	* The <code>DefaultSelectionType</code> instance to use for
 	* specifying that a range of pages of the job should be printed.
 	*/
-	public static var RANGE(default, null) : JobAttributes_DefaultSelectionType;
+	public static var RANGE(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	/**
 	* The <code>DefaultSelectionType</code> instance to use for
 	* specifying that the current selection should be printed.
 	*/
-	public static var SELECTION(default, null) : JobAttributes_DefaultSelectionType;
+	public static var SELECTION(default, null) : java.awt.JobAttributes.JobAttributes_DefaultSelectionType;
 	
 	
 }
@@ -577,13 +577,13 @@ package java.awt;
 	* The <code>DestinationType</code> instance to use for
 	* specifying print to file.
 	*/
-	public static var FILE(default, null) : JobAttributes_DestinationType;
+	public static var FILE(default, null) : java.awt.JobAttributes.JobAttributes_DestinationType;
 	
 	/**
 	* The <code>DestinationType</code> instance to use for
 	* specifying print to printer.
 	*/
-	public static var PRINTER(default, null) : JobAttributes_DestinationType;
+	public static var PRINTER(default, null) : java.awt.JobAttributes.JobAttributes_DestinationType;
 	
 	
 }
@@ -597,19 +597,19 @@ package java.awt;
 	* The <code>DialogType</code> instance to use for
 	* specifying the cross-platform, pure Java print dialog.
 	*/
-	public static var COMMON(default, null) : JobAttributes_DialogType;
+	public static var COMMON(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	/**
 	* The <code>DialogType</code> instance to use for
 	* specifying the platform's native print dialog.
 	*/
-	public static var NATIVE(default, null) : JobAttributes_DialogType;
+	public static var NATIVE(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	/**
 	* The <code>DialogType</code> instance to use for
 	* specifying no print dialog.
 	*/
-	public static var NONE(default, null) : JobAttributes_DialogType;
+	public static var NONE(default, null) : java.awt.JobAttributes.JobAttributes_DialogType;
 	
 	
 }
@@ -625,13 +625,13 @@ package java.awt;
 	* The <code>MultipleDocumentHandlingType</code> instance to use for specifying
 	* that the job should be divided into separate, collated copies.
 	*/
-	public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : JobAttributes_MultipleDocumentHandlingType;
+	public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
 	
 	/**
 	* The <code>MultipleDocumentHandlingType</code> instance to use for specifying
 	* that the job should be divided into separate, uncollated copies.
 	*/
-	public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : JobAttributes_MultipleDocumentHandlingType;
+	public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : java.awt.JobAttributes.JobAttributes_MultipleDocumentHandlingType;
 	
 	
 }
@@ -647,7 +647,7 @@ package java.awt;
 	* consecutive job pages should be printed upon the same side of
 	* consecutive media sheets.
 	*/
-	public static var ONE_SIDED(default, null) : JobAttributes_SidesType;
+	public static var ONE_SIDED(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	/**
 	* The <code>SidesType</code> instance to use for specifying that
@@ -656,7 +656,7 @@ package java.awt;
 	* of pages on the medium would be correct for the reader as if for
 	* binding on the long edge.
 	*/
-	public static var TWO_SIDED_LONG_EDGE(default, null) : JobAttributes_SidesType;
+	public static var TWO_SIDED_LONG_EDGE(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	/**
 	* The <code>SidesType</code> instance to use for specifying that
@@ -665,7 +665,7 @@ package java.awt;
 	* of pages on the medium would be correct for the reader as if for
 	* binding on the short edge.
 	*/
-	public static var TWO_SIDED_SHORT_EDGE(default, null) : JobAttributes_SidesType;
+	public static var TWO_SIDED_SHORT_EDGE(default, null) : java.awt.JobAttributes.JobAttributes_SidesType;
 	
 	
 }

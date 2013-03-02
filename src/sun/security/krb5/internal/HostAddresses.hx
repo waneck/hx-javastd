@@ -77,7 +77,7 @@ extern class HostAddresses implements java.lang.Cloneable
 	* @param optional indicates if this data field is optional.
 	* @return an instance of <code>HostAddresses</code>.
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : HostAddresses;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.HostAddresses;
 	
 	/**
 	* Writes data field values in <code>HostAddresses</code> in FCC
@@ -94,7 +94,7 @@ extern class HostAddresses implements java.lang.Cloneable
 	/**
 	* Returns all the IP addresses of the local host.
 	*/
-	@:overload public static function getLocalAddresses() : HostAddresses;
+	@:overload public static function getLocalAddresses() : sun.security.krb5.internal.HostAddresses;
 	
 	/**
 	* Creates a new HostAddresses instance from the supplied list

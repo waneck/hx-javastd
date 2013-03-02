@@ -166,7 +166,7 @@ extern class TypeResolver
 	*/
 	@:overload public static function erase(types : java.NativeArray<java.lang.reflect.Type>) : java.NativeArray<Class<Dynamic>>;
 	
-	@:overload public static function getTypeResolver(type : java.lang.reflect.Type) : TypeResolver;
+	@:overload public static function getTypeResolver(type : java.lang.reflect.Type) : com.sun.beans.TypeResolver;
 	
 	
 }

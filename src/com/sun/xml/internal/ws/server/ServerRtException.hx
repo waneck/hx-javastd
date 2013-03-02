@@ -33,7 +33,7 @@ extern class ServerRtException extends com.sun.xml.internal.ws.util.exception.JA
 	
 	@:overload public function new(arg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload public function getDefaultResourceBundleName() : String;
 	
 	
 }

@@ -39,7 +39,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @throws IllegalArgumentException if {@code modelWrapper} is
 	*         {@code null}
 	*/
-	@:overload @:final private function setModelWrapper(modelWrapper : DefaultRowSorter_ModelWrapper<M, I>) : Void;
+	@:overload @:final private function setModelWrapper(modelWrapper : javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<M, I>) : Void;
 	
 	/**
 	* Returns the model wrapper providing the data that is being sorted and
@@ -48,7 +48,7 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 	* @return the model wrapper responsible for providing the data that
 	*         gets sorted and filtered
 	*/
-	@:overload @:final private function getModelWrapper() : DefaultRowSorter_ModelWrapper<M, I>;
+	@:overload @:final private function getModelWrapper() : javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<M, I>;
 	
 	/**
 	* Returns the underlying model.
@@ -440,11 +440,11 @@ extern class DefaultRowSorter<M, I> extends javax.swing.RowSorter<M>
 * Row is used to handle the actual sorting by way of Comparable.  It
 * will use the sortKeys to do the actual comparison.
 */
-@:native('javax$swing$DefaultRowSorter$Row') @:internal extern class DefaultRowSorter_Row implements java.lang.Comparable<DefaultRowSorter_Row>
+@:native('javax$swing$DefaultRowSorter$Row') @:internal extern class DefaultRowSorter_Row implements java.lang.Comparable<javax.swing.DefaultRowSorter.DefaultRowSorter_Row>
 {
-	@:overload public function new(sorter : DefaultRowSorter<Dynamic, Dynamic>, index : Int) : Void;
+	@:overload public function new(sorter : javax.swing.DefaultRowSorter<Dynamic, Dynamic>, index : Int) : Void;
 	
-	@:overload public function compareTo(o : DefaultRowSorter_Row) : Int;
+	@:overload public function compareTo(o : javax.swing.DefaultRowSorter.DefaultRowSorter_Row) : Int;
 	
 	
 }

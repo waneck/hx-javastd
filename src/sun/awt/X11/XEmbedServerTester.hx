@@ -26,7 +26,7 @@ package sun.awt.X11;
 ////import static sun.awt.X11.XEmbed.*;
 extern class XEmbedServerTester implements sun.awt.X11.XEventDispatcher
 {
-	@:overload public static function getTester(serverBounds : java.NativeArray<java.awt.Rectangle>, parent : haxe.Int64) : XEmbedServerTester;
+	@:overload public static function getTester(serverBounds : java.NativeArray<java.awt.Rectangle>, parent : haxe.Int64) : sun.awt.X11.XEmbedServerTester;
 	
 	@:overload public function test1_1() : Void;
 	

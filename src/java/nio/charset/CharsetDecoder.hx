@@ -84,7 +84,7 @@ extern class CharsetDecoder
 	* @throws  IllegalArgumentException
 	*          If the preconditions on the parameter do not hold
 	*/
-	@:overload @:final public function replaceWith(newReplacement : String) : CharsetDecoder;
+	@:overload @:final public function replaceWith(newReplacement : String) : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Reports a change to this decoder's replacement value.
@@ -117,7 +117,7 @@ extern class CharsetDecoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : CharsetDecoder;
+	@:overload @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Reports a change to this decoder's malformed-input action.
@@ -150,7 +150,7 @@ extern class CharsetDecoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : CharsetDecoder;
+	@:overload @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Reports a change to this decoder's unmappable-character action.
@@ -348,7 +348,7 @@ extern class CharsetDecoder
 	* @return  This decoder
 	*
 	*/
-	@:overload @:final public function reset() : CharsetDecoder;
+	@:overload @:final public function reset() : java.nio.charset.CharsetDecoder;
 	
 	/**
 	* Resets this decoder, clearing any charset-specific internal state.

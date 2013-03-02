@@ -27,11 +27,11 @@ extern class TransformC14N11 extends com.sun.org.apache.xml.internal.security.tr
 	*
 	* @author Sean Mullan
 	*/
-	@:overload override private function engineGetURI() : String;
+	@:overload private function engineGetURI() : String;
 	
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, transform : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, transform : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, transform : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, transform : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

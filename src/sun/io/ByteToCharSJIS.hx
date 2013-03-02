@@ -38,7 +38,7 @@ extern class ByteToCharSJIS extends sun.io.ByteToCharJIS0208
 	
 	@:overload override private function convSingleByte(b : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function getUnicode(c1 : Int, c2 : Int) : java.StdTypes.Char16;
+	@:overload private function getUnicode(c1 : Int, c2 : Int) : java.StdTypes.Char16;
 	
 	
 }

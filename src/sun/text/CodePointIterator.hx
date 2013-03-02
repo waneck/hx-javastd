@@ -46,17 +46,17 @@ extern class CodePointIterator
 	
 	@:overload @:abstract public function charIndex() : Int;
 	
-	@:overload public static function create(text : java.NativeArray<java.StdTypes.Char16>) : CodePointIterator;
+	@:overload public static function create(text : java.NativeArray<java.StdTypes.Char16>) : sun.text.CodePointIterator;
 	
-	@:overload public static function create(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : CodePointIterator;
+	@:overload public static function create(text : java.NativeArray<java.StdTypes.Char16>, start : Int, limit : Int) : sun.text.CodePointIterator;
 	
-	@:overload public static function create(text : java.lang.CharSequence) : CodePointIterator;
+	@:overload public static function create(text : java.lang.CharSequence) : sun.text.CodePointIterator;
 	
-	@:overload public static function create(iter : java.text.CharacterIterator) : CodePointIterator;
+	@:overload public static function create(iter : java.text.CharacterIterator) : sun.text.CodePointIterator;
 	
 	
 }
-@:internal extern class CharArrayCodePointIterator extends CodePointIterator
+@:internal extern class CharArrayCodePointIterator extends sun.text.CodePointIterator
 {
 	@:overload public function new(text : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
@@ -74,7 +74,7 @@ extern class CodePointIterator
 	
 	
 }
-@:internal extern class CharSequenceCodePointIterator extends CodePointIterator
+@:internal extern class CharSequenceCodePointIterator extends sun.text.CodePointIterator
 {
 	@:overload public function new(text : java.lang.CharSequence) : Void;
 	
@@ -90,7 +90,7 @@ extern class CodePointIterator
 	
 	
 }
-@:internal extern class CharacterIteratorCodePointIterator extends CodePointIterator
+@:internal extern class CharacterIteratorCodePointIterator extends sun.text.CodePointIterator
 {
 	@:overload public function new(iter : java.text.CharacterIterator) : Void;
 	

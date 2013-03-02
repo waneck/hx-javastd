@@ -87,14 +87,14 @@ extern class FilePermission extends java.security.Permission implements java.io.
 	*          pathname and actions as this FilePermission object,
 	*          <code>false</code> otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Returns the "canonical string representation" of the actions.
@@ -105,7 +105,7 @@ extern class FilePermission extends java.security.Permission implements java.io.
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing FilePermission
@@ -138,7 +138,7 @@ extern class FilePermission extends java.security.Permission implements java.io.
 	* @return a new PermissionCollection object suitable for storing
 	* FilePermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }

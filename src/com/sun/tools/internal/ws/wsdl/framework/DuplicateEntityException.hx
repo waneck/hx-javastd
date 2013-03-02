@@ -36,7 +36,7 @@ extern class DuplicateEntityException extends com.sun.tools.internal.ws.wsdl.fra
 	
 	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity, name : String) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload public function getDefaultResourceBundleName() : String;
 	
 	
 }

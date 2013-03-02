@@ -66,7 +66,7 @@ extern class ConstantMethodref extends com.sun.org.apache.bcel.internal.classfil
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantMethodref) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantMethodref) : Void;
 	
 	/**
 	* @param class_index Reference to the class containing the method

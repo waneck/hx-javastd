@@ -30,15 +30,15 @@ package sun.security.jgss;
 */
 extern class GSSCaller
 {
-	public static var CALLER_UNKNOWN(default, null) : GSSCaller;
+	public static var CALLER_UNKNOWN(default, null) : sun.security.jgss.GSSCaller;
 	
-	public static var CALLER_INITIATE(default, null) : GSSCaller;
+	public static var CALLER_INITIATE(default, null) : sun.security.jgss.GSSCaller;
 	
-	public static var CALLER_ACCEPT(default, null) : GSSCaller;
+	public static var CALLER_ACCEPT(default, null) : sun.security.jgss.GSSCaller;
 	
-	public static var CALLER_SSL_CLIENT(default, null) : GSSCaller;
+	public static var CALLER_SSL_CLIENT(default, null) : sun.security.jgss.GSSCaller;
 	
-	public static var CALLER_SSL_SERVER(default, null) : GSSCaller;
+	public static var CALLER_SSL_SERVER(default, null) : sun.security.jgss.GSSCaller;
 	
 	
 }

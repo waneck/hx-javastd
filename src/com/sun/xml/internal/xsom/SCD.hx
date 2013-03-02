@@ -42,7 +42,7 @@ extern class SCD
 	*      Its {@link NamespaceContext#getNamespaceURI(String)} is used
 	*      to resolve prefixes in the SCD to the namespace URI.
 	*/
-	@:overload public static function create(path : String, nsContext : javax.xml.namespace.NamespaceContext) : SCD;
+	@:overload public static function create(path : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.SCD;
 	
 	/**
 	* Evaluates the SCD against the given context node and

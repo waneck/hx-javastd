@@ -68,7 +68,7 @@ package java.lang.invoke;
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle, invoker : java.lang.invoke.MethodHandle, convert : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : Void;
 	
 	/** Make a copy of self, with new fields. */
-	@:overload @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, invoker : java.lang.invoke.MethodHandle, convert : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : ToGeneric_Adapter;
+	@:overload @:abstract private function makeInstance(entryPoint : java.lang.invoke.MethodHandle, invoker : java.lang.invoke.MethodHandle, convert : java.lang.invoke.MethodHandle, target : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_Adapter;
 	
 	@:overload private function target() : Dynamic;
 	
@@ -276,13 +276,13 @@ System.out.println(VAR.transform(line));
 }
 }
 //}}} */
-@:native('java$lang$invoke$ToGeneric$A0') @:internal extern class ToGeneric_A0 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A0') @:internal extern class ToGeneric_A0 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A0;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A0;
 	
 	@:overload override private function target() : Dynamic;
 	
@@ -300,13 +300,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A1') @:internal extern class ToGeneric_A1 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A1') @:internal extern class ToGeneric_A1 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A1;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A1;
 	
 	@:overload override private function target(a0 : Dynamic) : Dynamic;
 	
@@ -348,13 +348,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A2') @:internal extern class ToGeneric_A2 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A2') @:internal extern class ToGeneric_A2 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A2;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A2;
 	
 	@:overload override private function target(a0 : Dynamic, a1 : Dynamic) : Dynamic;
 	
@@ -420,13 +420,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A3') @:internal extern class ToGeneric_A3 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A3') @:internal extern class ToGeneric_A3 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A3;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A3;
 	
 	@:overload override private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic) : Dynamic;
 	
@@ -516,13 +516,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A4') @:internal extern class ToGeneric_A4 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A4') @:internal extern class ToGeneric_A4 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A4;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A4;
 	
 	@:overload override private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic) : Dynamic;
 	
@@ -636,13 +636,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A5') @:internal extern class ToGeneric_A5 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A5') @:internal extern class ToGeneric_A5 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A5;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A5;
 	
 	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic) : Dynamic;
 	
@@ -736,13 +736,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A6') @:internal extern class ToGeneric_A6 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A6') @:internal extern class ToGeneric_A6 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A6;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A6;
 	
 	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic) : Dynamic;
 	
@@ -804,13 +804,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A7') @:internal extern class ToGeneric_A7 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A7') @:internal extern class ToGeneric_A7 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A7;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A7;
 	
 	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic) : Dynamic;
 	
@@ -880,13 +880,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A8') @:internal extern class ToGeneric_A8 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A8') @:internal extern class ToGeneric_A8 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A8;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A8;
 	
 	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic) : Dynamic;
 	
@@ -964,13 +964,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A9') @:internal extern class ToGeneric_A9 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A9') @:internal extern class ToGeneric_A9 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A9;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A9;
 	
 	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic) : Dynamic;
 	
@@ -1056,13 +1056,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$ToGeneric$A10') @:internal extern class ToGeneric_A10 extends ToGeneric_Adapter
+@:native('java$lang$invoke$ToGeneric$A10') @:internal extern class ToGeneric_A10 extends java.lang.invoke.ToGeneric.ToGeneric_Adapter
 {
 	@:overload private function new(entryPoint : java.lang.invoke.MethodHandle) : Void;
 	
 	@:overload private function new(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : ToGeneric_A10;
+	@:overload override private function makeInstance(e : java.lang.invoke.MethodHandle, i : java.lang.invoke.MethodHandle, c : java.lang.invoke.MethodHandle, t : java.lang.invoke.MethodHandle) : java.lang.invoke.ToGeneric.ToGeneric_A10;
 	
 	@:overload private function target(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic) : Dynamic;
 	

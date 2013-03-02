@@ -901,18 +901,18 @@ extern class BasicTreeUI extends javax.swing.plaf.TreeUI
 	/**
 	* Invoked when a mouse button has been pressed on a component.
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse button has been moved on a component
 	* (with no buttons no down).
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:require(java4) @:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

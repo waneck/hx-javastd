@@ -34,7 +34,7 @@ extern interface IORFactory extends com.sun.corba.se.spi.ior.Writeable extends c
 	/** Return true iff this.makeIOR(orb,typeid,oid).isEquivalent(
 	* other.makeIOR(orb,typeid,oid) for all orb, typeid, and oid.
 	*/
-	@:overload public function isEquivalent(other : IORFactory) : Bool;
+	@:overload public function isEquivalent(other : com.sun.corba.se.spi.ior.IORFactory) : Bool;
 	
 	
 }

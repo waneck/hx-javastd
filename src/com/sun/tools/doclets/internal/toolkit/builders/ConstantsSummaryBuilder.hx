@@ -69,7 +69,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	*                      of the doclet.
 	* @param writer        the writer for the summary.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, writer : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter) : ConstantsSummaryBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, writer : com.sun.tools.doclets.internal.toolkit.ConstantsSummaryWriter) : com.sun.tools.doclets.internal.toolkit.builders.ConstantsSummaryBuilder;
 	
 	/**
 	* {@inheritDoc}

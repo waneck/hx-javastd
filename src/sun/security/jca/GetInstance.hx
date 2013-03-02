@@ -65,17 +65,17 @@ extern class GetInstance
 	*
 	* There are overloaded methods for all the permutations.
 	*/
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String) : GetInstance_Instance;
+	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic) : GetInstance_Instance;
+	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : String) : GetInstance_Instance;
+	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : String) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : String) : GetInstance_Instance;
+	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : String) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : java.security.Provider) : GetInstance_Instance;
+	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, provider : java.security.Provider) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : java.security.Provider) : GetInstance_Instance;
+	@:overload public static function getInstance(type : String, clazz : Class<Dynamic>, algorithm : String, param : Dynamic, provider : java.security.Provider) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
 	/*
 	* The two getInstance() methods below take a service. They are
@@ -83,9 +83,9 @@ extern class GetInstance
 	* because they implement delayed provider selection like the
 	* Signature class.
 	*/
-	@:overload public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>) : GetInstance_Instance;
+	@:overload public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
-	@:overload public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>, param : Dynamic) : GetInstance_Instance;
+	@:overload public static function getInstance(s : java.security.Provider.Provider_Service, clazz : Class<Dynamic>, param : Dynamic) : sun.security.jca.GetInstance.GetInstance_Instance;
 	
 	/**
 	* Check is subClass is a subclass of superClass. If not,

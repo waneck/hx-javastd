@@ -590,7 +590,7 @@ extern class StyleConstants
 * attributes that contribute to a paragraph style.  These are
 * aliased by the outer class for general presentation.
 */
-@:native('javax$swing$text$StyleConstants$ParagraphConstants') extern class StyleConstants_ParagraphConstants extends StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_ParagraphAttribute
+@:native('javax$swing$text$StyleConstants$ParagraphConstants') extern class StyleConstants_ParagraphConstants extends javax.swing.text.StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_ParagraphAttribute
 {
 	
 }
@@ -599,7 +599,7 @@ extern class StyleConstants
 * attributes that contribute to a character style.  These are
 * aliased by the outer class for general presentation.
 */
-@:native('javax$swing$text$StyleConstants$CharacterConstants') extern class StyleConstants_CharacterConstants extends StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_CharacterAttribute
+@:native('javax$swing$text$StyleConstants$CharacterConstants') extern class StyleConstants_CharacterConstants extends javax.swing.text.StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_CharacterAttribute
 {
 	
 }
@@ -608,7 +608,7 @@ extern class StyleConstants
 * attributes that contribute to a color.  These are aliased
 * by the outer class for general presentation.
 */
-@:native('javax$swing$text$StyleConstants$ColorConstants') extern class StyleConstants_ColorConstants extends StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_ColorAttribute implements javax.swing.text.AttributeSet.AttributeSet_CharacterAttribute
+@:native('javax$swing$text$StyleConstants$ColorConstants') extern class StyleConstants_ColorConstants extends javax.swing.text.StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_ColorAttribute implements javax.swing.text.AttributeSet.AttributeSet_CharacterAttribute
 {
 	
 }
@@ -617,7 +617,7 @@ extern class StyleConstants
 * attributes that contribute to a font.  These are aliased
 * by the outer class for general presentation.
 */
-@:native('javax$swing$text$StyleConstants$FontConstants') extern class StyleConstants_FontConstants extends StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_FontAttribute implements javax.swing.text.AttributeSet.AttributeSet_CharacterAttribute
+@:native('javax$swing$text$StyleConstants$FontConstants') extern class StyleConstants_FontConstants extends javax.swing.text.StyleConstants implements javax.swing.text.AttributeSet.AttributeSet_FontAttribute implements javax.swing.text.AttributeSet.AttributeSet_CharacterAttribute
 {
 	
 }

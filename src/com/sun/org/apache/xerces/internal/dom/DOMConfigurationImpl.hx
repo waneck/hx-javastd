@@ -257,7 +257,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known.
 	*/
-	@:overload override public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* setProperty
@@ -265,7 +265,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @param propertyId
 	* @param value
 	*/
-	@:overload override public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Set the locale to use for messages.
@@ -331,7 +331,7 @@ extern class DOMConfigurationImpl extends com.sun.org.apache.xerces.internal.uti
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known or supported.
 	*/
-	@:overload override private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	@:overload private function addComponent(component : com.sun.org.apache.xerces.internal.xni.parser.XMLComponent) : Void;
 	

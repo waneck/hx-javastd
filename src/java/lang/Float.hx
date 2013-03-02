@@ -23,7 +23,7 @@ package java.lang;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Float extends java.lang.Number implements java.lang.Comparable<Float>
+extern class Float extends java.lang.Number implements java.lang.Comparable<java.lang.Float>
 {
 	/**
 	* A constant holding the positive infinity of type
@@ -104,7 +104,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<Floa
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Float>;
+	@:require(java1) public static var TYPE(default, null) : Class<java.lang.Float>;
 	
 	/**
 	* Returns a string representation of the {@code float}
@@ -374,7 +374,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<Floa
 	* @throws  NumberFormatException  if the string does not contain a
 	*          parsable number.
 	*/
-	@:overload public static function valueOf(s : String) : Float;
+	@:overload public static function valueOf(s : String) : java.lang.Float;
 	
 	/**
 	* Returns a {@code Float} instance representing the specified
@@ -389,7 +389,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<Floa
 	* @return a {@code Float} instance representing {@code f}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(f : Single) : Float;
+	@:require(java5) @:overload public static function valueOf(f : Single) : java.lang.Float;
 	
 	/**
 	* Returns a new {@code float} initialized to the value
@@ -755,7 +755,7 @@ extern class Float extends java.lang.Number implements java.lang.Comparable<Floa
 	* @since   1.2
 	* @see Comparable#compareTo(Object)
 	*/
-	@:require(java2) @:overload public function compareTo(anotherFloat : Float) : Int;
+	@:require(java2) @:overload public function compareTo(anotherFloat : java.lang.Float) : Int;
 	
 	/**
 	* Compares the two specified {@code float} values. The sign

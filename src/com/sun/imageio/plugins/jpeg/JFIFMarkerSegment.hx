@@ -28,7 +28,7 @@ package com.sun.imageio.plugins.jpeg;
 	/**
 	* Returns a deep-copy clone of this object.
 	*/
-	@:overload override private function clone() : Dynamic;
+	@:overload private function clone() : Dynamic;
 	
 	
 }
@@ -41,7 +41,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFExtensionMarkerSegment') @:internal extern class JFIFMarkerSegment_JFIFExtensionMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload override private function clone() : Dynamic;
+	@:overload private function clone() : Dynamic;
 	
 	
 }
@@ -59,7 +59,7 @@ package com.sun.imageio.plugins.jpeg;
 	
 	
 }
-@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbUncompressed') @:internal extern class JFIFMarkerSegment_JFIFThumbUncompressed extends JFIFMarkerSegment_JFIFThumb
+@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbUncompressed') @:internal extern class JFIFMarkerSegment_JFIFThumbUncompressed extends com.sun.imageio.plugins.jpeg.JFIFMarkerSegment.JFIFMarkerSegment_JFIFThumb
 {
 	
 }
@@ -67,7 +67,7 @@ package com.sun.imageio.plugins.jpeg;
 * A JFIF thumbnail stored as RGB, one byte per channel,
 * interleaved.
 */
-@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbRGB') @:internal extern class JFIFMarkerSegment_JFIFThumbRGB extends JFIFMarkerSegment_JFIFThumbUncompressed
+@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbRGB') @:internal extern class JFIFMarkerSegment_JFIFThumbRGB extends com.sun.imageio.plugins.jpeg.JFIFMarkerSegment.JFIFMarkerSegment_JFIFThumbUncompressed
 {
 	
 }
@@ -75,7 +75,7 @@ package com.sun.imageio.plugins.jpeg;
 * A JFIF thumbnail stored as an indexed palette image
 * using an RGB palette.
 */
-@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbPalette') @:internal extern class JFIFMarkerSegment_JFIFThumbPalette extends JFIFMarkerSegment_JFIFThumbUncompressed
+@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbPalette') @:internal extern class JFIFMarkerSegment_JFIFThumbPalette extends com.sun.imageio.plugins.jpeg.JFIFMarkerSegment.JFIFMarkerSegment_JFIFThumbUncompressed
 {
 	
 }
@@ -85,7 +85,7 @@ package com.sun.imageio.plugins.jpeg;
 * to clip these, but the entire image must fit into a
 * single JFXX marker segment.
 */
-@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbJPEG') @:internal extern class JFIFMarkerSegment_JFIFThumbJPEG extends JFIFMarkerSegment_JFIFThumb
+@:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$JFIFThumbJPEG') @:internal extern class JFIFMarkerSegment_JFIFThumbJPEG extends com.sun.imageio.plugins.jpeg.JFIFMarkerSegment.JFIFMarkerSegment_JFIFThumb
 {
 	@:overload override private function clone() : Dynamic;
 	
@@ -121,7 +121,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:native('com$sun$imageio$plugins$jpeg$JFIFMarkerSegment$ICCMarkerSegment') @:internal extern class JFIFMarkerSegment_ICCMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload override private function clone() : Dynamic;
+	@:overload private function clone() : Dynamic;
 	
 	
 }

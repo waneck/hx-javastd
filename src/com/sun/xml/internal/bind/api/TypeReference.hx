@@ -59,7 +59,7 @@ extern class TypeReference
 	* if this {@link TypeReference} represents a collection type.
 	* Otherwise returns an identical type.
 	*/
-	@:overload public function toItemType() : TypeReference;
+	@:overload public function toItemType() : com.sun.xml.internal.bind.api.TypeReference;
 	
 	
 }

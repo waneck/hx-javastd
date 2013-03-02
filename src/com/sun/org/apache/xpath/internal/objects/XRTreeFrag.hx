@@ -43,7 +43,7 @@ extern class XRTreeFrag extends com.sun.org.apache.xpath.internal.objects.XObjec
 	*
 	* @return The object that this class wraps
 	*/
-	@:overload override public function object() : Dynamic;
+	@:overload public function object() : Dynamic;
 	
 	/**
 	* Create an XRTreeFrag Object.
@@ -57,7 +57,7 @@ extern class XRTreeFrag extends com.sun.org.apache.xpath.internal.objects.XObjec
 	* @param allowRelease true if it is OK for detach to release this iterator
 	* for pooling.
 	*/
-	@:overload override public function allowDetachToRelease(allowRelease : Bool) : Void;
+	@:overload public function allowDetachToRelease(allowRelease : Bool) : Void;
 	
 	/**
 	* Detaches the <code>DTMIterator</code> from the set which it iterated
@@ -68,14 +68,14 @@ extern class XRTreeFrag extends com.sun.org.apache.xpath.internal.objects.XObjec
 	*
 	* In general, detach should only be called once on the object.
 	*/
-	@:overload override public function detach() : Void;
+	@:overload public function detach() : Void;
 	
 	/**
 	* Tell what kind of class this is.
 	*
 	* @return type CLASS_RTREEFRAG
 	*/
-	@:overload override public function getType() : Int;
+	@:overload public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -83,14 +83,14 @@ extern class XRTreeFrag extends com.sun.org.apache.xpath.internal.objects.XObjec
 	*
 	* @return type string "#RTREEFRAG"
 	*/
-	@:overload override public function getTypeString() : String;
+	@:overload public function getTypeString() : String;
 	
 	/**
 	* Cast result object to a number.
 	*
 	* @return The result tree fragment as a number or NaN
 	*/
-	@:overload override public function num() : Float;
+	@:overload public function num() : Float;
 	
 	/**
 	* Cast result object to a boolean.  This always returns true for a RTreeFrag
@@ -98,35 +98,35 @@ extern class XRTreeFrag extends com.sun.org.apache.xpath.internal.objects.XObjec
 	*
 	* @return true
 	*/
-	@:overload override public function bool() : Bool;
+	@:overload public function bool() : Bool;
 	
 	/**
 	* Cast result object to an XMLString.
 	*
 	* @return The document fragment node data or the empty string.
 	*/
-	@:overload override public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The document fragment node data or the empty string.
 	*/
-	@:overload override public function str() : String;
+	@:overload public function str() : String;
 	
 	/**
 	* Cast result object to a result tree fragment.
 	*
 	* @return The document fragment this wraps
 	*/
-	@:overload override public function rtf() : Int;
+	@:overload public function rtf() : Int;
 	
 	/**
 	* Cast result object to a DTMIterator.
@@ -153,7 +153,7 @@ extern class XRTreeFrag extends com.sun.org.apache.xpath.internal.objects.XObjec
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	
 }

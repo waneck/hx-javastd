@@ -27,7 +27,7 @@ extern class Big5_HKSCS_2001 extends java.nio.charset.Charset
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	

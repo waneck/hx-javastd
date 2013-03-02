@@ -62,10 +62,10 @@ package com.sun.org.apache.xerces.internal.impl.dtd;
 extern class XML11NSDTDValidator extends com.sun.org.apache.xerces.internal.impl.dtd.XML11DTDValidator
 {
 	/** Bind namespaces */
-	@:overload @:final override private function startNamespaceScope(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:final private function startNamespaceScope(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/** Handles end element. */
-	@:overload override private function endNamespaceScope(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, isEmpty : Bool) : Void;
+	@:overload private function endNamespaceScope(element : com.sun.org.apache.xerces.internal.xni.QName, augs : com.sun.org.apache.xerces.internal.xni.Augmentations, isEmpty : Bool) : Void;
 	
 	
 }

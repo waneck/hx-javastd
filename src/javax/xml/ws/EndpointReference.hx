@@ -92,7 +92,7 @@ extern class EndpointReference
 	* @throws java.lang.IllegalArgumentException
 	*     if the <code>null</code> <code>eprInfoset</code> value is given.
 	*/
-	@:overload public static function readFrom(eprInfoset : javax.xml.transform.Source) : EndpointReference;
+	@:overload public static function readFrom(eprInfoset : javax.xml.transform.Source) : javax.xml.ws.EndpointReference;
 	
 	/**
 	* write this <code>EndpointReference</code> to the specified infoset format

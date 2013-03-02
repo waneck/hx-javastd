@@ -159,7 +159,7 @@ package java.util.concurrent;
 	*
 	* @return {@code null} always
 	*/
-	@:overload @:final override public function getRawResult() : java.lang.Void;
+	@:overload @:final public function getRawResult() : java.lang.Void;
 	
 	/**
 	* Requires null completion value.
@@ -169,7 +169,7 @@ package java.util.concurrent;
 	/**
 	* Implements execution conventions for RecursiveActions.
 	*/
-	@:overload @:final override private function exec() : Bool;
+	@:overload @:final private function exec() : Bool;
 	
 	
 }

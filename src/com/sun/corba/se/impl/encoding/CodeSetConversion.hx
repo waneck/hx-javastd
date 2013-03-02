@@ -28,7 +28,7 @@ extern class CodeSetConversion
 	/**
 	* CTB converter factory for single byte or variable length encodings.
 	*/
-	@:overload public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : CodeSetConversion_CTBConverter;
+	@:overload public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
 	/**
 	* CTB converter factory for multibyte (mainly fixed) encodings.
@@ -42,17 +42,17 @@ extern class CodeSetConversion
 	* will use the endianness specified.
 	*
 	*/
-	@:overload public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, littleEndian : Bool, useByteOrderMarkers : Bool) : CodeSetConversion_CTBConverter;
+	@:overload public function getCTBConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, littleEndian : Bool, useByteOrderMarkers : Bool) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
 	/**
 	* BTCConverter factory for single byte or variable width encodings.
 	*/
-	@:overload public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : CodeSetConversion_BTCConverter;
+	@:overload public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
 	/**
 	* BTCConverter factory for fixed width multibyte encodings.
 	*/
-	@:overload public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, defaultToLittleEndian : Bool) : CodeSetConversion_BTCConverter;
+	@:overload public function getBTCConverter(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, defaultToLittleEndian : Bool) : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter;
 	
 	/**
 	* Perform the code set negotiation algorithm and come up with
@@ -63,7 +63,7 @@ extern class CodeSetConversion
 	/**
 	* CodeSetConversion is a singleton, and this is the access point.
 	*/
-	@:overload @:final public static function impl() : CodeSetConversion;
+	@:overload @:final public static function impl() : com.sun.corba.se.impl.encoding.CodeSetConversion;
 	
 	
 }
@@ -114,7 +114,7 @@ extern class CodeSetConversion
 * to do the real work.  Handles translation of exceptions to the
 * appropriate CORBA versions.
 */
-@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$JavaCTBConverter') @:internal extern class CodeSetConversion_JavaCTBConverter extends CodeSetConversion_CTBConverter
+@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$JavaCTBConverter') @:internal extern class CodeSetConversion_JavaCTBConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter
 {
 	@:overload public function new(codeset : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry, alignmentForEncoding : Int) : Void;
 	
@@ -138,7 +138,7 @@ extern class CodeSetConversion
 * Special UTF16 converter which can either always write a BOM
 * or use a specified byte order without one.
 */
-@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$UTF16CTBConverter') @:internal extern class CodeSetConversion_UTF16CTBConverter extends CodeSetConversion_JavaCTBConverter
+@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$UTF16CTBConverter') @:internal extern class CodeSetConversion_UTF16CTBConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_JavaCTBConverter
 {
 	@:overload public function new() : Void;
 	
@@ -151,7 +151,7 @@ extern class CodeSetConversion
 * for the real work.  Handles translation of exceptions to the
 * appropriate CORBA versions.
 */
-@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$JavaBTCConverter') @:internal extern class CodeSetConversion_JavaBTCConverter extends CodeSetConversion_BTCConverter
+@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$JavaBTCConverter') @:internal extern class CodeSetConversion_JavaBTCConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_BTCConverter
 {
 	private var btc : java.nio.charset.CharsetDecoder;
 	
@@ -182,7 +182,7 @@ extern class CodeSetConversion
 * The solution is to check for the byte order marker, and if we
 * need to do something differently, switch internal converters.
 */
-@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$UTF16BTCConverter') @:internal extern class CodeSetConversion_UTF16BTCConverter extends CodeSetConversion_JavaBTCConverter
+@:native('com$sun$corba$se$impl$encoding$CodeSetConversion$UTF16BTCConverter') @:internal extern class CodeSetConversion_UTF16BTCConverter extends com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_JavaBTCConverter
 {
 	@:overload public function new(defaultToLittleEndian : Bool) : Void;
 	

@@ -30,19 +30,19 @@ package sun.io;
 */
 extern class ByteToCharASCII extends sun.io.ByteToCharConverter
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Algorithmic character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
 	/*
 	*   Reset after finding bad input
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	
 }

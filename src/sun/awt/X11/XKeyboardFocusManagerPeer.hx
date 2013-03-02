@@ -25,11 +25,11 @@ package sun.awt.X11;
 */
 extern class XKeyboardFocusManagerPeer extends sun.awt.KeyboardFocusManagerPeerImpl
 {
-	@:overload override public function setCurrentFocusOwner(comp : java.awt.Component) : Void;
+	@:overload public function setCurrentFocusOwner(comp : java.awt.Component) : Void;
 	
-	@:overload override public function getCurrentFocusOwner() : java.awt.Component;
+	@:overload public function getCurrentFocusOwner() : java.awt.Component;
 	
-	@:overload override public function getCurrentFocusedWindow() : java.awt.Window;
+	@:overload public function getCurrentFocusedWindow() : java.awt.Window;
 	
 	@:overload public static function setCurrentNativeFocusOwner(comp : java.awt.Component) : Void;
 	
@@ -39,7 +39,7 @@ extern class XKeyboardFocusManagerPeer extends sun.awt.KeyboardFocusManagerPeerI
 	
 	@:overload public static function getCurrentNativeFocusedWindow() : java.awt.Window;
 	
-	@:native('deliverFocus') @:overload public static function _deliverFocus(lightweightChild : java.awt.Component, target : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
+	@:overload public static function deliverFocus(lightweightChild : java.awt.Component, target : java.awt.Component, temporary : Bool, focusedWindowChangeAllowed : Bool, time : haxe.Int64, cause : sun.awt.CausedFocusEvent.CausedFocusEvent_Cause) : Bool;
 	
 	
 }

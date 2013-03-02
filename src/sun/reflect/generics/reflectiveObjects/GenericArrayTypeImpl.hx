@@ -31,7 +31,7 @@ extern class GenericArrayTypeImpl implements java.lang.reflect.GenericArrayType
 	* being created
 	* @return a generic array type with the desired component type
 	*/
-	@:overload public static function make(ct : java.lang.reflect.Type) : GenericArrayTypeImpl;
+	@:overload public static function make(ct : java.lang.reflect.Type) : sun.reflect.generics.reflectiveObjects.GenericArrayTypeImpl;
 	
 	/**
 	* Returns  a <tt>Type</tt> object representing the component type

@@ -53,7 +53,7 @@ package com.sun.tools.internal.xjc.model;
 	
 	@:overload @:final override public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload @:final public function getSource() : CSingleTypePropertyInfo;
+	@:overload @:final public function getSource() : com.sun.tools.internal.xjc.model.CSingleTypePropertyInfo;
 	
 	
 }

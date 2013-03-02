@@ -27,13 +27,13 @@ extern class Plotter extends javax.swing.JComponent implements javax.accessibili
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function new(unit : Plotter_Unit) : Void;
+	@:overload public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
 	
-	@:overload public function new(unit : Plotter_Unit, decimals : Int) : Void;
+	@:overload public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit, decimals : Int) : Void;
 	
-	@:overload public function new(unit : Plotter_Unit, decimals : Int, displayLegend : Bool) : Void;
+	@:overload public function new(unit : sun.tools.jconsole.Plotter.Plotter_Unit, decimals : Int, displayLegend : Bool) : Void;
 	
-	@:overload public function setUnit(unit : Plotter_Unit) : Void;
+	@:overload public function setUnit(unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
 	
 	@:overload public function setDecimals(decimals : Int) : Void;
 	
@@ -55,11 +55,11 @@ extern class Plotter extends javax.swing.JComponent implements javax.accessibili
 	*/
 	@:overload public function setViewRange(minutes : Int) : Void;
 	
-	@:overload override public function getComponentPopupMenu() : javax.swing.JPopupMenu;
+	@:overload public function getComponentPopupMenu() : javax.swing.JPopupMenu;
 	
 	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	
@@ -101,7 +101,7 @@ extern class Plotter extends javax.swing.JComponent implements javax.accessibili
 }
 @:native('sun$tools$jconsole$Plotter$SaveDataFileChooser') @:internal extern class Plotter_SaveDataFileChooser extends javax.swing.JFileChooser
 {
-	@:overload override public function approveSelection() : Void;
+	@:overload public function approveSelection() : Void;
 	
 	
 }

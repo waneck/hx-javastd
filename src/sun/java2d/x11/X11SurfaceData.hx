@@ -134,7 +134,7 @@ extern class X11SurfaceData extends sun.java2d.x11.XSurfaceData
 	
 	@:overload public static function isAccelerationEnabled() : Bool;
 	
-	@:overload public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
+	@:overload override public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
 	
 	@:overload override public function validatePipe(sg2d : sun.java2d.SunGraphics2D) : Void;
 	
@@ -145,12 +145,12 @@ extern class X11SurfaceData extends sun.java2d.x11.XSurfaceData
 	/**
 	* Method for instantiating a Window SurfaceData
 	*/
-	@:overload public static function createData(peer : sun.awt.X11ComponentPeer) : X11SurfaceData_X11WindowSurfaceData;
+	@:overload public static function createData(peer : sun.awt.X11ComponentPeer) : sun.java2d.x11.X11SurfaceData.X11SurfaceData_X11WindowSurfaceData;
 	
 	/**
 	* Method for instantiating a Pixmap SurfaceData (offscreen)
 	*/
-	@:overload public static function createData(gc : sun.awt.X11GraphicsConfig, width : Int, height : Int, cm : java.awt.image.ColorModel, image : java.awt.Image, drawable : haxe.Int64, transparency : Int) : X11SurfaceData_X11PixmapSurfaceData;
+	@:overload public static function createData(gc : sun.awt.X11GraphicsConfig, width : Int, height : Int, cm : java.awt.image.ColorModel, image : java.awt.Image, drawable : haxe.Int64, transparency : Int) : sun.java2d.x11.X11SurfaceData.X11SurfaceData_X11PixmapSurfaceData;
 	
 	@:overload private function new(peer : sun.awt.X11ComponentPeer, gc : sun.awt.X11GraphicsConfig, sType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel) : Void;
 	
@@ -186,7 +186,7 @@ extern class X11SurfaceData extends sun.java2d.x11.XSurfaceData
 	
 	
 }
-@:native('sun$java2d$x11$X11SurfaceData$X11WindowSurfaceData') extern class X11SurfaceData_X11WindowSurfaceData extends X11SurfaceData
+@:native('sun$java2d$x11$X11SurfaceData$X11WindowSurfaceData') extern class X11SurfaceData_X11WindowSurfaceData extends sun.java2d.x11.X11SurfaceData
 {
 	@:overload public function new(peer : sun.awt.X11ComponentPeer, gc : sun.awt.X11GraphicsConfig, sType : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -203,7 +203,7 @@ extern class X11SurfaceData extends sun.java2d.x11.XSurfaceData
 	
 	
 }
-@:native('sun$java2d$x11$X11SurfaceData$X11PixmapSurfaceData') extern class X11SurfaceData_X11PixmapSurfaceData extends X11SurfaceData
+@:native('sun$java2d$x11$X11SurfaceData$X11PixmapSurfaceData') extern class X11SurfaceData_X11PixmapSurfaceData extends sun.java2d.x11.X11SurfaceData
 {
 	@:overload public function new(gc : sun.awt.X11GraphicsConfig, width : Int, height : Int, image : java.awt.Image, sType : sun.java2d.loops.SurfaceType, cm : java.awt.image.ColorModel, drawable : haxe.Int64, transparency : Int) : Void;
 	

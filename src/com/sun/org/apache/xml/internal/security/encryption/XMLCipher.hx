@@ -124,7 +124,7 @@ extern class XMLCipher
 	* @return the XMLCipher
 	* @see javax.crypto.Cipher#getInstance(java.lang.String)
 	*/
-	@:overload public static function getInstance(transformation : String) : XMLCipher;
+	@:overload public static function getInstance(transformation : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements the specified
@@ -142,9 +142,9 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getInstance(transformation : String, canon : String) : XMLCipher;
+	@:overload public static function getInstance(transformation : String, canon : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
-	@:overload public static function getInstance(transformation : String, cipher : javax.crypto.Cipher) : XMLCipher;
+	@:overload public static function getInstance(transformation : String, cipher : javax.crypto.Cipher) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements the specified
@@ -157,7 +157,7 @@ extern class XMLCipher
 	* @return the XMLCipher
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getProviderInstance(transformation : String, provider : String) : XMLCipher;
+	@:overload public static function getProviderInstance(transformation : String, provider : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements the specified
@@ -176,7 +176,7 @@ extern class XMLCipher
 	* @return
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getProviderInstance(transformation : String, provider : String, canon : String) : XMLCipher;
+	@:overload public static function getProviderInstance(transformation : String, provider : String, canon : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements no specific
@@ -187,7 +187,7 @@ extern class XMLCipher
 	* @return The XMLCipher
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getInstance() : XMLCipher;
+	@:overload public static function getInstance() : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Returns an <code>XMLCipher</code> that implements no specific
@@ -203,7 +203,7 @@ extern class XMLCipher
 	* @return the XMLCipher
 	* @throws XMLEncryptionException
 	*/
-	@:overload public static function getProviderInstance(provider : String) : XMLCipher;
+	@:overload public static function getProviderInstance(provider : String) : com.sun.org.apache.xml.internal.security.encryption.XMLCipher;
 	
 	/**
 	* Initializes this cipher with a key.
@@ -764,7 +764,7 @@ extern class XMLCipher
 	
 	
 }
-@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$EncryptedDataImpl') @:internal extern class XMLCipher_Factory_EncryptedDataImpl extends XMLCipher_Factory_EncryptedTypeImpl implements com.sun.org.apache.xml.internal.security.encryption.EncryptedData
+@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$EncryptedDataImpl') @:internal extern class XMLCipher_Factory_EncryptedDataImpl extends com.sun.org.apache.xml.internal.security.encryption.XMLCipher.XMLCipher_Factory_EncryptedTypeImpl implements com.sun.org.apache.xml.internal.security.encryption.EncryptedData
 {
 	/**
 	* @param data
@@ -773,7 +773,7 @@ extern class XMLCipher
 	
 	
 }
-@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$EncryptedKeyImpl') @:internal extern class XMLCipher_Factory_EncryptedKeyImpl extends XMLCipher_Factory_EncryptedTypeImpl implements com.sun.org.apache.xml.internal.security.encryption.EncryptedKey
+@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$EncryptedKeyImpl') @:internal extern class XMLCipher_Factory_EncryptedKeyImpl extends com.sun.org.apache.xml.internal.security.encryption.XMLCipher.XMLCipher_Factory_EncryptedTypeImpl implements com.sun.org.apache.xml.internal.security.encryption.EncryptedKey
 {
 	/**
 	* @param data
@@ -1025,7 +1025,7 @@ extern class XMLCipher
 	@:overload public function getDSTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseNamespace() : String;
+	@:overload public function getBaseNamespace() : String;
 	
 	
 }
@@ -1091,14 +1091,14 @@ extern class XMLCipher
 	
 	
 }
-@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$ReferenceListImpl$DataReference') @:internal extern class XMLCipher_Factory_ReferenceListImpl_DataReference extends XMLCipher_Factory_ReferenceListImpl_ReferenceImpl
+@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$ReferenceListImpl$DataReference') @:internal extern class XMLCipher_Factory_ReferenceListImpl_DataReference extends com.sun.org.apache.xml.internal.security.encryption.XMLCipher.XMLCipher_Factory_ReferenceListImpl_ReferenceImpl
 {
 	/** @inheritDoc */
 	@:overload override public function toElement() : org.w3c.dom.Element;
 	
 	
 }
-@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$ReferenceListImpl$KeyReference') @:internal extern class XMLCipher_Factory_ReferenceListImpl_KeyReference extends XMLCipher_Factory_ReferenceListImpl_ReferenceImpl
+@:native('com$sun$org$apache$xml$internal$security$encryption$XMLCipher$Factory$ReferenceListImpl$KeyReference') @:internal extern class XMLCipher_Factory_ReferenceListImpl_KeyReference extends com.sun.org.apache.xml.internal.security.encryption.XMLCipher.XMLCipher_Factory_ReferenceListImpl_ReferenceImpl
 {
 	/** @inheritDoc */
 	@:overload override public function toElement() : org.w3c.dom.Element;

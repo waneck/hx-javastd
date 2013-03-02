@@ -64,7 +64,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* <code>getDefaultRootElement</code> method.  If the
 	* document contained any data it will first be removed.
 	*/
-	@:overload private function create(data : java.NativeArray<DefaultStyledDocument_ElementSpec>) : Void;
+	@:overload private function create(data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
 	
 	/**
 	* Inserts new elements in bulk.  This is useful to allow
@@ -83,7 +83,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param data the element data
 	* @exception BadLocationException for an invalid starting offset
 	*/
-	@:overload private function insert(offset : Int, data : java.NativeArray<DefaultStyledDocument_ElementSpec>) : Void;
+	@:overload private function insert(offset : Int, data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
 	
 	/**
 	* Removes an element from this document.
@@ -254,14 +254,14 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param chng a description of the document change
 	* @param attr the attributes
 	*/
-	@:overload private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload override private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Updates document structure as a result of text removal.
 	*
 	* @param chng a description of the document change
 	*/
-	@:overload private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload override private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Creates the root element to be used to represent the
@@ -324,7 +324,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	*/
 	public static var BUFFER_SIZE_DEFAULT(default, null) : Int;
 	
-	private var buffer : DefaultStyledDocument_ElementBuffer;
+	private var buffer : javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementBuffer;
 	
 	
 }
@@ -563,7 +563,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	* @param data the data to insert
 	* @param de the event capturing this edit
 	*/
-	@:overload public function insert(offset : Int, length : Int, data : java.NativeArray<DefaultStyledDocument_ElementSpec>, de : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload public function insert(offset : Int, length : Int, data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>, de : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Removes content.
@@ -588,7 +588,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	*
 	* @param data the elements to insert
 	*/
-	@:overload private function insertUpdate(data : java.NativeArray<DefaultStyledDocument_ElementSpec>) : Void;
+	@:overload private function insertUpdate(data : java.NativeArray<javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_ElementSpec>) : Void;
 	
 	/**
 	* Updates the element structure in response to a removal from the
@@ -701,7 +701,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 	
 }
 /* This has an implicit reference to the handler object.  */
-@:native('javax$swing$text$DefaultStyledDocument$AbstractChangeHandler$DocReference') @:internal extern class DefaultStyledDocument_AbstractChangeHandler_DocReference extends java.lang.ref.WeakReference<DefaultStyledDocument>
+@:native('javax$swing$text$DefaultStyledDocument$AbstractChangeHandler$DocReference') @:internal extern class DefaultStyledDocument_AbstractChangeHandler_DocReference extends java.lang.ref.WeakReference<javax.swing.text.DefaultStyledDocument>
 {
 	
 }
@@ -709,7 +709,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 * Added to all the Styles. When instances of this receive a
 * stateChanged method, styleChanged is invoked.
 */
-@:native('javax$swing$text$DefaultStyledDocument$StyleChangeHandler') @:internal extern class DefaultStyledDocument_StyleChangeHandler extends DefaultStyledDocument_AbstractChangeHandler
+@:native('javax$swing$text$DefaultStyledDocument$StyleChangeHandler') @:internal extern class DefaultStyledDocument_StyleChangeHandler extends javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_AbstractChangeHandler
 {
 	
 }
@@ -717,7 +717,7 @@ extern class DefaultStyledDocument extends javax.swing.text.AbstractDocument imp
 * Added to the StyleContext. When the StyleContext changes, this invokes
 * <code>updateStylesListeningTo</code>.
 */
-@:native('javax$swing$text$DefaultStyledDocument$StyleContextChangeHandler') @:internal extern class DefaultStyledDocument_StyleContextChangeHandler extends DefaultStyledDocument_AbstractChangeHandler
+@:native('javax$swing$text$DefaultStyledDocument$StyleContextChangeHandler') @:internal extern class DefaultStyledDocument_StyleContextChangeHandler extends javax.swing.text.DefaultStyledDocument.DefaultStyledDocument_AbstractChangeHandler
 {
 	
 }

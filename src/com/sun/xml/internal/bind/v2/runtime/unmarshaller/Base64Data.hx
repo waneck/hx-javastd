@@ -80,20 +80,20 @@ extern class Base64Data extends com.sun.xml.internal.bind.v2.runtime.output.Pcda
 	* Gets the number of characters needed to represent
 	* this binary data in the base64 encoding.
 	*/
-	@:overload override public function length() : Int;
+	@:overload public function length() : Int;
 	
 	/**
 	* Encode this binary data in the base64 encoding
 	* and returns the character at the specified position.
 	*/
-	@:overload override public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Internally this is only used to split a text to a list,
 	* which doesn't happen that much for base64.
 	* So this method should be smaller than faster.
 	*/
-	@:overload override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	/**
 	* Returns the base64 encoded string of this data.

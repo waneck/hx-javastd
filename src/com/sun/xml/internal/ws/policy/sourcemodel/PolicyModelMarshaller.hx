@@ -52,7 +52,7 @@ extern class PolicyModelMarshaller
 	* @return policy model marshaller that either marshalls private assertions or not
 	*         based on the input argument.
 	*/
-	@:overload public static function getXmlMarshaller(marshallInvisible : Bool) : PolicyModelMarshaller;
+	@:overload public static function getXmlMarshaller(marshallInvisible : Bool) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelMarshaller;
 	
 	
 }

@@ -148,7 +148,7 @@ extern class ShapeGraphicAttribute extends java.awt.font.GraphicAttribute
 	* <code>ShapeGraphicAttribute</code> equals <code>rhs</code>;
 	* <code>false</code> otherwise.
 	*/
-	@:overload public function equals(rhs : ShapeGraphicAttribute) : Bool;
+	@:overload public function equals(rhs : java.awt.font.ShapeGraphicAttribute) : Bool;
 	
 	
 }

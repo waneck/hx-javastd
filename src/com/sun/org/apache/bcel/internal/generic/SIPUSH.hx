@@ -63,17 +63,17 @@ extern class SIPUSH extends com.sun.org.apache.bcel.internal.generic.Instruction
 	/**
 	* Dump instruction as short code to stream out.
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload public function toString(verbose : Bool) : String;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	@:overload public function getValue() : java.lang.Number;
 	
@@ -89,7 +89,7 @@ extern class SIPUSH extends com.sun.org.apache.bcel.internal.generic.Instruction
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

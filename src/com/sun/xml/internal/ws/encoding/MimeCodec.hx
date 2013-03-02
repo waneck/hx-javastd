@@ -44,7 +44,7 @@ package com.sun.xml.internal.ws.encoding;
 	/**
 	* Copy constructor.
 	*/
-	@:overload private function new(that : MimeCodec) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.encoding.MimeCodec) : Void;
 	
 	@:overload public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
@@ -55,7 +55,7 @@ package com.sun.xml.internal.ws.encoding;
 	*/
 	@:overload @:abstract private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
-	@:overload @:abstract public function copy() : MimeCodec;
+	@:overload @:abstract public function copy() : com.sun.xml.internal.ws.encoding.MimeCodec;
 	
 	@:overload public static function writeln(s : String, out : java.io.OutputStream) : Void;
 	

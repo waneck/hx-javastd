@@ -31,7 +31,7 @@ extern class GcInfoCompositeData extends sun.management.LazyCompositeData
 	
 	@:overload public static function toCompositeData(info : com.sun.management.GcInfo) : javax.management.openmbean.CompositeData;
 	
-	@:overload override private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
 	@:overload public static function getId(cd : javax.management.openmbean.CompositeData) : haxe.Int64;
 	

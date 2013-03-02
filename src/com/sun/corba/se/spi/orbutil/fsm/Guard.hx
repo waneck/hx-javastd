@@ -46,7 +46,7 @@ extern interface Guard
 	* @param FSM fsm is the state machine causing this action.
 	* @param Input in is the input that caused the transition.
 	*/
-	@:overload public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Guard_Result;
+	@:overload public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	
 }
@@ -54,23 +54,23 @@ extern interface Guard
 {
 	@:overload public function new(guard : com.sun.corba.se.spi.orbutil.fsm.GuardBase) : Void;
 	
-	@:overload public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Guard_Result;
+	@:overload public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	
 }
 @:native('com$sun$corba$se$spi$orbutil$fsm$Guard$Result') extern class Guard_Result
 {
-	@:overload public static function convert(res : Bool) : Guard_Result;
+	@:overload public static function convert(res : Bool) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
-	@:overload public function complement() : Guard_Result;
+	@:overload public function complement() : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	@:overload public function toString() : String;
 	
-	public static var ENABLED(default, null) : Guard_Result;
+	public static var ENABLED(default, null) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
-	public static var DISABLED(default, null) : Guard_Result;
+	public static var DISABLED(default, null) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
-	public static var DEFERED(default, null) : Guard_Result;
+	public static var DEFERED(default, null) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	
 }

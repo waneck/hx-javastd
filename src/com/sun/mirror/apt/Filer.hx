@@ -110,7 +110,7 @@ package com.sun.mirror.apt;
 	* @return a writer for the new file
 	* @throws IOException if the file cannot be created
 	*/
-	@:overload public function createTextFile(loc : Filer_Location, pkg : String, relPath : java.io.File, charsetName : String) : java.io.PrintWriter;
+	@:overload public function createTextFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File, charsetName : String) : java.io.PrintWriter;
 	
 	/**
 	* Creates a new binary file, and returns a stream for writing to it.
@@ -128,7 +128,7 @@ package com.sun.mirror.apt;
 	* @return a stream for writing to the new file
 	* @throws IOException if the file cannot be created
 	*/
-	@:overload public function createBinaryFile(loc : Filer_Location, pkg : String, relPath : java.io.File) : java.io.OutputStream;
+	@:overload public function createBinaryFile(loc : com.sun.mirror.apt.Filer.Filer_Location, pkg : String, relPath : java.io.File) : java.io.OutputStream;
 	
 	
 }

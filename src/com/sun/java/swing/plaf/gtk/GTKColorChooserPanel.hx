@@ -90,7 +90,7 @@ package com.sun.java.swing.plaf.gtk;
 	
 	@:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
@@ -105,7 +105,7 @@ package com.sun.java.swing.plaf.gtk;
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKColorChooserPanel$OpaqueLabel') @:internal extern class GTKColorChooserPanel_OpaqueLabel extends javax.swing.JLabel
 {
-	@:overload override public function isOpaque() : Bool;
+	@:overload public function isOpaque() : Bool;
 	
 	
 }

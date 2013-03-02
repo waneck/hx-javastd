@@ -29,25 +29,25 @@ extern class DOMHMACSignatureMethod extends org.jcp.xml.dsig.internal.dom.DOMSig
 {
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA1') @:internal extern class DOMHMACSignatureMethod_SHA1 extends DOMHMACSignatureMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA1') @:internal extern class DOMHMACSignatureMethod_SHA1 extends org.jcp.xml.dsig.internal.dom.DOMHMACSignatureMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA256') @:internal extern class DOMHMACSignatureMethod_SHA256 extends DOMHMACSignatureMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA256') @:internal extern class DOMHMACSignatureMethod_SHA256 extends org.jcp.xml.dsig.internal.dom.DOMHMACSignatureMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA384') @:internal extern class DOMHMACSignatureMethod_SHA384 extends DOMHMACSignatureMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA384') @:internal extern class DOMHMACSignatureMethod_SHA384 extends org.jcp.xml.dsig.internal.dom.DOMHMACSignatureMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA512') @:internal extern class DOMHMACSignatureMethod_SHA512 extends DOMHMACSignatureMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMHMACSignatureMethod$SHA512') @:internal extern class DOMHMACSignatureMethod_SHA512 extends org.jcp.xml.dsig.internal.dom.DOMHMACSignatureMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	

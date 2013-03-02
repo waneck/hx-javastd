@@ -37,7 +37,7 @@ package sun.management;
 	
 	@:overload public function setVerbose(value : Bool) : Void;
 	
-	@:overload override public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
+	@:overload public function getNotificationInfo() : java.NativeArray<javax.management.MBeanNotificationInfo>;
 	
 	@:overload public function getObjectName() : javax.management.ObjectName;
 	

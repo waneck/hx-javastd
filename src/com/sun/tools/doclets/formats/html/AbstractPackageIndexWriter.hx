@@ -124,7 +124,7 @@ extern class AbstractPackageIndexWriter extends com.sun.tools.doclets.formats.ht
 	*
 	* @return a Content object to be added to the documentation tree
 	*/
-	@:overload override private function getNavLinkContents() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkContents() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Do nothing. This will be overridden in PackageIndexFrameWriter.

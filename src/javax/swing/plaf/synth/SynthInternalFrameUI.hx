@@ -40,34 +40,34 @@ package javax.swing.plaf.synth;
 	* @param b component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload private function new(b : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function installDefaults() : Void;
+	@:overload public function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallComponents() : Void;
+	@:overload private function uninstallComponents() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
@@ -77,12 +77,12 @@ package javax.swing.plaf.synth;
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createComponentListener() : java.awt.event.ComponentListener;
+	@:overload private function createComponentListener() : java.awt.event.ComponentListener;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -96,7 +96,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -107,7 +107,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.

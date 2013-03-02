@@ -72,19 +72,19 @@ package com.sun.crypto.provider;
 	
 	
 }
-@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithMD5AndDES') extern class PBEKeyFactory_PBEWithMD5AndDES extends PBEKeyFactory
+@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithMD5AndDES') extern class PBEKeyFactory_PBEWithMD5AndDES extends com.sun.crypto.provider.PBEKeyFactory
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithSHA1AndDESede') extern class PBEKeyFactory_PBEWithSHA1AndDESede extends PBEKeyFactory
+@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithSHA1AndDESede') extern class PBEKeyFactory_PBEWithSHA1AndDESede extends com.sun.crypto.provider.PBEKeyFactory
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithSHA1AndRC2_40') extern class PBEKeyFactory_PBEWithSHA1AndRC2_40 extends PBEKeyFactory
+@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithSHA1AndRC2_40') extern class PBEKeyFactory_PBEWithSHA1AndRC2_40 extends com.sun.crypto.provider.PBEKeyFactory
 {
 	@:overload public function new() : Void;
 	
@@ -93,7 +93,7 @@ package com.sun.crypto.provider;
 /*
 * Private proprietary algorithm for supporting JCEKS.
 */
-@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithMD5AndTripleDES') extern class PBEKeyFactory_PBEWithMD5AndTripleDES extends PBEKeyFactory
+@:native('com$sun$crypto$provider$PBEKeyFactory$PBEWithMD5AndTripleDES') extern class PBEKeyFactory_PBEWithMD5AndTripleDES extends com.sun.crypto.provider.PBEKeyFactory
 {
 	@:overload public function new() : Void;
 	

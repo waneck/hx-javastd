@@ -73,9 +73,9 @@ extern class StartDocumentEvent extends com.sun.xml.internal.stream.events.Dummy
 	
 	@:overload public function toString() : String;
 	
-	@:overload override public function isStartDocument() : Bool;
+	@:overload public function isStartDocument() : Bool;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

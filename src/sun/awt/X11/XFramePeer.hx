@@ -35,11 +35,11 @@ package sun.awt.X11;
 	
 	@:overload override public function handlePropertyNotify(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override public function handleStateChange(oldState : Int, newState : Int) : Void;
+	@:overload public function handleStateChange(oldState : Int, newState : Int) : Void;
 	
-	@:overload override public function setVisible(vis : Bool) : Void;
+	@:overload public function setVisible(vis : Bool) : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	/*
 	* Print the native component by rendering the Motif look ourselves.
@@ -47,7 +47,7 @@ package sun.awt.X11;
 	* of Component (and thus it has no "print" method which gets called by
 	* default).
 	*/
-	@:overload override public function print(g : java.awt.Graphics) : Void;
+	@:overload public function print(g : java.awt.Graphics) : Void;
 	
 	@:overload public function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
 	

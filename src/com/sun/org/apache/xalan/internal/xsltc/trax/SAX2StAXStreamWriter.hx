@@ -47,9 +47,9 @@ extern class SAX2StAXStreamWriter extends com.sun.org.apache.xalan.internal.xslt
 	
 	@:overload override public function endCDATA() : Void;
 	
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload public function processingInstruction(target : String, data : String) : Void;
 	
 	
 }

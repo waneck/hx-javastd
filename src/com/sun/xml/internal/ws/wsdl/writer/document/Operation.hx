@@ -44,9 +44,9 @@ extern interface Operation extends com.sun.xml.internal.txw2.TypedXmlWriter exte
 	
 	@:overload public function fault() : com.sun.xml.internal.ws.wsdl.writer.document.FaultType;
 	
-	@:overload public function name(value : String) : Operation;
+	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Operation;
 	
-	@:overload public function parameterOrder(value : String) : Operation;
+	@:overload public function parameterOrder(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Operation;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class JavaClass extends com.sun.tools.hat.internal.model.JavaHeapObject
 	
 	@:overload public function new(name : String, superclassId : haxe.Int64, loaderId : haxe.Int64, signersId : haxe.Int64, protDomainId : haxe.Int64, fields : java.NativeArray<com.sun.tools.hat.internal.model.JavaField>, statics : java.NativeArray<com.sun.tools.hat.internal.model.JavaStatic>, instanceSize : Int) : Void;
 	
-	@:overload @:final override public function getClazz() : JavaClass;
+	@:overload @:final override public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
 	
 	@:overload @:final public function getIdentifierSize() : Int;
 	
@@ -77,7 +77,7 @@ extern class JavaClass extends com.sun.tools.hat.internal.model.JavaHeapObject
 	*
 	* @see JavaClass.getFieldForInstance()
 	*/
-	@:overload public function getClassForField(i : Int) : JavaClass;
+	@:overload public function getClassForField(i : Int) : com.sun.tools.hat.internal.model.JavaClass;
 	
 	@:overload override public function getId() : haxe.Int64;
 	
@@ -92,12 +92,12 @@ extern class JavaClass extends com.sun.tools.hat.internal.model.JavaHeapObject
 	*/
 	@:overload public function getInstancesCount(includeSubclasses : Bool) : Int;
 	
-	@:overload public function getSubclasses() : java.NativeArray<JavaClass>;
+	@:overload public function getSubclasses() : java.NativeArray<com.sun.tools.hat.internal.model.JavaClass>;
 	
 	/**
 	* This can only safely be called after resolve()
 	*/
-	@:overload public function getSuperclass() : JavaClass;
+	@:overload public function getSuperclass() : com.sun.tools.hat.internal.model.JavaClass;
 	
 	/**
 	* This can only safely be called after resolve()
@@ -138,7 +138,7 @@ extern class JavaClass extends com.sun.tools.hat.internal.model.JavaHeapObject
 	* @return true iff a variable of type this is assignable from an instance
 	*          of other
 	*/
-	@:overload public function isAssignableFrom(other : JavaClass) : Bool;
+	@:overload public function isAssignableFrom(other : com.sun.tools.hat.internal.model.JavaClass) : Bool;
 	
 	/**
 	* Describe the reference that this thing has to target.  This will only

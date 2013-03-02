@@ -57,7 +57,7 @@ extern class WsaPropertyBag extends com.sun.xml.internal.ws.api.PropertySet
 	*/
 	@:overload public function getMessageID() : String;
 	
-	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

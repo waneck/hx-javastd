@@ -31,25 +31,25 @@ extern class LongValueImpl extends com.sun.tools.jdi.PrimitiveValueImpl implemen
 	
 	@:overload public function compareTo(obj : com.sun.jdi.LongValue) : Int;
 	
-	@:overload override public function type() : com.sun.jdi.Type;
+	@:overload public function type() : com.sun.jdi.Type;
 	
 	@:overload public function value() : haxe.Int64;
 	
-	@:overload override public function booleanValue() : Bool;
+	@:overload public function booleanValue() : Bool;
 	
-	@:overload override public function byteValue() : java.StdTypes.Int8;
+	@:overload public function byteValue() : java.StdTypes.Int8;
 	
-	@:overload override public function charValue() : java.StdTypes.Char16;
+	@:overload public function charValue() : java.StdTypes.Char16;
 	
-	@:overload override public function shortValue() : java.StdTypes.Int16;
+	@:overload public function shortValue() : java.StdTypes.Int16;
 	
-	@:overload override public function intValue() : Int;
+	@:overload public function intValue() : Int;
 	
-	@:overload override public function longValue() : haxe.Int64;
+	@:overload public function longValue() : haxe.Int64;
 	
-	@:overload override public function floatValue() : Single;
+	@:overload public function floatValue() : Single;
 	
-	@:overload override public function doubleValue() : Float;
+	@:overload public function doubleValue() : Float;
 	
 	@:overload override public function toString() : String;
 	

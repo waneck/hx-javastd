@@ -82,7 +82,7 @@ extern interface Text extends org.w3c.dom.CharacterData
 	*   than the number of 16-bit units in <code>data</code>.
 	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
 	*/
-	@:overload public function splitText(offset : Int) : Text;
+	@:overload public function splitText(offset : Int) : org.w3c.dom.Text;
 	
 	/**
 	* Returns whether this text node contains <a href='http://www.w3.org/TR/2004/REC-xml-infoset-20040204#infoitem.character'>
@@ -178,7 +178,7 @@ extern interface Text extends org.w3c.dom.CharacterData
 	*   nodes being replaced is readonly.
 	* @since DOM Level 3
 	*/
-	@:overload public function replaceWholeText(content : String) : Text;
+	@:overload public function replaceWholeText(content : String) : org.w3c.dom.Text;
 	
 	
 }

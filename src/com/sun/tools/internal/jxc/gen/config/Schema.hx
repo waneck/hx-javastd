@@ -40,15 +40,15 @@ extern class Schema extends com.sun.tools.internal.jxc.gen.config.NGCCHandler
 	
 	@:overload public function new(runtime : com.sun.tools.internal.jxc.NGCCRuntimeEx, _baseDir : java.io.File) : Void;
 	
-	@:overload override public function enterElement($__uri : String, $__local : String, $__qname : String, $attrs : org.xml.sax.Attributes) : Void;
+	@:overload public function enterElement($__uri : String, $__local : String, $__qname : String, $attrs : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function leaveElement($__uri : String, $__local : String, $__qname : String) : Void;
+	@:overload public function leaveElement($__uri : String, $__local : String, $__qname : String) : Void;
 	
-	@:overload override public function enterAttribute($__uri : String, $__local : String, $__qname : String) : Void;
+	@:overload public function enterAttribute($__uri : String, $__local : String, $__qname : String) : Void;
 	
-	@:overload override public function leaveAttribute($__uri : String, $__local : String, $__qname : String) : Void;
+	@:overload public function leaveAttribute($__uri : String, $__local : String, $__qname : String) : Void;
 	
-	@:overload override public function text($value : String) : Void;
+	@:overload public function text($value : String) : Void;
 	
 	@:overload override public function onChildCompleted(result : Dynamic, cookie : Int, needAttCheck : Bool) : Void;
 	

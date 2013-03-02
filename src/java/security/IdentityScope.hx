@@ -47,7 +47,7 @@ extern class IdentityScope extends java.security.Identity
 	* @exception KeyManagementException if there is already an identity
 	* with the same name in the scope.
 	*/
-	@:overload public function new(name : String, scope : IdentityScope) : Void;
+	@:overload public function new(name : String, scope : java.security.IdentityScope) : Void;
 	
 	/**
 	* Returns the system's identity scope.
@@ -57,7 +57,7 @@ extern class IdentityScope extends java.security.Identity
 	*
 	* @see #setSystemScope
 	*/
-	@:overload public static function getSystemScope() : IdentityScope;
+	@:overload public static function getSystemScope() : java.security.IdentityScope;
 	
 	/**
 	* Sets the system's identity scope.
@@ -76,7 +76,7 @@ extern class IdentityScope extends java.security.Identity
 	* @see #getSystemScope
 	* @see SecurityManager#checkSecurityAccess
 	*/
-	@:overload private static function setSystemScope(scope : IdentityScope) : Void;
+	@:overload private static function setSystemScope(scope : java.security.IdentityScope) : Void;
 	
 	/**
 	* Returns the number of identities within this identity scope.

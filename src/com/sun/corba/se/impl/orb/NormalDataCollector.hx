@@ -27,9 +27,9 @@ extern class NormalDataCollector extends com.sun.corba.se.impl.orb.DataCollector
 {
 	@:overload public function new(args : java.NativeArray<String>, props : java.util.Properties, localHostName : String, configurationHostName : String) : Void;
 	
-	@:overload override public function isApplet() : Bool;
+	@:overload public function isApplet() : Bool;
 	
-	@:overload override private function collect() : Void;
+	@:overload private function collect() : Void;
 	
 	
 }

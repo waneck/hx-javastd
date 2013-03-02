@@ -136,7 +136,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @deprecated As of Java 2 platform v1.3.
 	*  @see #defaultButton
 	*/
-	private var defaultPressAction : JRootPane_DefaultAction;
+	private var defaultPressAction : javax.swing.JRootPane.JRootPane_DefaultAction;
 	
 	/**
 	* As of Java 2 platform v1.3 this unusable field is no longer used.
@@ -147,7 +147,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @deprecated As of Java 2 platform v1.3.
 	*  @see #defaultButton
 	*/
-	private var defaultReleaseAction : JRootPane_DefaultAction;
+	private var defaultReleaseAction : javax.swing.JRootPane.JRootPane_DefaultAction;
 	
 	/**
 	* Creates a <code>JRootPane</code>, setting up its
@@ -160,7 +160,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* {@inheritDoc}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function setDoubleBuffered(aFlag : Bool) : Void;
+	@:require(java6) @:overload public function setDoubleBuffered(aFlag : Bool) : Void;
 	
 	/**
 	* Returns a constant identifying the type of Window decorations the
@@ -243,7 +243,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the L&F class
@@ -254,7 +254,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Called by the constructor methods to create the default
@@ -419,7 +419,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	*
 	* @return true if this component's children don't overlap
 	*/
-	@:overload override public function isOptimizedDrawingEnabled() : Bool;
+	@:overload public function isOptimizedDrawingEnabled() : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -491,7 +491,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return an <code>AccessibleJRootPane</code> that serves as the
 	*         <code>AccessibleContext</code> of this <code>JRootPane</code>
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -501,7 +501,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	
 	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
 	
 }
@@ -592,7 +592,7 @@ extern class JRootPane extends javax.swing.JComponent implements javax.accessibi
 	* @return an instance of AccessibleRole describing the role of
 	* the object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children of the object.

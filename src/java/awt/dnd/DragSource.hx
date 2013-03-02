@@ -88,7 +88,7 @@ extern class DragSource implements java.io.Serializable
 	*            returns true
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload public static function getDefaultDragSource() : DragSource;
+	@:overload public static function getDefaultDragSource() : java.awt.dnd.DragSource;
 	
 	/**
 	* Reports

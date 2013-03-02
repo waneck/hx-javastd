@@ -69,7 +69,7 @@ extern class CClassInfo extends com.sun.tools.internal.xjc.model.AbstractCElemen
 	
 	@:overload public function getClazz() : com.sun.tools.internal.xjc.model.nav.NClass;
 	
-	@:overload override public function getScope() : CClassInfo;
+	@:overload override public function getScope() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	@:overload public function getName() : String;
 	
@@ -157,16 +157,16 @@ extern class CClassInfo extends com.sun.tools.internal.xjc.model.AbstractCElemen
 	*
 	* @see #getRefBaseClass()
 	*/
-	@:overload public function getBaseClass() : CClassInfo;
+	@:overload public function getBaseClass() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	@:overload public function getRefBaseClass() : com.sun.tools.internal.xjc.model.CClassRef;
 	
 	/**
 	* Enumerates all the sub-classes of this class.
 	*/
-	@:overload public function listSubclasses() : java.util.Iterator<CClassInfo>;
+	@:overload public function listSubclasses() : java.util.Iterator<com.sun.tools.internal.xjc.model.CClassInfo>;
 	
-	@:overload override public function getSubstitutionHead() : CClassInfo;
+	@:overload override public function getSubstitutionHead() : com.sun.tools.internal.xjc.model.CClassInfo;
 	
 	@:overload public function _implements(c : com.sun.codemodel.internal.JClass) : Void;
 	

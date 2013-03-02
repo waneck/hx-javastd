@@ -79,7 +79,7 @@ package javax.script;
 	* line and column numbers and filename if any of these are known.
 	* @return The error message.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* Get the line number on which an error occurred.

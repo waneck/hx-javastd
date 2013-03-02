@@ -25,17 +25,17 @@ package sun.nio.ch;
 */
 extern class SimpleAsynchronousFileChannelImpl extends sun.nio.ch.AsynchronousFileChannelImpl
 {
-	@:native('open') @:overload public static function _open(fdo : java.io.FileDescriptor, reading : Bool, writing : Bool, pool : sun.nio.ch.ThreadPool) : java.nio.channels.AsynchronousFileChannel;
+	@:overload public static function open(fdo : java.io.FileDescriptor, reading : Bool, writing : Bool, pool : sun.nio.ch.ThreadPool) : java.nio.channels.AsynchronousFileChannel;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function size() : haxe.Int64;
+	@:overload public function size() : haxe.Int64;
 	
-	@:overload override public function truncate(size : haxe.Int64) : java.nio.channels.AsynchronousFileChannel;
+	@:overload public function truncate(size : haxe.Int64) : java.nio.channels.AsynchronousFileChannel;
 	
-	@:overload override public function force(metaData : Bool) : Void;
+	@:overload public function force(metaData : Bool) : Void;
 	
-	@:overload override public function tryLock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
+	@:overload public function tryLock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
 	
 	@:overload override private function implRelease(fli : sun.nio.ch.FileLockImpl) : Void;
 	

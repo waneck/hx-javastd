@@ -22,25 +22,25 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 {
 	@:overload public function new(grammarContainer : com.sun.org.apache.xerces.internal.jaxp.validation.XSGrammarPoolContainer) : Void;
 	
-	@:overload override public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
+	@:overload public function validate(source : javax.xml.transform.Source, result : javax.xml.transform.Result) : Void;
 	
-	@:overload override public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload override public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
-	@:overload override public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
-	@:overload override public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload public function getFeature(name : String) : Bool;
 	
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload override public function getProperty(name : String) : Dynamic;
+	@:overload public function getProperty(name : String) : Dynamic;
 	
-	@:overload override public function setProperty(name : String, object : Dynamic) : Void;
+	@:overload public function setProperty(name : String, object : Dynamic) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/*
 	* PSVIProvider methods

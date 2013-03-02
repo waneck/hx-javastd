@@ -32,11 +32,11 @@ extern class AbstractFilterPipeImpl extends com.sun.xml.internal.ws.api.pipe.hel
 	
 	@:overload private function new(next : com.sun.xml.internal.ws.api.pipe.Pipe) : Void;
 	
-	@:overload private function new(that : AbstractFilterPipeImpl, cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterPipeImpl, cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : Void;
 	
-	@:overload override public function process(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
+	@:overload public function process(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Packet;
 	
-	@:overload override public function preDestroy() : Void;
+	@:overload public function preDestroy() : Void;
 	
 	
 }

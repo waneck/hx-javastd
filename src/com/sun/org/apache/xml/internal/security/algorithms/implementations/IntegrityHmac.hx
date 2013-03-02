@@ -26,7 +26,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	*
 	*@inheritDoc
 	*/
-	@:overload @:abstract override public function engineGetURI() : String;
+	@:overload @:abstract public function engineGetURI() : String;
 	
 	/**
 	* Method IntegrityHmacSHA1das
@@ -42,9 +42,9 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param params
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#verify(byte[])}
@@ -54,7 +54,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @return true if the signature is correct
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#initVerify(java.security.PublicKey)}
@@ -63,7 +63,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param secretKey
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineInitVerify(secretKey : java.security.Key) : Void;
+	@:overload private function engineInitVerify(secretKey : java.security.Key) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#sign()}
@@ -72,7 +72,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @return the result of the {@link java.security.Signature#sign()} method
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Method engineInitSign
@@ -80,7 +80,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param secretKey
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineInitSign(secretKey : java.security.Key) : Void;
+	@:overload private function engineInitSign(secretKey : java.security.Key) : Void;
 	
 	/**
 	* Method engineInitSign
@@ -89,7 +89,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param algorithmParameterSpec
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineInitSign(secretKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload private function engineInitSign(secretKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/**
 	* Method engineInitSign
@@ -98,7 +98,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param secureRandom
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineInitSign(secretKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
+	@:overload private function engineInitSign(secretKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[])}
@@ -107,7 +107,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte)}
@@ -116,7 +116,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param input
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Proxy method for {@link java.security.Signature#update(byte[], int, int)}
@@ -127,35 +127,35 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 	* @param len
 	* @throws XMLSignatureException
 	*/
-	@:overload override private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/**
 	* Method engineGetJCEAlgorithmString
 	* @inheritDoc
 	*
 	*/
-	@:overload override private function engineGetJCEAlgorithmString() : String;
+	@:overload private function engineGetJCEAlgorithmString() : String;
 	
 	/**
 	* Method engineGetJCEAlgorithmString
 	*
 	* @inheritDoc
 	*/
-	@:overload override private function engineGetJCEProviderName() : String;
+	@:overload private function engineGetJCEProviderName() : String;
 	
 	/**
 	* Method engineSetHMACOutputLength
 	*
 	* @param HMACOutputLength
 	*/
-	@:overload override private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
+	@:overload private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
 	
 	/**
 	* Method engineGetContextFromElement
 	*
 	* @param element
 	*/
-	@:overload override private function engineGetContextFromElement(element : org.w3c.dom.Element) : Void;
+	@:overload private function engineGetContextFromElement(element : org.w3c.dom.Element) : Void;
 	
 	/**
 	* Method engineAddContextToElement
@@ -172,7 +172,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 * @author $Author: mullan $
 * @version $Revision: 1.5 $
 */
-@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA1') extern class IntegrityHmac_IntegrityHmacSHA1 extends IntegrityHmac
+@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA1') extern class IntegrityHmac_IntegrityHmacSHA1 extends com.sun.org.apache.xml.internal.security.algorithms.implementations.IntegrityHmac
 {
 	/**
 	* Constructor IntegrityHmacSHA1
@@ -196,7 +196,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 * @author $Author: mullan $
 * @version $Revision: 1.5 $
 */
-@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA256') extern class IntegrityHmac_IntegrityHmacSHA256 extends IntegrityHmac
+@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA256') extern class IntegrityHmac_IntegrityHmacSHA256 extends com.sun.org.apache.xml.internal.security.algorithms.implementations.IntegrityHmac
 {
 	/**
 	* Constructor IntegrityHmacSHA256
@@ -220,7 +220,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 * @author $Author: mullan $
 * @version $Revision: 1.5 $
 */
-@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA384') extern class IntegrityHmac_IntegrityHmacSHA384 extends IntegrityHmac
+@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA384') extern class IntegrityHmac_IntegrityHmacSHA384 extends com.sun.org.apache.xml.internal.security.algorithms.implementations.IntegrityHmac
 {
 	/**
 	* Constructor IntegrityHmacSHA384
@@ -244,7 +244,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 * @author $Author: mullan $
 * @version $Revision: 1.5 $
 */
-@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA512') extern class IntegrityHmac_IntegrityHmacSHA512 extends IntegrityHmac
+@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacSHA512') extern class IntegrityHmac_IntegrityHmacSHA512 extends com.sun.org.apache.xml.internal.security.algorithms.implementations.IntegrityHmac
 {
 	/**
 	* Constructor IntegrityHmacSHA512
@@ -268,7 +268,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 * @author $Author: mullan $
 * @version $Revision: 1.5 $
 */
-@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacRIPEMD160') extern class IntegrityHmac_IntegrityHmacRIPEMD160 extends IntegrityHmac
+@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacRIPEMD160') extern class IntegrityHmac_IntegrityHmacRIPEMD160 extends com.sun.org.apache.xml.internal.security.algorithms.implementations.IntegrityHmac
 {
 	/**
 	* Constructor IntegrityHmacRIPEMD160
@@ -292,7 +292,7 @@ extern class IntegrityHmac extends com.sun.org.apache.xml.internal.security.algo
 * @author $Author: mullan $
 * @version $Revision: 1.5 $
 */
-@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacMD5') extern class IntegrityHmac_IntegrityHmacMD5 extends IntegrityHmac
+@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$IntegrityHmac$IntegrityHmacMD5') extern class IntegrityHmac_IntegrityHmacMD5 extends com.sun.org.apache.xml.internal.security.algorithms.implementations.IntegrityHmac
 {
 	/**
 	* Constructor IntegrityHmacMD5

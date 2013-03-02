@@ -31,15 +31,15 @@ extern class JIS_X_0208 extends java.nio.charset.Charset
 	
 	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }
 @:native('sun$nio$cs$ext$JIS_X_0208$Decoder') @:internal extern class JIS_X_0208_Decoder extends sun.nio.cs.ext.JIS_X_0208_Decoder
 {
-	@:overload override private function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload private function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
 	@:overload public function new(cs : java.nio.charset.Charset) : Void;
 	

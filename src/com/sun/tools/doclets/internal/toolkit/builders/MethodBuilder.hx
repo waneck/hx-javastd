@@ -45,7 +45,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	*
 	* @return an instance of a MethodBuilder.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.MethodWriter) : MethodBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.MethodWriter) : com.sun.tools.doclets.internal.toolkit.builders.MethodBuilder;
 	
 	/**
 	* {@inheritDoc}

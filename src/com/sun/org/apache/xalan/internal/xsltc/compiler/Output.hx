@@ -26,7 +26,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Displays the contents of this element (for debugging)
 	*/
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	/**
 	* Disables this <xsl:output> element in case where there are some other
@@ -41,18 +41,18 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	
 	@:overload public function getOutputMethod() : String;
 	
-	@:overload public function mergeOutput(previous : Output) : Void;
+	@:overload public function mergeOutput(previous : com.sun.org.apache.xalan.internal.xsltc.compiler.Output) : Void;
 	
 	/**
 	* Scans the attribute list for the xsl:output instruction
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Compile code that passes the information in this <xsl:output> element
 	* to the appropriate fields in the translet
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

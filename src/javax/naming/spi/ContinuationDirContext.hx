@@ -25,9 +25,9 @@ package javax.naming.spi;
 */
 @:internal extern class ContinuationDirContext extends javax.naming.spi.ContinuationContext implements javax.naming.directory.DirContext
 {
-	@:overload private function getTargetContext(name : javax.naming.Name) : DirContextNamePair;
+	@:overload private function getTargetContext(name : javax.naming.Name) : javax.naming.spi.ContinuationDirContext.DirContextNamePair;
 	
-	@:overload private function getTargetContext(name : String) : DirContextStringPair;
+	@:overload private function getTargetContext(name : String) : javax.naming.spi.ContinuationDirContext.DirContextStringPair;
 	
 	@:overload public function getAttributes(name : String) : javax.naming.directory.Attributes;
 	

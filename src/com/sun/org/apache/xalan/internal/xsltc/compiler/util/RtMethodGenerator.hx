@@ -27,11 +27,11 @@ extern class RtMethodGenerator extends com.sun.org.apache.xalan.internal.xsltc.c
 	
 	@:overload public function getIteratorIndex() : Int;
 	
-	@:overload @:final override public function storeHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:final public function storeHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload @:final override public function loadHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload @:final public function loadHandler() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function getLocalIndex(name : String) : Int;
+	@:overload public function getLocalIndex(name : String) : Int;
 	
 	
 }

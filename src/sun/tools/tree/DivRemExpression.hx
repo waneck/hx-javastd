@@ -33,7 +33,7 @@ extern class DivRemExpression extends sun.tools.tree.BinaryArithmeticExpression
 	/**
 	* Inline
 	*/
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	
 }

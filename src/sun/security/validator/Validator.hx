@@ -137,19 +137,19 @@ extern class Validator
 	* Get a new Validator instance using the trusted certificates from the
 	* specified KeyStore as trust anchors.
 	*/
-	@:overload public static function getInstance(type : String, variant : String, ks : java.security.KeyStore) : Validator;
+	@:overload public static function getInstance(type : String, variant : String, ks : java.security.KeyStore) : sun.security.validator.Validator;
 	
 	/**
 	* Get a new Validator instance using the Set of X509Certificates as trust
 	* anchors.
 	*/
-	@:overload public static function getInstance(type : String, variant : String, trustedCerts : java.util.Collection<java.security.cert.X509Certificate>) : Validator;
+	@:overload public static function getInstance(type : String, variant : String, trustedCerts : java.util.Collection<java.security.cert.X509Certificate>) : sun.security.validator.Validator;
 	
 	/**
 	* Get a new Validator instance using the provided PKIXBuilderParameters.
 	* This method can only be used with the PKIX validator.
 	*/
-	@:overload public static function getInstance(type : String, variant : String, params : java.security.cert.PKIXBuilderParameters) : Validator;
+	@:overload public static function getInstance(type : String, variant : String, params : java.security.cert.PKIXBuilderParameters) : sun.security.validator.Validator;
 	
 	/**
 	* Validate the given certificate chain.

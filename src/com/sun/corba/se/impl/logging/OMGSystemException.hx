@@ -7,9 +7,9 @@ extern class OMGSystemException extends com.sun.corba.se.spi.logging.LogWrapperB
 {
 	@:overload public function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : OMGSystemException;
+	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.OMGSystemException;
 	
-	@:overload public static function get(logDomain : String) : OMGSystemException;
+	@:overload public static function get(logDomain : String) : com.sun.corba.se.impl.logging.OMGSystemException;
 	
 	public static var IDL_CONTEXT_NOT_FOUND(default, null) : Int;
 	

@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class DoubleSignature implements sun.reflect.generics.tree.BaseType
 {
-	@:overload public static function make() : DoubleSignature;
+	@:overload public static function make() : sun.reflect.generics.tree.DoubleSignature;
 	
 	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	

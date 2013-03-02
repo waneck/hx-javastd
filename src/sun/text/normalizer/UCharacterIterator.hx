@@ -57,7 +57,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @exception IllegalArgumentException if the argument is null
 	* @stable ICU 2.4
 	*/
-	@:overload @:final public static function getInstance(source : String) : UCharacterIterator;
+	@:overload @:final public static function getInstance(source : String) : sun.text.normalizer.UCharacterIterator;
 	
 	/**
 	* Returns a <code>UCharacterIterator</code> object given a
@@ -67,7 +67,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @exception IllegalArgumentException if the argument is null
 	* @stable ICU 2.4
 	*/
-	@:overload @:final public static function getInstance(source : java.lang.StringBuffer) : UCharacterIterator;
+	@:overload @:final public static function getInstance(source : java.lang.StringBuffer) : sun.text.normalizer.UCharacterIterator;
 	
 	/**
 	* Returns a <code>UCharacterIterator</code> object given a
@@ -77,7 +77,7 @@ extern class UCharacterIterator implements java.lang.Cloneable
 	* @exception IllegalArgumentException if the argument is null
 	* @stable ICU 2.4
 	*/
-	@:overload @:final public static function getInstance(source : java.text.CharacterIterator) : UCharacterIterator;
+	@:overload @:final public static function getInstance(source : java.text.CharacterIterator) : sun.text.normalizer.UCharacterIterator;
 	
 	/**
 	* Returns the code unit at the current index.  If index is out

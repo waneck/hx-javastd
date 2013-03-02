@@ -326,7 +326,7 @@ extern class MetalIconFactory implements java.io.Serializable
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$plaf$metal$MetalIconFactory$TreeFolderIcon') extern class MetalIconFactory_TreeFolderIcon extends MetalIconFactory_FolderIcon16
+@:native('javax$swing$plaf$metal$MetalIconFactory$TreeFolderIcon') extern class MetalIconFactory_TreeFolderIcon extends javax.swing.plaf.metal.MetalIconFactory.MetalIconFactory_FolderIcon16
 {
 	@:overload override public function getShift() : Int;
 	
@@ -359,7 +359,7 @@ extern class MetalIconFactory implements java.io.Serializable
 	
 	
 }
-@:native('javax$swing$plaf$metal$MetalIconFactory$TreeLeafIcon') extern class MetalIconFactory_TreeLeafIcon extends MetalIconFactory_FileIcon16
+@:native('javax$swing$plaf$metal$MetalIconFactory$TreeLeafIcon') extern class MetalIconFactory_TreeLeafIcon extends javax.swing.plaf.metal.MetalIconFactory.MetalIconFactory_FileIcon16
 {
 	@:overload override public function getShift() : Int;
 	
@@ -474,13 +474,13 @@ extern class MetalIconFactory implements java.io.Serializable
 {
 	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload override private function paintToImage(c : java.awt.Component, image : java.awt.Image, g2 : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload private function paintToImage(c : java.awt.Component, image : java.awt.Image, g2 : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
 	@:overload public function getIconWidth() : Int;
 	
 	@:overload public function getIconHeight() : Int;
 	
-	@:overload override private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
 	
 }
@@ -488,9 +488,9 @@ extern class MetalIconFactory implements java.io.Serializable
 {
 	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
-	@:overload override private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
-	@:overload override private function paintToImage(c : java.awt.Component, image : java.awt.Image, g2 : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload private function paintToImage(c : java.awt.Component, image : java.awt.Image, g2 : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
 	@:overload public function getIconWidth() : Int;
 	

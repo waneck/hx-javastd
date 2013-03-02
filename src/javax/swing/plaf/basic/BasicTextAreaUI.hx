@@ -191,7 +191,7 @@ extern class BasicTextAreaUI extends javax.swing.plaf.basic.BasicTextUI
 	* @see #forwardUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	

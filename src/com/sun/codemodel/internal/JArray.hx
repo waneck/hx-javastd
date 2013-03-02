@@ -28,9 +28,9 @@ extern class JArray extends com.sun.codemodel.internal.JExpressionImpl
 	/**
 	* Add an element to the array initializer
 	*/
-	@:overload public function add(e : com.sun.codemodel.internal.JExpression) : JArray;
+	@:overload public function add(e : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JArray;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

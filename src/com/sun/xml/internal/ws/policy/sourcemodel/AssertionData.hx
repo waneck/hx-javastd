@@ -35,7 +35,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionData(name : javax.xml.namespace.QName) : AssertionData;
+	@:overload public static function createAssertionData(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Constructs assertion data wrapper instance for an assertion parameter that
@@ -47,7 +47,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionParameterData(name : javax.xml.namespace.QName) : AssertionData;
+	@:overload public static function createAssertionParameterData(name : javax.xml.namespace.QName) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Constructs assertion data wrapper instance for an assertion that does
@@ -63,7 +63,7 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>, optional : Bool, ignorable : Bool) : AssertionData;
+	@:overload public static function createAssertionData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>, optional : Bool, ignorable : Bool) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Constructs assertion data wrapper instance for an assertion parameter that
@@ -77,9 +77,9 @@ extern class AssertionData implements java.lang.Cloneable implements java.io.Ser
 	* {@link ModelNode.Type#ASSERTION ASSERTION} or
 	* {@link ModelNode.Type#ASSERTION_PARAMETER_NODE ASSERTION_PARAMETER_NODE}
 	*/
-	@:overload public static function createAssertionParameterData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>) : AssertionData;
+	@:overload public static function createAssertionParameterData(name : javax.xml.namespace.QName, value : String, attributes : java.util.Map<javax.xml.namespace.QName, String>) : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
-	@:overload private function clone() : AssertionData;
+	@:overload private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData;
 	
 	/**
 	* Returns true if the given attribute exists, false otherwise.

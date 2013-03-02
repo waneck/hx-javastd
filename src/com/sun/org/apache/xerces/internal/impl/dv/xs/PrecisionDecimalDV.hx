@@ -52,7 +52,7 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 {
 	@:overload public function equals(val : Dynamic) : Bool;
 	
-	@:overload public function compareTo(val : PrecisionDecimalDV_XPrecisionDecimal) : Int;
+	@:overload public function compareTo(val : com.sun.org.apache.xerces.internal.impl.dv.xs.PrecisionDecimalDV.PrecisionDecimalDV_XPrecisionDecimal) : Int;
 	
 	@:overload @:synchronized public function toString() : String;
 	
@@ -60,7 +60,7 @@ package com.sun.org.apache.xerces.internal.impl.dv.xs;
 	* @param decimal
 	* @return
 	*/
-	@:overload public function isIdentical(decimal : PrecisionDecimalDV_XPrecisionDecimal) : Bool;
+	@:overload public function isIdentical(decimal : com.sun.org.apache.xerces.internal.impl.dv.xs.PrecisionDecimalDV.PrecisionDecimalDV_XPrecisionDecimal) : Bool;
 	
 	
 }

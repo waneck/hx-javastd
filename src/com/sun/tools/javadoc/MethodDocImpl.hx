@@ -106,7 +106,7 @@ extern class MethodDocImpl extends com.sun.tools.javadoc.ExecutableMemberDocImpl
 	* parameters.  Type parameters follow the class name, as they do
 	* in the syntax for invoking methods with explicit type parameters.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

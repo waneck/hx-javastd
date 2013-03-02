@@ -332,7 +332,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* local time.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getOffset(date : haxe.Int64) : Int;
+	@:require(java4) @:overload public function getOffset(date : haxe.Int64) : Int;
 	
 	/**
 	* Returns the difference in milliseconds between local time and
@@ -360,21 +360,21 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	*                  <code>month</code>, <code>day</code>, <code>dayOfWeek</code>,
 	*                  or <code>millis</code> parameters are out of range
 	*/
-	@:overload override public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, millis : Int) : Int;
+	@:overload public function getOffset(era : Int, year : Int, month : Int, day : Int, dayOfWeek : Int, millis : Int) : Int;
 	
 	/**
 	* Gets the GMT offset for this time zone.
 	* @return the GMT offset value in milliseconds
 	* @see #setRawOffset
 	*/
-	@:overload override public function getRawOffset() : Int;
+	@:overload public function getRawOffset() : Int;
 	
 	/**
 	* Sets the base time zone offset to GMT.
 	* This is the offset to add to UTC to get local time.
 	* @see #getRawOffset
 	*/
-	@:overload override public function setRawOffset(offsetMillis : Int) : Void;
+	@:overload public function setRawOffset(offsetMillis : Int) : Void;
 	
 	/**
 	* Sets the amount of time in milliseconds that the clock is advanced
@@ -399,14 +399,14 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* @see #setDSTSavings
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getDSTSavings() : Int;
+	@:require(java2) @:overload public function getDSTSavings() : Int;
 	
 	/**
 	* Queries if this time zone uses daylight saving time.
 	* @return true if this time zone uses daylight saving time;
 	* false otherwise.
 	*/
-	@:overload override public function useDaylightTime() : Bool;
+	@:overload public function useDaylightTime() : Bool;
 	
 	/**
 	* Returns {@code true} if this {@code SimpleTimeZone} observes
@@ -417,20 +417,20 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* Daylight Saving Time; {@code false} otherwise.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function observesDaylightTime() : Bool;
+	@:require(java7) @:overload public function observesDaylightTime() : Bool;
 	
 	/**
 	* Queries if the given date is in daylight saving time.
 	* @return true if daylight saving time is in effective at the
 	* given date; false otherwise.
 	*/
-	@:overload override public function inDaylightTime(date : java.util.Date) : Bool;
+	@:overload public function inDaylightTime(date : java.util.Date) : Bool;
 	
 	/**
 	* Returns a clone of this <code>SimpleTimeZone</code> instance.
 	* @return a clone of this instance.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Generates the hash code for the SimpleDateFormat object.
@@ -454,7 +454,7 @@ extern class SimpleTimeZone extends java.util.TimeZone
 	* same rules and offset as this one
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function hasSameRules(other : java.util.TimeZone) : Bool;
+	@:require(java2) @:overload public function hasSameRules(other : java.util.TimeZone) : Bool;
 	
 	/**
 	* Returns a string representation of this time zone.

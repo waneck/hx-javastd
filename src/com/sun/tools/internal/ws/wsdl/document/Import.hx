@@ -40,7 +40,7 @@ extern class Import extends com.sun.tools.internal.ws.wsdl.framework.Entity
 	
 	@:overload public function setLocation(s : String) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload public function getElementName() : javax.xml.namespace.QName;
 	
 	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
@@ -48,7 +48,7 @@ extern class Import extends com.sun.tools.internal.ws.wsdl.framework.Entity
 	
 	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload public function validateThis() : Void;
 	
 	
 }

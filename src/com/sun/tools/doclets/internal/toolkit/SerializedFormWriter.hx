@@ -108,14 +108,14 @@ package com.sun.tools.doclets.internal.toolkit;
 	*
 	* @return an instance of a SerialFieldWriter.
 	*/
-	@:overload public function getSerialFieldWriter(classDoc : com.sun.javadoc.ClassDoc) : SerializedFormWriter_SerialFieldWriter;
+	@:overload public function getSerialFieldWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialFieldWriter;
 	
 	/**
 	* Return an instance of a SerialMethodWriter.
 	*
 	* @return an instance of a SerialMethodWriter.
 	*/
-	@:overload public function getSerialMethodWriter(classDoc : com.sun.javadoc.ClassDoc) : SerializedFormWriter_SerialMethodWriter;
+	@:overload public function getSerialMethodWriter(classDoc : com.sun.javadoc.ClassDoc) : com.sun.tools.doclets.internal.toolkit.SerializedFormWriter.SerializedFormWriter_SerialMethodWriter;
 	
 	/**
 	* Close the writer.

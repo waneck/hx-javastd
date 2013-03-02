@@ -47,7 +47,7 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* the UI obtained from the default <code>LookAndFeel</code>
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getToolTipText(a : javax.swing.text.JTextComponent, b : java.awt.Point) : String;
+	@:require(java4) @:overload public function getToolTipText(a : javax.swing.text.JTextComponent, b : java.awt.Point) : String;
 	
 	/**
 	* Invokes the <code>modelToView</code> method on each UI handled by this object.
@@ -55,7 +55,7 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function modelToView(a : javax.swing.text.JTextComponent, b : Int) : java.awt.Rectangle;
+	@:overload public function modelToView(a : javax.swing.text.JTextComponent, b : Int) : java.awt.Rectangle;
 	
 	/**
 	* Invokes the <code>modelToView</code> method on each UI handled by this object.
@@ -63,7 +63,7 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function modelToView(a : javax.swing.text.JTextComponent, b : Int, c : javax.swing.text.Position.Position_Bias) : java.awt.Rectangle;
+	@:overload public function modelToView(a : javax.swing.text.JTextComponent, b : Int, c : javax.swing.text.Position.Position_Bias) : java.awt.Rectangle;
 	
 	/**
 	* Invokes the <code>viewToModel</code> method on each UI handled by this object.
@@ -71,7 +71,7 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function viewToModel(a : javax.swing.text.JTextComponent, b : java.awt.Point) : Int;
+	@:overload public function viewToModel(a : javax.swing.text.JTextComponent, b : java.awt.Point) : Int;
 	
 	/**
 	* Invokes the <code>viewToModel</code> method on each UI handled by this object.
@@ -79,7 +79,7 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function viewToModel(a : javax.swing.text.JTextComponent, b : java.awt.Point, c : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function viewToModel(a : javax.swing.text.JTextComponent, b : java.awt.Point, c : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Invokes the <code>getNextVisualPositionFrom</code> method on each UI handled by this object.
@@ -87,17 +87,17 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getNextVisualPositionFrom(a : javax.swing.text.JTextComponent, b : Int, c : javax.swing.text.Position.Position_Bias, d : Int, e : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function getNextVisualPositionFrom(a : javax.swing.text.JTextComponent, b : Int, c : javax.swing.text.Position.Position_Bias, d : Int, e : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Invokes the <code>damageRange</code> method on each UI handled by this object.
 	*/
-	@:overload override public function damageRange(a : javax.swing.text.JTextComponent, b : Int, c : Int) : Void;
+	@:overload public function damageRange(a : javax.swing.text.JTextComponent, b : Int, c : Int) : Void;
 	
 	/**
 	* Invokes the <code>damageRange</code> method on each UI handled by this object.
 	*/
-	@:overload override public function damageRange(a : javax.swing.text.JTextComponent, b : Int, c : Int, d : javax.swing.text.Position.Position_Bias, e : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload public function damageRange(a : javax.swing.text.JTextComponent, b : Int, c : Int, d : javax.swing.text.Position.Position_Bias, e : javax.swing.text.Position.Position_Bias) : Void;
 	
 	/**
 	* Invokes the <code>getEditorKit</code> method on each UI handled by this object.
@@ -105,7 +105,7 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getEditorKit(a : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
+	@:overload public function getEditorKit(a : javax.swing.text.JTextComponent) : javax.swing.text.EditorKit;
 	
 	/**
 	* Invokes the <code>getRootView</code> method on each UI handled by this object.
@@ -113,7 +113,7 @@ extern class MultiTextUI extends javax.swing.plaf.TextUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getRootView(a : javax.swing.text.JTextComponent) : javax.swing.text.View;
+	@:overload public function getRootView(a : javax.swing.text.JTextComponent) : javax.swing.text.View;
 	
 	/**
 	* Invokes the <code>contains</code> method on each UI handled by this object.

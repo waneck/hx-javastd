@@ -139,7 +139,7 @@ extern class MemoryUsage
 	*         if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : MemoryUsage;
+	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryUsage;
 	
 	
 }

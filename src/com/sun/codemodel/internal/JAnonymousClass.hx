@@ -31,9 +31,9 @@ package com.sun.codemodel.internal;
 */
 @:internal extern class JAnonymousClass extends com.sun.codemodel.internal.JDefinedClass
 {
-	@:overload override public function fullName() : String;
+	@:overload public function fullName() : String;
 	
-	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

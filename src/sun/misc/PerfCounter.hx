@@ -60,40 +60,40 @@ extern class PerfCounter
 	/**
 	* Number of findClass calls
 	*/
-	@:overload public static function getFindClasses() : PerfCounter;
+	@:overload public static function getFindClasses() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in finding classes that includes
 	* lookup and read class bytes and defineClass
 	*/
-	@:overload public static function getFindClassTime() : PerfCounter;
+	@:overload public static function getFindClassTime() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in finding classes
 	*/
-	@:overload public static function getReadClassBytesTime() : PerfCounter;
+	@:overload public static function getReadClassBytesTime() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in the parent delegation to
 	* the parent of the defining class loader
 	*/
-	@:overload public static function getParentDelegationTime() : PerfCounter;
+	@:overload public static function getParentDelegationTime() : sun.misc.PerfCounter;
 	
 	/**
 	* Number of zip files opened.
 	*/
-	@:overload public static function getZipFileCount() : PerfCounter;
+	@:overload public static function getZipFileCount() : sun.misc.PerfCounter;
 	
 	/**
 	* Time (ns) spent in opening the zip files that
 	* includes building the entries hash table
 	*/
-	@:overload public static function getZipFileOpenTime() : PerfCounter;
+	@:overload public static function getZipFileOpenTime() : sun.misc.PerfCounter;
 	
 	/**
 	* D3D graphic pipeline available
 	*/
-	@:overload public static function getD3DAvailable() : PerfCounter;
+	@:overload public static function getD3DAvailable() : sun.misc.PerfCounter;
 	
 	
 }

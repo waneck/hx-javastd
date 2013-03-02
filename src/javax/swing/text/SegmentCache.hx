@@ -28,7 +28,7 @@ package javax.swing.text;
 	/**
 	* Returns the shared SegmentCache.
 	*/
-	@:overload public static function getSharedInstance() : SegmentCache;
+	@:overload public static function getSharedInstance() : javax.swing.text.SegmentCache;
 	
 	/**
 	* A convenience method to get a Segment from the shared

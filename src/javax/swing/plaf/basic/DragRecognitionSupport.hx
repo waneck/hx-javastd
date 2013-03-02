@@ -39,7 +39,7 @@ package javax.swing.plaf.basic;
 	/**
 	* Returns whether or not a drag gesture recognition is ongoing.
 	*/
-	@:overload public static function mouseDragged(me : java.awt.event.MouseEvent, bd : DragRecognitionSupport_BeforeDrag) : Bool;
+	@:overload public static function mouseDragged(me : java.awt.event.MouseEvent, bd : javax.swing.plaf.basic.DragRecognitionSupport.DragRecognitionSupport_BeforeDrag) : Bool;
 	
 	
 }

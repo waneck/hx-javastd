@@ -194,7 +194,7 @@ extern class DTD implements javax.swing.text.html.parser.DTDConstants
 	*/
 	@:overload public function toString() : String;
 	
-	@:overload public static function putDTDHash(name : String, dtd : DTD) : Void;
+	@:overload public static function putDTDHash(name : String, dtd : javax.swing.text.html.parser.DTD) : Void;
 	
 	/**
 	* Returns a DTD with the specified <code>name</code>.  If
@@ -205,7 +205,7 @@ extern class DTD implements javax.swing.text.html.parser.DTDConstants
 	* @param name the name of the DTD
 	* @return the DTD which corresponds to <code>name</code>
 	*/
-	@:overload public static function getDTD(name : String) : DTD;
+	@:overload public static function getDTD(name : String) : javax.swing.text.html.parser.DTD;
 	
 	/**
 	* Recreates a DTD from an archived format.

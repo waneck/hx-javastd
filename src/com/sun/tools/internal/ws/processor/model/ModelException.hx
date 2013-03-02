@@ -39,7 +39,7 @@ extern class ModelException extends com.sun.tools.internal.ws.processor.Processo
 	
 	@:overload public function new(arg : com.sun.xml.internal.ws.util.localization.Localizable) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload public function getDefaultResourceBundleName() : String;
 	
 	
 }

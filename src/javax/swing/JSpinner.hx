@@ -144,14 +144,14 @@ package javax.swing;
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Resets the UI property with the value from the current look and feel.
 	*
 	* @see UIManager#getUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* This method is called by the constructors to create the
@@ -388,7 +388,7 @@ package javax.swing;
 	* @return the <code>AccessibleContext</code> for the <code>JSpinner</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java5) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -446,7 +446,7 @@ package javax.swing;
 	* @see #getTextField
 	* @see JSpinner#addChangeListener
 	*/
-	@:overload public function new(spinner : JSpinner) : Void;
+	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Disconnect <code>this</code> editor from the specified
@@ -456,7 +456,7 @@ package javax.swing;
 	* @param spinner the <code>JSpinner</code> to disconnect this
 	*    editor from; the same spinner as was passed to the constructor.
 	*/
-	@:overload public function dismiss(spinner : JSpinner) : Void;
+	@:overload public function dismiss(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Returns the <code>JSpinner</code> ancestor of this editor or
@@ -472,7 +472,7 @@ package javax.swing;
 	*
 	* @see JSpinner#createEditor
 	*/
-	@:overload public function getSpinner() : JSpinner;
+	@:overload public function getSpinner() : javax.swing.JSpinner;
 	
 	/**
 	* Returns the <code>JFormattedTextField</code> child of this
@@ -577,7 +577,7 @@ package javax.swing;
 	* @see javax.swing.JComponent#getBaselineResizeBehavior()
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaseline(width : Int, height : Int) : Int;
+	@:require(java6) @:overload public function getBaseline(width : Int, height : Int) : Int;
 	
 	/**
 	* Returns an enum indicating how the baseline of the component
@@ -587,7 +587,7 @@ package javax.swing;
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
+	@:require(java6) @:overload public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }
@@ -597,13 +597,13 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$DateEditorFormatter') @:internal extern class JSpinner_DateEditorFormatter extends javax.swing.text.DateFormatter
 {
-	@:overload override public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
+	@:overload public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload override public function getMinimum() : java.lang.Comparable<Dynamic>;
+	@:overload public function getMinimum() : java.lang.Comparable<Dynamic>;
 	
-	@:overload override public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
+	@:overload public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload override public function getMaximum() : java.lang.Comparable<Dynamic>;
+	@:overload public function getMaximum() : java.lang.Comparable<Dynamic>;
 	
 	
 }
@@ -616,7 +616,7 @@ package javax.swing;
 * are mapped to the <code>SpinnerDateModel</code>.
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$JSpinner$DateEditor') extern class JSpinner_DateEditor extends JSpinner_DefaultEditor
+@:require(java4) @:native('javax$swing$JSpinner$DateEditor') extern class JSpinner_DateEditor extends javax.swing.JSpinner.JSpinner_DefaultEditor
 {
 	/**
 	* Construct a <code>JSpinner</code> editor that supports displaying
@@ -634,7 +634,7 @@ package javax.swing;
 	* @see #getFormat
 	* @see SpinnerDateModel
 	*/
-	@:overload public function new(spinner : JSpinner) : Void;
+	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Construct a <code>JSpinner</code> editor that supports displaying
@@ -656,7 +656,7 @@ package javax.swing;
 	* @see SpinnerDateModel
 	* @see java.text.SimpleDateFormat
 	*/
-	@:overload public function new(spinner : JSpinner, dateFormatPattern : String) : Void;
+	@:overload public function new(spinner : javax.swing.JSpinner, dateFormatPattern : String) : Void;
 	
 	/**
 	* Returns the <code>java.text.SimpleDateFormat</code> object the
@@ -687,13 +687,13 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$NumberEditorFormatter') @:internal extern class JSpinner_NumberEditorFormatter extends javax.swing.text.NumberFormatter
 {
-	@:overload override public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
+	@:overload public function setMinimum(min : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload override public function getMinimum() : java.lang.Comparable<Dynamic>;
+	@:overload public function getMinimum() : java.lang.Comparable<Dynamic>;
 	
-	@:overload override public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
+	@:overload public function setMaximum(max : java.lang.Comparable<Dynamic>) : Void;
 	
-	@:overload override public function getMaximum() : java.lang.Comparable<Dynamic>;
+	@:overload public function getMaximum() : java.lang.Comparable<Dynamic>;
 	
 	
 }
@@ -706,7 +706,7 @@ package javax.swing;
 * are mapped to the <code>SpinnerNumberModel</code>.
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$JSpinner$NumberEditor') extern class JSpinner_NumberEditor extends JSpinner_DefaultEditor
+@:require(java4) @:native('javax$swing$JSpinner$NumberEditor') extern class JSpinner_NumberEditor extends javax.swing.JSpinner.JSpinner_DefaultEditor
 {
 	/**
 	* Construct a <code>JSpinner</code> editor that supports displaying
@@ -724,7 +724,7 @@ package javax.swing;
 	* @see #getFormat
 	* @see SpinnerNumberModel
 	*/
-	@:overload public function new(spinner : JSpinner) : Void;
+	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Construct a <code>JSpinner</code> editor that supports displaying
@@ -747,7 +747,7 @@ package javax.swing;
 	* @see SpinnerNumberModel
 	* @see java.text.DecimalFormat
 	*/
-	@:overload public function new(spinner : JSpinner, decimalFormatPattern : String) : Void;
+	@:overload public function new(spinner : javax.swing.JSpinner, decimalFormatPattern : String) : Void;
 	
 	/**
 	* Returns the <code>java.text.DecimalFormat</code> object the
@@ -776,7 +776,7 @@ package javax.swing;
 * <code>SpinnerListModel</code>.
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$JSpinner$ListEditor') extern class JSpinner_ListEditor extends JSpinner_DefaultEditor
+@:require(java4) @:native('javax$swing$JSpinner$ListEditor') extern class JSpinner_ListEditor extends javax.swing.JSpinner.JSpinner_DefaultEditor
 {
 	/**
 	* Construct a <code>JSpinner</code> editor that supports displaying
@@ -793,7 +793,7 @@ package javax.swing;
 	* @see #getModel
 	* @see SpinnerListModel
 	*/
-	@:overload public function new(spinner : JSpinner) : Void;
+	@:overload public function new(spinner : javax.swing.JSpinner) : Void;
 	
 	/**
 	* Return our spinner ancestor's <code>SpinnerNumberModel</code>.
@@ -814,11 +814,11 @@ package javax.swing;
 */
 @:native('javax$swing$JSpinner$ListEditor$ListFormatter') @:internal extern class JSpinner_ListEditor_ListFormatter extends javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter
 {
-	@:overload override public function valueToString(value : Dynamic) : String;
+	@:overload public function valueToString(value : Dynamic) : String;
 	
-	@:overload override public function stringToValue(string : String) : Dynamic;
+	@:overload public function stringToValue(string : String) : Dynamic;
 	
-	@:overload override private function getDocumentFilter() : javax.swing.text.DocumentFilter;
+	@:overload private function getDocumentFilter() : javax.swing.text.DocumentFilter;
 	
 	
 }
@@ -889,7 +889,7 @@ package javax.swing;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible children of the object.
@@ -917,7 +917,7 @@ package javax.swing;
 	* @return AccessibleAction if supported by object; else return null
 	* @see AccessibleAction
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Gets the AccessibleText associated with this object presenting
@@ -926,7 +926,7 @@ package javax.swing;
 	* @return AccessibleText if supported by object; else return null
 	* @see AccessibleText
 	*/
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the AccessibleValue associated with this object.
@@ -935,7 +935,7 @@ package javax.swing;
 	* @see AccessibleValue
 	*
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the value of this object as a Number.  If the value has not been

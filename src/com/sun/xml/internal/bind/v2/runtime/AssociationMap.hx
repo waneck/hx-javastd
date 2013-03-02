@@ -33,9 +33,9 @@ extern class AssociationMap<XmlNode>
 	
 	@:overload public function addUsed(n : XmlNode) : Void;
 	
-	@:overload public function byElement(e : Dynamic) : AssociationMap_Entry<XmlNode>;
+	@:overload public function byElement(e : Dynamic) : com.sun.xml.internal.bind.v2.runtime.AssociationMap.AssociationMap_Entry<XmlNode>;
 	
-	@:overload public function byPeer(o : Dynamic) : AssociationMap_Entry<XmlNode>;
+	@:overload public function byPeer(o : Dynamic) : com.sun.xml.internal.bind.v2.runtime.AssociationMap.AssociationMap_Entry<XmlNode>;
 	
 	@:overload public function getInnerPeer(element : XmlNode) : Dynamic;
 	

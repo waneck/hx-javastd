@@ -183,7 +183,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* @return the service for this printer job.
 	*
 	*/
-	@:overload override public function getPrintService() : javax.print.PrintService;
+	@:overload public function getPrintService() : javax.print.PrintService;
 	
 	/**
 	* Associate this PrinterJob with a new PrintService.
@@ -196,7 +196,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* @throws PrinterException if the specified service does not support
 	* 2D printing or no longer available.
 	*/
-	@:overload override public function setPrintService(service : javax.print.PrintService) : Void;
+	@:overload public function setPrintService(service : javax.print.PrintService) : Void;
 	
 	@:overload private function updatePageAttributes(service : javax.print.PrintService, page : java.awt.print.PageFormat) : Void;
 	
@@ -222,13 +222,13 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since     1.2
 	*/
-	@:require(java2) @:overload override public function pageDialog(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
+	@:require(java2) @:overload public function pageDialog(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
 	
 	/**
 	* return a PageFormat corresponding to the updated attributes,
 	* or null if the user cancelled the dialog.
 	*/
-	@:overload override public function pageDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : java.awt.print.PageFormat;
+	@:overload public function pageDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : java.awt.print.PageFormat;
 	
 	/**
 	* Presents the user a dialog for changing properties of the
@@ -245,7 +245,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload override public function printDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : Bool;
+	@:overload public function printDialog(attributes : javax.print.attribute.PrintRequestAttributeSet) : Bool;
 	
 	/**
 	* Presents the user a dialog for changing properties of the
@@ -256,7 +256,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* returns true.
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload override public function printDialog() : Bool;
+	@:overload public function printDialog() : Bool;
 	
 	/**
 	* The pages in the document to be printed by this PrinterJob
@@ -264,7 +264,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* for each page is the default page format.
 	* @param Printable Called to render each page of the document.
 	*/
-	@:overload override public function setPrintable(painter : java.awt.print.Printable) : Void;
+	@:overload public function setPrintable(painter : java.awt.print.Printable) : Void;
 	
 	/**
 	* The pages in the document to be printed by this PrinterJob
@@ -274,7 +274,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* @param PageFormat The size and orientation of each page to
 	*                   be printed.
 	*/
-	@:overload override public function setPrintable(painter : java.awt.print.Printable, format : java.awt.print.PageFormat) : Void;
+	@:overload public function setPrintable(painter : java.awt.print.Printable, format : java.awt.print.PageFormat) : Void;
 	
 	/**
 	* The pages in the document to be printed are held by the
@@ -286,7 +286,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* @see PageFormat
 	* @see Printable
 	*/
-	@:overload override public function setPageable(document : java.awt.print.Pageable) : Void;
+	@:overload public function setPageable(document : java.awt.print.Pageable) : Void;
 	
 	@:overload private function initPrinter() : Void;
 	
@@ -313,13 +313,13 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* @see java.awt.print.Pageable
 	* @see java.awt.print.Printable
 	*/
-	@:overload override public function print() : Void;
+	@:overload public function print() : Void;
 	
 	public static var debugPrint : Bool;
 	
 	@:overload private function debug_println(str : String) : Void;
 	
-	@:overload override public function print(attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
+	@:overload public function print(attributes : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
 	/**
 	* updates a Paper object to reflect the current printer's selected
@@ -339,23 +339,23 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* Platform subclasses which can access the actual default paper size
 	* for a printer may override this method.
 	*/
-	@:overload override public function defaultPage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
+	@:overload public function defaultPage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
 	
 	/**
 	* The passed in PageFormat is cloned and altered to be usable on
 	* the PrinterJob's current printer.
 	*/
-	@:overload override public function validatePage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
+	@:overload public function validatePage(page : java.awt.print.PageFormat) : java.awt.print.PageFormat;
 	
 	/**
 	* Set the number of copies to be printed.
 	*/
-	@:overload override public function setCopies(copies : Int) : Void;
+	@:overload public function setCopies(copies : Int) : Void;
 	
 	/**
 	* Get the number of copies to be printed.
 	*/
-	@:overload override public function getCopies() : Int;
+	@:overload public function getCopies() : Int;
 	
 	/* Used when executing a print job where an attribute set may
 	* over ride API values.
@@ -366,7 +366,7 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* Get the name of the printing user.
 	* The caller must have security permission to read system properties.
 	*/
-	@:overload override public function getUserName() : String;
+	@:overload public function getUserName() : String;
 	
 	/* Used when executing a print job where an attribute set may
 	* over ride API values.
@@ -377,12 +377,12 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* Set the name of the document to be printed.
 	* The document name can not be null.
 	*/
-	@:overload override public function setJobName(jobName : String) : Void;
+	@:overload public function setJobName(jobName : String) : Void;
 	
 	/**
 	* Get the name of the document to be printed.
 	*/
-	@:overload override public function getJobName() : String;
+	@:overload public function getJobName() : String;
 	
 	/* Used when executing a print job where an attribute set may
 	* over ride API values.
@@ -476,14 +476,14 @@ extern class RasterPrinterJob extends java.awt.print.PrinterJob
 	* chance. If there is no print job in progress then
 	* this call does nothing.
 	*/
-	@:overload override public function cancel() : Void;
+	@:overload public function cancel() : Void;
 	
 	/**
 	* Returns true is a print job is ongoing but will
 	* be cancelled and the next opportunity. false is
 	* returned otherwise.
 	*/
-	@:overload override public function isCancelled() : Bool;
+	@:overload public function isCancelled() : Bool;
 	
 	/**
 	* Return the Pageable describing the pages to be printed.

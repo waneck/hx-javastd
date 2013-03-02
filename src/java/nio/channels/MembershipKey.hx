@@ -91,7 +91,7 @@ extern class MembershipKey
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:abstract public function block(source : java.net.InetAddress) : MembershipKey;
+	@:overload @:abstract public function block(source : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
 	/**
 	* Unblock multicast datagrams from the given source address that was
@@ -106,7 +106,7 @@ extern class MembershipKey
 	*          If the given source address is not currently blocked or the
 	*          membership key is no longer valid
 	*/
-	@:overload @:abstract public function unblock(source : java.net.InetAddress) : MembershipKey;
+	@:overload @:abstract public function unblock(source : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
 	/**
 	* Returns the channel for which this membership key was created. This

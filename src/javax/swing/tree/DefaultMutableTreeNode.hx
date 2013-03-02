@@ -315,7 +315,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @param   anotherNode     node to test as descendant of this node
 	* @return  true if this node is an ancestor of <code>anotherNode</code>
 	*/
-	@:overload public function isNodeDescendant(anotherNode : DefaultMutableTreeNode) : Bool;
+	@:overload public function isNodeDescendant(anotherNode : javax.swing.tree.DefaultMutableTreeNode) : Bool;
 	
 	/**
 	* Returns the nearest common ancestor to this node and <code>aNode</code>.
@@ -329,7 +329,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  nearest ancestor common to this node and <code>aNode</code>,
 	*          or null if none
 	*/
-	@:overload public function getSharedAncestor(aNode : DefaultMutableTreeNode) : javax.swing.tree.TreeNode;
+	@:overload public function getSharedAncestor(aNode : javax.swing.tree.DefaultMutableTreeNode) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns true if and only if <code>aNode</code> is in the same tree
@@ -340,7 +340,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  true if <code>aNode</code> is in the same tree as this node;
 	*          false if <code>aNode</code> is null
 	*/
-	@:overload public function isNodeRelated(aNode : DefaultMutableTreeNode) : Bool;
+	@:overload public function isNodeRelated(aNode : javax.swing.tree.DefaultMutableTreeNode) : Bool;
 	
 	/**
 	* Returns the depth of the tree rooted at this node -- the longest
@@ -422,7 +422,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the node that follows this node in a preorder traversal, or
 	*          null if this node is last
 	*/
-	@:overload public function getNextNode() : DefaultMutableTreeNode;
+	@:overload public function getNextNode() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the node that precedes this node in a preorder traversal of
@@ -435,7 +435,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @return  the node that precedes this node in a preorder traversal, or
 	*          null if this node is the first
 	*/
-	@:overload public function getPreviousNode() : DefaultMutableTreeNode;
+	@:overload public function getPreviousNode() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Creates and returns an enumeration that traverses the subtree rooted at
@@ -601,7 +601,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #children
 	* @return  the sibling of this node that immediately follows this node
 	*/
-	@:overload public function getNextSibling() : DefaultMutableTreeNode;
+	@:overload public function getNextSibling() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the previous sibling of this node in the parent's children
@@ -611,7 +611,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	*
 	* @return  the sibling of this node that immediately precedes this node
 	*/
-	@:overload public function getPreviousSibling() : DefaultMutableTreeNode;
+	@:overload public function getPreviousSibling() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns true if this node has no children.  To distinguish between
@@ -633,7 +633,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isNodeDescendant
 	* @return  the first leaf in the subtree rooted at this node
 	*/
-	@:overload public function getFirstLeaf() : DefaultMutableTreeNode;
+	@:overload public function getFirstLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Finds and returns the last leaf that is a descendant of this node --
@@ -644,7 +644,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isNodeDescendant
 	* @return  the last leaf in the subtree rooted at this node
 	*/
-	@:overload public function getLastLeaf() : DefaultMutableTreeNode;
+	@:overload public function getLastLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the leaf after this node or null if this node is the
@@ -665,7 +665,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see     #isLeaf
 	* @return  returns the next leaf past this node
 	*/
-	@:overload public function getNextLeaf() : DefaultMutableTreeNode;
+	@:overload public function getNextLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the leaf before this node or null if this node is the
@@ -686,7 +686,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 	* @see             #isLeaf
 	* @return  returns the leaf before this node
 	*/
-	@:overload public function getPreviousLeaf() : DefaultMutableTreeNode;
+	@:overload public function getPreviousLeaf() : javax.swing.tree.DefaultMutableTreeNode;
 	
 	/**
 	* Returns the total number of leaves that are descendants of this node.
@@ -745,7 +745,7 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 }
 @:native('javax$swing$tree$DefaultMutableTreeNode$BreadthFirstEnumeration') @:internal extern class DefaultMutableTreeNode_BreadthFirstEnumeration implements java.util.Enumeration<javax.swing.tree.TreeNode>
 {
-	private var queue : DefaultMutableTreeNode_BreadthFirstEnumeration_Queue;
+	private var queue : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue;
 	
 	@:overload public function new(rootNode : javax.swing.tree.TreeNode) : Void;
 	
@@ -771,9 +771,9 @@ extern class DefaultMutableTreeNode implements java.lang.Cloneable implements ja
 {
 	public var object : Dynamic;
 	
-	public var next : DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode;
+	public var next : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode;
 	
-	@:overload public function new(object : Dynamic, next : DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode) : Void;
+	@:overload public function new(object : Dynamic, next : javax.swing.tree.DefaultMutableTreeNode.DefaultMutableTreeNode_BreadthFirstEnumeration_Queue_QNode) : Void;
 	
 	
 }

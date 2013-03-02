@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlNsWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlNs>
 {
-	@:overload public function prefix(value : String) : XmlNsWriter;
+	@:overload public function prefix(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlNsWriter;
 	
-	@:overload public function namespaceURI(value : String) : XmlNsWriter;
+	@:overload public function namespaceURI(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlNsWriter;
 	
 	
 }

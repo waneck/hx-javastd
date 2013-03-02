@@ -38,38 +38,38 @@ extern class ArrayType extends sun.rmi.rmic.iiop.Type
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forArray(theType : sun.tools.java.Type, stack : sun.rmi.rmic.iiop.ContextStack) : ArrayType;
+	@:overload public static function forArray(theType : sun.tools.java.Type, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.ArrayType;
 	
 	/**
 	* Return signature for this type  (e.g. com.acme.Dynamite
 	* would return "com.acme.Dynamite", byte = "B")
 	*/
-	@:overload override public function getSignature() : String;
+	@:overload public function getSignature() : String;
 	
 	/**
 	* Get element type. Returns null if not an array.
 	*/
-	@:overload override public function getElementType() : sun.rmi.rmic.iiop.Type;
+	@:overload public function getElementType() : sun.rmi.rmic.iiop.Type;
 	
 	/**
 	* Get array dimension. Returns zero if not an array.
 	*/
-	@:overload override public function getArrayDimension() : Int;
+	@:overload public function getArrayDimension() : Int;
 	
 	/**
 	* Get brackets string. Returns "" if not an array.
 	*/
-	@:overload override public function getArrayBrackets() : String;
+	@:overload public function getArrayBrackets() : String;
 	
 	/**
 	* Return a string representation of this type.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload override public function getTypeDescription() : String;
+	@:overload public function getTypeDescription() : String;
 	
 	/**
 	* Return the name of this type. For arrays, will include "[]" if useIDLNames == false.
@@ -77,28 +77,28 @@ extern class ArrayType extends sun.rmi.rmic.iiop.Type
 	* @param useIDLNames If true, print IDL names; otherwise, print java names.
 	* @param globalIDLNames If true and useIDLNames true, prepends "::".
 	*/
-	@:overload override public function getTypeName(useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : String;
+	@:overload public function getTypeName(useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : String;
 	
 	/**
 	* Convert all invalid types to valid ones.
 	*/
-	@:overload override private function swapInvalidTypes() : Void;
+	@:overload private function swapInvalidTypes() : Void;
 	
 	/*
 	* Add matching types to list. Return true if this type has not
 	* been previously checked, false otherwise.
 	*/
-	@:overload override private function addTypes(typeCodeFilter : Int, checked : java.util.HashSet<Dynamic>, matching : java.util.Vector<Dynamic>) : Bool;
+	@:overload private function addTypes(typeCodeFilter : Int, checked : java.util.HashSet<Dynamic>, matching : java.util.Vector<Dynamic>) : Bool;
 	
 	/*
 	* Load a Class instance. Return null if fail.
 	*/
-	@:overload override private function loadClass() : Class<Dynamic>;
+	@:overload private function loadClass() : Class<Dynamic>;
 	
 	/**
 	* Release all resources
 	*/
-	@:overload override private function destroy() : Void;
+	@:overload private function destroy() : Void;
 	
 	
 }

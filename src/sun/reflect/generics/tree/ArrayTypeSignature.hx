@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class ArrayTypeSignature implements sun.reflect.generics.tree.FieldTypeSignature
 {
-	@:overload public static function make(ct : sun.reflect.generics.tree.TypeSignature) : ArrayTypeSignature;
+	@:overload public static function make(ct : sun.reflect.generics.tree.TypeSignature) : sun.reflect.generics.tree.ArrayTypeSignature;
 	
 	@:overload public function getComponentType() : sun.reflect.generics.tree.TypeSignature;
 	

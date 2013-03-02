@@ -55,11 +55,11 @@ extern class UlawCodec extends com.sun.media.sound.SunCodec
 	* Note that this won't actually read anything; must read in
 	* two-byte units.
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	
 }

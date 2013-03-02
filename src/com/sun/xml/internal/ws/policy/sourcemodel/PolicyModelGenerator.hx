@@ -35,7 +35,7 @@ extern class PolicyModelGenerator
 	*
 	* @return {@link PolicyModelGenerator} instance
 	*/
-	@:overload public static function getGenerator() : PolicyModelGenerator;
+	@:overload public static function getGenerator() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
 	
 	/**
 	* Allows derived classes to create instances of the package private
@@ -44,7 +44,7 @@ extern class PolicyModelGenerator
 	* @param creator An implementation of the PolicySourceModelCreator.
 	* @return An instance of CompactModelGenerator.
 	*/
-	@:overload private static function getCompactGenerator(creator : PolicyModelGenerator_PolicySourceModelCreator) : PolicyModelGenerator;
+	@:overload private static function getCompactGenerator(creator : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
 	
 	/**
 	* Allows derived classes to create instances of the package private
@@ -53,7 +53,7 @@ extern class PolicyModelGenerator
 	* @param creator An implementation of the PolicySourceModelCreator.
 	* @return An instance of NormalizedModelGenerator.
 	*/
-	@:overload private static function getNormalizedGenerator(creator : PolicyModelGenerator_PolicySourceModelCreator) : PolicyModelGenerator;
+	@:overload private static function getNormalizedGenerator(creator : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator.PolicyModelGenerator_PolicySourceModelCreator) : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator;
 	
 	/**
 	* This method translates a {@link Policy} into a

@@ -48,7 +48,7 @@ extern class ContentModel implements java.io.Serializable
 	/**
 	* The next content model (in a ',', '|' or '&' expression).
 	*/
-	public var next : ContentModel;
+	public var next : javax.swing.text.html.parser.ContentModel;
 	
 	@:overload public function new() : Void;
 	
@@ -60,12 +60,12 @@ extern class ContentModel implements java.io.Serializable
 	/**
 	* Create a content model of a particular type.
 	*/
-	@:overload public function new(type : Int, content : ContentModel) : Void;
+	@:overload public function new(type : Int, content : javax.swing.text.html.parser.ContentModel) : Void;
 	
 	/**
 	* Create a content model of a particular type.
 	*/
-	@:overload public function new(type : Int, content : Dynamic, next : ContentModel) : Void;
+	@:overload public function new(type : Int, content : Dynamic, next : javax.swing.text.html.parser.ContentModel) : Void;
 	
 	/**
 	* Return true if the content model could

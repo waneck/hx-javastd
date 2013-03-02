@@ -159,7 +159,7 @@ package java.rmi.server;
 	* @see             java.util.Hashtable
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function remoteEquals(obj : RemoteRef) : Bool;
+	@:require(java1) @:overload public function remoteEquals(obj : java.rmi.server.RemoteRef) : Bool;
 	
 	/**
 	* Returns a String that represents the reference of this remote

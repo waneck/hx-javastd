@@ -53,7 +53,7 @@ extern class CollisionCheckStack<E> extends java.util.AbstractList<E>
 	
 	@:overload public function findDuplicate(o : E) : Bool;
 	
-	@:overload override public function get(index : Int) : E;
+	@:overload public function get(index : Int) : E;
 	
 	@:overload override public function size() : Int;
 	

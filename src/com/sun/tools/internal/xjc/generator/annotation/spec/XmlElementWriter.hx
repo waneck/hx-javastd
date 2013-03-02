@@ -25,19 +25,19 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlElementWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlElement>
 {
-	@:overload public function name(value : String) : XmlElementWriter;
+	@:overload public function name(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWriter;
 	
-	@:overload public function type(value : Class<Dynamic>) : XmlElementWriter;
+	@:overload public function type(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWriter;
 	
-	@:overload public function type(value : com.sun.codemodel.internal.JType) : XmlElementWriter;
+	@:overload public function type(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWriter;
 	
-	@:overload public function namespace(value : String) : XmlElementWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWriter;
 	
-	@:overload public function defaultValue(value : String) : XmlElementWriter;
+	@:overload public function defaultValue(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWriter;
 	
-	@:overload public function required(value : Bool) : XmlElementWriter;
+	@:overload public function required(value : Bool) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWriter;
 	
-	@:overload public function nillable(value : Bool) : XmlElementWriter;
+	@:overload public function nillable(value : Bool) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWriter;
 	
 	
 }

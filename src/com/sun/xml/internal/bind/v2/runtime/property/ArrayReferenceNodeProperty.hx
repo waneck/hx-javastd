@@ -31,9 +31,9 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	
 	@:overload override public function createBodyUnmarshaller(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload override public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload override public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
 	
 }
@@ -41,7 +41,7 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 {
 	@:overload public function new(recv : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Receiver) : Void;
 	
-	@:overload override public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
+	@:overload public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
 	
 	
 }

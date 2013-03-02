@@ -24,31 +24,31 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 	
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$CharOp') @:internal extern class Op_CharOp extends Op
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$CharOp') @:internal extern class Op_CharOp extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Op
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$UnionOp') @:internal extern class Op_UnionOp extends Op
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$UnionOp') @:internal extern class Op_UnionOp extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Op
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$ChildOp') @:internal extern class Op_ChildOp extends Op
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$ChildOp') @:internal extern class Op_ChildOp extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Op
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$ModifierOp') @:internal extern class Op_ModifierOp extends Op_ChildOp
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$ModifierOp') @:internal extern class Op_ModifierOp extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Op.Op_ChildOp
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$RangeOp') @:internal extern class Op_RangeOp extends Op
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$RangeOp') @:internal extern class Op_RangeOp extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Op
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$StringOp') @:internal extern class Op_StringOp extends Op
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$StringOp') @:internal extern class Op_StringOp extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Op
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$ConditionOp') @:internal extern class Op_ConditionOp extends Op
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Op$ConditionOp') @:internal extern class Op_ConditionOp extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Op
 {
 	
 }

@@ -65,7 +65,7 @@ package java.util.concurrent.atomic;
 	* @throws RuntimeException with a nested reflection-based
 	* exception if the class does not hold field or is the wrong type
 	*/
-	@:overload public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : AtomicIntegerFieldUpdater<U>;
+	@:overload public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : java.util.concurrent.atomic.AtomicIntegerFieldUpdater<U>;
 	
 	/**
 	* Protected do-nothing constructor for use by subclasses.
@@ -208,7 +208,7 @@ package java.util.concurrent.atomic;
 /**
 * Standard hotspot implementation using intrinsics
 */
-@:native('java$util$concurrent$atomic$AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl') @:internal extern class AtomicIntegerFieldUpdater_AtomicIntegerFieldUpdaterImpl<T> extends AtomicIntegerFieldUpdater<T>
+@:native('java$util$concurrent$atomic$AtomicIntegerFieldUpdater$AtomicIntegerFieldUpdaterImpl') @:internal extern class AtomicIntegerFieldUpdater_AtomicIntegerFieldUpdaterImpl<T> extends java.util.concurrent.atomic.AtomicIntegerFieldUpdater<T>
 {
 	@:overload override public function compareAndSet(obj : T, expect : Int, update : Int) : Bool;
 	

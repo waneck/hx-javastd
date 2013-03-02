@@ -353,7 +353,7 @@ package javax.swing;
 	*
 	* @return      the constraints for the specified component
 	*/
-	@:overload public function getConstraints(c : java.awt.Component) : SpringLayout_Constraints;
+	@:overload public function getConstraints(c : java.awt.Component) : javax.swing.SpringLayout.SpringLayout_Constraints;
 	
 	/**
 	* Returns the spring controlling the distance between
@@ -687,7 +687,7 @@ package javax.swing;
 }
 @:native('javax$swing$SpringLayout$SpringProxy') @:internal extern class SpringLayout_SpringProxy extends javax.swing.Spring
 {
-	@:overload public function new(edgeName : String, c : java.awt.Component, l : SpringLayout) : Void;
+	@:overload public function new(edgeName : String, c : java.awt.Component, l : javax.swing.SpringLayout) : Void;
 	
 	@:overload override public function getMinimumValue() : Int;
 	

@@ -137,7 +137,7 @@ extern class Subject implements java.io.Serializable
 	* @exception NullPointerException if the provided
 	*          <code>AccessControlContext</code> is <code>null</code>.
 	*/
-	@:overload public static function getSubject(acc : java.security.AccessControlContext) : Subject;
+	@:overload public static function getSubject(acc : java.security.AccessControlContext) : javax.security.auth.Subject;
 	
 	/**
 	* Perform work as a particular <code>Subject</code>.
@@ -171,7 +171,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAs<T>(subject : Subject, action : java.security.PrivilegedAction<T>) : T;
+	@:overload public static function doAs<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedAction<T>) : T;
 	
 	/**
 	* Perform work as a particular <code>Subject</code>.
@@ -210,7 +210,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAs<T>(subject : Subject, action : java.security.PrivilegedExceptionAction<T>) : T;
+	@:overload public static function doAs<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedExceptionAction<T>) : T;
 	
 	/**
 	* Perform privileged work as a particular <code>Subject</code>.
@@ -244,7 +244,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAsPrivileged<T>(subject : Subject, action : java.security.PrivilegedAction<T>, acc : java.security.AccessControlContext) : T;
+	@:overload public static function doAsPrivileged<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedAction<T>, acc : java.security.AccessControlContext) : T;
 	
 	/**
 	* Perform privileged work as a particular <code>Subject</code>.
@@ -283,7 +283,7 @@ extern class Subject implements java.io.Serializable
 	* @exception SecurityException if the caller does not have permission
 	*                  to invoke this method.
 	*/
-	@:overload public static function doAsPrivileged<T>(subject : Subject, action : java.security.PrivilegedExceptionAction<T>, acc : java.security.AccessControlContext) : T;
+	@:overload public static function doAsPrivileged<T>(subject : javax.security.auth.Subject, action : java.security.PrivilegedExceptionAction<T>, acc : java.security.AccessControlContext) : T;
 	
 	/**
 	* Return the <code>Set</code> of Principals associated with this
@@ -474,21 +474,21 @@ extern class Subject implements java.io.Serializable
 */
 @:native('javax$security$auth$Subject$SecureSet') @:internal extern class Subject_SecureSet<E> extends java.util.AbstractSet<E> implements java.io.Serializable
 {
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload public function iterator() : java.util.Iterator<E>;
 	
-	@:overload override public function add(o : E) : Bool;
+	@:overload public function add(o : E) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	
 }
@@ -498,11 +498,11 @@ extern class Subject implements java.io.Serializable
 */
 @:native('javax$security$auth$Subject$ClassSet') @:internal extern class Subject_ClassSet<T> extends java.util.AbstractSet<T>
 {
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<T>;
+	@:overload public function iterator() : java.util.Iterator<T>;
 	
-	@:overload override public function add(o : T) : Bool;
+	@:overload public function add(o : T) : Bool;
 	
 	
 }

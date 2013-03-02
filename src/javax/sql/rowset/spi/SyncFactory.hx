@@ -235,7 +235,7 @@ extern class SyncFactory
 	*
 	* @return the <code>SyncFactory</code> instance
 	*/
-	@:overload public static function getSyncFactory() : SyncFactory;
+	@:overload public static function getSyncFactory() : javax.sql.rowset.spi.SyncFactory;
 	
 	/**
 	* Removes the designated currently registered synchronization provider from the

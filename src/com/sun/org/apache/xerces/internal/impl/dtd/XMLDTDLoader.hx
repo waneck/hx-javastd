@@ -97,7 +97,7 @@ extern class XMLDTDLoader extends com.sun.org.apache.xerces.internal.impl.dtd.XM
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload override public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -114,14 +114,14 @@ extern class XMLDTDLoader extends com.sun.org.apache.xerces.internal.impl.dtd.XM
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload override public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload override public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Returns the state of a property.
@@ -147,7 +147,7 @@ extern class XMLDTDLoader extends com.sun.org.apache.xerces.internal.impl.dtd.XM
 	* @throws SAXNotSupportedException The component should not throw
 	*                                  this exception.
 	*/
-	@:overload override public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Returns the state of a feature.
@@ -209,7 +209,7 @@ extern class XMLDTDLoader extends com.sun.org.apache.xerces.internal.impl.dtd.XM
 	*/
 	@:overload public function loadGrammarWithContext(validator : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator, rootName : String, publicId : String, systemId : String, baseSystemId : String, internalSubset : String) : Void;
 	
-	@:overload override private function reset() : Void;
+	@:overload private function reset() : Void;
 	
 	@:overload private function createDTDScanner(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, errorReporter : com.sun.org.apache.xerces.internal.impl.XMLErrorReporter, entityManager : com.sun.org.apache.xerces.internal.impl.XMLEntityManager) : com.sun.org.apache.xerces.internal.impl.XMLDTDScannerImpl;
 	

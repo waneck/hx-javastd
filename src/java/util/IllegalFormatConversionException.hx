@@ -61,7 +61,7 @@ package java.util;
 	*/
 	@:overload public function getArgumentClass() : Class<Dynamic>;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

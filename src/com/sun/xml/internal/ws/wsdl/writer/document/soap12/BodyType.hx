@@ -29,13 +29,13 @@ extern interface BodyType extends com.sun.xml.internal.txw2.TypedXmlWriter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function encodingStyle(value : String) : BodyType;
+	@:overload public function encodingStyle(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.BodyType;
 	
-	@:overload public function namespace(value : String) : BodyType;
+	@:overload public function namespace(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.BodyType;
 	
-	@:overload public function use(value : String) : BodyType;
+	@:overload public function use(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.BodyType;
 	
-	@:overload public function parts(value : String) : BodyType;
+	@:overload public function parts(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.BodyType;
 	
 	
 }

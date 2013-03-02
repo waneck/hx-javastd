@@ -92,7 +92,7 @@ extern class SSLSocketFactory extends javax.net.SocketFactory
 	
 	
 }
-@:internal extern class DefaultSSLSocketFactory extends SSLSocketFactory
+@:internal extern class DefaultSSLSocketFactory extends javax.net.ssl.SSLSocketFactory
 {
 	@:overload override public function createSocket() : java.net.Socket;
 	

@@ -74,7 +74,7 @@ extern class ConstantLong extends com.sun.org.apache.bcel.internal.classfile.Con
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantLong) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantLong) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely

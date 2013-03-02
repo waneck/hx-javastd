@@ -182,100 +182,100 @@ extern class SurfaceType
 	* Any SurfaceType objects that are not created with a specific
 	* PixelConverter object will inherit this behavior from the root.
 	*/
-	public static var Any(default, null) : SurfaceType;
+	public static var Any(default, null) : sun.java2d.loops.SurfaceType;
 	
 	/*
 	* START OF SurfaceType OBJECTS FOR THE VARIOUS CONSTANTS
 	*/
-	public static var AnyInt(default, null) : SurfaceType;
+	public static var AnyInt(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var AnyShort(default, null) : SurfaceType;
+	public static var AnyShort(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var AnyByte(default, null) : SurfaceType;
+	public static var AnyByte(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var AnyByteBinary(default, null) : SurfaceType;
+	public static var AnyByteBinary(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Any3Byte(default, null) : SurfaceType;
+	public static var Any3Byte(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Any4Byte(default, null) : SurfaceType;
+	public static var Any4Byte(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var AnyDcm(default, null) : SurfaceType;
+	public static var AnyDcm(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Custom(default, null) : SurfaceType;
+	public static var Custom(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var IntRgb(default, null) : SurfaceType;
+	public static var IntRgb(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var IntArgb(default, null) : SurfaceType;
+	public static var IntArgb(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var IntArgbPre(default, null) : SurfaceType;
+	public static var IntArgbPre(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var IntBgr(default, null) : SurfaceType;
+	public static var IntBgr(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ThreeByteBgr(default, null) : SurfaceType;
+	public static var ThreeByteBgr(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var FourByteAbgr(default, null) : SurfaceType;
+	public static var FourByteAbgr(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var FourByteAbgrPre(default, null) : SurfaceType;
+	public static var FourByteAbgrPre(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Ushort565Rgb(default, null) : SurfaceType;
+	public static var Ushort565Rgb(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Ushort555Rgb(default, null) : SurfaceType;
+	public static var Ushort555Rgb(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Ushort555Rgbx(default, null) : SurfaceType;
+	public static var Ushort555Rgbx(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Ushort4444Argb(default, null) : SurfaceType;
+	public static var Ushort4444Argb(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var UshortIndexed(default, null) : SurfaceType;
+	public static var UshortIndexed(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ByteGray(default, null) : SurfaceType;
+	public static var ByteGray(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var UshortGray(default, null) : SurfaceType;
+	public static var UshortGray(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ByteBinary1Bit(default, null) : SurfaceType;
+	public static var ByteBinary1Bit(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ByteBinary2Bit(default, null) : SurfaceType;
+	public static var ByteBinary2Bit(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ByteBinary4Bit(default, null) : SurfaceType;
+	public static var ByteBinary4Bit(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ByteIndexed(default, null) : SurfaceType;
+	public static var ByteIndexed(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var IntRgbx(default, null) : SurfaceType;
+	public static var IntRgbx(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var IntBgrx(default, null) : SurfaceType;
+	public static var IntBgrx(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ThreeByteRgb(default, null) : SurfaceType;
+	public static var ThreeByteRgb(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var IntArgbBm(default, null) : SurfaceType;
+	public static var IntArgbBm(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ByteIndexedBm(default, null) : SurfaceType;
+	public static var ByteIndexedBm(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var ByteIndexedOpaque(default, null) : SurfaceType;
+	public static var ByteIndexedOpaque(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Index8Gray(default, null) : SurfaceType;
+	public static var Index8Gray(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var Index12Gray(default, null) : SurfaceType;
+	public static var Index12Gray(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var AnyPaint(default, null) : SurfaceType;
+	public static var AnyPaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var AnyColor(default, null) : SurfaceType;
+	public static var AnyColor(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var OpaqueColor(default, null) : SurfaceType;
+	public static var OpaqueColor(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var GradientPaint(default, null) : SurfaceType;
+	public static var GradientPaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var OpaqueGradientPaint(default, null) : SurfaceType;
+	public static var OpaqueGradientPaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var LinearGradientPaint(default, null) : SurfaceType;
+	public static var LinearGradientPaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var OpaqueLinearGradientPaint(default, null) : SurfaceType;
+	public static var OpaqueLinearGradientPaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var RadialGradientPaint(default, null) : SurfaceType;
+	public static var RadialGradientPaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var OpaqueRadialGradientPaint(default, null) : SurfaceType;
+	public static var OpaqueRadialGradientPaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var TexturePaint(default, null) : SurfaceType;
+	public static var TexturePaint(default, null) : sun.java2d.loops.SurfaceType;
 	
-	public static var OpaqueTexturePaint(default, null) : SurfaceType;
+	public static var OpaqueTexturePaint(default, null) : sun.java2d.loops.SurfaceType;
 	
 	/**
 	* Return a new SurfaceType object which uses this object as its
@@ -284,9 +284,9 @@ extern class SurfaceType
 	* by desc, then this object will define the more relaxed specification
 	* of the surface that can be used to find a more general operator.
 	*/
-	@:overload public function deriveSubType(desc : String) : SurfaceType;
+	@:overload public function deriveSubType(desc : String) : sun.java2d.loops.SurfaceType;
 	
-	@:overload public function deriveSubType(desc : String, pixelConverter : sun.awt.image.PixelConverter) : SurfaceType;
+	@:overload public function deriveSubType(desc : String, pixelConverter : sun.awt.image.PixelConverter) : sun.java2d.loops.SurfaceType;
 	
 	private var pixelConverter : sun.awt.image.PixelConverter;
 	
@@ -296,7 +296,7 @@ extern class SurfaceType
 	
 	@:overload public function getDescriptor() : String;
 	
-	@:overload public function getSuperType() : SurfaceType;
+	@:overload public function getSuperType() : sun.java2d.loops.SurfaceType;
 	
 	@:overload public function getPixelConverter() : sun.awt.image.PixelConverter;
 	

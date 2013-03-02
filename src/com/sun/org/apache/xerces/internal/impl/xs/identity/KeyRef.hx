@@ -34,7 +34,7 @@ extern class KeyRef extends com.sun.org.apache.xerces.internal.impl.xs.identity.
 	* forbidden otherwise. An identity-constraint definition with
 	* {identity-constraint category} equal to key or unique.
 	*/
-	@:overload override public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
+	@:overload public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
 	
 	
 }

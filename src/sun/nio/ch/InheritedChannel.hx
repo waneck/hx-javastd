@@ -40,13 +40,13 @@ package sun.nio.ch;
 */
 @:native('sun$nio$ch$InheritedChannel$InheritedSocketChannelImpl') extern class InheritedChannel_InheritedSocketChannelImpl extends sun.nio.ch.SocketChannelImpl
 {
-	@:overload override private function implCloseSelectableChannel() : Void;
+	@:overload private function implCloseSelectableChannel() : Void;
 	
 	
 }
 @:native('sun$nio$ch$InheritedChannel$InheritedServerSocketChannelImpl') extern class InheritedChannel_InheritedServerSocketChannelImpl extends sun.nio.ch.ServerSocketChannelImpl
 {
-	@:overload override private function implCloseSelectableChannel() : Void;
+	@:overload private function implCloseSelectableChannel() : Void;
 	
 	
 }

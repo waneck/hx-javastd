@@ -25,7 +25,7 @@ package com.sun.tools.apt.mirror.declaration;
 */
 extern class DeclarationMaker
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : DeclarationMaker;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.declaration.DeclarationMaker;
 	
 	/**
 	* Returns the package declaration for a package symbol.

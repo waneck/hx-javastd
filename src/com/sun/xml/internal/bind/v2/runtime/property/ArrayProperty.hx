@@ -37,9 +37,9 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	
 	@:overload private function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo) : Void;
 	
-	@:overload override public function reset(o : BeanT) : Void;
+	@:overload public function reset(o : BeanT) : Void;
 	
-	@:overload @:final override public function getIdValue(bean : BeanT) : String;
+	@:overload @:final public function getIdValue(bean : BeanT) : String;
 	
 	
 }

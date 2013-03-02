@@ -70,13 +70,13 @@ extern interface Position
 	* Indicates to bias toward the next character
 	* in the model.
 	*/
-	public static var Forward(default, null) : Position_Bias;
+	public static var Forward(default, null) : javax.swing.text.Position.Position_Bias;
 	
 	/**
 	* Indicates a bias toward the previous character
 	* in the model.
 	*/
-	public static var Backward(default, null) : Position_Bias;
+	public static var Backward(default, null) : javax.swing.text.Position.Position_Bias;
 	
 	/**
 	* string representation

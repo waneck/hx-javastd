@@ -35,7 +35,7 @@ package sun.io;
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function getNative(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
+	@:overload public function getNative(inputChar : java.StdTypes.Char16) : java.StdTypes.Int8;
 	
 	@:overload override public function canConvert(ch : java.StdTypes.Char16) : Bool;
 	

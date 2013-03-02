@@ -27,7 +27,7 @@ extern class XFontPeer extends sun.awt.PlatformFont
 {
 	@:overload public function new(name : String, style : Int) : Void;
 	
-	@:overload override private function getMissingGlyphCharacter() : java.StdTypes.Char16;
+	@:overload private function getMissingGlyphCharacter() : java.StdTypes.Char16;
 	
 	
 }

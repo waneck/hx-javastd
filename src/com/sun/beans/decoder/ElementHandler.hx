@@ -46,7 +46,7 @@ package com.sun.beans.decoder;
 	*
 	* @return the parent element handler
 	*/
-	@:overload @:final public function getParent() : ElementHandler;
+	@:overload @:final public function getParent() : com.sun.beans.decoder.ElementHandler;
 	
 	/**
 	* Returns the value of the variable with specified identifier.

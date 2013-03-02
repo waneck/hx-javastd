@@ -75,7 +75,7 @@ extern class XComponentPeer extends sun.awt.X11.XWindow implements java.awt.peer
 	
 	@:overload public function disable() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	@:overload public function repaint(tm : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	

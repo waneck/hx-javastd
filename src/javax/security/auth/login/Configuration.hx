@@ -46,7 +46,7 @@ extern class Configuration
 	*
 	* @see #setConfiguration
 	*/
-	@:overload public static function getConfiguration() : Configuration;
+	@:overload public static function getConfiguration() : javax.security.auth.login.Configuration;
 	
 	/**
 	* Set the login <code>Configuration</code>.
@@ -60,7 +60,7 @@ extern class Configuration
 	*
 	* @see #getConfiguration
 	*/
-	@:overload public static function setConfiguration(configuration : Configuration) : Void;
+	@:overload public static function setConfiguration(configuration : javax.security.auth.login.Configuration) : Void;
 	
 	/**
 	* Returns a Configuration object of the specified type.
@@ -99,7 +99,7 @@ extern class Configuration
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : Configuration_Parameters) : Configuration;
+	@:require(java6) @:overload public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters) : javax.security.auth.login.Configuration;
 	
 	/**
 	* Returns a Configuration object of the specified type.
@@ -144,7 +144,7 @@ extern class Configuration
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : Configuration_Parameters, provider : String) : Configuration;
+	@:require(java6) @:overload public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters, provider : String) : javax.security.auth.login.Configuration;
 	
 	/**
 	* Returns a Configuration object of the specified type.
@@ -182,7 +182,7 @@ extern class Configuration
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : Configuration_Parameters, provider : java.security.Provider) : Configuration;
+	@:require(java6) @:overload public static function getInstance(type : String, params : javax.security.auth.login.Configuration.Configuration_Parameters, provider : java.security.Provider) : javax.security.auth.login.Configuration;
 	
 	/**
 	* Return the Provider of this Configuration.
@@ -221,7 +221,7 @@ extern class Configuration
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getParameters() : Configuration_Parameters;
+	@:require(java6) @:overload public function getParameters() : javax.security.auth.login.Configuration.Configuration_Parameters;
 	
 	/**
 	* Retrieve the AppConfigurationEntries for the specified <i>name</i>
@@ -260,11 +260,11 @@ extern class Configuration
 * This subclass is returned by the getInstance calls.  All Configuration
 * calls are delegated to the underlying ConfigurationSpi.
 */
-@:native('javax$security$auth$login$Configuration$ConfigDelegate') @:internal extern class Configuration_ConfigDelegate extends Configuration
+@:native('javax$security$auth$login$Configuration$ConfigDelegate') @:internal extern class Configuration_ConfigDelegate extends javax.security.auth.login.Configuration
 {
 	@:overload override public function getType() : String;
 	
-	@:overload override public function getParameters() : Configuration_Parameters;
+	@:overload override public function getParameters() : javax.security.auth.login.Configuration.Configuration_Parameters;
 	
 	@:overload override public function getProvider() : java.security.Provider;
 	

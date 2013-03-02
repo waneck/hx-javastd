@@ -66,7 +66,7 @@ extern class AnnotationProcessorEnvironmentImpl implements com.sun.mirror.apt.An
 }
 @:native('com$sun$tools$apt$mirror$apt$AnnotationProcessorEnvironmentImpl$CollectingAP$CollectingVisitor') @:internal extern class AnnotationProcessorEnvironmentImpl_CollectingAP_CollectingVisitor extends com.sun.mirror.util.SimpleDeclarationVisitor
 {
-	@:overload override public function visitDeclaration(d : com.sun.mirror.declaration.Declaration) : Void;
+	@:overload public function visitDeclaration(d : com.sun.mirror.declaration.Declaration) : Void;
 	
 	
 }

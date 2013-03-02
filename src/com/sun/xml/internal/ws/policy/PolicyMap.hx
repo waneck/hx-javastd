@@ -31,7 +31,7 @@ extern class PolicyMap implements java.lang.Iterable<com.sun.xml.internal.ws.pol
 	* @param mutators collection of mutators that should be connected to the newly created map.
 	* @return new policy map instance (mutable via provided collection of mutators).
 	*/
-	@:overload public static function createPolicyMap(mutators : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : PolicyMap;
+	@:overload public static function createPolicyMap(mutators : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyMapMutator>) : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	@:overload public function getServiceEffectivePolicy(key : com.sun.xml.internal.ws.policy.PolicyMapKey) : com.sun.xml.internal.ws.policy.Policy;
 	

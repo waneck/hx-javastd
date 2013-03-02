@@ -25,9 +25,9 @@ package sun.awt.X11;
 */
 extern class XEmbedCanvasPeer extends sun.awt.X11.XCanvasPeer implements java.awt.event.WindowFocusListener implements java.awt.KeyEventPostProcessor implements sun.awt.ModalityListener implements sun.awt.WindowIDProvider
 {
-	@:overload override private function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload private function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override private function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload private function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	@:overload override public function handleEvent(e : java.awt.AWTEvent) : Void;
 	
@@ -37,7 +37,7 @@ extern class XEmbedCanvasPeer extends sun.awt.X11.XCanvasPeer implements java.aw
 	
 	@:overload override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	@:overload override public function isFocusable() : Bool;
 	
@@ -63,7 +63,7 @@ extern class XEmbedCanvasPeer extends sun.awt.X11.XCanvasPeer implements java.aw
 }
 @:native('sun$awt$X11$XEmbedCanvasPeer$XEmbedDropTarget') @:internal extern class XEmbedCanvasPeer_XEmbedDropTarget extends java.awt.dnd.DropTarget
 {
-	@:overload override public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
+	@:overload public function addDropTargetListener(dtl : java.awt.dnd.DropTargetListener) : Void;
 	
 	
 }

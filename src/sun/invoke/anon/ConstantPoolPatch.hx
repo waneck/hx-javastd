@@ -60,7 +60,7 @@ extern class ConstantPoolPatch
 	*
 	* @see ConstantPoolParser#createPatch()
 	*/
-	@:overload public function new(patch : ConstantPoolPatch) : Void;
+	@:overload public function new(patch : sun.invoke.anon.ConstantPoolPatch) : Void;
 	
 	/** Which parser built this patch? */
 	@:overload public function getParser() : sun.invoke.anon.ConstantPoolParser;

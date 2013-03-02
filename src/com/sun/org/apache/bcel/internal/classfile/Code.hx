@@ -80,7 +80,7 @@ extern class Code extends com.sun.org.apache.bcel.internal.classfile.Attribute
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : Code) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Code) : Void;
 	
 	/**
 	* @param name_index Index pointing to the name <em>Code</em>

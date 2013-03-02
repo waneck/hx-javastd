@@ -7,9 +7,9 @@ extern class NamingSystemException extends com.sun.corba.se.spi.logging.LogWrapp
 {
 	@:overload public function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : NamingSystemException;
+	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.NamingSystemException;
 	
-	@:overload public static function get(logDomain : String) : NamingSystemException;
+	@:overload public static function get(logDomain : String) : com.sun.corba.se.impl.logging.NamingSystemException;
 	
 	public static var TRANSIENT_NAME_SERVER_BAD_PORT(default, null) : Int;
 	

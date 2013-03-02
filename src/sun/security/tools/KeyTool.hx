@@ -147,7 +147,7 @@ package sun.security.tools;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public static function of<A, B>(a : A, b : B) : Pair<A, B>;
+	@:overload public static function of<A, B>(a : A, b : B) : sun.security.tools.KeyTool.Pair<A, B>;
 	
 	
 }

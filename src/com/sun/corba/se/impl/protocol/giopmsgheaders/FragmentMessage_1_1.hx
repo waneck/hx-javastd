@@ -38,12 +38,12 @@ extern class FragmentMessage_1_1 extends com.sun.corba.se.impl.protocol.giopmsgh
 	* request_id from an CDRInputStream. Instead we use the
 	* readGIOP_1_1_requestId to read the requestId from a byte buffer.
 	*/
-	@:overload override public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
+	@:overload public function read(istream : org.omg.CORBA.portable.InputStream) : Void;
 	
 	/* 1.1 has no request_id; so nothing to write */
-	@:overload override public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload public function write(ostream : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	//@:overload override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

@@ -80,7 +80,7 @@ extern class DisabledAlgorithmConstraints implements java.security.AlgorithmCons
 */
 @:native('sun$security$util$DisabledAlgorithmConstraints$KeySizeConstraint') @:internal extern class DisabledAlgorithmConstraints_KeySizeConstraint
 {
-	@:overload public function new(operator : DisabledAlgorithmConstraints_KeySizeConstraint_Operator, length : Int) : Void;
+	@:overload public function new(operator : sun.security.util.DisabledAlgorithmConstraints.DisabledAlgorithmConstraints_KeySizeConstraint_Operator, length : Int) : Void;
 	
 	@:overload public function disables(key : java.security.Key) : Bool;
 	

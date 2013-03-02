@@ -30,7 +30,7 @@ extern interface JavaFileObject extends javax.tools.FileObject
 	*
 	* @return the kind
 	*/
-	@:overload public function getKind() : JavaFileObject_Kind;
+	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
 	/**
 	* Checks if this file object is compatible with the specified
@@ -44,7 +44,7 @@ extern interface JavaFileObject extends javax.tools.FileObject
 	* @return {@code true} if this file object is compatible; false
 	* otherwise
 	*/
-	@:overload public function isNameCompatible(simpleName : String, kind : JavaFileObject_Kind) : Bool;
+	@:overload public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
 	/**
 	* Provides a hint about the nesting level of the class

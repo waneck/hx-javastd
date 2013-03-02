@@ -45,7 +45,7 @@ extern class MimeTypeRange
 	*/
 	public var q(default, null) : Single;
 	
-	@:overload public static function parseRanges(s : String) : java.util.List<MimeTypeRange>;
+	@:overload public static function parseRanges(s : String) : java.util.List<com.sun.tools.internal.xjc.util.MimeTypeRange>;
 	
 	@:overload public function new(s : String) : Void;
 	
@@ -53,12 +53,12 @@ extern class MimeTypeRange
 	
 	@:overload public function toString() : String;
 	
-	public static var ALL(default, null) : MimeTypeRange;
+	public static var ALL(default, null) : com.sun.tools.internal.xjc.util.MimeTypeRange;
 	
 	/**
 	* Creates a range by merging all the given types.
 	*/
-	@:overload public static function merge(types : java.util.Collection<MimeTypeRange>) : MimeTypeRange;
+	@:overload public static function merge(types : java.util.Collection<com.sun.tools.internal.xjc.util.MimeTypeRange>) : com.sun.tools.internal.xjc.util.MimeTypeRange;
 	
 	@:overload public static function main(args : java.NativeArray<String>) : Void;
 	

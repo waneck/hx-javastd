@@ -40,7 +40,7 @@ package java.nio;
 	
 	@:overload override public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
 	@:overload override public function order() : java.nio.ByteOrder;
 	

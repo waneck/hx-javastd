@@ -34,15 +34,15 @@ extern class MotifMenuItemUI extends javax.swing.plaf.basic.BasicMenuItemUI
 	*/
 	private var changeListener : javax.swing.event.ChangeListener;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
 	@:overload private function createChangeListener(c : javax.swing.JComponent) : javax.swing.event.ChangeListener;
 	
-	@:overload override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
+	@:overload private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
 	
 	
 }

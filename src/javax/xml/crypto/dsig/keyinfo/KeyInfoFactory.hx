@@ -60,7 +60,7 @@ extern class KeyInfoFactory
 	*    <code>KeyInfoFactory</code> implementation for the specified mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String) : KeyInfoFactory;
+	@:overload public static function getInstance(mechanismType : String) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that supports the
@@ -83,7 +83,7 @@ extern class KeyInfoFactory
 	*    specified <code>Provider</code> object
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : java.security.Provider) : KeyInfoFactory;
+	@:overload public static function getInstance(mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that supports the
@@ -110,7 +110,7 @@ extern class KeyInfoFactory
 	*    specified provider
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : String) : KeyInfoFactory;
+	@:overload public static function getInstance(mechanismType : String, provider : String) : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns a <code>KeyInfoFactory</code> that supports the
@@ -132,7 +132,7 @@ extern class KeyInfoFactory
 	*    <code>KeyInfoFactory</code> implementation for the DOM mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance() : KeyInfoFactory;
+	@:overload public static function getInstance() : javax.xml.crypto.dsig.keyinfo.KeyInfoFactory;
 	
 	/**
 	* Returns the type of the XML processing mechanism and representation

@@ -25,9 +25,9 @@ package sun.security.pkcs11;
 */
 @:internal extern class P11RSAKeyFactory extends sun.security.pkcs11.P11KeyFactory
 {
-	@:overload override private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
+	@:overload private function engineGeneratePublic(keySpec : java.security.spec.KeySpec) : java.security.PublicKey;
 	
-	@:overload override private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
+	@:overload private function engineGeneratePrivate(keySpec : java.security.spec.KeySpec) : java.security.PrivateKey;
 	
 	
 }

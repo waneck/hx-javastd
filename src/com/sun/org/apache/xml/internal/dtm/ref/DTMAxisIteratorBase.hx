@@ -195,7 +195,7 @@ extern class DTMAxisIteratorBase implements com.sun.org.apache.xml.internal.dtm.
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload @:public public function setStartNode(node : Int) : DTMAxisIterator;
+	@:overload @:public public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class POAObjectKeyTemplate extends com.sun.corba.se.impl.ior.NewObjectKey
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, serverid : Int, orbid : String, objectAdapterId : com.sun.corba.se.spi.ior.ObjectAdapterId) : Void;
 	
-	@:overload override public function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

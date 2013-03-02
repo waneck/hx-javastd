@@ -30,22 +30,22 @@ extern class ByteToCharCp964 extends sun.io.ByteToCharConverter
 	/**
 	* Return the character set id
 	*/
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
 	/**
 	* flush out any residual data and reset the buffer state
 	*/
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	*  Resets the converter.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/**
 	* Character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
 	
 }

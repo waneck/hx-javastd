@@ -42,13 +42,13 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* should override newInstance() to return an appropriately
 	* constructed instance.
 	*/
-	@:overload override private function requireNewInstance() : Bool;
+	@:overload private function requireNewInstance() : Bool;
 	
 	/**
 	* Return true if non-conforming types should be parsed.
 	* @param stack The context stack.
 	*/
-	@:overload override private function parseNonConforming(stack : sun.rmi.rmic.iiop.ContextStack) : Bool;
+	@:overload private function parseNonConforming(stack : sun.rmi.rmic.iiop.ContextStack) : Bool;
 	
 	/**
 	* Create and return a top-level type.
@@ -56,7 +56,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* @param cdef The top-level class definition.
 	* @return An RemoteType or null if is non-conforming.
 	*/
-	@:overload override private function getTopType(cdef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.CompoundType;
+	@:overload private function getTopType(cdef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.CompoundType;
 	
 	/**
 	* Return an Identifier which contains the fully-qualified IDL filename
@@ -83,7 +83,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* @param error Report any errors using the main.error() methods.
 	* @return true if no errors, false otherwise.
 	*/
-	@:overload override public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
+	@:overload public function parseArgs(argv : java.NativeArray<String>, main : sun.rmi.rmic.Main) : Bool;
 	
 	/**
 	* Return an array of OutputTypes for the IDL files that need to be
@@ -93,7 +93,7 @@ extern class IDLGenerator extends sun.rmi.rmic.iiop.Generator
 	* @param alreadyChecked A set of Types which have already been checked.
 	* @return Array of OutputTypes to generate
 	*/
-	@:overload override private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Generator.Generator_OutputType>;
+	@:overload private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Generator.Generator_OutputType>;
 	
 	/**
 	* Get all referenced types of a given tyoe for which an IDL file needs

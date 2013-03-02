@@ -45,7 +45,7 @@ extern class ResourceInjector
 	* <p>
 	* Just inject {@link WSWebServiceContext} and done.
 	*/
-	public static var STANDALONE(default, null) : ResourceInjector;
+	public static var STANDALONE(default, null) : com.sun.xml.internal.ws.api.server.ResourceInjector;
 	
 	
 }

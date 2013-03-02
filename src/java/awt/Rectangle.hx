@@ -78,7 +78,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*           to a newly constructed <code>Rectangle</code>
 	* @since 1.1
 	*/
-	@:require(java1) @:overload public function new(r : Rectangle) : Void;
+	@:require(java1) @:overload public function new(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Constructs a new <code>Rectangle</code> whose upper-left corner is
@@ -171,7 +171,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       #setBounds(int, int, int, int)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload override public function getBounds() : Rectangle;
+	@:require(java1) @:overload override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* {@inheritDoc}
@@ -190,7 +190,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* @see       java.awt.Component#setBounds(java.awt.Rectangle)
 	* @since     1.1
 	*/
-	@:require(java1) @:overload public function setBounds(r : Rectangle) : Void;
+	@:require(java1) @:overload public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Sets the bounding <code>Rectangle</code> of this
@@ -397,7 +397,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            <code>false</code> otherwise
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function contains(r : Rectangle) : Bool;
+	@:require(java2) @:overload public function contains(r : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Checks whether this <code>Rectangle</code> entirely contains
@@ -441,7 +441,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            and this <code>Rectangle</code> intersect;
 	*            <code>false</code> otherwise.
 	*/
-	@:overload public function intersects(r : Rectangle) : Bool;
+	@:overload public function intersects(r : java.awt.Rectangle) : Bool;
 	
 	/**
 	* Computes the intersection of this <code>Rectangle</code> with the
@@ -456,7 +456,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            this <code>Rectangle</code>; or if the rectangles
 	*            do not intersect, an empty rectangle.
 	*/
-	@:overload public function intersection(r : Rectangle) : Rectangle;
+	@:overload public function intersection(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Computes the union of this <code>Rectangle</code> with the
@@ -481,7 +481,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	*            the specified <code>Rectangle</code> and this
 	*            <code>Rectangle</code>.
 	*/
-	@:overload public function union(r : Rectangle) : Rectangle;
+	@:overload public function union(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Adds a point, specified by the integer arguments {@code newx,newy}
@@ -564,7 +564,7 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* that dimension.
 	* @param  r the specified <code>Rectangle</code>
 	*/
-	@:overload public function add(r : Rectangle) : Void;
+	@:overload public function add(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Resizes the <code>Rectangle</code> both horizontally and vertically.
@@ -607,13 +607,13 @@ extern class Rectangle extends java.awt.geom.Rectangle2D implements java.awt.Sha
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createIntersection(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload override public function createIntersection(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function createUnion(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload override public function createUnion(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Checks whether two rectangles are equal.

@@ -105,7 +105,7 @@ extern class URLClassLoader extends java.security.SecureClassLoader implements j
 	*
 	* @since  1.7
 	*/
-	@:require(java7) @:overload override public function getResourceAsStream(name : String) : java.io.InputStream;
+	@:require(java7) @:overload public function getResourceAsStream(name : String) : java.io.InputStream;
 	
 	/**
 	* Closes this URLClassLoader, so that it can no longer be used to load
@@ -167,7 +167,7 @@ extern class URLClassLoader extends java.security.SecureClassLoader implements j
 	* @exception ClassNotFoundException if the class could not be found,
 	*            or if the loader is closed.
 	*/
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload private function findClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* Defines a new package by name in this ClassLoader. The attributes
@@ -193,7 +193,7 @@ extern class URLClassLoader extends java.security.SecureClassLoader implements j
 	* @return a <code>URL</code> for the resource, or <code>null</code>
 	* if the resource could not be found, or if the loader is closed.
 	*/
-	@:overload override public function findResource(name : String) : java.net.URL;
+	@:overload public function findResource(name : String) : java.net.URL;
 	
 	/**
 	* Returns an Enumeration of URLs representing all of the resources
@@ -204,7 +204,7 @@ extern class URLClassLoader extends java.security.SecureClassLoader implements j
 	* @return an <code>Enumeration</code> of <code>URL</code>s
 	*         If the loader is closed, the Enumeration will be empty.
 	*/
-	@:overload override public function findResources(name : String) : java.util.Enumeration<java.net.URL>;
+	@:overload public function findResources(name : String) : java.util.Enumeration<java.net.URL>;
 	
 	/**
 	* Returns the permissions for the given codesource object.
@@ -243,7 +243,7 @@ extern class URLClassLoader extends java.security.SecureClassLoader implements j
 	* @param parent the parent class loader for delegation
 	* @return the resulting class loader
 	*/
-	@:overload public static function newInstance(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : URLClassLoader;
+	@:overload public static function newInstance(urls : java.NativeArray<java.net.URL>, parent : java.lang.ClassLoader) : java.net.URLClassLoader;
 	
 	/**
 	* Creates a new instance of URLClassLoader for the specified
@@ -256,13 +256,13 @@ extern class URLClassLoader extends java.security.SecureClassLoader implements j
 	* @param urls the URLs to search for classes and resources
 	* @return the resulting class loader
 	*/
-	@:overload public static function newInstance(urls : java.NativeArray<java.net.URL>) : URLClassLoader;
+	@:overload public static function newInstance(urls : java.NativeArray<java.net.URL>) : java.net.URLClassLoader;
 	
 	
 }
-@:internal extern class FactoryURLClassLoader extends URLClassLoader
+@:internal extern class FactoryURLClassLoader extends java.net.URLClassLoader
 {
-	@:overload @:final override public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:final public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }

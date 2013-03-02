@@ -53,7 +53,7 @@ extern class LocalMember extends sun.tools.java.MemberDefinition
 	* the expression nodes will replace the original argument by the
 	* fresh copy.
 	*/
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : LocalMember;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.LocalMember;
 	
 	/**
 	* Returns the previous result of copyInline(ctx).
@@ -61,17 +61,17 @@ extern class LocalMember extends sun.tools.java.MemberDefinition
 	* operation that immediately follows the LocalMember.copyInline().
 	* Return "this" if there is no such copy.
 	*/
-	@:overload public function getCurrentInlineCopy(ctx : sun.tools.tree.Context) : LocalMember;
+	@:overload public function getCurrentInlineCopy(ctx : sun.tools.tree.Context) : sun.tools.tree.LocalMember;
 	
 	/**
 	* May inline copies of all the arguments of the given method.
 	*/
-	@:overload public static function copyArguments(ctx : sun.tools.tree.Context, field : sun.tools.java.MemberDefinition) : java.NativeArray<LocalMember>;
+	@:overload public static function copyArguments(ctx : sun.tools.tree.Context, field : sun.tools.java.MemberDefinition) : java.NativeArray<sun.tools.tree.LocalMember>;
 	
 	/**
 	* Call this when finished with the result of a copyArguments() call.
 	*/
-	@:overload public static function doneWithArguments(ctx : sun.tools.tree.Context, res : java.NativeArray<LocalMember>) : Void;
+	@:overload public static function doneWithArguments(ctx : sun.tools.tree.Context, res : java.NativeArray<sun.tools.tree.LocalMember>) : Void;
 	
 	/**
 	* Is this local variable's value stable and simple enough to be directly

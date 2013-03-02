@@ -34,7 +34,7 @@ extern class JSerializedObject extends com.sun.codemodel.internal.JResourceFile
 	/**
 	* called by JPackage to serialize the object
 	*/
-	@:overload override private function build(os : java.io.OutputStream) : Void;
+	@:overload private function build(os : java.io.OutputStream) : Void;
 	
 	
 }

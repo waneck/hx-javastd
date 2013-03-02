@@ -66,7 +66,7 @@ extern class HelpWriter extends com.sun.tools.doclets.formats.html.HtmlDocletWri
 	*
 	* @return a content tree for the help label
 	*/
-	@:overload override private function getNavLinkHelp() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkHelp() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

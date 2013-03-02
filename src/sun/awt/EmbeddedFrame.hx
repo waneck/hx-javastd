@@ -51,7 +51,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	/**
 	* Block introspection of a parent window by this child.
 	*/
-	@:overload override public function getParent() : java.awt.Container;
+	@:overload public function getParent() : java.awt.Container;
 	
 	/**
 	* Needed to track which KeyboardFocusManager is current. We want to avoid memory
@@ -157,7 +157,7 @@ extern class EmbeddedFrame extends java.awt.Frame implements java.awt.KeyEventDi
 	
 	@:overload public function isCursorAllowed() : Bool;
 	
-	@:overload override public function getCursor() : java.awt.Cursor;
+	@:overload public function getCursor() : java.awt.Cursor;
 	
 	@:overload private function setPeer(p : java.awt.peer.ComponentPeer) : Void;
 	

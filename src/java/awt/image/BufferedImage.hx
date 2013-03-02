@@ -459,14 +459,14 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @param observer ignored
 	* @return the width of this <code>BufferedImage</code>
 	*/
-	@:overload override public function getWidth(observer : java.awt.image.ImageObserver) : Int;
+	@:overload public function getWidth(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Returns the height of the <code>BufferedImage</code>.
 	* @param observer ignored
 	* @return the height of this <code>BufferedImage</code>
 	*/
-	@:overload override public function getHeight(observer : java.awt.image.ImageObserver) : Int;
+	@:overload public function getHeight(observer : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Returns the object that produces the pixels for the image.
@@ -474,7 +474,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* pixels for this image.
 	* @see ImageProducer
 	*/
-	@:overload override public function getSource() : java.awt.image.ImageProducer;
+	@:overload public function getSource() : java.awt.image.ImageProducer;
 	
 	/**
 	* Returns a property of the image by name.  Individual property names
@@ -496,7 +496,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @see ImageObserver
 	* @see java.awt.Image#UndefinedProperty
 	*/
-	@:overload override public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
+	@:overload public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
 	
 	/**
 	* Returns a property of the image by name.
@@ -515,7 +515,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @return a <code>Graphics2D</code>, which can be used to draw into
 	*          this image.
 	*/
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Creates a <code>Graphics2D</code>, which can be used to draw into
@@ -540,7 +540,7 @@ extern class BufferedImage extends java.awt.Image implements java.awt.image.Writ
 	* @exception <code>RasterFormatException</code> if the specified
 	* area is not contained within this <code>BufferedImage</code>.
 	*/
-	@:overload public function getSubimage(x : Int, y : Int, w : Int, h : Int) : BufferedImage;
+	@:overload public function getSubimage(x : Int, y : Int, w : Int, h : Int) : java.awt.image.BufferedImage;
 	
 	/**
 	* Returns whether or not the alpha has been premultiplied.  It

@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlAnyElementWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlAnyElement>
 {
-	@:overload public function value(value : Class<Dynamic>) : XmlAnyElementWriter;
+	@:overload public function value(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAnyElementWriter;
 	
-	@:overload public function value(value : com.sun.codemodel.internal.JType) : XmlAnyElementWriter;
+	@:overload public function value(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAnyElementWriter;
 	
-	@:overload public function lax(value : Bool) : XmlAnyElementWriter;
+	@:overload public function lax(value : Bool) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAnyElementWriter;
 	
 	
 }

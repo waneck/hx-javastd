@@ -45,7 +45,7 @@ package javax.swing.text.html;
 	/**
 	* @return true if the Component is visible.
 	*/
-	@:overload override public function isVisible() : Bool;
+	@:overload public function isVisible() : Bool;
 	
 	
 }

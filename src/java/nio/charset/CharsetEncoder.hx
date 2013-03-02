@@ -106,7 +106,7 @@ extern class CharsetEncoder
 	* @throws  IllegalArgumentException
 	*          If the preconditions on the parameter do not hold
 	*/
-	@:overload @:final public function replaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : CharsetEncoder;
+	@:overload @:final public function replaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Reports a change to this encoder's replacement value.
@@ -157,7 +157,7 @@ extern class CharsetEncoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : CharsetEncoder;
+	@:overload @:final public function onMalformedInput(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Reports a change to this encoder's malformed-input action.
@@ -190,7 +190,7 @@ extern class CharsetEncoder
 	* @throws IllegalArgumentException
 	*         If the precondition on the parameter does not hold
 	*/
-	@:overload @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : CharsetEncoder;
+	@:overload @:final public function onUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Reports a change to this encoder's unmappable-character action.
@@ -388,7 +388,7 @@ extern class CharsetEncoder
 	* @return  This encoder
 	*
 	*/
-	@:overload @:final public function reset() : CharsetEncoder;
+	@:overload @:final public function reset() : java.nio.charset.CharsetEncoder;
 	
 	/**
 	* Resets this encoder, clearing any charset-specific internal state.

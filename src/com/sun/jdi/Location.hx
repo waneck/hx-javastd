@@ -23,7 +23,7 @@ package com.sun.jdi;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern interface Location extends com.sun.jdi.Mirror extends java.lang.Comparable<Location>
+extern interface Location extends com.sun.jdi.Mirror extends java.lang.Comparable<com.sun.jdi.Location>
 {
 	/**
 	* Gets the type to which this Location belongs. Normally

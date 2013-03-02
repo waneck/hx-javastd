@@ -598,7 +598,7 @@ package java.util;
 	
 	
 }
-@:native('java$util$AbstractList$ListItr') @:internal extern class AbstractList_ListItr extends AbstractList_Itr implements java.util.ListIterator<Dynamic>
+@:native('java$util$AbstractList$ListItr') @:internal extern class AbstractList_ListItr extends java.util.AbstractList.AbstractList_Itr implements java.util.ListIterator<Dynamic>
 {
 	@:overload public function hasPrevious() : Bool;
 	
@@ -614,7 +614,7 @@ package java.util;
 	
 	
 }
-@:internal extern class SubList<E> extends AbstractList<E>
+@:internal extern class SubList<E> extends java.util.AbstractList<E>
 {
 	@:overload override public function set(index : Int, element : E) : E;
 	
@@ -640,7 +640,7 @@ package java.util;
 	
 	
 }
-@:internal extern class RandomAccessSubList<E> extends SubList<E> implements java.util.RandomAccess
+@:internal extern class RandomAccessSubList<E> extends java.util.AbstractList.SubList<E> implements java.util.RandomAccess
 {
 	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	

@@ -43,7 +43,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	* @param strict
 	* @return less, greater, less_equal, greater_equal, equal
 	*/
-	@:overload private function compareDates(date1 : AbstractDateTimeDV_DateTimeData, date2 : AbstractDateTimeDV_DateTimeData, strict : Bool) : java.StdTypes.Int16;
+	@:overload private function compareDates(date1 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, date2 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, strict : Bool) : java.StdTypes.Int16;
 	
 	/**
 	* Given normalized values, determines order-relation
@@ -53,7 +53,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	* @param date2  date/time object
 	* @return 0 if date1 and date2 are equal, a value less than 0 if date1 is less than date2, a value greater than 0 if date1 is greater than date2
 	*/
-	@:overload private function compareOrder(date1 : AbstractDateTimeDV_DateTimeData, date2 : AbstractDateTimeDV_DateTimeData) : java.StdTypes.Int16;
+	@:overload private function compareOrder(date1 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, date2 : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : java.StdTypes.Int16;
 	
 	/**
 	* Parses time hh:mm:ss.sss and time zone if any
@@ -63,7 +63,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	* @param data
 	* @exception RuntimeException
 	*/
-	@:overload private function getTime(buffer : String, start : Int, end : Int, data : AbstractDateTimeDV_DateTimeData) : Void;
+	@:overload private function getTime(buffer : String, start : Int, end : Int, data : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Void;
 	
 	/**
 	* Parses date CCYY-MM-DD
@@ -74,7 +74,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	* @param date
 	* @exception RuntimeException
 	*/
-	@:overload private function getDate(buffer : String, start : Int, end : Int, date : AbstractDateTimeDV_DateTimeData) : Int;
+	@:overload private function getDate(buffer : String, start : Int, end : Int, date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Int;
 	
 	/**
 	* Parses date CCYY-MM
@@ -85,7 +85,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	* @param date
 	* @exception RuntimeException
 	*/
-	@:overload private function getYearMonth(buffer : String, start : Int, end : Int, date : AbstractDateTimeDV_DateTimeData) : Int;
+	@:overload private function getYearMonth(buffer : String, start : Int, end : Int, date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Int;
 	
 	/**
 	* Shared code from Date and YearMonth datatypes.
@@ -95,7 +95,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	* @param date
 	* @exception RuntimeException
 	*/
-	@:overload private function parseTimeZone(buffer : String, start : Int, end : Int, date : AbstractDateTimeDV_DateTimeData) : Void;
+	@:overload private function parseTimeZone(buffer : String, start : Int, end : Int, date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Void;
 	
 	/**
 	* Parses time zone: 'Z' or {+,-} followed by  hh:mm
@@ -104,7 +104,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	* @param sign
 	* @exception RuntimeException
 	*/
-	@:overload private function getTimeZone(buffer : String, data : AbstractDateTimeDV_DateTimeData, sign : Int, end : Int) : Void;
+	@:overload private function getTimeZone(buffer : String, data : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData, sign : Int, end : Int) : Void;
 	
 	/**
 	* Computes index of given char within StringBuffer
@@ -122,7 +122,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	*
 	* @param data
 	*/
-	@:overload private function validateDateTime(data : AbstractDateTimeDV_DateTimeData) : Void;
+	@:overload private function validateDateTime(data : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Void;
 	
 	/**
 	* Return index of UTC char: 'Z', '+', '-'
@@ -155,19 +155,19 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	*
 	* @param date   CCYY-MM-DDThh:mm:ss+03
 	*/
-	@:overload private function normalize(date : AbstractDateTimeDV_DateTimeData) : Void;
+	@:overload private function normalize(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Void;
 	
 	/**
 	* @param date
 	*/
-	@:overload private function saveUnnormalized(date : AbstractDateTimeDV_DateTimeData) : Void;
+	@:overload private function saveUnnormalized(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Void;
 	
 	/**
 	* Resets object representation of date/time
 	*
 	* @param data   date/time object
 	*/
-	@:overload private function resetDateObj(data : AbstractDateTimeDV_DateTimeData) : Void;
+	@:overload private function resetDateObj(data : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : Void;
 	
 	/**
 	* Given {year,month} computes maximum
@@ -187,7 +187,7 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	
 	@:overload private function fQuotient(temp : Int, low : Int, high : Int) : Int;
 	
-	@:overload private function dateToString(date : AbstractDateTimeDV_DateTimeData) : String;
+	@:overload private function dateToString(date : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : String;
 	
 	@:overload @:final private function append(message : java.lang.StringBuffer, value : Int, nch : Int) : Void;
 	
@@ -197,11 +197,11 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 	
 	@:overload private function parseSecond(buffer : String, start : Int, end : Int) : Float;
 	
-	@:overload private function getXMLGregorianCalendar(data : AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
+	@:overload private function getXMLGregorianCalendar(data : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.XMLGregorianCalendar;
 	
-	@:overload private function getDuration(data : AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.Duration;
+	@:overload private function getDuration(data : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : javax.xml.datatype.Duration;
 	
-	@:overload @:final private function getFractionalSecondsAsBigDecimal(data : AbstractDateTimeDV_DateTimeData) : java.math.BigDecimal;
+	@:overload @:final private function getFractionalSecondsAsBigDecimal(data : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV.AbstractDateTimeDV_DateTimeData) : java.math.BigDecimal;
 	
 	
 }
@@ -210,9 +210,9 @@ extern class AbstractDateTimeDV extends com.sun.org.apache.xerces.internal.impl.
 */
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$AbstractDateTimeDV$DateTimeData') @:internal extern class AbstractDateTimeDV_DateTimeData implements com.sun.org.apache.xerces.internal.xs.datatypes.XSDateTime
 {
-	@:overload public function new(originalValue : String, type : AbstractDateTimeDV) : Void;
+	@:overload public function new(originalValue : String, type : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV) : Void;
 	
-	@:overload public function new(year : Int, month : Int, day : Int, hour : Int, minute : Int, second : Float, utc : Int, originalValue : String, normalized : Bool, type : AbstractDateTimeDV) : Void;
+	@:overload public function new(year : Int, month : Int, day : Int, hour : Int, minute : Int, second : Float, utc : Int, originalValue : String, normalized : Bool, type : com.sun.org.apache.xerces.internal.impl.dv.xs.AbstractDateTimeDV) : Void;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	

@@ -33,7 +33,7 @@ extern class ForwardingDiagnosticFormatter<D, F> implements com.sun.tools.javac.
 	/*
 	* configuration object used by this formatter
 	*/
-	private var configuration : ForwardingDiagnosticFormatter_ForwardingConfiguration;
+	private var configuration : com.sun.tools.javac.util.ForwardingDiagnosticFormatter.ForwardingDiagnosticFormatter_ForwardingConfiguration;
 	
 	@:overload public function new(formatter : F) : Void;
 	

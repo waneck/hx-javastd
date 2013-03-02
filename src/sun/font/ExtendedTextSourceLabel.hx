@@ -39,7 +39,7 @@ package sun.font;
 	* If present oldLabel must have been created from a run of text that includes the text used in
 	* the new label.  Start in source corresponds to logical character offset in oldLabel.
 	*/
-	@:overload public function new(source : sun.font.TextSource, oldLabel : ExtendedTextSourceLabel, offset : Int) : Void;
+	@:overload public function new(source : sun.font.TextSource, oldLabel : sun.font.ExtendedTextSourceLabel, offset : Int) : Void;
 	
 	@:overload override public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	

@@ -27,13 +27,13 @@ package com.sun.xml.internal.fastinfoset.util;
 */
 extern class StringIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIntMap
 {
-	private static var NULL_ENTRY(default, null) : StringIntMap_Entry;
+	private static var NULL_ENTRY(default, null) : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry;
 	
-	private var _readOnlyMap : StringIntMap;
+	private var _readOnlyMap : com.sun.xml.internal.fastinfoset.util.StringIntMap;
 	
-	private var _lastEntry : StringIntMap_Entry;
+	private var _lastEntry : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry;
 	
-	private var _table : java.NativeArray<StringIntMap_Entry>;
+	private var _table : java.NativeArray<com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry>;
 	
 	private var _index : Int;
 	
@@ -49,7 +49,7 @@ extern class StringIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIntMa
 	
 	@:overload override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyMap(readOnlyMap : StringIntMap, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.StringIntMap, clear : Bool) : Void;
 	
 	@:overload @:final public function getNextIndex() : Int;
 	
@@ -69,7 +69,7 @@ extern class StringIntMap extends com.sun.xml.internal.fastinfoset.util.KeyIntMa
 }
 @:native('com$sun$xml$internal$fastinfoset$util$StringIntMap$Entry') extern class StringIntMap_Entry extends com.sun.xml.internal.fastinfoset.util.KeyIntMap.KeyIntMap_BaseEntry
 {
-	@:overload public function new(key : String, hash : Int, value : Int, next : StringIntMap_Entry) : Void;
+	@:overload public function new(key : String, hash : Int, value : Int, next : com.sun.xml.internal.fastinfoset.util.StringIntMap.StringIntMap_Entry) : Void;
 	
 	
 }

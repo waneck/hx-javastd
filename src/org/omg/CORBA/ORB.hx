@@ -50,7 +50,7 @@ extern class ORB
 	*
 	* @return the singleton ORB
 	*/
-	@:overload @:synchronized public static function init() : ORB;
+	@:overload @:synchronized public static function init() : org.omg.CORBA.ORB;
 	
 	/**
 	* Creates a new <code>ORB</code> instance for a standalone
@@ -62,7 +62,7 @@ extern class ORB
 	* @param props application-specific properties; may be <code>null</code>
 	* @return the newly-created ORB instance
 	*/
-	@:overload public static function init(args : java.NativeArray<String>, props : java.util.Properties) : ORB;
+	@:overload public static function init(args : java.NativeArray<String>, props : java.util.Properties) : org.omg.CORBA.ORB;
 	
 	/**
 	* Creates a new <code>ORB</code> instance for an applet.  This
@@ -72,7 +72,7 @@ extern class ORB
 	* @param props applet-specific properties; may be <code>null</code>
 	* @return the newly-created ORB instance
 	*/
-	@:overload public static function init(app : java.applet.Applet, props : java.util.Properties) : ORB;
+	@:overload public static function init(app : java.applet.Applet, props : java.util.Properties) : org.omg.CORBA.ORB;
 	
 	/**
 	* Allows the ORB implementation to be initialized with the given

@@ -40,7 +40,7 @@ extern class ResourceResolver
 	*
 	* @throws ResourceResolverException
 	*/
-	@:overload @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String) : ResourceResolver;
+	@:overload @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
 	
 	/**
 	* Method getInstance
@@ -52,7 +52,7 @@ extern class ResourceResolver
 	*
 	* @throws ResourceResolverException
 	*/
-	@:overload @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String, individualResolvers : java.util.List<Dynamic>) : ResourceResolver;
+	@:overload @:final public static function getInstance(uri : org.w3c.dom.Attr, BaseURI : String, individualResolvers : java.util.List<Dynamic>) : com.sun.org.apache.xml.internal.security.utils.resolver.ResourceResolver;
 	
 	/**
 	* The init() function is called by com.sun.org.apache.xml.internal.security.Init.init()

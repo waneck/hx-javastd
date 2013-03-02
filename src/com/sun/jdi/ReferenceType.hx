@@ -23,7 +23,7 @@ package com.sun.jdi;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern interface ReferenceType extends com.sun.jdi.Type extends java.lang.Comparable<ReferenceType> extends com.sun.jdi.Accessible
+extern interface ReferenceType extends com.sun.jdi.Type extends java.lang.Comparable<com.sun.jdi.ReferenceType> extends com.sun.jdi.Accessible
 {
 	/**
 	* Gets the fully qualified name of this type. The returned name
@@ -433,7 +433,7 @@ extern interface ReferenceType extends com.sun.jdi.Type extends java.lang.Compar
 	* @return a List of nested {@link ReferenceType} objects; the list
 	* has 0 length if there are no nested types.
 	*/
-	@:overload public function nestedTypes() : java.util.List<ReferenceType>;
+	@:overload public function nestedTypes() : java.util.List<com.sun.jdi.ReferenceType>;
 	
 	/**
 	* Gets the {@link Value} of a given static {@link Field} in this type.

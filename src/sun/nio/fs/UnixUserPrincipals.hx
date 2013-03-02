@@ -42,7 +42,7 @@ package sun.nio.fs;
 	
 	
 }
-@:native('sun$nio$fs$UnixUserPrincipals$Group') @:internal extern class UnixUserPrincipals_Group extends UnixUserPrincipals_User implements java.nio.file.attribute.GroupPrincipal
+@:native('sun$nio$fs$UnixUserPrincipals$Group') @:internal extern class UnixUserPrincipals_Group extends sun.nio.fs.UnixUserPrincipals.UnixUserPrincipals_User implements java.nio.file.attribute.GroupPrincipal
 {
 	
 }

@@ -66,7 +66,7 @@ extern class DatatypeFactory
 	*
 	* @see #newInstance(String factoryClassName, ClassLoader classLoader)
 	*/
-	@:overload public static function newInstance() : DatatypeFactory;
+	@:overload public static function newInstance() : javax.xml.datatype.DatatypeFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>DatatypeFactory</code> from class name.
@@ -102,7 +102,7 @@ extern class DatatypeFactory
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : DatatypeFactory;
+	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.datatype.DatatypeFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>Duration</code>

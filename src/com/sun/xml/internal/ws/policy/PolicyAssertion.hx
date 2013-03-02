@@ -39,7 +39,7 @@ extern class PolicyAssertion
 	* nested policy alternatives in the future. This responsibility is delegated to
 	* {@link ComplexAssertion} class instead.
 	*/
-	@:overload private function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet) : Void;
+	@:overload private function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet) : Void;
 	
 	/**
 	* Creates generic assertionand stores the data specified in input parameters
@@ -47,7 +47,7 @@ extern class PolicyAssertion
 	* @param assertionData assertion creation data specifying the details of newly created assertion
 	* @param assertionParameters collection of assertions parameters of this policy assertion. May be {@code null}.
 	*/
-	@:overload private function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<PolicyAssertion>) : Void;
+	@:overload private function new(assertionData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
 	
 	/**
 	* Returns the fully qualified name of the assertion.
@@ -144,14 +144,14 @@ extern class PolicyAssertion
 	*
 	* @deprecated Use getNestedParametersIterator() instead
 	*/
-	@:overload @:final public function getNestedAssertionsIterator() : java.util.Iterator<PolicyAssertion>;
+	@:overload @:final public function getNestedAssertionsIterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.PolicyAssertion>;
 	
 	/**
 	* Returns the assertion's parameter collection iterator.
 	*
 	* @return the assertion's parameter collection iterator.
 	*/
-	@:overload @:final public function getParametersIterator() : java.util.Iterator<PolicyAssertion>;
+	@:overload @:final public function getParametersIterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.PolicyAssertion>;
 	
 	/**
 	* Returns the boolean information whether this assertion contains nested policy.
@@ -175,7 +175,7 @@ extern class PolicyAssertion
 	* @param type The implementation type of the assertion. May not be null.
 	* @return The instance of the implementation type. Null otherwise.
 	*/
-	@:overload public function getImplementation<T : PolicyAssertion>(type : Class<T>) : T;
+	@:overload public function getImplementation<T : com.sun.xml.internal.ws.policy.PolicyAssertion>(type : Class<T>) : T;
 	
 	/**
 	* An {@code Object.toString()} method override.

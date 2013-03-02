@@ -36,7 +36,7 @@ extern class DOMService
 	*
 	* @param obj Object to leverage the DOMService
 	*/
-	@:overload public static function getService(obj : Dynamic) : DOMService;
+	@:overload public static function getService(obj : Dynamic) : com.sun.java.browser.dom.DOMService;
 	
 	/**
 	* An empty constructor is provided. Implementations of this

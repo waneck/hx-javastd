@@ -28,7 +28,7 @@ extern class SolarisVirtualMachine extends sun.tools.attach.HotSpotVirtualMachin
 	/**
 	* Detach from the target VM
 	*/
-	@:overload override public function detach() : Void;
+	@:overload public function detach() : Void;
 	
 	
 }
@@ -36,11 +36,11 @@ extern class SolarisVirtualMachine extends sun.tools.attach.HotSpotVirtualMachin
 {
 	@:overload public function new(s : Int) : Void;
 	
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:synchronized public function read() : Int;
 	
-	@:overload @:synchronized override public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:synchronized public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class XInt
 	
 	@:overload @:final public function shortValue() : java.StdTypes.Int16;
 	
-	@:overload @:final public function equals(compareVal : XInt) : Bool;
+	@:overload @:final public function equals(compareVal : com.sun.org.apache.xerces.internal.impl.xs.util.XInt) : Bool;
 	
 	@:overload public function toString() : String;
 	

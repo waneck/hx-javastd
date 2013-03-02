@@ -101,7 +101,7 @@ extern class ValueGen24 extends com.sun.tools.corba.se.idl.ValueGen
 	/**
 	* <62023> - generate factory interface and default factory
 	**/
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, v : com.sun.tools.corba.se.idl.ValueEntry, str : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, v : com.sun.tools.corba.se.idl.ValueEntry, str : java.io.PrintWriter) : Void;
 	
 	/**
 	*

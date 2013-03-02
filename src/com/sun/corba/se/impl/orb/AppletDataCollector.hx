@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.orb;
 */
 extern class AppletDataCollector extends com.sun.corba.se.impl.orb.DataCollectorBase
 {
-	@:overload override public function isApplet() : Bool;
+	@:overload public function isApplet() : Bool;
 	
-	@:overload override private function collect() : Void;
+	@:overload private function collect() : Void;
 	
 	
 }

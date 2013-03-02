@@ -325,7 +325,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @return the specified <code>TimeZone</code>, or the GMT zone if the given ID
 	* cannot be understood.
 	*/
-	@:overload @:synchronized public static function getTimeZone(ID : String) : TimeZone;
+	@:overload @:synchronized public static function getTimeZone(ID : String) : java.util.TimeZone;
 	
 	/**
 	* Gets the available IDs according to the given time zone offset in milliseconds.
@@ -351,7 +351,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @return a default <code>TimeZone</code>.
 	* @see #setDefault
 	*/
-	@:overload public static function getDefault() : TimeZone;
+	@:overload public static function getDefault() : java.util.TimeZone;
 	
 	/**
 	* Sets the <code>TimeZone</code> that is
@@ -361,7 +361,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* @param zone the new default time zone
 	* @see #getDefault
 	*/
-	@:overload public static function setDefault(zone : TimeZone) : Void;
+	@:overload public static function setDefault(zone : java.util.TimeZone) : Void;
 	
 	/**
 	* Returns true if this zone has the same rule and offset as another zone.
@@ -372,7 +372,7 @@ extern class TimeZone implements java.io.Serializable implements java.lang.Clone
 	* with the possible exception of the ID
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function hasSameRules(other : TimeZone) : Bool;
+	@:require(java2) @:overload public function hasSameRules(other : java.util.TimeZone) : Bool;
 	
 	/**
 	* Creates a copy of this <code>TimeZone</code>.

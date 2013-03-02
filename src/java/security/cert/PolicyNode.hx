@@ -32,7 +32,7 @@ extern interface PolicyNode
 	* @return the parent of this node, or <code>null</code> if this is the
 	* root node
 	*/
-	@:overload public function getParent() : PolicyNode;
+	@:overload public function getParent() : java.security.cert.PolicyNode;
 	
 	/**
 	* Returns an iterator over the children of this node. Any attempts to
@@ -42,7 +42,7 @@ extern interface PolicyNode
 	*
 	* @return an iterator over the children of this node
 	*/
-	@:overload public function getChildren() : java.util.Iterator<PolicyNode>;
+	@:overload public function getChildren() : java.util.Iterator<java.security.cert.PolicyNode>;
 	
 	/**
 	* Returns the depth of this node in the valid policy tree.

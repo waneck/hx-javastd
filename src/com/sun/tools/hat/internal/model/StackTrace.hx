@@ -44,7 +44,7 @@ extern class StackTrace
 	*
 	* @return a (possibly new) StackTrace that is limited to depth.
 	*/
-	@:overload public function traceForDepth(depth : Int) : StackTrace;
+	@:overload public function traceForDepth(depth : Int) : com.sun.tools.hat.internal.model.StackTrace;
 	
 	@:overload public function resolve(snapshot : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	

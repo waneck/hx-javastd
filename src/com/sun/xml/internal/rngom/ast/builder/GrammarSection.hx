@@ -59,7 +59,7 @@ extern interface GrammarSection<P, E, L, A, CL>
 	* @param pattern
 	*      The pattern to be defined.
 	*/
-	@:overload public function define(name : String, combine : GrammarSection_Combine, pattern : P, loc : L, anno : A) : Void;
+	@:overload public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : P, loc : L, anno : A) : Void;
 	
 	/**
 	* Called when an annotation is found.

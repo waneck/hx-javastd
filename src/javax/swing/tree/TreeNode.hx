@@ -29,7 +29,7 @@ extern interface TreeNode
 	* Returns the child <code>TreeNode</code> at index
 	* <code>childIndex</code>.
 	*/
-	@:overload public function getChildAt(childIndex : Int) : TreeNode;
+	@:overload public function getChildAt(childIndex : Int) : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the number of children <code>TreeNode</code>s the receiver
@@ -40,14 +40,14 @@ extern interface TreeNode
 	/**
 	* Returns the parent <code>TreeNode</code> of the receiver.
 	*/
-	@:overload public function getParent() : TreeNode;
+	@:overload public function getParent() : javax.swing.tree.TreeNode;
 	
 	/**
 	* Returns the index of <code>node</code> in the receivers children.
 	* If the receiver does not contain <code>node</code>, -1 will be
 	* returned.
 	*/
-	@:overload public function getIndex(node : TreeNode) : Int;
+	@:overload public function getIndex(node : javax.swing.tree.TreeNode) : Int;
 	
 	/**
 	* Returns true if the receiver allows children.

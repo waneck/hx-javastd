@@ -86,7 +86,7 @@ package javax.swing.text;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload public function install(ftf : javax.swing.JFormattedTextField) : Void;
+	@:overload override public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	/**
 	* Sets when edits are published back to the
@@ -230,9 +230,9 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$DefaultFormatter$DefaultNavigationFilter') @:internal extern class DefaultFormatter_DefaultNavigationFilter extends javax.swing.text.NavigationFilter implements java.io.Serializable
 {
-	@:overload public function setDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload override public function setDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
-	@:overload public function moveDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
+	@:overload override public function moveDot(fb : javax.swing.text.NavigationFilter.NavigationFilter_FilterBypass, dot : Int, bias : javax.swing.text.Position.Position_Bias) : Void;
 	
 	@:overload override public function getNextVisualPositionFrom(text : javax.swing.text.JTextComponent, pos : Int, bias : javax.swing.text.Position.Position_Bias, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
@@ -244,11 +244,11 @@ package javax.swing.text;
 */
 @:native('javax$swing$text$DefaultFormatter$DefaultDocumentFilter') @:internal extern class DefaultFormatter_DefaultDocumentFilter extends javax.swing.text.DocumentFilter implements java.io.Serializable
 {
-	@:overload public function remove(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
+	@:overload override public function remove(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
 	
-	@:overload public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload override public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload override public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attr : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

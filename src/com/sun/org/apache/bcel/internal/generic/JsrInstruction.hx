@@ -82,7 +82,7 @@ extern class JsrInstruction extends com.sun.org.apache.bcel.internal.generic.Bra
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public @:public @:public public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

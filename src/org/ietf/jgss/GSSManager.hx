@@ -30,7 +30,7 @@ extern class GSSManager
 	*
 	* @return a GSSManager implementation
 	*/
-	@:overload public static function getInstance() : GSSManager;
+	@:overload public static function getInstance() : org.ietf.jgss.GSSManager;
 	
 	/**
 	* Returns a list of mechanisms that are available to GSS-API callers

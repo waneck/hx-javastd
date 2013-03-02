@@ -28,23 +28,23 @@ extern class Compression extends javax.print.attribute.EnumSyntax implements jav
 	/**
 	* No compression is used.
 	*/
-	public static var NONE(default, null) : Compression;
+	public static var NONE(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* ZIP public domain inflate/deflate compression technology.
 	*/
-	public static var DEFLATE(default, null) : Compression;
+	public static var DEFLATE(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* GNU zip compression technology described in
 	* <A HREF="http://www.ietf.org/rfc/rfc1952.txt">RFC 1952</A>.
 	*/
-	public static var GZIP(default, null) : Compression;
+	public static var GZIP(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* UNIX compression technology.
 	*/
-	public static var COMPRESS(default, null) : Compression;
+	public static var COMPRESS(default, null) : javax.print.attribute.standard.Compression;
 	
 	/**
 	* Construct a new compression enumeration value with the given integer

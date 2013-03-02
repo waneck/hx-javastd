@@ -77,7 +77,7 @@ extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.classfile.Ac
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload private function new(c : FieldOrMethod) : Void;
+	@:overload private function new(c : com.sun.org.apache.bcel.internal.classfile.FieldOrMethod) : Void;
 	
 	/**
 	* Construct object from file stream.
@@ -157,7 +157,7 @@ extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.classfile.Ac
 	/**
 	* @return deep copy of this field
 	*/
-	@:overload private function copy_(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : FieldOrMethod;
+	@:overload private function copy_(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.FieldOrMethod;
 	
 	@:overload @:public public function accept(obj : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	

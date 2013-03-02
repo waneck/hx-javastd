@@ -27,7 +27,7 @@ extern class OAInvocationInfo extends org.omg.CORBA.portable.ServantObject
 {
 	@:overload public function new(oa : com.sun.corba.se.spi.oa.ObjectAdapter, id : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function new(info : OAInvocationInfo, operation : String) : Void;
+	@:overload public function new(info : com.sun.corba.se.spi.oa.OAInvocationInfo, operation : String) : Void;
 	
 	@:overload public function oa() : com.sun.corba.se.spi.oa.ObjectAdapter;
 	

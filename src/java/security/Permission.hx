@@ -105,7 +105,7 @@ extern class Permission implements java.security.Guard implements java.io.Serial
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload @:abstract public function implies(permission : Permission) : Bool;
+	@:overload @:abstract public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two Permission objects for equality.

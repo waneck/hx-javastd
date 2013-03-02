@@ -73,7 +73,7 @@ extern class BasicComboBoxEditor implements javax.swing.ComboBoxEditor implement
 	
 	@:overload override public function setText(s : String) : Void;
 	
-	@:overload override public function setBorder(b : javax.swing.border.Border) : Void;
+	@:overload public function setBorder(b : javax.swing.border.Border) : Void;
 	
 	
 }
@@ -92,7 +92,7 @@ extern class BasicComboBoxEditor implements javax.swing.ComboBoxEditor implement
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$plaf$basic$BasicComboBoxEditor$UIResource') extern class BasicComboBoxEditor_UIResource extends BasicComboBoxEditor implements javax.swing.plaf.UIResource
+@:native('javax$swing$plaf$basic$BasicComboBoxEditor$UIResource') extern class BasicComboBoxEditor_UIResource extends javax.swing.plaf.basic.BasicComboBoxEditor implements javax.swing.plaf.UIResource
 {
 	
 }

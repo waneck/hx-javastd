@@ -94,7 +94,7 @@ extern class Oid
 	* @param oids the array of Oid's to search
 	* @return true if the array contains this Oid value, false otherwise
 	*/
-	@:overload public function containedIn(oids : java.NativeArray<Oid>) : Bool;
+	@:overload public function containedIn(oids : java.NativeArray<org.ietf.jgss.Oid>) : Bool;
 	
 	/**
 	* Returns a hashcode value for this Oid.

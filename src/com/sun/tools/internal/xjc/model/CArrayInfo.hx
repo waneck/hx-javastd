@@ -35,15 +35,15 @@ extern class CArrayInfo extends com.sun.tools.internal.xjc.model.AbstractCTypeIn
 	
 	@:overload public function getInfo() : com.sun.tools.internal.xjc.model.CNonElement;
 	
-	@:overload override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
-	@:overload override public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
+	@:overload public function getType() : com.sun.tools.internal.xjc.model.nav.NType;
 	
 	@:overload public function isBoxedType() : Bool;
 	
 	@:overload public function fullName() : String;
 	
-	@:overload override public function getLocator() : org.xml.sax.Locator;
+	@:overload public function getLocator() : org.xml.sax.Locator;
 	
 	
 }

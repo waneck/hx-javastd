@@ -25,9 +25,9 @@ package sun.font;
 */
 extern class FontAccess
 {
-	@:overload @:synchronized public static function setFontAccess(acc : FontAccess) : Void;
+	@:overload @:synchronized public static function setFontAccess(acc : sun.font.FontAccess) : Void;
 	
-	@:overload @:synchronized public static function getFontAccess() : FontAccess;
+	@:overload @:synchronized public static function getFontAccess() : sun.font.FontAccess;
 	
 	@:overload @:abstract public function getFont2D(f : java.awt.Font) : sun.font.Font2D;
 	

@@ -42,7 +42,7 @@ extern class ClientSOAPHandlerTube extends com.sun.xml.internal.ws.handler.Handl
 	*/
 	@:overload public function new(binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
+	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
 	
 	
 }

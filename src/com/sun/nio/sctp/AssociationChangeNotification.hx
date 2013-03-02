@@ -49,7 +49,7 @@ package com.sun.nio.sctp;
 	*
 	* @return  The event
 	*/
-	@:overload @:abstract public function event() : AssociationChangeNotification_AssocChangeEvent;
+	@:overload @:abstract public function event() : com.sun.nio.sctp.AssociationChangeNotification.AssociationChangeNotification_AssocChangeEvent;
 	
 	
 }

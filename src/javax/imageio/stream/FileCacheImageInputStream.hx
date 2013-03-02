@@ -49,9 +49,9 @@ extern class FileCacheImageInputStream extends javax.imageio.stream.ImageInputSt
 	*/
 	@:overload public function new(stream : java.io.InputStream, cacheDir : java.io.File) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Returns <code>true</code> since this
@@ -63,7 +63,7 @@ extern class FileCacheImageInputStream extends javax.imageio.stream.ImageInputSt
 	* @see #isCachedMemory
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCached() : Bool;
+	@:overload public function isCached() : Bool;
 	
 	/**
 	* Returns <code>true</code> since this
@@ -74,7 +74,7 @@ extern class FileCacheImageInputStream extends javax.imageio.stream.ImageInputSt
 	* @see #isCached
 	* @see #isCachedMemory
 	*/
-	@:overload override public function isCachedFile() : Bool;
+	@:overload public function isCachedFile() : Bool;
 	
 	/**
 	* Returns <code>false</code> since this
@@ -86,7 +86,7 @@ extern class FileCacheImageInputStream extends javax.imageio.stream.ImageInputSt
 	* @see #isCached
 	* @see #isCachedFile
 	*/
-	@:overload override public function isCachedMemory() : Bool;
+	@:overload public function isCachedMemory() : Bool;
 	
 	/**
 	* Closes this <code>FileCacheImageInputStream</code>, closing
@@ -95,12 +95,12 @@ extern class FileCacheImageInputStream extends javax.imageio.stream.ImageInputSt
 	*
 	* @exception IOException if an error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function finalize() : Void;
+	@:overload private function finalize() : Void;
 	
 	
 }

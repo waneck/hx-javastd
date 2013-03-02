@@ -40,7 +40,7 @@ extern class AbstractMessageImpl extends com.sun.xml.internal.ws.api.message.Mes
 	/**
 	* Copy constructor.
 	*/
-	@:overload private function new(that : AbstractMessageImpl) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.message.AbstractMessageImpl) : Void;
 	
 	@:overload override public function readEnvelopeAsSource() : javax.xml.transform.Source;
 	

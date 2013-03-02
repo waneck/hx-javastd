@@ -33,15 +33,15 @@ extern class PipeAdapter extends com.sun.xml.internal.ws.api.pipe.helper.Abstrac
 	* Uses the current fiber and runs the whole pipe to the completion
 	* (meaning everything from now on will run synchronously.)
 	*/
-	@:overload override public function processRequest(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processRequest(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processResponse(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processResponse(p : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function preDestroy() : Void;
+	@:overload public function preDestroy() : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : PipeAdapter;
+	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.PipeAdapter;
 	
 	@:overload public function toString() : String;
 	

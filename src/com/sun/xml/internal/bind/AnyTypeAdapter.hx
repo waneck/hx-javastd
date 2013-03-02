@@ -28,12 +28,12 @@ extern class AnyTypeAdapter extends javax.xml.bind.annotation.adapters.XmlAdapte
 	/**
 	* Noop. Just returns the object given as the argument.
 	*/
-	@:overload override public function unmarshal(v : Dynamic) : Dynamic;
+	@:overload public function unmarshal(v : Dynamic) : Dynamic;
 	
 	/**
 	* Noop. Just returns the object given as the argument.
 	*/
-	@:overload override public function marshal(v : Dynamic) : Dynamic;
+	@:overload public function marshal(v : Dynamic) : Dynamic;
 	
 	
 }

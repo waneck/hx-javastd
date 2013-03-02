@@ -43,7 +43,7 @@ extern class IncludeEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
-	@:overload private function new(that : IncludeEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
 	
 	@:overload override public function clone() : Dynamic;
 	
@@ -69,7 +69,7 @@ extern class IncludeEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	
 	/** Add an IncludeEntry to the list of files which this included
 	file includes. */
-	@:overload public function addInclude(entry : IncludeEntry) : Void;
+	@:overload public function addInclude(entry : com.sun.tools.corba.se.idl.IncludeEntry) : Void;
 	
 	/** Get the list of files which this file includes. */
 	@:overload public function includes() : java.util.Vector<Dynamic>;

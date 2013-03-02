@@ -24,7 +24,7 @@ package com.sun.org.apache.xpath.internal.objects;
 extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject implements com.sun.org.apache.xml.internal.utils.XMLString
 {
 	/** Empty string XString object */
-	public static var EMPTYSTRING(default, null) : XString;
+	public static var EMPTYSTRING(default, null) : com.sun.org.apache.xpath.internal.objects.XString;
 	
 	/**
 	* Construct a XString object.  This constructor exists for derived classes.
@@ -45,7 +45,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @return type CLASS_STRING
 	*/
-	@:overload override public function getType() : Int;
+	@:overload public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -53,7 +53,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @return type string "#STRING"
 	*/
-	@:overload override public function getTypeString() : String;
+	@:overload public function getTypeString() : String;
 	
 	/**
 	* Tell if this object contains a java String object.
@@ -68,7 +68,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @return 0.0 if this string is null, numeric value of this string
 	* or NaN
 	*/
-	@:overload override public function num() : Float;
+	@:overload public function num() : Float;
 	
 	/**
 	* Convert a string to a double -- Allowed input is in fixed
@@ -85,21 +85,21 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	* @return True if the length of this string object is greater
 	* than 0.
 	*/
-	@:overload override public function bool() : Bool;
+	@:overload public function bool() : Bool;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function str() : String;
+	@:overload public function str() : String;
 	
 	/**
 	* Cast result object to a result tree fragment.
@@ -108,7 +108,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @return A document fragment with this string as a child node
 	*/
-	@:overload override public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
+	@:overload public function rtf(support : com.sun.org.apache.xpath.internal.XPathContext) : Int;
 	
 	/**
 	* Directly call the
@@ -121,7 +121,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Directly call the
@@ -189,7 +189,7 @@ extern class XString extends com.sun.org.apache.xpath.internal.objects.XObject i
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Compares this string to the specified <code>String</code>.

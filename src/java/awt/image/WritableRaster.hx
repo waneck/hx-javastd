@@ -86,14 +86,14 @@ extern class WritableRaster extends java.awt.image.Raster
 	*         <code>aRegion.y + aRegion.height</code> results in integer
 	*         overflow
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : WritableRaster) : Void;
+	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.WritableRaster) : Void;
 	
 	/** Returns the parent WritableRaster (if any) of this WritableRaster,
 	*  or else null.
 	*  @return the parent of this <code>WritableRaster</code>, or
 	*          <code>null</code>.
 	*/
-	@:overload public function getWritableParent() : WritableRaster;
+	@:overload public function getWritableParent() : java.awt.image.WritableRaster;
 	
 	/**
 	* Create a WritableRaster with the same size, SampleModel and DataBuffer
@@ -110,7 +110,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*         <code>childMinY + this.getHeight()</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createWritableTranslatedChild(childMinX : Int, childMinY : Int) : WritableRaster;
+	@:overload public function createWritableTranslatedChild(childMinX : Int, childMinY : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Returns a new WritableRaster which shares all or part of this
@@ -167,7 +167,7 @@ extern class WritableRaster extends java.awt.image.Raster
 	*         <code>childMinY + h</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createWritableChild(parentX : Int, parentY : Int, w : Int, h : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : WritableRaster;
+	@:overload public function createWritableChild(parentX : Int, parentY : Int, w : Int, h : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
 	
 	/**
 	* Sets the data for a single pixel from a

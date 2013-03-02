@@ -27,23 +27,23 @@ extern class MultiplexProviderFactory extends com.sun.tracing.ProviderFactory
 {
 	@:overload public function new(factories : java.util.Set<com.sun.tracing.ProviderFactory>) : Void;
 	
-	@:overload override public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
+	@:overload public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
 	
 	
 }
 @:internal extern class MultiplexProvider extends sun.tracing.ProviderSkeleton
 {
-	@:overload override private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
+	@:overload private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	
 }
 @:internal extern class MultiplexProbe extends sun.tracing.ProbeSkeleton
 {
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
-	@:overload override public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

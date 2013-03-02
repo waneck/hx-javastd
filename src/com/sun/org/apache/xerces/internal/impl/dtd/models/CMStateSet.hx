@@ -84,17 +84,17 @@ extern class CMStateSet
 	
 	@:overload public function toString() : String;
 	
-	@:overload @:final public function intersection(setToAnd : CMStateSet) : Void;
+	@:overload @:final public function intersection(setToAnd : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	@:overload @:final public function getBit(bitToGet : Int) : Bool;
 	
 	@:overload @:final public function isEmpty() : Bool;
 	
-	@:overload @:final public function union(setToOr : CMStateSet) : Void;
+	@:overload @:final public function union(setToOr : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	@:overload @:final public function setBit(bitToSet : Int) : Void;
 	
-	@:overload @:final public function setTo(srcSet : CMStateSet) : Void;
+	@:overload @:final public function setTo(srcSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	@:overload @:final public function zeroBits() : Void;
 	

@@ -98,7 +98,7 @@ extern class ObjID implements java.io.Serializable
 	* @throws  IOException if an I/O error occurs while performing
 	* this operation
 	*/
-	@:overload public static function read(_in : java.io.ObjectInput) : ObjID;
+	@:overload public static function read(_in : java.io.ObjectInput) : java.rmi.server.ObjID;
 	
 	/**
 	* Returns the hash code value for this object identifier, the

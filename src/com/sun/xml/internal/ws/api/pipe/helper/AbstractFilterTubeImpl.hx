@@ -39,7 +39,7 @@ extern class AbstractFilterTubeImpl extends com.sun.xml.internal.ws.api.pipe.hel
 	
 	@:overload private function new(next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : AbstractFilterTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	/**
 	* Default no-op implementation.

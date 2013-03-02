@@ -56,7 +56,7 @@ extern class FileTypeMap
 	* @exception SecurityException if the caller doesn't have permission
 	*                                  to change the default
 	*/
-	@:overload public static function setDefaultFileTypeMap(map : FileTypeMap) : Void;
+	@:overload public static function setDefaultFileTypeMap(map : javax.activation.FileTypeMap) : Void;
 	
 	/**
 	* Return the default FileTypeMap for the system.
@@ -67,7 +67,7 @@ extern class FileTypeMap
 	* @return The default FileTypeMap
 	* @see javax.activation.FileTypeMap#setDefaultFileTypeMap
 	*/
-	@:overload public static function getDefaultFileTypeMap() : FileTypeMap;
+	@:overload public static function getDefaultFileTypeMap() : javax.activation.FileTypeMap;
 	
 	
 }

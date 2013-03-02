@@ -112,7 +112,7 @@ extern class ParameterList
 	*/
 	@:overload public function toString(used : Int) : String;
 	
-	@:overload public function copy() : ParameterList;
+	@:overload public function copy() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ParameterList;
 	
 	
 }

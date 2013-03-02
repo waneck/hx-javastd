@@ -53,7 +53,7 @@ package com.sun.tools.javac.nio;
 	
 	@:overload public function delete() : Bool;
 	
-	@:overload public function isSameFile(other : PathFileObject) : Bool;
+	@:overload public function isSameFile(other : com.sun.tools.javac.nio.PathFileObject) : Bool;
 	
 	@:overload public function equals(other : Dynamic) : Bool;
 	
@@ -66,20 +66,6 @@ package com.sun.tools.javac.nio;
 	@:overload private static function toBinaryName(relativePath : String, sep : String) : String;
 	
 	@:overload private static function removeExtension(fileName : String) : String;
-	
-	/**
-	* Checks if this file object is compatible with the specified
-	* simple name and kind.  A simple name is a single identifier
-	* (not qualified) as defined in
-	* <cite>The Java&trade; Language Specification</cite>,
-	* section 6.2 "Names and Identifiers".
-	*
-	* @param simpleName a simple name of a class
-	* @param kind a kind
-	* @return {@code true} if this file object is compatible; false
-	* otherwise
-	*/
-	@:overload public function isNameCompatible(simpleName : String, kind : JavaFileObject_Kind) : Bool;
 	
 	
 }

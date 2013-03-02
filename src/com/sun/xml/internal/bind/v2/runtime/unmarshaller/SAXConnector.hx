@@ -63,7 +63,7 @@ extern class SAXConnector implements javax.xml.bind.UnmarshallerHandler
 }
 @:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$SAXConnector$TagNameImpl') @:internal extern class SAXConnector_TagNameImpl extends com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName
 {
-	@:overload override public function getQname() : String;
+	@:overload public function getQname() : String;
 	
 	
 }

@@ -51,7 +51,7 @@ extern class JAXBContext
 	*   <li>mixing schema derived packages from different providers on the same contextPath</li>
 	* </ol>
 	*/
-	@:overload public static function newInstance(contextPath : String) : JAXBContext;
+	@:overload public static function newInstance(contextPath : String) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -144,7 +144,7 @@ extern class JAXBContext
 	*   <li>mixing schema derived packages from different providers on the same contextPath</li>
 	* </ol>
 	*/
-	@:overload public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader) : JAXBContext;
+	@:overload public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -177,7 +177,7 @@ extern class JAXBContext
 	* </ol>
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<String, Dynamic>) : JAXBContext;
+	@:require(java0) @:overload public static function newInstance(contextPath : String, classLoader : java.lang.ClassLoader, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -242,7 +242,7 @@ extern class JAXBContext
 	*
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>) : JAXBContext;
+	@:require(java0) @:overload public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* <p>
@@ -284,7 +284,7 @@ extern class JAXBContext
 	*
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<String, Dynamic>) : JAXBContext;
+	@:require(java0) @:overload public static function newInstance(classesToBeBound : java.NativeArray<Class<Dynamic>>, properties : java.util.Map<String, Dynamic>) : javax.xml.bind.JAXBContext;
 	
 	/**
 	* Create an <tt>Unmarshaller</tt> object that can be used to convert XML

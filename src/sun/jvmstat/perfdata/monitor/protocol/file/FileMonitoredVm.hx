@@ -50,7 +50,7 @@ package sun.jvmstat.perfdata.monitor.protocol.file;
 	* Note - the <em>file:</em> protocol currently does not support
 	* the registration or notification of listeners.
 	*/
-	@:overload override public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload public function addVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	/**
 	* {@inheritDoc}.
@@ -58,7 +58,7 @@ package sun.jvmstat.perfdata.monitor.protocol.file;
 	* Note - the <em>file:</em> protocol currently does not support
 	* the registration or notification of listeners.
 	*/
-	@:overload override public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
+	@:overload public function removeVmListener(l : sun.jvmstat.monitor.event.VmListener) : Void;
 	
 	
 }

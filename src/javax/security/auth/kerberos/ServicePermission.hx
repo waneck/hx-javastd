@@ -47,7 +47,7 @@ extern class ServicePermission extends java.security.Permission implements java.
 	* @return true if the specified permission is implied by this object,
 	* false if not.
 	*/
-	@:overload public function implies(p : java.security.Permission) : Bool;
+	@:overload override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two ServicePermission objects for equality.

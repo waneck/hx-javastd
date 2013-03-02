@@ -71,7 +71,7 @@ extern class IfInstruction extends com.sun.org.apache.bcel.internal.generic.Bran
 	/**
 	* @return negation of instruction, e.g. IFEQ.negate() == IFNE
 	*/
-	@:overload @:abstract public function negate() : IfInstruction;
+	@:overload @:abstract public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
 	
 	/** @return how many words are consumed from stack
 	*/

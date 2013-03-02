@@ -113,32 +113,32 @@ extern class DatatypeConstants
 	/**
 	* <p>A constant that represents the years field.</p>
 	*/
-	public static var YEARS(default, null) : DatatypeConstants_Field;
+	public static var YEARS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the months field.</p>
 	*/
-	public static var MONTHS(default, null) : DatatypeConstants_Field;
+	public static var MONTHS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the days field.</p>
 	*/
-	public static var DAYS(default, null) : DatatypeConstants_Field;
+	public static var DAYS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the hours field.</p>
 	*/
-	public static var HOURS(default, null) : DatatypeConstants_Field;
+	public static var HOURS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the minutes field.</p>
 	*/
-	public static var MINUTES(default, null) : DatatypeConstants_Field;
+	public static var MINUTES(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>A constant that represents the seconds field.</p>
 	*/
-	public static var SECONDS(default, null) : DatatypeConstants_Field;
+	public static var SECONDS(default, null) : javax.xml.datatype.DatatypeConstants.DatatypeConstants_Field;
 	
 	/**
 	* <p>Fully qualified name for W3C XML Schema 1.0 datatype <code>dateTime</code>.</p>

@@ -27,9 +27,9 @@ package com.sun.tools.internal.xjc.api.impl.s2j;
 {
 	@:overload private function new(parent : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl, elementInfo : com.sun.tools.internal.xjc.model.CElementInfo) : Void;
 	
-	@:overload override public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
+	@:overload public function getType() : com.sun.tools.internal.xjc.api.TypeAndAnnotation;
 	
-	@:overload @:final override public function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
+	@:overload @:final public function calcDrilldown() : java.util.List<com.sun.tools.internal.xjc.api.Property>;
 	
 	
 }

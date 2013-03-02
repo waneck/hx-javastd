@@ -45,7 +45,7 @@ package java.lang;
 * @author  Joseph D. Darcy
 * @since   JDK1.0
 */
-@:require(java0) extern class Long extends java.lang.Number implements java.lang.Comparable<Long>
+@:require(java0) extern class Long extends java.lang.Number implements java.lang.Comparable<Null<haxe.Int64>>
 {
 	/**
 	* A constant holding the minimum value a {@code long} can
@@ -65,7 +65,7 @@ package java.lang;
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Long>;
+	@:require(java1) public static var TYPE(default, null) : Class<Null<haxe.Int64>>;
 	
 	/**
 	* Returns a string representation of the first argument in the
@@ -331,7 +331,7 @@ package java.lang;
 	* @throws     NumberFormatException  If the {@code String} does not
 	*             contain a parsable {@code long}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Long;
+	@:overload public static function valueOf(s : String, radix : Int) : Null<haxe.Int64>;
 	
 	/**
 	* Returns a {@code Long} object holding the value
@@ -355,7 +355,7 @@ package java.lang;
 	* @throws     NumberFormatException  If the string cannot be parsed
 	*             as a {@code long}.
 	*/
-	@:overload public static function valueOf(s : String) : Long;
+	@:overload public static function valueOf(s : String) : Null<haxe.Int64>;
 	
 	/**
 	* Returns a {@code Long} instance representing the specified
@@ -375,7 +375,7 @@ package java.lang;
 	* @return a {@code Long} instance representing {@code l}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(l : haxe.Int64) : Long;
+	@:require(java5) @:overload public static function valueOf(l : haxe.Int64) : Null<haxe.Int64>;
 	
 	/**
 	* Decodes a {@code String} into a {@code Long}.
@@ -420,7 +420,7 @@ package java.lang;
 	* @see java.lang.Long#parseLong(String, int)
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function decode(nm : String) : Long;
+	@:require(java2) @:overload public static function decode(nm : String) : Null<haxe.Int64>;
 	
 	/**
 	* Constructs a newly allocated {@code Long} object that
@@ -550,7 +550,7 @@ package java.lang;
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getLong(nm : String) : Long;
+	@:overload public static function getLong(nm : String) : Null<haxe.Int64>;
 	
 	/**
 	* Determines the {@code long} value of the system property
@@ -593,7 +593,7 @@ package java.lang;
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getLong(nm : String, val : haxe.Int64) : Long;
+	@:overload public static function getLong(nm : String, val : haxe.Int64) : Null<haxe.Int64>;
 	
 	/**
 	* Returns the {@code long} value of the system property with
@@ -638,7 +638,7 @@ package java.lang;
 	* @see java.lang.System#getProperty(java.lang.String, java.lang.String)
 	* @see java.lang.Long#decode
 	*/
-	@:overload public static function getLong(nm : String, val : Long) : Long;
+	@:overload public static function getLong(nm : String, val : Null<haxe.Int64>) : Null<haxe.Int64>;
 	
 	/**
 	* Compares two {@code Long} objects numerically.
@@ -653,7 +653,7 @@ package java.lang;
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherLong : Long) : Int;
+	@:require(java2) @:overload public function compareTo(anotherLong : Null<haxe.Int64>) : Int;
 	
 	/**
 	* Compares two {@code long} values numerically.

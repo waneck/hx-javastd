@@ -258,7 +258,7 @@ package java.util;
 	*
 	* @return a reverse order view of this map
 	*/
-	@:overload public function descendingMap() : NavigableMap<K, V>;
+	@:overload public function descendingMap() : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Returns a {@link NavigableSet} view of the keys contained in this map.
@@ -326,7 +326,7 @@ package java.util;
 	*         range, and {@code fromKey} or {@code toKey} lies
 	*         outside the bounds of the range
 	*/
-	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : NavigableMap<K, V>;
+	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys are less than (or
@@ -355,7 +355,7 @@ package java.util;
 	*         restricted range, and {@code toKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function headMap(toKey : K, inclusive : Bool) : NavigableMap<K, V>;
+	@:overload public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys are greater than (or
@@ -384,7 +384,7 @@ package java.util;
 	*         restricted range, and {@code fromKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function tailMap(fromKey : K, inclusive : Bool) : NavigableMap<K, V>;
+	@:overload public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* {@inheritDoc}

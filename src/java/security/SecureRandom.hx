@@ -123,7 +123,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getInstance(algorithm : String) : SecureRandom;
+	@:require(java2) @:overload public static function getInstance(algorithm : String) : java.security.SecureRandom;
 	
 	/**
 	* Returns a SecureRandom object that implements the specified
@@ -168,7 +168,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getInstance(algorithm : String, provider : String) : SecureRandom;
+	@:require(java2) @:overload public static function getInstance(algorithm : String, provider : String) : java.security.SecureRandom;
 	
 	/**
 	* Returns a SecureRandom object that implements the specified
@@ -206,7 +206,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : SecureRandom;
+	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.SecureRandom;
 	
 	/**
 	* Returns the provider of this SecureRandom object.
@@ -249,7 +249,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @see #getSeed
 	*/
-	@:overload override public function setSeed(seed : haxe.Int64) : Void;
+	@:overload public function setSeed(seed : haxe.Int64) : Void;
 	
 	/**
 	* Generates a user-specified number of random bytes.
@@ -261,7 +261,7 @@ extern class SecureRandom extends java.util.Random
 	*
 	* @param bytes the array to be filled in with random bytes.
 	*/
-	@:overload @:synchronized override public function nextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:synchronized public function nextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Generates an integer containing the user-specified number of
@@ -277,7 +277,7 @@ extern class SecureRandom extends java.util.Random
 	* @return an <code>int</code> containing the user-specified number
 	* of pseudo-random bits (right justified, with leading zeros).
 	*/
-	@:overload @:final override private function next(numBits : Int) : Int;
+	@:overload @:final private function next(numBits : Int) : Int;
 	
 	/**
 	* Returns the given number of seed bytes, computed using the seed

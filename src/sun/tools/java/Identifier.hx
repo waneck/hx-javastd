@@ -28,18 +28,18 @@ extern class Identifier implements sun.tools.java.Constants
 	/**
 	* Lookup an identifier.
 	*/
-	@:overload @:synchronized public static function lookup(s : String) : Identifier;
+	@:overload @:synchronized public static function lookup(s : String) : sun.tools.java.Identifier;
 	
 	/**
 	* Lookup a qualified identifier.
 	*/
-	@:overload public static function lookup(q : Identifier, n : Identifier) : Identifier;
+	@:overload public static function lookup(q : sun.tools.java.Identifier, n : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Lookup an inner identifier.
 	* (Note:  n can be idNull.)
 	*/
-	@:overload public static function lookupInner(c : Identifier, n : Identifier) : Identifier;
+	@:overload public static function lookupInner(c : sun.tools.java.Identifier, n : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	/**
 	* Convert to a string.
@@ -56,14 +56,14 @@ extern class Identifier implements sun.tools.java.Constants
 	* the name was not qualified.  The qualifier does not include
 	* any inner part of the name.
 	*/
-	@:overload public function getQualifier() : Identifier;
+	@:overload public function getQualifier() : sun.tools.java.Identifier;
 	
 	/**
 	* Return the unqualified name.
 	* In the case of an inner name, the unqualified name
 	* will itself contain components.
 	*/
-	@:overload public function getName() : Identifier;
+	@:overload public function getName() : sun.tools.java.Identifier;
 	
 	/** A space character, which precedes the first inner class
 	*  name in a qualified name, and thus marks the qualification
@@ -91,21 +91,21 @@ extern class Identifier implements sun.tools.java.Constants
 	* id.getFlatName().name  =>  "Foo.Bar"
 	* </pre>
 	*/
-	@:overload public function getFlatName() : Identifier;
+	@:overload public function getFlatName() : sun.tools.java.Identifier;
 	
-	@:overload public function getTopName() : Identifier;
+	@:overload public function getTopName() : sun.tools.java.Identifier;
 	
 	/**
 	* Yet another way to slice qualified identifiers:
 	* The head of an identifier is its first qualifier component,
 	* and the tail is the rest of them.
 	*/
-	@:overload public function getHead() : Identifier;
+	@:overload public function getHead() : sun.tools.java.Identifier;
 	
 	/**
 	* @see getHead
 	*/
-	@:overload public function getTail() : Identifier;
+	@:overload public function getTail() : sun.tools.java.Identifier;
 	
 	/**
 	* Determine whether an Identifier has been marked as ambiguous.
@@ -117,12 +117,12 @@ extern class Identifier implements sun.tools.java.Constants
 	* ambiguous.  It is important that this new Identifier not refer
 	* to an existing class.
 	*/
-	@:overload public function addAmbigPrefix() : Identifier;
+	@:overload public function addAmbigPrefix() : sun.tools.java.Identifier;
 	
 	/**
 	* Remove the ambigPrefix from `this' to get the original identifier.
 	*/
-	@:overload public function removeAmbigPrefix() : Identifier;
+	@:overload public function removeAmbigPrefix() : sun.tools.java.Identifier;
 	
 	
 }

@@ -48,7 +48,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param annotationTypeDoc the class being documented.
 	* @param writer            the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, annotationTypeDoc : com.sun.javadoc.AnnotationTypeDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : AnnotationTypeBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, annotationTypeDoc : com.sun.javadoc.AnnotationTypeDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeBuilder;
 	
 	/**
 	* {@inheritDoc}

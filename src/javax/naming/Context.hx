@@ -335,7 +335,7 @@ extern interface Context
 	* @see #createSubcontext(String)
 	* @see javax.naming.directory.DirContext#createSubcontext
 	*/
-	@:overload public function createSubcontext(name : javax.naming.Name) : Context;
+	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
 	/**
 	* Creates and binds a new context.
@@ -351,7 +351,7 @@ extern interface Context
 	*          mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload public function createSubcontext(name : String) : Context;
+	@:overload public function createSubcontext(name : String) : javax.naming.Context;
 	
 	/**
 	* Retrieves the named object, following links except

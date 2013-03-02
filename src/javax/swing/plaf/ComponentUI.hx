@@ -213,7 +213,7 @@ extern class ComponentUI
 	* The default implementation of this method throws an error, as it
 	* should never be invoked.
 	*/
-	@:overload public static function createUI(c : javax.swing.JComponent) : ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Returns the baseline.  The baseline is measured from the top of

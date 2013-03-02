@@ -60,18 +60,18 @@ package java.lang.invoke;
 	*   Object invoke(Object**M a, Object v) = target(a..., v[0]...v[S-1]);
 	* }
 	*/
-	private var outer(default, null) : SpreadGeneric;
+	private var outer(default, null) : java.lang.invoke.SpreadGeneric;
 	
 	private var target(default, null) : java.lang.invoke.MethodHandle;
 	
 	@:overload private function isPrototype() : Bool;
 	
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, target : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, target : java.lang.invoke.MethodHandle) : Void;
 	
 	/** Make a copy of self, with new fields. */
-	@:overload @:abstract private function makeInstance(outer : SpreadGeneric, target : java.lang.invoke.MethodHandle) : SpreadGeneric_Adapter;
+	@:overload @:abstract private function makeInstance(outer : java.lang.invoke.SpreadGeneric, target : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter;
 	
 	@:overload private function check(av : Dynamic, n : Int) : Dynamic;
 	
@@ -200,25 +200,25 @@ System.out.println(VAR.transform(line));
 }
 }
 //}}} */
-@:native('java$lang$invoke$SpreadGeneric$S0') @:internal extern class SpreadGeneric_S0 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S0') @:internal extern class SpreadGeneric_S0 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S0;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S0;
 	
 	@:overload private function invoke_S0(av : Dynamic) : Dynamic;
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S1') @:internal extern class SpreadGeneric_S1 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S1') @:internal extern class SpreadGeneric_S1 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S1;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S1;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -226,13 +226,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S2') @:internal extern class SpreadGeneric_S2 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S2') @:internal extern class SpreadGeneric_S2 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S2;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S2;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -242,13 +242,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S3') @:internal extern class SpreadGeneric_S3 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S3') @:internal extern class SpreadGeneric_S3 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S3;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S3;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -260,13 +260,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S4') @:internal extern class SpreadGeneric_S4 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S4') @:internal extern class SpreadGeneric_S4 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S4;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S4;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -280,13 +280,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S5') @:internal extern class SpreadGeneric_S5 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S5') @:internal extern class SpreadGeneric_S5 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S5;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S5;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -302,13 +302,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S6') @:internal extern class SpreadGeneric_S6 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S6') @:internal extern class SpreadGeneric_S6 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S6;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S6;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -326,13 +326,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S7') @:internal extern class SpreadGeneric_S7 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S7') @:internal extern class SpreadGeneric_S7 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S7;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S7;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -352,13 +352,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S8') @:internal extern class SpreadGeneric_S8 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S8') @:internal extern class SpreadGeneric_S8 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S8;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S8;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -380,13 +380,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S9') @:internal extern class SpreadGeneric_S9 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S9') @:internal extern class SpreadGeneric_S9 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S9;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S9;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, av : Dynamic) : Dynamic;
 	
@@ -410,13 +410,13 @@ System.out.println(VAR.transform(line));
 	
 	
 }
-@:native('java$lang$invoke$SpreadGeneric$S10') @:internal extern class SpreadGeneric_S10 extends SpreadGeneric_Adapter
+@:native('java$lang$invoke$SpreadGeneric$S10') @:internal extern class SpreadGeneric_S10 extends java.lang.invoke.SpreadGeneric.SpreadGeneric_Adapter
 {
-	@:overload private function new(outer : SpreadGeneric) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric) : Void;
 	
-	@:overload private function new(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
+	@:overload private function new(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : Void;
 	
-	@:overload override private function makeInstance(outer : SpreadGeneric, t : java.lang.invoke.MethodHandle) : SpreadGeneric_S10;
+	@:overload override private function makeInstance(outer : java.lang.invoke.SpreadGeneric, t : java.lang.invoke.MethodHandle) : java.lang.invoke.SpreadGeneric.SpreadGeneric_S10;
 	
 	@:overload private function invoke_S0(a0 : Dynamic, a1 : Dynamic, a2 : Dynamic, a3 : Dynamic, a4 : Dynamic, a5 : Dynamic, a6 : Dynamic, a7 : Dynamic, a8 : Dynamic, a9 : Dynamic, av : Dynamic) : Dynamic;
 	

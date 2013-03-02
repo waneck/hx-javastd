@@ -25,7 +25,7 @@ package com.sun.xml.internal.dtdparser;
 */
 extern class InputEntity
 {
-	@:overload public static function getInputEntity(h : com.sun.xml.internal.dtdparser.DTDEventListener, l : java.util.Locale) : InputEntity;
+	@:overload public static function getInputEntity(h : com.sun.xml.internal.dtdparser.DTDEventListener, l : java.util.Locale) : com.sun.xml.internal.dtdparser.InputEntity;
 	
 	@:overload public function isInternal() : Bool;
 	
@@ -35,11 +35,11 @@ extern class InputEntity
 	
 	@:overload public function getName() : String;
 	
-	@:overload public function init(_in : org.xml.sax.InputSource, name : String, stack : InputEntity, isPE : Bool) : Void;
+	@:overload public function init(_in : org.xml.sax.InputSource, name : String, stack : com.sun.xml.internal.dtdparser.InputEntity, isPE : Bool) : Void;
 	
-	@:overload public function init(b : java.NativeArray<java.StdTypes.Char16>, name : String, stack : InputEntity, isPE : Bool) : Void;
+	@:overload public function init(b : java.NativeArray<java.StdTypes.Char16>, name : String, stack : com.sun.xml.internal.dtdparser.InputEntity, isPE : Bool) : Void;
 	
-	@:overload public function pop() : InputEntity;
+	@:overload public function pop() : com.sun.xml.internal.dtdparser.InputEntity;
 	
 	/**
 	* returns true iff there's no more data to consume ...

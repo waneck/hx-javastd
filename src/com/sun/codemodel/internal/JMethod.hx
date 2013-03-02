@@ -32,9 +32,9 @@ extern class JMethod extends com.sun.codemodel.internal.JGenerifiableImpl implem
 	* @param exception
 	*        Name of an exception that this method may throw
 	*/
-	@:overload public function _throws(exception : com.sun.codemodel.internal.JClass) : JMethod;
+	@:overload public function _throws(exception : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JMethod;
 	
-	@:overload public function _throws(exception : Class<java.lang.Throwable>) : JMethod;
+	@:overload public function _throws(exception : Class<java.lang.Throwable>) : com.sun.codemodel.internal.JMethod;
 	
 	/**
 	* Returns the list of variable of this method.

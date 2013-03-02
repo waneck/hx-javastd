@@ -31,7 +31,7 @@ extern class SurfaceManagerFactory
 	*
 	* @return the surface manager factory
 	*/
-	@:overload @:synchronized public static function getInstance() : SurfaceManagerFactory;
+	@:overload @:synchronized public static function getInstance() : sun.java2d.SurfaceManagerFactory;
 	
 	/**
 	* Sets the surface manager factory. This may only be called once, and it
@@ -40,7 +40,7 @@ extern class SurfaceManagerFactory
 	*
 	* @param factory the factory to set
 	*/
-	@:overload @:synchronized public static function setInstance(factory : SurfaceManagerFactory) : Void;
+	@:overload @:synchronized public static function setInstance(factory : sun.java2d.SurfaceManagerFactory) : Void;
 	
 	/**
 	* Creates a new instance of a VolatileSurfaceManager given any

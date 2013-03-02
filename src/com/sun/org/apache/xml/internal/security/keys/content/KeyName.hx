@@ -46,7 +46,7 @@ extern class KeyName extends com.sun.org.apache.xml.internal.security.utils.Sign
 	@:overload public function getKeyName() : String;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

@@ -63,7 +63,7 @@ extern class CertPathValidator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : CertPathValidator;
+	@:overload public static function getInstance(algorithm : String) : java.security.cert.CertPathValidator;
 	
 	/**
 	* Returns a <code>CertPathValidator</code> object that implements the
@@ -100,7 +100,7 @@ extern class CertPathValidator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : CertPathValidator;
+	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.cert.CertPathValidator;
 	
 	/**
 	* Returns a <code>CertPathValidator</code> object that implements the
@@ -131,7 +131,7 @@ extern class CertPathValidator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : CertPathValidator;
+	@:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.cert.CertPathValidator;
 	
 	/**
 	* Returns the <code>Provider</code> of this

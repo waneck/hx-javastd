@@ -28,12 +28,12 @@ extern class Chromaticity extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* Monochrome printing.
 	*/
-	public static var MONOCHROME(default, null) : Chromaticity;
+	public static var MONOCHROME(default, null) : javax.print.attribute.standard.Chromaticity;
 	
 	/**
 	* Color printing.
 	*/
-	public static var COLOR(default, null) : Chromaticity;
+	public static var COLOR(default, null) : javax.print.attribute.standard.Chromaticity;
 	
 	/**
 	* Construct a new chromaticity enumeration value with the given integer
@@ -46,12 +46,12 @@ extern class Chromaticity extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* Returns the string table for class Chromaticity.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class Chromaticity.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

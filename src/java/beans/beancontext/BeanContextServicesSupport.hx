@@ -102,7 +102,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* BCSSServiceProvider without having to overrride addService() in
 	* order to instantiate.
 	*/
-	@:overload private function createBCSSServiceProvider(sc : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider) : BeanContextServicesSupport_BCSSServiceProvider;
+	@:overload private function createBCSSServiceProvider(sc : Class<Dynamic>, bcsp : java.beans.beancontext.BeanContextServiceProvider) : java.beans.beancontext.BeanContextServicesSupport.BeanContextServicesSupport_BCSSServiceProvider;
 	
 	/**
 	* add a BeanContextServicesListener
@@ -198,7 +198,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	* subclasses may envelope this method in order to implement their
 	* own child removal side-effects.
 	*/
-	@:overload private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
+	@:overload override private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* called from setBeanContext to notify a BeanContextChild
@@ -284,7 +284,7 @@ extern class BeanContextServicesSupport extends java.beans.beancontext.BeanConte
 	/**
 	* Delegate for the <tt>BeanContextServiceProvider</tt>.
 	*/
-	@:transient private var proxy : BeanContextServicesSupport_BCSSProxyServiceProvider;
+	@:transient private var proxy : java.beans.beancontext.BeanContextServicesSupport.BeanContextServicesSupport_BCSSProxyServiceProvider;
 	
 	/**
 	* List of <tt>BeanContextServicesListener</tt> objects.

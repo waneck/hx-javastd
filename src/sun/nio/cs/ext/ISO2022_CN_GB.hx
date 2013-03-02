@@ -29,7 +29,7 @@ extern class ISO2022_CN_GB extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs.
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload public function historicalName() : String;
 	
@@ -41,7 +41,7 @@ extern class ISO2022_CN_GB extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs.
 }
 @:native('sun$nio$cs$ext$ISO2022_CN_GB$Encoder') @:internal extern class ISO2022_CN_GB_Encoder extends sun.nio.cs.ext.ISO2022.ISO2022_Encoder
 {
-	@:overload override public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload public function new(cs : java.nio.charset.Charset) : Void;
 	
 	/*
 	* Since ISO2022-CN-GB possesses a CharsetEncoder

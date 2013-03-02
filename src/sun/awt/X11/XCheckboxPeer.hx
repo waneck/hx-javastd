@@ -25,13 +25,13 @@ package sun.awt.X11;
 */
 @:internal extern class XCheckboxPeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.CheckboxPeer
 {
-	@:overload override public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override public function isFocusable() : Bool;
+	@:overload public function isFocusable() : Bool;
 	
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	@:overload public function keyTyped(e : java.awt.event.KeyEvent) : Void;
 	
@@ -51,20 +51,20 @@ package sun.awt.X11;
 	
 	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload public function setBackground(c : java.awt.Color) : Void;
 	
 	/*
 	* Layout the checkbox/radio button and text label
 	*/
-	@:overload override public function layout() : Void;
+	@:overload public function layout() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	@:overload public function paintCheckbox(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload public function setFont(f : java.awt.Font) : Void;
 	
 	@:overload public function paintRadioButton(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	

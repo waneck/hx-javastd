@@ -108,7 +108,7 @@ extern class ThreadLocal<T>
 * entry can be expunged from table.  Such entries are referred to
 * as "stale entries" in the code that follows.
 */
-@:native('java$lang$ThreadLocal$ThreadLocalMap$Entry') @:internal extern class ThreadLocal_ThreadLocalMap_Entry extends java.lang.ref.WeakReference<ThreadLocal<Dynamic>>
+@:native('java$lang$ThreadLocal$ThreadLocalMap$Entry') @:internal extern class ThreadLocal_ThreadLocalMap_Entry extends java.lang.ref.WeakReference<java.lang.ThreadLocal<Dynamic>>
 {
 	
 }

@@ -91,7 +91,7 @@ extern interface XSIdentityConstraint extends com.sun.xml.internal.xsom.XSCompon
 	* @throws IllegalStateException
 	*      if {@link #getCategory()}!={@link #KEYREF}
 	*/
-	@:overload public function getReferencedKey() : XSIdentityConstraint;
+	@:overload public function getReferencedKey() : com.sun.xml.internal.xsom.XSIdentityConstraint;
 	
 	
 }

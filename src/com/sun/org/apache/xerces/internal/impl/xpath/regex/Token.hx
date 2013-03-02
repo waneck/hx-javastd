@@ -28,11 +28,11 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 	
 	@:overload private function compactRanges() : Void;
 	
-	@:overload private function mergeRanges(tok : Token) : Void;
+	@:overload private function mergeRanges(tok : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
 	
-	@:overload private function subtractRanges(tok : Token) : Void;
+	@:overload private function subtractRanges(tok : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
 	
-	@:overload private function intersectRanges(tok : Token) : Void;
+	@:overload private function intersectRanges(tok : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -59,7 +59,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
 * This class represents a node in parse tree.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$StringToken') @:internal extern class Token_StringToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$StringToken') @:internal extern class Token_StringToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	
@@ -68,7 +68,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
 * This class represents a node in parse tree.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ConcatToken') @:internal extern class Token_ConcatToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ConcatToken') @:internal extern class Token_ConcatToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	
@@ -77,7 +77,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
 * This class represents a node in parse tree.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$CharToken') @:internal extern class Token_CharToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$CharToken') @:internal extern class Token_CharToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	
@@ -86,7 +86,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
 * This class represents a node in parse tree.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ClosureToken') @:internal extern class Token_ClosureToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ClosureToken') @:internal extern class Token_ClosureToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	
@@ -95,7 +95,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
 * This class represents a node in parse tree.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ParenToken') @:internal extern class Token_ParenToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ParenToken') @:internal extern class Token_ParenToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	
@@ -104,7 +104,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
 * (?(condition)yes-pattern|no-pattern)
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ConditionToken') @:internal extern class Token_ConditionToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ConditionToken') @:internal extern class Token_ConditionToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	
@@ -113,7 +113,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 /**
 * (ims-ims: .... )
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ModifierToken') @:internal extern class Token_ModifierToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$ModifierToken') @:internal extern class Token_ModifierToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	
@@ -123,7 +123,7 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 * This class represents a node in parse tree.
 * for UNION or CONCAT.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$UnionToken') @:internal extern class Token_UnionToken extends Token implements java.io.Serializable
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$Token$UnionToken') @:internal extern class Token_UnionToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
 	@:overload override public function toString(options : Int) : String;
 	

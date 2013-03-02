@@ -101,7 +101,7 @@ extern class CharArrayWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : CharArrayWriter;
+	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence) : java.io.CharArrayWriter;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -135,7 +135,7 @@ extern class CharArrayWriter extends java.io.Writer
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : CharArrayWriter;
+	@:require(java5) @:overload override public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.CharArrayWriter;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -153,7 +153,7 @@ extern class CharArrayWriter extends java.io.Writer
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : CharArrayWriter;
+	@:require(java5) @:overload override public function append(c : java.StdTypes.Char16) : java.io.CharArrayWriter;
 	
 	/**
 	* Resets the buffer so that you can use it again without

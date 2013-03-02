@@ -34,11 +34,11 @@ extern class FillRect extends sun.java2d.loops.GraphicsPrimitive
 	*   2) must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : FillRect;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.FillRect;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -55,7 +55,7 @@ extern class FillRect extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$FillRect$General') extern class FillRect_General extends FillRect
+@:native('sun$java2d$loops$FillRect$General') extern class FillRect_General extends sun.java2d.loops.FillRect
 {
 	public var fillop : sun.java2d.loops.MaskFill;
 	
@@ -65,9 +65,9 @@ extern class FillRect extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$FillRect$TraceFillRect') @:internal extern class FillRect_TraceFillRect extends FillRect
+@:native('sun$java2d$loops$FillRect$TraceFillRect') @:internal extern class FillRect_TraceFillRect extends sun.java2d.loops.FillRect
 {
-	@:overload public function new(target : FillRect) : Void;
+	@:overload public function new(target : sun.java2d.loops.FillRect) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

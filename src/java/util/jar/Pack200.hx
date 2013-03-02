@@ -45,7 +45,7 @@ extern class Pack200
 	*
 	* @return  A newly allocated Packer engine.
 	*/
-	@:overload @:synchronized public static function newPacker() : Pack200_Packer;
+	@:overload @:synchronized public static function newPacker() : java.util.jar.Pack200.Pack200_Packer;
 	
 	/**
 	* Obtain new instance of a class that implements Unpacker.
@@ -67,7 +67,7 @@ extern class Pack200
 	*
 	* @return  A newly allocated Unpacker engine.
 	*/
-	@:overload public static function newUnpacker() : Pack200_Unpacker;
+	@:overload public static function newUnpacker() : java.util.jar.Pack200.Pack200_Unpacker;
 	
 	
 }

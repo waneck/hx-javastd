@@ -23,7 +23,7 @@ package java.nio.file;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern interface Path extends java.lang.Comparable<Path> extends java.lang.Iterable<Path> extends java.nio.file.Watchable
+extern interface Path extends java.lang.Comparable<java.nio.file.Path> extends java.lang.Iterable<java.nio.file.Path> extends java.nio.file.Watchable
 {
 	/**
 	* Returns the file system that created this object.
@@ -49,7 +49,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	* @return  a path representing the root component of this path,
 	*          or {@code null}
 	*/
-	@:overload public function getRoot() : Path;
+	@:overload public function getRoot() : java.nio.file.Path;
 	
 	/**
 	* Returns the name of the file or directory denoted by this path as a
@@ -59,7 +59,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	* @return  a path representing the name of the file or directory, or
 	*          {@code null} if this path has zero elements
 	*/
-	@:overload public function getFileName() : Path;
+	@:overload public function getFileName() : java.nio.file.Path;
 	
 	/**
 	* Returns the <em>parent path</em>, or {@code null} if this path does not
@@ -84,7 +84,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*
 	* @return  a path representing the path's parent
 	*/
-	@:overload public function getParent() : Path;
+	@:overload public function getParent() : java.nio.file.Path;
 	
 	/**
 	* Returns the number of name elements in the path.
@@ -112,7 +112,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*          equal to the number of elements, or this path has zero name
 	*          elements
 	*/
-	@:overload public function getName(index : Int) : Path;
+	@:overload public function getName(index : Int) : java.nio.file.Path;
 	
 	/**
 	* Returns a relative {@code Path} that is a subsequence of the name
@@ -139,7 +139,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*          the number of elements. If {@code endIndex} is less than or
 	*          equal to {@code beginIndex}, or larger than the number of elements.
 	*/
-	@:overload public function subpath(beginIndex : Int, endIndex : Int) : Path;
+	@:overload public function subpath(beginIndex : Int, endIndex : Int) : java.nio.file.Path;
 	
 	/**
 	* Tests if this path starts with the given path.
@@ -164,7 +164,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	* @return  {@code true} if this path starts with the given path; otherwise
 	*          {@code false}
 	*/
-	@:overload public function startsWith(other : Path) : Bool;
+	@:overload public function startsWith(other : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tests if this path starts with a {@code Path}, constructed by converting
@@ -209,7 +209,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	* @return  {@code true} if this path ends with the given path; otherwise
 	*          {@code false}
 	*/
-	@:overload public function endsWith(other : Path) : Bool;
+	@:overload public function endsWith(other : java.nio.file.Path) : Bool;
 	
 	/**
 	* Tests if this path ends with a {@code Path}, constructed by converting
@@ -257,7 +257,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	* @see #getParent
 	* @see #toRealPath
 	*/
-	@:overload public function normalize() : Path;
+	@:overload public function normalize() : java.nio.file.Path;
 	
 	/**
 	* Resolve the given path against this path.
@@ -280,7 +280,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*
 	* @see #relativize
 	*/
-	@:overload public function resolve(other : Path) : Path;
+	@:overload public function resolve(other : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Converts a given path string to a {@code Path} and resolves it against
@@ -300,7 +300,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*
 	* @see FileSystem#getPath
 	*/
-	@:overload public function resolve(other : String) : Path;
+	@:overload public function resolve(other : String) : java.nio.file.Path;
 	
 	/**
 	* Resolves the given path against this path's {@link #getParent parent}
@@ -321,7 +321,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*
 	* @see #resolve(Path)
 	*/
-	@:overload public function resolveSibling(other : Path) : Path;
+	@:overload public function resolveSibling(other : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Converts a given path string to a {@code Path} and resolves it against
@@ -338,7 +338,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*
 	* @see FileSystem#getPath
 	*/
-	@:overload public function resolveSibling(other : String) : Path;
+	@:overload public function resolveSibling(other : String) : java.nio.file.Path;
 	
 	/**
 	* Constructs a relative path between this path and a given path.
@@ -380,7 +380,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*          if {@code other} is not a {@code Path} that can be relativized
 	*          against this path
 	*/
-	@:overload public function relativize(other : Path) : Path;
+	@:overload public function relativize(other : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Returns a URI to represent this path.
@@ -456,7 +456,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*          checkPropertyAccess} method is invoked to check access to the
 	*          system property {@code user.dir}
 	*/
-	@:overload public function toAbsolutePath() : Path;
+	@:overload public function toAbsolutePath() : java.nio.file.Path;
 	
 	/**
 	* Returns the <em>real</em> path of an existing file.
@@ -502,7 +502,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*          checkPropertyAccess} method is invoked to check access to the
 	*          system property {@code user.dir}
 	*/
-	@:overload public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : Path;
+	@:overload public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
 	
 	/**
 	* Returns a {@link File} object representing this path. Where this {@code
@@ -637,7 +637,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	*
 	* @return  an iterator over the name elements of this path.
 	*/
-	@:overload public function iterator() : java.util.Iterator<Path>;
+	@:overload public function iterator() : java.util.Iterator<java.nio.file.Path>;
 	
 	/**
 	* Compares two abstract paths lexicographically. The ordering defined by
@@ -658,7 +658,7 @@ extern interface Path extends java.lang.Comparable<Path> extends java.lang.Itera
 	* @throws  ClassCastException
 	*          if the paths are associated with different providers
 	*/
-	@:overload public function compareTo(other : Path) : Int;
+	@:overload public function compareTo(other : java.nio.file.Path) : Int;
 	
 	
 }

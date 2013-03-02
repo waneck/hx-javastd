@@ -29,9 +29,9 @@ extern class DynEnumImpl extends com.sun.corba.se.impl.dynamicany.DynAnyBasicImp
 	
 	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload override public function component_count() : Int;
+	@:overload public function component_count() : Int;
 	
-	@:overload override public function current_component() : org.omg.DynamicAny.DynAny;
+	@:overload public function current_component() : org.omg.DynamicAny.DynAny;
 	
 	@:overload public function get_as_string() : String;
 	

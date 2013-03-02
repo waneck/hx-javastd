@@ -25,13 +25,13 @@ extern class TransformC14NWithComments extends com.sun.org.apache.xml.internal.s
 	public static var implementedTransformURI(default, null) : String;
 	
 	/** @inheritDoc */
-	@:overload override private function engineGetURI() : String;
+	@:overload private function engineGetURI() : String;
 	
 	/** @inheritDoc */
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/** @inheritDoc */
-	@:overload override private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload private function enginePerformTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream, _transformObject : com.sun.org.apache.xml.internal.security.transforms.Transform) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	
 }

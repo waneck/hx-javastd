@@ -27,13 +27,13 @@ package sun.nio.cs;
 */
 extern class StreamEncoder extends java.io.Writer
 {
-	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, charsetName : String) : StreamEncoder;
+	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, charsetName : String) : sun.nio.cs.StreamEncoder;
 	
-	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, cs : java.nio.charset.Charset) : StreamEncoder;
+	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, cs : java.nio.charset.Charset) : sun.nio.cs.StreamEncoder;
 	
-	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, enc : java.nio.charset.CharsetEncoder) : StreamEncoder;
+	@:overload public static function forOutputStreamWriter(out : java.io.OutputStream, lock : Dynamic, enc : java.nio.charset.CharsetEncoder) : sun.nio.cs.StreamEncoder;
 	
-	@:overload public static function forEncoder(ch : java.nio.channels.WritableByteChannel, enc : java.nio.charset.CharsetEncoder, minBufferCap : Int) : StreamEncoder;
+	@:overload public static function forEncoder(ch : java.nio.channels.WritableByteChannel, enc : java.nio.charset.CharsetEncoder, minBufferCap : Int) : sun.nio.cs.StreamEncoder;
 	
 	@:overload public function getEncoding() : String;
 	

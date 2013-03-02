@@ -33,9 +33,9 @@ extern class MethodType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	
 	@:overload public function new(resultType : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type, argsType : java.util.Vector<Dynamic>) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override public function toSignature() : String;
+	@:overload public function toSignature() : String;
 	
 	/**
 	* Returns the signature of this method that results by adding
@@ -43,11 +43,11 @@ extern class MethodType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	*/
 	@:overload public function toSignature(lastArgSig : String) : String;
 	
-	@:overload override public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
-	@:overload override public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
+	@:overload public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
 	
-	@:overload override public function distanceTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Int;
+	@:overload public function distanceTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Int;
 	
 	@:overload public function resultType() : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	

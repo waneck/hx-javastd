@@ -35,7 +35,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var DEFAULT_MODALITY_TYPE(default, null) : Dialog_ModalityType;
+	@:require(java6) public static var DEFAULT_MODALITY_TYPE(default, null) : java.awt.Dialog.Dialog_ModalityType;
 	
 	/**
 	* Constructs an initially invisible, modeless <code>Dialog</code> with
@@ -169,7 +169,7 @@ extern class Dialog extends java.awt.Window
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(owner : Dialog) : Void;
+	@:require(java2) @:overload public function new(owner : java.awt.Dialog) : Void;
 	
 	/**
 	* Constructs an initially invisible, modeless <code>Dialog</code>
@@ -187,7 +187,7 @@ extern class Dialog extends java.awt.Window
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(owner : Dialog, title : String) : Void;
+	@:require(java2) @:overload public function new(owner : java.awt.Dialog, title : String) : Void;
 	
 	/**
 	* Constructs an initially invisible <code>Dialog</code> with the
@@ -215,7 +215,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(owner : Dialog, title : String, modal : Bool) : Void;
+	@:require(java2) @:overload public function new(owner : java.awt.Dialog, title : String, modal : Bool) : Void;
 	
 	/**
 	* Constructs an initially invisible <code>Dialog</code> with the
@@ -249,7 +249,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(owner : Dialog, title : String, modal : Bool, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java4) @:overload public function new(owner : java.awt.Dialog, title : String, modal : Bool, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Constructs an initially invisible, modeless <code>Dialog</code> with the
@@ -326,7 +326,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, modalityType : Dialog_ModalityType) : Void;
+	@:require(java6) @:overload public function new(owner : java.awt.Window, modalityType : java.awt.Dialog.Dialog_ModalityType) : Void;
 	
 	/**
 	* Constructs an initially invisible <code>Dialog</code> with the
@@ -359,7 +359,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, title : String, modalityType : Dialog_ModalityType) : Void;
+	@:require(java6) @:overload public function new(owner : java.awt.Window, title : String, modalityType : java.awt.Dialog.Dialog_ModalityType) : Void;
 	
 	/**
 	* Constructs an initially invisible <code>Dialog</code> with the
@@ -396,7 +396,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function new(owner : java.awt.Window, title : String, modalityType : Dialog_ModalityType, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java6) @:overload public function new(owner : java.awt.Window, title : String, modalityType : java.awt.Dialog.Dialog_ModalityType, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Makes this Dialog displayable by connecting it to
@@ -460,7 +460,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getModalityType() : Dialog_ModalityType;
+	@:require(java6) @:overload public function getModalityType() : java.awt.Dialog.Dialog_ModalityType;
 	
 	/**
 	* Sets the modality type for this dialog. See {@link
@@ -484,7 +484,7 @@ extern class Dialog extends java.awt.Window
 	*
 	* @since     1.6
 	*/
-	@:require(java6) @:overload public function setModalityType(type : Dialog_ModalityType) : Void;
+	@:require(java6) @:overload public function setModalityType(type : java.awt.Dialog.Dialog_ModalityType) : Void;
 	
 	/**
 	* Gets the title of the dialog. The title is displayed in the

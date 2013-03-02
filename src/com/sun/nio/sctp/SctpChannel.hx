@@ -46,7 +46,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:native('open') @:overload public static function _open() : SctpChannel;
+	@:overload public static function open() : com.sun.nio.sctp.SctpChannel;
 	
 	/**
 	* Opens an SCTP channel and connects it to a remote address.
@@ -98,7 +98,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:native('open') @:overload public static function _open(remote : java.net.SocketAddress, maxOutStreams : Int, maxInStreams : Int) : SctpChannel;
+	@:overload public static function open(remote : java.net.SocketAddress, maxOutStreams : Int, maxInStreams : Int) : com.sun.nio.sctp.SctpChannel;
 	
 	/**
 	* Returns the association on this channel's socket.
@@ -154,7 +154,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function bind(local : java.net.SocketAddress) : SctpChannel;
+	@:overload @:abstract public function bind(local : java.net.SocketAddress) : com.sun.nio.sctp.SctpChannel;
 	
 	/**
 	* Adds the given address to the bound addresses for the channel's
@@ -200,7 +200,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function bindAddress(address : java.net.InetAddress) : SctpChannel;
+	@:overload @:abstract public function bindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpChannel;
 	
 	/**
 	* Removes the given address from the bound addresses for the channel's
@@ -248,7 +248,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function unbindAddress(address : java.net.InetAddress) : SctpChannel;
+	@:overload @:abstract public function unbindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpChannel;
 	
 	/**
 	* Connects this channel's socket.
@@ -501,7 +501,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function shutdown() : SctpChannel;
+	@:overload @:abstract public function shutdown() : com.sun.nio.sctp.SctpChannel;
 	
 	/**
 	* Returns the value of a socket option.
@@ -551,7 +551,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	*
 	* @see SctpStandardSocketOptions
 	*/
-	@:overload @:abstract public function setOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, value : T) : SctpChannel;
+	@:overload @:abstract public function setOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, value : T) : com.sun.nio.sctp.SctpChannel;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -573,7 +573,7 @@ extern class SctpChannel extends java.nio.channels.spi.AbstractSelectableChannel
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final override public function validOps() : Int;
+	@:overload @:final public function validOps() : Int;
 	
 	/**
 	* Receives a message into the given buffer and/or handles a notification.

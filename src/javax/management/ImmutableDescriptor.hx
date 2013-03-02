@@ -28,7 +28,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	/**
 	* An empty descriptor.
 	*/
-	public static var EMPTY_DESCRIPTOR(default, null) : ImmutableDescriptor;
+	public static var EMPTY_DESCRIPTOR(default, null) : javax.management.ImmutableDescriptor;
 	
 	/**
 	* Construct a descriptor containing the given fields and values.
@@ -96,7 +96,7 @@ extern class ImmutableDescriptor implements javax.management.Descriptor
 	* the same elements.  Object array values are considered the same if
 	* {@link Arrays#deepEquals(Object[],Object[])} returns true.
 	*/
-	@:overload public static function union(descriptors : java.NativeArray<javax.management.Descriptor>) : ImmutableDescriptor;
+	@:overload public static function union(descriptors : java.NativeArray<javax.management.Descriptor>) : javax.management.ImmutableDescriptor;
 	
 	@:overload @:final public function getFieldValue(fieldName : String) : Dynamic;
 	

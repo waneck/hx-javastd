@@ -34,11 +34,11 @@ extern class BootstrapMethods_attribute extends com.sun.tools.classfile.Attribut
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	public var bootstrap_method_specifiers(default, null) : java.NativeArray<BootstrapMethods_attribute_BootstrapMethodSpecifier>;
+	public var bootstrap_method_specifiers(default, null) : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>;
 	
-	@:overload public function new(name_index : Int, bootstrap_method_specifiers : java.NativeArray<BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Void;
+	@:overload public function new(name_index : Int, bootstrap_method_specifiers : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Void;
 	
-	@:overload public static function length(bootstrap_method_specifiers : java.NativeArray<BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Int;
+	@:overload public static function length(bootstrap_method_specifiers : java.NativeArray<com.sun.tools.classfile.BootstrapMethods_attribute.BootstrapMethods_attribute_BootstrapMethodSpecifier>) : Int;
 	
 	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
 	

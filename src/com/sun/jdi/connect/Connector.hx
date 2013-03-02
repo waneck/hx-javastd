@@ -61,7 +61,7 @@ extern interface Connector
 	* @return the map associating argument names with argument
 	* information and default value.
 	*/
-	@:overload public function defaultArguments() : java.util.Map<String, Connector_Argument>;
+	@:overload public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
 	
 	
 }
@@ -139,7 +139,7 @@ extern interface Connector
 * whose value is Boolean.  Boolean values are represented
 * by the localized versions of the strings "true" and "false".
 */
-@:native('com$sun$jdi$connect$Connector$BooleanArgument') extern interface Connector_BooleanArgument extends Connector_Argument
+@:native('com$sun$jdi$connect$Connector$BooleanArgument') extern interface Connector_BooleanArgument extends com.sun.jdi.connect.Connector.Connector_Argument
 {
 	/**
 	* Sets the value of the argument.
@@ -181,7 +181,7 @@ extern interface Connector
 * whose value is an integer.  Integer values are represented
 * by their corresponding strings.
 */
-@:native('com$sun$jdi$connect$Connector$IntegerArgument') extern interface Connector_IntegerArgument extends Connector_Argument
+@:native('com$sun$jdi$connect$Connector$IntegerArgument') extern interface Connector_IntegerArgument extends com.sun.jdi.connect.Connector.Connector_Argument
 {
 	/**
 	* Sets the value of the argument.
@@ -244,7 +244,7 @@ extern interface Connector
 * Specification for and value of a Connector argument,
 * whose value is a String.
 */
-@:native('com$sun$jdi$connect$Connector$StringArgument') extern interface Connector_StringArgument extends Connector_Argument
+@:native('com$sun$jdi$connect$Connector$StringArgument') extern interface Connector_StringArgument extends com.sun.jdi.connect.Connector.Connector_Argument
 {
 	/**
 	* Performs basic sanity check of argument.
@@ -258,7 +258,7 @@ extern interface Connector
 * Specification for and value of a Connector argument,
 * whose value is a String selected from a list of choices.
 */
-@:native('com$sun$jdi$connect$Connector$SelectedArgument') extern interface Connector_SelectedArgument extends Connector_Argument
+@:native('com$sun$jdi$connect$Connector$SelectedArgument') extern interface Connector_SelectedArgument extends com.sun.jdi.connect.Connector.Connector_Argument
 {
 	/**
 	* Return the possible values for the argument

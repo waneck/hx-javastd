@@ -51,11 +51,11 @@ package javax.swing.plaf.nimbus;
 	* @see #getBlue
 	* @since JDK1.0
 	*/
-	@:require(java0) @:overload override public function getRGB() : Int;
+	@:require(java0) @:overload public function getRGB() : Int;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this <code>Color</code>. This method
@@ -65,11 +65,11 @@ package javax.swing.plaf.nimbus;
 	*
 	* @return a String representation of this <code>Color</code>.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }
-@:native('javax$swing$plaf$nimbus$DerivedColor$UIResource') @:internal extern class DerivedColor_UIResource extends DerivedColor implements javax.swing.plaf.UIResource
+@:native('javax$swing$plaf$nimbus$DerivedColor$UIResource') @:internal extern class DerivedColor_UIResource extends javax.swing.plaf.nimbus.DerivedColor implements javax.swing.plaf.UIResource
 {
 	@:overload override public function equals(o : Dynamic) : Bool;
 	

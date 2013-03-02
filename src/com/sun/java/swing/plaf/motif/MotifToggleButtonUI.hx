@@ -39,15 +39,15 @@ extern class MotifToggleButtonUI extends javax.swing.plaf.basic.BasicToggleButto
 {
 	private var selectColor : java.awt.Color;
 	
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	@:overload private function getSelectColor() : java.awt.Color;
 	
-	@:overload override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
+	@:overload private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
 	
 	@:overload public function getInsets(c : javax.swing.JComponent) : java.awt.Insets;
 	

@@ -56,7 +56,7 @@ extern class TerminalFactory
 	*
 	* @return the default TerminalFactory
 	*/
-	@:overload public static function getDefault() : TerminalFactory;
+	@:overload public static function getDefault() : javax.smartcardio.TerminalFactory;
 	
 	/**
 	* Returns a TerminalFactory of the specified type that is initialized
@@ -84,7 +84,7 @@ extern class TerminalFactory
 	* @throws NoSuchAlgorithmException if no Provider supports a
 	*   TerminalFactorySpi of the specified type
 	*/
-	@:overload public static function getInstance(type : String, params : Dynamic) : TerminalFactory;
+	@:overload public static function getInstance(type : String, params : Dynamic) : javax.smartcardio.TerminalFactory;
 	
 	/**
 	* Returns a TerminalFactory of the specified type that is initialized
@@ -117,7 +117,7 @@ extern class TerminalFactory
 	* @throws NoSuchProviderException if the specified provider could not
 	*   be found
 	*/
-	@:overload public static function getInstance(type : String, params : Dynamic, provider : String) : TerminalFactory;
+	@:overload public static function getInstance(type : String, params : Dynamic, provider : String) : javax.smartcardio.TerminalFactory;
 	
 	/**
 	* Returns a TerminalFactory of the specified type that is initialized
@@ -143,7 +143,7 @@ extern class TerminalFactory
 	* @throws NoSuchAlgorithmException if a TerminalFactorySpi implementation
 	*   of the specified type is not available from the specified Provider
 	*/
-	@:overload public static function getInstance(type : String, params : Dynamic, provider : java.security.Provider) : TerminalFactory;
+	@:overload public static function getInstance(type : String, params : Dynamic, provider : java.security.Provider) : javax.smartcardio.TerminalFactory;
 	
 	/**
 	* Returns the provider of this TerminalFactory.
@@ -192,7 +192,7 @@ extern class TerminalFactory
 }
 @:native('javax$smartcardio$TerminalFactory$NoneCardTerminals') @:internal extern class TerminalFactory_NoneCardTerminals extends javax.smartcardio.CardTerminals
 {
-	@:overload public function list(state : javax.smartcardio.CardTerminals.CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
+	@:overload override public function list(state : javax.smartcardio.CardTerminals.CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
 	
 	@:overload override public function waitForChange(timeout : haxe.Int64) : Bool;
 	

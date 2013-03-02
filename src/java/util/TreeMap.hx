@@ -609,25 +609,25 @@ package java.util;
 	
 	
 }
-@:native('java$util$TreeMap$EntryIterator') @:internal extern class TreeMap_EntryIterator extends TreeMap_PrivateEntryIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$TreeMap$EntryIterator') @:internal extern class TreeMap_EntryIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
 	
 }
-@:native('java$util$TreeMap$ValueIterator') @:internal extern class TreeMap_ValueIterator extends TreeMap_PrivateEntryIterator<Dynamic>
+@:native('java$util$TreeMap$ValueIterator') @:internal extern class TreeMap_ValueIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$TreeMap$KeyIterator') @:internal extern class TreeMap_KeyIterator extends TreeMap_PrivateEntryIterator<Dynamic>
+@:native('java$util$TreeMap$KeyIterator') @:internal extern class TreeMap_KeyIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$TreeMap$DescendingKeyIterator') @:internal extern class TreeMap_DescendingKeyIterator extends TreeMap_PrivateEntryIterator<Dynamic>
+@:native('java$util$TreeMap$DescendingKeyIterator') @:internal extern class TreeMap_DescendingKeyIterator extends java.util.TreeMap.TreeMap_PrivateEntryIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
@@ -728,7 +728,7 @@ package java.util;
 	*         restricted range, and {@code toKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function headMap(toKey : K, inclusive : Bool) : NavigableMap<K, V>;
+	@:overload public function headMap(toKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Removes all of the mappings from this map (optional operation).
@@ -754,7 +754,7 @@ package java.util;
 	*
 	* @return a reverse order view of this map
 	*/
-	@:overload public function descendingMap() : NavigableMap<K, V>;
+	@:overload public function descendingMap() : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys range from
@@ -790,7 +790,7 @@ package java.util;
 	*         range, and {@code fromKey} or {@code toKey} lies
 	*         outside the bounds of the range
 	*/
-	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : NavigableMap<K, V>;
+	@:overload public function subMap(fromKey : K, fromInclusive : Bool, toKey : K, toInclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys are greater than (or
@@ -819,7 +819,7 @@ package java.util;
 	*         restricted range, and {@code fromKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function tailMap(fromKey : K, inclusive : Bool) : NavigableMap<K, V>;
+	@:overload public function tailMap(fromKey : K, inclusive : Bool) : java.util.NavigableMap<K, V>;
 	
 	/**
 	* Copies all of the mappings from the specified map to this map
@@ -840,7 +840,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of a key or value in
 	*         the specified map prevents it from being stored in this map
 	*/
-	@:overload override public function putAll(m : Map<K, V>) : Void;
+	@:overload override public function putAll(m : java.util.Map<K, V>) : Void;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -951,7 +951,7 @@ package java.util;
 	
 	
 }
-@:native('java$util$TreeMap$NavigableSubMap$SubMapEntryIterator') @:internal extern class TreeMap_NavigableSubMap_SubMapEntryIterator extends TreeMap_NavigableSubMap_SubMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$TreeMap$NavigableSubMap$SubMapEntryIterator') @:internal extern class TreeMap_NavigableSubMap_SubMapEntryIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
@@ -959,7 +959,7 @@ package java.util;
 	
 	
 }
-@:native('java$util$TreeMap$NavigableSubMap$SubMapKeyIterator') @:internal extern class TreeMap_NavigableSubMap_SubMapKeyIterator extends TreeMap_NavigableSubMap_SubMapIterator<Dynamic>
+@:native('java$util$TreeMap$NavigableSubMap$SubMapKeyIterator') @:internal extern class TreeMap_NavigableSubMap_SubMapKeyIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
@@ -967,7 +967,7 @@ package java.util;
 	
 	
 }
-@:native('java$util$TreeMap$NavigableSubMap$DescendingSubMapEntryIterator') @:internal extern class TreeMap_NavigableSubMap_DescendingSubMapEntryIterator extends TreeMap_NavigableSubMap_SubMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$TreeMap$NavigableSubMap$DescendingSubMapEntryIterator') @:internal extern class TreeMap_NavigableSubMap_DescendingSubMapEntryIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	
@@ -975,7 +975,7 @@ package java.util;
 	
 	
 }
-@:native('java$util$TreeMap$NavigableSubMap$DescendingSubMapKeyIterator') @:internal extern class TreeMap_NavigableSubMap_DescendingSubMapKeyIterator extends TreeMap_NavigableSubMap_SubMapIterator<Dynamic>
+@:native('java$util$TreeMap$NavigableSubMap$DescendingSubMapKeyIterator') @:internal extern class TreeMap_NavigableSubMap_DescendingSubMapKeyIterator extends java.util.TreeMap.TreeMap_NavigableSubMap_SubMapIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
@@ -986,7 +986,7 @@ package java.util;
 /**
 * @serial include
 */
-@:native('java$util$TreeMap$AscendingSubMap') @:internal extern class TreeMap_AscendingSubMap<K, V> extends TreeMap_NavigableSubMap<K, V>
+@:native('java$util$TreeMap$AscendingSubMap') @:internal extern class TreeMap_AscendingSubMap<K, V> extends java.util.TreeMap.TreeMap_NavigableSubMap<K, V>
 {
 	@:overload override public function comparator() : java.util.Comparator<K>;
 	
@@ -1002,7 +1002,7 @@ package java.util;
 	
 	
 }
-@:native('java$util$TreeMap$AscendingSubMap$AscendingEntrySetView') @:internal extern class TreeMap_AscendingSubMap_AscendingEntrySetView extends TreeMap_NavigableSubMap_EntrySetView
+@:native('java$util$TreeMap$AscendingSubMap$AscendingEntrySetView') @:internal extern class TreeMap_AscendingSubMap_AscendingEntrySetView extends java.util.TreeMap.TreeMap_NavigableSubMap_EntrySetView
 {
 	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	
@@ -1011,7 +1011,7 @@ package java.util;
 /**
 * @serial include
 */
-@:native('java$util$TreeMap$DescendingSubMap') @:internal extern class TreeMap_DescendingSubMap<K, V> extends TreeMap_NavigableSubMap<K, V>
+@:native('java$util$TreeMap$DescendingSubMap') @:internal extern class TreeMap_DescendingSubMap<K, V> extends java.util.TreeMap.TreeMap_NavigableSubMap<K, V>
 {
 	@:overload override public function comparator() : java.util.Comparator<K>;
 	
@@ -1027,7 +1027,7 @@ package java.util;
 	
 	
 }
-@:native('java$util$TreeMap$DescendingSubMap$DescendingEntrySetView') @:internal extern class TreeMap_DescendingSubMap_DescendingEntrySetView extends TreeMap_NavigableSubMap_EntrySetView
+@:native('java$util$TreeMap$DescendingSubMap$DescendingEntrySetView') @:internal extern class TreeMap_DescendingSubMap_DescendingEntrySetView extends java.util.TreeMap.TreeMap_NavigableSubMap_EntrySetView
 {
 	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>;
 	

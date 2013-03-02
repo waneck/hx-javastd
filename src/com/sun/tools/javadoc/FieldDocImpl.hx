@@ -110,7 +110,7 @@ extern class FieldDocImpl extends com.sun.tools.javadoc.MemberDocImpl implements
 	/**
 	* Returns true if this field was synthesized by the compiler.
 	*/
-	@:overload override public function isSynthetic() : Bool;
+	@:overload public function isSynthetic() : Bool;
 	
 	/**
 	* Return the serialField tags in this FieldDocImpl item.

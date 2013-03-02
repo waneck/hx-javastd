@@ -108,7 +108,7 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	/**
 	* @see DTMIterator#reset()
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/**
 	* @see DTMIterator#getWhatToShow()
@@ -133,14 +133,14 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	/**
 	* @see DTMIterator#detach()
 	*/
-	@:overload override public function detach() : Void;
+	@:overload public function detach() : Void;
 	
 	/**
 	* Calling this with a value of false will cause the nodeset
 	* to be cached.
 	* @see DTMIterator#allowDetachToRelease(boolean)
 	*/
-	@:overload override public function allowDetachToRelease(allowRelease : Bool) : Void;
+	@:overload public function allowDetachToRelease(allowRelease : Bool) : Void;
 	
 	/**
 	* @see DTMIterator#getCurrentNode()
@@ -253,7 +253,7 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	* to update some caching information.
 	*
 	*/
-	@:overload override private function setObject(obj : Dynamic) : Void;
+	@:overload private function setObject(obj : Dynamic) : Void;
 	
 	/**
 	* Get the cached list of nodes appended with
@@ -261,7 +261,7 @@ extern class NodeSequence extends com.sun.org.apache.xpath.internal.objects.XObj
 	* a NodeSequence is walked when its
 	* nextNode() method is called.
 	*/
-	@:overload private function getIteratorCache() : NodeSequence_IteratorCache;
+	@:overload private function getIteratorCache() : com.sun.org.apache.xpath.internal.axes.NodeSequence.NodeSequence_IteratorCache;
 	
 	
 }

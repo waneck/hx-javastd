@@ -158,7 +158,7 @@ extern class ClassValue<T>
 *  Once an entry goes stale, it can be reset at any time
 *  into the dead state.
 */
-@:native('java$lang$ClassValue$Entry') @:internal extern class ClassValue_Entry<T> extends java.lang.ref.WeakReference<ClassValue_Version<T>>
+@:native('java$lang$ClassValue$Entry') @:internal extern class ClassValue_Entry<T> extends java.lang.ref.WeakReference<java.lang.ClassValue.ClassValue_Version<T>>
 {
 	
 }
@@ -166,7 +166,7 @@ extern class ClassValue<T>
 *  Gives a fully serialized "true state" for each pair (ClassValue cv, Class type).
 *  Also manages an unserialized fast-path cache.
 */
-@:native('java$lang$ClassValue$ClassValueMap') @:internal extern class ClassValue_ClassValueMap extends java.util.WeakHashMap<ClassValue_Identity, java.util.Map.Map_Entry<Dynamic>>
+@:native('java$lang$ClassValue$ClassValueMap') @:internal extern class ClassValue_ClassValueMap extends java.util.WeakHashMap<java.lang.ClassValue.ClassValue_Identity, java.util.Map.Map_Entry<Dynamic>>
 {
 	
 }

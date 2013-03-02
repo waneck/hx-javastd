@@ -31,7 +31,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	*/
 	@:overload public function new(variable : com.sun.org.apache.xalan.internal.xsltc.compiler.Variable) : Void;
 	
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

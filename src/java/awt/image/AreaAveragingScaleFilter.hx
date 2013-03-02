@@ -45,7 +45,7 @@ extern class AreaAveragingScaleFilter extends java.awt.image.ReplicateScaleFilte
 	* with the filtering operation.
 	* @see ImageConsumer#setHints
 	*/
-	@:overload override public function setHints(hints : Int) : Void;
+	@:overload public function setHints(hints : Int) : Void;
 	
 	/**
 	* Combine the components for the delivered byte pixels into the

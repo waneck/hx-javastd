@@ -37,7 +37,7 @@ extern class DirtyRegion implements java.lang.Cloneable
 	
 	@:overload public function growDirtyRegionTileLimit(x : Int, y : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload public static function combineRegion(region1 : DirtyRegion, region2 : DirtyRegion) : DirtyRegion;
+	@:overload public static function combineRegion(region1 : sun.java2d.xr.DirtyRegion, region2 : sun.java2d.xr.DirtyRegion) : sun.java2d.xr.DirtyRegion;
 	
 	@:overload public function setDirtyLineRegion(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
@@ -45,7 +45,7 @@ extern class DirtyRegion implements java.lang.Cloneable
 	
 	@:overload public function toString() : String;
 	
-	@:overload public function cloneRegion() : DirtyRegion;
+	@:overload public function cloneRegion() : sun.java2d.xr.DirtyRegion;
 	
 	
 }

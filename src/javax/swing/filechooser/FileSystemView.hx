@@ -43,7 +43,7 @@ package javax.swing.filechooser;
 //// to handle their particular type of file system.
 extern class FileSystemView
 {
-	@:overload public static function getFileSystemView() : FileSystemView;
+	@:overload public static function getFileSystemView() : javax.swing.filechooser.FileSystemView;
 	
 	@:overload public function new() : Void;
 	
@@ -268,13 +268,13 @@ extern class FileSystemView
 	
 	@:overload public function new(s : String) : Void;
 	
-	@:overload override public function isDirectory() : Bool;
+	@:overload public function isDirectory() : Bool;
 	
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	
 }
-@:internal extern class UnixFileSystemView extends FileSystemView
+@:internal extern class UnixFileSystemView extends javax.swing.filechooser.FileSystemView
 {
 	/**
 	* Creates a new folder with a default folder name.
@@ -291,7 +291,7 @@ extern class FileSystemView
 	
 	
 }
-@:internal extern class WindowsFileSystemView extends FileSystemView
+@:internal extern class WindowsFileSystemView extends javax.swing.filechooser.FileSystemView
 {
 	@:overload override public function isTraversable(f : java.io.File) : Null<Bool>;
 	
@@ -329,7 +329,7 @@ extern class FileSystemView
 	
 	
 }
-@:internal extern class GenericFileSystemView extends FileSystemView
+@:internal extern class GenericFileSystemView extends javax.swing.filechooser.FileSystemView
 {
 	/**
 	* Creates a new folder with a default folder name.

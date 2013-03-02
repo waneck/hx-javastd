@@ -96,7 +96,7 @@ package javax.swing.text.html;
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* For images the tooltip text comes from text specified with the
@@ -105,7 +105,7 @@ package javax.swing.text.html;
 	*
 	* @see JTextComponent#getToolTipText
 	*/
-	@:overload override public function getToolTipText(x : Single, y : Single, allocation : java.awt.Shape) : String;
+	@:overload public function getToolTipText(x : Single, y : Single, allocation : java.awt.Shape) : String;
 	
 	/**
 	* Update any cached values that come from attributes.
@@ -121,7 +121,7 @@ package javax.swing.text.html;
 	/**
 	* Invoked when the Elements attributes have changed. Recreates the image.
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Paints the View.
@@ -130,7 +130,7 @@ package javax.swing.text.html;
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -142,7 +142,7 @@ package javax.swing.text.html;
 	*           that is returned, although there is no guarantee;
 	*           the parent may choose to resize or break the view
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -157,7 +157,7 @@ package javax.swing.text.html;
 	*   away from the origin; an alignment of 0.5 would be the
 	*   center of the view
 	*/
-	@:overload override public function getAlignment(axis : Int) : Single;
+	@:overload public function getAlignment(axis : Int) : Single;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -170,7 +170,7 @@ package javax.swing.text.html;
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -183,7 +183,7 @@ package javax.swing.text.html;
 	*  given point of view
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Sets the size of the view.  This should cause
@@ -192,7 +192,7 @@ package javax.swing.text.html;
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload override public function setSize(width : Single, height : Single) : Void;
+	@:overload public function setSize(width : Single, height : Single) : Void;
 	
 	
 }

@@ -58,7 +58,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return a string such as "Multiplexing Look and Feel"
 	*/
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	/**
 	* Returns a string, suitable for use by applications/services,
@@ -66,14 +66,14 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return "Multiplex"
 	*/
-	@:overload override public function getID() : String;
+	@:overload public function getID() : String;
 	
 	/**
 	* Returns a one-line description of this look and feel.
 	*
 	* @return a descriptive string such as "Allows multiple UI instances per component instance"
 	*/
-	@:overload override public function getDescription() : String;
+	@:overload public function getDescription() : String;
 	
 	/**
 	* Returns <code>false</code>;
@@ -81,7 +81,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return <code>false</code>
 	*/
-	@:overload override public function isNativeLookAndFeel() : Bool;
+	@:overload public function isNativeLookAndFeel() : Bool;
 	
 	/**
 	* Returns <code>true</code>;
@@ -89,7 +89,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	*
 	* @return <code>true</code>
 	*/
-	@:overload override public function isSupportedLookAndFeel() : Bool;
+	@:overload public function isSupportedLookAndFeel() : Bool;
 	
 	/**
 	* Creates, initializes, and returns
@@ -104,7 +104,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 	* @return an initialized <code>UIDefaults</code> object
 	* @see javax.swing.JComponent#getUIClassID
 	*/
-	@:overload override public function getDefaults() : javax.swing.UIDefaults;
+	@:overload public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* Creates the <code>ComponentUI</code> objects
@@ -167,7 +167,7 @@ extern class MultiLookAndFeel extends javax.swing.LookAndFeel
 }
 @:internal extern class MultiUIDefaults extends javax.swing.UIDefaults
 {
-	@:overload override private function getUIError(msg : String) : Void;
+	@:overload private function getUIError(msg : String) : Void;
 	
 	
 }

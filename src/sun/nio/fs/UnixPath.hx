@@ -28,27 +28,27 @@ package sun.nio.fs;
 */
 @:internal extern class UnixPath extends sun.nio.fs.AbstractPath
 {
-	@:overload override public function getFileSystem() : java.io.UnixFileSystem;
+	@:overload public function getFileSystem() : java.io.UnixFileSystem;
 	
-	@:overload override public function getRoot() : UnixPath;
+	@:overload public function getRoot() : sun.nio.fs.UnixPath;
 	
-	@:overload override public function getFileName() : UnixPath;
+	@:overload public function getFileName() : sun.nio.fs.UnixPath;
 	
-	@:overload override public function getParent() : UnixPath;
+	@:overload public function getParent() : sun.nio.fs.UnixPath;
 	
-	@:overload override public function getNameCount() : Int;
+	@:overload public function getNameCount() : Int;
 	
-	@:overload override public function getName(index : Int) : UnixPath;
+	@:overload public function getName(index : Int) : sun.nio.fs.UnixPath;
 	
-	@:overload override public function subpath(beginIndex : Int, endIndex : Int) : UnixPath;
+	@:overload public function subpath(beginIndex : Int, endIndex : Int) : sun.nio.fs.UnixPath;
 	
-	@:overload override public function isAbsolute() : Bool;
+	@:overload public function isAbsolute() : Bool;
 	
-	@:overload public function resolve(obj : java.nio.file.Path) : UnixPath;
+	@:overload public function resolve(obj : java.nio.file.Path) : sun.nio.fs.UnixPath;
 	
-	@:overload public function relativize(obj : java.nio.file.Path) : UnixPath;
+	@:overload public function relativize(obj : java.nio.file.Path) : sun.nio.fs.UnixPath;
 	
-	@:overload override public function normalize() : java.nio.file.Path;
+	@:overload public function normalize() : java.nio.file.Path;
 	
 	@:overload public function startsWith(other : java.nio.file.Path) : Bool;
 	
@@ -62,13 +62,13 @@ package sun.nio.fs;
 	
 	@:overload public function toString() : String;
 	
-	@:overload override public function toAbsolutePath() : UnixPath;
+	@:overload public function toAbsolutePath() : sun.nio.fs.UnixPath;
 	
-	@:overload override public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
+	@:overload public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
 	
-	@:overload override public function toUri() : java.net.URI;
+	@:overload public function toUri() : java.net.URI;
 	
-	@:overload override public function register(watcher : java.nio.file.WatchService, events : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Kind<Dynamic>>, modifiers : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Modifier>) : java.nio.file.WatchKey;
+	@:overload public function register(watcher : java.nio.file.WatchService, events : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Kind<Dynamic>>, modifiers : java.NativeArray<java.nio.file.WatchEvent.WatchEvent_Modifier>) : java.nio.file.WatchKey;
 	
 	
 }

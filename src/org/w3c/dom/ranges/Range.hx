@@ -252,7 +252,7 @@ extern interface Range
 	*   <br>INVALID_STATE_ERR: Raised if <code>detach()</code> has already
 	*   been invoked on this object.
 	*/
-	@:overload public function compareBoundaryPoints(how : java.StdTypes.Int16, sourceRange : Range) : java.StdTypes.Int16;
+	@:overload public function compareBoundaryPoints(how : java.StdTypes.Int16, sourceRange : org.w3c.dom.ranges.Range) : java.StdTypes.Int16;
 	
 	/**
 	* Removes the contents of a Range from the containing document or
@@ -355,7 +355,7 @@ extern interface Range
 	*   INVALID_STATE_ERR: Raised if <code>detach()</code> has already been
 	*   invoked on this object.
 	*/
-	@:overload public function cloneRange() : Range;
+	@:overload public function cloneRange() : org.w3c.dom.ranges.Range;
 	
 	/**
 	* Called to indicate that the Range is no longer in use and that the

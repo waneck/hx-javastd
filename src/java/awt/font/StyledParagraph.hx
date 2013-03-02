@@ -48,7 +48,7 @@ package java.awt.font;
 	* @param oldParagraph a StyledParagraph for the text in aci before the
 	*     insertion
 	*/
-	@:overload public static function insertChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, insertPos : Int, oldParagraph : StyledParagraph) : StyledParagraph;
+	@:overload public static function insertChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, insertPos : Int, oldParagraph : java.awt.font.StyledParagraph) : java.awt.font.StyledParagraph;
 	
 	/**
 	* Return a StyledParagraph reflecting the insertion of a single character
@@ -62,7 +62,7 @@ package java.awt.font;
 	* @param oldParagraph a StyledParagraph for the text in aci before the
 	*     insertion
 	*/
-	@:overload public static function deleteChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, deletePos : Int, oldParagraph : StyledParagraph) : StyledParagraph;
+	@:overload public static function deleteChar(aci : java.text.AttributedCharacterIterator, chars : java.NativeArray<java.StdTypes.Char16>, deletePos : Int, oldParagraph : java.awt.font.StyledParagraph) : java.awt.font.StyledParagraph;
 	
 	/**
 	* Return the index at which there is a different Font, GraphicAttribute, or

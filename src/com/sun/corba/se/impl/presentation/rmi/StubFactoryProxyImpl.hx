@@ -27,7 +27,7 @@ extern class StubFactoryProxyImpl extends com.sun.corba.se.impl.presentation.rmi
 {
 	@:overload public function new(classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, loader : java.lang.ClassLoader) : Void;
 	
-	@:overload override public function makeStub() : org.omg.CORBA.Object;
+	@:overload public function makeStub() : org.omg.CORBA.Object;
 	
 	
 }

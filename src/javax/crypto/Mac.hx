@@ -72,7 +72,7 @@ extern class Mac implements java.lang.Cloneable
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : Mac;
+	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.Mac;
 	
 	/**
 	* Returns a <code>Mac</code> object that implements the
@@ -108,7 +108,7 @@ extern class Mac implements java.lang.Cloneable
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : Mac;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.Mac;
 	
 	/**
 	* Returns a <code>Mac</code> object that implements the
@@ -138,7 +138,7 @@ extern class Mac implements java.lang.Cloneable
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : Mac;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.Mac;
 	
 	/**
 	* Returns the provider of this <code>Mac</code> object.

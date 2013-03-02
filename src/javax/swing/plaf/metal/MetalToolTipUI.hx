@@ -29,7 +29,7 @@ extern class MetalToolTipUI extends javax.swing.plaf.basic.BasicToolTipUI
 	
 	@:overload public function new() : Void;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
 	

@@ -99,7 +99,7 @@ extern class WSEndpointReference implements com.sun.xml.internal.ws.api.model.ws
 	* This version takes various information about metadata, and creates an EPR that has
 	* the necessary embedded WSDL.
 	*/
-	@:overload public function new(version : com.sun.xml.internal.ws.api.addressing.AddressingVersion, address : String, service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, portType : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlAddress : String, referenceParameters : java.util.List<org.w3c.dom.Element>, extns : java.util.Collection<WSEndpointReference_EPRExtension>, attributes : java.util.Map<javax.xml.namespace.QName, String>) : Void;
+	@:overload public function new(version : com.sun.xml.internal.ws.api.addressing.AddressingVersion, address : String, service : javax.xml.namespace.QName, port : javax.xml.namespace.QName, portType : javax.xml.namespace.QName, metadata : java.util.List<org.w3c.dom.Element>, wsdlAddress : String, referenceParameters : java.util.List<org.w3c.dom.Element>, extns : java.util.Collection<com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension>, attributes : java.util.Map<javax.xml.namespace.QName, String>) : Void;
 	
 	/**
 	* Creates an EPR from individual components.
@@ -118,17 +118,17 @@ extern class WSEndpointReference implements com.sun.xml.internal.ws.api.model.ws
 	* Call {@link #WSEndpointReference(EndpointReference)} directly
 	* if you know it's not null.
 	*/
-	@:overload public static function create(epr : javax.xml.ws.EndpointReference) : WSEndpointReference;
+	@:overload public static function create(epr : javax.xml.ws.EndpointReference) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* @see #createWithAddress(String)
 	*/
-	@:overload public function createWithAddress(newAddress : java.net.URI) : WSEndpointReference;
+	@:overload public function createWithAddress(newAddress : java.net.URI) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* @see #createWithAddress(String)
 	*/
-	@:overload public function createWithAddress(newAddress : java.net.URL) : WSEndpointReference;
+	@:overload public function createWithAddress(newAddress : java.net.URL) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* Creates a new {@link WSEndpointReference} by replacing the address of this EPR
@@ -146,7 +146,7 @@ extern class WSEndpointReference implements com.sun.xml.internal.ws.api.model.ws
 	*      This is a complete URL to be written inside &lt;Adress> element of the EPR,
 	*      such as "http://foo.bar/abc/def"
 	*/
-	@:overload public function createWithAddress(newAddress : String) : WSEndpointReference;
+	@:overload public function createWithAddress(newAddress : String) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
 	/**
 	* Convert the EPR to the spec version. The actual type of
@@ -298,9 +298,9 @@ extern class WSEndpointReference implements com.sun.xml.internal.ws.api.model.ws
 	/**
 	* Returns the first extensibility element inside EPR root element with input QName.
 	*/
-	@:overload public function getEPRExtension(extnQName : javax.xml.namespace.QName) : WSEndpointReference_EPRExtension;
+	@:overload public function getEPRExtension(extnQName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension;
 	
-	@:overload public function getEPRExtensions() : java.util.Collection<WSEndpointReference_EPRExtension>;
+	@:overload public function getEPRExtensions() : java.util.Collection<com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_EPRExtension>;
 	
 	/**
 	* Parses the metadata inside this EPR and obtains it in a easy-to-process form.
@@ -308,7 +308,7 @@ extern class WSEndpointReference implements com.sun.xml.internal.ws.api.model.ws
 	* <p>
 	* See {@link Metadata} class for what's avaliable as "metadata".
 	*/
-	@:overload public function getMetaData() : WSEndpointReference_Metadata;
+	@:overload public function getMetaData() : com.sun.xml.internal.ws.api.addressing.WSEndpointReference.WSEndpointReference_Metadata;
 	
 	
 }
@@ -319,7 +319,7 @@ extern class WSEndpointReference implements com.sun.xml.internal.ws.api.model.ws
 {
 	@:overload public function new(rootLocalName : String) : Void;
 	
-	@:overload override private function processElement(uri : String, localName : String, qName : String) : Void;
+	@:overload private function processElement(uri : String, localName : String, qName : String) : Void;
 	
 	
 }

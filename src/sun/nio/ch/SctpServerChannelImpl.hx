@@ -38,9 +38,9 @@ extern class SctpServerChannelImpl extends com.sun.nio.sctp.SctpServerChannel im
 	
 	@:overload override public function accept() : com.sun.nio.sctp.SctpChannel;
 	
-	@:overload override private function implConfigureBlocking(block : Bool) : Void;
+	@:overload private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload override public function implCloseSelectableChannel() : Void;
+	@:overload public function implCloseSelectableChannel() : Void;
 	
 	@:overload public function kill() : Void;
 	

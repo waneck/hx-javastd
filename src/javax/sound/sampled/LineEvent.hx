@@ -55,7 +55,7 @@ package javax.sound.sampled;
 	* @throws IllegalArgumentException if <code>line</code> is
 	* <code>null</code>.
 	*/
-	@:overload public function new(line : javax.sound.sampled.Line, type : LineEvent_Type, position : haxe.Int64) : Void;
+	@:overload public function new(line : javax.sound.sampled.Line, type : javax.sound.sampled.LineEvent.LineEvent_Type, position : haxe.Int64) : Void;
 	
 	/**
 	* Obtains the audio line that is the source of this event.
@@ -68,7 +68,7 @@ package javax.sound.sampled;
 	* @return this event's type ({@link Type#OPEN}, {@link Type#CLOSE},
 	* {@link Type#START}, or {@link Type#STOP})
 	*/
-	@:overload @:final public function getType() : LineEvent_Type;
+	@:overload @:final public function getType() : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/*
 	* $$kk: 04.20.99: note to myself: should make sure our implementation is consistent with this.
@@ -124,7 +124,7 @@ package javax.sound.sampled;
 	* @see #CLOSE
 	* @see Line#open
 	*/
-	public static var OPEN(default, null) : LineEvent_Type;
+	public static var OPEN(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/**
 	* A type of event that is sent when a line closes, freeing the system
@@ -132,7 +132,7 @@ package javax.sound.sampled;
 	* @see #OPEN
 	* @see Line#close
 	*/
-	public static var CLOSE(default, null) : LineEvent_Type;
+	public static var CLOSE(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/**
 	* A type of event that is sent when a line begins to engage in active
@@ -141,7 +141,7 @@ package javax.sound.sampled;
 	* @see #STOP
 	* @see DataLine#start
 	*/
-	public static var START(default, null) : LineEvent_Type;
+	public static var START(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	/**
 	* A type of event that is sent when a line ceases active input or output
@@ -150,7 +150,7 @@ package javax.sound.sampled;
 	* @see #START
 	* @see DataLine#stop
 	*/
-	public static var STOP(default, null) : LineEvent_Type;
+	public static var STOP(default, null) : javax.sound.sampled.LineEvent.LineEvent_Type;
 	
 	
 }

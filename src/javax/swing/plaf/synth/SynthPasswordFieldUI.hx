@@ -31,7 +31,7 @@ extern class SynthPasswordFieldUI extends javax.swing.plaf.synth.SynthTextFieldU
 	* @param c the JPasswordField
 	* @return the UI
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to look up properties through the

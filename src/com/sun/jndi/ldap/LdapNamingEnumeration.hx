@@ -56,7 +56,7 @@ package com.sun.jndi.ldap;
 	*/
 	@:overload public function appendUnprocessedReferrals(ex : com.sun.jndi.ldap.LdapReferralException) : Void;
 	
-	@:overload private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : LdapNamingEnumeration;
+	@:overload private function getReferredResults(refCtx : com.sun.jndi.ldap.LdapReferralContext) : com.sun.jndi.ldap.LdapNamingEnumeration;
 	
 	/*
 	* Iterate through the URLs of a referral. If successful then perform
@@ -69,7 +69,7 @@ package com.sun.jndi.ldap;
 	* Merge the entries and/or referrals from the supplied enumeration
 	* with those of the current enumeration.
 	*/
-	@:overload private function update(ne : LdapNamingEnumeration) : Void;
+	@:overload private function update(ne : com.sun.jndi.ldap.LdapNamingEnumeration) : Void;
 	
 	@:overload private function finalize() : Void;
 	

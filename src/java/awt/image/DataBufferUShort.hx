@@ -188,7 +188,7 @@ extern class DataBufferUShort extends java.awt.image.DataBuffer
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload override public function getElem(i : Int) : Int;
+	@:overload public function getElem(i : Int) : Int;
 	
 	/**
 	* Returns the requested data array element from the specified bank.
@@ -199,7 +199,7 @@ extern class DataBufferUShort extends java.awt.image.DataBuffer
 	* @see #setElem(int, int)
 	* @see #setElem(int, int, int)
 	*/
-	@:overload override public function getElem(bank : Int, i : Int) : Int;
+	@:overload public function getElem(bank : Int, i : Int) : Int;
 	
 	/**
 	* Sets the requested data array element in the first (default) bank
@@ -210,7 +210,7 @@ extern class DataBufferUShort extends java.awt.image.DataBuffer
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload override public function setElem(i : Int, val : Int) : Void;
+	@:overload public function setElem(i : Int, val : Int) : Void;
 	
 	/**
 	* Sets the requested data array element in the specified bank
@@ -221,7 +221,7 @@ extern class DataBufferUShort extends java.awt.image.DataBuffer
 	* @see #getElem(int)
 	* @see #getElem(int, int)
 	*/
-	@:overload override public function setElem(bank : Int, i : Int, val : Int) : Void;
+	@:overload public function setElem(bank : Int, i : Int, val : Int) : Void;
 	
 	
 }

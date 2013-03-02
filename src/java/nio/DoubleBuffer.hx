@@ -246,7 +246,7 @@ package java.nio;
 * @author JSR-51 Expert Group
 * @since 1.4
 */
-@:require(java4) extern class DoubleBuffer extends java.nio.Buffer implements java.lang.Comparable<DoubleBuffer>
+@:require(java4) extern class DoubleBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.DoubleBuffer>
 {
 	/**
 	* Allocates a new double buffer.
@@ -265,7 +265,7 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the <tt>capacity</tt> is a negative integer
 	*/
-	@:overload public static function allocate(capacity : Int) : DoubleBuffer;
+	@:overload public static function allocate(capacity : Int) : java.nio.DoubleBuffer;
 	
 	/**
 	* Wraps a double array into a buffer.
@@ -298,7 +298,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public static function wrap(array : java.NativeArray<Float>, offset : Int, length : Int) : DoubleBuffer;
+	@:overload public static function wrap(array : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
 	
 	/**
 	* Wraps a double array into a buffer.
@@ -316,7 +316,7 @@ package java.nio;
 	*
 	* @return  The new double buffer
 	*/
-	@:overload public static function wrap(array : java.NativeArray<Float>) : DoubleBuffer;
+	@:overload public static function wrap(array : java.NativeArray<Float>) : java.nio.DoubleBuffer;
 	
 	/**
 	* Creates a new double buffer whose content is a shared subsequence of
@@ -335,7 +335,7 @@ package java.nio;
 	*
 	* @return  The new double buffer
 	*/
-	@:overload @:abstract public function slice() : DoubleBuffer;
+	@:overload @:abstract public function slice() : java.nio.DoubleBuffer;
 	
 	/**
 	* Creates a new double buffer that shares this buffer's content.
@@ -352,7 +352,7 @@ package java.nio;
 	*
 	* @return  The new double buffer
 	*/
-	@:overload @:abstract public function duplicate() : DoubleBuffer;
+	@:overload @:abstract public function duplicate() : java.nio.DoubleBuffer;
 	
 	/**
 	* Creates a new, read-only double buffer that shares this buffer's
@@ -372,7 +372,7 @@ package java.nio;
 	*
 	* @return  The new, read-only double buffer
 	*/
-	@:overload @:abstract public function asReadOnlyBuffer() : DoubleBuffer;
+	@:overload @:abstract public function asReadOnlyBuffer() : java.nio.DoubleBuffer;
 	
 	/**
 	* Relative <i>get</i> method.  Reads the double at this buffer's
@@ -402,7 +402,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(d : Float) : DoubleBuffer;
+	@:overload @:abstract public function put(d : Float) : java.nio.DoubleBuffer;
 	
 	/**
 	* Absolute <i>get</i> method.  Reads the double at the given
@@ -440,7 +440,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(index : Int, d : Float) : DoubleBuffer;
+	@:overload @:abstract public function put(index : Int, d : Float) : java.nio.DoubleBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -491,7 +491,7 @@ package java.nio;
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public function get(dst : java.NativeArray<Float>, offset : Int, length : Int) : DoubleBuffer;
+	@:overload public function get(dst : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -509,7 +509,7 @@ package java.nio;
 	*          If there are fewer than <tt>length</tt> doubles
 	*          remaining in this buffer
 	*/
-	@:overload public function get(dst : java.NativeArray<Float>) : DoubleBuffer;
+	@:overload public function get(dst : java.NativeArray<Float>) : java.nio.DoubleBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -552,7 +552,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : DoubleBuffer) : DoubleBuffer;
+	@:overload public function put(src : java.nio.DoubleBuffer) : java.nio.DoubleBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -604,7 +604,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.NativeArray<Float>, offset : Int, length : Int) : DoubleBuffer;
+	@:overload public function put(src : java.NativeArray<Float>, offset : Int, length : Int) : java.nio.DoubleBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -625,7 +625,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:final public function put(src : java.NativeArray<Float>) : DoubleBuffer;
+	@:overload @:final public function put(src : java.NativeArray<Float>) : java.nio.DoubleBuffer;
 	
 	/**
 	* Tells whether or not this buffer is backed by an accessible double
@@ -722,7 +722,7 @@ package java.nio;
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function compact() : DoubleBuffer;
+	@:overload @:abstract public function compact() : java.nio.DoubleBuffer;
 	
 	/**
 	* Tells whether or not this double buffer is direct. </p>
@@ -810,7 +810,7 @@ package java.nio;
 	* @return  A negative integer, zero, or a positive integer as this buffer
 	*          is less than, equal to, or greater than the given buffer
 	*/
-	@:overload public function compareTo(that : DoubleBuffer) : Int;
+	@:overload public function compareTo(that : java.nio.DoubleBuffer) : Int;
 	
 	/**
 	* Retrieves this buffer's byte order.

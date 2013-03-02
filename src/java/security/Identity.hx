@@ -210,7 +210,7 @@ extern class Identity implements java.security.Principal implements java.io.Seri
 	*
 	* @see #equals
 	*/
-	@:overload private function identityEquals(identity : Identity) : Bool;
+	@:overload private function identityEquals(identity : java.security.Identity) : Bool;
 	
 	/**
 	* Returns a short string describing this identity, telling its

@@ -58,7 +58,7 @@ extern class DOMTransform extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	* This method invokes the abstract {@link #marshalParams marshalParams}
 	* method to marshal any algorithm-specific parameters.
 	*/
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	/**
 	* Transforms the specified data using the underlying transform algorithm.

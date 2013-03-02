@@ -29,7 +29,7 @@ extern class AlternativeSelector extends com.sun.xml.internal.ws.policy.Effectiv
 	*
 	* @author Fabian Ritzmann
 	*/
-	@:native('doSelection') @:overload public static function _doSelection(modifier : com.sun.xml.internal.ws.policy.EffectivePolicyModifier) : Void;
+	@:overload public static function doSelection(modifier : com.sun.xml.internal.ws.policy.EffectivePolicyModifier) : Void;
 	
 	
 }

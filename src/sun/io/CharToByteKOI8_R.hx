@@ -25,7 +25,7 @@ package sun.io;
 */
 extern class CharToByteKOI8_R extends sun.io.CharToByteSingleByte
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
 	@:overload public function new() : Void;
 	

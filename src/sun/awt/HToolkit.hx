@@ -88,27 +88,27 @@ extern class HToolkit extends sun.awt.SunToolkit implements sun.awt.ComponentFac
 	/*
 	* Headless toolkit - unsupported.
 	*/
-	@:overload override private function loadSystemColors(systemColors : java.NativeArray<Int>) : Void;
+	@:overload private function loadSystemColors(systemColors : java.NativeArray<Int>) : Void;
 	
-	@:overload override public function getColorModel() : java.awt.image.ColorModel;
+	@:overload public function getColorModel() : java.awt.image.ColorModel;
 	
-	@:overload override public function getScreenResolution() : Int;
+	@:overload public function getScreenResolution() : Int;
 	
-	@:overload override public function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<Dynamic, Dynamic>;
+	@:overload public function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload override public function getMenuShortcutKeyMask() : Int;
+	@:overload public function getMenuShortcutKeyMask() : Int;
 	
-	@:overload override public function getLockingKeyState(keyCode : Int) : Bool;
+	@:overload public function getLockingKeyState(keyCode : Int) : Bool;
 	
-	@:overload override public function setLockingKeyState(keyCode : Int, on : Bool) : Void;
+	@:overload public function setLockingKeyState(keyCode : Int, on : Bool) : Void;
 	
-	@:overload override public function createCustomCursor(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : java.awt.Cursor;
+	@:overload public function createCustomCursor(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : java.awt.Cursor;
 	
-	@:overload override public function getBestCursorSize(preferredWidth : Int, preferredHeight : Int) : java.awt.Dimension;
+	@:overload public function getBestCursorSize(preferredWidth : Int, preferredHeight : Int) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumCursorColors() : Int;
+	@:overload public function getMaximumCursorColors() : Int;
 	
-	@:overload override public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(abstractRecognizerClass : Class<T>, ds : java.awt.dnd.DragSource, c : java.awt.Component, srcActions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
+	@:overload public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(abstractRecognizerClass : Class<T>, ds : java.awt.dnd.DragSource, c : java.awt.Component, srcActions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
 	
 	@:overload override public function getScreenHeight() : Int;
 	
@@ -116,31 +116,31 @@ extern class HToolkit extends sun.awt.SunToolkit implements sun.awt.ComponentFac
 	
 	@:overload override public function getScreenSize() : java.awt.Dimension;
 	
-	@:overload override public function getScreenInsets(gc : java.awt.GraphicsConfiguration) : java.awt.Insets;
+	@:overload public function getScreenInsets(gc : java.awt.GraphicsConfiguration) : java.awt.Insets;
 	
-	@:overload override public function setDynamicLayout(_dynamic : Bool) : Void;
+	@:overload public function setDynamicLayout(_dynamic : Bool) : Void;
 	
-	@:overload override private function isDynamicLayoutSet() : Bool;
+	@:overload private function isDynamicLayoutSet() : Bool;
 	
-	@:overload override public function isDynamicLayoutActive() : Bool;
+	@:overload public function isDynamicLayoutActive() : Bool;
 	
-	@:overload override public function getSystemClipboard() : java.awt.datatransfer.Clipboard;
+	@:overload public function getSystemClipboard() : java.awt.datatransfer.Clipboard;
 	
 	/*
 	* Printing
 	*/
-	@:overload override public function getPrintJob(frame : java.awt.Frame, jobtitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : java.awt.PrintJob;
+	@:overload public function getPrintJob(frame : java.awt.Frame, jobtitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : java.awt.PrintJob;
 	
-	@:overload override public function getPrintJob(frame : java.awt.Frame, doctitle : String, props : java.util.Properties) : java.awt.PrintJob;
+	@:overload public function getPrintJob(frame : java.awt.Frame, doctitle : String, props : java.util.Properties) : java.awt.PrintJob;
 	
 	/*
 	* Headless toolkit - supported.
 	*/
-	@:overload override public function sync() : Void;
+	@:overload public function sync() : Void;
 	
 	@:overload override private function syncNativeQueue(timeout : haxe.Int64) : Bool;
 	
-	@:overload override public function beep() : Void;
+	@:overload public function beep() : Void;
 	
 	/*
 	* Fonts
@@ -156,7 +156,7 @@ extern class HToolkit extends sun.awt.SunToolkit implements sun.awt.ComponentFac
 	
 	@:overload override public function isDesktopSupported() : Bool;
 	
-	@:overload override public function createDesktopPeer(target : java.awt.Desktop) : java.awt.peer.DesktopPeer;
+	@:overload public function createDesktopPeer(target : java.awt.Desktop) : java.awt.peer.DesktopPeer;
 	
 	@:overload public function isWindowOpacityControlSupported() : Bool;
 	
@@ -170,7 +170,7 @@ extern class HToolkit extends sun.awt.SunToolkit implements sun.awt.ComponentFac
 	
 	@:overload private function syncNativeQueue() : Bool;
 	
-	@:overload override public function getInputMethodAdapterDescriptor() : java.awt.im.spi.InputMethodDescriptor;
+	@:overload public function getInputMethodAdapterDescriptor() : java.awt.im.spi.InputMethodDescriptor;
 	
 	
 }

@@ -44,7 +44,7 @@ extern interface GSSNameSpi
 	* @exception GSSException with major codes of BAD_NAMETYPE,
 	*    BAD_NAME, FAILURE
 	*/
-	@:overload public function equals(name : GSSNameSpi) : Bool;
+	@:overload public function equals(name : sun.security.jgss.spi.GSSNameSpi) : Bool;
 	
 	/**
 	* Returns a flat name representation for this object. The name

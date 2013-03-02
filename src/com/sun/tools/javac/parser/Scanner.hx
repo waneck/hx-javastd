@@ -142,7 +142,7 @@ extern class Scanner implements com.sun.tools.javac.parser.Lexer
 	* Called when a complete comment has been scanned. pos and endPos
 	* will mark the comment boundary.
 	*/
-	@:overload private function processComment(style : Scanner_CommentStyle) : Void;
+	@:overload private function processComment(style : com.sun.tools.javac.parser.Scanner.Scanner_CommentStyle) : Void;
 	
 	/**
 	* Called when a complete whitespace run has been scanned. pos and endPos

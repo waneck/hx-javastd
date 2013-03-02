@@ -28,7 +28,7 @@ extern class CertPathHelper
 	/**
 	* Object used to tunnel the calls. Initialized by CertPathHelperImpl.
 	*/
-	private static var instance : CertPathHelper;
+	private static var instance : sun.security.provider.certpath.CertPathHelper;
 	
 	@:overload private function new() : Void;
 	

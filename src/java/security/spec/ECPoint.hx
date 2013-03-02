@@ -28,7 +28,7 @@ extern class ECPoint
 	/**
 	* This defines the point at infinity.
 	*/
-	public static var POINT_INFINITY(default, null) : ECPoint;
+	public static var POINT_INFINITY(default, null) : java.security.spec.ECPoint;
 	
 	/**
 	* Creates an ECPoint from the specified affine x-coordinate

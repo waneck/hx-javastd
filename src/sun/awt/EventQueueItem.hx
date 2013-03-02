@@ -27,7 +27,7 @@ extern class EventQueueItem
 {
 	public var event : java.awt.AWTEvent;
 	
-	public var next : EventQueueItem;
+	public var next : sun.awt.EventQueueItem;
 	
 	@:overload public function new(evt : java.awt.AWTEvent) : Void;
 	

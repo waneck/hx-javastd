@@ -140,14 +140,14 @@ package java.applet;
 	* @param   width    the new requested width for the applet.
 	* @param   height   the new requested height for the applet.
 	*/
-	@:overload override public function resize(width : Int, height : Int) : Void;
+	@:overload public function resize(width : Int, height : Int) : Void;
 	
 	/**
 	* Requests that this applet be resized.
 	*
 	* @param   d   an object giving the new width and height.
 	*/
-	@:overload override public function resize(d : java.awt.Dimension) : Void;
+	@:overload public function resize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Indicates if this container is a validate root.
@@ -269,7 +269,7 @@ package java.applet;
 	*          been set, the default locale is returned.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload override public function getLocale() : java.util.Locale;
+	@:require(java1) @:overload public function getLocale() : java.util.Locale;
 	
 	/**
 	* Returns information about the parameters that are understood by
@@ -416,7 +416,7 @@ package java.applet;
 	*         AccessibleContext of this Applet
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -434,7 +434,7 @@ package java.applet;
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the state of this object.
@@ -443,7 +443,7 @@ package java.applet;
 	* state set of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	
 }

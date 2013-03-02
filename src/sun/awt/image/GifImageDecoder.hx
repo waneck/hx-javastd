@@ -42,7 +42,7 @@ extern class GifImageDecoder extends sun.awt.image.ImageDecoder
 	/**
 	* produce an image from the stream.
 	*/
-	@:overload override public function produceImage() : Void;
+	@:overload public function produceImage() : Void;
 	
 	@:overload public static function grow_colormap(colormap : java.NativeArray<java.StdTypes.Int8>, newlen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
@@ -50,7 +50,7 @@ extern class GifImageDecoder extends sun.awt.image.ImageDecoder
 }
 @:internal extern class GifFrame
 {
-	@:overload public function new(id : GifImageDecoder, dm : Int, dl : Int, init : Bool, cm : java.awt.image.IndexColorModel, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function new(id : sun.awt.image.GifImageDecoder, dm : Int, dl : Int, init : Bool, cm : java.awt.image.IndexColorModel, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	@:overload public function dispose() : Bool;
 	

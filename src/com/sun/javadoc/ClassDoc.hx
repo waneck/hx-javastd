@@ -110,7 +110,7 @@ package com.sun.javadoc;
 	*         there is no superclass.
 	* @see #superclassType
 	*/
-	@:overload public function superclass() : ClassDoc;
+	@:overload public function superclass() : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Return the superclass of this class.  Return null if this is an
@@ -131,7 +131,7 @@ package com.sun.javadoc;
 	* @param cd the candidate superclass.
 	* @return true if cd is a superclass of this class.
 	*/
-	@:overload public function subclassOf(cd : ClassDoc) : Bool;
+	@:overload public function subclassOf(cd : com.sun.javadoc.ClassDoc) : Bool;
 	
 	/**
 	* Return interfaces implemented by this class or interfaces extended
@@ -145,7 +145,7 @@ package com.sun.javadoc;
 	* @return an array of ClassDoc objects representing the interfaces.
 	* @see #interfaceTypes
 	*/
-	@:overload public function interfaces() : java.NativeArray<ClassDoc>;
+	@:overload public function interfaces() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Return interfaces implemented by this class or interfaces extended
@@ -278,7 +278,7 @@ package com.sun.javadoc;
 	* @return an array of ClassDoc objects representing the included classes
 	*         and interfaces defined in this class or interface.
 	*/
-	@:overload public function innerClasses() : java.NativeArray<ClassDoc>;
+	@:overload public function innerClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Return nested classes and interfaces within this class or interface
@@ -295,7 +295,7 @@ package com.sun.javadoc;
 	* @return       a filtered array of ClassDoc objects representing the included
 	*               classes and interfaces defined in this class or interface.
 	*/
-	@:overload public function innerClasses(filter : Bool) : java.NativeArray<ClassDoc>;
+	@:overload public function innerClasses(filter : Bool) : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Find the specified class or interface within the context of this class doc.
@@ -303,7 +303,7 @@ package com.sun.javadoc;
 	* 3) in this package, 4) in the class imports, 5) in the package imports.
 	* Return the ClassDoc if found, null if not found.
 	*/
-	@:overload public function findClass(className : String) : ClassDoc;
+	@:overload public function findClass(className : String) : com.sun.javadoc.ClassDoc;
 	
 	/**
 	* Get the list of classes and interfaces declared as imported.
@@ -316,7 +316,7 @@ package com.sun.javadoc;
 	*          should not be exposed here.  In addition, not all imported
 	*          classes are imported through single-type-import declarations.
 	*/
-	@:overload public function importedClasses() : java.NativeArray<ClassDoc>;
+	@:overload public function importedClasses() : java.NativeArray<com.sun.javadoc.ClassDoc>;
 	
 	/**
 	* Get the list of packages declared as imported.

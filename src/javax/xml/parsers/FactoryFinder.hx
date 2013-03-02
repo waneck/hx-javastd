@@ -32,7 +32,7 @@ package javax.xml.parsers;
 	/**
 	* use the exception chaining mechanism of JDK1.4
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

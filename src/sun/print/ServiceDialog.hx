@@ -220,7 +220,7 @@ extern class ServiceDialog extends javax.swing.JDialog implements java.awt.event
 	@:overload public function itemStateChanged(e : java.awt.event.ItemEvent) : Void;
 	
 	/* this is ad hoc to keep things simple */
-	@:overload public function addMediaListener(pnl : ServiceDialog_MarginsPanel) : Void;
+	@:overload public function addMediaListener(pnl : sun.print.ServiceDialog.ServiceDialog_MarginsPanel) : Void;
 	
 	@:overload public function updateInfo() : Void;
 	
@@ -321,7 +321,7 @@ extern class ServiceDialog extends javax.swing.JDialog implements java.awt.event
 */
 @:native('sun$print$ServiceDialog$ValidatingFileChooser') @:internal extern class ServiceDialog_ValidatingFileChooser extends javax.swing.JFileChooser
 {
-	@:overload override public function approveSelection() : Void;
+	@:overload public function approveSelection() : Void;
 	
 	
 }

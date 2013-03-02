@@ -27,7 +27,7 @@ extern class XMBeanOperations extends sun.tools.jconsole.inspector.XOperations
 {
 	@:overload public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload override private function updateOperations(operations : java.NativeArray<javax.management.MBeanOperationInfo>) : java.NativeArray<javax.management.MBeanOperationInfo>;
+	@:overload private function updateOperations(operations : java.NativeArray<javax.management.MBeanOperationInfo>) : java.NativeArray<javax.management.MBeanOperationInfo>;
 	
 	
 }

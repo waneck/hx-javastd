@@ -32,7 +32,7 @@ extern class ToolkitImage extends java.awt.Image
 	*/
 	@:overload public function new(is : java.awt.image.ImageProducer) : Void;
 	
-	@:overload override public function getSource() : java.awt.image.ImageProducer;
+	@:overload public function getSource() : java.awt.image.ImageProducer;
 	
 	/**
 	* Return the width of the original image source.
@@ -45,7 +45,7 @@ extern class ToolkitImage extends java.awt.Image
 	* If the width isn't known, then the ImageObserver object will be
 	* notified when the data is available.
 	*/
-	@:overload @:synchronized override public function getWidth(iw : java.awt.image.ImageObserver) : Int;
+	@:overload @:synchronized public function getWidth(iw : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Return the height of the original image source.
@@ -58,7 +58,7 @@ extern class ToolkitImage extends java.awt.Image
 	* If the height isn't known, then the ImageObserver object will be
 	* notified when the data is available.
 	*/
-	@:overload @:synchronized override public function getHeight(iw : java.awt.image.ImageObserver) : Int;
+	@:overload @:synchronized public function getHeight(iw : java.awt.image.ImageObserver) : Int;
 	
 	/**
 	* Return a property of the image by name.  Individual property names
@@ -70,7 +70,7 @@ extern class ToolkitImage extends java.awt.Image
 	* be used to store an optional comment which can be presented to
 	* the user as a description of the image, its source, or its author.
 	*/
-	@:overload override public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
+	@:overload public function getProperty(name : String, observer : java.awt.image.ImageObserver) : Dynamic;
 	
 	@:overload public function hasError() : Bool;
 	
@@ -78,13 +78,13 @@ extern class ToolkitImage extends java.awt.Image
 	
 	@:overload public function preload(iw : java.awt.image.ImageObserver) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
 	@:overload private function makeImageRep() : sun.awt.image.ImageRepresentation;
 	
 	@:overload @:synchronized public function getImageRep() : sun.awt.image.ImageRepresentation;
 	
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload public function getGraphics() : java.awt.Graphics;
 	
 	/* this method is needed by printing code */
 	@:overload public function getColorModel() : java.awt.image.ColorModel;
@@ -92,7 +92,7 @@ extern class ToolkitImage extends java.awt.Image
 	/* this method is needed by printing code */
 	@:overload public function getBufferedImage() : java.awt.image.BufferedImage;
 	
-	@:overload override public function setAccelerationPriority(priority : Single) : Void;
+	@:overload public function setAccelerationPriority(priority : Single) : Void;
 	
 	
 }

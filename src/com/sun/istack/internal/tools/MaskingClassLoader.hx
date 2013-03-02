@@ -33,7 +33,7 @@ extern class MaskingClassLoader extends java.lang.ClassLoader
 	
 	@:overload public function new(parent : java.lang.ClassLoader, masks : java.util.Collection<String>) : Void;
 	
-	@:overload @:synchronized override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:synchronized private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	
 }

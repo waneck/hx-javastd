@@ -39,7 +39,7 @@ extern class MotifRadioButtonUI extends javax.swing.plaf.basic.BasicRadioButtonU
 {
 	private var focusColor : java.awt.Color;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	

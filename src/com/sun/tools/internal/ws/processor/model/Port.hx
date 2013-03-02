@@ -58,7 +58,7 @@ extern class Port extends com.sun.tools.internal.ws.processor.model.ModelObject
 	
 	@:overload public function setServiceImplName(name : String) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	@:overload public function isProvider() : Bool;
 	

@@ -31,9 +31,9 @@ extern class ZipCodeWriter extends com.sun.codemodel.internal.CodeWriter
 	*/
 	@:overload public function new(target : java.io.OutputStream) : Void;
 	
-	@:overload override public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
+	@:overload public function openBinary(pkg : com.sun.codemodel.internal.JPackage, fileName : String) : java.io.OutputStream;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

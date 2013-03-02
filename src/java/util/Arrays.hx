@@ -2379,19 +2379,19 @@ package java.util;
 */
 @:native('java$util$Arrays$ArrayList') @:internal extern class Arrays_ArrayList<E> extends java.util.AbstractList<E> implements java.util.RandomAccess implements java.io.Serializable
 {
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function get(index : Int) : E;
+	@:overload public function get(index : Int) : E;
 	
-	@:overload override public function set(index : Int, element : E) : E;
+	@:overload public function set(index : Int, element : E) : E;
 	
-	@:overload override public function indexOf(o : Dynamic) : Int;
+	@:overload public function indexOf(o : Dynamic) : Int;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
 	
 }

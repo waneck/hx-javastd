@@ -31,7 +31,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	*/
 	@:overload public function new(builder : com.sun.xml.internal.bind.v2.model.impl.ModelBuilder<T, C, F, M>, registry : com.sun.xml.internal.bind.v2.model.impl.RegistryInfoImpl<T, C, F, M>, m : M) : Void;
 	
-	@:overload private function createPropertyImpl() : ElementInfoImpl_PropertyImpl;
+	@:overload private function createPropertyImpl() : com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl.ElementInfoImpl_PropertyImpl;
 	
 	@:overload public function getProperty() : com.sun.xml.internal.bind.v2.model.core.ElementPropertyInfo<T, C>;
 	
@@ -55,7 +55,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.ElementInfo<T, C>;
 	
-	@:overload public function getSubstitutionMembers() : java.util.Collection<ElementInfoImpl<T, C, F, M>>;
+	@:overload public function getSubstitutionMembers() : java.util.Collection<com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl<T, C, F, M>>;
 	
 	@:overload override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
@@ -84,7 +84,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload public function getDefaultValue() : String;
 	
-	@:overload public function parent() : ElementInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>;
+	@:overload public function parent() : com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>;
 	
 	@:overload public function getName() : String;
 	

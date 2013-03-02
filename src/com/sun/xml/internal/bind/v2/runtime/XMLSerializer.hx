@@ -290,7 +290,7 @@ extern class XMLSerializer extends com.sun.xml.internal.bind.v2.runtime.Coordina
 	
 	@:overload public function handleError(e : java.lang.Exception, source : Dynamic, fieldName : String) : Bool;
 	
-	@:overload override public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
+	@:overload public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
 	/**
 	* Called when a referenced object doesn't have an ID.
@@ -299,7 +299,7 @@ extern class XMLSerializer extends com.sun.xml.internal.bind.v2.runtime.Coordina
 	
 	@:overload public function getCurrentLocation(fieldName : String) : javax.xml.bind.ValidationEventLocator;
 	
-	@:overload override private function getLocation() : javax.xml.bind.ValidationEventLocator;
+	@:overload private function getLocation() : javax.xml.bind.ValidationEventLocator;
 	
 	/**
 	* May return null when the property hasn't been set.
@@ -316,7 +316,7 @@ extern class XMLSerializer extends com.sun.xml.internal.bind.v2.runtime.Coordina
 	* When called from within the realm of the marshaller, this method
 	* returns the current {@link XMLSerializer} in charge.
 	*/
-	@:overload public static function getInstance() : XMLSerializer;
+	@:overload public static function getInstance() : com.sun.xml.internal.bind.v2.runtime.XMLSerializer;
 	
 	
 }

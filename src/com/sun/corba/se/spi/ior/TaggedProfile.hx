@@ -48,7 +48,7 @@ extern interface TaggedProfile extends com.sun.corba.se.spi.ior.Identifiable ext
 	* prof.getObjectId() ) is true, and so is
 	* getObjectKeyTemplate().equals( prof.getObjectKeyTemplate() ).
 	*/
-	@:overload public function isEquivalent(prof : TaggedProfile) : Bool;
+	@:overload public function isEquivalent(prof : com.sun.corba.se.spi.ior.TaggedProfile) : Bool;
 	
 	/** Return the TaggedProfile as a CDR encapsulation in the standard
 	* format.  This is required for Portable interceptors.

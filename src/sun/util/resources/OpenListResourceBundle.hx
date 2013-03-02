@@ -60,7 +60,7 @@ extern class OpenListResourceBundle extends java.util.ResourceBundle
 	/**
 	* Returns the parent bundle
 	*/
-	@:overload public function getParent() : OpenListResourceBundle;
+	@:overload public function getParent() : sun.util.resources.OpenListResourceBundle;
 	
 	/**
 	* See ListResourceBundle class description.

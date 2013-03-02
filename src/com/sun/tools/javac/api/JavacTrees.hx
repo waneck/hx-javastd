@@ -25,11 +25,11 @@ package com.sun.tools.javac.api;
 */
 extern class JavacTrees extends com.sun.source.util.Trees
 {
-	@:overload public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : JavacTrees;
+	@:overload public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : com.sun.tools.javac.api.JavacTrees;
 	
-	@:overload public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : JavacTrees;
+	@:overload public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : com.sun.tools.javac.api.JavacTrees;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : JavacTrees;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.api.JavacTrees;
 	
 	@:overload public function updateContext(context : com.sun.tools.javac.util.Context) : Void;
 	

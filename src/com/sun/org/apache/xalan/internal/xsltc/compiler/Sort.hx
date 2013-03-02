@@ -48,7 +48,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Parse the attributes of the xsl:sort element
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Run type checks on the attributes; expression must return a string

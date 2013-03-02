@@ -43,18 +43,18 @@ extern class ParameterBinding
 	/**
 	* Singleton instance that represents 'BODY'
 	*/
-	public static var BODY(default, null) : ParameterBinding;
+	public static var BODY(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Singleton instance that represents 'HEADER'
 	*/
-	public static var HEADER(default, null) : ParameterBinding;
+	public static var HEADER(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Singleton instance that represents 'UNBOUND',
 	* meaning the parameter doesn't have a representation in a SOAP message.
 	*/
-	public static var UNBOUND(default, null) : ParameterBinding;
+	public static var UNBOUND(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Creates an instance that represents the attachment
@@ -65,13 +65,13 @@ extern class ParameterBinding
 	* a cache? It's more elegant to do so, but
 	* no where in JAX-WS RI two {@link ParameterBinding}s are compared today,
 	*/
-	@:overload public static function createAttachment(mimeType : String) : ParameterBinding;
+	@:overload public static function createAttachment(mimeType : String) : com.sun.xml.internal.ws.api.model.ParameterBinding;
 	
 	/**
 	* Represents the kind of {@link ParameterBinding}.
 	* Always non-null.
 	*/
-	public var kind(default, null) : ParameterBinding_Kind;
+	public var kind(default, null) : com.sun.xml.internal.ws.api.model.ParameterBinding.ParameterBinding_Kind;
 	
 	@:overload public function toString() : String;
 	

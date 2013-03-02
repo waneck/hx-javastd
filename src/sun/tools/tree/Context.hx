@@ -29,14 +29,14 @@ extern class Context implements sun.tools.java.Constants
 	* Create the initial context for a method
 	* The incoming context is inherited from
 	*/
-	@:overload public function new(ctx : Context, field : sun.tools.java.MemberDefinition) : Void;
+	@:overload public function new(ctx : sun.tools.tree.Context, field : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* Create a new context, for initializing a class.
 	*/
-	@:overload public function new(ctx : Context, c : sun.tools.java.ClassDefinition) : Void;
+	@:overload public function new(ctx : sun.tools.tree.Context, c : sun.tools.java.ClassDefinition) : Void;
 	
-	@:overload public function new(ctx : Context) : Void;
+	@:overload public function new(ctx : sun.tools.tree.Context) : Void;
 	
 	/**
 	* Declare local
@@ -169,17 +169,17 @@ extern class Context implements sun.tools.java.Constants
 	* Get the context that corresponds to a label, return null if
 	* not found.
 	*/
-	@:overload public function getLabelContext(lbl : sun.tools.java.Identifier) : Context;
+	@:overload public function getLabelContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
 	
 	/**
 	* Get the destination context of a break
 	*/
-	@:overload public function getBreakContext(lbl : sun.tools.java.Identifier) : Context;
+	@:overload public function getBreakContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
 	
 	/**
 	* Get the destination context of a continue
 	*/
-	@:overload public function getContinueContext(lbl : sun.tools.java.Identifier) : Context;
+	@:overload public function getContinueContext(lbl : sun.tools.java.Identifier) : sun.tools.tree.Context;
 	
 	/**
 	* Get the destination context of a return (the method body)
@@ -221,13 +221,13 @@ extern class Context implements sun.tools.java.Constants
 	* the given one, except that resolveName() takes
 	* into account local class names in this context.
 	*/
-	@:overload public static function newEnvironment(env : sun.tools.java.Environment, ctx : Context) : sun.tools.java.Environment;
+	@:overload public static function newEnvironment(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.java.Environment;
 	
 	
 }
 @:internal extern class ContextEnvironment extends sun.tools.java.Environment
 {
-	@:overload override public function resolveName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload public function resolveName(name : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
 	
 }

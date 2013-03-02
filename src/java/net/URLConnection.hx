@@ -917,7 +917,7 @@ extern class URLConnection
 }
 @:internal extern class UnknownContentHandler extends java.net.ContentHandler
 {
-	@:overload override public function getContent(uc : URLConnection) : Dynamic;
+	@:overload override public function getContent(uc : java.net.URLConnection) : Dynamic;
 	
 	
 }

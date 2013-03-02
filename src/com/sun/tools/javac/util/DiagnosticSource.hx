@@ -35,7 +35,7 @@ package com.sun.tools.javac.util;
 extern class DiagnosticSource
 {
 	/* constant DiagnosticSource to be used when sourcefile is missing */
-	public static var NO_SOURCE(default, null) : DiagnosticSource;
+	public static var NO_SOURCE(default, null) : com.sun.tools.javac.util.DiagnosticSource;
 	
 	@:overload public function new(fo : javax.tools.JavaFileObject, log : com.sun.tools.javac.util.AbstractLog) : Void;
 	

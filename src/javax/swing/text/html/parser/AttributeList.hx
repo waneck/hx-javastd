@@ -49,7 +49,7 @@ extern class AttributeList implements javax.swing.text.html.parser.DTDConstants 
 	
 	public var value : String;
 	
-	public var next : AttributeList;
+	public var next : javax.swing.text.html.parser.AttributeList;
 	
 	/**
 	* Create an attribute list element.
@@ -59,7 +59,7 @@ extern class AttributeList implements javax.swing.text.html.parser.DTDConstants 
 	/**
 	* Create an attribute list element.
 	*/
-	@:overload public function new(name : String, type : Int, modifier : Int, value : String, values : java.util.Vector<Dynamic>, next : AttributeList) : Void;
+	@:overload public function new(name : String, type : Int, modifier : Int, value : String, values : java.util.Vector<Dynamic>, next : javax.swing.text.html.parser.AttributeList) : Void;
 	
 	/**
 	* @return attribute name
@@ -91,7 +91,7 @@ extern class AttributeList implements javax.swing.text.html.parser.DTDConstants 
 	/**
 	* @return the next attribute in the list
 	*/
-	@:overload public function getNext() : AttributeList;
+	@:overload public function getNext() : javax.swing.text.html.parser.AttributeList;
 	
 	/**
 	* @return string representation

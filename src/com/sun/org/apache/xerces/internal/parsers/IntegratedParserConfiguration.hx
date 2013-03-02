@@ -67,15 +67,15 @@ extern class IntegratedParserConfiguration extends com.sun.org.apache.xerces.int
 	@:overload public function new(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, grammarPool : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool, parentSettings : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** Configures the pipeline. */
-	@:overload override private function configurePipeline() : Void;
+	@:overload private function configurePipeline() : Void;
 	
 	/** Create a document scanner: this scanner performs namespace binding
 	*/
-	@:overload override private function createDocumentScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
+	@:overload private function createDocumentScanner() : com.sun.org.apache.xerces.internal.xni.parser.XMLDocumentScanner;
 	
 	/** Create a DTD validator: this validator performs namespace binding.
 	*/
-	@:overload override private function createDTDValidator() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
+	@:overload private function createDTDValidator() : com.sun.org.apache.xerces.internal.impl.dtd.XMLDTDValidator;
 	
 	
 }

@@ -31,14 +31,14 @@ extern class JInvocation extends com.sun.codemodel.internal.JExpressionImpl impl
 	* @param arg
 	*        Argument to add to argument list
 	*/
-	@:overload public function arg(arg : com.sun.codemodel.internal.JExpression) : JInvocation;
+	@:overload public function arg(arg : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Adds a literal argument.
 	*
 	* Short for {@code arg(JExpr.lit(v))}
 	*/
-	@:overload public function arg(v : String) : JInvocation;
+	@:overload public function arg(v : String) : com.sun.codemodel.internal.JInvocation;
 	
 	/**
 	* Returns all arguments of the invocation.

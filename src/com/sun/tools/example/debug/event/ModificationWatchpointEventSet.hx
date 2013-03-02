@@ -38,7 +38,7 @@ extern class ModificationWatchpointEventSet extends com.sun.tools.example.debug.
 	*/
 	@:overload public function getValueToBe() : com.sun.jdi.Value;
 	
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

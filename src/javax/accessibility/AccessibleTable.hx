@@ -108,7 +108,7 @@ package javax.accessibility;
 	* @return an AccessibleTable representing the row
 	* headers
 	*/
-	@:overload public function getAccessibleRowHeader() : AccessibleTable;
+	@:overload public function getAccessibleRowHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the row headers.
@@ -116,7 +116,7 @@ package javax.accessibility;
 	* @param table an AccessibleTable representing the
 	* row headers
 	*/
-	@:overload public function setAccessibleRowHeader(table : AccessibleTable) : Void;
+	@:overload public function setAccessibleRowHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the column headers as an AccessibleTable.
@@ -124,7 +124,7 @@ package javax.accessibility;
 	* @return an AccessibleTable representing the column
 	* headers
 	*/
-	@:overload public function getAccessibleColumnHeader() : AccessibleTable;
+	@:overload public function getAccessibleColumnHeader() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Sets the column headers.
@@ -132,7 +132,7 @@ package javax.accessibility;
 	* @param table an AccessibleTable representing the
 	* column headers
 	*/
-	@:overload public function setAccessibleColumnHeader(table : AccessibleTable) : Void;
+	@:overload public function setAccessibleColumnHeader(table : javax.accessibility.AccessibleTable) : Void;
 	
 	/**
 	* Returns the description of the specified row in the table.

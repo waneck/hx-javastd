@@ -27,13 +27,13 @@ extern class ISO2022_JP_2 extends sun.nio.cs.ext.ISO2022_JP
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function historicalName() : String;
+	@:overload public function historicalName() : String;
 	
 	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override private function get0212Decoder() : sun.nio.cs.ext.DoubleByteDecoder;
+	@:overload private function get0212Decoder() : sun.nio.cs.ext.DoubleByteDecoder;
 	
-	@:overload override private function get0212Encoder() : sun.nio.cs.ext.DoubleByteEncoder;
+	@:overload private function get0212Encoder() : sun.nio.cs.ext.DoubleByteEncoder;
 	
 	
 }

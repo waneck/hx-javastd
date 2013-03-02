@@ -41,9 +41,9 @@ extern class AMXClient implements com.sun.org.glassfish.gmbal.AMXMBeanInterface
 	
 	@:overload public function getMeta() : java.util.Map<String, Dynamic>;
 	
-	@:overload public function getParent() : AMXClient;
+	@:overload public function getParent() : com.sun.org.glassfish.gmbal.AMXClient;
 	
-	@:overload public function getChildren() : java.NativeArray<AMXClient>;
+	@:overload public function getChildren() : java.NativeArray<com.sun.org.glassfish.gmbal.AMXClient>;
 	
 	@:overload public function getAttribute(attribute : String) : Dynamic;
 	

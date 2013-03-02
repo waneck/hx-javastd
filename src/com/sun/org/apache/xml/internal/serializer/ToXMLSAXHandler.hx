@@ -134,7 +134,7 @@ extern class ToXMLSAXHandler extends com.sun.org.apache.xml.internal.serializer.
 	/**
 	* @see org.xml.sax.ContentHandler#setDocumentLocator(Locator)
 	*/
-	@:overload override public function setDocumentLocator(arg0 : org.xml.sax.Locator) : Void;
+	@:overload public function setDocumentLocator(arg0 : org.xml.sax.Locator) : Void;
 	
 	/**
 	* @see org.xml.sax.ContentHandler#skippedEntity(String)
@@ -162,22 +162,22 @@ extern class ToXMLSAXHandler extends com.sun.org.apache.xml.internal.serializer.
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#comment(char[], int, int)
 	*/
-	@:overload override public function comment(arg0 : java.NativeArray<java.StdTypes.Char16>, arg1 : Int, arg2 : Int) : Void;
+	@:overload public function comment(arg0 : java.NativeArray<java.StdTypes.Char16>, arg1 : Int, arg2 : Int) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#endCDATA()
 	*/
-	@:overload override public function endCDATA() : Void;
+	@:overload public function endCDATA() : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#endDTD()
 	*/
-	@:overload override public function endDTD() : Void;
+	@:overload public function endDTD() : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#startEntity(String)
 	*/
-	@:overload override public function startEntity(arg0 : String) : Void;
+	@:overload public function startEntity(arg0 : String) : Void;
 	
 	/**
 	* @see ExtendedContentHandler#characters(String)
@@ -208,7 +208,7 @@ extern class ToXMLSAXHandler extends com.sun.org.apache.xml.internal.serializer.
 	* declaration will not be include if the namespace is already in scope
 	* with the same prefix.
 	*/
-	@:overload override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
 	/**
 	*
@@ -223,7 +223,7 @@ extern class ToXMLSAXHandler extends com.sun.org.apache.xml.internal.serializer.
 	*/
 	@:overload private function popNamespace(prefix : String) : Bool;
 	
-	@:overload override public function startCDATA() : Void;
+	@:overload public function startCDATA() : Void;
 	
 	/**
 	* @see org.xml.sax.ContentHandler#startElement(String, String, String, Attributes)
@@ -243,7 +243,7 @@ extern class ToXMLSAXHandler extends com.sun.org.apache.xml.internal.serializer.
 	* @param XSLAttribute true if this attribute is coming from an xsl:attribute element
 	* @see ExtendedContentHandler#addAttribute(String, String, String, String, String)
 	*/
-	@:overload override public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
+	@:overload public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
 	
 	/**
 	* Try's to reset the super class and reset this class for

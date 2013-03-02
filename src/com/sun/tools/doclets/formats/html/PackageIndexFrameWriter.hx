@@ -48,7 +48,7 @@ extern class PackageIndexFrameWriter extends com.sun.tools.doclets.formats.html.
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addPackagesList(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addPackagesList(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Gets each package name as a separate link.
@@ -61,12 +61,12 @@ extern class PackageIndexFrameWriter extends com.sun.tools.doclets.formats.html.
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addNavigationBarHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addNavigationBarHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Do nothing as there is no overview information in this page.
 	*/
-	@:overload override private function addOverviewHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addOverviewHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds "All Classes" link for the top of the left-hand frame page to the
@@ -74,12 +74,12 @@ extern class PackageIndexFrameWriter extends com.sun.tools.doclets.formats.html.
 	*
 	* @param body the Content object to which the all classes link should be added
 	*/
-	@:overload override private function addAllClassesLink(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addAllClassesLink(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addNavigationBarFooter(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addNavigationBarFooter(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

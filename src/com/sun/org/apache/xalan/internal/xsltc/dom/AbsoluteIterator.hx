@@ -25,15 +25,15 @@ extern class AbsoluteIterator extends com.sun.org.apache.xml.internal.dtm.ref.DT
 {
 	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload public function setRestartable(isRestartable : Bool) : Void;
 	
 	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	@:overload override public function next() : Int;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	@:overload override public function setMark() : Void;
 	

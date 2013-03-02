@@ -25,17 +25,17 @@ package com.sun.media.sound;
 */
 extern class WaveExtensibleFileReader extends javax.sound.sampled.spi.AudioFileReader
 {
-	@:overload override public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
+	@:overload public function getAudioFileFormat(stream : java.io.InputStream) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload override public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload public function getAudioInputStream(stream : java.io.InputStream) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload override public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
+	@:overload public function getAudioFileFormat(url : java.net.URL) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload override public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
+	@:overload public function getAudioFileFormat(file : java.io.File) : javax.sound.sampled.AudioFileFormat;
 	
-	@:overload override public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
+	@:overload public function getAudioInputStream(url : java.net.URL) : javax.sound.sampled.AudioInputStream;
 	
-	@:overload override public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
+	@:overload public function getAudioInputStream(file : java.io.File) : javax.sound.sampled.AudioInputStream;
 	
 	
 }
@@ -48,7 +48,7 @@ extern class WaveExtensibleFileReader extends javax.sound.sampled.spi.AudioFileR
 {
 	@:overload public function new(i1 : haxe.Int64, s1 : Int, s2 : Int, x1 : Int, x2 : Int, x3 : Int, x4 : Int, x5 : Int, x6 : Int, x7 : Int, x8 : Int) : Void;
 	
-	@:overload public static function read(riff : com.sun.media.sound.RIFFReader) : WaveExtensibleFileReader_GUID;
+	@:overload public static function read(riff : com.sun.media.sound.RIFFReader) : com.sun.media.sound.WaveExtensibleFileReader.WaveExtensibleFileReader_GUID;
 	
 	@:overload public function hashCode() : Int;
 	

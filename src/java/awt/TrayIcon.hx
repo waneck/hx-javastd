@@ -411,7 +411,7 @@ extern class TrayIcon
 	* @throws NullPointerException if both <code>caption</code>
 	* and <code>text</code> are <code>null</code>
 	*/
-	@:overload public function displayMessage(caption : String, text : String, messageType : TrayIcon_MessageType) : Void;
+	@:overload public function displayMessage(caption : String, text : String, messageType : java.awt.TrayIcon.TrayIcon_MessageType) : Void;
 	
 	/**
 	* Returns the size, in pixels, of the space that the tray icon

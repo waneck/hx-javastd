@@ -27,9 +27,9 @@ extern class SoftMixingClip extends com.sun.media.sound.SoftMixingDataLine imple
 {
 	@:overload private function new(mixer : com.sun.media.sound.SoftMixingMixer, info : javax.sound.sampled.DataLine.DataLine_Info) : Void;
 	
-	@:overload override private function processControlLogic() : Void;
+	@:overload private function processControlLogic() : Void;
 	
-	@:overload override private function processAudioLogic(buffers : java.NativeArray<com.sun.media.sound.SoftAudioBuffer>) : Void;
+	@:overload private function processAudioLogic(buffers : java.NativeArray<com.sun.media.sound.SoftAudioBuffer>) : Void;
 	
 	@:overload public function getFrameLength() : Int;
 	
@@ -47,37 +47,37 @@ extern class SoftMixingClip extends com.sun.media.sound.SoftMixingDataLine imple
 	
 	@:overload public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
-	@:overload override public function drain() : Void;
+	@:overload public function drain() : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
-	@:overload override public function getBufferSize() : Int;
+	@:overload public function getBufferSize() : Int;
 	
-	@:overload override public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload public function getFormat() : javax.sound.sampled.AudioFormat;
 	
-	@:overload override public function getFramePosition() : Int;
+	@:overload public function getFramePosition() : Int;
 	
-	@:overload override public function getLevel() : Single;
+	@:overload public function getLevel() : Single;
 	
-	@:overload override public function getLongFramePosition() : haxe.Int64;
+	@:overload public function getLongFramePosition() : haxe.Int64;
 	
-	@:overload override public function getMicrosecondPosition() : haxe.Int64;
+	@:overload public function getMicrosecondPosition() : haxe.Int64;
 	
-	@:overload override public function isActive() : Bool;
+	@:overload public function isActive() : Bool;
 	
-	@:overload override public function isRunning() : Bool;
+	@:overload public function isRunning() : Bool;
 	
-	@:overload override public function start() : Void;
+	@:overload public function start() : Void;
 	
-	@:overload override public function stop() : Void;
+	@:overload public function stop() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function isOpen() : Bool;
+	@:overload public function isOpen() : Bool;
 	
-	@:overload override public function open() : Void;
+	@:overload public function open() : Void;
 	
 	
 }

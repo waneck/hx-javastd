@@ -71,7 +71,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* compiled away as dead code. This method can be used for that
 	* purpose.
 	*/
-	@:overload public function copyReferences(_var : VariableBase) : Void;
+	@:overload public function copyReferences(_var : com.sun.org.apache.xalan.internal.xsltc.compiler.VariableBase) : Void;
 	
 	/**
 	* Map this variable to a register
@@ -109,7 +109,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Display variable in a full AST dump
 	*/
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	/**
 	* Returns the type of the variable
@@ -140,7 +140,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Parse the contents of the <xsl:decimal-format> element.
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Compile the value of the variable, which is either in an expression in

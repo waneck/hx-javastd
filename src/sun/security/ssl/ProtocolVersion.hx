@@ -43,7 +43,7 @@ package sun.security.ssl;
 * @author  Andreas Sterbenz
 * @since   1.4.1
 */
-@:require(java4) extern class ProtocolVersion implements java.lang.Comparable<ProtocolVersion>
+@:require(java4) extern class ProtocolVersion implements java.lang.Comparable<sun.security.ssl.ProtocolVersion>
 {
 	public var v(default, null) : Int;
 	
@@ -53,14 +53,14 @@ package sun.security.ssl;
 	* Return a ProtocolVersion with the specified major and minor version
 	* numbers. Never throws exceptions.
 	*/
-	@:overload public static function valueOf(major : Int, minor : Int) : ProtocolVersion;
+	@:overload public static function valueOf(major : Int, minor : Int) : sun.security.ssl.ProtocolVersion;
 	
 	@:overload public function toString() : String;
 	
 	/**
 	* Compares this object with the specified object for order.
 	*/
-	@:overload public function compareTo(protocolVersion : ProtocolVersion) : Int;
+	@:overload public function compareTo(protocolVersion : sun.security.ssl.ProtocolVersion) : Int;
 	
 	
 }

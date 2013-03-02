@@ -509,7 +509,7 @@ package java.awt;
 	* @serial
 	* @see java.awt.EventQueue
 	*/
-	public var evt : Event;
+	public var evt : java.awt.Event;
 	
 	/**
 	* <b>NOTE:</b> The <code>Event</code> class is obsolete and is

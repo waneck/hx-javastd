@@ -56,7 +56,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open(group : java.nio.channels.AsynchronousChannelGroup) : AsynchronousSocketChannel;
+	@:overload public static function open(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Opens an asynchronous socket channel.
@@ -73,7 +73,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : AsynchronousSocketChannel;
+	@:overload public static function open() : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* @throws  ConnectionPendingException
@@ -83,14 +83,14 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  ClosedChannelException              {@inheritDoc}
 	* @throws  IOException                         {@inheritDoc}
 	*/
-	@:overload @:abstract public function bind(local : java.net.SocketAddress) : AsynchronousSocketChannel;
+	@:overload @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* @throws  IllegalArgumentException                {@inheritDoc}
 	* @throws  ClosedChannelException                  {@inheritDoc}
 	* @throws  IOException                             {@inheritDoc}
 	*/
-	@:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : AsynchronousSocketChannel;
+	@:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Shutdown the connection for reading without closing the channel.
@@ -112,7 +112,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function shutdownInput() : AsynchronousSocketChannel;
+	@:overload @:abstract public function shutdownInput() : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Shutdown the connection for writing without closing the channel.
@@ -132,7 +132,7 @@ extern class AsynchronousSocketChannel implements java.nio.channels.Asynchronous
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function shutdownOutput() : AsynchronousSocketChannel;
+	@:overload @:abstract public function shutdownOutput() : java.nio.channels.AsynchronousSocketChannel;
 	
 	/**
 	* Returns the remote address to which this channel's socket is connected.

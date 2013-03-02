@@ -43,7 +43,7 @@ extern class Entity
 	@:overload public function clear() : Void;
 	
 	/** Sets the values of the entity. */
-	@:overload public function setValues(entity : Entity) : Void;
+	@:overload public function setValues(entity : com.sun.xml.internal.stream.Entity) : Void;
 	
 	
 }
@@ -52,7 +52,7 @@ extern class Entity
 *
 * @author nb131165
 */
-@:native('com$sun$xml$internal$stream$Entity$InternalEntity') extern class Entity_InternalEntity extends Entity
+@:native('com$sun$xml$internal$stream$Entity$InternalEntity') extern class Entity_InternalEntity extends com.sun.xml.internal.stream.Entity
 {
 	/** Text value of entity. */
 	public var text : String;
@@ -73,10 +73,10 @@ extern class Entity
 	@:overload override public function clear() : Void;
 	
 	/** Sets the values of the entity. */
-	@:overload override public function setValues(entity : Entity) : Void;
+	@:overload override public function setValues(entity : com.sun.xml.internal.stream.Entity) : Void;
 	
 	/** Sets the values of the entity. */
-	@:overload public function setValues(entity : Entity_InternalEntity) : Void;
+	@:overload public function setValues(entity : com.sun.xml.internal.stream.Entity.Entity_InternalEntity) : Void;
 	
 	
 }
@@ -85,7 +85,7 @@ extern class Entity
 *
 * @author nb131165
 */
-@:native('com$sun$xml$internal$stream$Entity$ExternalEntity') extern class Entity_ExternalEntity extends Entity
+@:native('com$sun$xml$internal$stream$Entity$ExternalEntity') extern class Entity_ExternalEntity extends com.sun.xml.internal.stream.Entity
 {
 	/** container for all relevant entity location information. */
 	public var entityLocation : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier;
@@ -109,10 +109,10 @@ extern class Entity
 	@:overload override public function clear() : Void;
 	
 	/** Sets the values of the entity. */
-	@:overload override public function setValues(entity : Entity) : Void;
+	@:overload override public function setValues(entity : com.sun.xml.internal.stream.Entity) : Void;
 	
 	/** Sets the values of the entity. */
-	@:overload public function setValues(entity : Entity_ExternalEntity) : Void;
+	@:overload public function setValues(entity : com.sun.xml.internal.stream.Entity.Entity_ExternalEntity) : Void;
 	
 	
 }
@@ -121,7 +121,7 @@ extern class Entity
 *
 * @author nb131165
 */
-@:native('com$sun$xml$internal$stream$Entity$ScannedEntity') extern class Entity_ScannedEntity extends Entity
+@:native('com$sun$xml$internal$stream$Entity$ScannedEntity') extern class Entity_ScannedEntity extends com.sun.xml.internal.stream.Entity
 {
 	/** Default buffer size (4096). */
 	public static var DEFAULT_BUFFER_SIZE(default, null) : Int;

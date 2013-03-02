@@ -57,7 +57,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open(group : java.nio.channels.AsynchronousChannelGroup) : AsynchronousServerSocketChannel;
+	@:overload public static function open(group : java.nio.channels.AsynchronousChannelGroup) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Opens an asynchronous server-socket channel.
@@ -74,7 +74,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : AsynchronousServerSocketChannel;
+	@:overload public static function open() : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket to
@@ -97,7 +97,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  ClosedChannelException              {@inheritDoc}
 	* @throws  IOException                         {@inheritDoc}
 	*/
-	@:overload @:final public function bind(local : java.net.SocketAddress) : AsynchronousServerSocketChannel;
+	@:overload @:final public function bind(local : java.net.SocketAddress) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket to
@@ -134,14 +134,14 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : AsynchronousServerSocketChannel;
+	@:overload @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* @throws  IllegalArgumentException                {@inheritDoc}
 	* @throws  ClosedChannelException                  {@inheritDoc}
 	* @throws  IOException                             {@inheritDoc}
 	*/
-	@:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : AsynchronousServerSocketChannel;
+	@:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.AsynchronousServerSocketChannel;
 	
 	/**
 	* Accepts a connection.

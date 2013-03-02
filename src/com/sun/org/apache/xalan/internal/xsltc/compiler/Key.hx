@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Parse the <xsl:key> element and attributes
 	* @param parser A reference to the stylesheet parser
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Returns a String-representation of this key's name
@@ -35,7 +35,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	*/
 	@:overload public function getName() : String;
 	
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method is called if the "use" attribute of the key contains a
@@ -48,7 +48,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Gather all nodes that match the expression in the attribute "match"
 	* and add one (or more) entries in this key's index.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

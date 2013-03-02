@@ -79,7 +79,7 @@ package sun.awt.X11;
 	@:overload @:final public function attachTargetWindow(window : haxe.Int64, time : haxe.Int64) : Bool;
 	
 	/* The caller must hold AWT_LOCK. */
-	@:overload @:abstract public function getTargetWindowInfo(window : haxe.Int64) : XDragSourceProtocol_TargetWindowInfo;
+	@:overload @:abstract public function getTargetWindowInfo(window : haxe.Int64) : sun.awt.X11.XDragSourceProtocol.XDragSourceProtocol_TargetWindowInfo;
 	
 	/* The caller must hold AWT_LOCK. */
 	@:overload @:abstract public function sendEnterMessage(formats : java.NativeArray<haxe.Int64>, sourceAction : Int, sourceActions : Int, time : haxe.Int64) : Void;

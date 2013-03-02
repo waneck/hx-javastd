@@ -30,9 +30,9 @@ package com.sun.tools.internal.ws.wsdl.document.soap;
 */
 extern class SOAPStyle
 {
-	public static var RPC(default, null) : SOAPStyle;
+	public static var RPC(default, null) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
 	
-	public static var DOCUMENT(default, null) : SOAPStyle;
+	public static var DOCUMENT(default, null) : com.sun.tools.internal.ws.wsdl.document.soap.SOAPStyle;
 	
 	
 }

@@ -38,7 +38,7 @@ package javax.swing.plaf.synth;
 	
 	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	@:overload public function getContext(c : javax.swing.JComponent) : javax.swing.plaf.synth.SynthContext;
 	

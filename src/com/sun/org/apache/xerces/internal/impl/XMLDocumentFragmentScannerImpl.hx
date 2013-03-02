@@ -161,9 +161,9 @@ extern class XMLDocumentFragmentScannerImpl extends com.sun.org.apache.xerces.in
 	private var fCurrentElement : com.sun.org.apache.xerces.internal.xni.QName;
 	
 	/** Element stack. */
-	private var fElementStack : XMLDocumentFragmentScannerImpl_ElementStack;
+	private var fElementStack : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_ElementStack;
 	
-	private var fElementStack2 : XMLDocumentFragmentScannerImpl_ElementStack2;
+	private var fElementStack2 : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_ElementStack2;
 	
 	/** Document system identifier.
 	* REVISIT:  So what's this used for?  - NG
@@ -192,10 +192,10 @@ extern class XMLDocumentFragmentScannerImpl extends com.sun.org.apache.xerces.in
 	private var fDisallowDoctype : Bool;
 	
 	/** Active driver. */
-	private var fDriver : XMLDocumentFragmentScannerImpl_Driver;
+	private var fDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Content driver. */
-	private var fContentDriver : XMLDocumentFragmentScannerImpl_Driver;
+	private var fContentDriver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Element QName. */
 	private var fElementQName : com.sun.org.apache.xerces.internal.xni.QName;
@@ -401,7 +401,7 @@ extern class XMLDocumentFragmentScannerImpl extends com.sun.org.apache.xerces.in
 	@:overload override public function endEntity(name : String, augs : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/** Creates a content Driver. */
-	@:overload private function createContentDriver() : XMLDocumentFragmentScannerImpl_Driver;
+	@:overload private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/**
 	* Scans an XML or text declaration.
@@ -582,7 +582,7 @@ extern class XMLDocumentFragmentScannerImpl extends com.sun.org.apache.xerces.in
 	*
 	* @param Driver The new Driver.
 	*/
-	@:overload @:final private function setDriver(driver : XMLDocumentFragmentScannerImpl_Driver) : Void;
+	@:overload @:final private function setDriver(driver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver) : Void;
 	
 	/** Returns the scanner state name. */
 	@:overload private function getScannerStateName(state : Int) : String;
@@ -590,7 +590,7 @@ extern class XMLDocumentFragmentScannerImpl extends com.sun.org.apache.xerces.in
 	@:overload public function getEntityName() : String;
 	
 	/** Returns the driver name. */
-	@:overload public function getDriverName(driver : XMLDocumentFragmentScannerImpl_Driver) : String;
+	@:overload public function getDriverName(driver : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver) : String;
 	
 	private var fUsebuffer : Bool;
 	
@@ -629,13 +629,13 @@ extern class XMLDocumentFragmentScannerImpl extends com.sun.org.apache.xerces.in
 	public var fRawname : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** The next Element entry. */
-	public var next : XMLDocumentFragmentScannerImpl_Element;
+	public var next : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Element;
 	
 	/**
 	* Constructs a new Element from the given QName and next Element
 	* reference.
 	*/
-	@:overload public function new(qname : com.sun.org.apache.xerces.internal.xni.QName, next : XMLDocumentFragmentScannerImpl_Element) : Void;
+	@:overload public function new(qname : com.sun.org.apache.xerces.internal.xni.QName, next : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Element) : Void;
 	
 	
 }
@@ -844,7 +844,7 @@ extern class XMLDocumentFragmentScannerImpl extends com.sun.org.apache.xerces.in
 * @author Andy Clark, IBM
 * @author Eric Ye, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentFragmentScannerImpl$FragmentContentDriver') extern class XMLDocumentFragmentScannerImpl_FragmentContentDriver implements XMLDocumentFragmentScannerImpl_Driver
+@:native('com$sun$org$apache$xerces$internal$impl$XMLDocumentFragmentScannerImpl$FragmentContentDriver') extern class XMLDocumentFragmentScannerImpl_FragmentContentDriver implements com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver
 {
 	/**
 	*

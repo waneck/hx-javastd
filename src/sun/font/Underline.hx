@@ -31,11 +31,11 @@ package sun.font;
 {
 	
 }
-@:native('sun$font$Underline$StandardUnderline') @:internal extern class Underline_StandardUnderline extends Underline
+@:native('sun$font$Underline$StandardUnderline') @:internal extern class Underline_StandardUnderline extends sun.font.Underline
 {
 	
 }
-@:native('sun$font$Underline$IMGrayUnderline') @:internal extern class Underline_IMGrayUnderline extends Underline
+@:native('sun$font$Underline$IMGrayUnderline') @:internal extern class Underline_IMGrayUnderline extends sun.font.Underline
 {
 	
 }

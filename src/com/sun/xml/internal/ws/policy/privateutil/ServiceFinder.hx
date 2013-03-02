@@ -41,7 +41,7 @@ package com.sun.xml.internal.ws.policy.privateutil;
 	*                                   or names a provider class that cannot be found and instantiated
 	* @see #find(Class, ClassLoader)
 	*/
-	@:overload public static function find<T>(service : Class<T>) : ServiceFinder<T>;
+	@:overload public static function find<T>(service : Class<T>) : com.sun.xml.internal.ws.policy.privateutil.ServiceFinder<T>;
 	
 	/**
 	* Returns discovered objects incrementally.

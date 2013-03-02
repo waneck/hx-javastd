@@ -87,7 +87,7 @@ package sun.awt.X11;
 	* Sets the scrollbar.
 	* @param sb the scrollbar that this thread will scroll
 	*/
-	@:overload @:synchronized public function setScrollbar(sb : XScrollbar) : Void;
+	@:overload @:synchronized public function setScrollbar(sb : sun.awt.X11.XScrollbar) : Void;
 	
 	@:overload public function run() : Void;
 	

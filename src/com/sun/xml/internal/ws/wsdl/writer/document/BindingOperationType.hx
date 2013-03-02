@@ -29,7 +29,7 @@ extern interface BindingOperationType extends com.sun.xml.internal.txw2.TypedXml
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : BindingOperationType;
+	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.BindingOperationType;
 	
 	@:overload public function soapOperation() : com.sun.xml.internal.ws.wsdl.writer.document.soap.SOAPOperation;
 	

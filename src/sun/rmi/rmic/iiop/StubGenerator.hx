@@ -119,7 +119,7 @@ extern class StubGenerator extends sun.rmi.rmic.iiop.Generator
 	* method to return false.
 	* @param outputType One of the items returned by getOutputTypesFor(...)
 	*/
-	@:overload private function getFileNameExtensionFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : String;
+	@:overload override private function getFileNameExtensionFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : String;
 	
 	/**
 	* Write the output for the given OutputFileName into the output stream.
@@ -128,7 +128,7 @@ extern class StubGenerator extends sun.rmi.rmic.iiop.Generator
 	*  Intended to be passed to Type.collectMatching(filter,alreadyChecked).
 	* @param writer The output stream.
 	*/
-	@:overload private function writeOutputFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload override private function writeOutputFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	/**
 	* Write a stub for the specified type.

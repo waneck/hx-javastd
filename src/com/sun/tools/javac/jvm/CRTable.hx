@@ -66,21 +66,21 @@ extern class CRTable implements com.sun.tools.javac.jvm.CRTFlags
 {
 	/** Visitor method: compute source positions for a single node.
 	*/
-	@:overload public function csp(tree : com.sun.tools.javac.tree.JCTree) : CRTable_SourceRange;
+	@:overload public function csp(tree : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.jvm.CRTable.CRTable_SourceRange;
 	
 	/** Visitor method: compute source positions for a list of nodes.
 	*/
-	@:overload public function csp(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : CRTable_SourceRange;
+	@:overload public function csp(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : com.sun.tools.javac.jvm.CRTable.CRTable_SourceRange;
 	
 	/**  Visitor method: compute source positions for
 	*    a list of case blocks of switch statements.
 	*/
-	@:overload public function cspCases(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCase>) : CRTable_SourceRange;
+	@:overload public function cspCases(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCase>) : com.sun.tools.javac.jvm.CRTable.CRTable_SourceRange;
 	
 	/**  Visitor method: compute source positions for
 	*   a list of catch clauses in try statements.
 	*/
-	@:overload public function cspCatchers(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCatch>) : CRTable_SourceRange;
+	@:overload public function cspCatchers(trees : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCatch>) : com.sun.tools.javac.jvm.CRTable.CRTable_SourceRange;
 	
 	@:overload public function visitMethodDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
 	

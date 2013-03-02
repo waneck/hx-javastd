@@ -167,7 +167,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* Retrieves a PartialCompositeContext for the resolved object in
 	* cont.  Throws CannotProceedException if not successful.
 	*/
-	@:overload private static function getPCContext(cont : com.sun.jndi.toolkit.ctx.Continuation) : PartialCompositeContext;
+	@:overload private static function getPCContext(cont : com.sun.jndi.toolkit.ctx.Continuation) : com.sun.jndi.toolkit.ctx.PartialCompositeContext;
 	
 	/**
 	* Retrieves the full name of this context within its own namespace.

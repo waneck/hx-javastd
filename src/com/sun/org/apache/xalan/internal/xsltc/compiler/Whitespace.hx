@@ -44,7 +44,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Parse the attributes of the xsl:strip/preserve-space element.
 	* The element should have not contents (ignored if any).
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* De-tokenize the elements listed in the 'elements' attribute and
@@ -69,12 +69,12 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Type-check contents/attributes - nothing to do...
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method should not produce any code
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }
@@ -91,7 +91,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* For sorting rules depending on priority
 	*/
-	@:overload public function compareTo(other : Whitespace_WhitespaceRule) : Int;
+	@:overload public function compareTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.Whitespace.Whitespace_WhitespaceRule) : Int;
 	
 	@:overload public function getAction() : Int;
 	

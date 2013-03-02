@@ -43,9 +43,9 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return This class
 	*/
-	@:overload public function _extends(superClass : com.sun.codemodel.internal.JClass) : JDefinedClass;
+	@:overload public function _extends(superClass : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function _extends(superClass : Class<Dynamic>) : JDefinedClass;
+	@:overload public function _extends(superClass : Class<Dynamic>) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Returns the class extended by this class.
@@ -60,9 +60,9 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return This class
 	*/
-	@:overload public function _implements(iface : com.sun.codemodel.internal.JClass) : JDefinedClass;
+	@:overload public function _implements(iface : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function _implements(iface : Class<Dynamic>) : JDefinedClass;
+	@:overload public function _implements(iface : Class<Dynamic>) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Returns an iterator that walks the nested classes defined in this
@@ -154,7 +154,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _annotationTypeDeclaration(name : String) : JDefinedClass;
+	@:overload public function _annotationTypeDeclaration(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a public enum to this package
@@ -166,7 +166,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _enum(name : String) : JDefinedClass;
+	@:overload public function _enum(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a public enum to this package
@@ -180,7 +180,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*      When the specified class/interface was already created.
 
 	*/
-	@:overload public function _enum(mods : Int, name : String) : JDefinedClass;
+	@:overload public function _enum(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	@:overload public function getClassType() : com.sun.codemodel.internal.ClassType;
 	
@@ -281,21 +281,21 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Newly generated class
 	*/
-	@:overload public function _class(mods : Int, name : String) : JDefinedClass;
+	@:overload public function _class(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @deprecated
 	*/
-	@:overload public function _class(mods : Int, name : String, isInterface : Bool) : JDefinedClass;
+	@:overload public function _class(mods : Int, name : String, isInterface : Bool) : com.sun.codemodel.internal.JDefinedClass;
 	
-	@:overload public function _class(mods : Int, name : String, classTypeVal : com.sun.codemodel.internal.ClassType) : JDefinedClass;
+	@:overload public function _class(mods : Int, name : String, classTypeVal : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add a new public nested class to this class.
 	*/
-	@:overload public function _class(name : String) : JDefinedClass;
+	@:overload public function _class(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Add an interface to this package.
@@ -308,12 +308,12 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	*
 	* @return Newly generated interface
 	*/
-	@:overload public function _interface(mods : Int, name : String) : JDefinedClass;
+	@:overload public function _interface(mods : Int, name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Adds a public interface to this package.
 	*/
-	@:overload public function _interface(name : String) : JDefinedClass;
+	@:overload public function _interface(name : String) : com.sun.codemodel.internal.JDefinedClass;
 	
 	/**
 	* Creates, if necessary, and returns the class javadoc for this
@@ -339,7 +339,7 @@ extern class JDefinedClass extends com.sun.codemodel.internal.JClass implements 
 	* Returns an iterator that walks the nested classes defined in this
 	* class.
 	*/
-	@:overload @:final public function classes() : java.util.Iterator<JDefinedClass>;
+	@:overload @:final public function classes() : java.util.Iterator<com.sun.codemodel.internal.JDefinedClass>;
 	
 	/**
 	* Returns all the nested classes defined in this class.

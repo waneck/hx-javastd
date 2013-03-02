@@ -50,7 +50,7 @@ extern class JarEntry extends java.util.zip.ZipEntry
 	*
 	* @param je the <code>JarEntry</code> to copy
 	*/
-	@:overload public function new(je : JarEntry) : Void;
+	@:overload public function new(je : java.util.jar.JarEntry) : Void;
 	
 	/**
 	* Returns the <code>Manifest</code> <code>Attributes</code> for this

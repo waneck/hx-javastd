@@ -119,7 +119,7 @@ extern class RoleInfo implements java.io.Serializable
 	*
 	* @exception IllegalArgumentException  if null parameter
 	*/
-	@:overload public function new(roleInfo : RoleInfo) : Void;
+	@:overload public function new(roleInfo : javax.management.relation.RoleInfo) : Void;
 	
 	/**
 	* Returns the name of the role.

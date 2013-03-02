@@ -132,7 +132,7 @@ package java.util.regex;
 	*          If newPattern is <tt>null</tt>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function usePattern(newPattern : java.util.regex.Pattern) : Matcher;
+	@:require(java5) @:overload public function usePattern(newPattern : java.util.regex.Pattern) : java.util.regex.Matcher;
 	
 	/**
 	* Resets this matcher.
@@ -144,7 +144,7 @@ package java.util.regex;
 	*
 	* @return  This matcher
 	*/
-	@:overload public function reset() : Matcher;
+	@:overload public function reset() : java.util.regex.Matcher;
 	
 	/**
 	* Resets this matcher with a new input sequence.
@@ -160,7 +160,7 @@ package java.util.regex;
 	*
 	* @return  This matcher
 	*/
-	@:overload public function reset(input : java.lang.CharSequence) : Matcher;
+	@:overload public function reset(input : java.lang.CharSequence) : java.util.regex.Matcher;
 	
 	/**
 	* Returns the start index of the previous match.  </p>
@@ -498,7 +498,7 @@ package java.util.regex;
 	*          If the replacement string refers to a capturing group
 	*          that does not exist in the pattern
 	*/
-	@:overload public function appendReplacement(sb : java.lang.StringBuffer, replacement : String) : Matcher;
+	@:overload public function appendReplacement(sb : java.lang.StringBuffer, replacement : String) : java.util.regex.Matcher;
 	
 	/**
 	* Implements a terminal append-and-replace step.
@@ -612,7 +612,7 @@ package java.util.regex;
 	* @return  this matcher
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function region(start : Int, end : Int) : Matcher;
+	@:require(java5) @:overload public function region(start : Int, end : Int) : java.util.regex.Matcher;
 	
 	/**
 	* Reports the start index of this matcher's region. The
@@ -681,7 +681,7 @@ package java.util.regex;
 	* @see java.util.regex.Matcher#hasTransparentBounds
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function useTransparentBounds(b : Bool) : Matcher;
+	@:require(java5) @:overload public function useTransparentBounds(b : Bool) : java.util.regex.Matcher;
 	
 	/**
 	* Queries the anchoring of region bounds for this matcher.
@@ -722,7 +722,7 @@ package java.util.regex;
 	* @see java.util.regex.Matcher#hasAnchoringBounds
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function useAnchoringBounds(b : Bool) : Matcher;
+	@:require(java5) @:overload public function useAnchoringBounds(b : Bool) : java.util.regex.Matcher;
 	
 	/**
 	* <p>Returns the string representation of this matcher. The

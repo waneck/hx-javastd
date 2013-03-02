@@ -77,11 +77,11 @@ extern class AugmentationsImpl implements com.sun.org.apache.xerces.internal.xni
 	
 	@:overload @:abstract public function isFull() : Bool;
 	
-	@:overload @:abstract public function expand() : AugmentationsImpl_AugmentationsItemsContainer;
+	@:overload @:abstract public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
 	
 	
 }
-@:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$SmallContainer') @:internal extern class AugmentationsImpl_SmallContainer extends AugmentationsImpl_AugmentationsItemsContainer
+@:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$SmallContainer') @:internal extern class AugmentationsImpl_SmallContainer extends com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer
 {
 	@:overload override public function keys() : java.util.Enumeration<Dynamic>;
 	
@@ -95,7 +95,7 @@ extern class AugmentationsImpl implements com.sun.org.apache.xerces.internal.xni
 	
 	@:overload override public function isFull() : Bool;
 	
-	@:overload override public function expand() : AugmentationsImpl_AugmentationsItemsContainer;
+	@:overload override public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
 	
 	@:overload public function toString() : String;
 	
@@ -109,7 +109,7 @@ extern class AugmentationsImpl implements com.sun.org.apache.xerces.internal.xni
 	
 	
 }
-@:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$LargeContainer') @:internal extern class AugmentationsImpl_LargeContainer extends AugmentationsImpl_AugmentationsItemsContainer
+@:native('com$sun$org$apache$xerces$internal$util$AugmentationsImpl$LargeContainer') @:internal extern class AugmentationsImpl_LargeContainer extends com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer
 {
 	@:overload override public function getItem(key : Dynamic) : Dynamic;
 	
@@ -123,7 +123,7 @@ extern class AugmentationsImpl implements com.sun.org.apache.xerces.internal.xni
 	
 	@:overload override public function isFull() : Bool;
 	
-	@:overload override public function expand() : AugmentationsImpl_AugmentationsItemsContainer;
+	@:overload override public function expand() : com.sun.org.apache.xerces.internal.util.AugmentationsImpl.AugmentationsImpl_AugmentationsItemsContainer;
 	
 	@:overload public function toString() : String;
 	

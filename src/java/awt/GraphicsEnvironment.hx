@@ -35,7 +35,7 @@ extern class GraphicsEnvironment
 	* Returns the local <code>GraphicsEnvironment</code>.
 	* @return the local <code>GraphicsEnvironment</code>
 	*/
-	@:overload @:synchronized public static function getLocalGraphicsEnvironment() : GraphicsEnvironment;
+	@:overload @:synchronized public static function getLocalGraphicsEnvironment() : java.awt.GraphicsEnvironment;
 	
 	/**
 	* Tests whether or not a display, keyboard, and mouse can be

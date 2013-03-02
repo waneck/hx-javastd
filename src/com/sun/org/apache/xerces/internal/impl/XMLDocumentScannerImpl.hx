@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.impl;
 extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl
 {
 	/** Scanner state: XML declaration. */
-	@:native('SCANNER_STATE_XML_DECL') private static var _SCANNER_STATE_XML_DECL(default, null) : Int;
+	private static var SCANNER_STATE_XML_DECL(default, null) : Int;
 	
 	/** Scanner state: prolog. */
 	private static var SCANNER_STATE_PROLOG(default, null) : Int;
@@ -117,7 +117,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*
 	* @throws IOException Thrown on i/o error.
 	*/
-	@:overload override public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload public function setInputSource(inputSource : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**return the state of the scanner */
 	@:overload public function getScannetState() : Int;
@@ -246,12 +246,12 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*
 	* @return int
 	*/
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
 	@:overload public function getNamespaceContext() : com.sun.org.apache.xerces.internal.xni.NamespaceContext;
 	
 	/** Creates a content driver. */
-	@:overload override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:overload private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** Scans a doctype declaration. */
 	@:overload private function scanDoctypeDecl(supportDTD : Bool) : Bool;
@@ -260,14 +260,14 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	@:overload private function setEndDTDScanState() : Void;
 	
 	/** Returns the scanner state name. */
-	@:overload override private function getScannerStateName(state : Int) : String;
+	@:overload private function getScannerStateName(state : Int) : String;
 	
 	/**
 	* receives callbacks from {@link XMLEntityReader } when buffer
 	* is being changed.
 	* @param refreshPosition
 	*/
-	@:overload override public function refresh(refreshPosition : Int) : Void;
+	@:overload public function refresh(refreshPosition : Int) : Void;
 	
 	
 }
@@ -356,7 +356,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* @return True if the "DOCTYPE" was scanned; false if "DOCTYPE"
 	*          was not scanned.
 	*/
-	@:overload override private function scanForDoctypeHook() : Bool;
+	@:overload private function scanForDoctypeHook() : Bool;
 	
 	/**
 	* Element depth iz zero. This methos is a hook for subclasses
@@ -371,7 +371,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload override private function elementDepthIsZeroHook() : Bool;
+	@:overload private function elementDepthIsZeroHook() : Bool;
 	
 	/**
 	* Scan for root element hook. This method is a hook for
@@ -385,7 +385,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	*          driver. A return value of false indicates that
 	*          the content driver should continue as normal.
 	*/
-	@:overload override private function scanRootElementHook() : Bool;
+	@:overload private function scanRootElementHook() : Bool;
 	
 	/**
 	* End of file hook. This method is a hook for subclasses to
@@ -394,7 +394,7 @@ extern class XMLDocumentScannerImpl extends com.sun.org.apache.xerces.internal.i
 	* However, when scanning a full XML document, an end of file
 	* is always premature.
 	*/
-	@:overload override private function endOfFileHook(e : java.io.EOFException) : Void;
+	@:overload private function endOfFileHook(e : java.io.EOFException) : Void;
 	
 	@:overload private function resolveExternalSubsetAndRead() : Void;
 	

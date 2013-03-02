@@ -33,7 +33,7 @@ extern class ModelGroupDeclImpl extends com.sun.xml.internal.xsom.impl.Declarati
 	* This component is a redefinition of "oldMG". Fix up the internal state
 	* as such.
 	*/
-	@:overload public function redefine(oldMG : ModelGroupDeclImpl) : Void;
+	@:overload public function redefine(oldMG : com.sun.xml.internal.xsom.impl.ModelGroupDeclImpl) : Void;
 	
 	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	

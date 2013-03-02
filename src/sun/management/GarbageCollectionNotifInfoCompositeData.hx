@@ -31,7 +31,7 @@ extern class GarbageCollectionNotifInfoCompositeData extends sun.management.Lazy
 	
 	@:overload public static function toCompositeData(info : com.sun.management.GarbageCollectionNotificationInfo) : javax.management.openmbean.CompositeData;
 	
-	@:overload override private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
 	@:overload public static function getGcName(cd : javax.management.openmbean.CompositeData) : String;
 	

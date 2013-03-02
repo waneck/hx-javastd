@@ -264,19 +264,19 @@ extern class WeakHashMap<K, V> extends java.util.AbstractMap<K, V> implements ja
 	
 	
 }
-@:native('java$util$WeakHashMap$ValueIterator') @:internal extern class WeakHashMap_ValueIterator extends WeakHashMap_HashIterator<Dynamic>
+@:native('java$util$WeakHashMap$ValueIterator') @:internal extern class WeakHashMap_ValueIterator extends java.util.WeakHashMap.WeakHashMap_HashIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$WeakHashMap$KeyIterator') @:internal extern class WeakHashMap_KeyIterator extends WeakHashMap_HashIterator<Dynamic>
+@:native('java$util$WeakHashMap$KeyIterator') @:internal extern class WeakHashMap_KeyIterator extends java.util.WeakHashMap.WeakHashMap_HashIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$WeakHashMap$EntryIterator') @:internal extern class WeakHashMap_EntryIterator extends WeakHashMap_HashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$WeakHashMap$EntryIterator') @:internal extern class WeakHashMap_EntryIterator extends java.util.WeakHashMap.WeakHashMap_HashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	

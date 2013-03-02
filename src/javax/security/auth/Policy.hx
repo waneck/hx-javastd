@@ -48,7 +48,7 @@ extern class Policy
 	*
 	* @see #setPolicy
 	*/
-	@:overload public static function getPolicy() : Policy;
+	@:overload public static function getPolicy() : javax.security.auth.Policy;
 	
 	/**
 	* Sets the system-wide Policy object. This method first calls
@@ -65,7 +65,7 @@ extern class Policy
 	*
 	* @see #getPolicy
 	*/
-	@:overload public static function setPolicy(policy : Policy) : Void;
+	@:overload public static function setPolicy(policy : javax.security.auth.Policy) : Void;
 	
 	/**
 	* Retrieve the Permissions granted to the Principals associated with

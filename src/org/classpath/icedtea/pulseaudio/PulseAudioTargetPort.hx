@@ -41,9 +41,9 @@ exception statement from your version.
 	
 	@:overload override public function close() : Void;
 	
-	@:overload @:native override public function native_set_volume(newValue : Single) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:native public function native_set_volume(newValue : Single) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:native override public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:native public function native_update_volume() : java.NativeArray<java.StdTypes.Int8>;
 	
 	@:overload override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	

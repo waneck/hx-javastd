@@ -137,9 +137,9 @@ extern class NamedNodeMapImpl implements org.w3c.dom.NamedNodeMap implements jav
 	* Cloning a NamedNodeMap is a DEEP OPERATION; it always clones
 	* all the nodes contained in the map.
 	*/
-	@:overload public function cloneMap(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : NamedNodeMapImpl;
+	@:overload public function cloneMap(ownerNode : com.sun.org.apache.xerces.internal.dom.NodeImpl) : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl;
 	
-	@:overload private function cloneContent(srcmap : NamedNodeMapImpl) : Void;
+	@:overload private function cloneContent(srcmap : com.sun.org.apache.xerces.internal.dom.NamedNodeMapImpl) : Void;
 	
 	/**
 	* NON-DOM

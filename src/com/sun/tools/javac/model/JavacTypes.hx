@@ -33,7 +33,7 @@ package com.sun.tools.javac.model;
 */
 extern class JavacTypes implements javax.lang.model.util.Types
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : JavacTypes;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.model.JavacTypes;
 	
 	/**
 	* Public for use only by JavacProcessingEnvironment

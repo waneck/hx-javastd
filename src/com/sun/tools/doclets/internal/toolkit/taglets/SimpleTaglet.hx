@@ -104,7 +104,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	/**
 	* Return the name of this <code>Taglet</code>.
 	*/
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -113,7 +113,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in constructor documentation and false
 	* otherwise.
 	*/
-	@:overload override public function inConstructor() : Bool;
+	@:overload public function inConstructor() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -122,7 +122,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in field documentation and false
 	* otherwise.
 	*/
-	@:overload override public function inField() : Bool;
+	@:overload public function inField() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -131,7 +131,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in method documentation and false
 	* otherwise.
 	*/
-	@:overload override public function inMethod() : Bool;
+	@:overload public function inMethod() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -140,7 +140,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in overview documentation and false
 	* otherwise.
 	*/
-	@:overload override public function inOverview() : Bool;
+	@:overload public function inOverview() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -149,7 +149,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in package documentation and false
 	* otherwise.
 	*/
-	@:overload override public function inPackage() : Bool;
+	@:overload public function inPackage() : Bool;
 	
 	/**
 	* Return true if this <code>SimpleTaglet</code>
@@ -158,7 +158,7 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* is used in type documentation and false
 	* otherwise.
 	*/
-	@:overload override public function inType() : Bool;
+	@:overload public function inType() : Bool;
 	
 	/**
 	* Return true if this <code>Taglet</code>
@@ -166,17 +166,17 @@ extern class SimpleTaglet extends com.sun.tools.doclets.internal.toolkit.taglets
 	* @return true if this <code>Taglet</code>
 	* is an inline tag and false otherwise.
 	*/
-	@:overload override public function isInlineTag() : Bool;
+	@:overload public function isInlineTag() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

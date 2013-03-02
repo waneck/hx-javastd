@@ -97,7 +97,7 @@ extern class BaseCalendar extends sun.util.calendar.AbstractCalendar
 	
 	@:overload override public function getFixedDate(date : sun.util.calendar.CalendarDate) : haxe.Int64;
 	
-	@:overload public function getFixedDate(year : Int, month : Int, dayOfMonth : Int, cache : BaseCalendar_Date) : haxe.Int64;
+	@:overload public function getFixedDate(year : Int, month : Int, dayOfMonth : Int, cache : sun.util.calendar.BaseCalendar.BaseCalendar_Date) : haxe.Int64;
 	
 	/**
 	* Calculates calendar fields and store them in the specified
@@ -129,7 +129,7 @@ extern class BaseCalendar extends sun.util.calendar.AbstractCalendar
 	
 	@:overload private function new(zone : java.util.TimeZone) : Void;
 	
-	@:overload public function setNormalizedDate(normalizedYear : Int, month : Int, dayOfMonth : Int) : BaseCalendar_Date;
+	@:overload public function setNormalizedDate(normalizedYear : Int, month : Int, dayOfMonth : Int) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
 	@:overload @:abstract public function getNormalizedYear() : Int;
 	

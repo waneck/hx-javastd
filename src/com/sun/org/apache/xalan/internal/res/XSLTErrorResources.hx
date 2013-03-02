@@ -557,7 +557,7 @@ extern class XSLTErrorResources extends java.util.ListResourceBundle
 	*   @return the ResourceBundle
 	*   @throws MissingResourceException
 	*/
-	@:overload @:final public static function loadResourceBundle(className : String) : XSLTErrorResources;
+	@:overload @:final public static function loadResourceBundle(className : String) : com.sun.org.apache.xalan.internal.res.XSLTErrorResources;
 	
 	
 }

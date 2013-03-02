@@ -150,7 +150,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Error reporter. */
-	private var fXSIErrorReporter(default, null) : XMLSchemaValidator_XSIErrorReporter;
+	private var fXSIErrorReporter(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_XSIErrorReporter;
 	
 	/** Entity resolver */
 	private var fEntityResolver : com.sun.org.apache.xerces.internal.xni.parser.XMLEntityResolver;
@@ -495,10 +495,10 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* XPath matchers are automatically removed from the stack of
 	* active matchers and no longer receive callbacks.
 	*/
-	private var fMatcherStack : XMLSchemaValidator_XPathMatcherStack;
+	private var fMatcherStack : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_XPathMatcherStack;
 	
 	/** Cache of value stores for identity constraint fields. */
-	private var fValueStoreCache : XMLSchemaValidator_ValueStoreCache;
+	private var fValueStoreCache : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreCache;
 	
 	/** Default constructor. */
 	@:overload public function new() : Void;
@@ -653,7 +653,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	/** global data */
 	public var fValues(default, null) : java.util.Vector<Dynamic>;
 	
-	public var fValueTypes : XMLSchemaValidator_ShortVector;
+	public var fValueTypes : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ShortVector;
 	
 	public var fItemValueTypes : java.util.Vector<Dynamic>;
 	
@@ -662,7 +662,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	
 	@:overload public function clear() : Void;
 	
-	@:overload public function append(newVal : XMLSchemaValidator_ValueStoreBase) : Void;
+	@:overload public function append(newVal : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase) : Void;
 	
 	/** Start scope for value store. */
 	@:overload public function startValueScope() : Void;
@@ -704,7 +704,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	* values, otherwise the index of the first field in the
 	* key sequence.
 	*/
-	@:overload public function contains(vsb : XMLSchemaValidator_ValueStoreBase) : Int;
+	@:overload public function contains(vsb : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase) : Int;
 	
 	@:overload private function checkDuplicateValues() : Void;
 	
@@ -724,7 +724,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 *
 * @author Andy Clark, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$UniqueValueStore') extern class XMLSchemaValidator_UniqueValueStore extends XMLSchemaValidator_ValueStoreBase
+@:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$UniqueValueStore') extern class XMLSchemaValidator_UniqueValueStore extends com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase
 {
 	/** Constructs a unique value store. */
 	@:overload public function new(unique : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
@@ -741,7 +741,7 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 *
 * @author Andy Clark, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$KeyValueStore') extern class XMLSchemaValidator_KeyValueStore extends XMLSchemaValidator_ValueStoreBase
+@:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$KeyValueStore') extern class XMLSchemaValidator_KeyValueStore extends com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase
 {
 	/** Constructs a key value store. */
 	@:overload public function new(key : com.sun.org.apache.xerces.internal.impl.xs.identity.UniqueOrKey) : Void;
@@ -758,13 +758,13 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 *
 * @author Andy Clark, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$KeyRefValueStore') extern class XMLSchemaValidator_KeyRefValueStore extends XMLSchemaValidator_ValueStoreBase
+@:native('com$sun$org$apache$xerces$internal$impl$xs$XMLSchemaValidator$KeyRefValueStore') extern class XMLSchemaValidator_KeyRefValueStore extends com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase
 {
 	/** Key value store. */
-	private var fKeyValueStore : XMLSchemaValidator_ValueStoreBase;
+	private var fKeyValueStore : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
 	
 	/** Constructs a key value store. */
-	@:overload public function new(keyRef : com.sun.org.apache.xerces.internal.impl.xs.identity.KeyRef, keyValueStore : XMLSchemaValidator_KeyValueStore) : Void;
+	@:overload public function new(keyRef : com.sun.org.apache.xerces.internal.impl.xs.identity.KeyRef, keyValueStore : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_KeyValueStore) : Void;
 	
 	@:overload override public function endDocumentFragment() : Void;
 	
@@ -819,10 +819,10 @@ extern class XMLSchemaValidator implements com.sun.org.apache.xerces.internal.xn
 	@:overload public function initValueStoresFor(eDecl : com.sun.org.apache.xerces.internal.impl.xs.XSElementDecl, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator) : Void;
 	
 	/** Returns the value store associated to the specified IdentityConstraint. */
-	@:overload public function getValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : XMLSchemaValidator_ValueStoreBase;
+	@:overload public function getValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
 	
 	/** Returns the global value store associated to the specified IdentityConstraint. */
-	@:overload public function getGlobalValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : XMLSchemaValidator_ValueStoreBase;
+	@:overload public function getGlobalValueStoreFor(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.XMLSchemaValidator_ValueStoreBase;
 	
 	@:overload public function transplant(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint, initialDepth : Int) : Void;
 	

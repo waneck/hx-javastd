@@ -44,14 +44,14 @@ extern class JavaThing
 	* @param field     The field this thing represents.  If null, it is
 	*                  assumed this thing is an object (and never a value).
 	*/
-	@:overload public function dereference(shapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField) : JavaThing;
+	@:overload public function dereference(shapshot : com.sun.tools.hat.internal.model.Snapshot, field : com.sun.tools.hat.internal.model.JavaField) : com.sun.tools.hat.internal.model.JavaThing;
 	
 	/**
 	* Are we the same type as other?
 	*
 	* @see JavaObject.isSameTypeAs()
 	*/
-	@:overload public function isSameTypeAs(other : JavaThing) : Bool;
+	@:overload public function isSameTypeAs(other : com.sun.tools.hat.internal.model.JavaThing) : Bool;
 	
 	/**
 	* @return true iff this represents a heap-allocated object
@@ -72,7 +72,7 @@ extern class JavaThing
 	* Compare our string representation to other's
 	* @see java.lang.String.compareTo()
 	*/
-	@:overload public function compareTo(other : JavaThing) : Int;
+	@:overload public function compareTo(other : com.sun.tools.hat.internal.model.JavaThing) : Int;
 	
 	
 }

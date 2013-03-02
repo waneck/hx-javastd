@@ -35,7 +35,7 @@ extern class PopupFactory
 	* @exception IllegalArgumentException if <code>factory</code> is null
 	* @see #getPopup
 	*/
-	@:overload public static function setSharedInstance(factory : PopupFactory) : Void;
+	@:overload public static function setSharedInstance(factory : javax.swing.PopupFactory) : Void;
 	
 	/**
 	* Returns the shared <code>PopupFactory</code> which can be used
@@ -43,7 +43,7 @@ extern class PopupFactory
 	*
 	* @return Shared PopupFactory
 	*/
-	@:overload public static function getSharedInstance() : PopupFactory;
+	@:overload public static function getSharedInstance() : javax.swing.PopupFactory;
 	
 	/**
 	* Creates a <code>Popup</code> for the Component <code>owner</code>
@@ -73,7 +73,7 @@ extern class PopupFactory
 */
 @:native('javax$swing$PopupFactory$HeavyWeightPopup') @:internal extern class PopupFactory_HeavyWeightPopup extends javax.swing.Popup
 {
-	@:overload override public function hide() : Void;
+	@:overload public function hide() : Void;
 	
 	
 }
@@ -83,18 +83,18 @@ extern class PopupFactory
 */
 @:native('javax$swing$PopupFactory$ContainerPopup') @:internal extern class PopupFactory_ContainerPopup extends javax.swing.Popup
 {
-	@:overload override public function hide() : Void;
+	@:overload public function hide() : Void;
 	
-	@:overload override public function pack() : Void;
+	@:overload public function pack() : Void;
 	
 	
 }
 /**
 * Popup implementation that is used in headless environment.
 */
-@:native('javax$swing$PopupFactory$HeadlessPopup') @:internal extern class PopupFactory_HeadlessPopup extends PopupFactory_ContainerPopup
+@:native('javax$swing$PopupFactory$HeadlessPopup') @:internal extern class PopupFactory_HeadlessPopup extends javax.swing.PopupFactory.PopupFactory_ContainerPopup
 {
-	@:overload override public function show() : Void;
+	@:overload public function show() : Void;
 	
 	@:overload override public function hide() : Void;
 	
@@ -103,22 +103,22 @@ extern class PopupFactory
 /**
 * Popup implementation that uses a JPanel as the popup.
 */
-@:native('javax$swing$PopupFactory$LightWeightPopup') @:internal extern class PopupFactory_LightWeightPopup extends PopupFactory_ContainerPopup
+@:native('javax$swing$PopupFactory$LightWeightPopup') @:internal extern class PopupFactory_LightWeightPopup extends javax.swing.PopupFactory.PopupFactory_ContainerPopup
 {
 	@:overload override public function hide() : Void;
 	
-	@:overload override public function show() : Void;
+	@:overload public function show() : Void;
 	
 	
 }
 /**
 * Popup implementation that uses a Panel as the popup.
 */
-@:native('javax$swing$PopupFactory$MediumWeightPopup') @:internal extern class PopupFactory_MediumWeightPopup extends PopupFactory_ContainerPopup
+@:native('javax$swing$PopupFactory$MediumWeightPopup') @:internal extern class PopupFactory_MediumWeightPopup extends javax.swing.PopupFactory.PopupFactory_ContainerPopup
 {
 	@:overload override public function hide() : Void;
 	
-	@:overload override public function show() : Void;
+	@:overload public function show() : Void;
 	
 	
 }

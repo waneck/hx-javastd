@@ -44,7 +44,7 @@ extern class Pair<A, B>
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public static function of<A, B>(a : A, b : B) : Pair<A, B>;
+	@:overload public static function of<A, B>(a : A, b : B) : com.sun.tools.javac.util.Pair<A, B>;
 	
 	
 }

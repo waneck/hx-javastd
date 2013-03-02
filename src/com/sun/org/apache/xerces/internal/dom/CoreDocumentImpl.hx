@@ -98,7 +98,7 @@ extern class CoreDocumentImpl extends com.sun.org.apache.xerces.internal.dom.Par
 	/**
 	* internal method to share code with subclass
 	**/
-	@:overload private function cloneNode(newdoc : CoreDocumentImpl, deep : Bool) : Void;
+	@:overload private function cloneNode(newdoc : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl, deep : Bool) : Void;
 	
 	/**
 	* Since a Document may contain at most one top-level Element child,

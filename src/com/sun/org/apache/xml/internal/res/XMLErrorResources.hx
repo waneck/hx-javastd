@@ -203,7 +203,7 @@ extern class XMLErrorResources extends java.util.ListResourceBundle
 	*   @return the ResourceBundle
 	*   @throws MissingResourceException
 	*/
-	@:overload @:final public static function loadResourceBundle(className : String) : XMLErrorResources;
+	@:overload @:final public static function loadResourceBundle(className : String) : com.sun.org.apache.xml.internal.res.XMLErrorResources;
 	
 	
 }

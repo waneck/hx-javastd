@@ -35,7 +35,7 @@ extern class IndentingWriter extends java.io.BufferedWriter
 	
 	@:overload override public function write(s : String, off : Int, len : Int) : Void;
 	
-	@:overload override public function newLine() : Void;
+	@:overload public function newLine() : Void;
 	
 	@:overload private function checkWrite() : Void;
 	

@@ -407,7 +407,7 @@ extern class BidiBase
 	* @see #getProcessedLength
 	* @stable ICU 3.8
 	*/
-	@:overload public function setLine(bidi : java.text.Bidi, bidiBase : BidiBase, newBidi : java.text.Bidi, newBidiBase : BidiBase, start : Int, limit : Int) : java.text.Bidi;
+	@:overload public function setLine(bidi : java.text.Bidi, bidiBase : sun.text.bidi.BidiBase, newBidi : java.text.Bidi, newBidiBase : sun.text.bidi.BidiBase, start : Int, limit : Int) : java.text.Bidi;
 	
 	/**
 	* Get the level for one character.

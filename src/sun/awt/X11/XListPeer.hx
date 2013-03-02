@@ -49,9 +49,9 @@ package sun.awt.X11;
 	/**
 	* Overridden from XWindow
 	*/
-	@:overload override public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload public function postInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	/* New method name for 1.1 */
 	@:overload public function add(item : String, index : Int) : Void;

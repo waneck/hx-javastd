@@ -26,7 +26,7 @@ extern class XMLReaderManager
 	/**
 	* Retrieves the singleton reader manager
 	*/
-	@:overload public static function getInstance(useServicesMechanism : Bool) : XMLReaderManager;
+	@:overload public static function getInstance(useServicesMechanism : Bool) : com.sun.org.apache.xml.internal.utils.XMLReaderManager;
 	
 	/**
 	* Retrieves a cached XMLReader for this thread, or creates a new

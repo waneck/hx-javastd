@@ -54,7 +54,7 @@ package com.sun.tools.corba.se.idl;
 	/**
 	*
 	**/
-	@:overload public function new(that : ScannerData) : Void;
+	@:overload public function new(that : com.sun.tools.corba.se.idl.Scanner.ScannerData) : Void;
 	
 	
 }

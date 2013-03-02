@@ -71,29 +71,29 @@ package com.sun.mirror.util;
 	/**
 	* A filter that selects only <tt>public</tt> declarations.
 	*/
-	public static var FILTER_PUBLIC(default, null) : DeclarationFilter;
+	public static var FILTER_PUBLIC(default, null) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* A filter that selects only <tt>protected</tt> declarations.
 	*/
-	public static var FILTER_PROTECTED(default, null) : DeclarationFilter;
+	public static var FILTER_PROTECTED(default, null) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* A filter that selects only <tt>public</tt> or <tt>protected</tt>
 	* declarations.
 	*/
-	public static var FILTER_PUBLIC_OR_PROTECTED(default, null) : DeclarationFilter;
+	public static var FILTER_PUBLIC_OR_PROTECTED(default, null) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* A filter that selects only package-private (<i>default</i>)
 	* declarations.
 	*/
-	public static var FILTER_PACKAGE(default, null) : DeclarationFilter;
+	public static var FILTER_PACKAGE(default, null) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* A filter that selects only <tt>private</tt> declarations.
 	*/
-	public static var FILTER_PRIVATE(default, null) : DeclarationFilter;
+	public static var FILTER_PRIVATE(default, null) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* Constructs an identity filter:  one that selects all declarations.
@@ -107,7 +107,7 @@ package com.sun.mirror.util;
 	* @param mods  the modifiers to match (non-null)
 	* @return a filter that matches declarations containing <tt>mods</tt>
 	*/
-	@:overload public static function getFilter(mods : java.util.Collection<com.sun.mirror.declaration.Modifier>) : DeclarationFilter;
+	@:overload public static function getFilter(mods : java.util.Collection<com.sun.mirror.declaration.Modifier>) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* Returns a filter that selects declarations of a particular kind.
@@ -120,7 +120,7 @@ package com.sun.mirror.util;
 	* @param kind  the kind of declarations to select
 	* @return a filter that selects declarations of a particular kind
 	*/
-	@:overload public static function getFilter(kind : Class<com.sun.mirror.declaration.Declaration>) : DeclarationFilter;
+	@:overload public static function getFilter(kind : Class<com.sun.mirror.declaration.Declaration>) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* Returns a filter that selects those declarations selected
@@ -130,7 +130,7 @@ package com.sun.mirror.util;
 	* @return a filter that selects those declarations selected by
 	*          both this filter and another
 	*/
-	@:overload public function and(f : DeclarationFilter) : DeclarationFilter;
+	@:overload public function and(f : com.sun.mirror.util.DeclarationFilter) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* Returns a filter that selects those declarations selected
@@ -140,7 +140,7 @@ package com.sun.mirror.util;
 	* @return a filter that selects those declarations selected by
 	*          either this filter or another
 	*/
-	@:overload public function or(f : DeclarationFilter) : DeclarationFilter;
+	@:overload public function or(f : com.sun.mirror.util.DeclarationFilter) : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* Returns a filter that selects those declarations not selected
@@ -149,7 +149,7 @@ package com.sun.mirror.util;
 	* @return a filter that selects those declarations not selected
 	* by this filter
 	*/
-	@:overload public function not() : DeclarationFilter;
+	@:overload public function not() : com.sun.mirror.util.DeclarationFilter;
 	
 	/**
 	* Tests whether this filter matches a given declaration.
@@ -194,7 +194,7 @@ package com.sun.mirror.util;
 /*
 * A filter based on access modifiers.
 */
-@:native('com$sun$mirror$util$DeclarationFilter$AccessFilter') @:internal extern class DeclarationFilter_AccessFilter extends DeclarationFilter
+@:native('com$sun$mirror$util$DeclarationFilter$AccessFilter') @:internal extern class DeclarationFilter_AccessFilter extends com.sun.mirror.util.DeclarationFilter
 {
 	@:overload override public function matches(d : com.sun.mirror.declaration.Declaration) : Bool;
 	

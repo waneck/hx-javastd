@@ -63,9 +63,9 @@ extern class DSAPublicKey extends sun.security.x509.X509Key implements java.secu
 	*/
 	@:overload public function getY() : java.math.BigInteger;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override private function parseKeyBits() : Void;
+	@:overload private function parseKeyBits() : Void;
 	
 	
 }

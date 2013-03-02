@@ -25,20 +25,20 @@ package sun.font;
 */
 extern class FontDesignMetrics extends java.awt.FontMetrics
 {
-	@:overload public static function getMetrics(font : java.awt.Font) : FontDesignMetrics;
+	@:overload public static function getMetrics(font : java.awt.Font) : sun.font.FontDesignMetrics;
 	
-	@:overload public static function getMetrics(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : FontDesignMetrics;
+	@:overload public static function getMetrics(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.font.FontDesignMetrics;
 	
 	/* Override of FontMetrics.getFontRenderContext() */
-	@:overload override public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:overload public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
-	@:overload override public function charWidth(ch : java.StdTypes.Char16) : Int;
+	@:overload public function charWidth(ch : java.StdTypes.Char16) : Int;
 	
-	@:overload override public function charWidth(ch : Int) : Int;
+	@:overload public function charWidth(ch : Int) : Int;
 	
-	@:overload override public function stringWidth(str : String) : Int;
+	@:overload public function stringWidth(str : String) : Int;
 	
-	@:overload override public function charsWidth(data : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload public function charsWidth(data : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Gets the advance widths of the first 256 characters in the
@@ -51,26 +51,26 @@ extern class FontDesignMetrics extends java.awt.FontMetrics
 	*                 characters in the <code>Font</code>
 	*                 described by this <code>FontMetrics</code> object.
 	*/
-	@:overload override public function getWidths() : java.NativeArray<Int>;
+	@:overload public function getWidths() : java.NativeArray<Int>;
 	
-	@:overload override public function getMaxAdvance() : Int;
+	@:overload public function getMaxAdvance() : Int;
 	
 	/*
 	* Returns the typographic ascent of the font. This is the maximum distance
 	* glyphs in this font extend above the base line (measured in typographic
 	* units).
 	*/
-	@:overload override public function getAscent() : Int;
+	@:overload public function getAscent() : Int;
 	
 	/*
 	* Returns the typographic descent of the font. This is the maximum distance
 	* glyphs in this font extend below the base line.
 	*/
-	@:overload override public function getDescent() : Int;
+	@:overload public function getDescent() : Int;
 	
-	@:overload override public function getLeading() : Int;
+	@:overload public function getLeading() : Int;
 	
-	@:overload override public function getHeight() : Int;
+	@:overload public function getHeight() : Int;
 	
 	
 }

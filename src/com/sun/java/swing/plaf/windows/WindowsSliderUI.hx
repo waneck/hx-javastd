@@ -27,7 +27,7 @@ extern class WindowsSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 {
 	@:overload public function new(b : javax.swing.JSlider) : Void;
 	
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Overrides to return a private track listener subclass which handles
@@ -56,9 +56,9 @@ extern class WindowsSliderUI extends javax.swing.plaf.basic.BasicSliderUI
 {
 	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	

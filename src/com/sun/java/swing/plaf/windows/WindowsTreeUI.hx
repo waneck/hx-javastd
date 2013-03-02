@@ -89,7 +89,7 @@ extern class WindowsTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 * version of Swing.  A future release of Swing will provide support for
 * long term persistence.
 */
-@:native('com$sun$java$swing$plaf$windows$WindowsTreeUI$CollapsedIcon') extern class WindowsTreeUI_CollapsedIcon extends WindowsTreeUI_ExpandedIcon
+@:native('com$sun$java$swing$plaf$windows$WindowsTreeUI$CollapsedIcon') extern class WindowsTreeUI_CollapsedIcon extends com.sun.java.swing.plaf.windows.WindowsTreeUI.WindowsTreeUI_ExpandedIcon
 {
 	@:overload public static function createCollapsedIcon() : javax.swing.Icon;
 	

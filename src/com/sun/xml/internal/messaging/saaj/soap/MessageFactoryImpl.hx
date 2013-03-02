@@ -41,11 +41,11 @@ extern class MessageFactoryImpl extends javax.xml.soap.MessageFactory
 	
 	@:overload public function listen(newListener : java.io.OutputStream) : java.io.OutputStream;
 	
-	@:overload override public function createMessage() : javax.xml.soap.SOAPMessage;
+	@:overload public function createMessage() : javax.xml.soap.SOAPMessage;
 	
 	@:overload public function createMessage(isFastInfoset : Bool, acceptFastInfoset : Bool) : javax.xml.soap.SOAPMessage;
 	
-	@:overload override public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
+	@:overload public function createMessage(headers : javax.xml.soap.MimeHeaders, _in : java.io.InputStream) : javax.xml.soap.SOAPMessage;
 	
 	@:overload @:final private static function getContentType(headers : javax.xml.soap.MimeHeaders) : String;
 	

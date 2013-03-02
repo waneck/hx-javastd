@@ -66,7 +66,7 @@ extern class ConstantFieldref extends com.sun.org.apache.bcel.internal.classfile
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantFieldref) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantFieldref) : Void;
 	
 	/**
 	* @param class_index Reference to the class containing the Field

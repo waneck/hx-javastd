@@ -441,7 +441,7 @@ package java.net;
 	* @exception  UnknownHostException  if IP address is of illegal length
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>) : InetAddress;
+	@:require(java4) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>) : java.net.InetAddress;
 	
 	/**
 	* Determines the IP address of a host, given the host's name.
@@ -471,7 +471,7 @@ package java.net;
 	* @exception  SecurityException if a security manager exists
 	*             and its checkConnect method doesn't allow the operation
 	*/
-	@:overload public static function getByName(host : String) : InetAddress;
+	@:overload public static function getByName(host : String) : java.net.InetAddress;
 	
 	/**
 	* Given the name of a host, returns an array of its IP addresses,
@@ -512,7 +512,7 @@ package java.net;
 	*
 	* @see SecurityManager#checkConnect
 	*/
-	@:overload public static function getAllByName(host : String) : java.NativeArray<InetAddress>;
+	@:overload public static function getAllByName(host : String) : java.NativeArray<java.net.InetAddress>;
 	
 	/**
 	* Returns the loopback address.
@@ -525,7 +525,7 @@ package java.net;
 	* @return  the InetAddress loopback instance.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getLoopbackAddress() : InetAddress;
+	@:require(java7) @:overload public static function getLoopbackAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns an <code>InetAddress</code> object given the raw IP address .
@@ -543,7 +543,7 @@ package java.net;
 	* @exception  UnknownHostException  if IP address is of illegal length
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getByAddress(addr : java.NativeArray<java.StdTypes.Int8>) : InetAddress;
+	@:require(java4) @:overload public static function getByAddress(addr : java.NativeArray<java.StdTypes.Int8>) : java.net.InetAddress;
 	
 	/**
 	* Returns the address of the local host. This is achieved by retrieving
@@ -568,7 +568,7 @@ package java.net;
 	* @see SecurityManager#checkConnect
 	* @see java.net.InetAddress#getByName(java.lang.String)
 	*/
-	@:overload public static function getLocalHost() : InetAddress;
+	@:overload public static function getLocalHost() : java.net.InetAddress;
 	
 	
 }
@@ -588,20 +588,20 @@ package java.net;
 	/**
 	* Create cache
 	*/
-	@:overload public function new(type : InetAddress_Cache_Type) : Void;
+	@:overload public function new(type : java.net.InetAddress.InetAddress_Cache_Type) : Void;
 	
 	/**
 	* Add an entry to the cache. If there's already an
 	* entry then for this host then the entry will be
 	* replaced.
 	*/
-	@:overload public function put(host : String, addresses : java.NativeArray<InetAddress>) : InetAddress_Cache;
+	@:overload public function put(host : String, addresses : java.NativeArray<java.net.InetAddress>) : java.net.InetAddress.InetAddress_Cache;
 	
 	/**
 	* Query the cache for the specific host. If found then
 	* return its CacheEntry, or null if not found.
 	*/
-	@:overload public function get(host : String) : InetAddress_CacheEntry;
+	@:overload public function get(host : String) : java.net.InetAddress.InetAddress_CacheEntry;
 	
 	
 }

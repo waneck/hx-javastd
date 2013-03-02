@@ -49,7 +49,7 @@ extern class PeerAddressChangeNotification implements com.sun.nio.sctp.Notificat
 	*
 	* @return  The event
 	*/
-	@:overload @:abstract public function event() : PeerAddressChangeNotification_AddressChangeEvent;
+	@:overload @:abstract public function event() : com.sun.nio.sctp.PeerAddressChangeNotification.PeerAddressChangeNotification_AddressChangeEvent;
 	
 	
 }

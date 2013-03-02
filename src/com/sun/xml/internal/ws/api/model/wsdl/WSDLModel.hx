@@ -112,7 +112,7 @@ extern interface WSDLModel extends com.sun.xml.internal.ws.api.model.wsdl.WSDLEx
 	* @throws javax.xml.stream.XMLStreamException
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public static function parse(wsdlEntityParser : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : WSDLModel;
+	@:overload public static function parse(wsdlEntityParser : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.api.model.wsdl.WSDLModel;
 	
 	/**
 	* Parses WSDL from the given wsdlLoc and gives a {@link WSDLModel} built from it.
@@ -127,7 +127,7 @@ extern interface WSDLModel extends com.sun.xml.internal.ws.api.model.wsdl.WSDLEx
 	* @throws javax.xml.stream.XMLStreamException
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public static function parse(wsdlEntityParser : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : WSDLModel;
+	@:overload public static function parse(wsdlEntityParser : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.api.model.wsdl.WSDLModel;
 	
 	/**
 	* Parses WSDL from the given wsdlLoc and gives a {@link WSDLModel} built from it.
@@ -143,7 +143,7 @@ extern interface WSDLModel extends com.sun.xml.internal.ws.api.model.wsdl.WSDLEx
 	* @throws javax.xml.stream.XMLStreamException
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload public static function parse(wsdlEntityParser : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, policyResolver : com.sun.xml.internal.ws.api.policy.PolicyResolver, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : WSDLModel;
+	@:overload public static function parse(wsdlEntityParser : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser, resolver : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver, isClientSide : Bool, container : com.sun.xml.internal.ws.api.server.Container, policyResolver : com.sun.xml.internal.ws.api.policy.PolicyResolver, extensions : java.NativeArray<com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtension>) : com.sun.xml.internal.ws.api.model.wsdl.WSDLModel;
 	
 	
 }

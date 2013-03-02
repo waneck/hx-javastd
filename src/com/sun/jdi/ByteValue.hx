@@ -31,7 +31,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface ByteValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<ByteValue>
+@:require(java3) extern interface ByteValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<com.sun.jdi.ByteValue>
 {
 	/**
 	* Returns this ByteValue as a <code>byte</code>.

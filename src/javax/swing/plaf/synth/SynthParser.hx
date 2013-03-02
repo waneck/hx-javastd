@@ -40,33 +40,33 @@ package javax.swing.plaf.synth;
 	*/
 	@:overload public function parse(inputStream : java.io.InputStream, factory : javax.swing.plaf.synth.DefaultSynthStyleFactory, urlResourceBase : java.net.URL, classResourceBase : Class<Dynamic>, defaultsMap : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload override public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
+	@:overload public function resolveEntity(publicId : String, systemId : String) : org.xml.sax.InputSource;
 	
-	@:overload override public function notationDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	
-	@:overload override public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
+	@:overload public function unparsedEntityDecl(name : String, publicId : String, systemId : String, notationName : String) : Void;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload public function endDocument() : Void;
 	
-	@:overload override public function startElement(uri : String, local : String, name : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(uri : String, local : String, name : String, attributes : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(uri : String, local : String, name : String) : Void;
+	@:overload public function endElement(uri : String, local : String, name : String) : Void;
 	
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload override public function warning(e : org.xml.sax.SAXParseException) : Void;
+	@:overload public function warning(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(e : org.xml.sax.SAXParseException) : Void;
+	@:overload public function fatalError(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

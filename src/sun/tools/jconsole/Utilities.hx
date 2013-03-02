@@ -59,7 +59,7 @@ extern class Utilities
 {
 	@:overload public function new(comp : javax.swing.JComponent) : Void;
 	
-	@:overload override private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	
 }

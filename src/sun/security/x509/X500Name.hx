@@ -418,7 +418,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	* @param other another X500Name
 	* @return X500Name of lowest common ancestor; null if none
 	*/
-	@:overload public function commonAncestor(other : X500Name) : X500Name;
+	@:overload public function commonAncestor(other : sun.security.x509.X500Name) : sun.security.x509.X500Name;
 	
 	/**
 	* Get an X500Principal backed by this X500Name.
@@ -433,7 +433,7 @@ extern class X500Name implements sun.security.x509.GeneralNameInterface implemen
 	*
 	* Note that the X500Name is retrieved using reflection.
 	*/
-	@:overload public static function asX500Name(p : javax.security.auth.x500.X500Principal) : X500Name;
+	@:overload public static function asX500Name(p : javax.security.auth.x500.X500Principal) : sun.security.x509.X500Name;
 	
 	
 }

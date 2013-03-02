@@ -52,7 +52,7 @@ extern class DTMException extends java.lang.RuntimeException
 	* cause is nonexistent or unknown.  (The cause is the throwable that
 	* caused this throwable to get thrown.)
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Initializes the <i>cause</i> of this throwable to the specified value.
@@ -147,7 +147,7 @@ extern class DTMException extends java.lang.RuntimeException
 	* originated.  This will trace all nested exception
 	* objects, as well as this object.
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload public function printStackTrace() : Void;
 	
 	/**
 	* Print the the trace of methods from where the error
@@ -155,7 +155,7 @@ extern class DTMException extends java.lang.RuntimeException
 	* objects, as well as this object.
 	* @param s The stream where the dump will be sent to.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Print the the trace of methods from where the error
@@ -163,7 +163,7 @@ extern class DTMException extends java.lang.RuntimeException
 	* objects, as well as this object.
 	* @param s The writer where the dump will be sent to.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	
 }

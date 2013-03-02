@@ -106,7 +106,7 @@ package java.awt;
 	* Returns whether the two display modes are equal.
 	* @return whether the two display modes are equal
 	*/
-	@:overload public function equals(dm : DisplayMode) : Bool;
+	@:overload public function equals(dm : java.awt.DisplayMode) : Bool;
 	
 	/**
 	* {@inheritDoc}

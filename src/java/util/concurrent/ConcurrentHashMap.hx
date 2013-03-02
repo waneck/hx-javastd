@@ -344,7 +344,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	
 	
 }
-@:native('java$util$concurrent$ConcurrentHashMap$KeyIterator') @:internal extern class ConcurrentHashMap_KeyIterator extends ConcurrentHashMap_HashIterator implements java.util.Iterator<Dynamic> implements java.util.Enumeration<Dynamic>
+@:native('java$util$concurrent$ConcurrentHashMap$KeyIterator') @:internal extern class ConcurrentHashMap_KeyIterator extends java.util.concurrent.ConcurrentHashMap.ConcurrentHashMap_HashIterator implements java.util.Iterator<Dynamic> implements java.util.Enumeration<Dynamic>
 {
 	@:overload @:final public function next() : Dynamic;
 	
@@ -352,7 +352,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	
 	
 }
-@:native('java$util$concurrent$ConcurrentHashMap$ValueIterator') @:internal extern class ConcurrentHashMap_ValueIterator extends ConcurrentHashMap_HashIterator implements java.util.Iterator<Dynamic> implements java.util.Enumeration<Dynamic>
+@:native('java$util$concurrent$ConcurrentHashMap$ValueIterator') @:internal extern class ConcurrentHashMap_ValueIterator extends java.util.concurrent.ConcurrentHashMap.ConcurrentHashMap_HashIterator implements java.util.Iterator<Dynamic> implements java.util.Enumeration<Dynamic>
 {
 	@:overload @:final public function next() : Dynamic;
 	
@@ -379,7 +379,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	
 	
 }
-@:native('java$util$concurrent$ConcurrentHashMap$EntryIterator') @:internal extern class ConcurrentHashMap_EntryIterator extends ConcurrentHashMap_HashIterator implements java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$concurrent$ConcurrentHashMap$EntryIterator') @:internal extern class ConcurrentHashMap_EntryIterator extends java.util.concurrent.ConcurrentHashMap.ConcurrentHashMap_HashIterator implements java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	

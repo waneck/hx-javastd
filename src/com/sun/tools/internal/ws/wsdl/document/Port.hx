@@ -42,7 +42,7 @@ extern class Port extends com.sun.tools.internal.ws.wsdl.framework.GlobalEntity 
 	
 	@:overload public function resolveBinding(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument) : com.sun.tools.internal.ws.wsdl.document.Binding;
 	
-	@:overload override public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
 	@:overload public function getNameValue() : String;
 	
@@ -54,13 +54,13 @@ extern class Port extends com.sun.tools.internal.ws.wsdl.framework.GlobalEntity 
 	
 	@:overload public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
-	@:overload override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
+	@:overload public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
 	
-	@:overload override public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
+	@:overload public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
 	
 	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload public function validateThis() : Void;
 	
 	@:overload public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	
@@ -70,9 +70,9 @@ extern class Port extends com.sun.tools.internal.ws.wsdl.framework.GlobalEntity 
 	
 	@:overload public function setParent(parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible) : Void;
 	
-	@:overload override public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
+	@:overload public function withAllSubEntitiesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityAction) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

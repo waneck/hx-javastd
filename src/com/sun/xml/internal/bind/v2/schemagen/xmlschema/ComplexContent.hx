@@ -29,7 +29,7 @@ extern interface ComplexContent extends com.sun.xml.internal.bind.v2.schemagen.x
 	
 	@:overload public function restriction() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexRestriction;
 	
-	@:overload public function mixed(value : Bool) : ComplexContent;
+	@:overload public function mixed(value : Bool) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexContent;
 	
 	
 }

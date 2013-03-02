@@ -184,7 +184,7 @@ extern class HierMemDirCtx implements javax.naming.directory.DirContext
 	
 	@:overload public function search(name : String, filterExpr : String, filterArgs : java.NativeArray<Dynamic>, cons : javax.naming.directory.SearchControls) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload private function createNewCtx() : HierMemDirCtx;
+	@:overload private function createNewCtx() : com.sun.jndi.toolkit.dir.HierMemDirCtx;
 	
 	@:overload private function canonizeName(name : javax.naming.Name) : javax.naming.Name;
 	
@@ -222,7 +222,7 @@ extern class HierMemDirCtx implements javax.naming.directory.DirContext
 	
 	
 }
-@:native('com$sun$jndi$toolkit$dir$HierMemDirCtx$FlatBindings') @:internal extern class HierMemDirCtx_FlatBindings extends HierMemDirCtx_FlatNames
+@:native('com$sun$jndi$toolkit$dir$HierMemDirCtx$FlatBindings') @:internal extern class HierMemDirCtx_FlatBindings extends com.sun.jndi.toolkit.dir.HierMemDirCtx.HierMemDirCtx_FlatNames
 {
 	@:overload override public function next() : Dynamic;
 	

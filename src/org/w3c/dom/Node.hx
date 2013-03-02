@@ -200,7 +200,7 @@ extern interface Node
 	* tree, or if it has been removed from the tree, this is
 	* <code>null</code>.
 	*/
-	@:overload public function getParentNode() : Node;
+	@:overload public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* A <code>NodeList</code> that contains all children of this node. If
@@ -213,25 +213,25 @@ extern interface Node
 	* The first child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload public function getFirstChild() : Node;
+	@:overload public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* The last child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload public function getLastChild() : Node;
+	@:overload public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* The node immediately preceding this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload public function getPreviousSibling() : Node;
+	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* The node immediately following this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload public function getNextSibling() : Node;
+	@:overload public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the attributes of this node (if
@@ -284,7 +284,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload public function insertBefore(newChild : Node, refChild : Node) : Node;
+	@:overload public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
@@ -320,7 +320,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload public function replaceChild(newChild : Node, oldChild : Node) : Node;
+	@:overload public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes the child node indicated by <code>oldChild</code> from the list
@@ -338,7 +338,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload public function removeChild(oldChild : Node) : Node;
+	@:overload public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Adds the node <code>newChild</code> to the end of the list of children
@@ -366,7 +366,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload public function appendChild(newChild : Node) : Node;
+	@:overload public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Returns whether this node has any children.
@@ -409,7 +409,7 @@ extern interface Node
 	*   itself (and its attributes, if it is an <code>Element</code>).
 	* @return The duplicate node.
 	*/
-	@:overload public function cloneNode(deep : Bool) : Node;
+	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	*  Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -578,7 +578,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload public function compareDocumentPosition(other : Node) : java.StdTypes.Int16;
+	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -693,7 +693,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload public function isSameNode(other : Node) : Bool;
+	@:overload public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Look up the prefix associated to the given namespace URI, starting from
@@ -800,7 +800,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload public function isEqualNode(arg : Node) : Bool;
+	@:overload public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	*  This method returns a specialized object which implements the

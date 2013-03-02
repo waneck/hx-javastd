@@ -67,7 +67,7 @@ package com.sun.jmx.mbeanserver;
 {
 	@:overload public function compare(a : java.lang.reflect.Method, b : java.lang.reflect.Method) : Int;
 	
-	public static var instance(default, null) : MBeanAnalyzer_MethodOrder;
+	public static var instance(default, null) : com.sun.jmx.mbeanserver.MBeanAnalyzer.MBeanAnalyzer_MethodOrder;
 	
 	
 }

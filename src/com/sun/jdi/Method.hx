@@ -23,7 +23,7 @@ package com.sun.jdi;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Locatable extends java.lang.Comparable<Method>
+extern interface Method extends com.sun.jdi.TypeComponent extends com.sun.jdi.Locatable extends java.lang.Comparable<com.sun.jdi.Method>
 {
 	/**
 	* Returns a text representation of the return type,

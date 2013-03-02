@@ -47,7 +47,7 @@ extern class TypeKindVisitor7<R, P> extends javax.lang.model.util.TypeKindVisito
 	* @param p  {@inheritDoc}
 	* @return the result of {@code defaultAction}
 	*/
-	@:overload override public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
+	@:overload public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
 	
 	
 }

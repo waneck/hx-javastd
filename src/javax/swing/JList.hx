@@ -357,7 +357,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see UIManager#getUI
 	* @see SwingUtilities#updateComponentTreeUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns {@code "ListUI"}, the <code>UIDefaults</code> key used to look
@@ -368,7 +368,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns the "prototypical" cell value -- a value used to calculate a
@@ -857,7 +857,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see TransferHandler#canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropLocation() : JList_DropLocation;
+	@:require(java6) @:overload @:final public function getDropLocation() : javax.swing.JList.JList_DropLocation;
 	
 	/**
 	* Returns the next list element whose {@code toString} value
@@ -894,7 +894,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 	* @see JComponent#setToolTipText
 	* @see JComponent#getToolTipText
 	*/
-	@:overload override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns the cell index closest to the given location in the list's
@@ -1839,7 +1839,7 @@ extern class JList<E> extends javax.swing.JComponent implements javax.swing.Scro
 */
 @:native('javax$swing$JList$AccessibleJList$AccessibleJListChild') extern class JList_AccessibleJList_AccessibleJListChild extends javax.accessibility.AccessibleContext implements javax.accessibility.Accessible implements javax.accessibility.AccessibleComponent
 {
-	@:overload public function new(parent : JList<Dynamic>, indexInParent : Int) : Void;
+	@:overload public function new(parent : javax.swing.JList<Dynamic>, indexInParent : Int) : Void;
 	
 	/**
 	* Get the AccessibleContext for this object. In the

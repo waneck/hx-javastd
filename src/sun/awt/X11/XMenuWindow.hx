@@ -28,23 +28,23 @@ extern class XMenuWindow extends sun.awt.X11.XBaseMenuWindow
 	/**
 	* @see XBaseMenuWindow.getParentMenuWindow()
 	*/
-	@:overload override private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
+	@:overload private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
 	
 	/**
 	* @see XBaseMenuWindow.map()
 	*/
-	@:overload override private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
+	@:overload private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* @see XBaseMenuWindow.getSubmenuBounds()
 	*/
-	@:overload override private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
+	@:overload private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
 	
 	/**
 	* It's likely that size of items was changed
 	* invoke resizing of window on eventHandlerThread
 	*/
-	@:overload override private function updateSize() : Void;
+	@:overload private function updateSize() : Void;
 	
 	/**
 	* Returns size of menu window's caption or null
@@ -63,7 +63,7 @@ extern class XMenuWindow extends sun.awt.X11.XBaseMenuWindow
 	/**
 	* Paints menu window
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

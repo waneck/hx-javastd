@@ -27,7 +27,7 @@ extern class SimpleTypeImpl extends com.sun.xml.internal.xsom.impl.DeclarationIm
 {
 	@:overload public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSType>;
 	
-	@:overload public function redefine(st : SimpleTypeImpl) : Void;
+	@:overload public function redefine(st : com.sun.xml.internal.xsom.impl.SimpleTypeImpl) : Void;
 	
 	@:overload public function getRedefinedBy() : com.sun.xml.internal.xsom.XSSimpleType;
 	
@@ -120,7 +120,7 @@ extern class SimpleTypeImpl extends com.sun.xml.internal.xsom.impl.DeclarationIm
 	* @return
 	*      Can be empty but never null.
 	*/
-	@:overload override public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<XSComponent>;
+	@:overload override public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Gets a reference to the {@link XSSchema} object to which this component
@@ -146,7 +146,7 @@ extern class SimpleTypeImpl extends com.sun.xml.internal.xsom.impl.DeclarationIm
 	*      null if the SCD didn't match anything. If the SCD matched more than one node,
 	*      the first one will be returned.
 	*/
-	@:overload override public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : XSComponent;
+	@:overload override public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.XSComponent;
 	
 	/** Gets the annotation associated to this component, if any. */
 	@:overload override public function getAnnotation() : com.sun.xml.internal.xsom.XSAnnotation;

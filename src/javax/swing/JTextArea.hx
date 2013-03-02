@@ -92,7 +92,7 @@ extern class JTextArea extends javax.swing.text.JTextComponent
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Creates the default implementation of the model

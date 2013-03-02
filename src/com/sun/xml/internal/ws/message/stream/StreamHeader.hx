@@ -67,17 +67,17 @@ extern class StreamHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 	*/
 	@:overload private function new(reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload @:final override public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
+	@:overload @:final public function isIgnorable(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, roles : java.util.Set<String>) : Bool;
 	
-	@:overload override public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
-	@:overload override public function isRelay() : Bool;
+	@:overload public function isRelay() : Bool;
 	
 	@:overload override public function getNamespaceURI() : String;
 	
 	@:overload override public function getLocalPart() : String;
 	
-	@:overload override public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload public function getAttribute(nsUri : String, localName : String) : String;
 	
 	/**
 	* Reads the header as a {@link XMLStreamReader}
@@ -96,9 +96,9 @@ extern class StreamHeader extends com.sun.xml.internal.ws.message.AbstractHeader
 	* This is the most common implementation on which {@link Header#readAsEPR(AddressingVersion)}
 	* is invoked on.
 	*/
-	@:overload override public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
+	@:overload public function readAsEPR(expected : com.sun.xml.internal.ws.api.addressing.AddressingVersion) : com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
 	
-	@:overload @:abstract private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<StreamHeader_Attribute>;
+	@:overload @:abstract private function processHeaderAttributes(reader : javax.xml.stream.XMLStreamReader) : com.sun.istack.internal.FinalArrayList<com.sun.xml.internal.ws.message.stream.StreamHeader.StreamHeader_Attribute>;
 	
 	
 }

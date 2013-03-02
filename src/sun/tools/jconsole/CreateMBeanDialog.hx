@@ -29,7 +29,7 @@ extern class CreateMBeanDialog extends sun.tools.jconsole.InternalDialog impleme
 	
 	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function setVisible(b : Bool) : Void;
+	@:overload public function setVisible(b : Bool) : Void;
 	
 	
 }

@@ -44,7 +44,7 @@ extern class XBooleanStatic extends com.sun.org.apache.xpath.internal.objects.XB
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	
 }

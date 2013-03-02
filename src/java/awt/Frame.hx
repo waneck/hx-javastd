@@ -681,7 +681,7 @@ package java.awt;
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getFrames() : java.NativeArray<Frame>;
+	@:require(java2) @:overload public static function getFrames() : java.NativeArray<java.awt.Frame>;
 	
 	/**
 	* Gets the AccessibleContext associated with this Frame.

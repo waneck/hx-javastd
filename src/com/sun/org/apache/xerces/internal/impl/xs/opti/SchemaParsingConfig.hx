@@ -200,7 +200,7 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload override public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
 	/**
 	* Set the state of a feature.
@@ -215,7 +215,7 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	* @exception com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException If the
 	*            requested feature is not known.
 	*/
-	@:overload override public function setFeature(featureId : String, state : Bool) : Void;
+	@:overload public function setFeature(featureId : String, state : Bool) : Void;
 	
 	/**
 	* Returns the value of a property.
@@ -229,7 +229,7 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload override public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	/**
 	* setProperty
@@ -237,7 +237,7 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	* @param propertyId
 	* @param value
 	*/
-	@:overload override public function setProperty(propertyId : String, value : Dynamic) : Void;
+	@:overload public function setProperty(propertyId : String, value : Dynamic) : Void;
 	
 	/**
 	* Set the locale to use for messages.
@@ -247,7 +247,7 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload override public function setLocale(locale : java.util.Locale) : Void;
+	@:overload public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Sets the input source for the document to parse.
@@ -296,14 +296,14 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	* @exception XNIException Throws exception on XNI error.
 	* @exception java.io.IOException Throws exception on i/o error.
 	*/
-	@:overload override public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Reset all components before parsing.
 	*
 	* @throws XNIException Thrown if an error occurs during initialization.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/** Configures the XML 1.0 pipeline. */
 	@:overload private function configurePipeline() : Void;
@@ -323,7 +323,7 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload override private function checkFeature(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload private function checkFeature(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
 	/**
 	* Check a property. If the property is know and supported, this method
@@ -338,7 +338,7 @@ extern class SchemaParsingConfig extends com.sun.org.apache.xerces.internal.pars
 	*                                   it is <strong>really</strong>
 	*                                   a critical error.
 	*/
-	@:overload override private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload private function checkProperty(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	/**
 	* Reset all XML 1.0 components before parsing

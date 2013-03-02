@@ -64,7 +64,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitBoolean(b : Bool, p : P) : R;
+	@:overload public function visitBoolean(b : Bool, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -73,7 +73,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitByte(b : java.StdTypes.Int8, p : P) : R;
+	@:overload public function visitByte(b : java.StdTypes.Int8, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -82,7 +82,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitChar(c : java.StdTypes.Char16, p : P) : R;
+	@:overload public function visitChar(c : java.StdTypes.Char16, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -91,7 +91,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitDouble(d : Float, p : P) : R;
+	@:overload public function visitDouble(d : Float, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -100,7 +100,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitFloat(f : Single, p : P) : R;
+	@:overload public function visitFloat(f : Single, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -109,7 +109,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitInt(i : Int, p : P) : R;
+	@:overload public function visitInt(i : Int, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -118,7 +118,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitLong(i : haxe.Int64, p : P) : R;
+	@:overload public function visitLong(i : haxe.Int64, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -127,7 +127,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitShort(s : java.StdTypes.Int16, p : P) : R;
+	@:overload public function visitShort(s : java.StdTypes.Int16, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -136,7 +136,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitString(s : String, p : P) : R;
+	@:overload public function visitString(s : String, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -145,7 +145,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitType(t : javax.lang.model.type.TypeMirror, p : P) : R;
+	@:overload public function visitType(t : javax.lang.model.type.TypeMirror, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -154,7 +154,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitEnumConstant(c : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload public function visitEnumConstant(c : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -163,7 +163,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitAnnotation(a : javax.lang.model.element.AnnotationMirror, p : P) : R;
+	@:overload public function visitAnnotation(a : javax.lang.model.element.AnnotationMirror, p : P) : R;
 	
 	/**
 	* {@inheritDoc} This implementation calls {@code defaultAction}.
@@ -172,7 +172,7 @@ extern class SimpleAnnotationValueVisitor6<R, P> extends javax.lang.model.util.A
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitArray(vals : java.util.List<javax.lang.model.element.AnnotationValue>, p : P) : R;
+	@:overload public function visitArray(vals : java.util.List<javax.lang.model.element.AnnotationValue>, p : P) : R;
 	
 	
 }

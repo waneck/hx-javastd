@@ -33,7 +33,7 @@ extern class DOMDigestMethod extends org.jcp.xml.dsig.internal.dom.DOMStructure 
 	* This method invokes the abstract {@link #marshalParams marshalParams}
 	* method to marshal any algorithm-specific parameters.
 	*/
-	@:overload override public function marshal(parent : org.w3c.dom.Node, prefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload public function marshal(parent : org.w3c.dom.Node, prefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	@:overload public function equals(o : Dynamic) : Bool;
 	
@@ -45,7 +45,7 @@ extern class DOMDigestMethod extends org.jcp.xml.dsig.internal.dom.DOMStructure 
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload override public function isFeatureSupported(feature : String) : Bool;
+	@:overload public function isFeatureSupported(feature : String) : Bool;
 	
 	/**
 	* Returns the algorithm URI of this <code>AlgorithmMethod</code>.
@@ -56,25 +56,25 @@ extern class DOMDigestMethod extends org.jcp.xml.dsig.internal.dom.DOMStructure 
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA1') @:internal extern class DOMDigestMethod_SHA1 extends DOMDigestMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA1') @:internal extern class DOMDigestMethod_SHA1 extends org.jcp.xml.dsig.internal.dom.DOMDigestMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA256') @:internal extern class DOMDigestMethod_SHA256 extends DOMDigestMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA256') @:internal extern class DOMDigestMethod_SHA256 extends org.jcp.xml.dsig.internal.dom.DOMDigestMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA384') @:internal extern class DOMDigestMethod_SHA384 extends DOMDigestMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA384') @:internal extern class DOMDigestMethod_SHA384 extends org.jcp.xml.dsig.internal.dom.DOMDigestMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	
 	
 }
-@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA512') @:internal extern class DOMDigestMethod_SHA512 extends DOMDigestMethod
+@:native('org$jcp$xml$dsig$internal$dom$DOMDigestMethod$SHA512') @:internal extern class DOMDigestMethod_SHA512 extends org.jcp.xml.dsig.internal.dom.DOMDigestMethod
 {
 	@:overload override public function getAlgorithm() : String;
 	

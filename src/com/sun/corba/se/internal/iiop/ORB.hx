@@ -28,7 +28,7 @@ package com.sun.corba.se.internal.iiop;
 */
 extern class ORB extends com.sun.corba.se.impl.orb.ORBImpl
 {
-	@:overload override public function new() : Void;
+	@:overload public function new() : Void;
 	
 	
 }

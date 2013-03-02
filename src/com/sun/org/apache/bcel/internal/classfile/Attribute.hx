@@ -133,7 +133,7 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	* @throws  IOException
 	* @throws  ClassFormatException
 	*/
-	@:overload @:final public static function readAttribute(file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Attribute;
+	@:overload @:final public static function readAttribute(file : java.io.DataInputStream, constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	/**
 	* @return Length of attribute field in bytes.
@@ -184,7 +184,7 @@ extern class Attribute implements java.lang.Cloneable implements com.sun.org.apa
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload @:abstract public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Attribute;
+	@:overload @:abstract public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	/**
 	* @return attribute name.

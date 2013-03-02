@@ -143,7 +143,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 *
 * @author  Alan Kaminsky
 */
-@:native('javax$print$DocFlavor$BYTE_ARRAY') extern class DocFlavor_BYTE_ARRAY extends DocFlavor
+@:native('javax$print$DocFlavor$BYTE_ARRAY') extern class DocFlavor_BYTE_ARRAY extends javax.print.DocFlavor
 {
 	/**
 	* Constructs a new doc flavor with the given MIME type and a print
@@ -166,7 +166,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* Print data representation class name =
 	* <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var TEXT_PLAIN_HOST(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_PLAIN_HOST(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -174,7 +174,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_PLAIN_UTF_8(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_PLAIN_UTF_8(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -182,7 +182,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_PLAIN_UTF_16(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_PLAIN_UTF_16(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -191,7 +191,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_PLAIN_UTF_16BE(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_PLAIN_UTF_16BE(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -200,7 +200,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_PLAIN_UTF_16LE(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_PLAIN_UTF_16LE(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -208,7 +208,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var TEXT_PLAIN_US_ASCII(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_PLAIN_US_ASCII(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"text/html"</CODE>,
@@ -217,7 +217,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* Print data representation class name =
 	* <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var TEXT_HTML_HOST(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_HTML_HOST(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -225,7 +225,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_HTML_UTF_8(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_HTML_UTF_8(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -233,7 +233,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_HTML_UTF_16(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_HTML_UTF_16(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -242,7 +242,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_HTML_UTF_16BE(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_HTML_UTF_16BE(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -251,7 +251,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var TEXT_HTML_UTF_16LE(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_HTML_UTF_16LE(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -259,45 +259,45 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var TEXT_HTML_US_ASCII(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var TEXT_HTML_US_ASCII(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/pdf"</CODE>, print
 	* data representation class name = <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var PDF(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var PDF(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/postscript"</CODE>,
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var POSTSCRIPT(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var POSTSCRIPT(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/vnd.hp-PCL"</CODE>,
 	* print data representation class name = <CODE>"[B"</CODE> (byte
 	* array).
 	*/
-	public static var PCL(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var PCL(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/gif"</CODE>, print data
 	* representation class name = <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var GIF(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var GIF(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/jpeg"</CODE>, print data
 	* representation class name = <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var JPEG(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var JPEG(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/png"</CODE>, print data
 	* representation class name = <CODE>"[B"</CODE> (byte array).
 	*/
-	public static var PNG(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var PNG(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -306,7 +306,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* array). The client must determine that data described
 	* using this DocFlavor is valid for the printer.
 	*/
-	public static var AUTOSENSE(default, null) : DocFlavor_BYTE_ARRAY;
+	public static var AUTOSENSE(default, null) : javax.print.DocFlavor.DocFlavor_BYTE_ARRAY;
 	
 	
 }
@@ -319,7 +319,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 *
 * @author  Alan Kaminsky
 */
-@:native('javax$print$DocFlavor$INPUT_STREAM') extern class DocFlavor_INPUT_STREAM extends DocFlavor
+@:native('javax$print$DocFlavor$INPUT_STREAM') extern class DocFlavor_INPUT_STREAM extends javax.print.DocFlavor
 {
 	/**
 	* Constructs a new doc flavor with the given MIME type and a print
@@ -343,7 +343,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* Print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_HOST(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_PLAIN_HOST(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -351,7 +351,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_8(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_PLAIN_UTF_8(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -359,7 +359,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_16(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_PLAIN_UTF_16(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -368,7 +368,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_16BE(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_PLAIN_UTF_16BE(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -377,7 +377,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_16LE(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_PLAIN_UTF_16LE(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -385,7 +385,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_US_ASCII(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_PLAIN_US_ASCII(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"text/html"</CODE>,
@@ -394,7 +394,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* Print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_HOST(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_HTML_HOST(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -402,7 +402,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_8(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_HTML_UTF_8(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -410,7 +410,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_16(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_HTML_UTF_16(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -419,7 +419,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_16BE(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_HTML_UTF_16BE(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -428,7 +428,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_16LE(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_HTML_UTF_16LE(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -436,49 +436,49 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_US_ASCII(default, null) : DocFlavor_INPUT_STREAM;
+	public static var TEXT_HTML_US_ASCII(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/pdf"</CODE>, print
 	* data representation class name = <CODE>"java.io.InputStream"</CODE>
 	* (byte stream).
 	*/
-	public static var PDF(default, null) : DocFlavor_INPUT_STREAM;
+	public static var PDF(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/postscript"</CODE>,
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var POSTSCRIPT(default, null) : DocFlavor_INPUT_STREAM;
+	public static var POSTSCRIPT(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/vnd.hp-PCL"</CODE>,
 	* print data representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var PCL(default, null) : DocFlavor_INPUT_STREAM;
+	public static var PCL(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/gif"</CODE>, print data
 	* representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var GIF(default, null) : DocFlavor_INPUT_STREAM;
+	public static var GIF(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/jpeg"</CODE>, print data
 	* representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var JPEG(default, null) : DocFlavor_INPUT_STREAM;
+	public static var JPEG(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/png"</CODE>, print data
 	* representation class name =
 	* <CODE>"java.io.InputStream"</CODE> (byte stream).
 	*/
-	public static var PNG(default, null) : DocFlavor_INPUT_STREAM;
+	public static var PNG(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -488,7 +488,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* The client must determine that data described
 	* using this DocFlavor is valid for the printer.
 	*/
-	public static var AUTOSENSE(default, null) : DocFlavor_INPUT_STREAM;
+	public static var AUTOSENSE(default, null) : javax.print.DocFlavor.DocFlavor_INPUT_STREAM;
 	
 	
 }
@@ -502,7 +502,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 *
 * @author  Alan Kaminsky
 */
-@:native('javax$print$DocFlavor$URL') extern class DocFlavor_URL extends DocFlavor
+@:native('javax$print$DocFlavor$URL') extern class DocFlavor_URL extends javax.print.DocFlavor
 {
 	/**
 	* Constructs a new doc flavor with the given MIME type and a print
@@ -525,7 +525,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* Print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_HOST(default, null) : DocFlavor_URL;
+	public static var TEXT_PLAIN_HOST(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -533,7 +533,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_8(default, null) : DocFlavor_URL;
+	public static var TEXT_PLAIN_UTF_8(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -541,7 +541,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>java.net.URL""</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_16(default, null) : DocFlavor_URL;
+	public static var TEXT_PLAIN_UTF_16(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -550,7 +550,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_16BE(default, null) : DocFlavor_URL;
+	public static var TEXT_PLAIN_UTF_16BE(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -559,7 +559,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_UTF_16LE(default, null) : DocFlavor_URL;
+	public static var TEXT_PLAIN_UTF_16LE(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -567,7 +567,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_PLAIN_US_ASCII(default, null) : DocFlavor_URL;
+	public static var TEXT_PLAIN_US_ASCII(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"text/html"</CODE>,
@@ -576,7 +576,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* Print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_HOST(default, null) : DocFlavor_URL;
+	public static var TEXT_HTML_HOST(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -584,7 +584,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_8(default, null) : DocFlavor_URL;
+	public static var TEXT_HTML_UTF_8(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -592,7 +592,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_16(default, null) : DocFlavor_URL;
+	public static var TEXT_HTML_UTF_16(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -601,7 +601,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_16BE(default, null) : DocFlavor_URL;
+	public static var TEXT_HTML_UTF_16BE(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -610,7 +610,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_UTF_16LE(default, null) : DocFlavor_URL;
+	public static var TEXT_HTML_UTF_16LE(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -618,43 +618,43 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* print data representation class name =
 	* <CODE>"java.net.URL"</CODE> (byte stream).
 	*/
-	public static var TEXT_HTML_US_ASCII(default, null) : DocFlavor_URL;
+	public static var TEXT_HTML_US_ASCII(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/pdf"</CODE>, print
 	* data representation class name = <CODE>"java.net.URL"</CODE>.
 	*/
-	public static var PDF(default, null) : DocFlavor_URL;
+	public static var PDF(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/postscript"</CODE>,
 	* print data representation class name = <CODE>"java.net.URL"</CODE>.
 	*/
-	public static var POSTSCRIPT(default, null) : DocFlavor_URL;
+	public static var POSTSCRIPT(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"application/vnd.hp-PCL"</CODE>,
 	* print data representation class name = <CODE>"java.net.URL"</CODE>.
 	*/
-	public static var PCL(default, null) : DocFlavor_URL;
+	public static var PCL(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/gif"</CODE>, print data
 	* representation class name = <CODE>"java.net.URL"</CODE>.
 	*/
-	public static var GIF(default, null) : DocFlavor_URL;
+	public static var GIF(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/jpeg"</CODE>, print data
 	* representation class name = <CODE>"java.net.URL"</CODE>.
 	*/
-	public static var JPEG(default, null) : DocFlavor_URL;
+	public static var JPEG(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"image/png"</CODE>, print data
 	* representation class name = <CODE>"java.net.URL"</CODE>.
 	*/
-	public static var PNG(default, null) : DocFlavor_URL;
+	public static var PNG(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	/**
 	* Doc flavor with MIME type =
@@ -663,7 +663,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	*  The client must determine that data described
 	* using this DocFlavor is valid for the printer.
 	*/
-	public static var AUTOSENSE(default, null) : DocFlavor_URL;
+	public static var AUTOSENSE(default, null) : javax.print.DocFlavor.DocFlavor_URL;
 	
 	
 }
@@ -676,7 +676,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 *
 * @author  Alan Kaminsky
 */
-@:native('javax$print$DocFlavor$CHAR_ARRAY') extern class DocFlavor_CHAR_ARRAY extends DocFlavor
+@:native('javax$print$DocFlavor$CHAR_ARRAY') extern class DocFlavor_CHAR_ARRAY extends javax.print.DocFlavor
 {
 	/**
 	* Constructs a new doc flavor with the given MIME type and a print
@@ -700,14 +700,14 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* charset=utf-16"</CODE>, print data representation class name =
 	* <CODE>"[C"</CODE> (character array).
 	*/
-	public static var TEXT_PLAIN(default, null) : DocFlavor_CHAR_ARRAY;
+	public static var TEXT_PLAIN(default, null) : javax.print.DocFlavor.DocFlavor_CHAR_ARRAY;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"text/html;
 	* charset=utf-16"</CODE>, print data representation class name =
 	* <CODE>"[C"</CODE> (character array).
 	*/
-	public static var TEXT_HTML(default, null) : DocFlavor_CHAR_ARRAY;
+	public static var TEXT_HTML(default, null) : javax.print.DocFlavor.DocFlavor_CHAR_ARRAY;
 	
 	
 }
@@ -720,7 +720,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 *
 * @author  Alan Kaminsky
 */
-@:native('javax$print$DocFlavor$STRING') extern class DocFlavor_STRING extends DocFlavor
+@:native('javax$print$DocFlavor$STRING') extern class DocFlavor_STRING extends javax.print.DocFlavor
 {
 	/**
 	* Constructs a new doc flavor with the given MIME type and a print
@@ -743,14 +743,14 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* charset=utf-16"</CODE>, print data representation class name =
 	* <CODE>"java.lang.String"</CODE>.
 	*/
-	public static var TEXT_PLAIN(default, null) : DocFlavor_STRING;
+	public static var TEXT_PLAIN(default, null) : javax.print.DocFlavor.DocFlavor_STRING;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"text/html;
 	* charset=utf-16"</CODE>, print data representation class name =
 	* <CODE>"java.lang.String"</CODE>.
 	*/
-	public static var TEXT_HTML(default, null) : DocFlavor_STRING;
+	public static var TEXT_HTML(default, null) : javax.print.DocFlavor.DocFlavor_STRING;
 	
 	
 }
@@ -763,7 +763,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 *
 * @author  Alan Kaminsky
 */
-@:native('javax$print$DocFlavor$READER') extern class DocFlavor_READER extends DocFlavor
+@:native('javax$print$DocFlavor$READER') extern class DocFlavor_READER extends javax.print.DocFlavor
 {
 	/**
 	* Constructs a new doc flavor with the given MIME type and a print
@@ -787,14 +787,14 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* charset=utf-16"</CODE>, print data representation class name =
 	* <CODE>"java.io.Reader"</CODE> (character stream).
 	*/
-	public static var TEXT_PLAIN(default, null) : DocFlavor_READER;
+	public static var TEXT_PLAIN(default, null) : javax.print.DocFlavor.DocFlavor_READER;
 	
 	/**
 	* Doc flavor with MIME type = <CODE>"text/html;
 	* charset=utf-16"</CODE>, print data representation class name =
 	* <CODE>"java.io.Reader"</CODE> (character stream).
 	*/
-	public static var TEXT_HTML(default, null) : DocFlavor_READER;
+	public static var TEXT_HTML(default, null) : javax.print.DocFlavor.DocFlavor_READER;
 	
 	
 }
@@ -806,7 +806,7 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 *
 * @author  Alan Kaminsky
 */
-@:native('javax$print$DocFlavor$SERVICE_FORMATTED') extern class DocFlavor_SERVICE_FORMATTED extends DocFlavor
+@:native('javax$print$DocFlavor$SERVICE_FORMATTED') extern class DocFlavor_SERVICE_FORMATTED extends javax.print.DocFlavor
 {
 	/**
 	* Constructs a new doc flavor with a MIME type of
@@ -828,21 +828,21 @@ extern class DocFlavor implements java.io.Serializable implements java.lang.Clon
 	* <CODE>"java.awt.image.renderable.RenderableImage"</CODE>
 	* (renderable image object).
 	*/
-	public static var RENDERABLE_IMAGE(default, null) : DocFlavor_SERVICE_FORMATTED;
+	public static var RENDERABLE_IMAGE(default, null) : javax.print.DocFlavor.DocFlavor_SERVICE_FORMATTED;
 	
 	/**
 	* Service formatted print data doc flavor with print data
 	* representation class name = <CODE>"java.awt.print.Printable"</CODE>
 	* (printable object).
 	*/
-	public static var PRINTABLE(default, null) : DocFlavor_SERVICE_FORMATTED;
+	public static var PRINTABLE(default, null) : javax.print.DocFlavor.DocFlavor_SERVICE_FORMATTED;
 	
 	/**
 	* Service formatted print data doc flavor with print data
 	* representation class name = <CODE>"java.awt.print.Pageable"</CODE>
 	* (pageable object).
 	*/
-	public static var PAGEABLE(default, null) : DocFlavor_SERVICE_FORMATTED;
+	public static var PAGEABLE(default, null) : javax.print.DocFlavor.DocFlavor_SERVICE_FORMATTED;
 	
 	
 }

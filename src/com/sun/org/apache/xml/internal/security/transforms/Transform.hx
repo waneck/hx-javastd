@@ -57,7 +57,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @return <code>{@link Transform}</code> object
 	* @throws InvalidTransformException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : Transform;
+	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/**
 	* Generates a Transform object that implements the specified
@@ -71,7 +71,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @return <code>{@link Transform}</code> object
 	* @throws InvalidTransformException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextChild : org.w3c.dom.Element) : Transform;
+	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextChild : org.w3c.dom.Element) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/**
 	* Generates a Transform object that implements the specified
@@ -85,7 +85,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	* @return <code>{@link Transform}</code> object
 	* @throws InvalidTransformException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextNodes : org.w3c.dom.NodeList) : Transform;
+	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String, contextNodes : org.w3c.dom.NodeList) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/**
 	* Initalizes for this {@link Transform}.
@@ -142,7 +142,7 @@ extern class Transform extends com.sun.org.apache.xml.internal.security.utils.Si
 	@:overload public function performTransform(input : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput, os : java.io.OutputStream) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

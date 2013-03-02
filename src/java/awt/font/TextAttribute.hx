@@ -78,7 +78,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* The "Bold" in the name is part of the face name, not a separate
 	* request that the font's weight be bold.</p>
 	*/
-	public static var FAMILY(default, null) : TextAttribute;
+	public static var FAMILY(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for the weight of a font.  Values are instances
@@ -100,7 +100,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* <p>The system can interpolate the provided value.
 	*/
-	public static var WEIGHT(default, null) : TextAttribute;
+	public static var WEIGHT(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* The lightest predefined weight.
@@ -185,7 +185,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* <p>The system can interpolate the provided value.
 	*/
-	public static var WIDTH(default, null) : TextAttribute;
+	public static var WIDTH(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* The most condensed predefined width.
@@ -239,7 +239,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @see java.awt.Font#getItalicAngle()
 	*/
-	public static var POSTURE(default, null) : TextAttribute;
+	public static var POSTURE(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* The standard posture, upright.  This is the default value for
@@ -269,7 +269,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* 2x transform might be different than that of a 24 point font
 	* with no transform.
 	*/
-	public static var SIZE(default, null) : TextAttribute;
+	public static var SIZE(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for the transform of a font.  Values are
@@ -306,7 +306,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* @see TransformAttribute
 	* @see java.awt.geom.AffineTransform
 	*/
-	public static var TRANSFORM(default, null) : TextAttribute;
+	public static var TRANSFORM(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for superscripting and subscripting.  Values are
@@ -326,7 +326,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* impact the ascent and descent of a font.  The ascent
 	* and descent can never become negative, however.
 	*/
-	public static var SUPERSCRIPT(default, null) : TextAttribute;
+	public static var SUPERSCRIPT(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Standard superscript.
@@ -400,7 +400,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @see java.awt.Font
 	*/
-	public static var FONT(default, null) : TextAttribute;
+	public static var FONT(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for a user-defined glyph to display in lieu
@@ -423,7 +423,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @see GraphicAttribute
 	*/
-	public static var CHAR_REPLACEMENT(default, null) : TextAttribute;
+	public static var CHAR_REPLACEMENT(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for the paint used to render the text.  Values are
@@ -438,7 +438,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* @see java.awt.Paint
 	* @see #SWAP_COLORS
 	*/
-	public static var FOREGROUND(default, null) : TextAttribute;
+	public static var FOREGROUND(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for the paint used to render the background of
@@ -456,7 +456,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* @see java.awt.Paint
 	* @see #SWAP_COLORS
 	*/
-	public static var BACKGROUND(default, null) : TextAttribute;
+	public static var BACKGROUND(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for underline.  Values are instances of
@@ -468,7 +468,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* <p>The underline affects both the visual bounds and the outline
 	* of the text.
 	*/
-	public static var UNDERLINE(default, null) : TextAttribute;
+	public static var UNDERLINE(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Standard underline.
@@ -487,7 +487,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* <p>The strikethrough affects both the visual bounds and the
 	* outline of the text.
 	*/
-	public static var STRIKETHROUGH(default, null) : TextAttribute;
+	public static var STRIKETHROUGH(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* A single strikethrough.
@@ -516,7 +516,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @see java.text.Bidi
 	*/
-	public static var RUN_DIRECTION(default, null) : TextAttribute;
+	public static var RUN_DIRECTION(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Left-to-right run direction.
@@ -551,7 +551,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @see java.text.Bidi
 	*/
-	public static var BIDI_EMBEDDING(default, null) : TextAttribute;
+	public static var BIDI_EMBEDDING(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for the justification of a paragraph.  Values are
@@ -574,7 +574,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @see TextLayout#getJustifiedLayout
 	*/
-	public static var JUSTIFICATION(default, null) : TextAttribute;
+	public static var JUSTIFICATION(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Justify the line to the full requested width.  This is the
@@ -612,7 +612,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* @see java.awt.im.InputMethodHighlight
 	* @see java.text.Annotation
 	*/
-	public static var INPUT_METHOD_HIGHLIGHT(default, null) : TextAttribute;
+	public static var INPUT_METHOD_HIGHLIGHT(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key for input method underlines.  Values
@@ -634,7 +634,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @since 1.3
 	*/
-	@:require(java3) public static var INPUT_METHOD_UNDERLINE(default, null) : TextAttribute;
+	@:require(java3) public static var INPUT_METHOD_UNDERLINE(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Single pixel solid low underline.
@@ -690,7 +690,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* @see #FOREGROUND
 	* @see #BACKGROUND
 	*/
-	public static var SWAP_COLORS(default, null) : TextAttribute;
+	public static var SWAP_COLORS(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Swap foreground and background.
@@ -715,7 +715,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	* @see NumericShaper
 	* @since 1.4
 	*/
-	@:require(java4) public static var NUMERIC_SHAPING(default, null) : TextAttribute;
+	@:require(java4) public static var NUMERIC_SHAPING(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Attribute key to request kerning. Values are instances of
@@ -733,7 +733,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var KERNING(default, null) : TextAttribute;
+	@:require(java6) public static var KERNING(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Request standard kerning.
@@ -753,7 +753,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var LIGATURES(default, null) : TextAttribute;
+	@:require(java6) public static var LIGATURES(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Request standard optional ligatures.
@@ -780,7 +780,7 @@ extern class TextAttribute extends java.text.AttributedCharacterIterator.Attribu
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var TRACKING(default, null) : TextAttribute;
+	@:require(java6) public static var TRACKING(default, null) : java.awt.font.TextAttribute;
 	
 	/**
 	* Perform tight tracking.

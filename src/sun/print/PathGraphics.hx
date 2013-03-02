@@ -87,7 +87,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see          java.awt.Graphics#fillRect
 	* @see          java.awt.Graphics#clearRect
 	*/
-	@:overload override public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function drawRect(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Fills the specified rectangle.
@@ -319,7 +319,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @see          java.awt.Graphics#fillPolygon
 	* @see          java.awt.Graphics#drawPolyline
 	*/
-	@:overload override public function drawPolygon(p : java.awt.Polygon) : Void;
+	@:overload public function drawPolygon(p : java.awt.Polygon) : Void;
 	
 	/**
 	* Fills a closed polygon defined by
@@ -352,7 +352,7 @@ extern class PathGraphics extends sun.print.ProxyGraphics2D
 	* @param        p the polygon to fill.
 	* @see          java.awt.Graphics#drawPolygon(int[], int[], int)
 	*/
-	@:overload override public function fillPolygon(p : java.awt.Polygon) : Void;
+	@:overload public function fillPolygon(p : java.awt.Polygon) : Void;
 	
 	/**
 	* Draws the text given by the specified string, using this

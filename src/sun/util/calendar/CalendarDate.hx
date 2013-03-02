@@ -78,13 +78,13 @@ extern class CalendarDate implements java.lang.Cloneable
 	* <code>era</code> is unknown to the calendar
 	* system for this <code>CalendarDate</code>.
 	*/
-	@:overload public function setEra(era : sun.util.calendar.Era) : CalendarDate;
+	@:overload public function setEra(era : sun.util.calendar.Era) : sun.util.calendar.CalendarDate;
 	
 	@:overload public function getYear() : Int;
 	
-	@:overload public function setYear(year : Int) : CalendarDate;
+	@:overload public function setYear(year : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addYear(n : Int) : CalendarDate;
+	@:overload public function addYear(n : Int) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Returns whether the year represented by this
@@ -105,15 +105,15 @@ extern class CalendarDate implements java.lang.Cloneable
 	
 	@:overload public function getMonth() : Int;
 	
-	@:overload public function setMonth(month : Int) : CalendarDate;
+	@:overload public function setMonth(month : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addMonth(n : Int) : CalendarDate;
+	@:overload public function addMonth(n : Int) : sun.util.calendar.CalendarDate;
 	
 	@:overload public function getDayOfMonth() : Int;
 	
-	@:overload public function setDayOfMonth(date : Int) : CalendarDate;
+	@:overload public function setDayOfMonth(date : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addDayOfMonth(n : Int) : CalendarDate;
+	@:overload public function addDayOfMonth(n : Int) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Returns the day of week value. If this CalendarDate is not
@@ -125,37 +125,37 @@ extern class CalendarDate implements java.lang.Cloneable
 	
 	@:overload public function getHours() : Int;
 	
-	@:overload public function setHours(hours : Int) : CalendarDate;
+	@:overload public function setHours(hours : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addHours(n : Int) : CalendarDate;
+	@:overload public function addHours(n : Int) : sun.util.calendar.CalendarDate;
 	
 	@:overload public function getMinutes() : Int;
 	
-	@:overload public function setMinutes(minutes : Int) : CalendarDate;
+	@:overload public function setMinutes(minutes : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addMinutes(n : Int) : CalendarDate;
+	@:overload public function addMinutes(n : Int) : sun.util.calendar.CalendarDate;
 	
 	@:overload public function getSeconds() : Int;
 	
-	@:overload public function setSeconds(seconds : Int) : CalendarDate;
+	@:overload public function setSeconds(seconds : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addSeconds(n : Int) : CalendarDate;
+	@:overload public function addSeconds(n : Int) : sun.util.calendar.CalendarDate;
 	
 	@:overload public function getMillis() : Int;
 	
-	@:overload public function setMillis(millis : Int) : CalendarDate;
+	@:overload public function setMillis(millis : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addMillis(n : Int) : CalendarDate;
+	@:overload public function addMillis(n : Int) : sun.util.calendar.CalendarDate;
 	
 	@:overload public function getTimeOfDay() : haxe.Int64;
 	
-	@:overload public function setDate(year : Int, month : Int, dayOfMonth : Int) : CalendarDate;
+	@:overload public function setDate(year : Int, month : Int, dayOfMonth : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addDate(year : Int, month : Int, dayOfMonth : Int) : CalendarDate;
+	@:overload public function addDate(year : Int, month : Int, dayOfMonth : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function setTimeOfDay(hours : Int, minutes : Int, seconds : Int, millis : Int) : CalendarDate;
+	@:overload public function setTimeOfDay(hours : Int, minutes : Int, seconds : Int, millis : Int) : sun.util.calendar.CalendarDate;
 	
-	@:overload public function addTimeOfDay(hours : Int, minutes : Int, seconds : Int, millis : Int) : CalendarDate;
+	@:overload public function addTimeOfDay(hours : Int, minutes : Int, seconds : Int, millis : Int) : sun.util.calendar.CalendarDate;
 	
 	@:overload private function setTimeOfDay(fraction : haxe.Int64) : Void;
 	
@@ -171,14 +171,14 @@ extern class CalendarDate implements java.lang.Cloneable
 	
 	@:overload public function getZone() : java.util.TimeZone;
 	
-	@:overload public function setZone(zoneinfo : java.util.TimeZone) : CalendarDate;
+	@:overload public function setZone(zoneinfo : java.util.TimeZone) : sun.util.calendar.CalendarDate;
 	
 	/**
 	* Returns whether the specified date is the same date of this
 	* <code>CalendarDate</code>. The time of the day fields are
 	* ignored for the comparison.
 	*/
-	@:overload public function isSameDate(date : CalendarDate) : Bool;
+	@:overload public function isSameDate(date : sun.util.calendar.CalendarDate) : Bool;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	

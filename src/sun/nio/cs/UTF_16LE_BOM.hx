@@ -27,11 +27,11 @@ package sun.nio.cs;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function historicalName() : String;
+	@:overload public function historicalName() : String;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }

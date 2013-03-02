@@ -34,7 +34,7 @@ extern class KeyTab
 	* @return the keytab instance
 	* @throws NullPointerException if the {@code file} argument is null
 	*/
-	@:overload public static function getInstance(file : java.io.File) : KeyTab;
+	@:overload public static function getInstance(file : java.io.File) : javax.security.auth.kerberos.KeyTab;
 	
 	/**
 	* Returns the default {@code KeyTab} instance.
@@ -44,7 +44,7 @@ extern class KeyTab
 	* does not read it.
 	* @return the default keytab instance.
 	*/
-	@:overload public static function getInstance() : KeyTab;
+	@:overload public static function getInstance() : javax.security.auth.kerberos.KeyTab;
 	
 	/**
 	* Returns fresh keys for the given Kerberos principal.

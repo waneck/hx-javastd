@@ -38,22 +38,22 @@ extern class InputMethodHighlight
 	/**
 	* Constant for the default highlight for unselected raw text.
 	*/
-	public static var UNSELECTED_RAW_TEXT_HIGHLIGHT(default, null) : InputMethodHighlight;
+	public static var UNSELECTED_RAW_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constant for the default highlight for selected raw text.
 	*/
-	public static var SELECTED_RAW_TEXT_HIGHLIGHT(default, null) : InputMethodHighlight;
+	public static var SELECTED_RAW_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constant for the default highlight for unselected converted text.
 	*/
-	public static var UNSELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : InputMethodHighlight;
+	public static var UNSELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constant for the default highlight for selected converted text.
 	*/
-	public static var SELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : InputMethodHighlight;
+	public static var SELECTED_CONVERTED_TEXT_HIGHLIGHT(default, null) : java.awt.im.InputMethodHighlight;
 	
 	/**
 	* Constructs an input method highlight record.

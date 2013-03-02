@@ -27,9 +27,9 @@ extern class GTKLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 {
 	@:overload override public function getDefaults() : javax.swing.UIDefaults;
 	
-	@:overload override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
-	@:overload override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Creates the GTK look and feel class for the passed in Component.
@@ -48,7 +48,7 @@ extern class GTKLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	
 	@:overload override public function getID() : String;
 	
-	@:overload override private function loadSystemColors(table : javax.swing.UIDefaults, systemColors : java.NativeArray<String>, useNative : Bool) : Void;
+	@:overload private function loadSystemColors(table : javax.swing.UIDefaults, systemColors : java.NativeArray<String>, useNative : Bool) : Void;
 	
 	/**
 	* Returns whether or not the UIs should update their
@@ -68,7 +68,7 @@ extern class GTKLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 	
 	
 }
-@:native('com$sun$java$swing$plaf$gtk$GTKLookAndFeel$WeakPCL') @:internal extern class GTKLookAndFeel_WeakPCL extends java.lang.ref.WeakReference<GTKLookAndFeel> implements java.beans.PropertyChangeListener
+@:native('com$sun$java$swing$plaf$gtk$GTKLookAndFeel$WeakPCL') @:internal extern class GTKLookAndFeel_WeakPCL extends java.lang.ref.WeakReference<com.sun.java.swing.plaf.gtk.GTKLookAndFeel> implements java.beans.PropertyChangeListener
 {
 	@:overload public function getKey() : String;
 	

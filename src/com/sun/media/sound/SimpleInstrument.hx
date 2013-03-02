@@ -33,7 +33,7 @@ extern class SimpleInstrument extends com.sun.media.sound.ModelInstrument
 	
 	private var name : String;
 	
-	private var parts : java.util.List<SimpleInstrument_SimpleInstrumentPart>;
+	private var parts : java.util.List<com.sun.media.sound.SimpleInstrument.SimpleInstrument_SimpleInstrumentPart>;
 	
 	@:overload public function new() : Void;
 	

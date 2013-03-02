@@ -651,7 +651,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @return an <code>ICC_Profile</code> object corresponding to
 	*          the data in the specified <code>data</code> array.
 	*/
-	@:overload public static function getInstance(data : java.NativeArray<java.StdTypes.Int8>) : ICC_Profile;
+	@:overload public static function getInstance(data : java.NativeArray<java.StdTypes.Int8>) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Constructs an ICC_Profile corresponding to one of the specific color
@@ -668,7 +668,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception IllegalArgumentException If <CODE>cspace</CODE> is not
 	* one of the predefined color space types.
 	*/
-	@:overload public static function getInstance(cspace : Int) : ICC_Profile;
+	@:overload public static function getInstance(cspace : Int) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Constructs an ICC_Profile corresponding to the data in a file.
@@ -696,7 +696,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception SecurityException If a security manager is installed
 	* and it does not permit read access to the given file.
 	*/
-	@:overload public static function getInstance(fileName : String) : ICC_Profile;
+	@:overload public static function getInstance(fileName : String) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Constructs an ICC_Profile corresponding to the data in an InputStream.
@@ -713,7 +713,7 @@ extern class ICC_Profile implements java.io.Serializable
 	* @exception IllegalArgumentException If the stream does not
 	* contain valid ICC Profile data.
 	*/
-	@:overload public static function getInstance(s : java.io.InputStream) : ICC_Profile;
+	@:overload public static function getInstance(s : java.io.InputStream) : java.awt.color.ICC_Profile;
 	
 	/**
 	* Returns profile major version.

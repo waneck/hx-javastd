@@ -51,7 +51,7 @@ extern class DAttributePattern extends com.sun.xml.internal.rngom.digested.DXmlT
 	*/
 	@:overload public function new(name : com.sun.xml.internal.rngom.nc.NameClass) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }

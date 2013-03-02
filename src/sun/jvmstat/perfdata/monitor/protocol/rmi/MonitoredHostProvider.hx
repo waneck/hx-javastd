@@ -37,34 +37,34 @@ extern class MonitoredHostProvider extends sun.jvmstat.monitor.MonitoredHost
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier) : sun.jvmstat.monitor.MonitoredVm;
+	@:overload public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier) : sun.jvmstat.monitor.MonitoredVm;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : sun.jvmstat.monitor.MonitoredVm;
+	@:overload public function getMonitoredVm(vmid : sun.jvmstat.monitor.VmIdentifier, interval : Int) : sun.jvmstat.monitor.MonitoredVm;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function detach(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
+	@:overload public function detach(vm : sun.jvmstat.monitor.MonitoredVm) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
+	@:overload public function addHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function removeHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
+	@:overload public function removeHostListener(listener : sun.jvmstat.monitor.event.HostListener) : Void;
 	
-	@:overload override public function setInterval(newInterval : Int) : Void;
+	@:overload public function setInterval(newInterval : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function activeVms() : java.util.Set<Null<Int>>;
+	@:overload public function activeVms() : java.util.Set<Null<Int>>;
 	
 	
 }

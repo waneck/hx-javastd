@@ -64,7 +64,7 @@ extern class MutableCallSite extends java.lang.invoke.CallSite
 	* @return the linkage state of this call site, a method handle which can change over time
 	* @see #setTarget
 	*/
-	@:overload @:final override public function getTarget() : java.lang.invoke.MethodHandle;
+	@:overload @:final public function getTarget() : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Updates the target method of this call site, as a normal variable.
@@ -86,12 +86,12 @@ extern class MutableCallSite extends java.lang.invoke.CallSite
 	*         has a method type that differs from the previous target
 	* @see #getTarget
 	*/
-	@:overload override public function setTarget(newTarget : java.lang.invoke.MethodHandle) : Void;
+	@:overload public function setTarget(newTarget : java.lang.invoke.MethodHandle) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload @:final override public function dynamicInvoker() : java.lang.invoke.MethodHandle;
+	@:overload @:final public function dynamicInvoker() : java.lang.invoke.MethodHandle;
 	
 	/**
 	* Performs a synchronization operation on each call site in the given array,
@@ -202,7 +202,7 @@ extern class MutableCallSite extends java.lang.invoke.CallSite
 	* @throws NullPointerException if the {@code sites} array reference is null
 	*                              or the array contains a null
 	*/
-	@:overload public static function syncAll(sites : java.NativeArray<MutableCallSite>) : Void;
+	@:overload public static function syncAll(sites : java.NativeArray<java.lang.invoke.MutableCallSite>) : Void;
 	
 	
 }

@@ -71,7 +71,7 @@ package javax.swing.text.html.parser;
 	* token is illegal at this point in the content model.
 	* @return next state after reducing a token
 	*/
-	@:overload public function advance(token : Dynamic) : ContentModelState;
+	@:overload public function advance(token : Dynamic) : javax.swing.text.html.parser.ContentModelState;
 	
 	
 }

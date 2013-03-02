@@ -30,7 +30,7 @@ package com.sun.media.sound;
 */
 @:internal extern class FastSysexMessage extends javax.sound.midi.SysexMessage
 {
-	@:overload override public function setMessage(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
+	@:overload public function setMessage(data : java.NativeArray<java.StdTypes.Int8>, length : Int) : Void;
 	
 	
 }

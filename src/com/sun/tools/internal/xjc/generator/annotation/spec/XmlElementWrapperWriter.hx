@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlElementWrapperWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlElementWrapper>
 {
-	@:overload public function name(value : String) : XmlElementWrapperWriter;
+	@:overload public function name(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWrapperWriter;
 	
-	@:overload public function namespace(value : String) : XmlElementWrapperWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWrapperWriter;
 	
-	@:overload public function required(value : Bool) : XmlElementWrapperWriter;
+	@:overload public function required(value : Bool) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWrapperWriter;
 	
-	@:overload public function nillable(value : Bool) : XmlElementWrapperWriter;
+	@:overload public function nillable(value : Bool) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementWrapperWriter;
 	
 	
 }

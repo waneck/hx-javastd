@@ -52,7 +52,7 @@ package sun.tools.jconsole;
 	
 	@:overload public function actionPerformed(ev : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
 	
 }

@@ -71,7 +71,7 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	* @see <a href="http://www.w3.org/TR/xml-stylesheet/">Associating Style Sheets with XML documents, Version 1.0</a>
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* The spec notes that "The xml-stylesheet processing instruction is allowed only in the prolog of an XML document.",
@@ -86,7 +86,7 @@ extern class StylesheetPIHandler extends org.xml.sax.helpers.DefaultHandler
 	* @throws StopParseException since there can be no valid xml-stylesheet processing
 	*                            instructions past the first element.
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Added additional getter and setter methods for the Base Id

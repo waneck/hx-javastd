@@ -47,9 +47,9 @@ extern class Base64BinaryDV extends com.sun.org.apache.xerces.internal.impl.dv.x
 	
 	@:overload @:synchronized override public function toString() : String;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	
 }

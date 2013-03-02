@@ -43,7 +43,7 @@ package java.util.concurrent;
 * @since 1.5
 * @author Doug Lea
 */
-@:require(java5) extern interface Delayed extends java.lang.Comparable<Delayed>
+@:require(java5) extern interface Delayed extends java.lang.Comparable<java.util.concurrent.Delayed>
 {
 	/**
 	* Returns the remaining delay associated with this object, in the

@@ -29,7 +29,7 @@ extern class ByteArrayImageSource extends sun.awt.image.InputStreamImageSource
 	
 	@:overload public function new(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
-	@:overload override private function getDecoder() : sun.awt.image.ImageDecoder;
+	@:overload private function getDecoder() : sun.awt.image.ImageDecoder;
 	
 	
 }

@@ -42,11 +42,11 @@ extern class NamespaceImpl extends com.sun.xml.internal.stream.events.AttributeI
 	
 	@:overload public function getNamespaceURI() : String;
 	
-	@:overload override private function init() : Void;
+	@:overload private function init() : Void;
 	
-	@:overload override public function getEventType() : Int;
+	@:overload public function getEventType() : Int;
 	
-	@:overload override public function isNamespace() : Bool;
+	@:overload public function isNamespace() : Bool;
 	
 	
 }

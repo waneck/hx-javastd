@@ -61,13 +61,13 @@ package com.sun.java.swing.plaf.gtk;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$SynthExpanderIcon') @:internal extern class GTKIconFactory_SynthExpanderIcon extends GTKIconFactory_DelegatingIcon
+@:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$SynthExpanderIcon') @:internal extern class GTKIconFactory_SynthExpanderIcon extends com.sun.java.swing.plaf.gtk.GTKIconFactory.GTKIconFactory_DelegatingIcon
 {
 	@:overload override public function paintIcon(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$ToolBarHandleIcon') @:internal extern class GTKIconFactory_ToolBarHandleIcon extends GTKIconFactory_DelegatingIcon
+@:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$ToolBarHandleIcon') @:internal extern class GTKIconFactory_ToolBarHandleIcon extends com.sun.java.swing.plaf.gtk.GTKIconFactory.GTKIconFactory_DelegatingIcon
 {
 	@:overload public function new() : Void;
 	
@@ -81,7 +81,7 @@ package com.sun.java.swing.plaf.gtk;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$MenuArrowIcon') @:internal extern class GTKIconFactory_MenuArrowIcon extends GTKIconFactory_DelegatingIcon
+@:native('com$sun$java$swing$plaf$gtk$GTKIconFactory$MenuArrowIcon') @:internal extern class GTKIconFactory_MenuArrowIcon extends com.sun.java.swing.plaf.gtk.GTKIconFactory.GTKIconFactory_DelegatingIcon
 {
 	@:overload public function new() : Void;
 	

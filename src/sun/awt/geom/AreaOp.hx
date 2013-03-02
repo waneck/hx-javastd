@@ -70,7 +70,7 @@ extern class AreaOp
 	
 	
 }
-@:native('sun$awt$geom$AreaOp$CAGOp') extern class AreaOp_CAGOp extends AreaOp
+@:native('sun$awt$geom$AreaOp$CAGOp') extern class AreaOp_CAGOp extends sun.awt.geom.AreaOp
 {
 	@:overload override public function newRow() : Void;
 	
@@ -82,31 +82,31 @@ extern class AreaOp
 	
 	
 }
-@:native('sun$awt$geom$AreaOp$AddOp') extern class AreaOp_AddOp extends AreaOp_CAGOp
+@:native('sun$awt$geom$AreaOp$AddOp') extern class AreaOp_AddOp extends sun.awt.geom.AreaOp.AreaOp_CAGOp
 {
 	@:overload override public function newClassification(inLeft : Bool, inRight : Bool) : Bool;
 	
 	
 }
-@:native('sun$awt$geom$AreaOp$SubOp') extern class AreaOp_SubOp extends AreaOp_CAGOp
+@:native('sun$awt$geom$AreaOp$SubOp') extern class AreaOp_SubOp extends sun.awt.geom.AreaOp.AreaOp_CAGOp
 {
 	@:overload override public function newClassification(inLeft : Bool, inRight : Bool) : Bool;
 	
 	
 }
-@:native('sun$awt$geom$AreaOp$IntOp') extern class AreaOp_IntOp extends AreaOp_CAGOp
+@:native('sun$awt$geom$AreaOp$IntOp') extern class AreaOp_IntOp extends sun.awt.geom.AreaOp.AreaOp_CAGOp
 {
 	@:overload override public function newClassification(inLeft : Bool, inRight : Bool) : Bool;
 	
 	
 }
-@:native('sun$awt$geom$AreaOp$XorOp') extern class AreaOp_XorOp extends AreaOp_CAGOp
+@:native('sun$awt$geom$AreaOp$XorOp') extern class AreaOp_XorOp extends sun.awt.geom.AreaOp.AreaOp_CAGOp
 {
 	@:overload override public function newClassification(inLeft : Bool, inRight : Bool) : Bool;
 	
 	
 }
-@:native('sun$awt$geom$AreaOp$NZWindOp') extern class AreaOp_NZWindOp extends AreaOp
+@:native('sun$awt$geom$AreaOp$NZWindOp') extern class AreaOp_NZWindOp extends sun.awt.geom.AreaOp
 {
 	@:overload override public function newRow() : Void;
 	
@@ -116,7 +116,7 @@ extern class AreaOp
 	
 	
 }
-@:native('sun$awt$geom$AreaOp$EOWindOp') extern class AreaOp_EOWindOp extends AreaOp
+@:native('sun$awt$geom$AreaOp$EOWindOp') extern class AreaOp_EOWindOp extends sun.awt.geom.AreaOp
 {
 	@:overload override public function newRow() : Void;
 	

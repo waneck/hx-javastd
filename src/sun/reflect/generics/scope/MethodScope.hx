@@ -29,7 +29,7 @@ extern class MethodScope extends sun.reflect.generics.scope.AbstractScope<java.l
 	* Overrides the abstract method in the superclass.
 	* @return the enclosing scope
 	*/
-	@:overload override private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
+	@:overload private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
 	
 	/**
 	* Factory method. Takes a <tt>Method</tt> object and creates a
@@ -37,7 +37,7 @@ extern class MethodScope extends sun.reflect.generics.scope.AbstractScope<java.l
 	* @param m - A Method whose scope we want to obtain
 	* @return The type-variable scope for the method m
 	*/
-	@:overload public static function make(m : java.lang.reflect.Method) : MethodScope;
+	@:overload public static function make(m : java.lang.reflect.Method) : sun.reflect.generics.scope.MethodScope;
 	
 	
 }

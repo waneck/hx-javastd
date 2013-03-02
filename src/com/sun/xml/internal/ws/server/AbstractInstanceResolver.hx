@@ -45,7 +45,7 @@ package com.sun.xml.internal.ws.server;
 	*      Only look for static field/method
 	*
 	*/
-	@:overload private static function buildInjectionPlan<T, R>(clazz : Class<T>, resourceType : Class<R>, isStatic : Bool) : AbstractInstanceResolver_InjectionPlan<T, R>;
+	@:overload private static function buildInjectionPlan<T, R>(clazz : Class<T>, resourceType : Class<R>, isStatic : Bool) : com.sun.xml.internal.ws.server.AbstractInstanceResolver.AbstractInstanceResolver_InjectionPlan<T, R>;
 	
 	
 }
@@ -67,7 +67,7 @@ package com.sun.xml.internal.ws.server;
 /**
 * Injects to a field.
 */
-@:native('com$sun$xml$internal$ws$server$AbstractInstanceResolver$FieldInjectionPlan') extern class AbstractInstanceResolver_FieldInjectionPlan<T, R> implements AbstractInstanceResolver_InjectionPlan<T, R>
+@:native('com$sun$xml$internal$ws$server$AbstractInstanceResolver$FieldInjectionPlan') extern class AbstractInstanceResolver_FieldInjectionPlan<T, R> implements com.sun.xml.internal.ws.server.AbstractInstanceResolver.AbstractInstanceResolver_InjectionPlan<T, R>
 {
 	@:overload public function new(field : java.lang.reflect.Field) : Void;
 	
@@ -80,7 +80,7 @@ package com.sun.xml.internal.ws.server;
 /**
 * Injects to a method.
 */
-@:native('com$sun$xml$internal$ws$server$AbstractInstanceResolver$MethodInjectionPlan') extern class AbstractInstanceResolver_MethodInjectionPlan<T, R> implements AbstractInstanceResolver_InjectionPlan<T, R>
+@:native('com$sun$xml$internal$ws$server$AbstractInstanceResolver$MethodInjectionPlan') extern class AbstractInstanceResolver_MethodInjectionPlan<T, R> implements com.sun.xml.internal.ws.server.AbstractInstanceResolver.AbstractInstanceResolver_InjectionPlan<T, R>
 {
 	@:overload public function new(method : java.lang.reflect.Method) : Void;
 	
@@ -93,9 +93,9 @@ package com.sun.xml.internal.ws.server;
 /**
 * Combines multiple {@link InjectionPlan}s into one.
 */
-@:native('com$sun$xml$internal$ws$server$AbstractInstanceResolver$Compositor') @:internal extern class AbstractInstanceResolver_Compositor<T, R> implements AbstractInstanceResolver_InjectionPlan<T, R>
+@:native('com$sun$xml$internal$ws$server$AbstractInstanceResolver$Compositor') @:internal extern class AbstractInstanceResolver_Compositor<T, R> implements com.sun.xml.internal.ws.server.AbstractInstanceResolver.AbstractInstanceResolver_InjectionPlan<T, R>
 {
-	@:overload public function new(children : java.util.Collection<AbstractInstanceResolver_InjectionPlan<T, R>>) : Void;
+	@:overload public function new(children : java.util.Collection<com.sun.xml.internal.ws.server.AbstractInstanceResolver.AbstractInstanceResolver_InjectionPlan<T, R>>) : Void;
 	
 	@:overload public function inject(instance : T, res : R) : Void;
 	

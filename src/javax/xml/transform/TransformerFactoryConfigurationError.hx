@@ -71,7 +71,7 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	*
 	* @return The error message.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* Return the actual exception (if any) that caused this exception to
@@ -84,7 +84,7 @@ extern class TransformerFactoryConfigurationError extends java.lang.Error
 	/**
 	* use the exception chaining mechanism of JDK1.4
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

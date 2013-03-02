@@ -47,7 +47,7 @@ package com.sun.javadoc;
 	*
 	* @return this annotation's elements and their values.
 	*/
-	@:overload public function elementValues() : java.NativeArray<AnnotationDesc_ElementValuePair>;
+	@:overload public function elementValues() : java.NativeArray<com.sun.javadoc.AnnotationDesc.AnnotationDesc_ElementValuePair>;
 	
 	
 }

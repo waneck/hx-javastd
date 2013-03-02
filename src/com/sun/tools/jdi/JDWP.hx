@@ -1319,14 +1319,14 @@ package com.sun.tools.jdi;
 * this request. 
 * This modifier can be used with any event kind.
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$Count') @:internal extern class JDWP_EventRequest_Set_Modifier_Count extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$Count') @:internal extern class JDWP_EventRequest_Set_Modifier_Count extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
 /**
 * Conditional on expression
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$Conditional') @:internal extern class JDWP_EventRequest_Set_Modifier_Conditional extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$Conditional') @:internal extern class JDWP_EventRequest_Set_Modifier_Conditional extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1336,7 +1336,7 @@ package com.sun.tools.jdi;
 * This modifier can be used with any event kind 
 * except for class unload. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ThreadOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_ThreadOnly extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ThreadOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_ThreadOnly extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1355,7 +1355,7 @@ package com.sun.tools.jdi;
 * This modifier can be used with any event kind except 
 * class unload, thread start, and thread end. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ClassOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_ClassOnly extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ClassOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_ClassOnly extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1371,7 +1371,7 @@ package com.sun.tools.jdi;
 * This modifier can be used with any event kind except 
 * thread start and thread end. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ClassMatch') @:internal extern class JDWP_EventRequest_Set_Modifier_ClassMatch extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ClassMatch') @:internal extern class JDWP_EventRequest_Set_Modifier_ClassMatch extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1387,7 +1387,7 @@ package com.sun.tools.jdi;
 * This modifier can be used with any event kind except 
 * thread start and thread end. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ClassExclude') @:internal extern class JDWP_EventRequest_Set_Modifier_ClassExclude extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ClassExclude') @:internal extern class JDWP_EventRequest_Set_Modifier_ClassExclude extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1398,7 +1398,7 @@ package com.sun.tools.jdi;
 * breakpoint, field access, field modification, 
 * step, and exception event kinds. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$LocationOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_LocationOnly extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$LocationOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_LocationOnly extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1408,7 +1408,7 @@ package com.sun.tools.jdi;
 * This modifier can be used with 
 * exception event kinds only. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ExceptionOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_ExceptionOnly extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$ExceptionOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_ExceptionOnly extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1418,7 +1418,7 @@ package com.sun.tools.jdi;
 * This modifier can be used with 
 * field access and field modification event kinds only. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$FieldOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_FieldOnly extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$FieldOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_FieldOnly extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1429,7 +1429,7 @@ package com.sun.tools.jdi;
 * This modifier can be used with 
 * step event kinds only. 
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$Step') @:internal extern class JDWP_EventRequest_Set_Modifier_Step extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$Step') @:internal extern class JDWP_EventRequest_Set_Modifier_Step extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1441,7 +1441,7 @@ package com.sun.tools.jdi;
 * except class prepare, class unload, thread start, 
 * and thread end. Introduced in JDWP version 1.4.
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$InstanceOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_InstanceOnly extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$InstanceOnly') @:internal extern class JDWP_EventRequest_Set_Modifier_InstanceOnly extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1458,7 +1458,7 @@ package com.sun.tools.jdi;
 * capability - see 
 * <a href="#JDWP_VirtualMachine_CapabilitiesNew">CapabilitiesNew</a>.
 */
-@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$SourceNameMatch') @:internal extern class JDWP_EventRequest_Set_Modifier_SourceNameMatch extends JDWP_EventRequest_Set_Modifier_ModifierCommon
+@:native('com$sun$tools$jdi$JDWP$EventRequest$Set$Modifier$SourceNameMatch') @:internal extern class JDWP_EventRequest_Set_Modifier_SourceNameMatch extends com.sun.tools.jdi.JDWP.JDWP_EventRequest_Set_Modifier_ModifierCommon
 {
 	
 }
@@ -1672,7 +1672,7 @@ package com.sun.tools.jdi;
 * This event is always generated by the target VM, even 
 * if not explicitly requested.
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$VMStart') @:internal extern class JDWP_Event_Composite_Events_VMStart extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$VMStart') @:internal extern class JDWP_Event_Composite_Events_VMStart extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1680,7 +1680,7 @@ package com.sun.tools.jdi;
 * Notification of step completion in the target VM. The step event 
 * is generated before the code at its location is executed. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$SingleStep') @:internal extern class JDWP_Event_Composite_Events_SingleStep extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$SingleStep') @:internal extern class JDWP_Event_Composite_Events_SingleStep extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1688,7 +1688,7 @@ package com.sun.tools.jdi;
 * Notification of a breakpoint in the target VM. The breakpoint event 
 * is generated before the code at its location is executed. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$Breakpoint') @:internal extern class JDWP_Event_Composite_Events_Breakpoint extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$Breakpoint') @:internal extern class JDWP_Event_Composite_Events_Breakpoint extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1702,7 +1702,7 @@ package com.sun.tools.jdi;
 * before its thread start event occurs if methods are called 
 * as part of the thread's initialization. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MethodEntry') @:internal extern class JDWP_Event_Composite_Events_MethodEntry extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MethodEntry') @:internal extern class JDWP_Event_Composite_Events_MethodEntry extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1714,7 +1714,7 @@ package com.sun.tools.jdi;
 * methods. Method exit events are not generated if the method terminates 
 * with a thrown exception. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MethodExit') @:internal extern class JDWP_Event_Composite_Events_MethodExit extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MethodExit') @:internal extern class JDWP_Event_Composite_Events_MethodExit extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1726,7 +1726,7 @@ package com.sun.tools.jdi;
 * methods. Method exit events are not generated if the method terminates 
 * with a thrown exception. <p>Since JDWP version 1.6. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MethodExitWithReturnValue') @:internal extern class JDWP_Event_Composite_Events_MethodExitWithReturnValue extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MethodExitWithReturnValue') @:internal extern class JDWP_Event_Composite_Events_MethodExitWithReturnValue extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1737,7 +1737,7 @@ package com.sun.tools.jdi;
 * <a href="#JDWP_VirtualMachine_CapabilitiesNew">CapabilitiesNew</a>. 
 * <p>Since JDWP version 1.6. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorContendedEnter') @:internal extern class JDWP_Event_Composite_Events_MonitorContendedEnter extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorContendedEnter') @:internal extern class JDWP_Event_Composite_Events_MonitorContendedEnter extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1748,7 +1748,7 @@ package com.sun.tools.jdi;
 * <a href="#JDWP_VirtualMachine_CapabilitiesNew">CapabilitiesNew</a>. 
 * <p>Since JDWP version 1.6. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorContendedEntered') @:internal extern class JDWP_Event_Composite_Events_MonitorContendedEntered extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorContendedEntered') @:internal extern class JDWP_Event_Composite_Events_MonitorContendedEntered extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1758,7 +1758,7 @@ package com.sun.tools.jdi;
 * <a href="#JDWP_VirtualMachine_CapabilitiesNew">CapabilitiesNew</a>. 
 * <p>Since JDWP version 1.6. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorWait') @:internal extern class JDWP_Event_Composite_Events_MonitorWait extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorWait') @:internal extern class JDWP_Event_Composite_Events_MonitorWait extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1769,7 +1769,7 @@ package com.sun.tools.jdi;
 * a monitor object. 
 * <p>Since JDWP version 1.6. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorWaited') @:internal extern class JDWP_Event_Composite_Events_MonitorWaited extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$MonitorWaited') @:internal extern class JDWP_Event_Composite_Events_MonitorWaited extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1782,7 +1782,7 @@ package com.sun.tools.jdi;
 * is generated at the first non-native location reached after the exception 
 * is thrown. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$Exception') @:internal extern class JDWP_Event_Composite_Events_Exception extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$Exception') @:internal extern class JDWP_Event_Composite_Events_Exception extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1806,7 +1806,7 @@ package com.sun.tools.jdi;
 * about the creation of the thread object which may have happened 
 * much earlier, depending on the VM being debugged. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ThreadStart') @:internal extern class JDWP_Event_Composite_Events_ThreadStart extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ThreadStart') @:internal extern class JDWP_Event_Composite_Events_ThreadStart extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1821,7 +1821,7 @@ package com.sun.tools.jdi;
 * about the lifetime of the thread object. It may or may not be collected 
 * soon depending on what references exist in the target VM. 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ThreadDeath') @:internal extern class JDWP_Event_Composite_Events_ThreadDeath extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ThreadDeath') @:internal extern class JDWP_Event_Composite_Events_ThreadDeath extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1831,7 +1831,7 @@ package com.sun.tools.jdi;
 * events are not generated for primtiive classes (for example, 
 * java.lang.Integer.TYPE). 
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ClassPrepare') @:internal extern class JDWP_Event_Composite_Events_ClassPrepare extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ClassPrepare') @:internal extern class JDWP_Event_Composite_Events_ClassPrepare extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1841,7 +1841,7 @@ package com.sun.tools.jdi;
 * There are severe constraints on the debugger back-end during 
 * garbage collection, so unload information is greatly limited.	
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ClassUnload') @:internal extern class JDWP_Event_Composite_Events_ClassUnload extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$ClassUnload') @:internal extern class JDWP_Event_Composite_Events_ClassUnload extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1852,7 +1852,7 @@ package com.sun.tools.jdi;
 * Requires canWatchFieldAccess capability - see 
 * <a href="#JDWP_VirtualMachine_CapabilitiesNew">CapabilitiesNew</a>.
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$FieldAccess') @:internal extern class JDWP_Event_Composite_Events_FieldAccess extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$FieldAccess') @:internal extern class JDWP_Event_Composite_Events_FieldAccess extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
@@ -1861,11 +1861,11 @@ package com.sun.tools.jdi;
 * Requires canWatchFieldModification capability - see 
 * <a href="#JDWP_VirtualMachine_CapabilitiesNew">CapabilitiesNew</a>.
 */
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$FieldModification') @:internal extern class JDWP_Event_Composite_Events_FieldModification extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$FieldModification') @:internal extern class JDWP_Event_Composite_Events_FieldModification extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }
-@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$VMDeath') @:internal extern class JDWP_Event_Composite_Events_VMDeath extends JDWP_Event_Composite_Events_EventsCommon
+@:native('com$sun$tools$jdi$JDWP$Event$Composite$Events$VMDeath') @:internal extern class JDWP_Event_Composite_Events_VMDeath extends com.sun.tools.jdi.JDWP.JDWP_Event_Composite_Events_EventsCommon
 {
 	
 }

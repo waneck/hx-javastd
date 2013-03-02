@@ -89,7 +89,7 @@ extern class CharacterEvent extends com.sun.xml.internal.stream.events.DummyEven
 	* @param writer The writer that will output the data
 	* @throws XMLStreamException if there is a fatal error writing the event
 	*/
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	/**
 	* Return true if this is ignorableWhiteSpace.  If

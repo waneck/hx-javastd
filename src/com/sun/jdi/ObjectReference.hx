@@ -379,7 +379,7 @@ extern interface ObjectReference extends com.sun.jdi.Value
 	*         than zero.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function referringObjects(maxReferrers : haxe.Int64) : java.util.List<ObjectReference>;
+	@:require(java6) @:overload public function referringObjects(maxReferrers : haxe.Int64) : java.util.List<com.sun.jdi.ObjectReference>;
 	
 	
 }

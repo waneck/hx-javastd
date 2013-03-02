@@ -117,7 +117,7 @@ extern class UID implements java.io.Serializable
 	* @throws  IOException if an I/O error occurs while performing
 	* this operation
 	*/
-	@:overload public static function read(_in : java.io.DataInput) : UID;
+	@:overload public static function read(_in : java.io.DataInput) : java.rmi.server.UID;
 	
 	
 }

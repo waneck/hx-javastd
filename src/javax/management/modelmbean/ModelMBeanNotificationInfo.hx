@@ -72,13 +72,13 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	* @param inInfo the ModelMBeanNotificationInfo to be duplicated
 	*
 	**/
-	@:overload public function new(inInfo : ModelMBeanNotificationInfo) : Void;
+	@:overload public function new(inInfo : javax.management.modelmbean.ModelMBeanNotificationInfo) : Void;
 	
 	/**
 	* Creates and returns a new ModelMBeanNotificationInfo which is a
 	* duplicate of this ModelMBeanNotificationInfo.
 	**/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Returns a copy of the associated Descriptor for the
@@ -116,7 +116,7 @@ extern class ModelMBeanNotificationInfo extends javax.management.MBeanNotificati
 	*
 	* @return a string describing this object.
 	**/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

@@ -27,9 +27,9 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class BooleanEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm
 {
-	@:overload override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
 	@:overload @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
@@ -45,7 +45,7 @@ extern class BooleanEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.a
 	
 	@:overload @:final public function decodeFromBytesToBooleanArray(bdata : java.NativeArray<Bool>, bstart : Int, blength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Void;
 	
-	@:overload override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
 	@:overload public function encodeToBytesFromBooleanArray(array : java.NativeArray<Bool>, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	

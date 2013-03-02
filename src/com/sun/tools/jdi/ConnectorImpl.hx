@@ -84,7 +84,7 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$ConnectorImpl$BooleanArgumentImpl') @:internal extern class ConnectorImpl_BooleanArgumentImpl extends ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_BooleanArgument
+@:native('com$sun$tools$jdi$ConnectorImpl$BooleanArgumentImpl') @:internal extern class ConnectorImpl_BooleanArgumentImpl extends com.sun.tools.jdi.ConnectorImpl.ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_BooleanArgument
 {
 	/**
 	* Sets the value of the argument.
@@ -120,7 +120,7 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$ConnectorImpl$IntegerArgumentImpl') @:internal extern class ConnectorImpl_IntegerArgumentImpl extends ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_IntegerArgument
+@:native('com$sun$tools$jdi$ConnectorImpl$IntegerArgumentImpl') @:internal extern class ConnectorImpl_IntegerArgumentImpl extends com.sun.tools.jdi.ConnectorImpl.ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_IntegerArgument
 {
 	/**
 	* Sets the value of the argument.
@@ -178,7 +178,7 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$ConnectorImpl$StringArgumentImpl') @:internal extern class ConnectorImpl_StringArgumentImpl extends ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_StringArgument
+@:native('com$sun$tools$jdi$ConnectorImpl$StringArgumentImpl') @:internal extern class ConnectorImpl_StringArgumentImpl extends com.sun.tools.jdi.ConnectorImpl.ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_StringArgument
 {
 	/**
 	* Performs basic sanity check of argument.
@@ -188,7 +188,7 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$ConnectorImpl$SelectedArgumentImpl') @:internal extern class ConnectorImpl_SelectedArgumentImpl extends ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_SelectedArgument
+@:native('com$sun$tools$jdi$ConnectorImpl$SelectedArgumentImpl') @:internal extern class ConnectorImpl_SelectedArgumentImpl extends com.sun.tools.jdi.ConnectorImpl.ConnectorImpl_ArgumentImpl implements com.sun.jdi.connect.Connector.Connector_SelectedArgument
 {
 	/**
 	* Return the possible values for the argument

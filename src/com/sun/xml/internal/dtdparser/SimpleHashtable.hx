@@ -97,7 +97,7 @@ package com.sun.xml.internal.dtdparser;
 */
 @:native('com$sun$xml$internal$dtdparser$SimpleHashtable$Entry') @:internal extern class SimpleHashtable_Entry
 {
-	@:overload private function new(hash : Int, key : Dynamic, value : Dynamic, next : SimpleHashtable_Entry) : Void;
+	@:overload private function new(hash : Int, key : Dynamic, value : Dynamic, next : com.sun.xml.internal.dtdparser.SimpleHashtable.SimpleHashtable_Entry) : Void;
 	
 	
 }

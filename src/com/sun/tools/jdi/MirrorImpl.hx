@@ -29,7 +29,7 @@ package com.sun.tools.jdi;
 	
 	@:overload public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
-	@:overload public function equals(obj : Dynamic) : Bool;
+	@:overload override public function equals(obj : Dynamic) : Bool;
 	
 	@:overload override public function hashCode() : Int;
 	

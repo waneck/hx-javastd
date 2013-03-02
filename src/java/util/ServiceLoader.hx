@@ -95,7 +95,7 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	*
 	* @return A new service loader
 	*/
-	@:overload public static function load<S>(service : Class<S>, loader : java.lang.ClassLoader) : ServiceLoader<S>;
+	@:overload public static function load<S>(service : Class<S>, loader : java.lang.ClassLoader) : java.util.ServiceLoader<S>;
 	
 	/**
 	* Creates a new service loader for the given service type, using the
@@ -118,7 +118,7 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	*
 	* @return A new service loader
 	*/
-	@:overload public static function load<S>(service : Class<S>) : ServiceLoader<S>;
+	@:overload public static function load<S>(service : Class<S>) : java.util.ServiceLoader<S>;
 	
 	/**
 	* Creates a new service loader for the given service type, using the
@@ -144,7 +144,7 @@ extern class ServiceLoader<S> implements java.lang.Iterable<S>
 	*
 	* @return A new service loader
 	*/
-	@:overload public static function loadInstalled<S>(service : Class<S>) : ServiceLoader<S>;
+	@:overload public static function loadInstalled<S>(service : Class<S>) : java.util.ServiceLoader<S>;
 	
 	/**
 	* Returns a string describing this service.

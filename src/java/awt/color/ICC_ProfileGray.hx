@@ -40,7 +40,7 @@ extern class ICC_ProfileGray extends java.awt.color.ICC_Profile
 	* @return an array containing the components of the
 	* mediaWhitePointTag in the ICC profile.
 	*/
-	@:overload override public function getMediaWhitePoint() : java.NativeArray<Single>;
+	@:overload public function getMediaWhitePoint() : java.NativeArray<Single>;
 	
 	/**
 	* Returns a gamma value representing the tone reproduction

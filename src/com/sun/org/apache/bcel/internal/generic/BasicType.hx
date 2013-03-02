@@ -58,7 +58,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern class BasicType extends com.sun.org.apache.bcel.internal.generic.Type
 {
-	@:native('getType') @:overload @:final public static function _getType(type : java.StdTypes.Int8) : BasicType;
+	@:native('getType') @:overload @:final public static function _getType(type : java.StdTypes.Int8) : com.sun.org.apache.bcel.internal.generic.BasicType;
 	
 	/** @return true if both type objects refer to the same type
 	*/

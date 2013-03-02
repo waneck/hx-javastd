@@ -33,7 +33,7 @@ extern class ProxyLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshall
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload @:final override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:final public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
 	/**
 	* Picks the loader to delegate to.
@@ -42,7 +42,7 @@ extern class ProxyLoader extends com.sun.xml.internal.bind.v2.runtime.unmarshall
 	*/
 	@:overload @:abstract private function selectLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload @:final override public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:final public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
 	
 }

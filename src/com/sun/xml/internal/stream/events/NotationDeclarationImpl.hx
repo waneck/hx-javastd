@@ -38,7 +38,7 @@ extern class NotationDeclarationImpl extends com.sun.xml.internal.stream.events.
 	
 	@:overload public function getSystemId() : String;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

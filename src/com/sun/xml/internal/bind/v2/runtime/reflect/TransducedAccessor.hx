@@ -79,7 +79,7 @@ extern class TransducedAccessor<BeanT>
 	* <p>
 	* This allows the implementation to use an optimized code.
 	*/
-	@:overload public static function get<T>(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, ref : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElementRef) : TransducedAccessor<T>;
+	@:overload public static function get<T>(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, ref : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElementRef) : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<T>;
 	
 	/**
 	* Convenience method to write the value as a text inside an element
@@ -100,7 +100,7 @@ extern class TransducedAccessor<BeanT>
 	
 	
 }
-@:native('com$sun$xml$internal$bind$v2$runtime$reflect$TransducedAccessor$CompositeContextDependentTransducedAccessorImpl') @:internal extern class TransducedAccessor_CompositeContextDependentTransducedAccessorImpl<BeanT, ValueT> extends TransducedAccessor_CompositeTransducedAccessorImpl<BeanT, ValueT>
+@:native('com$sun$xml$internal$bind$v2$runtime$reflect$TransducedAccessor$CompositeContextDependentTransducedAccessorImpl') @:internal extern class TransducedAccessor_CompositeContextDependentTransducedAccessorImpl<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor.TransducedAccessor_CompositeTransducedAccessorImpl<BeanT, ValueT>
 {
 	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, xducer : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, ValueT>) : Void;
 	
@@ -116,7 +116,7 @@ extern class TransducedAccessor<BeanT>
 * Implementation of {@link TransducedAccessor} that
 * simply combines a {@link Transducer} and {@link Accessor}.
 */
-@:native('com$sun$xml$internal$bind$v2$runtime$reflect$TransducedAccessor$CompositeTransducedAccessorImpl') extern class TransducedAccessor_CompositeTransducedAccessorImpl<BeanT, ValueT> extends TransducedAccessor<BeanT>
+@:native('com$sun$xml$internal$bind$v2$runtime$reflect$TransducedAccessor$CompositeTransducedAccessorImpl') extern class TransducedAccessor_CompositeTransducedAccessorImpl<BeanT, ValueT> extends com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<BeanT>
 {
 	private var xducer(default, null) : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>;
 	

@@ -49,7 +49,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*        well, or not. If the value is {@code false}, the {@link Message} in the copy of the {@link Packet} is {@code null}.
 	* @return copy of the original packet
 	*/
-	@:overload public function copy(copyMessage : Bool) : Packet;
+	@:overload public function copy(copyMessage : Bool) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Gets the last {@link Message} set through {@link #setMessage(Message)}.
@@ -395,7 +395,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param msg
 	*      The {@link Message} that represents a reply. Can be null.
 	*/
-	@:overload public function createResponse(msg : com.sun.xml.internal.ws.api.message.Message) : Packet;
+	@:overload public function createResponse(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Creates a response {@link Packet} from a request packet ({@code this}).
@@ -407,7 +407,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param msg
 	*      The {@link Message} that represents a reply. Can be null.
 	*/
-	@:overload public function createClientResponse(msg : com.sun.xml.internal.ws.api.message.Message) : Packet;
+	@:overload public function createClientResponse(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Creates a server-side response {@link Packet} from a request
@@ -425,7 +425,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param binding The response Binding. Cannot be null.
 	* @return response packet
 	*/
-	@:overload public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding) : Packet;
+	@:overload public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Creates a server-side response {@link Packet} from a request
@@ -443,7 +443,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	* @param action The response Action Message Addressing Property value.
 	* @return response packet
 	*/
-	@:overload public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : Packet;
+	@:overload public function createServerResponse(responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : com.sun.xml.internal.ws.api.message.Packet;
 	
 	/**
 	* Overwrites the {@link Message} of the response packet ({@code this}) by the given {@link Message}.
@@ -455,9 +455,9 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*
 	* @see #createServerResponse(Message, AddressingVersion, SOAPVersion, String)
 	*/
-	@:overload public function setResponseMessage(request : Packet, responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : Void;
+	@:overload public function setResponseMessage(request : com.sun.xml.internal.ws.api.message.Packet, responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : Void;
 	
-	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

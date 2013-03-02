@@ -44,7 +44,7 @@ package com.sun.source.tree;
 	*
 	* @return the kind of this tree.
 	*/
-	@:overload public function getKind() : Tree_Kind;
+	@:overload public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	/**
 	* Accept method used to implement the visitor pattern.  The

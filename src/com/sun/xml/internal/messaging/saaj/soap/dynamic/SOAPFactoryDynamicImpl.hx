@@ -29,7 +29,7 @@ package com.sun.xml.internal.messaging.saaj.soap.dynamic;
 */
 extern class SOAPFactoryDynamicImpl extends com.sun.xml.internal.messaging.saaj.soap.SOAPFactoryImpl
 {
-	@:overload override private function createDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
+	@:overload private function createDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
 	
 	@:overload override public function createDetail() : javax.xml.soap.Detail;
 	

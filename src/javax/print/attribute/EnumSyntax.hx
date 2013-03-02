@@ -122,7 +122,7 @@ extern class EnumSyntax implements java.io.Serializable implements java.lang.Clo
 	* object input stream.
 	* @return the value table
 	*/
-	@:overload private function getEnumValueTable() : java.NativeArray<EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Returns the lowest integer value used by this enumeration value's

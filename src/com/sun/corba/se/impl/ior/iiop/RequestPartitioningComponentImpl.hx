@@ -39,7 +39,7 @@ extern class RequestPartitioningComponentImpl extends com.sun.corba.se.spi.ior.T
 	
 	@:overload public function getRequestPartitioningId() : Int;
 	
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload override public function getId() : Int;
 	

@@ -32,7 +32,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface FloatValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<FloatValue>
+@:require(java3) extern interface FloatValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<com.sun.jdi.FloatValue>
 {
 	/**
 	* Returns this FloatValue as a float.

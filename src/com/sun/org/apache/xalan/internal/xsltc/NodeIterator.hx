@@ -31,7 +31,7 @@ extern interface NodeIterator extends java.lang.Cloneable
 	/**
 	* Resets the iterator to the last start node.
 	*/
-	@:overload public function reset() : NodeIterator;
+	@:overload public function reset() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Returns the number of elements in this iterator.
@@ -57,7 +57,7 @@ extern interface NodeIterator extends java.lang.Cloneable
 	* Set start to END should 'close' the iterator,
 	* i.e. subsequent call to next() should return END.
 	*/
-	@:overload public function setStartNode(node : Int) : NodeIterator;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* True if this iterator has a reversed axis.
@@ -67,7 +67,7 @@ extern interface NodeIterator extends java.lang.Cloneable
 	/**
 	* Returns a deep copy of this iterator.
 	*/
-	@:overload public function cloneIterator() : NodeIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xalan.internal.xsltc.NodeIterator;
 	
 	/**
 	* Prevents or allows iterator restarts.

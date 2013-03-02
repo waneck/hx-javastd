@@ -43,7 +43,7 @@ extern class ReflectionFactory
 	* @exception SecurityException if a security manager exists and its
 	*             <code>checkPermission</code> method doesn't allow
 	*             access to the RuntimePermission "reflectionFactoryAccess".  */
-	@:overload public static function getReflectionFactory() : ReflectionFactory;
+	@:overload public static function getReflectionFactory() : sun.reflect.ReflectionFactory;
 	
 	/** Called only by java.lang.reflect.Modifier's static initializer */
 	@:overload public function setLangReflectAccess(access : sun.reflect.LangReflectAccess) : Void;
@@ -115,9 +115,9 @@ extern class ReflectionFactory
 * <p>An instance of this class can be used as the argument of
 * <code>AccessController.doPrivileged</code>.
 */
-@:native('sun$reflect$ReflectionFactory$GetReflectionFactoryAction') extern class ReflectionFactory_GetReflectionFactoryAction implements java.security.PrivilegedAction<ReflectionFactory>
+@:native('sun$reflect$ReflectionFactory$GetReflectionFactoryAction') extern class ReflectionFactory_GetReflectionFactoryAction implements java.security.PrivilegedAction<sun.reflect.ReflectionFactory>
 {
-	@:overload public function run() : ReflectionFactory;
+	@:overload public function run() : sun.reflect.ReflectionFactory;
 	
 	
 }

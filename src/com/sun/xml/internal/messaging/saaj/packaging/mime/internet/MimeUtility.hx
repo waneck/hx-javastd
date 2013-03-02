@@ -335,11 +335,11 @@ extern class MimeUtility
 {
 	@:overload public function new(breakOnNonAscii : Bool, encodeEolStrict : Bool) : Void;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Return ASCII-ness of data stream.

@@ -27,53 +27,53 @@ package sun.awt.geom;
 {
 	@:overload public function new(x0 : Float, y0 : Float, x1 : Float, y1 : Float, direction : Int) : Void;
 	
-	@:overload override public function getOrder() : Int;
+	@:overload public function getOrder() : Int;
 	
-	@:overload override public function getXTop() : Float;
+	@:overload public function getXTop() : Float;
 	
-	@:overload override public function getYTop() : Float;
+	@:overload public function getYTop() : Float;
 	
-	@:overload override public function getXBot() : Float;
+	@:overload public function getXBot() : Float;
 	
-	@:overload override public function getYBot() : Float;
+	@:overload public function getYBot() : Float;
 	
-	@:overload override public function getXMin() : Float;
+	@:overload public function getXMin() : Float;
 	
-	@:overload override public function getXMax() : Float;
+	@:overload public function getXMax() : Float;
 	
-	@:overload override public function getX0() : Float;
+	@:overload public function getX0() : Float;
 	
-	@:overload override public function getY0() : Float;
+	@:overload public function getY0() : Float;
 	
-	@:overload override public function getX1() : Float;
+	@:overload public function getX1() : Float;
 	
-	@:overload override public function getY1() : Float;
+	@:overload public function getY1() : Float;
 	
-	@:overload override public function XforY(y : Float) : Float;
+	@:overload public function XforY(y : Float) : Float;
 	
-	@:overload override public function TforY(y : Float) : Float;
+	@:overload public function TforY(y : Float) : Float;
 	
-	@:overload override public function XforT(t : Float) : Float;
+	@:overload public function XforT(t : Float) : Float;
 	
-	@:overload override public function YforT(t : Float) : Float;
+	@:overload public function YforT(t : Float) : Float;
 	
-	@:overload override public function dXforT(t : Float, deriv : Int) : Float;
+	@:overload public function dXforT(t : Float, deriv : Int) : Float;
 	
-	@:overload override public function dYforT(t : Float, deriv : Int) : Float;
+	@:overload public function dYforT(t : Float, deriv : Int) : Float;
 	
-	@:overload override public function nextVertical(t0 : Float, t1 : Float) : Float;
+	@:overload public function nextVertical(t0 : Float, t1 : Float) : Float;
 	
-	@:overload override public function accumulateCrossings(c : sun.awt.geom.Crossings) : Bool;
+	@:overload public function accumulateCrossings(c : sun.awt.geom.Crossings) : Bool;
 	
-	@:overload override public function enlarge(r : java.awt.geom.Rectangle2D) : Void;
+	@:overload public function enlarge(r : java.awt.geom.Rectangle2D) : Void;
 	
-	@:overload override public function getSubCurve(ystart : Float, yend : Float, dir : Int) : sun.awt.geom.Curve;
+	@:overload public function getSubCurve(ystart : Float, yend : Float, dir : Int) : sun.awt.geom.Curve;
 	
-	@:overload override public function getReversedCurve() : sun.awt.geom.Curve;
+	@:overload public function getReversedCurve() : sun.awt.geom.Curve;
 	
-	@:overload override public function compareTo(other : sun.awt.geom.Curve, yrange : java.NativeArray<Float>) : Int;
+	@:overload public function compareTo(other : sun.awt.geom.Curve, yrange : java.NativeArray<Float>) : Int;
 	
-	@:overload override public function getSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload public function getSegment(coords : java.NativeArray<Float>) : Int;
 	
 	
 }

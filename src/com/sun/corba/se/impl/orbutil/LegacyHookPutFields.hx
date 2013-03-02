@@ -30,53 +30,53 @@ package com.sun.corba.se.impl.orbutil;
 	/**
 	* Put the value of the named boolean field into the persistent field.
 	*/
-	@:overload override public function put(name : String, value : Bool) : Void;
+	@:overload public function put(name : String, value : Bool) : Void;
 	
 	/**
 	* Put the value of the named char field into the persistent fields.
 	*/
-	@:overload override public function put(name : String, value : java.StdTypes.Char16) : Void;
+	@:overload public function put(name : String, value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Put the value of the named byte field into the persistent fields.
 	*/
-	@:overload override public function put(name : String, value : java.StdTypes.Int8) : Void;
+	@:overload public function put(name : String, value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Put the value of the named short field into the persistent fields.
 	*/
-	@:overload override public function put(name : String, value : java.StdTypes.Int16) : Void;
+	@:overload public function put(name : String, value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Put the value of the named int field into the persistent fields.
 	*/
-	@:overload override public function put(name : String, value : Int) : Void;
+	@:overload public function put(name : String, value : Int) : Void;
 	
 	/**
 	* Put the value of the named long field into the persistent fields.
 	*/
-	@:overload override public function put(name : String, value : haxe.Int64) : Void;
+	@:overload public function put(name : String, value : haxe.Int64) : Void;
 	
 	/**
 	* Put the value of the named float field into the persistent fields.
 	*
 	*/
-	@:overload override public function put(name : String, value : Single) : Void;
+	@:overload public function put(name : String, value : Single) : Void;
 	
 	/**
 	* Put the value of the named double field into the persistent field.
 	*/
-	@:overload override public function put(name : String, value : Float) : Void;
+	@:overload public function put(name : String, value : Float) : Void;
 	
 	/**
 	* Put the value of the named Object field into the persistent field.
 	*/
-	@:overload override public function put(name : String, value : Dynamic) : Void;
+	@:overload public function put(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Write the data and fields to the specified ObjectOutput stream.
 	*/
-	@:overload override public function write(out : java.io.ObjectOutput) : Void;
+	@:overload public function write(out : java.io.ObjectOutput) : Void;
 	
 	
 }

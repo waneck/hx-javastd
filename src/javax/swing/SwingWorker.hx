@@ -342,7 +342,7 @@ extern class SwingWorker<T, V> implements java.util.concurrent.RunnableFuture<T>
 	*
 	* @return the current state
 	*/
-	@:overload @:final public function getState() : SwingWorker_StateValue;
+	@:overload @:final public function getState() : javax.swing.SwingWorker.SwingWorker_StateValue;
 	
 	
 }

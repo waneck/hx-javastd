@@ -110,7 +110,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @param l the specified <code>Line2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setLine(l : Line2D) : Void;
+	@:require(java2) @:overload public function setLine(l : java.awt.geom.Line2D) : Void;
 	
 	/**
 	* Returns an indicator of where the specified point
@@ -242,7 +242,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	*                  <code>false</code> otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function intersectsLine(l : Line2D) : Bool;
+	@:require(java2) @:overload public function intersectsLine(l : java.awt.geom.Line2D) : Bool;
 	
 	/**
 	* Returns the square of the distance from a point to a line segment.
@@ -649,7 +649,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 * A line segment specified with float coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Line2D$Float') extern class Line2D_Float extends Line2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Line2D$Float') extern class Line2D_Float extends java.awt.geom.Line2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the start point of the line segment.
@@ -769,7 +769,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 * A line segment specified with double coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Line2D$Double') extern class Line2D_Double extends Line2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Line2D$Double') extern class Line2D_Double extends java.awt.geom.Line2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the start point of the line segment.

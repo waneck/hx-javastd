@@ -50,7 +50,7 @@ extern class ServiceFinder<T> implements java.lang.Iterable<T>
 	*                                   or names a provider class that cannot be found and instantiated
 	* @see #find(Class)
 	*/
-	@:overload public static function find<T>(service : Class<T>, loader : java.lang.ClassLoader) : ServiceFinder<T>;
+	@:overload public static function find<T>(service : Class<T>, loader : java.lang.ClassLoader) : com.sun.xml.internal.ws.util.ServiceFinder<T>;
 	
 	/**
 	* Locates and incrementally instantiates the available providers of a
@@ -68,7 +68,7 @@ extern class ServiceFinder<T> implements java.lang.Iterable<T>
 	*                                   or names a provider class that cannot be found and instantiated
 	* @see #find(Class, ClassLoader)
 	*/
-	@:overload public static function find<T>(service : Class<T>) : ServiceFinder<T>;
+	@:overload public static function find<T>(service : Class<T>) : com.sun.xml.internal.ws.util.ServiceFinder<T>;
 	
 	/**
 	* Returns discovered objects incrementally.

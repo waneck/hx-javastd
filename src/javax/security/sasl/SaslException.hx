@@ -62,7 +62,7 @@ extern class SaslException extends java.io.IOException
 	* Override Throwable.getCause() to ensure deserialized object from
 	* JSR 28 would return same value for getCause() (i.e., _exception).
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	/*
 	* Override Throwable.initCause() to match getCause() by updating
@@ -81,7 +81,7 @@ extern class SaslException extends java.io.IOException
 	* @return The non-null string representation of this exception.
 	* @see java.lang.Throwable#getMessage
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

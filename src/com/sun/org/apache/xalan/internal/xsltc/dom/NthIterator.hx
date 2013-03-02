@@ -25,23 +25,23 @@ extern class NthIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxis
 {
 	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, n : Int) : Void;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function getLast() : Int;
+	@:overload public function getLast() : Int;
 	
-	@:overload override public function getPosition() : Int;
+	@:overload public function getPosition() : Int;
 	
-	@:overload override public function setMark() : Void;
+	@:overload public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload public function gotoMark() : Void;
 	
 	
 }

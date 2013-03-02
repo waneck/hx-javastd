@@ -31,7 +31,7 @@ extern class HTMLPane extends javax.swing.JEditorPane
 	
 	@:overload @:synchronized public function getHasSelection() : Bool;
 	
-	@:overload override public function setText(text : String) : Void;
+	@:overload public function setText(text : String) : Void;
 	
 	
 }

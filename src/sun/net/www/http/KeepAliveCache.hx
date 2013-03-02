@@ -23,7 +23,7 @@ package sun.net.www.http;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class KeepAliveCache extends java.util.HashMap<KeepAliveKey, ClientVector> implements java.lang.Runnable
+extern class KeepAliveCache extends java.util.HashMap<sun.net.www.http.KeepAliveCache.KeepAliveKey, sun.net.www.http.KeepAliveCache.ClientVector> implements java.lang.Runnable
 {
 	/**
 	* Constructor
@@ -53,7 +53,7 @@ extern class KeepAliveCache extends java.util.HashMap<KeepAliveKey, ClientVector
 	
 	
 }
-@:internal extern class ClientVector extends java.util.Stack<KeepAliveEntry>
+@:internal extern class ClientVector extends java.util.Stack<sun.net.www.http.KeepAliveCache.KeepAliveEntry>
 {
 	
 }

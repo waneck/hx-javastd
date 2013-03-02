@@ -336,7 +336,7 @@ extern class XMLSignature extends com.sun.org.apache.xml.internal.security.utils
 	*
 	* @return Constant._TAG_SIGNATURE
 	*/
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

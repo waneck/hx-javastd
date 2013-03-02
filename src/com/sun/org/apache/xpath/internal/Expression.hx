@@ -225,7 +225,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* object's class are the same, and the data contained
 	* within both objects are considered equal.
 	*/
-	@:overload @:abstract public function deepEquals(expr : Expression) : Bool;
+	@:overload @:abstract public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* This is a utility method to tell if the passed in
@@ -236,7 +236,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	* @return true of the passed in class is the exact same
 	* class as this class.
 	*/
-	@:overload @:final private function isSameClass(expr : Expression) : Bool;
+	@:overload @:final private function isSameClass(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* Warn the user of an problem.

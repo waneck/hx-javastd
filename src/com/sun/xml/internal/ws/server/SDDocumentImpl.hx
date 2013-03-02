@@ -37,7 +37,7 @@ extern class SDDocumentImpl extends com.sun.xml.internal.ws.api.server.SDDocumen
 	* @return null
 	*      Always non-null.
 	*/
-	@:overload public static function create(src : com.sun.xml.internal.ws.api.server.SDDocumentSource, serviceName : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : SDDocumentImpl;
+	@:overload public static function create(src : com.sun.xml.internal.ws.api.server.SDDocumentSource, serviceName : javax.xml.namespace.QName, portTypeName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.server.SDDocumentImpl;
 	
 	@:overload private function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource) : Void;
 	
@@ -72,7 +72,7 @@ extern class SDDocumentImpl extends com.sun.xml.internal.ws.api.server.SDDocumen
 *
 * @author Kohsuke Kawaguchi
 */
-@:native('com$sun$xml$internal$ws$server$SDDocumentImpl$SchemaImpl') @:internal extern class SDDocumentImpl_SchemaImpl extends SDDocumentImpl implements com.sun.xml.internal.ws.api.server.SDDocument.SDDocument_Schema
+@:native('com$sun$xml$internal$ws$server$SDDocumentImpl$SchemaImpl') @:internal extern class SDDocumentImpl_SchemaImpl extends com.sun.xml.internal.ws.server.SDDocumentImpl implements com.sun.xml.internal.ws.api.server.SDDocument.SDDocument_Schema
 {
 	@:overload public function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, targetNamespace : String, imports : java.util.Set<String>) : Void;
 	
@@ -82,7 +82,7 @@ extern class SDDocumentImpl extends com.sun.xml.internal.ws.api.server.SDDocumen
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$SDDocumentImpl$WSDLImpl') @:internal extern class SDDocumentImpl_WSDLImpl extends SDDocumentImpl implements com.sun.xml.internal.ws.api.server.SDDocument.SDDocument_WSDL
+@:native('com$sun$xml$internal$ws$server$SDDocumentImpl$WSDLImpl') @:internal extern class SDDocumentImpl_WSDLImpl extends com.sun.xml.internal.ws.server.SDDocumentImpl implements com.sun.xml.internal.ws.api.server.SDDocument.SDDocument_WSDL
 {
 	@:overload public function new(rootName : javax.xml.namespace.QName, url : java.net.URL, source : com.sun.xml.internal.ws.api.server.SDDocumentSource, targetNamespace : String, hasPortType : Bool, hasService : Bool, imports : java.util.Set<String>, allServices : java.util.Set<javax.xml.namespace.QName>) : Void;
 	

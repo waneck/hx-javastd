@@ -39,7 +39,7 @@ extern class WindowsMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 	
 	private var hotTrackingOn : Bool;
 	
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override private function installDefaults() : Void;
 	
@@ -73,9 +73,9 @@ extern class WindowsMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 */
 @:require(java4) @:native('com$sun$java$swing$plaf$windows$WindowsMenuUI$WindowsMouseInputHandler') extern class WindowsMenuUI_WindowsMouseInputHandler extends javax.swing.plaf.basic.BasicMenuUI.BasicMenuUI_MouseInputHandler
 {
-	@:overload override public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseExited(evt : java.awt.event.MouseEvent) : Void;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.imageio.plugins.jpeg;
 */
 @:internal extern class DQTMarkerSegment extends com.sun.imageio.plugins.jpeg.MarkerSegment
 {
-	@:overload override private function clone() : Dynamic;
+	@:overload private function clone() : Dynamic;
 	
 	
 }

@@ -34,7 +34,7 @@ package com.sun.xml.internal.ws.client;
 * {@link Service#setHandlerResolver(HandlerResolver)}, we'll use this object
 * with null {@link #resolver}.
 */
-@:native('com$sun$xml$internal$ws$client$HandlerConfigurator$HandlerResolverImpl') @:internal extern class HandlerConfigurator_HandlerResolverImpl extends HandlerConfigurator
+@:native('com$sun$xml$internal$ws$client$HandlerConfigurator$HandlerResolverImpl') @:internal extern class HandlerConfigurator_HandlerResolverImpl extends com.sun.xml.internal.ws.client.HandlerConfigurator
 {
 	@:overload public function new(resolver : javax.xml.ws.handler.HandlerResolver) : Void;
 	
@@ -59,7 +59,7 @@ package com.sun.xml.internal.ws.client;
 * are put into the map. The ServiceContext uses the map to set handler
 * chains on bindings when they are created.
 */
-@:native('com$sun$xml$internal$ws$client$HandlerConfigurator$AnnotationConfigurator') @:internal extern class HandlerConfigurator_AnnotationConfigurator extends HandlerConfigurator
+@:native('com$sun$xml$internal$ws$client$HandlerConfigurator$AnnotationConfigurator') @:internal extern class HandlerConfigurator_AnnotationConfigurator extends com.sun.xml.internal.ws.client.HandlerConfigurator
 {
 	
 }

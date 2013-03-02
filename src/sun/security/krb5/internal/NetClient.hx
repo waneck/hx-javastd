@@ -30,7 +30,7 @@ package sun.security.krb5.internal;
 */
 extern class NetClient
 {
-	@:overload public static function getInstance(protocol : String, hostname : String, port : Int, timeout : Int) : NetClient;
+	@:overload public static function getInstance(protocol : String, hostname : String, port : Int, timeout : Int) : sun.security.krb5.internal.NetClient;
 	
 	@:overload @:abstract public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
@@ -40,7 +40,7 @@ extern class NetClient
 	
 	
 }
-@:internal extern class TCPClient extends NetClient
+@:internal extern class TCPClient extends sun.security.krb5.internal.NetClient
 {
 	@:overload override public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
@@ -50,7 +50,7 @@ extern class NetClient
 	
 	
 }
-@:internal extern class UDPClient extends NetClient
+@:internal extern class UDPClient extends sun.security.krb5.internal.NetClient
 {
 	@:overload override public function send(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	

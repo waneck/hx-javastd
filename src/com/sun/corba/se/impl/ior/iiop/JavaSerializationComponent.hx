@@ -25,15 +25,15 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class JavaSerializationComponent extends com.sun.corba.se.spi.ior.TaggedComponentBase
 {
-	@:overload public static function singleton() : JavaSerializationComponent;
+	@:overload public static function singleton() : com.sun.corba.se.impl.ior.iiop.JavaSerializationComponent;
 	
 	@:overload public function new(version : java.StdTypes.Int8) : Void;
 	
 	@:overload public function javaSerializationVersion() : java.StdTypes.Int8;
 	
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function getId() : Int;
+	@:overload public function getId() : Int;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	

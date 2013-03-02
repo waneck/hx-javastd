@@ -195,7 +195,7 @@ package javax.swing.text;
 	* associated element.  This is reimplemented to do nothing
 	* and return false.
 	*/
-	@:overload override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
+	@:overload private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
 	
 	/**
 	* Gives notification that something was inserted into the document
@@ -209,7 +209,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function insertUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -223,7 +223,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function removeUpdate(changes : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }
@@ -266,7 +266,7 @@ package javax.swing.text;
 	* setEstimatedMajorSpan(true) followed by setSpan for
 	* the major axis with the estimated span.
 	*/
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Publish the changes in preferences upward to the parent
@@ -278,7 +278,7 @@ package javax.swing.text;
 	* best estimate and a calculated span for no children
 	* is undesirable.
 	*/
-	@:overload override private function flushRequirementChanges() : Void;
+	@:overload private function flushRequirementChanges() : Void;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -292,16 +292,16 @@ package javax.swing.text;
 	*   -1 if no view represents that position
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
+	@:require(java3) @:overload public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
 	
-	@:overload override private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
+	@:overload private function updateChildren(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, f : javax.swing.text.ViewFactory) : Bool;
 	
 	/**
 	* Fetches the attributes to use when rendering.  This view
 	* isn't directly responsible for an element so it returns
 	* the outer classes attributes.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -312,7 +312,7 @@ package javax.swing.text;
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -327,7 +327,7 @@ package javax.swing.text;
 	*  given point in the view >= 0
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -343,19 +343,19 @@ package javax.swing.text;
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Start of the zones range.
 	*
 	* @see View#getStartOffset
 	*/
-	@:overload override public function getStartOffset() : Int;
+	@:overload public function getStartOffset() : Int;
 	
 	/**
 	* End of the zones range.
 	*/
-	@:overload override public function getEndOffset() : Int;
+	@:overload public function getEndOffset() : Int;
 	
 	/**
 	* Gives notification that something was inserted into
@@ -368,7 +368,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -381,7 +381,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -394,7 +394,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

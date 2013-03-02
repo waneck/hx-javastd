@@ -39,7 +39,7 @@ package sun.util.resources;
 */
 extern class TimeZoneNames_es extends sun.util.resources.TimeZoneNamesBundle
 {
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

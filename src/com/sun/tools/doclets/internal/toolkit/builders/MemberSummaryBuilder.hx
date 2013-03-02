@@ -37,7 +37,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	*                      summarized.
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public static function getInstance(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : MemberSummaryBuilder;
+	@:overload public static function getInstance(classWriter : com.sun.tools.doclets.internal.toolkit.ClassWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder;
 	
 	/**
 	* Construct a new MemberSummaryBuilder.
@@ -46,7 +46,7 @@ extern class MemberSummaryBuilder extends com.sun.tools.doclets.internal.toolkit
 	*                             being summarized.
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public static function getInstance(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : MemberSummaryBuilder;
+	@:overload public static function getInstance(annotationTypeWriter : com.sun.tools.doclets.internal.toolkit.AnnotationTypeWriter, configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.MemberSummaryBuilder;
 	
 	/**
 	* {@inheritDoc}

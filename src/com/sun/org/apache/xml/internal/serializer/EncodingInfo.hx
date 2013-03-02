@@ -80,7 +80,7 @@ extern class EncodingInfo
 /**
 * This class implements the
 */
-@:native('com$sun$org$apache$xml$internal$serializer$EncodingInfo$EncodingImpl') @:internal extern class EncodingInfo_EncodingImpl implements EncodingInfo_InEncoding
+@:native('com$sun$org$apache$xml$internal$serializer$EncodingInfo$EncodingImpl') @:internal extern class EncodingInfo_EncodingImpl implements com.sun.org.apache.xml.internal.serializer.EncodingInfo.EncodingInfo_InEncoding
 {
 	@:overload public function isInEncoding(ch1 : java.StdTypes.Char16) : Bool;
 	

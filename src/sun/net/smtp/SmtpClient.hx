@@ -28,7 +28,7 @@ extern class SmtpClient extends sun.net.TransferProtocolClient
 	/**
 	* issue the QUIT command to the SMTP server and close the connection.
 	*/
-	@:overload override public function closeServer() : Void;
+	@:overload public function closeServer() : Void;
 	
 	@:overload public function to(s : String) : Void;
 	

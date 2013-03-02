@@ -74,7 +74,7 @@ extern class KeyGenerator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : KeyGenerator;
+	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.KeyGenerator;
 	
 	/**
 	* Returns a <code>KeyGenerator</code> object that generates secret keys
@@ -112,7 +112,7 @@ extern class KeyGenerator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : KeyGenerator;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.KeyGenerator;
 	
 	/**
 	* Returns a <code>KeyGenerator</code> object that generates secret keys
@@ -144,7 +144,7 @@ extern class KeyGenerator
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : KeyGenerator;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.KeyGenerator;
 	
 	/**
 	* Returns the provider of this <code>KeyGenerator</code> object.

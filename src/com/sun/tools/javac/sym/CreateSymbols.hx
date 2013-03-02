@@ -25,9 +25,9 @@ package com.sun.tools.javac.sym;
 */
 extern class CreateSymbols extends javax.annotation.processing.AbstractProcessor
 {
-	@:overload override public function process(tes : java.util.Set<javax.lang.model.element.TypeElement>, renv : javax.annotation.processing.RoundEnvironment) : Bool;
+	@:overload public function process(tes : java.util.Set<javax.lang.model.element.TypeElement>, renv : javax.annotation.processing.RoundEnvironment) : Bool;
 	
-	@:overload override public function getSupportedSourceVersion() : javax.lang.model.SourceVersion;
+	@:overload public function getSupportedSourceVersion() : javax.lang.model.SourceVersion;
 	
 	@:overload public static function main(args : java.NativeArray<String>) : Void;
 	

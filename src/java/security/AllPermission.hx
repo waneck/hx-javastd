@@ -48,7 +48,7 @@ extern class AllPermission extends java.security.Permission
 	*
 	* @return return
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two AllPermission objects for equality. Two AllPermission
@@ -57,21 +57,21 @@ extern class AllPermission extends java.security.Permission
 	* @param obj the object we are testing for equality with this object.
 	* @return true if <i>obj</i> is an AllPermission, false otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions.
 	*
 	* @return the actions.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload public function getActions() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing AllPermission
@@ -81,7 +81,7 @@ extern class AllPermission extends java.security.Permission
 	* @return a new PermissionCollection object suitable for
 	* storing AllPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -105,7 +105,7 @@ extern class AllPermission extends java.security.Permission
 	* @exception SecurityException - if this AllPermissionCollection object
 	*                                has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this set of permissions implies the permissions
@@ -115,7 +115,7 @@ extern class AllPermission extends java.security.Permission
 	*
 	* @return always returns true.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the AllPermission objects in the
@@ -123,7 +123,7 @@ extern class AllPermission extends java.security.Permission
 	*
 	* @return an enumeration of all the AllPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

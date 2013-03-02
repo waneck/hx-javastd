@@ -29,25 +29,25 @@ extern class MultipleDocumentHandling extends javax.print.attribute.EnumSyntax i
 	* Single document -- see above for <A HREF="#sdfi">further
 	* information</A>.
 	*/
-	public static var SINGLE_DOCUMENT(default, null) : MultipleDocumentHandling;
+	public static var SINGLE_DOCUMENT(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Separate documents uncollated copies -- see above for
 	* <A HREF="#sducfi">further information</A>.
 	*/
-	public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : MultipleDocumentHandling;
+	public static var SEPARATE_DOCUMENTS_UNCOLLATED_COPIES(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Separate documents collated copies -- see above for
 	* <A HREF="#sdccfi">further information</A>.
 	*/
-	public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : MultipleDocumentHandling;
+	public static var SEPARATE_DOCUMENTS_COLLATED_COPIES(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Single document new sheet -- see above for
 	* <A HREF="#sdnsfi">further information</A>.
 	*/
-	public static var SINGLE_DOCUMENT_NEW_SHEET(default, null) : MultipleDocumentHandling;
+	public static var SINGLE_DOCUMENT_NEW_SHEET(default, null) : javax.print.attribute.standard.MultipleDocumentHandling;
 	
 	/**
 	* Construct a new multiple document handling enumeration value with the
@@ -60,12 +60,12 @@ extern class MultipleDocumentHandling extends javax.print.attribute.EnumSyntax i
 	/**
 	* Returns the string table for class MultipleDocumentHandling.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class MultipleDocumentHandling.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

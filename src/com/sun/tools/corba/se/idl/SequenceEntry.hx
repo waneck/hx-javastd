@@ -41,7 +41,7 @@ extern class SequenceEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	**/
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : SequenceEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.SequenceEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	

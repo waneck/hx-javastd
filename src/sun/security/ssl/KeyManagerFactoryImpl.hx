@@ -32,7 +32,7 @@ package sun.security.ssl;
 	
 	
 }
-@:native('sun$security$ssl$KeyManagerFactoryImpl$SunX509') extern class KeyManagerFactoryImpl_SunX509 extends KeyManagerFactoryImpl
+@:native('sun$security$ssl$KeyManagerFactoryImpl$SunX509') extern class KeyManagerFactoryImpl_SunX509 extends sun.security.ssl.KeyManagerFactoryImpl
 {
 	@:overload override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
@@ -40,7 +40,7 @@ package sun.security.ssl;
 	
 	
 }
-@:native('sun$security$ssl$KeyManagerFactoryImpl$X509') extern class KeyManagerFactoryImpl_X509 extends KeyManagerFactoryImpl
+@:native('sun$security$ssl$KeyManagerFactoryImpl$X509') extern class KeyManagerFactoryImpl_X509 extends sun.security.ssl.KeyManagerFactoryImpl
 {
 	@:overload override private function engineInit(ks : java.security.KeyStore, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	

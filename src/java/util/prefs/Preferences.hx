@@ -80,7 +80,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function userNodeForPackage(c : Class<Dynamic>) : Preferences;
+	@:overload public static function userNodeForPackage(c : Class<Dynamic>) : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the preference node from the system preference tree that is
@@ -122,7 +122,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function systemNodeForPackage(c : Class<Dynamic>) : Preferences;
+	@:overload public static function systemNodeForPackage(c : Class<Dynamic>) : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the root preference node for the calling user.
@@ -132,7 +132,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function userRoot() : Preferences;
+	@:overload public static function userRoot() : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the root preference node for the system.
@@ -142,7 +142,7 @@ extern class Preferences
 	*         it denies <tt>RuntimePermission("preferences")</tt>.
 	* @see    RuntimePermission
 	*/
-	@:overload public static function systemRoot() : Preferences;
+	@:overload public static function systemRoot() : java.util.prefs.Preferences;
 	
 	/**
 	* Sole constructor. (For invocation by subclass constructors, typically
@@ -582,7 +582,7 @@ extern class Preferences
 	* @throws IllegalStateException if this node (or an ancestor) has been
 	*         removed with the {@link #removeNode()} method.
 	*/
-	@:overload @:abstract public function parent() : Preferences;
+	@:overload @:abstract public function parent() : java.util.prefs.Preferences;
 	
 	/**
 	* Returns the named preference node in the same tree as this node,
@@ -606,7 +606,7 @@ extern class Preferences
 	*         removed with the {@link #removeNode()} method.
 	* @see #flush()
 	*/
-	@:overload @:abstract public function node(pathName : String) : Preferences;
+	@:overload @:abstract public function node(pathName : String) : java.util.prefs.Preferences;
 	
 	/**
 	* Returns true if the named preference node exists in the same tree

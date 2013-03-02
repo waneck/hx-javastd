@@ -29,7 +29,7 @@ extern class RootElementSniffer extends org.xml.sax.helpers.DefaultHandler
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function startElement(uri : String, localName : String, qName : String, a : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(uri : String, localName : String, qName : String, a : org.xml.sax.Attributes) : Void;
 	
 	@:overload public function getNsUri() : String;
 	

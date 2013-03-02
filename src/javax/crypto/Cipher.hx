@@ -101,7 +101,7 @@ extern class Cipher
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(transformation : String) : Cipher;
+	@:overload @:final public static function getInstance(transformation : String) : javax.crypto.Cipher;
 	
 	/**
 	* Returns a <code>Cipher</code> object that implements the specified
@@ -142,7 +142,7 @@ extern class Cipher
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(transformation : String, provider : String) : Cipher;
+	@:overload @:final public static function getInstance(transformation : String, provider : String) : javax.crypto.Cipher;
 	
 	/**
 	* Returns a <code>Cipher</code> object that implements the specified
@@ -177,7 +177,7 @@ extern class Cipher
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(transformation : String, provider : java.security.Provider) : Cipher;
+	@:overload @:final public static function getInstance(transformation : String, provider : java.security.Provider) : javax.crypto.Cipher;
 	
 	/**
 	* Returns the provider of this <code>Cipher</code> object.

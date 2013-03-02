@@ -40,7 +40,7 @@ extern class AWTUtilities
 	*                         TRANSLUCENT, or PERPIXEL_TRANSLUCENT)
 	* @return whether the given translucency kind is supported
 	*/
-	@:overload public static function isTranslucencySupported(translucencyKind : AWTUtilities_Translucency) : Bool;
+	@:overload public static function isTranslucencySupported(translucencyKind : com.sun.awt.AWTUtilities.AWTUtilities_Translucency) : Bool;
 	
 	/**
 	* Set the opacity of the window. The opacity is at the range [0..1].

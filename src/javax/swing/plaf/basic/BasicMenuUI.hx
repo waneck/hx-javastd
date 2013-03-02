@@ -146,13 +146,13 @@ extern class BasicMenuUI extends javax.swing.plaf.basic.BasicMenuItemUI
 {
 	public var menu : javax.swing.JMenu;
 	
-	public var ui : BasicMenuUI;
+	public var ui : javax.swing.plaf.basic.BasicMenuUI;
 	
 	public var isSelected : Bool;
 	
 	public var wasFocused : java.awt.Component;
 	
-	@:overload public function new(m : javax.swing.JMenu, ui : BasicMenuUI) : Void;
+	@:overload public function new(m : javax.swing.JMenu, ui : javax.swing.plaf.basic.BasicMenuUI) : Void;
 	
 	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	

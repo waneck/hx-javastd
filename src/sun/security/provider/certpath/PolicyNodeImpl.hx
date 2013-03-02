@@ -40,7 +40,7 @@ package sun.security.provider.certpath;
 {
 	@:overload public function getParent() : java.security.cert.PolicyNode;
 	
-	@:overload public function getChildren() : java.util.Iterator<PolicyNodeImpl>;
+	@:overload public function getChildren() : java.util.Iterator<sun.security.provider.certpath.PolicyNodeImpl>;
 	
 	@:overload public function getDepth() : Int;
 	

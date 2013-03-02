@@ -420,7 +420,7 @@ extern class Message
 	* The restrictions placed on the use of copied {@link Message} can be
 	* relaxed if necessary, but it will make the copy method more expensive.
 	*/
-	@:overload @:abstract public function copy() : Message;
+	@:overload @:abstract public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
 	/**
 	* Retuns a unique id for the message. The id can be used for various things,

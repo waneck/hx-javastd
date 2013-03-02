@@ -66,7 +66,7 @@ extern class DatatypeLibraryLoader implements org.relaxng.datatype.DatatypeLibra
 {
 	
 }
-@:native('org$relaxng$datatype$helpers$DatatypeLibraryLoader$Service$Loader2') @:internal extern class DatatypeLibraryLoader_Service_Loader2 extends DatatypeLibraryLoader_Service_Loader
+@:native('org$relaxng$datatype$helpers$DatatypeLibraryLoader$Service$Loader2') @:internal extern class DatatypeLibraryLoader_Service_Loader2 extends org.relaxng.datatype.helpers.DatatypeLibraryLoader.DatatypeLibraryLoader_Service_Loader
 {
 	
 }

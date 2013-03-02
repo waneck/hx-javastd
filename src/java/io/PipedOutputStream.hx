@@ -91,7 +91,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedInputStream) unconnected},
 	*          closed, or if an I/O error occurs.
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> bytes from the specified byte array
@@ -106,7 +106,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedInputStream) unconnected},
 	*          closed, or if an I/O error occurs.
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this output stream and forces any buffered output bytes
@@ -115,7 +115,7 @@ package java.io;
 	*
 	* @exception IOException if an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function flush() : Void;
+	@:overload @:synchronized public function flush() : Void;
 	
 	/**
 	* Closes this piped output stream and releases any system resources
@@ -124,7 +124,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

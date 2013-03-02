@@ -47,7 +47,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Type') extern class DelayedRef_Type extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Type
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Type') extern class DelayedRef_Type extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Type
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -59,7 +59,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$SimpleType') extern class DelayedRef_SimpleType extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$SimpleType') extern class DelayedRef_SimpleType extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_SimpleType
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -71,7 +71,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$ComplexType') extern class DelayedRef_ComplexType extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_ComplexType
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$ComplexType') extern class DelayedRef_ComplexType extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_ComplexType
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -83,7 +83,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Element') extern class DelayedRef_Element extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Element
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Element') extern class DelayedRef_Element extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Element
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -97,7 +97,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$ModelGroup') extern class DelayedRef_ModelGroup extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Term
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$ModelGroup') extern class DelayedRef_ModelGroup extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Term
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -111,7 +111,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$AttGroup') extern class DelayedRef_AttGroup extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_AttGroup
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$AttGroup') extern class DelayedRef_AttGroup extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_AttGroup
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -123,7 +123,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Attribute') extern class DelayedRef_Attribute extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Attribute
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$Attribute') extern class DelayedRef_Attribute extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_Attribute
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -135,7 +135,7 @@ extern class DelayedRef implements com.sun.xml.internal.xsom.impl.parser.Patch
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$IdentityConstraint') extern class DelayedRef_IdentityConstraint extends DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_IdentityConstraint
+@:native('com$sun$xml$internal$xsom$impl$parser$DelayedRef$IdentityConstraint') extern class DelayedRef_IdentityConstraint extends com.sun.xml.internal.xsom.impl.parser.DelayedRef implements com.sun.xml.internal.xsom.impl.Ref.Ref_IdentityConstraint
 {
 	@:overload public function new(manager : com.sun.xml.internal.xsom.impl.parser.PatcherManager, loc : org.xml.sax.Locator, schema : com.sun.xml.internal.xsom.impl.SchemaImpl, name : com.sun.xml.internal.xsom.impl.UName) : Void;
 	

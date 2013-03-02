@@ -25,15 +25,15 @@ package com.sun.media.sound;
 */
 extern class AudioFloatInputStream
 {
-	@:overload public static function getInputStream(url : java.net.URL) : AudioFloatInputStream;
+	@:overload public static function getInputStream(url : java.net.URL) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(file : java.io.File) : AudioFloatInputStream;
+	@:overload public static function getInputStream(file : java.io.File) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(stream : java.io.InputStream) : AudioFloatInputStream;
+	@:overload public static function getInputStream(stream : java.io.InputStream) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(stream : javax.sound.sampled.AudioInputStream) : AudioFloatInputStream;
+	@:overload public static function getInputStream(stream : javax.sound.sampled.AudioInputStream) : com.sun.media.sound.AudioFloatInputStream;
 	
-	@:overload public static function getInputStream(format : javax.sound.sampled.AudioFormat, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : AudioFloatInputStream;
+	@:overload public static function getInputStream(format : javax.sound.sampled.AudioFormat, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : com.sun.media.sound.AudioFloatInputStream;
 	
 	@:overload @:abstract public function getFormat() : javax.sound.sampled.AudioFormat;
 	
@@ -65,7 +65,7 @@ extern class AudioFloatInputStream
 *
 * @author Karl Helgason
 */
-@:native('com$sun$media$sound$AudioFloatInputStream$BytaArrayAudioFloatInputStream') @:internal extern class AudioFloatInputStream_BytaArrayAudioFloatInputStream extends AudioFloatInputStream
+@:native('com$sun$media$sound$AudioFloatInputStream$BytaArrayAudioFloatInputStream') @:internal extern class AudioFloatInputStream_BytaArrayAudioFloatInputStream extends com.sun.media.sound.AudioFloatInputStream
 {
 	@:overload public function new(converter : com.sun.media.sound.AudioFloatConverter, buffer : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
@@ -89,7 +89,7 @@ extern class AudioFloatInputStream
 	
 	
 }
-@:native('com$sun$media$sound$AudioFloatInputStream$DirectAudioFloatInputStream') @:internal extern class AudioFloatInputStream_DirectAudioFloatInputStream extends AudioFloatInputStream
+@:native('com$sun$media$sound$AudioFloatInputStream$DirectAudioFloatInputStream') @:internal extern class AudioFloatInputStream_DirectAudioFloatInputStream extends com.sun.media.sound.AudioFloatInputStream
 {
 	@:overload public function new(stream : javax.sound.sampled.AudioInputStream) : Void;
 	

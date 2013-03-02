@@ -45,7 +45,7 @@ extern class BasicTextPaneUI extends javax.swing.plaf.basic.BasicEditorPaneUI
 	* @param c the JTextPane object
 	* @return the UI
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates a new BasicTextPaneUI.

@@ -35,11 +35,11 @@ extern class CommonResourceBundle extends com.sun.xml.internal.fastinfoset.Abstr
 	
 	@:overload private function new(locale : java.util.Locale) : Void;
 	
-	@:overload public static function getInstance() : CommonResourceBundle;
+	@:overload public static function getInstance() : com.sun.xml.internal.fastinfoset.CommonResourceBundle;
 	
-	@:overload public static function getInstance(locale : java.util.Locale) : CommonResourceBundle;
+	@:overload public static function getInstance(locale : java.util.Locale) : com.sun.xml.internal.fastinfoset.CommonResourceBundle;
 	
-	@:overload override public function getBundle() : java.util.ResourceBundle;
+	@:overload public function getBundle() : java.util.ResourceBundle;
 	
 	@:overload public function getBundle(locale : java.util.Locale) : java.util.ResourceBundle;
 	

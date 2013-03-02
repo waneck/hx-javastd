@@ -215,146 +215,146 @@ extern class SystemColor extends java.awt.Color implements java.io.Serializable
 	/**
 	* The color rendered for the background of the desktop.
 	*/
-	public static var desktop(default, null) : SystemColor;
+	public static var desktop(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the window-title background of the currently active window.
 	*/
-	public static var activeCaption(default, null) : SystemColor;
+	public static var activeCaption(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the window-title text of the currently active window.
 	*/
-	public static var activeCaptionText(default, null) : SystemColor;
+	public static var activeCaptionText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the border around the currently active window.
 	*/
-	public static var activeCaptionBorder(default, null) : SystemColor;
+	public static var activeCaptionBorder(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the window-title background of inactive windows.
 	*/
-	public static var inactiveCaption(default, null) : SystemColor;
+	public static var inactiveCaption(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the window-title text of inactive windows.
 	*/
-	public static var inactiveCaptionText(default, null) : SystemColor;
+	public static var inactiveCaptionText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the border around inactive windows.
 	*/
-	public static var inactiveCaptionBorder(default, null) : SystemColor;
+	public static var inactiveCaptionBorder(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the background of interior regions inside windows.
 	*/
-	public static var window(default, null) : SystemColor;
+	public static var window(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the border around interior regions inside windows.
 	*/
-	public static var windowBorder(default, null) : SystemColor;
+	public static var windowBorder(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for text of interior regions inside windows.
 	*/
-	public static var windowText(default, null) : SystemColor;
+	public static var windowText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the background of menus.
 	*/
-	public static var menu(default, null) : SystemColor;
+	public static var menu(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the text of menus.
 	*/
-	public static var menuText(default, null) : SystemColor;
+	public static var menuText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the background of text control objects, such as
 	* textfields and comboboxes.
 	*/
-	public static var text(default, null) : SystemColor;
+	public static var text(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the text of text control objects, such as textfields
 	* and comboboxes.
 	*/
-	public static var textText(default, null) : SystemColor;
+	public static var textText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the background of selected items, such as in menus,
 	* comboboxes, and text.
 	*/
-	public static var textHighlight(default, null) : SystemColor;
+	public static var textHighlight(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the text of selected items, such as in menus, comboboxes,
 	* and text.
 	*/
-	public static var textHighlightText(default, null) : SystemColor;
+	public static var textHighlightText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the text of inactive items, such as in menus.
 	*/
-	public static var textInactiveText(default, null) : SystemColor;
+	public static var textInactiveText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the background of control panels and control objects,
 	* such as pushbuttons.
 	*/
-	public static var control(default, null) : SystemColor;
+	public static var control(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the text of control panels and control objects,
 	* such as pushbuttons.
 	*/
-	public static var controlText(default, null) : SystemColor;
+	public static var controlText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for light areas of 3D control objects, such as pushbuttons.
 	* This color is typically derived from the <code>control</code> background color
 	* to provide a 3D effect.
 	*/
-	public static var controlHighlight(default, null) : SystemColor;
+	public static var controlHighlight(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for highlight areas of 3D control objects, such as pushbuttons.
 	* This color is typically derived from the <code>control</code> background color
 	* to provide a 3D effect.
 	*/
-	public static var controlLtHighlight(default, null) : SystemColor;
+	public static var controlLtHighlight(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for shadow areas of 3D control objects, such as pushbuttons.
 	* This color is typically derived from the <code>control</code> background color
 	* to provide a 3D effect.
 	*/
-	public static var controlShadow(default, null) : SystemColor;
+	public static var controlShadow(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for dark shadow areas on 3D control objects, such as pushbuttons.
 	* This color is typically derived from the <code>control</code> background color
 	* to provide a 3D effect.
 	*/
-	public static var controlDkShadow(default, null) : SystemColor;
+	public static var controlDkShadow(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the background of scrollbars.
 	*/
-	public static var scrollbar(default, null) : SystemColor;
+	public static var scrollbar(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the background of tooltips or spot help.
 	*/
-	public static var info(default, null) : SystemColor;
+	public static var info(default, null) : java.awt.SystemColor;
 	
 	/**
 	* The color rendered for the text of tooltips or spot help.
 	*/
-	public static var infoText(default, null) : SystemColor;
+	public static var infoText(default, null) : java.awt.SystemColor;
 	
 	/**
 	* Returns a string representation of this <code>Color</code>'s values.
@@ -365,7 +365,7 @@ extern class SystemColor extends java.awt.Color implements java.io.Serializable
 	*
 	* @return  a string representation of this <code>Color</code>
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

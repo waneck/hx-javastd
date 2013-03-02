@@ -86,9 +86,9 @@ extern class MBeanListener<T> implements javax.management.NotificationListener
 /** Callback interface.  */
 @:native('com$sun$org$glassfish$external$amx$MBeanListener$Callback') extern interface MBeanListener_Callback
 {
-	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : MBeanListener<Dynamic>) : Void;
+	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
-	@:overload public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : MBeanListener<Dynamic>) : Void;
+	@:overload public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }
@@ -96,7 +96,7 @@ extern class MBeanListener<T> implements javax.management.NotificationListener
 Default callback implementation, can be subclassed if needed
 Remembers only the last MBean that was seen.
 */
-@:native('com$sun$org$glassfish$external$amx$MBeanListener$CallbackImpl') extern class MBeanListener_CallbackImpl implements MBeanListener_Callback
+@:native('com$sun$org$glassfish$external$amx$MBeanListener$CallbackImpl') extern class MBeanListener_CallbackImpl implements com.sun.org.glassfish.external.amx.MBeanListener.MBeanListener_Callback
 {
 	@:overload public function new() : Void;
 	
@@ -114,9 +114,9 @@ Remembers only the last MBean that was seen.
 	*/
 	@:overload public function await() : Void;
 	
-	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : MBeanListener<Dynamic>) : Void;
+	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
-	@:overload public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : MBeanListener<Dynamic>) : Void;
+	@:overload public function mbeanUnregistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }

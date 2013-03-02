@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class SimpleClassTypeSignature implements sun.reflect.generics.tree.FieldTypeSignature
 {
-	@:overload public static function make(n : String, dollar : Bool, tas : java.NativeArray<sun.reflect.generics.tree.TypeArgument>) : SimpleClassTypeSignature;
+	@:overload public static function make(n : String, dollar : Bool, tas : java.NativeArray<sun.reflect.generics.tree.TypeArgument>) : sun.reflect.generics.tree.SimpleClassTypeSignature;
 	
 	/*
 	* Should a '$' be used instead of '.' to separate this component

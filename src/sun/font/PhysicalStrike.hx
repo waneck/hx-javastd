@@ -51,7 +51,7 @@ extern class PhysicalStrike extends sun.font.FontStrike
 	/* A number of methods are delegated by the strike to the scaler
 	* context which is a shared resource on a physical font.
 	*/
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload public function getNumGlyphs() : Int;
 	
 	@:overload private function adjustPoint(pt : java.awt.geom.Point2D.Point2D_Float) : Void;
 	

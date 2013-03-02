@@ -37,7 +37,7 @@ extern class MetalScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 	
 	private var isFreeStanding : Bool;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override private function installDefaults() : Void;
 	

@@ -53,9 +53,9 @@ extern class TransferableProxy implements java.awt.datatransfer.Transferable
 {
 	@:overload public function new(os : java.io.OutputStream) : Void;
 	
-	@:overload override private function annotateClass(cl : Class<Dynamic>) : Void;
+	@:overload private function annotateClass(cl : Class<Dynamic>) : Void;
 	
-	@:overload override private function annotateProxyClass(cl : Class<Dynamic>) : Void;
+	@:overload private function annotateProxyClass(cl : Class<Dynamic>) : Void;
 	
 	@:overload public function getClassLoaderMap() : java.util.Map<java.util.Set<String>, java.lang.ClassLoader>;
 	

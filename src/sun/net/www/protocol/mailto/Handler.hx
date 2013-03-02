@@ -87,7 +87,7 @@ extern class Handler extends java.net.URLStreamHandler
 //      return null;
 //     }
 	*/
-	@:overload @:synchronized override public function openConnection(u : java.net.URL) : sun.net.www.URLConnection;
+	@:overload @:synchronized public function openConnection(u : java.net.URL) : sun.net.www.URLConnection;
 	
 	/**
 	* This method is called to parse the string spec into URL u for a
@@ -99,7 +99,7 @@ extern class Handler extends java.net.URLStreamHandler
 	*          just past the ':'.
 	* @param   limit the character position to stop parsing at.
 	*/
-	@:overload override public function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
+	@:overload public function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
 	
 	
 }

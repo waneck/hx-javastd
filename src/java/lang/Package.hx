@@ -139,7 +139,7 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* @return the package of the requested name. It may be null if no package
 	*          information is available from the archive or codebase.
 	*/
-	@:overload public static function getPackage(name : String) : Package;
+	@:overload public static function getPackage(name : String) : java.lang.Package;
 	
 	/**
 	* Get all the packages currently known for the caller's {@code ClassLoader}
@@ -153,7 +153,7 @@ extern class Package implements java.lang.reflect.AnnotatedElement
 	* @return a new array of packages known to the callers {@code ClassLoader}
 	* instance.  An zero length array is returned if none are known.
 	*/
-	@:overload public static function getPackages() : java.NativeArray<Package>;
+	@:overload public static function getPackages() : java.NativeArray<java.lang.Package>;
 	
 	/**
 	* Return the hash code computed from the package name.

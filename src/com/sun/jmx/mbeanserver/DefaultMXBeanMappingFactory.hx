@@ -26,7 +26,7 @@ package com.sun.jmx.mbeanserver;
 extern class DefaultMXBeanMappingFactory extends com.sun.jmx.mbeanserver.MXBeanMappingFactory
 {
 	/** Get the converter for the given Java type, creating it if necessary. */
-	@:overload @:synchronized override public function mappingForType(objType : java.lang.reflect.Type, factory : com.sun.jmx.mbeanserver.MXBeanMappingFactory) : com.sun.jmx.mbeanserver.MXBeanMapping;
+	@:overload @:synchronized public function mappingForType(objType : java.lang.reflect.Type, factory : com.sun.jmx.mbeanserver.MXBeanMappingFactory) : com.sun.jmx.mbeanserver.MXBeanMapping;
 	
 	/**
 	* Utility method to take a string and convert it to normal Java variable
@@ -90,9 +90,9 @@ extern class DefaultMXBeanMappingFactory extends com.sun.jmx.mbeanserver.MXBeanM
 */
 @:require(java6) @:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$NonNullMXBeanMapping') @:internal extern class DefaultMXBeanMappingFactory_NonNullMXBeanMapping extends com.sun.jmx.mbeanserver.MXBeanMapping
 {
-	@:overload @:final override public function fromOpenValue(openValue : Dynamic) : Dynamic;
+	@:overload @:final public function fromOpenValue(openValue : Dynamic) : Dynamic;
 	
-	@:overload @:final override public function toOpenValue(javaValue : Dynamic) : Dynamic;
+	@:overload @:final public function toOpenValue(javaValue : Dynamic) : Dynamic;
 	
 	
 }
@@ -106,39 +106,39 @@ and for an any-dimension array of those.  It is also true for
 primitive types as of JMX 1.3, since an int[]
 can be directly represented by an ArrayType, and an int needs no mapping
 because reflection takes care of it.  */
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$IdentityMapping') @:internal extern class DefaultMXBeanMappingFactory_IdentityMapping extends DefaultMXBeanMappingFactory_NonNullMXBeanMapping
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$IdentityMapping') @:internal extern class DefaultMXBeanMappingFactory_IdentityMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
 	
 }
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$EnumMapping') @:internal extern class DefaultMXBeanMappingFactory_EnumMapping<T> extends DefaultMXBeanMappingFactory_NonNullMXBeanMapping
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$EnumMapping') @:internal extern class DefaultMXBeanMappingFactory_EnumMapping<T> extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
 	
 }
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$ArrayMapping') @:internal extern class DefaultMXBeanMappingFactory_ArrayMapping extends DefaultMXBeanMappingFactory_NonNullMXBeanMapping
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$ArrayMapping') @:internal extern class DefaultMXBeanMappingFactory_ArrayMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload override public function checkReconstructible() : Void;
+	@:overload public function checkReconstructible() : Void;
 	
 	
 }
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CollectionMapping') @:internal extern class DefaultMXBeanMappingFactory_CollectionMapping extends DefaultMXBeanMappingFactory_NonNullMXBeanMapping
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CollectionMapping') @:internal extern class DefaultMXBeanMappingFactory_CollectionMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload override public function checkReconstructible() : Void;
+	@:overload public function checkReconstructible() : Void;
 	
 	
 }
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$MXBeanRefMapping') @:internal extern class DefaultMXBeanMappingFactory_MXBeanRefMapping extends DefaultMXBeanMappingFactory_NonNullMXBeanMapping
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$MXBeanRefMapping') @:internal extern class DefaultMXBeanMappingFactory_MXBeanRefMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
 	
 }
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$TabularMapping') @:internal extern class DefaultMXBeanMappingFactory_TabularMapping extends DefaultMXBeanMappingFactory_NonNullMXBeanMapping
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$TabularMapping') @:internal extern class DefaultMXBeanMappingFactory_TabularMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload override public function checkReconstructible() : Void;
+	@:overload public function checkReconstructible() : Void;
 	
 	
 }
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeMapping') @:internal extern class DefaultMXBeanMappingFactory_CompositeMapping extends DefaultMXBeanMappingFactory_NonNullMXBeanMapping
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeMapping') @:internal extern class DefaultMXBeanMappingFactory_CompositeMapping extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_NonNullMXBeanMapping
 {
-	@:overload override public function checkReconstructible() : Void;
+	@:overload public function checkReconstructible() : Void;
 	
 	
 }
@@ -149,7 +149,7 @@ because reflection takes care of it.  */
 }
 /** Builder for when the target class has a method "public static
 from(CompositeData)".  */
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaFrom') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaFrom extends DefaultMXBeanMappingFactory_CompositeBuilder
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaFrom') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaFrom extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_CompositeBuilder
 {
 	
 }
@@ -163,19 +163,19 @@ candidate builders.  Instead, the "applicable" method will return
 an explanatory string, and the other builders will be skipped.
 If all the getters are OK, then the "applicable" method will return
 an empty string and the other builders will be tried.  */
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderCheckGetters') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderCheckGetters extends DefaultMXBeanMappingFactory_CompositeBuilder
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderCheckGetters') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderCheckGetters extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_CompositeBuilder
 {
 	
 }
 /** Builder for when the target class has a setter for every getter. */
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaSetters') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaSetters extends DefaultMXBeanMappingFactory_CompositeBuilder
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaSetters') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaSetters extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_CompositeBuilder
 {
 	
 }
 /** Builder for when the target class has a constructor that is
 annotated with @ConstructorProperties so we can see the correspondence
 to getters.  */
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaConstructor') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaConstructor extends DefaultMXBeanMappingFactory_CompositeBuilder
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaConstructor') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaConstructor extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_CompositeBuilder
 {
 	
 }
@@ -187,7 +187,7 @@ to getters.  */
 no methods other than getters.  Then we can make an instance
 using a dynamic proxy that forwards the getters to the source
 CompositeData.  */
-@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaProxy') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaProxy extends DefaultMXBeanMappingFactory_CompositeBuilder
+@:native('com$sun$jmx$mbeanserver$DefaultMXBeanMappingFactory$CompositeBuilderViaProxy') @:internal extern class DefaultMXBeanMappingFactory_CompositeBuilderViaProxy extends com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory.DefaultMXBeanMappingFactory_CompositeBuilder
 {
 	
 }

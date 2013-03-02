@@ -80,7 +80,7 @@ package java.lang.ref;
 	
 	
 }
-@:native('java$lang$ref$ReferenceQueue$Null') @:internal extern class ReferenceQueue_Null extends ReferenceQueue<Dynamic>
+@:native('java$lang$ref$ReferenceQueue$Null') @:internal extern class ReferenceQueue_Null extends java.lang.ref.ReferenceQueue<Dynamic>
 {
 	
 }

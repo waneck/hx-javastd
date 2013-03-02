@@ -25,7 +25,7 @@ package javax.swing.colorchooser;
 */
 @:internal extern class DiagramComponent extends javax.swing.JComponent implements java.awt.event.MouseListener implements java.awt.event.MouseMotionListener
 {
-	@:overload override private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	@:overload public function mousePressed(event : java.awt.event.MouseEvent) : Void;
 	

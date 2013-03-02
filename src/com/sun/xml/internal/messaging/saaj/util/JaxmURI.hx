@@ -38,7 +38,7 @@ extern class JaxmURI implements java.io.Serializable
 	*
 	* @param p_other the URI to copy (cannot be null)
 	*/
-	@:overload public function new(p_other : JaxmURI) : Void;
+	@:overload public function new(p_other : com.sun.xml.internal.messaging.saaj.util.JaxmURI) : Void;
 	
 	/**
 	* Construct a new URI from a URI specification string. If the
@@ -69,7 +69,7 @@ extern class JaxmURI implements java.io.Serializable
 	* @exception MalformedURIException if p_uriSpec violates any syntax
 	*                                  rules
 	*/
-	@:overload public function new(p_base : JaxmURI, p_uriSpec : String) : Void;
+	@:overload public function new(p_base : com.sun.xml.internal.messaging.saaj.util.JaxmURI, p_uriSpec : String) : Void;
 	
 	/**
 	* Construct a new URI that does not follow the generic URI syntax.

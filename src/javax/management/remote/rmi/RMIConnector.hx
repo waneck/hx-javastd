@@ -198,15 +198,15 @@ extern class RMIConnector implements javax.management.remote.JMXConnector implem
 {
 	@:overload public function new(period : haxe.Int64) : Void;
 	
-	@:overload override public function gotIOException(ioe : java.io.IOException) : Void;
+	@:overload public function gotIOException(ioe : java.io.IOException) : Void;
 	
 	@:overload public function reconnectNotificationListeners(old : java.NativeArray<com.sun.jmx.remote.internal.ClientListenerInfo>) : Void;
 	
-	@:overload override private function checkConnection() : Void;
+	@:overload private function checkConnection() : Void;
 	
-	@:overload override private function doStart() : Void;
+	@:overload private function doStart() : Void;
 	
-	@:overload override private function doStop() : Void;
+	@:overload private function doStop() : Void;
 	
 	
 }

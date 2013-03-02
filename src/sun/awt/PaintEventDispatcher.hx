@@ -30,7 +30,7 @@ extern class PaintEventDispatcher
 	*
 	* @param dispatcher PaintEventDispatcher
 	*/
-	@:overload public static function setPaintEventDispatcher(dispatcher : PaintEventDispatcher) : Void;
+	@:overload public static function setPaintEventDispatcher(dispatcher : sun.awt.PaintEventDispatcher) : Void;
 	
 	/**
 	* Returns the currently active <code>PaintEventDispatcher</code>.  This
@@ -38,7 +38,7 @@ extern class PaintEventDispatcher
 	*
 	* @return PaintEventDispatcher
 	*/
-	@:overload public static function getPaintEventDispatcher() : PaintEventDispatcher;
+	@:overload public static function getPaintEventDispatcher() : sun.awt.PaintEventDispatcher;
 	
 	/**
 	* Creates and returns the <code>PaintEvent</code> that should be

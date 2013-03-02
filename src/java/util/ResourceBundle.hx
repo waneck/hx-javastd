@@ -44,7 +44,7 @@ extern class ResourceBundle
 	* The parent bundle is searched by {@link #getObject getObject}
 	* when this bundle does not contain a particular resource.
 	*/
-	private var parent : ResourceBundle;
+	private var parent : java.util.ResourceBundle;
 	
 	/**
 	* Sole constructor.  (For invocation by subclass constructors, typically
@@ -113,7 +113,7 @@ extern class ResourceBundle
 	*
 	* @param parent this bundle's parent bundle.
 	*/
-	@:overload private function setParent(parent : ResourceBundle) : Void;
+	@:overload private function setParent(parent : java.util.ResourceBundle) : Void;
 	
 	/**
 	* Gets a resource bundle using the specified base name, the default locale,
@@ -133,7 +133,7 @@ extern class ResourceBundle
 	*     if no resource bundle for the specified base name can be found
 	* @return a resource bundle for the given base name and the default locale
 	*/
-	@:overload @:final public static function getBundle(baseName : String) : ResourceBundle;
+	@:overload @:final public static function getBundle(baseName : String) : java.util.ResourceBundle;
 	
 	/**
 	* Returns a resource bundle using the specified base name, the
@@ -169,7 +169,7 @@ extern class ResourceBundle
 	*        needed.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getBundle(baseName : String, control : ResourceBundle_Control) : ResourceBundle;
+	@:require(java6) @:overload @:final public static function getBundle(baseName : String, control : java.util.ResourceBundle.ResourceBundle_Control) : java.util.ResourceBundle;
 	
 	/**
 	* Gets a resource bundle using the specified base name and locale,
@@ -192,7 +192,7 @@ extern class ResourceBundle
 	*        if no resource bundle for the specified base name can be found
 	* @return a resource bundle for the given base name and locale
 	*/
-	@:overload @:final public static function getBundle(baseName : String, locale : java.util.Locale) : ResourceBundle;
+	@:overload @:final public static function getBundle(baseName : String, locale : java.util.Locale) : java.util.ResourceBundle;
 	
 	/**
 	* Returns a resource bundle using the specified base name, target
@@ -231,7 +231,7 @@ extern class ResourceBundle
 	*        needed.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public static function getBundle(baseName : String, targetLocale : java.util.Locale, control : ResourceBundle_Control) : ResourceBundle;
+	@:require(java6) @:overload @:final public static function getBundle(baseName : String, targetLocale : java.util.Locale, control : java.util.ResourceBundle.ResourceBundle_Control) : java.util.ResourceBundle;
 	
 	/**
 	* Gets a resource bundle using the specified base name, locale, and class
@@ -408,7 +408,7 @@ extern class ResourceBundle
 	*        if no resource bundle for the specified base name can be found
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function getBundle(baseName : String, locale : java.util.Locale, loader : java.lang.ClassLoader) : ResourceBundle;
+	@:require(java2) @:overload public static function getBundle(baseName : String, locale : java.util.Locale, loader : java.lang.ClassLoader) : java.util.ResourceBundle;
 	
 	/**
 	* Returns a resource bundle using the specified base name, target
@@ -620,7 +620,7 @@ extern class ResourceBundle
 	*        needed.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getBundle(baseName : String, targetLocale : java.util.Locale, loader : java.lang.ClassLoader, control : ResourceBundle_Control) : ResourceBundle;
+	@:require(java6) @:overload public static function getBundle(baseName : String, targetLocale : java.util.Locale, loader : java.lang.ClassLoader, control : java.util.ResourceBundle.ResourceBundle_Control) : java.util.ResourceBundle;
 	
 	/**
 	* Removes all resource bundles from the cache that have been loaded
@@ -745,7 +745,7 @@ extern class ResourceBundle
 */
 @:native('java$util$ResourceBundle$CacheKeyReference') @:internal extern interface ResourceBundle_CacheKeyReference
 {
-	@:overload public function getCacheKey() : ResourceBundle_CacheKey;
+	@:overload public function getCacheKey() : java.util.ResourceBundle.ResourceBundle_CacheKey;
 	
 	
 }
@@ -754,9 +754,9 @@ extern class ResourceBundle
 * garbage collected when nobody else is using them. The ResourceBundle
 * class has no reason to keep class loaders alive.
 */
-@:native('java$util$ResourceBundle$LoaderReference') @:internal extern class ResourceBundle_LoaderReference extends java.lang.ref.WeakReference<java.lang.ClassLoader> implements ResourceBundle_CacheKeyReference
+@:native('java$util$ResourceBundle$LoaderReference') @:internal extern class ResourceBundle_LoaderReference extends java.lang.ref.WeakReference<java.lang.ClassLoader> implements java.util.ResourceBundle.ResourceBundle_CacheKeyReference
 {
-	@:overload public function getCacheKey() : ResourceBundle_CacheKey;
+	@:overload public function getCacheKey() : java.util.ResourceBundle.ResourceBundle_CacheKey;
 	
 	
 }
@@ -764,9 +764,9 @@ extern class ResourceBundle
 * References to bundles are soft references so that they can be garbage
 * collected when they have no hard references.
 */
-@:native('java$util$ResourceBundle$BundleReference') @:internal extern class ResourceBundle_BundleReference extends java.lang.ref.SoftReference<ResourceBundle> implements ResourceBundle_CacheKeyReference
+@:native('java$util$ResourceBundle$BundleReference') @:internal extern class ResourceBundle_BundleReference extends java.lang.ref.SoftReference<java.util.ResourceBundle> implements java.util.ResourceBundle.ResourceBundle_CacheKeyReference
 {
-	@:overload public function getCacheKey() : ResourceBundle_CacheKey;
+	@:overload public function getCacheKey() : java.util.ResourceBundle.ResourceBundle_CacheKey;
 	
 	
 }
@@ -992,7 +992,7 @@ extern class ResourceBundle
 	* @exception IllegalArgumentException
 	*        if <code>formats</code> is unknown
 	*/
-	@:overload @:final public static function getControl(formats : java.util.List<String>) : ResourceBundle_Control;
+	@:overload @:final public static function getControl(formats : java.util.List<String>) : java.util.ResourceBundle.ResourceBundle_Control;
 	
 	/**
 	* Returns a <code>ResourceBundle.Control</code> in which the {@link
@@ -1016,7 +1016,7 @@ extern class ResourceBundle
 	* @exception IllegalArgumentException
 	*        if <code>formats</code> is unknown
 	*/
-	@:overload @:final public static function getNoFallbackControl(formats : java.util.List<String>) : ResourceBundle_Control;
+	@:overload @:final public static function getNoFallbackControl(formats : java.util.List<String>) : java.util.ResourceBundle.ResourceBundle_Control;
 	
 	/**
 	* Returns a <code>List</code> of <code>String</code>s containing
@@ -1370,7 +1370,7 @@ extern class ResourceBundle
 	*        if an error occurred when reading resources using
 	*        any I/O operations
 	*/
-	@:overload public function newBundle(baseName : String, locale : java.util.Locale, format : String, loader : java.lang.ClassLoader, reload : Bool) : ResourceBundle;
+	@:overload public function newBundle(baseName : String, locale : java.util.Locale, format : String, loader : java.lang.ClassLoader, reload : Bool) : java.util.ResourceBundle;
 	
 	/**
 	* Returns the time-to-live (TTL) value for resource bundles that
@@ -1468,7 +1468,7 @@ extern class ResourceBundle
 	*        <code>format</code>, <code>loader</code>, or
 	*        <code>bundle</code> is <code>null</code>
 	*/
-	@:overload public function needsReload(baseName : String, locale : java.util.Locale, format : String, loader : java.lang.ClassLoader, bundle : ResourceBundle, loadTime : haxe.Int64) : Bool;
+	@:overload public function needsReload(baseName : String, locale : java.util.Locale, format : String, loader : java.lang.ClassLoader, bundle : java.util.ResourceBundle, loadTime : haxe.Int64) : Bool;
 	
 	/**
 	* Converts the given <code>baseName</code> and <code>locale</code>
@@ -1544,7 +1544,7 @@ extern class ResourceBundle
 	
 	
 }
-@:native('java$util$ResourceBundle$SingleFormatControl') @:internal extern class ResourceBundle_SingleFormatControl extends ResourceBundle_Control
+@:native('java$util$ResourceBundle$SingleFormatControl') @:internal extern class ResourceBundle_SingleFormatControl extends java.util.ResourceBundle.ResourceBundle_Control
 {
 	@:overload private function new(formats : java.util.List<String>) : Void;
 	
@@ -1552,7 +1552,7 @@ extern class ResourceBundle
 	
 	
 }
-@:native('java$util$ResourceBundle$NoFallbackControl') @:internal extern class ResourceBundle_NoFallbackControl extends ResourceBundle_SingleFormatControl
+@:native('java$util$ResourceBundle$NoFallbackControl') @:internal extern class ResourceBundle_NoFallbackControl extends java.util.ResourceBundle.ResourceBundle_SingleFormatControl
 {
 	@:overload private function new(formats : java.util.List<String>) : Void;
 	

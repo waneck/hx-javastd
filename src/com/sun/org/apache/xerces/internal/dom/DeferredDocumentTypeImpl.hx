@@ -30,7 +30,7 @@ extern class DeferredDocumentTypeImpl extends com.sun.org.apache.xerces.internal
 	@:overload override private function synchronizeData() : Void;
 	
 	/** Synchronizes the entities, notations, and elements. */
-	@:overload override private function synchronizeChildren() : Void;
+	@:overload private function synchronizeChildren() : Void;
 	
 	
 }

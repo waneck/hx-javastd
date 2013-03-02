@@ -74,7 +74,7 @@ extern class Snapshot
 	*/
 	@:overload public function resolve(calculateRefs : Bool) : Void;
 	
-	@:overload public function markNewRelativeTo(baseline : Snapshot) : Void;
+	@:overload public function markNewRelativeTo(baseline : com.sun.tools.hat.internal.model.Snapshot) : Void;
 	
 	@:overload public function getThings() : java.util.Enumeration<com.sun.tools.hat.internal.model.JavaHeapObject>;
 	
@@ -119,7 +119,7 @@ extern class Snapshot
 }
 @:native('com$sun$tools$hat$internal$model$Snapshot$MyVisitor') @:internal extern class Snapshot_MyVisitor extends com.sun.tools.hat.internal.model.AbstractJavaHeapObjectVisitor
 {
-	@:overload override public function visit(other : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
+	@:overload public function visit(other : com.sun.tools.hat.internal.model.JavaHeapObject) : Void;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class HttpServer
 	* The server must be bound using {@link #bind(InetSocketAddress,int)} before it can be used.
 	* @throws IOException
 	*/
-	@:overload public static function create() : HttpServer;
+	@:overload public static function create() : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* Create a <code>HttpServer</code> instance which will bind to the
@@ -54,7 +54,7 @@ extern class HttpServer
 	*          or if the server is already bound.
 	* @throws IOException
 	*/
-	@:overload public static function create(addr : java.net.InetSocketAddress, backlog : Int) : HttpServer;
+	@:overload public static function create(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* Binds a currently unbound HttpServer to the given address and port number.

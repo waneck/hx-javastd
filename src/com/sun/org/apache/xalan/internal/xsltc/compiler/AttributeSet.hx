@@ -46,7 +46,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Parse the contents of this attribute set. Recognised attributes are
 	* "name" (required) and "use-attribute-sets" (optional).
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Type check the contents of this element

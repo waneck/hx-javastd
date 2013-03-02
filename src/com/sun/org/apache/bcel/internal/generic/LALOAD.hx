@@ -76,7 +76,7 @@ extern class LALOAD extends com.sun.org.apache.bcel.internal.generic.ArrayInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

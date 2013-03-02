@@ -33,7 +33,7 @@ extern class EntityReferenceEvent extends com.sun.xml.internal.stream.events.Dum
 	
 	@:overload public function toString() : String;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	@:overload public function getDeclaration() : javax.xml.stream.events.EntityDeclaration;
 	

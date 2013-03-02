@@ -65,7 +65,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @exception SecurityException if any of the jar file entries
 	*         are incorrectly signed.
 	*/
-	@:overload override public function getNextEntry() : java.util.zip.ZipEntry;
+	@:overload public function getNextEntry() : java.util.zip.ZipEntry;
 	
 	/**
 	* Reads the next JAR file entry and positions the stream at the
@@ -113,7 +113,7 @@ extern class JarInputStream extends java.util.zip.ZipInputStream
 	* @param name the name of the JAR/ZIP file entry
 	* @return the <code>JarEntry</code> object just created
 	*/
-	@:overload override private function createZipEntry(name : String) : java.util.zip.ZipEntry;
+	@:overload private function createZipEntry(name : String) : java.util.zip.ZipEntry;
 	
 	
 }

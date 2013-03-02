@@ -61,7 +61,7 @@ extern interface XMLString
 	* @param   doublePunctuationSpaces    Use double spaces for punctuation?
 	* @return              The trimmed string.
 	*/
-	@:overload public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : XMLString;
+	@:overload public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns the length of this string.
@@ -122,7 +122,7 @@ extern interface XMLString
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload @:abstract public function equals(anObject : XMLString) : Bool;
+	@:overload @:abstract public function equals(anObject : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Compares this string to the specified <code>String</code>.
@@ -168,7 +168,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>anotherString</code>
 	*          is <code>null</code>.
 	*/
-	@:overload @:abstract public function compareTo(anotherString : XMLString) : Int;
+	@:overload @:abstract public function compareTo(anotherString : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Compares two strings lexicographically, ignoring case considerations.
@@ -188,7 +188,7 @@ extern interface XMLString
 	* @see     java.text.Collator#compare(String, String)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload @:abstract public function compareToIgnoreCase(str : XMLString) : Int;
+	@:require(java2) @:overload @:abstract public function compareToIgnoreCase(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -230,7 +230,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function startsWith(prefix : XMLString, toffset : Int) : Bool;
+	@:overload @:abstract public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -264,7 +264,7 @@ extern interface XMLString
 	*          <code>null</code>.
 	* @since   JDK1. 0
 	*/
-	@:overload @:abstract public function startsWith(prefix : XMLString) : Bool;
+	@:overload @:abstract public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Tests if this string ends with the specified suffix.
@@ -408,7 +408,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function indexOf(str : XMLString) : Int;
+	@:overload @:abstract public function indexOf(str : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -497,7 +497,7 @@ extern interface XMLString
 	*             <code>beginIndex</code> is negative or larger than the
 	*             length of this <code>String</code> object.
 	*/
-	@:overload @:abstract public function substring(beginIndex : Int) : XMLString;
+	@:overload @:abstract public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -515,7 +515,7 @@ extern interface XMLString
 	*             <code>beginIndex</code> is larger than
 	*             <code>endIndex</code>.
 	*/
-	@:overload @:abstract public function substring(beginIndex : Int, endIndex : Int) : XMLString;
+	@:overload @:abstract public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Concatenates the specified string to the end of this string.
@@ -527,7 +527,7 @@ extern interface XMLString
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload @:abstract public function concat(str : String) : XMLString;
+	@:overload @:abstract public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -538,7 +538,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload @:abstract public function toLowerCase(locale : java.util.Locale) : XMLString;
+	@:overload @:abstract public function toLowerCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to lower
@@ -550,7 +550,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload @:abstract public function toLowerCase() : XMLString;
+	@:overload @:abstract public function toLowerCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -560,7 +560,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toLowerCase(Locale)
 	*/
-	@:overload @:abstract public function toUpperCase(locale : java.util.Locale) : XMLString;
+	@:overload @:abstract public function toUpperCase(locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Converts all of the characters in this <code>String</code> to upper
@@ -588,7 +588,7 @@ extern interface XMLString
 	* @see     java.lang.Character#toUpperCase(char)
 	* @see     java.lang.String#toUpperCase(Locale)
 	*/
-	@:overload @:abstract public function toUpperCase() : XMLString;
+	@:overload @:abstract public function toUpperCase() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Removes white space from both ends of this string.
@@ -619,7 +619,7 @@ extern interface XMLString
 	*
 	* @return  this string, with white space removed from the front and end.
 	*/
-	@:overload @:abstract public function trim() : XMLString;
+	@:overload @:abstract public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Tell if this object contains a java String object.

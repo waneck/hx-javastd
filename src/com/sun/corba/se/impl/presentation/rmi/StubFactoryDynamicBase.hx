@@ -29,7 +29,7 @@ extern class StubFactoryDynamicBase extends com.sun.corba.se.impl.presentation.r
 	
 	@:overload public function new(classData : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData, loader : java.lang.ClassLoader) : Void;
 	
-	@:overload @:abstract override public function makeStub() : org.omg.CORBA.Object;
+	@:overload @:abstract public function makeStub() : org.omg.CORBA.Object;
 	
 	
 }

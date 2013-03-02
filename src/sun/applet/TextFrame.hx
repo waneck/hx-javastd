@@ -32,7 +32,7 @@ package sun.applet;
 	/**
 	* Lets us construct one using unix-style one shot behaviors
 	*/
-	@:overload public function createAppletViewer(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>) : AppletViewer;
+	@:overload public function createAppletViewer(x : Int, y : Int, doc : java.net.URL, atts : java.util.Hashtable<Dynamic, Dynamic>) : sun.applet.TextFrame.AppletViewer;
 	
 	@:overload public function getBaseMenuBar() : java.awt.MenuBar;
 	

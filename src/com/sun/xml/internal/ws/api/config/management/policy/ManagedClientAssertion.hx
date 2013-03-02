@@ -39,7 +39,7 @@ extern class ManagedClientAssertion extends com.sun.xml.internal.ws.api.config.m
 	* @return The policy assertion if found. Null otherwise.
 	* @throws WebServiceException If computing the effective policy of the port failed.
 	*/
-	@:native('getAssertion') @:overload public static function _getAssertion(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo) : ManagedClientAssertion;
+	@:overload public static function getAssertion(portInfo : com.sun.xml.internal.ws.api.client.WSPortInfo) : com.sun.xml.internal.ws.api.config.management.policy.ManagedClientAssertion;
 	
 	@:overload public function new(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
 	
@@ -48,7 +48,7 @@ extern class ManagedClientAssertion extends com.sun.xml.internal.ws.api.config.m
 	*
 	* @return False.
 	*/
-	@:overload override public function isManagementEnabled() : Bool;
+	@:overload public function isManagementEnabled() : Bool;
 	
 	
 }

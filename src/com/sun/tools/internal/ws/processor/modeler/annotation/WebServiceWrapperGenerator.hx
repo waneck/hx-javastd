@@ -33,15 +33,15 @@ extern class WebServiceWrapperGenerator extends com.sun.tools.internal.ws.proces
 {
 	@:overload public function new(builder : com.sun.tools.internal.ws.processor.modeler.annotation.ModelBuilder, context : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext) : Void;
 	
-	@:overload override private function processWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.TypeDeclaration) : Void;
+	@:overload private function processWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.TypeDeclaration) : Void;
 	
-	@:overload override private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
+	@:overload private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
 	
-	@:overload override private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.ClassDeclaration) : Void;
+	@:overload private function postProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.ClassDeclaration) : Void;
 	
 	@:overload private function doPostProcessWebService(webService : javax.jws.WebService, d : com.sun.mirror.declaration.TypeDeclaration) : Void;
 	
-	@:overload override private function processMethod(method : com.sun.mirror.declaration.MethodDeclaration, webMethod : javax.jws.WebMethod) : Void;
+	@:overload private function processMethod(method : com.sun.mirror.declaration.MethodDeclaration, webMethod : javax.jws.WebMethod) : Void;
 	
 	@:overload private function getCMClass(className : String, type : com.sun.codemodel.internal.ClassType) : com.sun.codemodel.internal.JDefinedClass;
 	

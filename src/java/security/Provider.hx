@@ -222,7 +222,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function getService(type : String, algorithm : String) : Provider_Service;
+	@:require(java5) @:overload @:synchronized public function getService(type : String, algorithm : String) : java.security.Provider.Provider_Service;
 	
 	/**
 	* Get an unmodifiable Set of all services supported by
@@ -233,7 +233,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public function getServices() : java.util.Set<Provider_Service>;
+	@:require(java5) @:overload @:synchronized public function getServices() : java.util.Set<java.security.Provider.Provider_Service>;
 	
 	/**
 	* Add a service. If a service of the same type with the same algorithm
@@ -264,7 +264,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized private function putService(s : Provider_Service) : Void;
+	@:require(java5) @:overload @:synchronized private function putService(s : java.security.Provider.Provider_Service) : Void;
 	
 	/**
 	* Remove a service previously added using
@@ -294,7 +294,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized private function removeService(s : Provider_Service) : Void;
+	@:require(java5) @:overload @:synchronized private function removeService(s : java.security.Provider.Provider_Service) : Void;
 	
 	
 }
@@ -363,7 +363,7 @@ extern class Provider extends java.util.Properties
 	* @throws NullPointerException if provider, type, algorithm, or
 	* className is null
 	*/
-	@:overload public function new(provider : Provider, type : String, algorithm : String, className : String, aliases : java.util.List<String>, attributes : java.util.Map<String, String>) : Void;
+	@:overload public function new(provider : java.security.Provider, type : String, algorithm : String, className : String, aliases : java.util.List<String>, attributes : java.util.Map<String, String>) : Void;
 	
 	/**
 	* Get the type of this service. For example, <code>MessageDigest</code>.
@@ -385,7 +385,7 @@ extern class Provider extends java.util.Properties
 	*
 	* @return the Provider of this service
 	*/
-	@:overload @:final public function getProvider() : Provider;
+	@:overload @:final public function getProvider() : java.security.Provider;
 	
 	/**
 	* Return the name of the class implementing this service.

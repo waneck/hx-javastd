@@ -59,83 +59,83 @@ extern class SOAPPartImpl extends javax.xml.soap.SOAPPart implements com.sun.xml
 	
 	@:overload @:abstract private function createEmptyEnvelope(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.Envelope;
 	
-	@:overload @:abstract private function duplicateType() : SOAPPartImpl;
+	@:overload @:abstract private function duplicateType() : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl;
 	
 	@:overload private function getContentTypeString() : String;
 	
 	@:overload public function isFastInfoset() : Bool;
 	
-	@:overload override public function getEnvelope() : javax.xml.soap.SOAPEnvelope;
+	@:overload public function getEnvelope() : javax.xml.soap.SOAPEnvelope;
 	
 	@:overload private function lookForEnvelope() : Void;
 	
-	@:overload override public function removeAllMimeHeaders() : Void;
+	@:overload public function removeAllMimeHeaders() : Void;
 	
-	@:overload override public function removeMimeHeader(header : String) : Void;
+	@:overload public function removeMimeHeader(header : String) : Void;
 	
-	@:overload override public function getMimeHeader(name : String) : java.NativeArray<String>;
+	@:overload public function getMimeHeader(name : String) : java.NativeArray<String>;
 	
-	@:overload override public function setMimeHeader(name : String, value : String) : Void;
+	@:overload public function setMimeHeader(name : String, value : String) : Void;
 	
-	@:overload override public function addMimeHeader(name : String, value : String) : Void;
+	@:overload public function addMimeHeader(name : String, value : String) : Void;
 	
-	@:overload override public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
+	@:overload public function getAllMimeHeaders() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload public function getMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
+	@:overload public function getNonMatchingMimeHeaders(names : java.NativeArray<String>) : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function getContent() : javax.xml.transform.Source;
+	@:overload public function getContent() : javax.xml.transform.Source;
 	
-	@:overload override public function setContent(source : javax.xml.transform.Source) : Void;
+	@:overload public function setContent(source : javax.xml.transform.Source) : Void;
 	
 	@:overload public function getContentAsStream() : java.io.InputStream;
 	
 	@:overload public function getDocument() : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl;
 	
-	@:overload public function getSOAPPart() : SOAPPartImpl;
+	@:overload public function getSOAPPart() : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl;
 	
-	@:overload override public function getDoctype() : org.w3c.dom.DocumentType;
+	@:overload public function getDoctype() : org.w3c.dom.DocumentType;
 	
-	@:overload override public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
-	@:overload override public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload public function getDocumentElement() : org.w3c.dom.Element;
 	
 	@:overload private function doGetDocumentElement() : Void;
 	
-	@:overload override public function createElement(tagName : String) : org.w3c.dom.Element;
+	@:overload public function createElement(tagName : String) : org.w3c.dom.Element;
 	
-	@:overload override public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
+	@:overload public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
 	
-	@:overload override public function createTextNode(data : String) : org.w3c.dom.Text;
+	@:overload public function createTextNode(data : String) : org.w3c.dom.Text;
 	
-	@:overload override public function createComment(data : String) : org.w3c.dom.Comment;
+	@:overload public function createComment(data : String) : org.w3c.dom.Comment;
 	
-	@:overload override public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
+	@:overload public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
 	
-	@:overload override public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
+	@:overload public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
-	@:overload override public function createAttribute(name : String) : org.w3c.dom.Attr;
+	@:overload public function createAttribute(name : String) : org.w3c.dom.Attr;
 	
-	@:overload override public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
+	@:overload public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
 	
-	@:overload override public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
+	@:overload public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
 	
-	@:overload override public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
+	@:overload public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
 	
-	@:overload override public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
-	@:overload override public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
-	@:overload override public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
-	@:overload override public function getElementById(elementId : String) : org.w3c.dom.Element;
+	@:overload public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
-	@:overload public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload override public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
-	@:overload private function doCloneNode() : SOAPPartImpl;
+	@:overload private function doCloneNode() : com.sun.xml.internal.messaging.saaj.soap.SOAPPartImpl;
 	
 	@:overload override public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
@@ -169,15 +169,15 @@ extern class SOAPPartImpl extends javax.xml.soap.SOAPPart implements com.sun.xml
 	
 	@:overload override public function hasChildNodes() : Bool;
 	
-	@:overload public function insertBefore(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload override public function insertBefore(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	@:overload override public function isSupported(arg0 : String, arg1 : String) : Bool;
 	
 	@:overload override public function normalize() : Void;
 	
-	@:overload public function removeChild(arg0 : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload override public function removeChild(arg0 : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload public function replaceChild(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload override public function replaceChild(arg0 : org.w3c.dom.Node, arg1 : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	@:overload override public function setNodeValue(arg0 : String) : Void;
 	
@@ -187,43 +187,43 @@ extern class SOAPPartImpl extends javax.xml.soap.SOAPPart implements com.sun.xml
 	
 	@:overload public function setSourceCharsetEncoding(charset : String) : Void;
 	
-	@:overload override public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, qualifiedName : String) : org.w3c.dom.Node;
+	@:overload public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, qualifiedName : String) : org.w3c.dom.Node;
 	
-	@:overload override public function normalizeDocument() : Void;
+	@:overload public function normalizeDocument() : Void;
 	
-	@:overload override public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
-	@:overload override public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
-	@:overload override public function setDocumentURI(documentURI : String) : Void;
+	@:overload public function setDocumentURI(documentURI : String) : Void;
 	
-	@:overload override public function getDocumentURI() : String;
+	@:overload public function getDocumentURI() : String;
 	
-	@:overload override public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
+	@:overload public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
 	
-	@:overload override public function getInputEncoding() : String;
+	@:overload public function getInputEncoding() : String;
 	
-	@:overload override public function getXmlEncoding() : String;
+	@:overload public function getXmlEncoding() : String;
 	
-	@:overload override public function getXmlStandalone() : Bool;
+	@:overload public function getXmlStandalone() : Bool;
 	
-	@:overload override public function setXmlStandalone(xmlStandalone : Bool) : Void;
+	@:overload public function setXmlStandalone(xmlStandalone : Bool) : Void;
 	
-	@:overload override public function getXmlVersion() : String;
+	@:overload public function getXmlVersion() : String;
 	
-	@:overload override public function setXmlVersion(xmlVersion : String) : Void;
+	@:overload public function setXmlVersion(xmlVersion : String) : Void;
 	
-	@:overload override public function getStrictErrorChecking() : Bool;
+	@:overload public function getStrictErrorChecking() : Bool;
 	
 	@:overload override public function getBaseURI() : String;
 	
-	@:overload public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload override public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	@:overload override public function getTextContent() : String;
 	
 	@:overload override public function setTextContent(textContent : String) : Void;
 	
-	@:overload public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload override public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	@:overload override public function lookupPrefix(namespaceURI : String) : String;
 	
@@ -231,7 +231,7 @@ extern class SOAPPartImpl extends javax.xml.soap.SOAPPart implements com.sun.xml
 	
 	@:overload override public function lookupNamespaceURI(prefix : String) : String;
 	
-	@:overload public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload override public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	@:overload override public function getFeature(feature : String, version : String) : Dynamic;
 	

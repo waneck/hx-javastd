@@ -103,7 +103,7 @@ extern interface SDDocument
 /**
 * {@link SDDocument} that represents an XML Schema.
 */
-@:native('com$sun$xml$internal$ws$api$server$SDDocument$Schema') @:internal extern interface SDDocument_Schema extends SDDocument
+@:native('com$sun$xml$internal$ws$api$server$SDDocument$Schema') @:internal extern interface SDDocument_Schema extends com.sun.xml.internal.ws.api.server.SDDocument
 {
 	/**
 	* Gets the target namepsace of this schema.
@@ -115,7 +115,7 @@ extern interface SDDocument
 /**
 * {@link SDDocument} that represents a WSDL.
 */
-@:native('com$sun$xml$internal$ws$api$server$SDDocument$WSDL') @:internal extern interface SDDocument_WSDL extends SDDocument
+@:native('com$sun$xml$internal$ws$api$server$SDDocument$WSDL') @:internal extern interface SDDocument_WSDL extends com.sun.xml.internal.ws.api.server.SDDocument
 {
 	/**
 	* Gets the target namepsace of this schema.

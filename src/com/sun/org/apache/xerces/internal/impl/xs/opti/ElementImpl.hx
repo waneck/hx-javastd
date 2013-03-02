@@ -28,39 +28,39 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti
 	
 	@:overload public function new(prefix : String, localpart : String, rawname : String, uri : String, line : Int, column : Int) : Void;
 	
-	@:overload override public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
 	
-	@:overload override public function getParentNode() : org.w3c.dom.Node;
+	@:overload public function getParentNode() : org.w3c.dom.Node;
 	
-	@:overload override public function hasChildNodes() : Bool;
+	@:overload public function hasChildNodes() : Bool;
 	
-	@:overload override public function getFirstChild() : org.w3c.dom.Node;
+	@:overload public function getFirstChild() : org.w3c.dom.Node;
 	
-	@:overload override public function getLastChild() : org.w3c.dom.Node;
+	@:overload public function getLastChild() : org.w3c.dom.Node;
 	
-	@:overload override public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload public function getPreviousSibling() : org.w3c.dom.Node;
 	
-	@:overload override public function getNextSibling() : org.w3c.dom.Node;
+	@:overload public function getNextSibling() : org.w3c.dom.Node;
 	
-	@:overload override public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
-	@:overload override public function hasAttributes() : Bool;
+	@:overload public function hasAttributes() : Bool;
 	
-	@:overload override public function getTagName() : String;
+	@:overload public function getTagName() : String;
 	
-	@:overload override public function getAttribute(name : String) : String;
+	@:overload public function getAttribute(name : String) : String;
 	
-	@:overload override public function getAttributeNode(name : String) : org.w3c.dom.Attr;
+	@:overload public function getAttributeNode(name : String) : org.w3c.dom.Attr;
 	
-	@:overload override public function getAttributeNS(namespaceURI : String, localName : String) : String;
+	@:overload public function getAttributeNS(namespaceURI : String, localName : String) : String;
 	
-	@:overload override public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
+	@:overload public function getAttributeNodeNS(namespaceURI : String, localName : String) : org.w3c.dom.Attr;
 	
-	@:overload override public function hasAttribute(name : String) : Bool;
+	@:overload public function hasAttribute(name : String) : Bool;
 	
-	@:overload override public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
+	@:overload public function hasAttributeNS(namespaceURI : String, localName : String) : Bool;
 	
-	@:overload override public function setAttribute(name : String, value : String) : Void;
+	@:overload public function setAttribute(name : String, value : String) : Void;
 	
 	/** Returns the line number. */
 	@:overload public function getLineNumber() : Int;

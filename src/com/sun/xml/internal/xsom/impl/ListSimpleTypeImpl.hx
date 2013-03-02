@@ -29,23 +29,23 @@ extern class ListSimpleTypeImpl extends com.sun.xml.internal.xsom.impl.SimpleTyp
 	
 	@:overload public function getItemType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
+	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSSimpleTypeVisitor) : Void;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<Dynamic>) : Dynamic;
+	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSSimpleTypeFunction<Dynamic>) : Dynamic;
 	
-	@:overload override public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
+	@:overload public function getFacet(name : String) : com.sun.xml.internal.xsom.XSFacet;
 	
-	@:overload override public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
+	@:overload public function getFacets(name : String) : java.util.List<com.sun.xml.internal.xsom.XSFacet>;
 	
-	@:overload override public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
+	@:overload public function getVariety() : com.sun.xml.internal.xsom.XSVariety;
 	
-	@:overload override public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
+	@:overload public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	@:overload override public function getBaseListType() : com.sun.xml.internal.xsom.XSListSimpleType;
+	@:overload public function getBaseListType() : com.sun.xml.internal.xsom.XSListSimpleType;
 	
-	@:overload override public function isList() : Bool;
+	@:overload public function isList() : Bool;
 	
-	@:overload override public function asList() : com.sun.xml.internal.xsom.XSListSimpleType;
+	@:overload public function asList() : com.sun.xml.internal.xsom.XSListSimpleType;
 	
 	
 }

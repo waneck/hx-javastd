@@ -42,7 +42,7 @@ package sun.reflect;
 	
 	@:overload public function emitByte(val : java.StdTypes.Int8) : Void;
 	
-	@:overload public function append(asm : ClassFileAssembler) : Void;
+	@:overload public function append(asm : sun.reflect.ClassFileAssembler) : Void;
 	
 	@:overload public function append(vec : sun.reflect.ByteVector) : Void;
 	

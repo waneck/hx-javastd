@@ -41,7 +41,7 @@ extern class NamedEvent extends com.sun.xml.internal.stream.events.DummyEvent
 	
 	@:overload public function getNamespace() : String;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

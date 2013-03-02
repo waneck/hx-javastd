@@ -38,7 +38,7 @@ extern class Logger
 	* @return global logger object
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public static function getGlobal() : Logger;
+	@:require(java7) @:overload @:final public static function getGlobal() : java.util.logging.Logger;
 	
 	/**
 	* The "global" Logger object is provided as a convenience to developers
@@ -61,7 +61,7 @@ extern class Logger
 	* <code>Logger.getLogger(Logger.GLOBAL_LOGGER_NAME)</code>
 	* or <code>Logger.getLogger("global")</code>.
 	*/
-	public static var global(default, null) : Logger;
+	public static var global(default, null) : java.util.logging.Logger;
 	
 	/**
 	* Protected method to construct a logger for a named subsystem.
@@ -109,7 +109,7 @@ extern class Logger
 	* @return a suitable Logger
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public static function getLogger(name : String) : Logger;
+	@:overload public static function getLogger(name : String) : java.util.logging.Logger;
 	
 	/**
 	* Find or create a logger for a named subsystem.  If a logger has
@@ -151,7 +151,7 @@ extern class Logger
 	*             a different resource bundle name.
 	* @throws NullPointerException if the name is null.
 	*/
-	@:overload public static function getLogger(name : String, resourceBundleName : String) : Logger;
+	@:overload public static function getLogger(name : String, resourceBundleName : String) : java.util.logging.Logger;
 	
 	/**
 	* Create an anonymous Logger.  The newly created Logger is not
@@ -173,7 +173,7 @@ extern class Logger
 	*
 	* @return a newly created private Logger
 	*/
-	@:overload public static function getAnonymousLogger() : Logger;
+	@:overload public static function getAnonymousLogger() : java.util.logging.Logger;
 	
 	/**
 	* Create an anonymous Logger.  The newly created Logger is not
@@ -199,7 +199,7 @@ extern class Logger
 	* @throws MissingResourceException if the resourceBundleName is non-null and
 	*             no corresponding resource can be found.
 	*/
-	@:overload public static function getAnonymousLogger(resourceBundleName : String) : Logger;
+	@:overload public static function getAnonymousLogger(resourceBundleName : String) : java.util.logging.Logger;
 	
 	/**
 	* Retrieve the localization resource bundle for this
@@ -740,7 +740,7 @@ extern class Logger
 	*
 	* @return nearest existing parent Logger
 	*/
-	@:overload public function getParent() : Logger;
+	@:overload public function getParent() : java.util.logging.Logger;
 	
 	/**
 	* Set the parent for this Logger.  This method is used by
@@ -752,7 +752,7 @@ extern class Logger
 	* @exception  SecurityException  if a security manager exists and if
 	*             the caller does not have LoggingPermission("control").
 	*/
-	@:overload public function setParent(parent : Logger) : Void;
+	@:overload public function setParent(parent : java.util.logging.Logger) : Void;
 	
 	
 }

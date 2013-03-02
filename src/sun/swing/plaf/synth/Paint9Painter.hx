@@ -86,16 +86,16 @@ extern class Paint9Painter extends sun.swing.CachedPainter
 	*             specified will not be painted, for example
 	*             PAINT_ALL | PAINT_CENTER paints everything but the center.
 	*/
-	@:overload public function paint(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, source : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : Paint9Painter_PaintType, mask : Int) : Void;
+	@:overload public function paint(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, source : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : sun.swing.plaf.synth.Paint9Painter.Paint9Painter_PaintType, mask : Int) : Void;
 	
-	@:overload override private function paintToImage(c : java.awt.Component, destImage : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
+	@:overload private function paintToImage(c : java.awt.Component, destImage : java.awt.Image, g : java.awt.Graphics, w : Int, h : Int, args : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload private function paint9(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : Paint9Painter_PaintType, componentMask : Int) : Void;
+	@:overload private function paint9(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, image : java.awt.Image, sInsets : java.awt.Insets, dInsets : java.awt.Insets, type : sun.swing.plaf.synth.Paint9Painter.Paint9Painter_PaintType, componentMask : Int) : Void;
 	
 	/**
 	* Subclassed to always create a translucent image.
 	*/
-	@:overload override private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
+	@:overload private function createImage(c : java.awt.Component, w : Int, h : Int, config : java.awt.GraphicsConfiguration, args : java.NativeArray<Dynamic>) : java.awt.Image;
 	
 	
 }

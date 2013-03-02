@@ -25,15 +25,15 @@ package sun.java2d.opengl;
 */
 @:internal extern class OGLTextRenderer extends sun.java2d.pipe.BufferedTextPipe
 {
-	@:overload @:native override private function drawGlyphList(numGlyphs : Int, usePositions : Bool, subPixPos : Bool, rgbOrder : Bool, lcdContrast : Int, glOrigX : Single, glOrigY : Single, images : java.NativeArray<haxe.Int64>, positions : java.NativeArray<Single>) : Void;
+	@:overload @:native private function drawGlyphList(numGlyphs : Int, usePositions : Bool, subPixPos : Bool, rgbOrder : Bool, lcdContrast : Int, glOrigX : Single, glOrigY : Single, images : java.NativeArray<haxe.Int64>, positions : java.NativeArray<Single>) : Void;
 	
-	@:overload override private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite) : Void;
+	@:overload private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite) : Void;
 	
 	
 }
-@:native('sun$java2d$opengl$OGLTextRenderer$Tracer') @:internal extern class OGLTextRenderer_Tracer extends OGLTextRenderer
+@:native('sun$java2d$opengl$OGLTextRenderer$Tracer') @:internal extern class OGLTextRenderer_Tracer extends sun.java2d.opengl.OGLTextRenderer
 {
-	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
+	@:overload private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
 	
 }

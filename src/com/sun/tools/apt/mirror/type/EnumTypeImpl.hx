@@ -28,12 +28,12 @@ extern class EnumTypeImpl extends com.sun.tools.apt.mirror.type.ClassTypeImpl im
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getDeclaration() : com.sun.mirror.declaration.EnumDeclaration;
+	@:overload public function getDeclaration() : com.sun.mirror.declaration.EnumDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

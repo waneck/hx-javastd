@@ -41,7 +41,7 @@ extern class DeferredElementNSImpl extends com.sun.org.apache.xerces.internal.do
 	* the two structures in sync. The problem gets worse when
 	* editing the tree -- this makes it a lot easier.
 	*/
-	@:overload @:final override private function synchronizeChildren() : Void;
+	@:overload @:final private function synchronizeChildren() : Void;
 	
 	
 }

@@ -35,17 +35,17 @@ extern class CharsetMapping
 	
 	@:overload public function decodeSurrogate(db : Int, cc : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload public function decodeComposite(comp : CharsetMapping_Entry, cc : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Char16>;
+	@:overload public function decodeComposite(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry, cc : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Char16>;
 	
 	@:overload public function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
 	@:overload public function encodeSurrogate(hi : java.StdTypes.Char16, lo : java.StdTypes.Char16) : Int;
 	
-	@:overload public function isCompositeBase(comp : CharsetMapping_Entry) : Bool;
+	@:overload public function isCompositeBase(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry) : Bool;
 	
-	@:overload public function encodeComposite(comp : CharsetMapping_Entry) : Int;
+	@:overload public function encodeComposite(comp : sun.nio.cs.CharsetMapping.CharsetMapping_Entry) : Int;
 	
-	@:overload public static function get(is : java.io.InputStream) : CharsetMapping;
+	@:overload public static function get(is : java.io.InputStream) : sun.nio.cs.CharsetMapping;
 	
 	
 }

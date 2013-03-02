@@ -60,7 +60,7 @@ extern class AccessControlContext
 	*          {@link SecurityPermission}
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function new(acc : AccessControlContext, combiner : java.security.DomainCombiner) : Void;
+	@:require(java3) @:overload public function new(acc : java.security.AccessControlContext, combiner : java.security.DomainCombiner) : Void;
 	
 	/**
 	* Get the <code>DomainCombiner</code> associated with this

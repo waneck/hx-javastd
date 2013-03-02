@@ -338,7 +338,7 @@ extern class MessageFormat extends java.text.Format
 	*            <code>arguments</code> array is not of the type
 	*            expected by the format element(s) that use it.
 	*/
-	@:overload @:final override public function format(arguments : Dynamic, result : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload @:final public function format(arguments : Dynamic, result : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Formats an array of objects and inserts them into the
@@ -375,7 +375,7 @@ extern class MessageFormat extends java.text.Format
 	*            expected by the format element(s) that use it.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function formatToCharacterIterator(arguments : Dynamic) : java.text.AttributedCharacterIterator;
+	@:require(java4) @:overload public function formatToCharacterIterator(arguments : Dynamic) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Parses the string.
@@ -445,14 +445,14 @@ extern class MessageFormat extends java.text.Format
 	*         error, returns null.
 	* @exception NullPointerException if <code>pos</code> is null.
 	*/
-	@:overload override public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
+	@:overload public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
 	
 	/**
 	* Creates and returns a copy of this object.
 	*
 	* @return a clone of this instance.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Equality comparison between two message format objects
@@ -480,7 +480,7 @@ extern class MessageFormat extends java.text.Format
 	*
 	* @param name Name of the attribute
 	*/
-	@:overload override private function new(name : String) : Void;
+	@:overload private function new(name : String) : Void;
 	
 	/**
 	* Resolves instances being deserialized to the predefined constants.

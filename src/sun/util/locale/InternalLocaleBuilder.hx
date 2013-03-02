@@ -33,37 +33,37 @@ extern class InternalLocaleBuilder
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function setLanguage(language : String) : InternalLocaleBuilder;
+	@:overload public function setLanguage(language : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setScript(script : String) : InternalLocaleBuilder;
+	@:overload public function setScript(script : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setRegion(region : String) : InternalLocaleBuilder;
+	@:overload public function setRegion(region : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setVariant(variant : String) : InternalLocaleBuilder;
+	@:overload public function setVariant(variant : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function addUnicodeLocaleAttribute(attribute : String) : InternalLocaleBuilder;
+	@:overload public function addUnicodeLocaleAttribute(attribute : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function removeUnicodeLocaleAttribute(attribute : String) : InternalLocaleBuilder;
+	@:overload public function removeUnicodeLocaleAttribute(attribute : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setUnicodeLocaleKeyword(key : String, type : String) : InternalLocaleBuilder;
+	@:overload public function setUnicodeLocaleKeyword(key : String, type : String) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setExtension(singleton : java.StdTypes.Char16, value : String) : InternalLocaleBuilder;
+	@:overload public function setExtension(singleton : java.StdTypes.Char16, value : String) : sun.util.locale.InternalLocaleBuilder;
 	
 	/*
 	* Set extension/private subtags in a single string representation
 	*/
-	@:overload public function setExtensions(subtags : String) : InternalLocaleBuilder;
+	@:overload public function setExtensions(subtags : String) : sun.util.locale.InternalLocaleBuilder;
 	
 	/*
 	* Reset Builder's internal state with the given language tag
 	*/
-	@:overload public function setLanguageTag(langtag : sun.util.locale.LanguageTag) : InternalLocaleBuilder;
+	@:overload public function setLanguageTag(langtag : sun.util.locale.LanguageTag) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function setLocale(base : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : InternalLocaleBuilder;
+	@:overload public function setLocale(base : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function clear() : InternalLocaleBuilder;
+	@:overload public function clear() : sun.util.locale.InternalLocaleBuilder;
 	
-	@:overload public function clearExtensions() : InternalLocaleBuilder;
+	@:overload public function clearExtensions() : sun.util.locale.InternalLocaleBuilder;
 	
 	@:overload public function getBaseLocale() : sun.util.locale.BaseLocale;
 	

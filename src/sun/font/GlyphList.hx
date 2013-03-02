@@ -25,7 +25,7 @@ package sun.font;
 */
 extern class GlyphList
 {
-	@:overload public static function getInstance() : GlyphList;
+	@:overload public static function getInstance() : sun.font.GlyphList;
 	
 	/* GlyphList is in an invalid state until setFrom* method is called.
 	* After obtaining a new GlyphList it is the caller's responsibility

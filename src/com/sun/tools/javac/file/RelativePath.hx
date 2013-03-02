@@ -23,20 +23,20 @@ package com.sun.tools.javac.file;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class RelativePath implements java.lang.Comparable<RelativePath>
+extern class RelativePath implements java.lang.Comparable<com.sun.tools.javac.file.RelativePath>
 {
 	/**
 	* @param p must use '/' as an internal separator
 	*/
 	@:overload private function new(p : String) : Void;
 	
-	@:overload @:abstract public function dirname() : RelativePath_RelativeDirectory;
+	@:overload @:abstract public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
 	
 	@:overload @:abstract public function basename() : String;
 	
 	@:overload public function getFile(directory : java.io.File) : java.io.File;
 	
-	@:overload public function compareTo(other : RelativePath) : Int;
+	@:overload public function compareTo(other : com.sun.tools.javac.file.RelativePath) : Int;
 	
 	@:overload public function equals(other : Dynamic) : Bool;
 	
@@ -97,7 +97,7 @@ extern class RelativePath implements java.lang.Comparable<RelativePath>
 * Internally, the file separator is always '/', and if the path is not empty,
 * it always ends in a '/' as well.
 */
-@:native('com$sun$tools$javac$file$RelativePath$RelativeDirectory') extern class RelativePath_RelativeDirectory extends RelativePath
+@:native('com$sun$tools$javac$file$RelativePath$RelativeDirectory') extern class RelativePath_RelativeDirectory extends com.sun.tools.javac.file.RelativePath
 {
 	/**
 	* @param p must use '/' as an internal separator
@@ -107,9 +107,9 @@ extern class RelativePath implements java.lang.Comparable<RelativePath>
 	/**
 	* @param p must use '/' as an internal separator
 	*/
-	@:overload public function new(d : RelativePath_RelativeDirectory, p : String) : Void;
+	@:overload public function new(d : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, p : String) : Void;
 	
-	@:overload override public function dirname() : RelativePath_RelativeDirectory;
+	@:overload override public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
 	
 	@:overload override public function basename() : String;
 	
@@ -122,16 +122,16 @@ extern class RelativePath implements java.lang.Comparable<RelativePath>
 * container, such as a directory or zip file.
 * Internally, the file separator is always '/'. It never ends in '/'.
 */
-@:native('com$sun$tools$javac$file$RelativePath$RelativeFile') extern class RelativePath_RelativeFile extends RelativePath
+@:native('com$sun$tools$javac$file$RelativePath$RelativeFile') extern class RelativePath_RelativeFile extends com.sun.tools.javac.file.RelativePath
 {
 	@:overload public function new(p : String) : Void;
 	
 	/**
 	* @param p must use '/' as an internal separator
 	*/
-	@:overload public function new(d : RelativePath_RelativeDirectory, p : String) : Void;
+	@:overload public function new(d : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory, p : String) : Void;
 	
-	@:overload override public function dirname() : RelativePath_RelativeDirectory;
+	@:overload override public function dirname() : com.sun.tools.javac.file.RelativePath.RelativePath_RelativeDirectory;
 	
 	@:overload override public function basename() : String;
 	

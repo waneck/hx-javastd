@@ -82,44 +82,44 @@ extern class CompositeType
 	/**
 	* The root CompositeType object for all chains of algorithm descriptions.
 	*/
-	public static var Any(default, null) : CompositeType;
+	public static var Any(default, null) : sun.java2d.loops.CompositeType;
 	
 	/*
 	* START OF CompositeeType OBJECTS FOR THE VARIOUS CONSTANTS
 	*/
-	public static var General(default, null) : CompositeType;
+	public static var General(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var AnyAlpha(default, null) : CompositeType;
+	public static var AnyAlpha(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Xor(default, null) : CompositeType;
+	public static var Xor(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Clear(default, null) : CompositeType;
+	public static var Clear(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Src(default, null) : CompositeType;
+	public static var Src(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var Dst(default, null) : CompositeType;
+	public static var Dst(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcOver(default, null) : CompositeType;
+	public static var SrcOver(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstOver(default, null) : CompositeType;
+	public static var DstOver(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcIn(default, null) : CompositeType;
+	public static var SrcIn(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstIn(default, null) : CompositeType;
+	public static var DstIn(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcOut(default, null) : CompositeType;
+	public static var SrcOut(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstOut(default, null) : CompositeType;
+	public static var DstOut(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcAtop(default, null) : CompositeType;
+	public static var SrcAtop(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var DstAtop(default, null) : CompositeType;
+	public static var DstAtop(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var AlphaXor(default, null) : CompositeType;
+	public static var AlphaXor(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcNoEa(default, null) : CompositeType;
+	public static var SrcNoEa(default, null) : sun.java2d.loops.CompositeType;
 	
-	public static var SrcOverNoEa(default, null) : CompositeType;
+	public static var SrcOverNoEa(default, null) : sun.java2d.loops.CompositeType;
 	
 	/*
 	* A special CompositeType for the case where we are filling in
@@ -133,7 +133,7 @@ extern class CompositeType
 	* in the following order:
 	*    SrcNoEa, Src, SrcOverNoEa, SrcOver, AnyAlpha
 	*/
-	public static var OpaqueSrcOverNoEa(default, null) : CompositeType;
+	public static var OpaqueSrcOverNoEa(default, null) : sun.java2d.loops.CompositeType;
 	
 	/**
 	* Return a new CompositeType object which uses this object as its
@@ -142,13 +142,13 @@ extern class CompositeType
 	* by desc, then this object will define the more general
 	* compositing algorithm that can be used instead.
 	*/
-	@:overload public function deriveSubType(desc : String) : CompositeType;
+	@:overload public function deriveSubType(desc : String) : sun.java2d.loops.CompositeType;
 	
 	/**
 	* Return a CompositeType object for the specified AlphaComposite
 	* rule.
 	*/
-	@:overload public static function forAlphaComposite(ac : java.awt.AlphaComposite) : CompositeType;
+	@:overload public static function forAlphaComposite(ac : java.awt.AlphaComposite) : sun.java2d.loops.CompositeType;
 	
 	@:overload @:synchronized @:final public static function makeUniqueID(desc : String) : Int;
 	
@@ -156,11 +156,11 @@ extern class CompositeType
 	
 	@:overload public function getDescriptor() : String;
 	
-	@:overload public function getSuperType() : CompositeType;
+	@:overload public function getSuperType() : sun.java2d.loops.CompositeType;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function isDerivedFrom(other : CompositeType) : Bool;
+	@:overload public function isDerivedFrom(other : sun.java2d.loops.CompositeType) : Bool;
 	
 	@:overload public function equals(o : Dynamic) : Bool;
 	

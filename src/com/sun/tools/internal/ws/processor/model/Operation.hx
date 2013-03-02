@@ -31,7 +31,7 @@ extern class Operation extends com.sun.tools.internal.ws.processor.model.ModelOb
 	*/
 	@:overload public function new(entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
-	@:overload public function new(operation : Operation, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
+	@:overload public function new(operation : com.sun.tools.internal.ws.processor.model.Operation, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	
 	@:overload public function new(name : javax.xml.namespace.QName, entity : com.sun.tools.internal.ws.wsdl.framework.Entity) : Void;
 	

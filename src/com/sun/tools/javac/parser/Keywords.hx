@@ -33,9 +33,9 @@ package com.sun.tools.javac.parser;
 */
 extern class Keywords
 {
-	public static var keywordsKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Keywords>;
+	public static var keywordsKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.parser.Keywords>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Keywords;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.parser.Keywords;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	

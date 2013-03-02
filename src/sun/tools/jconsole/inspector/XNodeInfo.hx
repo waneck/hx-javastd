@@ -35,9 +35,9 @@ package sun.tools.jconsole.inspector;
 */
 extern class XNodeInfo
 {
-	@:overload public function new(type : XNodeInfo_Type, data : Dynamic, label : String, tooltip : String) : Void;
+	@:overload public function new(type : sun.tools.jconsole.inspector.XNodeInfo.XNodeInfo_Type, data : Dynamic, label : String, tooltip : String) : Void;
 	
-	@:overload public function getType() : XNodeInfo_Type;
+	@:overload public function getType() : sun.tools.jconsole.inspector.XNodeInfo.XNodeInfo_Type;
 	
 	@:overload public function getData() : Dynamic;
 	

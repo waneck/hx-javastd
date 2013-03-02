@@ -39,13 +39,13 @@ extern class StrikeCache
 	
 	
 }
-@:native('sun$font$StrikeCache$SoftDisposerRef') @:internal extern class StrikeCache_SoftDisposerRef extends java.lang.ref.SoftReference<Dynamic> implements StrikeCache_DisposableStrike
+@:native('sun$font$StrikeCache$SoftDisposerRef') @:internal extern class StrikeCache_SoftDisposerRef extends java.lang.ref.SoftReference<Dynamic> implements sun.font.StrikeCache.StrikeCache_DisposableStrike
 {
 	@:overload public function getDisposer() : sun.font.FontStrikeDisposer;
 	
 	
 }
-@:native('sun$font$StrikeCache$WeakDisposerRef') @:internal extern class StrikeCache_WeakDisposerRef extends java.lang.ref.WeakReference<Dynamic> implements StrikeCache_DisposableStrike
+@:native('sun$font$StrikeCache$WeakDisposerRef') @:internal extern class StrikeCache_WeakDisposerRef extends java.lang.ref.WeakReference<Dynamic> implements sun.font.StrikeCache.StrikeCache_DisposableStrike
 {
 	@:overload public function getDisposer() : sun.font.FontStrikeDisposer;
 	

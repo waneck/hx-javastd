@@ -25,13 +25,13 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface LocalAttribute extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.AttributeType extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.FixedOrDefault extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function form(value : String) : LocalAttribute;
+	@:overload public function form(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalAttribute;
 	
-	@:overload public function name(value : String) : LocalAttribute;
+	@:overload public function name(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalAttribute;
 	
-	@:overload public function ref(value : javax.xml.namespace.QName) : LocalAttribute;
+	@:overload public function ref(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalAttribute;
 	
-	@:overload public function use(value : String) : LocalAttribute;
+	@:overload public function use(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.LocalAttribute;
 	
 	
 }

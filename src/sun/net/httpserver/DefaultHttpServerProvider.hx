@@ -25,9 +25,9 @@ package sun.net.httpserver;
 */
 extern class DefaultHttpServerProvider extends com.sun.net.httpserver.spi.HttpServerProvider
 {
-	@:overload override public function createHttpServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpServer;
+	@:overload public function createHttpServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpServer;
 	
-	@:overload override public function createHttpsServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpsServer;
+	@:overload public function createHttpsServer(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpsServer;
 	
 	
 }

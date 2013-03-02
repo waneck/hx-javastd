@@ -78,7 +78,7 @@ extern interface CSSRule
 	* inside an @media block), this is the containing rule. If this rule is
 	* not nested inside any other rules, this returns <code>null</code>.
 	*/
-	@:overload public function getParentRule() : CSSRule;
+	@:overload public function getParentRule() : org.w3c.dom.css.CSSRule;
 	
 	
 }

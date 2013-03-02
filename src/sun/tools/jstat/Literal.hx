@@ -38,7 +38,7 @@ package sun.tools.jstat;
 	
 	@:overload public function setValue(value : Dynamic) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

@@ -134,7 +134,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @param index the child index.  This should be a
 	*   value >= 0 and < getViewCount().
 	*/
-	@:overload private function getChildState(index : Int) : AsyncBoxView_ChildState;
+	@:overload private function getChildState(index : Int) : javax.swing.text.AsyncBoxView.AsyncBoxView_ChildState;
 	
 	/**
 	* Fetch the queue to use for layout.
@@ -146,7 +146,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* this method to allow subclasses the extend
 	* the ChildState records to do/hold more
 	*/
-	@:overload private function createChildState(v : javax.swing.text.View) : AsyncBoxView_ChildState;
+	@:overload private function createChildState(v : javax.swing.text.View) : javax.swing.text.AsyncBoxView.AsyncBoxView_ChildState;
 	
 	/**
 	* Requirements changed along the major axis.
@@ -166,7 +166,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* the incremental change.  The delta is ignored if the
 	* major span is estimated.
 	*/
-	@:overload @:synchronized private function majorRequirementChange(cs : AsyncBoxView_ChildState, delta : Single) : Void;
+	@:overload @:synchronized private function majorRequirementChange(cs : javax.swing.text.AsyncBoxView.AsyncBoxView_ChildState, delta : Single) : Void;
 	
 	/**
 	* Requirements changed along the minor axis.
@@ -178,7 +178,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* something immediately (such as to perform a
 	* model/view translation).
 	*/
-	@:overload @:synchronized private function minorRequirementChange(cs : AsyncBoxView_ChildState) : Void;
+	@:overload @:synchronized private function minorRequirementChange(cs : javax.swing.text.AsyncBoxView.AsyncBoxView_ChildState) : Void;
 	
 	/**
 	* Publish the changes in preferences upward to the parent
@@ -198,7 +198,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @param length the number of existing views to replace >= 0
 	* @param views the child views to insert
 	*/
-	@:overload override public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
+	@:overload public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Loads all of the children to initialize the view.
@@ -245,7 +245,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @see #removeUpdate
 	* @see #changedUpdate
 	*/
-	@:overload override private function updateLayout(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape) : Void;
+	@:overload private function updateLayout(ec : javax.swing.event.DocumentEvent.DocumentEvent_ElementChange, e : javax.swing.event.DocumentEvent, a : java.awt.Shape) : Void;
 	
 	/**
 	* Sets the parent of the view.
@@ -262,7 +262,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	*
 	* @param parent the parent of the view, null if none
 	*/
-	@:overload override public function setParent(parent : javax.swing.text.View) : Void;
+	@:overload public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Child views can call this on the parent to indicate that
@@ -276,7 +276,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @param height true if the height preference has changed
 	* @see javax.swing.JComponent#revalidate
 	*/
-	@:overload @:synchronized override public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
+	@:overload @:synchronized public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
 	/**
 	* Sets the size of the view.  This should cause
@@ -291,7 +291,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload override public function setSize(width : Single, height : Single) : Void;
+	@:overload public function setSize(width : Single, height : Single) : Void;
 	
 	/**
 	* Render the view using the given allocation and
@@ -311,7 +311,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @param alloc the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, alloc : java.awt.Shape) : Void;
+	@:overload public function paint(g : java.awt.Graphics, alloc : java.awt.Shape) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -324,7 +324,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -337,7 +337,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -350,7 +350,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	*           The parent may choose to resize or break the view.
 	* @exception IllegalArgumentException for an invalid axis type
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Returns the number of views in this view.  Since
@@ -360,7 +360,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @return the number of views >= 0
 	* @see View#getViewCount
 	*/
-	@:overload override public function getViewCount() : Int;
+	@:overload public function getViewCount() : Int;
 	
 	/**
 	* Gets the nth child view.  Since there are no
@@ -369,7 +369,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @param n the number of the view to get, >= 0 && < getViewCount()
 	* @return the view
 	*/
-	@:overload override public function getView(n : Int) : javax.swing.text.View;
+	@:overload public function getView(n : Int) : javax.swing.text.View;
 	
 	/**
 	* Fetches the allocation for the given child view.
@@ -382,7 +382,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @param a  the allocation to this view.
 	* @return the allocation to the child
 	*/
-	@:overload override public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
+	@:overload public function getChildAllocation(index : Int, a : java.awt.Shape) : java.awt.Shape;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -395,7 +395,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	*   -1 if no view represents that position
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
+	@:require(java3) @:overload public function getViewIndex(pos : Int, b : javax.swing.text.Position.Position_Bias) : Int;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -412,7 +412,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @exception IllegalArgumentException for an invalid bias argument
 	* @see View#viewToModel
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -435,7 +435,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* filled in to indicate that the point given is closer to the next
 	* character in the model or the previous character in the model.
 	*/
-	@:overload override public function viewToModel(x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function viewToModel(x : Single, y : Single, a : java.awt.Shape, biasReturn : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Provides a way to determine the next visually represented model
@@ -460,14 +460,14 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* @exception BadLocationException
 	* @exception IllegalArgumentException if <code>direction</code> is invalid
 	*/
-	@:overload override public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function getNextVisualPositionFrom(pos : Int, b : javax.swing.text.Position.Position_Bias, a : java.awt.Shape, direction : Int, biasRet : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
 	/**
 	* Object that manages the offsets of the
 	* children.  All locking for management of
 	* child locations is on this object.
 	*/
-	private var locator : AsyncBoxView_ChildLocator;
+	private var locator : javax.swing.text.AsyncBoxView.AsyncBoxView_ChildLocator;
 	
 	
 }
@@ -494,7 +494,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* changed it's major span.  This can therefore be
 	* called by multiple threads.
 	*/
-	@:overload @:synchronized public function childChanged(cs : AsyncBoxView_ChildState) : Void;
+	@:overload @:synchronized public function childChanged(cs : javax.swing.text.AsyncBoxView.AsyncBoxView_ChildState) : Void;
 	
 	/**
 	* Paint the children that intersect the clip area.
@@ -554,7 +554,7 @@ extern class AsyncBoxView extends javax.swing.text.View
 	* The location of the last offset calculation
 	* that is valid.
 	*/
-	private var lastValidOffset : AsyncBoxView_ChildState;
+	private var lastValidOffset : javax.swing.text.AsyncBoxView.AsyncBoxView_ChildState;
 	
 	/**
 	* The last seen allocation (for repainting when changes

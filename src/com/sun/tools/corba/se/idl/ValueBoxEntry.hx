@@ -41,7 +41,7 @@ extern class ValueBoxEntry extends com.sun.tools.corba.se.idl.ValueEntry
 	**/
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : ValueBoxEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.ValueBoxEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	

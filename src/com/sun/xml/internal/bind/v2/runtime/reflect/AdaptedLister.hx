@@ -25,15 +25,15 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 */
 @:internal extern class AdaptedLister<BeanT, PropT, InMemItemT, OnWireItemT, PackT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, OnWireItemT, PackT>
 {
-	@:overload override public function iterator(prop : PropT, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<OnWireItemT>;
+	@:overload public function iterator(prop : PropT, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<OnWireItemT>;
 	
-	@:overload override public function startPacking(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : PackT;
+	@:overload public function startPacking(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : PackT;
 	
-	@:overload override public function addToPack(pack : PackT, item : OnWireItemT) : Void;
+	@:overload public function addToPack(pack : PackT, item : OnWireItemT) : Void;
 	
-	@:overload override public function endPacking(pack : PackT, bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
+	@:overload public function endPacking(pack : PackT, bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
 	
-	@:overload override public function reset(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
+	@:overload public function reset(bean : BeanT, accessor : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
 	
 	
 }

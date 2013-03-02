@@ -49,22 +49,22 @@ extern class HttpReceiveSocket extends sun.rmi.transport.proxy.WrappedSocket imp
 	* case the remote object makes access control decisions based on the
 	* "client host" of a remote call; see bugid 4399040).
 	*/
-	@:overload override public function getInetAddress() : java.net.InetAddress;
+	@:overload public function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Get an OutputStream for this socket.
 	*/
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Close the socket.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:synchronized public function close() : Void;
 	
 	/**
 	* Return string representation of the socket.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

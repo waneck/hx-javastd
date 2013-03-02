@@ -79,7 +79,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	*
 	* @return a shallow copy of this set
 	*/
-	@:overload public function clone() : ConcurrentSkipListSet<E>;
+	@:overload public function clone() : java.util.concurrent.ConcurrentSkipListSet<E>;
 	
 	/**
 	* Returns the number of elements in this set.  If this set
@@ -181,7 +181,7 @@ extern class ConcurrentSkipListSet<E> extends java.util.AbstractSet<E> implement
 	* @param o the object to be compared for equality with this set
 	* @return <tt>true</tt> if the specified object is equal to this set
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Removes from this set all of its elements that are contained in

@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlMimeTypeWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlMimeType>
 {
-	@:overload public function value(value : String) : XmlMimeTypeWriter;
+	@:overload public function value(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlMimeTypeWriter;
 	
 	
 }

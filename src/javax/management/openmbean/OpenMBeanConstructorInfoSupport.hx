@@ -161,7 +161,7 @@ extern class OpenMBeanConstructorInfoSupport extends javax.management.MBeanConst
 	* @return a string representation of this {@code
 	* OpenMBeanConstructorInfoSupport} instance
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

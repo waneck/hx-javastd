@@ -322,7 +322,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @see #isBorderPainted
 	* @see #setBorderPainted
 	*/
-	@:overload override private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns the look-and-feel object that renders this component.
@@ -349,7 +349,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the look-and-feel class that renders this component.
@@ -361,7 +361,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*        expert: true
 	*   description: A string that specifies the name of the look-and-feel class.
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Subclasses that want to handle change events
@@ -610,7 +610,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*       expert: true
 	*  description: The AccessibleContext associated with this ProgressBar.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -656,7 +656,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the role of this object.
@@ -664,7 +664,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	* @return an instance of AccessibleRole describing the role of the
 	* object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the <code>AccessibleValue</code> associated with this object.  In the
@@ -674,7 +674,7 @@ extern class JProgressBar extends javax.swing.JComponent implements javax.swing.
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the accessible value of this object.

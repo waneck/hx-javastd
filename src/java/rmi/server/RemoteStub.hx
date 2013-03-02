@@ -59,7 +59,7 @@ package java.rmi.server;
 	* is not needed since <code>RemoteStub</code>s can be created with
 	* the <code>RemoteStub(RemoteRef)</code> constructor.
 	*/
-	@:require(java1) @:overload private static function setRef(stub : RemoteStub, ref : java.rmi.server.RemoteRef) : Void;
+	@:require(java1) @:overload private static function setRef(stub : java.rmi.server.RemoteStub, ref : java.rmi.server.RemoteRef) : Void;
 	
 	
 }

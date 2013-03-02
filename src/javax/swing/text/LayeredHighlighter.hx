@@ -49,23 +49,11 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	@:overload @:public public function deinstall(c : javax.swing.text.JTextComponent) : Void;
 	
 	/**
-	* Adds a highlight to the view.  Returns a tag that can be used
-	* to refer to the highlight.
-	*
-	* @param p0 the beginning of the range >= 0
-	* @param p1 the end of the range >= p0
-	* @param p the painter to use for the actual highlighting
-	* @return an object that refers to the highlight
-	* @exception BadLocationException for an invalid range specification
-	*/
-	@:overload @:public public function addHighlight(p0 : Int, p1 : Int, p : Highlighter_HighlightPainter) : Dynamic;
-	
-	/**
 	* Fetches the current list of highlights.
 	*
 	* @return the highlight list
 	*/
-	@:overload @:public public function getHighlights() : java.NativeArray<Highlighter_Highlight>;
+	@:overload @:public public function getHighlights() : java.NativeArray<javax.swing.text.Highlighter.Highlighter_Highlight>;
 	
 	/**
 	* Called when the UI is being installed into the
@@ -108,6 +96,18 @@ extern class LayeredHighlighter implements javax.swing.text.Highlighter
 	* @exception BadLocationException for an invalid range specification
 	*/
 	@:overload @:public public function changeHighlight(tag : Dynamic, p0 : Int, p1 : Int) : Void;
+	
+	/**
+	* Adds a highlight to the view.  Returns a tag that can be used
+	* to refer to the highlight.
+	*
+	* @param p0 the beginning of the range >= 0
+	* @param p1 the end of the range >= p0
+	* @param p the painter to use for the actual highlighting
+	* @return an object that refers to the highlight
+	* @exception BadLocationException for an invalid range specification
+	*/
+	@:overload @:public public function addHighlight(p0 : Int, p1 : Int, p : javax.swing.text.Highlighter.Highlighter_HighlightPainter) : Dynamic;
 	
 	
 }

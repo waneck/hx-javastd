@@ -29,13 +29,13 @@ extern class TreePath implements java.lang.Iterable<com.sun.source.tree.Tree>
 	* Gets a tree path for a tree node within a compilation unit.
 	* @return null if the node is not found
 	*/
-	@:overload public static function getPath(unit : com.sun.source.tree.CompilationUnitTree, target : com.sun.source.tree.Tree) : TreePath;
+	@:overload public static function getPath(unit : com.sun.source.tree.CompilationUnitTree, target : com.sun.source.tree.Tree) : com.sun.source.util.TreePath;
 	
 	/**
 	* Gets a tree path for a tree node within a subtree identified by a TreePath object.
 	* @return null if the node is not found
 	*/
-	@:overload public static function getPath(path : TreePath, target : com.sun.source.tree.Tree) : TreePath;
+	@:overload public static function getPath(path : com.sun.source.util.TreePath, target : com.sun.source.tree.Tree) : com.sun.source.util.TreePath;
 	
 	/**
 	* Creates a TreePath for a root node.
@@ -45,7 +45,7 @@ extern class TreePath implements java.lang.Iterable<com.sun.source.tree.Tree>
 	/**
 	* Creates a TreePath for a child node.
 	*/
-	@:overload public function new(p : TreePath, t : com.sun.source.tree.Tree) : Void;
+	@:overload public function new(p : com.sun.source.util.TreePath, t : com.sun.source.tree.Tree) : Void;
 	
 	/**
 	* Get the compilation unit associated with this path.
@@ -60,7 +60,7 @@ extern class TreePath implements java.lang.Iterable<com.sun.source.tree.Tree>
 	/**
 	* Get the path for the enclosing node, or null if there is no enclosing node.
 	*/
-	@:overload public function getParentPath() : TreePath;
+	@:overload public function getParentPath() : com.sun.source.util.TreePath;
 	
 	@:overload public function iterator() : java.util.Iterator<com.sun.source.tree.Tree>;
 	

@@ -48,7 +48,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:native('open') @:overload public static function _open() : ServerSocketChannel;
+	@:overload public static function open() : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Returns an operation set identifying this channel's supported
@@ -60,7 +60,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final override public function validOps() : Int;
+	@:overload @:final public function validOps() : Int;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket
@@ -88,7 +88,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final public function bind(local : java.net.SocketAddress) : ServerSocketChannel;
+	@:require(java7) @:overload @:final public function bind(local : java.net.SocketAddress) : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Binds the channel's socket to a local address and configures the socket to
@@ -128,7 +128,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : ServerSocketChannel;
+	@:require(java7) @:overload @:abstract public function bind(local : java.net.SocketAddress, backlog : Int) : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* @throws  UnsupportedOperationException           {@inheritDoc}
@@ -138,7 +138,7 @@ extern class ServerSocketChannel extends java.nio.channels.spi.AbstractSelectabl
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : ServerSocketChannel;
+	@:require(java7) @:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.ServerSocketChannel;
 	
 	/**
 	* Retrieves a server socket associated with this channel.

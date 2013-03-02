@@ -23,7 +23,7 @@ package java.lang;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Character implements java.io.Serializable implements java.lang.Comparable<Character>
+extern class Character implements java.io.Serializable implements java.lang.Comparable<Null<java.StdTypes.Char16>>
 {
 	/**
 	* The minimum radix available for conversion to and from strings.
@@ -75,7 +75,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*
 	* @since   1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Character>;
+	@:require(java1) public static var TYPE(default, null) : Class<Null<java.StdTypes.Char16>>;
 	
 	/**
 	* General category "Cn" in the Unicode specification.
@@ -491,7 +491,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	* @return a <tt>Character</tt> instance representing <tt>c</tt>.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(c : java.StdTypes.Char16) : Character;
+	@:require(java5) @:overload public static function valueOf(c : java.StdTypes.Char16) : Null<java.StdTypes.Char16>;
 	
 	/**
 	* Returns the value of this {@code Character} object.
@@ -2619,7 +2619,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*          locale-dependent.
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherCharacter : Character) : Int;
+	@:require(java2) @:overload public function compareTo(anotherCharacter : Null<java.StdTypes.Char16>) : Int;
 	
 	/**
 	* Compares two {@code char} values numerically.
@@ -2739,49 +2739,49 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 *
 * @since 1.2
 */
-@:require(java2) @:native('java$lang$Character$UnicodeBlock') extern class Character_UnicodeBlock extends Character_Subset
+@:require(java2) @:native('java$lang$Character$UnicodeBlock') extern class Character_UnicodeBlock extends java.lang.Character.Character_Subset
 {
 	/**
 	* Constant for the "Basic Latin" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var BASIC_LATIN(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var BASIC_LATIN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Latin-1 Supplement" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var LATIN_1_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var LATIN_1_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Latin Extended-A" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var LATIN_EXTENDED_A(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var LATIN_EXTENDED_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Latin Extended-B" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var LATIN_EXTENDED_B(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var LATIN_EXTENDED_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "IPA Extensions" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var IPA_EXTENSIONS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var IPA_EXTENSIONS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Spacing Modifier Letters" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var SPACING_MODIFIER_LETTERS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var SPACING_MODIFIER_LETTERS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Combining Diacritical Marks" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var COMBINING_DIACRITICAL_MARKS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var COMBINING_DIACRITICAL_MARKS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Greek and Coptic" Unicode character block.
@@ -2790,146 +2790,146 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*
 	* @since 1.2
 	*/
-	@:require(java2) public static var GREEK(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var GREEK(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cyrillic" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CYRILLIC(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CYRILLIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Armenian" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ARMENIAN(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ARMENIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hebrew" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var HEBREW(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var HEBREW(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Arabic" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ARABIC(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ARABIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Devanagari" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var DEVANAGARI(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var DEVANAGARI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Bengali" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var BENGALI(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var BENGALI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Gurmukhi" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var GURMUKHI(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var GURMUKHI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Gujarati" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var GUJARATI(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var GUJARATI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Oriya" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ORIYA(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ORIYA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tamil" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var TAMIL(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var TAMIL(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Telugu" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var TELUGU(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var TELUGU(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Kannada" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var KANNADA(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var KANNADA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Malayalam" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var MALAYALAM(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var MALAYALAM(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Thai" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var THAI(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var THAI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Lao" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var LAO(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var LAO(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tibetan" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var TIBETAN(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var TIBETAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Georgian" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var GEORGIAN(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var GEORGIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hangul Jamo" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var HANGUL_JAMO(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var HANGUL_JAMO(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Latin Extended Additional" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var LATIN_EXTENDED_ADDITIONAL(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var LATIN_EXTENDED_ADDITIONAL(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Greek Extended" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var GREEK_EXTENDED(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var GREEK_EXTENDED(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "General Punctuation" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var GENERAL_PUNCTUATION(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var GENERAL_PUNCTUATION(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Superscripts and Subscripts" Unicode character
 	* block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var SUPERSCRIPTS_AND_SUBSCRIPTS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var SUPERSCRIPTS_AND_SUBSCRIPTS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Currency Symbols" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CURRENCY_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CURRENCY_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Combining Diacritical Marks for Symbols" Unicode
@@ -2938,208 +2938,208 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	* This block was previously known as "Combining Marks for Symbols".
 	* @since 1.2
 	*/
-	@:require(java2) public static var COMBINING_MARKS_FOR_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var COMBINING_MARKS_FOR_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Letterlike Symbols" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var LETTERLIKE_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var LETTERLIKE_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Number Forms" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var NUMBER_FORMS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var NUMBER_FORMS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Arrows" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ARROWS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ARROWS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Mathematical Operators" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var MATHEMATICAL_OPERATORS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var MATHEMATICAL_OPERATORS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Miscellaneous Technical" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var MISCELLANEOUS_TECHNICAL(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var MISCELLANEOUS_TECHNICAL(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Control Pictures" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CONTROL_PICTURES(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CONTROL_PICTURES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Optical Character Recognition" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var OPTICAL_CHARACTER_RECOGNITION(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var OPTICAL_CHARACTER_RECOGNITION(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Enclosed Alphanumerics" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ENCLOSED_ALPHANUMERICS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ENCLOSED_ALPHANUMERICS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Box Drawing" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var BOX_DRAWING(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var BOX_DRAWING(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Block Elements" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var BLOCK_ELEMENTS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var BLOCK_ELEMENTS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Geometric Shapes" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var GEOMETRIC_SHAPES(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var GEOMETRIC_SHAPES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Miscellaneous Symbols" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var MISCELLANEOUS_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var MISCELLANEOUS_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Dingbats" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var DINGBATS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var DINGBATS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Symbols and Punctuation" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CJK_SYMBOLS_AND_PUNCTUATION(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CJK_SYMBOLS_AND_PUNCTUATION(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hiragana" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var HIRAGANA(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var HIRAGANA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Katakana" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var KATAKANA(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var KATAKANA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Bopomofo" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var BOPOMOFO(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var BOPOMOFO(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hangul Compatibility Jamo" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var HANGUL_COMPATIBILITY_JAMO(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var HANGUL_COMPATIBILITY_JAMO(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Kanbun" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var KANBUN(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var KANBUN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Enclosed CJK Letters and Months" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ENCLOSED_CJK_LETTERS_AND_MONTHS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ENCLOSED_CJK_LETTERS_AND_MONTHS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Compatibility" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CJK_COMPATIBILITY(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CJK_COMPATIBILITY(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Unified Ideographs" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CJK_UNIFIED_IDEOGRAPHS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CJK_UNIFIED_IDEOGRAPHS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hangul Syllables" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var HANGUL_SYLLABLES(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var HANGUL_SYLLABLES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Private Use Area" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var PRIVATE_USE_AREA(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var PRIVATE_USE_AREA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Compatibility Ideographs" Unicode character
 	* block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CJK_COMPATIBILITY_IDEOGRAPHS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CJK_COMPATIBILITY_IDEOGRAPHS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Alphabetic Presentation Forms" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ALPHABETIC_PRESENTATION_FORMS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ALPHABETIC_PRESENTATION_FORMS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Arabic Presentation Forms-A" Unicode character
 	* block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ARABIC_PRESENTATION_FORMS_A(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ARABIC_PRESENTATION_FORMS_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Combining Half Marks" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var COMBINING_HALF_MARKS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var COMBINING_HALF_MARKS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Compatibility Forms" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var CJK_COMPATIBILITY_FORMS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var CJK_COMPATIBILITY_FORMS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Small Form Variants" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var SMALL_FORM_VARIANTS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var SMALL_FORM_VARIANTS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Arabic Presentation Forms-B" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var ARABIC_PRESENTATION_FORMS_B(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var ARABIC_PRESENTATION_FORMS_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Halfwidth and Fullwidth Forms" Unicode character
 	* block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var HALFWIDTH_AND_FULLWIDTH_FORMS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var HALFWIDTH_AND_FULLWIDTH_FORMS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Specials" Unicode character block.
 	* @since 1.2
 	*/
-	@:require(java2) public static var SPECIALS(default, null) : Character_UnicodeBlock;
+	@:require(java2) public static var SPECIALS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* @deprecated As of J2SE 5, use {@link #HIGH_SURROGATES},
@@ -3149,358 +3149,358 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*             The {@link #of(char)} and {@link #of(int)} methods
 	*             return the new constants, not SURROGATES_AREA.
 	*/
-	public static var SURROGATES_AREA(default, null) : Character_UnicodeBlock;
+	public static var SURROGATES_AREA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Syriac" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var SYRIAC(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var SYRIAC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Thaana" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var THAANA(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var THAANA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Sinhala" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var SINHALA(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var SINHALA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Myanmar" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var MYANMAR(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var MYANMAR(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ethiopic" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var ETHIOPIC(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var ETHIOPIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cherokee" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var CHEROKEE(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var CHEROKEE(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Unified Canadian Aboriginal Syllabics" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ogham" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var OGHAM(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var OGHAM(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Runic" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var RUNIC(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var RUNIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Khmer" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var KHMER(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var KHMER(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Mongolian" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var MONGOLIAN(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var MONGOLIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Braille Patterns" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BRAILLE_PATTERNS(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var BRAILLE_PATTERNS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Radicals Supplement" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var CJK_RADICALS_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var CJK_RADICALS_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Kangxi Radicals" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var KANGXI_RADICALS(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var KANGXI_RADICALS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ideographic Description Characters" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var IDEOGRAPHIC_DESCRIPTION_CHARACTERS(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var IDEOGRAPHIC_DESCRIPTION_CHARACTERS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Bopomofo Extended" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BOPOMOFO_EXTENDED(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var BOPOMOFO_EXTENDED(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Unified Ideographs Extension A" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Yi Syllables" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var YI_SYLLABLES(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var YI_SYLLABLES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Yi Radicals" Unicode character block.
 	* @since 1.4
 	*/
-	@:require(java4) public static var YI_RADICALS(default, null) : Character_UnicodeBlock;
+	@:require(java4) public static var YI_RADICALS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cyrillic Supplementary" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var CYRILLIC_SUPPLEMENTARY(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var CYRILLIC_SUPPLEMENTARY(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tagalog" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var TAGALOG(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var TAGALOG(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hanunoo" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var HANUNOO(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var HANUNOO(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Buhid" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var BUHID(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var BUHID(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tagbanwa" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var TAGBANWA(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var TAGBANWA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Limbu" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var LIMBU(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var LIMBU(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tai Le" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var TAI_LE(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var TAI_LE(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Khmer Symbols" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var KHMER_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var KHMER_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Phonetic Extensions" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var PHONETIC_EXTENSIONS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var PHONETIC_EXTENSIONS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Miscellaneous Mathematical Symbols-A" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Supplemental Arrows-A" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var SUPPLEMENTAL_ARROWS_A(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var SUPPLEMENTAL_ARROWS_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Supplemental Arrows-B" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var SUPPLEMENTAL_ARROWS_B(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var SUPPLEMENTAL_ARROWS_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Miscellaneous Mathematical Symbols-B" Unicode
 	* character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Supplemental Mathematical Operators" Unicode
 	* character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var SUPPLEMENTAL_MATHEMATICAL_OPERATORS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var SUPPLEMENTAL_MATHEMATICAL_OPERATORS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Miscellaneous Symbols and Arrows" Unicode character
 	* block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var MISCELLANEOUS_SYMBOLS_AND_ARROWS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var MISCELLANEOUS_SYMBOLS_AND_ARROWS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Katakana Phonetic Extensions" Unicode character
 	* block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var KATAKANA_PHONETIC_EXTENSIONS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var KATAKANA_PHONETIC_EXTENSIONS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Yijing Hexagram Symbols" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var YIJING_HEXAGRAM_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var YIJING_HEXAGRAM_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Variation Selectors" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var VARIATION_SELECTORS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var VARIATION_SELECTORS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Linear B Syllabary" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var LINEAR_B_SYLLABARY(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var LINEAR_B_SYLLABARY(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Linear B Ideograms" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var LINEAR_B_IDEOGRAMS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var LINEAR_B_IDEOGRAMS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Aegean Numbers" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var AEGEAN_NUMBERS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var AEGEAN_NUMBERS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Old Italic" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var OLD_ITALIC(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var OLD_ITALIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Gothic" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var GOTHIC(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var GOTHIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ugaritic" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var UGARITIC(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var UGARITIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Deseret" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var DESERET(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var DESERET(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Shavian" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var SHAVIAN(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var SHAVIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Osmanya" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var OSMANYA(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var OSMANYA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cypriot Syllabary" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var CYPRIOT_SYLLABARY(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var CYPRIOT_SYLLABARY(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Byzantine Musical Symbols" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var BYZANTINE_MUSICAL_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var BYZANTINE_MUSICAL_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Musical Symbols" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var MUSICAL_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var MUSICAL_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tai Xuan Jing Symbols" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var TAI_XUAN_JING_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var TAI_XUAN_JING_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Mathematical Alphanumeric Symbols" Unicode
 	* character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var MATHEMATICAL_ALPHANUMERIC_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var MATHEMATICAL_ALPHANUMERIC_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Unified Ideographs Extension B" Unicode
 	* character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Compatibility Ideographs Supplement" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tags" Unicode character block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var TAGS(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var TAGS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Variation Selectors Supplement" Unicode character
 	* block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var VARIATION_SELECTORS_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var VARIATION_SELECTORS_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Supplementary Private Use Area-A" Unicode character
 	* block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var SUPPLEMENTARY_PRIVATE_USE_AREA_A(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var SUPPLEMENTARY_PRIVATE_USE_AREA_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Supplementary Private Use Area-B" Unicode character
 	* block.
 	* @since 1.5
 	*/
-	@:require(java5) public static var SUPPLEMENTARY_PRIVATE_USE_AREA_B(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var SUPPLEMENTARY_PRIVATE_USE_AREA_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "High Surrogates" Unicode character block.
@@ -3509,7 +3509,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var HIGH_SURROGATES(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var HIGH_SURROGATES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "High Private Use Surrogates" Unicode character
@@ -3519,7 +3519,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var HIGH_PRIVATE_USE_SURROGATES(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var HIGH_PRIVATE_USE_SURROGATES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Low Surrogates" Unicode character block.
@@ -3528,521 +3528,521 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*
 	* @since 1.5
 	*/
-	@:require(java5) public static var LOW_SURROGATES(default, null) : Character_UnicodeBlock;
+	@:require(java5) public static var LOW_SURROGATES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Arabic Supplement" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ARABIC_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ARABIC_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "NKo" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var NKO(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var NKO(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Samaritan" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var SAMARITAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var SAMARITAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Mandaic" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var MANDAIC(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var MANDAIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ethiopic Supplement" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ETHIOPIC_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ETHIOPIC_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Unified Canadian Aboriginal Syllabics Extended"
 	* Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "New Tai Lue" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var NEW_TAI_LUE(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var NEW_TAI_LUE(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Buginese" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var BUGINESE(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var BUGINESE(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tai Tham" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var TAI_THAM(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var TAI_THAM(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Balinese" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var BALINESE(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var BALINESE(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Sundanese" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var SUNDANESE(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var SUNDANESE(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Batak" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var BATAK(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var BATAK(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Lepcha" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var LEPCHA(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var LEPCHA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ol Chiki" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var OL_CHIKI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var OL_CHIKI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Vedic Extensions" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var VEDIC_EXTENSIONS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var VEDIC_EXTENSIONS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Phonetic Extensions Supplement" Unicode character
 	* block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var PHONETIC_EXTENSIONS_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var PHONETIC_EXTENSIONS_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Combining Diacritical Marks Supplement" Unicode
 	* character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var COMBINING_DIACRITICAL_MARKS_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var COMBINING_DIACRITICAL_MARKS_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Glagolitic" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var GLAGOLITIC(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var GLAGOLITIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Latin Extended-C" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var LATIN_EXTENDED_C(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var LATIN_EXTENDED_C(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Coptic" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var COPTIC(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var COPTIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Georgian Supplement" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var GEORGIAN_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var GEORGIAN_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tifinagh" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var TIFINAGH(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var TIFINAGH(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ethiopic Extended" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ETHIOPIC_EXTENDED(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ETHIOPIC_EXTENDED(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cyrillic Extended-A" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CYRILLIC_EXTENDED_A(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CYRILLIC_EXTENDED_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Supplemental Punctuation" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var SUPPLEMENTAL_PUNCTUATION(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var SUPPLEMENTAL_PUNCTUATION(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Strokes" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CJK_STROKES(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CJK_STROKES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Lisu" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var LISU(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var LISU(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Vai" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var VAI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var VAI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cyrillic Extended-B" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CYRILLIC_EXTENDED_B(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CYRILLIC_EXTENDED_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Bamum" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var BAMUM(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var BAMUM(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Modifier Tone Letters" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var MODIFIER_TONE_LETTERS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var MODIFIER_TONE_LETTERS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Latin Extended-D" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var LATIN_EXTENDED_D(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var LATIN_EXTENDED_D(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Syloti Nagri" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var SYLOTI_NAGRI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var SYLOTI_NAGRI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Common Indic Number Forms" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var COMMON_INDIC_NUMBER_FORMS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var COMMON_INDIC_NUMBER_FORMS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Phags-pa" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var PHAGS_PA(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var PHAGS_PA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Saurashtra" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var SAURASHTRA(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var SAURASHTRA(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Devanagari Extended" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var DEVANAGARI_EXTENDED(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var DEVANAGARI_EXTENDED(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Kayah Li" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var KAYAH_LI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var KAYAH_LI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Rejang" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var REJANG(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var REJANG(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hangul Jamo Extended-A" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var HANGUL_JAMO_EXTENDED_A(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var HANGUL_JAMO_EXTENDED_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Javanese" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var JAVANESE(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var JAVANESE(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cham" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CHAM(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CHAM(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Myanmar Extended-A" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var MYANMAR_EXTENDED_A(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var MYANMAR_EXTENDED_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Tai Viet" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var TAI_VIET(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var TAI_VIET(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ethiopic Extended-A" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ETHIOPIC_EXTENDED_A(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ETHIOPIC_EXTENDED_A(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Meetei Mayek" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var MEETEI_MAYEK(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var MEETEI_MAYEK(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Hangul Jamo Extended-B" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var HANGUL_JAMO_EXTENDED_B(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var HANGUL_JAMO_EXTENDED_B(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Vertical Forms" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var VERTICAL_FORMS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var VERTICAL_FORMS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ancient Greek Numbers" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ANCIENT_GREEK_NUMBERS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ANCIENT_GREEK_NUMBERS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ancient Symbols" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ANCIENT_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ANCIENT_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Phaistos Disc" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var PHAISTOS_DISC(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var PHAISTOS_DISC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Lycian" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var LYCIAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var LYCIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Carian" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CARIAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CARIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Old Persian" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var OLD_PERSIAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var OLD_PERSIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Imperial Aramaic" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var IMPERIAL_ARAMAIC(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var IMPERIAL_ARAMAIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Phoenician" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var PHOENICIAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var PHOENICIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Lydian" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var LYDIAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var LYDIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Kharoshthi" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var KHAROSHTHI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var KHAROSHTHI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Old South Arabian" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var OLD_SOUTH_ARABIAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var OLD_SOUTH_ARABIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Avestan" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var AVESTAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var AVESTAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Inscriptional Parthian" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var INSCRIPTIONAL_PARTHIAN(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var INSCRIPTIONAL_PARTHIAN(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Inscriptional Pahlavi" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var INSCRIPTIONAL_PAHLAVI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var INSCRIPTIONAL_PAHLAVI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Old Turkic" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var OLD_TURKIC(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var OLD_TURKIC(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Rumi Numeral Symbols" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var RUMI_NUMERAL_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var RUMI_NUMERAL_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Brahmi" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var BRAHMI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var BRAHMI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Kaithi" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var KAITHI(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var KAITHI(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cuneiform" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CUNEIFORM(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CUNEIFORM(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Cuneiform Numbers and Punctuation" Unicode
 	* character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CUNEIFORM_NUMBERS_AND_PUNCTUATION(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CUNEIFORM_NUMBERS_AND_PUNCTUATION(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Egyptian Hieroglyphs" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var EGYPTIAN_HIEROGLYPHS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var EGYPTIAN_HIEROGLYPHS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Bamum Supplement" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var BAMUM_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var BAMUM_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Kana Supplement" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var KANA_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var KANA_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Ancient Greek Musical Notation" Unicode character
 	* block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ANCIENT_GREEK_MUSICAL_NOTATION(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ANCIENT_GREEK_MUSICAL_NOTATION(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Counting Rod Numerals" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var COUNTING_ROD_NUMERALS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var COUNTING_ROD_NUMERALS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Mahjong Tiles" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var MAHJONG_TILES(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var MAHJONG_TILES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Domino Tiles" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var DOMINO_TILES(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var DOMINO_TILES(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Playing Cards" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var PLAYING_CARDS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var PLAYING_CARDS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Enclosed Alphanumeric Supplement" Unicode character
 	* block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ENCLOSED_ALPHANUMERIC_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ENCLOSED_ALPHANUMERIC_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Enclosed Ideographic Supplement" Unicode character
 	* block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ENCLOSED_IDEOGRAPHIC_SUPPLEMENT(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ENCLOSED_IDEOGRAPHIC_SUPPLEMENT(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Miscellaneous Symbols And Pictographs" Unicode
 	* character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Emoticons" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var EMOTICONS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var EMOTICONS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Transport And Map Symbols" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var TRANSPORT_AND_MAP_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var TRANSPORT_AND_MAP_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "Alchemical Symbols" Unicode character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var ALCHEMICAL_SYMBOLS(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var ALCHEMICAL_SYMBOLS(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Unified Ideographs Extension C" Unicode
 	* character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Constant for the "CJK Unified Ideographs Extension D" Unicode
 	* character block.
 	* @since 1.7
 	*/
-	@:require(java7) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D(default, null) : Character_UnicodeBlock;
+	@:require(java7) public static var CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D(default, null) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Returns the object representing the Unicode block containing the
@@ -4060,7 +4060,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	*          {@code null} if the character is not a member of any
 	*          Unicode block
 	*/
-	@:overload public static function of(c : java.StdTypes.Char16) : Character_UnicodeBlock;
+	@:overload public static function of(c : java.StdTypes.Char16) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Returns the object representing the Unicode block
@@ -4078,7 +4078,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	* @see Character#isValidCodePoint(int)
 	* @since   1.5
 	*/
-	@:require(java5) @:overload public static function of(codePoint : Int) : Character_UnicodeBlock;
+	@:require(java5) @:overload public static function of(codePoint : Int) : java.lang.Character.Character_UnicodeBlock;
 	
 	/**
 	* Returns the UnicodeBlock with the given name. Block
@@ -4116,7 +4116,7 @@ extern class Character implements java.io.Serializable implements java.lang.Comp
 	* @throws NullPointerException if {@code blockName} is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public static function forName(blockName : String) : Character_UnicodeBlock;
+	@:require(java5) @:overload @:final public static function forName(blockName : String) : java.lang.Character.Character_UnicodeBlock;
 	
 	
 }

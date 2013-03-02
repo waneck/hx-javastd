@@ -70,7 +70,7 @@ extern class IFNULL extends com.sun.org.apache.bcel.internal.generic.IfInstructi
 	/**
 	* @return negation of instruction
 	*/
-	@:overload override public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
+	@:overload public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -80,7 +80,7 @@ extern class IFNULL extends com.sun.org.apache.bcel.internal.generic.IfInstructi
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

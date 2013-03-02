@@ -58,7 +58,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @param stable The parser's symbol table
 	* @throws TypeCheckError When the parameters have illegal type
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method is called when the constructor is compiled in
@@ -68,7 +68,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* @param classGen The Java class generator
 	* @param methodGen The method generator
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

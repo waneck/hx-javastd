@@ -55,7 +55,7 @@ extern class GC
 	* @throws  IllegalArgumentException
 	*          If the given <code>latency</code> is non-positive
 	*/
-	@:overload public static function requestLatency(latency : haxe.Int64) : GC_LatencyRequest;
+	@:overload public static function requestLatency(latency : haxe.Int64) : sun.misc.GC.GC_LatencyRequest;
 	
 	/**
 	* Returns the current smallest garbage-collection latency request, or zero
@@ -88,7 +88,7 @@ extern class GC
 * method.  Given a request, the only interesting operation is that of
 * cancellation.
 */
-@:native('sun$misc$GC$LatencyRequest') extern class GC_LatencyRequest implements java.lang.Comparable<GC_LatencyRequest>
+@:native('sun$misc$GC$LatencyRequest') extern class GC_LatencyRequest implements java.lang.Comparable<sun.misc.GC.GC_LatencyRequest>
 {
 	/**
 	* Cancels this latency request.
@@ -98,7 +98,7 @@ extern class GC
 	*/
 	@:overload public function cancel() : Void;
 	
-	@:overload public function compareTo(r : GC_LatencyRequest) : Int;
+	@:overload public function compareTo(r : sun.misc.GC.GC_LatencyRequest) : Int;
 	
 	@:overload public function toString() : String;
 	

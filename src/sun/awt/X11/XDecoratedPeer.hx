@@ -31,7 +31,7 @@ package sun.awt.X11;
 	
 	@:overload override public function updateMinimumSize() : Void;
 	
-	@:overload override private function getWMProtocols() : sun.awt.X11.XAtomList;
+	@:overload private function getWMProtocols() : sun.awt.X11.XAtomList;
 	
 	@:overload override public function getGraphics() : java.awt.Graphics;
 	
@@ -85,9 +85,9 @@ package sun.awt.X11;
 	
 	@:overload override public function getSize() : java.awt.Dimension;
 	
-	@:overload override public function getX() : Int;
+	@:overload public function getX() : Int;
 	
-	@:overload override public function getY() : Int;
+	@:overload public function getY() : Int;
 	
 	@:overload public function getLocation() : java.awt.Point;
 	
@@ -95,13 +95,13 @@ package sun.awt.X11;
 	
 	@:overload override public function getAbsoluteY() : Int;
 	
-	@:overload override public function getWidth() : Int;
+	@:overload public function getWidth() : Int;
 	
-	@:overload override public function getHeight() : Int;
+	@:overload public function getHeight() : Int;
 	
 	@:overload @:final public function getDimensions() : sun.awt.X11.WindowDimensions;
 	
-	@:overload override public function getLocationOnScreen() : java.awt.Point;
+	@:overload public function getLocationOnScreen() : java.awt.Point;
 	
 	/***************************************************************************************
 	*              END            OF             I N S E T S   C O D E

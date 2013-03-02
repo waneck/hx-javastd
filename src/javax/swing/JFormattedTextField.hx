@@ -238,7 +238,7 @@ package javax.swing;
 	*
 	* @param formatter AbstractFormatter to use for formatting.
 	*/
-	@:overload public function new(formatter : JFormattedTextField_AbstractFormatter) : Void;
+	@:overload public function new(formatter : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Creates a <code>JFormattedTextField</code> with the specified
@@ -246,7 +246,7 @@ package javax.swing;
 	*
 	* @param factory AbstractFormatterFactory used for formatting.
 	*/
-	@:overload public function new(factory : JFormattedTextField_AbstractFormatterFactory) : Void;
+	@:overload public function new(factory : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory) : Void;
 	
 	/**
 	* Creates a <code>JFormattedTextField</code> with the specified
@@ -256,7 +256,7 @@ package javax.swing;
 	*        formatting.
 	* @param currentValue Initial value to use
 	*/
-	@:overload public function new(factory : JFormattedTextField_AbstractFormatterFactory, currentValue : Dynamic) : Void;
+	@:overload public function new(factory : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory, currentValue : Dynamic) : Void;
 	
 	/**
 	* Sets the behavior when focus is lost. This will be one of
@@ -324,7 +324,7 @@ package javax.swing;
 	* description: AbstractFormatterFactory, responsible for returning an
 	*              AbstractFormatter that can format the current value.
 	*/
-	@:overload public function setFormatterFactory(tf : JFormattedTextField_AbstractFormatterFactory) : Void;
+	@:overload public function setFormatterFactory(tf : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory) : Void;
 	
 	/**
 	* Returns the current <code>AbstractFormatterFactory</code>.
@@ -333,7 +333,7 @@ package javax.swing;
 	* @return <code>AbstractFormatterFactory</code> used to determine
 	*         <code>AbstractFormatter</code>s
 	*/
-	@:overload public function getFormatterFactory() : JFormattedTextField_AbstractFormatterFactory;
+	@:overload public function getFormatterFactory() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatterFactory;
 	
 	/**
 	* Sets the current <code>AbstractFormatter</code>.
@@ -356,7 +356,7 @@ package javax.swing;
 	*   attribute: visualUpdate true
 	* description: TextFormatter, responsible for formatting the current value
 	*/
-	@:overload private function setFormatter(format : JFormattedTextField_AbstractFormatter) : Void;
+	@:overload private function setFormatter(format : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter) : Void;
 	
 	/**
 	* Returns the <code>AbstractFormatter</code> that is used to format and
@@ -364,7 +364,7 @@ package javax.swing;
 	*
 	* @return AbstractFormatter used for formatting
 	*/
-	@:overload public function getFormatter() : JFormattedTextField_AbstractFormatter;
+	@:overload public function getFormatter() : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	/**
 	* Sets the value that will be formatted by an
@@ -510,7 +510,7 @@ package javax.swing;
 	*         return value implies the JFormattedTextField should behave
 	*         like a normal JTextField
 	*/
-	@:overload @:abstract public function getFormatter(tf : JFormattedTextField) : JFormattedTextField_AbstractFormatter;
+	@:overload @:abstract public function getFormatter(tf : javax.swing.JFormattedTextField) : javax.swing.JFormattedTextField.JFormattedTextField_AbstractFormatter;
 	
 	
 }
@@ -578,7 +578,7 @@ package javax.swing;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload public function install(ftf : JFormattedTextField) : Void;
+	@:overload public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	/**
 	* Uninstalls any state the <code>AbstractFormatter</code> may have
@@ -614,7 +614,7 @@ package javax.swing;
 	*
 	* @return JFormattedTextField formatting for.
 	*/
-	@:overload private function getFormattedTextField() : JFormattedTextField;
+	@:overload private function getFormattedTextField() : javax.swing.JFormattedTextField;
 	
 	/**
 	* This should be invoked when the user types an invalid character.

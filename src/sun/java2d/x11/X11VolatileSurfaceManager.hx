@@ -27,20 +27,20 @@ extern class X11VolatileSurfaceManager extends sun.awt.image.VolatileSurfaceMana
 {
 	@:overload public function new(vImg : sun.awt.image.SunVolatileImage, context : Dynamic) : Void;
 	
-	@:overload override private function isAccelerationEnabled() : Bool;
+	@:overload private function isAccelerationEnabled() : Bool;
 	
 	/**
 	* Create a pixmap-based SurfaceData object
 	*/
-	@:overload override private function initAcceleratedSurface() : sun.java2d.SurfaceData;
+	@:overload private function initAcceleratedSurface() : sun.java2d.SurfaceData;
 	
-	@:overload override private function isConfigValid(gc : java.awt.GraphicsConfiguration) : Bool;
+	@:overload private function isConfigValid(gc : java.awt.GraphicsConfiguration) : Bool;
 	
 	/**
 	* Need to override the default behavior because Pixmaps-based
 	* images are accelerated but not volatile.
 	*/
-	@:overload override public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
+	@:overload public function getCapabilities(gc : java.awt.GraphicsConfiguration) : java.awt.ImageCapabilities;
 	
 	
 }

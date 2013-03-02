@@ -52,7 +52,7 @@ extern class SunCertPathBuilder extends java.security.cert.CertPathBuilderSpi
 	* @throws InvalidAlgorithmParameterException if the given parameters are
 	*  inappropriate for this certification path builder.
 	*/
-	@:overload override public function engineBuild(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
+	@:overload public function engineBuild(params : java.security.cert.CertPathParameters) : java.security.cert.CertPathBuilderResult;
 	
 	
 }

@@ -401,7 +401,7 @@ extern class MediaTracker implements java.io.Serializable
 {
 	
 }
-@:internal extern class ImageMediaEntry extends MediaEntry implements java.awt.image.ImageObserver implements java.io.Serializable
+@:internal extern class ImageMediaEntry extends java.awt.MediaTracker.MediaEntry implements java.awt.image.ImageObserver implements java.io.Serializable
 {
 	@:overload public function imageUpdate(img : java.awt.Image, infoflags : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
 	

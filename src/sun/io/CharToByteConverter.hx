@@ -63,13 +63,13 @@ extern class CharToByteConverter
 	/**
 	* Create an instance of the default CharToByteConverter subclass.
 	*/
-	@:overload public static function getDefault() : CharToByteConverter;
+	@:overload public static function getDefault() : sun.io.CharToByteConverter;
 	
 	/**
 	* Returns appropriate CharToByteConverter subclass instance.
 	* @param string represets encoding
 	*/
-	@:overload public static function getConverter(encoding : String) : CharToByteConverter;
+	@:overload public static function getConverter(encoding : String) : sun.io.CharToByteConverter;
 	
 	/**
 	* Returns the character set id for the conversion.

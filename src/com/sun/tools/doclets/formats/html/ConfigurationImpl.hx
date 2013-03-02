@@ -175,7 +175,7 @@ extern class ConfigurationImpl extends com.sun.tools.doclets.internal.toolkit.Co
 	*/
 	@:overload public static function reset() : Void;
 	
-	@:overload public static function getInstance() : ConfigurationImpl;
+	@:overload public static function getInstance() : com.sun.tools.doclets.formats.html.ConfigurationImpl;
 	
 	/**
 	* Return the build date for the doclet.

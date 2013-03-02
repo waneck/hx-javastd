@@ -136,7 +136,7 @@ package javax.sound.sampled;
 	* of the port.
 	* @return  a string that describes the port
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:final public function toString() : String;
 	
 	
 }

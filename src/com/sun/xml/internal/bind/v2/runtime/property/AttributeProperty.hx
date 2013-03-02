@@ -23,7 +23,7 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class AttributeProperty<BeanT> extends com.sun.xml.internal.bind.v2.runtime.property.PropertyImpl<BeanT> implements java.lang.Comparable<AttributeProperty<Dynamic>>
+extern class AttributeProperty<BeanT> extends com.sun.xml.internal.bind.v2.runtime.property.PropertyImpl<BeanT> implements java.lang.Comparable<com.sun.xml.internal.bind.v2.runtime.property.AttributeProperty<Dynamic>>
 {
 	/**
 	* Attribute name.
@@ -44,19 +44,19 @@ extern class AttributeProperty<BeanT> extends com.sun.xml.internal.bind.v2.runti
 	*/
 	@:overload public function serializeAttributes(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function serializeURIs(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload public function serializeURIs(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function hasSerializeURIAction() : Bool;
+	@:overload public function hasSerializeURIAction() : Bool;
 	
-	@:overload override public function buildChildElementUnmarshallers(chainElem : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload public function buildChildElementUnmarshallers(chainElem : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload override public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload override public function reset(o : BeanT) : Void;
+	@:overload public function reset(o : BeanT) : Void;
 	
-	@:overload override public function getIdValue(bean : BeanT) : String;
+	@:overload public function getIdValue(bean : BeanT) : String;
 	
-	@:overload public function compareTo(that : AttributeProperty<Dynamic>) : Int;
+	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.property.AttributeProperty<Dynamic>) : Int;
 	
 	
 }

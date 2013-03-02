@@ -129,7 +129,7 @@ extern interface Clob
 	* this method
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function position(searchstr : Clob, start : haxe.Int64) : haxe.Int64;
+	@:require(java2) @:overload public function position(searchstr : java.sql.Clob, start : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Writes the given Java <code>String</code> to the <code>CLOB</code>

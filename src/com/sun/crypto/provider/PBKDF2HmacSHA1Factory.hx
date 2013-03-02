@@ -41,7 +41,7 @@ extern class PBKDF2HmacSHA1Factory extends javax.crypto.SecretKeyFactorySpi
 	* @exception InvalidKeySpecException if the given key specification
 	* is inappropriate for this key factory to produce a public key.
 	*/
-	@:overload override private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
+	@:overload private function engineGenerateSecret(keySpec : java.security.spec.KeySpec) : javax.crypto.SecretKey;
 	
 	/**
 	* Returns a specification (key material) of the given key
@@ -60,7 +60,7 @@ extern class PBKDF2HmacSHA1Factory extends javax.crypto.SecretKeyFactorySpi
 	* given key cannot be processed (e.g., the given key has an
 	* unrecognized algorithm or format).
 	*/
-	@:overload override private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpecCl : Class<Dynamic>) : java.security.spec.KeySpec;
+	@:overload private function engineGetKeySpec(key : javax.crypto.SecretKey, keySpecCl : Class<Dynamic>) : java.security.spec.KeySpec;
 	
 	/**
 	* Translates a <code>SecretKey</code> object, whose provider may be
@@ -74,7 +74,7 @@ extern class PBKDF2HmacSHA1Factory extends javax.crypto.SecretKeyFactorySpi
 	* @exception InvalidKeyException if the given key cannot be processed by
 	* this key factory.
 	*/
-	@:overload override private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
+	@:overload private function engineTranslateKey(key : javax.crypto.SecretKey) : javax.crypto.SecretKey;
 	
 	
 }

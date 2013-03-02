@@ -143,7 +143,7 @@ package com.sun.media.sound;
 	
 	/** Return the internal list of Transmitters, possibly creating it first.
 	*/
-	@:overload private function getTransmitterList() : AbstractMidiDevice_TransmitterList;
+	@:overload private function getTransmitterList() : com.sun.media.sound.AbstractMidiDevice.AbstractMidiDevice_TransmitterList;
 	
 	/** Returns if this device supports Transmitters.
 	Subclasses that use Transmitters should override this method to

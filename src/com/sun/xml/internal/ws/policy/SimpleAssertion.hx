@@ -35,9 +35,9 @@ extern class SimpleAssertion extends com.sun.xml.internal.ws.policy.PolicyAssert
 	
 	@:overload private function new(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
 	
-	@:overload @:final override public function hasNestedPolicy() : Bool;
+	@:overload @:final public function hasNestedPolicy() : Bool;
 	
-	@:overload @:final override public function getNestedPolicy() : com.sun.xml.internal.ws.policy.NestedPolicy;
+	@:overload @:final public function getNestedPolicy() : com.sun.xml.internal.ws.policy.NestedPolicy;
 	
 	
 }

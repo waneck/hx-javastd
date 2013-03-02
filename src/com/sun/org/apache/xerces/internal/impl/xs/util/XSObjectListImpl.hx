@@ -23,7 +23,7 @@ extern class XSObjectListImpl extends java.util.AbstractList<Dynamic> implements
 	/**
 	* An immutable empty list.
 	*/
-	public static var EMPTY_LIST(default, null) : XSObjectListImpl;
+	public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.XSObjectListImpl;
 	
 	@:overload public function new() : Void;
 	

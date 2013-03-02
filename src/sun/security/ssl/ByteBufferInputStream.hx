@@ -39,34 +39,34 @@ package sun.security.ssl;
 	*
 	* Increments position().
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	/**
 	* Returns a byte array from the ByteBuffer.
 	*
 	* Increments position().
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Returns a byte array from the ByteBuffer.
 	*
 	* Increments position().
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards <code>n</code> bytes of data from this input
 	* stream.
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes that can be read (or skipped over)
 	* from this input stream without blocking by the next caller of a
 	* method for this input stream.
 	*/
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	/**
 	* Closes this input stream and releases any system resources associated
@@ -74,24 +74,24 @@ package sun.security.ssl;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* Marks the current position in this input stream.
 	*/
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:synchronized public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
 	* <code>mark</code> method was last called on this input stream.
 	*/
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:synchronized public function reset() : Void;
 	
 	/**
 	* Tests if this input stream supports the <code>mark</code> and
 	* <code>reset</code> methods.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload public function markSupported() : Bool;
 	
 	
 }

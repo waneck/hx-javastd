@@ -65,7 +65,7 @@ extern class DOMCanonicalizationMethod extends org.jcp.xml.dsig.internal.dom.DOM
 	
 	@:overload public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
 	
 }

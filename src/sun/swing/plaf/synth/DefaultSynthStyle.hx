@@ -48,7 +48,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param style Style to duplicate
 	*/
-	@:overload public function new(style : DefaultSynthStyle) : Void;
+	@:overload public function new(style : sun.swing.plaf.synth.DefaultSynthStyle) : Void;
 	
 	/**
 	* Creates a new DefaultSynthStyle.
@@ -59,7 +59,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param states StateInfos describing properties per state
 	* @param data Style specific data.
 	*/
-	@:overload public function new(insets : java.awt.Insets, opaque : Bool, states : java.NativeArray<DefaultSynthStyle_StateInfo>, data : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload public function new(insets : java.awt.Insets, opaque : Bool, states : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>, data : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	@:overload override public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
@@ -220,7 +220,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param style Style to add our styles to
 	* @return Merged style.
 	*/
-	@:overload public function addTo(style : DefaultSynthStyle) : DefaultSynthStyle;
+	@:overload public function addTo(style : sun.swing.plaf.synth.DefaultSynthStyle) : sun.swing.plaf.synth.DefaultSynthStyle;
 	
 	/**
 	* Sets the array of StateInfo's which are used to specify properties
@@ -228,7 +228,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param states StateInfos
 	*/
-	@:overload public function setStateInfo(states : java.NativeArray<DefaultSynthStyle_StateInfo>) : Void;
+	@:overload public function setStateInfo(states : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>) : Void;
 	
 	/**
 	* Returns the array of StateInfo's that that are used to specify
@@ -236,7 +236,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @return Array of StateInfos.
 	*/
-	@:overload public function getStateInfo() : java.NativeArray<DefaultSynthStyle_StateInfo>;
+	@:overload public function getStateInfo() : java.NativeArray<sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo>;
 	
 	/**
 	* Returns the best matching StateInfo for a particular state.
@@ -244,7 +244,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param state Component state.
 	* @return Best matching StateInfo, or null
 	*/
-	@:overload public function getStateInfo(state : Int) : DefaultSynthStyle_StateInfo;
+	@:overload public function getStateInfo(state : Int) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
 	
 	@:overload public function toString() : String;
 	
@@ -279,7 +279,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	*
 	* @param info StateInfo to copy.
 	*/
-	@:overload public function new(info : DefaultSynthStyle_StateInfo) : Void;
+	@:overload public function new(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : Void;
 	
 	@:overload public function getData() : java.util.Map<Dynamic, Dynamic>;
 	
@@ -334,7 +334,7 @@ extern class DefaultSynthStyle extends javax.swing.plaf.synth.SynthStyle impleme
 	* @param info StateInfo to add our styles to
 	* @return Merged StateInfo.
 	*/
-	@:overload public function addTo(info : DefaultSynthStyle_StateInfo) : DefaultSynthStyle_StateInfo;
+	@:overload public function addTo(info : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo) : sun.swing.plaf.synth.DefaultSynthStyle.DefaultSynthStyle_StateInfo;
 	
 	/**
 	* Sets the state this StateInfo corresponds to.

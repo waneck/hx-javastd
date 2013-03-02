@@ -86,7 +86,7 @@ extern class HeaderTokenizer
 	* @return          the next Token
 	* @exception       ParseException if the parse fails
 	*/
-	@:overload public function next() : HeaderTokenizer_Token;
+	@:overload public function next() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.HeaderTokenizer.HeaderTokenizer_Token;
 	
 	/**
 	* Peek at the next token, without actually removing the token
@@ -97,7 +97,7 @@ extern class HeaderTokenizer
 	* @return          the next Token
 	* @exception       ParseException if the parse fails
 	*/
-	@:overload public function peek() : HeaderTokenizer_Token;
+	@:overload public function peek() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.HeaderTokenizer.HeaderTokenizer_Token;
 	
 	/**
 	* Return the rest of the Header.

@@ -37,16 +37,16 @@ extern class ByteToCharGB18030 extends sun.io.ByteToCharGB18030DB
 	
 	@:overload public function getDBIndex2() : java.NativeArray<String>;
 	
-	@:overload override public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
+	@:overload public function flush(output : java.NativeArray<java.StdTypes.Char16>, outStart : Int, outEnd : Int) : Int;
 	
 	/**
 	* Character conversion
 	*/
-	@:overload override public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
+	@:overload public function convert(input : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inEnd : Int, output : java.NativeArray<java.StdTypes.Char16>, outOff : Int, outEnd : Int) : Int;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
 	
 }

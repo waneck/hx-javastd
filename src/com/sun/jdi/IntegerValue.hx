@@ -32,7 +32,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface IntegerValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<IntegerValue>
+@:require(java3) extern interface IntegerValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<com.sun.jdi.IntegerValue>
 {
 	/**
 	* Returns this IntegerValue as an int.

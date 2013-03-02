@@ -44,7 +44,7 @@ extern class FastInfosetCodec implements com.sun.xml.internal.ws.api.pipe.Codec
 	*
 	* @return a new {@link FastInfosetCodec} instance.
 	*/
-	@:overload public static function create() : FastInfosetCodec;
+	@:overload public static function create() : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetCodec;
 	
 	/**
 	* Creates a new {@link FastInfosetCodec} instance.
@@ -53,7 +53,7 @@ extern class FastInfosetCodec implements com.sun.xml.internal.ws.api.pipe.Codec
 	*        vocabulary tables for multiple encode/decode invocations.
 	* @return a new {@link FastInfosetCodec} instance.
 	*/
-	@:overload public static function create(retainState : Bool) : FastInfosetCodec;
+	@:overload public static function create(retainState : Bool) : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetCodec;
 	
 	
 }

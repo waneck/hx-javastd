@@ -25,7 +25,7 @@ package sun.awt.image;
 */
 extern class SunWritableRaster extends java.awt.image.WritableRaster
 {
-	@:overload public static function setDataStealer(ds : SunWritableRaster_DataStealer) : Void;
+	@:overload public static function setDataStealer(ds : sun.awt.image.SunWritableRaster.SunWritableRaster_DataStealer) : Void;
 	
 	@:overload public static function stealData(dbb : java.awt.image.DataBufferByte, bank : Int) : java.NativeArray<java.StdTypes.Int8>;
 	

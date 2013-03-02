@@ -76,7 +76,7 @@ extern class KeyAgreement
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : KeyAgreement;
+	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.KeyAgreement;
 	
 	/**
 	* Returns a <code>KeyAgreement</code> object that implements the
@@ -116,7 +116,7 @@ extern class KeyAgreement
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : KeyAgreement;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.KeyAgreement;
 	
 	/**
 	* Returns a <code>KeyAgreement</code> object that implements the
@@ -150,7 +150,7 @@ extern class KeyAgreement
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : KeyAgreement;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.KeyAgreement;
 	
 	/**
 	* Returns the provider of this <code>KeyAgreement</code> object.

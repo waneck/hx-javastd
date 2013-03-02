@@ -59,9 +59,9 @@ package sun.nio.ch;
 	*/
 	@:overload @:final private function end(completed : Bool) : Void;
 	
-	@:overload @:final override public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.util.concurrent.Future<java.nio.channels.FileLock>;
+	@:overload @:final public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.util.concurrent.Future<java.nio.channels.FileLock>;
 	
-	@:overload @:final override public function lock<A>(position : haxe.Int64, size : haxe.Int64, shared : Bool, attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
+	@:overload @:final public function lock<A>(position : haxe.Int64, size : haxe.Int64, shared : Bool, attachment : A, handler : java.nio.channels.CompletionHandler<java.nio.channels.FileLock, A>) : Void;
 	
 	/**
 	* Adds region to lock table
@@ -75,13 +75,13 @@ package sun.nio.ch;
 	*/
 	@:overload @:abstract private function implRelease(fli : sun.nio.ch.FileLockImpl) : Void;
 	
-	@:overload @:final override public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:final public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
 	
-	@:overload @:final override public function read<A>(dst : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:final public function read<A>(dst : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
-	@:overload @:final override public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
+	@:overload @:final public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : java.util.concurrent.Future<Null<Int>>;
 	
-	@:overload @:final override public function write<A>(src : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
+	@:overload @:final public function write<A>(src : java.nio.ByteBuffer, position : haxe.Int64, attachment : A, handler : java.nio.channels.CompletionHandler<Null<Int>, A>) : Void;
 	
 	
 }

@@ -77,7 +77,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @param listener The error listener to use with the TransformerFactory
 	* @throws IllegalArgumentException
 	*/
-	@:overload override public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
+	@:overload public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -85,7 +85,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	*
 	* @return The error listener used with the TransformerFactory
 	*/
-	@:overload override public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -95,7 +95,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @return An object representing the attribute value
 	* @throws IllegalArgumentException
 	*/
-	@:overload override public function getAttribute(name : String) : Dynamic;
+	@:overload public function getAttribute(name : String) : Dynamic;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -105,7 +105,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @param value An object representing the attribute value
 	* @throws IllegalArgumentException
 	*/
-	@:overload override public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
 	
 	/**
 	* <p>Set a feature for this <code>TransformerFactory</code> and <code>Transformer</code>s
@@ -128,7 +128,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	*   or the <code>Transformer</code>s or <code>Template</code>s it creates cannot support this feature.
 	* @throws NullPointerException If the <code>name</code> parameter is null.
 	*/
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -139,7 +139,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @param name The feature name
 	* @return 'true' if feature is supported, 'false' if not
 	*/
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload public function getFeature(name : String) : Bool;
 	
 	/**
 	* Return the state of the services mechanism feature.
@@ -154,7 +154,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @return The URLResolver used for this TransformerFactory and all
 	* Templates and Transformer objects created using this factory
 	*/
-	@:overload override public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload public function getURIResolver() : javax.xml.transform.URIResolver;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -166,7 +166,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @param resolver The URLResolver used for this TransformerFactory and all
 	* Templates and Transformer objects created using this factory
 	*/
-	@:overload override public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -183,7 +183,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @return A Source object suitable for passing to the TransformerFactory.
 	* @throws TransformerConfigurationException
 	*/
-	@:overload override public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
+	@:overload public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -192,7 +192,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @return A Transformer object that simply copies the source to the result.
 	* @throws TransformerConfigurationException
 	*/
-	@:overload override public function newTransformer() : javax.xml.transform.Transformer;
+	@:overload public function newTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -204,7 +204,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @return A Templates object that can be used to create Transformers.
 	* @throws TransformerConfigurationException
 	*/
-	@:overload override public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
+	@:overload public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -215,7 +215,7 @@ extern class TransformerFactoryImpl extends javax.xml.transform.sax.SAXTransform
 	* @return A Templates object that can be used to create Transformers.
 	* @throws TransformerConfigurationException
 	*/
-	@:overload override public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
+	@:overload public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
 	
 	/**
 	* javax.xml.transform.sax.SAXTransformerFactory implementation.

@@ -32,7 +32,7 @@ extern class ManifestDigester
 	
 	@:overload public function new(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function get(name : String, oldStyle : Bool) : ManifestDigester_Entry;
+	@:overload public function get(name : String, oldStyle : Bool) : sun.security.util.ManifestDigester.ManifestDigester_Entry;
 	
 	@:overload public function manifestDigest(md : java.security.MessageDigest) : java.NativeArray<java.StdTypes.Int8>;
 	

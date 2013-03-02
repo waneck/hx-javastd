@@ -159,7 +159,7 @@ package sun.java2d;
 	* @see #getStateTracker
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getState() : StateTrackable_State;
+	@:require(java7) @:overload public function getState() : sun.java2d.StateTrackable.StateTrackable_State;
 	
 	/**
 	* Returns an object which can track future changes to the

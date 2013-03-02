@@ -27,7 +27,7 @@ extern class JDocComment extends com.sun.codemodel.internal.JCommentPart impleme
 {
 	@:overload public function new(owner : com.sun.codemodel.internal.JCodeModel) : Void;
 	
-	@:overload override public function append(o : Dynamic) : JDocComment;
+	@:overload public function append(o : Dynamic) : com.sun.codemodel.internal.JDocComment;
 	
 	/**
 	* Append a text to a @param tag to the javadoc

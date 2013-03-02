@@ -31,7 +31,7 @@ extern class AnnotationType
 	* @throw IllegalArgumentException if the specified class object for
 	*     does not represent a valid annotation type
 	*/
-	@:overload @:synchronized public static function getInstance(annotationClass : Class<java.lang.annotation.Annotation>) : AnnotationType;
+	@:overload @:synchronized public static function getInstance(annotationClass : Class<java.lang.annotation.Annotation>) : sun.reflect.annotation.AnnotationType;
 	
 	/**
 	* Returns the type that must be returned by the invocation handler

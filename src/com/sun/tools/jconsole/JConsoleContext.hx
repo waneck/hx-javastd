@@ -41,7 +41,7 @@ extern interface JConsoleContext
 	* Returns the current connection state.
 	* @return the current connection state.
 	*/
-	@:overload public function getConnectionState() : JConsoleContext_ConnectionState;
+	@:overload public function getConnectionState() : com.sun.tools.jconsole.JConsoleContext.JConsoleContext_ConnectionState;
 	
 	/**
 	* Add a {@link java.beans.PropertyChangeListener PropertyChangeListener}

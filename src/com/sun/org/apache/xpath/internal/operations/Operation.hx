@@ -112,7 +112,7 @@ extern class Operation extends com.sun.org.apache.xpath.internal.Expression impl
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

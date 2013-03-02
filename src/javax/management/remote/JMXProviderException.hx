@@ -48,7 +48,7 @@ extern class JMXProviderException extends java.io.IOException
 	*/
 	@:overload public function new(message : String, cause : java.lang.Throwable) : Void;
 	
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

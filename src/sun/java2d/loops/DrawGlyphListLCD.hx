@@ -31,11 +31,11 @@ extern class DrawGlyphListLCD extends sun.java2d.loops.GraphicsPrimitive
 	*   2) must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : DrawGlyphListLCD;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawGlyphListLCD;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -49,9 +49,9 @@ extern class DrawGlyphListLCD extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$DrawGlyphListLCD$TraceDrawGlyphListLCD') @:internal extern class DrawGlyphListLCD_TraceDrawGlyphListLCD extends DrawGlyphListLCD
+@:native('sun$java2d$loops$DrawGlyphListLCD$TraceDrawGlyphListLCD') @:internal extern class DrawGlyphListLCD_TraceDrawGlyphListLCD extends sun.java2d.loops.DrawGlyphListLCD
 {
-	@:overload public function new(target : DrawGlyphListLCD) : Void;
+	@:overload public function new(target : sun.java2d.loops.DrawGlyphListLCD) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

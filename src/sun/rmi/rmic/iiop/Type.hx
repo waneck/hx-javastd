@@ -207,7 +207,7 @@ extern class Type implements sun.rmi.rmic.iiop.Constants implements sun.rmi.rmic
 	/**
 	* Get element type. Returns null if not an array.
 	*/
-	@:overload public function getElementType() : Type;
+	@:overload public function getElementType() : sun.rmi.rmic.iiop.Type;
 	
 	/**
 	* Get array dimension. Returns zero if not an array.
@@ -229,7 +229,7 @@ extern class Type implements sun.rmi.rmic.iiop.Constants implements sun.rmi.rmic
 	* by this type, including itself.
 	* @param typeCodeFilter The typeCode to use as a filter.
 	*/
-	@:overload public function collectMatching(typeCodeFilter : Int) : java.NativeArray<Type>;
+	@:overload public function collectMatching(typeCodeFilter : Int) : java.NativeArray<sun.rmi.rmic.iiop.Type>;
 	
 	/**
 	* Collect all the matching types referenced directly or indirectly
@@ -238,7 +238,7 @@ extern class Type implements sun.rmi.rmic.iiop.Constants implements sun.rmi.rmic
 	* @param alreadyChecked Contains types which have previously been checked
 	* and will be ignored. Updated during collection.
 	*/
-	@:overload public function collectMatching(typeCodeFilter : Int, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<Type>;
+	@:overload public function collectMatching(typeCodeFilter : Int, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Type>;
 	
 	/**
 	* Return a string describing this type.
@@ -272,7 +272,7 @@ extern class Type implements sun.rmi.rmic.iiop.Constants implements sun.rmi.rmic
 	* @param useIDLNames If true, print IDL names; otherwise, print java names.
 	* @param globalIDLNames If true and useIDLNames true, prepends "::".
 	*/
-	@:native('print') @:overload public static function _print(writer : sun.rmi.rmic.IndentingWriter, theTypes : java.NativeArray<Type>, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
+	@:native('print') @:overload public static function _print(writer : sun.rmi.rmic.IndentingWriter, theTypes : java.NativeArray<sun.rmi.rmic.iiop.Type>, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
 	
 	/**
 	* Print this type.
@@ -316,12 +316,12 @@ extern class Type implements sun.rmi.rmic.iiop.Constants implements sun.rmi.rmic
 	/**
 	* Get a type out of the table.
 	*/
-	@:overload private static function getType(key : sun.tools.java.Type, stack : sun.rmi.rmic.iiop.ContextStack) : Type;
+	@:overload private static function getType(key : sun.tools.java.Type, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.Type;
 	
 	/**
 	* Get a type out of the table.
 	*/
-	@:overload private static function getType(key : String, stack : sun.rmi.rmic.iiop.ContextStack) : Type;
+	@:overload private static function getType(key : String, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.Type;
 	
 	/**
 	* Remove a type from the table.
@@ -336,17 +336,17 @@ extern class Type implements sun.rmi.rmic.iiop.Constants implements sun.rmi.rmic
 	/**
 	* Put a type into the table.
 	*/
-	@:overload private static function putType(key : sun.tools.java.Type, value : Type, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
+	@:overload private static function putType(key : sun.tools.java.Type, value : sun.rmi.rmic.iiop.Type, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
 	
 	/**
 	* Put a type into the table.
 	*/
-	@:overload private static function putType(key : String, value : Type, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
+	@:overload private static function putType(key : String, value : sun.rmi.rmic.iiop.Type, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
 	
 	/**
 	* Put an invalid type into the.
 	*/
-	@:overload private static function putInvalidType(key : Type, value : String, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
+	@:overload private static function putInvalidType(key : sun.rmi.rmic.iiop.Type, value : String, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
 	
 	/**
 	* Remove all invalid types...
@@ -376,7 +376,7 @@ extern class Type implements sun.rmi.rmic.iiop.Constants implements sun.rmi.rmic
 	/**
 	* Convert an invalid type to a valid one.
 	*/
-	@:overload private function getValidType(invalidType : Type) : Type;
+	@:overload private function getValidType(invalidType : sun.rmi.rmic.iiop.Type) : sun.rmi.rmic.iiop.Type;
 	
 	/**
 	* Print the "closing" of the package or module of this type.

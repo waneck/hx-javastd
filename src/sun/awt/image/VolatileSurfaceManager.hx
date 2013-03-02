@@ -211,9 +211,9 @@ extern class VolatileSurfaceManager extends sun.awt.image.SurfaceManager impleme
 }
 @:native('sun$awt$image$VolatileSurfaceManager$AcceleratedImageCapabilities') @:internal extern class VolatileSurfaceManager_AcceleratedImageCapabilities extends java.awt.ImageCapabilities
 {
-	@:overload override public function isAccelerated() : Bool;
+	@:overload public function isAccelerated() : Bool;
 	
-	@:overload override public function isTrueVolatile() : Bool;
+	@:overload public function isTrueVolatile() : Bool;
 	
 	
 }

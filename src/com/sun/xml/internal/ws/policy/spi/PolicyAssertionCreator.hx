@@ -60,7 +60,7 @@ extern interface PolicyAssertionCreator
 	*
 	* @throws AssertionCreationException in case of assertion creation failure
 	*/
-	@:overload public function createAssertion(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet, defaultCreator : PolicyAssertionCreator) : com.sun.xml.internal.ws.policy.PolicyAssertion;
+	@:overload public function createAssertion(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>, nestedAlternative : com.sun.xml.internal.ws.policy.AssertionSet, defaultCreator : com.sun.xml.internal.ws.policy.spi.PolicyAssertionCreator) : com.sun.xml.internal.ws.policy.PolicyAssertion;
 	
 	
 }

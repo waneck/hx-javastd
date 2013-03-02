@@ -186,7 +186,7 @@ extern class FormView extends javax.swing.text.ComponentView implements java.awt
 */
 @:native('javax$swing$text$html$FormView$MouseEventListener') extern class FormView_MouseEventListener extends java.awt.event.MouseAdapter
 {
-	@:overload override public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(evt : java.awt.event.MouseEvent) : Void;
 	
 	
 }

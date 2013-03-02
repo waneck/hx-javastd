@@ -143,7 +143,7 @@ extern class Variable extends com.sun.org.apache.xpath.internal.Expression imple
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* Tell if this is a psuedo variable reference, declared by Xalan instead

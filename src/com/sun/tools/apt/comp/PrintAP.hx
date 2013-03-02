@@ -38,27 +38,27 @@ extern class PrintAP implements com.sun.mirror.apt.AnnotationProcessor
 }
 @:native('com$sun$tools$apt$comp$PrintAP$PrintingVisitors$PrePrinting') @:internal extern class PrintAP_PrintingVisitors_PrePrinting extends com.sun.mirror.util.SimpleDeclarationVisitor
 {
-	@:overload override public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
+	@:overload public function visitClassDeclaration(d : com.sun.mirror.declaration.ClassDeclaration) : Void;
 	
-	@:overload override public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
+	@:overload public function visitEnumDeclaration(d : com.sun.mirror.declaration.EnumDeclaration) : Void;
 	
-	@:overload override public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
+	@:overload public function visitInterfaceDeclaration(d : com.sun.mirror.declaration.InterfaceDeclaration) : Void;
 	
-	@:overload override public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
+	@:overload public function visitAnnotationTypeDeclaration(d : com.sun.mirror.declaration.AnnotationTypeDeclaration) : Void;
 	
-	@:overload override public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
+	@:overload public function visitFieldDeclaration(d : com.sun.mirror.declaration.FieldDeclaration) : Void;
 	
-	@:overload override public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
+	@:overload public function visitEnumConstantDeclaration(d : com.sun.mirror.declaration.EnumConstantDeclaration) : Void;
 	
-	@:overload override public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
+	@:overload public function visitMethodDeclaration(d : com.sun.mirror.declaration.MethodDeclaration) : Void;
 	
-	@:overload override public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
+	@:overload public function visitConstructorDeclaration(d : com.sun.mirror.declaration.ConstructorDeclaration) : Void;
 	
 	
 }
 @:native('com$sun$tools$apt$comp$PrintAP$PrintingVisitors$PostPrinting') @:internal extern class PrintAP_PrintingVisitors_PostPrinting extends com.sun.mirror.util.SimpleDeclarationVisitor
 {
-	@:overload override public function visitTypeDeclaration(d : com.sun.mirror.declaration.TypeDeclaration) : Void;
+	@:overload public function visitTypeDeclaration(d : com.sun.mirror.declaration.TypeDeclaration) : Void;
 	
 	
 }

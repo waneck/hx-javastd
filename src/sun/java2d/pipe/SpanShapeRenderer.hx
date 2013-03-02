@@ -45,7 +45,7 @@ extern class SpanShapeRenderer implements sun.java2d.pipe.ShapeDrawPipe
 	
 	
 }
-@:native('sun$java2d$pipe$SpanShapeRenderer$Composite') extern class SpanShapeRenderer_Composite extends SpanShapeRenderer
+@:native('sun$java2d$pipe$SpanShapeRenderer$Composite') extern class SpanShapeRenderer_Composite extends sun.java2d.pipe.SpanShapeRenderer
 {
 	@:overload public function new(pipe : sun.java2d.pipe.CompositePipe) : Void;
 	
@@ -57,7 +57,7 @@ extern class SpanShapeRenderer implements sun.java2d.pipe.ShapeDrawPipe
 	
 	
 }
-@:native('sun$java2d$pipe$SpanShapeRenderer$Simple') extern class SpanShapeRenderer_Simple extends SpanShapeRenderer implements sun.java2d.pipe.LoopBasedPipe
+@:native('sun$java2d$pipe$SpanShapeRenderer$Simple') extern class SpanShapeRenderer_Simple extends sun.java2d.pipe.SpanShapeRenderer implements sun.java2d.pipe.LoopBasedPipe
 {
 	@:overload override public function startSequence(sg : sun.java2d.SunGraphics2D, s : java.awt.Shape, devR : java.awt.Rectangle, bbox : java.NativeArray<Int>) : Dynamic;
 	

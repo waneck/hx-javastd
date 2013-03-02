@@ -29,11 +29,11 @@ extern class LocalVariableTypeTableWriter extends com.sun.tools.javap.Instructio
 	
 	@:overload public function reset(attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
-	@:overload override public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
-	@:overload public function writeLocalVariables(pc : Int, kind : LocalVariableTypeTableWriter_NoteKind) : Void;
+	@:overload public function writeLocalVariables(pc : Int, kind : com.sun.tools.javap.LocalVariableTypeTableWriter.LocalVariableTypeTableWriter_NoteKind) : Void;
 	
 	
 }

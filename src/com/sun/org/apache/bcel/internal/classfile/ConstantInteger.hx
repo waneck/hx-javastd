@@ -74,7 +74,7 @@ extern class ConstantInteger extends com.sun.org.apache.bcel.internal.classfile.
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantInteger) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantInteger) : Void;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -83,7 +83,7 @@ extern class ConstantInteger extends com.sun.org.apache.bcel.internal.classfile.
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	/**
 	* Dump constant integer to file stream in binary format.
@@ -91,7 +91,7 @@ extern class ConstantInteger extends com.sun.org.apache.bcel.internal.classfile.
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return data, i.e., 4 bytes.
@@ -106,7 +106,7 @@ extern class ConstantInteger extends com.sun.org.apache.bcel.internal.classfile.
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:final public function toString() : String;
 	
 	/** @return Integer object
 	*/

@@ -139,7 +139,7 @@ package java.util;
 	* @param e object to be compared for equality with this set
 	* @return <tt>true</tt> if the specified object is equal to this set
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
 	@:overload override public function clone() : java.util.EnumSet<E>;
 	

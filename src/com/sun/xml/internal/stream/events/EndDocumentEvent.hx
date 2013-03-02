@@ -36,7 +36,7 @@ extern class EndDocumentEvent extends com.sun.xml.internal.stream.events.DummyEv
 	
 	@:overload public function toString() : String;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

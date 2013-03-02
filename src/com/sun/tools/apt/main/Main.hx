@@ -56,33 +56,33 @@ extern class Main
 	
 	
 }
-@:native('com$sun$tools$apt$main$Main$SharedOption') @:internal extern class Main_SharedOption extends Main_Option
+@:native('com$sun$tools$apt$main$Main$SharedOption') @:internal extern class Main_SharedOption extends com.sun.tools.apt.main.Main.Main_Option
 {
 	
 }
-@:native('com$sun$tools$apt$main$Main$AptOption') @:internal extern class Main_AptOption extends Main_Option
-{
-	
-}
-/** A nonstandard or extended (-X) option
-*/
-@:native('com$sun$tools$apt$main$Main$XOption') @:internal extern class Main_XOption extends Main_Option
+@:native('com$sun$tools$apt$main$Main$AptOption') @:internal extern class Main_AptOption extends com.sun.tools.apt.main.Main.Main_Option
 {
 	
 }
 /** A nonstandard or extended (-X) option
 */
-@:native('com$sun$tools$apt$main$Main$AptXOption') @:internal extern class Main_AptXOption extends Main_Option
+@:native('com$sun$tools$apt$main$Main$XOption') @:internal extern class Main_XOption extends com.sun.tools.apt.main.Main.Main_Option
+{
+	
+}
+/** A nonstandard or extended (-X) option
+*/
+@:native('com$sun$tools$apt$main$Main$AptXOption') @:internal extern class Main_AptXOption extends com.sun.tools.apt.main.Main.Main_Option
 {
 	
 }
 /** A hidden (implementor) option
 */
-@:native('com$sun$tools$apt$main$Main$HiddenOption') @:internal extern class Main_HiddenOption extends Main_Option
+@:native('com$sun$tools$apt$main$Main$HiddenOption') @:internal extern class Main_HiddenOption extends com.sun.tools.apt.main.Main.Main_Option
 {
 	
 }
-@:native('com$sun$tools$apt$main$Main$AptHiddenOption') @:internal extern class Main_AptHiddenOption extends Main_HiddenOption
+@:native('com$sun$tools$apt$main$Main$AptHiddenOption') @:internal extern class Main_AptHiddenOption extends com.sun.tools.apt.main.Main.Main_HiddenOption
 {
 	
 }

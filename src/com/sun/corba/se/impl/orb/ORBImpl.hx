@@ -32,9 +32,9 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	
 	private var legacyServerSocketManager : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketManager;
 	
-	@:overload override public function getORBData() : com.sun.corba.se.spi.orb.ORBData;
+	@:overload public function getORBData() : com.sun.corba.se.spi.orb.ORBData;
 	
-	@:overload override public function getPIHandler() : com.sun.corba.se.spi.protocol.PIHandler;
+	@:overload public function getPIHandler() : com.sun.corba.se.spi.protocol.PIHandler;
 	
 	/**
 	* Create a new ORB. Should be followed by the appropriate
@@ -42,13 +42,13 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload override public function setORBVersion(verObj : com.sun.corba.se.spi.orb.ORBVersion) : Void;
+	@:overload public function setORBVersion(verObj : com.sun.corba.se.spi.orb.ORBVersion) : Void;
 	
 	@:overload private function setDebugFlags(args : java.NativeArray<String>) : Void;
 	
-	@:overload override public function set_parameters(props : java.util.Properties) : Void;
+	@:overload public function set_parameters(props : java.util.Properties) : Void;
 	
 	@:overload override private function set_parameters(app : java.applet.Applet, props : java.util.Properties) : Void;
 	
@@ -150,7 +150,7 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	/**
 	* Notify response to ORB for get_next_response
 	*/
-	@:overload override public function notifyORB() : Void;
+	@:overload public function notifyORB() : Void;
 	
 	/**
 	* Convert an object ref to a string.
@@ -166,7 +166,7 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	*/
 	@:overload override public function string_to_object(str : String) : org.omg.CORBA.Object;
 	
-	@:overload @:synchronized override public function getFVDCodeBaseIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload @:synchronized public function getFVDCodeBaseIOR() : com.sun.corba.se.spi.ior.IOR;
 	
 	/**
 	* Get the TypeCode for a primitive type.
@@ -303,9 +303,9 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	*/
 	@:overload @:synchronized override public function create_any() : org.omg.CORBA.Any;
 	
-	@:overload @:synchronized override public function setTypeCodeForClass(c : Class<Dynamic>, tci : com.sun.corba.se.impl.corba.TypeCodeImpl) : Void;
+	@:overload @:synchronized public function setTypeCodeForClass(c : Class<Dynamic>, tci : com.sun.corba.se.impl.corba.TypeCodeImpl) : Void;
 	
-	@:overload @:synchronized override public function getTypeCodeForClass(c : Class<Dynamic>) : com.sun.corba.se.impl.corba.TypeCodeImpl;
+	@:overload @:synchronized public function getTypeCodeForClass(c : Class<Dynamic>) : com.sun.corba.se.impl.corba.TypeCodeImpl;
 	
 	/**
 	* Get a list of the initially available CORBA services.
@@ -355,13 +355,13 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload private function shutdownServants(wait_for_completion : Bool) : Void;
 	
-	@:overload override public function checkShutdownState() : Void;
+	@:overload public function checkShutdownState() : Void;
 	
-	@:overload override public function isDuringDispatch() : Bool;
+	@:overload public function isDuringDispatch() : Bool;
 	
-	@:overload override public function startingDispatch() : Void;
+	@:overload public function startingDispatch() : Void;
 	
-	@:overload override public function finishedDispatch() : Void;
+	@:overload public function finishedDispatch() : Void;
 	
 	/**
 	*  formal/99-10-07 p 159: "If destroy is called on an ORB that has
@@ -399,17 +399,17 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	**/
 	@:overload @:synchronized override public function lookup_value_factory(repositoryID : String) : org.omg.CORBA.portable.ValueFactory;
 	
-	@:overload override public function peekInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
+	@:overload public function peekInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
 	
-	@:overload override public function pushInvocationInfo(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
+	@:overload public function pushInvocationInfo(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
 	
-	@:overload override public function popInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
+	@:overload public function popInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
 	
-	@:overload override public function initBadServerIdHandler() : Void;
+	@:overload public function initBadServerIdHandler() : Void;
 	
-	@:overload override public function setBadServerIdHandler(handler : com.sun.corba.se.impl.oa.poa.BadServerIdHandler) : Void;
+	@:overload public function setBadServerIdHandler(handler : com.sun.corba.se.impl.oa.poa.BadServerIdHandler) : Void;
 	
-	@:overload override public function handleBadServerId(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
+	@:overload public function handleBadServerId(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
 	
 	@:overload @:synchronized override public function create_policy(type : Int, val : org.omg.CORBA.Any) : org.omg.CORBA.Policy;
 	
@@ -420,15 +420,15 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload @:synchronized override public function disconnect(obj : org.omg.CORBA.Object) : Void;
 	
-	@:overload override public function getTransientServerId() : Int;
+	@:overload public function getTransientServerId() : Int;
 	
-	@:overload override public function getRequestDispatcherRegistry() : com.sun.corba.se.spi.protocol.RequestDispatcherRegistry;
+	@:overload public function getRequestDispatcherRegistry() : com.sun.corba.se.spi.protocol.RequestDispatcherRegistry;
 	
-	@:overload override public function getServiceContextRegistry() : com.sun.corba.se.spi.servicecontext.ServiceContextRegistry;
+	@:overload public function getServiceContextRegistry() : com.sun.corba.se.spi.servicecontext.ServiceContextRegistry;
 	
-	@:overload override public function isLocalHost(hostName : String) : Bool;
+	@:overload public function isLocalHost(hostName : String) : Bool;
 	
-	@:overload override public function isLocalServerId(subcontractId : Int, serverId : Int) : Bool;
+	@:overload public function isLocalServerId(subcontractId : Int, serverId : Int) : Bool;
 	
 	/** This method always returns false because the ORB never needs the
 	*  main thread to do work.
@@ -441,73 +441,73 @@ extern class ORBImpl extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload @:synchronized override public function set_delegate(servant : Dynamic) : Void;
 	
-	@:overload override public function createOrIncrementInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
+	@:overload public function createOrIncrementInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
 	
-	@:overload override public function releaseOrDecrementInvocationInfo() : Void;
+	@:overload public function releaseOrDecrementInvocationInfo() : Void;
 	
-	@:overload override public function getInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
+	@:overload public function getInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
 	
-	@:overload override public function setClientDelegateFactory(factory : com.sun.corba.se.spi.protocol.ClientDelegateFactory) : Void;
+	@:overload public function setClientDelegateFactory(factory : com.sun.corba.se.spi.protocol.ClientDelegateFactory) : Void;
 	
-	@:overload override public function getClientDelegateFactory() : com.sun.corba.se.spi.protocol.ClientDelegateFactory;
+	@:overload public function getClientDelegateFactory() : com.sun.corba.se.spi.protocol.ClientDelegateFactory;
 	
-	@:overload override public function setCorbaContactInfoListFactory(factory : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory) : Void;
+	@:overload public function setCorbaContactInfoListFactory(factory : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory) : Void;
 	
-	@:overload @:synchronized override public function getCorbaContactInfoListFactory() : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
+	@:overload @:synchronized public function getCorbaContactInfoListFactory() : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
 	
 	/** Set the resolver used in this ORB.  This resolver will be used for list_initial_services
 	* and resolve_initial_references.
 	*/
-	@:overload override public function setResolver(resolver : com.sun.corba.se.spi.resolver.Resolver) : Void;
+	@:overload public function setResolver(resolver : com.sun.corba.se.spi.resolver.Resolver) : Void;
 	
 	/** Get the resolver used in this ORB.  This resolver will be used for list_initial_services
 	* and resolve_initial_references.
 	*/
-	@:overload override public function getResolver() : com.sun.corba.se.spi.resolver.Resolver;
+	@:overload public function getResolver() : com.sun.corba.se.spi.resolver.Resolver;
 	
 	/** Set the LocalResolver used in this ORB.  This LocalResolver is used for
 	* register_initial_reference only.
 	*/
-	@:overload override public function setLocalResolver(resolver : com.sun.corba.se.spi.resolver.LocalResolver) : Void;
+	@:overload public function setLocalResolver(resolver : com.sun.corba.se.spi.resolver.LocalResolver) : Void;
 	
 	/** Get the LocalResolver used in this ORB.  This LocalResolver is used for
 	* register_initial_reference only.
 	*/
-	@:overload override public function getLocalResolver() : com.sun.corba.se.spi.resolver.LocalResolver;
+	@:overload public function getLocalResolver() : com.sun.corba.se.spi.resolver.LocalResolver;
 	
 	/** Set the operation used in string_to_object calls.  The Operation must expect a
 	* String and return an org.omg.CORBA.Object.
 	*/
-	@:overload override public function setURLOperation(stringToObject : com.sun.corba.se.spi.orb.Operation) : Void;
+	@:overload public function setURLOperation(stringToObject : com.sun.corba.se.spi.orb.Operation) : Void;
 	
 	/** Get the operation used in string_to_object calls.  The Operation must expect a
 	* String and return an org.omg.CORBA.Object.
 	*/
-	@:overload override public function getURLOperation() : com.sun.corba.se.spi.orb.Operation;
+	@:overload public function getURLOperation() : com.sun.corba.se.spi.orb.Operation;
 	
-	@:overload override public function setINSDelegate(sdel : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher) : Void;
+	@:overload public function setINSDelegate(sdel : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher) : Void;
 	
-	@:overload override public function getTaggedComponentFactoryFinder() : com.sun.corba.se.spi.ior.TaggedComponentFactoryFinder;
+	@:overload public function getTaggedComponentFactoryFinder() : com.sun.corba.se.spi.ior.TaggedComponentFactoryFinder;
 	
-	@:overload override public function getTaggedProfileFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
+	@:overload public function getTaggedProfileFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
 	
-	@:overload override public function getTaggedProfileTemplateFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
+	@:overload public function getTaggedProfileTemplateFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
 	
-	@:overload override public function getObjectKeyFactory() : com.sun.corba.se.spi.ior.ObjectKeyFactory;
+	@:overload public function getObjectKeyFactory() : com.sun.corba.se.spi.ior.ObjectKeyFactory;
 	
-	@:overload override public function setObjectKeyFactory(factory : com.sun.corba.se.spi.ior.ObjectKeyFactory) : Void;
+	@:overload public function setObjectKeyFactory(factory : com.sun.corba.se.spi.ior.ObjectKeyFactory) : Void;
 	
-	@:overload override public function getTransportManager() : com.sun.corba.se.pept.transport.TransportManager;
+	@:overload public function getTransportManager() : com.sun.corba.se.pept.transport.TransportManager;
 	
-	@:overload override public function getCorbaTransportManager() : com.sun.corba.se.spi.transport.CorbaTransportManager;
+	@:overload public function getCorbaTransportManager() : com.sun.corba.se.spi.transport.CorbaTransportManager;
 	
-	@:overload override public function getLegacyServerSocketManager() : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketManager;
+	@:overload public function getLegacyServerSocketManager() : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketManager;
 	
-	@:overload override public function setThreadPoolManager(mgr : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager) : Void;
+	@:overload public function setThreadPoolManager(mgr : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager) : Void;
 	
-	@:overload override public function getThreadPoolManager() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager;
+	@:overload public function getThreadPoolManager() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager;
 	
-	@:overload override public function getCopierManager() : com.sun.corba.se.spi.copyobject.CopierManager;
+	@:overload public function getCopierManager() : com.sun.corba.se.spi.copyobject.CopierManager;
 	
 	
 }

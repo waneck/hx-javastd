@@ -32,13 +32,13 @@ extern class MIMEExtensionHandler extends com.sun.tools.internal.ws.wsdl.parser.
 	*/
 	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
 	
-	@:overload override public function getNamespaceURI() : String;
+	@:overload public function getNamespaceURI() : String;
 	
-	@:overload override public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	@:overload private function handleInputOutputExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
-	@:overload override private function handleMIMEPartExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload private function handleMIMEPartExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	@:overload private function parseMIMEContent(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, e : org.w3c.dom.Element) : com.sun.tools.internal.ws.wsdl.document.mime.MIMEContent;
 	

@@ -38,7 +38,7 @@ extern class InterfaceType extends sun.rmi.rmic.iiop.CompoundType
 	* @param useIDLNames If true, print IDL names; otherwise, print java names.
 	* @param globalIDLNames If true and useIDLNames true, prepends "::".
 	*/
-	@:overload override public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
+	@:overload public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
 	
 	/**
 	* Create a InterfaceType instance for the given class. NOTE: This constructor

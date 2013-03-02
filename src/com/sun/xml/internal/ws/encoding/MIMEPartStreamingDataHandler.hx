@@ -27,11 +27,11 @@ extern class MIMEPartStreamingDataHandler extends com.sun.xml.internal.org.jvnet
 {
 	@:overload public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
 	
-	@:overload override public function readOnce() : java.io.InputStream;
+	@:overload public function readOnce() : java.io.InputStream;
 	
-	@:overload override public function moveTo(file : java.io.File) : Void;
+	@:overload public function moveTo(file : java.io.File) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }
@@ -51,7 +51,7 @@ extern class MIMEPartStreamingDataHandler extends com.sun.xml.internal.org.jvnet
 }
 @:native('com$sun$xml$internal$ws$encoding$MIMEPartStreamingDataHandler$MyIOException') @:internal extern class MIMEPartStreamingDataHandler_MyIOException extends java.io.IOException
 {
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

@@ -48,26 +48,26 @@ extern class WindowsButtonUI extends javax.swing.plaf.basic.BasicButtonUI
 	
 	private var focusColor : java.awt.Color;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload private function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	@:overload private function getFocusColor() : java.awt.Color;
 	
 	/**
 	* Overridden method to render the text without the mnemonic
 	*/
-	@:overload override private function paintText(g : java.awt.Graphics, b : javax.swing.AbstractButton, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload private function paintText(g : java.awt.Graphics, b : javax.swing.AbstractButton, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload override private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
+	@:overload private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
 	
-	@:overload override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
+	@:overload private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }

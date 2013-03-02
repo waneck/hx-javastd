@@ -35,21 +35,21 @@ extern class Fault1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.
 	
 	@:overload public function new(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
-	@:overload override private function getDetailName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload private function getDetailName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getFaultCodeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload private function getFaultCodeName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getFaultStringName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload private function getFaultStringName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getFaultActorName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload private function getFaultActorName() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function createDetail() : com.sun.xml.internal.messaging.saaj.soap.impl.DetailImpl;
+	@:overload private function createDetail() : com.sun.xml.internal.messaging.saaj.soap.impl.DetailImpl;
 	
-	@:overload override private function createSOAPFaultElement(localName : String) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
+	@:overload private function createSOAPFaultElement(localName : String) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	
-	@:overload override private function checkIfStandardFaultCode(faultCode : String, uri : String) : Void;
+	@:overload private function checkIfStandardFaultCode(faultCode : String, uri : String) : Void;
 	
-	@:overload override private function finallySetFaultCode(faultcode : String) : Void;
+	@:overload private function finallySetFaultCode(faultcode : String) : Void;
 	
 	@:overload override public function getFaultReasonTexts() : java.util.Iterator<Dynamic>;
 	
@@ -99,17 +99,17 @@ extern class Fault1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.
 	
 	@:overload override public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
+	@:overload override public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
-	@:overload override private function isStandardFaultElement(localName : String) : Bool;
+	@:overload private function isStandardFaultElement(localName : String) : Bool;
 	
-	@:overload override private function getDefaultFaultCode() : javax.xml.namespace.QName;
+	@:overload private function getDefaultFaultCode() : javax.xml.namespace.QName;
 	
-	@:overload override private function createSOAPFaultElement(qname : javax.xml.namespace.QName) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
+	@:overload private function createSOAPFaultElement(qname : javax.xml.namespace.QName) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	
-	@:overload override private function createSOAPFaultElement(qname : javax.xml.soap.Name) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
+	@:overload private function createSOAPFaultElement(qname : javax.xml.soap.Name) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	
-	@:overload override public function setFaultActor(faultActor : String) : Void;
+	@:overload public function setFaultActor(faultActor : String) : Void;
 	
 	
 }

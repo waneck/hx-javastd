@@ -49,12 +49,12 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* is used in constructor documentation and false
 	* otherwise.
 	*/
-	@:overload override public function inConstructor() : Bool;
+	@:overload public function inConstructor() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

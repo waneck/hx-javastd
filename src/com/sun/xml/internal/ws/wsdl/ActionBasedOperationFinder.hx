@@ -35,7 +35,7 @@ package com.sun.xml.internal.ws.wsdl;
 	* @throws DispatchException with WSA defined fault message when it cannot find an associated WSDL operation.
 	*
 	*/
-	@:overload override public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
+	@:overload public function getWSDLOperationQName(request : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.namespace.QName;
 	
 	
 }

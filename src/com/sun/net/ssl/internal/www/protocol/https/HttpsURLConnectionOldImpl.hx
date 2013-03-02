@@ -98,7 +98,7 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	/**
 	* Returns the cipher suite in use on this connection.
 	*/
-	@:overload override public function getCipherSuite() : String;
+	@:overload public function getCipherSuite() : String;
 	
 	/**
 	* Returns the certificate chain the client sent to the
@@ -121,7 +121,7 @@ extern class HttpsURLConnectionOldImpl extends com.sun.net.ssl.HttpsURLConnectio
 	* implementing javax.net.ssl.HttpsURLConnection, but provided for
 	* compatibility with the com.sun.net.ssl.HttpsURLConnection version.
 	*/
-	@:overload override public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
+	@:overload public function getServerCertificateChain() : java.NativeArray<javax.security.cert.X509Certificate>;
 	
 	/*
 	* Allowable input/output sequences:

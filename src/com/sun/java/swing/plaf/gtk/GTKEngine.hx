@@ -87,7 +87,7 @@ package com.sun.java.swing.plaf.gtk;
 	@:overload public function themeChanged() : Void;
 	
 	/* GtkSettings enum mirrors that in gtk2_interface.h */
-	@:overload public function getSetting(property : GTKEngine_Settings) : Dynamic;
+	@:overload public function getSetting(property : com.sun.java.swing.plaf.gtk.GTKEngine.GTKEngine_Settings) : Dynamic;
 	
 	
 }

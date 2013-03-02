@@ -27,7 +27,7 @@ extern class XPlotter extends sun.tools.jconsole.Plotter
 {
 	@:overload public function new(table : javax.swing.JTable, unit : sun.tools.jconsole.Plotter.Plotter_Unit) : Void;
 	
-	@:overload override public function addValues(time : haxe.Int64, values : java.NativeArray<haxe.Int64>) : Void;
+	@:overload public function addValues(time : haxe.Int64, values : java.NativeArray<haxe.Int64>) : Void;
 	
 	
 }

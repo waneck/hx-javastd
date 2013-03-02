@@ -31,7 +31,7 @@ extern class URI implements java.io.Serializable
 	*
 	* @param p_other the URI to copy (cannot be null)
 	*/
-	@:overload public function new(p_other : URI) : Void;
+	@:overload public function new(p_other : com.sun.org.apache.xerces.internal.util.URI) : Void;
 	
 	/**
 	* Construct a new URI from a URI specification string. If the
@@ -83,7 +83,7 @@ extern class URI implements java.io.Serializable
 	* @exception MalformedURIException if p_uriSpec violates any syntax
 	*                                  rules
 	*/
-	@:overload public function new(p_base : URI, p_uriSpec : String) : Void;
+	@:overload public function new(p_base : com.sun.org.apache.xerces.internal.util.URI, p_uriSpec : String) : Void;
 	
 	/**
 	* Construct a new URI from a base URI and a URI specification string.
@@ -102,7 +102,7 @@ extern class URI implements java.io.Serializable
 	* @exception MalformedURIException if p_uriSpec violates any syntax
 	*                                  rules
 	*/
-	@:overload public function new(p_base : URI, p_uriSpec : String, allowNonAbsoluteURI : Bool) : Void;
+	@:overload public function new(p_base : com.sun.org.apache.xerces.internal.util.URI, p_uriSpec : String, allowNonAbsoluteURI : Bool) : Void;
 	
 	/**
 	* Construct a new URI that does not follow the generic URI syntax.
@@ -173,7 +173,7 @@ extern class URI implements java.io.Serializable
 	*
 	* @param p_base base URI for absolutization
 	*/
-	@:overload public function absolutize(p_base : URI) : Void;
+	@:overload public function absolutize(p_base : com.sun.org.apache.xerces.internal.util.URI) : Void;
 	
 	/**
 	* Get the scheme for this URI.

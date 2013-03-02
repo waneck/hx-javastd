@@ -114,7 +114,7 @@ extern interface JClassContainer
 	* If this is an inner class, this method returns the outer
 	* class.
 	*/
-	@:overload public function parentContainer() : JClassContainer;
+	@:overload public function parentContainer() : com.sun.codemodel.internal.JClassContainer;
 	
 	/**
 	* Gets the nearest package parent.

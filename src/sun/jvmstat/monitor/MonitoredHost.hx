@@ -53,7 +53,7 @@ extern class MonitoredHost
 	*                            formed. This exception may get encapsulated
 	*                            into MonitorException in a future revision.
 	*/
-	@:overload public static function getMonitoredHost(hostIdString : String) : MonitoredHost;
+	@:overload public static function getMonitoredHost(hostIdString : String) : sun.jvmstat.monitor.MonitoredHost;
 	
 	/**
 	* Factory method to construct a MonitoredHost instance to manage the
@@ -70,7 +70,7 @@ extern class MonitoredHost
 	*
 	* @throws MonitorException Thrown if monitoring errors occur.
 	*/
-	@:overload public static function getMonitoredHost(vmid : sun.jvmstat.monitor.VmIdentifier) : MonitoredHost;
+	@:overload public static function getMonitoredHost(vmid : sun.jvmstat.monitor.VmIdentifier) : sun.jvmstat.monitor.MonitoredHost;
 	
 	/**
 	* Factory method to construct a MonitoredHost instance to manage the
@@ -82,7 +82,7 @@ extern class MonitoredHost
 	*
 	* @throws MonitorException Thrown if monitoring errors occur.
 	*/
-	@:overload public static function getMonitoredHost(hostId : sun.jvmstat.monitor.HostIdentifier) : MonitoredHost;
+	@:overload public static function getMonitoredHost(hostId : sun.jvmstat.monitor.HostIdentifier) : sun.jvmstat.monitor.MonitoredHost;
 	
 	/**
 	* Method to resolve unspecified components of the given HostIdentifier

@@ -7,9 +7,9 @@ extern class UtilSystemException extends com.sun.corba.se.spi.logging.LogWrapper
 {
 	@:overload public function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : UtilSystemException;
+	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.UtilSystemException;
 	
-	@:overload public static function get(logDomain : String) : UtilSystemException;
+	@:overload public static function get(logDomain : String) : com.sun.corba.se.impl.logging.UtilSystemException;
 	
 	public static var STUB_FACTORY_COULD_NOT_MAKE_STUB(default, null) : Int;
 	

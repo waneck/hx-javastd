@@ -111,7 +111,7 @@ extern class FilterExprIteratorSimple extends com.sun.org.apache.xpath.internal.
 	*
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload override public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload public function callPredicateVisitors(visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	/**
 	* @see Expression#deepEquals(Expression)

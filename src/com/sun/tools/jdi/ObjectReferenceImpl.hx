@@ -25,9 +25,9 @@ package com.sun.tools.jdi;
 */
 extern class ObjectReferenceImpl extends com.sun.tools.jdi.ValueImpl implements com.sun.jdi.ObjectReference implements com.sun.tools.jdi.VMListener
 {
-	@:overload private function newCache() : ObjectReferenceImpl_Cache;
+	@:overload private function newCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
 	
-	@:overload private function getCache() : ObjectReferenceImpl_Cache;
+	@:overload private function getCache() : com.sun.tools.jdi.ObjectReferenceImpl.ObjectReferenceImpl_Cache;
 	
 	@:overload private function invokableReferenceType(method : com.sun.jdi.Method) : com.sun.tools.jdi.ClassTypeImpl;
 	

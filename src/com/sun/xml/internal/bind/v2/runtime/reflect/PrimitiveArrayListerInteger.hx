@@ -23,17 +23,17 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class PrimitiveArrayListerInteger<BeanT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, java.NativeArray<Int>, Null<Int>, PrimitiveArrayListerInteger_IntegerArrayPack>
+@:internal extern class PrimitiveArrayListerInteger<BeanT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, java.NativeArray<Int>, Null<Int>, com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerInteger.PrimitiveArrayListerInteger_IntegerArrayPack>
 {
 	@:overload public function iterator(objects : java.NativeArray<Int>, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<Null<Int>>;
 	
-	@:overload override public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<Int>>) : PrimitiveArrayListerInteger_IntegerArrayPack;
+	@:overload public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<Int>>) : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerInteger.PrimitiveArrayListerInteger_IntegerArrayPack;
 	
-	@:overload public function addToPack(objects : PrimitiveArrayListerInteger_IntegerArrayPack, o : Null<Int>) : Void;
+	@:overload public function addToPack(objects : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerInteger.PrimitiveArrayListerInteger_IntegerArrayPack, o : Null<Int>) : Void;
 	
-	@:overload public function endPacking(pack : PrimitiveArrayListerInteger_IntegerArrayPack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<Int>>) : Void;
+	@:overload public function endPacking(pack : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerInteger.PrimitiveArrayListerInteger_IntegerArrayPack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<Int>>) : Void;
 	
-	@:overload override public function reset(o : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<Int>>) : Void;
+	@:overload public function reset(o : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<Int>>) : Void;
 	
 	
 }

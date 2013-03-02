@@ -46,7 +46,7 @@ extern class MultiFileChooserUI extends javax.swing.plaf.FileChooserUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getAcceptAllFileFilter(a : javax.swing.JFileChooser) : javax.swing.filechooser.FileFilter;
+	@:overload public function getAcceptAllFileFilter(a : javax.swing.JFileChooser) : javax.swing.filechooser.FileFilter;
 	
 	/**
 	* Invokes the <code>getFileView</code> method on each UI handled by this object.
@@ -54,7 +54,7 @@ extern class MultiFileChooserUI extends javax.swing.plaf.FileChooserUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getFileView(a : javax.swing.JFileChooser) : javax.swing.filechooser.FileView;
+	@:overload public function getFileView(a : javax.swing.JFileChooser) : javax.swing.filechooser.FileView;
 	
 	/**
 	* Invokes the <code>getApproveButtonText</code> method on each UI handled by this object.
@@ -62,7 +62,7 @@ extern class MultiFileChooserUI extends javax.swing.plaf.FileChooserUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getApproveButtonText(a : javax.swing.JFileChooser) : String;
+	@:overload public function getApproveButtonText(a : javax.swing.JFileChooser) : String;
 	
 	/**
 	* Invokes the <code>getDialogTitle</code> method on each UI handled by this object.
@@ -70,17 +70,17 @@ extern class MultiFileChooserUI extends javax.swing.plaf.FileChooserUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getDialogTitle(a : javax.swing.JFileChooser) : String;
+	@:overload public function getDialogTitle(a : javax.swing.JFileChooser) : String;
 	
 	/**
 	* Invokes the <code>rescanCurrentDirectory</code> method on each UI handled by this object.
 	*/
-	@:overload override public function rescanCurrentDirectory(a : javax.swing.JFileChooser) : Void;
+	@:overload public function rescanCurrentDirectory(a : javax.swing.JFileChooser) : Void;
 	
 	/**
 	* Invokes the <code>ensureFileIsVisible</code> method on each UI handled by this object.
 	*/
-	@:overload override public function ensureFileIsVisible(a : javax.swing.JFileChooser, b : java.io.File) : Void;
+	@:overload public function ensureFileIsVisible(a : javax.swing.JFileChooser, b : java.io.File) : Void;
 	
 	/**
 	* Invokes the <code>contains</code> method on each UI handled by this object.

@@ -132,7 +132,7 @@ package javax.management;
 	*/
 	@:overload public function getMBeanName() : javax.management.ObjectName;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

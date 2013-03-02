@@ -79,7 +79,7 @@ package sun.nio.fs;
 /**
 * A PosixFileAttributeView implementation that using a dfd/name pair.
 */
-@:native('sun$nio$fs$UnixSecureDirectoryStream$PosixFileAttributeViewImpl') @:internal extern class UnixSecureDirectoryStream_PosixFileAttributeViewImpl extends UnixSecureDirectoryStream_BasicFileAttributeViewImpl implements java.nio.file.attribute.PosixFileAttributeView
+@:native('sun$nio$fs$UnixSecureDirectoryStream$PosixFileAttributeViewImpl') @:internal extern class UnixSecureDirectoryStream_PosixFileAttributeViewImpl extends sun.nio.fs.UnixSecureDirectoryStream.UnixSecureDirectoryStream_BasicFileAttributeViewImpl implements java.nio.file.attribute.PosixFileAttributeView
 {
 	@:overload override public function name() : String;
 	

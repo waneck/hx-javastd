@@ -56,15 +56,15 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, sz : Int) : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$org$jvnet$mimepull$DataHead$ReadOnceStream') @:internal extern class DataHead_ReadOnceStream extends DataHead_ReadMultiStream
+@:native('com$sun$xml$internal$org$jvnet$mimepull$DataHead$ReadOnceStream') @:internal extern class DataHead_ReadOnceStream extends com.sun.xml.internal.org.jvnet.mimepull.DataHead.DataHead_ReadMultiStream
 {
 	
 }

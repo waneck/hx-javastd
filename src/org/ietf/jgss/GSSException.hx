@@ -254,7 +254,7 @@ package org.ietf.jgss;
 	*
 	* @return a String with the error descriptions
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Returns a textual representation of both the major and the minor
@@ -262,7 +262,7 @@ package org.ietf.jgss;
 	*
 	* @return a String with the error descriptions
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

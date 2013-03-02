@@ -43,7 +43,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, nif : java.net.NetworkInterface) : Inet6Address;
+	@:require(java5) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, nif : java.net.NetworkInterface) : java.net.Inet6Address;
 	
 	/**
 	* Create an Inet6Address in the exact manner of {@link InetAddress#getByAddress(String,byte[])}
@@ -60,7 +60,7 @@ extern class Inet6Address extends java.net.InetAddress
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, scope_id : Int) : Inet6Address;
+	@:require(java5) @:overload public static function getByAddress(host : String, addr : java.NativeArray<java.StdTypes.Int8>, scope_id : Int) : java.net.Inet6Address;
 	
 	/**
 	* Utility routine to check if the InetAddress is an IP multicast

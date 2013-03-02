@@ -66,11 +66,11 @@ extern class MetalComboBoxButton extends javax.swing.JButton
 	
 	@:overload public function new(cb : javax.swing.JComboBox<Dynamic>, i : javax.swing.Icon, onlyIcon : Bool, pane : javax.swing.CellRendererPane, list : javax.swing.JList<Dynamic>) : Void;
 	
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload public function isFocusTraversable() : Bool;
 	
-	@:overload override public function setEnabled(enabled : Bool) : Void;
+	@:overload public function setEnabled(enabled : Bool) : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	@:overload override public function getMinimumSize() : java.awt.Dimension;
 	

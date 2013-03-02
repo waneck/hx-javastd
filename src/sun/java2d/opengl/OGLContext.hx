@@ -39,7 +39,7 @@ extern class OGLContext extends sun.java2d.pipe.BufferedContext
 }
 @:native('sun$java2d$opengl$OGLContext$OGLContextCaps') @:internal extern class OGLContext_OGLContextCaps extends sun.java2d.pipe.hw.ContextCapabilities
 {
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

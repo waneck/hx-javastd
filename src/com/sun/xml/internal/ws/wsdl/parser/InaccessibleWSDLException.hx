@@ -27,7 +27,7 @@ extern class InaccessibleWSDLException extends javax.xml.ws.WebServiceException
 {
 	@:overload public function new(errors : java.util.List<java.lang.Throwable>) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Returns a read-only list of {@link InaccessibleWSDLException}s

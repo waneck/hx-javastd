@@ -124,7 +124,7 @@ extern class SOAPException extends java.lang.Exception
 	* @throws IllegalStateException if the cause for this <code>SOAPException</code> object
 	*         has already been initialized
 	*/
-	@:overload @:synchronized public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:overload @:synchronized override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	
 }

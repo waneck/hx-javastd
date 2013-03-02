@@ -39,7 +39,7 @@ extern interface XSContentType extends com.sun.xml.internal.xsom.XSComponent
 	* If this content type represents the empty content, return <code>this</code>,
 	* otherwise null.
 	*/
-	@:overload public function asEmpty() : XSContentType;
+	@:overload public function asEmpty() : com.sun.xml.internal.xsom.XSContentType;
 	
 	@:overload public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSContentTypeFunction<T>) : T;
 	

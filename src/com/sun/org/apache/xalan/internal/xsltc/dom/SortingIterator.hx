@@ -25,24 +25,24 @@ extern class SortingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 {
 	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, factory : com.sun.org.apache.xalan.internal.xsltc.dom.NodeSortRecordFactory) : Void;
 	
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function getPosition() : Int;
+	@:overload public function getPosition() : Int;
 	
-	@:overload override public function getLast() : Int;
+	@:overload public function getLast() : Int;
 	
-	@:overload override public function setMark() : Void;
+	@:overload public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload public function gotoMark() : Void;
 	
 	/**
 	* Clone a <code>SortingIterator</code> by cloning its source
 	* iterator and then sharing the factory and the array of
 	* <code>NodeSortRecords</code>.
 	*/
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }

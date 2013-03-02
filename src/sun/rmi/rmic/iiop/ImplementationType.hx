@@ -38,12 +38,12 @@ extern class ImplementationType extends sun.rmi.rmic.iiop.ClassType
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forImplementation(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack, quiet : Bool) : ImplementationType;
+	@:overload public static function forImplementation(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack, quiet : Bool) : sun.rmi.rmic.iiop.ImplementationType;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload override public function getTypeDescription() : String;
+	@:overload public function getTypeDescription() : String;
 	
 	
 }

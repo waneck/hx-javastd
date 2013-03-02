@@ -23,7 +23,7 @@ package com.sun.java.util.jar.pack;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class Fixups extends java.util.AbstractCollection<Fixups_Fixup>
+@:internal extern class Fixups extends java.util.AbstractCollection<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>
 {
 	@:overload override public function size() : Int;
 	
@@ -41,13 +41,13 @@ package com.sun.java.util.jar.pack;
 	
 	public static var U1_FORMAT(default, null) : Int;
 	
-	@:overload override public function iterator() : java.util.Iterator<Fixups_Fixup>;
+	@:overload override public function iterator() : java.util.Iterator<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>;
 	
 	@:overload public function add(location : Int, format : Int, entry : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
 	
-	@:overload public function add(f : Fixups_Fixup) : Bool;
+	@:overload public function add(f : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup) : Bool;
 	
-	@:overload override public function addAll(c : java.util.Collection<Fixups_Fixup>) : Bool;
+	@:overload override public function addAll(c : java.util.Collection<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>) : Bool;
 	
 	@:native('add') @:overload public static function _add(prevFixups : Dynamic, bytes : java.NativeArray<java.StdTypes.Int8>, loc : Int, fmt : Int, e : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Dynamic;
 	
@@ -62,7 +62,7 @@ package com.sun.java.util.jar.pack;
 	
 }
 /** Simple and necessary tuple to present each fixup. */
-@:native('com$sun$java$util$jar$pack$Fixups$Fixup') extern class Fixups_Fixup implements java.lang.Comparable<Fixups_Fixup>
+@:native('com$sun$java$util$jar$pack$Fixups$Fixup') extern class Fixups_Fixup implements java.lang.Comparable<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>
 {
 	@:overload public function new(loc : Int, fmt : Int, entry : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Void;
 	
@@ -72,7 +72,7 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function entry() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry;
 	
-	@:overload public function compareTo(that : Fixups_Fixup) : Int;
+	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup) : Int;
 	
 	@:overload public function equals(x : Dynamic) : Bool;
 	
@@ -80,13 +80,13 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Fixups$Itr') @:internal extern class Fixups_Itr implements java.util.Iterator<Fixups_Fixup>
+@:native('com$sun$java$util$jar$pack$Fixups$Itr') @:internal extern class Fixups_Itr implements java.util.Iterator<com.sun.java.util.jar.pack.Fixups.Fixups_Fixup>
 {
 	@:overload public function hasNext() : Bool;
 	
 	@:overload public function remove() : Void;
 	
-	@:overload public function next() : Fixups_Fixup;
+	@:overload public function next() : com.sun.java.util.jar.pack.Fixups.Fixups_Fixup;
 	
 	
 }

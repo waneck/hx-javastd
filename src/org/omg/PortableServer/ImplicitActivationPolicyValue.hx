@@ -18,15 +18,15 @@ extern class ImplicitActivationPolicyValue implements org.omg.CORBA.portable.IDL
 {
 	public static var _IMPLICIT_ACTIVATION(default, null) : Int;
 	
-	public static var IMPLICIT_ACTIVATION(default, null) : ImplicitActivationPolicyValue;
+	public static var IMPLICIT_ACTIVATION(default, null) : org.omg.PortableServer.ImplicitActivationPolicyValue;
 	
 	public static var _NO_IMPLICIT_ACTIVATION(default, null) : Int;
 	
-	public static var NO_IMPLICIT_ACTIVATION(default, null) : ImplicitActivationPolicyValue;
+	public static var NO_IMPLICIT_ACTIVATION(default, null) : org.omg.PortableServer.ImplicitActivationPolicyValue;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : ImplicitActivationPolicyValue;
+	@:overload public static function from_int(value : Int) : org.omg.PortableServer.ImplicitActivationPolicyValue;
 	
 	@:overload private function new(value : Int) : Void;
 	

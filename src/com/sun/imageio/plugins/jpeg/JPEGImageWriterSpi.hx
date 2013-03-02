@@ -27,7 +27,7 @@ extern class JPEGImageWriterSpi extends javax.imageio.spi.ImageWriterSpi
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getDescription(locale : java.util.Locale) : String;
+	@:overload public function getDescription(locale : java.util.Locale) : String;
 	
 	@:overload override public function isFormatLossless() : Bool;
 	

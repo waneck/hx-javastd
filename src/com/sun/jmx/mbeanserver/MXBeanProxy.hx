@@ -52,15 +52,15 @@ extern class MXBeanProxy
 {
 	
 }
-@:native('com$sun$jmx$mbeanserver$MXBeanProxy$GetHandler') @:internal extern class MXBeanProxy_GetHandler extends MXBeanProxy_Handler
+@:native('com$sun$jmx$mbeanserver$MXBeanProxy$GetHandler') @:internal extern class MXBeanProxy_GetHandler extends com.sun.jmx.mbeanserver.MXBeanProxy.MXBeanProxy_Handler
 {
 	
 }
-@:native('com$sun$jmx$mbeanserver$MXBeanProxy$SetHandler') @:internal extern class MXBeanProxy_SetHandler extends MXBeanProxy_Handler
+@:native('com$sun$jmx$mbeanserver$MXBeanProxy$SetHandler') @:internal extern class MXBeanProxy_SetHandler extends com.sun.jmx.mbeanserver.MXBeanProxy.MXBeanProxy_Handler
 {
 	
 }
-@:native('com$sun$jmx$mbeanserver$MXBeanProxy$InvokeHandler') @:internal extern class MXBeanProxy_InvokeHandler extends MXBeanProxy_Handler
+@:native('com$sun$jmx$mbeanserver$MXBeanProxy$InvokeHandler') @:internal extern class MXBeanProxy_InvokeHandler extends com.sun.jmx.mbeanserver.MXBeanProxy.MXBeanProxy_Handler
 {
 	
 }

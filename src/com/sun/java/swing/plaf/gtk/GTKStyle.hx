@@ -25,9 +25,9 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:internal extern class GTKStyle extends javax.swing.plaf.synth.SynthStyle implements com.sun.java.swing.plaf.gtk.GTKConstants
 {
-	@:overload override public function installDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
+	@:overload public function installDefaults(context : javax.swing.plaf.synth.SynthContext) : Void;
 	
-	@:overload override public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
+	@:overload public function getGraphicsUtils(context : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthGraphicsUtils;
 	
 	/**
 	* Returns a <code>SynthPainter</code> that will route the appropriate
@@ -36,13 +36,13 @@ package com.sun.java.swing.plaf.gtk;
 	* @param state SynthContext indentifying requestor
 	* @return SynthPainter
 	*/
-	@:overload override public function getPainter(state : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
+	@:overload public function getPainter(state : javax.swing.plaf.synth.SynthContext) : javax.swing.plaf.synth.SynthPainter;
 	
-	@:overload override private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload private function getColorForState(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
-	@:overload override public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
+	@:overload public function getColor(context : javax.swing.plaf.synth.SynthContext, type : javax.swing.plaf.synth.ColorType) : java.awt.Color;
 	
-	@:overload override private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
+	@:overload private function getFontForState(context : javax.swing.plaf.synth.SynthContext) : java.awt.Font;
 	
 	/**
 	* Returns the Insets. If <code>insets</code> is non-null the resulting
@@ -53,7 +53,7 @@ package com.sun.java.swing.plaf.gtk;
 	* @param insets Where to place Insets
 	* @return Insets.
 	*/
-	@:overload override public function getInsets(state : javax.swing.plaf.synth.SynthContext, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getInsets(state : javax.swing.plaf.synth.SynthContext, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the value to initialize the opacity property of the Component
@@ -63,9 +63,9 @@ package com.sun.java.swing.plaf.gtk;
 	* @param context SynthContext indentifying requestor
 	* @return opaque Whether or not the JComponent is opaque.
 	*/
-	@:overload override public function isOpaque(context : javax.swing.plaf.synth.SynthContext) : Bool;
+	@:overload public function isOpaque(context : javax.swing.plaf.synth.SynthContext) : Bool;
 	
-	@:overload override public function get(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
+	@:overload public function get(context : javax.swing.plaf.synth.SynthContext, key : Dynamic) : Dynamic;
 	
 	
 }

@@ -30,14 +30,14 @@ extern class RegionIterator
 	* iteration state as this object to allow multiple iteration
 	* branches from the current position.
 	*/
-	@:overload public function createCopy() : RegionIterator;
+	@:overload public function createCopy() : sun.java2d.pipe.RegionIterator;
 	
 	/**
 	* Copies the iteration state from this RegionIterator object
 	* into another RegionIterator object to allow multiple iteration
 	* branches from the current position.
 	*/
-	@:overload public function copyStateFrom(ri : RegionIterator) : Void;
+	@:overload public function copyStateFrom(ri : sun.java2d.pipe.RegionIterator) : Void;
 	
 	/**
 	* Moves the iteration state to the beginning of the next

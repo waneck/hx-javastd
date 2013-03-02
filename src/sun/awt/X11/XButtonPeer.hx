@@ -31,7 +31,7 @@ extern class XButtonPeer extends sun.awt.X11.XComponentPeer implements java.awt.
 	
 	@:overload public function new(target : java.awt.Button) : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	@:overload override public function isFocusable() : Bool;
 	

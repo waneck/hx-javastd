@@ -95,7 +95,7 @@ extern class XMLMessage
 * It's conent-type is some XML type
 *
 */
-@:native('com$sun$xml$internal$ws$encoding$xml$XMLMessage$XmlContent') @:internal extern class XMLMessage_XmlContent extends com.sun.xml.internal.ws.message.AbstractMessageImpl implements XMLMessage_MessageDataSource
+@:native('com$sun$xml$internal$ws$encoding$xml$XMLMessage$XmlContent') @:internal extern class XMLMessage_XmlContent extends com.sun.xml.internal.ws.message.AbstractMessageImpl implements com.sun.xml.internal.ws.encoding.xml.XMLMessage.XMLMessage_MessageDataSource
 {
 	@:overload public function new(ct : String, _in : java.io.InputStream, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
@@ -147,7 +147,7 @@ extern class XMLMessage
 * The root part may be an XML or an FI document. This class
 * parses MIME message lazily.
 */
-@:native('com$sun$xml$internal$ws$encoding$xml$XMLMessage$XMLMultiPart') extern class XMLMessage_XMLMultiPart extends com.sun.xml.internal.ws.message.AbstractMessageImpl implements XMLMessage_MessageDataSource
+@:native('com$sun$xml$internal$ws$encoding$xml$XMLMessage$XMLMultiPart') extern class XMLMessage_XMLMultiPart extends com.sun.xml.internal.ws.message.AbstractMessageImpl implements com.sun.xml.internal.ws.encoding.xml.XMLMessage.XMLMessage_MessageDataSource
 {
 	@:overload public function new(contentType : String, is : java.io.InputStream, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
@@ -211,7 +211,7 @@ extern class XMLMessage
 *
 * This could be used to represent image/jpeg etc
 */
-@:native('com$sun$xml$internal$ws$encoding$xml$XMLMessage$UnknownContent') extern class XMLMessage_UnknownContent extends com.sun.xml.internal.ws.message.AbstractMessageImpl implements XMLMessage_MessageDataSource
+@:native('com$sun$xml$internal$ws$encoding$xml$XMLMessage$UnknownContent') extern class XMLMessage_UnknownContent extends com.sun.xml.internal.ws.message.AbstractMessageImpl implements com.sun.xml.internal.ws.encoding.xml.XMLMessage.XMLMessage_MessageDataSource
 {
 	@:overload public function new(ct : String, _in : java.io.InputStream) : Void;
 	

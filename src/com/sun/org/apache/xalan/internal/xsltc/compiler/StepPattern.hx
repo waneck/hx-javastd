@@ -31,17 +31,17 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	
 	@:overload public function new(axis : Int, nodeType : Int, predicates : java.util.Vector<Dynamic>) : Void;
 	
-	@:overload override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	@:overload public function getNodeType() : Int;
 	
 	@:overload public function setPriority(priority : Float) : Void;
 	
-	@:overload override public function getKernelPattern() : StepPattern;
+	@:overload override public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
 	@:overload override public function isWildcard() : Bool;
 	
-	@:overload public function setPredicates(predicates : java.util.Vector<Dynamic>) : StepPattern;
+	@:overload public function setPredicates(predicates : java.util.Vector<Dynamic>) : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
 	@:overload private function hasPredicates() : Bool;
 	

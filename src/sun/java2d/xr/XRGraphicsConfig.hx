@@ -31,7 +31,7 @@ extern class XRGraphicsConfig extends sun.awt.X11GraphicsConfig implements sun.a
 {
 	@:overload override public function createSurfaceData(peer : sun.awt.X11ComponentPeer) : sun.java2d.SurfaceData;
 	
-	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : XRGraphicsConfig;
+	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : sun.java2d.xr.XRGraphicsConfig;
 	
 	@:overload override public function getProxyKey() : Dynamic;
 	

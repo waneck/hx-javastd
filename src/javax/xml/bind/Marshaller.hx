@@ -419,7 +419,7 @@ extern interface Marshaller
 	* @param listener an instance of a class that implements {@link Listener}
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setListener(listener : Marshaller_Listener) : Void;
+	@:require(java0) @:overload public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
 	
 	/**
 	* <p>Return {@link Listener} registered with this {@link Marshaller}.
@@ -427,7 +427,7 @@ extern interface Marshaller
 	* @return registered {@link Listener} or <code>null</code> if no Listener is registered with this Marshaller.
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function getListener() : Marshaller_Listener;
+	@:require(java0) @:overload public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
 	
 	
 }

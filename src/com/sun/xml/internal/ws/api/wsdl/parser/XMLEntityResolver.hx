@@ -28,7 +28,7 @@ extern interface XMLEntityResolver
 	/**
 	* See {@link EntityResolver#resolveEntity(String, String)} for the contract.
 	*/
-	@:overload public function resolveEntity(publicId : String, systemId : String) : XMLEntityResolver_Parser;
+	@:overload public function resolveEntity(publicId : String, systemId : String) : com.sun.xml.internal.ws.api.wsdl.parser.XMLEntityResolver.XMLEntityResolver_Parser;
 	
 	
 }

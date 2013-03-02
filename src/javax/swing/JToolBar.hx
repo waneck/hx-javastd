@@ -91,7 +91,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -100,7 +100,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns the index of the specified component.
@@ -184,7 +184,7 @@ extern class JToolBar extends javax.swing.JComponent implements javax.swing.Swin
 	* @see JComponent#paint
 	* @see JComponent#setBorder
 	*/
-	@:overload override private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the <code>floatable</code> property.

@@ -33,7 +33,7 @@ extern class DOMXPathTransform extends org.jcp.xml.dsig.internal.dom.ApacheTrans
 	*
 	* @author Sean Mullan
 	*/
-	@:overload override public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
+	@:overload public function init(params : javax.xml.crypto.dsig.spec.TransformParameterSpec) : Void;
 	
 	@:overload override public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	

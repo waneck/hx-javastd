@@ -87,7 +87,7 @@ extern class BigInt
 	*
 	* @param other the BigInt being compared with this one.
 	*/
-	@:overload public function equals(other : BigInt) : Bool;
+	@:overload public function equals(other : sun.security.util.BigInt) : Bool;
 	
 	/**
 	* Returns a hashcode for this BigInt.

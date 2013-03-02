@@ -27,7 +27,7 @@ extern class FuncLast extends com.sun.org.apache.xpath.internal.functions.Functi
 	* Figure out if we're executing a toplevel expression.
 	* If so, we can't be inside of a predicate.
 	*/
-	@:overload override public function postCompileStep(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler) : Void;
+	@:overload public function postCompileStep(compiler : com.sun.org.apache.xpath.internal.compiler.Compiler) : Void;
 	
 	/**
 	* Get the position in the current context node list.
@@ -48,12 +48,12 @@ extern class FuncLast extends com.sun.org.apache.xpath.internal.functions.Functi
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* No arguments to process, so this does nothing.
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	
 }

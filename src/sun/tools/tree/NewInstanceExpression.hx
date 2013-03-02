@@ -38,12 +38,12 @@ extern class NewInstanceExpression extends sun.tools.tree.NaryExpression
 	*/
 	@:overload public function getOuterArg() : sun.tools.tree.Expression;
 	
-	@:overload override public function order() : sun.tools.tree.Expression;
+	@:overload public function order() : sun.tools.tree.Expression;
 	
 	/**
 	* Check expression type
 	*/
-	@:overload override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
 	/**
 	* Given a list of arguments for a constructor,
@@ -57,22 +57,22 @@ extern class NewInstanceExpression extends sun.tools.tree.NaryExpression
 	/**
 	* Check void expression
 	*/
-	@:overload override public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload public function check(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	
 }

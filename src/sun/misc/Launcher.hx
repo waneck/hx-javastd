@@ -25,7 +25,7 @@ package sun.misc;
 */
 extern class Launcher
 {
-	@:overload public static function getLauncher() : Launcher;
+	@:overload public static function getLauncher() : sun.misc.Launcher;
 	
 	@:overload public function new() : Void;
 	
@@ -47,7 +47,7 @@ extern class Launcher
 	* create an ExtClassLoader. The ExtClassLoader is created
 	* within a context that limits which files it can read
 	*/
-	@:overload public static function getExtClassLoader() : Launcher_ExtClassLoader;
+	@:overload public static function getExtClassLoader() : sun.misc.Launcher.Launcher_ExtClassLoader;
 	
 	/*
 	* Creates a new ExtClassLoader for the specified directories.
@@ -61,7 +61,7 @@ extern class Launcher
 	* of the system property <code>os.arch</code>. Failing that, we
 	* look in the extension directory itself.
 	*/
-	@:overload override public function findLibrary(name : String) : String;
+	@:overload public function findLibrary(name : String) : String;
 	
 	
 }
@@ -76,12 +76,12 @@ extern class Launcher
 	/**
 	* Override loadClass so we can checkPackageAccess.
 	*/
-	@:overload override public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	/**
 	* allow any classes loaded from classpath to exit the VM.
 	*/
-	@:overload override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
 	
 }
@@ -100,13 +100,13 @@ extern class Launcher
 }
 @:internal extern class PathPermissions extends java.security.PermissionCollection
 {
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload public function add(permission : java.security.Permission) : Void;
 	
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload public function implies(permission : java.security.Permission) : Bool;
 	
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload public function elements() : java.util.Enumeration<java.security.Permission>;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

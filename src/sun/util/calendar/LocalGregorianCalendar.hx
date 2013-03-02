@@ -25,41 +25,41 @@ package sun.util.calendar;
 */
 extern class LocalGregorianCalendar extends sun.util.calendar.BaseCalendar
 {
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
-	@:overload override public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload public function getCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload public function getCalendarDate(millis : haxe.Int64) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload public function getCalendarDate(millis : haxe.Int64, zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload public function getCalendarDate(millis : haxe.Int64, date : sun.util.calendar.CalendarDate) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload public function newCalendarDate() : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
+	@:overload public function newCalendarDate(zone : java.util.TimeZone) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function validate(date : sun.util.calendar.CalendarDate) : Bool;
+	@:overload public function validate(date : sun.util.calendar.CalendarDate) : Bool;
 	
-	@:overload override public function normalize(date : sun.util.calendar.CalendarDate) : Bool;
+	@:overload public function normalize(date : sun.util.calendar.CalendarDate) : Bool;
 	
 	/**
 	* Returns whether the specified Gregorian year is a leap year.
 	* @see #isLeapYear(Era, int)
 	*/
-	@:overload override public function isLeapYear(gregorianYear : Int) : Bool;
+	@:overload public function isLeapYear(gregorianYear : Int) : Bool;
 	
 	@:overload public function isLeapYear(era : sun.util.calendar.Era, year : Int) : Bool;
 	
-	@:overload override public function getCalendarDateFromFixedDate(date : sun.util.calendar.CalendarDate, fixedDate : haxe.Int64) : Void;
+	@:overload public function getCalendarDateFromFixedDate(date : sun.util.calendar.CalendarDate, fixedDate : haxe.Int64) : Void;
 	
 	
 }
 @:native('sun$util$calendar$LocalGregorianCalendar$Date') extern class LocalGregorianCalendar_Date extends sun.util.calendar.BaseCalendar.BaseCalendar_Date
 {
-	@:overload override private function new() : Void;
+	@:overload private function new() : Void;
 	
-	@:overload override private function new(zone : java.util.TimeZone) : Void;
+	@:overload private function new(zone : java.util.TimeZone) : Void;
 	
 	@:overload override public function setEra(era : sun.util.calendar.Era) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
@@ -67,9 +67,9 @@ extern class LocalGregorianCalendar extends sun.util.calendar.BaseCalendar
 	
 	@:overload override public function setYear(localYear : Int) : sun.util.calendar.BaseCalendar.BaseCalendar_Date;
 	
-	@:overload override public function getNormalizedYear() : Int;
+	@:overload public function getNormalizedYear() : Int;
 	
-	@:overload override public function setNormalizedYear(normalizedYear : Int) : Void;
+	@:overload public function setNormalizedYear(normalizedYear : Int) : Void;
 	
 	@:overload override public function toString() : String;
 	

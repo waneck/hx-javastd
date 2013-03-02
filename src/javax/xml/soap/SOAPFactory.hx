@@ -209,7 +209,7 @@ extern class SOAPFactory
 	*            default <code>SOAPFactory</code>
 	* @see SAAJMetaFactory
 	*/
-	@:overload public static function newInstance() : SOAPFactory;
+	@:overload public static function newInstance() : javax.xml.soap.SOAPFactory;
 	
 	/**
 	* Creates a new <code>SOAPFactory</code> object that is an instance of
@@ -230,7 +230,7 @@ extern class SOAPFactory
 	* @see SAAJMetaFactory
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public static function newInstance(protocol : String) : SOAPFactory;
+	@:require(java3) @:overload public static function newInstance(protocol : String) : javax.xml.soap.SOAPFactory;
 	
 	
 }

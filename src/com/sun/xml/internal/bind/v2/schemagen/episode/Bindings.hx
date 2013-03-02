@@ -28,7 +28,7 @@ extern interface Bindings extends com.sun.xml.internal.txw2.TypedXmlWriter
 	/**
 	* Nested bindings.
 	*/
-	@:overload public function bindings() : Bindings;
+	@:overload public function bindings() : com.sun.xml.internal.bind.v2.schemagen.episode.Bindings;
 	
 	/**
 	* Nested class customization.

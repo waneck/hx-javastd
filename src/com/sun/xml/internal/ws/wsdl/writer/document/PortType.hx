@@ -29,7 +29,7 @@ extern interface PortType extends com.sun.xml.internal.txw2.TypedXmlWriter exten
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : PortType;
+	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.PortType;
 	
 	@:overload public function operation() : com.sun.xml.internal.ws.wsdl.writer.document.Operation;
 	

@@ -41,7 +41,7 @@ extern class CipherWithWrappingSpi extends javax.crypto.CipherSpi
 	* wrap the key with this cipher (e.g., a hardware protected key is
 	* being passed to a software only cipher).
 	*/
-	@:overload @:final override private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Unwrap a previously wrapped key.
@@ -64,7 +64,7 @@ extern class CipherWithWrappingSpi extends javax.crypto.CipherSpi
 	* @exception NoSuchAlgorithmException if no installed providers
 	* can create keys for the <code>wrappedKeyAlgorithm</code>.
 	*/
-	@:overload @:final override private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload @:final private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
 	
 }

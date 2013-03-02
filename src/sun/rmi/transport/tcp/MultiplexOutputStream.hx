@@ -42,7 +42,7 @@ package sun.rmi.transport.tcp;
 	* Write a byte over connection.
 	* @param b byte of data to write
 	*/
-	@:overload @:synchronized override public function write(b : Int) : Void;
+	@:overload @:synchronized public function write(b : Int) : Void;
 	
 	/**
 	* Write a subarray of bytes over connection.
@@ -50,18 +50,18 @@ package sun.rmi.transport.tcp;
 	* @param off offset of beginning of bytes to write
 	* @param len number of bytes to write
 	*/
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Guarantee that all data written to this stream has been pushed
 	* over and made available to the remote endpoint.
 	*/
-	@:overload @:synchronized override public function flush() : Void;
+	@:overload @:synchronized public function flush() : Void;
 	
 	/**
 	* Close this connection.
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

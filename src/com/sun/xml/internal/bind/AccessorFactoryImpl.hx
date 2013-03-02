@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind;
 */
 extern class AccessorFactoryImpl implements com.sun.xml.internal.bind.InternalAccessorFactory
 {
-	@:overload public static function getInstance() : AccessorFactoryImpl;
+	@:overload public static function getInstance() : com.sun.xml.internal.bind.AccessorFactoryImpl;
 	
 	/**
 	* Access a field of the class.

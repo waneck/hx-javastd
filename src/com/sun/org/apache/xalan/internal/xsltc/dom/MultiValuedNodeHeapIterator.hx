@@ -23,9 +23,9 @@ package com.sun.org.apache.xalan.internal.xsltc.dom;
 */
 extern class MultiValuedNodeHeapIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIteratorBase
 {
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload private function addHeapNode(node : MultiValuedNodeHeapIterator_HeapNode) : Void;
+	@:overload private function addHeapNode(node : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode) : Void;
 	
 	@:overload override public function next() : Int;
 	
@@ -37,7 +37,7 @@ extern class MultiValuedNodeHeapIterator extends com.sun.org.apache.xml.internal
 	
 	@:overload override public function gotoMark() : Void;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }
@@ -64,7 +64,7 @@ extern class MultiValuedNodeHeapIterator extends com.sun.org.apache.xml.internal
 	*
 	* @return the cloned heap node
 	*/
-	@:overload public function cloneHeapNode() : MultiValuedNodeHeapIterator_HeapNode;
+	@:overload public function cloneHeapNode() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	/**
 	* Remembers the current node for the next call to {@link #gotoMark()}.
@@ -84,7 +84,7 @@ extern class MultiValuedNodeHeapIterator extends com.sun.org.apache.xml.internal
 	*         heap node is before the current node of the argument heap
 	*         node in document order.
 	*/
-	@:overload @:abstract public function isLessThan(heapNode : MultiValuedNodeHeapIterator_HeapNode) : Bool;
+	@:overload @:abstract public function isLessThan(heapNode : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode) : Bool;
 	
 	/**
 	* Sets context with respect to which this heap node is evaluated.
@@ -93,7 +93,7 @@ extern class MultiValuedNodeHeapIterator extends com.sun.org.apache.xml.internal
 	* @return a {@link HeapNode} which may or may not be the same as
 	*         this <code>HeapNode</code>.
 	*/
-	@:overload @:abstract public function setStartNode(node : Int) : MultiValuedNodeHeapIterator_HeapNode;
+	@:overload @:abstract public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	/**
 	* Reset the heap node back to its beginning.
@@ -101,7 +101,7 @@ extern class MultiValuedNodeHeapIterator extends com.sun.org.apache.xml.internal
 	* @return a {@link HeapNode} which may or may not be the same as
 	*         this <code>HeapNode</code>.
 	*/
-	@:overload @:abstract public function reset() : MultiValuedNodeHeapIterator_HeapNode;
+	@:overload @:abstract public function reset() : com.sun.org.apache.xalan.internal.xsltc.dom.MultiValuedNodeHeapIterator.MultiValuedNodeHeapIterator_HeapNode;
 	
 	
 }

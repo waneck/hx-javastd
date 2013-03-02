@@ -28,7 +28,7 @@ package sun.beans.editors;
 */
 extern class EnumEditor extends com.sun.beans.editors.EnumEditor
 {
-	@:overload override public function new(type : Class<Dynamic>) : Void;
+	@:overload public function new(type : Class<Dynamic>) : Void;
 	
 	
 }

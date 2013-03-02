@@ -106,38 +106,38 @@ extern class Cache
 	/**
 	* accept a visitor
 	*/
-	@:overload @:abstract public function accept(visitor : Cache_CacheVisitor) : Void;
+	@:overload @:abstract public function accept(visitor : sun.security.util.Cache.Cache_CacheVisitor) : Void;
 	
 	/**
 	* Return a new memory cache with the specified maximum size, unlimited
 	* lifetime for entries, with the values held by SoftReferences.
 	*/
-	@:overload public static function newSoftMemoryCache(size : Int) : Cache;
+	@:overload public static function newSoftMemoryCache(size : Int) : sun.security.util.Cache;
 	
 	/**
 	* Return a new memory cache with the specified maximum size, the
 	* specified maximum lifetime (in seconds), with the values held
 	* by SoftReferences.
 	*/
-	@:overload public static function newSoftMemoryCache(size : Int, timeout : Int) : Cache;
+	@:overload public static function newSoftMemoryCache(size : Int, timeout : Int) : sun.security.util.Cache;
 	
 	/**
 	* Return a new memory cache with the specified maximum size, unlimited
 	* lifetime for entries, with the values held by standard references.
 	*/
-	@:overload public static function newHardMemoryCache(size : Int) : Cache;
+	@:overload public static function newHardMemoryCache(size : Int) : sun.security.util.Cache;
 	
 	/**
 	* Return a dummy cache that does nothing.
 	*/
-	@:overload public static function newNullCache() : Cache;
+	@:overload public static function newNullCache() : sun.security.util.Cache;
 	
 	/**
 	* Return a new memory cache with the specified maximum size, the
 	* specified maximum lifetime (in seconds), with the values held
 	* by standard references.
 	*/
-	@:overload public static function newHardMemoryCache(size : Int, timeout : Int) : Cache;
+	@:overload public static function newHardMemoryCache(size : Int, timeout : Int) : sun.security.util.Cache;
 	
 	
 }
@@ -161,7 +161,7 @@ extern class Cache
 	
 	
 }
-@:internal extern class NullCache extends Cache
+@:internal extern class NullCache extends sun.security.util.Cache
 {
 	@:overload override public function size() : Int;
 	
@@ -177,11 +177,11 @@ extern class Cache
 	
 	@:overload override public function setTimeout(timeout : Int) : Void;
 	
-	@:overload override public function accept(visitor : Cache_CacheVisitor) : Void;
+	@:overload override public function accept(visitor : sun.security.util.Cache.Cache_CacheVisitor) : Void;
 	
 	
 }
-@:internal extern class MemoryCache extends Cache
+@:internal extern class MemoryCache extends sun.security.util.Cache
 {
 	@:overload public function new(soft : Bool, maxSize : Int) : Void;
 	
@@ -201,9 +201,9 @@ extern class Cache
 	
 	@:overload @:synchronized override public function setTimeout(timeout : Int) : Void;
 	
-	@:overload @:synchronized override public function accept(visitor : Cache_CacheVisitor) : Void;
+	@:overload @:synchronized override public function accept(visitor : sun.security.util.Cache.Cache_CacheVisitor) : Void;
 	
-	@:overload private function newEntry(key : Dynamic, value : Dynamic, expirationTime : haxe.Int64, queue : java.lang.ref.ReferenceQueue<Dynamic>) : MemoryCache_CacheEntry;
+	@:overload private function newEntry(key : Dynamic, value : Dynamic, expirationTime : haxe.Int64, queue : java.lang.ref.ReferenceQueue<Dynamic>) : sun.security.util.Cache.MemoryCache_CacheEntry;
 	
 	
 }
@@ -219,7 +219,7 @@ extern class Cache
 	
 	
 }
-@:native('sun$security$util$MemoryCache$HardCacheEntry') @:internal extern class MemoryCache_HardCacheEntry implements MemoryCache_CacheEntry
+@:native('sun$security$util$MemoryCache$HardCacheEntry') @:internal extern class MemoryCache_HardCacheEntry implements sun.security.util.Cache.MemoryCache_CacheEntry
 {
 	@:overload public function getKey() : Dynamic;
 	
@@ -231,7 +231,7 @@ extern class Cache
 	
 	
 }
-@:native('sun$security$util$MemoryCache$SoftCacheEntry') @:internal extern class MemoryCache_SoftCacheEntry extends java.lang.ref.SoftReference<Dynamic> implements MemoryCache_CacheEntry
+@:native('sun$security$util$MemoryCache$SoftCacheEntry') @:internal extern class MemoryCache_SoftCacheEntry extends java.lang.ref.SoftReference<Dynamic> implements sun.security.util.Cache.MemoryCache_CacheEntry
 {
 	@:overload public function getKey() : Dynamic;
 	

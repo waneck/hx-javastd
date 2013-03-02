@@ -34,7 +34,7 @@ extern class MotifCheckBoxMenuItemUI extends javax.swing.plaf.basic.BasicCheckBo
 {
 	private var changeListener : javax.swing.event.ChangeListener;
 	
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override private function installListeners() : Void;
 	

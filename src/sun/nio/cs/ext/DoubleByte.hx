@@ -113,7 +113,7 @@ extern class DoubleByte
 	
 	
 }
-@:native('sun$nio$cs$ext$DoubleByte$Decoder_EBCDIC') extern class DoubleByte_Decoder_EBCDIC extends DoubleByte_Decoder
+@:native('sun$nio$cs$ext$DoubleByte$Decoder_EBCDIC') extern class DoubleByte_Decoder_EBCDIC extends sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder
 {
 	@:overload override public function implReset() : Void;
 	
@@ -123,11 +123,11 @@ extern class DoubleByte
 	
 	
 }
-@:native('sun$nio$cs$ext$DoubleByte$Decoder_EBCDIC_DBCSONLY') extern class DoubleByte_Decoder_EBCDIC_DBCSONLY extends DoubleByte_Decoder
+@:native('sun$nio$cs$ext$DoubleByte$Decoder_EBCDIC_DBCSONLY') extern class DoubleByte_Decoder_EBCDIC_DBCSONLY extends sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder
 {
 	
 }
-@:native('sun$nio$cs$ext$DoubleByte$Decoder_EUC_SIM') extern class DoubleByte_Decoder_EUC_SIM extends DoubleByte_Decoder
+@:native('sun$nio$cs$ext$DoubleByte$Decoder_EUC_SIM') extern class DoubleByte_Decoder_EUC_SIM extends sun.nio.cs.ext.DoubleByte.DoubleByte_Decoder
 {
 	@:overload override private function crMalformedOrUnderFlow(b : Int) : java.nio.charset.CoderResult;
 	
@@ -151,13 +151,13 @@ extern class DoubleByte
 	
 	
 }
-@:native('sun$nio$cs$ext$DoubleByte$Encoder_EBCDIC_DBCSONLY') extern class DoubleByte_Encoder_EBCDIC_DBCSONLY extends DoubleByte_Encoder
+@:native('sun$nio$cs$ext$DoubleByte$Encoder_EBCDIC_DBCSONLY') extern class DoubleByte_Encoder_EBCDIC_DBCSONLY extends sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder
 {
 	@:overload override public function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
 	
 }
-@:native('sun$nio$cs$ext$DoubleByte$Encoder_EBCDIC') extern class DoubleByte_Encoder_EBCDIC extends DoubleByte_Encoder
+@:native('sun$nio$cs$ext$DoubleByte$Encoder_EBCDIC') extern class DoubleByte_Encoder_EBCDIC extends sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder
 {
 	private var currentState : Int;
 	
@@ -171,7 +171,7 @@ extern class DoubleByte
 	
 	
 }
-@:native('sun$nio$cs$ext$DoubleByte$Encoder_EUC_SIM') extern class DoubleByte_Encoder_EUC_SIM extends DoubleByte_Encoder
+@:native('sun$nio$cs$ext$DoubleByte$Encoder_EUC_SIM') extern class DoubleByte_Encoder_EUC_SIM extends sun.nio.cs.ext.DoubleByte.DoubleByte_Encoder
 {
 	
 }

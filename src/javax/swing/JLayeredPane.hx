@@ -199,7 +199,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @return false if components can overlap, else true
 	* @see JComponent#isOptimizedDrawingEnabled
 	*/
-	@:overload override public function isOptimizedDrawingEnabled() : Bool;
+	@:overload public function isOptimizedDrawingEnabled() : Bool;
 	
 	/** Sets the layer property on a JComponent. This method does not cause
 	* any side effects like setLayer() (painting, add/remove, etc).
@@ -233,7 +233,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @see JFrame
 	* @see JRootPane
 	*/
-	@:overload public static function getLayeredPaneAbove(c : java.awt.Component) : JLayeredPane;
+	@:overload public static function getLayeredPaneAbove(c : java.awt.Component) : javax.swing.JLayeredPane;
 	
 	/** Sets the layer attribute on the specified component,
 	* making it the bottommost component in that layer.
@@ -408,7 +408,7 @@ extern class JLayeredPane extends javax.swing.JComponent implements javax.access
 	* @return an AccessibleJLayeredPane that serves as the
 	*         AccessibleContext of this JLayeredPane
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

@@ -23,7 +23,7 @@ package java.io;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class File implements java.io.Serializable implements java.lang.Comparable<File>
+extern class File implements java.io.Serializable implements java.lang.Comparable<java.io.File>
 {
 	/**
 	* The system-dependent default name-separator character.  This field is
@@ -124,7 +124,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @throws  NullPointerException
 	*          If <code>child</code> is <code>null</code>
 	*/
-	@:overload public function new(parent : File, child : String) : Void;
+	@:overload public function new(parent : java.io.File, child : String) : Void;
 	
 	/**
 	* Creates a new <tt>File</tt> instance by converting the given
@@ -207,7 +207,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getParentFile() : File;
+	@:require(java2) @:overload public function getParentFile() : java.io.File;
 	
 	/**
 	* Converts this abstract pathname into a pathname string.  The resulting
@@ -267,7 +267,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getAbsoluteFile() : File;
+	@:require(java2) @:overload public function getAbsoluteFile() : java.io.File;
 	
 	/**
 	* Returns the canonical pathname string of this abstract pathname.
@@ -330,7 +330,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since 1.2
 	* @see     Path#toRealPath
 	*/
-	@:require(java2) @:overload public function getCanonicalFile() : File;
+	@:require(java2) @:overload public function getCanonicalFile() : java.io.File;
 	
 	/**
 	* Converts this abstract pathname into a <code>file:</code> URL.  The
@@ -733,7 +733,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload public function listFiles() : java.NativeArray<File>;
+	@:require(java2) @:overload public function listFiles() : java.NativeArray<java.io.File>;
 	
 	/**
 	* Returns an array of abstract pathnames denoting the files and
@@ -765,7 +765,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since  1.2
 	* @see java.nio.file.Files#newDirectoryStream(Path,String)
 	*/
-	@:require(java2) @:overload public function listFiles(filter : java.io.FilenameFilter) : java.NativeArray<File>;
+	@:require(java2) @:overload public function listFiles(filter : java.io.FilenameFilter) : java.NativeArray<java.io.File>;
 	
 	/**
 	* Returns an array of abstract pathnames denoting the files and
@@ -795,7 +795,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since  1.2
 	* @see java.nio.file.Files#newDirectoryStream(Path,java.nio.file.DirectoryStream.Filter)
 	*/
-	@:require(java2) @:overload public function listFiles(filter : java.io.FileFilter) : java.NativeArray<File>;
+	@:require(java2) @:overload public function listFiles(filter : java.io.FileFilter) : java.NativeArray<java.io.File>;
 	
 	/**
 	* Creates the directory named by this abstract pathname.
@@ -859,7 +859,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @throws  NullPointerException
 	*          If parameter <code>dest</code> is <code>null</code>
 	*/
-	@:overload public function renameTo(dest : File) : Bool;
+	@:overload public function renameTo(dest : java.io.File) : Bool;
 	
 	/**
 	* Sets the last-modified time of the file or directory named by this
@@ -1155,7 +1155,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since  1.2
 	* @see java.nio.file.FileStore
 	*/
-	@:require(java2) @:overload public static function listRoots() : java.NativeArray<File>;
+	@:require(java2) @:overload public static function listRoots() : java.NativeArray<java.io.File>;
 	
 	/**
 	* Returns the size of the partition <a href="#partName">named</a> by this
@@ -1302,7 +1302,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function createTempFile(prefix : String, suffix : String, directory : File) : File;
+	@:require(java2) @:overload public static function createTempFile(prefix : String, suffix : String, directory : java.io.File) : java.io.File;
 	
 	/**
 	* Creates an empty file in the default temporary-file directory, using
@@ -1341,7 +1341,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	* @since 1.2
 	* @see java.nio.file.Files#createTempDirectory(String,FileAttribute[])
 	*/
-	@:require(java2) @:overload public static function createTempFile(prefix : String, suffix : String) : File;
+	@:require(java2) @:overload public static function createTempFile(prefix : String, suffix : String) : java.io.File;
 	
 	/**
 	* Compares two abstract pathnames lexicographically.  The ordering
@@ -1360,7 +1360,7 @@ extern class File implements java.io.Serializable implements java.lang.Comparabl
 	*
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(pathname : File) : Int;
+	@:require(java2) @:overload public function compareTo(pathname : java.io.File) : Int;
 	
 	/**
 	* Tests this abstract pathname for equality with the given object.

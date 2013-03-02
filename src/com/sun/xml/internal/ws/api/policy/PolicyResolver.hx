@@ -37,7 +37,7 @@ extern interface PolicyResolver
 	* @throws WebServiceException
 	*      If resolution failed
 	*/
-	@:overload public function resolve(context : PolicyResolver_ServerContext) : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload public function resolve(context : com.sun.xml.internal.ws.api.policy.PolicyResolver.PolicyResolver_ServerContext) : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	/**
 	* Creates a PolicyResolver
@@ -51,7 +51,7 @@ extern interface PolicyResolver
 	* @throws WebServiceException
 	*      If resolution failed
 	*/
-	@:overload public function resolve(context : PolicyResolver_ClientContext) : com.sun.xml.internal.ws.policy.PolicyMap;
+	@:overload public function resolve(context : com.sun.xml.internal.ws.api.policy.PolicyResolver.PolicyResolver_ClientContext) : com.sun.xml.internal.ws.policy.PolicyMap;
 	
 	
 }

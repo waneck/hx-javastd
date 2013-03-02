@@ -34,7 +34,7 @@ package javax.crypto;
 	* @return true if the specified permission is an
 	* instance of CryptoPermission.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two CryptoAllPermission objects for equality.
@@ -44,7 +44,7 @@ package javax.crypto;
 	*
 	* @return true if <i>obj</i> is a CryptoAllPermission object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	*
@@ -52,7 +52,7 @@ package javax.crypto;
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Returns a new PermissionCollection object for storing
@@ -62,7 +62,7 @@ package javax.crypto;
 	* @return a new PermissionCollection object suitable for
 	* storing CryptoAllPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }
@@ -76,7 +76,7 @@ package javax.crypto;
 	* @exception SecurityException - if this CryptoAllPermissionCollection
 	* object has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Check and see if this set of permissions implies the permissions
@@ -87,7 +87,7 @@ package javax.crypto;
 	* @return true if the given permission is implied by this
 	* CryptoAllPermissionCollection.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Returns an enumeration of all the CryptoAllPermission
@@ -95,7 +95,7 @@ package javax.crypto;
 	*
 	* @return an enumeration of all the CryptoAllPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload public function elements() : java.util.Enumeration<Dynamic>;
 	
 	
 }

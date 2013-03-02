@@ -33,7 +33,7 @@ extern class CharExpression extends sun.tools.tree.IntegerExpression
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

@@ -27,7 +27,7 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 {
 	@:overload public function new(p : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo) : Void;
 	
-	@:overload override public function serializeItem(bi : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>, item : ItemT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload public function serializeItem(bi : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>, item : ItemT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	
 }

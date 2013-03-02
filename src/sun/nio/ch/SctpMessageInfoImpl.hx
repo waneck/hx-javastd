@@ -28,31 +28,31 @@ extern class SctpMessageInfoImpl extends com.sun.nio.sctp.MessageInfo
 	/* 0 */
 	@:overload public function new(association : com.sun.nio.sctp.Association, address : java.net.SocketAddress, streamNumber : Int) : Void;
 	
-	@:overload override public function association() : com.sun.nio.sctp.Association;
+	@:overload public function association() : com.sun.nio.sctp.Association;
 	
-	@:overload override public function address() : java.net.SocketAddress;
+	@:overload public function address() : java.net.SocketAddress;
 	
-	@:overload override public function bytes() : Int;
+	@:overload public function bytes() : Int;
 	
-	@:overload override public function streamNumber() : Int;
+	@:overload public function streamNumber() : Int;
 	
-	@:overload override public function streamNumber(streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
+	@:overload public function streamNumber(streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
 	
-	@:overload override public function payloadProtocolID() : Int;
+	@:overload public function payloadProtocolID() : Int;
 	
-	@:overload override public function payloadProtocolID(ppid : Int) : com.sun.nio.sctp.MessageInfo;
+	@:overload public function payloadProtocolID(ppid : Int) : com.sun.nio.sctp.MessageInfo;
 	
-	@:overload override public function isComplete() : Bool;
+	@:overload public function isComplete() : Bool;
 	
-	@:overload override public function complete(complete : Bool) : com.sun.nio.sctp.MessageInfo;
+	@:overload public function complete(complete : Bool) : com.sun.nio.sctp.MessageInfo;
 	
-	@:overload override public function isUnordered() : Bool;
+	@:overload public function isUnordered() : Bool;
 	
-	@:overload override public function unordered(unordered : Bool) : com.sun.nio.sctp.MessageInfo;
+	@:overload public function unordered(unordered : Bool) : com.sun.nio.sctp.MessageInfo;
 	
-	@:overload override public function timeToLive() : haxe.Int64;
+	@:overload public function timeToLive() : haxe.Int64;
 	
-	@:overload override public function timeToLive(millis : haxe.Int64) : com.sun.nio.sctp.MessageInfo;
+	@:overload public function timeToLive(millis : haxe.Int64) : com.sun.nio.sctp.MessageInfo;
 	
 	@:overload public function toString() : String;
 	

@@ -99,22 +99,22 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	/**
 	* Return flags
 	*/
-	@:overload override public function getFlags() : Int;
+	@:overload public function getFlags() : Int;
 	
 	/**
 	* Return major version to use for generated class files
 	*/
-	@:overload override public function getMajorVersion() : java.StdTypes.Int16;
+	@:overload public function getMajorVersion() : java.StdTypes.Int16;
 	
 	/**
 	* Return minor version to use for generated class files
 	*/
-	@:overload override public function getMinorVersion() : java.StdTypes.Int16;
+	@:overload public function getMinorVersion() : java.StdTypes.Int16;
 	
 	/**
 	* Return coverage data file
 	*/
-	@:overload override public function getcovFile() : java.io.File;
+	@:overload public function getcovFile() : java.io.File;
 	
 	/**
 	* Return an enumeration of all the currently defined classes
@@ -126,25 +126,25 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	* Tells whether an Identifier refers to a package which should be
 	* exempt from the "exists" check in Imports#resolve().
 	*/
-	@:overload override public function isExemptPackage(id : sun.tools.java.Identifier) : Bool;
+	@:overload public function isExemptPackage(id : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Get a class, given the fully qualified class name
 	*/
-	@:overload override public function getClassDeclaration(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDeclaration;
+	@:overload public function getClassDeclaration(nm : sun.tools.java.Identifier) : sun.tools.java.ClassDeclaration;
 	
-	@:overload override public function getClassDeclaration(t : sun.tools.java.Type) : sun.tools.java.ClassDeclaration;
+	@:overload public function getClassDeclaration(t : sun.tools.java.Type) : sun.tools.java.ClassDeclaration;
 	
 	/**
 	* Check if a class exists
 	* Applies only to package members (non-nested classes).
 	*/
-	@:overload override public function classExists(nm : sun.tools.java.Identifier) : Bool;
+	@:overload public function classExists(nm : sun.tools.java.Identifier) : Bool;
 	
 	/**
 	* Get the package path for a package
 	*/
-	@:overload override public function getPackage(pkg : sun.tools.java.Identifier) : sun.tools.java.Package;
+	@:overload public function getPackage(pkg : sun.tools.java.Identifier) : sun.tools.java.Package;
 	
 	/**
 	* Parse a source file
@@ -158,7 +158,7 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	* until it the state converges to CS_BINARY, CS_PARSED, or the like..
 	* @see ClassDeclaration#getClassDefinition
 	*/
-	@:overload override public function loadDefinition(c : sun.tools.java.ClassDeclaration) : Void;
+	@:overload public function loadDefinition(c : sun.tools.java.ClassDeclaration) : Void;
 	
 	/**
 	* Create a new class.
@@ -173,7 +173,7 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	/**
 	* Release resources in classpath.
 	*/
-	@:overload override public function shutdown() : Void;
+	@:overload public function shutdown() : Void;
 	
 	/**
 	* Error String
@@ -214,13 +214,13 @@ extern class BatchEnvironment extends sun.tools.java.Environment implements sun.
 	/**
 	* Issue an error
 	*/
-	@:overload override public function error(source : Dynamic, where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
+	@:overload public function error(source : Dynamic, where : haxe.Int64, err : String, arg1 : Dynamic, arg2 : Dynamic, arg3 : Dynamic) : Void;
 	
 	/**
 	* Output a string. This can either be an error message or something
 	* for debugging.
 	*/
-	@:overload override public function output(msg : String) : Void;
+	@:overload public function output(msg : String) : Void;
 	
 	
 }

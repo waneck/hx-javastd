@@ -69,7 +69,7 @@ extern class CodeException implements java.lang.Cloneable implements com.sun.org
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : CodeException) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.CodeException) : Void;
 	
 	/**
 	* @param start_pc Range in the code the exception handler is active,
@@ -156,7 +156,7 @@ extern class CodeException implements java.lang.Cloneable implements com.sun.org
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : CodeException;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.CodeException;
 	
 	
 }

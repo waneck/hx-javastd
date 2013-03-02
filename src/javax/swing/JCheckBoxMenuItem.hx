@@ -166,7 +166,7 @@ extern class JCheckBoxMenuItem extends javax.swing.JMenuItem implements javax.sw
 	* @return an array containing one Object -- the text of the menu item
 	*         -- if the item is selected; otherwise null
 	*/
-	@:overload override public function getSelectedObjects() : java.NativeArray<Dynamic>;
+	@:overload public function getSelectedObjects() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns a string representation of this JCheckBoxMenuItem. This method

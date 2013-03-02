@@ -25,37 +25,37 @@ package sun.nio.ch;
 */
 extern class FileChannelImpl extends java.nio.channels.FileChannel
 {
-	@:native('open') @:overload public static function _open(fd : java.io.FileDescriptor, readable : Bool, writable : Bool, parent : Dynamic) : java.nio.channels.FileChannel;
+	@:overload public static function open(fd : java.io.FileDescriptor, readable : Bool, writable : Bool, parent : Dynamic) : java.nio.channels.FileChannel;
 	
-	@:native('open') @:overload public static function _open(fd : java.io.FileDescriptor, readable : Bool, writable : Bool, append : Bool, parent : Dynamic) : java.nio.channels.FileChannel;
+	@:overload public static function open(fd : java.io.FileDescriptor, readable : Bool, writable : Bool, append : Bool, parent : Dynamic) : java.nio.channels.FileChannel;
 	
 	@:overload override private function implCloseChannel() : Void;
 	
-	@:overload override public function read(dst : java.nio.ByteBuffer) : Int;
+	@:overload public function read(dst : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
-	@:overload override public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload public function write(src : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
-	@:overload override public function position() : haxe.Int64;
+	@:overload public function position() : haxe.Int64;
 	
-	@:overload override public function position(newPosition : haxe.Int64) : java.nio.channels.FileChannel;
+	@:overload public function position(newPosition : haxe.Int64) : java.nio.channels.FileChannel;
 	
-	@:overload override public function size() : haxe.Int64;
+	@:overload public function size() : haxe.Int64;
 	
-	@:overload override public function truncate(size : haxe.Int64) : java.nio.channels.FileChannel;
+	@:overload public function truncate(size : haxe.Int64) : java.nio.channels.FileChannel;
 	
-	@:overload override public function force(metaData : Bool) : Void;
+	@:overload public function force(metaData : Bool) : Void;
 	
-	@:overload override public function transferTo(position : haxe.Int64, count : haxe.Int64, target : java.nio.channels.WritableByteChannel) : haxe.Int64;
+	@:overload public function transferTo(position : haxe.Int64, count : haxe.Int64, target : java.nio.channels.WritableByteChannel) : haxe.Int64;
 	
-	@:overload override public function transferFrom(src : java.nio.channels.ReadableByteChannel, position : haxe.Int64, count : haxe.Int64) : haxe.Int64;
+	@:overload public function transferFrom(src : java.nio.channels.ReadableByteChannel, position : haxe.Int64, count : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : Int;
+	@:overload public function read(dst : java.nio.ByteBuffer, position : haxe.Int64) : Int;
 	
-	@:overload override public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : Int;
+	@:overload public function write(src : java.nio.ByteBuffer, position : haxe.Int64) : Int;
 	
 	@:overload public function map(mode : java.nio.channels.FileChannel.FileChannel_MapMode, position : haxe.Int64, size : haxe.Int64) : java.nio.MappedByteBuffer;
 	
@@ -65,9 +65,9 @@ extern class FileChannelImpl extends java.nio.channels.FileChannel
 	*/
 	@:overload public static function getMappedBufferPool() : sun.misc.JavaNioAccess.JavaNioAccess_BufferPool;
 	
-	@:overload override public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
+	@:overload public function lock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
 	
-	@:overload override public function tryLock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
+	@:overload public function tryLock(position : haxe.Int64, size : haxe.Int64, shared : Bool) : java.nio.channels.FileLock;
 	
 	
 }

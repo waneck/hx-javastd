@@ -54,7 +54,7 @@ extern class ElementDecl extends com.sun.xml.internal.xsom.impl.DeclarationImpl 
 	
 	@:overload public function getSubstitutables() : java.util.Set<com.sun.xml.internal.xsom.XSElementDecl>;
 	
-	@:overload private function addSubstitutable(decl : ElementDecl) : Void;
+	@:overload private function addSubstitutable(decl : com.sun.xml.internal.xsom.impl.ElementDecl) : Void;
 	
 	@:overload public function updateSubstitutabilityMap() : Void;
 	

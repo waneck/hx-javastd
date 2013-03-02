@@ -93,7 +93,7 @@ package java.lang;
 	*          if <tt>end</tt> is greater than <tt>length()</tt>,
 	*          or if <tt>start</tt> is greater than <tt>end</tt>
 	*/
-	//@:overload public function subSequence(start : Int, end : Int) : CharSequence;
+	//@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	
 }

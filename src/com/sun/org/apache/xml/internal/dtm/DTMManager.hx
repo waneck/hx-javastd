@@ -89,9 +89,9 @@ extern class DTMManager
 	* @throws DTMConfigurationException
 	* if the implementation is not available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : DTMManager;
+	@:overload public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory) : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
-	@:overload public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory, useServicesMechanism : Bool) : DTMManager;
+	@:overload public static function newInstance(xsf : com.sun.org.apache.xml.internal.utils.XMLStringFactory, useServicesMechanism : Bool) : com.sun.org.apache.xml.internal.dtm.DTMManager;
 	
 	/**
 	* Get an instance of a DTM, loaded with the content from the

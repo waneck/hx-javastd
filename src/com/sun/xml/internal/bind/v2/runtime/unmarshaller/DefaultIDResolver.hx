@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 */
 @:internal extern class DefaultIDResolver extends com.sun.xml.internal.bind.IDResolver
 {
-	@:overload override public function startDocument(eventHandler : javax.xml.bind.ValidationEventHandler) : Void;
+	@:overload public function startDocument(eventHandler : javax.xml.bind.ValidationEventHandler) : Void;
 	
-	@:overload override public function bind(id : String, obj : Dynamic) : Void;
+	@:overload public function bind(id : String, obj : Dynamic) : Void;
 	
-	@:overload override public function resolve(id : String, targetType : Class<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
+	@:overload public function resolve(id : String, targetType : Class<Dynamic>) : java.util.concurrent.Callable<Dynamic>;
 	
 	
 }

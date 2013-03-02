@@ -40,7 +40,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -49,7 +49,7 @@ extern class JToolTip extends javax.swing.JComponent implements javax.accessibil
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Sets the text to show when the tool tip is displayed.

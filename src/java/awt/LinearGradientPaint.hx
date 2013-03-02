@@ -191,7 +191,7 @@ extern class LinearGradientPaint extends java.awt.MultipleGradientPaint
 	* @see AffineTransform
 	* @see RenderingHints
 	*/
-	@:overload override public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, transform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
+	@:overload public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, transform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
 	
 	/**
 	* Returns a copy of the start point of the gradient axis.

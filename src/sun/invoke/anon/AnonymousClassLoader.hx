@@ -25,7 +25,7 @@ package sun.invoke.anon;
 */
 extern class AnonymousClassLoader
 {
-	@:overload public static function make(unsafe : sun.misc.Unsafe, hostClass : Class<Dynamic>) : AnonymousClassLoader;
+	@:overload public static function make(unsafe : sun.misc.Unsafe, hostClass : Class<Dynamic>) : sun.invoke.anon.AnonymousClassLoader;
 	
 	@:overload public function loadClass(classFile : java.NativeArray<java.StdTypes.Int8>) : Class<Dynamic>;
 	

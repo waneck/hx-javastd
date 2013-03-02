@@ -35,9 +35,9 @@ package sun.tools.tree;
 	* we must inline it later.  A <code>FieldUpdater</code> is inlined essentially as if
 	* it were a child of the assignment node to which it belongs.
 	*/
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : FieldUpdater;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : FieldUpdater;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
 	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, needGet : Bool) : Int;
 	

@@ -66,7 +66,7 @@ extern class ConstantInterfaceMethodref extends com.sun.org.apache.bcel.internal
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantInterfaceMethodref) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantInterfaceMethodref) : Void;
 	
 	/**
 	* @param class_index Reference to the class containing the method

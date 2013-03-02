@@ -38,7 +38,7 @@ extern class HostnameChecker
 	* Get a HostnameChecker instance. checkType should be one of the
 	* TYPE_* constants defined in this class.
 	*/
-	@:overload public static function getInstance(checkType : java.StdTypes.Int8) : HostnameChecker;
+	@:overload public static function getInstance(checkType : java.StdTypes.Int8) : sun.security.util.HostnameChecker;
 	
 	/**
 	* Perform the check.

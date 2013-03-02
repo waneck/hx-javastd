@@ -65,7 +65,7 @@ extern class ProcessBuilder
 	*
 	* @throws NullPointerException if the argument is null
 	*/
-	@:overload public function command(command : java.util.List<String>) : ProcessBuilder;
+	@:overload public function command(command : java.util.List<String>) : java.lang.ProcessBuilder;
 	
 	/**
 	* Sets this process builder's operating system program and
@@ -78,7 +78,7 @@ extern class ProcessBuilder
 	* @param  command a string array containing the program and its arguments
 	* @return this process builder
 	*/
-	@:overload public function command(command : java.NativeArray<String>) : ProcessBuilder;
+	@:overload public function command(command : java.NativeArray<String>) : java.lang.ProcessBuilder;
 	
 	/**
 	* Returns this process builder's operating system program and
@@ -187,7 +187,7 @@ extern class ProcessBuilder
 	* @param  directory the new working directory
 	* @return this process builder
 	*/
-	@:overload public function directory(directory : java.io.File) : ProcessBuilder;
+	@:overload public function directory(directory : java.io.File) : java.lang.ProcessBuilder;
 	
 	/**
 	* Sets this process builder's standard input source.
@@ -212,7 +212,7 @@ extern class ProcessBuilder
 	*         {@link Redirect.Type#APPEND APPEND}
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectInput(source : ProcessBuilder_Redirect) : ProcessBuilder;
+	@:require(java7) @:overload public function redirectInput(source : java.lang.ProcessBuilder.ProcessBuilder_Redirect) : java.lang.ProcessBuilder;
 	
 	/**
 	* Sets this process builder's standard output destination.
@@ -236,7 +236,7 @@ extern class ProcessBuilder
 	*         {@link Redirect.Type#READ READ}
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectOutput(destination : ProcessBuilder_Redirect) : ProcessBuilder;
+	@:require(java7) @:overload public function redirectOutput(destination : java.lang.ProcessBuilder.ProcessBuilder_Redirect) : java.lang.ProcessBuilder;
 	
 	/**
 	* Sets this process builder's standard error destination.
@@ -264,7 +264,7 @@ extern class ProcessBuilder
 	*         {@link Redirect.Type#READ READ}
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectError(destination : ProcessBuilder_Redirect) : ProcessBuilder;
+	@:require(java7) @:overload public function redirectError(destination : java.lang.ProcessBuilder.ProcessBuilder_Redirect) : java.lang.ProcessBuilder;
 	
 	/**
 	* Sets this process builder's standard input source to a file.
@@ -279,7 +279,7 @@ extern class ProcessBuilder
 	* @return this process builder
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectInput(file : java.io.File) : ProcessBuilder;
+	@:require(java7) @:overload public function redirectInput(file : java.io.File) : java.lang.ProcessBuilder;
 	
 	/**
 	* Sets this process builder's standard output destination to a file.
@@ -294,7 +294,7 @@ extern class ProcessBuilder
 	* @return this process builder
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectOutput(file : java.io.File) : ProcessBuilder;
+	@:require(java7) @:overload public function redirectOutput(file : java.io.File) : java.lang.ProcessBuilder;
 	
 	/**
 	* Sets this process builder's standard error destination to a file.
@@ -309,7 +309,7 @@ extern class ProcessBuilder
 	* @return this process builder
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectError(file : java.io.File) : ProcessBuilder;
+	@:require(java7) @:overload public function redirectError(file : java.io.File) : java.lang.ProcessBuilder;
 	
 	/**
 	* Returns this process builder's standard input source.
@@ -321,7 +321,7 @@ extern class ProcessBuilder
 	* @return this process builder's standard input source
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectInput() : ProcessBuilder_Redirect;
+	@:require(java7) @:overload public function redirectInput() : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Returns this process builder's standard output destination.
@@ -333,7 +333,7 @@ extern class ProcessBuilder
 	* @return this process builder's standard output destination
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectOutput() : ProcessBuilder_Redirect;
+	@:require(java7) @:overload public function redirectOutput() : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Returns this process builder's standard error destination.
@@ -345,7 +345,7 @@ extern class ProcessBuilder
 	* @return this process builder's standard error destination
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function redirectError() : ProcessBuilder_Redirect;
+	@:require(java7) @:overload public function redirectError() : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Sets the source and destination for subprocess standard I/O
@@ -369,7 +369,7 @@ extern class ProcessBuilder
 	* @return this process builder
 	* @since  1.7
 	*/
-	@:require(java7) @:overload public function inheritIO() : ProcessBuilder;
+	@:require(java7) @:overload public function inheritIO() : java.lang.ProcessBuilder;
 	
 	/**
 	* Tells whether this process builder merges standard error and
@@ -401,7 +401,7 @@ extern class ProcessBuilder
 	* @param  redirectErrorStream the new property value
 	* @return this process builder
 	*/
-	@:overload public function redirectErrorStream(redirectErrorStream : Bool) : ProcessBuilder;
+	@:overload public function redirectErrorStream(redirectErrorStream : Bool) : java.lang.ProcessBuilder;
 	
 	/**
 	* Starts a new process using the attributes of this process builder.
@@ -486,9 +486,9 @@ extern class ProcessBuilder
 */
 @:native('java$lang$ProcessBuilder$NullInputStream') @:internal extern class ProcessBuilder_NullInputStream extends java.io.InputStream
 {
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	
 }
@@ -497,7 +497,7 @@ extern class ProcessBuilder
 */
 @:native('java$lang$ProcessBuilder$NullOutputStream') @:internal extern class ProcessBuilder_NullOutputStream extends java.io.OutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
 	
 }
@@ -529,7 +529,7 @@ extern class ProcessBuilder
 	* Returns the type of this {@code Redirect}.
 	* @return the type of this {@code Redirect}
 	*/
-	@:overload @:abstract public function type() : ProcessBuilder_Redirect_Type;
+	@:overload @:abstract public function type() : java.lang.ProcessBuilder.ProcessBuilder_Redirect_Type;
 	
 	/**
 	* Indicates that subprocess I/O will be connected to the
@@ -543,7 +543,7 @@ extern class ProcessBuilder
 	* Redirect.PIPE.type() == Redirect.Type.PIPE
 	* }</pre>
 	*/
-	public static var PIPE(default, null) : ProcessBuilder_Redirect;
+	public static var PIPE(default, null) : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Indicates that subprocess I/O source or destination will be the
@@ -556,7 +556,7 @@ extern class ProcessBuilder
 	* Redirect.INHERIT.type() == Redirect.Type.INHERIT
 	* }</pre>
 	*/
-	public static var INHERIT(default, null) : ProcessBuilder_Redirect;
+	public static var INHERIT(default, null) : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Returns the {@link File} source or destination associated
@@ -579,7 +579,7 @@ extern class ProcessBuilder
 	* @throws NullPointerException if the specified file is null
 	* @return a redirect to read from the specified file
 	*/
-	@:overload public static function from(file : java.io.File) : ProcessBuilder_Redirect;
+	@:overload public static function from(file : java.io.File) : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Returns a redirect to write to the specified file.
@@ -595,7 +595,7 @@ extern class ProcessBuilder
 	* @throws NullPointerException if the specified file is null
 	* @return a redirect to write to the specified file
 	*/
-	@:overload public static function to(file : java.io.File) : ProcessBuilder_Redirect;
+	@:overload public static function to(file : java.io.File) : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Returns a redirect to append to the specified file.
@@ -614,7 +614,7 @@ extern class ProcessBuilder
 	* @throws NullPointerException if the specified file is null
 	* @return a redirect to append to the specified file
 	*/
-	@:overload public static function appendTo(file : java.io.File) : ProcessBuilder_Redirect;
+	@:overload public static function appendTo(file : java.io.File) : java.lang.ProcessBuilder.ProcessBuilder_Redirect;
 	
 	/**
 	* Compares the specified object with this {@code Redirect} for

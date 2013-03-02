@@ -42,7 +42,7 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	
 	public var solidloops : sun.java2d.loops.RenderLoops;
 	
-	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : X11GraphicsConfig;
+	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : sun.awt.X11GraphicsConfig;
 	
 	/*
 	* Note this method is currently here for backward compatability
@@ -53,14 +53,14 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* the program exits. REMOVE this method after Java3D fcs is
 	* released!
 	*/
-	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, type : Int) : X11GraphicsConfig;
+	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, type : Int) : sun.awt.X11GraphicsConfig;
 	
 	@:overload private function new(device : sun.awt.X11GraphicsDevice, visualnum : Int, depth : Int, colormap : Int, doubleBuffer : Bool) : Void;
 	
 	/**
 	* Return the graphics device associated with this configuration.
 	*/
-	@:overload override public function getDevice() : java.awt.GraphicsDevice;
+	@:overload public function getDevice() : java.awt.GraphicsDevice;
 	
 	/**
 	* Returns the visual id associated with this configuration.
@@ -96,13 +96,13 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	/**
 	* Returns the color model associated with this configuration.
 	*/
-	@:overload @:synchronized override public function getColorModel() : java.awt.image.ColorModel;
+	@:overload @:synchronized public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns the color model associated with this configuration that
 	* supports the specified transparency.
 	*/
-	@:overload override public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
+	@:overload public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
 	
 	@:overload public static function createDCM32(rMask : Int, gMask : Int, bMask : Int, aMask : Int, aPre : Bool) : java.awt.image.DirectColorModel;
 	
@@ -117,7 +117,7 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* increasing to the right and Y coordinates increasing downwards.
 	* For image buffers, this Transform will be the Identity transform.
 	*/
-	@:overload override public function getDefaultTransform() : java.awt.geom.AffineTransform;
+	@:overload public function getDefaultTransform() : java.awt.geom.AffineTransform;
 	
 	/**
 	*
@@ -138,19 +138,19 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	* For image buffers, this Transform will be the Identity transform,
 	* since there is no valid distance measurement.
 	*/
-	@:overload override public function getNormalizingTransform() : java.awt.geom.AffineTransform;
+	@:overload public function getNormalizingTransform() : java.awt.geom.AffineTransform;
 	
 	@:overload public function getAData() : haxe.Int64;
 	
 	@:overload public function toString() : String;
 	
-	@:overload override public function getBounds() : java.awt.Rectangle;
+	@:overload public function getBounds() : java.awt.Rectangle;
 	
 	@:overload @:native public function pGetBounds(screenNum : Int) : java.awt.Rectangle;
 	
-	@:overload override public function getBufferCapabilities() : java.awt.BufferCapabilities;
+	@:overload public function getBufferCapabilities() : java.awt.BufferCapabilities;
 	
-	@:overload override public function getImageCapabilities() : java.awt.ImageCapabilities;
+	@:overload public function getImageCapabilities() : java.awt.ImageCapabilities;
 	
 	@:overload public function isDoubleBuffered() : Bool;
 	
@@ -190,7 +190,7 @@ extern class X11GraphicsConfig extends java.awt.GraphicsConfiguration implements
 	*/
 	@:overload public function flip(peer : sun.awt.X11ComponentPeer, target : java.awt.Component, xBackBuffer : java.awt.image.VolatileImage, x1 : Int, y1 : Int, x2 : Int, y2 : Int, flipAction : java.awt.BufferCapabilities.BufferCapabilities_FlipContents) : Void;
 	
-	@:overload override public function isTranslucencyCapable() : Bool;
+	@:overload public function isTranslucencyCapable() : Bool;
 	
 	
 }

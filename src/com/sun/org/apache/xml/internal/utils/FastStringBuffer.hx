@@ -231,7 +231,7 @@ extern class FastStringBuffer
 	* @param value FastStringBuffer whose contents are
 	* to be appended.
 	*/
-	@:overload @:final public function append(value : FastStringBuffer) : Void;
+	@:overload @:final public function append(value : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* @return true if the specified range of characters are all whitespace,

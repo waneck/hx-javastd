@@ -38,7 +38,7 @@ extern class XMLOutputFactory
 	* Create a new instance of the factory.
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newInstance() : XMLOutputFactory;
+	@:overload public static function newInstance() : javax.xml.stream.XMLOutputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -65,7 +65,7 @@ extern class XMLOutputFactory
 	*
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory() : XMLOutputFactory;
+	@:overload public static function newFactory() : javax.xml.stream.XMLOutputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -100,7 +100,7 @@ extern class XMLOutputFactory
 	* @return the factory implementation
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : XMLOutputFactory;
+	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLOutputFactory;
 	
 	/**
 	* Create a new XMLStreamWriter that writes to a writer

@@ -147,7 +147,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*
 	* @param f the view factory
 	*/
-	@:overload override private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
+	@:overload private function loadChildren(f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Returns the next tab stop position after a given reference position.
@@ -172,7 +172,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Sets the size of the view.  This should cause
@@ -182,7 +182,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	* @param width the width >= 0
 	* @param height the height >= 0
 	*/
-	@:overload override public function setSize(width : Single, height : Single) : Void;
+	@:overload public function setSize(width : Single, height : Single) : Void;
 	
 	/**
 	* Determines the preferred span for this view along an
@@ -199,7 +199,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*           The parent may choose to resize or break the view.
 	* @see View#getPreferredSpan
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -216,7 +216,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*           The parent may choose to resize or break the view.
 	* @see View#getMinimumSpan
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Determines the maximum span for this view along an
@@ -233,7 +233,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*           The parent may choose to resize or break the view.
 	* @see View#getMaximumSpan
 	*/
-	@:overload override public function getMaximumSpan(axis : Int) : Single;
+	@:overload public function getMaximumSpan(axis : Int) : Single;
 	
 	/**
 	* Gives notification that something was inserted into the
@@ -245,7 +245,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification that something was removed from the
@@ -257,7 +257,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -268,7 +268,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }
@@ -292,7 +292,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*           The parent may choose to resize or break the view.
 	* @see View#getPreferredSpan
 	*/
-	@:overload override public function getPreferredSpan(axis : Int) : Single;
+	@:overload public function getPreferredSpan(axis : Int) : Single;
 	
 	/**
 	* Renders using the given rendering surface and area on that
@@ -303,7 +303,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	* @param a the allocated region to render into
 	* @see View#paint
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
+	@:overload public function paint(g : java.awt.Graphics, a : java.awt.Shape) : Void;
 	
 	/**
 	* Provides a mapping from the document model coordinate space
@@ -316,7 +316,7 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*   valid location in the associated document
 	* @see View#modelToView
 	*/
-	@:overload override public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
+	@:overload public function modelToView(pos : Int, a : java.awt.Shape, b : javax.swing.text.Position.Position_Bias) : java.awt.Shape;
 	
 	/**
 	* Provides a mapping from the view coordinate space to the logical
@@ -329,11 +329,11 @@ extern class WrappedPlainView extends javax.swing.text.BoxView implements javax.
 	*  given point in the view
 	* @see View#viewToModel
 	*/
-	@:overload override public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
+	@:overload public function viewToModel(fx : Single, fy : Single, a : java.awt.Shape, bias : java.NativeArray<javax.swing.text.Position.Position_Bias>) : Int;
 	
-	@:overload override public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
-	@:overload override public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:overload public function removeUpdate(e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	
 }

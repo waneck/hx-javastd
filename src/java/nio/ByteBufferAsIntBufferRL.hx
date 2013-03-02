@@ -26,23 +26,23 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class ByteBufferAsIntBufferRL extends java.nio.ByteBufferAsIntBufferL
 {
-	@:overload override public function slice() : java.nio.IntBuffer;
+	@:overload public function slice() : java.nio.IntBuffer;
 	
-	@:overload override public function duplicate() : java.nio.IntBuffer;
+	@:overload public function duplicate() : java.nio.IntBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.IntBuffer;
+	@:overload public function asReadOnlyBuffer() : java.nio.IntBuffer;
 	
-	@:overload override public function put(x : Int) : java.nio.IntBuffer;
+	@:overload public function put(x : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function put(i : Int, x : Int) : java.nio.IntBuffer;
+	@:overload public function put(i : Int, x : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function compact() : java.nio.IntBuffer;
+	@:overload public function compact() : java.nio.IntBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload public function order() : java.nio.ByteOrder;
 	
 	
 }

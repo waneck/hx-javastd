@@ -29,7 +29,7 @@ extern class ThreadInfoCompositeData extends sun.management.LazyCompositeData
 	
 	@:overload public function isCurrentVersion() : Bool;
 	
-	@:overload public static function getInstance(cd : javax.management.openmbean.CompositeData) : ThreadInfoCompositeData;
+	@:overload public static function getInstance(cd : javax.management.openmbean.CompositeData) : sun.management.ThreadInfoCompositeData;
 	
 	@:overload public static function toCompositeData(ti : java.lang.management.ThreadInfo) : javax.management.openmbean.CompositeData;
 	

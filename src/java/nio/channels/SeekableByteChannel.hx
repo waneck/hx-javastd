@@ -92,7 +92,7 @@ extern interface SeekableByteChannel extends java.nio.channels.ByteChannel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function position(newPosition : haxe.Int64) : SeekableByteChannel;
+	@:overload public function position(newPosition : haxe.Int64) : java.nio.channels.SeekableByteChannel;
 	
 	/**
 	* Returns the current size of entity to which this channel is connected.
@@ -134,7 +134,7 @@ extern interface SeekableByteChannel extends java.nio.channels.ByteChannel
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload public function truncate(size : haxe.Int64) : SeekableByteChannel;
+	@:overload public function truncate(size : haxe.Int64) : java.nio.channels.SeekableByteChannel;
 	
 	
 }

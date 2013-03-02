@@ -288,7 +288,7 @@ extern class QName implements java.io.Serializable
 	* @return <code>QName</code> corresponding to the given <code>String</code>
 	* @see #toString() QName.toString()
 	*/
-	@:overload public static function valueOf(qNameAsString : String) : QName;
+	@:overload public static function valueOf(qNameAsString : String) : javax.xml.namespace.QName;
 	
 	
 }

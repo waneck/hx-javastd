@@ -124,7 +124,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -133,7 +133,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns all <code>JInternalFrames</code> currently displayed in the
@@ -238,9 +238,9 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	
 	
 }
-@:native('javax$swing$JDesktopPane$ComponentPosition') @:internal extern class JDesktopPane_ComponentPosition implements java.lang.Comparable<JDesktopPane_ComponentPosition>
+@:native('javax$swing$JDesktopPane$ComponentPosition') @:internal extern class JDesktopPane_ComponentPosition implements java.lang.Comparable<javax.swing.JDesktopPane.JDesktopPane_ComponentPosition>
 {
-	@:overload public function compareTo(o : JDesktopPane_ComponentPosition) : Int;
+	@:overload public function compareTo(o : javax.swing.JDesktopPane.JDesktopPane_ComponentPosition) : Int;
 	
 	
 }

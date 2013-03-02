@@ -33,7 +33,7 @@ extern class Options
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload public static function instance(context : com.sun.tools.javap.Context) : Options;
+	@:overload public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.Options;
 	
 	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
 	

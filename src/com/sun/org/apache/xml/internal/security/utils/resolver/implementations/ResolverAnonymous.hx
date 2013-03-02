@@ -34,15 +34,15 @@ extern class ResolverAnonymous extends com.sun.org.apache.xml.internal.security.
 	@:overload public function new(is : java.io.InputStream) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
+	@:overload public function engineResolve(uri : org.w3c.dom.Attr, BaseURI : String) : com.sun.org.apache.xml.internal.security.signature.XMLSignatureInput;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
+	@:overload public function engineCanResolve(uri : org.w3c.dom.Attr, BaseURI : String) : Bool;
 	
 	/** @inheritDoc */
-	@:overload override public function engineGetPropertyKeys() : java.NativeArray<String>;
+	@:overload public function engineGetPropertyKeys() : java.NativeArray<String>;
 	
 	
 }

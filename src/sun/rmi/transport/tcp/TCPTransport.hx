@@ -40,26 +40,26 @@ extern class TCPTransport extends sun.rmi.transport.Transport
 	* @return the channel or null if the transport cannot
 	* generate connections to this endpoint
 	*/
-	@:overload override public function getChannel(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.tcp.TCPChannel;
+	@:overload public function getChannel(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.tcp.TCPChannel;
 	
 	/**
 	* Removes the <I>Channel</I> that generates connections to the
 	* endpoint <I>ep</I>.
 	*/
-	@:overload override public function free(ep : sun.rmi.transport.Endpoint) : Void;
+	@:overload public function free(ep : sun.rmi.transport.Endpoint) : Void;
 	
 	/**
 	* Export the object so that it can accept incoming calls.
 	*/
-	@:overload override public function exportObject(target : sun.rmi.transport.Target) : Void;
+	@:overload public function exportObject(target : sun.rmi.transport.Target) : Void;
 	
-	@:overload @:synchronized override private function targetUnexported() : Void;
+	@:overload @:synchronized private function targetUnexported() : Void;
 	
 	/**
 	* Verify that the current access control context has permission to
 	* accept the connection being dispatched by the current thread.
 	*/
-	@:overload override private function checkAcceptPermission(acc : java.security.AccessControlContext) : Void;
+	@:overload private function checkAcceptPermission(acc : java.security.AccessControlContext) : Void;
 	
 	/**
 	* Returns the client host for the current thread's connection.  Throws

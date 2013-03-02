@@ -48,7 +48,7 @@ extern class IndexedCollectionCertStore extends java.security.cert.CertStoreSpi
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload override public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
+	@:overload public function engineGetCertificates(selector : java.security.cert.CertSelector) : java.util.Collection<java.security.cert.Certificate>;
 	
 	/**
 	* Returns a <code>Collection</code> of <code>CRL</code>s that
@@ -62,7 +62,7 @@ extern class IndexedCollectionCertStore extends java.security.cert.CertStoreSpi
 	*         match the specified selector
 	* @throws CertStoreException if an exception occurs
 	*/
-	@:overload override public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
+	@:overload public function engineGetCRLs(selector : java.security.cert.CRLSelector) : java.util.Collection<java.security.cert.CRL>;
 	
 	
 }

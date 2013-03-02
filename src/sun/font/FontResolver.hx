@@ -70,7 +70,7 @@ extern class FontResolver
 	/**
 	* Return a shared instance of FontResolver.
 	*/
-	@:overload public static function getInstance() : FontResolver;
+	@:overload public static function getInstance() : sun.font.FontResolver;
 	
 	
 }

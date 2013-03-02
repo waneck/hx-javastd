@@ -28,233 +28,233 @@ extern class AWTAccessor
 	/*
 	* Set an accessor object for the java.awt.Component class.
 	*/
-	@:overload public static function setComponentAccessor(ca : AWTAccessor_ComponentAccessor) : Void;
+	@:overload public static function setComponentAccessor(ca : sun.awt.AWTAccessor.AWTAccessor_ComponentAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.Component class.
 	*/
-	@:overload public static function getComponentAccessor() : AWTAccessor_ComponentAccessor;
+	@:overload public static function getComponentAccessor() : sun.awt.AWTAccessor.AWTAccessor_ComponentAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.Container class.
 	*/
-	@:overload public static function setContainerAccessor(ca : AWTAccessor_ContainerAccessor) : Void;
+	@:overload public static function setContainerAccessor(ca : sun.awt.AWTAccessor.AWTAccessor_ContainerAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.Container class.
 	*/
-	@:overload public static function getContainerAccessor() : AWTAccessor_ContainerAccessor;
+	@:overload public static function getContainerAccessor() : sun.awt.AWTAccessor.AWTAccessor_ContainerAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.Window class.
 	*/
-	@:overload public static function setWindowAccessor(wa : AWTAccessor_WindowAccessor) : Void;
+	@:overload public static function setWindowAccessor(wa : sun.awt.AWTAccessor.AWTAccessor_WindowAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.Window class.
 	*/
-	@:overload public static function getWindowAccessor() : AWTAccessor_WindowAccessor;
+	@:overload public static function getWindowAccessor() : sun.awt.AWTAccessor.AWTAccessor_WindowAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.AWTEvent class.
 	*/
-	@:overload public static function setAWTEventAccessor(aea : AWTAccessor_AWTEventAccessor) : Void;
+	@:overload public static function setAWTEventAccessor(aea : sun.awt.AWTAccessor.AWTAccessor_AWTEventAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.AWTEvent class.
 	*/
-	@:overload public static function getAWTEventAccessor() : AWTAccessor_AWTEventAccessor;
+	@:overload public static function getAWTEventAccessor() : sun.awt.AWTAccessor.AWTAccessor_AWTEventAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.event.InputEvent class.
 	*/
-	@:overload public static function setInputEventAccessor(iea : AWTAccessor_InputEventAccessor) : Void;
+	@:overload public static function setInputEventAccessor(iea : sun.awt.AWTAccessor.AWTAccessor_InputEventAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.event.InputEvent class.
 	*/
-	@:overload public static function getInputEventAccessor() : AWTAccessor_InputEventAccessor;
+	@:overload public static function getInputEventAccessor() : sun.awt.AWTAccessor.AWTAccessor_InputEventAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.Frame class.
 	*/
-	@:overload public static function setFrameAccessor(fa : AWTAccessor_FrameAccessor) : Void;
+	@:overload public static function setFrameAccessor(fa : sun.awt.AWTAccessor.AWTAccessor_FrameAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.Frame class.
 	*/
-	@:overload public static function getFrameAccessor() : AWTAccessor_FrameAccessor;
+	@:overload public static function getFrameAccessor() : sun.awt.AWTAccessor.AWTAccessor_FrameAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.KeyboardFocusManager class.
 	*/
-	@:overload public static function setKeyboardFocusManagerAccessor(kfma : AWTAccessor_KeyboardFocusManagerAccessor) : Void;
+	@:overload public static function setKeyboardFocusManagerAccessor(kfma : sun.awt.AWTAccessor.AWTAccessor_KeyboardFocusManagerAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.KeyboardFocusManager class.
 	*/
-	@:overload public static function getKeyboardFocusManagerAccessor() : AWTAccessor_KeyboardFocusManagerAccessor;
+	@:overload public static function getKeyboardFocusManagerAccessor() : sun.awt.AWTAccessor.AWTAccessor_KeyboardFocusManagerAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.MenuComponent class.
 	*/
-	@:overload public static function setMenuComponentAccessor(mca : AWTAccessor_MenuComponentAccessor) : Void;
+	@:overload public static function setMenuComponentAccessor(mca : sun.awt.AWTAccessor.AWTAccessor_MenuComponentAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.MenuComponent class.
 	*/
-	@:overload public static function getMenuComponentAccessor() : AWTAccessor_MenuComponentAccessor;
+	@:overload public static function getMenuComponentAccessor() : sun.awt.AWTAccessor.AWTAccessor_MenuComponentAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.EventQueue class.
 	*/
-	@:overload public static function setEventQueueAccessor(eqa : AWTAccessor_EventQueueAccessor) : Void;
+	@:overload public static function setEventQueueAccessor(eqa : sun.awt.AWTAccessor.AWTAccessor_EventQueueAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.EventQueue class.
 	*/
-	@:overload public static function getEventQueueAccessor() : AWTAccessor_EventQueueAccessor;
+	@:overload public static function getEventQueueAccessor() : sun.awt.AWTAccessor.AWTAccessor_EventQueueAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.PopupMenu class.
 	*/
-	@:overload public static function setPopupMenuAccessor(pma : AWTAccessor_PopupMenuAccessor) : Void;
+	@:overload public static function setPopupMenuAccessor(pma : sun.awt.AWTAccessor.AWTAccessor_PopupMenuAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.PopupMenu class.
 	*/
-	@:overload public static function getPopupMenuAccessor() : AWTAccessor_PopupMenuAccessor;
+	@:overload public static function getPopupMenuAccessor() : sun.awt.AWTAccessor.AWTAccessor_PopupMenuAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.FileDialog class.
 	*/
-	@:overload public static function setFileDialogAccessor(fda : AWTAccessor_FileDialogAccessor) : Void;
+	@:overload public static function setFileDialogAccessor(fda : sun.awt.AWTAccessor.AWTAccessor_FileDialogAccessor) : Void;
 	
 	/*
 	* Retrieve the accessor object for the java.awt.FileDialog class.
 	*/
-	@:overload public static function getFileDialogAccessor() : AWTAccessor_FileDialogAccessor;
+	@:overload public static function getFileDialogAccessor() : sun.awt.AWTAccessor.AWTAccessor_FileDialogAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.ScrollPaneAdjustable class.
 	*/
-	@:overload public static function setScrollPaneAdjustableAccessor(adj : AWTAccessor_ScrollPaneAdjustableAccessor) : Void;
+	@:overload public static function setScrollPaneAdjustableAccessor(adj : sun.awt.AWTAccessor.AWTAccessor_ScrollPaneAdjustableAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.ScrollPaneAdjustable
 	* class.
 	*/
-	@:overload public static function getScrollPaneAdjustableAccessor() : AWTAccessor_ScrollPaneAdjustableAccessor;
+	@:overload public static function getScrollPaneAdjustableAccessor() : sun.awt.AWTAccessor.AWTAccessor_ScrollPaneAdjustableAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.CheckboxMenuItem class.
 	*/
-	@:overload public static function setCheckboxMenuItemAccessor(cmia : AWTAccessor_CheckboxMenuItemAccessor) : Void;
+	@:overload public static function setCheckboxMenuItemAccessor(cmia : sun.awt.AWTAccessor.AWTAccessor_CheckboxMenuItemAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.CheckboxMenuItem class.
 	*/
-	@:overload public static function getCheckboxMenuItemAccessor() : AWTAccessor_CheckboxMenuItemAccessor;
+	@:overload public static function getCheckboxMenuItemAccessor() : sun.awt.AWTAccessor.AWTAccessor_CheckboxMenuItemAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.Cursor class.
 	*/
-	@:overload public static function setCursorAccessor(ca : AWTAccessor_CursorAccessor) : Void;
+	@:overload public static function setCursorAccessor(ca : sun.awt.AWTAccessor.AWTAccessor_CursorAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.Cursor class.
 	*/
-	@:overload public static function getCursorAccessor() : AWTAccessor_CursorAccessor;
+	@:overload public static function getCursorAccessor() : sun.awt.AWTAccessor.AWTAccessor_CursorAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.MenuBar class.
 	*/
-	@:overload public static function setMenuBarAccessor(mba : AWTAccessor_MenuBarAccessor) : Void;
+	@:overload public static function setMenuBarAccessor(mba : sun.awt.AWTAccessor.AWTAccessor_MenuBarAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.MenuBar class.
 	*/
-	@:overload public static function getMenuBarAccessor() : AWTAccessor_MenuBarAccessor;
+	@:overload public static function getMenuBarAccessor() : sun.awt.AWTAccessor.AWTAccessor_MenuBarAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.MenuItem class.
 	*/
-	@:overload public static function setMenuItemAccessor(mia : AWTAccessor_MenuItemAccessor) : Void;
+	@:overload public static function setMenuItemAccessor(mia : sun.awt.AWTAccessor.AWTAccessor_MenuItemAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.MenuItem class.
 	*/
-	@:overload public static function getMenuItemAccessor() : AWTAccessor_MenuItemAccessor;
+	@:overload public static function getMenuItemAccessor() : sun.awt.AWTAccessor.AWTAccessor_MenuItemAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.Menu class.
 	*/
-	@:overload public static function setMenuAccessor(ma : AWTAccessor_MenuAccessor) : Void;
+	@:overload public static function setMenuAccessor(ma : sun.awt.AWTAccessor.AWTAccessor_MenuAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.Menu class.
 	*/
-	@:overload public static function getMenuAccessor() : AWTAccessor_MenuAccessor;
+	@:overload public static function getMenuAccessor() : sun.awt.AWTAccessor.AWTAccessor_MenuAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.event.KeyEvent class.
 	*/
-	@:overload public static function setKeyEventAccessor(kea : AWTAccessor_KeyEventAccessor) : Void;
+	@:overload public static function setKeyEventAccessor(kea : sun.awt.AWTAccessor.AWTAccessor_KeyEventAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.event.KeyEvent class.
 	*/
-	@:overload public static function getKeyEventAccessor() : AWTAccessor_KeyEventAccessor;
+	@:overload public static function getKeyEventAccessor() : sun.awt.AWTAccessor.AWTAccessor_KeyEventAccessor;
 	
 	/**
 	* Set an accessor object for the javax.swing.ClientPropertyKey class.
 	*/
-	@:overload public static function setClientPropertyKeyAccessor(cpka : AWTAccessor_ClientPropertyKeyAccessor) : Void;
+	@:overload public static function setClientPropertyKeyAccessor(cpka : sun.awt.AWTAccessor.AWTAccessor_ClientPropertyKeyAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the javax.swing.ClientPropertyKey class.
 	*/
-	@:overload public static function getClientPropertyKeyAccessor() : AWTAccessor_ClientPropertyKeyAccessor;
+	@:overload public static function getClientPropertyKeyAccessor() : sun.awt.AWTAccessor.AWTAccessor_ClientPropertyKeyAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.SystemTray class.
 	*/
-	@:overload public static function setSystemTrayAccessor(sta : AWTAccessor_SystemTrayAccessor) : Void;
+	@:overload public static function setSystemTrayAccessor(sta : sun.awt.AWTAccessor.AWTAccessor_SystemTrayAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.SystemTray class.
 	*/
-	@:overload public static function getSystemTrayAccessor() : AWTAccessor_SystemTrayAccessor;
+	@:overload public static function getSystemTrayAccessor() : sun.awt.AWTAccessor.AWTAccessor_SystemTrayAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.TrayIcon class.
 	*/
-	@:overload public static function setTrayIconAccessor(tia : AWTAccessor_TrayIconAccessor) : Void;
+	@:overload public static function setTrayIconAccessor(tia : sun.awt.AWTAccessor.AWTAccessor_TrayIconAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.TrayIcon class.
 	*/
-	@:overload public static function getTrayIconAccessor() : AWTAccessor_TrayIconAccessor;
+	@:overload public static function getTrayIconAccessor() : sun.awt.AWTAccessor.AWTAccessor_TrayIconAccessor;
 	
 	/**
 	* Set an accessor object for the java.awt.DefaultKeyboardFocusManager class.
 	*/
-	@:overload public static function setDefaultKeyboardFocusManagerAccessor(dkfma : AWTAccessor_DefaultKeyboardFocusManagerAccessor) : Void;
+	@:overload public static function setDefaultKeyboardFocusManagerAccessor(dkfma : sun.awt.AWTAccessor.AWTAccessor_DefaultKeyboardFocusManagerAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the java.awt.DefaultKeyboardFocusManager class.
 	*/
-	@:overload public static function getDefaultKeyboardFocusManagerAccessor() : AWTAccessor_DefaultKeyboardFocusManagerAccessor;
+	@:overload public static function getDefaultKeyboardFocusManagerAccessor() : sun.awt.AWTAccessor.AWTAccessor_DefaultKeyboardFocusManagerAccessor;
 	
 	/*
 	* Set an accessor object for the java.awt.SequencedEvent class.
 	*/
-	@:overload public static function setSequencedEventAccessor(sea : AWTAccessor_SequencedEventAccessor) : Void;
+	@:overload public static function setSequencedEventAccessor(sea : sun.awt.AWTAccessor.AWTAccessor_SequencedEventAccessor) : Void;
 	
 	/*
 	* Get the accessor object for the java.awt.SequencedEvent class.
 	*/
-	@:overload public static function getSequencedEventAccessor() : AWTAccessor_SequencedEventAccessor;
+	@:overload public static function getSequencedEventAccessor() : sun.awt.AWTAccessor.AWTAccessor_SequencedEventAccessor;
 	
 	
 }

@@ -41,11 +41,11 @@ extern class ForwardValueEntry extends com.sun.tools.corba.se.idl.ForwardEntry
 	**/
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : ForwardValueEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.ForwardValueEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/** Invoke the forward value declaration generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -53,12 +53,12 @@ extern class ForwardValueEntry extends com.sun.tools.corba.se.idl.ForwardEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the interface generator.
 	@returns an object which implements the ForwardValueGen interface.
 	@see ValueGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	
 }

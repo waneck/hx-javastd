@@ -24,7 +24,7 @@ package com.sun.org.apache.xml.internal.serializer;
 extern class ToStream extends com.sun.org.apache.xml.internal.serializer.SerializerBase
 {
 	/** Stack to keep track of disabling output escaping. */
-	private var m_disableOutputEscapingStates : ToStream_BoolStack;
+	private var m_disableOutputEscapingStates : com.sun.org.apache.xml.internal.serializer.ToStream.ToStream_BoolStack;
 	
 	/**
 	* Stack to keep track of whether or not we need to
@@ -35,7 +35,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* If m_doIndent is false this field has no impact.
 	*
 	*/
-	private var m_preserves : ToStream_BoolStack;
+	private var m_preserves : com.sun.org.apache.xml.internal.serializer.ToStream.ToStream_BoolStack;
 	
 	/**
 	* State flag to tell if preservation of whitespace
@@ -741,14 +741,14 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* Returns the m_indentAmount.
 	* @return int
 	*/
-	@:overload override public function getIndentAmount() : Int;
+	@:overload public function getIndentAmount() : Int;
 	
 	/**
 	* Sets the m_indentAmount.
 	*
 	* @param m_indentAmount The m_indentAmount to set
 	*/
-	@:overload override public function setIndentAmount(m_indentAmount : Int) : Void;
+	@:overload public function setIndentAmount(m_indentAmount : Int) : Void;
 	
 	/**
 	* Tell if, based on space preservation constraints and the doIndent property,
@@ -805,7 +805,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* false if the attribute already existed and the value was
 	* replaced with the new value.
 	*/
-	@:overload override public function addAttributeAlways(uri : String, localName : String, rawName : String, type : String, value : String, xslAttribute : Bool) : Bool;
+	@:overload public function addAttributeAlways(uri : String, localName : String, rawName : String, type : String, value : String, xslAttribute : Bool) : Bool;
 	
 	/**
 	* To fire off the pseudo characters of attributes, as they currently
@@ -817,7 +817,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	/**
 	* @see SerializationHandler#setTransformer(Transformer)
 	*/
-	@:overload override public function setTransformer(transformer : javax.xml.transform.Transformer) : Void;
+	@:overload public function setTransformer(transformer : javax.xml.transform.Transformer) : Void;
 	
 	/**
 	* Try's to reset the super class and reset this class for
@@ -826,13 +826,13 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	*
 	* @return true if the class was successfuly reset.
 	*/
-	@:overload override public function reset() : Bool;
+	@:overload public function reset() : Bool;
 	
 	/**
 	* Sets the character encoding coming from the xsl:output encoding stylesheet attribute.
 	* @param encoding the character encoding
 	*/
-	@:overload override public function setEncoding(encoding : String) : Void;
+	@:overload public function setEncoding(encoding : String) : Void;
 	
 	/**
 	* If this method is called, the serializer is used as a
@@ -840,7 +840,7 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* handles document entities.
 	* @see org.xml.sax.DTDHandler#notationDecl(java.lang.String, java.lang.String, java.lang.String)
 	*/
-	@:overload override public function notationDecl(name : String, pubID : String, sysID : String) : Void;
+	@:overload public function notationDecl(name : String, pubID : String, sysID : String) : Void;
 	
 	/**
 	* If this method is called, the serializer is used as a
@@ -848,13 +848,13 @@ extern class ToStream extends com.sun.org.apache.xml.internal.serializer.Seriali
 	* handles document entities.
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	*/
-	@:overload override public function unparsedEntityDecl(name : String, pubID : String, sysID : String, notationName : String) : Void;
+	@:overload public function unparsedEntityDecl(name : String, pubID : String, sysID : String, notationName : String) : Void;
 	
 	/**
 	* If set to false the serializer does not expand DTD entities,
 	* but leaves them as is, the default value is true;
 	*/
-	@:overload override public function setDTDEntityExpansion(expand : Bool) : Void;
+	@:overload public function setDTDEntityExpansion(expand : Bool) : Void;
 	
 	
 }

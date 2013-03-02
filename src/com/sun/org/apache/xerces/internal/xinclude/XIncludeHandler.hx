@@ -154,7 +154,7 @@ extern class XIncludeHandler implements com.sun.org.apache.xerces.internal.xni.p
 	
 	private var fDTDSource : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
 	
-	private var fParentXIncludeHandler : XIncludeHandler;
+	private var fParentXIncludeHandler : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler;
 	
 	private var fBufferSize : Int;
 	
@@ -603,7 +603,7 @@ extern class XIncludeHandler implements com.sun.org.apache.xerces.internal.xni.p
 	* Set the parent of this XIncludeHandler in the tree
 	* @param parent
 	*/
-	@:overload private function setParent(parent : XIncludeHandler) : Void;
+	@:overload private function setParent(parent : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler) : Void;
 	
 	@:overload private function isRootDocument() : Bool;
 	
@@ -649,7 +649,7 @@ extern class XIncludeHandler implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @param ent the UnparsedEntity to check for conflicts
 	*/
-	@:overload private function checkAndSendUnparsedEntity(ent : XIncludeHandler_UnparsedEntity) : Void;
+	@:overload private function checkAndSendUnparsedEntity(ent : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler.XIncludeHandler_UnparsedEntity) : Void;
 	
 	/**
 	* The purpose of this method is to check if a Notation conflicts with a previously
@@ -658,7 +658,7 @@ extern class XIncludeHandler implements com.sun.org.apache.xerces.internal.xni.p
 	*
 	* @param not the Notation to check for conflicts
 	*/
-	@:overload private function checkAndSendNotation(not : XIncludeHandler_Notation) : Void;
+	@:overload private function checkAndSendNotation(not : com.sun.org.apache.xerces.internal.xinclude.XIncludeHandler.XIncludeHandler_Notation) : Void;
 	
 	@:overload private function copyFeatures(from : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager, to : com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings) : Void;
 	

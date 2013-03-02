@@ -45,13 +45,13 @@ extern class CNNameParser implements javax.naming.NameParser
 */
 @:native('com$sun$jndi$cosnaming$CNNameParser$CNCompoundName') @:internal extern class CNNameParser_CNCompoundName extends javax.naming.CompoundName
 {
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
-	@:overload override public function getPrefix(posn : Int) : javax.naming.Name;
+	@:overload public function getPrefix(posn : Int) : javax.naming.Name;
 	
-	@:overload override public function getSuffix(posn : Int) : javax.naming.Name;
+	@:overload public function getSuffix(posn : Int) : javax.naming.Name;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

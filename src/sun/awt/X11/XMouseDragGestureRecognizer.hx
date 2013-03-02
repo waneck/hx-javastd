@@ -76,38 +76,38 @@ package sun.awt.X11;
 	/**
 	* Invoked when the mouse has been clicked on a component.
 	*/
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been pressed on a component.
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button has been released on a component.
 	*/
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse enters a component.
 	*/
-	@:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse exits a component.
 	*/
-	@:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when a mouse button is pressed on a component.
 	*/
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse button has been moved on a component
 	* (with no buttons no down).
 	*/
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

@@ -64,9 +64,9 @@ package com.sun.java.util.jar.pack;
 }
 @:native('com$sun$java$util$jar$pack$CodingChooser$Sizer') @:internal extern class CodingChooser_Sizer extends java.io.OutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	@:overload public function reset() : Void;
 	

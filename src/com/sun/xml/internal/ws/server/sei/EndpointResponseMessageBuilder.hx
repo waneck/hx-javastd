@@ -27,7 +27,7 @@ package com.sun.xml.internal.ws.server.sei;
 {
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$Empty') @:internal extern class EndpointResponseMessageBuilder_Empty extends EndpointResponseMessageBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$Empty') @:internal extern class EndpointResponseMessageBuilder_Empty extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder
 {
 	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
@@ -37,7 +37,7 @@ package com.sun.xml.internal.ws.server.sei;
 * Base class for those {@link EndpointResponseMessageBuilder}s that build a {@link Message}
 * from JAXB objects.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$JAXB') @:internal extern class EndpointResponseMessageBuilder_JAXB extends EndpointResponseMessageBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$JAXB') @:internal extern class EndpointResponseMessageBuilder_JAXB extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder
 {
 	@:overload private function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
@@ -47,7 +47,7 @@ package com.sun.xml.internal.ws.server.sei;
 * Used to create a payload JAXB object just by taking
 * one of the parameters.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$Bare') @:internal extern class EndpointResponseMessageBuilder_Bare extends EndpointResponseMessageBuilder_JAXB
+@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$Bare') @:internal extern class EndpointResponseMessageBuilder_Bare extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder.EndpointResponseMessageBuilder_JAXB
 {
 	
 }
@@ -55,7 +55,7 @@ package com.sun.xml.internal.ws.server.sei;
 * Used to handle a 'wrapper' style request.
 * Common part of rpc/lit and doc/lit.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$Wrapped') @:internal extern class EndpointResponseMessageBuilder_Wrapped extends EndpointResponseMessageBuilder_JAXB
+@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$Wrapped') @:internal extern class EndpointResponseMessageBuilder_Wrapped extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder.EndpointResponseMessageBuilder_JAXB
 {
 	/**
 	* Where in the method argument list do they come from?
@@ -75,7 +75,7 @@ package com.sun.xml.internal.ws.server.sei;
 * Used to create a payload JAXB object by wrapping
 * multiple parameters into one "wrapper bean".
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$DocLit') @:internal extern class EndpointResponseMessageBuilder_DocLit extends EndpointResponseMessageBuilder_Wrapped
+@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$DocLit') @:internal extern class EndpointResponseMessageBuilder_DocLit extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder.EndpointResponseMessageBuilder_Wrapped
 {
 	
 }
@@ -87,7 +87,7 @@ package com.sun.xml.internal.ws.server.sei;
 * This is used for rpc/lit, as we don't have a wrapper bean for it.
 * (TODO: Why don't we have a wrapper bean for this, when doc/lit does!?)
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$RpcLit') @:internal extern class EndpointResponseMessageBuilder_RpcLit extends EndpointResponseMessageBuilder_Wrapped
+@:native('com$sun$xml$internal$ws$server$sei$EndpointResponseMessageBuilder$RpcLit') @:internal extern class EndpointResponseMessageBuilder_RpcLit extends com.sun.xml.internal.ws.server.sei.EndpointResponseMessageBuilder.EndpointResponseMessageBuilder_Wrapped
 {
 	
 }

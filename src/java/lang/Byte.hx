@@ -39,7 +39,7 @@ package java.lang;
 * @see     java.lang.Number
 * @since   JDK1.1
 */
-@:require(java1) extern class Byte extends java.lang.Number implements java.lang.Comparable<Byte>
+@:require(java1) extern class Byte extends java.lang.Number implements java.lang.Comparable<Null<java.StdTypes.Int8>>
 {
 	/**
 	* A constant holding the minimum value a {@code byte} can
@@ -57,7 +57,7 @@ package java.lang;
 	* The {@code Class} instance representing the primitive type
 	* {@code byte}.
 	*/
-	public static var TYPE(default, null) : Class<Byte>;
+	public static var TYPE(default, null) : Class<Null<java.StdTypes.Int8>>;
 	
 	/**
 	* Returns a new {@code String} object representing the
@@ -82,7 +82,7 @@ package java.lang;
 	* @return a {@code Byte} instance representing {@code b}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(b : java.StdTypes.Int8) : Byte;
+	@:require(java5) @:overload public static function valueOf(b : java.StdTypes.Int8) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Parses the string argument as a signed {@code byte} in the
@@ -172,7 +172,7 @@ package java.lang;
 	* @throws          NumberFormatException If the {@code String} does
 	*                  not contain a parsable {@code byte}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Byte;
+	@:overload public static function valueOf(s : String, radix : Int) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Returns a {@code Byte} object holding the value
@@ -196,7 +196,7 @@ package java.lang;
 	* @throws          NumberFormatException If the {@code String} does
 	*                  not contain a parsable {@code byte}.
 	*/
-	@:overload public static function valueOf(s : String) : Byte;
+	@:overload public static function valueOf(s : String) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Decodes a {@code String} into a {@code Byte}.
@@ -240,7 +240,7 @@ package java.lang;
 	*            contain a parsable {@code byte}.
 	* @see java.lang.Byte#parseByte(java.lang.String, int)
 	*/
-	@:overload public static function decode(nm : String) : Byte;
+	@:overload public static function decode(nm : String) : Null<java.StdTypes.Int8>;
 	
 	/**
 	* Constructs a newly allocated {@code Byte} object that
@@ -347,7 +347,7 @@ package java.lang;
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherByte : Byte) : Int;
+	@:require(java2) @:overload public function compareTo(anotherByte : Null<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Compares two {@code byte} values numerically.

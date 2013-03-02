@@ -36,7 +36,7 @@ extern class Service extends com.sun.tools.internal.ws.wsdl.framework.GlobalEnti
 	
 	@:overload public function ports() : java.util.Iterator<com.sun.tools.internal.ws.wsdl.document.Port>;
 	
-	@:overload override public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
 	@:overload override public function getElementName() : javax.xml.namespace.QName;
 	

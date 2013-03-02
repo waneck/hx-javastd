@@ -50,7 +50,7 @@ extern class BISchemaBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 	
 	@:overload public function getJavadoc() : String;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload public function getName() : javax.xml.namespace.QName;
 	
 	public static var NAME(default, null) : javax.xml.namespace.QName;
 	

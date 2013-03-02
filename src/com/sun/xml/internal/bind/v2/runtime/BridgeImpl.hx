@@ -47,7 +47,7 @@ package com.sun.xml.internal.bind.v2.runtime;
 	
 	@:overload override public function getTypeReference() : com.sun.xml.internal.bind.api.TypeReference;
 	
-	@:overload override public function marshal(value : T, out : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload public function marshal(value : T, out : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
 	
 }

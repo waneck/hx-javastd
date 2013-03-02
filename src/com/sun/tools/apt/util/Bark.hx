@@ -26,7 +26,7 @@ package com.sun.tools.apt.util;
 extern class Bark extends com.sun.tools.javac.util.Log
 {
 	/** The context key for the bark. */
-	private static var barkKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Bark>;
+	private static var barkKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.apt.util.Bark>;
 	
 	/**
 	* Preregisters factories to create and use a Bark object for use as
@@ -35,7 +35,7 @@ extern class Bark extends com.sun.tools.javac.util.Log
 	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/** Get the Bark instance for this context. */
-	@:native('instance') @:overload public static function _instance(context : com.sun.tools.javac.util.Context) : Bark;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.util.Bark;
 	
 	/**
 	* Creates a Bark.
@@ -54,7 +54,7 @@ extern class Bark extends com.sun.tools.javac.util.Log
 	/**
 	* Report a diagnostic if they are not currently being ignored.
 	*/
-	@:overload override public function report(diagnostic : com.sun.tools.javac.util.JCDiagnostic) : Void;
+	@:overload public function report(diagnostic : com.sun.tools.javac.util.JCDiagnostic) : Void;
 	
 	/** Report an error.
 	*  @param key    The key for the localized error message.

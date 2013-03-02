@@ -27,7 +27,7 @@ extern class DefaultValueLoaderDecorator extends com.sun.xml.internal.bind.v2.ru
 {
 	@:overload public function new(l : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader, defaultValue : String) : Void;
 	
-	@:overload override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
 	
 }

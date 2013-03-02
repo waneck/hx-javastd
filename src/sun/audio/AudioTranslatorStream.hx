@@ -27,7 +27,7 @@ extern class AudioTranslatorStream extends sun.audio.NativeAudioStream
 {
 	@:overload public function new(_in : java.io.InputStream) : Void;
 	
-	@:overload override public function getLength() : Int;
+	@:overload public function getLength() : Int;
 	
 	
 }

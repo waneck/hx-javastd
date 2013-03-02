@@ -25,7 +25,7 @@ package sun.awt.shell;
 */
 extern class ShellFolder extends java.io.File
 {
-	private var parent : ShellFolder;
+	private var parent : sun.awt.shell.ShellFolder;
 	
 	/**
 	* @return Whether this is a file system shell folder
@@ -85,7 +85,7 @@ extern class ShellFolder extends java.io.File
 	* @return The shell folder linked to by this shell folder, or null
 	* if this shell folder is not a link
 	*/
-	@:overload @:abstract public function getLinkLocation() : ShellFolder;
+	@:overload @:abstract public function getLinkLocation() : sun.awt.shell.ShellFolder;
 	
 	/**
 	* @return The name used to display this shell folder
@@ -107,7 +107,7 @@ extern class ShellFolder extends java.io.File
 	*
 	* @see #compareTo(Object)
 	*/
-	@:overload public function compareTo(file2 : java.io.File) : Int;
+	@:overload override public function compareTo(file2 : java.io.File) : Int;
 	
 	/**
 	* @param getLargeIcon whether to return large icon (ignored in base implementation)
@@ -119,7 +119,7 @@ extern class ShellFolder extends java.io.File
 	* Return a shell folder from a file object
 	* @exception FileNotFoundException if file does not exist
 	*/
-	@:overload public static function getShellFolder(file : java.io.File) : ShellFolder;
+	@:overload public static function getShellFolder(file : java.io.File) : sun.awt.shell.ShellFolder;
 	
 	/**
 	* @param key a <code>String</code>
@@ -182,7 +182,7 @@ extern class ShellFolder extends java.io.File
 	
 	@:overload override public function mkdirs() : Bool;
 	
-	@:overload public function renameTo(dest : java.io.File) : Bool;
+	@:overload override public function renameTo(dest : java.io.File) : Bool;
 	
 	@:overload override public function setLastModified(time : haxe.Int64) : Bool;
 	

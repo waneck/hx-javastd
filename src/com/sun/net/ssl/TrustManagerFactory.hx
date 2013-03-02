@@ -88,7 +88,7 @@ extern class TrustManagerFactory
 	* available in the default provider package or any of the other provider
 	* packages that were searched.
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : TrustManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String) : com.sun.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Generates a <code>TrustManagerFactory</code> object for the specified
@@ -105,7 +105,7 @@ extern class TrustManagerFactory
 	* @exception NoSuchProviderException if the specified provider has not
 	* been configured.
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : TrustManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : com.sun.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Generates a <code>TrustManagerFactory</code> object for the specified
@@ -120,7 +120,7 @@ extern class TrustManagerFactory
 	* @exception NoSuchAlgorithmException if the specified algorithm is not
 	* available from the specified provider.
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : TrustManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : com.sun.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Returns the provider of this <code>TrustManagerFactory</code> object.

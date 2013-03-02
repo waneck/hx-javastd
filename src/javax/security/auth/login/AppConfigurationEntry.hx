@@ -48,7 +48,7 @@ extern class AppConfigurationEntry
 	*                  is not either REQUIRED, REQUISITE, SUFFICIENT
 	*                  or OPTIONAL, or if <code>options</code> is null.
 	*/
-	@:overload public function new(loginModuleName : String, controlFlag : AppConfigurationEntry_LoginModuleControlFlag, options : java.util.Map<String, Dynamic>) : Void;
+	@:overload public function new(loginModuleName : String, controlFlag : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag, options : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Get the class name of the configured <code>LoginModule</code>.
@@ -67,7 +67,7 @@ extern class AppConfigurationEntry
 	*          (either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL)
 	*          for this <code>LoginModule</code>.
 	*/
-	@:overload public function getControlFlag() : AppConfigurationEntry_LoginModuleControlFlag;
+	@:overload public function getControlFlag() : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Get the options configured for this <code>LoginModule</code>.
@@ -88,22 +88,22 @@ extern class AppConfigurationEntry
 	/**
 	* Required <code>LoginModule</code>.
 	*/
-	public static var REQUIRED(default, null) : AppConfigurationEntry_LoginModuleControlFlag;
+	public static var REQUIRED(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Requisite <code>LoginModule</code>.
 	*/
-	public static var REQUISITE(default, null) : AppConfigurationEntry_LoginModuleControlFlag;
+	public static var REQUISITE(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Sufficient <code>LoginModule</code>.
 	*/
-	public static var SUFFICIENT(default, null) : AppConfigurationEntry_LoginModuleControlFlag;
+	public static var SUFFICIENT(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Optional <code>LoginModule</code>.
 	*/
-	public static var OPTIONAL(default, null) : AppConfigurationEntry_LoginModuleControlFlag;
+	public static var OPTIONAL(default, null) : javax.security.auth.login.AppConfigurationEntry.AppConfigurationEntry_LoginModuleControlFlag;
 	
 	/**
 	* Return a String representation of this controlFlag.

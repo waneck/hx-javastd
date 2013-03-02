@@ -131,7 +131,7 @@ extern class Dependencies
 	* @throws ClassFileError if an error occurs while processing a class file,
 	*      such as an error in the internal class file structure.
 	*/
-	@:overload public function findAllDependencies(classFinder : Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool) : java.util.Set<com.sun.tools.classfile.Dependency>;
+	@:overload public function findAllDependencies(classFinder : com.sun.tools.classfile.Dependencies.Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool) : java.util.Set<com.sun.tools.classfile.Dependency>;
 	
 	/**
 	* Find the dependencies of a class, using the current
@@ -150,7 +150,7 @@ extern class Dependencies
 	* @throws ClassFileError if an error occurs while processing a class file,
 	*      such as an error in the internal class file structure.
 	*/
-	@:overload public function findAllDependencies(classFinder : Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool, recorder : Dependencies_Recorder) : Void;
+	@:overload public function findAllDependencies(classFinder : com.sun.tools.classfile.Dependencies.Dependencies_ClassFileReader, rootClassNames : java.util.Set<String>, transitiveClosure : Bool, recorder : com.sun.tools.classfile.Dependencies.Dependencies_Recorder) : Void;
 	
 	
 }
@@ -278,7 +278,7 @@ extern class Dependencies
 /**
 * This class identifies class names directly or indirectly in the constant pool.
 */
-@:native('com$sun$tools$classfile$Dependencies$ClassDependencyFinder') @:internal extern class Dependencies_ClassDependencyFinder extends Dependencies_BasicDependencyFinder
+@:native('com$sun$tools$classfile$Dependencies$ClassDependencyFinder') @:internal extern class Dependencies_ClassDependencyFinder extends com.sun.tools.classfile.Dependencies.Dependencies_BasicDependencyFinder
 {
 	@:overload public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
@@ -288,7 +288,7 @@ extern class Dependencies
 * This class identifies class names in the signatures of classes, fields,
 * and methods in a class.
 */
-@:native('com$sun$tools$classfile$Dependencies$APIDependencyFinder') @:internal extern class Dependencies_APIDependencyFinder extends Dependencies_BasicDependencyFinder
+@:native('com$sun$tools$classfile$Dependencies$APIDependencyFinder') @:internal extern class Dependencies_APIDependencyFinder extends com.sun.tools.classfile.Dependencies.Dependencies_BasicDependencyFinder
 {
 	@:overload public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
@@ -301,7 +301,7 @@ extern class Dependencies
 	* @param classfile the class file to be examined
 	* @return the dependencies located in the given class file.
 	*/
-	@:overload @:public public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<Dependency>;
+	@:overload @:public public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
 	
 }

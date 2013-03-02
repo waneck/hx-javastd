@@ -153,7 +153,7 @@ extern class Enum<E> implements java.lang.Comparable<E> implements java.io.Seria
 	*         is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function valueOf<T : Enum<T>>(enumType : Class<T>, name : String) : T;
+	@:require(java5) @:overload public static function valueOf<T : java.lang.Enum<T>>(enumType : Class<T>, name : String) : T;
 	
 	/**
 	* enum classes cannot have finalize methods.

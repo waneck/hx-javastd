@@ -151,7 +151,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The prefix if there is one, or null.
 	*/
-	@:overload override public function getIdForNamespace(uri : String) : Int;
+	@:overload public function getIdForNamespace(uri : String) : Int;
 	
 	/**
 	* Override SAX2DTM.startElement()
@@ -176,7 +176,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startElement
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -198,7 +198,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endElement
 	*/
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -212,7 +212,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @param length The number of characters to use from the array.
 	* @throws SAXException The application may raise an exception.
 	*/
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of the beginning of the document.
@@ -221,7 +221,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startDocument
 	*/
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of the document.
@@ -230,7 +230,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	*/
-	@:overload override public function endDocument() : Void;
+	@:overload public function endDocument() : Void;
 	
 	/**
 	* Construct the node map from the node.
@@ -245,13 +245,13 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The index identity of the node that was added.
 	*/
-	@:overload @:final override private function addNode(type : Int, expandedTypeID : Int, parentIndex : Int, previousSibling : Int, dataOrPrefix : Int, canHaveFirstChild : Bool) : Int;
+	@:overload @:final private function addNode(type : Int, expandedTypeID : Int, parentIndex : Int, previousSibling : Int, dataOrPrefix : Int, canHaveFirstChild : Bool) : Int;
 	
 	/**
 	* Check whether accumulated text should be stripped; if not,
 	* append the appropriate flavor of text/cdata node.
 	*/
-	@:overload @:final override private function charactersFlush() : Void;
+	@:overload @:final private function charactersFlush() : Void;
 	
 	/**
 	* Override the processingInstruction() interface in SAX2DTM2.
@@ -269,7 +269,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#processingInstruction
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* The optimized version of DTMDefaultBase.getFirstAttribute().

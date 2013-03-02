@@ -38,29 +38,29 @@ extern class BinaryMember extends sun.tools.java.MemberDefinition
 	/**
 	* Inline allowed (currently only allowed for the constructor of Object).
 	*/
-	@:overload override public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
+	@:overload public function isInlineable(env : sun.tools.java.Environment, fromFinal : Bool) : Bool;
 	
 	/**
 	* Get arguments
 	*/
-	@:overload override public function getArguments() : java.util.Vector<Dynamic>;
+	@:overload public function getArguments() : java.util.Vector<Dynamic>;
 	
 	/**
 	* Get exceptions
 	*/
-	@:overload override public function getExceptions(env : sun.tools.java.Environment) : java.NativeArray<sun.tools.java.ClassDeclaration>;
+	@:overload public function getExceptions(env : sun.tools.java.Environment) : java.NativeArray<sun.tools.java.ClassDeclaration>;
 	
 	/**
 	* Get documentation
 	*/
-	@:overload override public function getDocumentation() : String;
+	@:overload public function getDocumentation() : String;
 	
-	@:overload override public function isConstant() : Bool;
+	@:overload public function isConstant() : Bool;
 	
 	/**
 	* Get the value
 	*/
-	@:overload override public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
+	@:overload public function getValue(env : sun.tools.java.Environment) : sun.tools.tree.Node;
 	
 	/**
 	* Get a field attribute

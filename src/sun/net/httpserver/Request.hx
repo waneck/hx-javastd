@@ -51,22 +51,22 @@ package sun.net.httpserver;
 {
 	@:overload public function new(server : sun.net.httpserver.ServerImpl, chan : java.nio.channels.SocketChannel) : Void;
 	
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload @:synchronized public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:synchronized public function read() : Int;
 	
-	@:overload @:synchronized override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, srclen : Int) : Int;
+	@:overload @:synchronized public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, srclen : Int) : Int;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload public function markSupported() : Bool;
 	
 	/* Does not query the OS socket */
-	@:overload @:synchronized override public function available() : Int;
+	@:overload @:synchronized public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:synchronized public function mark(readlimit : Int) : Void;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:synchronized public function reset() : Void;
 	
 	
 }
@@ -74,13 +74,13 @@ package sun.net.httpserver;
 {
 	@:overload public function new(server : sun.net.httpserver.ServerImpl, channel : java.nio.channels.SocketChannel) : Void;
 	
-	@:overload @:synchronized override public function write(b : Int) : Void;
+	@:overload @:synchronized public function write(b : Int) : Void;
 	
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class PluginImpl extends com.sun.tools.internal.xjc.Plugin
 }
 @:native('com$sun$tools$internal$xjc$addon$episode$PluginImpl$OutlineAdaptor') @:internal extern class PluginImpl_OutlineAdaptor
 {
-	@:overload public function new(schemaComponent : com.sun.xml.internal.xsom.XSComponent, outlineType : PluginImpl_OutlineAdaptor_OutlineType, implName : String, packageName : String) : Void;
+	@:overload public function new(schemaComponent : com.sun.xml.internal.xsom.XSComponent, outlineType : com.sun.tools.internal.xjc.addon.episode.PluginImpl.PluginImpl_OutlineAdaptor_OutlineType, implName : String, packageName : String) : Void;
 	
 	
 }
@@ -54,13 +54,13 @@ extern class PluginImpl extends com.sun.tools.internal.xjc.Plugin
 
 @:native('com$sun$tools$internal$xjc$addon$episode$PluginImpl$OutlineAdaptor$OutlineType$BindingsBuilder') @:internal extern interface PluginImpl_OutlineAdaptor_OutlineType_BindingsBuilder
 {
-	@:overload public function build(adaptor : PluginImpl_OutlineAdaptor, bindings : com.sun.xml.internal.bind.v2.schemagen.episode.Bindings) : Void;
+	@:overload public function build(adaptor : com.sun.tools.internal.xjc.addon.episode.PluginImpl.PluginImpl_OutlineAdaptor, bindings : com.sun.xml.internal.bind.v2.schemagen.episode.Bindings) : Void;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$addon$episode$PluginImpl$OutlineAdaptor$OutlineType$BindingsBuilder') @:internal extern interface PluginImpl_OutlineAdaptor_OutlineType_BindingsBuilder
 {
-	@:overload public function build(adaptor : PluginImpl_OutlineAdaptor, bindings : com.sun.xml.internal.bind.v2.schemagen.episode.Bindings) : Void;
+	@:overload public function build(adaptor : com.sun.tools.internal.xjc.addon.episode.PluginImpl.PluginImpl_OutlineAdaptor, bindings : com.sun.xml.internal.bind.v2.schemagen.episode.Bindings) : Void;
 	
 	
 }

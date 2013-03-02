@@ -85,28 +85,28 @@ extern class ActivationDataFlavor extends java.awt.datatransfer.DataFlavor
 	*
 	* @return  the MIME type
 	*/
-	@:overload override public function getMimeType() : String;
+	@:overload public function getMimeType() : String;
 	
 	/**
 	* Return the representation class.
 	*
 	* @return  the representation class
 	*/
-	@:overload override public function getRepresentationClass() : Class<Dynamic>;
+	@:overload public function getRepresentationClass() : Class<Dynamic>;
 	
 	/**
 	* Return the Human Presentable name.
 	*
 	* @return  the human presentable name
 	*/
-	@:overload override public function getHumanPresentableName() : String;
+	@:overload public function getHumanPresentableName() : String;
 	
 	/**
 	* Set the human presentable name.
 	*
 	* @param humanPresentableName      the name to set
 	*/
-	@:overload override public function setHumanPresentableName(humanPresentableName : String) : Void;
+	@:overload public function setHumanPresentableName(humanPresentableName : String) : Void;
 	
 	/**
 	* Compares the DataFlavor passed in with this DataFlavor; calls
@@ -130,7 +130,7 @@ extern class ActivationDataFlavor extends java.awt.datatransfer.DataFlavor
 	* @param mimeType  the MIME type
 	* @return          true if the same MIME type
 	*/
-	@:overload override public function isMimeTypeEqual(mimeType : String) : Bool;
+	@:overload public function isMimeTypeEqual(mimeType : String) : Bool;
 	
 	/**
 	* Called on DataFlavor for every MIME Type parameter to allow DataFlavor
@@ -147,7 +147,7 @@ extern class ActivationDataFlavor extends java.awt.datatransfer.DataFlavor
 	* @return                  the normalized parameter value
 	* @deprecated
 	*/
-	@:overload override private function normalizeMimeTypeParameter(parameterName : String, parameterValue : String) : String;
+	@:overload private function normalizeMimeTypeParameter(parameterName : String, parameterValue : String) : String;
 	
 	/**
 	* Called for each MIME type string to give DataFlavor subtypes the
@@ -161,7 +161,7 @@ extern class ActivationDataFlavor extends java.awt.datatransfer.DataFlavor
 	* @return          the normalized MIME type
 	* @deprecated
 	*/
-	@:overload override private function normalizeMimeType(mimeType : String) : String;
+	@:overload private function normalizeMimeType(mimeType : String) : String;
 	
 	
 }

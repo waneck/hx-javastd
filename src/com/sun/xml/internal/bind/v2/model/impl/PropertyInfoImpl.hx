@@ -23,7 +23,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class PropertyInfoImpl<T, C, F, M> implements com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C> implements com.sun.xml.internal.bind.v2.model.annotation.Locatable implements java.lang.Comparable<PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>>
+@:internal extern class PropertyInfoImpl<T, C, F, M> implements com.sun.xml.internal.bind.v2.model.core.PropertyInfo<T, C> implements com.sun.xml.internal.bind.v2.model.annotation.Locatable implements java.lang.Comparable<com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>>
 {
 	/**
 	* Object that reads annotations.
@@ -87,7 +87,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	*/
 	@:overload @:final private function calcXmlName(e : javax.xml.bind.annotation.XmlElementWrapper) : javax.xml.namespace.QName;
 	
-	@:overload public function compareTo(that : PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>) : Int;
+	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.model.impl.PropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>) : Int;
 	
 	@:overload @:final public function readAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
 	

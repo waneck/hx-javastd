@@ -138,7 +138,7 @@ extern class SctpStandardSocketOptions
 	* value requested by the user. The default value of 0 indicates to use
 	* the endpoints default value.
 	*/
-	public static var SCTP_INIT_MAXSTREAMS(default, null) : com.sun.nio.sctp.SctpSocketOption<SctpStandardSocketOptions_InitMaxStreams>;
+	public static var SCTP_INIT_MAXSTREAMS(default, null) : com.sun.nio.sctp.SctpSocketOption<com.sun.nio.sctp.SctpStandardSocketOptions.SctpStandardSocketOptions_InitMaxStreams>;
 	
 	/**
 	* Enables or disables a Nagle-like algorithm.
@@ -302,7 +302,7 @@ extern class SctpStandardSocketOptions
 	* @throws  IllegalArgumentException
 	*          If an argument is outside of specified bounds
 	*/
-	@:overload public static function create(maxInStreams : Int, maxOutStreams : Int) : SctpStandardSocketOptions_InitMaxStreams;
+	@:overload public static function create(maxInStreams : Int, maxOutStreams : Int) : com.sun.nio.sctp.SctpStandardSocketOptions.SctpStandardSocketOptions_InitMaxStreams;
 	
 	/**
 	* Returns the maximum number of inbound streams.

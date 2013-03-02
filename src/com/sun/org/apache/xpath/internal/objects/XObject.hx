@@ -53,7 +53,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : XObject;
+	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Specify if it's OK for detach to release the iterator for reuse.
@@ -109,7 +109,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return the right XObject based on the type of the object passed.
 	*/
-	@:overload public static function create(val : Dynamic) : XObject;
+	@:overload public static function create(val : Dynamic) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Create the right XObject based on the type of the object passed.
@@ -121,7 +121,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return the right XObject based on the type of the object passed.
 	*/
-	@:overload public static function create(val : Dynamic, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : XObject;
+	@:overload public static function create(val : Dynamic, xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/** Constant for NULL object type */
 	public static var CLASS_NULL(default, null) : Int;
@@ -273,7 +273,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @return This object, unless overridden by subclass.
 	*/
-	@:overload public function getFresh() : XObject;
+	@:overload public function getFresh() : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Cast result object to a nodelist. Always issues an error.
@@ -323,7 +323,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function lessThan(obj2 : XObject) : Bool;
+	@:overload public function lessThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is less than or equal to the other.
@@ -334,7 +334,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function lessThanOrEqual(obj2 : XObject) : Bool;
+	@:overload public function lessThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is greater than the other.
@@ -345,7 +345,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function greaterThan(obj2 : XObject) : Bool;
+	@:overload public function greaterThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is greater than or equal to the other.
@@ -356,7 +356,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function greaterThanOrEqual(obj2 : XObject) : Bool;
+	@:overload public function greaterThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -367,7 +367,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function equals(obj2 : XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if two objects are functionally not equal.
@@ -378,7 +378,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function notEquals(obj2 : XObject) : Bool;
+	@:overload public function notEquals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell the user of an error, and probably throw an
@@ -423,7 +423,7 @@ extern class XObject extends com.sun.org.apache.xpath.internal.Expression implem
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	
 }

@@ -36,17 +36,17 @@ package sun.tools.jstat;
 	/**
 	* Alignment representing a Centered alignment
 	*/
-	public static var CENTER(default, null) : Alignment;
+	public static var CENTER(default, null) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Alignment representing a Left alignment
 	*/
-	public static var LEFT(default, null) : Alignment;
+	public static var LEFT(default, null) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Alignment representing a Right alignment
 	*/
-	public static var RIGHT(default, null) : Alignment;
+	public static var RIGHT(default, null) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Maps a string value to its corresponding Alignment object.
@@ -54,7 +54,7 @@ package sun.tools.jstat;
 	* @param   s  an string to match against Alignment objects.
 	* @return     The Alignment object matching the given string.
 	*/
-	@:overload public static function toAlignment(s : String) : Alignment;
+	@:overload public static function toAlignment(s : String) : sun.tools.jstat.Alignment;
 	
 	/**
 	* Returns an enumeration of the keys for this enumerated type

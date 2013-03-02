@@ -42,12 +42,12 @@ extern class MotifSplitPaneUI extends javax.swing.plaf.basic.BasicSplitPaneUI
 	/**
 	* Creates a new MotifSplitPaneUI instance
 	*/
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates the default divider.
 	*/
-	@:overload override public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
+	@:overload public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
 	
 	
 }

@@ -99,7 +99,7 @@ extern class DesktopProperty implements javax.swing.UIDefaults.UIDefaults_Active
 * is handled via a WeakReference so as not to pin down the
 * DesktopProperty.
 */
-@:native('com$sun$java$swing$plaf$windows$DesktopProperty$WeakPCL') @:internal extern class DesktopProperty_WeakPCL extends java.lang.ref.WeakReference<DesktopProperty> implements java.beans.PropertyChangeListener
+@:native('com$sun$java$swing$plaf$windows$DesktopProperty$WeakPCL') @:internal extern class DesktopProperty_WeakPCL extends java.lang.ref.WeakReference<com.sun.java.swing.plaf.windows.DesktopProperty> implements java.beans.PropertyChangeListener
 {
 	@:overload public function propertyChange(pce : java.beans.PropertyChangeEvent) : Void;
 	

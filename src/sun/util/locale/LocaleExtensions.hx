@@ -31,9 +31,9 @@ package sun.util.locale;
 */
 extern class LocaleExtensions
 {
-	public static var CALENDAR_JAPANESE(default, null) : LocaleExtensions;
+	public static var CALENDAR_JAPANESE(default, null) : sun.util.locale.LocaleExtensions;
 	
-	public static var NUMBER_THAI(default, null) : LocaleExtensions;
+	public static var NUMBER_THAI(default, null) : sun.util.locale.LocaleExtensions;
 	
 	@:overload public function getKeys() : java.util.Set<Null<java.StdTypes.Char16>>;
 	

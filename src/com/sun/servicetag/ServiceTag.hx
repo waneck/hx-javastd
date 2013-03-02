@@ -76,7 +76,7 @@ extern class ServiceTag
 	* @throws IllegalArgumentException if any value of the input fields
 	*    does not conform to the service tag XML schema.
 	*/
-	@:overload public static function newInstance(productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : ServiceTag;
+	@:overload public static function newInstance(productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Creates a service tag object with a specified <tt>instance_urn</tt>.
@@ -96,7 +96,7 @@ extern class ServiceTag
 	* @throws IllegalArgumentException if any value of the input fields
 	*    does not conform to the service tag XML schema.
 	*/
-	@:overload public static function newInstance(instanceURN : String, productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : ServiceTag;
+	@:overload public static function newInstance(instanceURN : String, productName : String, productVersion : String, productURN : String, productParent : String, productParentURN : String, productDefinedInstanceID : String, productVendor : String, platformArch : String, container : String, source : String) : com.sun.servicetag.ServiceTag;
 	
 	/**
 	* Returns a uniform resource name (URN) in this format:
@@ -262,7 +262,7 @@ extern class ServiceTag
 	*         or {@code null} if not supported.
 	* @throws IOException if an error occurs in this operation.
 	*/
-	@:overload public static function getJavaServiceTag(source : String) : ServiceTag;
+	@:overload public static function getJavaServiceTag(source : String) : com.sun.servicetag.ServiceTag;
 	
 	
 }

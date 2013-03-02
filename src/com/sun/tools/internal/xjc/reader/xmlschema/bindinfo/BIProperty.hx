@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 */
 extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.AbstractDeclarationImpl
 {
-	@:overload public function new(loc : org.xml.sax.Locator, _propName : String, _javadoc : String, _baseType : BIProperty_BaseTypeBean, collectionType : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.CollectionTypeAttribute, isConst : Null<Bool>, optionalProperty : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode, genElemProp : Null<Bool>) : Void;
+	@:overload public function new(loc : org.xml.sax.Locator, _propName : String, _javadoc : String, _baseType : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty.BIProperty_BaseTypeBean, collectionType : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.CollectionTypeAttribute, isConst : Null<Bool>, optionalProperty : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.OptionalPropertyMode, genElemProp : Null<Bool>) : Void;
 	
 	@:overload private function new() : Void;
 	
@@ -112,7 +112,7 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	*      If this object is contained in the BIGlobalBinding, then
 	*      this method returns null to indicate that there's no more default.
 	*/
-	@:overload private function getDefault() : BIProperty;
+	@:overload private function getDefault() : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
 	
 	/**
 	* Finds a property customization that describes how the given
@@ -143,9 +143,9 @@ extern class BIProperty extends com.sun.tools.internal.xjc.reader.xmlschema.bind
 	* @return
 	*      Always return non-null valid object.
 	*/
-	@:overload public static function getCustomization(c : com.sun.xml.internal.xsom.XSComponent) : BIProperty;
+	@:overload public static function getCustomization(c : com.sun.xml.internal.xsom.XSComponent) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIProperty;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload public function getName() : javax.xml.namespace.QName;
 	
 	/** Name of this declaration. */
 	public static var NAME(default, null) : javax.xml.namespace.QName;

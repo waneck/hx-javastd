@@ -134,7 +134,7 @@ package java.awt.datatransfer;
 	*    specified <code>type</code>; otherwise returns
 	*    <code>false</code>
 	*/
-	@:overload public function match(type : MimeType) : Bool;
+	@:overload public function match(type : java.awt.datatransfer.MimeType) : Bool;
 	
 	/**
 	* Returns <code>true</code> if the primary type and the

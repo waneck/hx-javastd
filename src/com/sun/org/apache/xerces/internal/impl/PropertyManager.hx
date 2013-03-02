@@ -48,7 +48,7 @@ extern class PropertyManager
 	/**
 	* Initialize this object with the properties taken from passed PropertyManager object.
 	*/
-	@:overload public function new(propertyManager : PropertyManager) : Void;
+	@:overload public function new(propertyManager : com.sun.org.apache.xerces.internal.impl.PropertyManager) : Void;
 	
 	/**
 	* public void reset(){

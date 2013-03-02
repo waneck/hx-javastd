@@ -42,7 +42,7 @@ extern class PrinterJob
 	*          {@link java.lang.SecurityManager#checkPrintJobAccess}
 	*          method disallows this thread from creating a print job request
 	*/
-	@:overload public static function getPrinterJob() : PrinterJob;
+	@:overload public static function getPrinterJob() : java.awt.print.PrinterJob;
 	
 	/**
 	* A convenience method which looks up 2D print services.

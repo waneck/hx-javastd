@@ -85,7 +85,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -94,7 +94,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	@:overload override private function processFocusEvent(evt : java.awt.event.FocusEvent) : Void;
 	
@@ -474,7 +474,7 @@ extern class JPopupMenu extends javax.swing.JComponent implements javax.accessib
 	* @see JComponent#paint
 	* @see JComponent#setBorder
 	*/
-	@:overload override private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns the margin, in pixels, between the popup menu's border and

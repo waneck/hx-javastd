@@ -75,7 +75,7 @@ package com.sun.security.auth;
 	*
 	* @return true if the objects are considered equal, false otherwise.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Return a hashcode for this <code>SubjectCodeSource</code>.
@@ -84,7 +84,7 @@ package com.sun.security.auth;
 	*
 	* @return a hashcode for this <code>SubjectCodeSource</code>.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Return a String representation of this <code>SubjectCodeSource</code>.
@@ -93,7 +93,7 @@ package com.sun.security.auth;
 	*
 	* @return a String representation of this <code>SubjectCodeSource</code>.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

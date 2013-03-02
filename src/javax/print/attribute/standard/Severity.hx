@@ -33,7 +33,7 @@ extern class Severity extends javax.print.attribute.EnumSyntax implements javax.
 	* others serve as a precursor to a warning. A report must contain nothing
 	* that could affect the printed output.
 	*/
-	public static var REPORT(default, null) : Severity;
+	public static var REPORT(default, null) : javax.print.attribute.standard.Severity;
 	
 	/**
 	* Indicates that the {@link PrinterStateReason PrinterStateReason} is a
@@ -42,7 +42,7 @@ extern class Severity extends javax.print.attribute.EnumSyntax implements javax.
 	* nothing  that prevents a job from completing, though in some cases the
 	* output may be of lower quality.
 	*/
-	public static var WARNING(default, null) : Severity;
+	public static var WARNING(default, null) : javax.print.attribute.standard.Severity;
 	
 	/**
 	* Indicates that the {@link PrinterStateReason PrinterStateReason} is an
@@ -50,7 +50,7 @@ extern class Severity extends javax.print.attribute.EnumSyntax implements javax.
 	* If this attribute contains one or more errors, the printer's
 	* {@link PrinterState PrinterState} must be STOPPED.
 	*/
-	public static var ERROR(default, null) : Severity;
+	public static var ERROR(default, null) : javax.print.attribute.standard.Severity;
 	
 	/**
 	* Construct a new severity enumeration value with the given integer
@@ -63,12 +63,12 @@ extern class Severity extends javax.print.attribute.EnumSyntax implements javax.
 	/**
 	* Returns the string table for class Severity.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class Severity.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

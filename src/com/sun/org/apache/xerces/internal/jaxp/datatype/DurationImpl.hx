@@ -205,7 +205,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	* @see #isShorterThan(Duration)
 	* @see #isLongerThan(Duration)
 	*/
-	@:overload public function compare(rhs : javax.xml.datatype.Duration) : Int;
+	@:overload override public function compare(rhs : javax.xml.datatype.Duration) : Int;
 	
 	/**
 	* Returns a hash code consistent with the definition of the equals method.
@@ -572,7 +572,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @see #subtract(Duration)
 	*/
-	@:overload public function add(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
+	@:overload override public function add(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>this-rhs</code>.</p>
@@ -623,7 +623,7 @@ package com.sun.org.apache.xerces.internal.jaxp.datatype;
 	*
 	* @see #add(Duration)
 	*/
-	@:overload public function subtract(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
+	@:overload override public function subtract(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* Returns a new {@link Duration} object whose

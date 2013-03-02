@@ -49,22 +49,22 @@ extern class XSWildcardDecl implements com.sun.org.apache.xerces.internal.xs.XSW
 	/**
 	*  Schema Component Constraint: Wildcard Subset
 	*/
-	@:overload public function isSubsetOf(superWildcard : XSWildcardDecl) : Bool;
+	@:overload public function isSubsetOf(superWildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl) : Bool;
 	
 	/**
 	* Check whether this wildcard has a weaker process contents than the super.
 	*/
-	@:overload public function weakerProcessContents(superWildcard : XSWildcardDecl) : Bool;
+	@:overload public function weakerProcessContents(superWildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl) : Bool;
 	
 	/**
 	* Schema Component Constraint: Attribute Wildcard Union
 	*/
-	@:overload public function performUnionWith(wildcard : XSWildcardDecl, processContents : java.StdTypes.Int16) : XSWildcardDecl;
+	@:overload public function performUnionWith(wildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl, processContents : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
 	
 	/**
 	* Schema Component Constraint: Attribute Wildcard Intersection
 	*/
-	@:overload public function performIntersectionWith(wildcard : XSWildcardDecl, processContents : java.StdTypes.Int16) : XSWildcardDecl;
+	@:overload public function performIntersectionWith(wildcard : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl, processContents : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.impl.xs.XSWildcardDecl;
 	
 	@:overload public function toString() : String;
 	

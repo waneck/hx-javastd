@@ -45,7 +45,7 @@ package javax.swing.text.html;
 	* @param elem an element
 	* @return the row
 	*/
-	@:overload private function createTableRow(elem : javax.swing.text.Element) : TableView_RowView;
+	@:overload private function createTableRow(elem : javax.swing.text.Element) : javax.swing.text.html.TableView.TableView_RowView;
 	
 	/**
 	* The number of columns in the table.

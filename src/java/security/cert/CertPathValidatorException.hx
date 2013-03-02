@@ -106,7 +106,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function new(msg : String, cause : java.lang.Throwable, certPath : java.security.cert.CertPath, index : Int, reason : CertPathValidatorException_Reason) : Void;
+	@:require(java7) @:overload public function new(msg : String, cause : java.lang.Throwable, certPath : java.security.cert.CertPath, index : Int, reason : java.security.cert.CertPathValidatorException.CertPathValidatorException_Reason) : Void;
 	
 	/**
 	* Returns the certification path that was being validated when
@@ -138,7 +138,7 @@ extern class CertPathValidatorException extends java.security.GeneralSecurityExc
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getReason() : CertPathValidatorException_Reason;
+	@:require(java7) @:overload public function getReason() : java.security.cert.CertPathValidatorException.CertPathValidatorException_Reason;
 	
 	
 }

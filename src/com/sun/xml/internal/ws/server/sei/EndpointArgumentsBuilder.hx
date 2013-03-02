@@ -29,7 +29,7 @@ package com.sun.xml.internal.ws.server.sei;
 	* The singleton instance that produces null return value.
 	* Used for operations that doesn't have any output.
 	*/
-	public static var NONE : EndpointArgumentsBuilder;
+	public static var NONE : com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder;
 	
 	/**
 	* Returns the 'uninitialized' value for the given type.
@@ -68,20 +68,20 @@ package com.sun.xml.internal.ws.server.sei;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$None') @:internal extern class EndpointArgumentsBuilder_None extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$None') @:internal extern class EndpointArgumentsBuilder_None extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
 /**
 * {@link EndpointArgumentsBuilder} that sets the VM uninitialized value to the type.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$NullSetter') @:internal extern class EndpointArgumentsBuilder_NullSetter extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$NullSetter') @:internal extern class EndpointArgumentsBuilder_NullSetter extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
 	@:overload public function new(setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter, nullValue : Dynamic) : Void;
 	
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -100,20 +100,20 @@ package com.sun.xml.internal.ws.server.sei;
 * return a value as a return value (and everything else has to go to
 * {@link Holder}s.)
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$Composite') @:internal extern class EndpointArgumentsBuilder_Composite extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$Composite') @:internal extern class EndpointArgumentsBuilder_Composite extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
-	@:overload public function new(builders : java.NativeArray<EndpointArgumentsBuilder>) : Void;
+	@:overload public function new(builders : java.NativeArray<com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder>) : Void;
 	
-	@:overload public function new(builders : java.util.Collection<EndpointArgumentsBuilder>) : Void;
+	@:overload public function new(builders : java.util.Collection<com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder>) : Void;
 	
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
 /**
 * Reads an Attachment into a Java parameter.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$AttachmentBuilder') @:internal extern class EndpointArgumentsBuilder_AttachmentBuilder extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$AttachmentBuilder') @:internal extern class EndpointArgumentsBuilder_AttachmentBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
 	private var setter(default, null) : com.sun.xml.internal.ws.server.sei.EndpointValueSetter;
 	
@@ -132,44 +132,44 @@ package com.sun.xml.internal.ws.server.sei;
 	*      specifies how the obtained value is set into the argument. Takes
 	*      care of Holder arguments.
 	*/
-	@:overload public static function createAttachmentBuilder(param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : EndpointArgumentsBuilder;
+	@:overload public static function createAttachmentBuilder(param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder;
 	
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$DataHandlerBuilder') @:internal extern class EndpointArgumentsBuilder_DataHandlerBuilder extends EndpointArgumentsBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$DataHandlerBuilder') @:internal extern class EndpointArgumentsBuilder_DataHandlerBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder.EndpointArgumentsBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$ByteArrayBuilder') @:internal extern class EndpointArgumentsBuilder_ByteArrayBuilder extends EndpointArgumentsBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$ByteArrayBuilder') @:internal extern class EndpointArgumentsBuilder_ByteArrayBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder.EndpointArgumentsBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$SourceBuilder') @:internal extern class EndpointArgumentsBuilder_SourceBuilder extends EndpointArgumentsBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$SourceBuilder') @:internal extern class EndpointArgumentsBuilder_SourceBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder.EndpointArgumentsBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$ImageBuilder') @:internal extern class EndpointArgumentsBuilder_ImageBuilder extends EndpointArgumentsBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$ImageBuilder') @:internal extern class EndpointArgumentsBuilder_ImageBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder.EndpointArgumentsBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$InputStreamBuilder') @:internal extern class EndpointArgumentsBuilder_InputStreamBuilder extends EndpointArgumentsBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$InputStreamBuilder') @:internal extern class EndpointArgumentsBuilder_InputStreamBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder.EndpointArgumentsBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$JAXBBuilder') @:internal extern class EndpointArgumentsBuilder_JAXBBuilder extends EndpointArgumentsBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$JAXBBuilder') @:internal extern class EndpointArgumentsBuilder_JAXBBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder.EndpointArgumentsBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$StringBuilder') @:internal extern class EndpointArgumentsBuilder_StringBuilder extends EndpointArgumentsBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$StringBuilder') @:internal extern class EndpointArgumentsBuilder_StringBuilder extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder.EndpointArgumentsBuilder_AttachmentBuilder
 {
 	
 }
 /**
 * Reads a header into a JAXB object.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$Header') @:internal extern class EndpointArgumentsBuilder_Header extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$Header') @:internal extern class EndpointArgumentsBuilder_Header extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
 	/**
 	* @param name
@@ -183,14 +183,14 @@ package com.sun.xml.internal.ws.server.sei;
 	
 	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
 	
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
 /**
 * Reads the whole payload into a single JAXB bean.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$Body') @:internal extern class EndpointArgumentsBuilder_Body extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$Body') @:internal extern class EndpointArgumentsBuilder_Body extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
 	/**
 	* @param bridge
@@ -200,7 +200,7 @@ package com.sun.xml.internal.ws.server.sei;
 	*/
 	@:overload public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.server.sei.EndpointValueSetter) : Void;
 	
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -208,11 +208,11 @@ package com.sun.xml.internal.ws.server.sei;
 * Treats a payload as multiple parts wrapped into one element,
 * and processes all such wrapped parts.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$DocLit') @:internal extern class EndpointArgumentsBuilder_DocLit extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$DocLit') @:internal extern class EndpointArgumentsBuilder_DocLit extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
 	@:overload public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, skipMode : Mode) : Void;
 	
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }
@@ -236,11 +236,11 @@ package com.sun.xml.internal.ws.server.sei;
 * Treats a payload as multiple parts wrapped into one element,
 * and processes all such wrapped parts.
 */
-@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$RpcLit') @:internal extern class EndpointArgumentsBuilder_RpcLit extends EndpointArgumentsBuilder
+@:native('com$sun$xml$internal$ws$server$sei$EndpointArgumentsBuilder$RpcLit') @:internal extern class EndpointArgumentsBuilder_RpcLit extends com.sun.xml.internal.ws.server.sei.EndpointArgumentsBuilder
 {
 	@:overload public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter) : Void;
 	
-	@:overload override public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function readRequest(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

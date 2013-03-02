@@ -30,7 +30,7 @@ package com.sun.tools.hat.internal.server;
 */
 extern class FinalizerSummaryQuery extends com.sun.tools.hat.internal.server.QueryHandler
 {
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }
@@ -40,7 +40,7 @@ extern class FinalizerSummaryQuery extends com.sun.tools.hat.internal.server.Que
 	
 	@:overload public function updateCount() : Void;
 	
-	@:overload public function compare(other : FinalizerSummaryQuery_HistogramElement) : Int;
+	@:overload public function compare(other : com.sun.tools.hat.internal.server.FinalizerSummaryQuery.FinalizerSummaryQuery_HistogramElement) : Int;
 	
 	@:overload public function getClazz() : com.sun.tools.hat.internal.model.JavaClass;
 	

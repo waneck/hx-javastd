@@ -29,9 +29,9 @@ extern class XMLStreamReaderFactory
 	* Overrides the singleton {@link XMLStreamReaderFactory} instance that
 	* the JAX-WS RI uses.
 	*/
-	@:overload public static function set(f : XMLStreamReaderFactory) : Void;
+	@:overload public static function set(f : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory) : Void;
 	
-	@:overload public static function get() : XMLStreamReaderFactory;
+	@:overload public static function get() : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
 	
 	@:overload public static function create(source : org.xml.sax.InputSource, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
@@ -91,13 +91,13 @@ extern class XMLStreamReaderFactory
 /**
 * {@link XMLStreamReaderFactory} implementation for SJSXP/JAXP RI.
 */
-@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Zephyr') extern class XMLStreamReaderFactory_Zephyr extends XMLStreamReaderFactory
+@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Zephyr') extern class XMLStreamReaderFactory_Zephyr extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory
 {
 	/**
 	* Creates {@link Zephyr} instance if the given {@link XMLInputFactory} is the one
 	* from Zephyr.
 	*/
-	@:overload public static function newInstance(xif : javax.xml.stream.XMLInputFactory) : XMLStreamReaderFactory;
+	@:overload public static function newInstance(xif : javax.xml.stream.XMLInputFactory) : com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory;
 	
 	@:overload public function new(xif : javax.xml.stream.XMLInputFactory, clazz : Class<Dynamic>) : Void;
 	
@@ -119,7 +119,7 @@ extern class XMLStreamReaderFactory
 * it may run into (see <a href="https://jax-ws.dev.java.net/issues/show_bug.cgi?id=555">
 * race condition</a>). Hence, using a XMLInputFactory per theread.
 */
-@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Default') extern class XMLStreamReaderFactory_Default extends XMLStreamReaderFactory
+@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Default') extern class XMLStreamReaderFactory_Default extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory
 {
 	@:overload override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	
@@ -135,7 +135,7 @@ extern class XMLStreamReaderFactory
 * <p>
 * This is useful when you know your {@link XMLInputFactory} is thread-safe by itself.
 */
-@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$NoLock') extern class XMLStreamReaderFactory_NoLock extends XMLStreamReaderFactory
+@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$NoLock') extern class XMLStreamReaderFactory_NoLock extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory
 {
 	@:overload public function new(xif : javax.xml.stream.XMLInputFactory) : Void;
 	
@@ -151,7 +151,7 @@ extern class XMLStreamReaderFactory
 * Handles Woodstox's XIF but set properties to do the string interning.
 * Woodstox {@link XMLInputFactory} is thread safe.
 */
-@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Woodstox') extern class XMLStreamReaderFactory_Woodstox extends XMLStreamReaderFactory_NoLock
+@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamReaderFactory$Woodstox') extern class XMLStreamReaderFactory_Woodstox extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory.XMLStreamReaderFactory_NoLock
 {
 	@:overload public function new(xif : javax.xml.stream.XMLInputFactory) : Void;
 	

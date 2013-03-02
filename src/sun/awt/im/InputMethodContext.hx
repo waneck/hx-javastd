@@ -76,7 +76,7 @@ extern class InputMethodContext extends sun.awt.im.InputContext implements java.
 	/**
 	* @see java.awt.im.spi.InputMethodContext#enableClientWindowNotification
 	*/
-	@:overload override public function enableClientWindowNotification(inputMethod : java.awt.im.spi.InputMethod, enable : Bool) : Void;
+	@:overload public function enableClientWindowNotification(inputMethod : java.awt.im.spi.InputMethod, enable : Bool) : Void;
 	
 	
 }

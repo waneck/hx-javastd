@@ -45,7 +45,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @return  the currently executing thread.
 	*/
-	@:overload @:native public static function currentThread() : Thread;
+	@:overload @:native public static function currentThread() : java.lang.Thread;
 	
 	/**
 	* A hint to the scheduler that the current thread is willing to yield
@@ -748,7 +748,7 @@ extern class Thread implements java.lang.Runnable
 	*          if {@link java.lang.ThreadGroup#checkAccess} determines that
 	*          the current thread cannot access its thread group
 	*/
-	@:overload public static function enumerate(tarray : java.NativeArray<Thread>) : Int;
+	@:overload public static function enumerate(tarray : java.NativeArray<java.lang.Thread>) : Int;
 	
 	/**
 	* Counts the number of stack frames in this thread. The thread must
@@ -1031,7 +1031,7 @@ extern class Thread implements java.lang.Runnable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function getAllStackTraces() : java.util.Map<Thread, java.NativeArray<java.lang.StackTraceElement>>;
+	@:require(java5) @:overload public static function getAllStackTraces() : java.util.Map<java.lang.Thread, java.NativeArray<java.lang.StackTraceElement>>;
 	
 	/**
 	* Returns the identifier of this Thread.  The thread ID is a positive
@@ -1052,7 +1052,7 @@ extern class Thread implements java.lang.Runnable
 	* @return this thread's state.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getState() : Thread_State;
+	@:require(java5) @:overload public function getState() : java.lang.Thread.Thread_State;
 	
 	/**
 	* Set the default handler invoked when a thread abruptly terminates
@@ -1088,7 +1088,7 @@ extern class Thread implements java.lang.Runnable
 	* @see ThreadGroup#uncaughtException
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function setDefaultUncaughtExceptionHandler(eh : Thread_UncaughtExceptionHandler) : Void;
+	@:require(java5) @:overload public static function setDefaultUncaughtExceptionHandler(eh : java.lang.Thread.Thread_UncaughtExceptionHandler) : Void;
 	
 	/**
 	* Returns the default handler invoked when a thread abruptly terminates
@@ -1097,7 +1097,7 @@ extern class Thread implements java.lang.Runnable
 	* @since 1.5
 	* @see #setDefaultUncaughtExceptionHandler
 	*/
-	@:require(java5) @:overload public static function getDefaultUncaughtExceptionHandler() : Thread_UncaughtExceptionHandler;
+	@:require(java5) @:overload public static function getDefaultUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
 	
 	/**
 	* Returns the handler invoked when this thread abruptly terminates
@@ -1107,7 +1107,7 @@ extern class Thread implements java.lang.Runnable
 	* has terminated, in which case <tt>null</tt> is returned.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getUncaughtExceptionHandler() : Thread_UncaughtExceptionHandler;
+	@:require(java5) @:overload public function getUncaughtExceptionHandler() : java.lang.Thread.Thread_UncaughtExceptionHandler;
 	
 	/**
 	* Set the handler invoked when this thread abruptly terminates
@@ -1124,7 +1124,7 @@ extern class Thread implements java.lang.Runnable
 	* @see ThreadGroup#uncaughtException
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function setUncaughtExceptionHandler(eh : Thread_UncaughtExceptionHandler) : Void;
+	@:require(java5) @:overload public function setUncaughtExceptionHandler(eh : java.lang.Thread.Thread_UncaughtExceptionHandler) : Void;
 	
 	
 }
@@ -1262,7 +1262,7 @@ extern class Thread implements java.lang.Runnable
 	* @param t the thread
 	* @param e the exception
 	*/
-	@:overload public function uncaughtException(t : Thread, e : java.lang.Throwable) : Void;
+	@:overload public function uncaughtException(t : java.lang.Thread, e : java.lang.Throwable) : Void;
 	
 	
 }

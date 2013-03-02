@@ -33,44 +33,44 @@ package sun.awt.shell;
 	*
 	* @returns a <code>java.io.File</code> replacement object.
 	*/
-	@:overload override private function writeReplace() : Dynamic;
+	@:overload private function writeReplace() : Dynamic;
 	
 	/**
 	* @return An array of shell folders that are children of this shell folder
 	* object, null if this shell folder is empty.
 	*/
-	@:overload override public function listFiles() : java.NativeArray<java.io.File>;
+	@:overload public function listFiles() : java.NativeArray<java.io.File>;
 	
 	/**
 	* @return Whether this shell folder is a link
 	*/
-	@:overload override public function isLink() : Bool;
+	@:overload public function isLink() : Bool;
 	
 	/**
 	* @return Whether this shell folder is marked as hidden
 	*/
-	@:overload override public function isHidden() : Bool;
+	@:overload public function isHidden() : Bool;
 	
 	/**
 	* @return The shell folder linked to by this shell folder, or null
 	* if this shell folder is not a link
 	*/
-	@:overload override public function getLinkLocation() : sun.awt.shell.ShellFolder;
+	@:overload public function getLinkLocation() : sun.awt.shell.ShellFolder;
 	
 	/**
 	* @return The name used to display this shell folder
 	*/
-	@:overload override public function getDisplayName() : String;
+	@:overload public function getDisplayName() : String;
 	
 	/**
 	* @return The type of shell folder as a string
 	*/
-	@:overload override public function getFolderType() : String;
+	@:overload public function getFolderType() : String;
 	
 	/**
 	* @return The executable type as a string
 	*/
-	@:overload override public function getExecutableType() : String;
+	@:overload public function getExecutableType() : String;
 	
 	
 }

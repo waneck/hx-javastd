@@ -59,9 +59,9 @@ extern class SctpChannelImpl extends com.sun.nio.sctp.SctpChannel implements sun
 	
 	@:overload override public function finishConnect() : Bool;
 	
-	@:overload override private function implConfigureBlocking(block : Bool) : Void;
+	@:overload private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload override public function implCloseSelectableChannel() : Void;
+	@:overload public function implCloseSelectableChannel() : Void;
 	
 	@:overload public function getFD() : java.io.FileDescriptor;
 	

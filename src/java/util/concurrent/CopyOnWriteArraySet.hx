@@ -312,7 +312,7 @@ package java.util.concurrent;
 	* @param o object to be compared for equality with this set
 	* @return {@code true} if the specified object is equal to this set
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
 	
 }

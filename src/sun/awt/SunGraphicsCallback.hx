@@ -41,19 +41,19 @@ extern class SunGraphicsCallback
 	
 	
 }
-@:native('sun$awt$SunGraphicsCallback$PaintHeavyweightComponentsCallback') extern class SunGraphicsCallback_PaintHeavyweightComponentsCallback extends SunGraphicsCallback
+@:native('sun$awt$SunGraphicsCallback$PaintHeavyweightComponentsCallback') extern class SunGraphicsCallback_PaintHeavyweightComponentsCallback extends sun.awt.SunGraphicsCallback
 {
 	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
-	@:overload public static function getInstance() : SunGraphicsCallback_PaintHeavyweightComponentsCallback;
+	@:overload public static function getInstance() : sun.awt.SunGraphicsCallback.SunGraphicsCallback_PaintHeavyweightComponentsCallback;
 	
 	
 }
-@:native('sun$awt$SunGraphicsCallback$PrintHeavyweightComponentsCallback') extern class SunGraphicsCallback_PrintHeavyweightComponentsCallback extends SunGraphicsCallback
+@:native('sun$awt$SunGraphicsCallback$PrintHeavyweightComponentsCallback') extern class SunGraphicsCallback_PrintHeavyweightComponentsCallback extends sun.awt.SunGraphicsCallback
 {
 	@:overload override public function run(comp : java.awt.Component, cg : java.awt.Graphics) : Void;
 	
-	@:overload public static function getInstance() : SunGraphicsCallback_PrintHeavyweightComponentsCallback;
+	@:overload public static function getInstance() : sun.awt.SunGraphicsCallback.SunGraphicsCallback_PrintHeavyweightComponentsCallback;
 	
 	
 }

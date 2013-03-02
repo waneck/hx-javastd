@@ -30,7 +30,7 @@ package javax.swing;
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload public static function sharedInstance() : TimerQueue;
+	@:overload public static function sharedInstance() : javax.swing.TimerQueue;
 	
 	@:overload public function run() : Void;
 	

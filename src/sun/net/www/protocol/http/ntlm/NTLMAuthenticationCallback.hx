@@ -25,9 +25,9 @@ package sun.net.www.protocol.http.ntlm;
 */
 extern class NTLMAuthenticationCallback
 {
-	@:overload public static function setNTLMAuthenticationCallback(_callback : NTLMAuthenticationCallback) : Void;
+	@:overload public static function setNTLMAuthenticationCallback(_callback : sun.net.www.protocol.http.ntlm.NTLMAuthenticationCallback) : Void;
 	
-	@:overload public static function getNTLMAuthenticationCallback() : NTLMAuthenticationCallback;
+	@:overload public static function getNTLMAuthenticationCallback() : sun.net.www.protocol.http.ntlm.NTLMAuthenticationCallback;
 	
 	/**
 	* Returns true if the given site is trusted, i.e. we can try
@@ -37,7 +37,7 @@ extern class NTLMAuthenticationCallback
 	
 	
 }
-@:native('sun$net$www$protocol$http$ntlm$NTLMAuthenticationCallback$DefaultNTLMAuthenticationCallback') @:internal extern class NTLMAuthenticationCallback_DefaultNTLMAuthenticationCallback extends NTLMAuthenticationCallback
+@:native('sun$net$www$protocol$http$ntlm$NTLMAuthenticationCallback$DefaultNTLMAuthenticationCallback') @:internal extern class NTLMAuthenticationCallback_DefaultNTLMAuthenticationCallback extends sun.net.www.protocol.http.ntlm.NTLMAuthenticationCallback
 {
 	@:overload override public function isTrustedSite(url : java.net.URL) : Bool;
 	

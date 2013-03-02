@@ -179,7 +179,7 @@ extern class Resolver extends com.sun.org.apache.xml.internal.resolver.Catalog
 	*
 	* @return The Resolver constructed.
 	*/
-	@:overload private function queryResolver(resolver : String, command : String, arg1 : String, arg2 : String) : Resolver;
+	@:overload private function queryResolver(resolver : String, command : String, arg1 : String, arg2 : String) : com.sun.org.apache.xml.internal.resolver.Resolver;
 	
 	/**
 	* Find the URNs for a given system identifier in all catalogs.

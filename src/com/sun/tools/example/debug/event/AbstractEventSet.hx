@@ -32,7 +32,7 @@ package com.sun.tools.example.debug.event;
 */
 extern class AbstractEventSet extends java.util.EventObject implements com.sun.jdi.event.EventSet
 {
-	@:overload public static function toSpecificEventSet(jdiEventSet : com.sun.jdi.event.EventSet) : AbstractEventSet;
+	@:overload public static function toSpecificEventSet(jdiEventSet : com.sun.jdi.event.EventSet) : com.sun.tools.example.debug.event.AbstractEventSet;
 	
 	@:overload @:abstract public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
@@ -180,101 +180,6 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	*         prevents it from being added to this set
 	*/
 	@:overload public function add(e : Dynamic) : Bool;
-	
-	/**
-	* Returns <tt>true</tt> if this collection contains all of the elements
-	* in the specified collection.
-	*
-	* @param  c collection to be checked for containment in this collection
-	* @return <tt>true</tt> if this collection contains all of the elements
-	*         in the specified collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in the specified collection are incompatible with this
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if the specified collection contains one
-	*         or more null elements and this collection does not permit null
-	*         elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null.
-	* @see    #contains(Object)
-	*/
-	@:overload public function containsAll(c : Collection<Dynamic>) : Bool;
-	
-	/**
-	* Adds all of the elements in the specified collection to this collection
-	* (optional operation).  The behavior of this operation is undefined if
-	* the specified collection is modified while the operation is in progress.
-	* (This implies that the behavior of this call is undefined if the
-	* specified collection is this collection, and this collection is
-	* nonempty.)
-	*
-	* @param c collection containing elements to be added to this collection
-	* @return <tt>true</tt> if this collection changed as a result of the call
-	* @throws UnsupportedOperationException if the <tt>addAll</tt> operation
-	*         is not supported by this collection
-	* @throws ClassCastException if the class of an element of the specified
-	*         collection prevents it from being added to this collection
-	* @throws NullPointerException if the specified collection contains a
-	*         null element and this collection does not permit null elements,
-	*         or if the specified collection is null
-	* @throws IllegalArgumentException if some property of an element of the
-	*         specified collection prevents it from being added to this
-	*         collection
-	* @throws IllegalStateException if not all the elements can be added at
-	*         this time due to insertion restrictions
-	* @see #add(Object)
-	*/
-	@:overload public function addAll(c : Collection<Dynamic>) : Bool;
-	
-	/**
-	* Retains only the elements in this collection that are contained in the
-	* specified collection (optional operation).  In other words, removes from
-	* this collection all of its elements that are not contained in the
-	* specified collection.
-	*
-	* @param c collection containing elements to be retained in this collection
-	* @return <tt>true</tt> if this collection changed as a result of the call
-	* @throws UnsupportedOperationException if the <tt>retainAll</tt> operation
-	*         is not supported by this collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in this collection are incompatible with the specified
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if this collection contains one or more
-	*         null elements and the specified collection does not permit null
-	*         elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #remove(Object)
-	* @see #contains(Object)
-	*/
-	@:overload public function retainAll(c : Collection<Dynamic>) : Bool;
-	
-	/**
-	* Removes all of this collection's elements that are also contained in the
-	* specified collection (optional operation).  After this call returns,
-	* this collection will contain no elements in common with the specified
-	* collection.
-	*
-	* @param c collection containing elements to be removed from this collection
-	* @return <tt>true</tt> if this collection changed as a result of the
-	*         call
-	* @throws UnsupportedOperationException if the <tt>removeAll</tt> method
-	*         is not supported by this collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in this collection are incompatible with the specified
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if this collection contains one or more
-	*         null elements and the specified collection does not support
-	*         null elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #remove(Object)
-	* @see #contains(Object)
-	*/
-	@:overload public function removeAll(c : Collection<Dynamic>) : Bool;
 	
 	
 }

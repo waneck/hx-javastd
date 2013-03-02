@@ -39,7 +39,7 @@ extern class Vset implements sun.tools.java.Constants
 	* Create an copy of the given Vset.
 	* (However, DEAD_END simply returns itself.)
 	*/
-	@:overload public function copy() : Vset;
+	@:overload public function copy() : sun.tools.tree.Vset;
 	
 	/**
 	* Ask if this is a vset for a dead end.
@@ -73,7 +73,7 @@ extern class Vset implements sun.tools.java.Constants
 	* implement the special-case treatment of
 	* statement reachability for such statements.
 	*/
-	@:overload public function clearDeadEnd() : Vset;
+	@:overload public function clearDeadEnd() : sun.tools.tree.Vset;
 	
 	/**
 	* Ask if a var is definitely assigned.
@@ -91,26 +91,26 @@ extern class Vset implements sun.tools.java.Constants
 	* Note that a var is definitely assigned.
 	* (Side-effecting.)
 	*/
-	@:overload public function addVar(varNumber : Int) : Vset;
+	@:overload public function addVar(varNumber : Int) : sun.tools.tree.Vset;
 	
 	/**
 	* Note that a var is definitely un-assigned.
 	* (Side-effecting.)
 	*/
-	@:overload public function addVarUnassigned(varNumber : Int) : Vset;
+	@:overload public function addVarUnassigned(varNumber : Int) : sun.tools.tree.Vset;
 	
 	/**
 	* Retract any assertion about the var.
 	* This operation is ineffective on a dead-end.
 	* (Side-effecting.)
 	*/
-	@:overload public function clearVar(varNumber : Int) : Vset;
+	@:overload public function clearVar(varNumber : Int) : sun.tools.tree.Vset;
 	
 	/**
 	* Join with another vset.  This is set intersection.
 	* (Side-effecting.)
 	*/
-	@:overload public function join(other : Vset) : Vset;
+	@:overload public function join(other : sun.tools.tree.Vset) : sun.tools.tree.Vset;
 	
 	/**
 	* Add in the definite assignment bits of another vset,
@@ -119,7 +119,7 @@ extern class Vset implements sun.tools.java.Constants
 	* original vset 'this' is destroyed by this operation.
 	* (Part of fix for 4068688.)
 	*/
-	@:overload public function addDAandJoinDU(other : Vset) : Vset;
+	@:overload public function addDAandJoinDU(other : sun.tools.tree.Vset) : sun.tools.tree.Vset;
 	
 	/**
 	* Construct a vset consisting of the DA bits of the first argument
@@ -129,7 +129,7 @@ extern class Vset implements sun.tools.java.Constants
 	* 'try' blocks.  The result is a dead-end iff the first argument is
 	* dead-end. (Part of fix for 4068688.)
 	*/
-	@:overload public static function firstDAandSecondDU(sourceDA : Vset, sourceDU : Vset) : Vset;
+	@:overload public static function firstDAandSecondDU(sourceDA : sun.tools.tree.Vset, sourceDU : sun.tools.tree.Vset) : sun.tools.tree.Vset;
 	
 	/**
 	* Remove variables from the vset that are no longer part of
@@ -138,7 +138,7 @@ extern class Vset implements sun.tools.java.Constants
 	* However, if this is a dead end, keep it so.
 	* That is, leave an infinite tail of bits set.
 	*/
-	@:overload public function removeAdditionalVars(varNumber : Int) : Vset;
+	@:overload public function removeAdditionalVars(varNumber : Int) : sun.tools.tree.Vset;
 	
 	/**
 	* Return one larger than the highest bit set.

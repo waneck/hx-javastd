@@ -27,7 +27,7 @@ extern class SchemaDVFactory
 	* @exception DVFactoryException  cannot create an instance of the specified
 	*                                class name or the default class name
 	*/
-	@:overload @:synchronized @:final public static function getInstance() : SchemaDVFactory;
+	@:overload @:synchronized @:final public static function getInstance() : com.sun.org.apache.xerces.internal.impl.dv.SchemaDVFactory;
 	
 	/**
 	* Get an instance of SchemaDVFactory implementation.
@@ -37,7 +37,7 @@ extern class SchemaDVFactory
 	* @exception DVFactoryException  cannot create an instance of the specified
 	*                                class name or the default class name
 	*/
-	@:overload @:synchronized @:final public static function getInstance(factoryClass : String) : SchemaDVFactory;
+	@:overload @:synchronized @:final public static function getInstance(factoryClass : String) : com.sun.org.apache.xerces.internal.impl.dv.SchemaDVFactory;
 	
 	@:overload private function new() : Void;
 	

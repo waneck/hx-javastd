@@ -122,21 +122,21 @@ extern class PackageWriterImpl extends com.sun.tools.doclets.formats.html.HtmlDo
 	*
 	* @return a content tree for the class use link
 	*/
-	@:overload override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get "PREV PACKAGE" link in the navigation bar.
 	*
 	* @return a content tree for the previous link
 	*/
-	@:overload override public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get "NEXT PACKAGE" link in the navigation bar.
 	*
 	* @return a content tree for the next link
 	*/
-	@:overload override public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get "Tree" link in the navigation bar. This will be link to the package
@@ -144,14 +144,14 @@ extern class PackageWriterImpl extends com.sun.tools.doclets.formats.html.HtmlDo
 	*
 	* @return a content tree for the tree link
 	*/
-	@:overload override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Highlight "Package" in the navigation bar, as this is the package page.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

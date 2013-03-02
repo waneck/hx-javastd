@@ -39,7 +39,7 @@ package sun.tools.jconsole;
 }
 @:native('sun$tools$jconsole$SummaryTab$CPUOverviewPanel') @:internal extern class SummaryTab_CPUOverviewPanel extends sun.tools.jconsole.OverviewPanel
 {
-	@:overload public function updateCPUInfo(result : SummaryTab_Result) : Void;
+	@:overload public function updateCPUInfo(result : sun.tools.jconsole.SummaryTab.SummaryTab_Result) : Void;
 	
 	
 }

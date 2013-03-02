@@ -37,7 +37,7 @@ extern class Reifier implements sun.reflect.generics.visitor.TypeTreeVisitor<jav
 	* @return A visitor that can be used to reify ASTs representing
 	* generic type information into reflective objects
 	*/
-	@:overload public static function make(f : sun.reflect.generics.factory.GenericsFactory) : Reifier;
+	@:overload public static function make(f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.visitor.Reifier;
 	
 	/**
 	* Accessor for the result of the last visit by this visitor,

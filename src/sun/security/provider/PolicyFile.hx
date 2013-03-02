@@ -193,7 +193,7 @@ extern class PolicyFile extends java.security.Policy
 	*
 	* @return false.
 	*/
-	@:overload public function implies(p : java.security.Permission) : Bool;
+	@:overload override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two SelfPermission objects for equality.

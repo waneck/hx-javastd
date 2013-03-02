@@ -124,7 +124,7 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 	
 	@:overload private function showSystemMenu() : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Invoked from paintComponent.
@@ -284,13 +284,13 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 */
 @:native('javax$swing$plaf$basic$BasicInternalFrameTitlePane$SystemMenuBar') extern class BasicInternalFrameTitlePane_SystemMenuBar extends javax.swing.JMenuBar
 {
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload public function isFocusTraversable() : Bool;
 	
-	@:overload override public function requestFocus() : Void;
+	@:overload public function requestFocus() : Void;
 	
 	@:overload override public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function isOpaque() : Bool;
+	@:overload public function isOpaque() : Bool;
 	
 	
 }
@@ -298,11 +298,11 @@ extern class BasicInternalFrameTitlePane extends javax.swing.JComponent
 {
 	@:overload public function new(uiKey : String, opacityKey : String) : Void;
 	
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload public function isFocusTraversable() : Bool;
 	
-	@:overload override public function requestFocus() : Void;
+	@:overload public function requestFocus() : Void;
 	
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

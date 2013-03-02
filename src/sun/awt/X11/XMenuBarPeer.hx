@@ -67,56 +67,56 @@ extern class XMenuBarPeer extends sun.awt.X11.XBaseMenuWindow implements java.aw
 	* Menu bar is always root window in menu window's
 	* hierarchy
 	*/
-	@:overload override private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
+	@:overload private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
 	
 	/**
 	* @see XBaseMenuWindow.map
 	*/
-	@:overload override private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
+	@:overload private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* @see XBaseMenuWindow.getSubmenuBounds
 	*/
-	@:overload override private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
+	@:overload private function getSubmenuBounds(itemBounds : java.awt.Rectangle, windowSize : java.awt.Dimension) : java.awt.Rectangle;
 	
 	/**
 	* This function is called when it's likely that
 	* size of items has changed.
 	* Invokes framePeer's updateChildrenSizes()
 	*/
-	@:overload override private function updateSize() : Void;
+	@:overload private function updateSize() : Void;
 	
 	/**
 	* @see XBaseMenuWindow.doDispose()
 	*/
-	@:overload override private function doDispose() : Void;
+	@:overload private function doDispose() : Void;
 	
 	/**
 	* For menu bars this function is called from framePeer's
 	* reshape(...) and updateChildrenSizes()
 	*/
-	@:overload override public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function reshape(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/************************************************
 	*
 	* Overriden XWindow painting & printing
 	*
 	************************************************/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	/************************************************
 	*
 	* Overriden XBaseMenuWindow event handling
 	*
 	************************************************/
-	@:overload override private function handleEvent(event : java.awt.AWTEvent) : Void;
+	@:overload private function handleEvent(event : java.awt.AWTEvent) : Void;
 	
 	/*
 	* In previous version keys were handled in handleKeyPress.
 	* Now we override this function do disable F10 explicit
 	* processing. All processing is done using KeyEvent.
 	*/
-	@:overload override public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
+	@:overload public function handleKeyPress(xev : sun.awt.X11.XEvent) : Void;
 	
 	
 }

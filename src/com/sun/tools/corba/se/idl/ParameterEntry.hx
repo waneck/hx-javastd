@@ -42,11 +42,11 @@ extern class ParameterEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : ParameterEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.ParameterEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/** Invoke the paramter generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -54,12 +54,12 @@ extern class ParameterEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the parameter generator.
 	@returns an object which implements the ParameterGen interface.
 	@see ParameterGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	/** This indicates the pass type of this parameter. */
 	@:overload public function passType(passType : Int) : Void;

@@ -25,7 +25,7 @@ package sun.java2d.x11;
 */
 extern class X11Renderer implements sun.java2d.pipe.PixelDrawPipe implements sun.java2d.pipe.PixelFillPipe implements sun.java2d.pipe.ShapeDrawPipe
 {
-	@:overload public static function getInstance() : X11Renderer;
+	@:overload public static function getInstance() : sun.java2d.x11.X11Renderer;
 	
 	@:overload public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
@@ -57,7 +57,7 @@ extern class X11Renderer implements sun.java2d.pipe.PixelDrawPipe implements sun
 	
 	
 }
-@:native('sun$java2d$x11$X11Renderer$X11TracingRenderer') extern class X11Renderer_X11TracingRenderer extends X11Renderer
+@:native('sun$java2d$x11$X11Renderer$X11TracingRenderer') extern class X11Renderer_X11TracingRenderer extends sun.java2d.x11.X11Renderer
 {
 	
 }

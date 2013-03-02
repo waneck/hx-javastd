@@ -330,7 +330,7 @@ extern class BasicFileChooserUI extends javax.swing.plaf.FileChooserUI
 {
 	@:overload public function setPattern(globPattern : String) : Void;
 	
-	@:overload override public function accept(f : java.io.File) : Bool;
+	@:overload public function accept(f : java.io.File) : Bool;
 	
 	@:overload public function getDescription() : String;
 	
@@ -358,7 +358,7 @@ extern class BasicFileChooserUI extends javax.swing.plaf.FileChooserUI
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function accept(f : java.io.File) : Bool;
+	@:overload public function accept(f : java.io.File) : Bool;
 	
 	@:overload public function getDescription() : String;
 	
@@ -415,12 +415,12 @@ extern class BasicFileChooserUI extends javax.swing.plaf.FileChooserUI
 	/**
 	* Best format of the file chooser is DataFlavor.javaFileListFlavor.
 	*/
-	@:overload override private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
+	@:overload private function getRicherFlavors() : java.NativeArray<java.awt.datatransfer.DataFlavor>;
 	
 	/**
 	* The only richer format supported is the file list flavor
 	*/
-	@:overload override private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
+	@:overload private function getRicherData(flavor : java.awt.datatransfer.DataFlavor) : Dynamic;
 	
 	
 }

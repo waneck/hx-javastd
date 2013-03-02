@@ -28,22 +28,22 @@ extern class MediaName extends javax.print.attribute.standard.Media implements j
 	/**
 	*  white letter paper.
 	*/
-	public static var NA_LETTER_WHITE(default, null) : MediaName;
+	public static var NA_LETTER_WHITE(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	*  letter transparency.
 	*/
-	public static var NA_LETTER_TRANSPARENT(default, null) : MediaName;
+	public static var NA_LETTER_TRANSPARENT(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	* white A4 paper.
 	*/
-	public static var ISO_A4_WHITE(default, null) : MediaName;
+	public static var ISO_A4_WHITE(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	*  A4 transparency.
 	*/
-	public static var ISO_A4_TRANSPARENT(default, null) : MediaName;
+	public static var ISO_A4_TRANSPARENT(default, null) : javax.print.attribute.standard.MediaName;
 	
 	/**
 	* Constructs a new media name enumeration value with the given integer
@@ -57,13 +57,13 @@ extern class MediaName extends javax.print.attribute.standard.Media implements j
 	* Returns the string table for class MediaTray.
 	* @return the String table.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class MediaTray.
 	* @return the enumeration value table.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	
 }

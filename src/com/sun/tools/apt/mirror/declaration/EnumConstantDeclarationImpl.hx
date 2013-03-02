@@ -28,7 +28,7 @@ extern class EnumConstantDeclarationImpl extends com.sun.tools.apt.mirror.declar
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getDeclaringType() : com.sun.mirror.declaration.EnumDeclaration;
+	@:overload public function getDeclaringType() : com.sun.mirror.declaration.EnumDeclaration;
 	
 	/**
 	* {@inheritDoc}

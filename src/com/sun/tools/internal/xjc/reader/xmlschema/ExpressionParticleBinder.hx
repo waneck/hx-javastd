@@ -31,9 +31,9 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload override public function build(p : com.sun.xml.internal.xsom.XSParticle, forcedProps : java.util.Collection<com.sun.xml.internal.xsom.XSParticle>) : Void;
+	@:overload public function build(p : com.sun.xml.internal.xsom.XSParticle, forcedProps : java.util.Collection<com.sun.xml.internal.xsom.XSParticle>) : Void;
 	
-	@:overload override public function checkFallback(p : com.sun.xml.internal.xsom.XSParticle) : Bool;
+	@:overload public function checkFallback(p : com.sun.xml.internal.xsom.XSParticle) : Bool;
 	
 	
 }

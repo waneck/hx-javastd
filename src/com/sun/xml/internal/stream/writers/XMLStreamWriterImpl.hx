@@ -356,7 +356,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 @:native('com$sun$xml$internal$stream$writers$XMLStreamWriterImpl$ElementStack') extern class XMLStreamWriterImpl_ElementStack
 {
 	/** The stack data. */
-	private var fElements : java.NativeArray<XMLStreamWriterImpl_ElementState>;
+	private var fElements : java.NativeArray<com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState>;
 	
 	/** The size of the stack. */
 	private var fDepth : java.StdTypes.Int16;
@@ -377,7 +377,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	*
 	* @return Returns the actual QName object that stores the
 	*/
-	@:overload public function push(element : XMLStreamWriterImpl_ElementState) : XMLStreamWriterImpl_ElementState;
+	@:overload public function push(element : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState) : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/**
 	*
@@ -388,7 +388,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* @param isEmpty
 	* @return
 	*/
-	@:overload public function push(prefix : String, localpart : String, rawname : String, uri : String, isEmpty : Bool) : XMLStreamWriterImpl_ElementState;
+	@:overload public function push(prefix : String, localpart : String, rawname : String, uri : String, isEmpty : Bool) : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/**
 	* Pops an element off of the stack by setting the values of
@@ -398,7 +398,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* orphaned to the caller. Therefore, the caller should consider
 	* the object to be read-only.
 	*/
-	@:overload public function pop() : XMLStreamWriterImpl_ElementState;
+	@:overload public function pop() : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/** Clears the stack without throwing away existing QName objects. */
 	@:overload public function clear() : Void;
@@ -410,7 +410,7 @@ extern class XMLStreamWriterImpl extends java.util.AbstractMap<Dynamic, Dynamic>
 	* the values will be set only if application need to know about the endElement
 	* -- neeraj.bajaj@sun.com
 	*/
-	@:overload public function peek() : XMLStreamWriterImpl_ElementState;
+	@:overload public function peek() : com.sun.xml.internal.stream.writers.XMLStreamWriterImpl.XMLStreamWriterImpl_ElementState;
 	
 	/**
 	*

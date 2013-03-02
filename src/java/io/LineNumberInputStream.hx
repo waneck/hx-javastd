@@ -77,7 +77,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.LineNumberInputStream#getLineNumber()
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	/**
 	* Reads up to <code>len</code> bytes of data from this input stream
@@ -96,7 +96,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.LineNumberInputStream#read()
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Skips over and discards <code>n</code> bytes of data from this
@@ -115,7 +115,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Sets the line number to the specified argument.
@@ -151,7 +151,7 @@ package java.io;
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	/**
 	* Marks the current position in this input stream. A subsequent
@@ -168,7 +168,7 @@ package java.io;
 	* @see     java.io.FilterInputStream#in
 	* @see     java.io.LineNumberInputStream#reset()
 	*/
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions this stream to the position at the time the
@@ -193,7 +193,7 @@ package java.io;
 	* @see        java.io.FilterInputStream#in
 	* @see        java.io.LineNumberInputStream#mark(int)
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	
 }

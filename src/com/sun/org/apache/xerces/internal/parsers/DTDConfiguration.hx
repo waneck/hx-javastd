@@ -176,7 +176,7 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload override public function setLocale(locale : java.util.Locale) : Void;
+	@:overload public function setLocale(locale : java.util.Locale) : Void;
 	
 	/**
 	* Sets the input source for the document to parse.
@@ -225,14 +225,14 @@ extern class DTDConfiguration extends com.sun.org.apache.xerces.internal.parsers
 	* @exception XNIException Throws exception on XNI error.
 	* @exception java.io.IOException Throws exception on i/o error.
 	*/
-	@:overload override public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Reset all components before parsing.
 	*
 	* @throws XNIException Thrown if an error occurs during initialization.
 	*/
-	@:overload override private function reset() : Void;
+	@:overload private function reset() : Void;
 	
 	/** Configures the pipeline. */
 	@:overload private function configurePipeline() : Void;

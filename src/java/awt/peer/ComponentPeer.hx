@@ -447,7 +447,7 @@ extern interface ComponentPeer
 	* Lowers this component at the bottom of the above HW peer. If the above parameter
 	* is null then the method places this component at the top of the Z-order.
 	*/
-	@:overload public function setZOrder(above : ComponentPeer) : Void;
+	@:overload public function setZOrder(above : java.awt.peer.ComponentPeer) : Void;
 	
 	/**
 	* Updates internal data structures related to the component's GC.

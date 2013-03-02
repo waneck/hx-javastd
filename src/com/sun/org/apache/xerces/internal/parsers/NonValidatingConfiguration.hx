@@ -171,7 +171,7 @@ extern class NonValidatingConfiguration extends com.sun.org.apache.xerces.intern
 	* @exception XNIException Thrown if the parser does not support the
 	*                         specified locale.
 	*/
-	@:overload override public function setLocale(locale : java.util.Locale) : Void;
+	@:overload public function setLocale(locale : java.util.Locale) : Void;
 	
 	@:overload override public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
@@ -222,14 +222,14 @@ extern class NonValidatingConfiguration extends com.sun.org.apache.xerces.intern
 	* @exception XNIException Throws exception on XNI error.
 	* @exception java.io.IOException Throws exception on i/o error.
 	*/
-	@:overload override public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
+	@:overload public function parse(source : com.sun.org.apache.xerces.internal.xni.parser.XMLInputSource) : Void;
 	
 	/**
 	* Reset all components before parsing.
 	*
 	* @throws XNIException Thrown if an error occurs during initialization.
 	*/
-	@:overload override private function reset() : Void;
+	@:overload private function reset() : Void;
 	
 	/** Configures the pipeline. */
 	@:overload private function configurePipeline() : Void;

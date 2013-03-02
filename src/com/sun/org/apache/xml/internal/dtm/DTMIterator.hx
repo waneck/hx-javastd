@@ -287,7 +287,7 @@ extern interface DTMIterator
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload public function cloneWithReset() : DTMIterator;
+	@:overload public function cloneWithReset() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Returns true if all the nodes in the iteration well be returned in document

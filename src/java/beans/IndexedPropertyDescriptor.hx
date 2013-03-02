@@ -137,7 +137,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function equals(obj : Dynamic) : Bool;
+	@:require(java4) @:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns a hash code value for the object.
@@ -146,7 +146,7 @@ extern class IndexedPropertyDescriptor extends java.beans.PropertyDescriptor
 	* @return a hash code value for this object.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function hashCode() : Int;
+	@:require(java5) @:overload public function hashCode() : Int;
 	
 	
 }

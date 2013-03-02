@@ -34,33 +34,33 @@ extern class DOMKeyInfoFactory extends javax.xml.crypto.dsig.keyinfo.KeyInfoFact
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function newKeyInfo(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload public function newKeyInfo(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
-	@:overload override public function newKeyInfo(content : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload public function newKeyInfo(content : java.util.List<Dynamic>, id : String) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
-	@:overload override public function newKeyName(name : String) : javax.xml.crypto.dsig.keyinfo.KeyName;
+	@:overload public function newKeyName(name : String) : javax.xml.crypto.dsig.keyinfo.KeyName;
 	
-	@:overload override public function newKeyValue(key : java.security.PublicKey) : javax.xml.crypto.dsig.keyinfo.KeyValue;
+	@:overload public function newKeyValue(key : java.security.PublicKey) : javax.xml.crypto.dsig.keyinfo.KeyValue;
 	
-	@:overload override public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
-	@:overload override public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload public function newPGPData(keyId : java.NativeArray<java.StdTypes.Int8>, keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
-	@:overload override public function newPGPData(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
+	@:overload public function newPGPData(keyPacket : java.NativeArray<java.StdTypes.Int8>, other : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.PGPData;
 	
-	@:overload override public function newRetrievalMethod(uri : String) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+	@:overload public function newRetrievalMethod(uri : String) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 	
-	@:overload override public function newRetrievalMethod(uri : String, type : String, transforms : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+	@:overload public function newRetrievalMethod(uri : String, type : String, transforms : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 	
-	@:overload override public function newX509Data(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.X509Data;
+	@:overload public function newX509Data(content : java.util.List<Dynamic>) : javax.xml.crypto.dsig.keyinfo.X509Data;
 	
-	@:overload override public function newX509IssuerSerial(issuerName : String, serialNumber : java.math.BigInteger) : javax.xml.crypto.dsig.keyinfo.X509IssuerSerial;
+	@:overload public function newX509IssuerSerial(issuerName : String, serialNumber : java.math.BigInteger) : javax.xml.crypto.dsig.keyinfo.X509IssuerSerial;
 	
-	@:overload override public function isFeatureSupported(feature : String) : Bool;
+	@:overload public function isFeatureSupported(feature : String) : Bool;
 	
-	@:overload override public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
+	@:overload public function getURIDereferencer() : javax.xml.crypto.URIDereferencer;
 	
-	@:overload override public function unmarshalKeyInfo(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
+	@:overload public function unmarshalKeyInfo(xmlStructure : javax.xml.crypto.XMLStructure) : javax.xml.crypto.dsig.keyinfo.KeyInfo;
 	
 	
 }

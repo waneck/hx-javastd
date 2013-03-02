@@ -74,7 +74,7 @@ extern class XMLString
 	*
 	* @param string The XMLString to copy.
 	*/
-	@:overload public function new(string : XMLString) : Void;
+	@:overload public function new(string : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/**
 	* Initializes the contents of the XMLString structure with the
@@ -95,7 +95,7 @@ extern class XMLString
 	*
 	* @param s
 	*/
-	@:overload public function setValues(s : XMLString) : Void;
+	@:overload public function setValues(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/** Resets all of the values to their defaults. */
 	@:overload public function clear() : Void;

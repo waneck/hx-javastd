@@ -65,13 +65,13 @@ extern class NodeCounter
 	* Set the start node for this counter. The same <tt>NodeCounter</tt>
 	* object can be used multiple times by resetting the starting node.
 	*/
-	@:overload @:abstract public function setStartNode(node : Int) : NodeCounter;
+	@:overload @:abstract public function setStartNode(node : Int) : com.sun.org.apache.xalan.internal.xsltc.dom.NodeCounter;
 	
 	/**
 	* If the user specified a value attribute, use this instead of
 	* counting nodes.
 	*/
-	@:overload public function setValue(value : Float) : NodeCounter;
+	@:overload public function setValue(value : Float) : com.sun.org.apache.xalan.internal.xsltc.dom.NodeCounter;
 	
 	/**
 	* Sets formatting fields before calling formatNumbers().
@@ -81,7 +81,7 @@ extern class NodeCounter
 	/**
 	* Sets formatting fields to their default values.
 	*/
-	@:overload public function setDefaultFormatting() : NodeCounter;
+	@:overload public function setDefaultFormatting() : com.sun.org.apache.xalan.internal.xsltc.dom.NodeCounter;
 	
 	/**
 	* Returns the position of <tt>node</tt> according to the level and

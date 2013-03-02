@@ -46,19 +46,19 @@ extern class C14nXmlOutput extends com.sun.xml.internal.bind.v2.runtime.output.U
 	
 	
 }
-@:native('com$sun$xml$internal$bind$v2$runtime$output$C14nXmlOutput$StaticAttribute') @:internal extern class C14nXmlOutput_StaticAttribute implements java.lang.Comparable<C14nXmlOutput_StaticAttribute>
+@:native('com$sun$xml$internal$bind$v2$runtime$output$C14nXmlOutput$StaticAttribute') @:internal extern class C14nXmlOutput_StaticAttribute implements java.lang.Comparable<com.sun.xml.internal.bind.v2.runtime.output.C14nXmlOutput.C14nXmlOutput_StaticAttribute>
 {
 	@:overload public function set(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
 	
-	@:overload public function compareTo(that : C14nXmlOutput_StaticAttribute) : Int;
+	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.output.C14nXmlOutput.C14nXmlOutput_StaticAttribute) : Int;
 	
 	
 }
-@:native('com$sun$xml$internal$bind$v2$runtime$output$C14nXmlOutput$DynamicAttribute') @:internal extern class C14nXmlOutput_DynamicAttribute implements java.lang.Comparable<C14nXmlOutput_DynamicAttribute>
+@:native('com$sun$xml$internal$bind$v2$runtime$output$C14nXmlOutput$DynamicAttribute') @:internal extern class C14nXmlOutput_DynamicAttribute implements java.lang.Comparable<com.sun.xml.internal.bind.v2.runtime.output.C14nXmlOutput.C14nXmlOutput_DynamicAttribute>
 {
 	@:overload public function new(prefix : Int, localName : String, value : String) : Void;
 	
-	@:overload public function compareTo(that : C14nXmlOutput_DynamicAttribute) : Int;
+	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.output.C14nXmlOutput.C14nXmlOutput_DynamicAttribute) : Int;
 	
 	
 }

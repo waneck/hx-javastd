@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class IntSignature implements sun.reflect.generics.tree.BaseType
 {
-	@:overload public static function make() : IntSignature;
+	@:overload public static function make() : sun.reflect.generics.tree.IntSignature;
 	
 	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	

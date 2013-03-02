@@ -34,7 +34,7 @@ extern class URI implements java.io.Serializable
 	*
 	* @param p_other the URI to copy (cannot be null)
 	*/
-	@:overload public function new(p_other : URI) : Void;
+	@:overload public function new(p_other : com.sun.org.apache.xml.internal.utils.URI) : Void;
 	
 	/**
 	* Construct a new URI from a URI specification string. If the
@@ -65,7 +65,7 @@ extern class URI implements java.io.Serializable
 	* @throws MalformedURIException if p_uriSpec violates any syntax
 	*                                  rules
 	*/
-	@:overload public function new(p_base : URI, p_uriSpec : String) : Void;
+	@:overload public function new(p_base : com.sun.org.apache.xml.internal.utils.URI, p_uriSpec : String) : Void;
 	
 	/**
 	* Construct a new URI that does not follow the generic URI syntax.

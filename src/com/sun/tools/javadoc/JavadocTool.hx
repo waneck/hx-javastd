@@ -34,12 +34,12 @@ extern class JavadocTool extends com.sun.tools.javac.main.JavaCompiler
 	/**
 	* For javadoc, the parser needs to keep comments. Overrides method from JavaCompiler.
 	*/
-	@:overload override private function keepComments() : Bool;
+	@:overload private function keepComments() : Bool;
 	
 	/**
 	*  Construct a new javadoc tool.
 	*/
-	@:overload public static function make0(context : com.sun.tools.javac.util.Context) : JavadocTool;
+	@:overload public static function make0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.JavadocTool;
 	
 	@:overload public function getRootDocImpl(doclocale : String, encoding : String, filter : com.sun.tools.javadoc.ModifierFilter, javaNames : com.sun.tools.javac.util.List<String>, options : com.sun.tools.javac.util.List<java.NativeArray<String>>, breakiterator : Bool, subPackages : com.sun.tools.javac.util.List<String>, excludedPackages : com.sun.tools.javac.util.List<String>, docClasses : Bool, legacyDoclet : Bool, quiet : Bool) : com.sun.tools.javadoc.RootDocImpl;
 	

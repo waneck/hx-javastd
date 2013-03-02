@@ -27,7 +27,7 @@ package com.sun.corba.se.impl.ior.iiop;
 */
 extern class MaxStreamFormatVersionComponentImpl extends com.sun.corba.se.spi.ior.TaggedComponentBase implements com.sun.corba.se.spi.ior.iiop.MaxStreamFormatVersionComponent
 {
-	public static var singleton(default, null) : MaxStreamFormatVersionComponentImpl;
+	public static var singleton(default, null) : com.sun.corba.se.impl.ior.iiop.MaxStreamFormatVersionComponentImpl;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
@@ -41,7 +41,7 @@ extern class MaxStreamFormatVersionComponentImpl extends com.sun.corba.se.spi.io
 	
 	@:overload public function getMaxStreamFormatVersion() : java.StdTypes.Int8;
 	
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload override public function getId() : Int;
 	

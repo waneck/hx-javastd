@@ -48,7 +48,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getDeprecatedLink(member : com.sun.javadoc.ProgramElementDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getDeprecatedLink(member : com.sun.javadoc.ProgramElementDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add the summary link for the member.
@@ -58,7 +58,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param member the member being linked to
 	* @param tdSummary the content tree to which the link will be added
 	*/
-	@:overload override private function addSummaryLink(context : Int, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addSummaryLink(context : Int, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the inherited summary link for the member.
@@ -67,7 +67,7 @@ extern class AbstractExecutableMemberWriter extends com.sun.tools.doclets.format
 	* @param member the member being linked to
 	* @param linksTree the content tree to which the link will be added
 	*/
-	@:overload override private function addInheritedSummaryLink(cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addInheritedSummaryLink(cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Add the parameter for the executable member.

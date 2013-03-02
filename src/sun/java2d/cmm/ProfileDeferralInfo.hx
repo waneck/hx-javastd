@@ -40,7 +40,7 @@ extern class ProfileDeferralInfo extends java.io.InputStream
 	/**
 	* Implements the abstract read() method of InputStream.
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	
 }

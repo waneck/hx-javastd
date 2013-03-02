@@ -27,7 +27,7 @@ package sun.nio.cs;
 {
 	@:overload public function new(name : String, aliases : java.NativeArray<String>) : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload @:public public function historicalName() : String;
 	

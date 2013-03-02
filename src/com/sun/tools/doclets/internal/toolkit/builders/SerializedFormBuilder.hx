@@ -50,7 +50,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* Construct a new SerializedFormBuilder.
 	* @param configuration the current configuration of the doclet.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : SerializedFormBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration) : com.sun.tools.doclets.internal.toolkit.builders.SerializedFormBuilder;
 	
 	/**
 	* Build the serialized form.

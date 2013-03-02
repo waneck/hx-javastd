@@ -29,7 +29,7 @@ extern interface SOAPFault extends com.sun.xml.internal.txw2.TypedXmlWriter exte
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : SOAPFault;
+	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap.SOAPFault;
 	
 	
 }

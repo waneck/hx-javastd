@@ -44,9 +44,9 @@ package com.sun.media.sound;
 */
 @:native('com$sun$media$sound$PortMixer$PortMixerPort') @:internal extern class PortMixer_PortMixerPort extends com.sun.media.sound.AbstractLine implements javax.sound.sampled.Port
 {
-	@:overload override public function open() : Void;
+	@:overload public function open() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }
@@ -55,9 +55,9 @@ package com.sun.media.sound;
 */
 @:native('com$sun$media$sound$PortMixer$BoolCtrl') @:internal extern class PortMixer_BoolCtrl extends javax.sound.sampled.BooleanControl
 {
-	@:overload override public function setValue(value : Bool) : Void;
+	@:overload public function setValue(value : Bool) : Void;
 	
-	@:overload override public function getValue() : Bool;
+	@:overload public function getValue() : Bool;
 	
 	
 }

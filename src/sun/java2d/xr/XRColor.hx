@@ -30,9 +30,9 @@ package sun.java2d.xr;
 */
 extern class XRColor
 {
-	public static var FULL_ALPHA(default, null) : XRColor;
+	public static var FULL_ALPHA(default, null) : sun.java2d.xr.XRColor;
 	
-	public static var NO_ALPHA(default, null) : XRColor;
+	public static var NO_ALPHA(default, null) : sun.java2d.xr.XRColor;
 	
 	@:overload public function new() : Void;
 	

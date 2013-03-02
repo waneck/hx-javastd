@@ -522,7 +522,7 @@ extern class XSLTErrorResources_es extends java.util.ListResourceBundle
 	*
 	* @return The int to message lookup table.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	/** String for use when a bad error code was encountered.    */
 	public static var BAD_CODE(default, null) : String;

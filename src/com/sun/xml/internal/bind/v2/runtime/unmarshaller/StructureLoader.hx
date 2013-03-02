@@ -36,17 +36,17 @@ extern class StructureLoader extends com.sun.xml.internal.bind.v2.runtime.unmars
 	*/
 	@:overload public function init(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, beanInfo : com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl<Dynamic>, attWildcard : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, java.util.Map<javax.xml.namespace.QName, String>>) : Void;
 	
-	@:overload override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload override public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, arg : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, arg : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload override public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload override public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
+	@:overload public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
 	
-	@:overload override public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload public function leaveElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
 	@:overload public function getBeanInfo() : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>;
 	

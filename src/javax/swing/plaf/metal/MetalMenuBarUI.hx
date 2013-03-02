@@ -40,7 +40,7 @@ package javax.swing.plaf.metal;
 	* @return ComponentUI implementation for <code>x</code>
 	* @throws NullPointerException if <code>x</code> is null
 	*/
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Configures the specified component appropriate for the metal look and
@@ -49,7 +49,7 @@ package javax.swing.plaf.metal;
 	* @param c the component where this UI delegate is being installed
 	* @throws NullPointerException if <code>c</code> is null.
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Reverses configuration which was done on the specified component during
@@ -58,7 +58,7 @@ package javax.swing.plaf.metal;
 	* @param c the component where this UI delegate is being installed
 	* @throws NullPointerException if <code>c</code> is null.
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* If necessary paints the background of the component, then
@@ -72,7 +72,7 @@ package javax.swing.plaf.metal;
 	* @see javax.swing.plaf.ComponentUI#paint
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java5) @:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }

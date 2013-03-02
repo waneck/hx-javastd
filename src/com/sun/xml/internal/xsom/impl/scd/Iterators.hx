@@ -61,7 +61,7 @@ extern class Iterators
 /**
 * {@link Iterator} that returns a single (or no) value.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Singleton') @:internal extern class Iterators_Singleton<T> extends Iterators_ReadOnly<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Singleton') @:internal extern class Iterators_Singleton<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
 	@:overload override public function hasNext() : Bool;
 	
@@ -72,7 +72,7 @@ extern class Iterators
 /**
 * {@link Iterator} that wraps another {@link Iterator} and changes its type.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Adapter') extern class Iterators_Adapter<T, U> extends Iterators_ReadOnly<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Adapter') extern class Iterators_Adapter<T, U> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
 	@:overload public function new(core : java.util.Iterator<U>) : Void;
 	
@@ -88,7 +88,7 @@ extern class Iterators
 * For each U, apply U->Iterator&lt;T> function and then iterate all
 * the resulting T.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Map') extern class Iterators_Map<T, U> extends Iterators_ReadOnly<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Map') extern class Iterators_Map<T, U> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
 	@:overload private function new(core : java.util.Iterator<U>) : Void;
 	
@@ -103,7 +103,7 @@ extern class Iterators
 /**
 * Filter out objects from another iterator.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Filter') extern class Iterators_Filter<T> extends Iterators_ReadOnly<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Filter') extern class Iterators_Filter<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
 	@:overload private function new(core : java.util.Iterator<T>) : Void;
 	
@@ -121,7 +121,7 @@ extern class Iterators
 /**
 * Only return unique items.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Unique') @:internal extern class Iterators_Unique<T> extends Iterators_Filter<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Unique') @:internal extern class Iterators_Unique<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_Filter<T>
 {
 	@:overload public function new(core : java.util.Iterator<T>) : Void;
 	
@@ -132,7 +132,7 @@ extern class Iterators
 /**
 * Union of two iterators.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Union') extern class Iterators_Union<T> extends Iterators_ReadOnly<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Union') extern class Iterators_Union<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
 	@:overload public function new(first : java.util.Iterator<T>, second : java.util.Iterator<T>) : Void;
 	
@@ -145,7 +145,7 @@ extern class Iterators
 /**
 * Array iterator.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Array') extern class Iterators_Array<T> extends Iterators_ReadOnly<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Iterators$Array') extern class Iterators_Array<T> extends com.sun.xml.internal.xsom.impl.scd.Iterators.Iterators_ReadOnly<T>
 {
 	@:overload public function new(items : java.NativeArray<T>) : Void;
 	

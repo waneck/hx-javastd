@@ -50,7 +50,7 @@ extern class AccessibleObject implements java.lang.reflect.AnnotatedElement
 	* @see SecurityManager#checkPermission
 	* @see java.lang.RuntimePermission
 	*/
-	@:native('setAccessible') @:overload public static function _setAccessible(array : java.NativeArray<AccessibleObject>, flag : Bool) : Void;
+	@:native('setAccessible') @:overload public static function _setAccessible(array : java.NativeArray<java.lang.reflect.AccessibleObject>, flag : Bool) : Void;
 	
 	/**
 	* Set the {@code accessible} flag for this object to

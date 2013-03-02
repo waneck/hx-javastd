@@ -136,7 +136,7 @@ extern interface UndoableEdit
 	* @return true if <code>anEdit</code> may be incorporated into this
 	*              edit
 	*/
-	@:overload public function addEdit(anEdit : UndoableEdit) : Bool;
+	@:overload public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* Returns true if this <code>UndoableEdit</code> should replace
@@ -158,7 +158,7 @@ extern interface UndoableEdit
 	* @param anEdit the edit that replaces the current edit
 	* @return true if this edit should replace <code>anEdit</code>
 	*/
-	@:overload public function replaceEdit(anEdit : UndoableEdit) : Bool;
+	@:overload public function replaceEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* Returns true if this edit is considered significant.  A significant

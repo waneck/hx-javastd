@@ -38,7 +38,7 @@ extern class ContextEnumerator implements javax.naming.NamingEnumeration<Dynamic
 	
 	@:overload private function getImmediateChildren(ctx : javax.naming.Context) : javax.naming.NamingEnumeration<Dynamic>;
 	
-	@:overload private function newEnumerator(ctx : javax.naming.Context, scope : Int, contextName : String, returnSelf : Bool) : ContextEnumerator;
+	@:overload private function newEnumerator(ctx : javax.naming.Context, scope : Int, contextName : String, returnSelf : Bool) : com.sun.jndi.toolkit.dir.ContextEnumerator;
 	
 	@:overload public function hasMore() : Bool;
 	

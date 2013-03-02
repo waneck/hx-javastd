@@ -27,7 +27,7 @@ extern class MS932_0213 extends java.nio.charset.Charset
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
@@ -37,17 +37,17 @@ extern class MS932_0213 extends java.nio.charset.Charset
 }
 @:native('sun$nio$cs$ext$MS932_0213$Decoder') extern class MS932_0213_Decoder extends sun.nio.cs.ext.SJIS_0213.SJIS_0213_Decoder
 {
-	@:overload override private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
+	@:overload private function decodeDouble(b1 : Int, b2 : Int) : java.StdTypes.Char16;
 	
 	
 }
 @:native('sun$nio$cs$ext$MS932_0213$Encoder') extern class MS932_0213_Encoder extends sun.nio.cs.ext.SJIS_0213.SJIS_0213_Encoder
 {
-	@:overload override private function new(cs : java.nio.charset.Charset) : Void;
+	@:overload private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function encodeChar(ch : java.StdTypes.Char16) : Int;
+	@:overload private function encodeChar(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class NavigatorImpl implements com.sun.xml.internal.bind.v2.model.nav.Nav
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public static var theInstance(default, null) : NavigatorImpl;
+	public static var theInstance(default, null) : com.sun.tools.internal.xjc.model.nav.NavigatorImpl;
 	
 	@:overload public function getSuperClass(nClass : com.sun.tools.internal.xjc.model.nav.NClass) : com.sun.tools.internal.xjc.model.nav.NClass;
 	

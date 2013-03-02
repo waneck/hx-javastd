@@ -64,7 +64,7 @@ extern class ReturnaddressType extends com.sun.org.apache.bcel.internal.generic.
 	* see vmspec2 3.3.3
 	* @author  <A HREF="http://www.inf.fu-berlin.de/~ehaase">Enver Haase</A>
 	*/
-	public static var NO_TARGET(default, null) : ReturnaddressType;
+	public static var NO_TARGET(default, null) : com.sun.org.apache.bcel.internal.generic.ReturnaddressType;
 	
 	/**
 	* Creates a ReturnaddressType object with a target.

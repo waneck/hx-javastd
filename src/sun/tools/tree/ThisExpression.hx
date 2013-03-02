@@ -41,7 +41,7 @@ extern class ThisExpression extends sun.tools.tree.Expression
 	*/
 	@:overload public function new(where : haxe.Int64, outerArg : sun.tools.tree.Expression) : Void;
 	
-	@:overload override public function getImplementation() : sun.tools.tree.Expression;
+	@:overload public function getImplementation() : sun.tools.tree.Expression;
 	
 	/**
 	* From the 'this' in an expression of the form outer.this(...),
@@ -53,33 +53,33 @@ extern class ThisExpression extends sun.tools.tree.Expression
 	/**
 	* Check expression
 	*/
-	@:overload override public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
+	@:overload public function checkValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>) : sun.tools.tree.Vset;
 	
-	@:overload override public function isNonNull() : Bool;
+	@:overload public function isNonNull() : Bool;
 	
-	@:overload override public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload public function getAssigner(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
-	@:overload override public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
+	@:overload public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
 	/**
 	* Inline
 	*/
-	@:overload override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Create a copy of the expression for method inlining
 	*/
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

@@ -64,28 +64,28 @@ extern class JFormatter
 	/**
 	* Decrement the indentation level.
 	*/
-	@:overload public function o() : JFormatter;
+	@:overload public function o() : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Increment the indentation level.
 	*/
-	@:overload public function i() : JFormatter;
+	@:overload public function i() : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Print a char into the stream
 	*
 	* @param c the char
 	*/
-	@:overload public function p(c : java.StdTypes.Char16) : JFormatter;
+	@:overload public function p(c : java.StdTypes.Char16) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Print a String into the stream
 	*
 	* @param s the String
 	*/
-	@:overload public function p(s : String) : JFormatter;
+	@:overload public function p(s : String) : com.sun.codemodel.internal.JFormatter;
 	
-	@:overload public function t(type : com.sun.codemodel.internal.JType) : JFormatter;
+	@:overload public function t(type : com.sun.codemodel.internal.JType) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Print a type name.
@@ -94,50 +94,50 @@ extern class JFormatter
 	* In the collecting mode we use this information to
 	* decide what types to import and what not to.
 	*/
-	@:overload public function t(type : com.sun.codemodel.internal.JClass) : JFormatter;
+	@:overload public function t(type : com.sun.codemodel.internal.JClass) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Print an identifier
 	*/
-	@:overload public function id(id : String) : JFormatter;
+	@:overload public function id(id : String) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Print a new line into the stream
 	*/
-	@:overload public function nl() : JFormatter;
+	@:overload public function nl() : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Cause the JGenerable object to generate source for iteself
 	*
 	* @param g the JGenerable object
 	*/
-	@:overload public function g(g : com.sun.codemodel.internal.JGenerable) : JFormatter;
+	@:overload public function g(g : com.sun.codemodel.internal.JGenerable) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Produces {@link JGenerable}s separated by ','
 	*/
-	@:overload public function g(list : java.util.Collection<com.sun.codemodel.internal.JGenerable>) : JFormatter;
+	@:overload public function g(list : java.util.Collection<com.sun.codemodel.internal.JGenerable>) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Cause the JDeclaration to generate source for itself
 	*
 	* @param d the JDeclaration object
 	*/
-	@:overload public function d(d : com.sun.codemodel.internal.JDeclaration) : JFormatter;
+	@:overload public function d(d : com.sun.codemodel.internal.JDeclaration) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Cause the JStatement to generate source for itself
 	*
 	* @param s the JStatement object
 	*/
-	@:overload public function s(s : com.sun.codemodel.internal.JStatement) : JFormatter;
+	@:overload public function s(s : com.sun.codemodel.internal.JStatement) : com.sun.codemodel.internal.JFormatter;
 	
 	/**
 	* Cause the JVar to generate source for itself
 	*
 	* @param v the JVar object
 	*/
-	@:overload public function b(v : com.sun.codemodel.internal.JVar) : JFormatter;
+	@:overload public function b(v : com.sun.codemodel.internal.JVar) : com.sun.codemodel.internal.JFormatter;
 	
 	
 }

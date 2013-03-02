@@ -39,13 +39,13 @@ package sun.security.ssl;
 	
 	
 }
-@:internal extern class UnknownExtension extends HelloExtension
+@:internal extern class UnknownExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:internal extern class ServerNameExtension extends HelloExtension
+@:internal extern class ServerNameExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
 	@:overload override public function toString() : String;
 	
@@ -57,25 +57,25 @@ package sun.security.ssl;
 	
 	
 }
-@:internal extern class SupportedEllipticCurvesExtension extends HelloExtension
+@:internal extern class SupportedEllipticCurvesExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:internal extern class SupportedEllipticPointFormatsExtension extends HelloExtension
+@:internal extern class SupportedEllipticPointFormatsExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:internal extern class RenegotiationInfoExtension extends HelloExtension
+@:internal extern class RenegotiationInfoExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:internal extern class SignatureAlgorithmsExtension extends HelloExtension
+@:internal extern class SignatureAlgorithmsExtension extends sun.security.ssl.HelloExtensions.HelloExtension
 {
 	@:overload override public function toString() : String;
 	

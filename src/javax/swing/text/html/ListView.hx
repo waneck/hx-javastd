@@ -64,7 +64,7 @@ extern class ListView extends javax.swing.text.html.BlockView
 	* @param alloc the allocated region to render the child into
 	* @param index the index of the child
 	*/
-	@:overload override private function paintChild(g : java.awt.Graphics, alloc : java.awt.Rectangle, index : Int) : Void;
+	@:overload private function paintChild(g : java.awt.Graphics, alloc : java.awt.Rectangle, index : Int) : Void;
 	
 	@:overload override private function setPropertiesFromAttributes() : Void;
 	

@@ -36,7 +36,7 @@ extern class WorldGroupImpl extends sun.security.acl.GroupImpl
 	* @param member The principal whose membership must be checked in this Group.
 	* @return true always since this is the "world" group.
 	*/
-	@:overload override public function isMember(member : java.security.Principal) : Bool;
+	@:overload public function isMember(member : java.security.Principal) : Bool;
 	
 	
 }

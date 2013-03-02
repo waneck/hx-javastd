@@ -27,9 +27,9 @@ extern class ConfigSpiFile extends javax.security.auth.login.ConfigurationSpi
 {
 	@:overload public function new(params : javax.security.auth.login.Configuration.Configuration_Parameters) : Void;
 	
-	@:overload override private function engineGetAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload private function engineGetAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
-	@:overload override private function engineRefresh() : Void;
+	@:overload private function engineRefresh() : Void;
 	
 	
 }

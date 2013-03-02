@@ -130,7 +130,7 @@ extern class CertStore
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters) : CertStore;
+	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters) : java.security.cert.CertStore;
 	
 	/**
 	* Returns a <code>CertStore</code> object that implements the specified
@@ -179,7 +179,7 @@ extern class CertStore
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : String) : CertStore;
+	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : String) : java.security.cert.CertStore;
 	
 	/**
 	* Returns a <code>CertStore</code> object that implements the specified
@@ -222,7 +222,7 @@ extern class CertStore
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : java.security.Provider) : CertStore;
+	@:overload public static function getInstance(type : String, params : java.security.cert.CertStoreParameters, provider : java.security.Provider) : java.security.cert.CertStore;
 	
 	/**
 	* Returns the parameters used to initialize this <code>CertStore</code>.

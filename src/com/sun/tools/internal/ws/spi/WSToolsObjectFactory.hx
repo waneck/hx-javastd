@@ -29,7 +29,7 @@ extern class WSToolsObjectFactory
 	* Obtain an instance of a factory. Don't worry about synchronization(at the
 	* most, one more factory is created).
 	*/
-	@:overload public static function newInstance() : WSToolsObjectFactory;
+	@:overload public static function newInstance() : com.sun.tools.internal.ws.spi.WSToolsObjectFactory;
 	
 	/**
 	* Invokes wsimport on the wsdl URL argument, and generates the necessary

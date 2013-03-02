@@ -132,7 +132,7 @@ extern class RoleUnresolvedList extends java.util.ArrayList<Dynamic>
 	* @exception IndexOutOfBoundsException  if accessing with an index
 	* outside of the list.
 	*/
-	@:overload public function addAll(roleList : RoleUnresolvedList) : Bool;
+	@:overload public function addAll(roleList : javax.management.relation.RoleUnresolvedList) : Bool;
 	
 	/**
 	* Inserts all of the elements in the RoleUnresolvedList specified into
@@ -149,22 +149,22 @@ extern class RoleUnresolvedList extends java.util.ArrayList<Dynamic>
 	* @exception IndexOutOfBoundsException if index is out of range
 	* (<code>index &lt; 0 || index &gt; size()</code>).
 	*/
-	@:overload public function addAll(index : Int, roleList : RoleUnresolvedList) : Bool;
+	@:overload public function addAll(index : Int, roleList : javax.management.relation.RoleUnresolvedList) : Bool;
 	
 	/*
 	* Override all of the methods from ArrayList<Object> that might add
 	* a non-RoleUnresolved to the List, and disallow that if asList has
 	* ever been called on this instance.
 	*/
-	@:overload override public function add(o : Dynamic) : Bool;
+	@:overload public function add(o : Dynamic) : Bool;
 	
-	@:overload override public function add(index : Int, element : Dynamic) : Void;
+	@:overload public function add(index : Int, element : Dynamic) : Void;
 	
-	@:overload override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload public function set(index : Int, element : Dynamic) : Dynamic;
 	
 	
 }

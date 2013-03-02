@@ -33,15 +33,15 @@ package com.sun.tools.classfile;
 */
 extern class InnerClasses_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, classes : java.NativeArray<InnerClasses_attribute_Info>) : Void;
+	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, classes : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>) : Void;
 	
-	@:overload public function new(name_index : Int, classes : java.NativeArray<InnerClasses_attribute_Info>) : Void;
+	@:overload public function new(name_index : Int, classes : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>) : Void;
 	
-	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var number_of_classes(default, null) : Int;
 	
-	public var classes(default, null) : java.NativeArray<InnerClasses_attribute_Info>;
+	public var classes(default, null) : java.NativeArray<com.sun.tools.classfile.InnerClasses_attribute.InnerClasses_attribute_Info>;
 	
 	
 }

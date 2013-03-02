@@ -121,7 +121,7 @@ extern interface Keymap
 	*
 	* @return the keymap
 	*/
-	@:overload public function getResolveParent() : Keymap;
+	@:overload public function getResolveParent() : javax.swing.text.Keymap;
 	
 	/**
 	* Sets the parent keymap, which will be used to
@@ -131,7 +131,7 @@ extern interface Keymap
 	*
 	* @param parent the parent keymap
 	*/
-	@:overload public function setResolveParent(parent : Keymap) : Void;
+	@:overload public function setResolveParent(parent : javax.swing.text.Keymap) : Void;
 	
 	
 }

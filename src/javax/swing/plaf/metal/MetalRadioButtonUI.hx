@@ -31,11 +31,11 @@ extern class MetalRadioButtonUI extends javax.swing.plaf.basic.BasicRadioButtonU
 	
 	private var disabledTextColor : java.awt.Color;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	@:overload private function getSelectColor() : java.awt.Color;
 	
@@ -43,9 +43,9 @@ extern class MetalRadioButtonUI extends javax.swing.plaf.basic.BasicRadioButtonU
 	
 	@:overload private function getFocusColor() : java.awt.Color;
 	
-	@:overload @:synchronized override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload @:synchronized public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function paintFocus(g : java.awt.Graphics, t : java.awt.Rectangle, d : java.awt.Dimension) : Void;
+	@:overload private function paintFocus(g : java.awt.Graphics, t : java.awt.Rectangle, d : java.awt.Dimension) : Void;
 	
 	
 }

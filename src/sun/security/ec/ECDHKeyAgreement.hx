@@ -35,17 +35,17 @@ package sun.security.ec;
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
+	@:overload private function engineDoPhase(key : java.security.Key, lastPhase : Bool) : java.security.Key;
 	
-	@:overload override private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGenerateSecret() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
+	@:overload private function engineGenerateSecret(sharedSecret : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
-	@:overload override private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
+	@:overload private function engineGenerateSecret(algorithm : String) : javax.crypto.SecretKey;
 	
 	
 }

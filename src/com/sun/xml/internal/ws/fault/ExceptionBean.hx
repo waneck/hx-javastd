@@ -41,9 +41,9 @@ package com.sun.xml.internal.ws.fault;
 	
 	public var message : String;
 	
-	public var stackTrace : java.util.List<ExceptionBean_StackFrame>;
+	public var stackTrace : java.util.List<com.sun.xml.internal.ws.fault.ExceptionBean.ExceptionBean_StackFrame>;
 	
-	public var cause : ExceptionBean;
+	public var cause : com.sun.xml.internal.ws.fault.ExceptionBean;
 	
 	public var note : String;
 	

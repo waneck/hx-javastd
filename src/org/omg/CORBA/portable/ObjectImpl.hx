@@ -367,22 +367,5 @@ extern class ObjectImpl implements org.omg.CORBA.Object
 	*/
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	/**
-	* Determines whether the two object references are equivalent,
-	* so far as the ORB can easily determine. Two object references are equivalent
-	* if they are identical. Two distinct object references which in fact refer to
-	* the same object are also equivalent. However, ORBs are not required
-	* to attempt determination of whether two distinct object references
-	* refer to the same object, since such determination could be impractically
-	* expensive.
-	* @param other the other object reference with which to check for equivalence
-	* @return <code>true</code> if this object reference is known to be
-	*         equivalent to the given object reference.
-	*         Note that <code>false</code> indicates only that the two
-	*         object references are distinct, not necessarily that
-	*         they reference distinct objects.
-	*/
-	@:overload @:public @:public override public function _is_equivalent(other : Object) : Bool;
-	
 	
 }

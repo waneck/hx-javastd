@@ -44,7 +44,7 @@ extern class DOMKeyName extends org.jcp.xml.dsig.internal.dom.DOMStructure imple
 	
 	@:overload public function getName() : String;
 	
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	

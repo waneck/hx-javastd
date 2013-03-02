@@ -126,21 +126,21 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	
 	@:overload public function new() : Void;
 	
-	@:overload private function new(base : XSSimpleTypeDecl, name : String, validateDV : java.StdTypes.Int16, ordered : java.StdTypes.Int16, bounded : Bool, finite : Bool, numeric : Bool, isImmutable : Bool, builtInKind : java.StdTypes.Int16) : Void;
+	@:overload private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, validateDV : java.StdTypes.Int16, ordered : java.StdTypes.Int16, bounded : Bool, finite : Bool, numeric : Bool, isImmutable : Bool, builtInKind : java.StdTypes.Int16) : Void;
 	
-	@:overload private function new(base : XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList, builtInKind : java.StdTypes.Int16) : Void;
+	@:overload private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList, builtInKind : java.StdTypes.Int16) : Void;
 	
-	@:overload private function new(base : XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
+	@:overload private function new(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
 	
-	@:overload private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : XSSimpleTypeDecl, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
+	@:overload private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, isImmutable : Bool, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
 	
-	@:overload private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
+	@:overload private function new(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : Void;
 	
-	@:overload private function setRestrictionValues(base : XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : XSSimpleTypeDecl;
+	@:overload private function setRestrictionValues(base : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, name : String, uri : String, finalSet : java.StdTypes.Int16, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
-	@:overload private function setListValues(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : XSSimpleTypeDecl, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : XSSimpleTypeDecl;
+	@:overload private function setListValues(name : String, uri : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
-	@:overload private function setUnionValues(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : XSSimpleTypeDecl;
+	@:overload private function setUnionValues(name : String, uri : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.xs.XSSimpleTypeDecl;
 	
 	@:overload public function getType() : java.StdTypes.Int16;
 	
@@ -517,217 +517,9 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 }
 @:native('com$sun$org$apache$xerces$internal$impl$dv$xs$XSSimpleTypeDecl$AbstractObjectList') @:internal extern class XSSimpleTypeDecl_AbstractObjectList extends java.util.AbstractList<Dynamic> implements com.sun.org.apache.xerces.internal.xs.datatypes.ObjectList
 {
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
-	
-	/**
-	* Appends the specified element to the end of this list (optional
-	* operation).
-	*
-	* <p>Lists that support this operation may place limitations on what
-	* elements may be added to this list.  In particular, some
-	* lists will refuse to add null elements, and others will impose
-	* restrictions on the type of elements that may be added.  List
-	* classes should clearly specify in their documentation any restrictions
-	* on what elements may be added.
-	*
-	* @param e element to be appended to this list
-	* @return <tt>true</tt> (as specified by {@link Collection#add})
-	* @throws UnsupportedOperationException if the <tt>add</tt> operation
-	*         is not supported by this list
-	* @throws ClassCastException if the class of the specified element
-	*         prevents it from being added to this list
-	* @throws NullPointerException if the specified element is null and this
-	*         list does not permit null elements
-	* @throws IllegalArgumentException if some property of this element
-	*         prevents it from being added to this list
-	*/
-	@:overload override public function add(e : Dynamic) : Bool;
-	
-	/**
-	* Returns <tt>true</tt> if this list contains all of the elements of the
-	* specified collection.
-	*
-	* @param  c collection to be checked for containment in this list
-	* @return <tt>true</tt> if this list contains all of the elements of the
-	*         specified collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in the specified collection are incompatible with this
-	*         list
-	* (<a href="Collection.html#optional-restrictions">optional</a>)
-	* @throws NullPointerException if the specified collection contains one
-	*         or more null elements and this list does not permit null
-	*         elements
-	*         (<a href="Collection.html#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #contains(Object)
-	*/
-	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
-	
-	/**
-	* Removes from this list all of its elements that are contained in the
-	* specified collection (optional operation).
-	*
-	* @param c collection containing elements to be removed from this list
-	* @return <tt>true</tt> if this list changed as a result of the call
-	* @throws UnsupportedOperationException if the <tt>removeAll</tt> operation
-	*         is not supported by this list
-	* @throws ClassCastException if the class of an element of this list
-	*         is incompatible with the specified collection
-	* (<a href="Collection.html#optional-restrictions">optional</a>)
-	* @throws NullPointerException if this list contains a null element and the
-	*         specified collection does not permit null elements
-	*         (<a href="Collection.html#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #remove(Object)
-	* @see #contains(Object)
-	*/
-	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
-	
-	/**
-	* Replaces the element at the specified position in this list with the
-	* specified element (optional operation).
-	*
-	* @param index index of the element to replace
-	* @param element element to be stored at the specified position
-	* @return the element previously at the specified position
-	* @throws UnsupportedOperationException if the <tt>set</tt> operation
-	*         is not supported by this list
-	* @throws ClassCastException if the class of the specified element
-	*         prevents it from being added to this list
-	* @throws NullPointerException if the specified element is null and
-	*         this list does not permit null elements
-	* @throws IllegalArgumentException if some property of the specified
-	*         element prevents it from being added to this list
-	* @throws IndexOutOfBoundsException if the index is out of range
-	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
-	*/
-	@:overload override public function set(index : Int, element : Dynamic) : Dynamic;
-	
-	/**
-	* Returns the <code>index</code>th item in the collection or
-	* <code>null</code> if <code>index</code> is greater than or equal to
-	* the number of objects in the list. The index starts at 0.
-	* @param index  index into the collection.
-	* @return  The <code>Object</code> at the <code>index</code>th
-	*   position in the <code>ObjectList</code>, or <code>null</code> if
-	*   the index specified is not valid - greater than or equal to the
-	*   number of items in the list or less than zero.
-	*/
-	@:overload public function item(index : Int) : Dynamic;
-	
-	/**
-	* Removes all of this collection's elements that are also contained in the
-	* specified collection (optional operation).  After this call returns,
-	* this collection will contain no elements in common with the specified
-	* collection.
-	*
-	* @param c collection containing elements to be removed from this collection
-	* @return <tt>true</tt> if this collection changed as a result of the
-	*         call
-	* @throws UnsupportedOperationException if the <tt>removeAll</tt> method
-	*         is not supported by this collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in this collection are incompatible with the specified
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if this collection contains one or more
-	*         null elements and the specified collection does not support
-	*         null elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #remove(Object)
-	* @see #contains(Object)
-	*/
-	@:overload @:public @:public public function removeAll(c : Collection<Dynamic>) : Bool;
-	
-	/**
-	* Returns <tt>true</tt> if this list contains no elements.
-	*
-	* @return <tt>true</tt> if this list contains no elements
-	*/
-	@:overload override public function isEmpty() : Bool;
-	
-	/**
-	* Removes the first occurrence of the specified element from this list,
-	* if it is present (optional operation).  If this list does not contain
-	* the element, it is unchanged.  More formally, removes the element with
-	* the lowest index <tt>i</tt> such that
-	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>
-	* (if such an element exists).  Returns <tt>true</tt> if this list
-	* contained the specified element (or equivalently, if this list changed
-	* as a result of the call).
-	*
-	* @param o element to be removed from this list, if present
-	* @return <tt>true</tt> if this list contained the specified element
-	* @throws ClassCastException if the type of the specified element
-	*         is incompatible with this list
-	* (<a href="Collection.html#optional-restrictions">optional</a>)
-	* @throws NullPointerException if the specified element is null and this
-	*         list does not permit null elements
-	* (<a href="Collection.html#optional-restrictions">optional</a>)
-	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
-	*         is not supported by this list
-	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
-	
-	/**
-	* Removes all of the elements from this list (optional operation).
-	* The list will be empty after this call returns.
-	*
-	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
-	*         is not supported by this list
-	*/
-	@:overload override public function clear() : Void;
-	
-	/**
-	* Returns the index of the last occurrence of the specified element
-	* in this list, or -1 if this list does not contain the element.
-	* More formally, returns the highest index <tt>i</tt> such that
-	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
-	* or -1 if there is no such index.
-	*
-	* @param o element to search for
-	* @return the index of the last occurrence of the specified element in
-	*         this list, or -1 if this list does not contain the element
-	* @throws ClassCastException if the type of the specified element
-	*         is incompatible with this list
-	*         (<a href="Collection.html#optional-restrictions">optional</a>)
-	* @throws NullPointerException if the specified element is null and this
-	*         list does not permit null elements
-	*         (<a href="Collection.html#optional-restrictions">optional</a>)
-	*/
-	@:overload override public function lastIndexOf(o : Dynamic) : Int;
-	
-	/**
-	* Checks if the <code>Object</code> <code>item</code> is a
-	* member of this list.
-	* @param item  <code>Object</code> whose presence in this list
-	*   is to be tested.
-	* @return  True if this list contains the <code>Object</code>
-	*   <code>item</code>.
-	*/
-	@:overload override public function contains(item : Dynamic) : Bool;
-	
-	/**
-	* Returns the index of the first occurrence of the specified element
-	* in this list, or -1 if this list does not contain the element.
-	* More formally, returns the lowest index <tt>i</tt> such that
-	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
-	* or -1 if there is no such index.
-	*
-	* @param o element to search for
-	* @return the index of the first occurrence of the specified element in
-	*         this list, or -1 if this list does not contain the element
-	* @throws ClassCastException if the type of the specified element
-	*         is incompatible with this list
-	*         (<a href="Collection.html#optional-restrictions">optional</a>)
-	* @throws NullPointerException if the specified element is null and this
-	*         list does not permit null elements
-	*         (<a href="Collection.html#optional-restrictions">optional</a>)
-	*/
-	@:overload override public function indexOf(o : Dynamic) : Int;
+	@:overload public function size() : Int;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -770,30 +562,48 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
-	* Adds all of the elements in the specified collection to this collection
-	* (optional operation).  The behavior of this operation is undefined if
-	* the specified collection is modified while the operation is in progress.
-	* (This implies that the behavior of this call is undefined if the
-	* specified collection is this collection, and this collection is
-	* nonempty.)
+	* Appends the specified element to the end of this list (optional
+	* operation).
 	*
-	* @param c collection containing elements to be added to this collection
-	* @return <tt>true</tt> if this collection changed as a result of the call
-	* @throws UnsupportedOperationException if the <tt>addAll</tt> operation
-	*         is not supported by this collection
-	* @throws ClassCastException if the class of an element of the specified
-	*         collection prevents it from being added to this collection
-	* @throws NullPointerException if the specified collection contains a
-	*         null element and this collection does not permit null elements,
-	*         or if the specified collection is null
-	* @throws IllegalArgumentException if some property of an element of the
-	*         specified collection prevents it from being added to this
-	*         collection
-	* @throws IllegalStateException if not all the elements can be added at
-	*         this time due to insertion restrictions
-	* @see #add(Object)
+	* <p>Lists that support this operation may place limitations on what
+	* elements may be added to this list.  In particular, some
+	* lists will refuse to add null elements, and others will impose
+	* restrictions on the type of elements that may be added.  List
+	* classes should clearly specify in their documentation any restrictions
+	* on what elements may be added.
+	*
+	* @param e element to be appended to this list
+	* @return <tt>true</tt> (as specified by {@link Collection#add})
+	* @throws UnsupportedOperationException if the <tt>add</tt> operation
+	*         is not supported by this list
+	* @throws ClassCastException if the class of the specified element
+	*         prevents it from being added to this list
+	* @throws NullPointerException if the specified element is null and this
+	*         list does not permit null elements
+	* @throws IllegalArgumentException if some property of this element
+	*         prevents it from being added to this list
 	*/
-	@:overload @:public public function addAll(c : Collection<Dynamic>) : Bool;
+	@:overload public function add(e : Dynamic) : Bool;
+	
+	/**
+	* Returns <tt>true</tt> if this list contains all of the elements of the
+	* specified collection.
+	*
+	* @param  c collection to be checked for containment in this list
+	* @return <tt>true</tt> if this list contains all of the elements of the
+	*         specified collection
+	* @throws ClassCastException if the types of one or more elements
+	*         in the specified collection are incompatible with this
+	*         list
+	* (<a href="Collection.html#optional-restrictions">optional</a>)
+	* @throws NullPointerException if the specified collection contains one
+	*         or more null elements and this list does not permit null
+	*         elements
+	*         (<a href="Collection.html#optional-restrictions">optional</a>),
+	*         or if the specified collection is null
+	* @see #contains(Object)
+	*/
+	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this list that are contained in the
@@ -818,24 +628,24 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
-	* Returns <tt>true</tt> if this collection contains all of the elements
-	* in the specified collection.
+	* Removes from this list all of its elements that are contained in the
+	* specified collection (optional operation).
 	*
-	* @param  c collection to be checked for containment in this collection
-	* @return <tt>true</tt> if this collection contains all of the elements
-	*         in the specified collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in the specified collection are incompatible with this
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if the specified collection contains one
-	*         or more null elements and this collection does not permit null
-	*         elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null.
-	* @see    #contains(Object)
+	* @param c collection containing elements to be removed from this list
+	* @return <tt>true</tt> if this list changed as a result of the call
+	* @throws UnsupportedOperationException if the <tt>removeAll</tt> operation
+	*         is not supported by this list
+	* @throws ClassCastException if the class of an element of this list
+	*         is incompatible with the specified collection
+	* (<a href="Collection.html#optional-restrictions">optional</a>)
+	* @throws NullPointerException if this list contains a null element and the
+	*         specified collection does not permit null elements
+	*         (<a href="Collection.html#optional-restrictions">optional</a>),
+	*         or if the specified collection is null
+	* @see #remove(Object)
+	* @see #contains(Object)
 	*/
-	@:overload @:public @:public public function containsAll(c : Collection<Dynamic>) : Bool;
+	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -864,7 +674,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -881,7 +691,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index > size()})
 	*/
-	@:overload override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -907,34 +717,42 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	@:overload override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
+	* Replaces the element at the specified position in this list with the
+	* specified element (optional operation).
+	*
+	* @param index index of the element to replace
+	* @param element element to be stored at the specified position
+	* @return the element previously at the specified position
+	* @throws UnsupportedOperationException if the <tt>set</tt> operation
+	*         is not supported by this list
+	* @throws ClassCastException if the class of the specified element
+	*         prevents it from being added to this list
+	* @throws NullPointerException if the specified element is null and
+	*         this list does not permit null elements
+	* @throws IllegalArgumentException if some property of the specified
+	*         element prevents it from being added to this list
+	* @throws IndexOutOfBoundsException if the index is out of range
+	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
+	*/
+	@:overload public function set(index : Int, element : Dynamic) : Dynamic;
+	
+	/**
 	* The number of <code>Object</code>s in the list. The range of
 	* valid child object indices is 0 to <code>length-1</code> inclusive.
 	*/
 	@:overload public function getLength() : Int;
 	
 	/**
-	* Retains only the elements in this collection that are contained in the
-	* specified collection (optional operation).  In other words, removes from
-	* this collection all of its elements that are not contained in the
-	* specified collection.
-	*
-	* @param c collection containing elements to be retained in this collection
-	* @return <tt>true</tt> if this collection changed as a result of the call
-	* @throws UnsupportedOperationException if the <tt>retainAll</tt> operation
-	*         is not supported by this collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in this collection are incompatible with the specified
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if this collection contains one or more
-	*         null elements and the specified collection does not permit null
-	*         elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #remove(Object)
-	* @see #contains(Object)
+	* Returns the <code>index</code>th item in the collection or
+	* <code>null</code> if <code>index</code> is greater than or equal to
+	* the number of objects in the list. The index starts at 0.
+	* @param index  index into the collection.
+	* @return  The <code>Object</code> at the <code>index</code>th
+	*   position in the <code>ObjectList</code>, or <code>null</code> if
+	*   the index specified is not valid - greater than or equal to the
+	*   number of items in the list or less than zero.
 	*/
-	@:overload @:public @:public public function retainAll(c : Collection<Dynamic>) : Bool;
+	@:overload public function item(index : Int) : Dynamic;
 	
 	/**
 	* Returns an array containing all of the elements in this list in proper
@@ -961,7 +779,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @return a list iterator over the elements in this list (in proper
 	*         sequence)
 	*/
-	@:overload override public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload public function listIterator() : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Returns a view of the portion of this list between the specified
@@ -997,7 +815,14 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
 	*         fromIndex &gt; toIndex</tt>)
 	*/
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : List<Dynamic>;
+	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
+	
+	/**
+	* Returns <tt>true</tt> if this list contains no elements.
+	*
+	* @return <tt>true</tt> if this list contains no elements
+	*/
+	@:overload override public function isEmpty() : Bool;
 	
 	/**
 	* Inserts the specified element at the specified position in this list
@@ -1018,7 +843,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload override public function add(index : Int, element : Dynamic) : Void;
+	@:overload public function add(index : Int, element : Dynamic) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list (optional
@@ -1033,14 +858,94 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload override public function remove(index : Int) : Dynamic;
+	@:overload public function remove(index : Int) : Dynamic;
+	
+	/**
+	* Removes the first occurrence of the specified element from this list,
+	* if it is present (optional operation).  If this list does not contain
+	* the element, it is unchanged.  More formally, removes the element with
+	* the lowest index <tt>i</tt> such that
+	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>
+	* (if such an element exists).  Returns <tt>true</tt> if this list
+	* contained the specified element (or equivalently, if this list changed
+	* as a result of the call).
+	*
+	* @param o element to be removed from this list, if present
+	* @return <tt>true</tt> if this list contained the specified element
+	* @throws ClassCastException if the type of the specified element
+	*         is incompatible with this list
+	* (<a href="Collection.html#optional-restrictions">optional</a>)
+	* @throws NullPointerException if the specified element is null and this
+	*         list does not permit null elements
+	* (<a href="Collection.html#optional-restrictions">optional</a>)
+	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
+	*         is not supported by this list
+	*/
+	@:overload override public function remove(o : Dynamic) : Bool;
+	
+	/**
+	* Removes all of the elements from this list (optional operation).
+	* The list will be empty after this call returns.
+	*
+	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
+	*         is not supported by this list
+	*/
+	@:overload public function clear() : Void;
+	
+	/**
+	* Returns the index of the last occurrence of the specified element
+	* in this list, or -1 if this list does not contain the element.
+	* More formally, returns the highest index <tt>i</tt> such that
+	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
+	* or -1 if there is no such index.
+	*
+	* @param o element to search for
+	* @return the index of the last occurrence of the specified element in
+	*         this list, or -1 if this list does not contain the element
+	* @throws ClassCastException if the type of the specified element
+	*         is incompatible with this list
+	*         (<a href="Collection.html#optional-restrictions">optional</a>)
+	* @throws NullPointerException if the specified element is null and this
+	*         list does not permit null elements
+	*         (<a href="Collection.html#optional-restrictions">optional</a>)
+	*/
+	@:overload public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload public function iterator() : java.util.Iterator<Dynamic>;
+	
+	/**
+	* Checks if the <code>Object</code> <code>item</code> is a
+	* member of this list.
+	* @param item  <code>Object</code> whose presence in this list
+	*   is to be tested.
+	* @return  True if this list contains the <code>Object</code>
+	*   <code>item</code>.
+	*/
+	@:overload public function contains(item : Dynamic) : Bool;
+	
+	/**
+	* Returns the index of the first occurrence of the specified element
+	* in this list, or -1 if this list does not contain the element.
+	* More formally, returns the lowest index <tt>i</tt> such that
+	* <tt>(o==null&nbsp;?&nbsp;get(i)==null&nbsp;:&nbsp;o.equals(get(i)))</tt>,
+	* or -1 if there is no such index.
+	*
+	* @param o element to search for
+	* @return the index of the first occurrence of the specified element in
+	*         this list, or -1 if this list does not contain the element
+	* @throws ClassCastException if the type of the specified element
+	*         is incompatible with this list
+	*         (<a href="Collection.html#optional-restrictions">optional</a>)
+	* @throws NullPointerException if the specified element is null and this
+	*         list does not permit null elements
+	*         (<a href="Collection.html#optional-restrictions">optional</a>)
+	*/
+	@:overload public function indexOf(o : Dynamic) : Int;
 	
 	
 }

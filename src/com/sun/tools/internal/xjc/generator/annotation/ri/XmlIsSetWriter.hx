@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.generator.annotation.ri;
 */
 extern interface XmlIsSetWriter extends com.sun.codemodel.internal.JAnnotationWriter<com.sun.xml.internal.bind.annotation.XmlIsSet>
 {
-	@:overload public function value(value : String) : XmlIsSetWriter;
+	@:overload public function value(value : String) : com.sun.tools.internal.xjc.generator.annotation.ri.XmlIsSetWriter;
 	
 	
 }

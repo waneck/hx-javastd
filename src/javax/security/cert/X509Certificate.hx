@@ -48,7 +48,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @exception CertificateException if a class initialization
 	*            or certificate parsing error occurs.
 	*/
-	@:overload @:final public static function getInstance(inStream : java.io.InputStream) : X509Certificate;
+	@:overload @:final public static function getInstance(inStream : java.io.InputStream) : javax.security.cert.X509Certificate;
 	
 	/**
 	* Instantiates an X509Certificate object, and initializes it with
@@ -71,7 +71,7 @@ extern class X509Certificate extends javax.security.cert.Certificate
 	* @exception CertificateException if a class initialization
 	*            or certificate parsing error occurs.
 	*/
-	@:overload @:final public static function getInstance(certData : java.NativeArray<java.StdTypes.Int8>) : X509Certificate;
+	@:overload @:final public static function getInstance(certData : java.NativeArray<java.StdTypes.Int8>) : javax.security.cert.X509Certificate;
 	
 	/**
 	* Checks that the certificate is currently valid. It is if

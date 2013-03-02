@@ -61,7 +61,7 @@ extern class Method extends java.lang.reflect.AccessibleObject implements java.l
 	*     <cite>The Java&trade; Virtual Machine Specification</cite>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Method>>;
+	@:require(java5) @:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<java.lang.reflect.Method>>;
 	
 	/**
 	* Returns a {@code Class} object that represents the formal return type

@@ -39,7 +39,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 	* @return The policy assertion if found. Null otherwise.
 	* @throws WebServiceException If computing the effective policy of the endpoint failed.
 	*/
-	@:native('getAssertion') @:overload public static function _getAssertion(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : ManagedServiceAssertion;
+	@:overload public static function getAssertion(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.api.config.management.policy.ManagedServiceAssertion;
 	
 	@:overload public function new(data : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData, assertionParameters : java.util.Collection<com.sun.xml.internal.ws.policy.PolicyAssertion>) : Void;
 	
@@ -49,7 +49,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 	*
 	* @return The value of the management attribute.
 	*/
-	@:overload override public function isManagementEnabled() : Bool;
+	@:overload public function isManagementEnabled() : Bool;
 	
 	/**
 	* Returns the value of the endpointDisposeDelay attribute or the default value
@@ -69,7 +69,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 	* @return A list of CommunicationServerImplementation elements that were set as
 	* parameters of this assertion. May be empty.
 	*/
-	@:overload public function getCommunicationServerImplementations() : java.util.Collection<ManagedServiceAssertion_ImplementationRecord>;
+	@:overload public function getCommunicationServerImplementations() : java.util.Collection<com.sun.xml.internal.ws.api.config.management.policy.ManagedServiceAssertion.ManagedServiceAssertion_ImplementationRecord>;
 	
 	/**
 	* The ConfiguratorImplementation that was set as parameter of this assertion.
@@ -77,7 +77,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 	* @return The ConfiguratorImplementation that was set as parameter of this assertion.
 	*   May be null.
 	*/
-	@:overload public function getConfiguratorImplementation() : ManagedServiceAssertion_ImplementationRecord;
+	@:overload public function getConfiguratorImplementation() : com.sun.xml.internal.ws.api.config.management.policy.ManagedServiceAssertion.ManagedServiceAssertion_ImplementationRecord;
 	
 	/**
 	* The ConfigSaverImplementation that was set as parameter of this assertion.
@@ -85,7 +85,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 	* @return The ConfigSaverImplementation that was set as parameter of this assertion.
 	*   May be null.
 	*/
-	@:overload public function getConfigSaverImplementation() : ManagedServiceAssertion_ImplementationRecord;
+	@:overload public function getConfigSaverImplementation() : com.sun.xml.internal.ws.api.config.management.policy.ManagedServiceAssertion.ManagedServiceAssertion_ImplementationRecord;
 	
 	/**
 	* The ConfigReaderImplementation that was set as parameter of this assertion.
@@ -93,7 +93,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 	* @return The ConfigReaderImplementation that was set as parameter of this assertion.
 	*   May be null.
 	*/
-	@:overload public function getConfigReaderImplementation() : ManagedServiceAssertion_ImplementationRecord;
+	@:overload public function getConfigReaderImplementation() : com.sun.xml.internal.ws.api.config.management.policy.ManagedServiceAssertion.ManagedServiceAssertion_ImplementationRecord;
 	
 	
 }
@@ -103,7 +103,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 */
 @:native('com$sun$xml$internal$ws$api$config$management$policy$ManagedServiceAssertion$ImplementationRecord') extern class ManagedServiceAssertion_ImplementationRecord
 {
-	@:overload private function new(implementation : String, parameters : java.util.Map<javax.xml.namespace.QName, String>, nestedParameters : java.util.Collection<ManagedServiceAssertion_NestedParameters>) : Void;
+	@:overload private function new(implementation : String, parameters : java.util.Map<javax.xml.namespace.QName, String>, nestedParameters : java.util.Collection<com.sun.xml.internal.ws.api.config.management.policy.ManagedServiceAssertion.ManagedServiceAssertion_NestedParameters>) : Void;
 	
 	@:overload public function getImplementation() : String;
 	
@@ -122,7 +122,7 @@ extern class ManagedServiceAssertion extends com.sun.xml.internal.ws.api.config.
 	* @return The nested parameters that were set for this implementation element.
 	*   May be null.
 	*/
-	@:overload public function getNestedParameters() : java.util.Collection<ManagedServiceAssertion_NestedParameters>;
+	@:overload public function getNestedParameters() : java.util.Collection<com.sun.xml.internal.ws.api.config.management.policy.ManagedServiceAssertion.ManagedServiceAssertion_NestedParameters>;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	

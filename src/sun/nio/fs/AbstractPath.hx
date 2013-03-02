@@ -64,28 +64,7 @@ package sun.nio.fs;
 	*          equal to the number of elements, or this path has zero name
 	*          elements
 	*/
-	@:overload public function getName(index : Int) : Path;
-	
-	/**
-	* Compares two abstract paths lexicographically. The ordering defined by
-	* this method is provider specific, and in the case of the default
-	* provider, platform specific. This method does not access the file system
-	* and neither file is required to exist.
-	*
-	* <p> This method may not be used to compare paths that are associated
-	* with different file system providers.
-	*
-	* @param   other  the path compared to this path.
-	*
-	* @return  zero if the argument is {@link #equals equal} to this path, a
-	*          value less than zero if this path is lexicographically less than
-	*          the argument, or a value greater than zero if this path is
-	*          lexicographically greater than the argument
-	*
-	* @throws  ClassCastException
-	*          if the paths are associated with different providers
-	*/
-	@:overload public function compareTo(other : Path) : Int;
+	@:overload public function getName(index : Int) : java.nio.file.Path;
 	
 	/**
 	* Tells whether or not this path is absolute.
@@ -129,32 +108,7 @@ package sun.nio.fs;
 	*          the number of elements. If {@code endIndex} is less than or
 	*          equal to {@code beginIndex}, or larger than the number of elements.
 	*/
-	@:overload public function subpath(beginIndex : Int, endIndex : Int) : Path;
-	
-	/**
-	* Tests if this path starts with the given path.
-	*
-	* <p> This path <em>starts</em> with the given path if this path's root
-	* component <em>starts</em> with the root component of the given path,
-	* and this path starts with the same name elements as the given path.
-	* If the given path has more name elements than this path then {@code false}
-	* is returned.
-	*
-	* <p> Whether or not the root component of this path starts with the root
-	* component of the given path is file system specific. If this path does
-	* not have a root component and the given path has a root component then
-	* this path does not start with the given path.
-	*
-	* <p> If the given path is associated with a different {@code FileSystem}
-	* to this path then {@code false} is returned.
-	*
-	* @param   other
-	*          the given path
-	*
-	* @return  {@code true} if this path starts with the given path; otherwise
-	*          {@code false}
-	*/
-	@:overload public function startsWith(other : Path) : Bool;
+	@:overload public function subpath(beginIndex : Int, endIndex : Int) : java.nio.file.Path;
 	
 	/**
 	* Returns a path that is this path with redundant name elements eliminated.
@@ -181,49 +135,30 @@ package sun.nio.fs;
 	* @see #getParent
 	* @see #toRealPath
 	*/
-	@:overload public function normalize() : Path;
+	@:overload public function normalize() : java.nio.file.Path;
 	
 	/**
-	* Constructs a relative path between this path and a given path.
+	* Resolve the given path against this path.
 	*
-	* <p> Relativization is the inverse of {@link #resolve(Path) resolution}.
-	* This method attempts to construct a {@link #isAbsolute relative} path
-	* that when {@link #resolve(Path) resolved} against this path, yields a
-	* path that locates the same file as the given path. For example, on UNIX,
-	* if this path is {@code "/a/b"} and the given path is {@code "/a/b/c/d"}
-	* then the resulting relative path would be {@code "c/d"}. Where this
-	* path and the given path do not have a {@link #getRoot root} component,
-	* then a relative path can be constructed. A relative path cannot be
-	* constructed if only one of the paths have a root component. Where both
-	* paths have a root component then it is implementation dependent if a
-	* relative path can be constructed. If this path and the given path are
-	* {@link #equals equal} then an <i>empty path</i> is returned.
-	*
-	* <p> For any two {@link #normalize normalized} paths <i>p</i> and
-	* <i>q</i>, where <i>q</i> does not have a root component,
-	* <blockquote>
-	*   <i>p</i><tt>.relativize(</tt><i>p</i><tt>.resolve(</tt><i>q</i><tt>)).equals(</tt><i>q</i><tt>)</tt>
-	* </blockquote>
-	*
-	* <p> When symbolic links are supported, then whether the resulting path,
-	* when resolved against this path, yields a path that can be used to locate
-	* the {@link Files#isSameFile same} file as {@code other} is implementation
-	* dependent. For example, if this path is  {@code "/a/b"} and the given
-	* path is {@code "/a/x"} then the resulting relative path may be {@code
-	* "../x"}. If {@code "b"} is a symbolic link then is implementation
-	* dependent if {@code "a/b/../x"} would locate the same file as {@code "/a/x"}.
+	* <p> If the {@code other} parameter is an {@link #isAbsolute() absolute}
+	* path then this method trivially returns {@code other}. If {@code other}
+	* is an <i>empty path</i> then this method trivially returns this path.
+	* Otherwise this method considers this path to be a directory and resolves
+	* the given path against this path. In the simplest case, the given path
+	* does not have a {@link #getRoot root} component, in which case this method
+	* <em>joins</em> the given path to this path and returns a resulting path
+	* that {@link #endsWith ends} with the given path. Where the given path has
+	* a root component then resolution is highly implementation dependent and
+	* therefore unspecified.
 	*
 	* @param   other
-	*          the path to relativize against this path
+	*          the path to resolve against this path
 	*
-	* @return  the resulting relative path, or an empty path if both paths are
-	*          equal
+	* @return  the resulting path
 	*
-	* @throws  IllegalArgumentException
-	*          if {@code other} is not a {@code Path} that can be relativized
-	*          against this path
+	* @see #relativize
 	*/
-	@:overload public function relativize(other : Path) : Path;
+	@:overload public function resolve(other : java.nio.file.Path) : java.nio.file.Path;
 	
 	/**
 	* Returns the <em>real</em> path of an existing file.
@@ -269,7 +204,7 @@ package sun.nio.fs;
 	*          checkPropertyAccess} method is invoked to check access to the
 	*          system property {@code user.dir}
 	*/
-	@:overload public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : Path;
+	@:overload public function toRealPath(options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.Path;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -313,6 +248,66 @@ package sun.nio.fs;
 	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
 	
 	/**
+	* Constructs a relative path between this path and a given path.
+	*
+	* <p> Relativization is the inverse of {@link #resolve(Path) resolution}.
+	* This method attempts to construct a {@link #isAbsolute relative} path
+	* that when {@link #resolve(Path) resolved} against this path, yields a
+	* path that locates the same file as the given path. For example, on UNIX,
+	* if this path is {@code "/a/b"} and the given path is {@code "/a/b/c/d"}
+	* then the resulting relative path would be {@code "c/d"}. Where this
+	* path and the given path do not have a {@link #getRoot root} component,
+	* then a relative path can be constructed. A relative path cannot be
+	* constructed if only one of the paths have a root component. Where both
+	* paths have a root component then it is implementation dependent if a
+	* relative path can be constructed. If this path and the given path are
+	* {@link #equals equal} then an <i>empty path</i> is returned.
+	*
+	* <p> For any two {@link #normalize normalized} paths <i>p</i> and
+	* <i>q</i>, where <i>q</i> does not have a root component,
+	* <blockquote>
+	*   <i>p</i><tt>.relativize(</tt><i>p</i><tt>.resolve(</tt><i>q</i><tt>)).equals(</tt><i>q</i><tt>)</tt>
+	* </blockquote>
+	*
+	* <p> When symbolic links are supported, then whether the resulting path,
+	* when resolved against this path, yields a path that can be used to locate
+	* the {@link Files#isSameFile same} file as {@code other} is implementation
+	* dependent. For example, if this path is  {@code "/a/b"} and the given
+	* path is {@code "/a/x"} then the resulting relative path may be {@code
+	* "../x"}. If {@code "b"} is a symbolic link then is implementation
+	* dependent if {@code "a/b/../x"} would locate the same file as {@code "/a/x"}.
+	*
+	* @param   other
+	*          the path to relativize against this path
+	*
+	* @return  the resulting relative path, or an empty path if both paths are
+	*          equal
+	*
+	* @throws  IllegalArgumentException
+	*          if {@code other} is not a {@code Path} that can be relativized
+	*          against this path
+	*/
+	@:overload public function relativize(other : java.nio.file.Path) : java.nio.file.Path;
+	
+	/**
+	* Returns the number of name elements in the path.
+	*
+	* @return  the number of elements in the path, or {@code 0} if this path
+	*          only represents a root component
+	*/
+	@:overload public function getNameCount() : Int;
+	
+	/**
+	* Returns the name of the file or directory denoted by this path as a
+	* {@code Path} object. The file name is the <em>farthest</em> element from
+	* the root in the directory hierarchy.
+	*
+	* @return  a path representing the name of the file or directory, or
+	*          {@code null} if this path has zero elements
+	*/
+	@:overload public function getFileName() : java.nio.file.Path;
+	
+	/**
 	* Tests if this path ends with the given path.
 	*
 	* <p> If the given path has <em>N</em> elements, and no root component,
@@ -337,69 +332,28 @@ package sun.nio.fs;
 	* @return  {@code true} if this path ends with the given path; otherwise
 	*          {@code false}
 	*/
-	@:overload public function endsWith(other : Path) : Bool;
+	@:overload public function endsWith(other : java.nio.file.Path) : Bool;
 	
 	/**
-	* Returns the number of name elements in the path.
+	* Compares two abstract paths lexicographically. The ordering defined by
+	* this method is provider specific, and in the case of the default
+	* provider, platform specific. This method does not access the file system
+	* and neither file is required to exist.
 	*
-	* @return  the number of elements in the path, or {@code 0} if this path
-	*          only represents a root component
+	* <p> This method may not be used to compare paths that are associated
+	* with different file system providers.
+	*
+	* @param   other  the path compared to this path.
+	*
+	* @return  zero if the argument is {@link #equals equal} to this path, a
+	*          value less than zero if this path is lexicographically less than
+	*          the argument, or a value greater than zero if this path is
+	*          lexicographically greater than the argument
+	*
+	* @throws  ClassCastException
+	*          if the paths are associated with different providers
 	*/
-	@:overload public function getNameCount() : Int;
-	
-	/**
-	* Resolves the given path against this path's {@link #getParent parent}
-	* path. This is useful where a file name needs to be <i>replaced</i> with
-	* another file name. For example, suppose that the name separator is
-	* "{@code /}" and a path represents "{@code dir1/dir2/foo}", then invoking
-	* this method with the {@code Path} "{@code bar}" will result in the {@code
-	* Path} "{@code dir1/dir2/bar}". If this path does not have a parent path,
-	* or {@code other} is {@link #isAbsolute() absolute}, then this method
-	* returns {@code other}. If {@code other} is an empty path then this method
-	* returns this path's parent, or where this path doesn't have a parent, the
-	* empty path.
-	*
-	* @param   other
-	*          the path to resolve against this path's parent
-	*
-	* @return  the resulting path
-	*
-	* @see #resolve(Path)
-	*/
-	@:overload public function resolveSibling(other : Path) : Path;
-	
-	/**
-	* Returns the name of the file or directory denoted by this path as a
-	* {@code Path} object. The file name is the <em>farthest</em> element from
-	* the root in the directory hierarchy.
-	*
-	* @return  a path representing the name of the file or directory, or
-	*          {@code null} if this path has zero elements
-	*/
-	@:overload public function getFileName() : Path;
-	
-	/**
-	* Resolve the given path against this path.
-	*
-	* <p> If the {@code other} parameter is an {@link #isAbsolute() absolute}
-	* path then this method trivially returns {@code other}. If {@code other}
-	* is an <i>empty path</i> then this method trivially returns this path.
-	* Otherwise this method considers this path to be a directory and resolves
-	* the given path against this path. In the simplest case, the given path
-	* does not have a {@link #getRoot root} component, in which case this method
-	* <em>joins</em> the given path to this path and returns a resulting path
-	* that {@link #endsWith ends} with the given path. Where the given path has
-	* a root component then resolution is highly implementation dependent and
-	* therefore unspecified.
-	*
-	* @param   other
-	*          the path to resolve against this path
-	*
-	* @return  the resulting path
-	*
-	* @see #relativize
-	*/
-	@:overload public function resolve(other : Path) : Path;
+	@:overload public function compareTo(other : java.nio.file.Path) : Int;
 	
 	/**
 	* Returns the root component of this path as a {@code Path} object,
@@ -408,7 +362,7 @@ package sun.nio.fs;
 	* @return  a path representing the root component of this path,
 	*          or {@code null}
 	*/
-	@:overload public function getRoot() : Path;
+	@:overload public function getRoot() : java.nio.file.Path;
 	
 	/**
 	* Returns the <em>parent path</em>, or {@code null} if this path does not
@@ -433,7 +387,32 @@ package sun.nio.fs;
 	*
 	* @return  a path representing the path's parent
 	*/
-	@:overload public function getParent() : Path;
+	@:overload public function getParent() : java.nio.file.Path;
+	
+	/**
+	* Tests if this path starts with the given path.
+	*
+	* <p> This path <em>starts</em> with the given path if this path's root
+	* component <em>starts</em> with the root component of the given path,
+	* and this path starts with the same name elements as the given path.
+	* If the given path has more name elements than this path then {@code false}
+	* is returned.
+	*
+	* <p> Whether or not the root component of this path starts with the root
+	* component of the given path is file system specific. If this path does
+	* not have a root component and the given path has a root component then
+	* this path does not start with the given path.
+	*
+	* <p> If the given path is associated with a different {@code FileSystem}
+	* to this path then {@code false} is returned.
+	*
+	* @param   other
+	*          the given path
+	*
+	* @return  {@code true} if this path starts with the given path; otherwise
+	*          {@code false}
+	*/
+	@:overload public function startsWith(other : java.nio.file.Path) : Bool;
 	
 	/**
 	* Registers the file located by this path with a watch service.
@@ -569,7 +548,7 @@ package sun.nio.fs;
 	*          checkPropertyAccess} method is invoked to check access to the
 	*          system property {@code user.dir}
 	*/
-	@:overload public function toAbsolutePath() : Path;
+	@:overload public function toAbsolutePath() : java.nio.file.Path;
 	
 	
 }

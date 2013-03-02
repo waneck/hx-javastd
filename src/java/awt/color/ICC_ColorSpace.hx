@@ -69,7 +69,7 @@ extern class ICC_ColorSpace extends java.awt.color.ColorSpace
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	* at least the number of components in this ColorSpace.
 	*/
-	@:overload override public function toRGB(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function toRGB(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Transforms a color value assumed to be in the default CS_sRGB
@@ -92,7 +92,7 @@ extern class ICC_ColorSpace extends java.awt.color.ColorSpace
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	* at least 3.
 	*/
-	@:overload override public function fromRGB(rgbvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function fromRGB(rgbvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Transforms a color value assumed to be in this ColorSpace
@@ -197,7 +197,7 @@ extern class ICC_ColorSpace extends java.awt.color.ColorSpace
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	* at least the number of components in this ColorSpace.
 	*/
-	@:overload override public function toCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function toCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Transforms a color value assumed to be in the CS_CIEXYZ conversion
@@ -304,7 +304,7 @@ extern class ICC_ColorSpace extends java.awt.color.ColorSpace
 	* @throws ArrayIndexOutOfBoundsException if array length is not
 	* at least 3.
 	*/
-	@:overload override public function fromCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function fromCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	/**
 	* Returns the minimum normalized color component value for the
@@ -322,7 +322,7 @@ extern class ICC_ColorSpace extends java.awt.color.ColorSpace
 	*         greater than numComponents - 1.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getMinValue(component : Int) : Single;
+	@:require(java4) @:overload public function getMinValue(component : Int) : Single;
 	
 	/**
 	* Returns the maximum normalized color component value for the
@@ -341,7 +341,7 @@ extern class ICC_ColorSpace extends java.awt.color.ColorSpace
 	*         greater than numComponents - 1.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getMaxValue(component : Int) : Single;
+	@:require(java4) @:overload public function getMaxValue(component : Int) : Single;
 	
 	
 }

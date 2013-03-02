@@ -46,7 +46,7 @@ extern class BasicSplitPaneUI extends javax.swing.plaf.SplitPaneUI
 	/**
 	* LayoutManager that is created and placed into the split pane.
 	*/
-	private var layoutManager : BasicSplitPaneUI_BasicHorizontalLayoutManager;
+	private var layoutManager : javax.swing.plaf.basic.BasicSplitPaneUI.BasicSplitPaneUI_BasicHorizontalLayoutManager;
 	
 	/**
 	* Instance of the divider for this JSplitPane.
@@ -748,7 +748,7 @@ extern class BasicSplitPaneUI extends javax.swing.plaf.SplitPaneUI
 * VERTICAL_SPLIT.
 * <p>
 */
-@:native('javax$swing$plaf$basic$BasicSplitPaneUI$BasicVerticalLayoutManager') extern class BasicSplitPaneUI_BasicVerticalLayoutManager extends BasicSplitPaneUI_BasicHorizontalLayoutManager
+@:native('javax$swing$plaf$basic$BasicSplitPaneUI$BasicVerticalLayoutManager') extern class BasicSplitPaneUI_BasicVerticalLayoutManager extends javax.swing.plaf.basic.BasicSplitPaneUI.BasicSplitPaneUI_BasicHorizontalLayoutManager
 {
 	@:overload public function new() : Void;
 	

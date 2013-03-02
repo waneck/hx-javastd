@@ -23,7 +23,7 @@ extern class XSNamedMapImpl extends java.util.AbstractMap<Dynamic, Dynamic> impl
 	/**
 	* An immutable empty map.
 	*/
-	public static var EMPTY_MAP(default, null) : XSNamedMapImpl;
+	public static var EMPTY_MAP(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.XSNamedMapImpl;
 	
 	/**
 	* Construct an XSNamedMap implementation for one namespace
@@ -88,13 +88,13 @@ extern class XSNamedMapImpl extends java.util.AbstractMap<Dynamic, Dynamic> impl
 	/*
 	* java.util.Map methods
 	*/
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload public function get(key : Dynamic) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload @:synchronized override public function entrySet() : java.util.Set<Dynamic>;
+	@:overload @:synchronized public function entrySet() : java.util.Set<Dynamic>;
 	
 	
 }

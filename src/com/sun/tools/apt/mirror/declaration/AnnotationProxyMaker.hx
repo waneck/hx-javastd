@@ -61,7 +61,7 @@ package com.sun.tools.apt.mirror.declaration;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override private function generateException() : java.lang.RuntimeException;
+	@:overload private function generateException() : java.lang.RuntimeException;
 	
 	
 }
@@ -78,7 +78,7 @@ package com.sun.tools.apt.mirror.declaration;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override private function generateException() : java.lang.RuntimeException;
+	@:overload private function generateException() : java.lang.RuntimeException;
 	
 	
 }

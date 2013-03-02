@@ -48,9 +48,9 @@ extern class WindowsFileChooserUI extends javax.swing.plaf.basic.BasicFileChoose
 	
 	@:overload override private function installListeners(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function getActionMap() : javax.swing.ActionMap;
+	@:overload private function getActionMap() : javax.swing.ActionMap;
 	
-	@:overload override private function createActionMap() : javax.swing.ActionMap;
+	@:overload private function createActionMap() : javax.swing.ActionMap;
 	
 	@:overload private function createList(fc : javax.swing.JFileChooser) : javax.swing.JPanel;
 	
@@ -129,13 +129,13 @@ extern class WindowsFileChooserUI extends javax.swing.plaf.basic.BasicFileChoose
 	
 	@:overload override public function setDirectoryName(dirname : String) : Void;
 	
-	@:overload private function createDirectoryComboBoxRenderer(fc : javax.swing.JFileChooser) : WindowsFileChooserUI_DirectoryComboBoxRenderer;
+	@:overload private function createDirectoryComboBoxRenderer(fc : javax.swing.JFileChooser) : com.sun.java.swing.plaf.windows.WindowsFileChooserUI.WindowsFileChooserUI_DirectoryComboBoxRenderer;
 	
-	@:overload private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : WindowsFileChooserUI_DirectoryComboBoxModel;
+	@:overload private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : com.sun.java.swing.plaf.windows.WindowsFileChooserUI.WindowsFileChooserUI_DirectoryComboBoxModel;
 	
-	@:overload private function createFilterComboBoxRenderer() : WindowsFileChooserUI_FilterComboBoxRenderer;
+	@:overload private function createFilterComboBoxRenderer() : com.sun.java.swing.plaf.windows.WindowsFileChooserUI.WindowsFileChooserUI_FilterComboBoxRenderer;
 	
-	@:overload private function createFilterComboBoxModel() : WindowsFileChooserUI_FilterComboBoxModel;
+	@:overload private function createFilterComboBoxModel() : com.sun.java.swing.plaf.windows.WindowsFileChooserUI.WindowsFileChooserUI_FilterComboBoxModel;
 	
 	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	

@@ -32,7 +32,7 @@ extern class JAXBType extends com.sun.tools.internal.ws.processor.model.Abstract
 	* @author
 	*     Vivek Pandey
 	*/
-	@:overload public function new(jaxbType : JAXBType) : Void;
+	@:overload public function new(jaxbType : com.sun.tools.internal.ws.processor.model.jaxb.JAXBType) : Void;
 	
 	@:overload public function new() : Void;
 	

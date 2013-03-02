@@ -469,7 +469,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	* @return <tt>true</tt> if owned
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function owns(condition : AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
+	@:overload @:final public function owns(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
 	
 	/**
 	* Queries whether any threads are waiting on the given condition
@@ -487,7 +487,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         not associated with this synchronizer
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function hasWaiters(condition : AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
+	@:overload @:final public function hasWaiters(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Bool;
 	
 	/**
 	* Returns an estimate of the number of threads waiting on the
@@ -505,7 +505,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         not associated with this synchronizer
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function getWaitQueueLength(condition : AbstractQueuedLongSynchronizer_ConditionObject) : Int;
+	@:overload @:final public function getWaitQueueLength(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : Int;
 	
 	/**
 	* Returns a collection containing those threads that may be
@@ -523,7 +523,7 @@ extern class AbstractQueuedLongSynchronizer extends java.util.concurrent.locks.A
 	*         not associated with this synchronizer
 	* @throws NullPointerException if the condition is null
 	*/
-	@:overload @:final public function getWaitingThreads(condition : AbstractQueuedLongSynchronizer_ConditionObject) : java.util.Collection<java.lang.Thread>;
+	@:overload @:final public function getWaitingThreads(condition : java.util.concurrent.locks.AbstractQueuedLongSynchronizer.AbstractQueuedLongSynchronizer_ConditionObject) : java.util.Collection<java.lang.Thread>;
 	
 	
 }

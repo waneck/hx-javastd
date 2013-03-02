@@ -116,7 +116,7 @@ extern class SocketOrChannelAcceptorImpl extends com.sun.corba.se.impl.transport
 	
 	@:overload private function toStringName() : String;
 	
-	@:overload override private function dprint(msg : String) : Void;
+	@:overload private function dprint(msg : String) : Void;
 	
 	@:overload private function dprint(msg : String, t : java.lang.Throwable) : Void;
 	

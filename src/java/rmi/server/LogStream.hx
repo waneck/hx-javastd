@@ -42,7 +42,7 @@ package java.rmi.server;
 	* @since JDK1.1
 	* @deprecated no replacement
 	*/
-	@:require(java1) @:overload public static function log(name : String) : LogStream;
+	@:require(java1) @:overload public static function log(name : String) : java.rmi.server.LogStream;
 	
 	/**
 	* Return the current default stream for new logs.

@@ -26,10 +26,10 @@ package com.sun.tools.javac.parser;
 extern class ScannerFactory
 {
 	/** The context key for the scanner factory. */
-	public static var scannerFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<ScannerFactory>;
+	public static var scannerFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.parser.ScannerFactory>;
 	
 	/** Get the Factory instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : ScannerFactory;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.parser.ScannerFactory;
 	
 	/** Create a new scanner factory. */
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;

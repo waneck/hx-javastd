@@ -27,9 +27,9 @@ package com.sun.java.swing.plaf.windows;
 {
 	@:overload override public function update(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function hide() : Void;
+	@:overload public function hide() : Void;
 	
-	@:overload override public function show() : Void;
+	@:overload public function show() : Void;
 	
 	
 }

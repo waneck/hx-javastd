@@ -42,7 +42,7 @@ extern class FormatData_uk_UA extends java.util.ListResourceBundle
 	/**
 	* Overrides ListResourceBundle
 	*/
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

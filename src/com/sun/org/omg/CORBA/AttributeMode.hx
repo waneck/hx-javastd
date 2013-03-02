@@ -33,15 +33,15 @@ extern class AttributeMode implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _ATTR_NORMAL(default, null) : Int;
 	
-	public static var ATTR_NORMAL(default, null) : AttributeMode;
+	public static var ATTR_NORMAL(default, null) : com.sun.org.omg.CORBA.AttributeMode;
 	
 	public static var _ATTR_READONLY(default, null) : Int;
 	
-	public static var ATTR_READONLY(default, null) : AttributeMode;
+	public static var ATTR_READONLY(default, null) : com.sun.org.omg.CORBA.AttributeMode;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : AttributeMode;
+	@:overload public static function from_int(value : Int) : com.sun.org.omg.CORBA.AttributeMode;
 	
 	@:overload private function new(value : Int) : Void;
 	

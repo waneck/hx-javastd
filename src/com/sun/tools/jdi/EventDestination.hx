@@ -33,7 +33,7 @@ extern enum EventDestination
 
 extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> implements com.sun.jdi.event.EventSet
 {
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	@:overload public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
@@ -41,22 +41,22 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	@:overload public function resume() : Void;
 	
-	@:overload override public function iterator() : java.util.Iterator<com.sun.jdi.event.Event>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.jdi.event.Event>;
 	
 	@:overload public function eventIterator() : com.sun.jdi.event.EventIterator;
 	
 	/* below make this unmodifiable */
 	@:overload public function add(o : com.sun.jdi.event.Event) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function addAll(coll : java.util.Collection<com.sun.jdi.event.Event>) : Bool;
+	@:overload public function addAll(coll : java.util.Collection<com.sun.jdi.event.Event>) : Bool;
 	
-	@:overload override public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function removeAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function retainAll(coll : java.util.Collection<Dynamic>) : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	
 }
@@ -94,7 +94,7 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$ThreadedEventImpl') @:internal extern class EventSetImpl_ThreadedEventImpl extends EventSetImpl_EventImpl
+@:native('com$sun$tools$jdi$EventSetImpl$ThreadedEventImpl') @:internal extern class EventSetImpl_ThreadedEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_EventImpl
 {
 	@:overload public function thread() : com.sun.jdi.ThreadReference;
 	
@@ -102,7 +102,7 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$LocatableEventImpl') @:internal extern class EventSetImpl_LocatableEventImpl extends EventSetImpl_ThreadedEventImpl implements com.sun.jdi.Locatable
+@:native('com$sun$tools$jdi$EventSetImpl$LocatableEventImpl') @:internal extern class EventSetImpl_LocatableEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_ThreadedEventImpl implements com.sun.jdi.Locatable
 {
 	@:overload public function location() : com.sun.jdi.Location;
 	
@@ -115,37 +115,37 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$BreakpointEventImpl') @:internal extern class EventSetImpl_BreakpointEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.BreakpointEvent
+@:native('com$sun$tools$jdi$EventSetImpl$BreakpointEventImpl') @:internal extern class EventSetImpl_BreakpointEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.BreakpointEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$StepEventImpl') @:internal extern class EventSetImpl_StepEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.StepEvent
+@:native('com$sun$tools$jdi$EventSetImpl$StepEventImpl') @:internal extern class EventSetImpl_StepEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.StepEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$MethodEntryEventImpl') @:internal extern class EventSetImpl_MethodEntryEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MethodEntryEvent
+@:native('com$sun$tools$jdi$EventSetImpl$MethodEntryEventImpl') @:internal extern class EventSetImpl_MethodEntryEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MethodEntryEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$MethodExitEventImpl') @:internal extern class EventSetImpl_MethodExitEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MethodExitEvent
+@:native('com$sun$tools$jdi$EventSetImpl$MethodExitEventImpl') @:internal extern class EventSetImpl_MethodExitEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MethodExitEvent
 {
 	@:overload public function returnValue() : com.sun.jdi.Value;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$MonitorContendedEnterEventImpl') @:internal extern class EventSetImpl_MonitorContendedEnterEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorContendedEnterEvent
+@:native('com$sun$tools$jdi$EventSetImpl$MonitorContendedEnterEventImpl') @:internal extern class EventSetImpl_MonitorContendedEnterEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorContendedEnterEvent
 {
 	@:overload public function monitor() : com.sun.jdi.ObjectReference;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$MonitorContendedEnteredEventImpl') @:internal extern class EventSetImpl_MonitorContendedEnteredEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorContendedEnteredEvent
+@:native('com$sun$tools$jdi$EventSetImpl$MonitorContendedEnteredEventImpl') @:internal extern class EventSetImpl_MonitorContendedEnteredEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorContendedEnteredEvent
 {
 	@:overload public function monitor() : com.sun.jdi.ObjectReference;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$MonitorWaitEventImpl') @:internal extern class EventSetImpl_MonitorWaitEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorWaitEvent
+@:native('com$sun$tools$jdi$EventSetImpl$MonitorWaitEventImpl') @:internal extern class EventSetImpl_MonitorWaitEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorWaitEvent
 {
 	@:overload public function monitor() : com.sun.jdi.ObjectReference;
 	
@@ -153,7 +153,7 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$MonitorWaitedEventImpl') @:internal extern class EventSetImpl_MonitorWaitedEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorWaitedEvent
+@:native('com$sun$tools$jdi$EventSetImpl$MonitorWaitedEventImpl') @:internal extern class EventSetImpl_MonitorWaitedEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.MonitorWaitedEvent
 {
 	@:overload public function monitor() : com.sun.jdi.ObjectReference;
 	
@@ -161,13 +161,13 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$ClassPrepareEventImpl') @:internal extern class EventSetImpl_ClassPrepareEventImpl extends EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.ClassPrepareEvent
+@:native('com$sun$tools$jdi$EventSetImpl$ClassPrepareEventImpl') @:internal extern class EventSetImpl_ClassPrepareEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.ClassPrepareEvent
 {
 	@:overload public function referenceType() : com.sun.jdi.ReferenceType;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$ClassUnloadEventImpl') @:internal extern class EventSetImpl_ClassUnloadEventImpl extends EventSetImpl_EventImpl implements com.sun.jdi.event.ClassUnloadEvent
+@:native('com$sun$tools$jdi$EventSetImpl$ClassUnloadEventImpl') @:internal extern class EventSetImpl_ClassUnloadEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_EventImpl implements com.sun.jdi.event.ClassUnloadEvent
 {
 	@:overload public function className() : String;
 	
@@ -175,7 +175,7 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$ExceptionEventImpl') @:internal extern class EventSetImpl_ExceptionEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.ExceptionEvent
+@:native('com$sun$tools$jdi$EventSetImpl$ExceptionEventImpl') @:internal extern class EventSetImpl_ExceptionEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.ExceptionEvent
 {
 	@:overload public function exception() : com.sun.jdi.ObjectReference;
 	
@@ -183,27 +183,27 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$ThreadDeathEventImpl') @:internal extern class EventSetImpl_ThreadDeathEventImpl extends EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.ThreadDeathEvent
+@:native('com$sun$tools$jdi$EventSetImpl$ThreadDeathEventImpl') @:internal extern class EventSetImpl_ThreadDeathEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.ThreadDeathEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$ThreadStartEventImpl') @:internal extern class EventSetImpl_ThreadStartEventImpl extends EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.ThreadStartEvent
+@:native('com$sun$tools$jdi$EventSetImpl$ThreadStartEventImpl') @:internal extern class EventSetImpl_ThreadStartEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.ThreadStartEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$VMStartEventImpl') @:internal extern class EventSetImpl_VMStartEventImpl extends EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.VMStartEvent
+@:native('com$sun$tools$jdi$EventSetImpl$VMStartEventImpl') @:internal extern class EventSetImpl_VMStartEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_ThreadedEventImpl implements com.sun.jdi.event.VMStartEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$VMDeathEventImpl') @:internal extern class EventSetImpl_VMDeathEventImpl extends EventSetImpl_EventImpl implements com.sun.jdi.event.VMDeathEvent
+@:native('com$sun$tools$jdi$EventSetImpl$VMDeathEventImpl') @:internal extern class EventSetImpl_VMDeathEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_EventImpl implements com.sun.jdi.event.VMDeathEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$VMDisconnectEventImpl') @:internal extern class EventSetImpl_VMDisconnectEventImpl extends EventSetImpl_EventImpl implements com.sun.jdi.event.VMDisconnectEvent
+@:native('com$sun$tools$jdi$EventSetImpl$VMDisconnectEventImpl') @:internal extern class EventSetImpl_VMDisconnectEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_EventImpl implements com.sun.jdi.event.VMDisconnectEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$WatchpointEventImpl') @:internal extern class EventSetImpl_WatchpointEventImpl extends EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.WatchpointEvent
+@:native('com$sun$tools$jdi$EventSetImpl$WatchpointEventImpl') @:internal extern class EventSetImpl_WatchpointEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_LocatableEventImpl implements com.sun.jdi.event.WatchpointEvent
 {
 	@:overload public function field() : com.sun.jdi.Field;
 	
@@ -250,11 +250,11 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$AccessWatchpointEventImpl') @:internal extern class EventSetImpl_AccessWatchpointEventImpl extends EventSetImpl_WatchpointEventImpl implements com.sun.jdi.event.AccessWatchpointEvent
+@:native('com$sun$tools$jdi$EventSetImpl$AccessWatchpointEventImpl') @:internal extern class EventSetImpl_AccessWatchpointEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_WatchpointEventImpl implements com.sun.jdi.event.AccessWatchpointEvent
 {
 	
 }
-@:native('com$sun$tools$jdi$EventSetImpl$ModificationWatchpointEventImpl') @:internal extern class EventSetImpl_ModificationWatchpointEventImpl extends EventSetImpl_WatchpointEventImpl implements com.sun.jdi.event.ModificationWatchpointEvent
+@:native('com$sun$tools$jdi$EventSetImpl$ModificationWatchpointEventImpl') @:internal extern class EventSetImpl_ModificationWatchpointEventImpl extends com.sun.tools.jdi.EventDestination.EventSetImpl_WatchpointEventImpl implements com.sun.jdi.event.ModificationWatchpointEvent
 {
 	@:overload public function valueToBe() : com.sun.jdi.Value;
 	

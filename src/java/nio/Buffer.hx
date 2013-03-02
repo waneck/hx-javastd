@@ -196,7 +196,7 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the preconditions on <tt>newPosition</tt> do not hold
 	*/
-	@:overload @:final public function position(newPosition : Int) : Buffer;
+	@:overload @:final public function position(newPosition : Int) : java.nio.Buffer;
 	
 	/**
 	* Returns this buffer's limit. </p>
@@ -219,14 +219,14 @@ package java.nio;
 	* @throws  IllegalArgumentException
 	*          If the preconditions on <tt>newLimit</tt> do not hold
 	*/
-	@:overload @:final public function limit(newLimit : Int) : Buffer;
+	@:overload @:final public function limit(newLimit : Int) : java.nio.Buffer;
 	
 	/**
 	* Sets this buffer's mark at its position. </p>
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function mark() : Buffer;
+	@:overload @:final public function mark() : java.nio.Buffer;
 	
 	/**
 	* Resets this buffer's position to the previously-marked position.
@@ -239,7 +239,7 @@ package java.nio;
 	* @throws  InvalidMarkException
 	*          If the mark has not been set
 	*/
-	@:overload @:final public function reset() : Buffer;
+	@:overload @:final public function reset() : java.nio.Buffer;
 	
 	/**
 	* Clears this buffer.  The position is set to zero, the limit is set to
@@ -258,7 +258,7 @@ package java.nio;
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function clear() : Buffer;
+	@:overload @:final public function clear() : java.nio.Buffer;
 	
 	/**
 	* Flips this buffer.  The limit is set to the current position and then
@@ -281,7 +281,7 @@ package java.nio;
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function flip() : Buffer;
+	@:overload @:final public function flip() : java.nio.Buffer;
 	
 	/**
 	* Rewinds this buffer.  The position is set to zero and the mark is
@@ -298,7 +298,7 @@ package java.nio;
 	*
 	* @return  This buffer
 	*/
-	@:overload @:final public function rewind() : Buffer;
+	@:overload @:final public function rewind() : java.nio.Buffer;
 	
 	/**
 	* Returns the number of elements between the current position and the

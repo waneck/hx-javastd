@@ -63,13 +63,13 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	
 	@:overload public static function checkValidDataSourceDispatch(binding : com.sun.xml.internal.ws.api.WSBinding, mode : javax.xml.ws.Service.Service_Mode) : Void;
 	
-	@:overload @:final override private function getPortName() : javax.xml.namespace.QName;
+	@:overload @:final private function getPortName() : javax.xml.namespace.QName;
 	
 	@:overload private function resolveURI(endpointURI : java.net.URI, pathInfo : String, queryString : String) : String;
 	
 	@:overload private function setOutboundAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
-	@:overload override public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
+	@:overload public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
 	
 	@:overload public static function createSourceDispatch(port : javax.xml.namespace.QName, mode : javax.xml.ws.Service.Service_Mode, owner : com.sun.xml.internal.ws.client.WSServiceDelegate, pipe : com.sun.xml.internal.ws.api.pipe.Tube, binding : com.sun.xml.internal.ws.binding.BindingImpl, epr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference) : javax.xml.ws.Dispatch<javax.xml.transform.Source>;
 	
@@ -93,7 +93,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload override public function getEndpointReference() : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload public function getEndpointReference() : javax.xml.ws.EndpointReference;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -114,7 +114,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload override public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
+	@:require(java1) @:overload public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
 	
 	
 }

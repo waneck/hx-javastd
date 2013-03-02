@@ -27,17 +27,17 @@ extern class PrinterGraphicsDevice extends java.awt.GraphicsDevice
 {
 	@:overload private function new(conf : java.awt.GraphicsConfiguration, id : String) : Void;
 	
-	@:overload override public function getType() : Int;
+	@:overload public function getType() : Int;
 	
-	@:overload override public function getIDstring() : String;
+	@:overload public function getIDstring() : String;
 	
-	@:overload override public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
+	@:overload public function getConfigurations() : java.NativeArray<java.awt.GraphicsConfiguration>;
 	
-	@:overload override public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
+	@:overload public function getDefaultConfiguration() : java.awt.GraphicsConfiguration;
 	
-	@:overload override public function setFullScreenWindow(w : java.awt.Window) : Void;
+	@:overload public function setFullScreenWindow(w : java.awt.Window) : Void;
 	
-	@:overload override public function getFullScreenWindow() : java.awt.Window;
+	@:overload public function getFullScreenWindow() : java.awt.Window;
 	
 	
 }

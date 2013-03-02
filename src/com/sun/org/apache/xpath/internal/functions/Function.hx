@@ -79,7 +79,7 @@ extern class Function extends com.sun.org.apache.xpath.internal.Expression
 	/**
 	* @see Expression#deepEquals(Expression)
 	*/
-	@:overload public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
+	@:overload override public function deepEquals(expr : com.sun.org.apache.xpath.internal.Expression) : Bool;
 	
 	/**
 	* This function is currently only being used by Position()

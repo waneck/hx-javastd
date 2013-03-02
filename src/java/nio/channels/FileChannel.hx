@@ -147,7 +147,7 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	*
 	* @since   1.7
 	*/
-	@:require(java7) @:native('open') @:overload public static function _open(path : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : FileChannel;
+	@:require(java7) @:overload public static function open(path : java.nio.file.Path, options : java.util.Set<java.nio.file.OpenOption>, attrs : java.NativeArray<java.nio.file.attribute.FileAttribute<Dynamic>>) : java.nio.channels.FileChannel;
 	
 	/**
 	* Opens or creates a file, returning a file channel to access the file.
@@ -186,7 +186,7 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	*
 	* @since   1.7
 	*/
-	@:require(java7) @:native('open') @:overload public static function _open(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : FileChannel;
+	@:require(java7) @:overload public static function open(path : java.nio.file.Path, options : java.NativeArray<java.nio.file.OpenOption>) : java.nio.channels.FileChannel;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffer.
@@ -300,7 +300,7 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function position(newPosition : haxe.Int64) : FileChannel;
+	@:overload @:abstract public function position(newPosition : haxe.Int64) : java.nio.channels.FileChannel;
 	
 	/**
 	* Returns the current size of this channel's file.  </p>
@@ -343,7 +343,7 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:abstract public function truncate(size : haxe.Int64) : FileChannel;
+	@:overload @:abstract public function truncate(size : haxe.Int64) : java.nio.channels.FileChannel;
 	
 	/**
 	* Forces any updates to this channel's file to be written to the storage
@@ -703,7 +703,7 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	* @see java.nio.channels.FileChannel.MapMode
 	* @see java.nio.MappedByteBuffer
 	*/
-	@:overload @:abstract public function map(mode : FileChannel_MapMode, position : haxe.Int64, size : haxe.Int64) : java.nio.MappedByteBuffer;
+	@:overload @:abstract public function map(mode : java.nio.channels.FileChannel.FileChannel_MapMode, position : haxe.Int64, size : haxe.Int64) : java.nio.MappedByteBuffer;
 	
 	/**
 	* Acquires a lock on the given region of this channel's file.
@@ -975,17 +975,17 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	/**
 	* Mode for a read-only mapping.
 	*/
-	public static var READ_ONLY(default, null) : FileChannel_MapMode;
+	public static var READ_ONLY(default, null) : java.nio.channels.FileChannel.FileChannel_MapMode;
 	
 	/**
 	* Mode for a read/write mapping.
 	*/
-	public static var READ_WRITE(default, null) : FileChannel_MapMode;
+	public static var READ_WRITE(default, null) : java.nio.channels.FileChannel.FileChannel_MapMode;
 	
 	/**
 	* Mode for a private (copy-on-write) mapping.
 	*/
-	public static var PRIVATE(default, null) : FileChannel_MapMode;
+	public static var PRIVATE(default, null) : java.nio.channels.FileChannel.FileChannel_MapMode;
 	
 	/**
 	* Returns a string describing this file-mapping mode.

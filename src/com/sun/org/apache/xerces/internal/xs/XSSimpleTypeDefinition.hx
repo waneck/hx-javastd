@@ -38,7 +38,7 @@ extern interface XSSimpleTypeDefinition extends com.sun.org.apache.xerces.intern
 	* built-in primitive datatype definition or the simple ur-type
 	* definition) is available, otherwise <code>null</code>.
 	*/
-	@:overload public function getPrimitiveType() : XSSimpleTypeDefinition;
+	@:overload public function getPrimitiveType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* Returns the closest built-in type category this type represents or
@@ -52,7 +52,7 @@ extern interface XSSimpleTypeDefinition extends com.sun.org.apache.xerces.intern
 	* union simple type definition) is available, otherwise
 	* <code>null</code>.
 	*/
-	@:overload public function getItemType() : XSSimpleTypeDefinition;
+	@:overload public function getItemType() : com.sun.org.apache.xerces.internal.xs.XSSimpleTypeDefinition;
 	
 	/**
 	* If variety is <code>union</code> the list of member type definitions (a

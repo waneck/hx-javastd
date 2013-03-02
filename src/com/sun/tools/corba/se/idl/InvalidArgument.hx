@@ -44,7 +44,7 @@ extern class InvalidArgument extends java.lang.Exception
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

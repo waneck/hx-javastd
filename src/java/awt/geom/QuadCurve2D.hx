@@ -168,7 +168,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* @param c the specified <code>QuadCurve2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurve(c : QuadCurve2D) : Void;
+	@:require(java2) @:overload public function setCurve(c : java.awt.geom.QuadCurve2D) : Void;
 	
 	/**
 	* Returns the square of the flatness, or maximum distance of a
@@ -264,7 +264,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	* right or second half of the subdivided curve
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function subdivide(left : QuadCurve2D, right : QuadCurve2D) : Void;
+	@:require(java2) @:overload public function subdivide(left : java.awt.geom.QuadCurve2D, right : java.awt.geom.QuadCurve2D) : Void;
 	
 	/**
 	* Subdivides the quadratic curve specified by the <code>src</code>
@@ -280,7 +280,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 	*          right or second half of the subdivided curve
 	* @since 1.2
 	*/
-	@:require(java2) @:native('subdivide') @:overload public static function _subdivide(src : QuadCurve2D, left : QuadCurve2D, right : QuadCurve2D) : Void;
+	@:require(java2) @:native('subdivide') @:overload public static function _subdivide(src : java.awt.geom.QuadCurve2D, left : java.awt.geom.QuadCurve2D, right : java.awt.geom.QuadCurve2D) : Void;
 	
 	/**
 	* Subdivides the quadratic curve specified by the coordinates
@@ -495,7 +495,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 *
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$QuadCurve2D$Float') extern class QuadCurve2D_Float extends QuadCurve2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$QuadCurve2D$Float') extern class QuadCurve2D_Float extends java.awt.geom.QuadCurve2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the start point of the quadratic curve
@@ -654,7 +654,7 @@ extern class QuadCurve2D implements java.awt.Shape implements java.lang.Cloneabl
 *
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$QuadCurve2D$Double') extern class QuadCurve2D_Double extends QuadCurve2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$QuadCurve2D$Double') extern class QuadCurve2D_Double extends java.awt.geom.QuadCurve2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the start point of the quadratic curve

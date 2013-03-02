@@ -30,7 +30,7 @@ package javax.swing.plaf.synth;
 	*
 	* @author Scott Violet
 	*/
-	@:overload override public function getDefault(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Dynamic;
+	@:overload public function getDefault(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Dynamic;
 	
 	
 }

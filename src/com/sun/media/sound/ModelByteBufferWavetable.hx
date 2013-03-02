@@ -78,21 +78,21 @@ extern class ModelByteBufferWavetable implements com.sun.media.sound.ModelWaveta
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload public function markSupported() : Bool;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
-	@:overload @:synchronized override public function mark(readlimit : Int) : Void;
+	@:overload @:synchronized public function mark(readlimit : Int) : Void;
 	
-	@:overload @:synchronized override public function reset() : Void;
+	@:overload @:synchronized public function reset() : Void;
 	
 	
 }

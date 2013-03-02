@@ -282,7 +282,7 @@ package java.util.concurrent;
 	
 }
 /** Dual stack */
-@:native('java$util$concurrent$SynchronousQueue$TransferStack') @:internal extern class SynchronousQueue_TransferStack extends SynchronousQueue_Transferer
+@:native('java$util$concurrent$SynchronousQueue$TransferStack') @:internal extern class SynchronousQueue_TransferStack extends java.util.concurrent.SynchronousQueue.SynchronousQueue_Transferer
 {
 	
 }
@@ -292,7 +292,7 @@ package java.util.concurrent;
 	
 }
 /** Dual Queue */
-@:native('java$util$concurrent$SynchronousQueue$TransferQueue') @:internal extern class SynchronousQueue_TransferQueue extends SynchronousQueue_Transferer
+@:native('java$util$concurrent$SynchronousQueue$TransferQueue') @:internal extern class SynchronousQueue_TransferQueue extends java.util.concurrent.SynchronousQueue.SynchronousQueue_Transferer
 {
 	
 }
@@ -312,11 +312,11 @@ package java.util.concurrent;
 {
 	
 }
-@:native('java$util$concurrent$SynchronousQueue$LifoWaitQueue') @:internal extern class SynchronousQueue_LifoWaitQueue extends SynchronousQueue_WaitQueue
+@:native('java$util$concurrent$SynchronousQueue$LifoWaitQueue') @:internal extern class SynchronousQueue_LifoWaitQueue extends java.util.concurrent.SynchronousQueue.SynchronousQueue_WaitQueue
 {
 	
 }
-@:native('java$util$concurrent$SynchronousQueue$FifoWaitQueue') @:internal extern class SynchronousQueue_FifoWaitQueue extends SynchronousQueue_WaitQueue
+@:native('java$util$concurrent$SynchronousQueue$FifoWaitQueue') @:internal extern class SynchronousQueue_FifoWaitQueue extends java.util.concurrent.SynchronousQueue.SynchronousQueue_WaitQueue
 {
 	
 }

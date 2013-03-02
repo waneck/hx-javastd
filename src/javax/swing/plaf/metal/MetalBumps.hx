@@ -35,7 +35,7 @@ package javax.swing.plaf.metal;
 	
 	private var backColor : java.awt.Color;
 	
-	private var buffer : BumpBuffer;
+	private var buffer : javax.swing.plaf.metal.MetalBumps.BumpBuffer;
 	
 	/**
 	* Creates MetalBumps of the specified size with the specified colors.

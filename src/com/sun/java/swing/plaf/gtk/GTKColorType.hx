@@ -38,7 +38,7 @@ extern class GTKColorType extends javax.swing.plaf.synth.ColorType
 	
 	public static var WHITE(default, null) : javax.swing.plaf.synth.ColorType;
 	
-	@:native('MAX_COUNT') public static var _MAX_COUNT(default, null) : Int;
+	public static var MAX_COUNT(default, null) : Int;
 	
 	@:overload private function new(name : String) : Void;
 	

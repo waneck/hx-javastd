@@ -35,7 +35,7 @@ extern class WildcardTypeImpl extends sun.reflect.generics.reflectiveObjects.Laz
 	* objects that represent the bounds of this wildcard type
 	* @return a wild card type with the requested bounds and factory
 	*/
-	@:overload public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : WildcardTypeImpl;
+	@:overload public static function make(ubs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, lbs : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.reflectiveObjects.WildcardTypeImpl;
 	
 	/**
 	* Returns an array of <tt>Type</tt> objects representing the  upper

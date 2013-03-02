@@ -36,7 +36,7 @@ extern class DOMNormalizer implements com.sun.org.apache.xerces.internal.xni.XML
 	
 	private var fDocument : com.sun.org.apache.xerces.internal.dom.CoreDocumentImpl;
 	
-	private var fAttrProxy(default, null) : DOMNormalizer_XMLAttributesProxy;
+	private var fAttrProxy(default, null) : com.sun.org.apache.xerces.internal.dom.DOMNormalizer.DOMNormalizer_XMLAttributesProxy;
 	
 	private var fQName(default, null) : com.sun.org.apache.xerces.internal.xni.QName;
 	

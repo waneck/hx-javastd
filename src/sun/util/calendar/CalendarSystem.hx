@@ -43,7 +43,7 @@ extern class CalendarSystem
 	* <code>calendarName</code>, or null if there is no
 	* <code>CalendarSystem</code> associated with the given calendar name.
 	*/
-	@:overload public static function forName(calendarName : String) : CalendarSystem;
+	@:overload public static function forName(calendarName : String) : sun.util.calendar.CalendarSystem;
 	
 	/**
 	* Returns the name of this calendar system.

@@ -29,23 +29,23 @@ extern class SharedCDRContactInfoImpl extends com.sun.corba.se.impl.transport.Co
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, addressingDisposition : java.StdTypes.Int16) : Void;
 	
-	@:overload override public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
+	@:overload public function getClientRequestDispatcher() : com.sun.corba.se.pept.protocol.ClientRequestDispatcher;
 	
-	@:overload override public function isConnectionBased() : Bool;
+	@:overload public function isConnectionBased() : Bool;
 	
-	@:overload override public function shouldCacheConnection() : Bool;
+	@:overload public function shouldCacheConnection() : Bool;
 	
-	@:overload override public function getConnectionCacheType() : String;
+	@:overload public function getConnectionCacheType() : String;
 	
-	@:overload override public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload override public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload override public function createOutputObject(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
+	@:overload public function createOutputObject(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : com.sun.corba.se.pept.encoding.OutputObject;
 	
-	@:overload override public function getMonitoringName() : String;
+	@:overload public function getMonitoringName() : String;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	@:overload private function getWrapper() : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	

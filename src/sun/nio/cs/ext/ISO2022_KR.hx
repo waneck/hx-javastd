@@ -29,7 +29,7 @@ extern class ISO2022_KR extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs.His
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload public function historicalName() : String;
 	

@@ -62,9 +62,9 @@ extern class JavaObjectArray extends com.sun.tools.hat.internal.model.JavaLazyRe
 	*     array class ID
 	*     array element IDs
 	*/
-	@:overload @:final override private function readValueLength() : Int;
+	@:overload @:final private function readValueLength() : Int;
 	
-	@:overload @:final override private function readValue() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final private function readValue() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

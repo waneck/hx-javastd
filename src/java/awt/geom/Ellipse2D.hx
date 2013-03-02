@@ -103,7 +103,7 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 * in <code>float</code> precision.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Ellipse2D$Float') extern class Ellipse2D_Float extends Ellipse2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Ellipse2D$Float') extern class Ellipse2D_Float extends java.awt.geom.Ellipse2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the upper-left corner of the
@@ -219,7 +219,7 @@ extern class Ellipse2D extends java.awt.geom.RectangularShape
 * in <code>double</code> precision.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Ellipse2D$Double') extern class Ellipse2D_Double extends Ellipse2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Ellipse2D$Double') extern class Ellipse2D_Double extends java.awt.geom.Ellipse2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the upper-left corner of the

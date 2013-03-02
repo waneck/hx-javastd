@@ -80,7 +80,7 @@ extern class IREM extends com.sun.org.apache.bcel.internal.generic.ArithmeticIns
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

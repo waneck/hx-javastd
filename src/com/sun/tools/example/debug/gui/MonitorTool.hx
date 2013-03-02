@@ -44,7 +44,7 @@ extern class MonitorTool extends javax.swing.JPanel
 }
 @:native('com$sun$tools$example$debug$gui$MonitorTool$MonitorRenderer') @:internal extern class MonitorTool_MonitorRenderer extends javax.swing.DefaultListCellRenderer
 {
-	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }

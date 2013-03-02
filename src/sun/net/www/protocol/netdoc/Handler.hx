@@ -37,7 +37,7 @@ extern class Handler extends java.net.URLStreamHandler
 	* Attempt to find a load the given url using the default (network)
 	* documentation location.  If that fails, use the local copy
 	*/
-	@:overload @:synchronized override public function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:synchronized public function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
 	
 }

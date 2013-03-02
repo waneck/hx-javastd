@@ -29,7 +29,7 @@ package sun.tools.jconsole;
 	
 	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
 	
 }
@@ -37,9 +37,9 @@ package sun.tools.jconsole;
 {
 	@:overload public function new(hGap : Int, vGap : Int) : Void;
 	
-	@:overload override public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload public function preferredLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
-	@:overload override public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
+	@:overload public function minimumLayoutSize(parent : java.awt.Container) : java.awt.Dimension;
 	
 	
 }

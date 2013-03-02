@@ -86,7 +86,7 @@ extern class StackMap extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	* @param file Output file stream
 	* @throws IOException
 	*/
-	@:overload @:final override public function dump(file : java.io.DataOutputStream) : Void;
+	@:overload @:final public function dump(file : java.io.DataOutputStream) : Void;
 	
 	/**
 	* @return Array of stack map entries
@@ -101,12 +101,12 @@ extern class StackMap extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	/**
 	* @return String representation.
 	*/
-	@:overload @:final override public function toString() : String;
+	@:overload @:final public function toString() : String;
 	
 	/**
 	* @return deep copy of this attribute
 	*/
-	@:overload override public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
+	@:overload public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Attribute;
 	
 	/**
 	* Called by objects that are traversing the nodes of the tree implicitely
@@ -115,7 +115,7 @@ extern class StackMap extends com.sun.org.apache.bcel.internal.classfile.Attribu
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	@:overload @:final public function getMapLength() : Int;
 	

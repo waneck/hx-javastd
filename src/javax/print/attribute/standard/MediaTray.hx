@@ -28,42 +28,42 @@ extern class MediaTray extends javax.print.attribute.standard.Media implements j
 	/**
 	* The top input tray in the printer.
 	*/
-	public static var TOP(default, null) : MediaTray;
+	public static var TOP(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The middle input tray in the printe.
 	*/
-	public static var MIDDLE(default, null) : MediaTray;
+	public static var MIDDLE(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The bottom input tray in the printer.
 	*/
-	public static var BOTTOM(default, null) : MediaTray;
+	public static var BOTTOM(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The envelope input tray in the printer.
 	*/
-	public static var ENVELOPE(default, null) : MediaTray;
+	public static var ENVELOPE(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The manual feed input tray in the printer.
 	*/
-	public static var MANUAL(default, null) : MediaTray;
+	public static var MANUAL(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The large capacity input tray in the printer.
 	*/
-	public static var LARGE_CAPACITY(default, null) : MediaTray;
+	public static var LARGE_CAPACITY(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The main input tray in the printer.
 	*/
-	public static var MAIN(default, null) : MediaTray;
+	public static var MAIN(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* The side input tray.
 	*/
-	public static var SIDE(default, null) : MediaTray;
+	public static var SIDE(default, null) : javax.print.attribute.standard.MediaTray;
 	
 	/**
 	* Construct a new media tray enumeration value with the given integer

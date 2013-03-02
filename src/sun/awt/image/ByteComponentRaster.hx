@@ -83,7 +83,7 @@ extern class ByteComponentRaster extends sun.awt.image.SunWritableRaster
 	* @param origin          The Point that specifies the origin.
 	* @param parent          The parent (if any) of this raster.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : ByteComponentRaster) : Void;
+	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : sun.awt.image.ByteComponentRaster) : Void;
 	
 	/**
 	* Returns a copy of the data offsets array. For each band the data offset

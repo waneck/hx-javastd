@@ -99,7 +99,7 @@ extern class Cursor implements java.io.Serializable
 	* @deprecated As of JDK version 1.7, the {@link #getPredefinedCursor(int)}
 	* method should be used instead.
 	*/
-	private static var predefined : java.NativeArray<Cursor>;
+	private static var predefined : java.NativeArray<java.awt.Cursor>;
 	
 	/**
 	* The type associated with all custom cursors.
@@ -122,7 +122,7 @@ extern class Cursor implements java.io.Serializable
 	* @throws IllegalArgumentException if the specified cursor type is
 	*         invalid
 	*/
-	@:overload public static function getPredefinedCursor(type : Int) : Cursor;
+	@:overload public static function getPredefinedCursor(type : Int) : java.awt.Cursor;
 	
 	/**
 	* Returns a system-specific custom cursor object matching the
@@ -133,12 +133,12 @@ extern class Cursor implements java.io.Serializable
 	* @exception HeadlessException if
 	* <code>GraphicsEnvironment.isHeadless</code> returns true
 	*/
-	@:overload public static function getSystemCustomCursor(name : String) : Cursor;
+	@:overload public static function getSystemCustomCursor(name : String) : java.awt.Cursor;
 	
 	/**
 	* Return the system default cursor.
 	*/
-	@:overload public static function getDefaultCursor() : Cursor;
+	@:overload public static function getDefaultCursor() : java.awt.Cursor;
 	
 	/**
 	* Creates a new cursor object with the specified type.

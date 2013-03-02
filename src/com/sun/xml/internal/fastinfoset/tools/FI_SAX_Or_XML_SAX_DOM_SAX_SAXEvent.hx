@@ -29,9 +29,9 @@ extern class FI_SAX_Or_XML_SAX_DOM_SAX_SAXEvent extends com.sun.xml.internal.fas
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function parse(document : java.io.InputStream, events : java.io.OutputStream, workingDirectory : String) : Void;
+	@:overload public function parse(document : java.io.InputStream, events : java.io.OutputStream, workingDirectory : String) : Void;
 	
-	@:overload override public function parse(document : java.io.InputStream, events : java.io.OutputStream) : Void;
+	@:overload public function parse(document : java.io.InputStream, events : java.io.OutputStream) : Void;
 	
 	@:overload public static function main(args : java.NativeArray<String>) : Void;
 	

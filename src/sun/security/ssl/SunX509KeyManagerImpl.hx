@@ -31,19 +31,19 @@ package sun.security.ssl;
 	* @return the certificate chain (ordered with the user's certificate first
 	* and the root certificate authority last)
 	*/
-	@:overload override public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/*
 	* Returns the key associated with the given alias
 	*/
-	@:overload override public function getPrivateKey(alias : String) : java.security.PrivateKey;
+	@:overload public function getPrivateKey(alias : String) : java.security.PrivateKey;
 	
 	/*
 	* Choose an alias to authenticate the client side of a secure
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function chooseClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload public function chooseClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
 	/*
 	* Choose an alias to authenticate the client side of an
@@ -53,14 +53,14 @@ package sun.security.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function chooseEngineClientAlias(keyType : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
+	@:require(java5) @:overload public function chooseEngineClientAlias(keyType : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
 	
 	/*
 	* Choose an alias to authenticate the server side of a secure
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
 	/*
 	* Choose an alias to authenticate the server side of an
@@ -70,21 +70,21 @@ package sun.security.ssl;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function chooseEngineServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
+	@:require(java5) @:overload public function chooseEngineServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
 	
 	/*
 	* Get the matching aliases for authenticating the client side of a secure
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	/*
 	* Get the matching aliases for authenticating the server side of a secure
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	
 }

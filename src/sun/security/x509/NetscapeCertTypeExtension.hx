@@ -128,7 +128,7 @@ extern class NetscapeCertTypeExtension extends java.security.cert.Extension impl
 	* @param out the DerOutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Return an enumeration of names of attributes existing within this

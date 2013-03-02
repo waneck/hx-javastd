@@ -43,25 +43,25 @@ package sun.security.ssl;
 	* associated with this socket, if any.
 	* @see java.net.Socket#getChannel
 	*/
-	@:overload @:final override public function getChannel() : java.nio.channels.SocketChannel;
+	@:overload @:final public function getChannel() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Binds the address to the socket.
 	* @see java.net.Socket#bind
 	*/
-	@:overload override public function bind(bindpoint : java.net.SocketAddress) : Void;
+	@:overload public function bind(bindpoint : java.net.SocketAddress) : Void;
 	
 	/**
 	* Returns the address of the endpoint this socket is connected to
 	* @see java.net.Socket#getLocalSocketAddress
 	*/
-	@:overload override public function getLocalSocketAddress() : java.net.SocketAddress;
+	@:overload public function getLocalSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Returns the address of the endpoint this socket is connected to
 	* @see java.net.Socket#getRemoteSocketAddress
 	*/
-	@:overload override public function getRemoteSocketAddress() : java.net.SocketAddress;
+	@:overload public function getRemoteSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Connects this socket to the server.
@@ -76,19 +76,19 @@ package sun.security.ssl;
 	* @param   endpoint the <code>SocketAddress</code>
 	* @throws  IOException if an error occurs during the connection
 	*/
-	@:overload @:final override public function connect(endpoint : java.net.SocketAddress) : Void;
+	@:overload @:final public function connect(endpoint : java.net.SocketAddress) : Void;
 	
 	/**
 	* Returns the connection state of the socket.
 	* @see java.net.Socket#isConnected
 	*/
-	@:overload @:final override public function isConnected() : Bool;
+	@:overload @:final public function isConnected() : Bool;
 	
 	/**
 	* Returns the binding state of the socket.
 	* @see java.net.Socket#isBound
 	*/
-	@:overload @:final override public function isBound() : Bool;
+	@:overload @:final public function isBound() : Bool;
 	
 	/**
 	* The semantics of shutdownInput is not supported in TLS 1.0
@@ -97,7 +97,7 @@ package sun.security.ssl;
 	*
 	* @throws UnsupportedOperationException
 	*/
-	@:overload @:final override public function shutdownInput() : Void;
+	@:overload @:final public function shutdownInput() : Void;
 	
 	/**
 	* The semantics of shutdownOutput is not supported in TLS 1.0
@@ -106,19 +106,19 @@ package sun.security.ssl;
 	*
 	* @throws UnsupportedOperationException
 	*/
-	@:overload @:final override public function shutdownOutput() : Void;
+	@:overload @:final public function shutdownOutput() : Void;
 	
 	/**
 	* Returns the input state of the socket
 	* @see java.net.Socket#isInputShutdown
 	*/
-	@:overload @:final override public function isInputShutdown() : Bool;
+	@:overload @:final public function isInputShutdown() : Bool;
 	
 	/**
 	* Returns the output state of the socket
 	* @see java.net.Socket#isOutputShutdown
 	*/
-	@:overload @:final override public function isOutputShutdown() : Bool;
+	@:overload @:final public function isOutputShutdown() : Bool;
 	
 	/**
 	* Ensures that the SSL connection is closed down as cleanly
@@ -132,7 +132,7 @@ package sun.security.ssl;
 	/**
 	* Returns the address of the remote peer for this connection.
 	*/
-	@:overload @:final override public function getInetAddress() : java.net.InetAddress;
+	@:overload @:final public function getInetAddress() : java.net.InetAddress;
 	
 	/**
 	* Gets the local address to which the socket is bound.
@@ -140,23 +140,23 @@ package sun.security.ssl;
 	* @return the local address to which the socket is bound.
 	* @since   JDK1.1
 	*/
-	@:require(java1) @:overload @:final override public function getLocalAddress() : java.net.InetAddress;
+	@:require(java1) @:overload @:final public function getLocalAddress() : java.net.InetAddress;
 	
 	/**
 	* Returns the number of the remote port that this connection uses.
 	*/
-	@:overload @:final override public function getPort() : Int;
+	@:overload @:final public function getPort() : Int;
 	
 	/**
 	* Returns the number of the local port that this connection uses.
 	*/
-	@:overload @:final override public function getLocalPort() : Int;
+	@:overload @:final public function getLocalPort() : Int;
 	
 	/**
 	* Enables or disables the Nagle optimization.
 	* @see java.net.Socket#setTcpNoDelay
 	*/
-	@:overload @:final override public function setTcpNoDelay(value : Bool) : Void;
+	@:overload @:final public function setTcpNoDelay(value : Bool) : Void;
 	
 	/**
 	* Returns true if the Nagle optimization is disabled.  This
@@ -165,19 +165,19 @@ package sun.security.ssl;
 	*
 	* @see java.net.Socket#getTcpNoDelay
 	*/
-	@:overload @:final override public function getTcpNoDelay() : Bool;
+	@:overload @:final public function getTcpNoDelay() : Bool;
 	
 	/**
 	* Assigns the socket's linger timeout.
 	* @see java.net.Socket#setSoLinger
 	*/
-	@:overload @:final override public function setSoLinger(flag : Bool, linger : Int) : Void;
+	@:overload @:final public function setSoLinger(flag : Bool, linger : Int) : Void;
 	
 	/**
 	* Returns the socket's linger timeout.
 	* @see java.net.Socket#getSoLinger
 	*/
-	@:overload @:final override public function getSoLinger() : Int;
+	@:overload @:final public function getSoLinger() : Int;
 	
 	/**
 	* Send one byte of urgent data on the socket.
@@ -186,7 +186,7 @@ package sun.security.ssl;
 	* this for an SSLSocket. An implementation can be provided if a need
 	* arises in future.
 	*/
-	@:overload @:final override public function sendUrgentData(data : Int) : Void;
+	@:overload @:final public function sendUrgentData(data : Int) : Void;
 	
 	/**
 	* Enable/disable OOBINLINE (receipt of TCP urgent data) By default, this
@@ -196,72 +196,72 @@ package sun.security.ssl;
 	* Setting OOBInline does not have any effect on SSLSocket,
 	* since currently we don't support sending urgent data.
 	*/
-	@:overload @:final override public function setOOBInline(on : Bool) : Void;
+	@:overload @:final public function setOOBInline(on : Bool) : Void;
 	
 	/**
 	* Tests if OOBINLINE is enabled.
 	* @see java.net.Socket#getOOBInline
 	*/
-	@:overload @:final override public function getOOBInline() : Bool;
+	@:overload @:final public function getOOBInline() : Bool;
 	
 	/**
 	* Returns the socket timeout.
 	* @see java.net.Socket#getSoTimeout
 	*/
-	@:overload @:final override public function getSoTimeout() : Int;
+	@:overload @:final public function getSoTimeout() : Int;
 	
-	@:overload @:final override public function setSendBufferSize(size : Int) : Void;
+	@:overload @:final public function setSendBufferSize(size : Int) : Void;
 	
-	@:overload @:final override public function getSendBufferSize() : Int;
+	@:overload @:final public function getSendBufferSize() : Int;
 	
-	@:overload @:final override public function setReceiveBufferSize(size : Int) : Void;
+	@:overload @:final public function setReceiveBufferSize(size : Int) : Void;
 	
-	@:overload @:final override public function getReceiveBufferSize() : Int;
+	@:overload @:final public function getReceiveBufferSize() : Int;
 	
 	/**
 	* Enable/disable SO_KEEPALIVE.
 	* @see java.net.Socket#setKeepAlive
 	*/
-	@:overload @:final override public function setKeepAlive(on : Bool) : Void;
+	@:overload @:final public function setKeepAlive(on : Bool) : Void;
 	
 	/**
 	* Tests if SO_KEEPALIVE is enabled.
 	* @see java.net.Socket#getKeepAlive
 	*/
-	@:overload @:final override public function getKeepAlive() : Bool;
+	@:overload @:final public function getKeepAlive() : Bool;
 	
 	/**
 	* Sets traffic class or type-of-service octet in the IP header for
 	* packets sent from this Socket.
 	* @see java.net.Socket#setTrafficClass
 	*/
-	@:overload @:final override public function setTrafficClass(tc : Int) : Void;
+	@:overload @:final public function setTrafficClass(tc : Int) : Void;
 	
 	/**
 	* Gets traffic class or type-of-service in the IP header for packets
 	* sent from this Socket.
 	* @see java.net.Socket#getTrafficClass
 	*/
-	@:overload @:final override public function getTrafficClass() : Int;
+	@:overload @:final public function getTrafficClass() : Int;
 	
 	/**
 	* Enable/disable SO_REUSEADDR.
 	* @see java.net.Socket#setReuseAddress
 	*/
-	@:overload @:final override public function setReuseAddress(on : Bool) : Void;
+	@:overload @:final public function setReuseAddress(on : Bool) : Void;
 	
 	/**
 	* Tests if SO_REUSEADDR is enabled.
 	* @see java.net.Socket#getReuseAddress
 	*/
-	@:overload @:final override public function getReuseAddress() : Bool;
+	@:overload @:final public function getReuseAddress() : Bool;
 	
 	/**
 	* Sets performance preferences for this socket.
 	*
 	* @see java.net.Socket#setPerformancePreferences(int, int, int)
 	*/
-	@:overload override public function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
+	@:overload public function setPerformancePreferences(connectionTime : Int, latency : Int, bandwidth : Int) : Void;
 	
 	
 }

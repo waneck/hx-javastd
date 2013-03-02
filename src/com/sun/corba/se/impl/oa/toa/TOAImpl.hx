@@ -27,9 +27,9 @@ extern class TOAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implement
 {
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, tom : com.sun.corba.se.impl.oa.toa.TransientObjectManager, codebase : String) : Void;
 	
-	@:overload override public function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload public function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload override public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
+	@:overload public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
 	
 	/** Get the servant for the request given by the parameters.
 	* This will update thread Current, so that subsequent calls to
@@ -37,23 +37,23 @@ extern class TOAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implement
 	* same request.
 	* @param request is the request containing the rest of the request
 	*/
-	@:overload override public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
+	@:overload public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
 	
-	@:overload override public function returnServant() : Void;
+	@:overload public function returnServant() : Void;
 	
 	/** Return the most derived interface for the given servant and objectId.
 	*/
-	@:overload override public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload override public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
+	@:overload public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
 	
-	@:overload override public function getManagerId() : Int;
+	@:overload public function getManagerId() : Int;
 	
-	@:overload override public function getState() : java.StdTypes.Int16;
+	@:overload public function getState() : java.StdTypes.Int16;
 	
-	@:overload override public function enter() : Void;
+	@:overload public function enter() : Void;
 	
-	@:overload override public function exit() : Void;
+	@:overload public function exit() : Void;
 	
 	@:overload public function connect(objref : org.omg.CORBA.Object) : Void;
 	

@@ -32,7 +32,7 @@ extern class DefaultCellEditor extends javax.swing.AbstractCellEditor implements
 	* The delegate class which handles all methods sent from the
 	* <code>CellEditor</code>.
 	*/
-	private var delegate : DefaultCellEditor_EditorDelegate;
+	private var delegate : javax.swing.DefaultCellEditor.DefaultCellEditor_EditorDelegate;
 	
 	/**
 	* An integer specifying the number of clicks needed to start editing.

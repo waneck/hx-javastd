@@ -55,15 +55,15 @@ extern class SAXDocumentSerializerWithPrefixMapping extends com.sun.xml.internal
 	
 	@:overload public function new(namespaceToPrefixMapping : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload @:final override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:final public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload @:final override private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
+	@:overload @:final private function encodeElement(namespaceURI : String, qName : String, localName : String) : Void;
 	
 	@:overload private function encodeElementMapEntry(entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry, namespaceURI : String) : Bool;
 	
-	@:overload @:final override private function encodeAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload @:final private function encodeAttributes(atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload @:final override private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Bool;
+	@:overload @:final private function encodeAttribute(namespaceURI : String, qName : String, localName : String) : Bool;
 	
 	@:overload private function encodeAttributeMapEntry(entry : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry, namespaceURI : String) : Bool;
 	

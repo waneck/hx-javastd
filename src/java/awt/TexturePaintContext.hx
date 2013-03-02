@@ -82,7 +82,7 @@ package java.awt;
 	
 	
 }
-@:native('java$awt$TexturePaintContext$Int') @:internal extern class TexturePaintContext_Int extends TexturePaintContext
+@:native('java$awt$TexturePaintContext$Int') @:internal extern class TexturePaintContext_Int extends java.awt.TexturePaintContext
 {
 	@:overload public function new(srcRas : sun.awt.image.IntegerInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int, filter : Bool) : Void;
 	
@@ -92,7 +92,7 @@ package java.awt;
 	
 	
 }
-@:native('java$awt$TexturePaintContext$Byte') @:internal extern class TexturePaintContext_Byte extends TexturePaintContext
+@:native('java$awt$TexturePaintContext$Byte') @:internal extern class TexturePaintContext_Byte extends java.awt.TexturePaintContext
 {
 	@:overload public function new(srcRas : sun.awt.image.ByteInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int) : Void;
 	
@@ -104,7 +104,7 @@ package java.awt;
 	
 	
 }
-@:native('java$awt$TexturePaintContext$ByteFilter') @:internal extern class TexturePaintContext_ByteFilter extends TexturePaintContext
+@:native('java$awt$TexturePaintContext$ByteFilter') @:internal extern class TexturePaintContext_ByteFilter extends java.awt.TexturePaintContext
 {
 	@:overload public function new(srcRas : sun.awt.image.ByteInterleavedRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int) : Void;
 	
@@ -114,7 +114,7 @@ package java.awt;
 	
 	
 }
-@:native('java$awt$TexturePaintContext$Any') @:internal extern class TexturePaintContext_Any extends TexturePaintContext
+@:native('java$awt$TexturePaintContext$Any') @:internal extern class TexturePaintContext_Any extends java.awt.TexturePaintContext
 {
 	@:overload public function new(srcRas : java.awt.image.WritableRaster, cm : java.awt.image.ColorModel, xform : java.awt.geom.AffineTransform, maxw : Int, filter : Bool) : Void;
 	

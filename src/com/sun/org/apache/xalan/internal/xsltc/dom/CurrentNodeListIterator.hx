@@ -29,19 +29,19 @@ extern class CurrentNodeListIterator extends com.sun.org.apache.xml.internal.dtm
 	
 	@:overload public function forceNaturalOrder() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload override public function isReverse() : Bool;
+	@:overload public function isReverse() : Bool;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	@:overload override public function next() : Int;
 	
 	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function getLast() : Int;
+	@:overload public function getLast() : Int;
 	
 	@:overload override public function setMark() : Void;
 	

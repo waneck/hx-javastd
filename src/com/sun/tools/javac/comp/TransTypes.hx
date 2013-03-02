@@ -33,10 +33,10 @@ package com.sun.tools.javac.comp;
 extern class TransTypes extends com.sun.tools.javac.tree.TreeTranslator
 {
 	/** The context key for the TransTypes phase. */
-	private static var transTypesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<TransTypes>;
+	private static var transTypesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.TransTypes>;
 	
 	/** Get the instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : TransTypes;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.TransTypes;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	

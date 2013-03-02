@@ -80,14 +80,14 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	/**
 	* Returns the outer highlight color of the bevel border
@@ -169,7 +169,7 @@ extern class BevelBorder extends javax.swing.border.AbstractBorder
 	/**
 	* Returns whether or not the border is opaque.
 	*/
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload public function isBorderOpaque() : Bool;
 	
 	@:overload private function paintRaisedBevel(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	

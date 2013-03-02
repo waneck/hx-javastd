@@ -32,13 +32,13 @@ extern class CoreMetrics
 {
 	@:overload public function new(ascent : Single, descent : Single, leading : Single, height : Single, baselineIndex : Int, baselineOffsets : java.NativeArray<Single>, strikethroughOffset : Single, strikethroughThickness : Single, underlineOffset : Single, underlineThickness : Single, ssOffset : Single, italicAngle : Single) : Void;
 	
-	@:overload public static function get(lm : java.awt.font.LineMetrics) : CoreMetrics;
+	@:overload public static function get(lm : java.awt.font.LineMetrics) : sun.font.CoreMetrics;
 	
 	@:overload @:final public function hashCode() : Int;
 	
 	@:overload @:final public function equals(rhs : Dynamic) : Bool;
 	
-	@:overload @:final public function equals(rhs : CoreMetrics) : Bool;
+	@:overload @:final public function equals(rhs : sun.font.CoreMetrics) : Bool;
 	
 	@:overload @:final public function effectiveBaselineOffset(fullOffsets : java.NativeArray<Single>) : Single;
 	

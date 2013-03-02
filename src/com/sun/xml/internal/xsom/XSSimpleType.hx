@@ -41,7 +41,7 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	* @return
 	*      null if this is xs:anySimpleType. Otherwise non-null.
 	*/
-	@:overload public function getSimpleBaseType() : XSSimpleType;
+	@:overload public function getSimpleBaseType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
 	/**
 	* Gets the variety of this simple type.
@@ -55,7 +55,7 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	* @return
 	*      null otherwise.
 	*/
-	@:overload public function getPrimitiveType() : XSSimpleType;
+	@:overload public function getPrimitiveType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
 	/**
 	* Returns true if this is a primitive built-in simple type
@@ -95,7 +95,7 @@ extern interface XSSimpleType extends com.sun.xml.internal.xsom.XSType extends c
 	* @return null
 	*      if this component has not been redefined.
 	*/
-	@:overload public function getRedefinedBy() : XSSimpleType;
+	@:overload public function getRedefinedBy() : com.sun.xml.internal.xsom.XSSimpleType;
 	
 	/**
 	* Gets the effective facet object of the given name.

@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class ChildNode extends com.sun.org.apache.xerces.internal.dom.NodeImpl
 {
 	/** Next sibling. */
-	private var nextSibling : ChildNode;
+	private var nextSibling : com.sun.org.apache.xerces.internal.dom.ChildNode;
 	
 	/**
 	* No public constructor; only subclasses of Node should be

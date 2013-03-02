@@ -28,12 +28,12 @@ package java.net;
 	/**
 	* Creates a datagram socket
 	*/
-	@:overload @:synchronized override private function create() : Void;
+	@:overload @:synchronized private function create() : Void;
 	
 	/**
 	* Binds a datagram socket to a local port.
 	*/
-	@:overload @:synchronized override private function bind(lport : Int, laddr : java.net.InetAddress) : Void;
+	@:overload @:synchronized private function bind(lport : Int, laddr : java.net.InetAddress) : Void;
 	
 	@:overload @:abstract private function bind0(lport : Int, laddr : java.net.InetAddress) : Void;
 	
@@ -42,7 +42,7 @@ package java.net;
 	* destination address to send the packet to.
 	* @param packet to be sent.
 	*/
-	@:overload @:abstract override private function send(p : java.net.DatagramPacket) : Void;
+	@:overload @:abstract private function send(p : java.net.DatagramPacket) : Void;
 	
 	/**
 	* Connects a datagram socket to a remote destination. This associates the remote
@@ -51,27 +51,27 @@ package java.net;
 	* @param address the remote InetAddress to connect to
 	* @param port the remote port number
 	*/
-	@:overload override private function connect(address : java.net.InetAddress, port : Int) : Void;
+	@:overload private function connect(address : java.net.InetAddress, port : Int) : Void;
 	
 	/**
 	* Disconnects a previously connected socket. Does nothing if the socket was
 	* not connected already.
 	*/
-	@:overload override private function disconnect() : Void;
+	@:overload private function disconnect() : Void;
 	
 	/**
 	* Peek at the packet to see who it is from.
 	* @param return the address which the packet came from.
 	*/
-	@:overload @:abstract override private function peek(i : java.net.InetAddress) : Int;
+	@:overload @:abstract private function peek(i : java.net.InetAddress) : Int;
 	
-	@:overload @:abstract override private function peekData(p : java.net.DatagramPacket) : Int;
+	@:overload @:abstract private function peekData(p : java.net.DatagramPacket) : Int;
 	
 	/**
 	* Receive the datagram packet.
 	* @param Packet Received.
 	*/
-	@:overload @:synchronized override private function receive(p : java.net.DatagramPacket) : Void;
+	@:overload @:synchronized private function receive(p : java.net.DatagramPacket) : Void;
 	
 	@:overload @:abstract private function receive0(p : java.net.DatagramPacket) : Void;
 	
@@ -79,35 +79,35 @@ package java.net;
 	* Set the TTL (time-to-live) option.
 	* @param TTL to be set.
 	*/
-	@:overload @:abstract override private function setTimeToLive(ttl : Int) : Void;
+	@:overload @:abstract private function setTimeToLive(ttl : Int) : Void;
 	
 	/**
 	* Get the TTL (time-to-live) option.
 	*/
-	@:overload @:abstract override private function getTimeToLive() : Int;
+	@:overload @:abstract private function getTimeToLive() : Int;
 	
 	/**
 	* Set the TTL (time-to-live) option.
 	* @param TTL to be set.
 	*/
-	@:overload @:abstract override private function setTTL(ttl : java.StdTypes.Int8) : Void;
+	@:overload @:abstract private function setTTL(ttl : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Get the TTL (time-to-live) option.
 	*/
-	@:overload @:abstract override private function getTTL() : java.StdTypes.Int8;
+	@:overload @:abstract private function getTTL() : java.StdTypes.Int8;
 	
 	/**
 	* Join the multicast group.
 	* @param multicast address to join.
 	*/
-	@:overload override private function join(inetaddr : java.net.InetAddress) : Void;
+	@:overload private function join(inetaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Leave the multicast group.
 	* @param multicast address to leave.
 	*/
-	@:overload override private function leave(inetaddr : java.net.InetAddress) : Void;
+	@:overload private function leave(inetaddr : java.net.InetAddress) : Void;
 	
 	/**
 	* Join the multicast group.
@@ -118,7 +118,7 @@ package java.net;
 	*          SocketAddress subclass not supported by this socket
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload private function joinGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	@:overload @:abstract private function join(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
 	
@@ -130,14 +130,14 @@ package java.net;
 	*          SocketAddress subclass not supported by this socket
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
+	@:require(java4) @:overload private function leaveGroup(mcastaddr : java.net.SocketAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	@:overload @:abstract private function leave(inetaddr : java.net.InetAddress, netIf : java.net.NetworkInterface) : Void;
 	
 	/**
 	* Close the socket.
 	*/
-	@:overload override private function close() : Void;
+	@:overload private function close() : Void;
 	
 	@:overload private function isClosed() : Bool;
 	

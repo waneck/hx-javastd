@@ -71,7 +71,7 @@ extern interface ElementInfo<T, C> extends com.sun.xml.internal.bind.v2.model.co
 	*
 	* {@link ElementInfo} can only substitute {@link ElementInfo}.
 	*/
-	@:overload public function getSubstitutionHead() : ElementInfo<T, C>;
+	@:overload public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.ElementInfo<T, C>;
 	
 	/**
 	* All the {@link ElementInfo}s whose {@link #getSubstitutionHead()} points
@@ -80,7 +80,7 @@ extern interface ElementInfo<T, C> extends com.sun.xml.internal.bind.v2.model.co
 	* @return
 	*      can be empty but never null.
 	*/
-	@:overload public function getSubstitutionMembers() : java.util.Collection<ElementInfo<T, C>>;
+	@:overload public function getSubstitutionMembers() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.ElementInfo<T, C>>;
 	
 	
 }

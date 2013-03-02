@@ -163,13 +163,13 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadVisibleEventRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadVisibleEventRequestImpl extends EventRequestManagerImpl_EventRequestImpl
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadVisibleEventRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadVisibleEventRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_EventRequestImpl
 {
 	@:overload @:synchronized public function addThreadFilter(thread : com.sun.jdi.ThreadReference) : Void;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassVisibleEventRequestImpl') @:internal extern class EventRequestManagerImpl_ClassVisibleEventRequestImpl extends EventRequestManagerImpl_ThreadVisibleEventRequestImpl
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassVisibleEventRequestImpl') @:internal extern class EventRequestManagerImpl_ClassVisibleEventRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ThreadVisibleEventRequestImpl
 {
 	@:overload @:synchronized public function addClassFilter(clazz : com.sun.jdi.ReferenceType) : Void;
 	
@@ -181,7 +181,7 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$BreakpointRequestImpl') @:internal extern class EventRequestManagerImpl_BreakpointRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.BreakpointRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$BreakpointRequestImpl') @:internal extern class EventRequestManagerImpl_BreakpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.BreakpointRequest
 {
 	@:overload public function location() : com.sun.jdi.Location;
 	
@@ -189,7 +189,7 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassPrepareRequestImpl') @:internal extern class EventRequestManagerImpl_ClassPrepareRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ClassPrepareRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassPrepareRequestImpl') @:internal extern class EventRequestManagerImpl_ClassPrepareRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ClassPrepareRequest
 {
 	@:overload @:synchronized public function addSourceNameFilter(sourceNamePattern : String) : Void;
 	
@@ -197,13 +197,13 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassUnloadRequestImpl') @:internal extern class EventRequestManagerImpl_ClassUnloadRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ClassUnloadRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ClassUnloadRequestImpl') @:internal extern class EventRequestManagerImpl_ClassUnloadRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ClassUnloadRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ExceptionRequestImpl') @:internal extern class EventRequestManagerImpl_ExceptionRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ExceptionRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ExceptionRequestImpl') @:internal extern class EventRequestManagerImpl_ExceptionRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.ExceptionRequest
 {
 	@:overload public function exception() : com.sun.jdi.ReferenceType;
 	
@@ -215,43 +215,43 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$MethodEntryRequestImpl') @:internal extern class EventRequestManagerImpl_MethodEntryRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MethodEntryRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$MethodEntryRequestImpl') @:internal extern class EventRequestManagerImpl_MethodEntryRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MethodEntryRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$MethodExitRequestImpl') @:internal extern class EventRequestManagerImpl_MethodExitRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MethodExitRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$MethodExitRequestImpl') @:internal extern class EventRequestManagerImpl_MethodExitRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MethodExitRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorContendedEnterRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorContendedEnterRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorContendedEnterRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorContendedEnterRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorContendedEnterRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorContendedEnterRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorContendedEnteredRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorContendedEnteredRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorContendedEnteredRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorContendedEnteredRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorContendedEnteredRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorContendedEnteredRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorWaitRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorWaitRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorWaitRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorWaitRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorWaitRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorWaitRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorWaitedRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorWaitedRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorWaitedRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$MonitorWaitedRequestImpl') @:internal extern class EventRequestManagerImpl_MonitorWaitedRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.MonitorWaitedRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$StepRequestImpl') @:internal extern class EventRequestManagerImpl_StepRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.StepRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$StepRequestImpl') @:internal extern class EventRequestManagerImpl_StepRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.StepRequest
 {
 	@:overload public function depth() : Int;
 	
@@ -263,19 +263,19 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadDeathRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadDeathRequestImpl extends EventRequestManagerImpl_ThreadVisibleEventRequestImpl implements com.sun.jdi.request.ThreadDeathRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadDeathRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadDeathRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ThreadVisibleEventRequestImpl implements com.sun.jdi.request.ThreadDeathRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadStartRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadStartRequestImpl extends EventRequestManagerImpl_ThreadVisibleEventRequestImpl implements com.sun.jdi.request.ThreadStartRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ThreadStartRequestImpl') @:internal extern class EventRequestManagerImpl_ThreadStartRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ThreadVisibleEventRequestImpl implements com.sun.jdi.request.ThreadStartRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$WatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_WatchpointRequestImpl extends EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.WatchpointRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$WatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_WatchpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_ClassVisibleEventRequestImpl implements com.sun.jdi.request.WatchpointRequest
 {
 	@:overload public function field() : com.sun.jdi.Field;
 	
@@ -482,19 +482,19 @@ package com.sun.tools.jdi;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$AccessWatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_AccessWatchpointRequestImpl extends EventRequestManagerImpl_WatchpointRequestImpl implements com.sun.jdi.request.AccessWatchpointRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$AccessWatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_AccessWatchpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_WatchpointRequestImpl implements com.sun.jdi.request.AccessWatchpointRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$ModificationWatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_ModificationWatchpointRequestImpl extends EventRequestManagerImpl_WatchpointRequestImpl implements com.sun.jdi.request.ModificationWatchpointRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$ModificationWatchpointRequestImpl') @:internal extern class EventRequestManagerImpl_ModificationWatchpointRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_WatchpointRequestImpl implements com.sun.jdi.request.ModificationWatchpointRequest
 {
 	@:overload override public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$jdi$EventRequestManagerImpl$VMDeathRequestImpl') @:internal extern class EventRequestManagerImpl_VMDeathRequestImpl extends EventRequestManagerImpl_EventRequestImpl implements com.sun.jdi.request.VMDeathRequest
+@:native('com$sun$tools$jdi$EventRequestManagerImpl$VMDeathRequestImpl') @:internal extern class EventRequestManagerImpl_VMDeathRequestImpl extends com.sun.tools.jdi.EventRequestManagerImpl.EventRequestManagerImpl_EventRequestImpl implements com.sun.jdi.request.VMDeathRequest
 {
 	@:overload override public function toString() : String;
 	

@@ -34,7 +34,7 @@ extern class OptionFormat
 	*/
 	@:require(java5) private var name : String;
 	
-	private var children : java.util.List<OptionFormat>;
+	private var children : java.util.List<sun.tools.jstat.OptionFormat>;
 	
 	@:overload public function new(name : String) : Void;
 	
@@ -42,11 +42,11 @@ extern class OptionFormat
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function addSubFormat(f : OptionFormat) : Void;
+	@:overload public function addSubFormat(f : sun.tools.jstat.OptionFormat) : Void;
 	
-	@:overload public function getSubFormat(index : Int) : OptionFormat;
+	@:overload public function getSubFormat(index : Int) : sun.tools.jstat.OptionFormat;
 	
-	@:overload public function insertSubFormat(index : Int, f : OptionFormat) : Void;
+	@:overload public function insertSubFormat(index : Int, f : sun.tools.jstat.OptionFormat) : Void;
 	
 	@:overload public function getName() : String;
 	

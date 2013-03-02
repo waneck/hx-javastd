@@ -32,7 +32,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface CharValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<CharValue>
+@:require(java3) extern interface CharValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<com.sun.jdi.CharValue>
 {
 	/**
 	* Returns this CharValue as a <code>char</code>.

@@ -739,10 +739,10 @@ extern class XMLEntityManager implements com.sun.org.apache.xerces.internal.xni.
 	@:overload public function new(poolSize : Int, externalBufferSize : Int, internalBufferSize : Int) : Void;
 	
 	/** Retrieves buffer from pool. **/
-	@:overload public function getBuffer(external : Bool) : XMLEntityManager_CharacterBuffer;
+	@:overload public function getBuffer(external : Bool) : com.sun.org.apache.xerces.internal.impl.XMLEntityManager.XMLEntityManager_CharacterBuffer;
 	
 	/** Returns buffer to pool. **/
-	@:overload public function returnToPool(buffer : XMLEntityManager_CharacterBuffer) : Void;
+	@:overload public function returnToPool(buffer : com.sun.org.apache.xerces.internal.impl.XMLEntityManager.XMLEntityManager_CharacterBuffer) : Void;
 	
 	/** Sets the size of external buffers and dumps the old pool. **/
 	@:overload public function setExternalBufferSize(bufferSize : Int) : Void;

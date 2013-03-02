@@ -25,13 +25,13 @@ package javax.swing.plaf.basic;
 */
 extern class BasicToolTipUI extends javax.swing.plaf.ToolTipUI
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	@:overload private function installDefaults(c : javax.swing.JComponent) : Void;
 	
@@ -41,13 +41,13 @@ extern class BasicToolTipUI extends javax.swing.plaf.ToolTipUI
 	
 	@:overload private function uninstallListeners(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }

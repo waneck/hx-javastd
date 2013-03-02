@@ -85,7 +85,7 @@ extern interface XSDateTime
 	*         (has no effect on objects already
 	*          normalized)
 	*/
-	@:overload public function normalize() : XSDateTime;
+	@:overload public function normalize() : com.sun.org.apache.xerces.internal.xs.datatypes.XSDateTime;
 	
 	/**
 	* @return whether a date-time related object is normalized or not

@@ -32,7 +32,7 @@ extern interface ClassType extends com.sun.jdi.ReferenceType
 	* of this class in the target VM. If no such class exists,
 	* returns null
 	*/
-	@:overload public function superclass() : ClassType;
+	@:overload public function superclass() : com.sun.jdi.ClassType;
 	
 	/**
 	* Gets the interfaces directly implemented by this class.
@@ -68,7 +68,7 @@ extern interface ClassType extends com.sun.jdi.ReferenceType
 	* subclass of this class in the target VM. If no such classes
 	* exist, this method returns a zero-length list.
 	*/
-	@:overload public function subclasses() : java.util.List<ClassType>;
+	@:overload public function subclasses() : java.util.List<com.sun.jdi.ClassType>;
 	
 	/**
 	* Determine if this class was declared as an enum.

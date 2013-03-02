@@ -44,7 +44,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload private function new(parent : ClassLoader) : Void;
+	@:require(java2) @:overload private function new(parent : java.lang.ClassLoader) : Void;
 	
 	/**
 	* Creates a new class loader using the <tt>ClassLoader</tt> returned by
@@ -667,7 +667,7 @@ extern class ClassLoader
 	*
 	* @since  1.2
 	*/
-	@:require(java2) @:overload @:final public function getParent() : ClassLoader;
+	@:require(java2) @:overload @:final public function getParent() : java.lang.ClassLoader;
 	
 	/**
 	* Returns the system class loader for delegation.  This is the default
@@ -724,7 +724,7 @@ extern class ClassLoader
 	*
 	* @revised  1.4
 	*/
-	@:overload public static function getSystemClassLoader() : ClassLoader;
+	@:overload public static function getSystemClassLoader() : java.lang.ClassLoader;
 	
 	/**
 	* Defines a package by name in this <tt>ClassLoader</tt>.  This allows
@@ -937,9 +937,9 @@ extern class ClassLoader
 	
 	
 }
-@:internal extern class SystemClassLoaderAction implements java.security.PrivilegedExceptionAction<ClassLoader>
+@:internal extern class SystemClassLoaderAction implements java.security.PrivilegedExceptionAction<java.lang.ClassLoader>
 {
-	@:overload public function run() : ClassLoader;
+	@:overload public function run() : java.lang.ClassLoader;
 	
 	
 }

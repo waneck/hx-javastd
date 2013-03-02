@@ -70,7 +70,7 @@ extern class LocalVariableTable extends com.sun.org.apache.bcel.internal.classfi
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : LocalVariableTable) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LocalVariableTable) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to `LocalVariableTable'

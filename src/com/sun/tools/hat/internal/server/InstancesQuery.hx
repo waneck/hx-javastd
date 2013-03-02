@@ -34,7 +34,7 @@ package com.sun.tools.hat.internal.server;
 	
 	@:overload public function new(includeSubclasses : Bool, newObjects : Bool) : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }

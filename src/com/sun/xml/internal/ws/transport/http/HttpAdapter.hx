@@ -23,9 +23,9 @@ package com.sun.xml.internal.ws.transport.http;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<HttpAdapter_HttpToolkit>
+extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_HttpToolkit>
 {
-	public var owner(default, null) : com.sun.xml.internal.ws.transport.http.HttpAdapterList<HttpAdapter>;
+	public var owner(default, null) : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>;
 	
 	/**
 	* Servlet URL pattern with which this {@link HttpAdapter} is associated.
@@ -44,7 +44,7 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<Http
 	* @param endpoint web service endpoint
 	* @return singe adapter to process HTTP messages
 	*/
-	@:overload public static function createAlone(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : HttpAdapter;
+	@:overload public static function createAlone(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.HttpAdapter;
 	
 	/**
 	* @deprecated
@@ -52,9 +52,9 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<Http
 	* @param endpoint web service endpoint
 	* @param owner list of related adapters
 	*/
-	@:overload private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<HttpAdapter>) : Void;
+	@:overload private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>) : Void;
 	
-	@:overload private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<HttpAdapter>, urlPattern : String) : Void;
+	@:overload private function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, owner : com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>, urlPattern : String) : Void;
 	
 	/**
 	* Return the last known service definition of the endpoint.
@@ -76,7 +76,7 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<Http
 	*/
 	@:overload public function getValidPath() : String;
 	
-	@:overload override private function createToolkit() : HttpAdapter_HttpToolkit;
+	@:overload override private function createToolkit() : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_HttpToolkit;
 	
 	/**
 	* Receives the incoming HTTP connection and dispatches
@@ -102,9 +102,9 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<Http
 	
 	@:overload public function invokeAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection) : Void;
 	
-	@:overload public function invokeAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection, _callback : HttpAdapter_CompletionCallback) : Void;
+	@:overload public function invokeAsync(con : com.sun.xml.internal.ws.transport.http.WSHTTPConnection, _callback : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_CompletionCallback) : Void;
 	
-	public static var NO_OP_COMPLETION_CALLBACK(default, null) : HttpAdapter_CompletionCallback;
+	public static var NO_OP_COMPLETION_CALLBACK(default, null) : com.sun.xml.internal.ws.transport.http.HttpAdapter.HttpAdapter_CompletionCallback;
 	
 	/**
 	* Sends out the WSDL (and other referenced documents)
@@ -172,9 +172,9 @@ extern class HttpAdapter extends com.sun.xml.internal.ws.api.server.Adapter<Http
 	
 	
 }
-@:native('com$sun$xml$internal$ws$transport$http$HttpAdapter$DummyList') @:internal extern class HttpAdapter_DummyList extends com.sun.xml.internal.ws.transport.http.HttpAdapterList<HttpAdapter>
+@:native('com$sun$xml$internal$ws$transport$http$HttpAdapter$DummyList') @:internal extern class HttpAdapter_DummyList extends com.sun.xml.internal.ws.transport.http.HttpAdapterList<com.sun.xml.internal.ws.transport.http.HttpAdapter>
 {
-	@:overload override private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : HttpAdapter;
+	@:overload override private function createHttpAdapter(name : String, urlPattern : String, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.transport.http.HttpAdapter;
 	
 	
 }

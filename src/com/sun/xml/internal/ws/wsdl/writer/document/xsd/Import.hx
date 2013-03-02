@@ -29,9 +29,9 @@ package com.sun.xml.internal.ws.wsdl.writer.document.xsd;
 */
 extern interface Import extends com.sun.xml.internal.txw2.TypedXmlWriter extends com.sun.xml.internal.ws.wsdl.writer.document.Documented
 {
-	@:overload public function schemaLocation(value : String) : Import;
+	@:overload public function schemaLocation(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.xsd.Import;
 	
-	@:overload public function namespace(value : String) : Import;
+	@:overload public function namespace(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.xsd.Import;
 	
 	
 }

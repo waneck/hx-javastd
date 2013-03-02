@@ -28,7 +28,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	/**
 	* The content will be imaged across the short edge of the medium.
 	*/
-	public static var PORTRAIT(default, null) : OrientationRequested;
+	public static var PORTRAIT(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* The content will be imaged across the long edge of the medium.
@@ -39,7 +39,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	* simple finishing on the long edge is the same edge whether portrait or
 	* landscape.
 	*/
-	public static var LANDSCAPE(default, null) : OrientationRequested;
+	public static var LANDSCAPE(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* The content will be imaged across the long edge of the medium, but in
@@ -50,7 +50,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	* applications rotate landscape -90 degrees from portrait, rather than
 	* +90 degrees.
 	*/
-	public static var REVERSE_LANDSCAPE(default, null) : OrientationRequested;
+	public static var REVERSE_LANDSCAPE(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* The content will be imaged across the short edge of the medium, but in
@@ -65,7 +65,7 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	* right" by a simple finishing device as is common use with some
 	* Middle Eastern languages such as Hebrew.
 	*/
-	public static var REVERSE_PORTRAIT(default, null) : OrientationRequested;
+	public static var REVERSE_PORTRAIT(default, null) : javax.print.attribute.standard.OrientationRequested;
 	
 	/**
 	* Construct a new orientation requested enumeration value with the given
@@ -78,17 +78,17 @@ extern class OrientationRequested extends javax.print.attribute.EnumSyntax imple
 	/**
 	* Returns the string table for class OrientationRequested.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class OrientationRequested.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Returns the lowest integer value used by class OrientationRequested.
 	*/
-	@:overload override private function getOffset() : Int;
+	@:overload private function getOffset() : Int;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

@@ -7,9 +7,9 @@ extern class POASystemException extends com.sun.corba.se.spi.logging.LogWrapperB
 {
 	@:overload public function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : POASystemException;
+	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.POASystemException;
 	
-	@:overload public static function get(logDomain : String) : POASystemException;
+	@:overload public static function get(logDomain : String) : com.sun.corba.se.impl.logging.POASystemException;
 	
 	public static var SERVANT_MANAGER_ALREADY_SET(default, null) : Int;
 	

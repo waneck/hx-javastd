@@ -36,38 +36,38 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI implements java.io.Serializable
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override private function createPopup() : javax.swing.plaf.basic.ComboPopup;
+	@:overload private function createPopup() : javax.swing.plaf.basic.ComboPopup;
 	
-	@:overload override private function installComponents() : Void;
+	@:overload private function installComponents() : Void;
 	
-	@:overload override private function uninstallComponents() : Void;
+	@:overload private function uninstallComponents() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
+	@:overload public function paintCurrentValue(g : java.awt.Graphics, bounds : java.awt.Rectangle, hasFocus : Bool) : Void;
 	
 	@:overload private function rectangleForArrowIcon() : java.awt.Rectangle;
 	
-	@:overload override private function rectangleForCurrentValue() : java.awt.Rectangle;
+	@:overload private function rectangleForCurrentValue() : java.awt.Rectangle;
 	
 	@:overload public function iconAreaWidth() : Int;
 	
-	@:overload override public function configureEditor() : Void;
+	@:overload public function configureEditor() : Void;
 	
-	@:overload override private function createLayoutManager() : java.awt.LayoutManager;
+	@:overload private function createLayoutManager() : java.awt.LayoutManager;
 	
 	/**
 	*{@inheritDoc}
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:require(java6) @:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
 	
 }
@@ -102,7 +102,7 @@ extern class MotifComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function layoutContainer(parent : java.awt.Container) : Void;
+	@:overload public function layoutContainer(parent : java.awt.Container) : Void;
 	
 	
 }
@@ -123,7 +123,7 @@ extern class MotifComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI impl
 */
 @:native('com$sun$java$swing$plaf$motif$MotifComboBoxUI$MotifPropertyChangeListener') @:internal extern class MotifComboBoxUI_MotifPropertyChangeListener extends javax.swing.plaf.basic.BasicComboBoxUI.BasicComboBoxUI_PropertyChangeHandler
 {
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

@@ -184,7 +184,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param pattern A delimiting pattern
 	* @return this scanner
 	*/
-	@:overload public function useDelimiter(pattern : java.util.regex.Pattern) : Scanner;
+	@:overload public function useDelimiter(pattern : java.util.regex.Pattern) : java.util.Scanner;
 	
 	/**
 	* Sets this scanner's delimiting pattern to a pattern constructed from
@@ -200,7 +200,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param pattern A string specifying a delimiting pattern
 	* @return this scanner
 	*/
-	@:overload public function useDelimiter(pattern : String) : Scanner;
+	@:overload public function useDelimiter(pattern : String) : java.util.Scanner;
 	
 	/**
 	* Returns this scanner's locale.
@@ -226,7 +226,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @param locale A string specifying the locale to use
 	* @return this scanner
 	*/
-	@:overload public function useLocale(locale : java.util.Locale) : Scanner;
+	@:overload public function useLocale(locale : java.util.Locale) : java.util.Scanner;
 	
 	/**
 	* Returns this scanner's default radix.
@@ -257,7 +257,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return this scanner
 	* @throws IllegalArgumentException if radix is out of range
 	*/
-	@:overload public function useRadix(radix : Int) : Scanner;
+	@:overload public function useRadix(radix : Int) : java.util.Scanner;
 	
 	/**
 	* Returns the match result of the last scanning operation performed
@@ -514,7 +514,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @throws NoSuchElementException if the specified pattern is not found
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function skip(pattern : java.util.regex.Pattern) : Scanner;
+	@:overload public function skip(pattern : java.util.regex.Pattern) : java.util.Scanner;
 	
 	/**
 	* Skips input that matches a pattern constructed from the specified
@@ -528,7 +528,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	* @return this scanner
 	* @throws IllegalStateException if this scanner is closed
 	*/
-	@:overload public function skip(pattern : String) : Scanner;
+	@:overload public function skip(pattern : String) : java.util.Scanner;
 	
 	/**
 	* Returns true if the next token in this scanner's input can be
@@ -1029,7 +1029,7 @@ extern class Scanner implements java.util.Iterator<String> implements java.io.Cl
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function reset() : Scanner;
+	@:require(java6) @:overload public function reset() : java.util.Scanner;
 	
 	
 }

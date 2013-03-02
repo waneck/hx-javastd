@@ -30,29 +30,29 @@ extern class POAPolicyMediatorImpl_R_USM extends com.sun.corba.se.impl.oa.poa.PO
 	*/
 	private var activator : org.omg.PortableServer.ServantActivator;
 	
-	@:overload override private function internalGetServant(id : java.NativeArray<java.StdTypes.Int8>, operation : String) : Dynamic;
+	@:overload private function internalGetServant(id : java.NativeArray<java.StdTypes.Int8>, operation : String) : Dynamic;
 	
-	@:overload override public function returnServant() : Void;
+	@:overload public function returnServant() : Void;
 	
-	@:overload override public function etherealizeAll() : Void;
+	@:overload public function etherealizeAll() : Void;
 	
-	@:overload override public function getServantManager() : org.omg.PortableServer.ServantManager;
+	@:overload public function getServantManager() : org.omg.PortableServer.ServantManager;
 	
-	@:overload override public function setServantManager(servantManager : org.omg.PortableServer.ServantManager) : Void;
+	@:overload public function setServantManager(servantManager : org.omg.PortableServer.ServantManager) : Void;
 	
-	@:overload override public function getDefaultServant() : org.omg.PortableServer.Servant;
+	@:overload public function getDefaultServant() : org.omg.PortableServer.Servant;
 	
-	@:overload override public function setDefaultServant(servant : org.omg.PortableServer.Servant) : Void;
+	@:overload public function setDefaultServant(servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload override public function deactivateHelper(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, servant : org.omg.PortableServer.Servant) : Void;
+	@:overload public function deactivateHelper(key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, servant : org.omg.PortableServer.Servant) : Void;
 	
-	@:overload override public function idToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
+	@:overload public function idToServant(id : java.NativeArray<java.StdTypes.Int8>) : org.omg.PortableServer.Servant;
 	
 	
 }
 @:native('com$sun$corba$se$impl$oa$poa$POAPolicyMediatorImpl_R_USM$Etherealizer') @:internal extern class POAPolicyMediatorImpl_R_USM_Etherealizer extends java.lang.Thread
 {
-	@:overload public function new(mediator : POAPolicyMediatorImpl_R_USM, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, servant : org.omg.PortableServer.Servant, debug : Bool) : Void;
+	@:overload public function new(mediator : com.sun.corba.se.impl.oa.poa.POAPolicyMediatorImpl_R_USM, key : com.sun.corba.se.impl.oa.poa.ActiveObjectMap.ActiveObjectMap_Key, entry : com.sun.corba.se.impl.oa.poa.AOMEntry, servant : org.omg.PortableServer.Servant, debug : Bool) : Void;
 	
 	@:overload override public function run() : Void;
 	

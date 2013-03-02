@@ -346,7 +346,7 @@ extern class ConstantPoolGen implements java.io.Serializable
 	
 	/** Import constant from another ConstantPool and return new index.
 	*/
-	@:overload public function addConstant(c : com.sun.org.apache.bcel.internal.classfile.Constant, cp : ConstantPoolGen) : Int;
+	@:overload public function addConstant(c : com.sun.org.apache.bcel.internal.classfile.Constant, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

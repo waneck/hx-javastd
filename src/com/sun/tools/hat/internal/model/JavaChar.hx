@@ -37,7 +37,7 @@ extern class JavaChar extends com.sun.tools.hat.internal.model.JavaValue
 {
 	@:overload public function new(value : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

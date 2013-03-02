@@ -37,7 +37,7 @@ package javax.naming;
 	* Note: using syntax of this NameImpl and ignoring
 	* that of comparison target.
 	*/
-	@:overload public function compareTo(obj : NameImpl) : Int;
+	@:overload public function compareTo(obj : javax.naming.NameImpl) : Int;
 	
 	@:overload public function size() : Int;
 	

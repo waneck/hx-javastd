@@ -91,7 +91,7 @@ extern class PixelInterleavedSampleModel extends java.awt.image.ComponentSampleM
 	* @throws IllegalArgumentException if <code>w</code> or
 	*         <code>h</code> is not greater than 0
 	*/
-	@:overload override public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
+	@:overload public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a new PixelInterleavedSampleModel with a subset of the
@@ -102,9 +102,9 @@ extern class PixelInterleavedSampleModel extends java.awt.image.ComponentSampleM
 	* an image with a subset of the bands of the original
 	* PixelInterleavedSampleModel/DataBuffer combination.
 	*/
-	@:overload override public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
+	@:overload public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	
 }

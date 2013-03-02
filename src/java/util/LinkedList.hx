@@ -149,14 +149,14 @@ package java.util;
 	* @param o element whose presence in this list is to be tested
 	* @return {@code true} if this list contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the number of elements in this list.
 	*
 	* @return the number of elements in this list
 	*/
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	/**
 	* Appends the specified element to the end of this list.
@@ -166,7 +166,7 @@ package java.util;
 	* @param e element to be appended to this list
 	* @return {@code true} (as specified by {@link Collection#add})
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload public function add(e : E) : Bool;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -181,7 +181,7 @@ package java.util;
 	* @param o element to be removed from this list, if present
 	* @return {@code true} if this list contained the specified element
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -195,7 +195,7 @@ package java.util;
 	* @return {@code true} if this list changed as a result of the call
 	* @throws NullPointerException if the specified collection is null
 	*/
-	@:overload override public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -218,7 +218,7 @@ package java.util;
 	* Removes all of the elements from this list.
 	* The list will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	/**
 	* Returns the element at the specified position in this list.
@@ -273,7 +273,7 @@ package java.util;
 	* @return the index of the first occurrence of the specified element in
 	*         this list, or -1 if this list does not contain the element
 	*/
-	@:overload override public function indexOf(o : Dynamic) : Int;
+	@:overload public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -286,7 +286,7 @@ package java.util;
 	* @return the index of the last occurrence of the specified element in
 	*         this list, or -1 if this list does not contain the element
 	*/
-	@:overload override public function lastIndexOf(o : Dynamic) : Int;
+	@:overload public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Retrieves, but does not remove, the head (first element) of this list.
@@ -485,7 +485,7 @@ package java.util;
 	* @return an array containing all of the elements in this list
 	*         in proper sequence
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -525,7 +525,7 @@ package java.util;
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	
 }

@@ -33,7 +33,7 @@ package sun.jvmstat.perfdata.monitor;
 {
 	@:overload public function new(lineno : Int) : Void;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

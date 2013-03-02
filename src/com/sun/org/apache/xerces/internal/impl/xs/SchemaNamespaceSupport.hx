@@ -32,7 +32,7 @@ extern class SchemaNamespaceSupport extends com.sun.org.apache.xerces.internal.u
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload public function new(nSupport : SchemaNamespaceSupport) : Void;
+	@:overload public function new(nSupport : com.sun.org.apache.xerces.internal.impl.xs.SchemaNamespaceSupport) : Void;
 	
 	/**
 	* This method takes a set of Strings, as stored in a

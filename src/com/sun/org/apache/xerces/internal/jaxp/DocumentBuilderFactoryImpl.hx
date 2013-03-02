@@ -24,7 +24,7 @@ extern class DocumentBuilderFactoryImpl extends javax.xml.parsers.DocumentBuilde
 	* Creates a new instance of a {@link javax.xml.parsers.DocumentBuilder}
 	* using the currently configured parameters.
 	*/
-	@:overload override public function newDocumentBuilder() : javax.xml.parsers.DocumentBuilder;
+	@:overload public function newDocumentBuilder() : javax.xml.parsers.DocumentBuilder;
 	
 	/**
 	* Allows the user to set specific attributes on the underlying
@@ -32,25 +32,25 @@ extern class DocumentBuilderFactoryImpl extends javax.xml.parsers.DocumentBuilde
 	* @param name    name of attribute
 	* @param value   null means to remove attribute
 	*/
-	@:overload override public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
 	
 	/**
 	* Allows the user to retrieve specific attributes on the underlying
 	* implementation.
 	*/
-	@:overload override public function getAttribute(name : String) : Dynamic;
+	@:overload public function getAttribute(name : String) : Dynamic;
 	
-	@:overload override public function getSchema() : javax.xml.validation.Schema;
+	@:overload public function getSchema() : javax.xml.validation.Schema;
 	
-	@:overload override public function setSchema(grammar : javax.xml.validation.Schema) : Void;
+	@:overload public function setSchema(grammar : javax.xml.validation.Schema) : Void;
 	
-	@:overload override public function isXIncludeAware() : Bool;
+	@:overload public function isXIncludeAware() : Bool;
 	
-	@:overload override public function setXIncludeAware(state : Bool) : Void;
+	@:overload public function setXIncludeAware(state : Bool) : Void;
 	
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload public function getFeature(name : String) : Bool;
 	
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload public function setFeature(name : String, value : Bool) : Void;
 	
 	
 }

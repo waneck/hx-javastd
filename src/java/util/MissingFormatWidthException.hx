@@ -50,7 +50,7 @@ package java.util;
 	*/
 	@:overload public function getFormatSpecifier() : String;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

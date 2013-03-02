@@ -264,7 +264,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  The
@@ -278,7 +278,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	*
 	* @see #setAccessibleDescription
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -298,7 +298,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the state set of this object.  The AccessibleStateSet of an object
@@ -312,7 +312,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @see AccessibleState
 	* @see #addPropertyChangeListener
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the Accessible parent of this object.
@@ -320,7 +320,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return the Accessible parent of this object; null if this
 	* object does not have an Accessible parent
 	*/
-	@:overload override public function getAccessibleParent() : javax.accessibility.Accessible;
+	@:overload public function getAccessibleParent() : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -332,14 +332,14 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -351,7 +351,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component does not have a
@@ -365,7 +365,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* added to a containment hierarchy such that the locale can be
 	* determined from the containing parent.
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload public function getLocale() : java.util.Locale;
 	
 	/**
 	* Gets the AccessibleComponent associated with this object that has a
@@ -374,7 +374,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return AccessibleComponent if supported by object; else return null
 	* @see AccessibleComponent
 	*/
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the AccessibleValue associated with this object that supports a
@@ -383,7 +383,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return AccessibleValue if supported by object; else return null
 	* @see AccessibleValue
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Gets the AccessibleText associated with this object presenting
@@ -392,7 +392,7 @@ extern class ProgressMonitor implements javax.accessibility.Accessible
 	* @return AccessibleText if supported by object; else return null
 	* @see AccessibleText
 	*/
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index

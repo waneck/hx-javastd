@@ -92,7 +92,7 @@ extern class BitArray
 	*/
 	@:overload public function toString() : String;
 	
-	@:overload public function truncate() : BitArray;
+	@:overload public function truncate() : sun.security.util.BitArray;
 	
 	
 }

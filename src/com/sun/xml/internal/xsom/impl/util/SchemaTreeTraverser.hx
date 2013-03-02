@@ -35,7 +35,7 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	*
 	* @return Tree model of <code>this</code> traverser.
 	*/
-	@:overload public function getModel() : SchemaTreeTraverser_SchemaTreeModel;
+	@:overload public function getModel() : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeModel;
 	
 	/**
 	* Visits the root schema set.
@@ -165,9 +165,9 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	*
 	* @return New empty tree model.
 	*/
-	@:overload public static function getInstance() : SchemaTreeTraverser_SchemaTreeModel;
+	@:overload public static function getInstance() : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeModel;
 	
-	@:overload public function addSchemaNode(node : SchemaTreeTraverser_SchemaTreeNode) : Void;
+	@:overload public function addSchemaNode(node : com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeNode) : Void;
 	
 	
 }
@@ -223,7 +223,7 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 *
 * @author Kirill Grouchnikov
 */
-@:native('com$sun$xml$internal$xsom$impl$util$SchemaTreeTraverser$SchemaRootNode') extern class SchemaTreeTraverser_SchemaRootNode extends SchemaTreeTraverser_SchemaTreeNode
+@:native('com$sun$xml$internal$xsom$impl$util$SchemaTreeTraverser$SchemaRootNode') extern class SchemaTreeTraverser_SchemaRootNode extends com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser.SchemaTreeTraverser_SchemaTreeNode
 {
 	/**
 	* A simple constructor.
@@ -275,7 +275,7 @@ extern class SchemaTreeTraverser implements com.sun.xml.internal.xsom.visitor.XS
 	*
 	* @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
 	*/
-	@:overload @:final override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload @:final public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets values for the icon and text of <code>this</code> renderer.

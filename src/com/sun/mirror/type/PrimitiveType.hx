@@ -44,7 +44,7 @@ package com.sun.mirror.type;
 	*
 	* @return the kind of primitive type that this object represents
 	*/
-	@:overload public function getKind() : PrimitiveType_Kind;
+	@:overload public function getKind() : com.sun.mirror.type.PrimitiveType.PrimitiveType_Kind;
 	
 	
 }

@@ -31,11 +31,11 @@ extern class SpecialMethod
 	
 	@:overload @:abstract public function invoke(servant : Dynamic, request : com.sun.corba.se.spi.protocol.CorbaMessageMediator, objectId : java.NativeArray<java.StdTypes.Int8>, objectAdapter : com.sun.corba.se.spi.oa.ObjectAdapter) : com.sun.corba.se.spi.protocol.CorbaMessageMediator;
 	
-	@:overload @:final public static function getSpecialMethod(operation : String) : SpecialMethod;
+	@:overload @:final public static function getSpecialMethod(operation : String) : com.sun.corba.se.impl.protocol.SpecialMethod;
 	
 	
 }
-@:internal extern class NonExistent extends SpecialMethod
+@:internal extern class NonExistent extends com.sun.corba.se.impl.protocol.SpecialMethod
 {
 	@:overload override public function isNonExistentMethod() : Bool;
 	
@@ -45,13 +45,13 @@ extern class SpecialMethod
 	
 	
 }
-@:internal extern class NotExistent extends NonExistent
+@:internal extern class NotExistent extends com.sun.corba.se.impl.protocol.SpecialMethod.NonExistent
 {
 	@:overload override public function getName() : String;
 	
 	
 }
-@:internal extern class IsA extends SpecialMethod
+@:internal extern class IsA extends com.sun.corba.se.impl.protocol.SpecialMethod
 {
 	@:overload override public function isNonExistentMethod() : Bool;
 	
@@ -61,7 +61,7 @@ extern class SpecialMethod
 	
 	
 }
-@:internal extern class GetInterface extends SpecialMethod
+@:internal extern class GetInterface extends com.sun.corba.se.impl.protocol.SpecialMethod
 {
 	@:overload override public function isNonExistentMethod() : Bool;
 	

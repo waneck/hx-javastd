@@ -27,7 +27,7 @@ extern class Scope
 {
 	/** Next enclosing scope (with whom this scope may share a hashtable)
 	*/
-	public var next : Scope;
+	public var next : com.sun.tools.javac.code.Scope;
 	
 	/** The scope's owner.
 	*/
@@ -36,11 +36,11 @@ extern class Scope
 	/** A linear list that also contains all entries in
 	*  reverse order of appearance (i.e later entries are pushed on top).
 	*/
-	public var elems : Scope_Entry;
+	public var elems : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
 	/** A value for the empty scope.
 	*/
-	public static var emptyScope(default, null) : Scope;
+	public static var emptyScope(default, null) : com.sun.tools.javac.code.Scope;
 	
 	/** Construct a new scope, within scope next, with given owner,
 	*  using a fresh table of length INITIAL_SIZE.
@@ -52,40 +52,40 @@ extern class Scope
 	*  method leave if scope access is stack-like in order to avoid allocation
 	*  of fresh tables.
 	*/
-	@:overload public function dup() : Scope;
+	@:overload public function dup() : com.sun.tools.javac.code.Scope;
 	
 	/** Construct a fresh scope within this scope, with new owner,
 	*  which shares its table with the outer scope. Used in connection with
 	*  method leave if scope access is stack-like in order to avoid allocation
 	*  of fresh tables.
 	*/
-	@:overload public function dup(newOwner : com.sun.tools.javac.code.Symbol) : Scope;
+	@:overload public function dup(newOwner : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Scope;
 	
 	/** Construct a fresh scope within this scope, with same owner,
 	*  with a new hash table, whose contents initially are those of
 	*  the table of its outer scope.
 	*/
-	@:overload public function dupUnshared() : Scope;
+	@:overload public function dupUnshared() : com.sun.tools.javac.code.Scope;
 	
 	/** Remove all entries of this scope from its table, if shared
 	*  with next.
 	*/
-	@:overload public function leave() : Scope;
+	@:overload public function leave() : com.sun.tools.javac.code.Scope;
 	
 	/** Enter symbol sym in this scope.
 	*/
 	@:overload public function enter(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload public function enter(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload public function enter(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
 	/**
 	* Enter symbol sym in this scope, but mark that it comes from
 	* given scope `s' accessed through `origin'.  The last two
 	* arguments are only used in import scopes.
 	*/
-	@:overload public function enter(sym : com.sun.tools.javac.code.Symbol, s : Scope, origin : Scope) : Void;
+	@:overload public function enter(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope, origin : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload public function addScopeListener(sl : Scope_ScopeListener) : Void;
+	@:overload public function addScopeListener(sl : com.sun.tools.javac.code.Scope.Scope_ScopeListener) : Void;
 	
 	/** Remove symbol from this scope.  Used when an inner class
 	*  attribute tells us that the class isn't a package member.
@@ -107,9 +107,9 @@ extern class Scope
 	*  both its scope and sym fields, whereas both fields are non-null
 	*  for regular entries.
 	*/
-	@:overload public function lookup(name : com.sun.tools.javac.util.Name) : Scope_Entry;
+	@:overload public function lookup(name : com.sun.tools.javac.util.Name) : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
-	@:overload public function lookup(name : com.sun.tools.javac.util.Name, sf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : Scope_Entry;
+	@:overload public function lookup(name : com.sun.tools.javac.util.Name, sf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
 	@:overload public function getElements() : java.lang.Iterable<com.sun.tools.javac.code.Symbol>;
 	
@@ -125,9 +125,9 @@ extern class Scope
 }
 @:native('com$sun$tools$javac$code$Scope$ScopeListener') extern interface Scope_ScopeListener
 {
-	@:overload public function symbolAdded(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload public function symbolAdded(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload public function symbolRemoved(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload public function symbolRemoved(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
 	
 }
@@ -142,74 +142,74 @@ extern class Scope
 	
 	/** Next entry in same scope.
 	*/
-	public var sibling : Scope_Entry;
+	public var sibling : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
 	/** The entry's scope.
 	*  scope == null   iff   this == sentinel
 	*  for an entry in an import scope, this is the scope
 	*  where the entry came from (i.e. was imported from).
 	*/
-	public var scope : Scope;
+	public var scope : com.sun.tools.javac.code.Scope;
 	
-	@:overload public function new(sym : com.sun.tools.javac.code.Symbol, shadowed : Scope_Entry, sibling : Scope_Entry, scope : Scope) : Void;
+	@:overload public function new(sym : com.sun.tools.javac.code.Symbol, shadowed : com.sun.tools.javac.code.Scope.Scope_Entry, sibling : com.sun.tools.javac.code.Scope.Scope_Entry, scope : com.sun.tools.javac.code.Scope) : Void;
 	
 	/** Return next entry with the same name as this entry, proceeding
 	*  outwards if not found in this scope.
 	*/
-	@:overload public function next() : Scope_Entry;
+	@:overload public function next() : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
-	@:overload public function next(sf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : Scope_Entry;
+	@:overload public function next(sf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
-	@:overload public function getOrigin() : Scope;
+	@:overload public function getOrigin() : com.sun.tools.javac.code.Scope;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Scope$ImportScope') extern class Scope_ImportScope extends Scope
+@:native('com$sun$tools$javac$code$Scope$ImportScope') extern class Scope_ImportScope extends com.sun.tools.javac.code.Scope
 {
 	@:overload public function new(owner : com.sun.tools.javac.code.Symbol) : Void;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Scope$ImportScope$ImportEntry') @:internal extern class Scope_ImportScope_ImportEntry extends Scope_Entry
+@:native('com$sun$tools$javac$code$Scope$ImportScope$ImportEntry') @:internal extern class Scope_ImportScope_ImportEntry extends com.sun.tools.javac.code.Scope.Scope_Entry
 {
-	@:overload override public function getOrigin() : Scope;
+	@:overload override public function getOrigin() : com.sun.tools.javac.code.Scope;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Scope$StarImportScope') extern class Scope_StarImportScope extends Scope_ImportScope implements Scope_ScopeListener
+@:native('com$sun$tools$javac$code$Scope$StarImportScope') extern class Scope_StarImportScope extends com.sun.tools.javac.code.Scope.Scope_ImportScope implements com.sun.tools.javac.code.Scope.Scope_ScopeListener
 {
 	@:overload public function new(owner : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload public function importAll(fromScope : Scope) : Void;
+	@:overload public function importAll(fromScope : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload public function symbolRemoved(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload public function symbolRemoved(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload public function symbolAdded(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload public function symbolAdded(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
 	
 }
 /** An empty scope, into which you can't place anything.  Used for
 *  the scope for a variable initializer.
 */
-@:native('com$sun$tools$javac$code$Scope$DelegatedScope') extern class Scope_DelegatedScope extends Scope
+@:native('com$sun$tools$javac$code$Scope$DelegatedScope') extern class Scope_DelegatedScope extends com.sun.tools.javac.code.Scope
 {
-	public static var emptyTable(default, null) : java.NativeArray<Scope_Entry>;
+	public static var emptyTable(default, null) : java.NativeArray<com.sun.tools.javac.code.Scope.Scope_Entry>;
 	
-	@:overload public function new(outer : Scope) : Void;
+	@:overload public function new(outer : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload override public function dup() : Scope;
+	@:overload override public function dup() : com.sun.tools.javac.code.Scope;
 	
-	@:overload override public function dupUnshared() : Scope;
+	@:overload override public function dupUnshared() : com.sun.tools.javac.code.Scope;
 	
-	@:overload override public function leave() : Scope;
+	@:overload override public function leave() : com.sun.tools.javac.code.Scope;
 	
 	@:overload override public function enter(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function enter(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload override public function enter(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
 	@:overload override public function remove(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function lookup(name : com.sun.tools.javac.util.Name) : Scope_Entry;
+	@:overload override public function lookup(name : com.sun.tools.javac.util.Name) : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
 	
 }
@@ -219,17 +219,17 @@ extern class Scope
 *  to this scope) or indirectly (i.e. because a new member has been
 *  added/removed into a supertype scope)
 */
-@:native('com$sun$tools$javac$code$Scope$CompoundScope') extern class Scope_CompoundScope extends Scope implements Scope_ScopeListener
+@:native('com$sun$tools$javac$code$Scope$CompoundScope') extern class Scope_CompoundScope extends com.sun.tools.javac.code.Scope implements com.sun.tools.javac.code.Scope.Scope_ScopeListener
 {
-	public static var emptyTable(default, null) : java.NativeArray<Scope_Entry>;
+	public static var emptyTable(default, null) : java.NativeArray<com.sun.tools.javac.code.Scope.Scope_Entry>;
 	
 	@:overload public function new(owner : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload public function addSubScope(that : Scope) : Void;
+	@:overload public function addSubScope(that : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload public function symbolAdded(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload public function symbolAdded(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
-	@:overload public function symbolRemoved(sym : com.sun.tools.javac.code.Symbol, s : Scope) : Void;
+	@:overload public function symbolRemoved(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope) : Void;
 	
 	@:overload public function getMark() : Int;
 	
@@ -239,11 +239,11 @@ extern class Scope
 	
 	@:overload override public function getElementsByName(name : com.sun.tools.javac.util.Name, sf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : java.lang.Iterable<com.sun.tools.javac.code.Symbol>;
 	
-	@:overload override public function lookup(name : com.sun.tools.javac.util.Name, sf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : Scope_Entry;
+	@:overload override public function lookup(name : com.sun.tools.javac.util.Name, sf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
-	@:overload override public function dup(newOwner : com.sun.tools.javac.code.Symbol) : Scope;
+	@:overload override public function dup(newOwner : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Scope;
 	
-	@:overload override public function enter(sym : com.sun.tools.javac.code.Symbol, s : Scope, origin : Scope) : Void;
+	@:overload override public function enter(sym : com.sun.tools.javac.code.Symbol, s : com.sun.tools.javac.code.Scope, origin : com.sun.tools.javac.code.Scope) : Void;
 	
 	@:overload override public function remove(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
@@ -251,7 +251,7 @@ extern class Scope
 }
 @:native('com$sun$tools$javac$code$Scope$CompoundScope$CompoundScopeIterator') @:internal extern class Scope_CompoundScope_CompoundScopeIterator implements java.util.Iterator<com.sun.tools.javac.code.Symbol>
 {
-	@:overload public function new(scopesToScan : com.sun.tools.javac.util.List<Scope>) : Void;
+	@:overload public function new(scopesToScan : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Scope>) : Void;
 	
 	@:overload public function hasNext() : Bool;
 	
@@ -262,15 +262,15 @@ extern class Scope
 	
 }
 /** An error scope, for which the owner should be an error symbol. */
-@:native('com$sun$tools$javac$code$Scope$ErrorScope') extern class Scope_ErrorScope extends Scope
+@:native('com$sun$tools$javac$code$Scope$ErrorScope') extern class Scope_ErrorScope extends com.sun.tools.javac.code.Scope
 {
 	@:overload public function new(errSymbol : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function dup() : Scope;
+	@:overload override public function dup() : com.sun.tools.javac.code.Scope;
 	
-	@:overload override public function dupUnshared() : Scope;
+	@:overload override public function dupUnshared() : com.sun.tools.javac.code.Scope;
 	
-	@:overload override public function lookup(name : com.sun.tools.javac.util.Name) : Scope_Entry;
+	@:overload override public function lookup(name : com.sun.tools.javac.util.Name) : com.sun.tools.javac.code.Scope.Scope_Entry;
 	
 	
 }

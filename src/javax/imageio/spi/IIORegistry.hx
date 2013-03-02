@@ -37,7 +37,7 @@ extern class IIORegistry extends javax.imageio.spi.ServiceRegistry
 	* @return the default registry for the current
 	* <code>ThreadGroup</code>.
 	*/
-	@:overload public static function getDefaultInstance() : IIORegistry;
+	@:overload public static function getDefaultInstance() : javax.imageio.spi.IIORegistry;
 	
 	/**
 	* Registers all available service providers found on the

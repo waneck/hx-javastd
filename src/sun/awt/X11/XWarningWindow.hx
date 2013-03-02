@@ -30,25 +30,25 @@ package sun.awt.X11;
 	*/
 	@:overload public function reposition(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function getWMName() : String;
+	@:overload private function getWMName() : String;
 	
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload public function getGraphics() : java.awt.Graphics;
 	
-	@:overload override public function repaint() : Void;
+	@:overload public function repaint() : Void;
 	
-	@:overload override public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload public function handleExposeEvent(xev : sun.awt.X11.XEvent) : Void;
 	
-	@:overload override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
+	@:overload private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
 	
-	@:overload override private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
+	@:overload private function stateChanged(time : haxe.Int64, oldState : Int, newState : Int) : Void;
 	
-	@:overload override private function setMouseAbove(above : Bool) : Void;
+	@:overload private function setMouseAbove(above : Bool) : Void;
 	
-	@:overload override private function enterNotify(window : haxe.Int64) : Void;
+	@:overload private function enterNotify(window : haxe.Int64) : Void;
 	
-	@:overload override private function leaveNotify(window : haxe.Int64) : Void;
+	@:overload private function leaveNotify(window : haxe.Int64) : Void;
 	
-	@:overload override public function xSetVisible(visible : Bool) : Void;
+	@:overload public function xSetVisible(visible : Bool) : Void;
 	
 	@:overload public function setSecurityWarningVisible(visible : Bool, doSchedule : Bool) : Void;
 	

@@ -31,7 +31,7 @@ extern class HttpCapture
 	
 	@:overload @:synchronized public function flush() : Void;
 	
-	@:overload public static function getCapture(url : java.net.URL) : HttpCapture;
+	@:overload public static function getCapture(url : java.net.URL) : sun.net.www.http.HttpCapture;
 	
 	
 }

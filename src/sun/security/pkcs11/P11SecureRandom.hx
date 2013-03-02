@@ -41,11 +41,11 @@ package sun.security.pkcs11;
 */
 @:require(java5) @:internal extern class P11SecureRandom extends java.security.SecureRandomSpi
 {
-	@:overload @:synchronized override private function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:synchronized private function engineSetSeed(seed : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function engineNextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload private function engineNextBytes(bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGenerateSeed(numBytes : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

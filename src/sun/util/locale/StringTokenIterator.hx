@@ -47,9 +47,9 @@ extern class StringTokenIterator
 	
 	@:overload public function hasNext() : Bool;
 	
-	@:overload public function setStart(offset : Int) : StringTokenIterator;
+	@:overload public function setStart(offset : Int) : sun.util.locale.StringTokenIterator;
 	
-	@:overload public function setText(text : String) : StringTokenIterator;
+	@:overload public function setText(text : String) : sun.util.locale.StringTokenIterator;
 	
 	
 }

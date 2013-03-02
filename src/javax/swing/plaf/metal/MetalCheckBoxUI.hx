@@ -25,9 +25,9 @@ package javax.swing.plaf.metal;
 */
 extern class MetalCheckBoxUI extends javax.swing.plaf.metal.MetalRadioButtonUI
 {
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function getPropertyPrefix() : String;
+	@:overload public function getPropertyPrefix() : String;
 	
 	@:overload override public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	

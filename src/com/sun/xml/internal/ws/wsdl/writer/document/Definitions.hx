@@ -29,9 +29,9 @@ extern interface Definitions extends com.sun.xml.internal.txw2.TypedXmlWriter ex
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function name(value : String) : Definitions;
+	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Definitions;
 	
-	@:overload public function targetNamespace(value : String) : Definitions;
+	@:overload public function targetNamespace(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Definitions;
 	
 	@:overload public function service() : com.sun.xml.internal.ws.wsdl.writer.document.Service;
 	

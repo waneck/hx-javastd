@@ -17,15 +17,15 @@ extern class LifespanPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _TRANSIENT(default, null) : Int;
 	
-	public static var TRANSIENT(default, null) : LifespanPolicyValue;
+	public static var TRANSIENT(default, null) : org.omg.PortableServer.LifespanPolicyValue;
 	
 	public static var _PERSISTENT(default, null) : Int;
 	
-	public static var PERSISTENT(default, null) : LifespanPolicyValue;
+	public static var PERSISTENT(default, null) : org.omg.PortableServer.LifespanPolicyValue;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : LifespanPolicyValue;
+	@:overload public static function from_int(value : Int) : org.omg.PortableServer.LifespanPolicyValue;
 	
 	@:overload private function new(value : Int) : Void;
 	

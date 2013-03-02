@@ -38,9 +38,9 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param args   Fields of the error message.
 	*
 	*/
-	@:overload public static function fragment(key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public static function fragment(key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
-	@:overload public static function getFragmentFormatter() : com.sun.tools.javac.api.DiagnosticFormatter<JCDiagnostic>;
+	@:overload public static function getFragmentFormatter() : com.sun.tools.javac.api.DiagnosticFormatter<com.sun.tools.javac.util.JCDiagnostic>;
 	
 	private var args(default, null) : java.NativeArray<Dynamic>;
 	
@@ -54,19 +54,19 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	* @param key a resource key to identify the text of the diagnostic
 	* @param args arguments to be included in the text of the diagnostic
 	*/
-	@:overload private function new(formatter : com.sun.tools.javac.api.DiagnosticFormatter<JCDiagnostic>, dt : JCDiagnostic_DiagnosticType, lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, flags : java.util.Set<JCDiagnostic_DiagnosticFlag>, source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload private function new(formatter : com.sun.tools.javac.api.DiagnosticFormatter<com.sun.tools.javac.util.JCDiagnostic>, dt : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticType, lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, flags : java.util.Set<com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticFlag>, source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Get the type of this diagnostic.
 	* @return the type of this diagnostic
 	*/
-	@:overload public function getType() : JCDiagnostic_DiagnosticType;
+	@:overload public function getType() : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticType;
 	
 	/**
 	* Get the subdiagnostic list
 	* @return subdiagnostic list
 	*/
-	@:overload public function getSubdiagnostics() : com.sun.tools.javac.util.List<JCDiagnostic>;
+	@:overload public function getSubdiagnostics() : com.sun.tools.javac.util.List<com.sun.tools.javac.util.JCDiagnostic>;
 	
 	@:overload public function isMultiline() : Bool;
 	
@@ -138,7 +138,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	* Get the prefix string associated with a particular type of diagnostic.
 	* @return the prefix string associated with a particular type of diagnostic
 	*/
-	@:overload public function getPrefix(dt : JCDiagnostic_DiagnosticType) : String;
+	@:overload public function getPrefix(dt : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticType) : String;
 	
 	/**
 	* Return the standard presentation of this diagnostic.
@@ -151,9 +151,9 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	
 	@:overload public function getMessage(locale : java.util.Locale) : String;
 	
-	@:overload public function setFlag(flag : JCDiagnostic_DiagnosticFlag) : Void;
+	@:overload public function setFlag(flag : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticFlag) : Void;
 	
-	@:overload public function isFlagSet(flag : JCDiagnostic_DiagnosticFlag) : Bool;
+	@:overload public function isFlagSet(flag : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticFlag) : Bool;
 	
 	
 }
@@ -161,10 +161,10 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 @:native('com$sun$tools$javac$util$JCDiagnostic$Factory') extern class JCDiagnostic_Factory
 {
 	/** The context key for the diagnostic factory. */
-	private static var diagnosticFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<JCDiagnostic_Factory>;
+	private static var diagnosticFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_Factory>;
 	
 	/** Get the Factory instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : JCDiagnostic_Factory;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_Factory;
 	
 	/** Create a new diagnostic factory. */
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
@@ -179,7 +179,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param key    The key for the localized error message.
 	*  @param args   Fields of the error message.
 	*/
-	@:overload public function error(source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function error(source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a warning diagnostic that will not be hidden by the -nowarn or -Xlint:none options.
@@ -189,7 +189,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param args   Fields of the warning message.
 	*  @see MandatoryWarningHandler
 	*/
-	@:overload public function mandatoryWarning(source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function mandatoryWarning(source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a warning diagnostic that will not be hidden by the -nowarn or -Xlint:none options.
@@ -200,7 +200,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param args   Fields of the warning message.
 	*  @see MandatoryWarningHandler
 	*/
-	@:overload public function mandatoryWarning(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function mandatoryWarning(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a warning diagnostic.
@@ -209,7 +209,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param args   Fields of the warning message.
 	*  @see MandatoryWarningHandler
 	*/
-	@:overload public function warning(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function warning(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a warning diagnostic.
@@ -218,7 +218,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param key    The key for the localized warning message.
 	*  @param args   Fields of the warning message.
 	*/
-	@:overload public function warning(source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function warning(source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a warning diagnostic.
@@ -229,7 +229,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param args   Fields of the warning message.
 	*  @see MandatoryWarningHandler
 	*/
-	@:overload public function warning(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function warning(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a note diagnostic that will not be hidden by the -nowarn or -Xlint:none options.
@@ -237,14 +237,14 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param args   Fields of the message.
 	*  @see MandatoryWarningHandler
 	*/
-	@:overload public function mandatoryNote(source : com.sun.tools.javac.util.DiagnosticSource, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function mandatoryNote(source : com.sun.tools.javac.util.DiagnosticSource, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a note diagnostic.
 	*  @param key    The key for the localized error message.
 	*  @param args   Fields of the message.
 	*/
-	@:overload public function note(key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function note(key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a note diagnostic.
@@ -253,14 +253,14 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param key    The key for the localized message.
 	*  @param args   Fields of the message.
 	*/
-	@:overload public function note(source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function note(source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a fragment diagnostic, for use as an argument in other diagnostics
 	*  @param key    The key for the localized message.
 	*  @param args   Fields of the message.
 	*/
-	@:overload public function fragment(key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function fragment(key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a new diagnostic of the given kind, which is not mandatory and which has
@@ -272,7 +272,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param key         The key for the localized message.
 	*  @param args        Fields of the message.
 	*/
-	@:overload public function create(kind : JCDiagnostic_DiagnosticType, source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function create(kind : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticType, source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
 	/**
 	* Create a new diagnostic of the given kind.
@@ -284,9 +284,9 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	*  @param key         The key for the localized message.
 	*  @param args        Fields of the message.
 	*/
-	@:overload public function create(kind : JCDiagnostic_DiagnosticType, lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, flags : java.util.Set<JCDiagnostic_DiagnosticFlag>, source : com.sun.tools.javac.util.DiagnosticSource, pos : JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : JCDiagnostic;
+	@:overload public function create(kind : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticType, lc : com.sun.tools.javac.code.Lint.Lint_LintCategory, flags : java.util.Set<com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticFlag>, source : com.sun.tools.javac.util.DiagnosticSource, pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, key : String, args : java.NativeArray<Dynamic>) : com.sun.tools.javac.util.JCDiagnostic;
 	
-	@:overload private function qualify(t : JCDiagnostic_DiagnosticType, key : String) : String;
+	@:overload private function qualify(t : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticType, key : String) : String;
 	
 	
 }
@@ -336,7 +336,7 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 * A DiagnosticPosition that simply identifies a position, but no related
 * tree node, as the location for a diagnostic. Used for scanner and parser
 * diagnostics. */
-@:native('com$sun$tools$javac$util$JCDiagnostic$SimpleDiagnosticPosition') extern class JCDiagnostic_SimpleDiagnosticPosition implements JCDiagnostic_DiagnosticPosition
+@:native('com$sun$tools$javac$util$JCDiagnostic$SimpleDiagnosticPosition') extern class JCDiagnostic_SimpleDiagnosticPosition implements com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition
 {
 	@:overload public function new(pos : Int) : Void;
 	
@@ -359,11 +359,11 @@ extern class JCDiagnostic implements javax.tools.Diagnostic<javax.tools.JavaFile
 	
 }
 
-@:native('com$sun$tools$javac$util$JCDiagnostic$MultilineDiagnostic') extern class JCDiagnostic_MultilineDiagnostic extends JCDiagnostic
+@:native('com$sun$tools$javac$util$JCDiagnostic$MultilineDiagnostic') extern class JCDiagnostic_MultilineDiagnostic extends com.sun.tools.javac.util.JCDiagnostic
 {
-	@:overload public function new(other : JCDiagnostic, subdiagnostics : com.sun.tools.javac.util.List<JCDiagnostic>) : Void;
+	@:overload public function new(other : com.sun.tools.javac.util.JCDiagnostic, subdiagnostics : com.sun.tools.javac.util.List<com.sun.tools.javac.util.JCDiagnostic>) : Void;
 	
-	@:overload override public function getSubdiagnostics() : com.sun.tools.javac.util.List<JCDiagnostic>;
+	@:overload override public function getSubdiagnostics() : com.sun.tools.javac.util.List<com.sun.tools.javac.util.JCDiagnostic>;
 	
 	@:overload override public function isMultiline() : Bool;
 	

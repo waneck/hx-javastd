@@ -87,7 +87,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* @param r the specified <code>Rectangle2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setRect(r : Rectangle2D) : Void;
+	@:require(java2) @:overload public function setRect(r : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* Tests if the specified line segment intersects the interior of this
@@ -173,7 +173,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : Rectangle2D;
+	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
@@ -204,7 +204,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	*          <code>Rectangle2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function createIntersection(r : Rectangle2D) : Rectangle2D;
+	@:require(java2) @:overload @:abstract public function createIntersection(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Intersects the pair of specified source <code>Rectangle2D</code>
@@ -222,7 +222,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* <code>src2</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function intersect(src1 : Rectangle2D, src2 : Rectangle2D, dest : Rectangle2D) : Void;
+	@:require(java2) @:overload public static function intersect(src1 : java.awt.geom.Rectangle2D, src2 : java.awt.geom.Rectangle2D, dest : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* Returns a new <code>Rectangle2D</code> object representing the
@@ -235,7 +235,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* <code>Rectangle2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:abstract public function createUnion(r : Rectangle2D) : Rectangle2D;
+	@:require(java2) @:overload @:abstract public function createUnion(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Unions the pair of source <code>Rectangle2D</code> objects
@@ -253,7 +253,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* <code>src2</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public static function union(src1 : Rectangle2D, src2 : Rectangle2D, dest : Rectangle2D) : Void;
+	@:require(java2) @:overload public static function union(src1 : java.awt.geom.Rectangle2D, src2 : java.awt.geom.Rectangle2D, dest : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* Adds a point, specified by the double precision arguments
@@ -304,7 +304,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* <code>Rectangle2D</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function add(r : Rectangle2D) : Void;
+	@:require(java2) @:overload public function add(r : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* Returns an iteration object that defines the boundary of this
@@ -376,7 +376,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 * coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Rectangle2D$Float') extern class Rectangle2D_Float extends Rectangle2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Rectangle2D$Float') extern class Rectangle2D_Float extends java.awt.geom.Rectangle2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of this <code>Rectangle2D</code>.
@@ -483,7 +483,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRect(r : Rectangle2D) : Void;
+	@:require(java2) @:overload override public function setRect(r : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -495,19 +495,19 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : Rectangle2D;
+	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function createIntersection(r : Rectangle2D) : Rectangle2D;
+	@:require(java2) @:overload override public function createIntersection(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function createUnion(r : Rectangle2D) : Rectangle2D;
+	@:require(java2) @:overload override public function createUnion(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the <code>String</code> representation of this
@@ -525,7 +525,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 * double coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Rectangle2D$Double') extern class Rectangle2D_Double extends Rectangle2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Rectangle2D$Double') extern class Rectangle2D_Double extends java.awt.geom.Rectangle2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of this <code>Rectangle2D</code>.
@@ -618,7 +618,7 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRect(r : Rectangle2D) : Void;
+	@:require(java2) @:overload override public function setRect(r : java.awt.geom.Rectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -630,19 +630,19 @@ extern class Rectangle2D extends java.awt.geom.RectangularShape
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function getBounds2D() : Rectangle2D;
+	@:require(java2) @:overload override public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function createIntersection(r : Rectangle2D) : Rectangle2D;
+	@:require(java2) @:overload override public function createIntersection(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function createUnion(r : Rectangle2D) : Rectangle2D;
+	@:require(java2) @:overload override public function createUnion(r : java.awt.geom.Rectangle2D) : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Returns the <code>String</code> representation of this

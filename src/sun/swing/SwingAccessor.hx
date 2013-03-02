@@ -28,12 +28,12 @@ extern class SwingAccessor
 	/**
 	* Set an accessor object for the javax.swing.text.JTextComponent class.
 	*/
-	@:overload public static function setJTextComponentAccessor(jtca : SwingAccessor_JTextComponentAccessor) : Void;
+	@:overload public static function setJTextComponentAccessor(jtca : sun.swing.SwingAccessor.SwingAccessor_JTextComponentAccessor) : Void;
 	
 	/**
 	* Retrieve the accessor object for the javax.swing.text.JTextComponent class.
 	*/
-	@:overload public static function getJTextComponentAccessor() : SwingAccessor_JTextComponentAccessor;
+	@:overload public static function getJTextComponentAccessor() : sun.swing.SwingAccessor.SwingAccessor_JTextComponentAccessor;
 	
 	
 }

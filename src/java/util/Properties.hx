@@ -31,7 +31,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	*
 	* @serial
 	*/
-	private var defaults : Properties;
+	private var defaults : java.util.Properties;
 	
 	/**
 	* Creates an empty property list with no default values.
@@ -43,7 +43,7 @@ extern class Properties extends java.util.Hashtable<Dynamic, Dynamic>
 	*
 	* @param   defaults   the defaults.
 	*/
-	@:overload public function new(defaults : Properties) : Void;
+	@:overload public function new(defaults : java.util.Properties) : Void;
 	
 	/**
 	* Calls the <tt>Hashtable</tt> method <code>put</code>. Provided for

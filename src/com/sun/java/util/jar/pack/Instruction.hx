@@ -56,18 +56,18 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function getNextPC() : Int;
 	
-	@:overload public function next() : Instruction;
+	@:overload public function next() : com.sun.java.util.jar.pack.Instruction;
 	
 	@:overload public function isNonstandard() : Bool;
 	
 	@:overload public function setNonstandardLength(length : Int) : Void;
 	
 	/** A fake instruction at this pc whose next() will be at nextpc. */
-	@:overload public function forceNextPC(nextpc : Int) : Instruction;
+	@:overload public function forceNextPC(nextpc : Int) : com.sun.java.util.jar.pack.Instruction;
 	
-	@:overload public static function at(bytes : java.NativeArray<java.StdTypes.Int8>, pc : Int) : Instruction;
+	@:overload public static function at(bytes : java.NativeArray<java.StdTypes.Int8>, pc : Int) : com.sun.java.util.jar.pack.Instruction;
 	
-	@:overload public static function at(bytes : java.NativeArray<java.StdTypes.Int8>, pc : Int, reuse : Instruction) : Instruction;
+	@:overload public static function at(bytes : java.NativeArray<java.StdTypes.Int8>, pc : Int, reuse : com.sun.java.util.jar.pack.Instruction) : com.sun.java.util.jar.pack.Instruction;
 	
 	@:overload public function getCPTag() : java.StdTypes.Int8;
 	
@@ -92,7 +92,7 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function equals(that : Instruction) : Bool;
+	@:overload public function equals(that : com.sun.java.util.jar.pack.Instruction) : Bool;
 	
 	@:overload public function toString() : String;
 	
@@ -142,7 +142,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Instruction$Switch') extern class Instruction_Switch extends Instruction
+@:native('com$sun$java$util$jar$pack$Instruction$Switch') extern class Instruction_Switch extends com.sun.java.util.jar.pack.Instruction
 {
 	@:overload @:abstract public function getCaseCount() : Int;
 	
@@ -178,7 +178,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Instruction$TableSwitch') extern class Instruction_TableSwitch extends Instruction_Switch
+@:native('com$sun$java$util$jar$pack$Instruction$TableSwitch') extern class Instruction_TableSwitch extends com.sun.java.util.jar.pack.Instruction.Instruction_Switch
 {
 	@:overload public function getLowCase() : Int;
 	
@@ -204,7 +204,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Instruction$LookupSwitch') extern class Instruction_LookupSwitch extends Instruction_Switch
+@:native('com$sun$java$util$jar$pack$Instruction$LookupSwitch') extern class Instruction_LookupSwitch extends com.sun.java.util.jar.pack.Instruction.Instruction_Switch
 {
 	@:overload override public function getCaseCount() : Int;
 	

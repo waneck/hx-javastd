@@ -75,13 +75,13 @@ extern class XTrayIconPeer implements java.awt.peer.TrayIconPeer implements sun.
 	
 	@:overload override public function isResizable() : Bool;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	@:overload public function realDispose() : Void;
 	
 	
 }
-@:native('sun$awt$X11$XTrayIconPeer$TrayIconCanvas') @:internal extern class XTrayIconPeer_TrayIconCanvas extends XTrayIconPeer_IconCanvas
+@:native('sun$awt$X11$XTrayIconPeer$TrayIconCanvas') @:internal extern class XTrayIconPeer_TrayIconCanvas extends sun.awt.X11.XTrayIconPeer.XTrayIconPeer_IconCanvas
 {
 	@:overload override private function repaintImage(doClear : Bool) : Void;
 	

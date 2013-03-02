@@ -27,11 +27,11 @@ package com.sun.xml.internal.ws.server.provider;
 {
 	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
-	@:overload override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.message.Message;
 	
 	@:overload private function getResponseMessage(returnValue : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload override private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
+	@:overload private function getResponseMessage(e : java.lang.Exception) : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

@@ -33,37 +33,37 @@ extern class MappedMXBeanType
 	
 	
 }
-@:native('sun$management$MappedMXBeanType$BasicMXBeanType') @:internal extern class MappedMXBeanType_BasicMXBeanType extends MappedMXBeanType
+@:native('sun$management$MappedMXBeanType$BasicMXBeanType') @:internal extern class MappedMXBeanType_BasicMXBeanType extends sun.management.MappedMXBeanType
 {
 	
 }
-@:native('sun$management$MappedMXBeanType$EnumMXBeanType') @:internal extern class MappedMXBeanType_EnumMXBeanType extends MappedMXBeanType
+@:native('sun$management$MappedMXBeanType$EnumMXBeanType') @:internal extern class MappedMXBeanType_EnumMXBeanType extends sun.management.MappedMXBeanType
 {
 	
 }
-@:native('sun$management$MappedMXBeanType$ArrayMXBeanType') @:internal extern class MappedMXBeanType_ArrayMXBeanType extends MappedMXBeanType
+@:native('sun$management$MappedMXBeanType$ArrayMXBeanType') @:internal extern class MappedMXBeanType_ArrayMXBeanType extends sun.management.MappedMXBeanType
 {
-	private var componentType : MappedMXBeanType;
+	private var componentType : sun.management.MappedMXBeanType;
 	
-	private var baseElementType : MappedMXBeanType;
+	private var baseElementType : sun.management.MappedMXBeanType;
 	
 	@:overload private function new() : Void;
 	
 	
 }
-@:native('sun$management$MappedMXBeanType$GenericArrayMXBeanType') @:internal extern class MappedMXBeanType_GenericArrayMXBeanType extends MappedMXBeanType_ArrayMXBeanType
+@:native('sun$management$MappedMXBeanType$GenericArrayMXBeanType') @:internal extern class MappedMXBeanType_GenericArrayMXBeanType extends sun.management.MappedMXBeanType.MappedMXBeanType_ArrayMXBeanType
 {
 	
 }
-@:native('sun$management$MappedMXBeanType$ListMXBeanType') @:internal extern class MappedMXBeanType_ListMXBeanType extends MappedMXBeanType
+@:native('sun$management$MappedMXBeanType$ListMXBeanType') @:internal extern class MappedMXBeanType_ListMXBeanType extends sun.management.MappedMXBeanType
 {
 	
 }
-@:native('sun$management$MappedMXBeanType$MapMXBeanType') @:internal extern class MappedMXBeanType_MapMXBeanType extends MappedMXBeanType
+@:native('sun$management$MappedMXBeanType$MapMXBeanType') @:internal extern class MappedMXBeanType_MapMXBeanType extends sun.management.MappedMXBeanType
 {
 	
 }
-@:native('sun$management$MappedMXBeanType$CompositeDataMXBeanType') @:internal extern class MappedMXBeanType_CompositeDataMXBeanType extends MappedMXBeanType
+@:native('sun$management$MappedMXBeanType$CompositeDataMXBeanType') @:internal extern class MappedMXBeanType_CompositeDataMXBeanType extends sun.management.MappedMXBeanType
 {
 	
 }

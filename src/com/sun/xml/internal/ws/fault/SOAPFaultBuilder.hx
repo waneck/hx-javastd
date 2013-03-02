@@ -106,7 +106,7 @@ extern class SOAPFaultBuilder
 	* @return always non-null valid object.
 	* @throws JAXBException if the parsing fails.
 	*/
-	@:overload public static function create(msg : com.sun.xml.internal.ws.api.message.Message) : SOAPFaultBuilder;
+	@:overload public static function create(msg : com.sun.xml.internal.ws.api.message.Message) : com.sun.xml.internal.ws.fault.SOAPFaultBuilder;
 	
 	/**
 	* Set to false if you don't want the generated faults to have stack trace in it.

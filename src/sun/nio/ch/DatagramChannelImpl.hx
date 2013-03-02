@@ -31,49 +31,49 @@ package sun.nio.ch;
 	
 	@:overload public function new(sp : java.nio.channels.spi.SelectorProvider, fd : java.io.FileDescriptor) : Void;
 	
-	@:overload override public function socket() : java.net.DatagramSocket;
+	@:overload public function socket() : java.net.DatagramSocket;
 	
 	@:overload override public function getLocalAddress() : java.net.SocketAddress;
 	
-	@:overload override public function getRemoteAddress() : java.net.SocketAddress;
+	@:overload public function getRemoteAddress() : java.net.SocketAddress;
 	
-	@:overload override public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.DatagramChannel;
+	@:overload public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.DatagramChannel;
 	
 	@:overload override public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	@:overload @:final override public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
-	@:overload override public function receive(dst : java.nio.ByteBuffer) : java.net.SocketAddress;
+	@:overload public function receive(dst : java.nio.ByteBuffer) : java.net.SocketAddress;
 	
-	@:overload override public function send(src : java.nio.ByteBuffer, target : java.net.SocketAddress) : Int;
+	@:overload public function send(src : java.nio.ByteBuffer, target : java.net.SocketAddress) : Int;
 	
-	@:overload override public function read(buf : java.nio.ByteBuffer) : Int;
+	@:overload public function read(buf : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
-	@:overload override public function write(buf : java.nio.ByteBuffer) : Int;
+	@:overload public function write(buf : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
-	@:overload override private function implConfigureBlocking(block : Bool) : Void;
+	@:overload private function implConfigureBlocking(block : Bool) : Void;
 	
 	@:overload public function localAddress() : java.net.SocketAddress;
 	
 	@:overload public function remoteAddress() : java.net.SocketAddress;
 	
-	@:overload override public function bind(local : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
+	@:overload public function bind(local : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
 	
-	@:overload override public function isConnected() : Bool;
+	@:overload public function isConnected() : Bool;
 	
-	@:overload override public function connect(sa : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
+	@:overload public function connect(sa : java.net.SocketAddress) : java.nio.channels.DatagramChannel;
 	
-	@:overload override public function disconnect() : java.nio.channels.DatagramChannel;
+	@:overload public function disconnect() : java.nio.channels.DatagramChannel;
 	
-	@:overload override public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface) : java.nio.channels.MembershipKey;
+	@:overload public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface) : java.nio.channels.MembershipKey;
 	
-	@:overload override public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface, source : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload public function join(group : java.net.InetAddress, interf : java.net.NetworkInterface, source : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
-	@:overload override private function implCloseSelectableChannel() : Void;
+	@:overload private function implCloseSelectableChannel() : Void;
 	
 	@:overload public function kill() : Void;
 	

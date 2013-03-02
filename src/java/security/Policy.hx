@@ -49,7 +49,7 @@ extern class Policy
 	* @see SecurityManager#checkPermission(Permission)
 	* @see #setPolicy(java.security.Policy)
 	*/
-	@:overload public static function getPolicy() : Policy;
+	@:overload public static function getPolicy() : java.security.Policy;
 	
 	/**
 	* Sets the system-wide Policy object. This method first calls
@@ -68,7 +68,7 @@ extern class Policy
 	* @see #getPolicy()
 	*
 	*/
-	@:overload public static function setPolicy(p : Policy) : Void;
+	@:overload public static function setPolicy(p : java.security.Policy) : Void;
 	
 	/**
 	* Returns a Policy object of the specified type.
@@ -107,7 +107,7 @@ extern class Policy
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : Policy_Parameters) : Policy;
+	@:require(java6) @:overload public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters) : java.security.Policy;
 	
 	/**
 	* Returns a Policy object of the specified type.
@@ -151,7 +151,7 @@ extern class Policy
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : Policy_Parameters, provider : String) : Policy;
+	@:require(java6) @:overload public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters, provider : String) : java.security.Policy;
 	
 	/**
 	* Returns a Policy object of the specified type.
@@ -188,7 +188,7 @@ extern class Policy
 	* @see Provider
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getInstance(type : String, params : Policy_Parameters, provider : java.security.Provider) : Policy;
+	@:require(java6) @:overload public static function getInstance(type : String, params : java.security.Policy.Policy_Parameters, provider : java.security.Provider) : java.security.Policy;
 	
 	/**
 	* Return the Provider of this Policy.
@@ -227,7 +227,7 @@ extern class Policy
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getParameters() : Policy_Parameters;
+	@:require(java6) @:overload public function getParameters() : java.security.Policy.Policy_Parameters;
 	
 	/**
 	* Return a PermissionCollection object containing the set of
@@ -330,11 +330,11 @@ extern class Policy
 * This subclass is returned by the getInstance calls.  All Policy calls
 * are delegated to the underlying PolicySpi.
 */
-@:native('java$security$Policy$PolicyDelegate') @:internal extern class Policy_PolicyDelegate extends Policy
+@:native('java$security$Policy$PolicyDelegate') @:internal extern class Policy_PolicyDelegate extends java.security.Policy
 {
 	@:overload override public function getType() : String;
 	
-	@:overload override public function getParameters() : Policy_Parameters;
+	@:overload override public function getParameters() : java.security.Policy.Policy_Parameters;
 	
 	@:overload override public function getProvider() : java.security.Provider;
 	

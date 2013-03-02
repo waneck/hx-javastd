@@ -279,7 +279,7 @@ extern class XMLStreamBuffer
 	* @return XMLStreamBuffer the created buffer
 	* @see MutableXMLStreamBuffer#createFromXMLStreamReader(XMLStreamReader)
 	*/
-	@:overload public static function createNewBufferFromXMLStreamReader(reader : javax.xml.stream.XMLStreamReader) : XMLStreamBuffer;
+	@:overload public static function createNewBufferFromXMLStreamReader(reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
 	/**
 	* Create a new buffer from a {@link XMLReader} and {@link InputStream}.
@@ -291,7 +291,7 @@ extern class XMLStreamBuffer
 	* @return XMLStreamBuffer the created buffer
 	* @see MutableXMLStreamBuffer#createFromXMLReader(XMLReader, InputStream)
 	*/
-	@:overload public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream) : XMLStreamBuffer;
+	@:overload public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
 	/**
 	* Create a new buffer from a {@link XMLReader} and {@link InputStream}.
@@ -305,7 +305,7 @@ extern class XMLStreamBuffer
 	* @return XMLStreamBuffer the created buffer
 	* @see MutableXMLStreamBuffer#createFromXMLReader(XMLReader, InputStream, String)
 	*/
-	@:overload public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream, systemId : String) : XMLStreamBuffer;
+	@:overload public static function createNewBufferFromXMLReader(reader : org.xml.sax.XMLReader, _in : java.io.InputStream, systemId : String) : com.sun.xml.internal.stream.buffer.XMLStreamBuffer;
 	
 	@:overload @:final private function getStructure() : com.sun.xml.internal.stream.buffer.FragmentedArray<java.NativeArray<java.StdTypes.Int8>>;
 	

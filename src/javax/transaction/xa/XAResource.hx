@@ -141,7 +141,7 @@ extern interface XAResource
 	* values are XAER_RMERR and XAER_RMFAIL.
 	*
 	*/
-	@:overload public function isSameRM(xares : XAResource) : Bool;
+	@:overload public function isSameRM(xares : javax.transaction.xa.XAResource) : Bool;
 	
 	/** Ask the resource manager to prepare for a transaction commit
 	* of the transaction specified in xid.

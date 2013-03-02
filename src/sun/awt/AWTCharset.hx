@@ -33,7 +33,7 @@ extern class AWTCharset extends java.nio.charset.Charset
 	
 	@:overload public function new(awtCsName : String, javaCs : java.nio.charset.Charset) : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
 	

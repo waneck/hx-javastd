@@ -104,7 +104,7 @@ extern class CatalogException extends java.lang.Exception
 	*
 	* @return The error or warning message.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* Return the embedded exception, if any.
@@ -125,7 +125,7 @@ extern class CatalogException extends java.lang.Exception
 	*
 	* @return A string representation of this exception.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

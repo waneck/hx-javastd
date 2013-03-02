@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.generator.annotation.ri;
 */
 extern interface OverrideAnnotationOfWriter extends com.sun.codemodel.internal.JAnnotationWriter<com.sun.xml.internal.bind.annotation.OverrideAnnotationOf>
 {
-	@:overload public function value(value : String) : OverrideAnnotationOfWriter;
+	@:overload public function value(value : String) : com.sun.tools.internal.xjc.generator.annotation.ri.OverrideAnnotationOfWriter;
 	
 	
 }

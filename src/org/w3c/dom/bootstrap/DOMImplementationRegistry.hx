@@ -73,7 +73,7 @@ extern class DOMImplementationRegistry
 	*     If any specified class does not implement
 	* <code>DOMImplementationSource</code>
 	*/
-	@:overload public static function newInstance() : DOMImplementationRegistry;
+	@:overload public static function newInstance() : org.w3c.dom.bootstrap.DOMImplementationRegistry;
 	
 	/**
 	* Return the first implementation that has the desired

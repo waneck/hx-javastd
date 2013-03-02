@@ -79,7 +79,7 @@ extern class ExemptionMechanism
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : ExemptionMechanism;
+	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.ExemptionMechanism;
 	
 	/**
 	* Returns an <code>ExemptionMechanism</code> object that implements the
@@ -119,7 +119,7 @@ extern class ExemptionMechanism
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : ExemptionMechanism;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.ExemptionMechanism;
 	
 	/**
 	* Returns an <code>ExemptionMechanism</code> object that implements the
@@ -153,7 +153,7 @@ extern class ExemptionMechanism
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : ExemptionMechanism;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.ExemptionMechanism;
 	
 	/**
 	* Returns the provider of this <code>ExemptionMechanism</code> object.

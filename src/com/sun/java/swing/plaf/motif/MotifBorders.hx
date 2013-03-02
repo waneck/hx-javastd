@@ -45,9 +45,9 @@ extern class MotifBorders
 {
 	@:overload public function new(isRaised : Bool, darkShadow : java.awt.Color, lightShadow : java.awt.Color) : Void;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	@:overload public function isOpaque(c : java.awt.Component) : Bool;
 	
@@ -57,9 +57,9 @@ extern class MotifBorders
 {
 	@:overload public function new(control : java.awt.Color, focus : java.awt.Color) : Void;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -75,13 +75,13 @@ extern class MotifBorders
 	
 	@:overload public function new(shadow : java.awt.Color, highlight : java.awt.Color, darkShadow : java.awt.Color, focus : java.awt.Color) : Void;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$motif$MotifBorders$ToggleButtonBorder') extern class MotifBorders_ToggleButtonBorder extends MotifBorders_ButtonBorder
+@:native('com$sun$java$swing$plaf$motif$MotifBorders$ToggleButtonBorder') extern class MotifBorders_ToggleButtonBorder extends com.sun.java.swing.plaf.motif.MotifBorders.MotifBorders_ButtonBorder
 {
 	@:overload public function new(shadow : java.awt.Color, highlight : java.awt.Color, darkShadow : java.awt.Color, focus : java.awt.Color) : Void;
 	
@@ -91,7 +91,7 @@ extern class MotifBorders
 	
 	
 }
-@:native('com$sun$java$swing$plaf$motif$MotifBorders$MenuBarBorder') extern class MotifBorders_MenuBarBorder extends MotifBorders_ButtonBorder
+@:native('com$sun$java$swing$plaf$motif$MotifBorders$MenuBarBorder') extern class MotifBorders_MenuBarBorder extends com.sun.java.swing.plaf.motif.MotifBorders.MotifBorders_ButtonBorder
 {
 	@:overload public function new(shadow : java.awt.Color, highlight : java.awt.Color, darkShadow : java.awt.Color, focus : java.awt.Color) : Void;
 	
@@ -124,7 +124,7 @@ extern class MotifBorders
 	
 	@:overload private function getFrameShadow() : java.awt.Color;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	/** Draws the FrameBorder's top border.
 	*/
@@ -148,11 +148,11 @@ extern class MotifBorders
 	* <b>drawTitleBar</b>, <b>drawLeftBorder</b>, <b>drawRightBorder</b> and
 	* <b>drawBottomBorder</b>.
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$motif$MotifBorders$InternalFrameBorder') extern class MotifBorders_InternalFrameBorder extends MotifBorders_FrameBorder
+@:native('com$sun$java$swing$plaf$motif$MotifBorders$InternalFrameBorder') extern class MotifBorders_InternalFrameBorder extends com.sun.java.swing.plaf.motif.MotifBorders.MotifBorders_FrameBorder
 {
 	public static var CORNER_SIZE(default, null) : Int;
 	
@@ -232,14 +232,14 @@ extern class MotifBorders
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Reinitialize the insets parameter with this Border's current Insets.
 	* @param c the component for which this border insets value applies
 	* @param insets the object to be reinitialized
 	*/
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }

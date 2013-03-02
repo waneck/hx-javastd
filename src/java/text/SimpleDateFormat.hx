@@ -484,7 +484,7 @@ extern class SimpleDateFormat extends java.text.DateFormat
 	* @return AttributedCharacterIterator describing the formatted value.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
+	@:require(java4) @:overload public function formatToCharacterIterator(obj : Dynamic) : java.text.AttributedCharacterIterator;
 	
 	/**
 	* Parses text from a string to produce a <code>Date</code>.

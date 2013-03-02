@@ -27,7 +27,7 @@ package sun.nio.ch;
 {
 	private var fdToChannelLock(default, null) : java.util.concurrent.locks.ReadWriteLock;
 	
-	private var fdToChannel(default, null) : java.util.Map<Null<Int>, Port_PollableChannel>;
+	private var fdToChannel(default, null) : java.util.Map<Null<Int>, sun.nio.ch.Port.Port_PollableChannel>;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class ByteBufferWithInfo
 	
 	@:overload public function new(orb : org.omg.CORBA.ORB, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite, usePooledByteBuffers : Bool) : Void;
 	
-	@:overload public function new(bbwi : ByteBufferWithInfo) : Void;
+	@:overload public function new(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
 	@:overload public function getSize() : Int;
 	

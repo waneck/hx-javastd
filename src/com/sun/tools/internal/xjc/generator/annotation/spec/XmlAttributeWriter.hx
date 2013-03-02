@@ -25,11 +25,11 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlAttributeWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlAttribute>
 {
-	@:overload public function name(value : String) : XmlAttributeWriter;
+	@:overload public function name(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAttributeWriter;
 	
-	@:overload public function namespace(value : String) : XmlAttributeWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAttributeWriter;
 	
-	@:overload public function required(value : Bool) : XmlAttributeWriter;
+	@:overload public function required(value : Bool) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAttributeWriter;
 	
 	
 }

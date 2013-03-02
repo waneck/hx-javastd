@@ -47,7 +47,7 @@ extern class Fault extends com.sun.tools.internal.ws.processor.model.ModelObject
 	
 	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
-	@:overload public function getParentFault() : Fault;
+	@:overload public function getParentFault() : com.sun.tools.internal.ws.processor.model.Fault;
 	
 	@:overload public function getSubfaults() : java.util.Iterator<Dynamic>;
 	

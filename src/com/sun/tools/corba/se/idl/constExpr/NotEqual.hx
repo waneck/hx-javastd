@@ -38,7 +38,7 @@ extern class NotEqual extends com.sun.tools.corba.se.idl.constExpr.BinaryExpr
 {
 	@:overload private function new(leftOperand : com.sun.tools.corba.se.idl.constExpr.Expression, rightOperand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload override public function evaluate() : Dynamic;
+	@:overload public function evaluate() : Dynamic;
 	
 	
 }

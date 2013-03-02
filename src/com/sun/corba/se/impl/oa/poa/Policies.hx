@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.oa.poa;
 */
 extern class Policies
 {
-	public static var defaultPolicies(default, null) : Policies;
+	public static var defaultPolicies(default, null) : com.sun.corba.se.impl.oa.poa.Policies;
 	
-	public static var rootPOAPolicies(default, null) : Policies;
+	public static var rootPOAPolicies(default, null) : com.sun.corba.se.impl.oa.poa.Policies;
 	
 	@:overload public function toString() : String;
 	

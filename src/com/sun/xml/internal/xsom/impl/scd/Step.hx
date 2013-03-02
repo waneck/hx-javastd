@@ -50,7 +50,7 @@ extern class Step<T>
 /**
 * Matches any name.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Step$Any') @:internal extern class Step_Any extends Step<com.sun.xml.internal.xsom.XSComponent>
+@:native('com$sun$xml$internal$xsom$impl$scd$Step$Any') @:internal extern class Step_Any extends com.sun.xml.internal.xsom.impl.scd.Step<com.sun.xml.internal.xsom.XSComponent>
 {
 	@:overload public function new(axis : com.sun.xml.internal.xsom.impl.scd.Axis<com.sun.xml.internal.xsom.XSComponent>) : Void;
 	
@@ -58,7 +58,7 @@ extern class Step<T>
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$scd$Step$Filtered') @:internal extern class Step_Filtered<T> extends Step<T>
+@:native('com$sun$xml$internal$xsom$impl$scd$Step$Filtered') @:internal extern class Step_Filtered<T> extends com.sun.xml.internal.xsom.impl.scd.Step<T>
 {
 	@:overload private function new(axis : com.sun.xml.internal.xsom.impl.scd.Axis<T>) : Void;
 	
@@ -71,7 +71,7 @@ extern class Step<T>
 /**
 * Matches a particular name.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Step$Named') @:internal extern class Step_Named extends Step_Filtered<com.sun.xml.internal.xsom.XSDeclaration>
+@:native('com$sun$xml$internal$xsom$impl$scd$Step$Named') @:internal extern class Step_Named extends com.sun.xml.internal.xsom.impl.scd.Step.Step_Filtered<com.sun.xml.internal.xsom.XSDeclaration>
 {
 	@:overload public function new(axis : com.sun.xml.internal.xsom.impl.scd.Axis<com.sun.xml.internal.xsom.XSDeclaration>, n : com.sun.xml.internal.xsom.impl.UName) : Void;
 	
@@ -84,7 +84,7 @@ extern class Step<T>
 /**
 * Matches anonymous types.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Step$AnonymousType') @:internal extern class Step_AnonymousType extends Step_Filtered<com.sun.xml.internal.xsom.XSType>
+@:native('com$sun$xml$internal$xsom$impl$scd$Step$AnonymousType') @:internal extern class Step_AnonymousType extends com.sun.xml.internal.xsom.impl.scd.Step.Step_Filtered<com.sun.xml.internal.xsom.XSType>
 {
 	@:overload public function new(axis : com.sun.xml.internal.xsom.impl.scd.Axis<com.sun.xml.internal.xsom.XSType>) : Void;
 	
@@ -95,7 +95,7 @@ extern class Step<T>
 /**
 * Matches a particular kind of facets.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Step$Facet') @:internal extern class Step_Facet extends Step_Filtered<com.sun.xml.internal.xsom.XSFacet>
+@:native('com$sun$xml$internal$xsom$impl$scd$Step$Facet') @:internal extern class Step_Facet extends com.sun.xml.internal.xsom.impl.scd.Step.Step_Filtered<com.sun.xml.internal.xsom.XSFacet>
 {
 	@:overload public function new(axis : com.sun.xml.internal.xsom.impl.scd.Axis<com.sun.xml.internal.xsom.XSFacet>, facetName : String) : Void;
 	
@@ -106,7 +106,7 @@ extern class Step<T>
 /**
 * Matches a schema in a particular namespace.
 */
-@:native('com$sun$xml$internal$xsom$impl$scd$Step$Schema') @:internal extern class Step_Schema extends Step_Filtered<com.sun.xml.internal.xsom.XSSchema>
+@:native('com$sun$xml$internal$xsom$impl$scd$Step$Schema') @:internal extern class Step_Schema extends com.sun.xml.internal.xsom.impl.scd.Step.Step_Filtered<com.sun.xml.internal.xsom.XSSchema>
 {
 	@:overload public function new(axis : com.sun.xml.internal.xsom.impl.scd.Axis<com.sun.xml.internal.xsom.XSSchema>, uri : String) : Void;
 	

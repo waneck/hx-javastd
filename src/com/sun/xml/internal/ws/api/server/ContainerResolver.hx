@@ -31,21 +31,21 @@ extern class ContainerResolver
 	*
 	* @param resolver container resolver
 	*/
-	@:overload public static function setInstance(resolver : ContainerResolver) : Void;
+	@:overload public static function setInstance(resolver : com.sun.xml.internal.ws.api.server.ContainerResolver) : Void;
 	
 	/**
 	* Returns the container resolver which can be used to get client's {@link Container}.
 	*
 	* @return container resolver instance
 	*/
-	@:overload public static function getInstance() : ContainerResolver;
+	@:overload public static function getInstance() : com.sun.xml.internal.ws.api.server.ContainerResolver;
 	
 	/**
 	* Returns the default container resolver which can be used to get {@link Container}.
 	*
 	* @return default container resolver
 	*/
-	@:overload public static function getDefault() : ContainerResolver;
+	@:overload public static function getDefault() : com.sun.xml.internal.ws.api.server.ContainerResolver;
 	
 	/**
 	* Returns the {@link Container} context in which client is running.

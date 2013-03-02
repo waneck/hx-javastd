@@ -70,7 +70,7 @@ extern class AlgorithmParameterGenerator
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : AlgorithmParameterGenerator;
+	@:overload public static function getInstance(algorithm : String) : java.security.AlgorithmParameterGenerator;
 	
 	/**
 	* Returns an AlgorithmParameterGenerator object for generating
@@ -107,7 +107,7 @@ extern class AlgorithmParameterGenerator
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : AlgorithmParameterGenerator;
+	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.AlgorithmParameterGenerator;
 	
 	/**
 	* Returns an AlgorithmParameterGenerator object for generating
@@ -139,7 +139,7 @@ extern class AlgorithmParameterGenerator
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : AlgorithmParameterGenerator;
+	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.AlgorithmParameterGenerator;
 	
 	/**
 	* Returns the provider of this algorithm parameter generator object.

@@ -43,7 +43,7 @@ extern interface Formattable
 	
 	
 }
-@:native('com$sun$tools$javac$api$Formattable$LocalizedString') @:internal extern class Formattable_LocalizedString implements Formattable
+@:native('com$sun$tools$javac$api$Formattable$LocalizedString') @:internal extern class Formattable_LocalizedString implements com.sun.tools.javac.api.Formattable
 {
 	@:overload public function new(key : String) : Void;
 	

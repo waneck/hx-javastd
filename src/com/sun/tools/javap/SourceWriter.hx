@@ -29,7 +29,7 @@ extern class SourceWriter extends com.sun.tools.javap.InstructionDetailWriter
 	
 	@:overload public function reset(cf : com.sun.tools.classfile.ClassFile, attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
-	@:overload override public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
 	
 	@:overload public function hasSource() : Bool;
 	

@@ -26,7 +26,7 @@ package javax.swing.tree;
 extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 {
 	/** Object responsible for getting the size of a node. */
-	private var nodeDimensions : AbstractLayoutCache_NodeDimensions;
+	private var nodeDimensions : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions;
 	
 	/** Model providing information. */
 	private var treeModel : javax.swing.tree.TreeModel;
@@ -53,7 +53,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @param nd a <code>NodeDimensions</code> object
 	*/
-	@:overload public function setNodeDimensions(nd : AbstractLayoutCache_NodeDimensions) : Void;
+	@:overload public function setNodeDimensions(nd : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions) : Void;
 	
 	/**
 	* Returns the object that renders nodes in the tree, and which is
@@ -61,7 +61,7 @@ extern class AbstractLayoutCache implements javax.swing.tree.RowMapper
 	*
 	* @return the <code>NodeDimensions</code> object
 	*/
-	@:overload public function getNodeDimensions() : AbstractLayoutCache_NodeDimensions;
+	@:overload public function getNodeDimensions() : javax.swing.tree.AbstractLayoutCache.AbstractLayoutCache_NodeDimensions;
 	
 	/**
 	* Sets the <code>TreeModel</code> that will provide the data.

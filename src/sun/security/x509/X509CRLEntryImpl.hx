@@ -23,7 +23,7 @@ package sun.security.x509;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class X509CRLEntryImpl extends java.security.cert.X509CRLEntry implements java.lang.Comparable<X509CRLEntryImpl>
+extern class X509CRLEntryImpl extends java.security.cert.X509CRLEntry implements java.lang.Comparable<sun.security.x509.X509CRLEntryImpl>
 {
 	/**
 	* Constructs a revoked certificate entry using the given
@@ -186,7 +186,7 @@ extern class X509CRLEntryImpl extends java.security.cert.X509CRLEntry implements
 	* to a X509CRLEntryImpl. Does a cast if possible, otherwise reparses
 	* the encoding.
 	*/
-	@:overload public static function toImpl(entry : java.security.cert.X509CRLEntry) : X509CRLEntryImpl;
+	@:overload public static function toImpl(entry : java.security.cert.X509CRLEntry) : sun.security.x509.X509CRLEntryImpl;
 	
 	/**
 	* Returns all extensions for this entry in a map
@@ -194,7 +194,7 @@ extern class X509CRLEntryImpl extends java.security.cert.X509CRLEntry implements
 	*/
 	@:overload public function getExtensions() : java.util.Map<String, java.security.cert.Extension>;
 	
-	@:overload public function compareTo(that : X509CRLEntryImpl) : Int;
+	@:overload public function compareTo(that : sun.security.x509.X509CRLEntryImpl) : Int;
 	
 	
 }

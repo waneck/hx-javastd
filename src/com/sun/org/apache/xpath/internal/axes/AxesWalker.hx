@@ -104,7 +104,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @param walker Reference to AxesWalker derivative, or may be null.
 	*/
-	@:overload public function setNextWalker(walker : AxesWalker) : Void;
+	@:overload public function setNextWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
 	
 	/**
 	* Get the next walker in the location step chain.
@@ -112,7 +112,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	*
 	* @return Reference to AxesWalker derivative, or null.
 	*/
-	@:overload public function getNextWalker() : AxesWalker;
+	@:overload public function getNextWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/**
 	* Set or clear the previous walker reference in the location step chain.
@@ -121,7 +121,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	* @param walker Reference to previous walker reference in the location
 	*               step chain, or null.
 	*/
-	@:overload public function setPrevWalker(walker : AxesWalker) : Void;
+	@:overload public function setPrevWalker(walker : com.sun.org.apache.xpath.internal.axes.AxesWalker) : Void;
 	
 	/**
 	* Get the previous walker reference in the location step chain.
@@ -130,7 +130,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	* @return Reference to previous walker reference in the location
 	*               step chain, or null.
 	*/
-	@:overload public function getPrevWalker() : AxesWalker;
+	@:overload public function getPrevWalker() : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/**
 	* Get the next node in document order on the axes.
@@ -219,7 +219,7 @@ extern class AxesWalker extends com.sun.org.apache.xpath.internal.axes.Predicate
 	
 	/** The next walker in the location step chain.
 	*  @serial  */
-	private var m_nextWalker : AxesWalker;
+	private var m_nextWalker : com.sun.org.apache.xpath.internal.axes.AxesWalker;
 	
 	/** The traversal axis from where the nodes will be filtered. */
 	private var m_axis : Int;

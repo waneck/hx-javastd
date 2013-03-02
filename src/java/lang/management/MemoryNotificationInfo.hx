@@ -129,7 +129,7 @@ extern class MemoryNotificationInfo
 	*         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : MemoryNotificationInfo;
+	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.MemoryNotificationInfo;
 	
 	
 }

@@ -23,7 +23,7 @@ package com.sun.tools.internal.ws.processor.modeler.annotation;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class MemberInfo implements java.lang.Comparable<MemberInfo>
+@:internal extern class MemberInfo implements java.lang.Comparable<com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo>
 {
 	@:overload public function new(paramType : com.sun.mirror.type.TypeMirror, paramName : String, jaxbAnnotations : java.util.List<java.lang.annotation.Annotation>) : Void;
 	
@@ -33,7 +33,7 @@ package com.sun.tools.internal.ws.processor.modeler.annotation;
 	
 	@:overload public function getParamName() : String;
 	
-	@:overload public function compareTo(member : MemberInfo) : Int;
+	@:overload public function compareTo(member : com.sun.tools.internal.ws.processor.modeler.annotation.MemberInfo) : Int;
 	
 	
 }

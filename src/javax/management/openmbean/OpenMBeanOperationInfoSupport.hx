@@ -188,7 +188,7 @@ extern class OpenMBeanOperationInfoSupport extends javax.management.MBeanOperati
 	* @return a string representation of this {@code
 	* OpenMBeanOperationInfoSupport} instance
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

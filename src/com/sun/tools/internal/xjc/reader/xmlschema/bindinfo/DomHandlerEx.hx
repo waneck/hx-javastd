@@ -23,13 +23,13 @@ package com.sun.tools.internal.xjc.reader.xmlschema.bindinfo;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class DomHandlerEx implements javax.xml.bind.annotation.DomHandler<DomHandlerEx_DomAndLocation, DomHandlerEx_ResultImpl>
+@:internal extern class DomHandlerEx implements javax.xml.bind.annotation.DomHandler<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation, com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl>
 {
-	@:overload public function createUnmarshaller(errorHandler : javax.xml.bind.ValidationEventHandler) : DomHandlerEx_ResultImpl;
+	@:overload public function createUnmarshaller(errorHandler : javax.xml.bind.ValidationEventHandler) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl;
 	
-	@:overload public function getElement(r : DomHandlerEx_ResultImpl) : DomHandlerEx_DomAndLocation;
+	@:overload public function getElement(r : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_ResultImpl) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation;
 	
-	@:overload public function marshal(domAndLocation : DomHandlerEx_DomAndLocation, errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.Source;
+	@:overload public function marshal(domAndLocation : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.DomHandlerEx.DomHandlerEx_DomAndLocation, errorHandler : javax.xml.bind.ValidationEventHandler) : javax.xml.transform.Source;
 	
 	
 }

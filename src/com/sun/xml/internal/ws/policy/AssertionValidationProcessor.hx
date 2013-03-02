@@ -46,7 +46,7 @@ extern class AssertionValidationProcessor
 	* @return singleton An instance of the class.
 	* @throws PolicyException If instantiation failed.
 	*/
-	@:overload public static function getInstance() : AssertionValidationProcessor;
+	@:overload public static function getInstance() : com.sun.xml.internal.ws.policy.AssertionValidationProcessor;
 	
 	/**
 	* Validates fitness of the {@code assertion} on the client side.

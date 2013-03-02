@@ -31,7 +31,7 @@ extern class WindowsScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 	* @param c the text field
 	* @return the UI
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override private function installDefaults() : Void;
 	
@@ -94,7 +94,7 @@ extern class WindowsScrollBarUI extends javax.swing.plaf.basic.BasicScrollBarUI
 */
 @:native('com$sun$java$swing$plaf$windows$WindowsScrollBarUI$Grid') @:internal extern class WindowsScrollBarUI_Grid
 {
-	@:overload public static function getGrid(fg : java.awt.Color, bg : java.awt.Color) : WindowsScrollBarUI_Grid;
+	@:overload public static function getGrid(fg : java.awt.Color, bg : java.awt.Color) : com.sun.java.swing.plaf.windows.WindowsScrollBarUI.WindowsScrollBarUI_Grid;
 	
 	@:overload public function new(fg : java.awt.Color, bg : java.awt.Color) : Void;
 	

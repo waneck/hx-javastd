@@ -103,7 +103,7 @@ extern class InetSocketAddress extends java.net.SocketAddress
 	*          socket address
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function createUnresolved(host : String, port : Int) : InetSocketAddress;
+	@:require(java5) @:overload public static function createUnresolved(host : String, port : Int) : java.net.InetSocketAddress;
 	
 	/**
 	* Gets the port number.

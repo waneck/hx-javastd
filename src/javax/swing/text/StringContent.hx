@@ -173,7 +173,7 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 	private var undoLocation : Int;
 	
 	/** Position to reset offset. */
-	private var rec : StringContent_PosRec;
+	private var rec : javax.swing.text.StringContent.StringContent_PosRec;
 	
 	
 }
@@ -184,9 +184,9 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 {
 	@:overload private function new(offset : Int, length : Int) : Void;
 	
-	@:overload override public function undo() : Void;
+	@:overload public function undo() : Void;
 	
-	@:overload override public function redo() : Void;
+	@:overload public function redo() : Void;
 	
 	private var offset : Int;
 	
@@ -205,9 +205,9 @@ extern class StringContent implements javax.swing.text.AbstractDocument.Abstract
 {
 	@:overload private function new(offset : Int, string : String) : Void;
 	
-	@:overload override public function undo() : Void;
+	@:overload public function undo() : Void;
 	
-	@:overload override public function redo() : Void;
+	@:overload public function redo() : Void;
 	
 	private var offset : Int;
 	

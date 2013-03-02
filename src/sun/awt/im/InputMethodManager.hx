@@ -32,7 +32,7 @@ extern class InputMethodManager
 	*
 	* @return the InputMethodManager instance
 	*/
-	@:overload @:final public static function getInstance() : InputMethodManager;
+	@:overload @:final public static function getInstance() : sun.awt.im.InputMethodManager;
 	
 	/**
 	* Gets a string for the trigger menu item that should be added to
@@ -63,7 +63,7 @@ extern class InputMethodManager
 	
 	
 }
-@:internal extern class ExecutableInputMethodManager extends InputMethodManager implements java.lang.Runnable
+@:internal extern class ExecutableInputMethodManager extends sun.awt.im.InputMethodManager implements java.lang.Runnable
 {
 	@:overload public function run() : Void;
 	

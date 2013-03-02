@@ -41,37 +41,37 @@ package com.sun.crypto.provider;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
+	@:overload private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
 	
-	@:overload override private function engineGetBlockSize() : Int;
+	@:overload private function engineGetBlockSize() : Int;
 	
-	@:overload override private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineGetKeySize(key : java.security.Key) : Int;
+	@:overload private function engineGetKeySize(key : java.security.Key) : Int;
 	
-	@:overload override private function engineGetOutputSize(inLen : Int) : Int;
+	@:overload private function engineGetOutputSize(inLen : Int) : Int;
 	
-	@:overload override private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:overload private function engineGetParameters() : java.security.AlgorithmParameters;
 	
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineSetMode(mode : String) : Void;
+	@:overload private function engineSetMode(mode : String) : Void;
 	
-	@:overload override private function engineSetPadding(paddingScheme : String) : Void;
+	@:overload private function engineSetPadding(paddingScheme : String) : Void;
 	
-	@:overload override private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
-	@:overload override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
+	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
 	
-	@:overload override private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }
@@ -79,37 +79,37 @@ package com.sun.crypto.provider;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
+	@:overload private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
 	
-	@:overload override private function engineGetBlockSize() : Int;
+	@:overload private function engineGetBlockSize() : Int;
 	
-	@:overload override private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineGetKeySize(key : java.security.Key) : Int;
+	@:overload private function engineGetKeySize(key : java.security.Key) : Int;
 	
-	@:overload override private function engineGetOutputSize(inLen : Int) : Int;
+	@:overload private function engineGetOutputSize(inLen : Int) : Int;
 	
-	@:overload override private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:overload private function engineGetParameters() : java.security.AlgorithmParameters;
 	
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineSetMode(mode : String) : Void;
+	@:overload private function engineSetMode(mode : String) : Void;
 	
-	@:overload override private function engineSetPadding(paddingScheme : String) : Void;
+	@:overload private function engineSetPadding(paddingScheme : String) : Void;
 	
-	@:overload override private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
-	@:overload override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
+	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOff : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOff : Int) : Int;
 	
-	@:overload override private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

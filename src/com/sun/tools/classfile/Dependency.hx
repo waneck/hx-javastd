@@ -37,13 +37,13 @@ extern interface Dependency
 	* Get the location that has the dependency.
 	* @return the location that has the dependency.
 	*/
-	@:overload public function getOrigin() : Dependency_Location;
+	@:overload public function getOrigin() : com.sun.tools.classfile.Dependency.Dependency_Location;
 	
 	/**
 	* Get the location that is being depended upon.
 	* @return the location that is being depended upon.
 	*/
-	@:overload public function getTarget() : Dependency_Location;
+	@:overload public function getTarget() : com.sun.tools.classfile.Dependency.Dependency_Location;
 	
 	
 }
@@ -57,7 +57,7 @@ extern interface Dependency
 	* @param dependency the dependency to be considered
 	* @return true if and only if the dependency is of interest.
 	*/
-	@:overload public function accepts(dependency : Dependency) : Bool;
+	@:overload public function accepts(dependency : com.sun.tools.classfile.Dependency) : Bool;
 	
 	
 }
@@ -71,7 +71,7 @@ extern interface Dependency
 	* @param classfile the class file to be examined
 	* @return the dependencies located in the given class file.
 	*/
-	@:overload public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<Dependency>;
+	@:overload public function findDependencies(classfile : com.sun.tools.classfile.ClassFile) : java.lang.Iterable<com.sun.tools.classfile.Dependency>;
 	
 	
 }

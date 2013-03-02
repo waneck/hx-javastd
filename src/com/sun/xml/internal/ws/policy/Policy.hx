@@ -31,7 +31,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents a <emph>'nothing allowed'</emph> (no policy alternatives).
 	*/
-	@:overload public static function createNullPolicy() : Policy;
+	@:overload public static function createNullPolicy() : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'anything allowed'</emph>
@@ -40,7 +40,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @return policy instance which represents a <emph>'anything allowed'</emph> (empty policy alternative with no plicy
 	* assertions prescribed).
 	*/
-	@:overload public static function createEmptyPolicy() : Policy;
+	@:overload public static function createEmptyPolicy() : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'nothing allowed'</emph>
@@ -50,7 +50,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @param policyId local URI of the policy. May be {@code null}.
 	* @return policy instance which represents a <emph>'nothing allowed'</emph> (no policy alternatives).
 	*/
-	@:overload public static function createNullPolicy(name : String, policyId : String) : Policy;
+	@:overload public static function createNullPolicy(name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'nothing allowed'</emph>
@@ -61,7 +61,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @param policyId local URI of the policy. May be {@code null}.
 	* @return policy instance which represents a <emph>'nothing allowed'</emph> (no policy alternatives).
 	*/
-	@:overload public static function createNullPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : Policy;
+	@:overload public static function createNullPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'anything allowed'</emph>
@@ -73,7 +73,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @return policy instance which represents a <emph>'anything allowed'</emph> (empty policy alternative with no plicy
 	* assertions prescribed).
 	*/
-	@:overload public static function createEmptyPolicy(name : String, policyId : String) : Policy;
+	@:overload public static function createEmptyPolicy(name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a <emph>'anything allowed'</emph>
@@ -86,7 +86,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	* @return policy instance which represents a <emph>'anything allowed'</emph> (empty policy alternative with no plicy
 	* assertions prescribed).
 	*/
-	@:overload public static function createEmptyPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : Policy;
+	@:overload public static function createEmptyPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a policy expression with
@@ -100,7 +100,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents the policy with given alternatives.
 	*/
-	@:overload public static function createPolicy(sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : Policy;
+	@:overload public static function createPolicy(sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a policy expression with
@@ -116,7 +116,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents the policy with given alternatives.
 	*/
-	@:overload public static function createPolicy(name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : Policy;
+	@:overload public static function createPolicy(name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* The factory method creates an <b>immutable</b> policy instance which represents a policy expression with
@@ -133,7 +133,7 @@ extern class Policy implements java.lang.Iterable<com.sun.xml.internal.ws.policy
 	*
 	* @return policy instance which represents the policy with given alternatives.
 	*/
-	@:overload public static function createPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : Policy;
+	@:overload public static function createPolicy(nsVersion : com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.NamespaceVersion, name : String, policyId : String, sets : java.util.Collection<com.sun.xml.internal.ws.policy.AssertionSet>) : com.sun.xml.internal.ws.policy.Policy;
 	
 	/**
 	* Returns the policy identifier that serves as a local relative policy URI.

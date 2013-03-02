@@ -27,9 +27,9 @@ package com.sun.tools.internal.xjc.reader.dtd.bindinfo;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(namespace : String, localName : String, qName : String, attrs : org.xml.sax.Attributes) : Void;
 	
 	
 }

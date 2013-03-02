@@ -25,11 +25,11 @@ package sun.net.www.protocol.file;
 */
 extern class Handler extends java.net.URLStreamHandler
 {
-	@:overload override private function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
+	@:overload private function parseURL(u : java.net.URL, spec : String, start : Int, limit : Int) : Void;
 	
-	@:overload @:synchronized override public function openConnection(u : java.net.URL) : java.net.URLConnection;
+	@:overload @:synchronized public function openConnection(u : java.net.URL) : java.net.URLConnection;
 	
-	@:overload @:synchronized override public function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
+	@:overload @:synchronized public function openConnection(u : java.net.URL, p : java.net.Proxy) : java.net.URLConnection;
 	
 	@:overload private function createFileURLConnection(u : java.net.URL, file : java.io.File) : java.net.URLConnection;
 	
@@ -40,7 +40,7 @@ extern class Handler extends java.net.URLStreamHandler
 	* @return  <tt>true</tt> if and only if they
 	* are equal, <tt>false</tt> otherwise.
 	*/
-	@:overload override private function hostsEqual(u1 : java.net.URL, u2 : java.net.URL) : Bool;
+	@:overload private function hostsEqual(u1 : java.net.URL, u2 : java.net.URL) : Bool;
 	
 	
 }

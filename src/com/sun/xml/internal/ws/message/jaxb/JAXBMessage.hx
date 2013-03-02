@@ -53,7 +53,7 @@ extern class JAXBMessage extends com.sun.xml.internal.ws.message.AbstractMessage
 	/**
 	* Copy constructor.
 	*/
-	@:overload public function new(that : JAXBMessage) : Void;
+	@:overload public function new(that : com.sun.xml.internal.ws.message.jaxb.JAXBMessage) : Void;
 	
 	@:overload override public function hasHeaders() : Bool;
 	

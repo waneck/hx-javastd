@@ -168,7 +168,7 @@ extern class Pattern implements java.io.Serializable
 	* @throws  PatternSyntaxException
 	*          If the expression's syntax is invalid
 	*/
-	@:native('compile') @:overload public static function _compile(regex : String) : Pattern;
+	@:native('compile') @:overload public static function _compile(regex : String) : java.util.regex.Pattern;
 	
 	/**
 	* Compiles the given regular expression into a pattern with the given
@@ -191,7 +191,7 @@ extern class Pattern implements java.io.Serializable
 	* @throws  PatternSyntaxException
 	*          If the expression's syntax is invalid
 	*/
-	@:native('compile') @:overload public static function _compile(regex : String, flags : Int) : Pattern;
+	@:native('compile') @:overload public static function _compile(regex : String, flags : Int) : java.util.regex.Pattern;
 	
 	/**
 	* Returns the regular expression from which this pattern was compiled.
@@ -380,7 +380,7 @@ extern class Pattern implements java.io.Serializable
 *  never matches values above Latin-1, and a complemented BitClass always
 *  matches values above Latin-1.
 */
-@:native('java$util$regex$Pattern$BitClass') @:internal extern class Pattern_BitClass extends Pattern_BmpCharProperty
+@:native('java$util$regex$Pattern$BitClass') @:internal extern class Pattern_BitClass extends java.util.regex.Pattern.Pattern_BmpCharProperty
 {
 	
 }
@@ -393,7 +393,7 @@ extern class Pattern implements java.io.Serializable
 {
 	
 }
-@:native('java$util$regex$Pattern$LastNode') @:internal extern class Pattern_LastNode extends Pattern_Node
+@:native('java$util$regex$Pattern$LastNode') @:internal extern class Pattern_LastNode extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -403,14 +403,14 @@ extern class Pattern implements java.io.Serializable
 * input string, moving forward after each try. An anchored search
 * or a BnM will bypass this node completely.
 */
-@:native('java$util$regex$Pattern$Start') @:internal extern class Pattern_Start extends Pattern_Node
+@:native('java$util$regex$Pattern$Start') @:internal extern class Pattern_Start extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
 /*
 * StartS supports supplementary characters, including unpaired surrogates.
 */
-@:native('java$util$regex$Pattern$StartS') @:internal extern class Pattern_StartS extends Pattern_Start
+@:native('java$util$regex$Pattern$StartS') @:internal extern class Pattern_StartS extends java.util.regex.Pattern.Pattern_Start
 {
 	
 }
@@ -419,7 +419,7 @@ extern class Pattern implements java.io.Serializable
 * match for a \A sequence, and the caret anchor will use this if not in
 * multiline mode.
 */
-@:native('java$util$regex$Pattern$Begin') @:internal extern class Pattern_Begin extends Pattern_Node
+@:native('java$util$regex$Pattern$Begin') @:internal extern class Pattern_Begin extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -427,7 +427,7 @@ extern class Pattern implements java.io.Serializable
 * Node to anchor at the end of input. This is the absolute end, so this
 * should not match at the last newline before the end as $ will.
 */
-@:native('java$util$regex$Pattern$End') @:internal extern class Pattern_End extends Pattern_Node
+@:native('java$util$regex$Pattern$End') @:internal extern class Pattern_End extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -435,14 +435,14 @@ extern class Pattern implements java.io.Serializable
 * Node to anchor at the beginning of a line. This is essentially the
 * object to match for the multiline ^.
 */
-@:native('java$util$regex$Pattern$Caret') @:internal extern class Pattern_Caret extends Pattern_Node
+@:native('java$util$regex$Pattern$Caret') @:internal extern class Pattern_Caret extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
 /**
 * Node to anchor at the beginning of a line when in unixdot mode.
 */
-@:native('java$util$regex$Pattern$UnixCaret') @:internal extern class Pattern_UnixCaret extends Pattern_Node
+@:native('java$util$regex$Pattern$UnixCaret') @:internal extern class Pattern_UnixCaret extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -450,7 +450,7 @@ extern class Pattern implements java.io.Serializable
 * Node to match the location where the last match ended.
 * This is used for the \G construct.
 */
-@:native('java$util$regex$Pattern$LastMatch') @:internal extern class Pattern_LastMatch extends Pattern_Node
+@:native('java$util$regex$Pattern$LastMatch') @:internal extern class Pattern_LastMatch extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -467,7 +467,7 @@ extern class Pattern implements java.io.Serializable
 * Like ^ the $ operator matches at a position, it does not match the
 * line terminators themselves.
 */
-@:native('java$util$regex$Pattern$Dollar') @:internal extern class Pattern_Dollar extends Pattern_Node
+@:native('java$util$regex$Pattern$Dollar') @:internal extern class Pattern_Dollar extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -475,7 +475,7 @@ extern class Pattern implements java.io.Serializable
 * Node to anchor at the end of a line or the end of input based on the
 * multiline mode when in unix lines mode.
 */
-@:native('java$util$regex$Pattern$UnixDollar') @:internal extern class Pattern_UnixDollar extends Pattern_Node
+@:native('java$util$regex$Pattern$UnixDollar') @:internal extern class Pattern_UnixDollar extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -483,7 +483,7 @@ extern class Pattern implements java.io.Serializable
 * Abstract node class to match one character satisfying some
 * boolean property.
 */
-@:native('java$util$regex$Pattern$CharProperty') @:internal extern class Pattern_CharProperty extends Pattern_Node
+@:native('java$util$regex$Pattern$CharProperty') @:internal extern class Pattern_CharProperty extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -491,77 +491,77 @@ extern class Pattern implements java.io.Serializable
 * Optimized version of CharProperty that works only for
 * properties never satisfied by Supplementary characters.
 */
-@:native('java$util$regex$Pattern$BmpCharProperty') @:internal extern class Pattern_BmpCharProperty extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$BmpCharProperty') @:internal extern class Pattern_BmpCharProperty extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Node class that matches a Supplementary Unicode character
 */
-@:native('java$util$regex$Pattern$SingleS') @:internal extern class Pattern_SingleS extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$SingleS') @:internal extern class Pattern_SingleS extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Optimization -- matches a given BMP character
 */
-@:native('java$util$regex$Pattern$Single') @:internal extern class Pattern_Single extends Pattern_BmpCharProperty
+@:native('java$util$regex$Pattern$Single') @:internal extern class Pattern_Single extends java.util.regex.Pattern.Pattern_BmpCharProperty
 {
 	
 }
 /**
 * Case insensitive matches a given BMP character
 */
-@:native('java$util$regex$Pattern$SingleI') @:internal extern class Pattern_SingleI extends Pattern_BmpCharProperty
+@:native('java$util$regex$Pattern$SingleI') @:internal extern class Pattern_SingleI extends java.util.regex.Pattern.Pattern_BmpCharProperty
 {
 	
 }
 /**
 * Unicode case insensitive matches a given Unicode character
 */
-@:native('java$util$regex$Pattern$SingleU') @:internal extern class Pattern_SingleU extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$SingleU') @:internal extern class Pattern_SingleU extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Node class that matches a Unicode block.
 */
-@:native('java$util$regex$Pattern$Block') @:internal extern class Pattern_Block extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$Block') @:internal extern class Pattern_Block extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Node class that matches a Unicode script
 */
-@:native('java$util$regex$Pattern$Script') @:internal extern class Pattern_Script extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$Script') @:internal extern class Pattern_Script extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Node class that matches a Unicode category.
 */
-@:native('java$util$regex$Pattern$Category') @:internal extern class Pattern_Category extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$Category') @:internal extern class Pattern_Category extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Node class that matches a Unicode "type"
 */
-@:native('java$util$regex$Pattern$Utype') @:internal extern class Pattern_Utype extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$Utype') @:internal extern class Pattern_Utype extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Node class that matches a POSIX type.
 */
-@:native('java$util$regex$Pattern$Ctype') @:internal extern class Pattern_Ctype extends Pattern_BmpCharProperty
+@:native('java$util$regex$Pattern$Ctype') @:internal extern class Pattern_Ctype extends java.util.regex.Pattern.Pattern_BmpCharProperty
 {
 	
 }
 /**
 * Base class for all Slice nodes
 */
-@:native('java$util$regex$Pattern$SliceNode') @:internal extern class Pattern_SliceNode extends Pattern_Node
+@:native('java$util$regex$Pattern$SliceNode') @:internal extern class Pattern_SliceNode extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -569,7 +569,7 @@ extern class Pattern implements java.io.Serializable
 * Node class for a case sensitive/BMP-only sequence of literal
 * characters.
 */
-@:native('java$util$regex$Pattern$Slice') @:internal extern class Pattern_Slice extends Pattern_SliceNode
+@:native('java$util$regex$Pattern$Slice') @:internal extern class Pattern_Slice extends java.util.regex.Pattern.Pattern_SliceNode
 {
 	
 }
@@ -577,7 +577,7 @@ extern class Pattern implements java.io.Serializable
 * Node class for a case_insensitive/BMP-only sequence of literal
 * characters.
 */
-@:native('java$util$regex$Pattern$SliceI') @:internal extern class Pattern_SliceI extends Pattern_SliceNode
+@:native('java$util$regex$Pattern$SliceI') @:internal extern class Pattern_SliceI extends java.util.regex.Pattern.Pattern_SliceNode
 {
 	
 }
@@ -585,7 +585,7 @@ extern class Pattern implements java.io.Serializable
 * Node class for a unicode_case_insensitive/BMP-only sequence of
 * literal characters. Uses unicode case folding.
 */
-@:native('java$util$regex$Pattern$SliceU') @:internal extern class Pattern_SliceU extends Pattern_SliceNode
+@:native('java$util$regex$Pattern$SliceU') @:internal extern class Pattern_SliceU extends java.util.regex.Pattern.Pattern_SliceNode
 {
 	
 }
@@ -593,7 +593,7 @@ extern class Pattern implements java.io.Serializable
 * Node class for a case sensitive sequence of literal characters
 * including supplementary characters.
 */
-@:native('java$util$regex$Pattern$SliceS') @:internal extern class Pattern_SliceS extends Pattern_SliceNode
+@:native('java$util$regex$Pattern$SliceS') @:internal extern class Pattern_SliceS extends java.util.regex.Pattern.Pattern_SliceNode
 {
 	
 }
@@ -601,7 +601,7 @@ extern class Pattern implements java.io.Serializable
 * Node class for a case insensitive sequence of literal characters
 * including supplementary characters.
 */
-@:native('java$util$regex$Pattern$SliceIS') @:internal extern class Pattern_SliceIS extends Pattern_SliceNode
+@:native('java$util$regex$Pattern$SliceIS') @:internal extern class Pattern_SliceIS extends java.util.regex.Pattern.Pattern_SliceNode
 {
 	
 }
@@ -609,7 +609,7 @@ extern class Pattern implements java.io.Serializable
 * Node class for a case insensitive sequence of literal characters.
 * Uses unicode case folding.
 */
-@:native('java$util$regex$Pattern$SliceUS') @:internal extern class Pattern_SliceUS extends Pattern_SliceIS
+@:native('java$util$regex$Pattern$SliceUS') @:internal extern class Pattern_SliceUS extends java.util.regex.Pattern.Pattern_SliceIS
 {
 	
 }
@@ -617,14 +617,14 @@ extern class Pattern implements java.io.Serializable
 * Implements the Unicode category ALL and the dot metacharacter when
 * in dotall mode.
 */
-@:native('java$util$regex$Pattern$All') @:internal extern class Pattern_All extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$All') @:internal extern class Pattern_All extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * Node class for the dot metacharacter when dotall is not enabled.
 */
-@:native('java$util$regex$Pattern$Dot') @:internal extern class Pattern_Dot extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$Dot') @:internal extern class Pattern_Dot extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
@@ -632,14 +632,14 @@ extern class Pattern implements java.io.Serializable
 * Node class for the dot metacharacter when dotall is not enabled
 * but UNIX_LINES is enabled.
 */
-@:native('java$util$regex$Pattern$UnixDot') @:internal extern class Pattern_UnixDot extends Pattern_CharProperty
+@:native('java$util$regex$Pattern$UnixDot') @:internal extern class Pattern_UnixDot extends java.util.regex.Pattern.Pattern_CharProperty
 {
 	
 }
 /**
 * The 0 or 1 quantifier. This one class implements all three types.
 */
-@:native('java$util$regex$Pattern$Ques') @:internal extern class Pattern_Ques extends Pattern_Node
+@:native('java$util$regex$Pattern$Ques') @:internal extern class Pattern_Ques extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -648,7 +648,7 @@ extern class Pattern implements java.io.Serializable
 * maximum occurrences. The * quantifier is handled as a special case.
 * This class handles the three types.
 */
-@:native('java$util$regex$Pattern$Curly') @:internal extern class Pattern_Curly extends Pattern_Node
+@:native('java$util$regex$Pattern$Curly') @:internal extern class Pattern_Curly extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -660,7 +660,7 @@ extern class Pattern implements java.io.Serializable
 * If capture is true then this class saves group settings and ensures
 * that groups are unset when backing off of a group match.
 */
-@:native('java$util$regex$Pattern$GroupCurly') @:internal extern class Pattern_GroupCurly extends Pattern_Node
+@:native('java$util$regex$Pattern$GroupCurly') @:internal extern class Pattern_GroupCurly extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -671,7 +671,7 @@ extern class Pattern implements java.io.Serializable
 * of each atom node without including the TreeInfo of the
 * "next".
 */
-@:native('java$util$regex$Pattern$BranchConn') @:internal extern class Pattern_BranchConn extends Pattern_Node
+@:native('java$util$regex$Pattern$BranchConn') @:internal extern class Pattern_BranchConn extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -680,7 +680,7 @@ extern class Pattern implements java.io.Serializable
 * the ? quantifier to branch between the case where it matches once
 * and where it does not occur.
 */
-@:native('java$util$regex$Pattern$Branch') @:internal extern class Pattern_Branch extends Pattern_Node
+@:native('java$util$regex$Pattern$Branch') @:internal extern class Pattern_Branch extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -693,7 +693,7 @@ extern class Pattern implements java.io.Serializable
 * indicate that we do not want to unset the group if the reference
 * doesn't match.
 */
-@:native('java$util$regex$Pattern$GroupHead') @:internal extern class Pattern_GroupHead extends Pattern_Node
+@:native('java$util$regex$Pattern$GroupHead') @:internal extern class Pattern_GroupHead extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -702,7 +702,7 @@ extern class Pattern implements java.io.Serializable
 * matchRef because if the reference fails to match we would not unset
 * the group.
 */
-@:native('java$util$regex$Pattern$GroupRef') @:internal extern class Pattern_GroupRef extends Pattern_Node
+@:native('java$util$regex$Pattern$GroupRef') @:internal extern class Pattern_GroupRef extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -714,14 +714,14 @@ extern class Pattern implements java.io.Serializable
 * The GroupTail node is also used when a previous group is referenced,
 * and in that case no group information needs to be set.
 */
-@:native('java$util$regex$Pattern$GroupTail') @:internal extern class Pattern_GroupTail extends Pattern_Node
+@:native('java$util$regex$Pattern$GroupTail') @:internal extern class Pattern_GroupTail extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
 /**
 * This sets up a loop to handle a recursive quantifier structure.
 */
-@:native('java$util$regex$Pattern$Prolog') @:internal extern class Pattern_Prolog extends Pattern_Node
+@:native('java$util$regex$Pattern$Prolog') @:internal extern class Pattern_Prolog extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -731,7 +731,7 @@ extern class Pattern implements java.io.Serializable
 * beginning is stored. A zero length group check occurs in the
 * normal match but is skipped in the matchInit.
 */
-@:native('java$util$regex$Pattern$Loop') @:internal extern class Pattern_Loop extends Pattern_Node
+@:native('java$util$regex$Pattern$Loop') @:internal extern class Pattern_Loop extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -741,7 +741,7 @@ extern class Pattern implements java.io.Serializable
 * beginning is stored. A zero length group check occurs in the
 * normal match but is skipped in the matchInit.
 */
-@:native('java$util$regex$Pattern$LazyLoop') @:internal extern class Pattern_LazyLoop extends Pattern_Loop
+@:native('java$util$regex$Pattern$LazyLoop') @:internal extern class Pattern_LazyLoop extends java.util.regex.Pattern.Pattern_Loop
 {
 	
 }
@@ -749,11 +749,11 @@ extern class Pattern implements java.io.Serializable
 * Refers to a group in the regular expression. Attempts to match
 * whatever the group referred to last matched.
 */
-@:native('java$util$regex$Pattern$BackRef') @:internal extern class Pattern_BackRef extends Pattern_Node
+@:native('java$util$regex$Pattern$BackRef') @:internal extern class Pattern_BackRef extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
-@:native('java$util$regex$Pattern$CIBackRef') @:internal extern class Pattern_CIBackRef extends Pattern_Node
+@:native('java$util$regex$Pattern$CIBackRef') @:internal extern class Pattern_CIBackRef extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -763,32 +763,32 @@ extern class Pattern implements java.io.Serializable
 * (greedy problem) and without a lot of wasted search time (reluctant
 * problem).
 */
-@:native('java$util$regex$Pattern$First') @:internal extern class Pattern_First extends Pattern_Node
+@:native('java$util$regex$Pattern$First') @:internal extern class Pattern_First extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
-@:native('java$util$regex$Pattern$Conditional') @:internal extern class Pattern_Conditional extends Pattern_Node
+@:native('java$util$regex$Pattern$Conditional') @:internal extern class Pattern_Conditional extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
 /**
 * Zero width positive lookahead.
 */
-@:native('java$util$regex$Pattern$Pos') @:internal extern class Pattern_Pos extends Pattern_Node
+@:native('java$util$regex$Pattern$Pos') @:internal extern class Pattern_Pos extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
 /**
 * Zero width negative lookahead.
 */
-@:native('java$util$regex$Pattern$Neg') @:internal extern class Pattern_Neg extends Pattern_Node
+@:native('java$util$regex$Pattern$Neg') @:internal extern class Pattern_Neg extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
 /**
 * Zero width positive lookbehind.
 */
-@:native('java$util$regex$Pattern$Behind') @:internal extern class Pattern_Behind extends Pattern_Node
+@:native('java$util$regex$Pattern$Behind') @:internal extern class Pattern_Behind extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -796,14 +796,14 @@ extern class Pattern implements java.io.Serializable
 * Zero width positive lookbehind, including supplementary
 * characters or unpaired surrogates.
 */
-@:native('java$util$regex$Pattern$BehindS') @:internal extern class Pattern_BehindS extends Pattern_Behind
+@:native('java$util$regex$Pattern$BehindS') @:internal extern class Pattern_BehindS extends java.util.regex.Pattern.Pattern_Behind
 {
 	
 }
 /**
 * Zero width negative lookbehind.
 */
-@:native('java$util$regex$Pattern$NotBehind') @:internal extern class Pattern_NotBehind extends Pattern_Node
+@:native('java$util$regex$Pattern$NotBehind') @:internal extern class Pattern_NotBehind extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -811,7 +811,7 @@ extern class Pattern implements java.io.Serializable
 * Zero width negative lookbehind, including supplementary
 * characters or unpaired surrogates.
 */
-@:native('java$util$regex$Pattern$NotBehindS') @:internal extern class Pattern_NotBehindS extends Pattern_NotBehind
+@:native('java$util$regex$Pattern$NotBehindS') @:internal extern class Pattern_NotBehindS extends java.util.regex.Pattern.Pattern_NotBehind
 {
 	
 }
@@ -822,7 +822,7 @@ extern class Pattern implements java.io.Serializable
 * can are also part of a word if they have a base character, otherwise
 * they are ignored for purposes of finding word boundaries.
 */
-@:native('java$util$regex$Pattern$Bound') @:internal extern class Pattern_Bound extends Pattern_Node
+@:native('java$util$regex$Pattern$Bound') @:internal extern class Pattern_Bound extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -854,7 +854,7 @@ extern class Pattern implements java.io.Serializable
 *
 * Boyer-Moore search methods adapted from code by Amy Yu.
 */
-@:native('java$util$regex$Pattern$BnM') @:internal extern class Pattern_BnM extends Pattern_Node
+@:native('java$util$regex$Pattern$BnM') @:internal extern class Pattern_BnM extends java.util.regex.Pattern.Pattern_Node
 {
 	
 }
@@ -862,7 +862,7 @@ extern class Pattern implements java.io.Serializable
 * Supplementary support version of BnM(). Unpaired surrogates are
 * also handled by this class.
 */
-@:native('java$util$regex$Pattern$BnMS') @:internal extern class Pattern_BnMS extends Pattern_BnM
+@:native('java$util$regex$Pattern$BnMS') @:internal extern class Pattern_BnMS extends java.util.regex.Pattern.Pattern_BnM
 {
 	
 }
@@ -874,9 +874,9 @@ extern class Pattern implements java.io.Serializable
 {
 	
 }
-@:native('java$util$regex$Pattern$CharPropertyNames$CloneableProperty') @:internal extern class Pattern_CharPropertyNames_CloneableProperty extends Pattern_CharProperty implements java.lang.Cloneable
+@:native('java$util$regex$Pattern$CharPropertyNames$CloneableProperty') @:internal extern class Pattern_CharPropertyNames_CloneableProperty extends java.util.regex.Pattern.Pattern_CharProperty implements java.lang.Cloneable
 {
-	@:overload override public function clone() : Pattern_CharPropertyNames_CloneableProperty;
+	@:overload override public function clone() : java.util.regex.Pattern.Pattern_CharPropertyNames_CloneableProperty;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class GB18030 extends java.nio.charset.Charset
 	
 	@:overload public function getEncoderIndex2() : java.NativeArray<String>;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	

@@ -69,11 +69,11 @@ extern class CMBinOp extends com.sun.org.apache.xerces.internal.impl.dtd.models.
 	*/
 	@:overload public function new(type : Int, leftNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode, rightNode : com.sun.org.apache.xerces.internal.impl.dtd.models.CMNode) : Void;
 	
-	@:overload override public function isNullable() : Bool;
+	@:overload public function isNullable() : Bool;
 	
-	@:overload override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	
 }

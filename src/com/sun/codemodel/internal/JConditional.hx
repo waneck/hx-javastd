@@ -45,7 +45,7 @@ extern class JConditional implements com.sun.codemodel.internal.JStatement
 	/**
 	* Creates <tt>... else if(...) ...</tt> code.
 	*/
-	@:overload public function _elseif(boolExp : com.sun.codemodel.internal.JExpression) : JConditional;
+	@:overload public function _elseif(boolExp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JConditional;
 	
 	@:overload public function state(f : com.sun.codemodel.internal.JFormatter) : Void;
 	

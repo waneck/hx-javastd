@@ -96,7 +96,7 @@ extern class CertificateRevokedException extends java.security.cert.CertificateE
 	*/
 	@:overload public function getExtensions() : java.util.Map<String, java.security.cert.Extension>;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

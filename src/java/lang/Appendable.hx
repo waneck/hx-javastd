@@ -43,7 +43,7 @@ extern interface Appendable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function append(csq : java.lang.CharSequence) : Appendable;
+	@:overload public function append(csq : java.lang.CharSequence) : java.lang.Appendable;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this
@@ -79,7 +79,7 @@ extern interface Appendable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : Appendable;
+	@:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.lang.Appendable;
 	
 	/**
 	* Appends the specified character to this <tt>Appendable</tt>.
@@ -92,7 +92,7 @@ extern interface Appendable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public function append(c : java.StdTypes.Char16) : Appendable;
+	@:overload public function append(c : java.StdTypes.Char16) : java.lang.Appendable;
 	
 	
 }

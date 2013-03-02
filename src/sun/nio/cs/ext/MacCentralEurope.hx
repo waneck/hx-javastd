@@ -31,9 +31,9 @@ extern class MacCentralEurope extends java.nio.charset.Charset implements sun.ni
 	
 	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	@:overload public function getDecoderSingleByteMappings() : String;
 	

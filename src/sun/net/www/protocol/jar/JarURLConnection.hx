@@ -27,9 +27,9 @@ extern class JarURLConnection extends java.net.JarURLConnection
 {
 	@:overload public function new(url : java.net.URL, handler : sun.net.www.protocol.jar.Handler) : Void;
 	
-	@:overload override public function getJarFile() : java.util.jar.JarFile;
+	@:overload public function getJarFile() : java.util.jar.JarFile;
 	
-	@:overload override public function getJarEntry() : java.util.jar.JarEntry;
+	@:overload public function getJarEntry() : java.util.jar.JarEntry;
 	
 	@:overload override public function getPermission() : java.security.Permission;
 	
@@ -169,7 +169,7 @@ extern class JarURLConnection extends java.net.JarURLConnection
 }
 @:native('sun$net$www$protocol$jar$JarURLConnection$JarURLInputStream') @:internal extern class JarURLConnection_JarURLInputStream extends java.io.FilterInputStream
 {
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

@@ -35,9 +35,9 @@ extern class AttributeUseImpl extends com.sun.xml.internal.xsom.impl.ComponentIm
 	
 	@:overload public function isRequired() : Bool;
 	
-	@:overload override public function apply(f : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload public function apply(f : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
-	@:overload override public function visit(v : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload public function visit(v : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
 	
 }

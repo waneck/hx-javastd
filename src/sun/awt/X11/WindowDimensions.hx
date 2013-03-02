@@ -49,7 +49,7 @@ package sun.awt.X11;
 	*/
 	@:overload public function new(bounds : java.awt.Rectangle, isClient : Bool) : Void;
 	
-	@:overload public function new(dims : WindowDimensions) : Void;
+	@:overload public function new(dims : sun.awt.X11.WindowDimensions) : Void;
 	
 	@:overload public function getClientRect() : java.awt.Rectangle;
 	

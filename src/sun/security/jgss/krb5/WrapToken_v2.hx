@@ -79,7 +79,7 @@ package sun.security.jgss.krb5;
 	*/
 	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, prop : org.ietf.jgss.MessageProp, dataBytes : java.NativeArray<java.StdTypes.Int8>, dataOffset : Int, dataLen : Int) : Void;
 	
-	@:overload override public function encode(os : java.io.OutputStream) : Void;
+	@:overload public function encode(os : java.io.OutputStream) : Void;
 	
 	@:overload public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	

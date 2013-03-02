@@ -71,7 +71,7 @@ extern class XTree extends javax.swing.JTree
 	
 	
 }
-@:native('sun$tools$jconsole$inspector$XTree$Dn') @:internal extern class XTree_Dn implements java.lang.Comparable<XTree_Dn>
+@:native('sun$tools$jconsole$inspector$XTree$Dn') @:internal extern class XTree_Dn implements java.lang.Comparable<sun.tools.jconsole.inspector.XTree.XTree_Dn>
 {
 	@:overload public function new(mbean : javax.management.ObjectName) : Void;
 	
@@ -81,17 +81,17 @@ extern class XTree extends javax.swing.JTree
 	
 	@:overload public function getKeyPropertyList() : String;
 	
-	@:overload public function getToken(index : Int) : XTree_Token;
+	@:overload public function getToken(index : Int) : sun.tools.jconsole.inspector.XTree.XTree_Token;
 	
 	@:overload public function getTokenCount() : Int;
 	
 	@:overload public function getHashDn() : String;
 	
-	@:overload public function getHashKey(token : XTree_Token) : String;
+	@:overload public function getHashKey(token : sun.tools.jconsole.inspector.XTree.XTree_Token) : String;
 	
 	@:overload public function toString() : String;
 	
-	@:overload public function compareTo(dn : XTree_Dn) : Int;
+	@:overload public function compareTo(dn : sun.tools.jconsole.inspector.XTree.XTree_Dn) : Int;
 	
 	
 }

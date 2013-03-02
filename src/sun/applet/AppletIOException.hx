@@ -29,7 +29,7 @@ extern class AppletIOException extends java.io.IOException
 	
 	@:overload public function new(key : String, arg : Dynamic) : Void;
 	
-	@:overload override public function getLocalizedMessage() : String;
+	@:overload public function getLocalizedMessage() : String;
 	
 	
 }

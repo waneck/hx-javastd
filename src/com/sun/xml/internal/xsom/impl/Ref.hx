@@ -63,13 +63,13 @@ extern class Ref
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$Ref$SimpleType') extern interface Ref_SimpleType extends Ref_Type
+@:native('com$sun$xml$internal$xsom$impl$Ref$SimpleType') extern interface Ref_SimpleType extends com.sun.xml.internal.xsom.impl.Ref.Ref_Type
 {
 	@:overload public function getType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$Ref$ComplexType') extern interface Ref_ComplexType extends Ref_Type
+@:native('com$sun$xml$internal$xsom$impl$Ref$ComplexType') extern interface Ref_ComplexType extends com.sun.xml.internal.xsom.impl.Ref.Ref_Type
 {
 	@:overload public function getType() : com.sun.xml.internal.xsom.XSComplexType;
 	
@@ -87,7 +87,7 @@ extern class Ref
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$Ref$Element') extern interface Ref_Element extends Ref_Term
+@:native('com$sun$xml$internal$xsom$impl$Ref$Element') extern interface Ref_Element extends com.sun.xml.internal.xsom.impl.Ref.Ref_Term
 {
 	@:overload public function get() : com.sun.xml.internal.xsom.XSElementDecl;
 	

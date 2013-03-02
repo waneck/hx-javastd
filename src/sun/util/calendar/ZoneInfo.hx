@@ -45,7 +45,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	*/
 	@:overload override public function getOffset(date : haxe.Int64) : Int;
 	
-	@:overload override public function getOffsets(utc : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
+	@:overload public function getOffsets(utc : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
 	
 	@:overload public function getOffsetsByStandard(standard : haxe.Int64, offsets : java.NativeArray<Int>) : Int;
 	
@@ -192,7 +192,7 @@ extern class ZoneInfo extends java.util.TimeZone
 	* @return true if the given <code>TimeZone</code> has the same
 	* GMT offset and transition information; false, otherwise.
 	*/
-	@:overload public function hasSameRules(other : java.util.TimeZone) : Bool;
+	@:overload override public function hasSameRules(other : java.util.TimeZone) : Bool;
 	
 	/**
 	* Returns a Map from alias time zone IDs to their standard

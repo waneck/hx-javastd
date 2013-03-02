@@ -34,7 +34,7 @@ package com.sun.tools.javac.util;
 extern class Log extends com.sun.tools.javac.util.AbstractLog
 {
 	/** The context key for the log. */
-	public static var logKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Log>;
+	public static var logKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.util.Log>;
 	
 	/** The context key for the output PrintWriter. */
 	public static var outKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<java.io.PrintWriter>;
@@ -110,7 +110,7 @@ extern class Log extends com.sun.tools.javac.util.AbstractLog
 	@:overload private function new(context : com.sun.tools.javac.util.Context, defaultWriter : java.io.PrintWriter) : Void;
 	
 	/** Get the Log instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Log;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.Log;
 	
 	/** The number of errors encountered so far.
 	*/

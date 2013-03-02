@@ -34,32 +34,32 @@ package com.sun.tools.javac.code;
 extern class Lint
 {
 	/** The context key for the root Lint object. */
-	private static var lintKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Lint>;
+	private static var lintKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.Lint>;
 	
 	/** Get the root Lint instance. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Lint;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.Lint;
 	
 	/**
 	* Returns the result of combining the values in this object with
 	* the given annotation.
 	*/
-	@:overload public function augment(attr : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Lint;
+	@:overload public function augment(attr : com.sun.tools.javac.code.Attribute.Attribute_Compound) : com.sun.tools.javac.code.Lint;
 	
 	/**
 	* Returns the result of combining the values in this object with
 	* the given annotations.
 	*/
-	@:overload public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>) : Lint;
+	@:overload public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>) : com.sun.tools.javac.code.Lint;
 	
 	/**
 	* Returns the result of combining the values in this object with
 	* the given annotations and flags.
 	*/
-	@:overload public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>, flags : haxe.Int64) : Lint;
+	@:overload public function augment(attrs : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>, flags : haxe.Int64) : com.sun.tools.javac.code.Lint;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload private function new(other : Lint) : Void;
+	@:overload private function new(other : com.sun.tools.javac.code.Lint) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -68,7 +68,7 @@ extern class Lint
 	* on the command line, or by default, and can be temporarily disabled with
 	* the SuppressWarnings annotation.
 	*/
-	@:overload public function isEnabled(lc : Lint_LintCategory) : Bool;
+	@:overload public function isEnabled(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
 	
 	/**
 	* Checks is a warning category has been specifically suppressed, by means
@@ -76,7 +76,7 @@ extern class Lint
 	* category, whether it has been implicitly suppressed by virtue of the
 	* current entity being itself deprecated.
 	*/
-	@:overload public function isSuppressed(lc : Lint_LintCategory) : Bool;
+	@:overload public function isSuppressed(lc : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Bool;
 	
 	
 }

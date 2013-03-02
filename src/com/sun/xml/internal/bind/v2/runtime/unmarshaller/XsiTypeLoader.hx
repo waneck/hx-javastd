@@ -27,9 +27,9 @@ extern class XsiTypeLoader extends com.sun.xml.internal.bind.v2.runtime.unmarsha
 {
 	@:overload public function new(defaultBeanInfo : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<Dynamic>) : Void;
 	
-	@:overload override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload override public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload public function getExpectedAttributes() : java.util.Collection<javax.xml.namespace.QName>;
 	
 	
 }

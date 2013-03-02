@@ -25,17 +25,17 @@ package com.sun.corba.se.spi.ior.iiop;
 */
 extern class GIOPVersion
 {
-	public static var V1_0(default, null) : GIOPVersion;
+	public static var V1_0(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V1_1(default, null) : GIOPVersion;
+	public static var V1_1(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V1_2(default, null) : GIOPVersion;
+	public static var V1_2(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V1_3(default, null) : GIOPVersion;
+	public static var V1_3(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var V13_XX(default, null) : GIOPVersion;
+	public static var V13_XX(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	public static var DEFAULT_VERSION(default, null) : GIOPVersion;
+	public static var DEFAULT_VERSION(default, null) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
 	public static var VERSION_1_0(default, null) : Int;
 	
@@ -57,21 +57,21 @@ extern class GIOPVersion
 	
 	@:overload public function getMinor() : java.StdTypes.Int8;
 	
-	@:overload public function equals(gv : GIOPVersion) : Bool;
+	@:overload public function equals(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Bool;
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function lessThan(gv : GIOPVersion) : Bool;
+	@:overload public function lessThan(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Bool;
 	
 	@:overload public function intValue() : Int;
 	
 	@:overload public function toString() : String;
 	
-	@:overload public static function getInstance(major : java.StdTypes.Int8, minor : java.StdTypes.Int8) : GIOPVersion;
+	@:overload public static function getInstance(major : java.StdTypes.Int8, minor : java.StdTypes.Int8) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload public static function parseVersion(s : String) : GIOPVersion;
+	@:overload public static function parseVersion(s : String) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
 	/**
 	* This chooses the appropriate GIOP version.
@@ -79,7 +79,7 @@ extern class GIOPVersion
 	* @return the GIOP version 13.00 if Java serialization is enabled, or
 	*         smallest(profGIOPVersion, orbGIOPVersion)
 	*/
-	@:overload public static function chooseRequestVersion(orb : com.sun.corba.se.spi.orb.ORB, ior : com.sun.corba.se.spi.ior.IOR) : GIOPVersion;
+	@:overload public static function chooseRequestVersion(orb : com.sun.corba.se.spi.orb.ORB, ior : com.sun.corba.se.spi.ior.IOR) : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
 	@:overload public function supportsIORIIOPProfileComponents() : Bool;
 	

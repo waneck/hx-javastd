@@ -39,7 +39,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface LocalVariable extends com.sun.jdi.Mirror extends java.lang.Comparable<LocalVariable>
+@:require(java3) extern interface LocalVariable extends com.sun.jdi.Mirror extends java.lang.Comparable<com.sun.jdi.LocalVariable>
 {
 	/**
 	* Gets the name of the local variable.

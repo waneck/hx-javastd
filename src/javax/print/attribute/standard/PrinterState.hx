@@ -28,23 +28,23 @@ extern class PrinterState extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* The printer state is unknown.
 	*/
-	public static var UNKNOWN(default, null) : PrinterState;
+	public static var UNKNOWN(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Indicates that new jobs can start processing without waiting.
 	*/
-	public static var IDLE(default, null) : PrinterState;
+	public static var IDLE(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Indicates that jobs are processing;
 	* new jobs will wait before processing.
 	*/
-	public static var PROCESSING(default, null) : PrinterState;
+	public static var PROCESSING(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Indicates that no jobs can be processed and intervention is required.
 	*/
-	public static var STOPPED(default, null) : PrinterState;
+	public static var STOPPED(default, null) : javax.print.attribute.standard.PrinterState;
 	
 	/**
 	* Construct a new printer state enumeration value with the given integer
@@ -57,12 +57,12 @@ extern class PrinterState extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* Returns the string table for class PrinterState.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class PrinterState.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

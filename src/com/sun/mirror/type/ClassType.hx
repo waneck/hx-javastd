@@ -62,7 +62,7 @@ package com.sun.mirror.type;
 	* @return the class type that is a direct supertype of this one,
 	* or <tt>null</tt> if there is none
 	*/
-	@:overload public function getSuperclass() : ClassType;
+	@:overload public function getSuperclass() : com.sun.mirror.type.ClassType;
 	
 	
 }

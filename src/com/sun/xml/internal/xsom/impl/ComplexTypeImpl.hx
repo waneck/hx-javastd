@@ -44,7 +44,7 @@ extern class ComplexTypeImpl extends com.sun.xml.internal.xsom.impl.AttributesHo
 	/**
 	* Called when this complex type redefines the specified complex type.
 	*/
-	@:overload public function redefine(ct : ComplexTypeImpl) : Void;
+	@:overload public function redefine(ct : com.sun.xml.internal.xsom.impl.ComplexTypeImpl) : Void;
 	
 	@:overload public function getRedefinedBy() : com.sun.xml.internal.xsom.XSComplexType;
 	
@@ -59,7 +59,7 @@ extern class ComplexTypeImpl extends com.sun.xml.internal.xsom.impl.AttributesHo
 	/**
 	* Set the local attribute wildcard.
 	*/
-	@:overload override public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
+	@:overload public function setWildcard(wc : com.sun.xml.internal.xsom.impl.WildcardImpl) : Void;
 	
 	@:overload public function getAttributeWildcard() : com.sun.xml.internal.xsom.XSWildcard;
 	
@@ -79,15 +79,15 @@ extern class ComplexTypeImpl extends com.sun.xml.internal.xsom.impl.AttributesHo
 	
 	@:overload public function getAttributeUse(nsURI : String, localName : String) : com.sun.xml.internal.xsom.XSAttributeUse;
 	
-	@:overload override public function iterateAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttributeUse>;
+	@:overload public function iterateAttributeUses() : java.util.Iterator<com.sun.xml.internal.xsom.XSAttributeUse>;
 	
-	@:overload override public function getAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.XSAttributeUse>;
+	@:overload public function getAttributeUses() : java.util.Collection<com.sun.xml.internal.xsom.XSAttributeUse>;
 	
 	@:overload public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSType>;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
 	@:overload public function getType() : com.sun.xml.internal.xsom.XSComplexType;
 	

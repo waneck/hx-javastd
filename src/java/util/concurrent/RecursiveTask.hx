@@ -69,14 +69,14 @@ package java.util.concurrent;
 	*/
 	@:overload @:abstract private function compute() : V;
 	
-	@:overload @:final override public function getRawResult() : V;
+	@:overload @:final public function getRawResult() : V;
 	
-	@:overload @:final override private function setRawResult(value : V) : Void;
+	@:overload @:final private function setRawResult(value : V) : Void;
 	
 	/**
 	* Implements execution conventions for RecursiveTask.
 	*/
-	@:overload @:final override private function exec() : Bool;
+	@:overload @:final private function exec() : Bool;
 	
 	
 }

@@ -44,7 +44,7 @@ extern interface Element
 	*
 	* @return the parent element
 	*/
-	@:overload public function getParentElement() : Element;
+	@:overload public function getParentElement() : javax.swing.text.Element;
 	
 	/**
 	* Fetches the name of the element.  If the element is used to
@@ -123,7 +123,7 @@ extern interface Element
 	* @param index the specified index >= 0
 	* @return the child element
 	*/
-	@:overload public function getElement(index : Int) : Element;
+	@:overload public function getElement(index : Int) : javax.swing.text.Element;
 	
 	/**
 	* Is this element a leaf element? An element that

@@ -30,14 +30,14 @@ extern class IndentPrinter extends com.sun.org.apache.xml.internal.serialize.Pri
 	* have affect the first time it's called. To exist DTD state
 	* and get the accumulated DTD, call {@link #leaveDTD}.
 	*/
-	@:overload override public function enterDTD() : Void;
+	@:overload public function enterDTD() : Void;
 	
 	/**
 	* Called by the root element to leave DTD mode and if any
 	* DTD parts were printer, will return a string with their
 	* textual content.
 	*/
-	@:overload override public function leaveDTD() : String;
+	@:overload public function leaveDTD() : String;
 	
 	/**
 	* Called to print additional text. Each time this method is called
@@ -48,13 +48,13 @@ extern class IndentPrinter extends com.sun.org.apache.xml.internal.serialize.Pri
 	*
 	* @param text The text to print
 	*/
-	@:overload override public function printText(text : String) : Void;
+	@:overload public function printText(text : String) : Void;
 	
-	@:overload override public function printText(text : java.lang.StringBuffer) : Void;
+	@:overload public function printText(text : java.lang.StringBuffer) : Void;
 	
-	@:overload override public function printText(ch : java.StdTypes.Char16) : Void;
+	@:overload public function printText(ch : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function printText(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Called to print a single space between text parts that may be
@@ -64,7 +64,7 @@ extern class IndentPrinter extends com.sun.org.apache.xml.internal.serialize.Pri
 	* separator will be counted. If the line accumulated so far is
 	* long enough, it will be printed.
 	*/
-	@:overload override public function printSpace() : Void;
+	@:overload public function printSpace() : Void;
 	
 	/**
 	* Called to print a line consisting of the text accumulated so
@@ -73,9 +73,9 @@ extern class IndentPrinter extends com.sun.org.apache.xml.internal.serialize.Pri
 	* #printSpace} will only start a new line if the current line
 	* is long enough).
 	*/
-	@:overload override public function breakLine() : Void;
+	@:overload public function breakLine() : Void;
 	
-	@:overload override public function breakLine(preserveSpace : Bool) : Void;
+	@:overload public function breakLine(preserveSpace : Bool) : Void;
 	
 	/**
 	* Flushes the line accumulated so far to the writer and get ready
@@ -84,29 +84,29 @@ extern class IndentPrinter extends com.sun.org.apache.xml.internal.serialize.Pri
 	* accumulated text are two long to fit on a given line. At the end of
 	* this method _line is empty and _spaces is zero.
 	*/
-	@:overload override public function flushLine(preserveSpace : Bool) : Void;
+	@:overload public function flushLine(preserveSpace : Bool) : Void;
 	
 	/**
 	* Flush the output stream. Must be called when done printing
 	* the document, otherwise some text might be buffered.
 	*/
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
 	/**
 	* Increment the indentation for the next line.
 	*/
-	@:overload override public function indent() : Void;
+	@:overload public function indent() : Void;
 	
 	/**
 	* Decrement the indentation for the next line.
 	*/
-	@:overload override public function unindent() : Void;
+	@:overload public function unindent() : Void;
 	
-	@:overload override public function getNextIndent() : Int;
+	@:overload public function getNextIndent() : Int;
 	
-	@:overload override public function setNextIndent(indent : Int) : Void;
+	@:overload public function setNextIndent(indent : Int) : Void;
 	
-	@:overload override public function setThisIndent(indent : Int) : Void;
+	@:overload public function setThisIndent(indent : Int) : Void;
 	
 	
 }

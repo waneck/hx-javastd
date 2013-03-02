@@ -74,7 +74,7 @@ extern class BatchEnvironment extends sun.tools.javac.BatchEnvironment
 	/**
 	* Release resources, if any.
 	*/
-	@:overload override public function shutdown() : Void;
+	@:overload public function shutdown() : Void;
 	
 	/**
 	* Return the formatted, localized string for a named error message
@@ -82,7 +82,7 @@ extern class BatchEnvironment extends sun.tools.javac.BatchEnvironment
 	* being with "rmic.", look up the error message in rmic's resource
 	* bundle; otherwise, defer to java's superclass method.
 	*/
-	@:overload override public function errorString(err : String, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
+	@:overload public function errorString(err : String, arg0 : Dynamic, arg1 : Dynamic, arg2 : Dynamic) : String;
 	
 	@:overload public function reset() : Void;
 	
@@ -97,19 +97,19 @@ extern class BatchEnvironment extends sun.tools.javac.BatchEnvironment
 */
 @:native('sun$rmi$rmic$BatchEnvironment$Path') @:internal extern class BatchEnvironment_Path extends java.util.LinkedHashSet<String>
 {
-	@:overload public function expandJarClassPaths(x : Bool) : BatchEnvironment_Path;
+	@:overload public function expandJarClassPaths(x : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function emptyPathDefault(x : String) : BatchEnvironment_Path;
+	@:overload public function emptyPathDefault(x : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
 	@:overload public function new() : Void;
 	
-	@:overload public function addDirectories(dirs : String, warn : Bool) : BatchEnvironment_Path;
+	@:overload public function addDirectories(dirs : String, warn : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function addDirectories(dirs : String) : BatchEnvironment_Path;
+	@:overload public function addDirectories(dirs : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function addFiles(files : String, warn : Bool) : BatchEnvironment_Path;
+	@:overload public function addFiles(files : String, warn : Bool) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
-	@:overload public function addFiles(files : String) : BatchEnvironment_Path;
+	@:overload public function addFiles(files : String) : sun.rmi.rmic.BatchEnvironment.BatchEnvironment_Path;
 	
 	
 }

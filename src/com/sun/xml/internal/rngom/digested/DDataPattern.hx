@@ -68,7 +68,7 @@ extern class DDataPattern extends com.sun.xml.internal.rngom.digested.DPattern
 	* @return
 	*      can be empty but never null.
 	*/
-	@:overload public function getParams() : java.util.List<DDataPattern_Param>;
+	@:overload public function getParams() : java.util.List<com.sun.xml.internal.rngom.digested.DDataPattern.DDataPattern_Param>;
 	
 	/**
 	* Gets the pattern that reprsents the &lt;except> child of this data pattern.
@@ -77,9 +77,9 @@ extern class DDataPattern extends com.sun.xml.internal.rngom.digested.DPattern
 	*/
 	@:overload public function getExcept() : com.sun.xml.internal.rngom.digested.DPattern;
 	
-	@:overload override public function isNullable() : Bool;
+	@:overload public function isNullable() : Bool;
 	
-	@:overload override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }

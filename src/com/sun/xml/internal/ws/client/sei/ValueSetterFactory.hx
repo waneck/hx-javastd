@@ -27,7 +27,7 @@ package com.sun.xml.internal.ws.client.sei;
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ValueSetterFactory$AsyncBeanValueSetterFactory') @:internal extern class ValueSetterFactory_AsyncBeanValueSetterFactory extends ValueSetterFactory
+@:native('com$sun$xml$internal$ws$client$sei$ValueSetterFactory$AsyncBeanValueSetterFactory') @:internal extern class ValueSetterFactory_AsyncBeanValueSetterFactory extends com.sun.xml.internal.ws.client.sei.ValueSetterFactory
 {
 	
 }

@@ -62,7 +62,7 @@ package java.nio;
 	
 	@:overload override public function isReadOnly() : Bool;
 	
-	@:overload override public function toString(start : Int, end : Int) : String;
+	@:overload public function toString(start : Int, end : Int) : String;
 	
 	@:overload override public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
 	

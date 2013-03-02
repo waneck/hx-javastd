@@ -214,7 +214,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #getPreviousValue
 	* @see #setStepSize
 	*/
-	@:overload override public function getNextValue() : Dynamic;
+	@:overload public function getNextValue() : Dynamic;
 	
 	/**
 	* Returns the previous number in the sequence.
@@ -227,7 +227,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #getNextValue
 	* @see #setStepSize
 	*/
-	@:overload override public function getPreviousValue() : Dynamic;
+	@:overload public function getPreviousValue() : Dynamic;
 	
 	/**
 	* Returns the value of the current element of the sequence.
@@ -244,7 +244,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #setValue
 	* @see #getNumber
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload public function getValue() : Dynamic;
 	
 	/**
 	* Sets the current value for this sequence.  If <code>value</code> is
@@ -272,7 +272,7 @@ extern class SpinnerNumberModel extends javax.swing.AbstractSpinnerModel impleme
 	* @see #getValue
 	* @see SpinnerModel#addChangeListener
 	*/
-	@:overload override public function setValue(value : Dynamic) : Void;
+	@:overload public function setValue(value : Dynamic) : Void;
 	
 	
 }

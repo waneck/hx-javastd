@@ -34,9 +34,9 @@ extern class StAXFilteredParser extends com.sun.xml.internal.fastinfoset.stax.ut
 	
 	@:overload public function setFilter(filter : javax.xml.stream.StreamFilter) : Void;
 	
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload public function hasNext() : Bool;
 	
 	
 }

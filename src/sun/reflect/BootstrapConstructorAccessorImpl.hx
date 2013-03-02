@@ -25,7 +25,7 @@ package sun.reflect;
 */
 @:internal extern class BootstrapConstructorAccessorImpl extends sun.reflect.ConstructorAccessorImpl
 {
-	@:overload override public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

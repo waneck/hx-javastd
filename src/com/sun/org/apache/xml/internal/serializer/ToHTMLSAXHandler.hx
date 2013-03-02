@@ -33,21 +33,21 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* @return null
 	* @see Serializer#getOutputFormat()
 	*/
-	@:overload override public function getOutputFormat() : java.util.Properties;
+	@:overload public function getOutputFormat() : java.util.Properties;
 	
 	/**
 	* Reurns null
 	* @return null
 	* @see Serializer#getOutputStream()
 	*/
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Returns null
 	* @return null
 	* @see Serializer#getWriter()
 	*/
-	@:overload override public function getWriter() : java.io.Writer;
+	@:overload public function getWriter() : java.io.Writer;
 	
 	/**
 	* Does nothing.
@@ -59,7 +59,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* Does nothing.
 	* @see DOMSerializer#serialize(Node)
 	*/
-	@:overload override public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Turns special character escaping on/off.
@@ -69,7 +69,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*
 	* @see SerializationHandler#setEscaping(boolean)
 	*/
-	@:overload override public function setEscaping(escape : Bool) : Bool;
+	@:overload public function setEscaping(escape : Bool) : Bool;
 	
 	/**
 	* Does nothing
@@ -77,28 +77,28 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* (ignored)
 	* @see SerializationHandler#setIndent(boolean)
 	*/
-	@:overload override public function setIndent(indent : Bool) : Void;
+	@:overload public function setIndent(indent : Bool) : Void;
 	
 	/**
 	* Does nothing.
 	* @param format this parameter is not used
 	* @see Serializer#setOutputFormat(Properties)
 	*/
-	@:overload override public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	/**
 	* Does nothing.
 	* @param output this parameter is ignored
 	* @see Serializer#setOutputStream(OutputStream)
 	*/
-	@:overload override public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* Does nothing.
 	* @param writer this parameter is ignored.
 	* @see Serializer#setWriter(Writer)
 	*/
-	@:overload override public function setWriter(writer : java.io.Writer) : Void;
+	@:overload public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Does nothing.
@@ -110,25 +110,25 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* @param value this parameter is ignored
 	* @see org.xml.sax.ext.DeclHandler#attributeDecl(String, String, String,String,String)
 	*/
-	@:overload override public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
+	@:overload public function attributeDecl(eName : String, aName : String, type : String, valueDefault : String, value : String) : Void;
 	
 	/**
 	* Does nothing.
 	* @see org.xml.sax.ext.DeclHandler#elementDecl(String, String)
 	*/
-	@:overload override public function elementDecl(name : String, model : String) : Void;
+	@:overload public function elementDecl(name : String, model : String) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.DeclHandler#externalEntityDecl(String, String, String)
 	*/
-	@:overload override public function externalEntityDecl(arg0 : String, arg1 : String, arg2 : String) : Void;
+	@:overload public function externalEntityDecl(arg0 : String, arg1 : String, arg2 : String) : Void;
 	
 	/**
 	* Does nothing.
 	*
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload override public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -193,7 +193,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* Does nothing.
 	* @see org.xml.sax.ContentHandler#setDocumentLocator(Locator)
 	*/
-	@:overload override public function setDocumentLocator(arg0 : org.xml.sax.Locator) : Void;
+	@:overload public function setDocumentLocator(arg0 : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Does nothing.
@@ -237,31 +237,31 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*
 	* @see org.xml.sax.ext.LexicalHandler#comment(char[], int, int)
 	*/
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Does nothing.
 	* @see org.xml.sax.ext.LexicalHandler#endCDATA()
 	*/
-	@:overload override public function endCDATA() : Void;
+	@:overload public function endCDATA() : Void;
 	
 	/**
 	* Does nothing.
 	* @see org.xml.sax.ext.LexicalHandler#endDTD()
 	*/
-	@:overload override public function endDTD() : Void;
+	@:overload public function endDTD() : Void;
 	
 	/**
 	* Does nothing.
 	* @see org.xml.sax.ext.LexicalHandler#startCDATA()
 	*/
-	@:overload override public function startCDATA() : Void;
+	@:overload public function startCDATA() : Void;
 	
 	/**
 	* Does nothing.
 	* @see org.xml.sax.ext.LexicalHandler#startEntity(String)
 	*/
-	@:overload override public function startEntity(arg0 : String) : Void;
+	@:overload public function startEntity(arg0 : String) : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -285,13 +285,13 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* This method is called when all the data needed for a call to the
 	* SAX handler's startElement() method has been gathered.
 	*/
-	@:overload override private function closeStartTag() : Void;
+	@:overload private function closeStartTag() : Void;
 	
 	/**
 	* Do nothing.
 	* @see SerializationHandler#close()
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -302,7 +302,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*
 	* @see ExtendedContentHandler#characters(String)
 	*/
-	@:overload override public function characters(chars : String) : Void;
+	@:overload public function characters(chars : String) : Void;
 	
 	/**
 	* A constructor
@@ -330,7 +330,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*
 	* @see ExtendedContentHandler#startElement(String)
 	*/
-	@:overload override public function startElement(elementNamespaceURI : String, elementLocalName : String, elementName : String) : Void;
+	@:overload public function startElement(elementNamespaceURI : String, elementLocalName : String, elementName : String) : Void;
 	
 	/**
 	* An element starts, but attributes are not fully known yet.
@@ -339,7 +339,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*
 	* @see ExtendedContentHandler#startElement(String)
 	*/
-	@:overload override public function startElement(elementName : String) : Void;
+	@:overload public function startElement(elementName : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -349,7 +349,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*
 	* @see ExtendedContentHandler#endElement(String)
 	*/
-	@:overload override public function endElement(elementName : String) : Void;
+	@:overload public function endElement(elementName : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -386,7 +386,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* This method flushes any pending events, which can be startDocument()
 	* closing the opening tag of an element, or closing an open CDATA section.
 	*/
-	@:overload override public function flushPending() : Void;
+	@:overload public function flushPending() : Void;
 	
 	/**
 	* Handle a prefix/uri mapping, which is associated with a startElement()
@@ -407,7 +407,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* @throws org.xml.sax.SAXException The client may throw
 	*            an exception during processing.
 	*/
-	@:overload override public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
+	@:overload public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping
@@ -437,7 +437,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*
 	* @see ExtendedContentHandler#namespaceAfterStartElement(String, String)
 	*/
-	@:overload override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
 	/**
 	* Try's to reset the super class and reset this class for
@@ -447,7 +447,7 @@ extern class ToHTMLSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	* @return true if the class was successfuly reset.
 	* @see Serializer#reset()
 	*/
-	@:overload override public function reset() : Bool;
+	@:overload public function reset() : Bool;
 	
 	
 }

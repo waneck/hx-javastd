@@ -33,14 +33,14 @@ extern class LayoutQueue
 	/**
 	* Fetch the default layout queue.
 	*/
-	@:overload public static function getDefaultQueue() : LayoutQueue;
+	@:overload public static function getDefaultQueue() : javax.swing.text.LayoutQueue;
 	
 	/**
 	* Set the default layout queue.
 	*
 	* @param q the new queue.
 	*/
-	@:overload public static function setDefaultQueue(q : LayoutQueue) : Void;
+	@:overload public static function setDefaultQueue(q : javax.swing.text.LayoutQueue) : Void;
 	
 	/**
 	* Add a task that is not needed immediately because

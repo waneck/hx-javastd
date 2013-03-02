@@ -41,12 +41,12 @@ package javax.management;
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload override public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
+	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
 	/**
 	* Returns the string "Class" representing its value
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	@:overload private function getValue(name : javax.management.ObjectName) : Dynamic;
 	

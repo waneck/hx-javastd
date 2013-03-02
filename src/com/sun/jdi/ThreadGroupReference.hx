@@ -39,7 +39,7 @@ extern interface ThreadGroupReference extends com.sun.jdi.ObjectReference
 	* thread group in the target VM, or null if this is a top-level
 	* thread group.
 	*/
-	@:overload public function parent() : ThreadGroupReference;
+	@:overload public function parent() : com.sun.jdi.ThreadGroupReference;
 	
 	/**
 	* Suspends all threads in this thread group. Each thread
@@ -83,7 +83,7 @@ extern interface ThreadGroupReference extends com.sun.jdi.ObjectReference
 	* @return a List of {@link ThreadGroupReference} objects mirroring the
 	* active thread groups from this thread group in the target VM.
 	*/
-	@:overload public function threadGroups() : java.util.List<ThreadGroupReference>;
+	@:overload public function threadGroups() : java.util.List<com.sun.jdi.ThreadGroupReference>;
 	
 	
 }

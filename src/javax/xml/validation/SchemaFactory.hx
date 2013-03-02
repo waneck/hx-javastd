@@ -101,7 +101,7 @@ extern class SchemaFactory
 	*
 	* @see #newInstance(String schemaLanguage, String factoryClassName, ClassLoader classLoader)
 	*/
-	@:overload @:final public static function newInstance(schemaLanguage : String) : SchemaFactory;
+	@:overload @:final public static function newInstance(schemaLanguage : String) : javax.xml.validation.SchemaFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>SchemaFactory</code> from class name. <code>SchemaFactory</code>
@@ -145,7 +145,7 @@ extern class SchemaFactory
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(schemaLanguage : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : SchemaFactory;
+	@:require(java6) @:overload public static function newInstance(schemaLanguage : String, factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.validation.SchemaFactory;
 	
 	/**
 	* <p>Is specified schema supported by this <code>SchemaFactory</code>?</p>

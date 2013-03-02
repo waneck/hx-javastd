@@ -27,7 +27,7 @@ extern class ReflectiveTie extends org.omg.PortableServer.Servant implements jav
 {
 	@:overload public function new(pm : com.sun.corba.se.spi.presentation.rmi.PresentationManager, wrapper : com.sun.corba.se.impl.logging.ORBUtilSystemException) : Void;
 	
-	@:overload override public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload public function _all_interfaces(poa : org.omg.PortableServer.POA, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	@:overload public function setTarget(target : java.rmi.Remote) : Void;
 	

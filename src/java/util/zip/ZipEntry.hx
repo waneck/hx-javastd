@@ -50,7 +50,7 @@ extern class ZipEntry implements java.util.zip.ZipConstants implements java.lang
 	* zip entry.
 	* @param e a zip Entry object
 	*/
-	@:overload public function new(e : ZipEntry) : Void;
+	@:overload public function new(e : java.util.zip.ZipEntry) : Void;
 	
 	/**
 	* Returns the name of the entry.

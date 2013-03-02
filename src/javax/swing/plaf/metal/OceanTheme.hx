@@ -36,14 +36,14 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @param table the defaults table, non-null
 	* @throws NullPointerException if {@code table} is {@code null}
 	*/
-	@:overload override public function addCustomEntriesToTable(table : javax.swing.UIDefaults) : Void;
+	@:overload public function addCustomEntriesToTable(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Return the name of this theme, "Ocean".
 	*
 	* @return "Ocean"
 	*/
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	/**
 	* Returns the primary 1 color. This returns a color with an rgb hex value
@@ -52,7 +52,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the primary 1 color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override private function getPrimary1() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getPrimary1() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary 2 color. This returns a color with an rgb hex value
@@ -61,7 +61,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the primary 2 color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override private function getPrimary2() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getPrimary2() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the primary 3 color. This returns a color with an rgb hex value
@@ -70,7 +70,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the primary 3 color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override private function getPrimary3() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getPrimary3() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 1 color. This returns a color with an rgb hex
@@ -79,7 +79,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the secondary 1 color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override private function getSecondary1() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getSecondary1() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 2 color. This returns a color with an rgb hex
@@ -88,7 +88,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the secondary 2 color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override private function getSecondary2() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getSecondary2() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the secondary 3 color. This returns a color with an rgb hex
@@ -97,7 +97,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the secondary 3 color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override private function getSecondary3() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getSecondary3() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the black color. This returns a color with an rgb hex
@@ -106,7 +106,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the black color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override private function getBlack() : javax.swing.plaf.ColorUIResource;
+	@:overload private function getBlack() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the desktop color. This returns a color with an rgb hex
@@ -115,7 +115,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	* @return the desktop color
 	* @see java.awt.Color#decode
 	*/
-	@:overload override public function getDesktopColor() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getDesktopColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the inactive control text color. This returns a color with an
@@ -123,7 +123,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	*
 	* @return the inactive control text color
 	*/
-	@:overload override public function getInactiveControlTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getInactiveControlTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the control text color. This returns a color with an
@@ -131,7 +131,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	*
 	* @return the control text color
 	*/
-	@:overload override public function getControlTextColor() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getControlTextColor() : javax.swing.plaf.ColorUIResource;
 	
 	/**
 	* Returns the menu disabled foreground color. This returns a color with an
@@ -139,7 +139,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 	*
 	* @return the menu disabled foreground color
 	*/
-	@:overload override public function getMenuDisabledForeground() : javax.swing.plaf.ColorUIResource;
+	@:overload public function getMenuDisabledForeground() : javax.swing.plaf.ColorUIResource;
 	
 	
 }
@@ -147,7 +147,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 {
 	@:overload public function new(ltr : javax.swing.Icon, rtl : javax.swing.Icon) : Void;
 	
-	@:overload override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	
 }
@@ -155,7 +155,7 @@ extern class OceanTheme extends javax.swing.plaf.metal.DefaultMetalTheme
 {
 	@:overload public function new(normal : javax.swing.Icon, pressed : javax.swing.Icon) : Void;
 	
-	@:overload override public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
+	@:overload public function paintIcon(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int) : Void;
 	
 	
 }

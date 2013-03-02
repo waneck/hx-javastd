@@ -100,9 +100,9 @@ extern class LoaderHandler
 * loader key for the loader so that the mapping can be removed from
 * the table efficiently when the weak reference is cleared.
 */
-@:native('sun$rmi$server$LoaderHandler$LoaderEntry') @:internal extern class LoaderHandler_LoaderEntry extends java.lang.ref.WeakReference<LoaderHandler_Loader>
+@:native('sun$rmi$server$LoaderHandler$LoaderEntry') @:internal extern class LoaderHandler_LoaderEntry extends java.lang.ref.WeakReference<sun.rmi.server.LoaderHandler.LoaderHandler_Loader>
 {
-	public var key : LoaderHandler_LoaderKey;
+	public var key : sun.rmi.server.LoaderHandler.LoaderHandler_LoaderKey;
 	
 	/**
 	* set to true if the entry has been removed from the table
@@ -111,7 +111,7 @@ extern class LoaderHandler
 	*/
 	public var removed : Bool;
 	
-	@:overload public function new(key : LoaderHandler_LoaderKey, loader : LoaderHandler_Loader) : Void;
+	@:overload public function new(key : sun.rmi.server.LoaderHandler.LoaderHandler_LoaderKey, loader : sun.rmi.server.LoaderHandler.LoaderHandler_Loader) : Void;
 	
 	
 }

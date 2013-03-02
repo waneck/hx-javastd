@@ -29,7 +29,7 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	* Imposes each consecutive print-stream page upon the same side of
 	* consecutive media sheets.
 	*/
-	public static var ONE_SIDED(default, null) : Sides;
+	public static var ONE_SIDED(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* Imposes each consecutive pair of print-stream pages upon front and back
@@ -38,7 +38,7 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	* reader as if for binding on the long edge. This imposition is also
 	* known as "duplex" (see {@link #DUPLEX <CODE>DUPLEX</CODE>}).
 	*/
-	public static var TWO_SIDED_LONG_EDGE(default, null) : Sides;
+	public static var TWO_SIDED_LONG_EDGE(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* Imposes each consecutive pair of print-stream pages upon front and back
@@ -47,19 +47,19 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	* reader as if for binding on the short edge. This imposition is also
 	* known as "tumble" (see {@link #TUMBLE <CODE>TUMBLE</CODE>}).
 	*/
-	public static var TWO_SIDED_SHORT_EDGE(default, null) : Sides;
+	public static var TWO_SIDED_SHORT_EDGE(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* An alias for "two sided long edge" (see {@link #TWO_SIDED_LONG_EDGE
 	* <CODE>TWO_SIDED_LONG_EDGE</CODE>}).
 	*/
-	public static var DUPLEX(default, null) : Sides;
+	public static var DUPLEX(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* An alias for "two sided short edge" (see {@link #TWO_SIDED_SHORT_EDGE
 	* <CODE>TWO_SIDED_SHORT_EDGE</CODE>}).
 	*/
-	public static var TUMBLE(default, null) : Sides;
+	public static var TUMBLE(default, null) : javax.print.attribute.standard.Sides;
 	
 	/**
 	* Construct a new sides enumeration value with the given integer value.
@@ -71,12 +71,12 @@ extern class Sides extends javax.print.attribute.EnumSyntax implements javax.pri
 	/**
 	* Returns the string table for class Sides.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class Sides.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

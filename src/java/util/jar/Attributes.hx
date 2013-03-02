@@ -49,7 +49,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	*
 	* @param attr the specified Attributes
 	*/
-	@:overload public function new(attr : Attributes) : Void;
+	@:overload public function new(attr : java.util.jar.Attributes) : Void;
 	
 	/**
 	* Returns the value of the specified attribute name, or null if the
@@ -91,7 +91,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @return the String value of the specified Attribute.Name, or null if
 	*         not found.
 	*/
-	@:overload public function getValue(name : Attributes_Name) : String;
+	@:overload public function getValue(name : java.util.jar.Attributes.Attributes_Name) : String;
 	
 	/**
 	* Associates the specified value with the specified attribute name
@@ -265,7 +265,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/jar/jar.html#JAR Manifest">
 	*      Manifest and Signature Specification</a>
 	*/
-	public static var MANIFEST_VERSION(default, null) : Attributes_Name;
+	public static var MANIFEST_VERSION(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Signature-Version</code>
@@ -273,13 +273,13 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/jar/jar.html#JAR Manifest">
 	*      Manifest and Signature Specification</a>
 	*/
-	public static var SIGNATURE_VERSION(default, null) : Attributes_Name;
+	public static var SIGNATURE_VERSION(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Content-Type</code>
 	* manifest attribute.
 	*/
-	public static var CONTENT_TYPE(default, null) : Attributes_Name;
+	public static var CONTENT_TYPE(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Class-Path</code>
@@ -288,7 +288,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/extensions/spec.html#bundled">
 	*      Extensions Specification</a>
 	*/
-	public static var CLASS_PATH(default, null) : Attributes_Name;
+	public static var CLASS_PATH(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Main-Class</code> manifest
@@ -297,7 +297,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* with the <code>-jar</code> command-line option of the
 	* <tt>java</tt> application launcher.
 	*/
-	public static var MAIN_CLASS(default, null) : Attributes_Name;
+	public static var MAIN_CLASS(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Sealed</code> manifest attribute
@@ -305,7 +305,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/extensions/spec.html#sealing">
 	*      Extension Sealing</a>
 	*/
-	public static var SEALED(default, null) : Attributes_Name;
+	public static var SEALED(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Extension-List</code> manifest attribute
@@ -313,7 +313,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/extensions/spec.html#dependency">
 	*      Installed extension dependency</a>
 	*/
-	public static var EXTENSION_LIST(default, null) : Attributes_Name;
+	public static var EXTENSION_LIST(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Extension-Name</code> manifest attribute
@@ -321,7 +321,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/extensions/spec.html#dependency">
 	*      Installed extension dependency</a>
 	*/
-	public static var EXTENSION_NAME(default, null) : Attributes_Name;
+	public static var EXTENSION_NAME(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Extension-Name</code> manifest attribute
@@ -329,7 +329,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/extensions/spec.html#dependency">
 	*      Installed extension dependency</a>
 	*/
-	public static var EXTENSION_INSTALLATION(default, null) : Attributes_Name;
+	public static var EXTENSION_INSTALLATION(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Implementation-Title</code>
@@ -337,7 +337,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var IMPLEMENTATION_TITLE(default, null) : Attributes_Name;
+	public static var IMPLEMENTATION_TITLE(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Implementation-Version</code>
@@ -345,7 +345,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var IMPLEMENTATION_VERSION(default, null) : Attributes_Name;
+	public static var IMPLEMENTATION_VERSION(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Implementation-Vendor</code>
@@ -353,7 +353,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var IMPLEMENTATION_VENDOR(default, null) : Attributes_Name;
+	public static var IMPLEMENTATION_VENDOR(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Implementation-Vendor-Id</code>
@@ -361,7 +361,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var IMPLEMENTATION_VENDOR_ID(default, null) : Attributes_Name;
+	public static var IMPLEMENTATION_VENDOR_ID(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Implementation-Vendor-URL</code>
@@ -369,7 +369,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var IMPLEMENTATION_URL(default, null) : Attributes_Name;
+	public static var IMPLEMENTATION_URL(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Specification-Title</code>
@@ -377,7 +377,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var SPECIFICATION_TITLE(default, null) : Attributes_Name;
+	public static var SPECIFICATION_TITLE(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Specification-Version</code>
@@ -385,7 +385,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var SPECIFICATION_VERSION(default, null) : Attributes_Name;
+	public static var SPECIFICATION_VERSION(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	/**
 	* <code>Name</code> object for <code>Specification-Vendor</code>
@@ -393,7 +393,7 @@ extern class Attributes implements java.util.Map<Dynamic, Dynamic> implements ja
 	* @see <a href="../../../../technotes/guides/versioning/spec/versioning2.html#wp90779">
 	*      Java Product Versioning Specification</a>
 	*/
-	public static var SPECIFICATION_VENDOR(default, null) : Attributes_Name;
+	public static var SPECIFICATION_VENDOR(default, null) : java.util.jar.Attributes.Attributes_Name;
 	
 	
 }

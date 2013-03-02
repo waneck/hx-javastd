@@ -75,7 +75,7 @@ package java.net;
 	* @see SecurityManager#checkPermission
 	* @see java.net.NetPermission
 	*/
-	@:overload @:synchronized public static function setDefault(a : Authenticator) : Void;
+	@:overload @:synchronized public static function setDefault(a : java.net.Authenticator) : Void;
 	
 	/**
 	* Ask the authenticator that has been registered with the system
@@ -172,7 +172,7 @@ package java.net;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function requestPasswordAuthentication(host : String, addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String, url : java.net.URL, reqType : Authenticator_RequestorType) : java.net.PasswordAuthentication;
+	@:require(java5) @:overload public static function requestPasswordAuthentication(host : String, addr : java.net.InetAddress, port : Int, protocol : String, prompt : String, scheme : String, url : java.net.URL, reqType : java.net.Authenticator.Authenticator_RequestorType) : java.net.PasswordAuthentication;
 	
 	/**
 	* Gets the <code>hostname</code> of the
@@ -258,7 +258,7 @@ package java.net;
 	* @return the authentication type of the requestor
 	*
 	*/
-	@:require(java5) @:overload private function getRequestorType() : Authenticator_RequestorType;
+	@:require(java5) @:overload private function getRequestorType() : java.net.Authenticator.Authenticator_RequestorType;
 	
 	
 }

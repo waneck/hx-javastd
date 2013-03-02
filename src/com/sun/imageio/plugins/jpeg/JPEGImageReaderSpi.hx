@@ -27,7 +27,7 @@ extern class JPEGImageReaderSpi extends javax.imageio.spi.ImageReaderSpi
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getDescription(locale : java.util.Locale) : String;
+	@:overload public function getDescription(locale : java.util.Locale) : String;
 	
 	@:overload override public function canDecodeInput(source : Dynamic) : Bool;
 	

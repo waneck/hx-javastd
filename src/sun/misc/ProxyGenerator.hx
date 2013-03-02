@@ -89,7 +89,7 @@ extern class ProxyGenerator
 	
 	public var code : java.io.ByteArrayOutputStream;
 	
-	public var exceptionTable : java.util.List<ProxyGenerator_ExceptionTableEntry>;
+	public var exceptionTable : java.util.List<sun.misc.ProxyGenerator.ProxyGenerator_ExceptionTableEntry>;
 	
 	public var declaredExceptions : java.NativeArray<java.StdTypes.Int16>;
 	
@@ -142,7 +142,7 @@ extern class ProxyGenerator
 	/** descriptor of same method */
 	public var unwrapMethodDesc : String;
 	
-	@:overload public static function get(cl : Class<Dynamic>) : ProxyGenerator_PrimitiveTypeInfo;
+	@:overload public static function get(cl : Class<Dynamic>) : sun.misc.ProxyGenerator.ProxyGenerator_PrimitiveTypeInfo;
 	
 	
 }
@@ -249,7 +249,7 @@ extern class ProxyGenerator
 * ValueEntry objects are not used as keys for their entries in the
 * Map "map", so no useful hashCode or equals methods are defined.
 */
-@:native('sun$misc$ProxyGenerator$ConstantPool$ValueEntry') @:internal extern class ProxyGenerator_ConstantPool_ValueEntry extends ProxyGenerator_ConstantPool_Entry
+@:native('sun$misc$ProxyGenerator$ConstantPool$ValueEntry') @:internal extern class ProxyGenerator_ConstantPool_ValueEntry extends sun.misc.ProxyGenerator.ProxyGenerator_ConstantPool_Entry
 {
 	@:overload public function new(value : Dynamic) : Void;
 	
@@ -272,7 +272,7 @@ extern class ProxyGenerator
 * the Map "map", so the hashCode and equals methods are overridden
 * to allow matching.
 */
-@:native('sun$misc$ProxyGenerator$ConstantPool$IndirectEntry') @:internal extern class ProxyGenerator_ConstantPool_IndirectEntry extends ProxyGenerator_ConstantPool_Entry
+@:native('sun$misc$ProxyGenerator$ConstantPool$IndirectEntry') @:internal extern class ProxyGenerator_ConstantPool_IndirectEntry extends sun.misc.ProxyGenerator.ProxyGenerator_ConstantPool_Entry
 {
 	/**
 	* Construct an IndirectEntry for a constant pool entry type

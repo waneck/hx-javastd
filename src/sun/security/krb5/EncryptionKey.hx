@@ -51,7 +51,7 @@ extern class EncryptionKey implements java.lang.Cloneable
 	* keyvalue
 	*     This field contains the key itself, encoded as an octet string.
 	*/
-	public static var NULL_KEY(default, null) : EncryptionKey;
+	public static var NULL_KEY(default, null) : sun.security.krb5.EncryptionKey;
 	
 	@:overload @:synchronized public function getEType() : Int;
 	
@@ -74,7 +74,7 @@ extern class EncryptionKey implements java.lang.Cloneable
 	* searched.
 	* @returns an array of secret keys or null if none were found.
 	*/
-	@:overload public static function acquireSecretKeys(princ : sun.security.krb5.PrincipalName, keytab : String) : java.NativeArray<EncryptionKey>;
+	@:overload public static function acquireSecretKeys(princ : sun.security.krb5.PrincipalName, keytab : String) : java.NativeArray<sun.security.krb5.EncryptionKey>;
 	
 	/**
 	* Obtains a key for a given etype of a principal with possible new salt
@@ -85,7 +85,7 @@ extern class EncryptionKey implements java.lang.Cloneable
 	* @param snp can be NULL
 	* @returns never null
 	*/
-	@:overload public static function acquireSecretKey(cname : sun.security.krb5.PrincipalName, password : java.NativeArray<java.StdTypes.Char16>, etype : Int, snp : sun.security.krb5.internal.PAData.PAData_SaltAndParams) : EncryptionKey;
+	@:overload public static function acquireSecretKey(cname : sun.security.krb5.PrincipalName, password : java.NativeArray<java.StdTypes.Char16>, etype : Int, snp : sun.security.krb5.internal.PAData.PAData_SaltAndParams) : sun.security.krb5.EncryptionKey;
 	
 	/**
 	* Obtains a key for a given etype with salt and optional s2kparams
@@ -95,7 +95,7 @@ extern class EncryptionKey implements java.lang.Cloneable
 	* @param s2kparams can be NULL
 	* @returns never null
 	*/
-	@:overload public static function acquireSecretKey(password : java.NativeArray<java.StdTypes.Char16>, salt : String, etype : Int, s2kparams : java.NativeArray<java.StdTypes.Int8>) : EncryptionKey;
+	@:overload public static function acquireSecretKey(password : java.NativeArray<java.StdTypes.Char16>, salt : String, etype : Int, s2kparams : java.NativeArray<java.StdTypes.Int8>) : sun.security.krb5.EncryptionKey;
 	
 	/*
 	* Usually, when keyType is decoded from ASN.1 it will contain a
@@ -105,7 +105,7 @@ extern class EncryptionKey implements java.lang.Cloneable
 	* as the default in that case. If default_tkt_enctypes was set in
 	* the libdefaults of krb5.conf, then use that sequence.
 	*/
-	@:overload public static function acquireSecretKeys(password : java.NativeArray<java.StdTypes.Char16>, salt : String) : java.NativeArray<EncryptionKey>;
+	@:overload public static function acquireSecretKeys(password : java.NativeArray<java.StdTypes.Char16>, salt : String) : java.NativeArray<sun.security.krb5.EncryptionKey>;
 	
 	@:overload public function new(keyValue : java.NativeArray<java.StdTypes.Int8>, keyType : Int, kvno : Null<Int>) : Void;
 	
@@ -173,7 +173,7 @@ extern class EncryptionKey implements java.lang.Cloneable
 	* @return an instance of EncryptionKey.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : EncryptionKey;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.EncryptionKey;
 	
 	/**
 	* Writes key value in FCC format to a <code>CCacheOutputStream</code>.
@@ -190,13 +190,13 @@ extern class EncryptionKey implements java.lang.Cloneable
 	/**
 	* Find a key with given etype
 	*/
-	@:overload public static function findKey(etype : Int, keys : java.NativeArray<EncryptionKey>) : EncryptionKey;
+	@:overload public static function findKey(etype : Int, keys : java.NativeArray<sun.security.krb5.EncryptionKey>) : sun.security.krb5.EncryptionKey;
 	
 	/**
 	* Find a key with given etype and kvno
 	* @param kvno if null, return any (first?) key
 	*/
-	@:overload public static function findKey(etype : Int, kvno : Null<Int>, keys : java.NativeArray<EncryptionKey>) : EncryptionKey;
+	@:overload public static function findKey(etype : Int, kvno : Null<Int>, keys : java.NativeArray<sun.security.krb5.EncryptionKey>) : sun.security.krb5.EncryptionKey;
 	
 	
 }

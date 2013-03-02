@@ -154,7 +154,7 @@ extern class TrueTypeFont extends sun.font.FileFont
 	
 	@:overload override public function getFamilyName(locale : java.util.Locale) : String;
 	
-	@:overload override public function getMapper() : sun.font.CharToGlyphMapper;
+	@:overload public function getMapper() : sun.font.CharToGlyphMapper;
 	
 	/* This duplicates initNames() but that has to run fast as its used
 	* during typical start-up and the information here is likely never

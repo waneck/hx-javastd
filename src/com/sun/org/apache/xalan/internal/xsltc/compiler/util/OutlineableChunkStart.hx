@@ -33,19 +33,19 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler.util;
 	* Get the name of this instruction.  Used for debugging.
 	* @return the instruction name
 	*/
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	/**
 	* Get the name of this instruction.  Used for debugging.
 	* @return the instruction name
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Get the name of this instruction.  Used for debugging.
 	* @return the instruction name
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload public function toString(verbose : Bool) : String;
 	
 	
 }

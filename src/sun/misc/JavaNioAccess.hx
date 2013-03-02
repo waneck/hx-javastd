@@ -25,7 +25,7 @@ package sun.misc;
 */
 extern interface JavaNioAccess
 {
-	@:overload public function getDirectBufferPool() : JavaNioAccess_BufferPool;
+	@:overload public function getDirectBufferPool() : sun.misc.JavaNioAccess.JavaNioAccess_BufferPool;
 	
 	/**
 	* Constructs a direct ByteBuffer referring to the block of memory starting

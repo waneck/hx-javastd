@@ -34,16 +34,16 @@ package sun.tools.jstat;
 	@:overload @:abstract private function eval(x : Float, y : Float) : Float;
 	
 	/* Operator '+' */
-	public static var PLUS(default, null) : Operator;
+	public static var PLUS(default, null) : sun.tools.jstat.Operator;
 	
 	/* Operator '-' */
-	public static var MINUS(default, null) : Operator;
+	public static var MINUS(default, null) : sun.tools.jstat.Operator;
 	
 	/* Operator '/' */
-	public static var DIVIDE(default, null) : Operator;
+	public static var DIVIDE(default, null) : sun.tools.jstat.Operator;
 	
 	/* Operator '*' */
-	public static var MULTIPLY(default, null) : Operator;
+	public static var MULTIPLY(default, null) : sun.tools.jstat.Operator;
 	
 	/**
 	* Returns the string representation of this Operator object.
@@ -58,7 +58,7 @@ package sun.tools.jstat;
 	* @param   s  an string to match against Operator objects.
 	* @return     The Operator object matching the given string.
 	*/
-	@:overload public static function toOperator(s : String) : Operator;
+	@:overload public static function toOperator(s : String) : sun.tools.jstat.Operator;
 	
 	/**
 	* Returns an enumeration of the keys for this enumerated type

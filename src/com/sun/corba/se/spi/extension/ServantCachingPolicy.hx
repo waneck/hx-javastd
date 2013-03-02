@@ -56,13 +56,13 @@ extern class ServantCachingPolicy extends org.omg.CORBA.LocalObject implements o
 	
 	/** Return the default servant caching policy.
 	*/
-	@:overload @:synchronized public static function getPolicy() : ServantCachingPolicy;
+	@:overload @:synchronized public static function getPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
-	@:overload @:synchronized public static function getFullPolicy() : ServantCachingPolicy;
+	@:overload @:synchronized public static function getFullPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
-	@:overload @:synchronized public static function getInfoOnlyPolicy() : ServantCachingPolicy;
+	@:overload @:synchronized public static function getInfoOnlyPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
-	@:overload @:synchronized public static function getMinimalPolicy() : ServantCachingPolicy;
+	@:overload @:synchronized public static function getMinimalPolicy() : com.sun.corba.se.spi.extension.ServantCachingPolicy;
 	
 	@:overload public function policy_type() : Int;
 	

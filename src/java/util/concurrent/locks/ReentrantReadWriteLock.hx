@@ -225,9 +225,9 @@ package java.util.concurrent.locks;
 	*/
 	@:overload public function new(fair : Bool) : Void;
 	
-	@:overload public function writeLock() : ReentrantReadWriteLock_WriteLock;
+	@:overload public function writeLock() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_WriteLock;
 	
-	@:overload public function readLock() : ReentrantReadWriteLock_ReadLock;
+	@:overload public function readLock() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_ReadLock;
 	
 	/**
 	* Returns {@code true} if this lock has fairness set true.
@@ -452,15 +452,15 @@ package java.util.concurrent.locks;
 	* both read and write holds that are all released during a
 	* condition wait and re-established in tryAcquire.
 	*/
-	@:overload @:final override private function tryRelease(releases : Int) : Bool;
+	@:overload @:final private function tryRelease(releases : Int) : Bool;
 	
-	@:overload @:final override private function tryAcquire(acquires : Int) : Bool;
+	@:overload @:final private function tryAcquire(acquires : Int) : Bool;
 	
-	@:overload @:final override private function tryReleaseShared(unused : Int) : Bool;
+	@:overload @:final private function tryReleaseShared(unused : Int) : Bool;
 	
-	@:overload @:final override private function tryAcquireShared(unused : Int) : Int;
+	@:overload @:final private function tryAcquireShared(unused : Int) : Int;
 	
-	@:overload @:final override private function isHeldExclusively() : Bool;
+	@:overload @:final private function isHeldExclusively() : Bool;
 	
 	
 }
@@ -476,23 +476,23 @@ package java.util.concurrent.locks;
 * ThreadLocal subclass. Easiest to explicitly define for sake
 * of deserialization mechanics.
 */
-@:native('java$util$concurrent$locks$ReentrantReadWriteLock$Sync$ThreadLocalHoldCounter') @:internal extern class ReentrantReadWriteLock_Sync_ThreadLocalHoldCounter extends java.lang.ThreadLocal<ReentrantReadWriteLock_Sync_HoldCounter>
+@:native('java$util$concurrent$locks$ReentrantReadWriteLock$Sync$ThreadLocalHoldCounter') @:internal extern class ReentrantReadWriteLock_Sync_ThreadLocalHoldCounter extends java.lang.ThreadLocal<java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_Sync_HoldCounter>
 {
-	@:overload override public function initialValue() : ReentrantReadWriteLock_Sync_HoldCounter;
+	@:overload override public function initialValue() : java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_Sync_HoldCounter;
 	
 	
 }
 /**
 * Nonfair version of Sync
 */
-@:native('java$util$concurrent$locks$ReentrantReadWriteLock$NonfairSync') @:internal extern class ReentrantReadWriteLock_NonfairSync extends ReentrantReadWriteLock_Sync
+@:native('java$util$concurrent$locks$ReentrantReadWriteLock$NonfairSync') @:internal extern class ReentrantReadWriteLock_NonfairSync extends java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_Sync
 {
 	
 }
 /**
 * Fair version of Sync
 */
-@:native('java$util$concurrent$locks$ReentrantReadWriteLock$FairSync') @:internal extern class ReentrantReadWriteLock_FairSync extends ReentrantReadWriteLock_Sync
+@:native('java$util$concurrent$locks$ReentrantReadWriteLock$FairSync') @:internal extern class ReentrantReadWriteLock_FairSync extends java.util.concurrent.locks.ReentrantReadWriteLock.ReentrantReadWriteLock_Sync
 {
 	
 }
@@ -507,7 +507,7 @@ package java.util.concurrent.locks;
 	* @param lock the outer lock object
 	* @throws NullPointerException if the lock is null
 	*/
-	@:overload private function new(lock : ReentrantReadWriteLock) : Void;
+	@:overload private function new(lock : java.util.concurrent.locks.ReentrantReadWriteLock) : Void;
 	
 	/**
 	* Acquires the read lock.
@@ -694,7 +694,7 @@ package java.util.concurrent.locks;
 	* @param lock the outer lock object
 	* @throws NullPointerException if the lock is null
 	*/
-	@:overload private function new(lock : ReentrantReadWriteLock) : Void;
+	@:overload private function new(lock : java.util.concurrent.locks.ReentrantReadWriteLock) : Void;
 	
 	/**
 	* Acquires the write lock.

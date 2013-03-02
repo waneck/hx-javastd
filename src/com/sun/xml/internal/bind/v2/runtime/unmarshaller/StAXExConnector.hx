@@ -27,7 +27,7 @@ package com.sun.xml.internal.bind.v2.runtime.unmarshaller;
 {
 	@:overload public function new(_in : com.sun.xml.internal.org.jvnet.staxex.XMLStreamReaderEx, visitor : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor) : Void;
 	
-	@:overload override private function handleCharacters() : Void;
+	@:overload private function handleCharacters() : Void;
 	
 	
 }

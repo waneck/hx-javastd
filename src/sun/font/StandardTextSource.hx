@@ -54,31 +54,31 @@ extern class StandardTextSource extends sun.font.TextSource
 	/** Create a StandardTextSource whose context and source are all the text in the String. */
 	@:overload public function new(str : String, level : Int, flags : Int, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : Void;
 	
-	@:overload override public function getChars() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload public function getChars() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload override public function getStart() : Int;
+	@:overload public function getStart() : Int;
 	
-	@:overload override public function getLength() : Int;
+	@:overload public function getLength() : Int;
 	
-	@:overload override public function getContextStart() : Int;
+	@:overload public function getContextStart() : Int;
 	
-	@:overload override public function getContextLength() : Int;
+	@:overload public function getContextLength() : Int;
 	
-	@:overload override public function getLayoutFlags() : Int;
+	@:overload public function getLayoutFlags() : Int;
 	
-	@:overload override public function getBidiLevel() : Int;
+	@:overload public function getBidiLevel() : Int;
 	
-	@:overload override public function getFont() : java.awt.Font;
+	@:overload public function getFont() : java.awt.Font;
 	
-	@:overload override public function getFRC() : java.awt.font.FontRenderContext;
+	@:overload public function getFRC() : java.awt.font.FontRenderContext;
 	
-	@:overload override public function getCoreMetrics() : sun.font.CoreMetrics;
+	@:overload public function getCoreMetrics() : sun.font.CoreMetrics;
 	
-	@:overload override public function getSubSource(start : Int, length : Int, dir : Int) : sun.font.TextSource;
+	@:overload public function getSubSource(start : Int, length : Int, dir : Int) : sun.font.TextSource;
 	
 	@:overload public function toString() : String;
 	
-	@:overload override public function toString(withContext : Bool) : String;
+	@:overload public function toString(withContext : Bool) : String;
 	
 	
 }

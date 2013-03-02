@@ -54,7 +54,7 @@ package sun.font;
 	
 	@:overload public function new(font2D : sun.font.Font2D, desc : sun.font.FontStrikeDesc) : Void;
 	
-	@:overload @:synchronized override public function dispose() : Void;
+	@:overload @:synchronized public function dispose() : Void;
 	
 	
 }

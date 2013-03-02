@@ -28,9 +28,9 @@ package sun.net.www.protocol.http;
 	/**
 	* Create a DigestAuthentication
 	*/
-	@:overload public function new(isProxy : Bool, url : java.net.URL, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : DigestAuthentication_Parameters) : Void;
+	@:overload public function new(isProxy : Bool, url : java.net.URL, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : sun.net.www.protocol.http.DigestAuthentication.DigestAuthentication_Parameters) : Void;
 	
-	@:overload public function new(isProxy : Bool, host : String, port : Int, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : DigestAuthentication_Parameters) : Void;
+	@:overload public function new(isProxy : Bool, host : String, port : Int, realm : String, authMethod : String, pw : java.net.PasswordAuthentication, params : sun.net.www.protocol.http.DigestAuthentication.DigestAuthentication_Parameters) : Void;
 	
 	/**
 	* @return true if this authentication supports preemptive authorization

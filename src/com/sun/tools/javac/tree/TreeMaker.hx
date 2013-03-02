@@ -33,10 +33,10 @@ package com.sun.tools.javac.tree;
 extern class TreeMaker implements com.sun.tools.javac.tree.JCTree.JCTree_Factory
 {
 	/** The context key for the tree factory. */
-	private static var treeMakerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<TreeMaker>;
+	private static var treeMakerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.tree.TreeMaker>;
 	
 	/** Get the TreeMaker instance. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : TreeMaker;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.tree.TreeMaker;
 	
 	/** The position at which subsequent trees will be created.
 	*/
@@ -52,15 +52,15 @@ extern class TreeMaker implements com.sun.tools.javac.tree.JCTree.JCTree_Factory
 	
 	/** Create a new tree maker for a given toplevel.
 	*/
-	@:overload public function forToplevel(toplevel : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : TreeMaker;
+	@:overload public function forToplevel(toplevel : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : com.sun.tools.javac.tree.TreeMaker;
 	
 	/** Reassign current position.
 	*/
-	@:overload public function at(pos : Int) : TreeMaker;
+	@:overload public function at(pos : Int) : com.sun.tools.javac.tree.TreeMaker;
 	
 	/** Reassign current position.
 	*/
-	@:overload public function at(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : TreeMaker;
+	@:overload public function at(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition) : com.sun.tools.javac.tree.TreeMaker;
 	
 	/**
 	* Create given tree node at current position.

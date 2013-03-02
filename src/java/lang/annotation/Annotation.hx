@@ -40,7 +40,7 @@ package java.lang.annotation;
 	/**
 	* Returns the annotation type of this annotation.
 	*/
-	@:overload public function annotationType() : Class<Annotation>;
+	@:overload public function annotationType() : Class<java.lang.annotation.Annotation>;
 	
 	
 }

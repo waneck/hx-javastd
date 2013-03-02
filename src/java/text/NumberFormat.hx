@@ -87,7 +87,7 @@ extern class NumberFormat extends java.text.Format
 	*                   mode being set to RoundingMode.UNNECESSARY
 	* @see              java.text.FieldPosition
 	*/
-	@:overload override public function format(number : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload public function format(number : Dynamic, toAppendTo : java.lang.StringBuffer, pos : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Parses text from a string to produce a <code>Number</code>.
@@ -113,7 +113,7 @@ extern class NumberFormat extends java.text.Format
 	*         error, returns null.
 	* @exception NullPointerException if <code>pos</code> is null.
 	*/
-	@:overload @:final override public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
+	@:overload @:final public function parseObject(source : String, pos : java.text.ParsePosition) : Dynamic;
 	
 	/**
 	* Specialization of format.
@@ -195,24 +195,24 @@ extern class NumberFormat extends java.text.Format
 	* This is the same as calling
 	* {@link #getNumberInstance() getNumberInstance()}.
 	*/
-	@:overload @:final public static function getInstance() : NumberFormat;
+	@:overload @:final public static function getInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a general-purpose number format for the specified locale.
 	* This is the same as calling
 	* {@link #getNumberInstance(java.util.Locale) getNumberInstance(inLocale)}.
 	*/
-	@:overload public static function getInstance(inLocale : java.util.Locale) : NumberFormat;
+	@:overload public static function getInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a general-purpose number format for the current default locale.
 	*/
-	@:overload @:final public static function getNumberInstance() : NumberFormat;
+	@:overload @:final public static function getNumberInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a general-purpose number format for the specified locale.
 	*/
-	@:overload public static function getNumberInstance(inLocale : java.util.Locale) : NumberFormat;
+	@:overload public static function getNumberInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns an integer number format for the current default locale. The
@@ -226,7 +226,7 @@ extern class NumberFormat extends java.text.Format
 	* @return a number format for integer values
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public static function getIntegerInstance() : NumberFormat;
+	@:require(java4) @:overload @:final public static function getIntegerInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns an integer number format for the specified locale. The
@@ -240,27 +240,27 @@ extern class NumberFormat extends java.text.Format
 	* @return a number format for integer values
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getIntegerInstance(inLocale : java.util.Locale) : NumberFormat;
+	@:require(java4) @:overload public static function getIntegerInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a currency format for the current default locale.
 	*/
-	@:overload @:final public static function getCurrencyInstance() : NumberFormat;
+	@:overload @:final public static function getCurrencyInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a currency format for the specified locale.
 	*/
-	@:overload public static function getCurrencyInstance(inLocale : java.util.Locale) : NumberFormat;
+	@:overload public static function getCurrencyInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns a percentage format for the current default locale.
 	*/
-	@:overload @:final public static function getPercentInstance() : NumberFormat;
+	@:overload @:final public static function getPercentInstance() : java.text.NumberFormat;
 	
 	/**
 	* Returns a percentage format for the specified locale.
 	*/
-	@:overload public static function getPercentInstance(inLocale : java.util.Locale) : NumberFormat;
+	@:overload public static function getPercentInstance(inLocale : java.util.Locale) : java.text.NumberFormat;
 	
 	/**
 	* Returns an array of all locales for which the
@@ -290,7 +290,7 @@ extern class NumberFormat extends java.text.Format
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Returns true if grouping is used in this format. For example, in the
@@ -469,7 +469,7 @@ extern class NumberFormat extends java.text.Format
 	*
 	* @param name Name of the attribute
 	*/
-	@:overload override private function new(name : String) : Void;
+	@:overload private function new(name : String) : Void;
 	
 	/**
 	* Resolves instances being deserialized to the predefined constants.
@@ -539,9 +539,9 @@ extern class NumberFormat extends java.text.Format
 /**
 * Obtains a NumberFormat instance from a NumberFormatProvider implementation.
 */
-@:native('java$text$NumberFormat$NumberFormatGetter') @:internal extern class NumberFormat_NumberFormatGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.NumberFormatProvider, NumberFormat>
+@:native('java$text$NumberFormat$NumberFormatGetter') @:internal extern class NumberFormat_NumberFormatGetter implements sun.util.LocaleServiceProviderPool.LocaleServiceProviderPool_LocalizedObjectGetter<java.text.spi.NumberFormatProvider, java.text.NumberFormat>
 {
-	@:overload public function getObject(numberFormatProvider : java.text.spi.NumberFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : NumberFormat;
+	@:overload public function getObject(numberFormatProvider : java.text.spi.NumberFormatProvider, locale : java.util.Locale, key : String, params : java.NativeArray<Dynamic>) : java.text.NumberFormat;
 	
 	
 }

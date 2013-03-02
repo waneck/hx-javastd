@@ -33,37 +33,37 @@ extern class ServerSocketAdaptor extends java.net.ServerSocket
 {
 	@:overload public static function create(ssc : sun.nio.ch.ServerSocketChannelImpl) : java.net.ServerSocket;
 	
-	@:overload override public function bind(local : java.net.SocketAddress) : Void;
+	@:overload public function bind(local : java.net.SocketAddress) : Void;
 	
-	@:overload override public function bind(local : java.net.SocketAddress, backlog : Int) : Void;
+	@:overload public function bind(local : java.net.SocketAddress, backlog : Int) : Void;
 	
-	@:overload override public function getInetAddress() : java.net.InetAddress;
+	@:overload public function getInetAddress() : java.net.InetAddress;
 	
-	@:overload override public function getLocalPort() : Int;
+	@:overload public function getLocalPort() : Int;
 	
-	@:overload override public function accept() : java.net.Socket;
+	@:overload public function accept() : java.net.Socket;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function getChannel() : java.nio.channels.ServerSocketChannel;
+	@:overload public function getChannel() : java.nio.channels.ServerSocketChannel;
 	
-	@:overload override public function isBound() : Bool;
+	@:overload public function isBound() : Bool;
 	
-	@:overload override public function isClosed() : Bool;
+	@:overload public function isClosed() : Bool;
 	
-	@:overload override public function setSoTimeout(timeout : Int) : Void;
+	@:overload public function setSoTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getSoTimeout() : Int;
+	@:overload public function getSoTimeout() : Int;
 	
-	@:overload override public function setReuseAddress(on : Bool) : Void;
+	@:overload public function setReuseAddress(on : Bool) : Void;
 	
-	@:overload override public function getReuseAddress() : Bool;
+	@:overload public function getReuseAddress() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override public function setReceiveBufferSize(size : Int) : Void;
+	@:overload public function setReceiveBufferSize(size : Int) : Void;
 	
-	@:overload override public function getReceiveBufferSize() : Int;
+	@:overload public function getReceiveBufferSize() : Int;
 	
 	
 }

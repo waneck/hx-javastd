@@ -56,7 +56,7 @@ extern class PrinterMoreInfoManufacturer extends javax.print.attribute.URISyntax
 	* @return  True if <CODE>object</CODE> is equivalent to this printer
 	*          more info manufacturer attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

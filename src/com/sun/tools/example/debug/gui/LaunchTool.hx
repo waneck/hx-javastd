@@ -38,11 +38,11 @@ package com.sun.tools.example.debug.gui;
 {
 	
 }
-@:native('com$sun$tools$example$debug$gui$LaunchTool$StringArgRep') @:internal extern class LaunchTool_StringArgRep extends LaunchTool_ArgRep
+@:native('com$sun$tools$example$debug$gui$LaunchTool$StringArgRep') @:internal extern class LaunchTool_StringArgRep extends com.sun.tools.example.debug.gui.LaunchTool.LaunchTool_ArgRep
 {
 	
 }
-@:native('com$sun$tools$example$debug$gui$LaunchTool$BooleanArgRep') @:internal extern class LaunchTool_BooleanArgRep extends LaunchTool_ArgRep
+@:native('com$sun$tools$example$debug$gui$LaunchTool$BooleanArgRep') @:internal extern class LaunchTool_BooleanArgRep extends com.sun.tools.example.debug.gui.LaunchTool.LaunchTool_ArgRep
 {
 	
 }

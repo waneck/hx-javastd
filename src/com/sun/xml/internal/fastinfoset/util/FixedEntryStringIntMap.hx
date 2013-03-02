@@ -37,7 +37,7 @@ extern class FixedEntryStringIntMap extends com.sun.xml.internal.fastinfoset.uti
 	
 	@:overload @:final override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyMap(readOnlyMap : FixedEntryStringIntMap, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.FixedEntryStringIntMap, clear : Bool) : Void;
 	
 	
 }

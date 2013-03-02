@@ -39,7 +39,7 @@ extern class Packet
 	/**
 	* Create a packet from its byte array representation
 	*/
-	@:overload public static function fromByteArray(b : java.NativeArray<java.StdTypes.Int8>) : Packet;
+	@:overload public static function fromByteArray(b : java.NativeArray<java.StdTypes.Int8>) : com.sun.tools.jdi.Packet;
 	
 	
 }

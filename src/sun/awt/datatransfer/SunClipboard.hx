@@ -70,7 +70,7 @@ extern class SunClipboard extends java.awt.datatransfer.Clipboard implements jav
 	/**
 	* @throws IllegalStateException if the clipboard has not been opened
 	*/
-	@:overload public function openClipboard(newOwner : SunClipboard) : Void;
+	@:overload public function openClipboard(newOwner : sun.awt.datatransfer.SunClipboard) : Void;
 	
 	@:overload public function closeClipboard() : Void;
 	

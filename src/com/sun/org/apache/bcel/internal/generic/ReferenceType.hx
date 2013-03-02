@@ -97,7 +97,7 @@ extern class ReferenceType extends com.sun.org.apache.bcel.internal.generic.Type
 	* If not all of the two classes' superclasses cannot be found, "null" is returned.
 	* See the JVM specification edition 2, "4.9.2 The Bytecode Verifier".
 	*/
-	@:overload public function getFirstCommonSuperclass(t : ReferenceType) : ReferenceType;
+	@:overload public function getFirstCommonSuperclass(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.ReferenceType;
 	
 	/**
 	* This commutative operation returns the first common superclass (narrowest ReferenceType
@@ -114,7 +114,7 @@ extern class ReferenceType extends com.sun.org.apache.bcel.internal.generic.Type
 	* @deprecated use getFirstCommonSuperclass(ReferenceType t) which has
 	*             slightly changed semantics.
 	*/
-	@:overload public function firstCommonSuperclass(t : ReferenceType) : ReferenceType;
+	@:overload public function firstCommonSuperclass(t : com.sun.org.apache.bcel.internal.generic.ReferenceType) : com.sun.org.apache.bcel.internal.generic.ReferenceType;
 	
 	
 }

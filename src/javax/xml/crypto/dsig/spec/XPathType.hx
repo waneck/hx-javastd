@@ -38,7 +38,7 @@ extern class XPathType
 	* @throws NullPointerException if <code>expression</code> or
 	*    <code>filter</code> is <code>null</code>
 	*/
-	@:overload public function new(expression : String, filter : XPathType_Filter) : Void;
+	@:overload public function new(expression : String, filter : javax.xml.crypto.dsig.spec.XPathType.XPathType_Filter) : Void;
 	
 	/**
 	* Creates an <code>XPathType</code> instance with the specified XPath
@@ -57,7 +57,7 @@ extern class XPathType
 	* @throws ClassCastException if any of the map's keys or entries are
 	*    not of type <code>String</code>
 	*/
-	@:overload public function new(expression : String, filter : XPathType_Filter, namespaceMap : java.util.Map<Dynamic, Dynamic>) : Void;
+	@:overload public function new(expression : String, filter : javax.xml.crypto.dsig.spec.XPathType.XPathType_Filter, namespaceMap : java.util.Map<Dynamic, Dynamic>) : Void;
 	
 	/**
 	* Returns the XPath expression to be evaluated.
@@ -71,7 +71,7 @@ extern class XPathType
 	*
 	* @return the filter operation
 	*/
-	@:overload public function getFilter() : XPathType_Filter;
+	@:overload public function getFilter() : javax.xml.crypto.dsig.spec.XPathType.XPathType_Filter;
 	
 	/**
 	* Returns a map of namespace prefixes. Each key is a namespace prefix
@@ -103,17 +103,17 @@ extern class XPathType
 	/**
 	* The intersect filter operation.
 	*/
-	public static var INTERSECT(default, null) : XPathType_Filter;
+	public static var INTERSECT(default, null) : javax.xml.crypto.dsig.spec.XPathType.XPathType_Filter;
 	
 	/**
 	* The subtract filter operation.
 	*/
-	public static var SUBTRACT(default, null) : XPathType_Filter;
+	public static var SUBTRACT(default, null) : javax.xml.crypto.dsig.spec.XPathType.XPathType_Filter;
 	
 	/**
 	* The union filter operation.
 	*/
-	public static var UNION(default, null) : XPathType_Filter;
+	public static var UNION(default, null) : javax.xml.crypto.dsig.spec.XPathType.XPathType_Filter;
 	
 	
 }

@@ -84,9 +84,9 @@ extern class LanguageTag
 	* privateuse    = "x" 1*("-" (1*8alphanum))
 	*
 	*/
-	@:overload public static function parse(languageTag : String, sts : sun.util.locale.ParseStatus) : LanguageTag;
+	@:overload public static function parse(languageTag : String, sts : sun.util.locale.ParseStatus) : sun.util.locale.LanguageTag;
 	
-	@:overload public static function parseLocale(baseLocale : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : LanguageTag;
+	@:overload public static function parseLocale(baseLocale : sun.util.locale.BaseLocale, localeExtensions : sun.util.locale.LocaleExtensions) : sun.util.locale.LanguageTag;
 	
 	@:overload public function getLanguage() : String;
 	

@@ -27,21 +27,21 @@ package com.sun.xml.internal.fastinfoset.algorithm;
 */
 extern class HexadecimalEncodingAlgorithm extends com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm
 {
-	@:overload @:final override public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
+	@:overload @:final public function decodeFromBytes(b : java.NativeArray<java.StdTypes.Int8>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
+	@:overload @:final public function decodeFromInputStream(s : java.io.InputStream) : Dynamic;
 	
-	@:overload override public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
+	@:overload public function encodeToOutputStream(data : Dynamic, s : java.io.OutputStream) : Void;
 	
-	@:overload @:final override public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
+	@:overload @:final public function convertFromCharacters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Dynamic;
 	
-	@:overload @:final override public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
+	@:overload @:final public function convertToCharacters(data : Dynamic, s : java.lang.StringBuffer) : Void;
 	
-	@:overload @:final override public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
+	@:overload @:final public function getPrimtiveLengthFromOctetLength(octetLength : Int) : Int;
 	
-	@:overload override public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
+	@:overload public function getOctetLengthFromPrimitiveLength(primitiveLength : Int) : Int;
 	
-	@:overload @:final override public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
+	@:overload @:final public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
 	
 }

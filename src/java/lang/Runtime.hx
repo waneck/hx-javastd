@@ -33,7 +33,7 @@ extern class Runtime
 	* @return  the <code>Runtime</code> object associated with the current
 	*          Java application.
 	*/
-	@:overload public static function getRuntime() : Runtime;
+	@:overload public static function getRuntime() : java.lang.Runtime;
 	
 	/**
 	* Terminates the currently running Java virtual machine by initiating its

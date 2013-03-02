@@ -47,7 +47,7 @@ extern class HandlerConfiguration
 	* @param roles
 	* @param oldConfig
 	*/
-	@:overload public function new(roles : java.util.Set<String>, oldConfig : HandlerConfiguration) : Void;
+	@:overload public function new(roles : java.util.Set<String>, oldConfig : com.sun.xml.internal.ws.client.HandlerConfiguration) : Void;
 	
 	@:overload public function getRoles() : java.util.Set<String>;
 	

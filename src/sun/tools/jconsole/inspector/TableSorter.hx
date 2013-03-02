@@ -32,9 +32,9 @@ extern class TableSorter extends javax.swing.table.DefaultTableModel implements 
 	
 	@:overload override public function newDataAvailable(e : javax.swing.event.TableModelEvent) : Void;
 	
-	@:overload override public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload public function addTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
-	@:overload override public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
+	@:overload public function removeTableModelListener(l : javax.swing.event.TableModelListener) : Void;
 	
 	@:overload public function sortByColumn(column : Int) : Void;
 	

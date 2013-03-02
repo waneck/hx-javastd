@@ -25,10 +25,10 @@ package com.sun.tools.javac.file;
 */
 extern class ZipFileIndexCache
 {
-	@:overload @:synchronized public static function getSharedInstance() : ZipFileIndexCache;
+	@:overload @:synchronized public static function getSharedInstance() : com.sun.tools.javac.file.ZipFileIndexCache;
 	
 	/** Get a context-specific instance of a cache. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : ZipFileIndexCache;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.file.ZipFileIndexCache;
 	
 	/**
 	* Returns a list of all ZipFileIndex entries

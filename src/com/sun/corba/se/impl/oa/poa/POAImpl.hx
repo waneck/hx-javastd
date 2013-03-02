@@ -220,30 +220,30 @@ extern class POAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implement
 	*/
 	@:overload public function id() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
+	@:overload public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
 	
-	@:overload override public function getManagerId() : Int;
+	@:overload public function getManagerId() : Int;
 	
-	@:overload override public function getState() : java.StdTypes.Int16;
+	@:overload public function getState() : java.StdTypes.Int16;
 	
 	@:overload public function getInterfaces(servant : Dynamic, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
-	@:overload override private function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
+	@:overload private function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	
-	@:overload override public function enter() : Void;
+	@:overload public function enter() : Void;
 	
-	@:overload override public function exit() : Void;
+	@:overload public function exit() : Void;
 	
-	@:overload override public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
+	@:overload public function getInvocationServant(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
 	
-	@:overload override public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
+	@:overload public function getLocalServant(objectId : java.NativeArray<java.StdTypes.Int8>) : org.omg.CORBA.Object;
 	
 	/** Called from the subcontract to let this POA cleanup after an
 	*  invocation. Note: If getServant was called, then returnServant
 	*  MUST be called, even in the case of exceptions.  This may be
 	*  called multiple times for a single request.
 	*/
-	@:overload override public function returnServant() : Void;
+	@:overload public function returnServant() : Void;
 	
 	
 }
@@ -251,11 +251,11 @@ extern class POAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implement
 {
 	@:overload public function new(etherealize : Bool, debug : Bool) : Void;
 	
-	@:overload public function doIt(thePoa : POAImpl, wait : Bool) : Void;
+	@:overload public function doIt(thePoa : com.sun.corba.se.impl.oa.poa.POAImpl, wait : Bool) : Void;
 	
 	@:overload override public function run() : Void;
 	
-	@:overload public function performDestroy(poa : POAImpl, destroyedPOATemplates : java.util.Set<Dynamic>) : Void;
+	@:overload public function performDestroy(poa : com.sun.corba.se.impl.oa.poa.POAImpl, destroyedPOATemplates : java.util.Set<Dynamic>) : Void;
 	
 	
 }

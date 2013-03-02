@@ -115,7 +115,7 @@ extern class LdapCtx extends com.sun.jndi.toolkit.ctx.ComponentDirContext implem
 	/**
 	* Override with noncloning version.
 	*/
-	@:overload override private function p_getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload private function p_getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	@:overload override public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	

@@ -41,7 +41,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	*
 	* @return the attribute set
 	*/
-	@:overload override public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
+	@:overload public function getInputAttributes() : javax.swing.text.MutableAttributeSet;
 	
 	/**
 	* Fetches the element representing the current
@@ -203,7 +203,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 	* @return the kit
 	* @exception IllegalArgumentException for the wrong document type
 	*/
-	@:overload @:final private function getStyledEditorKit(e : javax.swing.JEditorPane) : StyledEditorKit;
+	@:overload @:final private function getStyledEditorKit(e : javax.swing.JEditorPane) : javax.swing.text.StyledEditorKit;
 	
 	/**
 	* Applies the given attributes to character
@@ -249,7 +249,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$StyledEditorKit$FontFamilyAction') extern class StyledEditorKit_FontFamilyAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$FontFamilyAction') extern class StyledEditorKit_FontFamilyAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	/**
 	* Creates a new FontFamilyAction.
@@ -283,7 +283,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$StyledEditorKit$FontSizeAction') extern class StyledEditorKit_FontSizeAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$FontSizeAction') extern class StyledEditorKit_FontSizeAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	/**
 	* Creates a new FontSizeAction.
@@ -327,7 +327,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$StyledEditorKit$ForegroundAction') extern class StyledEditorKit_ForegroundAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$ForegroundAction') extern class StyledEditorKit_ForegroundAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	/**
 	* Creates a new ForegroundAction.
@@ -370,7 +370,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$StyledEditorKit$AlignmentAction') extern class StyledEditorKit_AlignmentAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$AlignmentAction') extern class StyledEditorKit_AlignmentAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	/**
 	* Creates a new AlignmentAction.
@@ -401,7 +401,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$StyledEditorKit$BoldAction') extern class StyledEditorKit_BoldAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$BoldAction') extern class StyledEditorKit_BoldAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	/**
 	* Constructs a new BoldAction.
@@ -429,7 +429,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$StyledEditorKit$ItalicAction') extern class StyledEditorKit_ItalicAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$ItalicAction') extern class StyledEditorKit_ItalicAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	/**
 	* Constructs a new ItalicAction.
@@ -457,7 +457,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$StyledEditorKit$UnderlineAction') extern class StyledEditorKit_UnderlineAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$UnderlineAction') extern class StyledEditorKit_UnderlineAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	/**
 	* Constructs a new UnderlineAction.
@@ -480,7 +480,7 @@ extern class StyledEditorKit extends javax.swing.text.DefaultEditorKit
 * is inserted. Beyond that, this will reset the input attributes to
 * what they were before the newline was inserted.
 */
-@:native('javax$swing$text$StyledEditorKit$StyledInsertBreakAction') @:internal extern class StyledEditorKit_StyledInsertBreakAction extends StyledEditorKit_StyledTextAction
+@:native('javax$swing$text$StyledEditorKit$StyledInsertBreakAction') @:internal extern class StyledEditorKit_StyledInsertBreakAction extends javax.swing.text.StyledEditorKit.StyledEditorKit_StyledTextAction
 {
 	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	

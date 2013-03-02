@@ -25,21 +25,21 @@ package javax.swing.colorchooser;
 */
 @:internal extern class ColorChooserPanel extends javax.swing.colorchooser.AbstractColorChooserPanel implements java.beans.PropertyChangeListener
 {
-	@:overload override public function setEnabled(enabled : Bool) : Void;
+	@:overload public function setEnabled(enabled : Bool) : Void;
 	
-	@:overload override public function updateChooser() : Void;
+	@:overload public function updateChooser() : Void;
 	
-	@:overload override private function buildChooser() : Void;
+	@:overload private function buildChooser() : Void;
 	
-	@:overload override public function getDisplayName() : String;
+	@:overload public function getDisplayName() : String;
 	
-	@:overload override public function getMnemonic() : Int;
+	@:overload public function getMnemonic() : Int;
 	
-	@:overload override public function getDisplayedMnemonicIndex() : Int;
+	@:overload public function getDisplayedMnemonicIndex() : Int;
 	
-	@:overload override public function getSmallDisplayIcon() : javax.swing.Icon;
+	@:overload public function getSmallDisplayIcon() : javax.swing.Icon;
 	
-	@:overload override public function getLargeDisplayIcon() : javax.swing.Icon;
+	@:overload public function getLargeDisplayIcon() : javax.swing.Icon;
 	
 	@:overload public function propertyChange(event : java.beans.PropertyChangeEvent) : Void;
 	

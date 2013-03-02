@@ -33,7 +33,7 @@ extern class XResourceBundle extends java.util.ListResourceBundle
 	* @param className Name of local-specific subclass.
 	* @param locale the locale to prefer when searching for the bundle
 	*/
-	@:overload @:final public static function loadResourceBundle(className : String, locale : java.util.Locale) : XResourceBundle;
+	@:overload @:final public static function loadResourceBundle(className : String, locale : java.util.Locale) : com.sun.org.apache.xml.internal.utils.res.XResourceBundle;
 	
 	/**
 	* Get the association list.

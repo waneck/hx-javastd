@@ -56,7 +56,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* Initialize an AbstractDiagnosticFormatter by setting its JavacMessages object.
 	* @param messages
 	*/
-	@:overload private function new(messages : com.sun.tools.javac.util.JavacMessages, config : AbstractDiagnosticFormatter_SimpleConfiguration) : Void;
+	@:overload private function new(messages : com.sun.tools.javac.util.JavacMessages, config : com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration) : Void;
 	
 	@:overload public function formatKind(d : com.sun.tools.javac.util.JCDiagnostic, l : java.util.Locale) : String;
 	
@@ -157,7 +157,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	*/
 	@:overload private function indent(s : String, nSpaces : Int) : String;
 	
-	@:overload public function getConfiguration() : AbstractDiagnosticFormatter_SimpleConfiguration;
+	@:overload public function getConfiguration() : com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration;
 	
 	@:overload public function getPrinter() : com.sun.tools.javac.code.Printer;
 	
@@ -173,16 +173,6 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* lead to infinite loops.
 	*/
 	private var printer : com.sun.tools.javac.code.Printer;
-	
-	/**
-	* Controls the way in which a diagnostic position is displayed.
-	*
-	* @param diag diagnostic to be formatted
-	* @param pk enum constant representing the position kind
-	* @param l locale object to be used for i18n
-	* @return string representation of the diagnostic position
-	*/
-	@:overload @:public public function formatPosition(diag : Dynamic, pk : DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
 	/**
 	* Whether the source code output for this diagnostic is to be displayed.
@@ -218,6 +208,16 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @return string representation of the diagnostic prefix
 	*/
 	@:overload @:public public function formatKind(diag : Dynamic, l : java.util.Locale) : String;
+	
+	/**
+	* Controls the way in which a diagnostic position is displayed.
+	*
+	* @param diag diagnostic to be formatted
+	* @param pk enum constant representing the position kind
+	* @param l locale object to be used for i18n
+	* @return string representation of the diagnostic position
+	*/
+	@:overload @:public public function formatPosition(diag : Dynamic, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic source is displayed.

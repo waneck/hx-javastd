@@ -28,7 +28,7 @@ package com.sun.tools.apt.mirror.type;
 */
 extern class TypeMaker
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : TypeMaker;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.type.TypeMaker;
 	
 	/**
 	* Returns the TypeMirror corresponding to a javac Type object.

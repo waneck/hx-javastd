@@ -68,7 +68,7 @@ extern class Field extends com.sun.org.apache.bcel.internal.classfile.FieldOrMet
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : Field) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
 	/**
 	* @param access_flags Access rights of field
@@ -104,7 +104,7 @@ extern class Field extends com.sun.org.apache.bcel.internal.classfile.FieldOrMet
 	/**
 	* @return deep copy of this field
 	*/
-	@:overload @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Field;
+	@:overload @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Field;
 	
 	/**
 	* @return type of field

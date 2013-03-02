@@ -54,7 +54,7 @@ extern class XHTMLSerializer extends com.sun.org.apache.xml.internal.serialize.H
 	*/
 	@:overload public function new(output : java.io.OutputStream, format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
-	@:overload override public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
+	@:overload public function setOutputFormat(format : com.sun.org.apache.xml.internal.serialize.OutputFormat) : Void;
 	
 	
 }

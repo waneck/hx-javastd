@@ -74,7 +74,7 @@ package com.sun.javadoc;
 	* in a superclass this method overrides, null if
 	* this method does not override.
 	*/
-	@:overload public function overriddenMethod() : MethodDoc;
+	@:overload public function overriddenMethod() : com.sun.javadoc.MethodDoc;
 	
 	/**
 	* Tests whether this method overrides another.
@@ -88,7 +88,7 @@ package com.sun.javadoc;
 	* @return <tt>true</tt> if this method overrides the other
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function overrides(meth : MethodDoc) : Bool;
+	@:require(java5) @:overload public function overrides(meth : com.sun.javadoc.MethodDoc) : Bool;
 	
 	
 }

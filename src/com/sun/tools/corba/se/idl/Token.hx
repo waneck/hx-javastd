@@ -69,7 +69,7 @@ package com.sun.tools.corba.se.idl;
 	* This is set by this method.
 	* @returns Token The resulting Token corresponding to string.
 	*/
-	@:overload public static function makeKeywordToken(string : String, corbaLevel : Single, escapedOK : Bool, collision : java.NativeArray<Bool>) : Token;
+	@:overload public static function makeKeywordToken(string : String, corbaLevel : Single, escapedOK : Bool, collision : java.NativeArray<Bool>) : com.sun.tools.corba.se.idl.Token;
 	
 	/**
 	* Get the String representation of this Token.

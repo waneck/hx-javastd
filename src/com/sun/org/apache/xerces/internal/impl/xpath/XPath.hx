@@ -27,7 +27,7 @@ extern class XPath
 	private var fSymbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable;
 	
 	/** Location paths. */
-	private var fLocationPaths : java.NativeArray<XPath_LocationPath>;
+	private var fLocationPaths : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath>;
 	
 	/** Constructs an XPath object from the specified expression. */
 	@:overload public function new(xpath : String, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, context : com.sun.org.apache.xerces.internal.xni.NamespaceContext) : Void;
@@ -36,10 +36,10 @@ extern class XPath
 	* Returns a representation of all location paths for this XPath.
 	* XPath = locationPath ( '|' locationPath)
 	*/
-	@:overload public function getLocationPaths() : java.NativeArray<XPath_LocationPath>;
+	@:overload public function getLocationPaths() : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath>;
 	
 	/** Returns a representation of the first location path for this XPath. */
-	@:overload public function getLocationPath() : XPath_LocationPath;
+	@:overload public function getLocationPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath;
 	
 	/** Returns a string representation of this object. */
 	@:overload public function toString() : String;
@@ -59,13 +59,13 @@ extern class XPath
 @:native('com$sun$org$apache$xerces$internal$impl$xpath$XPath$LocationPath') extern class XPath_LocationPath implements java.lang.Cloneable
 {
 	/** List of steps. */
-	public var steps : java.NativeArray<XPath_Step>;
+	public var steps : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step>;
 	
 	/** Creates a location path from a series of steps. */
-	@:overload public function new(steps : java.NativeArray<XPath_Step>) : Void;
+	@:overload public function new(steps : java.NativeArray<com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step>) : Void;
 	
 	/** Copy constructor. */
-	@:overload private function new(path : XPath_LocationPath) : Void;
+	@:overload private function new(path : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_LocationPath) : Void;
 	
 	/** Returns a string representation of this object. */
 	@:overload public function toString() : String;
@@ -85,16 +85,16 @@ extern class XPath
 @:native('com$sun$org$apache$xerces$internal$impl$xpath$XPath$Step') extern class XPath_Step implements java.lang.Cloneable
 {
 	/** Axis. */
-	public var axis : XPath_Axis;
+	public var axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis;
 	
 	/** Node test. */
-	public var nodeTest : XPath_NodeTest;
+	public var nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest;
 	
 	/** Constructs a step from an axis and node test. */
-	@:overload public function new(axis : XPath_Axis, nodeTest : XPath_NodeTest) : Void;
+	@:overload public function new(axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis, nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest) : Void;
 	
 	/** Copy constructor. */
-	@:overload private function new(step : XPath_Step) : Void;
+	@:overload private function new(step : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Step) : Void;
 	
 	/** Returns a string representation of this object. */
 	@:overload public function toString() : String;
@@ -132,7 +132,7 @@ extern class XPath
 	@:overload public function new(type : java.StdTypes.Int16) : Void;
 	
 	/** Copy constructor. */
-	@:overload private function new(axis : XPath_Axis) : Void;
+	@:overload private function new(axis : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Axis) : Void;
 	
 	/** Returns a string representation of this object. */
 	@:overload public function toString() : String;
@@ -179,7 +179,7 @@ extern class XPath
 	@:overload public function new(prefix : String, uri : String) : Void;
 	
 	/** Copy constructor. */
-	@:overload public function new(nodeTest : XPath_NodeTest) : Void;
+	@:overload public function new(nodeTest : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_NodeTest) : Void;
 	
 	/** Returns a string representation of this object. */
 	@:overload public function toString() : String;
@@ -272,7 +272,7 @@ extern class XPath
 	/**
 	*
 	*/
-	@:overload public function scanExpr(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, tokens : XPath_Tokens, data : String, currentOffset : Int, endOffset : Int) : Bool;
+	@:overload public function scanExpr(symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable, tokens : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Tokens, data : String, currentOffset : Int, endOffset : Int) : Bool;
 	
 	/**
 	* This method adds the specified token to the token list. By
@@ -282,7 +282,7 @@ extern class XPath
 	* XPath expression. This is a convenient way of allowing only
 	* a subset of XPath.
 	*/
-	@:overload private function addToken(tokens : XPath_Tokens, token : Int) : Void;
+	@:overload private function addToken(tokens : com.sun.org.apache.xerces.internal.impl.xpath.XPath.XPath_Tokens, token : Int) : Void;
 	
 	
 }

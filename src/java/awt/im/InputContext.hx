@@ -36,7 +36,7 @@ extern class InputContext
 	/**
 	* Returns a new InputContext instance.
 	*/
-	@:overload public static function getInstance() : InputContext;
+	@:overload public static function getInstance() : java.awt.im.InputContext;
 	
 	/**
 	* Attempts to select an input method or keyboard layout that

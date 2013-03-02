@@ -43,7 +43,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class whoses members are being documented.
 	* @param writer the doclet specific writer.
 	*/
-	@:native('getInstance') @:overload public static function _getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter) : AnnotationTypeOptionalMemberBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.AnnotationTypeOptionalMemberWriter) : com.sun.tools.doclets.internal.toolkit.builders.AnnotationTypeOptionalMemberBuilder;
 	
 	/**
 	* {@inheritDoc}
@@ -69,7 +69,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getWriter() : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
+	@:overload public function getWriter() : com.sun.tools.doclets.internal.toolkit.AnnotationTypeRequiredMemberWriter;
 	
 	
 }

@@ -160,7 +160,7 @@ extern class ExpandedNameTable
 */
 @:native('com$sun$org$apache$xml$internal$dtm$ref$ExpandedNameTable$HashEntry') @:internal extern class ExpandedNameTable_HashEntry
 {
-	@:overload private function new(key : com.sun.org.apache.xml.internal.dtm.ref.ExtendedType, value : Int, hash : Int, next : ExpandedNameTable_HashEntry) : Void;
+	@:overload private function new(key : com.sun.org.apache.xml.internal.dtm.ref.ExtendedType, value : Int, hash : Int, next : com.sun.org.apache.xml.internal.dtm.ref.ExpandedNameTable.ExpandedNameTable_HashEntry) : Void;
 	
 	
 }

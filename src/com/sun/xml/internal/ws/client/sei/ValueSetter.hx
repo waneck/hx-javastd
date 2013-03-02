@@ -27,11 +27,11 @@ package com.sun.xml.internal.ws.client.sei;
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$ReturnValue') @:internal extern class ValueSetter_ReturnValue extends ValueSetter
+@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$ReturnValue') @:internal extern class ValueSetter_ReturnValue extends com.sun.xml.internal.ws.client.sei.ValueSetter
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$Param') @:internal extern class ValueSetter_Param extends ValueSetter
+@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$Param') @:internal extern class ValueSetter_Param extends com.sun.xml.internal.ws.client.sei.ValueSetter
 {
 	@:overload public function new(idx : Int) : Void;
 	
@@ -40,14 +40,14 @@ package com.sun.xml.internal.ws.client.sei;
 /**
 * Used in case of async invocation, where there is only one OUT parameter
 */
-@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$SingleValue') @:internal extern class ValueSetter_SingleValue extends ValueSetter
+@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$SingleValue') @:internal extern class ValueSetter_SingleValue extends com.sun.xml.internal.ws.client.sei.ValueSetter
 {
 	
 }
 /**
 * OUT parameters are set in async bean
 */
-@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$AsyncBeanValueSetter') @:internal extern class ValueSetter_AsyncBeanValueSetter extends ValueSetter
+@:native('com$sun$xml$internal$ws$client$sei$ValueSetter$AsyncBeanValueSetter') @:internal extern class ValueSetter_AsyncBeanValueSetter extends com.sun.xml.internal.ws.client.sei.ValueSetter
 {
 	
 }

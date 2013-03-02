@@ -55,7 +55,7 @@ extern class MutableAttrListImpl extends org.xml.sax.helpers.AttributesImpl impl
 	* @param type The attribute type as a string.
 	* @param value The attribute value.
 	*/
-	@:overload override public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
 	
 	/**
 	* Add the contents of the attribute list to this list.

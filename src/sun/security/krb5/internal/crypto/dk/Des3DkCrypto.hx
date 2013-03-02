@@ -27,7 +27,7 @@ extern class Des3DkCrypto extends sun.security.krb5.internal.crypto.dk.DkCrypto
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function getKeySeedLength() : Int;
+	@:overload private function getKeySeedLength() : Int;
 	
 	@:overload public function stringToKey(salt : java.NativeArray<java.StdTypes.Char16>) : java.NativeArray<java.StdTypes.Int8>;
 	
@@ -41,13 +41,13 @@ extern class Des3DkCrypto extends sun.security.krb5.internal.crypto.dk.DkCrypto
 	* bits, which are expanded individually into 64 bits as in des3Expand().
 	* Result is a 24 byte (192-bit) key.
 	*/
-	@:overload override private function randomToKey(_in : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function randomToKey(_in : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function getCipher(key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, mode : Int) : javax.crypto.Cipher;
+	@:overload private function getCipher(key : java.NativeArray<java.StdTypes.Int8>, ivec : java.NativeArray<java.StdTypes.Int8>, mode : Int) : javax.crypto.Cipher;
 	
-	@:overload override public function getChecksumLength() : Int;
+	@:overload public function getChecksumLength() : Int;
 	
-	@:overload override private function getHmac(key : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function getHmac(key : java.NativeArray<java.StdTypes.Int8>, msg : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

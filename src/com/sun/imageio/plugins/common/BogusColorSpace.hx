@@ -35,13 +35,13 @@ extern class BogusColorSpace extends java.awt.color.ColorSpace
 	*/
 	@:overload public function new(numComponents : Int) : Void;
 	
-	@:overload override public function toRGB(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function toRGB(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
-	@:overload override public function fromRGB(rgbvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function fromRGB(rgbvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
-	@:overload override public function toCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function toCIEXYZ(colorvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
-	@:overload override public function fromCIEXYZ(xyzvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function fromCIEXYZ(xyzvalue : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
 	
 }

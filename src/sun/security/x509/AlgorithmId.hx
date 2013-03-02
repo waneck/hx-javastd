@@ -133,7 +133,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* Returns true iff the argument indicates the same algorithm
 	* with the same parameters.
 	*/
-	@:overload public function equals(other : AlgorithmId) : Bool;
+	@:overload public function equals(other : sun.security.x509.AlgorithmId) : Bool;
 	
 	/**
 	* Compares this AlgorithmID to another.  If algorithm parameters are
@@ -181,7 +181,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	*          with some kind of special support for this algorithm.
 	*          In that case, you may "narrow" the type of the ID.
 	*/
-	@:overload public static function parse(val : sun.security.util.DerValue) : AlgorithmId;
+	@:overload public static function parse(val : sun.security.util.DerValue) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Returns one of the algorithm IDs most commonly associated
@@ -191,7 +191,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* @deprecated use the short get form of this method.
 	* @exception NoSuchAlgorithmException on error.
 	*/
-	@:overload public static function getAlgorithmId(algname : String) : AlgorithmId;
+	@:overload public static function getAlgorithmId(algname : String) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Returns one of the algorithm IDs most commonly associated
@@ -200,7 +200,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* @param algname the name being used
 	* @exception NoSuchAlgorithmException on error.
 	*/
-	@:overload public static function get(algname : String) : AlgorithmId;
+	@:overload public static function get(algname : String) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Returns one of the algorithm IDs most commonly associated
@@ -209,7 +209,7 @@ extern class AlgorithmId implements java.io.Serializable implements sun.security
 	* @param algparams the associated algorithm parameters.
 	* @exception NoSuchAlgorithmException on error.
 	*/
-	@:overload public static function get(algparams : java.security.AlgorithmParameters) : AlgorithmId;
+	@:overload public static function get(algparams : java.security.AlgorithmParameters) : sun.security.x509.AlgorithmId;
 	
 	/**
 	* Algorithm ID for the MD2 Message Digest Algorthm, from RFC 1319.

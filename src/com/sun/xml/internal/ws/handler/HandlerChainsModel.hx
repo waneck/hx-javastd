@@ -32,7 +32,7 @@ extern class HandlerChainsModel
 	/**
 	* reader should be on <handler-chains> element
 	*/
-	@:overload public static function parseHandlerConfigFile(annotatedClass : Class<Dynamic>, reader : javax.xml.stream.XMLStreamReader) : HandlerChainsModel;
+	@:overload public static function parseHandlerConfigFile(annotatedClass : Class<Dynamic>, reader : javax.xml.stream.XMLStreamReader) : com.sun.xml.internal.ws.handler.HandlerChainsModel;
 	
 	/**
 	* <p>This method is called internally by HandlerAnnotationProcessor,
@@ -107,7 +107,7 @@ extern class HandlerChainsModel
 	
 	@:overload public function setId(value : String) : Void;
 	
-	@:overload public function getHandlers() : java.util.List<HandlerChainsModel_HandlerType>;
+	@:overload public function getHandlers() : java.util.List<com.sun.xml.internal.ws.handler.HandlerChainsModel.HandlerChainsModel_HandlerType>;
 	
 	
 }

@@ -100,7 +100,7 @@ extern class ExtensionInfo
 	*
 	* @param the requested extension information to compare to
 	*/
-	@:overload public function isCompatibleWith(ei : ExtensionInfo) : Int;
+	@:overload public function isCompatibleWith(ei : sun.misc.ExtensionInfo) : Int;
 	
 	/**
 	* <p>

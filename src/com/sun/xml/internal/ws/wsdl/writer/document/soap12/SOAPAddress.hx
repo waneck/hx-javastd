@@ -29,7 +29,7 @@ extern interface SOAPAddress extends com.sun.xml.internal.txw2.TypedXmlWriter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function location(value : String) : SOAPAddress;
+	@:overload public function location(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap12.SOAPAddress;
 	
 	
 }

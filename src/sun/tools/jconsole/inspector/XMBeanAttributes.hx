@@ -27,55 +27,55 @@ extern class XMBeanAttributes extends sun.tools.jconsole.inspector.XTable
 {
 	@:overload public function new(mbeansTab : sun.tools.jconsole.MBeansTab) : Void;
 	
-	@:overload @:synchronized override public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
+	@:overload @:synchronized public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload @:synchronized override public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload @:synchronized public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
 	@:overload public function cancelCellEditing() : Void;
 	
 	@:overload public function stopCellEditing() : Void;
 	
-	@:overload @:final override public function editCellAt(row : Int, column : Int, e : java.util.EventObject) : Bool;
+	@:overload @:final public function editCellAt(row : Int, column : Int, e : java.util.EventObject) : Bool;
 	
-	@:overload override public function isCellEditable(row : Int, col : Int) : Bool;
+	@:overload public function isCellEditable(row : Int, col : Int) : Bool;
 	
-	@:overload override public function setValueAt(value : Dynamic, row : Int, column : Int) : Void;
+	@:overload public function setValueAt(value : Dynamic, row : Int, column : Int) : Void;
 	
-	@:overload override public function isTableEditable() : Bool;
+	@:overload public function isTableEditable() : Bool;
 	
-	@:overload override public function setTableValue(value : Dynamic, row : Int) : Void;
+	@:overload public function setTableValue(value : Dynamic, row : Int) : Void;
 	
-	@:overload override public function isColumnEditable(column : Int) : Bool;
+	@:overload public function isColumnEditable(column : Int) : Bool;
 	
-	@:overload override public function getClassName(row : Int) : String;
+	@:overload public function getClassName(row : Int) : String;
 	
-	@:overload override public function getValueName(row : Int) : String;
+	@:overload public function getValueName(row : Int) : String;
 	
-	@:overload override public function getValue(row : Int) : Dynamic;
+	@:overload public function getValue(row : Int) : Dynamic;
 	
-	@:overload override public function getToolTip(row : Int, column : Int) : String;
+	@:overload public function getToolTip(row : Int, column : Int) : String;
 	
-	@:overload @:synchronized override public function isWritable(row : Int) : Bool;
+	@:overload @:synchronized public function isWritable(row : Int) : Bool;
 	
 	/**
 	* Override JTable method in order to make any call to this method
 	* atomic with TableModel elements.
 	*/
-	@:overload @:synchronized override public function getRowCount() : Int;
+	@:overload @:synchronized public function getRowCount() : Int;
 	
-	@:overload @:synchronized override public function isReadable(row : Int) : Bool;
+	@:overload @:synchronized public function isReadable(row : Int) : Bool;
 	
-	@:overload @:synchronized override public function isCellError(row : Int, col : Int) : Bool;
+	@:overload @:synchronized public function isCellError(row : Int, col : Int) : Bool;
 	
-	@:overload @:synchronized override public function isAttributeViewable(row : Int, col : Int) : Bool;
+	@:overload @:synchronized public function isAttributeViewable(row : Int, col : Int) : Bool;
 	
 	@:overload public function loadAttributes(mbean : sun.tools.jconsole.inspector.XMBean, mbeanInfo : javax.management.MBeanInfo) : Void;
 	
 	@:overload public function refreshAttributes() : Void;
 	
-	@:overload override public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload public function columnMarginChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
-	@:overload @:synchronized override public function emptyTable() : Void;
+	@:overload @:synchronized public function emptyTable() : Void;
 	
 	@:overload private function addTableData(tableModel : javax.swing.table.DefaultTableModel, mbean : sun.tools.jconsole.inspector.XMBean, attributesInfo : java.NativeArray<javax.management.MBeanAttributeInfo>, attributes : java.util.HashMap<String, Dynamic>, unavailableAttributes : java.util.HashMap<String, Dynamic>, viewableAttributes : java.util.HashMap<String, Dynamic>) : Void;
 	
@@ -83,7 +83,7 @@ extern class XMBeanAttributes extends sun.tools.jconsole.inspector.XTable
 }
 @:native('sun$tools$jconsole$inspector$XMBeanAttributes$AttributesMouseListener') @:internal extern class XMBeanAttributes_AttributesMouseListener extends java.awt.event.MouseAdapter
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -97,7 +97,7 @@ extern class XMBeanAttributes extends sun.tools.jconsole.inspector.XTable
 }
 @:native('sun$tools$jconsole$inspector$XMBeanAttributes$MaximizedCellRenderer') @:internal extern class XMBeanAttributes_MaximizedCellRenderer extends javax.swing.table.DefaultTableCellRenderer
 {
-	@:overload override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	@:overload public function getComponent() : java.awt.Component;
 	

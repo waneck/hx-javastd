@@ -303,13 +303,13 @@ extern class DefaultTreeCellEditor implements java.awt.event.ActionListener impl
 	*    attribute: visualUpdate true
 	*  description: The component's border.
 	*/
-	@:overload override public function setBorder(border : javax.swing.border.Border) : Void;
+	@:overload public function setBorder(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* Overrides <code>JComponent.getBorder</code> to
 	* returns the current border.
 	*/
-	@:overload override public function getBorder() : javax.swing.border.Border;
+	@:overload public function getBorder() : javax.swing.border.Border;
 	
 	@:overload override public function getFont() : java.awt.Font;
 	

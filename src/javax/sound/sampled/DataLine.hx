@@ -371,7 +371,7 @@ package javax.sound.sampled;
 	* @return <code>true</code> if this object matches the one specified,
 	* otherwise <code>false</code>.
 	*/
-	@:overload public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
+	@:overload override public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
 	/**
 	* Obtains a textual description of the data line info.

@@ -35,23 +35,23 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsDesktopIconUI extends javax.swing.plaf.basic.BasicDesktopIconUI
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installDefaults() : Void;
+	@:overload public function installDefaults() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function installComponents() : Void;
+	@:overload private function installComponents() : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Windows desktop icons are restricted to a width of 160 pixels by
 	* default.  This value is retrieved by the DesktopIcon.width property.
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	
 }

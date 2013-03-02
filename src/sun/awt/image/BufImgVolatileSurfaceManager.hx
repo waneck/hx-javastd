@@ -35,7 +35,7 @@ extern class BufImgVolatileSurfaceManager extends sun.awt.image.VolatileSurfaceM
 	* Returns false to indicate that this surface manager cannot accelerate
 	* the image.
 	*/
-	@:overload override private function isAccelerationEnabled() : Bool;
+	@:overload private function isAccelerationEnabled() : Bool;
 	
 	/**
 	* Returns null to indicate failure in creating the accelerated surface.
@@ -44,7 +44,7 @@ extern class BufImgVolatileSurfaceManager extends sun.awt.image.VolatileSurfaceM
 	* isAccelerationEnabled() method.  But we need to override this method
 	* since it is abstract in our parent class.
 	*/
-	@:overload override private function initAcceleratedSurface() : sun.java2d.SurfaceData;
+	@:overload private function initAcceleratedSurface() : sun.java2d.SurfaceData;
 	
 	
 }

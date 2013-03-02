@@ -42,9 +42,9 @@ extern class BinaryClass extends sun.tools.java.ClassDefinition implements sun.t
 	/**
 	* Load a binary class
 	*/
-	@:overload public static function load(env : sun.tools.java.Environment, _in : java.io.DataInputStream) : BinaryClass;
+	@:overload public static function load(env : sun.tools.java.Environment, _in : java.io.DataInputStream) : sun.tools.java.BinaryClass;
 	
-	@:overload public static function load(env : sun.tools.java.Environment, _in : java.io.DataInputStream, mask : Int) : BinaryClass;
+	@:overload public static function load(env : sun.tools.java.Environment, _in : java.io.DataInputStream, mask : Int) : sun.tools.java.BinaryClass;
 	
 	/**
 	* Called when an environment ties a binary definition to a declaration.

@@ -36,19 +36,19 @@ package com.sun.tools.example.debug.gui;
 */
 extern class SourceModel extends javax.swing.AbstractListModel<Dynamic>
 {
-	public static var prototypeCellValue(default, null) : SourceModel_Line;
+	public static var prototypeCellValue(default, null) : com.sun.tools.example.debug.gui.SourceModel.SourceModel_Line;
 	
 	@:overload public function new(message : String) : Void;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
 	@:overload public function fileName() : java.io.File;
 	
 	@:overload public function sourceReader() : java.io.BufferedReader;
 	
-	@:overload public function line(lineNo : Int) : SourceModel_Line;
+	@:overload public function line(lineNo : Int) : com.sun.tools.example.debug.gui.SourceModel.SourceModel_Line;
 	
 	@:overload public function sourceLine(lineNo : Int) : String;
 	

@@ -88,7 +88,7 @@ extern class CorbaClientDelegateImpl extends com.sun.corba.se.spi.protocol.Corba
 	* @return the codebase as a space delimited list of url strings or
 	* null if none.
 	*/
-	@:overload override public function get_codebase(self : org.omg.CORBA.Object) : String;
+	@:overload public function get_codebase(self : org.omg.CORBA.Object) : String;
 	
 	@:overload override public function toString(self : org.omg.CORBA.Object) : String;
 	

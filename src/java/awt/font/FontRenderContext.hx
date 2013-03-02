@@ -181,7 +181,7 @@ extern class FontRenderContext
 	*         otherwise.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function equals(rhs : FontRenderContext) : Bool;
+	@:require(java4) @:overload public function equals(rhs : java.awt.font.FontRenderContext) : Bool;
 	
 	/**
 	* Return a hashcode for this FontRenderContext.

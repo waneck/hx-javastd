@@ -88,24 +88,24 @@ extern class Kinds
 	
 	/** A KindName representing a given symbol kind
 	*/
-	@:overload public static function kindName(kind : Int) : Kinds_KindName;
+	@:overload public static function kindName(kind : Int) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	/** A KindName representing a given symbol
 	*/
-	@:overload public static function kindName(sym : com.sun.tools.javac.code.Symbol) : Kinds_KindName;
+	@:overload public static function kindName(sym : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	/** A set of KindName(s) representing a set of symbol's kinds.
 	*/
-	@:overload public static function kindNames(kind : Int) : java.util.EnumSet<Kinds_KindName>;
+	@:overload public static function kindNames(kind : Int) : java.util.EnumSet<com.sun.tools.javac.code.Kinds.Kinds_KindName>;
 	
 	/** A KindName representing the kind of a given class/interface type.
 	*/
-	@:overload public static function typeKindName(t : com.sun.tools.javac.code.Type) : Kinds_KindName;
+	@:overload public static function typeKindName(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	/** A KindName representing the kind of a a missing symbol, given an
 	*  error kind.
 	* */
-	@:overload public static function absentKind(kind : Int) : Kinds_KindName;
+	@:overload public static function absentKind(kind : Int) : com.sun.tools.javac.code.Kinds.Kinds_KindName;
 	
 	
 }

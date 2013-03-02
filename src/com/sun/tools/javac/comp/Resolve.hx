@@ -32,7 +32,7 @@ extern class Resolve
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	private static var resolveKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Resolve>;
+	private static var resolveKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Resolve>;
 	
 	public var boxingEnabled(default, null) : Bool;
 	
@@ -40,7 +40,7 @@ extern class Resolve
 	
 	public var allowMethodHandles(default, null) : Bool;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Resolve;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Resolve;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -144,7 +144,7 @@ extern class Resolve
 * This class is the root class of all resolution errors caused by
 * an invalid symbol being found during resolution.
 */
-@:native('com$sun$tools$javac$comp$Resolve$InvalidSymbolError') @:internal extern class Resolve_InvalidSymbolError extends Resolve_ResolveError
+@:native('com$sun$tools$javac$comp$Resolve$InvalidSymbolError') @:internal extern class Resolve_InvalidSymbolError extends com.sun.tools.javac.comp.Resolve.Resolve_ResolveError
 {
 	@:overload override public function exists() : Bool;
 	
@@ -158,7 +158,7 @@ extern class Resolve
 * InvalidSymbolError error class indicating that a symbol matching a
 * given name does not exists in a given site.
 */
-@:native('com$sun$tools$javac$comp$Resolve$SymbolNotFoundError') @:internal extern class Resolve_SymbolNotFoundError extends Resolve_ResolveError
+@:native('com$sun$tools$javac$comp$Resolve$SymbolNotFoundError') @:internal extern class Resolve_SymbolNotFoundError extends com.sun.tools.javac.comp.Resolve.Resolve_ResolveError
 {
 	
 }
@@ -167,7 +167,7 @@ extern class Resolve
 * (either a method, a constructor or an operand) is not applicable
 * given an actual arguments/type argument list.
 */
-@:native('com$sun$tools$javac$comp$Resolve$InapplicableSymbolError') @:internal extern class Resolve_InapplicableSymbolError extends Resolve_InvalidSymbolError
+@:native('com$sun$tools$javac$comp$Resolve$InapplicableSymbolError') @:internal extern class Resolve_InapplicableSymbolError extends com.sun.tools.javac.comp.Resolve.Resolve_InvalidSymbolError
 {
 	@:overload override public function toString() : String;
 	
@@ -180,7 +180,7 @@ extern class Resolve
 * (either methods, constructors or operands) is not applicable
 * given an actual arguments/type argument list.
 */
-@:native('com$sun$tools$javac$comp$Resolve$InapplicableSymbolsError') @:internal extern class Resolve_InapplicableSymbolsError extends Resolve_ResolveError
+@:native('com$sun$tools$javac$comp$Resolve$InapplicableSymbolsError') @:internal extern class Resolve_InapplicableSymbolsError extends com.sun.tools.javac.comp.Resolve.Resolve_ResolveError
 {
 	
 }
@@ -194,7 +194,7 @@ extern class Resolve
 * An InvalidSymbolError error class indicating that a symbol is not
 * accessible from a given site
 */
-@:native('com$sun$tools$javac$comp$Resolve$AccessError') @:internal extern class Resolve_AccessError extends Resolve_InvalidSymbolError
+@:native('com$sun$tools$javac$comp$Resolve$AccessError') @:internal extern class Resolve_AccessError extends com.sun.tools.javac.comp.Resolve.Resolve_InvalidSymbolError
 {
 	@:overload override public function exists() : Bool;
 	
@@ -204,7 +204,7 @@ extern class Resolve
 * InvalidSymbolError error class indicating that an instance member
 * has erroneously been accessed from a static context.
 */
-@:native('com$sun$tools$javac$comp$Resolve$StaticError') @:internal extern class Resolve_StaticError extends Resolve_InvalidSymbolError
+@:native('com$sun$tools$javac$comp$Resolve$StaticError') @:internal extern class Resolve_StaticError extends com.sun.tools.javac.comp.Resolve.Resolve_InvalidSymbolError
 {
 	
 }
@@ -213,7 +213,7 @@ extern class Resolve
 * (either methods, constructors or operands) are ambiguous
 * given an actual arguments/type argument list.
 */
-@:native('com$sun$tools$javac$comp$Resolve$AmbiguityError') @:internal extern class Resolve_AmbiguityError extends Resolve_InvalidSymbolError
+@:native('com$sun$tools$javac$comp$Resolve$AmbiguityError') @:internal extern class Resolve_AmbiguityError extends com.sun.tools.javac.comp.Resolve.Resolve_InvalidSymbolError
 {
 	
 }

@@ -62,9 +62,9 @@ extern class BindingImpl implements com.sun.xml.internal.ws.api.WSBinding
 	
 	@:overload @:final public function createCodec() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
-	@:overload public static function create(bindingId : com.sun.xml.internal.ws.api.BindingID) : BindingImpl;
+	@:overload public static function create(bindingId : com.sun.xml.internal.ws.api.BindingID) : com.sun.xml.internal.ws.binding.BindingImpl;
 	
-	@:overload public static function create(bindingId : com.sun.xml.internal.ws.api.BindingID, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : BindingImpl;
+	@:overload public static function create(bindingId : com.sun.xml.internal.ws.api.BindingID, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : com.sun.xml.internal.ws.binding.BindingImpl;
 	
 	@:overload public static function getDefaultBinding() : com.sun.xml.internal.ws.api.WSBinding;
 	

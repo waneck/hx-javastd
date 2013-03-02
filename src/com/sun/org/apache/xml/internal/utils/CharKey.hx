@@ -61,7 +61,7 @@ extern class CharKey
 	*
 	* @return True if this object equals this string value
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:final override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

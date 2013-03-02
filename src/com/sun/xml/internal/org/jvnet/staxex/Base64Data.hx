@@ -34,7 +34,7 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	* Clone constructor
 	* @param that needs to be cloned
 	*/
-	@:overload public function new(that : Base64Data) : Void;
+	@:overload public function new(that : com.sun.xml.internal.org.jvnet.staxex.Base64Data) : Void;
 	
 	/**
 	* Fills in the data object by a portion of the byte[].
@@ -153,7 +153,7 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 	
 	@:overload public function writeTo(buf : java.NativeArray<java.StdTypes.Char16>, start : Int) : Void;
 	
-	@:overload public function clone() : Base64Data;
+	@:overload public function clone() : com.sun.xml.internal.org.jvnet.staxex.Base64Data;
 	
 	
 }
@@ -171,21 +171,21 @@ extern class Base64Data implements java.lang.CharSequence implements java.lang.C
 }
 @:native('com$sun$xml$internal$org$jvnet$staxex$Base64Data$Base64StreamingDataHandler') @:internal extern class Base64Data_Base64StreamingDataHandler extends com.sun.xml.internal.org.jvnet.staxex.StreamingDataHandler
 {
-	@:overload override public function readOnce() : java.io.InputStream;
+	@:overload public function readOnce() : java.io.InputStream;
 	
-	@:overload override public function moveTo(dst : java.io.File) : Void;
+	@:overload public function moveTo(dst : java.io.File) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }
 @:native('com$sun$xml$internal$org$jvnet$staxex$Base64Data$FilterDataHandler') @:internal extern class Base64Data_FilterDataHandler extends com.sun.xml.internal.org.jvnet.staxex.StreamingDataHandler
 {
-	@:overload override public function readOnce() : java.io.InputStream;
+	@:overload public function readOnce() : java.io.InputStream;
 	
-	@:overload override public function moveTo(dst : java.io.File) : Void;
+	@:overload public function moveTo(dst : java.io.File) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

@@ -308,7 +308,7 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	/**
 	* @return deep copy of this class
 	*/
-	@:overload public function copy() : JavaClass;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	@:overload @:final public function isSuper() : Bool;
 	
@@ -334,34 +334,34 @@ extern class JavaClass extends com.sun.org.apache.bcel.internal.classfile.Access
 	*
 	* @return true if this JavaClass is derived from teh super class
 	*/
-	@:overload @:final public function instanceOf(super_class : JavaClass) : Bool;
+	@:overload @:final public function instanceOf(super_class : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
 	
 	/**
 	* @return true, if clazz is an implementation of interface inter
 	*/
-	@:overload public function implementationOf(inter : JavaClass) : Bool;
+	@:overload public function implementationOf(inter : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Bool;
 	
 	/**
 	* @return the superclass for this JavaClass object, or null if this
 	* is java.lang.Object
 	*/
-	@:overload public function getSuperClass() : JavaClass;
+	@:overload public function getSuperClass() : com.sun.org.apache.bcel.internal.classfile.JavaClass;
 	
 	/**
 	* @return list of super classes of this class in ascending order, i.e.,
 	* java.lang.Object is always the last element
 	*/
-	@:overload public function getSuperClasses() : java.NativeArray<JavaClass>;
+	@:overload public function getSuperClasses() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
 	/**
 	* Get interfaces directly implemented by this JavaClass.
 	*/
-	@:overload public function getInterfaces() : java.NativeArray<JavaClass>;
+	@:overload public function getInterfaces() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
 	/**
 	* Get all interfaces implemented by this JavaClass (transitively).
 	*/
-	@:overload public function getAllInterfaces() : java.NativeArray<JavaClass>;
+	@:overload public function getAllInterfaces() : java.NativeArray<com.sun.org.apache.bcel.internal.classfile.JavaClass>;
 	
 	
 }

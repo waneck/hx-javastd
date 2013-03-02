@@ -75,7 +75,7 @@ package javax.sound.sampled;
 	* line.
 	* @return description of the line
 	*/
-	@:overload public function getLineInfo() : Line_Info;
+	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Opens the line, indicating that it should acquire any required
@@ -262,7 +262,7 @@ package javax.sound.sampled;
 	* @return <code>true</code> if the specified object matches this one,
 	* <code>false</code> otherwise
 	*/
-	@:overload public function matches(info : Line_Info) : Bool;
+	@:overload public function matches(info : javax.sound.sampled.Line.Line_Info) : Bool;
 	
 	/**
 	* Obtains a textual description of the line info.

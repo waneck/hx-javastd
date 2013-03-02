@@ -611,7 +611,7 @@ extern class XPathContext extends com.sun.org.apache.xml.internal.dtm.DTMManager
 	* to the ExpressionContext interface to avoid having to call this method.
 	* @return the XPathContext associated with this XPathExpressionContext.
 	*/
-	@:overload public function getXPathContext() : XPathContext;
+	@:overload public function getXPathContext() : com.sun.org.apache.xpath.internal.XPathContext;
 	
 	/**
 	* Return the DTMManager object.  Though XPathContext context extends

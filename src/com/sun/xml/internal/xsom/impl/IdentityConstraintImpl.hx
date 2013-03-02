@@ -27,9 +27,9 @@ extern class IdentityConstraintImpl extends com.sun.xml.internal.xsom.impl.Compo
 {
 	@:overload public function new(_owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, category : java.StdTypes.Int16, name : String, selector : com.sun.xml.internal.xsom.impl.XPathImpl, fields : java.util.List<com.sun.xml.internal.xsom.impl.XPathImpl>, refer : com.sun.xml.internal.xsom.impl.Ref.Ref_IdentityConstraint) : Void;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
 	@:overload public function setParent(parent : com.sun.xml.internal.xsom.impl.ElementDecl) : Void;
 	

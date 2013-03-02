@@ -23,7 +23,7 @@ package java.lang;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Double extends java.lang.Number implements java.lang.Comparable<Double>
+extern class Double extends java.lang.Number implements java.lang.Comparable<Null<Float>>
 {
 	/**
 	* A constant holding the positive infinity of type
@@ -106,7 +106,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Dou
 	*
 	* @since JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Double>;
+	@:require(java1) public static var TYPE(default, null) : Class<Null<Float>>;
 	
 	/**
 	* Returns a string representation of the {@code double}
@@ -420,7 +420,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Dou
 	* @throws     NumberFormatException  if the string does not contain a
 	*             parsable number.
 	*/
-	@:overload public static function valueOf(s : String) : Double;
+	@:overload public static function valueOf(s : String) : Null<Float>;
 	
 	/**
 	* Returns a {@code Double} instance representing the specified
@@ -435,7 +435,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Dou
 	* @return a {@code Double} instance representing {@code d}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(d : Float) : Double;
+	@:require(java5) @:overload public static function valueOf(d : Float) : Null<Float>;
 	
 	/**
 	* Returns a new {@code double} initialized to the value
@@ -810,7 +810,7 @@ extern class Double extends java.lang.Number implements java.lang.Comparable<Dou
 	*
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherDouble : Double) : Int;
+	@:require(java2) @:overload public function compareTo(anotherDouble : Null<Float>) : Int;
 	
 	/**
 	* Compares the two specified {@code double} values. The sign

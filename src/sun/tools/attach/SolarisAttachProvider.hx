@@ -31,13 +31,13 @@ extern class SolarisAttachProvider extends sun.tools.attach.HotSpotAttachProvide
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function name() : String;
+	@:overload public function name() : String;
 	
-	@:overload override public function type() : String;
+	@:overload public function type() : String;
 	
-	@:overload override public function attachVirtualMachine(vmid : String) : com.sun.tools.attach.VirtualMachine;
+	@:overload public function attachVirtualMachine(vmid : String) : com.sun.tools.attach.VirtualMachine;
 	
-	@:overload override public function attachVirtualMachine(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
+	@:overload public function attachVirtualMachine(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
 	
 	
 }

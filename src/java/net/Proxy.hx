@@ -44,7 +44,7 @@ package java.net;
 	* <code>Socket s = new Socket(Proxy.NO_PROXY);</code><br>
 	* <P>
 	*/
-	public static var NO_PROXY(default, null) : Proxy;
+	public static var NO_PROXY(default, null) : java.net.Proxy;
 	
 	/**
 	* Creates an entry representing a PROXY connection.
@@ -59,14 +59,14 @@ package java.net;
 	* @throws IllegalArgumentException when the type and the address are
 	* incompatible
 	*/
-	@:overload public function new(type : Proxy_Type, sa : java.net.SocketAddress) : Void;
+	@:overload public function new(type : java.net.Proxy.Proxy_Type, sa : java.net.SocketAddress) : Void;
 	
 	/**
 	* Returns the proxy type.
 	*
 	* @return a Type representing the proxy type
 	*/
-	@:overload public function type() : Proxy_Type;
+	@:overload public function type() : java.net.Proxy.Proxy_Type;
 	
 	/**
 	* Returns the socket address of the proxy, or

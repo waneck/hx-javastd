@@ -51,7 +51,7 @@ extern class ImageFilter implements java.awt.image.ImageConsumer implements java
 	* @return an <code>ImageFilter</code> used to perform the
 	*         filtering for the specified <code>ImageConsumer</code>.
 	*/
-	@:overload public function getFilterInstance(ic : java.awt.image.ImageConsumer) : ImageFilter;
+	@:overload public function getFilterInstance(ic : java.awt.image.ImageConsumer) : java.awt.image.ImageFilter;
 	
 	/**
 	* Filters the information provided in the setDimensions method

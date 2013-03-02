@@ -31,7 +31,7 @@ extern interface Locatable
 	* @return
 	*      can be null.
 	*/
-	@:overload public function getUpstream() : Locatable;
+	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
 	/**
 	* Gets the location object that this object points to.

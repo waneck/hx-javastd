@@ -29,7 +29,7 @@ extern class ISO2022_CN_CNS extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload public function historicalName() : String;
 	
@@ -41,9 +41,9 @@ extern class ISO2022_CN_CNS extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs
 }
 @:native('sun$nio$cs$ext$ISO2022_CN_CNS$Encoder') @:internal extern class ISO2022_CN_CNS_Encoder extends sun.nio.cs.ext.ISO2022.ISO2022_Encoder
 {
-	@:overload override public function new(cs : java.nio.charset.Charset) : Void;
+	@:overload public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override public function canEncode(c : java.StdTypes.Char16) : Bool;
+	@:overload public function canEncode(c : java.StdTypes.Char16) : Bool;
 	
 	/*
 	* Since ISO2022-CN-CNS possesses a CharsetEncoder
@@ -52,7 +52,7 @@ extern class ISO2022_CN_CNS extends sun.nio.cs.ext.ISO2022 implements sun.nio.cs
 	* since the parent class version attempts to
 	* decode 0x3f (?).
 	*/
-	@:overload override public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload public function isLegalReplacement(repl : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	
 }

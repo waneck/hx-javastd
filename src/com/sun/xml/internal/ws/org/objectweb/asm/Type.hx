@@ -117,47 +117,47 @@ extern class Type
 	/**
 	* The <tt>void</tt> type.
 	*/
-	public static var VOID_TYPE(default, null) : Type;
+	public static var VOID_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>boolean</tt> type.
 	*/
-	public static var BOOLEAN_TYPE(default, null) : Type;
+	public static var BOOLEAN_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>char</tt> type.
 	*/
-	public static var CHAR_TYPE(default, null) : Type;
+	public static var CHAR_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>byte</tt> type.
 	*/
-	public static var BYTE_TYPE(default, null) : Type;
+	public static var BYTE_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>short</tt> type.
 	*/
-	public static var SHORT_TYPE(default, null) : Type;
+	public static var SHORT_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>int</tt> type.
 	*/
-	public static var INT_TYPE(default, null) : Type;
+	public static var INT_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>float</tt> type.
 	*/
-	public static var FLOAT_TYPE(default, null) : Type;
+	public static var FLOAT_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>long</tt> type.
 	*/
-	public static var LONG_TYPE(default, null) : Type;
+	public static var LONG_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* The <tt>double</tt> type.
 	*/
-	public static var DOUBLE_TYPE(default, null) : Type;
+	public static var DOUBLE_TYPE(default, null) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* Returns the Java type corresponding to the given type descriptor.
@@ -165,7 +165,7 @@ extern class Type
 	* @param typeDescriptor a type descriptor.
 	* @return the Java type corresponding to the given type descriptor.
 	*/
-	@:overload public static function getType(typeDescriptor : String) : Type;
+	@:overload public static function getType(typeDescriptor : String) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* Returns the Java type corresponding to the given internal name.
@@ -173,7 +173,7 @@ extern class Type
 	* @param internalName an internal name.
 	* @return the Java type corresponding to the given internal name.
 	*/
-	@:overload public static function getObjectType(internalName : String) : Type;
+	@:overload public static function getObjectType(internalName : String) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* Returns the Java type corresponding to the given class.
@@ -181,7 +181,7 @@ extern class Type
 	* @param c a class.
 	* @return the Java type corresponding to the given class.
 	*/
-	@:overload public static function getType(c : Class<Dynamic>) : Type;
+	@:overload public static function getType(c : Class<Dynamic>) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* Returns the Java types corresponding to the argument types of the given
@@ -191,7 +191,7 @@ extern class Type
 	* @return the Java types corresponding to the argument types of the given
 	*         method descriptor.
 	*/
-	@:overload public static function getArgumentTypes(methodDescriptor : String) : java.NativeArray<Type>;
+	@:overload public static function getArgumentTypes(methodDescriptor : String) : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Type>;
 	
 	/**
 	* Returns the Java types corresponding to the argument types of the given
@@ -201,7 +201,7 @@ extern class Type
 	* @return the Java types corresponding to the argument types of the given
 	*         method.
 	*/
-	@:overload public static function getArgumentTypes(method : java.lang.reflect.Method) : java.NativeArray<Type>;
+	@:overload public static function getArgumentTypes(method : java.lang.reflect.Method) : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Type>;
 	
 	/**
 	* Returns the Java type corresponding to the return type of the given
@@ -211,7 +211,7 @@ extern class Type
 	* @return the Java type corresponding to the return type of the given
 	*         method descriptor.
 	*/
-	@:overload public static function getReturnType(methodDescriptor : String) : Type;
+	@:overload public static function getReturnType(methodDescriptor : String) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* Returns the Java type corresponding to the return type of the given
@@ -221,7 +221,7 @@ extern class Type
 	* @return the Java type corresponding to the return type of the given
 	*         method.
 	*/
-	@:overload public static function getReturnType(method : java.lang.reflect.Method) : Type;
+	@:overload public static function getReturnType(method : java.lang.reflect.Method) : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* Returns the sort of this Java type.
@@ -248,7 +248,7 @@ extern class Type
 	*
 	* @return Returns the type of the elements of this array type.
 	*/
-	@:overload public function getElementType() : Type;
+	@:overload public function getElementType() : com.sun.xml.internal.ws.org.objectweb.asm.Type;
 	
 	/**
 	* Returns the name of the class corresponding to this type.
@@ -283,7 +283,7 @@ extern class Type
 	* @return the descriptor corresponding to the given argument and return
 	*         types.
 	*/
-	@:overload public static function getMethodDescriptor(returnType : Type, argumentTypes : java.NativeArray<Type>) : String;
+	@:overload public static function getMethodDescriptor(returnType : com.sun.xml.internal.ws.org.objectweb.asm.Type, argumentTypes : java.NativeArray<com.sun.xml.internal.ws.org.objectweb.asm.Type>) : String;
 	
 	/**
 	* Returns the internal name of the given class. The internal name of a

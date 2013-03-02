@@ -57,7 +57,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	
 	private var trackBuffer : Int;
 	
-	private var trackListener : BasicSliderUI_TrackListener;
+	private var trackListener : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
 	private var changeListener : javax.swing.event.ChangeListener;
 	
@@ -65,7 +65,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	
 	private var focusListener : java.awt.event.FocusListener;
 	
-	private var scrollListener : BasicSliderUI_ScrollListener;
+	private var scrollListener : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_ScrollListener;
 	
 	private var propertyChangeListener : java.beans.PropertyChangeListener;
 	
@@ -95,7 +95,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	
 	@:overload private function uninstallDefaults(slider : javax.swing.JSlider) : Void;
 	
-	@:overload private function createTrackListener(slider : javax.swing.JSlider) : BasicSliderUI_TrackListener;
+	@:overload private function createTrackListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_TrackListener;
 	
 	@:overload private function createChangeListener(slider : javax.swing.JSlider) : javax.swing.event.ChangeListener;
 	
@@ -103,7 +103,7 @@ extern class BasicSliderUI extends javax.swing.plaf.SliderUI
 	
 	@:overload private function createFocusListener(slider : javax.swing.JSlider) : java.awt.event.FocusListener;
 	
-	@:overload private function createScrollListener(slider : javax.swing.JSlider) : BasicSliderUI_ScrollListener;
+	@:overload private function createScrollListener(slider : javax.swing.JSlider) : javax.swing.plaf.basic.BasicSliderUI.BasicSliderUI_ScrollListener;
 	
 	@:overload private function createPropertyChangeListener(slider : javax.swing.JSlider) : java.beans.PropertyChangeListener;
 	

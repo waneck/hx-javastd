@@ -100,7 +100,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @return a non-contextual numeric shaper
 	* @throws IllegalArgumentException if the range is not a single range
 	*/
-	@:overload public static function getShaper(singleRange : Int) : NumericShaper;
+	@:overload public static function getShaper(singleRange : Int) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a shaper for the provided Unicode
@@ -113,7 +113,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @throws NullPointerException if {@code singleRange} is {@code null}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getShaper(singleRange : NumericShaper_Range) : NumericShaper;
+	@:require(java7) @:overload public static function getShaper(singleRange : java.awt.font.NumericShaper.NumericShaper_Range) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided unicode range(s).
@@ -129,7 +129,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @param ranges the specified Unicode ranges
 	* @return a shaper for the specified ranges
 	*/
-	@:overload public static function getContextualShaper(ranges : Int) : NumericShaper;
+	@:overload public static function getContextualShaper(ranges : Int) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided Unicode
@@ -147,7 +147,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @throws NullPointerException if {@code ranges} is {@code null}.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getContextualShaper(ranges : java.util.Set<NumericShaper_Range>) : NumericShaper;
+	@:require(java7) @:overload public static function getContextualShaper(ranges : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided unicode range(s).
@@ -164,7 +164,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @throws IllegalArgumentException if the specified
 	* <code>defaultContext</code> is not a single valid range.
 	*/
-	@:overload public static function getContextualShaper(ranges : Int, defaultContext : Int) : NumericShaper;
+	@:overload public static function getContextualShaper(ranges : Int, defaultContext : Int) : java.awt.font.NumericShaper;
 	
 	/**
 	* Returns a contextual shaper for the provided Unicode range(s).
@@ -181,7 +181,7 @@ extern class NumericShaper implements java.io.Serializable
 	*         if {@code ranges} or {@code defaultContext} is {@code null}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getContextualShaper(ranges : java.util.Set<NumericShaper_Range>, defaultContext : NumericShaper_Range) : NumericShaper;
+	@:require(java7) @:overload public static function getContextualShaper(ranges : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>, defaultContext : java.awt.font.NumericShaper.NumericShaper_Range) : java.awt.font.NumericShaper;
 	
 	/**
 	* Converts the digits in the text that occur between start and
@@ -235,7 +235,7 @@ extern class NumericShaper implements java.io.Serializable
 	*         if {@code text} or {@code context} is null
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, context : NumericShaper_Range) : Void;
+	@:require(java7) @:overload public function shape(text : java.NativeArray<java.StdTypes.Char16>, start : Int, count : Int, context : java.awt.font.NumericShaper.NumericShaper_Range) : Void;
 	
 	/**
 	* Returns a <code>boolean</code> indicating whether or not
@@ -269,7 +269,7 @@ extern class NumericShaper implements java.io.Serializable
 	* @return all the Unicode ranges to be shaped.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getRangeSet() : java.util.Set<NumericShaper_Range>;
+	@:require(java7) @:overload public function getRangeSet() : java.util.Set<java.awt.font.NumericShaper.NumericShaper_Range>;
 	
 	/**
 	* Returns a hash code for this shaper.

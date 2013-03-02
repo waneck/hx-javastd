@@ -25,16 +25,16 @@ extern class MatchGenerator extends com.sun.org.apache.xalan.internal.xsltc.comp
 {
 	@:overload public function new(access_flags : Int, return_type : com.sun.org.apache.bcel.internal.generic.Type, arg_types : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>, arg_names : java.NativeArray<String>, method_name : String, class_name : String, il : com.sun.org.apache.bcel.internal.generic.InstructionList, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Void;
 	
-	@:overload override public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function loadCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function storeCurrentNode() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	@:overload public function getHandlerIndex() : Int;
 	
 	/**
 	* Get index of the register where the DOM is stored.
 	*/
-	@:overload override public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function loadDOM() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Set index where the reference to the DOM is stored.
@@ -51,7 +51,7 @@ extern class MatchGenerator extends com.sun.org.apache.xalan.internal.xsltc.comp
 	*/
 	@:overload public function setIteratorIndex(iteratorIndex : Int) : Void;
 	
-	@:overload override public function getLocalIndex(name : String) : Int;
+	@:overload public function getLocalIndex(name : String) : Int;
 	
 	
 }

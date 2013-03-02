@@ -37,7 +37,7 @@ extern class SOAPBindingCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	
 	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
 	@:overload override public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
@@ -59,7 +59,7 @@ extern class SOAPBindingCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 
 @:native('com$sun$xml$internal$ws$encoding$SOAPBindingCodec$AcceptContentType') @:internal extern class SOAPBindingCodec_AcceptContentType implements com.sun.xml.internal.ws.api.pipe.ContentType
 {
-	@:overload public function set(p : com.sun.xml.internal.ws.api.message.Packet, c : com.sun.xml.internal.ws.api.pipe.ContentType) : SOAPBindingCodec_AcceptContentType;
+	@:overload public function set(p : com.sun.xml.internal.ws.api.message.Packet, c : com.sun.xml.internal.ws.api.pipe.ContentType) : com.sun.xml.internal.ws.encoding.SOAPBindingCodec.SOAPBindingCodec_AcceptContentType;
 	
 	@:overload public function getContentType() : String;
 	

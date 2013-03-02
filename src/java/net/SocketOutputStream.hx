@@ -37,7 +37,7 @@ package java.net;
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload @:final override public function getChannel() : java.nio.channels.FileChannel;
+	@:require(java4) @:overload @:final public function getChannel() : java.nio.channels.FileChannel;
 	
 	/**
 	* Writes a byte to the socket.
@@ -68,7 +68,7 @@ package java.net;
 	/**
 	* Overrides finalize, the fd is closed by the Socket.
 	*/
-	@:overload override private function finalize() : Void;
+	@:overload private function finalize() : Void;
 	
 	
 }

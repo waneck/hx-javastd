@@ -47,7 +47,7 @@ extern class XMLX509CRL extends com.sun.org.apache.xml.internal.security.utils.S
 	@:overload public function getCRLBytes() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

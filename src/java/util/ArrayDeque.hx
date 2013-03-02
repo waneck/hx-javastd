@@ -405,7 +405,7 @@ package java.util;
 	*
 	* @return a copy of this deque
 	*/
-	@:overload public function clone() : ArrayDeque<E>;
+	@:overload public function clone() : java.util.ArrayDeque<E>;
 	
 	
 }

@@ -34,19 +34,19 @@ package javax.swing.plaf.basic;
 {
 	@:overload public function put(action : javax.swing.Action) : Void;
 	
-	@:overload override public function put(key : Dynamic, action : javax.swing.Action) : Void;
+	@:overload public function put(key : Dynamic, action : javax.swing.Action) : Void;
 	
-	@:overload override public function get(key : Dynamic) : javax.swing.Action;
+	@:overload public function get(key : Dynamic) : javax.swing.Action;
 	
-	@:overload override public function remove(key : Dynamic) : Void;
+	@:overload public function remove(key : Dynamic) : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
-	@:overload override public function keys() : java.NativeArray<Dynamic>;
+	@:overload public function keys() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function allKeys() : java.NativeArray<Dynamic>;
+	@:overload public function allKeys() : java.NativeArray<Dynamic>;
 	
 	@:overload public function setParent(map : javax.swing.ActionMap) : Void;
 	

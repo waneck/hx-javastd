@@ -98,9 +98,9 @@ extern class MarshalledObject<T> implements java.io.Serializable
 	* Overrides MarshalOutputStream.writeLocation implementation to write
 	* annotations to the location stream.
 	*/
-	@:overload override private function writeLocation(loc : String) : Void;
+	@:overload private function writeLocation(loc : String) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
 	
 }
@@ -116,7 +116,7 @@ extern class MarshalledObject<T> implements java.io.Serializable
 	* the stream we were given, or <code>null</code> if we were given a
 	* <code>null</code> location stream.
 	*/
-	@:overload override private function readLocation() : Dynamic;
+	@:overload private function readLocation() : Dynamic;
 	
 	
 }

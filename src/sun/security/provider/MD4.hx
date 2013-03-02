@@ -41,7 +41,7 @@ extern class MD4 extends sun.security.provider.DigestBase
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	
 }

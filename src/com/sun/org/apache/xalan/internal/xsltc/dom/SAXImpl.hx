@@ -113,7 +113,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	/**
 	* Returns the namespace type of a specific node
 	*/
-	@:overload override public function getNamespaceType(node : Int) : Int;
+	@:overload public function getNamespaceType(node : Int) : Int;
 	
 	/**
 	* Returns the internal type associated with an expanded QName
@@ -162,7 +162,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	* This is used to support DTM sharing between multiple transformations.
 	* @param manager the DTMManager
 	*/
-	@:overload override public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
+	@:overload public function migrateTo(manager : com.sun.org.apache.xml.internal.dtm.DTMManager) : Void;
 	
 	/**
 	* Return the node identity for a given id String
@@ -170,7 +170,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	* @param idString The id String
 	* @return The identity of the node whose id is the given String.
 	*/
-	@:overload override public function getElementById(idString : String) : Int;
+	@:overload public function getElementById(idString : String) : Int;
 	
 	/**
 	* Return true if the input source is DOMSource.
@@ -183,22 +183,22 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return whether or not to strip whitespace nodes.
 	*/
-	@:overload override private function getShouldStripWhitespace() : Bool;
+	@:overload private function getShouldStripWhitespace() : Bool;
 	
 	/**
 	* SAX2: Receive notification of character data.
 	*/
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* SAX2: Receive notification of the beginning of a document.
 	*/
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
 	/**
 	* SAX2: Receive notification of the end of a document.
 	*/
-	@:overload override public function endDocument() : Void;
+	@:overload public function endDocument() : Void;
 	
 	/**
 	* Specialized interface used by DOM2SAX. This one has an extra Node
@@ -209,33 +209,33 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	/**
 	* SAX2: Receive notification of the beginning of an element.
 	*/
-	@:overload override public function startElement(uri : String, localName : String, qname : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(uri : String, localName : String, qname : String, attributes : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* SAX2: Receive notification of the end of an element.
 	*/
-	@:overload override public function endElement(namespaceURI : String, localName : String, qname : String) : Void;
+	@:overload public function endElement(namespaceURI : String, localName : String, qname : String) : Void;
 	
 	/**
 	* SAX2: Receive notification of a processing instruction.
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* SAX2: Receive notification of ignorable whitespace in element
 	* content. Similar to characters(char[], int, int).
 	*/
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* SAX2: Begin the scope of a prefix-URI Namespace mapping.
 	*/
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* SAX2: Report an XML comment anywhere in the document.
 	*/
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	@:overload public function setEscaping(value : Bool) : Bool;
 	
@@ -247,7 +247,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	/**
 	* Returns the name of a node (attribute or element).
 	*/
-	@:overload override public function getNodeName(node : Int) : String;
+	@:overload public function getNodeName(node : Int) : String;
 	
 	/**
 	* Returns the namespace URI to which a node belongs
@@ -387,7 +387,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	* node (see [3.3 Unparsed Entities]). It returns the empty string if
 	* there is no such entity.
 	*/
-	@:overload override public function getUnparsedEntityURI(name : String) : String;
+	@:overload public function getUnparsedEntityURI(name : String) : String;
 	
 	
 }
@@ -410,7 +410,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
 	
 }
@@ -422,21 +422,21 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 {
 	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, returnType : Int, value : String, op : Bool) : Void;
 	
-	@:overload override public function isReverse() : Bool;
+	@:overload public function isReverse() : Bool;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function setMark() : Void;
+	@:overload public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload public function gotoMark() : Void;
 	
 	
 }
@@ -474,14 +474,14 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
 	/**
 	* Returns a deep copy of this iterator.  The cloned iterator is not
@@ -489,18 +489,18 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return <code>true</code> if this iterator is a reversed axis.
 	*/
-	@:overload override public function isReverse() : Bool;
+	@:overload public function isReverse() : Bool;
 	
-	@:overload override public function setMark() : Void;
+	@:overload public function setMark() : Void;
 	
-	@:overload override public function gotoMark() : Void;
+	@:overload public function gotoMark() : Void;
 	
 	
 }
@@ -528,14 +528,14 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
 	
 }
@@ -560,14 +560,14 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
 	
 }

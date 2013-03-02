@@ -111,7 +111,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @return true if "permission" is a proper subset of a permission in
 	* the collection, false if not.
 	*/
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload public function implies(permission : java.security.Permission) : Bool;
 	
 	/**
 	* Adds a permission to the DelegationPermissions. The key for
@@ -125,7 +125,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	* @exception SecurityException - if this PermissionCollection object
 	*                                has been marked readonly
 	*/
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload public function add(permission : java.security.Permission) : Void;
 	
 	/**
 	* Returns an enumeration of all the DelegationPermission objects
@@ -133,7 +133,7 @@ extern class DelegationPermission extends java.security.BasicPermission implemen
 	*
 	* @return an enumeration of all the DelegationPermission objects.
 	*/
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

@@ -25,9 +25,9 @@ package java.security.cert;
 */
 @:internal extern class CertPathHelperImpl extends sun.security.provider.certpath.CertPathHelper
 {
-	@:overload override private function implSetPathToNames(sel : java.security.cert.X509CertSelector, names : java.util.Set<sun.security.x509.GeneralNameInterface>) : Void;
+	@:overload private function implSetPathToNames(sel : java.security.cert.X509CertSelector, names : java.util.Set<sun.security.x509.GeneralNameInterface>) : Void;
 	
-	@:overload override private function implSetDateAndTime(sel : java.security.cert.X509CRLSelector, date : java.util.Date, skew : haxe.Int64) : Void;
+	@:overload private function implSetDateAndTime(sel : java.security.cert.X509CRLSelector, date : java.util.Date, skew : haxe.Int64) : Void;
 	
 	
 }

@@ -91,7 +91,7 @@ extern class KeyManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : KeyManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String) : javax.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Returns a <code>KeyManagerFactory</code> object that acts as a
@@ -127,7 +127,7 @@ extern class KeyManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : KeyManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Returns a <code>KeyManagerFactory</code> object that acts as a
@@ -157,7 +157,7 @@ extern class KeyManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : KeyManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.net.ssl.KeyManagerFactory;
 	
 	/**
 	* Returns the provider of this <code>KeyManagerFactory</code> object.

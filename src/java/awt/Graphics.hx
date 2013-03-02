@@ -45,7 +45,7 @@ extern class Graphics
 	* @return     a new graphics context that is a copy of
 	*                       this graphics context.
 	*/
-	@:overload @:abstract public function create() : Graphics;
+	@:overload @:abstract public function create() : java.awt.Graphics;
 	
 	/**
 	* Creates a new <code>Graphics</code> object based on this
@@ -81,7 +81,7 @@ extern class Graphics
 	* @see        java.awt.Graphics#translate
 	* @see        java.awt.Graphics#clipRect
 	*/
-	@:overload public function create(x : Int, y : Int, width : Int, height : Int) : Graphics;
+	@:overload public function create(x : Int, y : Int, width : Int, height : Int) : java.awt.Graphics;
 	
 	/**
 	* Translates the origin of the graphics context to the point

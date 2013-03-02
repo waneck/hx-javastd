@@ -58,7 +58,7 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 	*/
 	@:overload private function normalizeFilter() : Void;
 	
-	@:overload private function createNextFilter() : SearchFilter_StringFilter;
+	@:overload private function createNextFilter() : com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter;
 	
 	@:overload private function getCurrentChar() : java.StdTypes.Char16;
 	
@@ -121,7 +121,7 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 /**
 * A class for dealing with compound filters ("and" & "or" filters).
 */
-@:native('com$sun$jndi$toolkit$dir$SearchFilter$CompoundFilter') @:internal extern class SearchFilter_CompoundFilter implements SearchFilter_StringFilter
+@:native('com$sun$jndi$toolkit$dir$SearchFilter$CompoundFilter') @:internal extern class SearchFilter_CompoundFilter implements com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter
 {
 	@:overload public function parse() : Void;
 	
@@ -132,7 +132,7 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 /**
 * A class for dealing with NOT filters
 */
-@:native('com$sun$jndi$toolkit$dir$SearchFilter$NotFilter') @:internal extern class SearchFilter_NotFilter implements SearchFilter_StringFilter
+@:native('com$sun$jndi$toolkit$dir$SearchFilter$NotFilter') @:internal extern class SearchFilter_NotFilter implements com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter
 {
 	@:overload public function parse() : Void;
 	
@@ -143,7 +143,7 @@ extern class SearchFilter implements com.sun.jndi.toolkit.dir.AttrFilter
 /**
 * A class for dealing wtih atomic filters
 */
-@:native('com$sun$jndi$toolkit$dir$SearchFilter$AtomicFilter') @:internal extern class SearchFilter_AtomicFilter implements SearchFilter_StringFilter
+@:native('com$sun$jndi$toolkit$dir$SearchFilter$AtomicFilter') @:internal extern class SearchFilter_AtomicFilter implements com.sun.jndi.toolkit.dir.SearchFilter.SearchFilter_StringFilter
 {
 	@:overload public function parse() : Void;
 	

@@ -545,7 +545,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param table  a <code>UIDefaults</code> table
 	* @return the created <code>Object</code>
 	*/
-	@:overload public function createValue(table : UIDefaults) : Dynamic;
+	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -576,7 +576,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param table  a <code>UIDefaults</code> table
 	* @return the created <code>Object</code>
 	*/
-	@:overload public function createValue(table : UIDefaults) : Dynamic;
+	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -592,7 +592,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 * (since Reflection APIs are used).
 * @since 1.3
 */
-@:require(java3) @:native('javax$swing$UIDefaults$ProxyLazyValue') extern class UIDefaults_ProxyLazyValue implements UIDefaults_LazyValue
+@:require(java3) @:native('javax$swing$UIDefaults$ProxyLazyValue') extern class UIDefaults_ProxyLazyValue implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
 	/**
 	* Creates a <code>LazyValue</code> which will construct an instance
@@ -649,7 +649,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param table  a <code>UIDefaults</code> table
 	* @return the created <code>Object</code>
 	*/
-	@:overload public function createValue(table : UIDefaults) : Dynamic;
+	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }
@@ -664,7 +664,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 * <code>InputMap</code> (and the key in the <code>ActionMap</code>).
 * @since 1.3
 */
-@:require(java3) @:native('javax$swing$UIDefaults$LazyInputMap') extern class UIDefaults_LazyInputMap implements UIDefaults_LazyValue
+@:require(java3) @:native('javax$swing$UIDefaults$LazyInputMap') extern class UIDefaults_LazyInputMap implements javax.swing.UIDefaults.UIDefaults_LazyValue
 {
 	@:overload public function new(bindings : java.NativeArray<Dynamic>) : Void;
 	
@@ -675,7 +675,7 @@ extern class UIDefaults extends java.util.Hashtable<Dynamic, Dynamic>
 	* @param table a <code>UIDefaults</code> table
 	* @return the <code>InputMap</code>
 	*/
-	@:overload public function createValue(table : UIDefaults) : Dynamic;
+	@:overload public function createValue(table : javax.swing.UIDefaults) : Dynamic;
 	
 	
 }

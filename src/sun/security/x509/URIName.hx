@@ -96,7 +96,7 @@ extern class URIName implements sun.security.x509.GeneralNameInterface
 	* @param value the URI name constraint
 	* @throws IOException if name is not a proper URI name constraint
 	*/
-	@:overload public static function nameConstraint(value : sun.security.util.DerValue) : URIName;
+	@:overload public static function nameConstraint(value : sun.security.util.DerValue) : sun.security.x509.URIName;
 	
 	/**
 	* Return the type of the GeneralName.

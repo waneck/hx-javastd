@@ -119,14 +119,14 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	* @param inInfo the ModelMBeanOperationInfo to be duplicated
 	*
 	*/
-	@:overload public function new(inInfo : ModelMBeanOperationInfo) : Void;
+	@:overload public function new(inInfo : javax.management.modelmbean.ModelMBeanOperationInfo) : Void;
 	
 	/**
 	* Creates and returns a new ModelMBeanOperationInfo which is a
 	* duplicate of this ModelMBeanOperationInfo.
 	*
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Returns a copy of the associated Descriptor of the
@@ -162,7 +162,7 @@ extern class ModelMBeanOperationInfo extends javax.management.MBeanOperationInfo
 	* Returns a string containing the entire contents of the
 	* ModelMBeanOperationInfo in human readable form.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

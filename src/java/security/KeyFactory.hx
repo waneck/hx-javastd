@@ -62,7 +62,7 @@ extern class KeyFactory
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : KeyFactory;
+	@:overload public static function getInstance(algorithm : String) : java.security.KeyFactory;
 	
 	/**
 	* Returns a KeyFactory object that converts
@@ -98,7 +98,7 @@ extern class KeyFactory
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : KeyFactory;
+	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.KeyFactory;
 	
 	/**
 	* Returns a KeyFactory object that converts
@@ -129,7 +129,7 @@ extern class KeyFactory
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : KeyFactory;
+	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.KeyFactory;
 	
 	/**
 	* Returns the provider of this key factory object.

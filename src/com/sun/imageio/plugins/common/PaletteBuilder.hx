@@ -38,7 +38,7 @@ extern class PaletteBuilder
 	
 	private var requiredSize : Int;
 	
-	private var root : PaletteBuilder_ColorNode;
+	private var root : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
 	private var numNodes : Int;
 	
@@ -48,13 +48,13 @@ extern class PaletteBuilder
 	
 	private var currSize : Int;
 	
-	private var reduceList : java.NativeArray<PaletteBuilder_ColorNode>;
+	private var reduceList : java.NativeArray<com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode>;
 	
-	private var palette : java.NativeArray<PaletteBuilder_ColorNode>;
+	private var palette : java.NativeArray<com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode>;
 	
 	private var transparency : Int;
 	
-	private var transColor : PaletteBuilder_ColorNode;
+	private var transColor : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
 	/**
 	* Creates an image representing given image
@@ -134,21 +134,21 @@ extern class PaletteBuilder
 	
 	@:overload private function new(src : java.awt.image.RenderedImage, size : Int) : Void;
 	
-	@:overload private function findColorIndex(aNode : PaletteBuilder_ColorNode, aColor : java.awt.Color) : Int;
+	@:overload private function findColorIndex(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, aColor : java.awt.Color) : Int;
 	
 	@:overload private function buildPalette() : Void;
 	
-	@:overload private function insertNode(aNode : PaletteBuilder_ColorNode, aColor : java.awt.Color, aLevel : Int) : PaletteBuilder_ColorNode;
+	@:overload private function insertNode(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, aColor : java.awt.Color, aLevel : Int) : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
 	@:overload private function getIndexColorModel() : java.awt.image.IndexColorModel;
 	
-	@:overload private function findPaletteEntry(aNode : PaletteBuilder_ColorNode, index : Int, red : java.NativeArray<java.StdTypes.Int8>, green : java.NativeArray<java.StdTypes.Int8>, blue : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload private function findPaletteEntry(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode, index : Int, red : java.NativeArray<java.StdTypes.Int8>, green : java.NativeArray<java.StdTypes.Int8>, blue : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	@:overload private function getBranchIndex(aColor : java.awt.Color, aLevel : Int) : Int;
 	
 	@:overload private function reduceTree() : Void;
 	
-	@:overload private function freeTree(aNode : PaletteBuilder_ColorNode) : PaletteBuilder_ColorNode;
+	@:overload private function freeTree(aNode : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode) : com.sun.imageio.plugins.common.PaletteBuilder.PaletteBuilder_ColorNode;
 	
 	
 }

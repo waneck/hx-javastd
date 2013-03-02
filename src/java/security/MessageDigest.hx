@@ -63,7 +63,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : MessageDigest;
+	@:overload public static function getInstance(algorithm : String) : java.security.MessageDigest;
 	
 	/**
 	* Returns a MessageDigest object that implements the specified digest
@@ -99,7 +99,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : MessageDigest;
+	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.MessageDigest;
 	
 	/**
 	* Returns a MessageDigest object that implements the specified digest
@@ -130,7 +130,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : MessageDigest;
+	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.MessageDigest;
 	
 	/**
 	* Returns the provider of this message digest object.
@@ -269,7 +269,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	* @exception CloneNotSupportedException if this is called on an
 	* implementation that does not support <code>Cloneable</code>.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	
 }
@@ -286,7 +286,7 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 * been interposed in the hierarchy between the API (MessageDigest)
 * and its original parent (Object).
 */
-@:native('java$security$MessageDigest$Delegate') @:internal extern class MessageDigest_Delegate extends MessageDigest
+@:native('java$security$MessageDigest$Delegate') @:internal extern class MessageDigest_Delegate extends java.security.MessageDigest
 {
 	@:overload public function new(digestSpi : java.security.MessageDigestSpi, algorithm : String) : Void;
 	
@@ -300,19 +300,19 @@ extern class MessageDigest extends java.security.MessageDigestSpi
 	*/
 	@:overload override public function clone() : Dynamic;
 	
-	@:overload override private function engineGetDigestLength() : Int;
+	@:overload private function engineGetDigestLength() : Int;
 	
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(input : java.nio.ByteBuffer) : Void;
+	@:overload private function engineUpdate(input : java.nio.ByteBuffer) : Void;
 	
-	@:overload override private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineDigest() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload private function engineDigest(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
-	@:overload override private function engineReset() : Void;
+	@:overload private function engineReset() : Void;
 	
 	
 }

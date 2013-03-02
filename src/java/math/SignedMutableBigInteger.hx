@@ -47,7 +47,7 @@ package java.math;
 	* Print out the first intLen ints of this MutableBigInteger's value
 	* array starting at offset.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

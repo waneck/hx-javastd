@@ -271,7 +271,7 @@ extern class Service
 	* @see javax.xml.transform.Source
 	* @see javax.xml.soap.SOAPMessage
 	**/
-	@:overload public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : Service_Mode) : javax.xml.ws.Dispatch<T>;
+	@:overload public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with objects of
@@ -303,7 +303,7 @@ extern class Service
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:require(java1) @:overload public function createDispatch<T>(portName : javax.xml.namespace.QName, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with objects of
@@ -374,7 +374,7 @@ extern class Service
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload public function createDispatch<T>(endpointReference : javax.xml.ws.EndpointReference, type : Class<T>, mode : Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:require(java1) @:overload public function createDispatch<T>(endpointReference : javax.xml.ws.EndpointReference, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with JAXB
@@ -395,7 +395,7 @@ extern class Service
 	*
 	* @see javax.xml.bind.JAXBContext
 	**/
-	@:overload public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : Service_Mode) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with JAXB
@@ -424,7 +424,7 @@ extern class Service
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:require(java1) @:overload public function createDispatch(portName : javax.xml.namespace.QName, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Creates a <code>Dispatch</code> instance for use with JAXB
@@ -493,7 +493,7 @@ extern class Service
 	*
 	* @since JAX-WS 2.1
 	**/
-	@:require(java1) @:overload public function createDispatch(endpointReference : javax.xml.ws.EndpointReference, context : javax.xml.bind.JAXBContext, mode : Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:require(java1) @:overload public function createDispatch(endpointReference : javax.xml.ws.EndpointReference, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
 	/**
 	* Gets the name of this service.
@@ -587,7 +587,7 @@ extern class Service
 	* @throws WebServiceException If any error in creation of the
 	*                    specified service.
 	**/
-	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName) : Service;
+	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName) : javax.xml.ws.Service;
 	
 	/**
 	* Creates a <code>Service</code> instance. The created instance is
@@ -606,7 +606,7 @@ extern class Service
 	*                    specified service.
 	* @since JAX-WS 2.2
 	**/
-	@:require(java2) @:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Service;
+	@:require(java2) @:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Service;
 	
 	/**
 	* Creates a <code>Service</code> instance.
@@ -615,7 +615,7 @@ extern class Service
 	* @throws WebServiceException If any error in creation of the
 	*                    specified service
 	*/
-	@:overload public static function create(serviceName : javax.xml.namespace.QName) : Service;
+	@:overload public static function create(serviceName : javax.xml.namespace.QName) : javax.xml.ws.Service;
 	
 	/**
 	* Creates a <code>Service</code> instance. The created instance is
@@ -630,7 +630,7 @@ extern class Service
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public static function create(serviceName : javax.xml.namespace.QName, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Service;
+	@:require(java2) @:overload public static function create(serviceName : javax.xml.namespace.QName, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Service;
 	
 	
 }

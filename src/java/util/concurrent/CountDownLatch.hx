@@ -274,9 +274,9 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$CountDownLatch$Sync') @:internal extern class CountDownLatch_Sync extends java.util.concurrent.locks.AbstractQueuedSynchronizer
 {
-	@:overload override private function tryAcquireShared(acquires : Int) : Int;
+	@:overload private function tryAcquireShared(acquires : Int) : Int;
 	
-	@:overload override private function tryReleaseShared(releases : Int) : Bool;
+	@:overload private function tryReleaseShared(releases : Int) : Bool;
 	
 	
 }

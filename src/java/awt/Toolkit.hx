@@ -544,7 +544,7 @@ extern class Toolkit
 	* @exception  AWTError  if a toolkit could not be found, or
 	*                 if one could not be accessed or instantiated.
 	*/
-	@:overload @:synchronized public static function getDefaultToolkit() : Toolkit;
+	@:overload @:synchronized public static function getDefaultToolkit() : java.awt.Toolkit;
 	
 	/**
 	* Returns an image which gets pixel data from the specified file,

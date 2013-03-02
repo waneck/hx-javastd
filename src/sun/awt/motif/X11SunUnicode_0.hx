@@ -34,7 +34,7 @@ extern class X11SunUnicode_0 extends java.nio.charset.Charset
 	*/
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	
 }

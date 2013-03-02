@@ -49,7 +49,7 @@ extern interface AttributeSet
 	* @param attr an attribute set
 	* @return true if the sets are equivalent
 	*/
-	@:overload public function isEqual(attr : AttributeSet) : Bool;
+	@:overload public function isEqual(attr : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Returns an attribute set that is guaranteed not
@@ -57,7 +57,7 @@ extern interface AttributeSet
 	*
 	* @return a copy of the attribute set
 	*/
-	@:overload public function copyAttributes() : AttributeSet;
+	@:overload public function copyAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Fetches the value of the given attribute. If the value is not found
@@ -109,14 +109,14 @@ extern interface AttributeSet
 	*              values, either locally or through its resolving parent
 	* @throws NullPointerException if {@code attributes} is {@code null}
 	*/
-	@:overload public function containsAttributes(attributes : AttributeSet) : Bool;
+	@:overload public function containsAttributes(attributes : javax.swing.text.AttributeSet) : Bool;
 	
 	/**
 	* Gets the resolving parent.
 	*
 	* @return the parent
 	*/
-	@:overload public function getResolveParent() : AttributeSet;
+	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }

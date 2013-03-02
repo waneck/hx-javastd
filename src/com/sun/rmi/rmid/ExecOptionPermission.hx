@@ -56,7 +56,7 @@ extern class ExecOptionPermission extends java.security.Permission
 	* @return true if the passed permission is equal to or
 	* implied by this permission, false otherwise.
 	*/
-	@:overload public function implies(p : java.security.Permission) : Bool;
+	@:overload override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two ExecOptionPermission objects for equality.

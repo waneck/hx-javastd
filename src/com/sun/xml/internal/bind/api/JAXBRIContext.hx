@@ -63,7 +63,7 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	*      Can be null.
 	* @since JAXB 2.1 EA2
 	*/
-	@:require(java1) @:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader) : JAXBRIContext;
+	@:require(java1) @:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	* Creates a new {@link JAXBRIContext}.
@@ -98,13 +98,13 @@ extern class JAXBRIContext extends javax.xml.bind.JAXBContext
 	* @param supressAccessorWarnings
 	*      See {@link #SUPRESS_ACCESSOR_WARNINGS} for the meaning of this parameter.
 	*/
-	@:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool, supressAccessorWarnings : Bool) : JAXBRIContext;
+	@:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, subclassReplacements : java.util.Map<Class<Dynamic>, Class<Dynamic>>, defaultNamespaceRemap : String, c14nSupport : Bool, ar : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader, xmlAccessorFactorySupport : Bool, allNillable : Bool, retainPropertyInfo : Bool, supressAccessorWarnings : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	* @deprecated
 	*      Compatibility with older versions.
 	*/
-	@:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, defaultNamespaceRemap : String, c14nSupport : Bool) : JAXBRIContext;
+	@:overload public static function newInstance(classes : java.NativeArray<Class<Dynamic>>, typeRefs : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>, defaultNamespaceRemap : String, c14nSupport : Bool) : com.sun.xml.internal.bind.api.JAXBRIContext;
 	
 	/**
 	* Returns true if this context includes a class

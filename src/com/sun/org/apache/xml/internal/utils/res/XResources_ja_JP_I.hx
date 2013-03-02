@@ -36,7 +36,7 @@ extern class XResources_ja_JP_I extends com.sun.org.apache.xml.internal.utils.re
 	*
 	* @return the association table for this resource.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

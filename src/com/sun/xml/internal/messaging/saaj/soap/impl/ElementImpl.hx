@@ -56,7 +56,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ElementN
 	
 	@:overload public function ensureNamespaceIsDeclared(prefix : String, uri : String) : Void;
 	
-	@:overload override public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	@:overload public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
@@ -188,7 +188,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ElementN
 	
 	@:overload public static function getLocalPart(qualifiedName : String) : String;
 	
-	@:native('getPrefix') @:overload public static function _getPrefix(qualifiedName : String) : String;
+	@:overload public static function getPrefix(qualifiedName : String) : String;
 	
 	@:overload private function isNamespaceQualified(name : javax.xml.soap.Name) : Bool;
 	

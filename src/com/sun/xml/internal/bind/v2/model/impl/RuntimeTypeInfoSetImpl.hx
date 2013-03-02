@@ -32,29 +32,29 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	*/
 	@:overload public function new(reader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : Void;
 	
-	@:overload override private function createAnyType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload private function createAnyType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload override public function getNavigator() : com.sun.xml.internal.bind.v2.model.nav.ReflectionNavigator;
+	@:overload public function getNavigator() : com.sun.xml.internal.bind.v2.model.nav.ReflectionNavigator;
 	
 	@:overload public function getTypeInfo(type : java.lang.reflect.Type) : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload override public function getAnyTypeInfo() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload public function getAnyTypeInfo() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
 	@:overload public function getClassInfo(clazz : Class<Dynamic>) : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload override public function beans() : java.util.Map<Class<Dynamic>, com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl>;
+	@:overload public function beans() : java.util.Map<Class<Dynamic>, com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl>;
 	
-	@:overload override public function builtins() : java.util.Map<java.lang.reflect.Type, com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl<Dynamic>>;
+	@:overload public function builtins() : java.util.Map<java.lang.reflect.Type, com.sun.xml.internal.bind.v2.model.impl.RuntimeBuiltinLeafInfoImpl<Dynamic>>;
 	
-	@:overload override public function enums() : java.util.Map<Class<Dynamic>, com.sun.xml.internal.bind.v2.model.impl.RuntimeEnumLeafInfoImpl<Dynamic, Dynamic>>;
+	@:overload public function enums() : java.util.Map<Class<Dynamic>, com.sun.xml.internal.bind.v2.model.impl.RuntimeEnumLeafInfoImpl<Dynamic, Dynamic>>;
 	
-	@:overload override public function arrays() : java.util.Map<Class<Dynamic>, com.sun.xml.internal.bind.v2.model.impl.RuntimeArrayInfoImpl>;
+	@:overload public function arrays() : java.util.Map<Class<Dynamic>, com.sun.xml.internal.bind.v2.model.impl.RuntimeArrayInfoImpl>;
 	
 	@:overload public function getElementInfo(scope : Class<Dynamic>, name : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.model.impl.RuntimeElementInfoImpl;
 	
 	@:overload public function getElementMappings(scope : Class<Dynamic>) : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.bind.v2.model.impl.RuntimeElementInfoImpl>;
 	
-	@:overload override public function getAllElements() : java.lang.Iterable<com.sun.xml.internal.bind.v2.model.impl.RuntimeElementInfoImpl>;
+	@:overload public function getAllElements() : java.lang.Iterable<com.sun.xml.internal.bind.v2.model.impl.RuntimeElementInfoImpl>;
 	
 	
 }

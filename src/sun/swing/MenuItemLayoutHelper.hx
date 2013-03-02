@@ -51,7 +51,7 @@ extern class MenuItemLayoutHelper
 	
 	@:overload private function calcMaxWidths() : Void;
 	
-	@:overload private function calcMaxWidth(rs : MenuItemLayoutHelper_RectSize, key : Dynamic) : Void;
+	@:overload private function calcMaxWidth(rs : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize, key : Dynamic) : Void;
 	
 	/**
 	* Calculates and returns maximal value through specified parent component
@@ -95,15 +95,15 @@ extern class MenuItemLayoutHelper
 	* The order of columns can be reversed.
 	* It depends on the menu item orientation.
 	*/
-	@:overload public function layoutMenuItem() : MenuItemLayoutHelper_LayoutResult;
+	@:overload public function layoutMenuItem() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult;
 	
-	@:overload public function getLTRColumnAlignment() : MenuItemLayoutHelper_ColumnAlignment;
+	@:overload public function getLTRColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload public function getRTLColumnAlignment() : MenuItemLayoutHelper_ColumnAlignment;
+	@:overload public function getRTLColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload private function prepareForLayout(lr : MenuItemLayoutHelper_LayoutResult) : Void;
+	@:overload private function prepareForLayout(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
-	@:overload private function layoutIconAndTextInLabelRect(lr : MenuItemLayoutHelper_LayoutResult) : Void;
+	@:overload private function layoutIconAndTextInLabelRect(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
 	/**
 	* Returns parent of this component if it is not a top-level menu
@@ -127,7 +127,7 @@ extern class MenuItemLayoutHelper
 	
 	@:overload public static function createMaxRect() : java.awt.Rectangle;
 	
-	@:overload public static function addMaxWidth(size : MenuItemLayoutHelper_RectSize, gap : Int, result : java.awt.Dimension) : Void;
+	@:overload public static function addMaxWidth(size : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize, gap : Int, result : java.awt.Dimension) : Void;
 	
 	@:overload public static function addWidth(width : Int, gap : Int, result : java.awt.Dimension) : Void;
 	
@@ -181,17 +181,17 @@ extern class MenuItemLayoutHelper
 	
 	@:overload public function getViewRect() : java.awt.Rectangle;
 	
-	@:overload public function getIconSize() : MenuItemLayoutHelper_RectSize;
+	@:overload public function getIconSize() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize;
 	
-	@:overload public function getTextSize() : MenuItemLayoutHelper_RectSize;
+	@:overload public function getTextSize() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize;
 	
-	@:overload public function getAccSize() : MenuItemLayoutHelper_RectSize;
+	@:overload public function getAccSize() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize;
 	
-	@:overload public function getCheckSize() : MenuItemLayoutHelper_RectSize;
+	@:overload public function getCheckSize() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize;
 	
-	@:overload public function getArrowSize() : MenuItemLayoutHelper_RectSize;
+	@:overload public function getArrowSize() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize;
 	
-	@:overload public function getLabelSize() : MenuItemLayoutHelper_RectSize;
+	@:overload public function getLabelSize() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize;
 	
 	@:overload private function setMenuItem(mi : javax.swing.JMenuItem) : Void;
 	
@@ -243,17 +243,17 @@ extern class MenuItemLayoutHelper
 	
 	@:overload private function setViewRect(viewRect : java.awt.Rectangle) : Void;
 	
-	@:overload private function setIconSize(iconSize : MenuItemLayoutHelper_RectSize) : Void;
+	@:overload private function setIconSize(iconSize : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize) : Void;
 	
-	@:overload private function setTextSize(textSize : MenuItemLayoutHelper_RectSize) : Void;
+	@:overload private function setTextSize(textSize : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize) : Void;
 	
-	@:overload private function setAccSize(accSize : MenuItemLayoutHelper_RectSize) : Void;
+	@:overload private function setAccSize(accSize : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize) : Void;
 	
-	@:overload private function setCheckSize(checkSize : MenuItemLayoutHelper_RectSize) : Void;
+	@:overload private function setCheckSize(checkSize : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize) : Void;
 	
-	@:overload private function setArrowSize(arrowSize : MenuItemLayoutHelper_RectSize) : Void;
+	@:overload private function setArrowSize(arrowSize : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize) : Void;
 	
-	@:overload private function setLabelSize(labelSize : MenuItemLayoutHelper_RectSize) : Void;
+	@:overload private function setLabelSize(labelSize : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_RectSize) : Void;
 	
 	@:overload public function getLeftTextExtraWidth() : Int;
 	
@@ -301,9 +301,9 @@ extern class MenuItemLayoutHelper
 }
 @:native('sun$swing$MenuItemLayoutHelper$ColumnAlignment') extern class MenuItemLayoutHelper_ColumnAlignment
 {
-	public static var LEFT_ALIGNMENT(default, null) : MenuItemLayoutHelper_ColumnAlignment;
+	public static var LEFT_ALIGNMENT(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	public static var RIGHT_ALIGNMENT(default, null) : MenuItemLayoutHelper_ColumnAlignment;
+	public static var RIGHT_ALIGNMENT(default, null) : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
 	@:overload public function new(checkAlignment : Int, iconAlignment : Int, textAlignment : Int, accAlignment : Int, arrowAlignment : Int) : Void;
 	

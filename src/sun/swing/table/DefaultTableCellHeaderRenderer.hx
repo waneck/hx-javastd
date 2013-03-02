@@ -29,11 +29,11 @@ extern class DefaultTableCellHeaderRenderer extends javax.swing.table.DefaultTab
 	
 	@:overload override public function setHorizontalTextPosition(textPosition : Int) : Void;
 	
-	@:overload override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	@:overload public static function getColumnSortOrder(table : javax.swing.JTable, column : Int) : javax.swing.SortOrder;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }

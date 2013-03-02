@@ -100,12 +100,12 @@ extern class BIGlobalBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 	
 	@:overload public function canBeMappedToTypeSafeEnum(decl : com.sun.xml.internal.xsom.XSDeclaration) : Bool;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload public function getName() : javax.xml.namespace.QName;
 	
 	public static var NAME(default, null) : javax.xml.namespace.QName;
 	
 	/* don't want to override equals to avoid overriding hashcode for this complex object, too */
-	@:overload public function isEqual(b : BIGlobalBinding) : Bool;
+	@:overload public function isEqual(b : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding) : Bool;
 	
 	
 }
@@ -130,9 +130,9 @@ extern class BIGlobalBinding extends com.sun.tools.internal.xjc.reader.xmlschema
 {
 	
 }
-@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIGlobalBinding$ClassNameAdapter') @:internal extern class BIGlobalBinding_ClassNameAdapter extends com.sun.tools.internal.xjc.util.ReadOnlyAdapter<BIGlobalBinding_ClassNameBean, String>
+@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIGlobalBinding$ClassNameAdapter') @:internal extern class BIGlobalBinding_ClassNameAdapter extends com.sun.tools.internal.xjc.util.ReadOnlyAdapter<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.BIGlobalBinding_ClassNameBean, String>
 {
-	@:overload public function unmarshal(bean : BIGlobalBinding_ClassNameBean) : String;
+	@:overload public function unmarshal(bean : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.BIGlobalBinding_ClassNameBean) : String;
 	
 	
 }

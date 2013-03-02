@@ -29,7 +29,7 @@ extern class CreatedFontTracker
 	
 	public static var MAX_TOTAL_BYTES(default, null) : Int;
 	
-	@:overload @:synchronized public static function getTracker() : CreatedFontTracker;
+	@:overload @:synchronized public static function getTracker() : sun.font.CreatedFontTracker;
 	
 	@:overload @:synchronized public function getNumBytes() : Int;
 	

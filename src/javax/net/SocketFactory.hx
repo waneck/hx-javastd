@@ -35,7 +35,7 @@ extern class SocketFactory
 	*
 	* @return the default <code>SocketFactory</code>
 	*/
-	@:overload public static function getDefault() : SocketFactory;
+	@:overload public static function getDefault() : javax.net.SocketFactory;
 	
 	/**
 	* Creates an unconnected socket.
@@ -156,7 +156,7 @@ extern class SocketFactory
 	
 	
 }
-@:internal extern class DefaultSocketFactory extends SocketFactory
+@:internal extern class DefaultSocketFactory extends javax.net.SocketFactory
 {
 	@:overload override public function createSocket() : java.net.Socket;
 	

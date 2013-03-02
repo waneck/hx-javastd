@@ -45,7 +45,7 @@ extern class PolicyModelUnmarshaller
 	*
 	* @return policy model unmarshaller able to unmarshal policy expressions from XML source.
 	*/
-	@:overload public static function getXmlUnmarshaller() : PolicyModelUnmarshaller;
+	@:overload public static function getXmlUnmarshaller() : com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelUnmarshaller;
 	
 	
 }

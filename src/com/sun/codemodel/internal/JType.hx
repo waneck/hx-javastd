@@ -29,7 +29,7 @@ package com.sun.codemodel.internal;
 * A type is always either primitive ({@link JPrimitiveType}) or
 * a reference type ({@link JClass}).
 */
-extern class JType implements com.sun.codemodel.internal.JGenerable implements java.lang.Comparable<JType>
+extern class JType implements com.sun.codemodel.internal.JGenerable implements java.lang.Comparable<com.sun.codemodel.internal.JType>
 {
 	/**
 	* Obtains a reference to the primitive type object from a type name.
@@ -100,12 +100,12 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* <p>
 	* For example, for "java.lang.Integer", this method returns "int".
 	*/
-	@:overload @:abstract public function unboxify() : JType;
+	@:overload @:abstract public function unboxify() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Returns the erasure of this type.
 	*/
-	@:overload public function erasure() : JType;
+	@:overload public function erasure() : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Returns true if this is a referenced type.
@@ -116,7 +116,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* If this is an array, returns the component type of the array.
 	* (T of T[])
 	*/
-	@:overload public function elementType() : JType;
+	@:overload public function elementType() : com.sun.codemodel.internal.JType;
 	
 	@:overload public function toString() : String;
 	
@@ -127,7 +127,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* This method is used to sort generated import statments in a
 	* conventional way for readability.
 	*/
-	@:overload public function compareTo(o : JType) : Int;
+	@:overload public function compareTo(o : com.sun.codemodel.internal.JType) : Int;
 	
 	@:overload @:public @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	

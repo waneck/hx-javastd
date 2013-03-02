@@ -27,7 +27,7 @@ extern class GLXSurfaceData extends sun.java2d.opengl.OGLSurfaceData
 {
 	private var peer : sun.awt.X11ComponentPeer;
 	
-	@:overload @:native override private function initPbuffer(pData : haxe.Int64, pConfigInfo : haxe.Int64, isOpaque : Bool, width : Int, height : Int) : Bool;
+	@:overload @:native private function initPbuffer(pData : haxe.Int64, pConfigInfo : haxe.Int64, isOpaque : Bool, width : Int, height : Int) : Bool;
 	
 	@:overload private function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, cm : java.awt.image.ColorModel, type : Int) : Void;
 	
@@ -37,25 +37,25 @@ extern class GLXSurfaceData extends sun.java2d.opengl.OGLSurfaceData
 	* Creates a SurfaceData object representing the primary (front) buffer
 	* of an on-screen Window.
 	*/
-	@:overload public static function createData(peer : sun.awt.X11ComponentPeer) : GLXSurfaceData_GLXWindowSurfaceData;
+	@:overload public static function createData(peer : sun.awt.X11ComponentPeer) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXWindowSurfaceData;
 	
 	/**
 	* Creates a SurfaceData object representing the back buffer of a
 	* double-buffered on-screen Window.
 	*/
-	@:overload public static function createData(peer : sun.awt.X11ComponentPeer, image : java.awt.Image, type : Int) : GLXSurfaceData_GLXOffScreenSurfaceData;
+	@:overload public static function createData(peer : sun.awt.X11ComponentPeer, image : java.awt.Image, type : Int) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData;
 	
 	/**
 	* Creates a SurfaceData object representing an off-screen buffer (either
 	* a Pbuffer or Texture).
 	*/
-	@:overload public static function createData(gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, cm : java.awt.image.ColorModel, image : java.awt.Image, type : Int) : GLXSurfaceData_GLXOffScreenSurfaceData;
+	@:overload public static function createData(gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, cm : java.awt.image.ColorModel, image : java.awt.Image, type : Int) : sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData;
 	
 	@:overload public static function getGC(peer : sun.awt.X11ComponentPeer) : sun.java2d.opengl.GLXGraphicsConfig;
 	
 	
 }
-@:native('sun$java2d$opengl$GLXSurfaceData$GLXWindowSurfaceData') extern class GLXSurfaceData_GLXWindowSurfaceData extends GLXSurfaceData
+@:native('sun$java2d$opengl$GLXSurfaceData$GLXWindowSurfaceData') extern class GLXSurfaceData_GLXWindowSurfaceData extends sun.java2d.opengl.GLXSurfaceData
 {
 	@:overload public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig) : Void;
 	
@@ -79,7 +79,7 @@ extern class GLXSurfaceData extends sun.java2d.opengl.OGLSurfaceData
 * belongs to is showed, it is first copied to the real private
 * FLIP_BACKBUFFER, which is then flipped.
 */
-@:native('sun$java2d$opengl$GLXSurfaceData$GLXVSyncOffScreenSurfaceData') extern class GLXSurfaceData_GLXVSyncOffScreenSurfaceData extends GLXSurfaceData_GLXOffScreenSurfaceData
+@:native('sun$java2d$opengl$GLXSurfaceData$GLXVSyncOffScreenSurfaceData') extern class GLXSurfaceData_GLXVSyncOffScreenSurfaceData extends sun.java2d.opengl.GLXSurfaceData.GLXSurfaceData_GLXOffScreenSurfaceData
 {
 	@:overload public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, image : java.awt.Image, cm : java.awt.image.ColorModel, type : Int) : Void;
 	
@@ -89,7 +89,7 @@ extern class GLXSurfaceData extends sun.java2d.opengl.OGLSurfaceData
 	
 	
 }
-@:native('sun$java2d$opengl$GLXSurfaceData$GLXOffScreenSurfaceData') extern class GLXSurfaceData_GLXOffScreenSurfaceData extends GLXSurfaceData
+@:native('sun$java2d$opengl$GLXSurfaceData$GLXOffScreenSurfaceData') extern class GLXSurfaceData_GLXOffScreenSurfaceData extends sun.java2d.opengl.GLXSurfaceData
 {
 	@:overload public function new(peer : sun.awt.X11ComponentPeer, gc : sun.java2d.opengl.GLXGraphicsConfig, width : Int, height : Int, image : java.awt.Image, cm : java.awt.image.ColorModel, type : Int) : Void;
 	

@@ -475,7 +475,7 @@ package java.lang.management;
 	*         by <tt>cd</tt> if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : ThreadInfo;
+	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : java.lang.management.ThreadInfo;
 	
 	/**
 	* Returns an array of {@link MonitorInfo} objects, each of which

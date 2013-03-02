@@ -38,7 +38,7 @@ extern class SymbolArchive extends com.sun.tools.javac.file.ZipArchive
 */
 @:native('com$sun$tools$javac$file$SymbolArchive$SymbolFileObject') extern class SymbolArchive_SymbolFileObject extends com.sun.tools.javac.file.ZipArchive.ZipArchive_ZipFileObject
 {
-	@:overload private function new(zarch : SymbolArchive, name : String, entry : java.util.zip.ZipEntry) : Void;
+	@:overload private function new(zarch : com.sun.tools.javac.file.SymbolArchive, name : String, entry : java.util.zip.ZipEntry) : Void;
 	
 	@:overload override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
 	

@@ -33,7 +33,7 @@ extern class SymbolHash
 	private var fTableSize : Int;
 	
 	/** Buckets. */
-	private var fBuckets : java.NativeArray<SymbolHash_Entry>;
+	private var fBuckets : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry>;
 	
 	/** Number of elements. */
 	private var fNum : Int;
@@ -90,7 +90,7 @@ extern class SymbolHash
 	/**
 	* Make a clone of this object.
 	*/
-	@:overload public function makeClone() : SymbolHash;
+	@:overload public function makeClone() : com.sun.org.apache.xerces.internal.util.SymbolHash;
 	
 	/**
 	* Remove all key/value assocaition. This tries to save a bit of GC'ing
@@ -98,7 +98,7 @@ extern class SymbolHash
 	*/
 	@:overload public function clear() : Void;
 	
-	@:overload private function search(key : Dynamic, bucket : Int) : SymbolHash_Entry;
+	@:overload private function search(key : Dynamic, bucket : Int) : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
 	
 	
 }
@@ -113,13 +113,13 @@ extern class SymbolHash
 	public var value : Dynamic;
 	
 	/** The next entry. */
-	public var next : SymbolHash_Entry;
+	public var next : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
 	
 	@:overload public function new() : Void;
 	
-	@:overload public function new(key : Dynamic, value : Dynamic, next : SymbolHash_Entry) : Void;
+	@:overload public function new(key : Dynamic, value : Dynamic, next : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry) : Void;
 	
-	@:overload public function makeClone() : SymbolHash_Entry;
+	@:overload public function makeClone() : com.sun.org.apache.xerces.internal.util.SymbolHash.SymbolHash_Entry;
 	
 	
 }

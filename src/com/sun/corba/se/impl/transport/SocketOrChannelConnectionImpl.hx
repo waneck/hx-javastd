@@ -282,7 +282,7 @@ extern class SocketOrChannelConnectionImpl extends com.sun.corba.se.impl.transpo
 	
 	@:overload public function toString() : String;
 	
-	@:overload override public function dprint(msg : String) : Void;
+	@:overload public function dprint(msg : String) : Void;
 	
 	@:overload private function dprint(msg : String, t : java.lang.Throwable) : Void;
 	

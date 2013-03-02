@@ -45,7 +45,7 @@ extern class RowSorterEvent extends java.util.EventObject
 	* @throws IllegalArgumentException if source or <code>type</code> is
 	*         <code>null</code>
 	*/
-	@:overload public function new(source : javax.swing.RowSorter<Dynamic>, type : RowSorterEvent_Type, previousRowIndexToModel : java.NativeArray<Int>) : Void;
+	@:overload public function new(source : javax.swing.RowSorter<Dynamic>, type : javax.swing.event.RowSorterEvent.RowSorterEvent_Type, previousRowIndexToModel : java.NativeArray<Int>) : Void;
 	
 	/**
 	* Returns the source of the event as a <code>RowSorter</code>.
@@ -59,7 +59,7 @@ extern class RowSorterEvent extends java.util.EventObject
 	*
 	* @return the type of event
 	*/
-	@:overload public function getType() : RowSorterEvent_Type;
+	@:overload public function getType() : javax.swing.event.RowSorterEvent.RowSorterEvent_Type;
 	
 	/**
 	* Returns the location of <code>index</code> in terms of the

@@ -70,7 +70,7 @@ extern class ObjectVector implements java.lang.Cloneable
 	*
 	* @param v Existing ObjectVector to copy
 	*/
-	@:overload public function new(v : ObjectVector) : Void;
+	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.ObjectVector) : Void;
 	
 	/**
 	* Get the length of the list.

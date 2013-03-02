@@ -39,7 +39,7 @@ extern class StackMapWriter extends com.sun.tools.javap.InstructionDetailWriter
 	
 	@:overload public function writeInitialDetails() : Void;
 	
-	@:overload override public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class FloatingDecimal
 	
 	@:overload public function appendTo(buf : java.lang.Appendable) : Void;
 	
-	@:overload public static function readJavaFormatString(_in : String) : FloatingDecimal;
+	@:overload public static function readJavaFormatString(_in : String) : sun.misc.FloatingDecimal;
 	
 	/*
 	* Take a FloatingDecimal, which we presumably just scanned in,
@@ -72,7 +72,7 @@ extern class FloatingDecimal
 	
 	@:overload public function new(v : haxe.Int64) : Void;
 	
-	@:overload public function new(other : FDBigInt) : Void;
+	@:overload public function new(other : sun.misc.FloatingDecimal.FDBigInt) : Void;
 	
 	@:overload public function new(seed : haxe.Int64, digit : java.NativeArray<java.StdTypes.Char16>, nd0 : Int, nd : Int) : Void;
 	
@@ -99,7 +99,7 @@ extern class FloatingDecimal
 	* Multiply a FDBigInt by an int.
 	* Result is a new FDBigInt.
 	*/
-	@:overload public function mult(iv : Int) : FDBigInt;
+	@:overload public function mult(iv : Int) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Multiply a FDBigInt by an int and add another int.
@@ -112,18 +112,18 @@ extern class FloatingDecimal
 	* Multiply a FDBigInt by another FDBigInt.
 	* Result is a new FDBigInt.
 	*/
-	@:overload public function mult(other : FDBigInt) : FDBigInt;
+	@:overload public function mult(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Add one FDBigInt to another. Return a FDBigInt
 	*/
-	@:overload public function add(other : FDBigInt) : FDBigInt;
+	@:overload public function add(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Subtract one FDBigInt from another. Return a FDBigInt
 	* Assert that the result is positive.
 	*/
-	@:overload public function sub(other : FDBigInt) : FDBigInt;
+	@:overload public function sub(other : sun.misc.FloatingDecimal.FDBigInt) : sun.misc.FloatingDecimal.FDBigInt;
 	
 	/*
 	* Compare FDBigInt with another FDBigInt. Return an integer
@@ -131,7 +131,7 @@ extern class FloatingDecimal
 	*  0: this == other
 	* <0: this < other
 	*/
-	@:overload public function cmp(other : FDBigInt) : Int;
+	@:overload public function cmp(other : sun.misc.FloatingDecimal.FDBigInt) : Int;
 	
 	/*
 	* Compute
@@ -144,7 +144,7 @@ extern class FloatingDecimal
 	* Also assume, of course, that the result, q, can be expressed
 	* as an integer, 0 <= q < 10.
 	*/
-	@:overload public function quoRemIteration(S : FDBigInt) : Int;
+	@:overload public function quoRemIteration(S : sun.misc.FloatingDecimal.FDBigInt) : Int;
 	
 	@:overload public function longValue() : haxe.Int64;
 	

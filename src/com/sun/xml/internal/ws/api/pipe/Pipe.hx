@@ -148,7 +148,7 @@ extern interface Pipe
 	*      always non-null {@link Pipe}.
 	* @param cloner
 	*/
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : Pipe;
+	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : com.sun.xml.internal.ws.api.pipe.Pipe;
 	
 	
 }

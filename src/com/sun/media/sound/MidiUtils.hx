@@ -72,13 +72,13 @@ extern class MidiUtils
 	* Given a tick, convert to microsecond
 	* @param cache tempo info and current tempo
 	*/
-	@:overload public static function tick2microsecond(seq : javax.sound.midi.Sequence, tick : haxe.Int64, cache : MidiUtils_TempoCache) : haxe.Int64;
+	@:overload public static function tick2microsecond(seq : javax.sound.midi.Sequence, tick : haxe.Int64, cache : com.sun.media.sound.MidiUtils.MidiUtils_TempoCache) : haxe.Int64;
 	
 	/**
 	* Given a microsecond time, convert to tick.
 	* returns tempo at the given time in cache.getCurrTempoMPQ
 	*/
-	@:overload public static function microsecond2tick(seq : javax.sound.midi.Sequence, micros : haxe.Int64, cache : MidiUtils_TempoCache) : haxe.Int64;
+	@:overload public static function microsecond2tick(seq : javax.sound.midi.Sequence, micros : haxe.Int64, cache : com.sun.media.sound.MidiUtils.MidiUtils_TempoCache) : haxe.Int64;
 	
 	/**
 	* Binary search for the event indexes of the track

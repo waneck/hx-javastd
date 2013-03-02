@@ -24,7 +24,7 @@ extern class LSInputListImpl extends java.util.AbstractList<Dynamic> implements 
 	/**
 	* An immutable empty list.
 	*/
-	public static var EMPTY_LIST(default, null) : LSInputListImpl;
+	public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.LSInputListImpl;
 	
 	/**
 	* Construct an LSInputList implementation
@@ -54,13 +54,13 @@ extern class LSInputListImpl extends java.util.AbstractList<Dynamic> implements 
 	/*
 	* List methods
 	*/
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	
 }

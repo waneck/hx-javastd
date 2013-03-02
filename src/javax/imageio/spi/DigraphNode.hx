@@ -57,7 +57,7 @@ package javax.imageio.spi;
 	* @return <code>true</code> if the node was not previously the
 	* target of an edge.
 	*/
-	@:overload public function addEdge(node : DigraphNode) : Bool;
+	@:overload public function addEdge(node : javax.imageio.spi.DigraphNode) : Bool;
 	
 	/**
 	* Returns <code>true</code> if an edge exists between this node
@@ -67,7 +67,7 @@ package javax.imageio.spi;
 	*
 	* @return <code>true</code> if the node is the target of an edge.
 	*/
-	@:overload public function hasEdge(node : DigraphNode) : Bool;
+	@:overload public function hasEdge(node : javax.imageio.spi.DigraphNode) : Bool;
 	
 	/**
 	* Removes a directed edge from the graph.  The outNodes list of this
@@ -76,7 +76,7 @@ package javax.imageio.spi;
 	* @return <code>true</code> if the node was previously the target
 	* of an edge.
 	*/
-	@:overload public function removeEdge(node : DigraphNode) : Bool;
+	@:overload public function removeEdge(node : javax.imageio.spi.DigraphNode) : Bool;
 	
 	/**
 	* Removes this node from the graph, updating neighboring nodes

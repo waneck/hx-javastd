@@ -27,7 +27,7 @@ extern class Element extends com.sun.tools.internal.xjc.reader.gbind.Expression 
 {
 	@:overload private function new() : Void;
 	
-	@:overload public function addNext(element : Element) : Void;
+	@:overload public function addNext(element : com.sun.tools.internal.xjc.reader.gbind.Element) : Void;
 	
 	@:overload public function contains(rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Bool;
 	
@@ -37,7 +37,7 @@ extern class Element extends com.sun.tools.internal.xjc.reader.gbind.Expression 
 	* @deprecated
 	*      if you statically call this method, there's something wrong.
 	*/
-	@:overload public function iterator() : java.util.Iterator<Element>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.tools.internal.xjc.reader.gbind.Element>;
 	
 	/**
 	* Builds a set of strongly connected components and puts them

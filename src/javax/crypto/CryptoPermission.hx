@@ -63,7 +63,7 @@ package javax.crypto;
 	* @return true if the specified permission is equal to or
 	* implied by this permission, false otherwise.
 	*/
-	@:overload public function implies(p : java.security.Permission) : Bool;
+	@:overload override public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two CryptoPermission objects for equality. Checks that

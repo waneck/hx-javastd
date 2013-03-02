@@ -193,7 +193,7 @@ extern class XMLErrorResources_fr extends java.util.ListResourceBundle
 	*
 	* @return The association list.
 	*/
-	@:overload override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	/**
 	*   Return a named ResourceBundle for a particular locale.  This method mimics the behavior

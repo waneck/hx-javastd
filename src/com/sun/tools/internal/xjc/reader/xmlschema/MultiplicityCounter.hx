@@ -30,7 +30,7 @@ extern class MultiplicityCounter implements com.sun.xml.internal.xsom.visitor.XS
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public static var theInstance(default, null) : MultiplicityCounter;
+	public static var theInstance(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.MultiplicityCounter;
 	
 	@:overload public function particle(p : com.sun.xml.internal.xsom.XSParticle) : com.sun.tools.internal.xjc.model.Multiplicity;
 	

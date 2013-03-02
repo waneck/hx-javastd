@@ -463,9 +463,9 @@ extern class JTextField extends javax.swing.text.JTextComponent implements javax
 	
 	
 }
-@:native('javax$swing$JTextField$TextFieldActionPropertyChangeListener') @:internal extern class JTextField_TextFieldActionPropertyChangeListener extends javax.swing.ActionPropertyChangeListener<JTextField>
+@:native('javax$swing$JTextField$TextFieldActionPropertyChangeListener') @:internal extern class JTextField_TextFieldActionPropertyChangeListener extends javax.swing.ActionPropertyChangeListener<javax.swing.JTextField>
 {
-	@:overload private function actionPropertyChanged(textField : JTextField, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function actionPropertyChanged(textField : javax.swing.JTextField, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

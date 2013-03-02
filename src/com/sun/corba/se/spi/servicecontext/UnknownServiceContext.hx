@@ -29,11 +29,11 @@ extern class UnknownServiceContext extends com.sun.corba.se.spi.servicecontext.S
 	
 	@:overload public function new(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload override public function getId() : Int;
+	@:overload public function getId() : Int;
 	
-	@:overload override public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function write(os : org.omg.CORBA_2_3.portable.OutputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
+	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream, gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	
 	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	

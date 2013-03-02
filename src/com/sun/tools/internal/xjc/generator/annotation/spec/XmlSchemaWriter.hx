@@ -25,15 +25,15 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlSchemaWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlSchema>
 {
-	@:overload public function location(value : String) : XmlSchemaWriter;
+	@:overload public function location(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaWriter;
 	
-	@:overload public function namespace(value : String) : XmlSchemaWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaWriter;
 	
 	@:overload public function xmlns() : com.sun.tools.internal.xjc.generator.annotation.spec.XmlNsWriter;
 	
-	@:overload public function elementFormDefault(value : javax.xml.bind.annotation.XmlNsForm) : XmlSchemaWriter;
+	@:overload public function elementFormDefault(value : javax.xml.bind.annotation.XmlNsForm) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaWriter;
 	
-	@:overload public function attributeFormDefault(value : javax.xml.bind.annotation.XmlNsForm) : XmlSchemaWriter;
+	@:overload public function attributeFormDefault(value : javax.xml.bind.annotation.XmlNsForm) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaWriter;
 	
 	
 }

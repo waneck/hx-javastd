@@ -48,7 +48,7 @@ extern class ClassPrepareEventSet extends com.sun.tools.example.debug.event.Abst
 	*/
 	@:overload public function getReferenceType() : com.sun.jdi.ReferenceType;
 	
-	@:overload override public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
+	@:overload public function notify(listener : com.sun.tools.example.debug.event.JDIListener) : Void;
 	
 	
 }

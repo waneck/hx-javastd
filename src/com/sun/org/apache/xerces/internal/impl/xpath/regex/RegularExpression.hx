@@ -190,15 +190,15 @@ extern class RegularExpression implements java.io.Serializable
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$RegularExpression$StringTarget') @:internal extern class RegularExpression_StringTarget extends RegularExpression_ExpressionTarget
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$RegularExpression$StringTarget') @:internal extern class RegularExpression_StringTarget extends com.sun.org.apache.xerces.internal.impl.xpath.regex.RegularExpression.RegularExpression_ExpressionTarget
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$RegularExpression$CharArrayTarget') @:internal extern class RegularExpression_CharArrayTarget extends RegularExpression_ExpressionTarget
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$RegularExpression$CharArrayTarget') @:internal extern class RegularExpression_CharArrayTarget extends com.sun.org.apache.xerces.internal.impl.xpath.regex.RegularExpression.RegularExpression_ExpressionTarget
 {
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$RegularExpression$CharacterIteratorTarget') @:internal extern class RegularExpression_CharacterIteratorTarget extends RegularExpression_ExpressionTarget
+@:native('com$sun$org$apache$xerces$internal$impl$xpath$regex$RegularExpression$CharacterIteratorTarget') @:internal extern class RegularExpression_CharacterIteratorTarget extends com.sun.org.apache.xerces.internal.impl.xpath.regex.RegularExpression.RegularExpression_ExpressionTarget
 {
 	
 }

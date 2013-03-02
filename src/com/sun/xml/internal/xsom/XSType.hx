@@ -39,7 +39,7 @@ extern interface XSType extends com.sun.xml.internal.xsom.XSDeclaration
 	*
 	* @return  always non-null.
 	*/
-	@:overload public function getBaseType() : XSType;
+	@:overload public function getBaseType() : com.sun.xml.internal.xsom.XSType;
 	
 	@:overload public function getDerivationMethod() : Int;
 	
@@ -55,7 +55,7 @@ extern interface XSType extends com.sun.xml.internal.xsom.XSDeclaration
 	* <p>
 	* This method honors the block flag.
 	*/
-	@:overload public function listSubstitutables() : java.NativeArray<XSType>;
+	@:overload public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSType>;
 	
 	/**
 	* If this {@link XSType} is redefined by another type,
@@ -64,7 +64,7 @@ extern interface XSType extends com.sun.xml.internal.xsom.XSDeclaration
 	* @return null
 	*      if this component has not been redefined.
 	*/
-	@:overload public function getRedefinedBy() : XSType;
+	@:overload public function getRedefinedBy() : com.sun.xml.internal.xsom.XSType;
 	
 	/**
 	* Returns the number of complex types that redefine this component.
@@ -88,7 +88,7 @@ extern interface XSType extends com.sun.xml.internal.xsom.XSDeclaration
 	* <p>
 	* Note that <tt>t.isDerivedFrom(t)</tt> returns true.
 	*/
-	@:overload public function isDerivedFrom(t : XSType) : Bool;
+	@:overload public function isDerivedFrom(t : com.sun.xml.internal.xsom.XSType) : Bool;
 	
 	
 }

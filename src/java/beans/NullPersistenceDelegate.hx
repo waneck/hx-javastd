@@ -129,7 +129,7 @@ package java.beans;
 	
 	
 }
-@:internal extern class java_sql_Timestamp_PersistenceDelegate extends java_util_Date_PersistenceDelegate
+@:internal extern class java_sql_Timestamp_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Date_PersistenceDelegate
 {
 	@:overload override private function initialize(type : Class<Dynamic>, oldInstance : Dynamic, newInstance : Dynamic, out : java.beans.Encoder) : Void;
 	
@@ -147,163 +147,163 @@ package java.beans;
 	
 	
 }
-@:native('java$beans$java_util_Collections$EmptyList_PersistenceDelegate') @:internal extern class java_util_Collections_EmptyList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$EmptyList_PersistenceDelegate') @:internal extern class java_util_Collections_EmptyList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$EmptySet_PersistenceDelegate') @:internal extern class java_util_Collections_EmptySet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$EmptySet_PersistenceDelegate') @:internal extern class java_util_Collections_EmptySet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$EmptyMap_PersistenceDelegate') @:internal extern class java_util_Collections_EmptyMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$EmptyMap_PersistenceDelegate') @:internal extern class java_util_Collections_EmptyMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SingletonList_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SingletonList_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SingletonSet_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonSet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SingletonSet_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SingletonMap_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SingletonMap_PersistenceDelegate') @:internal extern class java_util_Collections_SingletonMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$UnmodifiableCollection_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableCollection_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$UnmodifiableCollection_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableCollection_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$UnmodifiableList_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$UnmodifiableList_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$UnmodifiableRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableRandomAccessList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$UnmodifiableRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableRandomAccessList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$UnmodifiableSet_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$UnmodifiableSet_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$UnmodifiableSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSortedSet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$UnmodifiableSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSortedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$UnmodifiableMap_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$UnmodifiableMap_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$UnmodifiableSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSortedMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$UnmodifiableSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_UnmodifiableSortedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SynchronizedCollection_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedCollection_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SynchronizedCollection_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedCollection_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SynchronizedList_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SynchronizedList_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SynchronizedRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedRandomAccessList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SynchronizedRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedRandomAccessList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SynchronizedSet_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SynchronizedSet_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SynchronizedSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSortedSet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SynchronizedSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSortedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SynchronizedMap_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SynchronizedMap_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$SynchronizedSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSortedMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$SynchronizedSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_SynchronizedSortedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$CheckedCollection_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedCollection_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$CheckedCollection_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedCollection_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$CheckedList_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$CheckedList_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$CheckedRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedRandomAccessList_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$CheckedRandomAccessList_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedRandomAccessList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$CheckedSet_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$CheckedSet_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$CheckedSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSortedSet_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$CheckedSortedSet_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSortedSet_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$CheckedMap_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$CheckedMap_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
 	
 }
-@:native('java$beans$java_util_Collections$CheckedSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSortedMap_PersistenceDelegate extends java_util_Collections
+@:native('java$beans$java_util_Collections$CheckedSortedMap_PersistenceDelegate') @:internal extern class java_util_Collections_CheckedSortedMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collections
 {
 	@:overload override private function instantiate(oldInstance : Dynamic, out : java.beans.Encoder) : java.beans.Expression;
 	
@@ -353,23 +353,23 @@ package java.beans;
 	
 	
 }
-@:internal extern class java_util_AbstractCollection_PersistenceDelegate extends java_util_Collection_PersistenceDelegate
+@:internal extern class java_util_AbstractCollection_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collection_PersistenceDelegate
 {
 	
 }
-@:internal extern class java_util_AbstractList_PersistenceDelegate extends java_util_List_PersistenceDelegate
+@:internal extern class java_util_AbstractList_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_List_PersistenceDelegate
 {
 	
 }
-@:internal extern class java_util_AbstractMap_PersistenceDelegate extends java_util_Map_PersistenceDelegate
+@:internal extern class java_util_AbstractMap_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Map_PersistenceDelegate
 {
 	
 }
-@:internal extern class java_util_Hashtable_PersistenceDelegate extends java_util_Map_PersistenceDelegate
+@:internal extern class java_util_Hashtable_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Map_PersistenceDelegate
 {
 	
 }
-@:internal extern class java_beans_beancontext_BeanContextSupport_PersistenceDelegate extends java_util_Collection_PersistenceDelegate
+@:internal extern class java_beans_beancontext_BeanContextSupport_PersistenceDelegate extends java.beans.NullPersistenceDelegate.java_util_Collection_PersistenceDelegate
 {
 	
 }
@@ -428,11 +428,11 @@ package java.beans;
 	
 	
 }
-@:internal extern class java_awt_SystemColor_PersistenceDelegate extends StaticFieldsPersistenceDelegate
+@:internal extern class java_awt_SystemColor_PersistenceDelegate extends java.beans.NullPersistenceDelegate.StaticFieldsPersistenceDelegate
 {
 	
 }
-@:internal extern class java_awt_font_TextAttribute_PersistenceDelegate extends StaticFieldsPersistenceDelegate
+@:internal extern class java_awt_font_TextAttribute_PersistenceDelegate extends java.beans.NullPersistenceDelegate.StaticFieldsPersistenceDelegate
 {
 	
 }

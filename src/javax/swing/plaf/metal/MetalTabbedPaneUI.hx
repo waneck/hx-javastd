@@ -47,7 +47,7 @@ extern class MetalTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI
 	
 	private var selectHighlight : java.awt.Color;
 	
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override private function createLayoutManager() : java.awt.LayoutManager;
 	
@@ -67,7 +67,7 @@ extern class MetalTabbedPaneUI extends javax.swing.plaf.basic.BasicTabbedPaneUI
 	
 	@:overload private function paintRightTabBorder(tabIndex : Int, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int, btm : Int, rght : Int, isSelected : Bool) : Void;
 	
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	@:overload override private function paintTabBackground(g : java.awt.Graphics, tabPlacement : Int, tabIndex : Int, x : Int, y : Int, w : Int, h : Int, isSelected : Bool) : Void;
 	

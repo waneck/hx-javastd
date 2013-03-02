@@ -186,7 +186,7 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	/**
 	* Create a new SunGraphics2D based on this one.
 	*/
-	@:overload override public function create() : java.awt.Graphics;
+	@:overload public function create() : java.awt.Graphics;
 	
 	@:overload public function setDevClip(x : Int, y : Int, w : Int, h : Int) : Void;
 	
@@ -223,22 +223,22 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	*/
 	@:overload public function getCompClip() : sun.java2d.pipe.Region;
 	
-	@:overload override public function getFont() : java.awt.Font;
+	@:overload public function getFont() : java.awt.Font;
 	
 	@:overload public function checkFontInfo(info : sun.java2d.loops.FontInfo, font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.java2d.loops.FontInfo;
 	
 	@:overload public static function isRotated(mtx : java.NativeArray<Float>) : Bool;
 	
-	@:overload override public function setFont(font : java.awt.Font) : Void;
+	@:overload public function setFont(font : java.awt.Font) : Void;
 	
 	@:overload public function getFontInfo() : sun.java2d.loops.FontInfo;
 	
 	/* Used by drawGlyphVector which specifies its own font. */
 	@:overload public function getGVFontInfo(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.java2d.loops.FontInfo;
 	
-	@:overload override public function getFontMetrics() : java.awt.FontMetrics;
+	@:overload public function getFontMetrics() : java.awt.FontMetrics;
 	
-	@:overload override public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
+	@:overload public function getFontMetrics(font : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Checks to see if a Path intersects the specified Rectangle in device
@@ -497,9 +497,9 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	*/
 	@:overload override public function getComposite() : java.awt.Composite;
 	
-	@:overload override public function getColor() : java.awt.Color;
+	@:overload public function getColor() : java.awt.Color;
 	
-	@:overload override public function setColor(color : java.awt.Color) : Void;
+	@:overload public function setColor(color : java.awt.Color) : Void;
 	
 	/**
 	* Sets the background color in this context used for clearing a region.
@@ -527,11 +527,11 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	*/
 	@:overload override public function getStroke() : java.awt.Stroke;
 	
-	@:overload override public function getClipBounds() : java.awt.Rectangle;
+	@:overload public function getClipBounds() : java.awt.Rectangle;
 	
-	@:overload override public function getClipBounds(r : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload public function getClipBounds(r : java.awt.Rectangle) : java.awt.Rectangle;
 	
-	@:overload override public function hitClip(x : Int, y : Int, width : Int, height : Int) : Bool;
+	@:overload public function hitClip(x : Int, y : Int, width : Int, height : Int) : Bool;
 	
 	@:overload private function validateCompClip() : Void;
 	
@@ -543,13 +543,13 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	
 	@:native('transformShape') @:overload private static function _transformShape(tx : java.awt.geom.AffineTransform, clip : java.awt.Shape) : java.awt.Shape;
 	
-	@:overload override public function clipRect(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function clipRect(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function setClip(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function setClip(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getClip() : java.awt.Shape;
+	@:overload public function getClip() : java.awt.Shape;
 	
-	@:overload override public function setClip(sh : java.awt.Shape) : Void;
+	@:overload public function setClip(sh : java.awt.Shape) : Void;
 	
 	/**
 	* Intersects the current clip with the specified Path and sets the
@@ -561,11 +561,11 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	*/
 	@:overload override public function clip(s : java.awt.Shape) : Void;
 	
-	@:overload override public function setPaintMode() : Void;
+	@:overload public function setPaintMode() : Void;
 	
-	@:overload override public function setXORMode(c : java.awt.Color) : Void;
+	@:overload public function setXORMode(c : java.awt.Color) : Void;
 	
-	@:overload override public function copyArea(x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Void;
+	@:overload public function copyArea(x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Void;
 	
 	/*
 	public void XcopyArea(int x, int y, int w, int h, int dx, int dy) {
@@ -625,31 +625,31 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	null);
 	}
 	*/
-	@:overload override public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload public function drawLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload override public function drawRoundRect(x : Int, y : Int, w : Int, h : Int, arcW : Int, arcH : Int) : Void;
+	@:overload public function drawRoundRect(x : Int, y : Int, w : Int, h : Int, arcW : Int, arcH : Int) : Void;
 	
-	@:overload override public function fillRoundRect(x : Int, y : Int, w : Int, h : Int, arcW : Int, arcH : Int) : Void;
+	@:overload public function fillRoundRect(x : Int, y : Int, w : Int, h : Int, arcW : Int, arcH : Int) : Void;
 	
-	@:overload override public function drawOval(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function drawOval(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function fillOval(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function fillOval(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function drawArc(x : Int, y : Int, w : Int, h : Int, startAngl : Int, arcAngl : Int) : Void;
+	@:overload public function drawArc(x : Int, y : Int, w : Int, h : Int, startAngl : Int, arcAngl : Int) : Void;
 	
-	@:overload override public function fillArc(x : Int, y : Int, w : Int, h : Int, startAngl : Int, arcAngl : Int) : Void;
+	@:overload public function fillArc(x : Int, y : Int, w : Int, h : Int, startAngl : Int, arcAngl : Int) : Void;
 	
-	@:overload override public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload public function drawPolyline(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
-	@:overload override public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload public function drawPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
-	@:overload override public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
+	@:overload public function fillPolygon(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int) : Void;
 	
-	@:overload override public function drawRect(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function drawRect(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function fillRect(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function fillRect(x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function clearRect(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function clearRect(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Strokes the outline of a Path using the settings of the current
@@ -718,15 +718,15 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	
 	@:overload override public function drawGlyphVector(gv : java.awt.font.GlyphVector, x : Single, y : Single) : Void;
 	
-	@:overload override public function drawChars(data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload public function drawChars(data : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
-	@:overload override public function drawBytes(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, x : Int, y : Int) : Void;
+	@:overload public function drawBytes(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, x : Int, y : Int) : Void;
 	
 	/**
 	* Draws an image scaled to x,y,w,h in nonblocking mode with a
 	* callback object.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Not part of the advertised API but a useful utility method
@@ -741,30 +741,30 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	* Draws an image scaled to x,y,w,h in nonblocking mode with a
 	* solid background color and a callback object.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bg : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, width : Int, height : Int, bg : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws an image at x,y in nonblocking mode.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws an image at x,y in nonblocking mode with a solid background
 	* color and a callback object.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, x : Int, y : Int, bg : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, x : Int, y : Int, bg : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws a subrectangle of an image scaled to a destination rectangle
 	* in nonblocking mode with a callback object.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draws a subrectangle of an image scaled to a destination rectangle in
 	* nonblocking mode with a solid background color and a callback object.
 	*/
-	@:overload override public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
+	@:overload public function drawImage(img : java.awt.Image, dx1 : Int, dy1 : Int, dx2 : Int, dy2 : Int, sx1 : Int, sy1 : Int, sx2 : Int, sy2 : Int, bgcolor : java.awt.Color, observer : java.awt.image.ImageObserver) : Bool;
 	
 	/**
 	* Draw an image, applying a transform from image space into user space
@@ -803,7 +803,7 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	* other, less forgiving, VMs that really need to dispose of
 	* resources.
 	*/
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	/**
 	* Graphics has a finalize method that automatically calls dispose()
@@ -816,7 +816,7 @@ extern class SunGraphics2D extends java.awt.Graphics2D implements sun.awt.Constr
 	* enough to know that if our override is empty then it should not
 	* mark us as finalizeable.
 	*/
-	@:overload override public function finalize() : Void;
+	@:overload public function finalize() : Void;
 	
 	/**
 	* Returns destination that this Graphics renders to.  This could be

@@ -361,7 +361,7 @@ extern class MLet extends java.net.URLClassLoader implements javax.management.lo
 	*
 	* @return The absolute path of the native library.
 	*/
-	@:overload override private function findLibrary(libname : String) : String;
+	@:overload private function findLibrary(libname : String) : String;
 	
 	/**
 	* <p>This method is to be overridden when extending this service to

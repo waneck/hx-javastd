@@ -27,9 +27,9 @@ package com.sun.xml.internal.bind.v2.model.impl;
 {
 	@:overload public function new(ci : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>) : Void;
 	
-	@:overload override public function ref() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
+	@:overload public function ref() : java.util.Collection<com.sun.xml.internal.bind.v2.model.core.TypeInfo<T, C>>;
 	
-	@:overload @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:final public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	@:overload public function getXmlName() : javax.xml.namespace.QName;
 	

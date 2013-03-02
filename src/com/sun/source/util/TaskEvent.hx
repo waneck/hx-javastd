@@ -25,15 +25,15 @@ package com.sun.source.util;
 */
 extern class TaskEvent
 {
-	@:overload public function new(kind : TaskEvent_Kind) : Void;
+	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind) : Void;
 	
-	@:overload public function new(kind : TaskEvent_Kind, sourceFile : javax.tools.JavaFileObject) : Void;
+	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, sourceFile : javax.tools.JavaFileObject) : Void;
 	
-	@:overload public function new(kind : TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree) : Void;
+	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree) : Void;
 	
-	@:overload public function new(kind : TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree, clazz : javax.lang.model.element.TypeElement) : Void;
+	@:overload public function new(kind : com.sun.source.util.TaskEvent.TaskEvent_Kind, unit : com.sun.source.tree.CompilationUnitTree, clazz : javax.lang.model.element.TypeElement) : Void;
 	
-	@:overload public function getKind() : TaskEvent_Kind;
+	@:overload public function getKind() : com.sun.source.util.TaskEvent.TaskEvent_Kind;
 	
 	@:overload public function getSourceFile() : javax.tools.JavaFileObject;
 	

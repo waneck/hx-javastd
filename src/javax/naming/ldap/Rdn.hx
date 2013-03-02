@@ -60,7 +60,7 @@ extern class Rdn implements java.io.Serializable implements java.lang.Comparable
 	* created Rdn.
 	* @param rdn The non-null Rdn to be copied.
 	*/
-	@:overload public function new(rdn : Rdn) : Void;
+	@:overload public function new(rdn : javax.naming.ldap.Rdn) : Void;
 	
 	/**
 	* Constructs an Rdn from the given attribute type and

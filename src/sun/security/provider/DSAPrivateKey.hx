@@ -53,9 +53,9 @@ extern class DSAPrivateKey extends sun.security.pkcs.PKCS8Key implements java.se
 	*/
 	@:overload public function getX() : java.math.BigInteger;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override private function parseKeyBits() : Void;
+	@:overload private function parseKeyBits() : Void;
 	
 	
 }

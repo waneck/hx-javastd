@@ -32,7 +32,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	*     set
 	* @throws NullPointerException if <tt>elementType</tt> is null
 	*/
-	@:overload public static function noneOf<E : java.lang.Enum<E>>(elementType : Class<E>) : EnumSet<E>;
+	@:overload public static function noneOf<E : java.lang.Enum<E>>(elementType : Class<E>) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set containing all of the elements in the specified
@@ -42,7 +42,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	*     set
 	* @throws NullPointerException if <tt>elementType</tt> is null
 	*/
-	@:overload public static function allOf<E : java.lang.Enum<E>>(elementType : Class<E>) : EnumSet<E>;
+	@:overload public static function allOf<E : java.lang.Enum<E>>(elementType : Class<E>) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set with the same element type as the specified enum
@@ -51,7 +51,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @param s the enum set from which to initialize this enum set
 	* @throws NullPointerException if <tt>s</tt> is null
 	*/
-	@:overload public static function copyOf<E : java.lang.Enum<E>>(s : EnumSet<E>) : EnumSet<E>;
+	@:overload public static function copyOf<E : java.lang.Enum<E>>(s : java.util.EnumSet<E>) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initialized from the specified collection.  If
@@ -65,7 +65,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	*     <tt>EnumSet</tt> instance and contains no elements
 	* @throws NullPointerException if <tt>c</tt> is null
 	*/
-	@:overload public static function copyOf<E : java.lang.Enum<E>>(c : java.util.Collection<E>) : EnumSet<E>;
+	@:overload public static function copyOf<E : java.lang.Enum<E>>(c : java.util.Collection<E>) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set with the same element type as the specified enum
@@ -75,7 +75,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @param s the enum set from whose complement to initialize this enum set
 	* @throws NullPointerException if <tt>s</tt> is null
 	*/
-	@:overload public static function complementOf<E : java.lang.Enum<E>>(s : EnumSet<E>) : EnumSet<E>;
+	@:overload public static function complementOf<E : java.lang.Enum<E>>(s : java.util.EnumSet<E>) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initially containing the specified element.
@@ -90,7 +90,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @throws NullPointerException if <tt>e</tt> is null
 	* @return an enum set initially containing the specified element
 	*/
-	@:overload public static function of<E : java.lang.Enum<E>>(e : E) : EnumSet<E>;
+	@:overload public static function of<E : java.lang.Enum<E>>(e : E) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initially containing the specified elements.
@@ -106,7 +106,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @throws NullPointerException if any parameters are null
 	* @return an enum set initially containing the specified elements
 	*/
-	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E) : EnumSet<E>;
+	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initially containing the specified elements.
@@ -123,7 +123,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @throws NullPointerException if any parameters are null
 	* @return an enum set initially containing the specified elements
 	*/
-	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E, e3 : E) : EnumSet<E>;
+	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E, e3 : E) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initially containing the specified elements.
@@ -141,7 +141,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @throws NullPointerException if any parameters are null
 	* @return an enum set initially containing the specified elements
 	*/
-	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E, e3 : E, e4 : E) : EnumSet<E>;
+	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E, e3 : E, e4 : E) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initially containing the specified elements.
@@ -160,7 +160,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @throws NullPointerException if any parameters are null
 	* @return an enum set initially containing the specified elements
 	*/
-	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E, e3 : E, e4 : E, e5 : E) : EnumSet<E>;
+	@:overload public static function of<E : java.lang.Enum<E>>(e1 : E, e2 : E, e3 : E, e4 : E, e5 : E) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initially containing the specified elements.
@@ -175,7 +175,7 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	*     or if <tt>rest</tt> is null
 	* @return an enum set initially containing the specified elements
 	*/
-	@:overload public static function of<E : java.lang.Enum<E>>(first : E, rest : java.NativeArray<E>) : EnumSet<E>;
+	@:overload public static function of<E : java.lang.Enum<E>>(first : E, rest : java.NativeArray<E>) : java.util.EnumSet<E>;
 	
 	/**
 	* Creates an enum set initially containing all of the elements in the
@@ -190,14 +190,14 @@ extern class EnumSet<E> extends java.util.AbstractSet<E> implements java.lang.Cl
 	* @return an enum set initially containing all of the elements in the
 	*         range defined by the two specified endpoints
 	*/
-	@:overload public static function range<E : java.lang.Enum<E>>(from : E, to : E) : EnumSet<E>;
+	@:overload public static function range<E : java.lang.Enum<E>>(from : E, to : E) : java.util.EnumSet<E>;
 	
 	/**
 	* Returns a copy of this set.
 	*
 	* @return a copy of this set
 	*/
-	@:overload public function clone() : EnumSet<E>;
+	@:overload public function clone() : java.util.EnumSet<E>;
 	
 	
 }

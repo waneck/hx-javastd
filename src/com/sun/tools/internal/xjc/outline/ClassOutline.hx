@@ -83,7 +83,7 @@ extern class ClassOutline
 	* super class and it is also a JAXB-bound class.
 	* Otherwise null.
 	*/
-	@:overload @:final public function getSuperClass() : ClassOutline;
+	@:overload @:final public function getSuperClass() : com.sun.tools.internal.xjc.outline.ClassOutline;
 	
 	
 }

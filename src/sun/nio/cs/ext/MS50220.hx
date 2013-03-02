@@ -27,23 +27,23 @@ extern class MS50220 extends sun.nio.cs.ext.ISO2022_JP
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function historicalName() : String;
+	@:overload public function historicalName() : String;
 	
 	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override private function getDecIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload private function getDecIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload override private function getDecIndex2() : java.NativeArray<String>;
+	@:overload private function getDecIndex2() : java.NativeArray<String>;
 	
-	@:overload override private function get0212Decoder() : sun.nio.cs.ext.DoubleByteDecoder;
+	@:overload private function get0212Decoder() : sun.nio.cs.ext.DoubleByteDecoder;
 	
-	@:overload override private function getEncIndex1() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload private function getEncIndex1() : java.NativeArray<java.StdTypes.Int16>;
 	
-	@:overload override private function getEncIndex2() : java.NativeArray<String>;
+	@:overload private function getEncIndex2() : java.NativeArray<String>;
 	
-	@:overload override private function get0212Encoder() : sun.nio.cs.ext.DoubleByteEncoder;
+	@:overload private function get0212Encoder() : sun.nio.cs.ext.DoubleByteEncoder;
 	
-	@:overload override private function doSBKANA() : Bool;
+	@:overload private function doSBKANA() : Bool;
 	
 	
 }

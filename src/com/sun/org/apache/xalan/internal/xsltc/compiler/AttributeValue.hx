@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class AttributeValue extends com.sun.org.apache.xalan.internal.xsltc.compiler.Expression
 {
-	@:overload @:final public static function create(parent : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode, text : String, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : AttributeValue;
+	@:overload @:final public static function create(parent : com.sun.org.apache.xalan.internal.xsltc.compiler.SyntaxTreeNode, text : String, parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : com.sun.org.apache.xalan.internal.xsltc.compiler.AttributeValue;
 	
 	
 }

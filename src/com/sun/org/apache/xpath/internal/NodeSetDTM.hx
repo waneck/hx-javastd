@@ -42,7 +42,7 @@ extern class NodeSetDTM extends com.sun.org.apache.xml.internal.utils.NodeVector
 	*
 	* @param nodelist Set of Nodes to be made members of the new set.
 	*/
-	@:overload public function new(nodelist : NodeSetDTM) : Void;
+	@:overload public function new(nodelist : com.sun.org.apache.xpath.internal.NodeSetDTM) : Void;
 	
 	/**
 	* Create a NodeSetDTM, and copy the members of the
@@ -407,7 +407,7 @@ extern class NodeSetDTM extends com.sun.org.apache.xml.internal.utils.NodeVector
 	* @throws RuntimeException thrown if this NodeSetDTM is not of
 	* a mutable type.
 	*/
-	@:overload public function appendNodes(nodes : com.sun.org.apache.xml.internal.utils.NodeVector) : Void;
+	@:overload override public function appendNodes(nodes : com.sun.org.apache.xml.internal.utils.NodeVector) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.

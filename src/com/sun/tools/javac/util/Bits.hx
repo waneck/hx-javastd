@@ -50,7 +50,7 @@ extern class Bits
 	
 	/** Return a copy of this set.
 	*/
-	@:overload public function dup() : Bits;
+	@:overload public function dup() : com.sun.tools.javac.util.Bits;
 	
 	/** Include x in this set.
 	*/
@@ -74,19 +74,19 @@ extern class Bits
 	
 	/** this set = this set & xs.
 	*/
-	@:overload public function andSet(xs : Bits) : Bits;
+	@:overload public function andSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** this set = this set | xs.
 	*/
-	@:overload public function orSet(xs : Bits) : Bits;
+	@:overload public function orSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** this set = this set \ xs.
 	*/
-	@:overload public function diffSet(xs : Bits) : Bits;
+	@:overload public function diffSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** this set = this set ^ xs.
 	*/
-	@:overload public function xorSet(xs : Bits) : Bits;
+	@:overload public function xorSet(xs : com.sun.tools.javac.util.Bits) : com.sun.tools.javac.util.Bits;
 	
 	/** Return the index of the least bit position >= x that is set.
 	*  If none are set, returns -1.  This provides a nice way to iterate

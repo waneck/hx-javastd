@@ -29,25 +29,25 @@ extern interface Schema extends com.sun.xml.internal.bind.v2.schemagen.xmlschema
 	
 	@:overload public function _import() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Import;
 	
-	@:overload public function targetNamespace(value : String) : Schema;
+	@:overload public function targetNamespace(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function lang(value : String) : Schema;
+	@:overload public function lang(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function id(value : String) : Schema;
+	@:overload public function id(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function elementFormDefault(value : String) : Schema;
+	@:overload public function elementFormDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function attributeFormDefault(value : String) : Schema;
+	@:overload public function attributeFormDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function blockDefault(value : String) : Schema;
+	@:overload public function blockDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function blockDefault(value : java.NativeArray<String>) : Schema;
+	@:overload public function blockDefault(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function finalDefault(value : String) : Schema;
+	@:overload public function finalDefault(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function finalDefault(value : java.NativeArray<String>) : Schema;
+	@:overload public function finalDefault(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
-	@:overload public function version(value : String) : Schema;
+	@:overload public function version(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Schema;
 	
 	
 }

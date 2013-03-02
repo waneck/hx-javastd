@@ -89,7 +89,7 @@ extern class XMLStringBuffer extends com.sun.org.apache.xerces.internal.xni.XMLS
 	@:overload public function new(s : com.sun.org.apache.xerces.internal.xni.XMLString) : Void;
 	
 	/** Clears the string buffer. */
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	/**
 	* append

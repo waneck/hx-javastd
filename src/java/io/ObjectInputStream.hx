@@ -192,7 +192,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 	*          objects.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function readFields() : ObjectInputStream_GetField;
+	@:require(java2) @:overload public function readFields() : java.io.ObjectInputStream.ObjectInputStream_GetField;
 	
 	/**
 	* Register an object to be validated before the graph is returned.  While
@@ -736,7 +736,7 @@ extern class ObjectInputStream extends java.io.InputStream implements java.io.Ob
 /**
 * Default GetField implementation.
 */
-@:native('java$io$ObjectInputStream$GetFieldImpl') @:internal extern class ObjectInputStream_GetFieldImpl extends ObjectInputStream_GetField
+@:native('java$io$ObjectInputStream$GetFieldImpl') @:internal extern class ObjectInputStream_GetFieldImpl extends java.io.ObjectInputStream.ObjectInputStream_GetField
 {
 	@:overload override public function getObjectStreamClass() : java.io.ObjectStreamClass;
 	

@@ -80,14 +80,14 @@ extern class MBeanPermission extends java.security.Permission
 	*
 	* @return the canonical string representation of the actions.
 	*/
-	@:overload override public function getActions() : String;
+	@:overload public function getActions() : String;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* <p>Checks if this MBeanPermission object "implies" the
@@ -142,7 +142,7 @@ extern class MBeanPermission extends java.security.Permission
 	* @return true if obj is an MBeanPermission, and has the
 	* same name and actions as this MBeanPermission object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	
 }

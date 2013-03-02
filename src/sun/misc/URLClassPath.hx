@@ -132,7 +132,7 @@ extern class URLClassPath
 /*
 * Inner class used to represent a Loader of resources from a JAR URL.
 */
-@:native('sun$misc$URLClassPath$JarLoader') @:internal extern class URLClassPath_JarLoader extends URLClassPath_Loader
+@:native('sun$misc$URLClassPath$JarLoader') @:internal extern class URLClassPath_JarLoader extends sun.misc.URLClassPath.URLClassPath_Loader
 {
 	@:overload override public function close() : Void;
 	
@@ -142,7 +142,7 @@ extern class URLClassPath
 * Inner class used to represent a loader of classes and resources
 * from a file URL that refers to a directory.
 */
-@:native('sun$misc$URLClassPath$FileLoader') @:internal extern class URLClassPath_FileLoader extends URLClassPath_Loader
+@:native('sun$misc$URLClassPath$FileLoader') @:internal extern class URLClassPath_FileLoader extends sun.misc.URLClassPath.URLClassPath_Loader
 {
 	
 }

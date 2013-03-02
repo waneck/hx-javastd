@@ -57,7 +57,7 @@ package sun.security.ec;
 	
 	
 }
-@:native('sun$security$ec$ECDSASignature$Raw') extern class ECDSASignature_Raw extends ECDSASignature
+@:native('sun$security$ec$ECDSASignature$Raw') extern class ECDSASignature_Raw extends sun.security.ec.ECDSASignature
 {
 	@:overload public function new() : Void;
 	
@@ -73,25 +73,25 @@ package sun.security.ec;
 	
 	
 }
-@:native('sun$security$ec$ECDSASignature$SHA1') extern class ECDSASignature_SHA1 extends ECDSASignature
+@:native('sun$security$ec$ECDSASignature$SHA1') extern class ECDSASignature_SHA1 extends sun.security.ec.ECDSASignature
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:native('sun$security$ec$ECDSASignature$SHA256') extern class ECDSASignature_SHA256 extends ECDSASignature
+@:native('sun$security$ec$ECDSASignature$SHA256') extern class ECDSASignature_SHA256 extends sun.security.ec.ECDSASignature
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:native('sun$security$ec$ECDSASignature$SHA384') extern class ECDSASignature_SHA384 extends ECDSASignature
+@:native('sun$security$ec$ECDSASignature$SHA384') extern class ECDSASignature_SHA384 extends sun.security.ec.ECDSASignature
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:native('sun$security$ec$ECDSASignature$SHA512') extern class ECDSASignature_SHA512 extends ECDSASignature
+@:native('sun$security$ec$ECDSASignature$SHA512') extern class ECDSASignature_SHA512 extends sun.security.ec.ECDSASignature
 {
 	@:overload public function new() : Void;
 	

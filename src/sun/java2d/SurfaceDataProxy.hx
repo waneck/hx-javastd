@@ -68,7 +68,7 @@ extern class SurfaceDataProxy implements sun.awt.DisplayChangedListener implemen
 	* This class optimally implements NOP variants of all necessary
 	* methods to avoid caching with a minimum of fuss.
 	*/
-	public static var UNCACHED : SurfaceDataProxy;
+	public static var UNCACHED : sun.java2d.SurfaceDataProxy;
 	
 	/**
 	* Create a SurfaceData proxy manager that attempts to create

@@ -499,7 +499,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @param e the mouse-press event to be handled
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Responds to the user terminating
@@ -507,7 +507,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 	*
 	* @param e the mouse-release event to be handled
 	*/
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -517,7 +517,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$InvocationMouseMotionHandler') extern class BasicComboPopup_InvocationMouseMotionHandler extends java.awt.event.MouseMotionAdapter
 {
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -569,9 +569,9 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$ListMouseHandler') extern class BasicComboPopup_ListMouseHandler extends java.awt.event.MouseAdapter
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(anEvent : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(anEvent : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -581,7 +581,7 @@ extern class BasicComboPopup extends javax.swing.JPopupMenu implements javax.swi
 */
 @:native('javax$swing$plaf$basic$BasicComboPopup$ListMouseMotionHandler') extern class BasicComboPopup_ListMouseMotionHandler extends java.awt.event.MouseMotionAdapter
 {
-	@:overload override public function mouseMoved(anEvent : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseMoved(anEvent : java.awt.event.MouseEvent) : Void;
 	
 	
 }

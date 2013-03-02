@@ -44,7 +44,7 @@ extern class TypeSet
 	* @param b another TypeSet
 	* @return the intersection of a and b
 	*/
-	@:overload public static function intersection(a : TypeSet, b : TypeSet) : TypeSet;
+	@:overload public static function intersection(a : com.sun.xml.internal.xsom.util.TypeSet, b : com.sun.xml.internal.xsom.util.TypeSet) : com.sun.xml.internal.xsom.util.TypeSet;
 	
 	/**
 	* Calculate the TypeSet formed by the union of two
@@ -54,7 +54,7 @@ extern class TypeSet
 	* @param b another TypeSet
 	* @return the union of a and b
 	*/
-	@:overload public static function union(a : TypeSet, b : TypeSet) : TypeSet;
+	@:overload public static function union(a : com.sun.xml.internal.xsom.util.TypeSet, b : com.sun.xml.internal.xsom.util.TypeSet) : com.sun.xml.internal.xsom.util.TypeSet;
 	
 	
 }

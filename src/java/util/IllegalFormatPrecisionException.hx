@@ -47,7 +47,7 @@ package java.util;
 	*/
 	@:overload public function getPrecision() : Int;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

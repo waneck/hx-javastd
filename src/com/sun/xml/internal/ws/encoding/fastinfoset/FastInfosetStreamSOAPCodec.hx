@@ -49,7 +49,7 @@ extern class FastInfosetStreamSOAPCodec implements com.sun.xml.internal.ws.api.p
 	* @param version the SOAP version of the codec.
 	* @return a new {@link FastInfosetStreamSOAPCodec} instance.
 	*/
-	@:overload public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion) : FastInfosetStreamSOAPCodec;
+	@:overload public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion) : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec;
 	
 	/**
 	* Creates a new {@link FastInfosetStreamSOAPCodec} instance.
@@ -59,7 +59,7 @@ extern class FastInfosetStreamSOAPCodec implements com.sun.xml.internal.ws.api.p
 	*        vocabulary tables for multiple encode/decode invocations.
 	* @return a new {@link FastInfosetStreamSOAPCodec} instance.
 	*/
-	@:overload public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion, retainState : Bool) : FastInfosetStreamSOAPCodec;
+	@:overload public static function create(soapCodec : com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec, version : com.sun.xml.internal.ws.api.SOAPVersion, retainState : Bool) : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamSOAPCodec;
 	
 	/**
 	* Creates a copy of this {@link Codec}.
@@ -95,7 +95,7 @@ extern class FastInfosetStreamSOAPCodec implements com.sun.xml.internal.ws.api.p
 	*      re-entrant and multi-thread safe to begin with,
 	*      then this method may simply return <tt>this</tt>.
 	*/
-	@:overload public function copy() : Codec;
+	@:overload public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
 	
 }

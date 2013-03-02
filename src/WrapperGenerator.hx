@@ -28,9 +28,9 @@ extern class WrapperGenerator
 	
 	@:overload public function getJavaTypeForSize(size : Int) : String;
 	
-	@:overload public function getOffsets(stp : WrapperGenerator_StructType, atp : WrapperGenerator_AtomicType, wide : Bool) : String;
+	@:overload public function getOffsets(stp : WrapperGenerator.WrapperGenerator_StructType, atp : WrapperGenerator.WrapperGenerator_AtomicType, wide : Bool) : String;
 	
-	@:overload public function getStructSize(stp : WrapperGenerator_StructType, wide : Bool) : String;
+	@:overload public function getStructSize(stp : WrapperGenerator.WrapperGenerator_StructType, wide : Bool) : String;
 	
 	@:overload public function getLongSize(wide : Bool) : Int;
 	
@@ -40,17 +40,17 @@ extern class WrapperGenerator
 	
 	@:overload public function getOrdinalSize(ordinal : String, wide : Bool) : Int;
 	
-	@:overload public function writeToString(stp : WrapperGenerator_StructType, pw : java.io.PrintWriter) : Void;
+	@:overload public function writeToString(stp : WrapperGenerator.WrapperGenerator_StructType, pw : java.io.PrintWriter) : Void;
 	
-	@:overload public function writeStubs(stp : WrapperGenerator_StructType, pw : java.io.PrintWriter) : Void;
+	@:overload public function writeStubs(stp : WrapperGenerator.WrapperGenerator_StructType, pw : java.io.PrintWriter) : Void;
 	
-	@:overload public function writeAccessorImpls(stp : WrapperGenerator_StructType, pw : java.io.PrintWriter) : Void;
+	@:overload public function writeAccessorImpls(stp : WrapperGenerator.WrapperGenerator_StructType, pw : java.io.PrintWriter) : Void;
 	
-	@:overload public function writeWrapperSubclass(stp : WrapperGenerator_StructType, pw : java.io.PrintWriter, wide : Bool) : Void;
+	@:overload public function writeWrapperSubclass(stp : WrapperGenerator.WrapperGenerator_StructType, pw : java.io.PrintWriter, wide : Bool) : Void;
 	
-	@:overload public function writeWrapper(outputDir : String, stp : WrapperGenerator_StructType) : Void;
+	@:overload public function writeWrapper(outputDir : String, stp : WrapperGenerator.WrapperGenerator_StructType) : Void;
 	
-	@:overload public function writeFunctionCallWrapper(outputDir : String, ft : WrapperGenerator_FunctionType) : Void;
+	@:overload public function writeFunctionCallWrapper(outputDir : String, ft : WrapperGenerator.WrapperGenerator_FunctionType) : Void;
 	
 	@:overload public function writeJavaWrapperClass(outputDir : String) : Void;
 	
@@ -72,7 +72,7 @@ extern class WrapperGenerator
 	
 	
 }
-@:native('WrapperGenerator$AtomicType') @:internal extern class WrapperGenerator_AtomicType extends WrapperGenerator_BaseType
+@:native('WrapperGenerator$AtomicType') @:internal extern class WrapperGenerator_AtomicType extends WrapperGenerator.WrapperGenerator_BaseType
 {
 	@:overload public function new(_type : Int, _name : String, _real_type : String) : Void;
 	
@@ -86,7 +86,7 @@ extern class WrapperGenerator
 	
 	@:overload public function setAttributes(attributes : java.NativeArray<String>) : Void;
 	
-	@:overload public function getReferencedType() : WrapperGenerator_BaseType;
+	@:overload public function getReferencedType() : WrapperGenerator.WrapperGenerator_BaseType;
 	
 	@:overload public function getArrayLength() : Int;
 	
@@ -104,7 +104,7 @@ extern class WrapperGenerator
 	
 	
 }
-@:native('WrapperGenerator$StructType') @:internal extern class WrapperGenerator_StructType extends WrapperGenerator_BaseType
+@:native('WrapperGenerator$StructType') @:internal extern class WrapperGenerator_StructType extends WrapperGenerator.WrapperGenerator_BaseType
 {
 	/**
 	* Construct new structured type.
@@ -123,7 +123,7 @@ extern class WrapperGenerator
 	
 	@:overload public function getMembers() : java.util.Enumeration<Dynamic>;
 	
-	@:overload public function addMember(tp : WrapperGenerator_BaseType) : Void;
+	@:overload public function addMember(tp : WrapperGenerator.WrapperGenerator_BaseType) : Void;
 	
 	@:overload public function getBaseClass() : String;
 	
@@ -138,11 +138,11 @@ extern class WrapperGenerator
 	*/
 	@:overload public function getSize() : String;
 	
-	@:overload public function getOffset(atp : WrapperGenerator_AtomicType) : String;
+	@:overload public function getOffset(atp : WrapperGenerator.WrapperGenerator_AtomicType) : String;
 	
 	
 }
-@:native('WrapperGenerator$FunctionType') @:internal extern class WrapperGenerator_FunctionType extends WrapperGenerator_BaseType
+@:native('WrapperGenerator$FunctionType') @:internal extern class WrapperGenerator_FunctionType extends WrapperGenerator.WrapperGenerator_BaseType
 {
 	@:overload public function new(_desc : String) : Void;
 	
@@ -154,7 +154,7 @@ extern class WrapperGenerator
 	
 	@:overload public function getArguments() : java.util.Collection<Dynamic>;
 	
-	@:overload public function addArgument(tp : WrapperGenerator_BaseType) : Void;
+	@:overload public function addArgument(tp : WrapperGenerator.WrapperGenerator_BaseType) : Void;
 	
 	
 }

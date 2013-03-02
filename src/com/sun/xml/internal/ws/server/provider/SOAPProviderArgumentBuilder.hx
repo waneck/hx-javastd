@@ -32,7 +32,7 @@ package com.sun.xml.internal.ws.server.provider;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$PayloadSource') @:internal extern class SOAPProviderArgumentBuilder_PayloadSource extends SOAPProviderArgumentBuilder<javax.xml.transform.Source>
+@:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$PayloadSource') @:internal extern class SOAPProviderArgumentBuilder_PayloadSource extends com.sun.xml.internal.ws.server.provider.SOAPProviderArgumentBuilder<javax.xml.transform.Source>
 {
 	@:overload override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
 	
@@ -42,7 +42,7 @@ package com.sun.xml.internal.ws.server.provider;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$MessageSource') @:internal extern class SOAPProviderArgumentBuilder_MessageSource extends SOAPProviderArgumentBuilder<javax.xml.transform.Source>
+@:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$MessageSource') @:internal extern class SOAPProviderArgumentBuilder_MessageSource extends com.sun.xml.internal.ws.server.provider.SOAPProviderArgumentBuilder<javax.xml.transform.Source>
 {
 	@:overload override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
 	
@@ -52,7 +52,7 @@ package com.sun.xml.internal.ws.server.provider;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$SOAPMessageParameter') @:internal extern class SOAPProviderArgumentBuilder_SOAPMessageParameter extends SOAPProviderArgumentBuilder<javax.xml.soap.SOAPMessage>
+@:native('com$sun$xml$internal$ws$server$provider$SOAPProviderArgumentBuilder$SOAPMessageParameter') @:internal extern class SOAPProviderArgumentBuilder_SOAPMessageParameter extends com.sun.xml.internal.ws.server.provider.SOAPProviderArgumentBuilder<javax.xml.soap.SOAPMessage>
 {
 	@:overload override private function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.soap.SOAPMessage;
 	

@@ -82,7 +82,7 @@ extern interface Object
 	*         object references are distinct, not necessarily that
 	*         they reference distinct objects.
 	*/
-	@:overload @:public public function _is_equivalent(other : Object) : Bool;
+	@:overload @:public public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Determines whether the server object for this object reference has been
@@ -123,7 +123,7 @@ extern interface Object
 	* @return a duplicate of this object reference or this object reference
 	*         itself
 	*/
-	@:overload @:public public function _duplicate() : Object;
+	@:overload @:public public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Signals that the caller is done using this object reference, so
@@ -144,7 +144,7 @@ extern interface Object
 	*         which provides type information about the object referred to by
 	*         this object reference
 	*/
-	@:overload @:public public function _get_interface_def() : Object;
+	@:overload @:public public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Creates a <code>Request</code> instance for use in the
@@ -247,7 +247,7 @@ extern interface Object
 	* @return a new <code>Object</code> with the given policies replacing
 	*         or added to those in this <code>Object</code>
 	*/
-	@:overload @:public public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : Object;
+	@:overload @:public public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	
 }

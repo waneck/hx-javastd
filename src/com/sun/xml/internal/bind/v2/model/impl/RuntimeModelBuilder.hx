@@ -47,9 +47,9 @@ extern class RuntimeModelBuilder extends com.sun.xml.internal.bind.v2.model.impl
 	
 	@:overload public function getNavigator() : com.sun.xml.internal.bind.v2.model.nav.ReflectionNavigator;
 	
-	@:overload override private function createTypeInfoSet() : com.sun.xml.internal.bind.v2.model.impl.RuntimeTypeInfoSetImpl;
+	@:overload private function createTypeInfoSet() : com.sun.xml.internal.bind.v2.model.impl.RuntimeTypeInfoSetImpl;
 	
-	@:overload override public function link() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfoSet;
+	@:overload public function link() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfoSet;
 	
 	/**
 	* Creates a {@link Transducer} given a reference.
@@ -73,7 +73,7 @@ extern class RuntimeModelBuilder extends com.sun.xml.internal.bind.v2.model.impl
 {
 	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.Transducer<ValueT>) : Void;
 	
-	@:overload override public function parse(lexical : java.lang.CharSequence) : ValueT;
+	@:overload public function parse(lexical : java.lang.CharSequence) : ValueT;
 	
 	
 }

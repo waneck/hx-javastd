@@ -25,39 +25,39 @@ package sun.java2d.opengl;
 */
 @:internal extern class OGLRenderer extends sun.java2d.pipe.BufferedRenderPipe
 {
-	@:overload override private function validateContext(sg2d : sun.java2d.SunGraphics2D) : Void;
+	@:overload private function validateContext(sg2d : sun.java2d.SunGraphics2D) : Void;
 	
-	@:overload override private function validateContextAA(sg2d : sun.java2d.SunGraphics2D) : Void;
+	@:overload private function validateContextAA(sg2d : sun.java2d.SunGraphics2D) : Void;
 	
-	@:overload @:native override private function drawPoly(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int, isClosed : Bool, transX : Int, transY : Int) : Void;
+	@:overload @:native private function drawPoly(xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int, isClosed : Bool, transX : Int, transY : Int) : Void;
 	
 	
 }
-@:native('sun$java2d$opengl$OGLRenderer$Tracer') @:internal extern class OGLRenderer_Tracer extends OGLRenderer
+@:native('sun$java2d$opengl$OGLRenderer$Tracer') @:internal extern class OGLRenderer_Tracer extends sun.java2d.opengl.OGLRenderer
 {
-	@:overload override public function getAAParallelogramPipe() : sun.java2d.pipe.ParallelogramPipe;
+	@:overload public function getAAParallelogramPipe() : sun.java2d.pipe.ParallelogramPipe;
 	
 	@:overload override private function validateContext(sg2d : sun.java2d.SunGraphics2D) : Void;
 	
-	@:overload override public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
+	@:overload public function drawLine(sg2d : sun.java2d.SunGraphics2D, x1 : Int, y1 : Int, x2 : Int, y2 : Int) : Void;
 	
-	@:overload override public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function drawRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function drawPoly(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int, isClosed : Bool) : Void;
+	@:overload private function drawPoly(sg2d : sun.java2d.SunGraphics2D, xPoints : java.NativeArray<Int>, yPoints : java.NativeArray<Int>, nPoints : Int, isClosed : Bool) : Void;
 	
-	@:overload override public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function fillRect(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override private function drawPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
+	@:overload private function drawPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
 	
-	@:overload override private function fillPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
+	@:overload private function fillPath(sg2d : sun.java2d.SunGraphics2D, p2df : java.awt.geom.Path2D.Path2D_Float, transx : Int, transy : Int) : Void;
 	
-	@:overload override private function fillSpans(sg2d : sun.java2d.SunGraphics2D, si : sun.java2d.pipe.SpanIterator, transx : Int, transy : Int) : Void;
+	@:overload private function fillSpans(sg2d : sun.java2d.SunGraphics2D, si : sun.java2d.pipe.SpanIterator, transx : Int, transy : Int) : Void;
 	
-	@:overload override public function fillParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
+	@:overload public function fillParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float) : Void;
 	
-	@:overload override public function drawParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
+	@:overload public function drawParallelogram(sg2d : sun.java2d.SunGraphics2D, ux1 : Float, uy1 : Float, ux2 : Float, uy2 : Float, x : Float, y : Float, dx1 : Float, dy1 : Float, dx2 : Float, dy2 : Float, lw1 : Float, lw2 : Float) : Void;
 	
-	@:overload override public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Void;
+	@:overload public function copyArea(sg2d : sun.java2d.SunGraphics2D, x : Int, y : Int, w : Int, h : Int, dx : Int, dy : Int) : Void;
 	
 	
 }

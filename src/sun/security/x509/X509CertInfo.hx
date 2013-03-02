@@ -147,7 +147,7 @@ extern class X509CertInfo implements sun.security.x509.CertAttrSet<String>
 	* @param other the object being compared with this one
 	* @return true iff the certificates are equivalent
 	*/
-	@:overload public function equals(other : X509CertInfo) : Bool;
+	@:overload public function equals(other : sun.security.x509.X509CertInfo) : Bool;
 	
 	/**
 	* Calculates a hash code value for the object.  Objects

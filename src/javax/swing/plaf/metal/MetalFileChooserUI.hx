@@ -30,7 +30,7 @@ package javax.swing.plaf.metal;
 */
 extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserUI
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload public function new(filechooser : javax.swing.JFileChooser) : Void;
 	
@@ -48,9 +48,9 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload override private function installListeners(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function getActionMap() : javax.swing.ActionMap;
+	@:overload private function getActionMap() : javax.swing.ActionMap;
 	
-	@:overload override private function createActionMap() : javax.swing.ActionMap;
+	@:overload private function createActionMap() : javax.swing.ActionMap;
 	
 	@:overload private function createList(fc : javax.swing.JFileChooser) : javax.swing.JPanel;
 	
@@ -78,7 +78,7 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	* @return   a <code>Dimension</code> specifying the preferred
 	*           width and height of the file chooser
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the minimum size of the <code>JFileChooser</code>.
@@ -87,7 +87,7 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	* @return   a <code>Dimension</code> specifying the minimum
 	*           width and height of the file chooser
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the maximum size of the <code>JFileChooser</code>.
@@ -96,7 +96,7 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	* @return   a <code>Dimension</code> specifying the maximum
 	*           width and height of the file chooser
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/*
 	* Listen for filechooser property changes, such as
@@ -129,13 +129,13 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload override public function setDirectoryName(dirname : String) : Void;
 	
-	@:overload private function createDirectoryComboBoxRenderer(fc : javax.swing.JFileChooser) : MetalFileChooserUI_DirectoryComboBoxRenderer;
+	@:overload private function createDirectoryComboBoxRenderer(fc : javax.swing.JFileChooser) : javax.swing.plaf.metal.MetalFileChooserUI.MetalFileChooserUI_DirectoryComboBoxRenderer;
 	
-	@:overload private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : MetalFileChooserUI_DirectoryComboBoxModel;
+	@:overload private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : javax.swing.plaf.metal.MetalFileChooserUI.MetalFileChooserUI_DirectoryComboBoxModel;
 	
-	@:overload private function createFilterComboBoxRenderer() : MetalFileChooserUI_FilterComboBoxRenderer;
+	@:overload private function createFilterComboBoxRenderer() : javax.swing.plaf.metal.MetalFileChooserUI.MetalFileChooserUI_FilterComboBoxRenderer;
 	
-	@:overload private function createFilterComboBoxModel() : MetalFileChooserUI_FilterComboBoxModel;
+	@:overload private function createFilterComboBoxModel() : javax.swing.plaf.metal.MetalFileChooserUI.MetalFileChooserUI_FilterComboBoxModel;
 	
 	@:overload public function valueChanged(e : javax.swing.event.ListSelectionEvent) : Void;
 	
@@ -181,7 +181,7 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 }
 @:native('javax$swing$plaf$metal$MetalFileChooserUI$DirectoryComboBoxRenderer') @:internal extern class MetalFileChooserUI_DirectoryComboBoxRenderer extends javax.swing.DefaultListCellRenderer
 {
-	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }
@@ -208,9 +208,9 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload public function getSelectedItem() : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	
 }
@@ -219,7 +219,7 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 */
 @:native('javax$swing$plaf$metal$MetalFileChooserUI$FilterComboBoxRenderer') extern class MetalFileChooserUI_FilterComboBoxRenderer extends javax.swing.DefaultListCellRenderer
 {
-	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }
@@ -238,9 +238,9 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload public function getSelectedItem() : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	
 }
@@ -251,7 +251,7 @@ extern class MetalFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 {
 	@:overload private function new() : Void;
 	
-	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

@@ -66,9 +66,9 @@ extern class SocketOrChannelContactInfoImpl extends com.sun.corba.se.impl.transp
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override private function dprint(msg : String) : Void;
+	@:overload private function dprint(msg : String) : Void;
 	
 	
 }

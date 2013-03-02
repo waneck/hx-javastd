@@ -108,7 +108,7 @@ extern class Instruction implements java.lang.Cloneable implements java.io.Seria
 	* @see BranchInstruction
 	* @return (shallow) copy of an instruction
 	*/
-	@:overload public function copy() : Instruction;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* Read needed data (e.g. index) from file.
@@ -125,7 +125,7 @@ extern class Instruction implements java.lang.Cloneable implements java.io.Seria
 	* @param file file to read from
 	* @return instruction object being read
 	*/
-	@:overload @:final public static function readInstruction(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence) : Instruction;
+	@:overload @:final public static function readInstruction(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	/**
 	* This method also gives right results for instructions whose

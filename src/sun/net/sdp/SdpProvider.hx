@@ -42,19 +42,19 @@ extern class SdpProvider extends sun.net.NetHooks.NetHooks_Provider
 
 @:native('sun$net$sdp$SdpProvider$Rule') @:internal extern interface SdpProvider_Rule
 {
-	@:overload public function match(action : SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
+	@:overload public function match(action : sun.net.sdp.SdpProvider.SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
 	
 	
 }
-@:native('sun$net$sdp$SdpProvider$PortRangeRule') @:internal extern class SdpProvider_PortRangeRule implements SdpProvider_Rule
+@:native('sun$net$sdp$SdpProvider$PortRangeRule') @:internal extern class SdpProvider_PortRangeRule implements sun.net.sdp.SdpProvider.SdpProvider_Rule
 {
-	@:overload public function match(action : SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
+	@:overload public function match(action : sun.net.sdp.SdpProvider.SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
 	
 	
 }
-@:native('sun$net$sdp$SdpProvider$AddressPortRangeRule') @:internal extern class SdpProvider_AddressPortRangeRule extends SdpProvider_PortRangeRule
+@:native('sun$net$sdp$SdpProvider$AddressPortRangeRule') @:internal extern class SdpProvider_AddressPortRangeRule extends sun.net.sdp.SdpProvider.SdpProvider_PortRangeRule
 {
-	@:overload override public function match(action : SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
+	@:overload override public function match(action : sun.net.sdp.SdpProvider.SdpProvider_Action, address : java.net.InetAddress, port : Int) : Bool;
 	
 	
 }

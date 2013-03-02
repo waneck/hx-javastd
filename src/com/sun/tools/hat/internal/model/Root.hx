@@ -71,7 +71,7 @@ extern class Root
 	/**
 	* Given two Root instances, return the one that is most interesting.
 	*/
-	@:overload public function mostInteresting(other : Root) : Root;
+	@:overload public function mostInteresting(other : com.sun.tools.hat.internal.model.Root) : com.sun.tools.hat.internal.model.Root;
 	
 	/**
 	* Get the object that's responsible for this root, if there is one.

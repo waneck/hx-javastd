@@ -33,17 +33,17 @@ extern class ElementDefinitionImpl extends com.sun.org.apache.xerces.internal.do
 	* A short integer indicating what type of node this is. The named
 	* constants for this value are defined in the org.w3c.dom.Node interface.
 	*/
-	@:overload override public function getNodeType() : java.StdTypes.Int16;
+	@:overload public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* Returns the element definition name
 	*/
-	@:overload override public function getNodeName() : String;
+	@:overload public function getNodeName() : String;
 	
 	/**
 	* Replicate this object.
 	*/
-	@:overload override public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Query the attributes defined on this Element.
@@ -55,7 +55,7 @@ extern class ElementDefinitionImpl extends com.sun.org.apache.xerces.internal.do
 	*
 	* @return org.w3c.dom.NamedNodeMap containing org.w3c.dom.Attribute
 	*/
-	@:overload override public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	
 }

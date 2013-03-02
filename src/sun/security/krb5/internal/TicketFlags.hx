@@ -68,18 +68,18 @@ extern class TicketFlags extends sun.security.krb5.internal.util.KerberosFlags
 	* @return an instance of TicketFlags.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : TicketFlags;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.TicketFlags;
 	
 	@:overload public function clone() : Dynamic;
 	
 	@:overload public function match(options : sun.security.krb5.internal.LoginOptions) : Bool;
 	
-	@:overload public function match(flags : TicketFlags) : Bool;
+	@:overload public function match(flags : sun.security.krb5.internal.TicketFlags) : Bool;
 	
 	/**
 	* Returns the string representative of ticket flags.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

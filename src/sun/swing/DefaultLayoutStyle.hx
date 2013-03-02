@@ -25,11 +25,11 @@ package sun.swing;
 */
 extern class DefaultLayoutStyle extends javax.swing.LayoutStyle
 {
-	@:native('getInstance') @:overload public static function _getInstance() : javax.swing.LayoutStyle;
+	@:overload public static function getInstance() : javax.swing.LayoutStyle;
 	
 	@:overload public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
+	@:overload public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	
 	/**
 	* Returns true if the classes identify a JLabel and a non-JLabel

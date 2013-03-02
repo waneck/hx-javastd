@@ -44,7 +44,7 @@ extern class CatalogManager
 	/**
 	* Allow access to the static CatalogManager
 	*/
-	@:overload public static function getStaticManager() : CatalogManager;
+	@:overload public static function getStaticManager() : com.sun.org.apache.xml.internal.resolver.CatalogManager;
 	
 	/**
 	* How are missing properties handled?

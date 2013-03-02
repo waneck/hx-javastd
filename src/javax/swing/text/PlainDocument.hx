@@ -103,7 +103,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	* @param chng the change event describing the dit
 	* @param attr the set of attributes for the inserted text
 	*/
-	@:overload private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload override private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Updates any document structure as a result of text removal.
@@ -114,7 +114,7 @@ extern class PlainDocument extends javax.swing.text.AbstractDocument
 	*
 	* @param chng the change event describing the edit
 	*/
-	@:overload private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload override private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	
 }

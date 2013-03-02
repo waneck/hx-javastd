@@ -23,7 +23,7 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.lang.Cloneable
+extern class ModelNode implements java.lang.Iterable<com.sun.xml.internal.ws.policy.sourcemodel.ModelNode> implements java.lang.Cloneable
 {
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -31,7 +31,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*
 	* @return A new Policy node.
 	*/
-	@:overload public function createChildPolicyNode() : ModelNode;
+	@:overload public function createChildPolicyNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -39,7 +39,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*
 	* @return A new All node.
 	*/
-	@:overload public function createChildAllNode() : ModelNode;
+	@:overload public function createChildAllNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -47,7 +47,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*
 	* @return A new ExactlyOne node.
 	*/
-	@:overload public function createChildExactlyOneNode() : ModelNode;
+	@:overload public function createChildExactlyOneNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -55,7 +55,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*
 	* @return A new policy assertion node.
 	*/
-	@:overload public function createChildAssertionNode() : ModelNode;
+	@:overload public function createChildAssertionNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -64,7 +64,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	* @param nodeData The policy assertion data.
 	* @return A new policy assertion node.
 	*/
-	@:overload public function createChildAssertionNode(nodeData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData) : ModelNode;
+	@:overload public function createChildAssertionNode(nodeData : com.sun.xml.internal.ws.policy.sourcemodel.AssertionData) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Factory method that creates new policy source model node as specified by a factory method name and input parameters.
@@ -72,7 +72,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*
 	* @return A new assertion parameter node.
 	*/
-	@:overload public function createChildAssertionParameterNode() : ModelNode;
+	@:overload public function createChildAssertionParameterNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Returns the parent policy source model that contains this model node.
@@ -86,14 +86,14 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*
 	* @return actual type of this policy source model node
 	*/
-	@:overload public function getType() : ModelNode_Type;
+	@:overload public function getType() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode.ModelNode_Type;
 	
 	/**
 	* Returns the parent referenced by this policy source model node.
 	*
 	* @return current parent of this policy source model node or {@code null} if the node does not have a parent currently.
 	*/
-	@:overload public function getParentNode() : ModelNode;
+	@:overload public function getParentNode() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	/**
 	* Returns the data for this policy source model node (if any). The model node data are expected to be not {@code null} only in
@@ -139,7 +139,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*
 	* @return An iterator for the child nodes
 	*/
-	@:overload public function iterator() : java.util.Iterator<ModelNode>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.policy.sourcemodel.ModelNode>;
 	
 	/**
 	* An {@code Object.equals(Object obj)} method override. Method ignores the parent source model. It means that two
@@ -173,7 +173,7 @@ extern class ModelNode implements java.lang.Iterable<ModelNode> implements java.
 	*/
 	@:overload public function toString(indentLevel : Int, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
-	@:overload private function clone() : ModelNode;
+	@:overload private function clone() : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	
 }

@@ -46,9 +46,9 @@ package com.sun.xml.internal.rngom.binary;
 */
 extern class AttributePattern extends com.sun.xml.internal.rngom.binary.Pattern
 {
-	@:overload override public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
+	@:overload public function accept(visitor : com.sun.xml.internal.rngom.binary.visitor.PatternVisitor) : Void;
 	
-	@:overload override public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
+	@:overload public function apply(f : com.sun.xml.internal.rngom.binary.visitor.PatternFunction) : Dynamic;
 	
 	@:overload public function getContent() : com.sun.xml.internal.rngom.binary.Pattern;
 	

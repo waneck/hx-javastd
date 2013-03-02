@@ -71,7 +71,7 @@ extern interface TextLineComponent
 	* (ie, the first character is at 0).
 	* @param dir one of the constants LEFT_TO_RIGHT, RIGHT_TO_LEFT, or UNCHANGED
 	*/
-	@:overload public function getSubset(start : Int, limit : Int, dir : Int) : TextLineComponent;
+	@:overload public function getSubset(start : Int, limit : Int, dir : Int) : sun.font.TextLineComponent;
 	
 	/**
 	* Return the number of justification records this uses.
@@ -98,7 +98,7 @@ extern interface TextLineComponent
 	* the new component requires rejustification (ligatures were
 	* formed or split), flags[0] will be set on exit.
 	*/
-	@:overload public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : TextLineComponent;
+	@:overload public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
 	
 	
 }

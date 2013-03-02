@@ -55,19 +55,19 @@ extern class SerializerVocabulary extends com.sun.xml.internal.fastinfoset.vocab
 	
 	private var _useLocalNameAsKey : Bool;
 	
-	private var _readOnlyVocabulary : SerializerVocabulary;
+	private var _readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
 	
 	@:overload public function new() : Void;
 	
 	@:overload public function new(v : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary, useLocalNameAsKey : Bool) : Void;
 	
-	@:overload public function getReadOnlyVocabulary() : SerializerVocabulary;
+	@:overload public function getReadOnlyVocabulary() : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary;
 	
-	@:overload private function setReadOnlyVocabulary(readOnlyVocabulary : SerializerVocabulary, clear : Bool) : Void;
+	@:overload private function setReadOnlyVocabulary(readOnlyVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
 	
-	@:overload public function setInitialVocabulary(initialVocabulary : SerializerVocabulary, clear : Bool) : Void;
+	@:overload public function setInitialVocabulary(initialVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
 	
-	@:overload public function setExternalVocabulary(externalVocabularyURI : String, externalVocabulary : SerializerVocabulary, clear : Bool) : Void;
+	@:overload public function setExternalVocabulary(externalVocabularyURI : String, externalVocabulary : com.sun.xml.internal.fastinfoset.vocab.SerializerVocabulary, clear : Bool) : Void;
 	
 	@:overload public function clear() : Void;
 	

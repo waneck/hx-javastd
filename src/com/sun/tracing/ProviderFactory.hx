@@ -36,7 +36,7 @@ extern class ProviderFactory
 	*
 	* @return a {@code ProviderFactory} that is used to create Providers.
 	*/
-	@:overload public static function getDefaultFactory() : ProviderFactory;
+	@:overload public static function getDefaultFactory() : com.sun.tracing.ProviderFactory;
 	
 	
 }

@@ -52,7 +52,7 @@ extern class CachedXPathAPI
 	* <p>%REVIEW% Should this instead do a clone-and-reset on the XPathSupport object?</p>
 	*
 	*/
-	@:overload public function new(priorXPathAPI : CachedXPathAPI) : Void;
+	@:overload public function new(priorXPathAPI : com.sun.org.apache.xpath.internal.CachedXPathAPI) : Void;
 	
 	/** Returns the XPathSupport object used in this CachedXPathAPI
 	*

@@ -31,7 +31,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Displays the contents of this element
 	*/
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	/**
 	* Returns the escaped qname of the parameter
@@ -57,13 +57,13 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* The contents of a <xsl:with-param> elements are either in the element's
 	* 'select' attribute (this has precedence) or in the element body.
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Type-check either the select attribute or the element body, depending
 	* on which is in use.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Compile the value of the parameter, which is either in an expression in
@@ -76,7 +76,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* addParameter() method in AbstractTranslet. The method call will add
 	* (or update) the parameter frame with the new parameter value.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

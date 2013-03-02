@@ -56,7 +56,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	/**
 	* Reads characters into a portion of an array.
@@ -70,7 +70,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
+	@:overload public function read(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Int;
 	
 	/**
 	* Pushes back a single character by copying it to the front of the
@@ -118,7 +118,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function ready() : Bool;
+	@:overload public function ready() : Bool;
 	
 	/**
 	* Marks the present position in the stream. The <code>mark</code>
@@ -126,7 +126,7 @@ package java.io;
 	*
 	* @exception  IOException  Always, since mark is not supported
 	*/
-	@:overload override public function mark(readAheadLimit : Int) : Void;
+	@:overload public function mark(readAheadLimit : Int) : Void;
 	
 	/**
 	* Resets the stream. The <code>reset</code> method of
@@ -134,13 +134,13 @@ package java.io;
 	*
 	* @exception  IOException  Always, since reset is not supported
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/**
 	* Tells whether this stream supports the mark() operation, which it does
 	* not.
 	*/
-	@:overload override public function markSupported() : Bool;
+	@:overload public function markSupported() : Bool;
 	
 	/**
 	* Closes the stream and releases any system resources associated with
@@ -150,7 +150,7 @@ package java.io;
 	*
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* Skips characters.  This method will block until some characters are
@@ -163,7 +163,7 @@ package java.io;
 	* @exception  IllegalArgumentException  If <code>n</code> is negative.
 	* @exception  IOException  If an I/O error occurs
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }

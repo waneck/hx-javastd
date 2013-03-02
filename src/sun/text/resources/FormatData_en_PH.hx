@@ -40,7 +40,7 @@ package sun.text.resources;
 //// Generated automatically from the Common Locale Data Repository. DO NOT EDIT!
 extern class FormatData_en_PH extends java.util.ListResourceBundle
 {
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

@@ -35,7 +35,7 @@ package java.util;
 *   Taligent is a registered trademark of Taligent, Inc.
 *
 */
-extern class Calendar implements java.io.Serializable implements java.lang.Cloneable implements java.lang.Comparable<Calendar>
+extern class Calendar implements java.io.Serializable implements java.lang.Cloneable implements java.lang.Comparable<java.util.Calendar>
 {
 	/**
 	* Field number for <code>get</code> and <code>set</code> indicating the
@@ -466,7 +466,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	*
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance() : Calendar;
+	@:overload public static function getInstance() : java.util.Calendar;
 	
 	/**
 	* Gets a calendar using the specified time zone and default locale.
@@ -476,7 +476,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param zone the time zone to use
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance(zone : java.util.TimeZone) : Calendar;
+	@:overload public static function getInstance(zone : java.util.TimeZone) : java.util.Calendar;
 	
 	/**
 	* Gets a calendar using the default time zone and specified locale.
@@ -486,7 +486,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param aLocale the locale for the week data
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance(aLocale : java.util.Locale) : Calendar;
+	@:overload public static function getInstance(aLocale : java.util.Locale) : java.util.Calendar;
 	
 	/**
 	* Gets a calendar with the specified time zone and locale.
@@ -497,7 +497,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* @param aLocale the locale for the week data
 	* @return a Calendar.
 	*/
-	@:overload public static function getInstance(zone : java.util.TimeZone, aLocale : java.util.Locale) : Calendar;
+	@:overload public static function getInstance(zone : java.util.TimeZone, aLocale : java.util.Locale) : java.util.Calendar;
 	
 	/**
 	* Returns an array of all locales for which the <code>getInstance</code>
@@ -906,7 +906,7 @@ extern class Calendar implements java.io.Serializable implements java.lang.Clone
 	* any invalid calendar values.
 	* @since   1.5
 	*/
-	@:require(java5) @:overload public function compareTo(anotherCalendar : Calendar) : Int;
+	@:require(java5) @:overload public function compareTo(anotherCalendar : java.util.Calendar) : Int;
 	
 	/**
 	* Adds or subtracts the specified amount of time to the given calendar field,

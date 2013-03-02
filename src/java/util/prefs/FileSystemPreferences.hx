@@ -25,34 +25,34 @@ package java.util.prefs;
 */
 @:internal extern class FileSystemPreferences extends java.util.prefs.AbstractPreferences
 {
-	@:overload override public function isUserNode() : Bool;
+	@:overload public function isUserNode() : Bool;
 	
-	@:overload override private function putSpi(key : String, value : String) : Void;
+	@:overload private function putSpi(key : String, value : String) : Void;
 	
-	@:overload override private function getSpi(key : String) : String;
+	@:overload private function getSpi(key : String) : String;
 	
-	@:overload override private function removeSpi(key : String) : Void;
+	@:overload private function removeSpi(key : String) : Void;
 	
-	@:overload override private function keysSpi() : java.NativeArray<String>;
+	@:overload private function keysSpi() : java.NativeArray<String>;
 	
-	@:overload override private function childrenNamesSpi() : java.NativeArray<String>;
+	@:overload private function childrenNamesSpi() : java.NativeArray<String>;
 	
-	@:overload override private function childSpi(name : String) : java.util.prefs.AbstractPreferences;
+	@:overload private function childSpi(name : String) : java.util.prefs.AbstractPreferences;
 	
-	@:overload override public function removeNode() : Void;
+	@:overload public function removeNode() : Void;
 	
 	/**
 	* Called with file lock held (in addition to node locks).
 	*/
-	@:overload override private function removeNodeSpi() : Void;
+	@:overload private function removeNodeSpi() : Void;
 	
-	@:overload @:synchronized override public function sync() : Void;
+	@:overload @:synchronized public function sync() : Void;
 	
-	@:overload override private function syncSpi() : Void;
+	@:overload private function syncSpi() : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
-	@:overload override private function flushSpi() : Void;
+	@:overload private function flushSpi() : Void;
 	
 	
 }
@@ -66,21 +66,21 @@ package java.util.prefs;
 /**
 * Represents a preference put.
 */
-@:native('java$util$prefs$FileSystemPreferences$Put') @:internal extern class FileSystemPreferences_Put extends FileSystemPreferences_Change
+@:native('java$util$prefs$FileSystemPreferences$Put') @:internal extern class FileSystemPreferences_Put extends java.util.prefs.FileSystemPreferences.FileSystemPreferences_Change
 {
 	
 }
 /**
 * Represents a preference remove.
 */
-@:native('java$util$prefs$FileSystemPreferences$Remove') @:internal extern class FileSystemPreferences_Remove extends FileSystemPreferences_Change
+@:native('java$util$prefs$FileSystemPreferences$Remove') @:internal extern class FileSystemPreferences_Remove extends java.util.prefs.FileSystemPreferences.FileSystemPreferences_Change
 {
 	
 }
 /**
 * Represents the creation of this node.
 */
-@:native('java$util$prefs$FileSystemPreferences$NodeCreate') @:internal extern class FileSystemPreferences_NodeCreate extends FileSystemPreferences_Change
+@:native('java$util$prefs$FileSystemPreferences$NodeCreate') @:internal extern class FileSystemPreferences_NodeCreate extends java.util.prefs.FileSystemPreferences.FileSystemPreferences_Change
 {
 	
 }

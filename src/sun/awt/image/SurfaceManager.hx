@@ -25,14 +25,14 @@ package sun.awt.image;
 */
 extern class SurfaceManager
 {
-	@:overload public static function setImageAccessor(ia : SurfaceManager_ImageAccessor) : Void;
+	@:overload public static function setImageAccessor(ia : sun.awt.image.SurfaceManager.SurfaceManager_ImageAccessor) : Void;
 	
 	/**
 	* Returns the SurfaceManager object contained within the given Image.
 	*/
-	@:overload public static function getManager(img : java.awt.Image) : SurfaceManager;
+	@:overload public static function getManager(img : java.awt.Image) : sun.awt.image.SurfaceManager;
 	
-	@:overload public static function setManager(img : java.awt.Image, mgr : SurfaceManager) : Void;
+	@:overload public static function setManager(img : java.awt.Image, mgr : sun.awt.image.SurfaceManager) : Void;
 	
 	/**
 	* Return an arbitrary cached object for an arbitrary cache key.
@@ -150,9 +150,9 @@ extern class SurfaceManager
 */
 @:native('sun$awt$image$SurfaceManager$ImageAccessor') extern class SurfaceManager_ImageAccessor
 {
-	@:overload @:abstract public function getSurfaceManager(img : java.awt.Image) : SurfaceManager;
+	@:overload @:abstract public function getSurfaceManager(img : java.awt.Image) : sun.awt.image.SurfaceManager;
 	
-	@:overload @:abstract public function setSurfaceManager(img : java.awt.Image, mgr : SurfaceManager) : Void;
+	@:overload @:abstract public function setSurfaceManager(img : java.awt.Image, mgr : sun.awt.image.SurfaceManager) : Void;
 	
 	
 }
@@ -160,7 +160,7 @@ extern class SurfaceManager
 {
 	@:overload public function new(gc : java.awt.GraphicsConfiguration) : Void;
 	
-	@:overload override public function isAccelerated() : Bool;
+	@:overload public function isAccelerated() : Bool;
 	
 	
 }

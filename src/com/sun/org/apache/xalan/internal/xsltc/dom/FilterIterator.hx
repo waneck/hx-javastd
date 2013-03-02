@@ -25,13 +25,13 @@ extern class FilterIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMA
 {
 	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, filter : com.sun.org.apache.xml.internal.dtm.DTMFilter) : Void;
 	
-	@:overload override public function isReverse() : Bool;
+	@:overload public function isReverse() : Bool;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	@:overload override public function next() : Int;
 	

@@ -39,20 +39,20 @@ extern class ComponentOrientation implements java.io.Serializable
 	* Items run left to right and lines flow top to bottom
 	* Examples: English, French.
 	*/
-	public static var LEFT_TO_RIGHT(default, null) : ComponentOrientation;
+	public static var LEFT_TO_RIGHT(default, null) : java.awt.ComponentOrientation;
 	
 	/**
 	* Items run right to left and lines flow top to bottom
 	* Examples: Arabic, Hebrew.
 	*/
-	public static var RIGHT_TO_LEFT(default, null) : ComponentOrientation;
+	public static var RIGHT_TO_LEFT(default, null) : java.awt.ComponentOrientation;
 	
 	/**
 	* Indicates that a component's orientation has not been set.
 	* To preserve the behavior of existing applications,
 	* isLeftToRight will return true for this value.
 	*/
-	public static var UNKNOWN(default, null) : ComponentOrientation;
+	public static var UNKNOWN(default, null) : java.awt.ComponentOrientation;
 	
 	/**
 	* Are lines horizontal?
@@ -73,7 +73,7 @@ extern class ComponentOrientation implements java.io.Serializable
 	* Returns the orientation that is appropriate for the given locale.
 	* @param locale the specified locale
 	*/
-	@:overload public static function getOrientation(locale : java.util.Locale) : ComponentOrientation;
+	@:overload public static function getOrientation(locale : java.util.Locale) : java.awt.ComponentOrientation;
 	
 	/**
 	* Returns the orientation appropriate for the given ResourceBundle's
@@ -88,7 +88,7 @@ extern class ComponentOrientation implements java.io.Serializable
 	*
 	* @deprecated As of J2SE 1.4, use {@link #getOrientation(java.util.Locale)}.
 	*/
-	@:overload public static function getOrientation(bdl : java.util.ResourceBundle) : ComponentOrientation;
+	@:overload public static function getOrientation(bdl : java.util.ResourceBundle) : java.awt.ComponentOrientation;
 	
 	
 }

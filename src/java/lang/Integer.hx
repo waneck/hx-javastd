@@ -23,7 +23,7 @@ package java.lang;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Integer extends java.lang.Number implements java.lang.Comparable<Integer>
+extern class Integer extends java.lang.Number implements java.lang.Comparable<Null<Int>>
 {
 	/**
 	* A constant holding the minimum value an {@code int} can
@@ -43,7 +43,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Integer>;
+	@:require(java1) public static var TYPE(default, null) : Class<Null<Int>>;
 	
 	/**
 	* Returns a string representation of the first argument in the
@@ -293,7 +293,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	* @exception NumberFormatException if the {@code String}
 	*            does not contain a parsable {@code int}.
 	*/
-	@:overload public static function valueOf(s : String, radix : Int) : Integer;
+	@:overload public static function valueOf(s : String, radix : Int) : Null<Int>;
 	
 	/**
 	* Returns an {@code Integer} object holding the
@@ -317,7 +317,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	* @exception  NumberFormatException  if the string cannot be parsed
 	*             as an integer.
 	*/
-	@:overload public static function valueOf(s : String) : Integer;
+	@:overload public static function valueOf(s : String) : Null<Int>;
 	
 	/**
 	* Returns an {@code Integer} instance representing the specified
@@ -334,7 +334,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	* @return an {@code Integer} instance representing {@code i}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(i : Int) : Integer;
+	@:require(java5) @:overload public static function valueOf(i : Int) : Null<Int>;
 	
 	/**
 	* Constructs a newly allocated {@code Integer} object that
@@ -457,7 +457,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getInteger(nm : String) : Integer;
+	@:overload public static function getInteger(nm : String) : Null<Int>;
 	
 	/**
 	* Determines the integer value of the system property with the
@@ -500,7 +500,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	* @see     java.lang.System#getProperty(java.lang.String)
 	* @see     java.lang.System#getProperty(java.lang.String, java.lang.String)
 	*/
-	@:overload public static function getInteger(nm : String, val : Int) : Integer;
+	@:overload public static function getInteger(nm : String, val : Int) : Null<Int>;
 	
 	/**
 	* Returns the integer value of the system property with the
@@ -538,7 +538,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	* @see java.lang.System#getProperty(java.lang.String, java.lang.String)
 	* @see java.lang.Integer#decode
 	*/
-	@:overload public static function getInteger(nm : String, val : Integer) : Integer;
+	@:overload public static function getInteger(nm : String, val : Null<Int>) : Null<Int>;
 	
 	/**
 	* Decodes a {@code String} into an {@code Integer}.
@@ -582,7 +582,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	*            contain a parsable integer.
 	* @see java.lang.Integer#parseInt(java.lang.String, int)
 	*/
-	@:overload public static function decode(nm : String) : Integer;
+	@:overload public static function decode(nm : String) : Null<Int>;
 	
 	/**
 	* Compares two {@code Integer} objects numerically.
@@ -597,7 +597,7 @@ extern class Integer extends java.lang.Number implements java.lang.Comparable<In
 	*           comparison).
 	* @since   1.2
 	*/
-	@:require(java2) @:overload public function compareTo(anotherInteger : Integer) : Int;
+	@:require(java2) @:overload public function compareTo(anotherInteger : Null<Int>) : Int;
 	
 	/**
 	* Compares two {@code int} values numerically.

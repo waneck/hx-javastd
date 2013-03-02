@@ -39,7 +39,7 @@ extern class ThreadLocalRandom extends java.util.Random
 	*
 	* @return the current thread's {@code ThreadLocalRandom}
 	*/
-	@:overload public static function current() : ThreadLocalRandom;
+	@:overload public static function current() : java.util.concurrent.ThreadLocalRandom;
 	
 	/**
 	* Throws {@code UnsupportedOperationException}.  Setting seeds in
@@ -47,9 +47,9 @@ extern class ThreadLocalRandom extends java.util.Random
 	*
 	* @throws UnsupportedOperationException always
 	*/
-	@:overload override public function setSeed(seed : haxe.Int64) : Void;
+	@:overload public function setSeed(seed : haxe.Int64) : Void;
 	
-	@:overload override private function next(bits : Int) : Int;
+	@:overload private function next(bits : Int) : Int;
 	
 	/**
 	* Returns a pseudorandom, uniformly distributed value between the

@@ -33,7 +33,7 @@ extern class WSDLProperties extends com.sun.xml.internal.ws.api.PropertySet
 	
 	@:overload public function getWSDLPortType() : javax.xml.namespace.QName;
 	
-	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class CorbalocURL extends com.sun.corba.se.impl.naming.namingutil.INSURLB
 	/**
 	* Will be true only in CorbanameURL class.
 	*/
-	@:overload override public function isCorbanameURL() : Bool;
+	@:overload public function isCorbanameURL() : Bool;
 	
 	
 }

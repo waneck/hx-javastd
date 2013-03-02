@@ -33,27 +33,27 @@ extern class WhileStatement extends sun.tools.tree.Statement
 	/**
 	* Inline
 	*/
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
 	
 	/**
 	* The cost of inlining this statement
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Create a copy of the statement for method inlining
 	*/
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream, indent : Int) : Void;
+	@:overload public function print(out : java.io.PrintStream, indent : Int) : Void;
 	
 	
 }

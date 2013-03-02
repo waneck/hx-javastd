@@ -189,14 +189,14 @@ extern class AlphaComposite implements java.awt.Composite
 	* with an alpha of 1.0f.
 	* @see #CLEAR
 	*/
-	public static var Clear(default, null) : AlphaComposite;
+	public static var Clear(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque SRC rule
 	* with an alpha of 1.0f.
 	* @see #SRC
 	*/
-	public static var Src(default, null) : AlphaComposite;
+	public static var Src(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque DST rule
@@ -204,49 +204,49 @@ extern class AlphaComposite implements java.awt.Composite
 	* @see #DST
 	* @since 1.4
 	*/
-	@:require(java4) public static var Dst(default, null) : AlphaComposite;
+	@:require(java4) public static var Dst(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque SRC_OVER rule
 	* with an alpha of 1.0f.
 	* @see #SRC_OVER
 	*/
-	public static var SrcOver(default, null) : AlphaComposite;
+	public static var SrcOver(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque DST_OVER rule
 	* with an alpha of 1.0f.
 	* @see #DST_OVER
 	*/
-	public static var DstOver(default, null) : AlphaComposite;
+	public static var DstOver(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque SRC_IN rule
 	* with an alpha of 1.0f.
 	* @see #SRC_IN
 	*/
-	public static var SrcIn(default, null) : AlphaComposite;
+	public static var SrcIn(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque DST_IN rule
 	* with an alpha of 1.0f.
 	* @see #DST_IN
 	*/
-	public static var DstIn(default, null) : AlphaComposite;
+	public static var DstIn(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque SRC_OUT rule
 	* with an alpha of 1.0f.
 	* @see #SRC_OUT
 	*/
-	public static var SrcOut(default, null) : AlphaComposite;
+	public static var SrcOut(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque DST_OUT rule
 	* with an alpha of 1.0f.
 	* @see #DST_OUT
 	*/
-	public static var DstOut(default, null) : AlphaComposite;
+	public static var DstOut(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque SRC_ATOP rule
@@ -254,7 +254,7 @@ extern class AlphaComposite implements java.awt.Composite
 	* @see #SRC_ATOP
 	* @since 1.4
 	*/
-	@:require(java4) public static var SrcAtop(default, null) : AlphaComposite;
+	@:require(java4) public static var SrcAtop(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque DST_ATOP rule
@@ -262,7 +262,7 @@ extern class AlphaComposite implements java.awt.Composite
 	* @see #DST_ATOP
 	* @since 1.4
 	*/
-	@:require(java4) public static var DstAtop(default, null) : AlphaComposite;
+	@:require(java4) public static var DstAtop(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* <code>AlphaComposite</code> object that implements the opaque XOR rule
@@ -270,7 +270,7 @@ extern class AlphaComposite implements java.awt.Composite
 	* @see #XOR
 	* @since 1.4
 	*/
-	@:require(java4) public static var Xor(default, null) : AlphaComposite;
+	@:require(java4) public static var Xor(default, null) : java.awt.AlphaComposite;
 	
 	/**
 	* Creates an <code>AlphaComposite</code> object with the specified rule.
@@ -281,7 +281,7 @@ extern class AlphaComposite implements java.awt.Composite
 	*         {@link #DST_IN}, {@link #SRC_OUT}, {@link #DST_OUT},
 	*         {@link #SRC_ATOP}, {@link #DST_ATOP}, or {@link #XOR}
 	*/
-	@:overload public static function getInstance(rule : Int) : AlphaComposite;
+	@:overload public static function getInstance(rule : Int) : java.awt.AlphaComposite;
 	
 	/**
 	* Creates an <code>AlphaComposite</code> object with the specified rule and
@@ -300,7 +300,7 @@ extern class AlphaComposite implements java.awt.Composite
 	*         {@link #DST_IN}, {@link #SRC_OUT}, {@link #DST_OUT},
 	*         {@link #SRC_ATOP}, {@link #DST_ATOP}, or {@link #XOR}
 	*/
-	@:overload public static function getInstance(rule : Int, alpha : Single) : AlphaComposite;
+	@:overload public static function getInstance(rule : Int, alpha : Single) : java.awt.AlphaComposite;
 	
 	/**
 	* Creates a context for the compositing operation.
@@ -342,7 +342,7 @@ extern class AlphaComposite implements java.awt.Composite
 	*         {@link #SRC_ATOP}, {@link #DST_ATOP}, or {@link #XOR}
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function derive(rule : Int) : AlphaComposite;
+	@:require(java6) @:overload public function derive(rule : Int) : java.awt.AlphaComposite;
 	
 	/**
 	* Returns a similar <code>AlphaComposite</code> object that uses
@@ -358,7 +358,7 @@ extern class AlphaComposite implements java.awt.Composite
 	*         <code>alpha</code> is less than 0.0 or greater than 1.0
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function derive(alpha : Single) : AlphaComposite;
+	@:require(java6) @:overload public function derive(alpha : Single) : java.awt.AlphaComposite;
 	
 	/**
 	* Returns the hashcode for this composite.

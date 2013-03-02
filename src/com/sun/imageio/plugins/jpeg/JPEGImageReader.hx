@@ -122,7 +122,7 @@ extern class JPEGImageReader extends javax.imageio.ImageReader
 }
 @:internal extern class ImageTypeIterator implements java.util.Iterator<javax.imageio.ImageTypeSpecifier>
 {
-	@:overload public function new(producers : java.util.Iterator<ImageTypeProducer>) : Void;
+	@:overload public function new(producers : java.util.Iterator<com.sun.imageio.plugins.jpeg.JPEGImageReader.ImageTypeProducer>) : Void;
 	
 	@:overload public function hasNext() : Bool;
 	
@@ -140,7 +140,7 @@ extern class JPEGImageReader extends javax.imageio.ImageReader
 	
 	@:overload @:synchronized public function getType() : javax.imageio.ImageTypeSpecifier;
 	
-	@:overload @:synchronized public static function getTypeProducer(csCode : Int) : ImageTypeProducer;
+	@:overload @:synchronized public static function getTypeProducer(csCode : Int) : com.sun.imageio.plugins.jpeg.JPEGImageReader.ImageTypeProducer;
 	
 	@:overload private function produce() : javax.imageio.ImageTypeSpecifier;
 	

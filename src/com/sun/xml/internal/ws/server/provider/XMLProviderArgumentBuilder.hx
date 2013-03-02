@@ -32,7 +32,7 @@ package com.sun.xml.internal.ws.server.provider;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$provider$XMLProviderArgumentBuilder$PayloadSource') @:internal extern class XMLProviderArgumentBuilder_PayloadSource extends XMLProviderArgumentBuilder<javax.xml.transform.Source>
+@:native('com$sun$xml$internal$ws$server$provider$XMLProviderArgumentBuilder$PayloadSource') @:internal extern class XMLProviderArgumentBuilder_PayloadSource extends com.sun.xml.internal.ws.server.provider.XMLProviderArgumentBuilder<javax.xml.transform.Source>
 {
 	@:overload override public function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.xml.transform.Source;
 	
@@ -42,7 +42,7 @@ package com.sun.xml.internal.ws.server.provider;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$server$provider$XMLProviderArgumentBuilder$DataSourceParameter') @:internal extern class XMLProviderArgumentBuilder_DataSourceParameter extends XMLProviderArgumentBuilder<javax.activation.DataSource>
+@:native('com$sun$xml$internal$ws$server$provider$XMLProviderArgumentBuilder$DataSourceParameter') @:internal extern class XMLProviderArgumentBuilder_DataSourceParameter extends com.sun.xml.internal.ws.server.provider.XMLProviderArgumentBuilder<javax.activation.DataSource>
 {
 	@:overload override public function getParameter(packet : com.sun.xml.internal.ws.api.message.Packet) : javax.activation.DataSource;
 	

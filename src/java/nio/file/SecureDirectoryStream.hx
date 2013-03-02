@@ -60,7 +60,7 @@ extern interface SecureDirectoryStream<T> extends java.nio.file.DirectoryStream<
 	*          installed, the {@link SecurityManager#checkRead(String) checkRead}
 	*          method is invoked to check read access to the directory.
 	*/
-	@:overload public function newDirectoryStream(path : T, options : java.NativeArray<java.nio.file.LinkOption>) : SecureDirectoryStream<T>;
+	@:overload public function newDirectoryStream(path : T, options : java.NativeArray<java.nio.file.LinkOption>) : java.nio.file.SecureDirectoryStream<T>;
 	
 	/**
 	* Opens or creates a file in this directory, returning a seekable byte
@@ -203,7 +203,7 @@ extern interface SecureDirectoryStream<T> extends java.nio.file.DirectoryStream<
 	*          method is invoked to check write access to both the source and
 	*          target file.
 	*/
-	@:overload public function move(srcpath : T, targetdir : SecureDirectoryStream<T>, targetpath : T) : Void;
+	@:overload public function move(srcpath : T, targetdir : java.nio.file.SecureDirectoryStream<T>, targetpath : T) : Void;
 	
 	/**
 	* Returns a new file attribute view to access the file attributes of this

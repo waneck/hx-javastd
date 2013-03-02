@@ -25,7 +25,7 @@ package sun.io;
 */
 extern class ByteToCharCp1123 extends sun.io.ByteToCharSingleByte
 {
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
 	@:overload public function new() : Void;
 	

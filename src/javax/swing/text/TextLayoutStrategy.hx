@@ -42,7 +42,7 @@ package javax.swing.text;
 	*   This value will be null if the view has not yet been displayed.
 	* @see View#insertUpdate
 	*/
-	@:overload override public function insertUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload public function insertUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -52,7 +52,7 @@ package javax.swing.text;
 	* @param alloc the current allocation of the view inside of the insets.
 	* @see View#removeUpdate
 	*/
-	@:overload override public function removeUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload public function removeUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -63,7 +63,7 @@ package javax.swing.text;
 	* @param f the factory to use to rebuild if the view has children
 	* @see View#changedUpdate
 	*/
-	@:overload override public function changedUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload public function changedUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Does a a full layout on the given View.  This causes all of
@@ -73,7 +73,7 @@ package javax.swing.text;
 	*
 	* @param fv the view to reflow
 	*/
-	@:overload override public function layout(fv : javax.swing.text.FlowView) : Void;
+	@:overload public function layout(fv : javax.swing.text.FlowView) : Void;
 	
 	/**
 	* Creates a row of views that will fit within the
@@ -88,7 +88,7 @@ package javax.swing.text;
 	*   this views element from which to start.
 	* @return the position to start the next row
 	*/
-	@:overload override private function layoutRow(fv : javax.swing.text.FlowView, rowIndex : Int, p0 : Int) : Int;
+	@:overload private function layoutRow(fv : javax.swing.text.FlowView, rowIndex : Int, p0 : Int) : Int;
 	
 	/**
 	* Adjusts the given row if possible to fit within the
@@ -101,7 +101,7 @@ package javax.swing.text;
 	* @param desiredSpan the current layout span >= 0
 	* @param x the location r starts at.
 	*/
-	@:overload override private function adjustRow(fv : javax.swing.text.FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
+	@:overload private function adjustRow(fv : javax.swing.text.FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
 	
 	/**
 	* Creates a unidirectional view that can be used to represent the
@@ -113,7 +113,7 @@ package javax.swing.text;
 	* @param spanLeft the about of span left to fill in the row
 	* @param rowIndex the row the view will be placed into
 	*/
-	@:overload override private function createView(fv : javax.swing.text.FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
+	@:overload private function createView(fv : javax.swing.text.FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
 	
 	
 }

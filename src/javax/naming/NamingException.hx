@@ -317,7 +317,7 @@ package javax.naming;
 	* @see #getCause
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:require(java4) @:overload override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* Generates the string representation of this exception.

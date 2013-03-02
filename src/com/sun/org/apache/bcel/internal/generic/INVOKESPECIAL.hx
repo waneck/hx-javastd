@@ -60,7 +60,7 @@ extern class INVOKESPECIAL extends com.sun.org.apache.bcel.internal.generic.Invo
 {
 	@:overload public function new(index : Int) : Void;
 	
-	@:overload override public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:

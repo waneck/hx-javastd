@@ -48,7 +48,7 @@ package com.sun.xml.internal.ws.server.provider;
 	*/
 	@:overload private function getResponse(request : com.sun.xml.internal.ws.api.message.Packet, returnValue : T, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.api.message.Packet;
 	
-	@:overload public static function create(model : com.sun.xml.internal.ws.server.provider.ProviderEndpointModel<Dynamic>, binding : com.sun.xml.internal.ws.api.WSBinding) : ProviderArgumentsBuilder<Dynamic>;
+	@:overload public static function create(model : com.sun.xml.internal.ws.server.provider.ProviderEndpointModel<Dynamic>, binding : com.sun.xml.internal.ws.api.WSBinding) : com.sun.xml.internal.ws.server.provider.ProviderArgumentsBuilder<Dynamic>;
 	
 	
 }

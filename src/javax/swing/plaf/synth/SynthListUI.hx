@@ -88,7 +88,7 @@ extern class SynthListUI extends javax.swing.plaf.basic.BasicListUI implements j
 {
 	@:overload override public function getName() : String;
 	
-	@:overload override public function setBorder(b : javax.swing.border.Border) : Void;
+	@:overload public function setBorder(b : javax.swing.border.Border) : Void;
 	
 	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	

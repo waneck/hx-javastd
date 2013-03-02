@@ -12,23 +12,23 @@ extern class State implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _HOLDING(default, null) : Int;
 	
-	public static var HOLDING(default, null) : State;
+	public static var HOLDING(default, null) : org.omg.PortableServer.POAManagerPackage.State;
 	
 	public static var _ACTIVE(default, null) : Int;
 	
-	public static var ACTIVE(default, null) : State;
+	public static var ACTIVE(default, null) : org.omg.PortableServer.POAManagerPackage.State;
 	
 	public static var _DISCARDING(default, null) : Int;
 	
-	public static var DISCARDING(default, null) : State;
+	public static var DISCARDING(default, null) : org.omg.PortableServer.POAManagerPackage.State;
 	
 	public static var _INACTIVE(default, null) : Int;
 	
-	public static var INACTIVE(default, null) : State;
+	public static var INACTIVE(default, null) : org.omg.PortableServer.POAManagerPackage.State;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : State;
+	@:overload public static function from_int(value : Int) : org.omg.PortableServer.POAManagerPackage.State;
 	
 	@:overload private function new(value : Int) : Void;
 	

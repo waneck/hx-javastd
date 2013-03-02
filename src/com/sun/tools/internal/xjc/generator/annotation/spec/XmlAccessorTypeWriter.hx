@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlAccessorTypeWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlAccessorType>
 {
-	@:overload public function value(value : javax.xml.bind.annotation.XmlAccessType) : XmlAccessorTypeWriter;
+	@:overload public function value(value : javax.xml.bind.annotation.XmlAccessType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAccessorTypeWriter;
 	
 	
 }

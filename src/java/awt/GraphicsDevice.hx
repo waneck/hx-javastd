@@ -333,7 +333,7 @@ extern class GraphicsDevice
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function isWindowTranslucencySupported(translucencyKind : GraphicsDevice_WindowTranslucency) : Bool;
+	@:require(java7) @:overload public function isWindowTranslucencySupported(translucencyKind : java.awt.GraphicsDevice.GraphicsDevice_WindowTranslucency) : Bool;
 	
 	
 }

@@ -42,7 +42,7 @@ extern class ClassInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.mode
 	/*final*/
 	private var attributeWildcard : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<T, C, F, M>;
 	
-	@:overload public function getBaseClass() : ClassInfoImpl<T, C, F, M>;
+	@:overload public function getBaseClass() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
 	
 	/**
 	* {@inheritDoc}
@@ -60,7 +60,7 @@ extern class ClassInfoImpl<T, C, F, M> extends com.sun.xml.internal.bind.v2.mode
 	* @deprecated
 	*      you shouldn't be invoking this method on {@link ClassInfoImpl}.
 	*/
-	@:overload public function getScope() : ClassInfoImpl<T, C, F, M>;
+	@:overload public function getScope() : com.sun.xml.internal.bind.v2.model.impl.ClassInfoImpl<T, C, F, M>;
 	
 	@:overload @:final override public function getType() : T;
 	

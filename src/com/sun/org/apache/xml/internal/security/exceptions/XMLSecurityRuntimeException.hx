@@ -60,27 +60,27 @@ extern class XMLSecurityRuntimeException extends java.lang.RuntimeException
 	@:overload public function getMsgID() : String;
 	
 	/** @inheritDoc */
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Method printStackTrace
 	*
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload public function printStackTrace() : Void;
 	
 	/**
 	* Method printStackTrace
 	*
 	* @param printwriter
 	*/
-	@:overload override public function printStackTrace(printwriter : java.io.PrintWriter) : Void;
+	@:overload public function printStackTrace(printwriter : java.io.PrintWriter) : Void;
 	
 	/**
 	* Method printStackTrace
 	*
 	* @param printstream
 	*/
-	@:overload override public function printStackTrace(printstream : java.io.PrintStream) : Void;
+	@:overload public function printStackTrace(printstream : java.io.PrintStream) : Void;
 	
 	/**
 	* Method getOriginalException

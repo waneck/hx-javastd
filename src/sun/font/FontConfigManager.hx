@@ -63,7 +63,7 @@ extern class FontConfigManager
 	*/
 	@:overload @:synchronized public function initFontConfigFonts(includeFallbacks : Bool) : Void;
 	
-	@:overload public function registerFromFcInfo(fcInfo : FontConfigManager_FcCompFont) : sun.font.PhysicalFont;
+	@:overload public function registerFromFcInfo(fcInfo : sun.font.FontConfigManager.FontConfigManager_FcCompFont) : sun.font.PhysicalFont;
 	
 	/*
 	* We need to return a Composite font which has as the font in
@@ -77,7 +77,7 @@ extern class FontConfigManager
 	* @param fcFamily
 	* @return
 	*/
-	@:overload public function getFontConfigFonts() : java.NativeArray<FontConfigManager_FcCompFont>;
+	@:overload public function getFontConfigFonts() : java.NativeArray<sun.font.FontConfigManager.FontConfigManager_FcCompFont>;
 	
 	
 }
@@ -105,9 +105,9 @@ extern class FontConfigManager
 	
 	public var style : Int;
 	
-	public var firstFont : FontConfigManager_FontConfigFont;
+	public var firstFont : sun.font.FontConfigManager.FontConfigManager_FontConfigFont;
 	
-	public var allFonts : java.NativeArray<FontConfigManager_FontConfigFont>;
+	public var allFonts : java.NativeArray<sun.font.FontConfigManager.FontConfigManager_FontConfigFont>;
 	
 	public var compFont : sun.font.CompositeFont;
 	

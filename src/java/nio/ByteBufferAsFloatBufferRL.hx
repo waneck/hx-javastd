@@ -26,23 +26,23 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class ByteBufferAsFloatBufferRL extends java.nio.ByteBufferAsFloatBufferL
 {
-	@:overload override public function slice() : java.nio.FloatBuffer;
+	@:overload public function slice() : java.nio.FloatBuffer;
 	
-	@:overload override public function duplicate() : java.nio.FloatBuffer;
+	@:overload public function duplicate() : java.nio.FloatBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.FloatBuffer;
+	@:overload public function asReadOnlyBuffer() : java.nio.FloatBuffer;
 	
-	@:overload override public function put(x : Single) : java.nio.FloatBuffer;
+	@:overload public function put(x : Single) : java.nio.FloatBuffer;
 	
-	@:overload override public function put(i : Int, x : Single) : java.nio.FloatBuffer;
+	@:overload public function put(i : Int, x : Single) : java.nio.FloatBuffer;
 	
-	@:overload override public function compact() : java.nio.FloatBuffer;
+	@:overload public function compact() : java.nio.FloatBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload public function order() : java.nio.ByteOrder;
 	
 	
 }

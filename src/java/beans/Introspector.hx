@@ -231,19 +231,19 @@ extern class Introspector
 {
 	@:overload public function new(beanDescriptor : java.beans.BeanDescriptor, events : java.NativeArray<java.beans.EventSetDescriptor>, defaultEvent : Int, properties : java.NativeArray<java.beans.PropertyDescriptor>, defaultProperty : Int, methods : java.NativeArray<java.beans.MethodDescriptor>, targetBeanInfo : java.beans.BeanInfo) : Void;
 	
-	@:overload override public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
+	@:overload public function getPropertyDescriptors() : java.NativeArray<java.beans.PropertyDescriptor>;
 	
-	@:overload override public function getDefaultPropertyIndex() : Int;
+	@:overload public function getDefaultPropertyIndex() : Int;
 	
-	@:overload override public function getEventSetDescriptors() : java.NativeArray<java.beans.EventSetDescriptor>;
+	@:overload public function getEventSetDescriptors() : java.NativeArray<java.beans.EventSetDescriptor>;
 	
-	@:overload override public function getDefaultEventIndex() : Int;
+	@:overload public function getDefaultEventIndex() : Int;
 	
-	@:overload override public function getMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
+	@:overload public function getMethodDescriptors() : java.NativeArray<java.beans.MethodDescriptor>;
 	
-	@:overload override public function getBeanDescriptor() : java.beans.BeanDescriptor;
+	@:overload public function getBeanDescriptor() : java.beans.BeanDescriptor;
 	
-	@:overload override public function getIcon(iconKind : Int) : java.awt.Image;
+	@:overload public function getIcon(iconKind : Int) : java.awt.Image;
 	
 	
 }

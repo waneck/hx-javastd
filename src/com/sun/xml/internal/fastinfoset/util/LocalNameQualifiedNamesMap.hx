@@ -33,11 +33,11 @@ extern class LocalNameQualifiedNamesMap extends com.sun.xml.internal.fastinfoset
 	
 	@:overload public function new() : Void;
 	
-	@:overload @:final override public function clear() : Void;
+	@:overload @:final public function clear() : Void;
 	
-	@:overload @:final override public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyMap(readOnlyMap : LocalNameQualifiedNamesMap, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap, clear : Bool) : Void;
 	
 	@:overload @:final public function isQNameFromReadOnlyMap(name : com.sun.xml.internal.fastinfoset.QualifiedName) : Bool;
 	
@@ -45,9 +45,9 @@ extern class LocalNameQualifiedNamesMap extends com.sun.xml.internal.fastinfoset
 	
 	@:overload @:final public function getIndex() : Int;
 	
-	@:overload @:final public function obtainEntry(key : String) : LocalNameQualifiedNamesMap_Entry;
+	@:overload @:final public function obtainEntry(key : String) : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry;
 	
-	@:overload @:final public function obtainDynamicEntry(key : String) : LocalNameQualifiedNamesMap_Entry;
+	@:overload @:final public function obtainDynamicEntry(key : String) : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry;
 	
 	
 }
@@ -57,7 +57,7 @@ extern class LocalNameQualifiedNamesMap extends com.sun.xml.internal.fastinfoset
 	
 	public var _valueIndex : Int;
 	
-	@:overload public function new(key : String, hash : Int, next : LocalNameQualifiedNamesMap_Entry) : Void;
+	@:overload public function new(key : String, hash : Int, next : com.sun.xml.internal.fastinfoset.util.LocalNameQualifiedNamesMap.LocalNameQualifiedNamesMap_Entry) : Void;
 	
 	@:overload public function addQualifiedName(name : com.sun.xml.internal.fastinfoset.QualifiedName) : Void;
 	

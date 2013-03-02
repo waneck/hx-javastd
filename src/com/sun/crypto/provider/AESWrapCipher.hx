@@ -52,7 +52,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	* @exception NoSuchAlgorithmException if the requested cipher mode
 	* is not "ECB".
 	*/
-	@:overload override private function engineSetMode(mode : String) : Void;
+	@:overload private function engineSetMode(mode : String) : Void;
 	
 	/**
 	* Sets the padding mechanism of this cipher. Only "NoPadding" schmem
@@ -63,14 +63,14 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	* @exception NoSuchPaddingException if the requested padding mechanism
 	* is not "NoPadding".
 	*/
-	@:overload override private function engineSetPadding(padding : String) : Void;
+	@:overload private function engineSetPadding(padding : String) : Void;
 	
 	/**
 	* Returns the block size (in bytes). i.e. 16 bytes.
 	*
 	* @return the block size (in bytes), i.e. 16 bytes.
 	*/
-	@:overload override private function engineGetBlockSize() : Int;
+	@:overload private function engineGetBlockSize() : Int;
 	
 	/**
 	* Returns the length in bytes that an output buffer would need to be
@@ -84,14 +84,14 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	*
 	* @return the required output buffer size (in bytes)
 	*/
-	@:overload override private function engineGetOutputSize(inputLen : Int) : Int;
+	@:overload private function engineGetOutputSize(inputLen : Int) : Int;
 	
 	/**
 	* Returns the initialization vector (IV) which is null for this cipher.
 	*
 	* @return null for this cipher.
 	*/
-	@:overload override private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineGetIV() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Initializes this cipher with a key and a source of randomness.
@@ -110,7 +110,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	* @exception InvalidKeyException if the given key is inappropriate for
 	* initializing this cipher.
 	*/
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with a key, a set of algorithm parameters,
@@ -133,7 +133,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	* @exception InvalidAlgorithmParameterException if the given algorithm
 	* parameters is not null.
 	*/
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.spec.AlgorithmParameterSpec, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* Initializes this cipher with a key, a set of algorithm parameters,
@@ -155,7 +155,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	* @exception InvalidAlgorithmParameterException if the given algorithm
 	* parameters is not null.
 	*/
-	@:overload override private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(opmode : Int, key : java.security.Key, params : java.security.AlgorithmParameters, random : java.security.SecureRandom) : Void;
 	
 	/**
 	* This operation is not supported by this cipher.
@@ -172,7 +172,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	*
 	* @exception IllegalStateException upon invocation of this method.
 	*/
-	@:overload override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, inLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* This operation is not supported by this cipher.
@@ -192,7 +192,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	*
 	* @exception IllegalStateException upon invocation of this method.
 	*/
-	@:overload override private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOffset : Int) : Int;
+	@:overload private function engineUpdate(_in : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOffset : Int) : Int;
 	
 	/**
 	* This operation is not supported by this cipher.
@@ -209,7 +209,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	*
 	* @exception IllegalStateException upon invocation of this method.
 	*/
-	@:overload override private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineDoFinal(input : java.NativeArray<java.StdTypes.Int8>, inputOffset : Int, inputLen : Int) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* This operation is not supported by this cipher.
@@ -229,7 +229,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	*
 	* @exception IllegalStateException upon invocation of this method.
 	*/
-	@:overload override private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOffset : Int) : Int;
+	@:overload private function engineDoFinal(_in : java.NativeArray<java.StdTypes.Int8>, inOffset : Int, inLen : Int, out : java.NativeArray<java.StdTypes.Int8>, outOffset : Int) : Int;
 	
 	/**
 	* Returns the parameters used with this cipher which is always null
@@ -237,7 +237,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	*
 	* @return null since this cipher does not use any parameters.
 	*/
-	@:overload override private function engineGetParameters() : java.security.AlgorithmParameters;
+	@:overload private function engineGetParameters() : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns the key size of the given key object in number of bits.
@@ -248,7 +248,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	*
 	* @exception InvalidKeyException if <code>key</code> is invalid.
 	*/
-	@:overload override private function engineGetKeySize(key : java.security.Key) : Int;
+	@:overload private function engineGetKeySize(key : java.security.Key) : Int;
 	
 	/**
 	* Wrap a key.
@@ -266,7 +266,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	* wrap the key with this cipher (e.g., a hardware protected key is
 	* being passed to a software only cipher).
 	*/
-	@:overload override private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineWrap(key : java.security.Key) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Unwrap a previously wrapped key.
@@ -289,7 +289,7 @@ extern class AESWrapCipher extends javax.crypto.CipherSpi
 	* represent a wrapped key of type <code>wrappedKeyType</code> for
 	* the <code>wrappedKeyAlgorithm</code>.
 	*/
-	@:overload override private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
+	@:overload private function engineUnwrap(wrappedKey : java.NativeArray<java.StdTypes.Int8>, wrappedKeyAlgorithm : String, wrappedKeyType : Int) : java.security.Key;
 	
 	
 }

@@ -74,7 +74,7 @@ extern class BIClass extends com.sun.tools.internal.xjc.reader.xmlschema.bindinf
 	*/
 	@:overload public function getJavadoc() : String;
 	
-	@:overload override public function getName() : javax.xml.namespace.QName;
+	@:overload public function getName() : javax.xml.namespace.QName;
 	
 	@:overload override public function setParent(p : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	

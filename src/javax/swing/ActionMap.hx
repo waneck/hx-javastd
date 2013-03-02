@@ -35,7 +35,7 @@ extern class ActionMap implements java.io.Serializable
 	*
 	* @param map  the <code>ActionMap</code> that is the parent of this one
 	*/
-	@:overload public function setParent(map : ActionMap) : Void;
+	@:overload public function setParent(map : javax.swing.ActionMap) : Void;
 	
 	/**
 	* Returns this <code>ActionMap</code>'s parent.
@@ -43,7 +43,7 @@ extern class ActionMap implements java.io.Serializable
 	* @return the <code>ActionMap</code> that is the parent of this one,
 	*         or null if this <code>ActionMap</code> has no parent
 	*/
-	@:overload public function getParent() : ActionMap;
+	@:overload public function getParent() : javax.swing.ActionMap;
 	
 	/**
 	* Adds a binding for <code>key</code> to <code>action</code>.

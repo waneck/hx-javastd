@@ -134,7 +134,7 @@ extern class WSEndpoint<T>
 	* @param request web service request
 	* @param callback callback to get response packet
 	*/
-	@:overload @:final public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : WSEndpoint_CompletionCallback) : Void;
+	@:overload @:final public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback) : Void;
 	
 	/**
 	* Schedule invocation of web service asynchronously.
@@ -145,9 +145,9 @@ extern class WSEndpoint<T>
 	* @param callback callback to get response packet(exception if there is one)
 	* @param interceptor caller's interceptor to impose a context of execution
 	*/
-	@:overload @:abstract public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload @:abstract public function schedule(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
-	@:overload public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
+	@:overload public function process(request : com.sun.xml.internal.ws.api.message.Packet, _callback : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_CompletionCallback, interceptor : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor) : Void;
 	
 	/**
 	* Creates a new {@link PipeHead} to process
@@ -161,7 +161,7 @@ extern class WSEndpoint<T>
 	* @return
 	*      A newly created {@link PipeHead} that's ready to serve.
 	*/
-	@:overload @:abstract public function createPipeHead() : WSEndpoint_PipeHead;
+	@:overload @:abstract public function createPipeHead() : com.sun.xml.internal.ws.api.server.WSEndpoint.WSEndpoint_PipeHead;
 	
 	/**
 	* Indicates that the {@link WSEndpoint} is about to be turned off,
@@ -321,12 +321,12 @@ extern class WSEndpoint<T>
 	* @throws WebServiceException
 	*      if the endpoint set up fails.
 	*/
-	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : WSEndpoint<T>;
+	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver, isTransportSynchronous : Bool) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	/**
 	* Deprecated version that assumes <tt>isTransportSynchronous==false</tt>
 	*/
-	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver) : WSEndpoint<T>;
+	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, resolver : org.xml.sax.EntityResolver) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	/**
 	* The same as
@@ -337,7 +337,7 @@ extern class WSEndpoint<T>
 	*      if not null, an {@link EntityResolver} is created from it and used.
 	*      otherwise no resolution will be performed.
 	*/
-	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, catalogUrl : java.net.URL) : WSEndpoint<T>;
+	@:overload public static function create<T>(implType : Class<T>, processHandlerAnnotation : Bool, invoker : com.sun.xml.internal.ws.api.server.Invoker, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, container : com.sun.xml.internal.ws.api.server.Container, binding : com.sun.xml.internal.ws.api.WSBinding, primaryWsdl : com.sun.xml.internal.ws.api.server.SDDocumentSource, metadata : java.util.Collection<com.sun.xml.internal.ws.api.server.SDDocumentSource>, catalogUrl : java.net.URL) : com.sun.xml.internal.ws.api.server.WSEndpoint<T>;
 	
 	/**
 	* Gives the wsdl:service default name computed from the endpoint implementaiton class

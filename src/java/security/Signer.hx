@@ -111,7 +111,7 @@ extern class Signer extends java.security.Identity
 	*
 	* @return a string of information about the signer.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

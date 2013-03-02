@@ -37,7 +37,7 @@ extern class CharArrayArray extends com.sun.xml.internal.fastinfoset.util.ValueA
 	
 	@:overload @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyArray(readOnlyArray : CharArrayArray, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.CharArrayArray, clear : Bool) : Void;
 	
 	@:overload @:final public function get(i : Int) : com.sun.xml.internal.fastinfoset.util.CharArray;
 	

@@ -25,9 +25,9 @@ package javax.swing.colorchooser;
 */
 @:internal extern class DefaultPreviewPanel extends javax.swing.JPanel
 {
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload public function getPreferredSize() : java.awt.Dimension;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }

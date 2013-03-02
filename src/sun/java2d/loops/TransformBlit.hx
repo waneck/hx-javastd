@@ -36,13 +36,13 @@ extern class TransformBlit extends sun.java2d.loops.GraphicsPrimitive
 	* and the destination surface are the same surface
 	* with overlapping regions of pixels
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : TransformBlit;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.TransformBlit;
 	
-	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : TransformBlit;
+	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.TransformBlit;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -56,9 +56,9 @@ extern class TransformBlit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$TransformBlit$TraceTransformBlit') @:internal extern class TransformBlit_TraceTransformBlit extends TransformBlit
+@:native('sun$java2d$loops$TransformBlit$TraceTransformBlit') @:internal extern class TransformBlit_TraceTransformBlit extends sun.java2d.loops.TransformBlit
 {
-	@:overload public function new(target : TransformBlit) : Void;
+	@:overload public function new(target : sun.java2d.loops.TransformBlit) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

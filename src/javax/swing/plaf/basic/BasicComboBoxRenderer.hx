@@ -55,7 +55,7 @@ extern class BasicComboBoxRenderer extends javax.swing.JLabel implements javax.s
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$plaf$basic$BasicComboBoxRenderer$UIResource') extern class BasicComboBoxRenderer_UIResource extends BasicComboBoxRenderer implements javax.swing.plaf.UIResource
+@:native('javax$swing$plaf$basic$BasicComboBoxRenderer$UIResource') extern class BasicComboBoxRenderer_UIResource extends javax.swing.plaf.basic.BasicComboBoxRenderer implements javax.swing.plaf.UIResource
 {
 	
 }

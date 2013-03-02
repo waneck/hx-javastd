@@ -25,17 +25,17 @@ package sun.font;
 */
 extern class NativeGlyphMapper extends sun.font.CharToGlyphMapper
 {
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload public function getNumGlyphs() : Int;
 	
-	@:overload override public function charToGlyph(unicode : java.StdTypes.Char16) : Int;
+	@:overload public function charToGlyph(unicode : java.StdTypes.Char16) : Int;
 	
-	@:overload override public function charToGlyph(unicode : Int) : Int;
+	@:overload public function charToGlyph(unicode : Int) : Int;
 	
-	@:overload override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload public function charsToGlyphs(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Void;
 	
-	@:overload override public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
+	@:overload public function charsToGlyphsNS(count : Int, unicodes : java.NativeArray<java.StdTypes.Char16>, glyphs : java.NativeArray<Int>) : Bool;
 	
-	@:overload override public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
+	@:overload public function charsToGlyphs(count : Int, unicodes : java.NativeArray<Int>, glyphs : java.NativeArray<Int>) : Void;
 	
 	
 }

@@ -1339,7 +1339,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopy() : CachedRowSet;
+	@:overload public function createCopy() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Creates a <code>CachedRowSet</code> object that is an empty copy of this
@@ -1365,7 +1365,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopySchema() : CachedRowSet;
+	@:overload public function createCopySchema() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Creates a <code>CachedRowSet</code> object that is a deep copy of
@@ -1391,7 +1391,7 @@ extern interface CachedRowSet extends javax.sql.RowSet extends javax.sql.rowset.
 	* @see javax.sql.RowSetEvent
 	* @see javax.sql.RowSetListener
 	*/
-	@:overload public function createCopyNoConstraints() : CachedRowSet;
+	@:overload public function createCopyNoConstraints() : javax.sql.rowset.CachedRowSet;
 	
 	/**
 	* Retrieves the first warning reported by calls on this <code>RowSet</code> object.

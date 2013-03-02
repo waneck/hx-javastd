@@ -29,9 +29,9 @@ extern class TryBlockWriter extends com.sun.tools.javap.InstructionDetailWriter
 	
 	@:overload public function reset(attr : com.sun.tools.classfile.Code_attribute) : Void;
 	
-	@:overload override public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
+	@:overload public function writeDetails(instr : com.sun.tools.classfile.Instruction) : Void;
 	
-	@:overload public function writeTrys(instr : com.sun.tools.classfile.Instruction, kind : TryBlockWriter_NoteKind) : Void;
+	@:overload public function writeTrys(instr : com.sun.tools.classfile.Instruction, kind : com.sun.tools.javap.TryBlockWriter.TryBlockWriter_NoteKind) : Void;
 	
 	
 }

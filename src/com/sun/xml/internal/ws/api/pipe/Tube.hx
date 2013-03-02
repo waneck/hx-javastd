@@ -203,7 +203,7 @@ extern interface Tube
 	*      always non-null {@link Tube}.
 	* @param cloner
 	*/
-	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Tube;
+	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.Tube;
 	
 	
 }

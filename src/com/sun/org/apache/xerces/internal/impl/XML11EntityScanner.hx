@@ -72,7 +72,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload override public function peekChar() : Int;
+	@:overload public function peekChar() : Int;
 	
 	/**
 	* Returns the next character on the input.
@@ -82,7 +82,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload override public function scanChar() : Int;
+	@:overload public function scanChar() : Int;
 	
 	/**
 	* Returns a string matching the NMTOKEN production appearing immediately
@@ -99,7 +99,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @see com.sun.org.apache.xerces.internal.util.SymbolTable
 	* @see com.sun.org.apache.xerces.internal.util.XML11Char#isXML11Name
 	*/
-	@:overload override public function scanNmtoken() : String;
+	@:overload public function scanNmtoken() : String;
 	
 	/**
 	* Returns a string matching the Name production appearing immediately
@@ -117,7 +117,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @see com.sun.org.apache.xerces.internal.util.XML11Char#isXML11Name
 	* @see com.sun.org.apache.xerces.internal.util.XML11Char#isXML11NameStart
 	*/
-	@:overload override public function scanName() : String;
+	@:overload public function scanName() : String;
 	
 	/**
 	* Returns a string matching the NCName production appearing immediately
@@ -159,7 +159,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @see com.sun.org.apache.xerces.internal.util.XML11Char#isXML11Name
 	* @see com.sun.org.apache.xerces.internal.util.XML11Char#isXML11NameStart
 	*/
-	@:overload override public function scanQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
+	@:overload public function scanQName(qname : com.sun.org.apache.xerces.internal.xni.QName) : Bool;
 	
 	/**
 	* Scans a range of parsed character data, setting the fields of the
@@ -187,7 +187,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload override public function scanContent(content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload public function scanContent(content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
 	/**
 	* Scans a range of attribute value data, setting the fields of the
@@ -217,7 +217,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload override public function scanLiteral(quote : Int, content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
+	@:overload public function scanLiteral(quote : Int, content : com.sun.org.apache.xerces.internal.xni.XMLString) : Int;
 	
 	/**
 	* Scans a range of character data up to the specicied delimiter,
@@ -249,7 +249,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload override public function scanData(delimiter : String, buffer : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
+	@:overload public function scanData(delimiter : String, buffer : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Bool;
 	
 	/**
 	* Skips a character appearing immediately on the input.
@@ -264,7 +264,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload override public function skipChar(c : Int) : Bool;
+	@:overload public function skipChar(c : Int) : Bool;
 	
 	/**
 	* Skips space characters appearing immediately on the input.
@@ -280,7 +280,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @see com.sun.org.apache.xerces.internal.util.XMLChar#isSpace
 	* @see com.sun.org.apache.xerces.internal.util.XML11Char#isXML11Space
 	*/
-	@:overload override public function skipSpaces() : Bool;
+	@:overload public function skipSpaces() : Bool;
 	
 	/**
 	* Skips the specified string appearing immediately on the input.
@@ -295,7 +295,7 @@ extern class XML11EntityScanner extends com.sun.org.apache.xerces.internal.impl.
 	* @throws IOException  Thrown if i/o error occurs.
 	* @throws EOFException Thrown on end of file.
 	*/
-	@:overload override public function skipString(s : String) : Bool;
+	@:overload public function skipString(s : String) : Bool;
 	
 	
 }

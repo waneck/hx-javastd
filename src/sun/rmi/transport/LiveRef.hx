@@ -100,7 +100,7 @@ extern class LiveRef implements java.lang.Cloneable
 	
 	@:overload public function write(out : java.io.ObjectOutput, useNewFormat : Bool) : Void;
 	
-	@:overload public static function read(_in : java.io.ObjectInput, useNewFormat : Bool) : LiveRef;
+	@:overload public static function read(_in : java.io.ObjectInput, useNewFormat : Bool) : sun.rmi.transport.LiveRef;
 	
 	
 }

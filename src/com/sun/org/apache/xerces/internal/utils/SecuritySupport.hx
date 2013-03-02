@@ -23,7 +23,7 @@ extern class SecuritySupport
 	/**
 	* Return an instance of this class.
 	*/
-	@:overload public static function getInstance() : SecuritySupport;
+	@:overload public static function getInstance() : com.sun.org.apache.xerces.internal.utils.SecuritySupport;
 	
 	@:overload public static function getSystemProperty(propName : String) : String;
 	

@@ -27,7 +27,7 @@ extern class FileImageSource extends sun.awt.image.InputStreamImageSource
 {
 	@:overload public function new(filename : String) : Void;
 	
-	@:overload override private function getDecoder() : sun.awt.image.ImageDecoder;
+	@:overload private function getDecoder() : sun.awt.image.ImageDecoder;
 	
 	
 }

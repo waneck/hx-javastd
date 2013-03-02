@@ -111,7 +111,7 @@ extern class SOAPElementFactory
 	* @exception SOAPException if there was an error creating the
 	*            default <code>SOAPElementFactory</code>
 	*/
-	@:overload public static function newInstance() : SOAPElementFactory;
+	@:overload public static function newInstance() : javax.xml.soap.SOAPElementFactory;
 	
 	
 }

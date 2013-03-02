@@ -38,7 +38,7 @@ extern class BooleanNot extends com.sun.tools.corba.se.idl.constExpr.UnaryExpr
 {
 	@:overload private function new(operand : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload override public function evaluate() : Dynamic;
+	@:overload public function evaluate() : Dynamic;
 	
 	
 }

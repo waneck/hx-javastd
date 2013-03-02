@@ -160,68 +160,68 @@ package com.sun.tools.javac.comp;
 */
 extern class Flow extends com.sun.tools.javac.tree.TreeScanner
 {
-	private static var flowKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Flow>;
+	private static var flowKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Flow>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Flow;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Flow;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
 	/* ------------ Visitor methods for various sorts of trees -------------*/
-	@:overload override public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
 	
-	@:overload override public function visitMethodDef(tree : JCMethodDecl) : Void;
+	@:overload public function visitMethodDef(tree : JCMethodDecl) : Void;
 	
-	@:overload override public function visitVarDef(tree : JCVariableDecl) : Void;
+	@:overload public function visitVarDef(tree : JCVariableDecl) : Void;
 	
-	@:overload override public function visitBlock(tree : JCBlock) : Void;
+	@:overload public function visitBlock(tree : JCBlock) : Void;
 	
-	@:overload override public function visitDoLoop(tree : JCDoWhileLoop) : Void;
+	@:overload public function visitDoLoop(tree : JCDoWhileLoop) : Void;
 	
-	@:overload override public function visitWhileLoop(tree : JCWhileLoop) : Void;
+	@:overload public function visitWhileLoop(tree : JCWhileLoop) : Void;
 	
-	@:overload override public function visitForLoop(tree : JCForLoop) : Void;
+	@:overload public function visitForLoop(tree : JCForLoop) : Void;
 	
-	@:overload override public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
+	@:overload public function visitForeachLoop(tree : JCEnhancedForLoop) : Void;
 	
-	@:overload override public function visitLabelled(tree : JCLabeledStatement) : Void;
+	@:overload public function visitLabelled(tree : JCLabeledStatement) : Void;
 	
-	@:overload override public function visitSwitch(tree : JCSwitch) : Void;
+	@:overload public function visitSwitch(tree : JCSwitch) : Void;
 	
-	@:overload override public function visitTry(tree : JCTry) : Void;
+	@:overload public function visitTry(tree : JCTry) : Void;
 	
-	@:overload override public function visitConditional(tree : JCConditional) : Void;
+	@:overload public function visitConditional(tree : JCConditional) : Void;
 	
-	@:overload override public function visitIf(tree : JCIf) : Void;
+	@:overload public function visitIf(tree : JCIf) : Void;
 	
-	@:overload override public function visitBreak(tree : JCBreak) : Void;
+	@:overload public function visitBreak(tree : JCBreak) : Void;
 	
-	@:overload override public function visitContinue(tree : JCContinue) : Void;
+	@:overload public function visitContinue(tree : JCContinue) : Void;
 	
-	@:overload override public function visitReturn(tree : JCReturn) : Void;
+	@:overload public function visitReturn(tree : JCReturn) : Void;
 	
-	@:overload override public function visitThrow(tree : JCThrow) : Void;
+	@:overload public function visitThrow(tree : JCThrow) : Void;
 	
-	@:overload override public function visitApply(tree : JCMethodInvocation) : Void;
+	@:overload public function visitApply(tree : JCMethodInvocation) : Void;
 	
-	@:overload override public function visitNewClass(tree : JCNewClass) : Void;
+	@:overload public function visitNewClass(tree : JCNewClass) : Void;
 	
-	@:overload override public function visitNewArray(tree : JCNewArray) : Void;
+	@:overload public function visitNewArray(tree : JCNewArray) : Void;
 	
-	@:overload override public function visitAssert(tree : JCAssert) : Void;
+	@:overload public function visitAssert(tree : JCAssert) : Void;
 	
-	@:overload override public function visitAssign(tree : JCAssign) : Void;
+	@:overload public function visitAssign(tree : JCAssign) : Void;
 	
-	@:overload override public function visitAssignop(tree : JCAssignOp) : Void;
+	@:overload public function visitAssignop(tree : JCAssignOp) : Void;
 	
-	@:overload override public function visitUnary(tree : JCUnary) : Void;
+	@:overload public function visitUnary(tree : JCUnary) : Void;
 	
-	@:overload override public function visitBinary(tree : JCBinary) : Void;
+	@:overload public function visitBinary(tree : JCBinary) : Void;
 	
-	@:overload override public function visitIdent(tree : JCIdent) : Void;
+	@:overload public function visitIdent(tree : JCIdent) : Void;
 	
-	@:overload override public function visitTypeCast(tree : JCTypeCast) : Void;
+	@:overload public function visitTypeCast(tree : JCTypeCast) : Void;
 	
-	@:overload override public function visitTopLevel(tree : JCCompilationUnit) : Void;
+	@:overload public function visitTopLevel(tree : JCCompilationUnit) : Void;
 	
 	/** Perform definite assignment/unassignment analysis on a tree.
 	*/

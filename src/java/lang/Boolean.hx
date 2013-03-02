@@ -38,26 +38,26 @@ package java.lang;
 * @author  Arthur van Hoff
 * @since   JDK1.0
 */
-@:require(java0) extern class Boolean implements java.io.Serializable implements java.lang.Comparable<Boolean>
+@:require(java0) extern class Boolean implements java.io.Serializable implements java.lang.Comparable<Null<Bool>>
 {
 	/**
 	* The {@code Boolean} object corresponding to the primitive
 	* value {@code true}.
 	*/
-	public static var TRUE(default, null) : Boolean;
+	public static var TRUE(default, null) : Null<Bool>;
 	
 	/**
 	* The {@code Boolean} object corresponding to the primitive
 	* value {@code false}.
 	*/
-	public static var FALSE(default, null) : Boolean;
+	public static var FALSE(default, null) : Null<Bool>;
 	
 	/**
 	* The Class object representing the primitive type boolean.
 	*
 	* @since   JDK1.1
 	*/
-	@:require(java1) public static var TYPE(default, null) : Class<Boolean>;
+	@:require(java1) public static var TYPE(default, null) : Class<Null<Bool>>;
 	
 	/**
 	* Allocates a {@code Boolean} object representing the
@@ -124,7 +124,7 @@ package java.lang;
 	* @return a {@code Boolean} instance representing {@code b}.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public static function valueOf(b : Bool) : Boolean;
+	@:require(java4) @:overload public static function valueOf(b : Bool) : Null<Bool>;
 	
 	/**
 	* Returns a {@code Boolean} with a value represented by the
@@ -135,7 +135,7 @@ package java.lang;
 	* @param   s   a string.
 	* @return  the {@code Boolean} value represented by the string.
 	*/
-	@:overload public static function valueOf(s : String) : Boolean;
+	@:overload public static function valueOf(s : String) : Null<Bool>;
 	
 	/**
 	* Returns a {@code String} object representing the specified
@@ -210,7 +210,7 @@ package java.lang;
 	* @see     Comparable
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function compareTo(b : Boolean) : Int;
+	@:require(java5) @:overload public function compareTo(b : Null<Bool>) : Int;
 	
 	/**
 	* Compares two {@code boolean} values.

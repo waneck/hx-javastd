@@ -31,7 +31,7 @@ extern class WindowsToolBarSeparatorUI extends javax.swing.plaf.basic.BasicToolB
 	*
 	* @author Mark Davidson
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	

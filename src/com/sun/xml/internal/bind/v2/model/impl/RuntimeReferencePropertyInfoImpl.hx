@@ -27,9 +27,9 @@ package com.sun.xml.internal.bind.v2.model.impl;
 {
 	@:overload public function new(classInfo : com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl, seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : Void;
 	
-	@:overload override public function getElements() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
+	@:overload public function getElements() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
 	
-	@:overload override public function ref() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
+	@:overload public function ref() : java.util.Set<com.sun.xml.internal.bind.v2.model.runtime.RuntimeElement>;
 	
 	@:overload public function getAccessor() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	

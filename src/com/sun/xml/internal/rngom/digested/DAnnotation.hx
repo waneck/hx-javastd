@@ -54,9 +54,9 @@ extern class DAnnotation
 	* @return
 	*      null if no such attribute is found.
 	*/
-	@:overload public function getAttribute(nsUri : String, localName : String) : DAnnotation_Attribute;
+	@:overload public function getAttribute(nsUri : String, localName : String) : com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute;
 	
-	@:overload public function getAttribute(n : javax.xml.namespace.QName) : DAnnotation_Attribute;
+	@:overload public function getAttribute(n : javax.xml.namespace.QName) : com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute;
 	
 	/**
 	* Gets the read-only view of all the attributes.
@@ -65,7 +65,7 @@ extern class DAnnotation
 	*      can be empty but never null.
 	*      the returned map is read-only.
 	*/
-	@:overload public function getAttributes() : java.util.Map<javax.xml.namespace.QName, DAnnotation_Attribute>;
+	@:overload public function getAttributes() : java.util.Map<javax.xml.namespace.QName, com.sun.xml.internal.rngom.digested.DAnnotation.DAnnotation_Attribute>;
 	
 	/**
 	* Gets the read-only view of all the child elements of this annotation.

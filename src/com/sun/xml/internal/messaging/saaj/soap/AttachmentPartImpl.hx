@@ -66,7 +66,7 @@ extern class AttachmentPartImpl extends javax.xml.soap.AttachmentPart
 	
 	@:overload public static function copyMimeHeaders(headers : javax.xml.soap.MimeHeaders, mbp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart) : Void;
 	
-	@:overload public static function copyMimeHeaders(mbp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart, ap : AttachmentPartImpl) : Void;
+	@:overload public static function copyMimeHeaders(mbp : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeBodyPart, ap : com.sun.xml.internal.messaging.saaj.soap.AttachmentPartImpl) : Void;
 	
 	@:overload override public function setBase64Content(content : java.io.InputStream, contentType : String) : Void;
 	

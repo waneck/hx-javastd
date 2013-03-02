@@ -29,7 +29,7 @@ extern class ZeroPortPolicy extends org.omg.CORBA.LocalObject implements org.omg
 	
 	@:overload public function forceZeroPort() : Bool;
 	
-	@:overload @:synchronized public static function getPolicy() : ZeroPortPolicy;
+	@:overload @:synchronized public static function getPolicy() : com.sun.corba.se.spi.extension.ZeroPortPolicy;
 	
 	@:overload public function policy_type() : Int;
 	

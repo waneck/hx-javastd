@@ -32,13 +32,13 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
+	@:overload public function setErrorListener(listener : javax.xml.transform.ErrorListener) : Void;
 	
-	@:overload override public function getErrorListener() : javax.xml.transform.ErrorListener;
+	@:overload public function getErrorListener() : javax.xml.transform.ErrorListener;
 	
-	@:overload override public function getAttribute(name : String) : Dynamic;
+	@:overload public function getAttribute(name : String) : Dynamic;
 	
-	@:overload override public function setAttribute(name : String, value : Dynamic) : Void;
+	@:overload public function setAttribute(name : String, value : Dynamic) : Void;
 	
 	/**
 	* <p>Set a feature for this <code>SmartTransformerFactory</code> and <code>Transformer</code>s
@@ -61,7 +61,7 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	*   or the <code>Transformer</code>s or <code>Template</code>s it creates cannot support this feature.
 	* @throws NullPointerException If the <code>name</code> parameter is null.
 	*/
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload public function setFeature(name : String, value : Bool) : Void;
 	
 	/**
 	* javax.xml.transform.sax.TransformerFactory implementation.
@@ -72,20 +72,20 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	* @param name The feature name
 	* @return 'true' if feature is supported, 'false' if not
 	*/
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload public function getFeature(name : String) : Bool;
 	
-	@:overload override public function getURIResolver() : javax.xml.transform.URIResolver;
+	@:overload public function getURIResolver() : javax.xml.transform.URIResolver;
 	
-	@:overload override public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
+	@:overload public function setURIResolver(resolver : javax.xml.transform.URIResolver) : Void;
 	
-	@:overload override public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
+	@:overload public function getAssociatedStylesheet(source : javax.xml.transform.Source, media : String, title : String, charset : String) : javax.xml.transform.Source;
 	
 	/**
 	* Create a Transformer object that copies the input document to the
 	* result. Uses the com.sun.org.apache.xalan.internal.processor.TransformerFactory.
 	* @return A Transformer object.
 	*/
-	@:overload override public function newTransformer() : javax.xml.transform.Transformer;
+	@:overload public function newTransformer() : javax.xml.transform.Transformer;
 	
 	/**
 	* Create a Transformer object that from the input stylesheet
@@ -93,7 +93,7 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	* @param source the stylesheet.
 	* @return A Transformer object.
 	*/
-	@:overload override public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
+	@:overload public function newTransformer(source : javax.xml.transform.Source) : javax.xml.transform.Transformer;
 	
 	/**
 	* Create a Templates object that from the input stylesheet
@@ -101,7 +101,7 @@ extern class SmartTransformerFactoryImpl extends javax.xml.transform.sax.SAXTran
 	* @param source the stylesheet.
 	* @return A Templates object.
 	*/
-	@:overload override public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
+	@:overload public function newTemplates(source : javax.xml.transform.Source) : javax.xml.transform.Templates;
 	
 	/**
 	* Get a TemplatesHandler object that can process SAX ContentHandler

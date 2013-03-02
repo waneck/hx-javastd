@@ -86,14 +86,14 @@ extern class InclusiveNamespaces extends com.sun.org.apache.xml.internal.securit
 	*
 	* @inheritDoc
 	*/
-	@:overload override public function getBaseNamespace() : String;
+	@:overload public function getBaseNamespace() : String;
 	
 	/**
 	* Method getBaseLocalName
 	*
 	* @inheritDoc
 	*/
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

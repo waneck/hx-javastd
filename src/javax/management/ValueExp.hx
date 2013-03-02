@@ -82,7 +82,7 @@ attribute is not in fact a Number.
 	* @exception BadAttributeValueExpException
 	* @exception InvalidApplicationException
 	*/
-	@:overload public function apply(name : javax.management.ObjectName) : ValueExp;
+	@:overload public function apply(name : javax.management.ObjectName) : javax.management.ValueExp;
 	
 	/**
 	* Sets the MBean server on which the query is to be performed.

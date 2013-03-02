@@ -25,9 +25,9 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsPopupMenuUI extends javax.swing.plaf.basic.BasicPopupMenuUI
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installListeners() : Void;
+	@:overload public function installListeners() : Void;
 	
 	/**
 	* Returns the <code>Popup</code> that will be responsible for
@@ -39,9 +39,9 @@ extern class WindowsPopupMenuUI extends javax.swing.plaf.basic.BasicPopupMenuUI
 	* @return Popup that will show the JPopupMenu
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getPopup(popupMenu : javax.swing.JPopupMenu, x : Int, y : Int) : javax.swing.Popup;
+	@:require(java4) @:overload public function getPopup(popupMenu : javax.swing.JPopupMenu, x : Int, y : Int) : javax.swing.Popup;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	
 }

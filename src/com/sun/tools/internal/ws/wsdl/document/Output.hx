@@ -42,19 +42,19 @@ extern class Output extends com.sun.tools.internal.ws.wsdl.framework.Entity impl
 	
 	@:overload public function resolveMessage(document : com.sun.tools.internal.ws.wsdl.framework.AbstractDocument) : com.sun.tools.internal.ws.wsdl.document.Message;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload public function getElementName() : javax.xml.namespace.QName;
 	
 	@:overload public function getDocumentation() : com.sun.tools.internal.ws.wsdl.document.Documentation;
 	
 	@:overload public function setDocumentation(d : com.sun.tools.internal.ws.wsdl.document.Documentation) : Void;
 	
-	@:overload override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
+	@:overload public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
 	
-	@:overload override public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
+	@:overload public function withAllEntityReferencesDo(action : com.sun.tools.internal.ws.wsdl.framework.EntityReferenceAction) : Void;
 	
 	@:overload public function accept(visitor : com.sun.tools.internal.ws.wsdl.document.WSDLDocumentVisitor) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload public function validateThis() : Void;
 	
 	@:overload public function addExtension(e : com.sun.tools.internal.ws.api.wsdl.TWSDLExtension) : Void;
 	

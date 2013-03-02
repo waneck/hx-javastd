@@ -23,7 +23,7 @@ package java.nio.file.attribute;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class FileTime implements java.lang.Comparable<FileTime>
+extern class FileTime implements java.lang.Comparable<java.nio.file.attribute.FileTime>
 {
 	/**
 	* Returns a {@code FileTime} representing a value at the given unit of
@@ -37,7 +37,7 @@ extern class FileTime implements java.lang.Comparable<FileTime>
 	*
 	* @return  a {@code FileTime} representing the given value
 	*/
-	@:overload public static function from(value : haxe.Int64, unit : java.util.concurrent.TimeUnit) : FileTime;
+	@:overload public static function from(value : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.nio.file.attribute.FileTime;
 	
 	/**
 	* Returns a {@code FileTime} representing the given value in milliseconds.
@@ -48,7 +48,7 @@ extern class FileTime implements java.lang.Comparable<FileTime>
 	*
 	* @return  a {@code FileTime} representing the given value
 	*/
-	@:overload public static function fromMillis(value : haxe.Int64) : FileTime;
+	@:overload public static function fromMillis(value : haxe.Int64) : java.nio.file.attribute.FileTime;
 	
 	/**
 	* Returns the value at the given unit of granularity.
@@ -112,7 +112,7 @@ extern class FileTime implements java.lang.Comparable<FileTime>
 	*          that is before {@code other}, and a value greater than 0 if this
 	*          {@code FileTime} represents a time that is after {@code other}
 	*/
-	@:overload public function compareTo(other : FileTime) : Int;
+	@:overload public function compareTo(other : java.nio.file.attribute.FileTime) : Int;
 	
 	/**
 	* Returns the string representation of this {@code FileTime}. The string
@@ -148,13 +148,13 @@ extern class FileTime implements java.lang.Comparable<FileTime>
 * the epoch, and the excess (in nanoseconds). This is used for comparing
 * values with different units of granularity.
 */
-@:native('java$nio$file$attribute$FileTime$DaysAndNanos') @:internal extern class FileTime_DaysAndNanos implements java.lang.Comparable<FileTime_DaysAndNanos>
+@:native('java$nio$file$attribute$FileTime$DaysAndNanos') @:internal extern class FileTime_DaysAndNanos implements java.lang.Comparable<java.nio.file.attribute.FileTime.FileTime_DaysAndNanos>
 {
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function compareTo(other : FileTime_DaysAndNanos) : Int;
+	@:overload public function compareTo(other : java.nio.file.attribute.FileTime.FileTime_DaysAndNanos) : Int;
 	
 	
 }

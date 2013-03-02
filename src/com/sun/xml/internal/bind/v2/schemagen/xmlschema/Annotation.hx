@@ -29,7 +29,7 @@ extern interface Annotation extends com.sun.xml.internal.txw2.TypedXmlWriter
 	
 	@:overload public function documentation() : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Documentation;
 	
-	@:overload public function id(value : String) : Annotation;
+	@:overload public function id(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotation;
 	
 	
 }

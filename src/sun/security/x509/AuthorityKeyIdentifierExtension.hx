@@ -98,7 +98,7 @@ extern class AuthorityKeyIdentifierExtension extends java.security.cert.Extensio
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on error.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.

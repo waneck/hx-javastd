@@ -27,7 +27,7 @@ extern class DTDDVFactory
 	* @exception DVFactoryException  cannot create an instance of the specified
 	*                                class name or the default class name
 	*/
-	@:overload @:final public static function getInstance() : DTDDVFactory;
+	@:overload @:final public static function getInstance() : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
 	
 	/**
 	* Get an instance of DTDDVFactory implementation.
@@ -37,7 +37,7 @@ extern class DTDDVFactory
 	* @exception DVFactoryException  cannot create an instance of the specified
 	*                                class name or the default class name
 	*/
-	@:overload @:final public static function getInstance(factoryClass : String) : DTDDVFactory;
+	@:overload @:final public static function getInstance(factoryClass : String) : com.sun.org.apache.xerces.internal.impl.dv.DTDDVFactory;
 	
 	@:overload private function new() : Void;
 	

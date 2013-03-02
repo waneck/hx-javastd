@@ -27,7 +27,7 @@ package com.sun.java.swing.plaf.gtk;
 {
 	@:overload public function new(filechooser : javax.swing.JFileChooser) : Void;
 	
-	@:overload override private function createActionMap() : javax.swing.ActionMap;
+	@:overload private function createActionMap() : javax.swing.ActionMap;
 	
 	@:overload override public function getFileName() : String;
 	
@@ -43,25 +43,25 @@ package com.sun.java.swing.plaf.gtk;
 	
 	@:overload override public function getFileView(fc : javax.swing.JFileChooser) : javax.swing.filechooser.FileView;
 	
-	@:overload override private function doSelectedFileChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function doSelectedFileChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override private function doDirectoryChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function doDirectoryChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override private function doAccessoryChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function doAccessoryChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override private function doFileSelectionModeChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function doFileSelectionModeChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override private function doMultiSelectionChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function doMultiSelectionChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override private function doControlButtonsChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function doControlButtonsChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
-	@:overload override private function doAncestorChanged(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function doAncestorChanged(e : java.beans.PropertyChangeEvent) : Void;
 	
 	@:overload override public function createListSelectionListener(fc : javax.swing.JFileChooser) : javax.swing.event.ListSelectionListener;
 	
 	@:overload override private function createDoubleClickListener(fc : javax.swing.JFileChooser, list : javax.swing.JList<Dynamic>) : java.awt.event.MouseListener;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
 	
@@ -91,21 +91,21 @@ package com.sun.java.swing.plaf.gtk;
 	
 	@:overload override public function getApproveSelectionAction() : javax.swing.Action;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(x : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
 	
 	@:overload private function align(c : javax.swing.JComponent) : Void;
 	
 	@:overload override public function getNewFolderAction() : javax.swing.Action;
 	
-	@:overload private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : GTKFileChooserUI_DirectoryComboBoxModel;
+	@:overload private function createDirectoryComboBoxModel(fc : javax.swing.JFileChooser) : com.sun.java.swing.plaf.gtk.GTKFileChooserUI.GTKFileChooserUI_DirectoryComboBoxModel;
 	
-	@:overload private function createFilterComboBoxRenderer() : GTKFileChooserUI_FilterComboBoxRenderer;
+	@:overload private function createFilterComboBoxRenderer() : com.sun.java.swing.plaf.gtk.GTKFileChooserUI.GTKFileChooserUI_FilterComboBoxRenderer;
 	
-	@:overload private function createFilterComboBoxModel() : GTKFileChooserUI_FilterComboBoxModel;
+	@:overload private function createFilterComboBoxModel() : com.sun.java.swing.plaf.gtk.GTKFileChooserUI.GTKFileChooserUI_FilterComboBoxModel;
 	
 	
 }
@@ -127,9 +127,9 @@ package com.sun.java.swing.plaf.gtk;
 {
 	@:overload public function new(list : javax.swing.JList<Dynamic>) : Void;
 	
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseEntered(evt : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -157,9 +157,9 @@ package com.sun.java.swing.plaf.gtk;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
@@ -175,13 +175,13 @@ package com.sun.java.swing.plaf.gtk;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
 	@:overload public function contains(o : Dynamic) : Bool;
 	
 	@:overload public function indexOf(o : Dynamic) : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
@@ -216,9 +216,9 @@ package com.sun.java.swing.plaf.gtk;
 	
 	@:overload public function getSelectedItem() : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	
 }
@@ -266,7 +266,7 @@ package com.sun.java.swing.plaf.gtk;
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$FilterComboBoxRenderer') extern class GTKFileChooserUI_FilterComboBoxRenderer extends javax.swing.DefaultListCellRenderer implements javax.swing.plaf.UIResource
 {
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
@@ -287,9 +287,9 @@ package com.sun.java.swing.plaf.gtk;
 	
 	@:overload public function getSelectedItem() : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	
 }

@@ -35,7 +35,7 @@ extern interface Closure
 	/**
 	* Returns a reference to its parent closure or null if outermost.
 	*/
-	@:overload public function getParentClosure() : Closure;
+	@:overload public function getParentClosure() : com.sun.org.apache.xalan.internal.xsltc.compiler.Closure;
 	
 	/**
 	* Returns the name of the auxiliary class or null if this predicate

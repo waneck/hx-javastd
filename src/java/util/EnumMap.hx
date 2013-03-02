@@ -40,7 +40,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	* @param m the enum map from which to initialize this enum map
 	* @throws NullPointerException if <tt>m</tt> is null
 	*/
-	@:overload public function new(m : EnumMap<K, V>) : Void;
+	@:overload public function new(m : java.util.EnumMap<K, V>) : Void;
 	
 	/**
 	* Creates an enum map initialized from the specified map.  If the
@@ -199,7 +199,7 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	*
 	* @return a shallow copy of this enum map
 	*/
-	@:overload override public function clone() : EnumMap<K, V>;
+	@:overload override public function clone() : java.util.EnumMap<K, V>;
 	
 	
 }
@@ -265,19 +265,19 @@ extern class EnumMap<K, V> extends java.util.AbstractMap<K, V> implements java.i
 	
 	
 }
-@:native('java$util$EnumMap$KeyIterator') @:internal extern class EnumMap_KeyIterator extends EnumMap_EnumMapIterator<Dynamic>
+@:native('java$util$EnumMap$KeyIterator') @:internal extern class EnumMap_KeyIterator extends java.util.EnumMap.EnumMap_EnumMapIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$EnumMap$ValueIterator') @:internal extern class EnumMap_ValueIterator extends EnumMap_EnumMapIterator<Dynamic>
+@:native('java$util$EnumMap$ValueIterator') @:internal extern class EnumMap_ValueIterator extends java.util.EnumMap.EnumMap_EnumMapIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$EnumMap$EntryIterator') @:internal extern class EnumMap_EntryIterator extends EnumMap_EnumMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$EnumMap$EntryIterator') @:internal extern class EnumMap_EntryIterator extends java.util.EnumMap.EnumMap_EnumMapIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	

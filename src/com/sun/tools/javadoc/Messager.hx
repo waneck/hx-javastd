@@ -26,7 +26,7 @@ package com.sun.tools.javadoc;
 extern class Messager extends com.sun.tools.javac.util.Log implements com.sun.javadoc.DocErrorReporter
 {
 	/** Get the current messager, which is also the compiler log. */
-	@:overload public static function instance0(context : com.sun.tools.javac.util.Context) : Messager;
+	@:overload public static function instance0(context : com.sun.tools.javac.util.Context) : com.sun.tools.javadoc.Messager;
 	
 	@:overload public static function preRegister(context : com.sun.tools.javac.util.Context, programName : String) : Void;
 	

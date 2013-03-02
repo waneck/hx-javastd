@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.parsers;
 extern class DOMParserImpl extends com.sun.org.apache.xerces.internal.parsers.AbstractDOMParser implements org.w3c.dom.ls.LSParser implements org.w3c.dom.DOMConfiguration
 {
 	/** Feature identifier: namespaces. */
-	@:native('NAMESPACES') private static var _NAMESPACES(default, null) : String;
+	private static var NAMESPACES(default, null) : String;
 	
 	/** Feature id: validation. */
 	private static var VALIDATION_FEATURE(default, null) : String;
@@ -183,7 +183,7 @@ extern class DOMParserImpl extends com.sun.org.apache.xerces.internal.parsers.Ab
 	/**
 	* @see org.w3c.dom.ls.DOMParser#abort()
 	*/
-	@:overload override public function abort() : Void;
+	@:overload public function abort() : Void;
 	
 	/**
 	* The start of an element. If the document specifies the start element

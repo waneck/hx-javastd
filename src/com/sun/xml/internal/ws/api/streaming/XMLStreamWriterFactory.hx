@@ -71,7 +71,7 @@ extern class XMLStreamWriterFactory
 	/**
 	* Gets the singleton instance.
 	*/
-	@:overload public static function get() : XMLStreamWriterFactory;
+	@:overload public static function get() : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
 	
 	/**
 	* Overrides the singleton {@link XMLStreamWriterFactory} instance that
@@ -80,7 +80,7 @@ extern class XMLStreamWriterFactory
 	* @param f
 	*      must not be null.
 	*/
-	@:overload public static function set(f : XMLStreamWriterFactory) : Void;
+	@:overload public static function set(f : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory) : Void;
 	
 	/**
 	* Short-cut for {@link #create(OutputStream, String)} with UTF-8.
@@ -131,7 +131,7 @@ extern class XMLStreamWriterFactory
 * {@link XMLOutputFactory} is not required to be thread-safe, so the
 * create method on this implementation is synchronized.
 */
-@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$Default') extern class XMLStreamWriterFactory_Default extends XMLStreamWriterFactory
+@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$Default') extern class XMLStreamWriterFactory_Default extends com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory
 {
 	@:overload public function new(xof : javax.xml.stream.XMLOutputFactory) : Void;
 	
@@ -149,9 +149,9 @@ extern class XMLStreamWriterFactory
 * <p>
 * This implementation supports instance reuse.
 */
-@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$Zephyr') extern class XMLStreamWriterFactory_Zephyr extends XMLStreamWriterFactory
+@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$Zephyr') extern class XMLStreamWriterFactory_Zephyr extends com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory
 {
-	@:overload public static function newInstance(xof : javax.xml.stream.XMLOutputFactory) : XMLStreamWriterFactory;
+	@:overload public static function newInstance(xof : javax.xml.stream.XMLOutputFactory) : com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory;
 	
 	@:overload override public function doCreate(out : java.io.OutputStream) : javax.xml.stream.XMLStreamWriter;
 	
@@ -165,7 +165,7 @@ extern class XMLStreamWriterFactory
 *
 * For {@link javax.xml.stream.XMLOutputFactory} is thread safe.
 */
-@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$NoLock') extern class XMLStreamWriterFactory_NoLock extends XMLStreamWriterFactory
+@:native('com$sun$xml$internal$ws$api$streaming$XMLStreamWriterFactory$NoLock') extern class XMLStreamWriterFactory_NoLock extends com.sun.xml.internal.ws.api.streaming.XMLStreamWriterFactory
 {
 	@:overload public function new(xof : javax.xml.stream.XMLOutputFactory) : Void;
 	

@@ -42,7 +42,7 @@ extern class CoreReflectionFactory implements sun.reflect.generics.factory.Gener
 	* type variables
 	* @return an instance of <tt>CoreReflectionFactory</tt>
 	*/
-	@:overload public static function make(d : java.lang.reflect.GenericDeclaration, s : sun.reflect.generics.scope.Scope) : CoreReflectionFactory;
+	@:overload public static function make(d : java.lang.reflect.GenericDeclaration, s : sun.reflect.generics.scope.Scope) : sun.reflect.generics.factory.CoreReflectionFactory;
 	
 	@:overload public function makeTypeVariable(name : String, bounds : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : java.lang.reflect.TypeVariable<Dynamic>;
 	

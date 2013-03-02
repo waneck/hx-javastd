@@ -32,7 +32,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface LongValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<LongValue>
+@:require(java3) extern interface LongValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<com.sun.jdi.LongValue>
 {
 	/**
 	* Returns this LongValue as a long.

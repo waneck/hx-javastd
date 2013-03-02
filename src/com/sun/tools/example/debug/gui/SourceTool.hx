@@ -82,17 +82,17 @@ extern class SourceTool extends javax.swing.JPanel
 }
 @:native('com$sun$tools$example$debug$gui$SourceTool$SourceLineRenderer') @:internal extern class SourceTool_SourceLineRenderer extends javax.swing.DefaultListCellRenderer
 {
-	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
 @:native('com$sun$tools$example$debug$gui$SourceTool$STMouseListener') @:internal extern class SourceTool_STMouseListener extends java.awt.event.MouseAdapter implements java.awt.event.MouseListener
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

@@ -47,7 +47,7 @@ extern class ElementKindVisitor7<R, P> extends javax.lang.model.util.ElementKind
 	* @param p {@inheritDoc}
 	* @return  the result of {@code defaultAction}
 	*/
-	@:overload override public function visitVariableAsResourceVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
+	@:overload public function visitVariableAsResourceVariable(e : javax.lang.model.element.VariableElement, p : P) : R;
 	
 	
 }

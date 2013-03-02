@@ -72,7 +72,7 @@ extern class NetworkInterface
 	* of this network interface
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getSubInterfaces() : java.util.Enumeration<NetworkInterface>;
+	@:require(java6) @:overload public function getSubInterfaces() : java.util.Enumeration<java.net.NetworkInterface>;
 	
 	/**
 	* Returns the parent NetworkInterface of this interface if this is
@@ -82,7 +82,7 @@ extern class NetworkInterface
 	* @return The <code>NetworkInterface</code> this interface is attached to.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function getParent() : NetworkInterface;
+	@:require(java6) @:overload public function getParent() : java.net.NetworkInterface;
 	
 	/**
 	* Returns the index of this network interface. The index is an integer greater
@@ -123,7 +123,7 @@ extern class NetworkInterface
 	* @throws  NullPointerException
 	*          If the specified name is <tt>null</tt>.
 	*/
-	@:overload public static function getByName(name : String) : NetworkInterface;
+	@:overload public static function getByName(name : String) : java.net.NetworkInterface;
 	
 	/**
 	* Get a network interface given its index.
@@ -136,7 +136,7 @@ extern class NetworkInterface
 	* @see #getIndex()
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getByIndex(index : Int) : NetworkInterface;
+	@:require(java7) @:overload public static function getByIndex(index : Int) : java.net.NetworkInterface;
 	
 	/**
 	* Convenience method to search for a network interface that
@@ -160,7 +160,7 @@ extern class NetworkInterface
 	* @throws  NullPointerException
 	*          If the specified address is <tt>null</tt>.
 	*/
-	@:overload public static function getByInetAddress(addr : java.net.InetAddress) : NetworkInterface;
+	@:overload public static function getByInetAddress(addr : java.net.InetAddress) : java.net.NetworkInterface;
 	
 	/**
 	* Returns all the interfaces on this machine. Returns null if no
@@ -172,7 +172,7 @@ extern class NetworkInterface
 	* @return an Enumeration of NetworkInterfaces found on this machine
 	* @exception  SocketException  if an I/O error occurs.
 	*/
-	@:overload public static function getNetworkInterfaces() : java.util.Enumeration<NetworkInterface>;
+	@:overload public static function getNetworkInterfaces() : java.util.Enumeration<java.net.NetworkInterface>;
 	
 	/**
 	* Returns whether a network interface is up and running.

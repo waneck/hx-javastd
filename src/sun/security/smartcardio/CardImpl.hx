@@ -31,21 +31,21 @@ package sun.security.smartcardio;
 */
 @:require(java6) @:internal extern class CardImpl extends javax.smartcardio.Card
 {
-	@:overload override public function getATR() : javax.smartcardio.ATR;
+	@:overload public function getATR() : javax.smartcardio.ATR;
 	
-	@:overload override public function getProtocol() : String;
+	@:overload public function getProtocol() : String;
 	
-	@:overload override public function getBasicChannel() : javax.smartcardio.CardChannel;
+	@:overload public function getBasicChannel() : javax.smartcardio.CardChannel;
 	
-	@:overload override public function openLogicalChannel() : javax.smartcardio.CardChannel;
+	@:overload public function openLogicalChannel() : javax.smartcardio.CardChannel;
 	
-	@:overload @:synchronized override public function beginExclusive() : Void;
+	@:overload @:synchronized public function beginExclusive() : Void;
 	
-	@:overload @:synchronized override public function endExclusive() : Void;
+	@:overload @:synchronized public function endExclusive() : Void;
 	
-	@:overload override public function transmitControlCommand(controlCode : Int, command : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function transmitControlCommand(controlCode : Int, command : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function disconnect(reset : Bool) : Void;
+	@:overload public function disconnect(reset : Bool) : Void;
 	
 	@:overload public function toString() : String;
 	

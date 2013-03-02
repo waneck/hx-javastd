@@ -82,7 +82,7 @@ extern class Ticket implements java.lang.Cloneable
 	* @param optional indicate if this data field is optional
 	* @return an instance of Ticket.
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : Ticket;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.Ticket;
 	
 	
 }

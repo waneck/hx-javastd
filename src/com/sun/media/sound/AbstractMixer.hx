@@ -110,7 +110,7 @@ package com.sun.media.sound;
 	/**
 	* This implementation tries to open the mixer with its current format and buffer size settings.
 	*/
-	@:overload @:synchronized override public function open() : Void;
+	@:overload @:synchronized public function open() : Void;
 	
 	/**
 	* This implementation tries to open the mixer with its current format and buffer size settings.
@@ -136,7 +136,7 @@ package com.sun.media.sound;
 	/**
 	* Close all lines and then close this mixer.
 	*/
-	@:overload @:synchronized override public function close() : Void;
+	@:overload @:synchronized public function close() : Void;
 	
 	/**
 	* Starts the mixer.
@@ -153,7 +153,7 @@ package com.sun.media.sound;
 	* line.
 	* @return description of the line
 	*/
-	@:overload override public function getLineInfo() : Line_Info;
+	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Obtains a control of the specified type,
@@ -166,7 +166,7 @@ package com.sun.media.sound;
 	* @see #getControls
 	* @see #isControlSupported(Control.Type control)
 	*/
-	@:overload override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* Adds a listener to this line.  Whenever the line's status changes, the
@@ -177,7 +177,7 @@ package com.sun.media.sound;
 	* @see LineListener#update
 	* @see LineEvent
 	*/
-	@:overload override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Indicates whether the line supports a control of the specified type.
@@ -186,7 +186,7 @@ package com.sun.media.sound;
 	* @return <code>true</code> if at least one control of the specified type is
 	* supported, otherwise <code>false</code>.
 	*/
-	@:overload override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Obtains the set of controls associated with this line.
@@ -195,7 +195,7 @@ package com.sun.media.sound;
 	* @return the array of controls
 	* @see #getControl
 	*/
-	@:overload override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Indicates whether the line is open, meaning that it has reserved
@@ -206,14 +206,14 @@ package com.sun.media.sound;
 	* @see #open()
 	* @see #close()
 	*/
-	@:overload override public function isOpen() : Bool;
+	@:overload public function isOpen() : Bool;
 	
 	/**
 	* Removes the specified listener from this line's list of listeners.
 	* @param listener listener to remove
 	* @see #addLineListener
 	*/
-	@:overload override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }

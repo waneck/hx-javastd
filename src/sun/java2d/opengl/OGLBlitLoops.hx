@@ -29,7 +29,7 @@ package sun.java2d.opengl;
 }
 @:internal extern class OGLSurfaceToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
@@ -47,7 +47,7 @@ package sun.java2d.opengl;
 }
 @:internal extern class OGLRTTSurfaceToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
@@ -65,13 +65,13 @@ package sun.java2d.opengl;
 }
 @:internal extern class OGLSurfaceToSwBlit extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLSwToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
@@ -89,13 +89,13 @@ package sun.java2d.opengl;
 }
 @:internal extern class OGLSwToTextureBlit extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
 @:internal extern class OGLTextureToSurfaceBlit extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
@@ -113,7 +113,7 @@ package sun.java2d.opengl;
 }
 @:internal extern class OGLGeneralBlit extends sun.java2d.loops.Blit
 {
-	@:overload @:synchronized override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload @:synchronized public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }

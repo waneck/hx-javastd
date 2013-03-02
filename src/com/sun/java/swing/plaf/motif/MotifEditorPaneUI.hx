@@ -31,7 +31,7 @@ extern class MotifEditorPaneUI extends javax.swing.plaf.basic.BasicEditorPaneUI
 	* @param c the JTextPane component
 	* @return the UI
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates the object to use for a caret.  By default an
@@ -41,7 +41,7 @@ extern class MotifEditorPaneUI extends javax.swing.plaf.basic.BasicEditorPaneUI
 	*
 	* @return the caret object
 	*/
-	@:overload override private function createCaret() : javax.swing.text.Caret;
+	@:overload private function createCaret() : javax.swing.text.Caret;
 	
 	
 }

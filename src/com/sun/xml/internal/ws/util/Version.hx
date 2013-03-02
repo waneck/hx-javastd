@@ -40,7 +40,7 @@ extern class Version
 	*/
 	public var MAJOR_VERSION(default, null) : String;
 	
-	@:overload public static function create(is : java.io.InputStream) : Version;
+	@:overload public static function create(is : java.io.InputStream) : com.sun.xml.internal.ws.util.Version;
 	
 	@:overload public function toString() : String;
 	

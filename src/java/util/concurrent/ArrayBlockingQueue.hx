@@ -119,7 +119,7 @@ package java.util.concurrent;
 	* @throws IllegalStateException if this queue is full
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue if it is
@@ -130,7 +130,7 @@ package java.util.concurrent;
 	*
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload public function offer(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element at the tail of this queue, waiting
@@ -151,20 +151,20 @@ package java.util.concurrent;
 	*/
 	@:overload public function offer(e : E, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
-	@:overload override public function poll() : E;
+	@:overload public function poll() : E;
 	
 	@:overload public function take() : E;
 	
 	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : E;
 	
-	@:overload override public function peek() : E;
+	@:overload public function peek() : E;
 	
 	/**
 	* Returns the number of elements in this queue.
 	*
 	* @return the number of elements in this queue
 	*/
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	/**
 	* Returns the number of additional elements that this queue can ideally
@@ -196,7 +196,7 @@ package java.util.concurrent;
 	* @param o element to be removed from this queue, if present
 	* @return {@code true} if this queue changed as a result of the call
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns {@code true} if this queue contains the specified element.
@@ -206,7 +206,7 @@ package java.util.concurrent;
 	* @param o object to be checked for containment in this queue
 	* @return {@code true} if this queue contains the specified element
 	*/
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -221,7 +221,7 @@ package java.util.concurrent;
 	*
 	* @return an array containing all of the elements in this queue
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this queue, in
@@ -259,15 +259,15 @@ package java.util.concurrent;
 	*         this queue
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Atomically removes all of the elements from this queue.
 	* The queue will be empty after this call returns.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -298,7 +298,7 @@ package java.util.concurrent;
 	*
 	* @return an iterator over the elements in this queue in proper sequence
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload public function iterator() : java.util.Iterator<E>;
 	
 	
 }

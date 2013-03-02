@@ -42,7 +42,7 @@ extern class StubFactoryFactoryBase implements com.sun.corba.se.spi.presentation
 	* @param expectedClass The expected stub type (may be null or unused).
 	* @param classLoader The classLoader to use (may be null).
 	*/
-	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : PresentationManager_StubFactory;
+	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
 	/** Return whether or not this StubFactoryFactory creates StubFactory
 	* instances that create dynamic stubs and ties.  At the top level,

@@ -34,9 +34,9 @@ package com.sun.tools.javac.util;
 */
 extern class Names
 {
-	public static var namesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Names>;
+	public static var namesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.util.Names>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Names;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.Names;
 	
 	public var slash(default, null) : com.sun.tools.javac.util.Name;
 	

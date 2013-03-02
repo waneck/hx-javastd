@@ -39,7 +39,7 @@ extern class KeyIntMap
 	
 	@:overload @:abstract public function clear() : Void;
 	
-	@:overload @:abstract public function setReadOnlyMap(readOnlyMap : KeyIntMap, clear : Bool) : Void;
+	@:overload @:abstract public function setReadOnlyMap(readOnlyMap : com.sun.xml.internal.fastinfoset.util.KeyIntMap, clear : Bool) : Void;
 	
 	@:overload @:final public static function hashHash(h : Int) : Int;
 	

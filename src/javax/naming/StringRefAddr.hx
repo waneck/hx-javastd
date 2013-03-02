@@ -64,7 +64,7 @@ package javax.naming;
 	*
 	* @return The possibly null address contents.
 	*/
-	@:overload override public function getContent() : Dynamic;
+	@:overload public function getContent() : Dynamic;
 	
 	
 }

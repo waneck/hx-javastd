@@ -26,25 +26,25 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 */
 @:internal extern class RangeToken extends com.sun.org.apache.xerces.internal.impl.xpath.regex.Token implements java.io.Serializable
 {
-	@:overload override private function addRange(start : Int, end : Int) : Void;
+	@:overload private function addRange(start : Int, end : Int) : Void;
 	
-	@:overload override private function sortRanges() : Void;
+	@:overload private function sortRanges() : Void;
 	
 	/**
 	* this.ranges is sorted.
 	*/
-	@:overload override private function compactRanges() : Void;
+	@:overload private function compactRanges() : Void;
 	
-	@:overload override private function mergeRanges(token : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
+	@:overload private function mergeRanges(token : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
 	
-	@:overload override private function subtractRanges(token : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
+	@:overload private function subtractRanges(token : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
 	
 	/**
 	* @param tok Ignore whether it is NRANGE or not.
 	*/
-	@:overload override private function intersectRanges(token : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
+	@:overload private function intersectRanges(token : com.sun.org.apache.xerces.internal.impl.xpath.regex.Token) : Void;
 	
-	@:overload override public function toString(options : Int) : String;
+	@:overload public function toString(options : Int) : String;
 	
 	
 }

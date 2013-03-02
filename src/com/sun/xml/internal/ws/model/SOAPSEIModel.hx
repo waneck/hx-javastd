@@ -32,7 +32,7 @@ extern class SOAPSEIModel extends com.sun.xml.internal.ws.model.AbstractSEIModel
 	*/
 	@:overload public function new(features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Void;
 	
-	@:overload override private function populateMaps() : Void;
+	@:overload private function populateMaps() : Void;
 	
 	@:overload public function getKnownHeaders() : java.util.Set<javax.xml.namespace.QName>;
 	

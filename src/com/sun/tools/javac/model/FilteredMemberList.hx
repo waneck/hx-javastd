@@ -39,7 +39,7 @@ extern class FilteredMemberList extends java.util.AbstractList<com.sun.tools.jav
 	
 	@:overload override public function size() : Int;
 	
-	@:overload override public function get(index : Int) : com.sun.tools.javac.code.Symbol;
+	@:overload public function get(index : Int) : com.sun.tools.javac.code.Symbol;
 	
 	@:overload override public function iterator() : java.util.Iterator<com.sun.tools.javac.code.Symbol>;
 	

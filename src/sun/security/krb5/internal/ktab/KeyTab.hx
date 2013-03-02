@@ -35,20 +35,20 @@ extern class KeyTab implements sun.security.krb5.internal.ktab.KeyTabConstants
 	* @param s the key tab file name.
 	* @return the KeyTab object, never null.
 	*/
-	@:overload public static function getInstance(s : String) : KeyTab;
+	@:overload public static function getInstance(s : String) : sun.security.krb5.internal.ktab.KeyTab;
 	
 	/**
 	* Gets a KeyTab object.
 	* @param file the key tab file.
 	* @return the KeyTab object, never null.
 	*/
-	@:overload public static function getInstance(file : java.io.File) : KeyTab;
+	@:overload public static function getInstance(file : java.io.File) : sun.security.krb5.internal.ktab.KeyTab;
 	
 	/**
 	* Gets the default KeyTab object.
 	* @return the KeyTab object, never null.
 	*/
-	@:overload public static function getInstance() : KeyTab;
+	@:overload public static function getInstance() : sun.security.krb5.internal.ktab.KeyTab;
 	
 	@:overload public function isMissing() : Bool;
 	
@@ -93,12 +93,12 @@ extern class KeyTab implements sun.security.krb5.internal.ktab.KeyTabConstants
 	/**
 	* Creates a new default key table.
 	*/
-	@:overload @:synchronized public static function create() : KeyTab;
+	@:overload @:synchronized public static function create() : sun.security.krb5.internal.ktab.KeyTab;
 	
 	/**
 	* Creates a new default key table.
 	*/
-	@:overload @:synchronized public static function create(name : String) : KeyTab;
+	@:overload @:synchronized public static function create(name : String) : sun.security.krb5.internal.ktab.KeyTab;
 	
 	/**
 	* Saves the file at the directory.

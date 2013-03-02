@@ -39,7 +39,7 @@ package javax.swing.plaf.synth;
 	* @param b component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc

@@ -23,9 +23,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class Attribute extends com.sun.org.apache.xalan.internal.xsltc.compiler.Instruction
 {
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	
 }

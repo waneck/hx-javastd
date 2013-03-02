@@ -92,7 +92,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @return True if this object equals this string value
 	*/
-	@:overload @:final public function equals(obj : Dynamic) : Bool;
+	@:overload @:final override public function equals(obj : Dynamic) : Bool;
 	
 	
 }

@@ -70,13 +70,13 @@ extern class GlyphLayout
 	* Return a new instance of GlyphLayout, using the provided layout engine factory.
 	* If null, the system layout engine factory will be used.
 	*/
-	@:overload public static function get(lef : GlyphLayout_LayoutEngineFactory) : GlyphLayout;
+	@:overload public static function get(lef : sun.font.GlyphLayout.GlyphLayout_LayoutEngineFactory) : sun.font.GlyphLayout;
 	
 	/**
 	* Return the old instance of GlyphLayout when you are done.  This enables reuse
 	* of GlyphLayout objects.
 	*/
-	@:overload public static function done(gl : GlyphLayout) : Void;
+	@:overload public static function done(gl : sun.font.GlyphLayout) : Void;
 	
 	/**
 	* Create a glyph vector.
@@ -106,12 +106,12 @@ extern class GlyphLayout
 	/**
 	* Given a font, script, and language, determine a layout engine to use.
 	*/
-	@:overload public function getEngine(font : sun.font.Font2D, script : Int, lang : Int) : GlyphLayout_LayoutEngine;
+	@:overload public function getEngine(font : sun.font.Font2D, script : Int, lang : Int) : sun.font.GlyphLayout.GlyphLayout_LayoutEngine;
 	
 	/**
 	* Given a key, determine a layout engine to use.
 	*/
-	@:overload public function getEngine(key : GlyphLayout_LayoutEngineKey) : GlyphLayout_LayoutEngine;
+	@:overload public function getEngine(key : sun.font.GlyphLayout.GlyphLayout_LayoutEngineKey) : sun.font.GlyphLayout.GlyphLayout_LayoutEngine;
 	
 	
 }
@@ -124,7 +124,7 @@ extern class GlyphLayout
 	* If the GVData does not have room for the glyphs, throws an IndexOutOfBoundsException and
 	* leave pt and the gvdata unchanged.
 	*/
-	@:overload public function layout(sd : sun.font.FontStrikeDesc, mat : java.NativeArray<Single>, gmask : Int, baseIndex : Int, text : sun.font.TextRecord, typo_flags : Int, pt : java.awt.geom.Point2D.Point2D_Float, data : GlyphLayout_GVData) : Void;
+	@:overload public function layout(sd : sun.font.FontStrikeDesc, mat : java.NativeArray<Single>, gmask : Int, baseIndex : Int, text : sun.font.TextRecord, typo_flags : Int, pt : java.awt.geom.Point2D.Point2D_Float, data : sun.font.GlyphLayout.GlyphLayout_GVData) : Void;
 	
 	
 }
@@ -144,7 +144,7 @@ extern class GlyphLayout
 	
 	public var sd : sun.font.FontStrikeDesc;
 	
-	@:overload public static function get(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : GlyphLayout_SDCache;
+	@:overload public static function get(font : java.awt.Font, frc : java.awt.font.FontRenderContext) : sun.font.GlyphLayout.GlyphLayout_SDCache;
 	
 	
 }

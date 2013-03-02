@@ -34,13 +34,13 @@ package com.sun.media.sound;
 	
 	private static var bisBufferSize(default, null) : Int;
 	
-	@:overload override public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload public function getAudioFileTypes() : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
-	@:overload @:abstract override public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
+	@:overload @:abstract public function getAudioFileTypes(stream : javax.sound.sampled.AudioInputStream) : java.NativeArray<javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type>;
 	
-	@:overload @:abstract override public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
+	@:overload @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.OutputStream) : Int;
 	
-	@:overload @:abstract override public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
+	@:overload @:abstract public function write(stream : javax.sound.sampled.AudioInputStream, fileType : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, out : java.io.File) : Int;
 	
 	/**
 	* rllong

@@ -42,7 +42,7 @@ extern class JulianCalendar extends sun.util.calendar.BaseCalendar
 	/**
 	* @param jyear normalized Julian year
 	*/
-	@:overload public function getFixedDate(jyear : Int, month : Int, dayOfMonth : Int, cache : sun.util.calendar.BaseCalendar.BaseCalendar_Date) : haxe.Int64;
+	@:overload override public function getFixedDate(jyear : Int, month : Int, dayOfMonth : Int, cache : sun.util.calendar.BaseCalendar.BaseCalendar_Date) : haxe.Int64;
 	
 	@:overload override public function getCalendarDateFromFixedDate(date : sun.util.calendar.CalendarDate, fixedDate : haxe.Int64) : Void;
 	

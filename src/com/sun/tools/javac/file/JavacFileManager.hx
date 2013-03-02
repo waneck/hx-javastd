@@ -40,7 +40,7 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 	
 	private var ignoreSymbolFile : Bool;
 	
-	private var sortFiles : JavacFileManager_SortFiles;
+	private var sortFiles : com.sun.tools.javac.file.JavacFileManager.JavacFileManager_SortFiles;
 	
 	/**
 	* Register a Context.Factory to create a JavacFileManager.
@@ -78,7 +78,7 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 	* fail over to the platform zip, and allow it to deal with a potentially
 	* non compliant zip file.
 	*/
-	@:overload private function openArchive(zipFilename : java.io.File) : JavacFileManager_Archive;
+	@:overload private function openArchive(zipFilename : java.io.File) : com.sun.tools.javac.file.JavacFileManager.JavacFileManager_Archive;
 	
 	/** Flush any output resources.
 	*/
@@ -177,7 +177,7 @@ extern class JavacFileManager extends com.sun.tools.javac.util.BaseFileManager i
 	
 	
 }
-@:native('com$sun$tools$javac$file$JavacFileManager$MissingArchive') extern class JavacFileManager_MissingArchive implements JavacFileManager_Archive
+@:native('com$sun$tools$javac$file$JavacFileManager$MissingArchive') extern class JavacFileManager_MissingArchive implements com.sun.tools.javac.file.JavacFileManager.JavacFileManager_Archive
 {
 	@:overload public function new(name : java.io.File) : Void;
 	

@@ -122,7 +122,7 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function getState() : State;
+	@:overload private function getState() : State;
 	
 	@:overload override public function getPreferredSize() : java.awt.Dimension;
 	
@@ -174,7 +174,7 @@ extern class WindowsComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
+	@:overload public function getListCellRendererComponent(list : javax.swing.JList<Dynamic>, value : Dynamic, index : Int, isSelected : Bool, cellHasFocus : Bool) : java.awt.Component;
 	
 	
 }

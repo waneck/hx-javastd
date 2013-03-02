@@ -26,28 +26,28 @@ package java.math;
 /*
 * Portions Copyright IBM Corporation, 2001. All Rights Reserved.
 */
-extern class BigDecimal extends java.lang.Number implements java.lang.Comparable<BigDecimal>
+extern class BigDecimal extends java.lang.Number implements java.lang.Comparable<java.math.BigDecimal>
 {
 	/**
 	* The value 0, with a scale of 0.
 	*
 	* @since  1.5
 	*/
-	@:require(java5) public static var ZERO(default, null) : BigDecimal;
+	@:require(java5) public static var ZERO(default, null) : java.math.BigDecimal;
 	
 	/**
 	* The value 1, with a scale of 0.
 	*
 	* @since  1.5
 	*/
-	@:require(java5) public static var ONE(default, null) : BigDecimal;
+	@:require(java5) public static var ONE(default, null) : java.math.BigDecimal;
 	
 	/**
 	* The value 10, with a scale of 0.
 	*
 	* @since  1.5
 	*/
-	@:require(java5) public static var TEN(default, null) : BigDecimal;
+	@:require(java5) public static var TEN(default, null) : java.math.BigDecimal;
 	
 	/**
 	* Translates a character array representation of a
@@ -437,7 +437,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @return a {@code BigDecimal} whose value is
 	*         <tt>(unscaledVal &times; 10<sup>-scale</sup>)</tt>.
 	*/
-	@:overload public static function valueOf(unscaledVal : haxe.Int64, scale : Int) : BigDecimal;
+	@:overload public static function valueOf(unscaledVal : haxe.Int64, scale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Translates a {@code long} value into a {@code BigDecimal}
@@ -449,7 +449,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @param val value of the {@code BigDecimal}.
 	* @return a {@code BigDecimal} whose value is {@code val}.
 	*/
-	@:overload public static function valueOf(val : haxe.Int64) : BigDecimal;
+	@:overload public static function valueOf(val : haxe.Int64) : java.math.BigDecimal;
 	
 	/**
 	* Translates a {@code double} into a {@code BigDecimal}, using
@@ -468,7 +468,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @throws NumberFormatException if {@code val} is infinite or NaN.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public static function valueOf(val : Float) : BigDecimal;
+	@:require(java5) @:overload public static function valueOf(val : Float) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this +
@@ -478,7 +478,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @param  augend value to be added to this {@code BigDecimal}.
 	* @return {@code this + augend}
 	*/
-	@:overload public function add(augend : BigDecimal) : BigDecimal;
+	@:overload public function add(augend : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this + augend)},
@@ -494,7 +494,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         rounding mode is {@code UNNECESSARY}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function add(augend : BigDecimal, mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function add(augend : java.math.BigDecimal, mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this -
@@ -504,7 +504,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @param  subtrahend value to be subtracted from this {@code BigDecimal}.
 	* @return {@code this - subtrahend}
 	*/
-	@:overload public function subtract(subtrahend : BigDecimal) : BigDecimal;
+	@:overload public function subtract(subtrahend : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this - subtrahend)},
@@ -520,7 +520,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         rounding mode is {@code UNNECESSARY}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function subtract(subtrahend : BigDecimal, mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function subtract(subtrahend : java.math.BigDecimal, mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is <tt>(this &times;
@@ -530,7 +530,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @param  multiplicand value to be multiplied by this {@code BigDecimal}.
 	* @return {@code this * multiplicand}
 	*/
-	@:overload public function multiply(multiplicand : BigDecimal) : BigDecimal;
+	@:overload public function multiply(multiplicand : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is <tt>(this &times;
@@ -543,7 +543,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         rounding mode is {@code UNNECESSARY}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function multiply(multiplicand : BigDecimal, mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function multiply(multiplicand : java.math.BigDecimal, mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this /
@@ -573,7 +573,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #ROUND_HALF_EVEN
 	* @see    #ROUND_UNNECESSARY
 	*/
-	@:overload public function divide(divisor : BigDecimal, scale : Int, roundingMode : Int) : BigDecimal;
+	@:overload public function divide(divisor : java.math.BigDecimal, scale : Int, roundingMode : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this /
@@ -591,7 +591,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         of the division exactly.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function divide(divisor : BigDecimal, scale : Int, roundingMode : java.math.RoundingMode) : BigDecimal;
+	@:require(java5) @:overload public function divide(divisor : java.math.BigDecimal, scale : Int, roundingMode : java.math.RoundingMode) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this /
@@ -620,7 +620,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #ROUND_HALF_EVEN
 	* @see    #ROUND_UNNECESSARY
 	*/
-	@:overload public function divide(divisor : BigDecimal, roundingMode : Int) : BigDecimal;
+	@:overload public function divide(divisor : java.math.BigDecimal, roundingMode : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this /
@@ -637,7 +637,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         of the division exactly.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function divide(divisor : BigDecimal, roundingMode : java.math.RoundingMode) : BigDecimal;
+	@:require(java5) @:overload public function divide(divisor : java.math.BigDecimal, roundingMode : java.math.RoundingMode) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this /
@@ -653,7 +653,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @since 1.5
 	* @author Joseph D. Darcy
 	*/
-	@:require(java5) @:overload public function divide(divisor : BigDecimal) : BigDecimal;
+	@:require(java5) @:overload public function divide(divisor : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this /
@@ -668,7 +668,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         non-terminating decimal expansion.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function divide(divisor : BigDecimal, mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function divide(divisor : java.math.BigDecimal, mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is the integer part
@@ -681,7 +681,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @throws ArithmeticException if {@code divisor==0}
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function divideToIntegralValue(divisor : BigDecimal) : BigDecimal;
+	@:require(java5) @:overload public function divideToIntegralValue(divisor : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is the integer part
@@ -703,7 +703,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @since  1.5
 	* @author Joseph D. Darcy
 	*/
-	@:require(java5) @:overload public function divideToIntegralValue(divisor : BigDecimal, mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function divideToIntegralValue(divisor : java.math.BigDecimal, mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this % divisor)}.
@@ -718,7 +718,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @throws ArithmeticException if {@code divisor==0}
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function remainder(divisor : BigDecimal) : BigDecimal;
+	@:require(java5) @:overload public function remainder(divisor : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (this %
@@ -744,7 +744,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #divideToIntegralValue(java.math.BigDecimal, java.math.MathContext)
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function remainder(divisor : BigDecimal, mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function remainder(divisor : java.math.BigDecimal, mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a two-element {@code BigDecimal} array containing the
@@ -766,7 +766,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #remainder(java.math.BigDecimal, java.math.MathContext)
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function divideAndRemainder(divisor : BigDecimal) : java.NativeArray<BigDecimal>;
+	@:require(java5) @:overload public function divideAndRemainder(divisor : java.math.BigDecimal) : java.NativeArray<java.math.BigDecimal>;
 	
 	/**
 	* Returns a two-element {@code BigDecimal} array containing the
@@ -794,7 +794,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #remainder(java.math.BigDecimal, java.math.MathContext)
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function divideAndRemainder(divisor : BigDecimal, mc : java.math.MathContext) : java.NativeArray<BigDecimal>;
+	@:require(java5) @:overload public function divideAndRemainder(divisor : java.math.BigDecimal, mc : java.math.MathContext) : java.NativeArray<java.math.BigDecimal>;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is
@@ -813,7 +813,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @throws ArithmeticException if {@code n} is out of range.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function pow(n : Int) : BigDecimal;
+	@:require(java5) @:overload public function pow(n : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is
@@ -865,7 +865,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         of range.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function pow(n : Int, mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function pow(n : Int, mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is the absolute value
@@ -874,7 +874,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*
 	* @return {@code abs(this)}
 	*/
-	@:overload public function abs() : BigDecimal;
+	@:overload public function abs() : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is the absolute value
@@ -887,7 +887,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         rounding mode is {@code UNNECESSARY}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function abs(mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function abs(mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (-this)},
@@ -895,7 +895,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*
 	* @return {@code -this}.
 	*/
-	@:overload public function negate() : BigDecimal;
+	@:overload public function negate() : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (-this)},
@@ -907,7 +907,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         rounding mode is {@code UNNECESSARY}.
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function negate(mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function negate(mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (+this)}, and whose
@@ -921,7 +921,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see #negate()
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function plus() : BigDecimal;
+	@:require(java5) @:overload public function plus() : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose value is {@code (+this)},
@@ -938,7 +938,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #round(MathContext)
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function plus(mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function plus(mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns the signum function of this {@code BigDecimal}.
@@ -1069,7 +1069,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #plus(MathContext)
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function round(mc : java.math.MathContext) : BigDecimal;
+	@:require(java5) @:overload public function round(mc : java.math.MathContext) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose scale is the specified
@@ -1100,7 +1100,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    RoundingMode
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function setScale(newScale : Int, roundingMode : java.math.RoundingMode) : BigDecimal;
+	@:require(java5) @:overload public function setScale(newScale : Int, roundingMode : java.math.RoundingMode) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose scale is the specified
@@ -1142,7 +1142,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #ROUND_HALF_EVEN
 	* @see    #ROUND_UNNECESSARY
 	*/
-	@:overload public function setScale(newScale : Int, roundingMode : Int) : BigDecimal;
+	@:overload public function setScale(newScale : Int, roundingMode : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} whose scale is the specified
@@ -1180,7 +1180,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @see    #setScale(int, int)
 	* @see    #setScale(int, RoundingMode)
 	*/
-	@:overload public function setScale(newScale : Int) : BigDecimal;
+	@:overload public function setScale(newScale : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} which is equivalent to this one
@@ -1197,7 +1197,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         decimal point moved {@code n} places to the left.
 	* @throws ArithmeticException if scale overflows.
 	*/
-	@:overload public function movePointLeft(n : Int) : BigDecimal;
+	@:overload public function movePointLeft(n : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} which is equivalent to this one
@@ -1214,7 +1214,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         with the decimal point moved {@code n} places to the right.
 	* @throws ArithmeticException if scale overflows.
 	*/
-	@:overload public function movePointRight(n : Int) : BigDecimal;
+	@:overload public function movePointRight(n : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a BigDecimal whose numerical value is equal to
@@ -1226,7 +1226,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function scaleByPowerOfTen(n : Int) : BigDecimal;
+	@:require(java5) @:overload public function scaleByPowerOfTen(n : Int) : java.math.BigDecimal;
 	
 	/**
 	* Returns a {@code BigDecimal} which is numerically equal to
@@ -1241,7 +1241,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* trailing zeros removed.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function stripTrailingZeros() : BigDecimal;
+	@:require(java5) @:overload public function stripTrailingZeros() : java.math.BigDecimal;
 	
 	/**
 	* Compares this {@code BigDecimal} with the specified
@@ -1260,7 +1260,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @return -1, 0, or 1 as this {@code BigDecimal} is numerically
 	*          less than, equal to, or greater than {@code val}.
 	*/
-	@:overload public function compareTo(val : BigDecimal) : Int;
+	@:overload public function compareTo(val : java.math.BigDecimal) : Int;
 	
 	/**
 	* Compares this {@code BigDecimal} with the specified
@@ -1291,7 +1291,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         method, {@code this} is returned.
 	* @see    #compareTo(java.math.BigDecimal)
 	*/
-	@:overload public function min(val : BigDecimal) : BigDecimal;
+	@:overload public function min(val : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns the maximum of this {@code BigDecimal} and {@code val}.
@@ -1303,7 +1303,7 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	*         method, {@code this} is returned.
 	* @see    #compareTo(java.math.BigDecimal)
 	*/
-	@:overload public function max(val : BigDecimal) : BigDecimal;
+	@:overload public function max(val : java.math.BigDecimal) : java.math.BigDecimal;
 	
 	/**
 	* Returns the hash code for this {@code BigDecimal}.  Note that
@@ -1651,13 +1651,13 @@ extern class BigDecimal extends java.lang.Number implements java.lang.Comparable
 	* @return the size of an ulp of {@code this}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function ulp() : BigDecimal;
+	@:require(java5) @:overload public function ulp() : java.math.BigDecimal;
 	
 	
 }
 @:native('java$math$BigDecimal$LongOverflow') @:internal extern class BigDecimal_LongOverflow
 {
-	@:overload public static function check(num : BigDecimal) : Void;
+	@:overload public static function check(num : java.math.BigDecimal) : Void;
 	
 	
 }

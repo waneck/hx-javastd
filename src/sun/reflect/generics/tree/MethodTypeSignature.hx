@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class MethodTypeSignature implements sun.reflect.generics.tree.Signature
 {
-	@:overload public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, pts : java.NativeArray<sun.reflect.generics.tree.TypeSignature>, rt : sun.reflect.generics.tree.ReturnType, ets : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : MethodTypeSignature;
+	@:overload public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, pts : java.NativeArray<sun.reflect.generics.tree.TypeSignature>, rt : sun.reflect.generics.tree.ReturnType, ets : java.NativeArray<sun.reflect.generics.tree.FieldTypeSignature>) : sun.reflect.generics.tree.MethodTypeSignature;
 	
 	@:overload public function getFormalTypeParameters() : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>;
 	

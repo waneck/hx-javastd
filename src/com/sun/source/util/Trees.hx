@@ -30,14 +30,14 @@ extern class Trees
 	* @param task the compilation task for which to get the Trees object
 	* @throws IllegalArgumentException if the task does not support the Trees API.
 	*/
-	@:overload public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : Trees;
+	@:overload public static function instance(task : javax.tools.JavaCompiler.JavaCompiler_CompilationTask) : com.sun.source.util.Trees;
 	
 	/**
 	* Gets a Trees object for a given ProcessingEnvironment.
 	* @param env the processing environment for which to get the Trees object
 	* @throws IllegalArgumentException if the env does not support the Trees API.
 	*/
-	@:overload public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : Trees;
+	@:overload public static function instance(env : javax.annotation.processing.ProcessingEnvironment) : com.sun.source.util.Trees;
 	
 	/**
 	* Gets a utility object for obtaining source positions.

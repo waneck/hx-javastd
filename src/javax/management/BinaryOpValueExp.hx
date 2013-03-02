@@ -77,7 +77,7 @@ package javax.management;
 	*/
 	@:overload public function toString() : String;
 	
-	@:overload override public function setMBeanServer(s : javax.management.MBeanServer) : Void;
+	@:overload public function setMBeanServer(s : javax.management.MBeanServer) : Void;
 	
 	
 }

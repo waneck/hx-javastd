@@ -30,7 +30,7 @@ extern class RawTypeSet
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	public var refs(default, null) : java.util.Set<RawTypeSet_Ref>;
+	public var refs(default, null) : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>;
 	
 	/**
 	* The occurence of the whole references.
@@ -40,7 +40,7 @@ extern class RawTypeSet
 	/**
 	* Should be called from one of the raw type set builders.
 	*/
-	@:overload public function new(refs : java.util.Set<RawTypeSet_Ref>, m : com.sun.tools.internal.xjc.model.Multiplicity) : Void;
+	@:overload public function new(refs : java.util.Set<com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Ref>, m : com.sun.tools.internal.xjc.model.Multiplicity) : Void;
 	
 	@:overload public function getCollectionMode() : com.sun.tools.internal.xjc.model.CElementPropertyInfo.CElementPropertyInfo_CollectionMode;
 	
@@ -101,7 +101,7 @@ extern class RawTypeSet
 	* @return false to veto.
 	* @param parent
 	*/
-	@:overload @:abstract private function canBeType(parent : RawTypeSet) : RawTypeSet_Mode;
+	@:overload @:abstract private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
 	@:overload @:abstract private function isListOfValues() : Bool;
 	

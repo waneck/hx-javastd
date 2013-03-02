@@ -35,7 +35,7 @@ extern class ExpressionParser implements com.sun.tools.example.debug.expr.Expres
 {
 	@:overload public static function getMassagedValue() : com.sun.jdi.Value;
 	
-	@:overload public static function evaluate(expr : String, vm : com.sun.jdi.VirtualMachine, frameGetter : ExpressionParser_GetFrame) : com.sun.jdi.Value;
+	@:overload public static function evaluate(expr : String, vm : com.sun.jdi.VirtualMachine, frameGetter : com.sun.tools.example.debug.expr.ExpressionParser.ExpressionParser_GetFrame) : com.sun.jdi.Value;
 	
 	@:overload public static function main(args : java.NativeArray<String>) : Void;
 	

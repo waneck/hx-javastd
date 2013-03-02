@@ -44,7 +44,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*     mimeType           = "application/x-java-serialized-object"
 	* </pre>
 	*/
-	public static var stringFlavor(default, null) : DataFlavor;
+	public static var stringFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* The <code>DataFlavor</code> representing a Java Image class,
@@ -54,7 +54,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*     mimeType            = "image/x-java-image"
 	* </pre>
 	*/
-	public static var imageFlavor(default, null) : DataFlavor;
+	public static var imageFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* The <code>DataFlavor</code> representing plain text with Unicode
@@ -72,7 +72,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @deprecated as of 1.3. Use <code>DataFlavor.getReaderForText(Transferable)</code>
 	*             instead of <code>Transferable.getTransferData(DataFlavor.plainTextFlavor)</code>.
 	*/
-	public static var plainTextFlavor(default, null) : DataFlavor;
+	public static var plainTextFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* A MIME Content-Type of application/x-java-serialized-object represents
@@ -91,7 +91,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* Each element of the list is required/guaranteed to be of type
 	* <code>java.io.File</code>.
 	*/
-	public static var javaFileListFlavor(default, null) : DataFlavor;
+	public static var javaFileListFlavor(default, null) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* To transfer a reference to an arbitrary Java object reference that
@@ -252,7 +252,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*    with Unicode encoding
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public static function getTextPlainUnicodeFlavor() : DataFlavor;
+	@:require(java3) @:overload @:final public static function getTextPlainUnicodeFlavor() : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* Selects the best text <code>DataFlavor</code> from an array of <code>
@@ -370,7 +370,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*         has zero length, or contains no text flavors
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:final public static function selectBestTextFlavor(availableFlavors : java.NativeArray<DataFlavor>) : DataFlavor;
+	@:require(java3) @:overload @:final public static function selectBestTextFlavor(availableFlavors : java.NativeArray<java.awt.datatransfer.DataFlavor>) : java.awt.datatransfer.DataFlavor;
 	
 	/**
 	* Gets a Reader for a text flavor, decoded, if necessary, for the expected
@@ -504,7 +504,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	*         <code>DataFlavor</code>; <code>false</code> otherwise
 	* @see #selectBestTextFlavor
 	*/
-	@:overload public function equals(that : DataFlavor) : Bool;
+	@:overload public function equals(that : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Compares only the <code>mimeType</code> against the passed in
@@ -543,7 +543,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @see #selectBestTextFlavor
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function match(that : DataFlavor) : Bool;
+	@:require(java3) @:overload public function match(that : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Returns whether the string representation of the MIME type passed in
@@ -566,7 +566,7 @@ extern class DataFlavor implements java.io.Externalizable implements java.lang.C
 	* @return true if the <code>MimeType</code>s are equal,
 	*  otherwise false
 	*/
-	@:overload @:final public function isMimeTypeEqual(dataFlavor : DataFlavor) : Bool;
+	@:overload @:final public function isMimeTypeEqual(dataFlavor : java.awt.datatransfer.DataFlavor) : Bool;
 	
 	/**
 	* Does the <code>DataFlavor</code> represent a serialized object?

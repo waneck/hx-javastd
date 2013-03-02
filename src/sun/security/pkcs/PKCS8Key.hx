@@ -53,7 +53,7 @@ extern class PKCS8Key implements java.security.PrivateKey
 	/*
 	* Binary backwards compatibility. New uses should call parseKey().
 	*/
-	@:overload public static function parse(_in : sun.security.util.DerValue) : PKCS8Key;
+	@:overload public static function parse(_in : sun.security.util.DerValue) : sun.security.pkcs.PKCS8Key;
 	
 	/**
 	* Construct PKCS#8 subject public key from a DER value.  If

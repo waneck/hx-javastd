@@ -30,7 +30,7 @@ extern interface Diagnostic<S>
 	* warning.
 	* @return the kind of this diagnostic
 	*/
-	@:overload public function getKind() : Diagnostic_Kind;
+	@:overload public function getKind() : javax.tools.Diagnostic.Diagnostic_Kind;
 	
 	/**
 	* Gets the source object associated with this diagnostic.

@@ -32,11 +32,11 @@ extern class SEIInvokerTube extends com.sun.xml.internal.ws.server.InvokerTube<D
 	* return value, and response Holder arguments are used to create a new {@link Message}
 	* that traverses through the Pipeline to transport.
 	*/
-	@:overload override public function processRequest(req : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processRequest(req : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processResponse(response : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
+	@:overload public function processException(t : java.lang.Throwable) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
 	
 }

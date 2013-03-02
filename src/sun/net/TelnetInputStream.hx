@@ -72,16 +72,16 @@ extern class TelnetInputStream extends java.io.FilterInputStream
 	
 	@:overload public function setStickyCRLF(on : Bool) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	/** read into a byte array */
-	@:overload override public function read(bytes : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload public function read(bytes : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Read into a byte array at offset <i>off</i> for length <i>length</i>
 	* bytes.
 	*/
-	@:overload override public function read(bytes : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Int;
+	@:overload public function read(bytes : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Int;
 	
 	
 }

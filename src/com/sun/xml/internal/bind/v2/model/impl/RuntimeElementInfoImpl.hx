@@ -30,15 +30,15 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	*/
 	@:overload public function new(modelBuilder : com.sun.xml.internal.bind.v2.model.impl.RuntimeModelBuilder, registry : com.sun.xml.internal.bind.v2.model.impl.RegistryInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>, method : java.lang.reflect.Method) : Void;
 	
-	@:overload override private function createPropertyImpl() : com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl.ElementInfoImpl_PropertyImpl;
+	@:overload private function createPropertyImpl() : com.sun.xml.internal.bind.v2.model.impl.ElementInfoImpl.ElementInfoImpl_PropertyImpl;
 	
-	@:overload override public function getProperty() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo;
+	@:overload public function getProperty() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo;
 	
 	@:overload override public function getType() : Class<javax.xml.bind.JAXBElement<Dynamic>>;
 	
-	@:overload override public function getScope() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeClassInfo;
+	@:overload public function getScope() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeClassInfo;
 	
-	@:overload override public function getContentType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload public function getContentType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
 	
 }
@@ -52,13 +52,13 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload public function elementOnlyContent() : Bool;
 	
-	@:overload override public function getTypes() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeRef>;
+	@:overload public function getTypes() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeRef>;
 	
-	@:overload override public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement>;
+	@:overload public function ref() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement>;
 	
-	@:overload override public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload public function getTarget() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
-	@:overload override public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
+	@:overload public function getSource() : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
 	
 	@:overload public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
 	

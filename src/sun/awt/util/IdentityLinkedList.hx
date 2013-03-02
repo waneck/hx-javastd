@@ -219,7 +219,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the index of the first occurrence of the specified element in
 	*         this list, or -1 if this list does not contain the element
 	*/
-	@:overload override public function indexOf(o : Dynamic) : Int;
+	@:overload public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -232,7 +232,7 @@ extern class IdentityLinkedList<E> extends java.util.AbstractSequentialList<E> i
 	* @return the index of the last occurrence of the specified element in
 	*         this list, or -1 if this list does not contain the element
 	*/
-	@:overload override public function lastIndexOf(o : Dynamic) : Int;
+	@:overload public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Retrieves, but does not remove, the head (first element) of this list.

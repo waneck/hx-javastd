@@ -36,7 +36,7 @@ extern class MotifDesktopPaneUI extends javax.swing.plaf.basic.BasicDesktopPaneU
 	*
 	* @author David Kloba
 	*/
-	@:native('createUI') @:overload public static function _createUI(d : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(d : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload public function new() : Void;
 	

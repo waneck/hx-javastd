@@ -43,7 +43,7 @@ extern class Selector implements java.io.Closeable
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : Selector;
+	@:overload public static function open() : java.nio.channels.Selector;
 	
 	/**
 	* Tells whether or not this selector is open.  </p>
@@ -185,7 +185,7 @@ extern class Selector implements java.io.Closeable
 	*
 	* @return  This selector
 	*/
-	@:overload @:abstract public function wakeup() : Selector;
+	@:overload @:abstract public function wakeup() : java.nio.channels.Selector;
 	
 	/**
 	* Closes this selector.

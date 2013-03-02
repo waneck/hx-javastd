@@ -25,10 +25,10 @@ package com.sun.xml.internal.stream.buffer.stax;
 */
 extern class StreamReaderBufferProcessor extends com.sun.xml.internal.stream.buffer.AbstractProcessor implements com.sun.xml.internal.org.jvnet.staxex.XMLStreamReaderEx
 {
-	private var _stack : java.NativeArray<StreamReaderBufferProcessor_ElementStackEntry>;
+	private var _stack : java.NativeArray<com.sun.xml.internal.stream.buffer.stax.StreamReaderBufferProcessor.StreamReaderBufferProcessor_ElementStackEntry>;
 	
 	/** The top-most active entry of the {@link #_stack}. */
-	private var _stackTop : StreamReaderBufferProcessor_ElementStackEntry;
+	private var _stackTop : com.sun.xml.internal.stream.buffer.stax.StreamReaderBufferProcessor.StreamReaderBufferProcessor_ElementStackEntry;
 	
 	/** The element depth that we are in. Used to determine when we are done with a tree. */
 	private var _depth : Int;
@@ -42,7 +42,7 @@ extern class StreamReaderBufferProcessor extends com.sun.xml.internal.stream.buf
 	
 	private var _namespaceAIIsEnd : Int;
 	
-	private var _nsCtx : StreamReaderBufferProcessor_InternalNamespaceContext;
+	private var _nsCtx : com.sun.xml.internal.stream.buffer.stax.StreamReaderBufferProcessor.StreamReaderBufferProcessor_InternalNamespaceContext;
 	
 	private var _eventType : Int;
 	

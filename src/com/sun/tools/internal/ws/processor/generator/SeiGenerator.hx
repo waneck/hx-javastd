@@ -27,9 +27,9 @@ extern class SeiGenerator extends com.sun.tools.internal.ws.processor.generator.
 {
 	@:overload public static function generate(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, extensions : java.NativeArray<com.sun.tools.internal.ws.api.TJavaGeneratorExtension>) : Void;
 	
-	@:overload override public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload public function visit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload override public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload public function visit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
 	
 }

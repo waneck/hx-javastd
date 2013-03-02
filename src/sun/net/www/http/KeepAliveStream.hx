@@ -54,9 +54,9 @@ extern class KeepAliveStream extends sun.net.www.MeteredStream implements sun.ne
 }
 @:internal extern class KeepAliveCleanerEntry
 {
-	@:overload public function new(kas : KeepAliveStream, hc : sun.net.www.http.HttpClient) : Void;
+	@:overload public function new(kas : sun.net.www.http.KeepAliveStream, hc : sun.net.www.http.HttpClient) : Void;
 	
-	@:overload private function getKeepAliveStream() : KeepAliveStream;
+	@:overload private function getKeepAliveStream() : sun.net.www.http.KeepAliveStream;
 	
 	@:overload private function getHttpClient() : sun.net.www.http.HttpClient;
 	

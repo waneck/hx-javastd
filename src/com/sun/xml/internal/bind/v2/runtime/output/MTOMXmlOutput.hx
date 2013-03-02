@@ -27,23 +27,23 @@ extern class MTOMXmlOutput extends com.sun.xml.internal.bind.v2.runtime.output.X
 {
 	@:overload public function new(next : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput) : Void;
 	
-	@:overload override public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
+	@:overload public function startDocument(serializer : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, fragment : Bool, nsUriIndex2prefixIndex : java.NativeArray<Int>, nsContext : com.sun.xml.internal.bind.v2.runtime.output.NamespaceContextImpl) : Void;
 	
-	@:overload override public function endDocument(fragment : Bool) : Void;
+	@:overload public function endDocument(fragment : Bool) : Void;
 	
-	@:overload override public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload public function beginStartTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload override public function beginStartTag(prefix : Int, localName : String) : Void;
+	@:overload public function beginStartTag(prefix : Int, localName : String) : Void;
 	
-	@:overload override public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
+	@:overload public function attribute(name : com.sun.xml.internal.bind.v2.runtime.Name, value : String) : Void;
 	
-	@:overload override public function attribute(prefix : Int, localName : String, value : String) : Void;
+	@:overload public function attribute(prefix : Int, localName : String, value : String) : Void;
 	
-	@:overload override public function endStartTag() : Void;
+	@:overload public function endStartTag() : Void;
 	
-	@:overload override public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
+	@:overload public function endTag(name : com.sun.xml.internal.bind.v2.runtime.Name) : Void;
 	
-	@:overload override public function endTag(prefix : Int, localName : String) : Void;
+	@:overload public function endTag(prefix : Int, localName : String) : Void;
 	
 	@:overload override public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
 	

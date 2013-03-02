@@ -25,11 +25,11 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsLabelUI extends javax.swing.plaf.basic.BasicLabelUI
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function paintEnabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
+	@:overload private function paintEnabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
 	
-	@:overload override private function paintDisabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
+	@:overload private function paintDisabledText(l : javax.swing.JLabel, g : java.awt.Graphics, s : String, textX : Int, textY : Int) : Void;
 	
 	
 }

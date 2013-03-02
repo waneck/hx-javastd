@@ -37,12 +37,12 @@ extern class UplevelReference implements sun.tools.java.Constants
 	* and (b) to allow uplevel "this" parameters to come at the
 	* front of every argument list they appear in.
 	*/
-	@:overload public function insertInto(references : UplevelReference) : UplevelReference;
+	@:overload public function insertInto(references : sun.tools.tree.UplevelReference) : sun.tools.tree.UplevelReference;
 	
 	/**
 	* Tells if self precedes the other in the canonical ordering.
 	*/
-	@:overload @:final public function isEarlierThan(other : UplevelReference) : Bool;
+	@:overload @:final public function isEarlierThan(other : sun.tools.tree.UplevelReference) : Bool;
 	
 	/**
 	* the target of this reference
@@ -73,7 +73,7 @@ extern class UplevelReference implements sun.tools.java.Constants
 	/**
 	* the next reference in the client's list
 	*/
-	@:overload @:final public function getNext() : UplevelReference;
+	@:overload @:final public function getNext() : sun.tools.tree.UplevelReference;
 	
 	/**
 	* Tell if this uplevel reference is the up-level "this" pointer

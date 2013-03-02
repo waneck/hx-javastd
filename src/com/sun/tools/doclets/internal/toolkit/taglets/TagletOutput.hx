@@ -43,7 +43,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* Append the given output to this output.
 	* @param o a TagletOutput representing the output.
 	*/
-	@:overload @:abstract public function appendOutput(o : TagletOutput) : Void;
+	@:overload @:abstract public function appendOutput(o : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput) : Void;
 	
 	/**
 	* Return true if this output has any occurances of @inheritDoc.

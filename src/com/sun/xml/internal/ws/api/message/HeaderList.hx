@@ -33,7 +33,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	/**
 	* Copy constructor.
 	*/
-	@:overload public function new(that : HeaderList) : Void;
+	@:overload public function new(that : com.sun.xml.internal.ws.api.message.HeaderList) : Void;
 	
 	/**
 	* The total number of headers.
@@ -53,7 +53,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*
 	* @see #understood(int)
 	*/
-	@:overload override public function get(index : Int) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload public function get(index : Int) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Marks the {@link Header} at the specified index as
@@ -317,7 +317,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	*
 	* @return removed header
 	*/
-	@:overload override public function remove(index : Int) : com.sun.xml.internal.ws.api.message.Header;
+	@:overload public function remove(index : Int) : com.sun.xml.internal.ws.api.message.Header;
 	
 	/**
 	* Removes a single instance of the specified element from this
@@ -342,7 +342,7 @@ extern class HeaderList extends java.util.ArrayList<com.sun.xml.internal.ws.api.
 	* @param original
 	*      Can be null, in which case null will be returned.
 	*/
-	@:overload public static function copy(original : HeaderList) : HeaderList;
+	@:overload public static function copy(original : com.sun.xml.internal.ws.api.message.HeaderList) : com.sun.xml.internal.ws.api.message.HeaderList;
 	
 	@:overload public function readResponseAddressingHeaders(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	

@@ -105,20 +105,20 @@ extern class RootDocImpl extends com.sun.tools.javadoc.DocImpl implements com.su
 	*
 	* @return the string <code>"*RootDocImpl*"</code>.
 	*/
-	@:overload override public function name() : String;
+	@:overload public function name() : String;
 	
 	/**
 	* Return the name of this Doc item.
 	*
 	* @return the string <code>"*RootDocImpl*"</code>.
 	*/
-	@:overload override public function qualifiedName() : String;
+	@:overload public function qualifiedName() : String;
 	
 	/**
 	* Return true if this Doc is include in the active set.
 	* RootDocImpl isn't even a program entity so it is always false.
 	*/
-	@:overload override public function isIncluded() : Bool;
+	@:overload public function isIncluded() : Bool;
 	
 	/**
 	* Print error message, increment error count.
@@ -165,13 +165,13 @@ extern class RootDocImpl extends com.sun.tools.javadoc.DocImpl implements com.su
 	/**
 	* Do lazy initialization of "documentation" string.
 	*/
-	@:overload override private function documentation() : String;
+	@:overload private function documentation() : String;
 	
 	/**
 	* Return the source position of the entity, or null if
 	* no position is available.
 	*/
-	@:overload override public function position() : com.sun.javadoc.SourcePosition;
+	@:overload public function position() : com.sun.javadoc.SourcePosition;
 	
 	/**
 	* Return the locale provided by the user or the default locale value.

@@ -25,9 +25,9 @@ package com.sun.xml.internal.ws.policy.sourcemodel;
 */
 @:internal extern class CompactModelGenerator extends com.sun.xml.internal.ws.policy.sourcemodel.PolicyModelGenerator
 {
-	@:overload override public function translate(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
+	@:overload public function translate(policy : com.sun.xml.internal.ws.policy.Policy) : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel;
 	
-	@:overload override private function translate(parentAssertion : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, policy : com.sun.xml.internal.ws.policy.NestedPolicy) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
+	@:overload private function translate(parentAssertion : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode, policy : com.sun.xml.internal.ws.policy.NestedPolicy) : com.sun.xml.internal.ws.policy.sourcemodel.ModelNode;
 	
 	
 }

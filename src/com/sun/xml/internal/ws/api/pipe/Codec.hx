@@ -125,7 +125,7 @@ extern interface Codec
 	*      re-entrant and multi-thread safe to begin with,
 	*      then this method may simply return <tt>this</tt>.
 	*/
-	@:overload public function copy() : Codec;
+	@:overload public function copy() : com.sun.xml.internal.ws.api.pipe.Codec;
 	
 	/**
 	* Reads bytes from {@link InputStream} and constructs a {@link Message}.

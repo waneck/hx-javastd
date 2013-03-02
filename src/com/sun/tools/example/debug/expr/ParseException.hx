@@ -107,7 +107,7 @@ extern class ParseException extends java.lang.Exception
 	* of the final stack trace, and hence the correct error message
 	* gets displayed.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* The end of line string for this machine.

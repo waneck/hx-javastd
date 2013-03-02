@@ -59,12 +59,12 @@ extern class ServiceInterceptorFactory
 	* Once registered, {@link ServiceInterceptorFactory}s are consulted for every
 	* {@link Service} created in this thread, until it gets unregistered.
 	*/
-	@:overload public static function registerForThread(factory : ServiceInterceptorFactory) : Bool;
+	@:overload public static function registerForThread(factory : com.sun.xml.internal.ws.api.client.ServiceInterceptorFactory) : Bool;
 	
 	/**
 	* Removes previously registered {@link ServiceInterceptorFactory} for this thread.
 	*/
-	@:overload public static function unregisterForThread(factory : ServiceInterceptorFactory) : Bool;
+	@:overload public static function unregisterForThread(factory : com.sun.xml.internal.ws.api.client.ServiceInterceptorFactory) : Bool;
 	
 	
 }

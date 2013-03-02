@@ -132,7 +132,7 @@ extern class MimeType implements java.io.Externalizable
 	* @param type      the MimeType object to compare with
 	* @return          true if they match
 	*/
-	@:overload public function match(type : MimeType) : Bool;
+	@:overload public function match(type : javax.activation.MimeType) : Bool;
 	
 	/**
 	* Determine if the primary and sub type of this object is

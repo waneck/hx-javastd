@@ -61,7 +61,7 @@ extern class NTSidPrimaryGroupPrincipal extends com.sun.security.auth.NTSid
 	* @return a string representation of this
 	*          <code>NTSidPrimaryGroupPrincipal</code>.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Compares the specified Object with this
@@ -78,7 +78,7 @@ extern class NTSidPrimaryGroupPrincipal extends com.sun.security.auth.NTSid
 	* @return true if the specified Object is equal equal to this
 	*          <code>NTSidPrimaryGroupPrincipal</code>.
 	*/
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
 	
 }

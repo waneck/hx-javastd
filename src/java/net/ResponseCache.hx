@@ -36,7 +36,7 @@ extern class ResponseCache
 	* @return the system-wide <code>ResponseCache</code>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public static function getDefault() : ResponseCache;
+	@:require(java5) @:overload @:synchronized public static function getDefault() : java.net.ResponseCache;
 	
 	/**
 	* Sets (or unsets) the system-wide cache.
@@ -53,7 +53,7 @@ extern class ResponseCache
 	* @see #getDefault()
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized public static function setDefault(responseCache : ResponseCache) : Void;
+	@:require(java5) @:overload @:synchronized public static function setDefault(responseCache : java.net.ResponseCache) : Void;
 	
 	/**
 	* Retrieve the cached response based on the requesting uri,

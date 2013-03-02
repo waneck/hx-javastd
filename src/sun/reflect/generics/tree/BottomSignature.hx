@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class BottomSignature implements sun.reflect.generics.tree.FieldTypeSignature
 {
-	@:overload public static function make() : BottomSignature;
+	@:overload public static function make() : sun.reflect.generics.tree.BottomSignature;
 	
 	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	

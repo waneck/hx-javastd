@@ -115,7 +115,7 @@ extern class SocketImpl implements java.net.SocketOptions
 	* @exception  IOException  if an I/O error occurs when accepting the
 	*               connection.
 	*/
-	@:overload @:abstract private function accept(s : SocketImpl) : Void;
+	@:overload @:abstract private function accept(s : java.net.SocketImpl) : Void;
 	
 	/**
 	* Returns an input stream for this socket.

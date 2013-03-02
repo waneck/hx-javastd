@@ -183,7 +183,7 @@ extern class CPropertyInfo implements com.sun.xml.internal.bind.v2.model.core.Pr
 	* @return
 	*      null if no conflict was found. Otherwise return the QName that has the collision.
 	*/
-	@:overload public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, CPropertyInfo>) : javax.xml.namespace.QName;
+	@:overload public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
 	
 	@:overload @:final public function readAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
 	

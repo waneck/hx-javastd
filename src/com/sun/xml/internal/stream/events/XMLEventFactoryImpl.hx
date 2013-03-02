@@ -28,57 +28,57 @@ extern class XMLEventFactoryImpl extends javax.xml.stream.XMLEventFactory
 	/** Creates a new instance of XMLEventFactory */
 	@:overload public function new() : Void;
 	
-	@:overload override public function createAttribute(localName : String, value : String) : javax.xml.stream.events.Attribute;
+	@:overload public function createAttribute(localName : String, value : String) : javax.xml.stream.events.Attribute;
 	
-	@:overload override public function createAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.stream.events.Attribute;
+	@:overload public function createAttribute(name : javax.xml.namespace.QName, value : String) : javax.xml.stream.events.Attribute;
 	
-	@:overload override public function createAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : javax.xml.stream.events.Attribute;
+	@:overload public function createAttribute(prefix : String, namespaceURI : String, localName : String, value : String) : javax.xml.stream.events.Attribute;
 	
-	@:overload override public function createCData(content : String) : javax.xml.stream.events.Characters;
+	@:overload public function createCData(content : String) : javax.xml.stream.events.Characters;
 	
-	@:overload override public function createCharacters(content : String) : javax.xml.stream.events.Characters;
+	@:overload public function createCharacters(content : String) : javax.xml.stream.events.Characters;
 	
-	@:overload override public function createComment(text : String) : javax.xml.stream.events.Comment;
+	@:overload public function createComment(text : String) : javax.xml.stream.events.Comment;
 	
-	@:overload override public function createDTD(dtd : String) : javax.xml.stream.events.DTD;
+	@:overload public function createDTD(dtd : String) : javax.xml.stream.events.DTD;
 	
-	@:overload override public function createEndDocument() : javax.xml.stream.events.EndDocument;
+	@:overload public function createEndDocument() : javax.xml.stream.events.EndDocument;
 	
-	@:overload override public function createEndElement(name : javax.xml.namespace.QName, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
+	@:overload public function createEndElement(name : javax.xml.namespace.QName, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
 	
-	@:overload override public function createEndElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.EndElement;
+	@:overload public function createEndElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.EndElement;
 	
-	@:overload override public function createEndElement(prefix : String, namespaceUri : String, localName : String, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
+	@:overload public function createEndElement(prefix : String, namespaceUri : String, localName : String, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.EndElement;
 	
-	@:overload override public function createEntityReference(name : String, entityDeclaration : javax.xml.stream.events.EntityDeclaration) : javax.xml.stream.events.EntityReference;
+	@:overload public function createEntityReference(name : String, entityDeclaration : javax.xml.stream.events.EntityDeclaration) : javax.xml.stream.events.EntityReference;
 	
-	@:overload override public function createIgnorableSpace(content : String) : javax.xml.stream.events.Characters;
+	@:overload public function createIgnorableSpace(content : String) : javax.xml.stream.events.Characters;
 	
-	@:overload override public function createNamespace(namespaceURI : String) : javax.xml.stream.events.Namespace;
+	@:overload public function createNamespace(namespaceURI : String) : javax.xml.stream.events.Namespace;
 	
-	@:overload override public function createNamespace(prefix : String, namespaceURI : String) : javax.xml.stream.events.Namespace;
+	@:overload public function createNamespace(prefix : String, namespaceURI : String) : javax.xml.stream.events.Namespace;
 	
-	@:overload override public function createProcessingInstruction(target : String, data : String) : javax.xml.stream.events.ProcessingInstruction;
+	@:overload public function createProcessingInstruction(target : String, data : String) : javax.xml.stream.events.ProcessingInstruction;
 	
-	@:overload override public function createSpace(content : String) : javax.xml.stream.events.Characters;
+	@:overload public function createSpace(content : String) : javax.xml.stream.events.Characters;
 	
-	@:overload override public function createStartDocument() : javax.xml.stream.events.StartDocument;
+	@:overload public function createStartDocument() : javax.xml.stream.events.StartDocument;
 	
-	@:overload override public function createStartDocument(encoding : String) : javax.xml.stream.events.StartDocument;
+	@:overload public function createStartDocument(encoding : String) : javax.xml.stream.events.StartDocument;
 	
-	@:overload override public function createStartDocument(encoding : String, version : String) : javax.xml.stream.events.StartDocument;
+	@:overload public function createStartDocument(encoding : String, version : String) : javax.xml.stream.events.StartDocument;
 	
-	@:overload override public function createStartDocument(encoding : String, version : String, standalone : Bool) : javax.xml.stream.events.StartDocument;
+	@:overload public function createStartDocument(encoding : String, version : String, standalone : Bool) : javax.xml.stream.events.StartDocument;
 	
-	@:overload override public function createStartElement(name : javax.xml.namespace.QName, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
+	@:overload public function createStartElement(name : javax.xml.namespace.QName, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
 	
-	@:overload override public function createStartElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.StartElement;
+	@:overload public function createStartElement(prefix : String, namespaceUri : String, localName : String) : javax.xml.stream.events.StartElement;
 	
-	@:overload override public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
+	@:overload public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>) : javax.xml.stream.events.StartElement;
 	
-	@:overload override public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>, context : javax.xml.namespace.NamespaceContext) : javax.xml.stream.events.StartElement;
+	@:overload public function createStartElement(prefix : String, namespaceUri : String, localName : String, attributes : java.util.Iterator<Dynamic>, namespaces : java.util.Iterator<Dynamic>, context : javax.xml.namespace.NamespaceContext) : javax.xml.stream.events.StartElement;
 	
-	@:overload override public function setLocation(location : javax.xml.stream.Location) : Void;
+	@:overload public function setLocation(location : javax.xml.stream.Location) : Void;
 	
 	
 }

@@ -74,7 +74,7 @@ extern class Raster
 	private var numDataElements : Int;
 	
 	/** The parent of this Raster, or null. */
-	private var parent : Raster;
+	private var parent : java.awt.image.Raster;
 	
 	/**
 	* Creates a Raster based on a PixelInterleavedSampleModel with the
@@ -441,7 +441,7 @@ extern class Raster
 	*  @throws NullPointerException if either SampleModel or DataBuffer is
 	*          null
 	*/
-	@:overload public static function createRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer, location : java.awt.Point) : Raster;
+	@:overload public static function createRaster(sm : java.awt.image.SampleModel, db : java.awt.image.DataBuffer, location : java.awt.Point) : java.awt.image.Raster;
 	
 	/**
 	*  Creates a WritableRaster with the specified SampleModel.
@@ -541,13 +541,13 @@ extern class Raster
 	*         <code>aRegion.y + aRegion.height</code> results in integer
 	*         overflow
 	*/
-	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : Raster) : Void;
+	@:overload private function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, sampleModelTranslate : java.awt.Point, parent : java.awt.image.Raster) : Void;
 	
 	/**
 	* Returns the parent Raster (if any) of this Raster or null.
 	* @return the parent Raster or <code>null</code>.
 	*/
-	@:overload public function getParent() : Raster;
+	@:overload public function getParent() : java.awt.image.Raster;
 	
 	/**
 	* Returns the X translation from the coordinate system of the
@@ -644,7 +644,7 @@ extern class Raster
 	*         <code>childMinY + this.getHeight()</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createTranslatedChild(childMinX : Int, childMinY : Int) : Raster;
+	@:overload public function createTranslatedChild(childMinX : Int, childMinY : Int) : java.awt.image.Raster;
 	
 	/**
 	* Returns a new Raster which shares all or part of this Raster's
@@ -698,7 +698,7 @@ extern class Raster
 	*         <code>childMinY + height</code> results in integer
 	*         overflow
 	*/
-	@:overload public function createChild(parentX : Int, parentY : Int, width : Int, height : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : Raster;
+	@:overload public function createChild(parentX : Int, parentY : Int, width : Int, height : Int, childMinX : Int, childMinY : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
 	
 	/**
 	* Returns the bounding Rectangle of this Raster. This function returns

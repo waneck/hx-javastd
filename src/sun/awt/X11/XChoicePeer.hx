@@ -33,24 +33,24 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 	
 	public static var SCROLLBAR_WIDTH(default, null) : Int;
 	
-	@:overload override public function isFocusable() : Bool;
+	@:overload public function isFocusable() : Bool;
 	
-	@:overload override public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
+	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
 	
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/*
 	* Fix for 6246503 : Disabling a choice after selection locks keyboard, mouse and makes the system unusable, Xtoolkit
 	* if setEnabled(false) invoked we should close opened choice in
 	* order to prevent keyboard/mouse lock.
 	*/
-	@:overload override public function setEnabled(value : Bool) : Void;
+	@:overload public function setEnabled(value : Bool) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	@:overload public function keyPressed(e : java.awt.event.KeyEvent) : Void;
 	
-	@:overload override public function handlesWheelScrolling() : Bool;
+	@:overload public function handlesWheelScrolling() : Bool;
 	
 	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
@@ -58,17 +58,17 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 	
 	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload public function getMinimumSize() : java.awt.Dimension;
 	
 	/*
 	* Layout the...
 	*/
-	@:overload override public function layout() : Void;
+	@:overload public function layout() : Void;
 	
 	/**
 	* Paint the choice
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	@:overload private function paintFocus(g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
@@ -88,17 +88,17 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 	*/
 	@:overload public function addItem(item : String, index : Int) : Void;
 	
-	@:overload override public function setFont(font : java.awt.Font) : Void;
+	@:overload public function setFont(font : java.awt.Font) : Void;
 	
-	@:overload override public function setForeground(c : java.awt.Color) : Void;
+	@:overload public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload public function setBackground(c : java.awt.Color) : Void;
 	
 	@:overload public function setDrawSelectedItem(value : Bool) : Void;
 	
 	@:overload public function setAlignUnder(comp : java.awt.Component) : Void;
 	
-	@:overload public function addXChoicePeerListener(l : XChoicePeerListener) : Void;
+	@:overload public function addXChoicePeerListener(l : sun.awt.X11.XChoicePeer.XChoicePeerListener) : Void;
 	
 	@:overload public function removeXChoicePeerListener() : Void;
 	
@@ -111,7 +111,7 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 	
 	@:overload public function stateChangedJava(oldState : Int, newState : Int) : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	@:overload public function handleMouseEventByChoice(me : java.awt.event.MouseEvent) : Bool;
 	
@@ -125,7 +125,7 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 {
 	@:overload public function new(target : java.awt.Component) : Void;
 	
-	@:overload override public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	@:overload override public function toFront() : Void;
 	
@@ -144,9 +144,9 @@ extern class XChoicePeer extends sun.awt.X11.XComponentPeer implements java.awt.
 	* 6405689. In some cases we should erase background to eliminate painting
 	* artefacts.
 	*/
-	@:overload override public function repaint() : Void;
+	@:overload public function repaint() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	@:overload public function setVisible(vis : Bool) : Void;
 	

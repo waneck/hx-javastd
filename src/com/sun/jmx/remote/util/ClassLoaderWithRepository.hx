@@ -27,7 +27,7 @@ extern class ClassLoaderWithRepository extends java.lang.ClassLoader
 {
 	@:overload public function new(clr : javax.management.loading.ClassLoaderRepository, cl2 : java.lang.ClassLoader) : Void;
 	
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload private function findClass(name : String) : Class<Dynamic>;
 	
 	
 }

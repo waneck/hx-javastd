@@ -68,7 +68,7 @@ package javax.lang.model.util;
 	* @param p  {@inheritDoc}
 	* @return the result of the visit as defined by a subclass
 	*/
-	@:overload @:abstract override public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
+	@:overload @:abstract public function visitUnion(t : javax.lang.model.type.UnionType, p : P) : R;
 	
 	
 }

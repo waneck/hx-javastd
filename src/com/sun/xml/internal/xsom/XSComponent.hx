@@ -123,7 +123,7 @@ extern interface XSComponent
 	* @return
 	*      Can be empty but never null.
 	*/
-	@:overload @:public public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<XSComponent>;
+	@:overload @:public public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Evaluates a schema component designator against this schema component
@@ -140,7 +140,7 @@ extern interface XSComponent
 	*      null if the SCD didn't match anything. If the SCD matched more than one node,
 	*      the first one will be returned.
 	*/
-	@:overload @:public public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : XSComponent;
+	@:overload @:public public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* Accepts a visitor.

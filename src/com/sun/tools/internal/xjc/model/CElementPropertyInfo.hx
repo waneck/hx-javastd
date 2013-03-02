@@ -25,15 +25,15 @@ package com.sun.tools.internal.xjc.model;
 */
 extern class CElementPropertyInfo extends com.sun.tools.internal.xjc.model.CPropertyInfo implements com.sun.xml.internal.bind.v2.model.core.ElementPropertyInfo<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.nav.NClass>
 {
-	@:overload public function new(name : String, collection : CElementPropertyInfo_CollectionMode, id : com.sun.xml.internal.bind.v2.model.core.ID, expectedMimeType : javax.activation.MimeType, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, required : Bool) : Void;
+	@:overload public function new(name : String, collection : com.sun.tools.internal.xjc.model.CElementPropertyInfo.CElementPropertyInfo_CollectionMode, id : com.sun.xml.internal.bind.v2.model.core.ID, expectedMimeType : javax.activation.MimeType, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, required : Bool) : Void;
 	
-	@:overload override public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
 	@:overload public function getTypes() : java.util.List<com.sun.tools.internal.xjc.model.CTypeRef>;
 	
-	@:overload override public function ref() : java.util.List<com.sun.tools.internal.xjc.model.CNonElement>;
+	@:overload public function ref() : java.util.List<com.sun.tools.internal.xjc.model.CNonElement>;
 	
-	@:overload override public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload public function getSchemaType() : javax.xml.namespace.QName;
 	
 	/**
 	* XJC never uses the wrapper element. Always return null.
@@ -48,21 +48,21 @@ extern class CElementPropertyInfo extends com.sun.tools.internal.xjc.model.CProp
 	
 	@:overload public function isValueList() : Bool;
 	
-	@:overload override public function isUnboxable() : Bool;
+	@:overload public function isUnboxable() : Bool;
 	
-	@:overload override public function isOptionalPrimitive() : Bool;
+	@:overload public function isOptionalPrimitive() : Bool;
 	
-	@:overload override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
+	@:overload public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
 	
-	@:overload override public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
 	
 	@:overload public function setAdapter(a : com.sun.tools.internal.xjc.model.CAdapter) : Void;
 	
-	@:overload @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:final public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload override public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
 	
-	@:overload override public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
+	@:overload public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
 	
 	
 }

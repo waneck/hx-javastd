@@ -45,7 +45,7 @@ package com.sun.net.httpserver;
 	* The server must also have a HttpsConfigurator established with {@link #setHttpsConfigurator(HttpsConfigurator)}
 	* @throws IOException
 	*/
-	@:native('create') @:overload public static function _create() : HttpsServer;
+	@:overload public static function create() : com.sun.net.httpserver.HttpsServer;
 	
 	/**
 	* Create a <code>HttpsServer</code> instance which will bind to the
@@ -65,7 +65,7 @@ package com.sun.net.httpserver;
 	*          or if the server is already bound.
 	* @throws IOException
 	*/
-	@:native('create') @:overload public static function _create(addr : java.net.InetSocketAddress, backlog : Int) : HttpsServer;
+	@:overload public static function create(addr : java.net.InetSocketAddress, backlog : Int) : com.sun.net.httpserver.HttpsServer;
 	
 	/**
 	* Sets this server's {@link HttpsConfigurator} object.

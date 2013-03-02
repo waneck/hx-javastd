@@ -91,7 +91,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @see ImageProducer
 	* @see #getSnapshot()
 	*/
-	@:overload override public function getSource() : java.awt.image.ImageProducer;
+	@:overload public function getSource() : java.awt.image.ImageProducer;
 	
 	/**
 	* This method returns a {@link Graphics2D}, but is here
@@ -101,7 +101,7 @@ extern class VolatileImage extends java.awt.Image implements java.awt.Transparen
 	* @return a <code>Graphics2D</code>, which can be used to draw into
 	*          this image.
 	*/
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Creates a <code>Graphics2D</code>, which can be used to draw into

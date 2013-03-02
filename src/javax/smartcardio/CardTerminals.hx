@@ -91,7 +91,7 @@ package javax.smartcardio;
 	* @throws NullPointerException if attr is null
 	* @throws CardException if the card operation failed
 	*/
-	@:overload @:abstract public function list(state : CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
+	@:overload @:abstract public function list(state : javax.smartcardio.CardTerminals.CardTerminals_State) : java.util.List<javax.smartcardio.CardTerminal>;
 	
 	/**
 	* Returns the terminal with the specified name or null if no such

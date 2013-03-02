@@ -33,7 +33,7 @@ package sun.security.provider;
 	* @exception InvalidKeyException if the key is not a valid DSA private
 	* key.
 	*/
-	@:overload override private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
+	@:overload private function engineInitSign(privateKey : java.security.PrivateKey) : Void;
 	
 	/**
 	* Initialize the DSA object with a DSA public key.
@@ -43,7 +43,7 @@ package sun.security.provider;
 	* @exception InvalidKeyException if the key is not a valid DSA public
 	* key.
 	*/
-	@:overload override private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
+	@:overload private function engineInitVerify(publicKey : java.security.PublicKey) : Void;
 	
 	/**
 	* Sign all the data thus far updated. The signature is formatted
@@ -59,7 +59,7 @@ package sun.security.provider;
 	* @see sun.security.DSA#engineUpdate
 	* @see sun.security.DSA#engineVerify
 	*/
-	@:overload override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Verify all the data thus far updated.
@@ -73,7 +73,7 @@ package sun.security.provider;
 	* @see sun.security.DSA#engineUpdate
 	* @see sun.security.DSA#engineSign
 	*/
-	@:overload override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/**
 	* Verify all the data thus far updated.
@@ -91,7 +91,7 @@ package sun.security.provider;
 	* @see sun.security.DSA#engineUpdate
 	* @see sun.security.DSA#engineSign
 	*/
-	@:overload override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
+	@:overload private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Bool;
 	
 	/**
 	* This implementation recognizes the following parameter:<dl>
@@ -104,7 +104,7 @@ package sun.security.provider;
 	*
 	* @deprecated
 	*/
-	@:overload override private function engineSetParameter(key : String, param : Dynamic) : Void;
+	@:overload private function engineSetParameter(key : String, param : Dynamic) : Void;
 	
 	/**
 	* Return the value of the requested parameter. Recognized
@@ -124,7 +124,7 @@ package sun.security.provider;
 	*
 	* @deprecated
 	*/
-	@:overload override private function engineGetParameter(key : String) : Dynamic;
+	@:overload private function engineGetParameter(key : String) : Dynamic;
 	
 	/**
 	* Return a human readable rendition of the engine.
@@ -136,21 +136,21 @@ package sun.security.provider;
 /**
 * Standard SHA1withDSA implementation.
 */
-@:native('sun$security$provider$DSA$SHA1withDSA') extern class DSA_SHA1withDSA extends DSA
+@:native('sun$security$provider$DSA$SHA1withDSA') extern class DSA_SHA1withDSA extends sun.security.provider.DSA
 {
 	@:overload public function new() : Void;
 	
 	/**
 	* Update a byte to be signed or verified.
 	*/
-	@:overload override private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Update an array of bytes to be signed or verified.
 	*/
-	@:overload override private function engineUpdate(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload private function engineUpdate(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override private function engineUpdate(b : java.nio.ByteBuffer) : Void;
+	@:overload private function engineUpdate(b : java.nio.ByteBuffer) : Void;
 	
 	
 }
@@ -161,13 +161,13 @@ package sun.security.provider;
 * not, a SignatureException is thrown when sign()/verify() is called
 * per JCA spec.
 */
-@:native('sun$security$provider$DSA$RawDSA') extern class DSA_RawDSA extends DSA
+@:native('sun$security$provider$DSA$RawDSA') extern class DSA_RawDSA extends sun.security.provider.DSA
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function engineUpdate(b : java.StdTypes.Int8) : Void;
+	@:overload private function engineUpdate(b : java.StdTypes.Int8) : Void;
 	
-	@:overload override private function engineUpdate(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload private function engineUpdate(data : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	
 }

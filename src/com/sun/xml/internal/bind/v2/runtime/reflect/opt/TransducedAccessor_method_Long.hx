@@ -35,11 +35,11 @@ extern class TransducedAccessor_method_Long extends com.sun.xml.internal.bind.v2
 	*
 	* @see TransducedAccessor#get
 	*/
-	@:overload override public function print(o : Dynamic) : String;
+	@:overload public function print(o : Dynamic) : String;
 	
-	@:overload override public function parse(o : Dynamic, lexical : java.lang.CharSequence) : Void;
+	@:overload public function parse(o : Dynamic, lexical : java.lang.CharSequence) : Void;
 	
-	@:overload override public function hasValue(o : Dynamic) : Bool;
+	@:overload public function hasValue(o : Dynamic) : Bool;
 	
 	
 }

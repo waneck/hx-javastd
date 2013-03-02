@@ -45,7 +45,7 @@ extern class W3CEndpointReference extends javax.xml.ws.EndpointReference
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function writeTo(result : javax.xml.transform.Result) : Void;
+	@:overload public function writeTo(result : javax.xml.transform.Result) : Void;
 	
 	private static var NS(default, null) : String;
 	

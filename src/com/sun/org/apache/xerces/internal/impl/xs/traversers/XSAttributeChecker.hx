@@ -226,11 +226,11 @@ extern class XSAttributeChecker
 {
 	
 }
-@:internal extern class SmallContainer extends Container
+@:internal extern class SmallContainer extends com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker.Container
 {
 	
 }
-@:internal extern class LargeContainer extends Container
+@:internal extern class LargeContainer extends com.sun.org.apache.xerces.internal.impl.xs.traversers.XSAttributeChecker.Container
 {
 	
 }

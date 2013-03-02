@@ -46,7 +46,7 @@ extern class ByteToCharEUC_JP_LINUX extends sun.io.ByteToCharJIS0208
 	
 	@:overload override private function convSingleByte(b : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function getUnicode(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload private function getUnicode(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Converts sequences of bytes to characters.

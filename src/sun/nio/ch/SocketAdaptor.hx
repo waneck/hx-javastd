@@ -38,87 +38,87 @@ extern class SocketAdaptor extends java.net.Socket
 {
 	@:overload public static function create(sc : sun.nio.ch.SocketChannelImpl) : java.net.Socket;
 	
-	@:overload override public function getChannel() : java.nio.channels.SocketChannel;
+	@:overload public function getChannel() : java.nio.channels.SocketChannel;
 	
-	@:overload override public function connect(remote : java.net.SocketAddress) : Void;
+	@:overload public function connect(remote : java.net.SocketAddress) : Void;
 	
-	@:overload override public function connect(remote : java.net.SocketAddress, timeout : Int) : Void;
+	@:overload public function connect(remote : java.net.SocketAddress, timeout : Int) : Void;
 	
-	@:overload override public function bind(local : java.net.SocketAddress) : Void;
+	@:overload public function bind(local : java.net.SocketAddress) : Void;
 	
-	@:overload override public function getInetAddress() : java.net.InetAddress;
+	@:overload public function getInetAddress() : java.net.InetAddress;
 	
-	@:overload override public function getLocalAddress() : java.net.InetAddress;
+	@:overload public function getLocalAddress() : java.net.InetAddress;
 	
-	@:overload override public function getPort() : Int;
+	@:overload public function getPort() : Int;
 	
-	@:overload override public function getLocalPort() : Int;
+	@:overload public function getLocalPort() : Int;
 	
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload public function getInputStream() : java.io.InputStream;
 	
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload public function getOutputStream() : java.io.OutputStream;
 	
-	@:overload override public function setTcpNoDelay(on : Bool) : Void;
+	@:overload public function setTcpNoDelay(on : Bool) : Void;
 	
-	@:overload override public function getTcpNoDelay() : Bool;
+	@:overload public function getTcpNoDelay() : Bool;
 	
-	@:overload override public function setSoLinger(on : Bool, linger : Int) : Void;
+	@:overload public function setSoLinger(on : Bool, linger : Int) : Void;
 	
-	@:overload override public function getSoLinger() : Int;
+	@:overload public function getSoLinger() : Int;
 	
-	@:overload override public function sendUrgentData(data : Int) : Void;
+	@:overload public function sendUrgentData(data : Int) : Void;
 	
-	@:overload override public function setOOBInline(on : Bool) : Void;
+	@:overload public function setOOBInline(on : Bool) : Void;
 	
-	@:overload override public function getOOBInline() : Bool;
+	@:overload public function getOOBInline() : Bool;
 	
-	@:overload override public function setSoTimeout(timeout : Int) : Void;
+	@:overload public function setSoTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getSoTimeout() : Int;
+	@:overload public function getSoTimeout() : Int;
 	
-	@:overload override public function setSendBufferSize(size : Int) : Void;
+	@:overload public function setSendBufferSize(size : Int) : Void;
 	
-	@:overload override public function getSendBufferSize() : Int;
+	@:overload public function getSendBufferSize() : Int;
 	
-	@:overload override public function setReceiveBufferSize(size : Int) : Void;
+	@:overload public function setReceiveBufferSize(size : Int) : Void;
 	
-	@:overload override public function getReceiveBufferSize() : Int;
+	@:overload public function getReceiveBufferSize() : Int;
 	
-	@:overload override public function setKeepAlive(on : Bool) : Void;
+	@:overload public function setKeepAlive(on : Bool) : Void;
 	
-	@:overload override public function getKeepAlive() : Bool;
+	@:overload public function getKeepAlive() : Bool;
 	
-	@:overload override public function setTrafficClass(tc : Int) : Void;
+	@:overload public function setTrafficClass(tc : Int) : Void;
 	
-	@:overload override public function getTrafficClass() : Int;
+	@:overload public function getTrafficClass() : Int;
 	
-	@:overload override public function setReuseAddress(on : Bool) : Void;
+	@:overload public function setReuseAddress(on : Bool) : Void;
 	
-	@:overload override public function getReuseAddress() : Bool;
+	@:overload public function getReuseAddress() : Bool;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function shutdownInput() : Void;
+	@:overload public function shutdownInput() : Void;
 	
-	@:overload override public function shutdownOutput() : Void;
+	@:overload public function shutdownOutput() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override public function isConnected() : Bool;
+	@:overload public function isConnected() : Bool;
 	
-	@:overload override public function isBound() : Bool;
+	@:overload public function isBound() : Bool;
 	
-	@:overload override public function isClosed() : Bool;
+	@:overload public function isClosed() : Bool;
 	
-	@:overload override public function isInputShutdown() : Bool;
+	@:overload public function isInputShutdown() : Bool;
 	
-	@:overload override public function isOutputShutdown() : Bool;
+	@:overload public function isOutputShutdown() : Bool;
 	
 	
 }
 @:native('sun$nio$ch$SocketAdaptor$SocketInputStream') @:internal extern class SocketAdaptor_SocketInputStream extends sun.nio.ch.ChannelInputStream
 {
-	@:overload override private function read(bb : java.nio.ByteBuffer) : Int;
+	@:overload private function read(bb : java.nio.ByteBuffer) : Int;
 	
 	
 }

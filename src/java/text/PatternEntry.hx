@@ -67,7 +67,7 @@ package java.text;
 {
 	@:overload public function new(pattern : String) : Void;
 	
-	@:overload public function next() : PatternEntry;
+	@:overload public function next() : java.text.PatternEntry;
 	
 	
 }

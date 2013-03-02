@@ -29,21 +29,21 @@ extern class XCreateWindowParams extends java.util.HashMap<Dynamic, Dynamic>
 	
 	@:overload public function new(map : java.NativeArray<Dynamic>) : Void;
 	
-	@:overload public function putIfNull(key : Dynamic, value : Dynamic) : XCreateWindowParams;
+	@:overload public function putIfNull(key : Dynamic, value : Dynamic) : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload public function putIfNull(key : Dynamic, value : Int) : XCreateWindowParams;
+	@:overload public function putIfNull(key : Dynamic, value : Int) : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload public function putIfNull(key : Dynamic, value : haxe.Int64) : XCreateWindowParams;
+	@:overload public function putIfNull(key : Dynamic, value : haxe.Int64) : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload public function add(key : Dynamic, value : Dynamic) : XCreateWindowParams;
+	@:overload public function add(key : Dynamic, value : Dynamic) : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload public function add(key : Dynamic, value : Int) : XCreateWindowParams;
+	@:overload public function add(key : Dynamic, value : Int) : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload public function add(key : Dynamic, value : haxe.Int64) : XCreateWindowParams;
+	@:overload public function add(key : Dynamic, value : haxe.Int64) : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload public function delete(key : Dynamic) : XCreateWindowParams;
+	@:overload public function delete(key : Dynamic) : sun.awt.X11.XCreateWindowParams;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

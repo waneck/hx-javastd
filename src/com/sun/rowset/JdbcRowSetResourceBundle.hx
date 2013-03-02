@@ -39,7 +39,7 @@ extern class JdbcRowSetResourceBundle implements java.io.Serializable
 	*
 	* @throws IOException if unable to find the RowSetResourceBundle.properties
 	*/
-	@:overload public static function getJdbcRowSetResourceBundle() : JdbcRowSetResourceBundle;
+	@:overload public static function getJdbcRowSetResourceBundle() : com.sun.rowset.JdbcRowSetResourceBundle;
 	
 	/**
 	* This method returns an enumerated handle of the keys

@@ -34,7 +34,7 @@ package sun.nio.fs;
 	* Opens file based on parameters and options, returning a FileDescriptor
 	* encapsulating the handle to the open file.
 	*/
-	@:overload private static function open(dfd : Int, path : sun.nio.fs.UnixPath, pathForPermissionCheck : String, flags : UnixChannelFactory_Flags, mode : Int) : java.io.FileDescriptor;
+	@:overload private static function open(dfd : Int, path : sun.nio.fs.UnixPath, pathForPermissionCheck : String, flags : sun.nio.fs.UnixChannelFactory.UnixChannelFactory_Flags, mode : Int) : java.io.FileDescriptor;
 	
 	
 }

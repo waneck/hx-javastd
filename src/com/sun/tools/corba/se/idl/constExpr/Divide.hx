@@ -48,7 +48,7 @@ extern class Divide extends com.sun.tools.corba.se.idl.constExpr.BinaryExpr
 	/**
 	*
 	**/
-	@:overload override public function evaluate() : Dynamic;
+	@:overload public function evaluate() : Dynamic;
 	
 	
 }

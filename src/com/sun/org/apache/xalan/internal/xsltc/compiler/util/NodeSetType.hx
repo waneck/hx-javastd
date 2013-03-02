@@ -29,13 +29,13 @@ extern class NodeSetType extends com.sun.org.apache.xalan.internal.xsltc.compile
 	*/
 	@:overload private function new() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
+	@:overload public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
 	
-	@:overload override public function toSignature() : String;
+	@:overload public function toSignature() : String;
 	
-	@:overload override public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Translates a node-set into an object of internal type
@@ -45,13 +45,13 @@ extern class NodeSetType extends com.sun.org.apache.xalan.internal.xsltc.compile
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateTo
 	*/
-	@:overload override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
 	/**
 	* Translates an external Java Class into an internal type.
 	* Expects the Java object on the stack, pushes the internal type
 	*/
-	@:overload override public function translateFrom(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
+	@:overload public function translateFrom(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
 	
 	/**
 	* Translates a node-set into a synthesized boolean.
@@ -100,7 +100,7 @@ extern class NodeSetType extends com.sun.org.apache.xalan.internal.xsltc.compile
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateToDesynthesized
 	*/
-	@:overload override public function translateToDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.BooleanType) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
+	@:overload public function translateToDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.BooleanType) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
 	
 	/**
 	* Expects a node-set on the stack and pushes a boxed node-set.
@@ -115,26 +115,26 @@ extern class NodeSetType extends com.sun.org.apache.xalan.internal.xsltc.compile
 	* Expects a node-set on the stack and pushes an object of the appropriate
 	* type after coercion.
 	*/
-	@:overload override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
+	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
 	
 	/**
 	* Translates an object of this type to its boxed representation.
 	*/
-	@:overload override public function translateBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translateBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Translates an object of this type to its unboxed representation.
 	*/
-	@:overload override public function translateUnBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translateUnBox(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Returns the class name of an internal type's external representation.
 	*/
-	@:overload override public function getClassName() : String;
+	@:overload public function getClassName() : String;
 	
-	@:overload override public function LOAD(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function LOAD(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function STORE(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function STORE(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	
 }

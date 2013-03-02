@@ -83,7 +83,7 @@ extern class SignatureProperty extends com.sun.org.apache.xml.internal.security.
 	@:overload public function appendChild(node : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

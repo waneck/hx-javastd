@@ -36,7 +36,7 @@ extern class SwACodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	
 	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function copy() : SwACodec;
+	@:overload override public function copy() : com.sun.xml.internal.ws.encoding.SwACodec;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class WalkingIteratorSorted extends com.sun.org.apache.xpath.internal.axe
 	*
 	* @return true as a default.
 	*/
-	@:overload override public function isDocOrdered() : Bool;
+	@:overload public function isDocOrdered() : Bool;
 	
 	/**
 	* This function is used to perform some extra analysis of the iterator.
@@ -53,7 +53,7 @@ extern class WalkingIteratorSorted extends com.sun.org.apache.xpath.internal.axe
 	* in the stack frame (but variables above the globalsTop value will need
 	* to be offset to the current stack frame).
 	*/
-	@:overload override public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
+	@:overload public function fixupVariables(vars : java.util.Vector<Dynamic>, globalsSize : Int) : Void;
 	
 	
 }

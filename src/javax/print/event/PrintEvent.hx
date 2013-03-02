@@ -40,7 +40,7 @@ extern class PrintEvent extends java.util.EventObject
 	/**
 	* @return a message describing the event
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

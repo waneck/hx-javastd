@@ -802,7 +802,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JEditorPane$AccessibleJEditorPaneHTML') extern class JEditorPane_AccessibleJEditorPaneHTML extends JEditorPane_AccessibleJEditorPane
+@:native('javax$swing$JEditorPane$AccessibleJEditorPaneHTML') extern class JEditorPane_AccessibleJEditorPaneHTML extends javax.swing.JEditorPane.JEditorPane_AccessibleJEditorPane
 {
 	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
@@ -848,7 +848,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 * <code>JEditorPane</code>.
 *
 */
-@:native('javax$swing$JEditorPane$JEditorPaneAccessibleHypertextSupport') extern class JEditorPane_JEditorPaneAccessibleHypertextSupport extends JEditorPane_AccessibleJEditorPane implements javax.accessibility.AccessibleHypertext
+@:native('javax$swing$JEditorPane$JEditorPaneAccessibleHypertextSupport') extern class JEditorPane_JEditorPaneAccessibleHypertextSupport extends javax.swing.JEditorPane.JEditorPane_AccessibleJEditorPane implements javax.accessibility.AccessibleHypertext
 {
 	/**
 	* Make one of these puppies
@@ -982,7 +982,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	
 	
 }
-@:native('javax$swing$JEditorPane$JEditorPaneAccessibleHypertextSupport$LinkVector') @:internal extern class JEditorPane_JEditorPaneAccessibleHypertextSupport_LinkVector extends java.util.Vector<JEditorPane_JEditorPaneAccessibleHypertextSupport_HTMLLink>
+@:native('javax$swing$JEditorPane$JEditorPaneAccessibleHypertextSupport$LinkVector') @:internal extern class JEditorPane_JEditorPaneAccessibleHypertextSupport_LinkVector extends java.util.Vector<javax.swing.JEditorPane.JEditorPane_JEditorPaneAccessibleHypertextSupport_HTMLLink>
 {
 	@:overload public function baseElementIndex(e : javax.swing.text.Element) : Int;
 	
@@ -1062,7 +1062,7 @@ extern class JEditorPane extends javax.swing.text.JTextComponent
 	* @see #forwardUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload override private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	@:overload override public function paint(g : java.awt.Graphics, allocation : java.awt.Shape) : Void;
 	

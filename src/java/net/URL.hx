@@ -227,7 +227,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URLStreamHandler#parseURL(java.net.URL,
 	*                  java.lang.String, int, int)
 	*/
-	@:overload public function new(context : URL, spec : String) : Void;
+	@:overload public function new(context : java.net.URL, spec : String) : Void;
 	
 	/**
 	* Creates a URL by parsing the given spec with the specified handler
@@ -249,7 +249,7 @@ extern class URL implements java.io.Serializable
 	* @see        java.net.URLStreamHandler#parseURL(java.net.URL,
 	*                  java.lang.String, int, int)
 	*/
-	@:overload public function new(context : URL, spec : String, handler : java.net.URLStreamHandler) : Void;
+	@:overload public function new(context : java.net.URL, spec : String, handler : java.net.URLStreamHandler) : Void;
 	
 	/**
 	* Sets the fields of the URL. This is not a public method so that
@@ -421,7 +421,7 @@ extern class URL implements java.io.Serializable
 	* @return  <code>true</code> if they reference the same remote object;
 	*          <code>false</code> otherwise.
 	*/
-	@:overload public function sameFile(other : URL) : Bool;
+	@:overload public function sameFile(other : java.net.URL) : Bool;
 	
 	/**
 	* Constructs a string representation of this <code>URL</code>. The

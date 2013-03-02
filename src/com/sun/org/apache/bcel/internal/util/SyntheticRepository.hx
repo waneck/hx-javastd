@@ -78,9 +78,9 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class SyntheticRepository implements com.sun.org.apache.bcel.internal.util.Repository
 {
-	@:overload public static function getInstance() : SyntheticRepository;
+	@:overload public static function getInstance() : com.sun.org.apache.bcel.internal.util.SyntheticRepository;
 	
-	@:overload public static function getInstance(classPath : com.sun.org.apache.bcel.internal.util.ClassPath) : SyntheticRepository;
+	@:overload public static function getInstance(classPath : com.sun.org.apache.bcel.internal.util.ClassPath) : com.sun.org.apache.bcel.internal.util.SyntheticRepository;
 	
 	/**
 	* Store a new JavaClass instance into this Repository.

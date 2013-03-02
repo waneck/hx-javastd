@@ -29,7 +29,7 @@ extern class LocationPathPattern extends com.sun.org.apache.xalan.internal.xsltc
 	
 	@:overload public function setTemplate(template : com.sun.org.apache.xalan.internal.xsltc.compiler.Template) : Void;
 	
-	@:overload override public function getTemplate() : com.sun.org.apache.xalan.internal.xsltc.compiler.Template;
+	@:overload public function getTemplate() : com.sun.org.apache.xalan.internal.xsltc.compiler.Template;
 	
 	@:overload @:final override public function getPriority() : Float;
 	
@@ -43,7 +43,7 @@ extern class LocationPathPattern extends com.sun.org.apache.xalan.internal.xsltc
 	*  o) then check priority - highest priority wins
 	*  o) then check the position - the template that occured last wins
 	*/
-	@:overload public function noSmallerThan(other : LocationPathPattern) : Bool;
+	@:overload public function noSmallerThan(other : com.sun.org.apache.xalan.internal.xsltc.compiler.LocationPathPattern) : Bool;
 	
 	@:overload @:abstract public function getKernelPattern() : com.sun.org.apache.xalan.internal.xsltc.compiler.StepPattern;
 	
@@ -53,7 +53,7 @@ extern class LocationPathPattern extends com.sun.org.apache.xalan.internal.xsltc
 	
 	@:overload public function getAxis() : Int;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

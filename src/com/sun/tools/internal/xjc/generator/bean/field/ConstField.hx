@@ -25,21 +25,21 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 */
 @:internal extern class ConstField extends com.sun.tools.internal.xjc.generator.bean.field.AbstractField
 {
-	@:overload override public function getRawType() : com.sun.codemodel.internal.JType;
+	@:overload public function getRawType() : com.sun.codemodel.internal.JType;
 	
-	@:overload override public function create(target : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload public function create(target : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	
 }
 @:native('com$sun$tools$internal$xjc$generator$bean$field$ConstField$Accessor') @:internal extern class ConstField_Accessor extends com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor
 {
-	@:overload override public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
+	@:overload public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
 	
-	@:overload override public function hasSetValue() : com.sun.codemodel.internal.JExpression;
+	@:overload public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	
-	@:overload override public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
-	@:overload override public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	
 }

@@ -28,51 +28,51 @@ extern class Type implements com.sun.org.apache.xalan.internal.xsltc.compiler.Co
 	* @author Santiago Pericas-Geertsen
 	* @author Morten Jorgensen
 	*/
-	public static var Int(default, null) : Type;
+	public static var Int(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Real(default, null) : Type;
+	public static var Real(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Boolean(default, null) : Type;
+	public static var Boolean(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var NodeSet(default, null) : Type;
+	public static var NodeSet(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var String(default, null) : Type;
+	public static var String(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var ResultTree(default, null) : Type;
+	public static var ResultTree(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Reference(default, null) : Type;
+	public static var Reference(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Void(default, null) : Type;
+	public static var Void(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Object(default, null) : Type;
+	public static var Object(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var ObjectString(default, null) : Type;
+	public static var ObjectString(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Node(default, null) : Type;
+	public static var Node(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Root(default, null) : Type;
+	public static var Root(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Element(default, null) : Type;
+	public static var Element(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Attribute(default, null) : Type;
+	public static var Attribute(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Text(default, null) : Type;
+	public static var Text(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Comment(default, null) : Type;
+	public static var Comment(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
-	public static var Processing_Instruction(default, null) : Type;
+	public static var Processing_Instruction(default, null) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Factory method to instantiate object types. Returns a pre-defined
 	* instance for "java.lang.Object" and "java.lang.String".
 	*/
-	@:overload public static function newObjectType(javaClassName : String) : Type;
+	@:overload public static function newObjectType(javaClassName : String) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Factory method to instantiate object types. Returns a pre-defined
 	* instance for java.lang.Object.class and java.lang.String.class.
 	*/
-	@:overload public static function newObjectType(clazz : Class<Dynamic>) : Type;
+	@:overload public static function newObjectType(clazz : Class<Dynamic>) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Returns a string representation of this type.
@@ -82,7 +82,7 @@ extern class Type implements com.sun.org.apache.xalan.internal.xsltc.compiler.Co
 	/**
 	* Returns true if this and other are identical types.
 	*/
-	@:overload @:abstract public function identicalTo(other : Type) : Bool;
+	@:overload @:abstract public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
 	
 	/**
 	* Returns true if this type is a numeric type. Redefined in NumberType.
@@ -108,7 +108,7 @@ extern class Type implements com.sun.org.apache.xalan.internal.xsltc.compiler.Co
 	* overloaded functions/operators. This method is typically redefined by
 	* the subclasses.
 	*/
-	@:overload public function distanceTo(type : Type) : Int;
+	@:overload public function distanceTo(type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Int;
 	
 	/**
 	* Returns the signature of an internal type's external representation.
@@ -120,7 +120,7 @@ extern class Type implements com.sun.org.apache.xalan.internal.xsltc.compiler.Co
 	* <code>type</code>.
 	* Expects an object of the former type and pushes an object of the latter.
 	*/
-	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : Type) : Void;
+	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
 	/**
 	* Translates object of this type to an object of type <code>type</code>.
@@ -128,7 +128,7 @@ extern class Type implements com.sun.org.apache.xalan.internal.xsltc.compiler.Co
 	* if not boolean. If type <code>type</code> is boolean then a branchhandle
 	* list (to be appended to the false list) is returned.
 	*/
-	@:overload public function translateToDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : Type) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
+	@:overload public function translateToDesynthesized(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : com.sun.org.apache.xalan.internal.xsltc.compiler.FlowList;
 	
 	/**
 	* Translates an object of this type to an non-synthesized boolean. It

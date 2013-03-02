@@ -38,61 +38,61 @@ package java.awt.im;
 	* in the BASIC_LATIN, LATIN_1_SUPPLEMENT, LATIN_EXTENDED_A,
 	* LATIN_EXTENDED_B Unicode character blocks.
 	*/
-	public static var LATIN(default, null) : InputSubset;
+	public static var LATIN(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for the digits included in the BASIC_LATIN Unicode character
 	* block.
 	*/
-	public static var LATIN_DIGITS(default, null) : InputSubset;
+	public static var LATIN_DIGITS(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for all Han characters used in writing Traditional Chinese,
 	* including a subset of the CJK unified ideographs as well as Traditional
 	* Chinese Han characters that may be defined as surrogate characters.
 	*/
-	public static var TRADITIONAL_HANZI(default, null) : InputSubset;
+	public static var TRADITIONAL_HANZI(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for all Han characters used in writing Simplified Chinese,
 	* including a subset of the CJK unified ideographs as well as Simplified
 	* Chinese Han characters that may be defined as surrogate characters.
 	*/
-	public static var SIMPLIFIED_HANZI(default, null) : InputSubset;
+	public static var SIMPLIFIED_HANZI(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for all Han characters used in writing Japanese, including a
 	* subset of the CJK unified ideographs as well as Japanese Han characters
 	* that may be defined as surrogate characters.
 	*/
-	public static var KANJI(default, null) : InputSubset;
+	public static var KANJI(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for all Han characters used in writing Korean, including a
 	* subset of the CJK unified ideographs as well as Korean Han characters
 	* that may be defined as surrogate characters.
 	*/
-	public static var HANJA(default, null) : InputSubset;
+	public static var HANJA(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for the halfwidth katakana subset of the Unicode halfwidth and
 	* fullwidth forms character block.
 	*/
-	public static var HALFWIDTH_KATAKANA(default, null) : InputSubset;
+	public static var HALFWIDTH_KATAKANA(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for the fullwidth ASCII variants subset of the Unicode halfwidth and
 	* fullwidth forms character block.
 	* @since 1.3
 	*/
-	@:require(java3) public static var FULLWIDTH_LATIN(default, null) : InputSubset;
+	@:require(java3) public static var FULLWIDTH_LATIN(default, null) : java.awt.im.InputSubset;
 	
 	/**
 	* Constant for the fullwidth digits included in the Unicode halfwidth and
 	* fullwidth forms character block.
 	* @since 1.3
 	*/
-	@:require(java3) public static var FULLWIDTH_DIGITS(default, null) : InputSubset;
+	@:require(java3) public static var FULLWIDTH_DIGITS(default, null) : java.awt.im.InputSubset;
 	
 	
 }

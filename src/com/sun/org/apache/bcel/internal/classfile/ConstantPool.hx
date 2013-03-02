@@ -175,7 +175,7 @@ extern class ConstantPool implements java.lang.Cloneable implements com.sun.org.
 	/**
 	* @return deep copy of this constant pool
 	*/
-	@:overload public function copy() : ConstantPool;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.ConstantPool;
 	
 	
 }

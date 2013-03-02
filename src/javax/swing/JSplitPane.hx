@@ -247,7 +247,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -259,7 +259,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*       expert: true
 	*  description: A string that specifies the name of the L&F class.
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Sets the size of the divider.
@@ -632,7 +632,7 @@ extern class JSplitPane extends javax.swing.JComponent implements javax.accessib
 	*
 	* @param g the <code>Graphics</code> context within which to paint
 	*/
-	@:overload override private function paintChildren(g : java.awt.Graphics) : Void;
+	@:overload private function paintChildren(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JSplitPane</code>.

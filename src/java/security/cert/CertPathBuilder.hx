@@ -63,7 +63,7 @@ extern class CertPathBuilder
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : CertPathBuilder;
+	@:overload public static function getInstance(algorithm : String) : java.security.cert.CertPathBuilder;
 	
 	/**
 	* Returns a <code>CertPathBuilder</code> object that implements the
@@ -100,7 +100,7 @@ extern class CertPathBuilder
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : CertPathBuilder;
+	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.cert.CertPathBuilder;
 	
 	/**
 	* Returns a <code>CertPathBuilder</code> object that implements the
@@ -131,7 +131,7 @@ extern class CertPathBuilder
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : CertPathBuilder;
+	@:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.cert.CertPathBuilder;
 	
 	/**
 	* Returns the provider of this <code>CertPathBuilder</code>.

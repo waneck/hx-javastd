@@ -370,7 +370,7 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 	
 	/** @return deep copy of this method
 	*/
-	@:overload public function copy(class_name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : MethodGen;
+	@:overload public function copy(class_name : String, cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.MethodGen;
 	
 	
 }
@@ -382,7 +382,7 @@ extern class MethodGen extends com.sun.org.apache.bcel.internal.generic.FieldGen
 {
 	@:overload public function push(target : com.sun.org.apache.bcel.internal.generic.InstructionHandle, stackDepth : Int) : Void;
 	
-	@:overload public function pop() : MethodGen_BranchTarget;
+	@:overload public function pop() : com.sun.org.apache.bcel.internal.generic.MethodGen.MethodGen_BranchTarget;
 	
 	
 }

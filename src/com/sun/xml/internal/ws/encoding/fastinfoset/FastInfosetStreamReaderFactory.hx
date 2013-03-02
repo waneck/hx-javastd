@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.encoding.fastinfoset;
 */
 extern class FastInfosetStreamReaderFactory extends com.sun.xml.internal.ws.api.streaming.XMLStreamReaderFactory
 {
-	@:overload public static function getInstance() : FastInfosetStreamReaderFactory;
+	@:overload public static function getInstance() : com.sun.xml.internal.ws.encoding.fastinfoset.FastInfosetStreamReaderFactory;
 	
 	@:overload override public function doCreate(systemId : String, _in : java.io.InputStream, rejectDTDs : Bool) : javax.xml.stream.XMLStreamReader;
 	

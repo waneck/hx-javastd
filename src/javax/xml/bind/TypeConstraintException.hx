@@ -115,7 +115,7 @@ package javax.xml.bind;
 	* Returns a short description of this TypeConstraintException.
 	*
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Prints this TypeConstraintException and its stack trace (including the stack trace
@@ -123,14 +123,14 @@ package javax.xml.bind;
 	*
 	* @param s PrintStream to use for output
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints this TypeConstraintException and its stack trace (including the stack trace
 	* of the linkedException if it is non-null) to <tt>System.err</tt>.
 	*
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload public function printStackTrace() : Void;
 	
 	
 }

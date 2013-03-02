@@ -40,14 +40,14 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	* of the StateTrackable interface that is permanently in the
 	* {@link State#UNTRACKABLE UNTRACKABLE} state.
 	*/
-	public static var UNTRACKABLE_DELEGATE(default, null) : StateTrackableDelegate;
+	public static var UNTRACKABLE_DELEGATE(default, null) : sun.java2d.StateTrackableDelegate;
 	
 	/**
 	* The {@code IMMUTABLE_DELEGATE} provides an implementation
 	* of the StateTrackable interface that is permanently in the
 	* {@link State#IMMUTABLE IMMUTABLE} state.
 	*/
-	public static var IMMUTABLE_DELEGATE(default, null) : StateTrackableDelegate;
+	public static var IMMUTABLE_DELEGATE(default, null) : sun.java2d.StateTrackableDelegate;
 	
 	/**
 	* Returns a {@code StateTrackableDelegate} instance with the
@@ -59,7 +59,7 @@ extern class StateTrackableDelegate implements sun.java2d.StateTrackable
 	* {@link #UNTRACKABLE_DELEGATE} or {@link #IMMUTABLE_DELEGATE}
 	* is returned.
 	*/
-	@:overload public static function createInstance(state : sun.java2d.StateTrackable.StateTrackable_State) : StateTrackableDelegate;
+	@:overload public static function createInstance(state : sun.java2d.StateTrackable.StateTrackable_State) : sun.java2d.StateTrackableDelegate;
 	
 	/**
 	* @inheritDoc

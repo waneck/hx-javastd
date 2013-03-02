@@ -41,7 +41,7 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 }
 @:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XOpenTypeDataListener') @:internal extern class XOpenTypeViewer_XOpenTypeDataListener extends java.awt.event.MouseAdapter
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -61,11 +61,11 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 	
 	
 }
-@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XViewedTabularData') @:internal extern interface XOpenTypeViewer_XViewedTabularData extends XOpenTypeViewer_Navigatable
+@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XViewedTabularData') @:internal extern interface XOpenTypeViewer_XViewedTabularData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_Navigatable
 {
 	
 }
-@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XViewedArrayData') @:internal extern interface XOpenTypeViewer_XViewedArrayData extends XOpenTypeViewer_Navigatable
+@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XViewedArrayData') @:internal extern interface XOpenTypeViewer_XViewedArrayData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_Navigatable
 {
 	
 }
@@ -75,29 +75,29 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 	
 	private var col2Width : Int;
 	
-	@:overload private function new(parent : XOpenTypeViewer_XOpenTypeData) : Void;
+	@:overload private function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData) : Void;
 	
-	@:overload public function getViewedParent() : XOpenTypeViewer_XOpenTypeData;
+	@:overload public function getViewedParent() : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData;
 	
 	@:overload public function getToolTip(row : Int, col : Int) : String;
 	
-	@:overload override public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
 	@:overload public function renderKey(key : String, comp : java.awt.Component) : Void;
 	
-	@:overload override public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
+	@:overload public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
 	
 	@:overload private function isClickableElement(obj : Dynamic) : Bool;
 	
 	@:overload private function updateColumnWidth() : Void;
 	
-	@:overload @:abstract public function viewed(viewer : XOpenTypeViewer) : Void;
+	@:overload @:abstract public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
 	
 	@:overload private function initTable(columnNames : java.NativeArray<String>) : Void;
 	
 	@:overload private function emptyTable() : Void;
 	
-	@:overload override public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
+	@:overload public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
 	
 	
 }
@@ -109,9 +109,9 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 	
 	
 }
-@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XTabularData') @:internal extern class XOpenTypeViewer_XTabularData extends XOpenTypeViewer_XCompositeData implements XOpenTypeViewer_XViewedTabularData
+@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XTabularData') @:internal extern class XOpenTypeViewer_XTabularData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XCompositeData implements sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XViewedTabularData
 {
-	@:overload public function new(parent : XOpenTypeViewer_XOpenTypeData, tabular : javax.management.openmbean.TabularData) : Void;
+	@:overload public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData, tabular : javax.management.openmbean.TabularData) : Void;
 	
 	@:overload override public function renderKey(key : String, comp : java.awt.Component) : Void;
 	
@@ -131,19 +131,19 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 	
 	
 }
-@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XCompositeData') @:internal extern class XOpenTypeViewer_XCompositeData extends XOpenTypeViewer_XOpenTypeData
+@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XCompositeData') @:internal extern class XOpenTypeViewer_XCompositeData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData
 {
 	private var columnNames(default, null) : java.NativeArray<String>;
 	
 	@:overload public function new() : Void;
 	
-	@:overload public function new(parent : XOpenTypeViewer_XOpenTypeData) : Void;
+	@:overload public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData) : Void;
 	
-	@:overload public function new(parent : XOpenTypeViewer_XOpenTypeData, composite : javax.management.openmbean.CompositeData) : Void;
+	@:overload public function new(parent : sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XOpenTypeData, composite : javax.management.openmbean.CompositeData) : Void;
 	
-	@:overload override public function viewed(viewer : XOpenTypeViewer) : Void;
+	@:overload override public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	@:overload private function formatKey(key : String) : Dynamic;
 	
@@ -151,9 +151,9 @@ extern class XOpenTypeViewer extends javax.swing.JPanel implements java.awt.even
 	
 	
 }
-@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XArrayData') @:internal extern class XOpenTypeViewer_XArrayData extends XOpenTypeViewer_XCompositeData implements XOpenTypeViewer_XViewedArrayData
+@:native('sun$tools$jconsole$inspector$XOpenTypeViewer$XArrayData') @:internal extern class XOpenTypeViewer_XArrayData extends sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XCompositeData implements sun.tools.jconsole.inspector.XOpenTypeViewer.XOpenTypeViewer_XViewedArrayData
 {
-	@:overload override public function viewed(viewer : XOpenTypeViewer) : Void;
+	@:overload override public function viewed(viewer : sun.tools.jconsole.inspector.XOpenTypeViewer) : Void;
 	
 	@:overload public function getElementCount() : Int;
 	

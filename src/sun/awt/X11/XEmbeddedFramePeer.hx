@@ -27,45 +27,45 @@ extern class XEmbeddedFramePeer extends sun.awt.X11.XFramePeer
 {
 	@:overload public function new(target : sun.awt.EmbeddedFrame) : Void;
 	
-	@:overload override public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
-	@:overload override public function updateMinimumSize() : Void;
+	@:overload public function updateMinimumSize() : Void;
 	
-	@:overload override private function getWMName() : String;
+	@:overload private function getWMName() : String;
 	
-	@:overload override public function requestWindowFocus(time : haxe.Int64, timeProvided : Bool) : Bool;
+	@:overload public function requestWindowFocus(time : haxe.Int64, timeProvided : Bool) : Bool;
 	
-	@:overload override private function requestInitialFocus() : Void;
+	@:overload private function requestInitialFocus() : Void;
 	
-	@:overload override private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
+	@:overload private function isEventDisabled(e : sun.awt.X11.XEvent) : Bool;
 	
-	@:overload override public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
+	@:overload public function handleConfigureNotifyEvent(xev : sun.awt.X11.XEvent) : Void;
 	
 	@:overload private function traverseOutForward() : Void;
 	
 	@:overload private function traverseOutBackward() : Void;
 	
-	@:overload override public function getLocationOnScreen() : java.awt.Point;
+	@:overload public function getLocationOnScreen() : java.awt.Point;
 	
-	@:overload override public function getBounds() : java.awt.Rectangle;
+	@:overload public function getBounds() : java.awt.Rectangle;
 	
-	@:overload override public function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function setBoundsPrivate(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getBoundsPrivate() : java.awt.Rectangle;
+	@:overload public function getBoundsPrivate() : java.awt.Rectangle;
 	
-	@:overload override public function getAbsoluteX() : Int;
+	@:overload public function getAbsoluteX() : Int;
 	
-	@:overload override public function getAbsoluteY() : Int;
+	@:overload public function getAbsoluteY() : Int;
 	
-	@:overload override public function getWidth() : Int;
+	@:overload public function getWidth() : Int;
 	
-	@:overload override public function getHeight() : Int;
+	@:overload public function getHeight() : Int;
 	
-	@:overload override public function getSize() : java.awt.Dimension;
+	@:overload public function getSize() : java.awt.Dimension;
 	
-	@:overload override public function setModalBlocked(blocker : java.awt.Dialog, blocked : Bool) : Void;
+	@:overload public function setModalBlocked(blocker : java.awt.Dialog, blocked : Bool) : Void;
 	
 	@:overload public function synthesizeFocusInOut(doFocus : Bool) : Void;
 	

@@ -77,12 +77,12 @@ package javax.management.monitor;
 	/**
 	* Starts the counter monitor.
 	*/
-	@:overload @:synchronized override public function start() : Void;
+	@:overload @:synchronized public function start() : Void;
 	
 	/**
 	* Stops the counter monitor.
 	*/
-	@:overload @:synchronized override public function stop() : Void;
+	@:overload @:synchronized public function stop() : Void;
 	
 	/**
 	* Gets the derived gauge of the specified object, if this object is
@@ -94,7 +94,7 @@ package javax.management.monitor;
 	* @return The derived gauge of the specified object.
 	*
 	*/
-	@:overload @:synchronized override public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
+	@:overload @:synchronized public function getDerivedGauge(object : javax.management.ObjectName) : java.lang.Number;
 	
 	/**
 	* Gets the derived gauge timestamp of the specified object, if
@@ -107,7 +107,7 @@ package javax.management.monitor;
 	* @return The derived gauge timestamp of the specified object.
 	*
 	*/
-	@:overload @:synchronized override public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
+	@:overload @:synchronized public function getDerivedGaugeTimeStamp(object : javax.management.ObjectName) : haxe.Int64;
 	
 	/**
 	* Gets the current threshold value of the specified object, if

@@ -56,7 +56,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$AbstractContext') @:internal extern class SchemaParser_AbstractContext extends com.sun.xml.internal.rngom.parse.xml.DtdContext implements com.sun.xml.internal.rngom.parse.Context
 {
-	@:overload override public function resolveNamespacePrefix(prefix : String) : String;
+	@:overload public function resolveNamespacePrefix(prefix : String) : String;
 	
 	@:overload public function prefixes() : java.util.Enumeration<Dynamic>;
 	
@@ -79,7 +79,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	*  false
 	*              otherwise.
 	*/
-	@:overload override public function isUnparsedEntity(entityName : String) : Bool;
+	@:overload public function isUnparsedEntity(entityName : String) : Bool;
 	
 	/**
 	* Checks if a notation is declared with the
@@ -91,17 +91,17 @@ package com.sun.xml.internal.rngom.parse.xml;
 	*  false
 	*              otherwise.
 	*/
-	@:overload override public function isNotation(notationName : String) : Bool;
+	@:overload public function isNotation(notationName : String) : Bool;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$SavedContext') @:internal extern class SchemaParser_SavedContext extends SchemaParser_AbstractContext
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$SavedContext') @:internal extern class SchemaParser_SavedContext extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_AbstractContext
 {
 	@:overload override public function getBaseUri() : String;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ContextImpl') @:internal extern class SchemaParser_ContextImpl extends SchemaParser_AbstractContext
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ContextImpl') @:internal extern class SchemaParser_ContextImpl extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_AbstractContext
 {
 	@:overload override public function getBaseUri() : String;
 	
@@ -113,7 +113,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$Handler') @:internal extern class SchemaParser_Handler implements org.xml.sax.ContentHandler implements SchemaParser_CommentHandler
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$Handler') @:internal extern class SchemaParser_Handler implements org.xml.sax.ContentHandler implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_CommentHandler
 {
 	@:overload public function comment(value : String) : Void;
 	
@@ -269,7 +269,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$State') @:internal extern class SchemaParser_State extends SchemaParser_Handler
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$State') @:internal extern class SchemaParser_State extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_Handler
 {
 	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
@@ -283,7 +283,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ForeignElementHandler') @:internal extern class SchemaParser_ForeignElementHandler extends SchemaParser_Handler
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ForeignElementHandler') @:internal extern class SchemaParser_ForeignElementHandler extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_Handler
 {
 	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
@@ -295,53 +295,53 @@ package com.sun.xml.internal.rngom.parse.xml;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$Skipper') @:internal extern class SchemaParser_Skipper extends org.xml.sax.helpers.DefaultHandler implements SchemaParser_CommentHandler
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$Skipper') @:internal extern class SchemaParser_Skipper extends org.xml.sax.helpers.DefaultHandler implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_CommentHandler
 {
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	@:overload public function comment(value : String) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$EmptyContentState') @:internal extern class SchemaParser_EmptyContentState extends SchemaParser_State
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$EmptyContentState') @:internal extern class SchemaParser_EmptyContentState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$PatternContainerState') @:internal extern class SchemaParser_PatternContainerState extends SchemaParser_State
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$PatternContainerState') @:internal extern class SchemaParser_PatternContainerState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$GroupState') @:internal extern class SchemaParser_GroupState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$GroupState') @:internal extern class SchemaParser_GroupState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ZeroOrMoreState') @:internal extern class SchemaParser_ZeroOrMoreState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ZeroOrMoreState') @:internal extern class SchemaParser_ZeroOrMoreState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$OneOrMoreState') @:internal extern class SchemaParser_OneOrMoreState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$OneOrMoreState') @:internal extern class SchemaParser_OneOrMoreState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$OptionalState') @:internal extern class SchemaParser_OptionalState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$OptionalState') @:internal extern class SchemaParser_OptionalState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ListState') @:internal extern class SchemaParser_ListState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ListState') @:internal extern class SchemaParser_ListState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ChoiceState') @:internal extern class SchemaParser_ChoiceState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ChoiceState') @:internal extern class SchemaParser_ChoiceState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$InterleaveState') @:internal extern class SchemaParser_InterleaveState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$InterleaveState') @:internal extern class SchemaParser_InterleaveState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$MixedState') @:internal extern class SchemaParser_MixedState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$MixedState') @:internal extern class SchemaParser_MixedState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
@@ -351,135 +351,135 @@ package com.sun.xml.internal.rngom.parse.xml;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ElementState') @:internal extern class SchemaParser_ElementState extends SchemaParser_PatternContainerState implements SchemaParser_NameClassRef
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ElementState') @:internal extern class SchemaParser_ElementState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassRef
 {
 	@:overload public function setNameClass(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$RootState') @:internal extern class SchemaParser_RootState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$RootState') @:internal extern class SchemaParser_RootState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NotAllowedState') @:internal extern class SchemaParser_NotAllowedState extends SchemaParser_EmptyContentState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NotAllowedState') @:internal extern class SchemaParser_NotAllowedState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_EmptyContentState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$EmptyState') @:internal extern class SchemaParser_EmptyState extends SchemaParser_EmptyContentState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$EmptyState') @:internal extern class SchemaParser_EmptyState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_EmptyContentState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$TextState') @:internal extern class SchemaParser_TextState extends SchemaParser_EmptyContentState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$TextState') @:internal extern class SchemaParser_TextState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_EmptyContentState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ValueState') @:internal extern class SchemaParser_ValueState extends SchemaParser_EmptyContentState
-{
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
-	
-	
-}
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DataState') @:internal extern class SchemaParser_DataState extends SchemaParser_State
-{
-	
-}
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ParamState') @:internal extern class SchemaParser_ParamState extends SchemaParser_State
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ValueState') @:internal extern class SchemaParser_ValueState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_EmptyContentState
 {
 	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$AttributeState') @:internal extern class SchemaParser_AttributeState extends SchemaParser_PatternContainerState implements SchemaParser_NameClassRef
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DataState') @:internal extern class SchemaParser_DataState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
+{
+	
+}
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ParamState') @:internal extern class SchemaParser_ParamState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
+{
+	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
+	
+	
+}
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$AttributeState') @:internal extern class SchemaParser_AttributeState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState implements com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassRef
 {
 	@:overload public function setNameClass(nc : com.sun.xml.internal.rngom.ast.om.ParsedNameClass) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$SinglePatternContainerState') @:internal extern class SchemaParser_SinglePatternContainerState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$SinglePatternContainerState') @:internal extern class SchemaParser_SinglePatternContainerState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$GrammarSectionState') @:internal extern class SchemaParser_GrammarSectionState extends SchemaParser_State
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$GrammarSectionState') @:internal extern class SchemaParser_GrammarSectionState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DivState') @:internal extern class SchemaParser_DivState extends SchemaParser_GrammarSectionState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DivState') @:internal extern class SchemaParser_DivState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_GrammarSectionState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$IncludeState') @:internal extern class SchemaParser_IncludeState extends SchemaParser_GrammarSectionState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$IncludeState') @:internal extern class SchemaParser_IncludeState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_GrammarSectionState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$MergeGrammarState') @:internal extern class SchemaParser_MergeGrammarState extends SchemaParser_GrammarSectionState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$MergeGrammarState') @:internal extern class SchemaParser_MergeGrammarState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_GrammarSectionState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$GrammarState') @:internal extern class SchemaParser_GrammarState extends SchemaParser_GrammarSectionState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$GrammarState') @:internal extern class SchemaParser_GrammarState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_GrammarSectionState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$RefState') @:internal extern class SchemaParser_RefState extends SchemaParser_EmptyContentState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$RefState') @:internal extern class SchemaParser_RefState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_EmptyContentState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ParentRefState') @:internal extern class SchemaParser_ParentRefState extends SchemaParser_RefState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ParentRefState') @:internal extern class SchemaParser_ParentRefState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_RefState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ExternalRefState') @:internal extern class SchemaParser_ExternalRefState extends SchemaParser_EmptyContentState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$ExternalRefState') @:internal extern class SchemaParser_ExternalRefState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_EmptyContentState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DefinitionState') @:internal extern class SchemaParser_DefinitionState extends SchemaParser_PatternContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DefinitionState') @:internal extern class SchemaParser_DefinitionState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_PatternContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DefineState') @:internal extern class SchemaParser_DefineState extends SchemaParser_DefinitionState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$DefineState') @:internal extern class SchemaParser_DefineState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_DefinitionState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$StartState') @:internal extern class SchemaParser_StartState extends SchemaParser_DefinitionState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$StartState') @:internal extern class SchemaParser_StartState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_DefinitionState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassContainerState') @:internal extern class SchemaParser_NameClassContainerState extends SchemaParser_State
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassContainerState') @:internal extern class SchemaParser_NameClassContainerState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassChildState') @:internal extern class SchemaParser_NameClassChildState extends SchemaParser_NameClassContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassChildState') @:internal extern class SchemaParser_NameClassChildState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassContainerState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassBaseState') @:internal extern class SchemaParser_NameClassBaseState extends SchemaParser_State
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassBaseState') @:internal extern class SchemaParser_NameClassBaseState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_State
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameState') @:internal extern class SchemaParser_NameState extends SchemaParser_NameClassBaseState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameState') @:internal extern class SchemaParser_NameState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassBaseState
 {
 	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$AnyNameState') @:internal extern class SchemaParser_AnyNameState extends SchemaParser_NameClassBaseState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$AnyNameState') @:internal extern class SchemaParser_AnyNameState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassBaseState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NsNameState') @:internal extern class SchemaParser_NsNameState extends SchemaParser_AnyNameState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NsNameState') @:internal extern class SchemaParser_NsNameState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_AnyNameState
 {
 	
 }
-@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassChoiceState') @:internal extern class SchemaParser_NameClassChoiceState extends SchemaParser_NameClassContainerState
+@:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$NameClassChoiceState') @:internal extern class SchemaParser_NameClassChoiceState extends com.sun.xml.internal.rngom.parse.xml.SchemaParser.SchemaParser_NameClassContainerState
 {
 	
 }
 @:native('com$sun$xml$internal$rngom$parse$xml$SchemaParser$LexicalHandlerImpl') @:internal extern class SchemaParser_LexicalHandlerImpl extends com.sun.xml.internal.rngom.xml.sax.AbstractLexicalHandler
 {
-	@:overload override public function startDTD(s : String, s1 : String, s2 : String) : Void;
+	@:overload public function startDTD(s : String, s1 : String, s2 : String) : Void;
 	
-	@:overload override public function endDTD() : Void;
+	@:overload public function endDTD() : Void;
 	
-	@:overload override public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function comment(chars : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	
 }

@@ -62,7 +62,7 @@ extern class BIConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 /**
 * Implementation that returns a statically-determined constant {@link TypeUse}.
 */
-@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$Static') extern class BIConversion_Static extends BIConversion
+@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$Static') extern class BIConversion_Static extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 {
 	@:overload public function new(loc : org.xml.sax.Locator, transducer : com.sun.tools.internal.xjc.model.TypeUse) : Void;
 	
@@ -77,7 +77,7 @@ extern class BIConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 * and their default values are determined based on the
 * owner of the token.
 */
-@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$User') extern class BIConversion_User extends BIConversion
+@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$User') extern class BIConversion_User extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 {
 	@:overload public function new(loc : org.xml.sax.Locator, parseMethod : String, printMethod : String, inMemoryType : com.sun.codemodel.internal.JType) : Void;
 	
@@ -92,7 +92,7 @@ extern class BIConversion extends com.sun.tools.internal.xjc.reader.xmlschema.bi
 	
 	
 }
-@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$UserAdapter') extern class BIConversion_UserAdapter extends BIConversion
+@:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BIConversion$UserAdapter') extern class BIConversion_UserAdapter extends com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion
 {
 	@:overload override public function getTypeUse(owner : com.sun.xml.internal.xsom.XSSimpleType) : com.sun.tools.internal.xjc.model.TypeUse;
 	

@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class ClassSignature implements sun.reflect.generics.tree.Signature
 {
-	@:overload public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, sc : sun.reflect.generics.tree.ClassTypeSignature, sis : java.NativeArray<sun.reflect.generics.tree.ClassTypeSignature>) : ClassSignature;
+	@:overload public static function make(ftps : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>, sc : sun.reflect.generics.tree.ClassTypeSignature, sis : java.NativeArray<sun.reflect.generics.tree.ClassTypeSignature>) : sun.reflect.generics.tree.ClassSignature;
 	
 	@:overload public function getFormalTypeParameters() : java.NativeArray<sun.reflect.generics.tree.FormalTypeParameter>;
 	

@@ -39,17 +39,17 @@ extern class MarshalOutputStream extends java.io.ObjectOutputStream
 	* Checks for objects that are instances of java.rmi.Remote
 	* that need to be serialized as proxy objects.
 	*/
-	@:overload @:final override private function replaceObject(obj : Dynamic) : Dynamic;
+	@:overload @:final private function replaceObject(obj : Dynamic) : Dynamic;
 	
 	/**
 	* Serializes a location from which to load the the specified class.
 	*/
-	@:overload override private function annotateClass(cl : Class<Dynamic>) : Void;
+	@:overload private function annotateClass(cl : Class<Dynamic>) : Void;
 	
 	/**
 	* Serializes a location from which to load the specified class.
 	*/
-	@:overload override private function annotateProxyClass(cl : Class<Dynamic>) : Void;
+	@:overload private function annotateProxyClass(cl : Class<Dynamic>) : Void;
 	
 	/**
 	* Writes the location for the class into the stream.  This method can

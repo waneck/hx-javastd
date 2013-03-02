@@ -31,7 +31,7 @@ extern class SynthProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* @param x component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
@@ -85,7 +85,7 @@ extern class SynthProgressBarUI extends javax.swing.plaf.basic.BasicProgressBarU
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.

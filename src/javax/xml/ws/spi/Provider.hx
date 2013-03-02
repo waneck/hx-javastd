@@ -67,7 +67,7 @@ extern class Provider
 	* </ul>
 	*
 	*/
-	@:overload public static function provider() : Provider;
+	@:overload public static function provider() : javax.xml.ws.spi.Provider;
 	
 	/**
 	* Creates a service delegate object.

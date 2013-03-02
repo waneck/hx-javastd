@@ -60,19 +60,19 @@ extern class RSAPadding
 	* Get a RSAPadding instance of the specified type.
 	* Keys used with this padding must be paddedSize bytes long.
 	*/
-	@:overload public static function getInstance(type : Int, paddedSize : Int) : RSAPadding;
+	@:overload public static function getInstance(type : Int, paddedSize : Int) : sun.security.rsa.RSAPadding;
 	
 	/**
 	* Get a RSAPadding instance of the specified type.
 	* Keys used with this padding must be paddedSize bytes long.
 	*/
-	@:overload public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom) : RSAPadding;
+	@:overload public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom) : sun.security.rsa.RSAPadding;
 	
 	/**
 	* Get a RSAPadding instance of the specified type, which must be
 	* OAEP. Keys used with this padding must be paddedSize bytes long.
 	*/
-	@:overload public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom, spec : javax.crypto.spec.OAEPParameterSpec) : RSAPadding;
+	@:overload public static function getInstance(type : Int, paddedSize : Int, random : java.security.SecureRandom, spec : javax.crypto.spec.OAEPParameterSpec) : sun.security.rsa.RSAPadding;
 	
 	/**
 	* Return the maximum size of the plaintext data that can be processed using

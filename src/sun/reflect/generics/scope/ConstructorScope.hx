@@ -29,7 +29,7 @@ extern class ConstructorScope extends sun.reflect.generics.scope.AbstractScope<j
 	* Overrides the abstract method in the superclass.
 	* @return the enclosing scope
 	*/
-	@:overload override private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
+	@:overload private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
 	
 	/**
 	* Factory method. Takes a <tt>Constructor</tt> object and creates a
@@ -37,7 +37,7 @@ extern class ConstructorScope extends sun.reflect.generics.scope.AbstractScope<j
 	* @param m - A Constructor whose scope we want to obtain
 	* @return The type-variable scope for the constructor m
 	*/
-	@:overload public static function make(c : java.lang.reflect.Constructor<Dynamic>) : ConstructorScope;
+	@:overload public static function make(c : java.lang.reflect.Constructor<Dynamic>) : sun.reflect.generics.scope.ConstructorScope;
 	
 	
 }

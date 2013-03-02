@@ -27,29 +27,29 @@ package com.sun.xml.internal.bind.v2.runtime;
 {
 	@:overload public function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, li : com.sun.xml.internal.bind.v2.model.runtime.RuntimeLeafInfo) : Void;
 	
-	@:overload override public function getTypeName(instance : BeanT) : javax.xml.namespace.QName;
+	@:overload public function getTypeName(instance : BeanT) : javax.xml.namespace.QName;
 	
-	@:overload @:final override public function getElementNamespaceURI(_ : BeanT) : String;
+	@:overload @:final public function getElementNamespaceURI(_ : BeanT) : String;
 	
-	@:overload @:final override public function getElementLocalName(_ : BeanT) : String;
+	@:overload @:final public function getElementLocalName(_ : BeanT) : String;
 	
-	@:overload override public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : BeanT;
+	@:overload public function createInstance(context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : BeanT;
 	
-	@:overload @:final override public function reset(bean : BeanT, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
+	@:overload @:final public function reset(bean : BeanT, context : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext) : Bool;
 	
-	@:overload @:final override public function getId(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
+	@:overload @:final public function getId(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : String;
 	
-	@:overload @:final override public function serializeBody(bean : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:final public function serializeBody(bean : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function serializeAttributes(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:final public function serializeAttributes(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function serializeRoot(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:final public function serializeRoot(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function serializeURIs(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload @:final public function serializeURIs(bean : BeanT, target : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload @:final override public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload @:final public function getLoader(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, typeSubstitutionCapable : Bool) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
-	@:overload override public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<BeanT>;
+	@:overload public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<BeanT>;
 	
 	
 }

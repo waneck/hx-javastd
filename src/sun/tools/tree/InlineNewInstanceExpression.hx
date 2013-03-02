@@ -28,26 +28,26 @@ extern class InlineNewInstanceExpression extends sun.tools.tree.Expression
 	/**
 	* Inline
 	*/
-	//@:overload override public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload override public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Create a copy of the expression for method inlining
 	*/
-	@:overload override public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Code
 	*/
-	@:overload override public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function code(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
-	@:overload override public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
+	@:overload public function codeValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, asm : sun.tools.asm.Assembler) : Void;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream) : Void;
+	@:overload public function print(out : java.io.PrintStream) : Void;
 	
 	
 }

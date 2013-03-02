@@ -32,7 +32,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	*
 	* @param newModel the TreeModel that is to provide the data
 	*/
-	@:overload override public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
+	@:overload public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
 	
 	/**
 	* Determines whether or not the root node from
@@ -41,7 +41,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* @param rootVisible true if the root node of the tree is to be displayed
 	* @see #rootVisible
 	*/
-	@:overload override public function setRootVisible(rootVisible : Bool) : Void;
+	@:overload public function setRootVisible(rootVisible : Bool) : Void;
 	
 	/**
 	* Sets the height of each cell. If rowHeight is less than or equal to
@@ -49,29 +49,29 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	*
 	* @param rowHeight the height of each cell, in pixels
 	*/
-	@:overload override public function setRowHeight(rowHeight : Int) : Void;
+	@:overload public function setRowHeight(rowHeight : Int) : Void;
 	
 	/**
 	* Returns the number of visible rows.
 	*/
-	@:overload override public function getRowCount() : Int;
+	@:overload public function getRowCount() : Int;
 	
 	/**
 	* Does nothing, FixedHeightLayoutCache doesn't cache width, and that
 	* is all that could change.
 	*/
-	@:overload override public function invalidatePathBounds(path : javax.swing.tree.TreePath) : Void;
+	@:overload public function invalidatePathBounds(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Informs the TreeState that it needs to recalculate all the sizes
 	* it is referencing.
 	*/
-	@:overload override public function invalidateSizes() : Void;
+	@:overload public function invalidateSizes() : Void;
 	
 	/**
 	* Returns true if the value identified by row is currently expanded.
 	*/
-	@:overload override public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
+	@:overload public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns a rectangle giving the bounds needed to draw path.
@@ -80,20 +80,20 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* @param placeIn  a Rectangle object giving the available space
 	* @return a Rectangle object specifying the space to be used
 	*/
-	@:overload override public function getBounds(path : javax.swing.tree.TreePath, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload public function getBounds(path : javax.swing.tree.TreePath, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Returns the path for passed in row.  If row is not visible
 	* null is returned.
 	*/
-	@:overload override public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
+	@:overload public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the row that the last item identified in path is visible
 	* at.  Will return -1 if any of the elements in path are not
 	* currently visible.
 	*/
-	@:overload override public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
+	@:overload public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Returns the path to the node that is closest to x,y.  If
@@ -102,30 +102,30 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* returned object is exactly at x, y you should get the bounds for
 	* the returned path and test x, y against that.
 	*/
-	@:overload override public function getPathClosestTo(x : Int, y : Int) : javax.swing.tree.TreePath;
+	@:overload public function getPathClosestTo(x : Int, y : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the number of visible children for row.
 	*/
-	@:overload override public function getVisibleChildCount(path : javax.swing.tree.TreePath) : Int;
+	@:overload public function getVisibleChildCount(path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Returns an Enumerator that increments over the visible paths
 	* starting at the passed in location. The ordering of the enumeration
 	* is based on how the paths are displayed.
 	*/
-	@:overload override public function getVisiblePathsFrom(path : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
+	@:overload public function getVisiblePathsFrom(path : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
 	
 	/**
 	* Marks the path <code>path</code> expanded state to
 	* <code>isExpanded</code>.
 	*/
-	@:overload override public function setExpandedState(path : javax.swing.tree.TreePath, isExpanded : Bool) : Void;
+	@:overload public function setExpandedState(path : javax.swing.tree.TreePath, isExpanded : Bool) : Void;
 	
 	/**
 	* Returns true if the path is expanded, and visible.
 	*/
-	@:overload override public function getExpandedState(path : javax.swing.tree.TreePath) : Bool;
+	@:overload public function getExpandedState(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* <p>Invoked after a node (or a set of siblings) has changed in some
@@ -139,7 +139,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	*
 	* <p>e.childIndices() returns the index(es) of the changed node(s).</p>
 	*/
-	@:overload override public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* <p>Invoked after nodes have been inserted into the tree.</p>
@@ -148,7 +148,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* <p>e.childIndices() returns the indices of the new nodes in
 	* ascending order.
 	*/
-	@:overload override public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* <p>Invoked after nodes have been removed from the tree.  Note that
@@ -160,7 +160,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	*
 	* <p>e.childIndices() returns the indices the nodes had before they were deleted in ascending order.</p>
 	*/
-	@:overload override public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* <p>Invoked after the tree has drastically changed structure from a
@@ -171,7 +171,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* <p>e.path() holds the path to the node.</p>
 	* <p>e.childIndices() returns null.</p>
 	*/
-	@:overload override public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	
 }
@@ -203,18 +203,18 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* Messaged when this node is added somewhere, resets the path
 	* and adds a mapping from path to this node.
 	*/
-	@:overload override public function setParent(parent : javax.swing.tree.MutableTreeNode) : Void;
+	@:overload public function setParent(parent : javax.swing.tree.MutableTreeNode) : Void;
 	
 	/**
 	* Messaged when this node is removed from its parent, this messages
 	* <code>removedFromMapping</code> to remove all the children.
 	*/
-	@:overload override public function remove(childIndex : Int) : Void;
+	@:overload public function remove(childIndex : Int) : Void;
 	
 	/**
 	* Messaged to set the user object. This resets the path.
 	*/
-	@:overload override public function setUserObject(o : Dynamic) : Void;
+	@:overload public function setUserObject(o : Dynamic) : Void;
 	
 	/**
 	* Returns the index of the receiver in the model.
@@ -231,7 +231,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* return <code>null</code> if the child for <code>index</code>
 	* has not yet been created (expanded).
 	*/
-	@:overload public function getChildAtModelIndex(index : Int) : FixedHeightLayoutCache_FHTreeStateNode;
+	@:overload public function getChildAtModelIndex(index : Int) : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_FHTreeStateNode;
 	
 	/**
 	* Returns true if this node is visible. This is determined by
@@ -282,7 +282,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* This does NOT check to ensure there isn't already a child node
 	* to manage <code>userObject</code>.
 	*/
-	@:overload private function createChildFor(userObject : Dynamic) : FixedHeightLayoutCache_FHTreeStateNode;
+	@:overload private function createChildFor(userObject : Dynamic) : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_FHTreeStateNode;
 	
 	/**
 	* Adjusts the receiver, and all its children rows by
@@ -346,13 +346,13 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	/**
 	* Returns true if the receiver is a leaf.
 	*/
-	@:overload override public function isLeaf() : Bool;
+	@:overload public function isLeaf() : Bool;
 	
 	/**
 	* Adds newChild to this nodes children at the appropriate location.
 	* The location is determined from the childIndex of newChild.
 	*/
-	@:overload private function addNode(newChild : FixedHeightLayoutCache_FHTreeStateNode) : Void;
+	@:overload private function addNode(newChild : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_FHTreeStateNode) : Void;
 	
 	/**
 	* Removes the child at <code>modelIndex</code>.
@@ -381,7 +381,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	* This should be invoked on root with <code>nextRow</code> set
 	* to <code>getRowCount</code>().
 	*/
-	@:overload private function getPathForRow(row : Int, nextRow : Int, info : FixedHeightLayoutCache_SearchInfo) : Bool;
+	@:overload private function getPathForRow(row : Int, nextRow : Int, info : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_SearchInfo) : Bool;
 	
 	/**
 	* Asks all the children of the receiver for their totalChildCount
@@ -409,7 +409,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 */
 @:native('javax$swing$tree$FixedHeightLayoutCache$SearchInfo') @:internal extern class FixedHeightLayoutCache_SearchInfo
 {
-	private var node : FixedHeightLayoutCache_FHTreeStateNode;
+	private var node : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_FHTreeStateNode;
 	
 	private var isNodeParentNode : Bool;
 	
@@ -425,7 +425,7 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 @:native('javax$swing$tree$FixedHeightLayoutCache$VisibleFHTreeStateNodeEnumeration') @:internal extern class FixedHeightLayoutCache_VisibleFHTreeStateNodeEnumeration implements java.util.Enumeration<javax.swing.tree.TreePath>
 {
 	/** Parent thats children are being enumerated. */
-	private var parent : FixedHeightLayoutCache_FHTreeStateNode;
+	private var parent : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_FHTreeStateNode;
 	
 	/** Index of next child. An index of -1 signifies parent should be
 	* visibled next. */
@@ -434,9 +434,9 @@ extern class FixedHeightLayoutCache extends javax.swing.tree.AbstractLayoutCache
 	/** Number of children in parent. */
 	private var childCount : Int;
 	
-	@:overload private function new(node : FixedHeightLayoutCache_FHTreeStateNode) : Void;
+	@:overload private function new(node : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_FHTreeStateNode) : Void;
 	
-	@:overload private function new(parent : FixedHeightLayoutCache_FHTreeStateNode, startIndex : Int) : Void;
+	@:overload private function new(parent : javax.swing.tree.FixedHeightLayoutCache.FixedHeightLayoutCache_FHTreeStateNode, startIndex : Int) : Void;
 	
 	/**
 	* @return true if more visible nodes.

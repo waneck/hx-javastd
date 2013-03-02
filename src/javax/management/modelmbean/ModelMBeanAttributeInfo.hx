@@ -119,7 +119,7 @@ extern class ModelMBeanAttributeInfo extends javax.management.MBeanAttributeInfo
 	*
 	* @param inInfo the ModelMBeanAttributeInfo to be duplicated
 	*/
-	@:overload public function new(inInfo : ModelMBeanAttributeInfo) : Void;
+	@:overload public function new(inInfo : javax.management.modelmbean.ModelMBeanAttributeInfo) : Void;
 	
 	/**
 	* Gets a copy of the associated Descriptor for the

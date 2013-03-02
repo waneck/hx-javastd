@@ -35,7 +35,7 @@ extern class CookieHandler
 	* {@link NetPermission}<tt>("getCookieHandler")</tt>
 	* @see #setDefault(CookieHandler)
 	*/
-	@:overload @:synchronized public static function getDefault() : CookieHandler;
+	@:overload @:synchronized public static function getDefault() : java.net.CookieHandler;
 	
 	/**
 	* Sets (or unsets) the system-wide cookie handler.
@@ -49,7 +49,7 @@ extern class CookieHandler
 	* {@link NetPermission}<tt>("setCookieHandler")</tt>
 	* @see #getDefault()
 	*/
-	@:overload @:synchronized public static function setDefault(cHandler : CookieHandler) : Void;
+	@:overload @:synchronized public static function setDefault(cHandler : java.net.CookieHandler) : Void;
 	
 	/**
 	* Gets all the applicable cookies from a cookie cache for the

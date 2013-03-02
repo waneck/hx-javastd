@@ -41,7 +41,7 @@ package sun.awt.geom;
 	
 	@:overload public function setEquivalence(eq : Int) : Void;
 	
-	@:overload public function compareTo(other : Edge, yrange : java.NativeArray<Float>) : Int;
+	@:overload public function compareTo(other : sun.awt.geom.Edge, yrange : java.NativeArray<Float>) : Int;
 	
 	@:overload public function record(yend : Float, etag : Int) : Void;
 	

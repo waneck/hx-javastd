@@ -27,7 +27,7 @@ package sun.tracing.dtrace;
 {
 	
 }
-@:internal extern class SystemResource extends java.lang.ref.WeakReference<Activation>
+@:internal extern class SystemResource extends java.lang.ref.WeakReference<sun.tracing.dtrace.Activation>
 {
 	
 }

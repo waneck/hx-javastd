@@ -57,7 +57,7 @@ extern class DerOutputStream extends java.io.ByteArrayOutputStream implements su
 	*          <em>DerValue.tag_Sequence</em>
 	* @param out buffered data
 	*/
-	@:overload public function write(tag : java.StdTypes.Int8, out : DerOutputStream) : Void;
+	@:overload public function write(tag : java.StdTypes.Int8, out : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Writes implicitly tagged data using buffer-to-buffer copy.  As above,
@@ -76,7 +76,7 @@ extern class DerOutputStream extends java.io.ByteArrayOutputStream implements su
 	* explicit tagging the form is always constructed.
 	* @param value original value being implicitly tagged
 	*/
-	@:overload public function writeImplicit(tag : java.StdTypes.Int8, value : DerOutputStream) : Void;
+	@:overload public function writeImplicit(tag : java.StdTypes.Int8, value : sun.security.util.DerOutputStream) : Void;
 	
 	/**
 	* Marshals pre-encoded DER value onto the output stream.

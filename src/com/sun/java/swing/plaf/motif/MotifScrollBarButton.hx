@@ -43,7 +43,7 @@ extern class MotifScrollBarButton extends javax.swing.plaf.basic.BasicArrowButto
 	
 	@:overload override public function getMaximumSize() : java.awt.Dimension;
 	
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload public function isFocusTraversable() : Bool;
 	
 	@:overload override public function paint(g : java.awt.Graphics) : Void;
 	

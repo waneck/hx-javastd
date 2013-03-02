@@ -28,19 +28,19 @@ package sun.awt.X11;
 	/*
 	* @param returnValue the drop action selected by the Java drop target.
 	*/
-	@:overload override private function eventProcessed(e : sun.awt.dnd.SunDropTargetEvent, returnValue : Int, dispatcherDone : Bool) : Void;
+	@:overload private function eventProcessed(e : sun.awt.dnd.SunDropTargetEvent, returnValue : Int, dispatcherDone : Bool) : Void;
 	
-	@:overload override private function doDropDone(success : Bool, dropAction : Int, isLocal : Bool) : Void;
+	@:overload private function doDropDone(success : Bool, dropAction : Int, isLocal : Bool) : Void;
 	
-	@:overload override private function getNativeData(format : haxe.Int64) : Dynamic;
+	@:overload private function getNativeData(format : haxe.Int64) : Dynamic;
 	
-	@:overload override private function processEnterMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload private function processEnterMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
-	@:overload override private function processExitMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload private function processExitMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
-	@:overload override private function processMotionMessage(event : sun.awt.dnd.SunDropTargetEvent, operationChanged : Bool) : Void;
+	@:overload private function processMotionMessage(event : sun.awt.dnd.SunDropTargetEvent, operationChanged : Bool) : Void;
 	
-	@:overload override private function processDropMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
+	@:overload private function processDropMessage(event : sun.awt.dnd.SunDropTargetEvent) : Void;
 	
 	@:overload public function forwardEventToEmbedded(embedded : haxe.Int64, ctxt : haxe.Int64, eventID : Int) : Void;
 	

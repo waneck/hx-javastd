@@ -49,7 +49,7 @@ package com.sun.crypto.provider;
 * appropriate supportsParamters() checks into KeyGenerators (not
 * currently there).
 */
-@:native('com$sun$crypto$provider$TlsPrfGenerator$V12') extern class TlsPrfGenerator_V12 extends TlsPrfGenerator
+@:native('com$sun$crypto$provider$TlsPrfGenerator$V12') extern class TlsPrfGenerator_V12 extends com.sun.crypto.provider.TlsPrfGenerator
 {
 	@:overload override private function engineGenerateKey() : javax.crypto.SecretKey;
 	
@@ -58,7 +58,7 @@ package com.sun.crypto.provider;
 /**
 * A KeyGenerator implementation that supports TLS 1.0/1.1.
 */
-@:native('com$sun$crypto$provider$TlsPrfGenerator$V10') extern class TlsPrfGenerator_V10 extends TlsPrfGenerator
+@:native('com$sun$crypto$provider$TlsPrfGenerator$V10') extern class TlsPrfGenerator_V10 extends com.sun.crypto.provider.TlsPrfGenerator
 {
 	@:overload override private function engineGenerateKey() : javax.crypto.SecretKey;
 	

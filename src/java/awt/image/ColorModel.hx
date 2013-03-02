@@ -51,7 +51,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return a <code>DirectColorModel</code>object describing default
 	*          RGB values.
 	*/
-	@:overload public static function getRGBdefault() : ColorModel;
+	@:overload public static function getRGBdefault() : java.awt.image.ColorModel;
 	
 	/**
 	* Constructs a <code>ColorModel</code> that translates pixels of the
@@ -935,7 +935,7 @@ extern class ColorModel implements java.awt.Transparency
 	* @return a <code>ColorModel</code> object that represents the
 	* coerced data.
 	*/
-	@:overload public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : ColorModel;
+	@:overload public function coerceData(raster : java.awt.image.WritableRaster, isAlphaPremultiplied : Bool) : java.awt.image.ColorModel;
 	
 	/**
 	* Returns <code>true</code> if <code>raster</code> is compatible

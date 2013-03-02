@@ -36,9 +36,9 @@ extern class OldPOAObjectKeyTemplate extends com.sun.corba.se.impl.ior.OldObject
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, magic : Int, scid : Int, serverid : Int, orbid : Int, poaid : Int) : Void;
 	
-	@:overload override public function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload override public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
 	
 }

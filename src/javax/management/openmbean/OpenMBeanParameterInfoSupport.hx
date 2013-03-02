@@ -375,7 +375,7 @@ package javax.management.openmbean;
 	* @return a string representation of this
 	* {@code OpenMBeanParameterInfoSupport} instance.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

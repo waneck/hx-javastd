@@ -191,7 +191,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 	* @throws  IOException if I/O errors occur
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function putFields() : ObjectOutputStream_PutField;
+	@:require(java2) @:overload public function putFields() : java.io.ObjectOutputStream.ObjectOutputStream_PutField;
 	
 	/**
 	* Write the buffered fields to the stream.
@@ -783,7 +783,7 @@ extern class ObjectOutputStream extends java.io.OutputStream implements java.io.
 /**
 * Default PutField implementation.
 */
-@:native('java$io$ObjectOutputStream$PutFieldImpl') @:internal extern class ObjectOutputStream_PutFieldImpl extends ObjectOutputStream_PutField
+@:native('java$io$ObjectOutputStream$PutFieldImpl') @:internal extern class ObjectOutputStream_PutFieldImpl extends java.io.ObjectOutputStream.ObjectOutputStream_PutField
 {
 	@:overload override public function put(name : String, val : Bool) : Void;
 	

@@ -35,13 +35,13 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsMenuBarUI extends javax.swing.plaf.basic.BasicMenuBarUI
 {
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload private function installKeyboardActions() : Void;
 	
 	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	

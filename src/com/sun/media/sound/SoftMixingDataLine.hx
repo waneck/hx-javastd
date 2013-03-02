@@ -310,7 +310,7 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 	* @see #open()
 	* @see #close()
 	*/
-	@:overload @:public override public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
 	/**
 	* Obtains the current format (encoding, sample rate, number of channels,
@@ -365,13 +365,13 @@ extern class SoftMixingDataLine implements javax.sound.sampled.DataLine
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$Mute') @:internal extern class SoftMixingDataLine_Mute extends javax.sound.sampled.BooleanControl
 {
-	@:overload override public function setValue(newValue : Bool) : Void;
+	@:overload public function setValue(newValue : Bool) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$SoftMixingDataLine$ApplyReverb') @:internal extern class SoftMixingDataLine_ApplyReverb extends javax.sound.sampled.BooleanControl
 {
-	@:overload override public function setValue(newValue : Bool) : Void;
+	@:overload public function setValue(newValue : Bool) : Void;
 	
 	
 }

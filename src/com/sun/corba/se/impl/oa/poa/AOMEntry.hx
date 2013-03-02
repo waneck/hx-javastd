@@ -59,7 +59,7 @@ extern class AOMEntry extends com.sun.corba.se.spi.orbutil.fsm.FSMImpl
 {
 	@:overload public function new(value : Int) : Void;
 	
-	@:overload override public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
+	@:overload public function evaluate(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : com.sun.corba.se.spi.orbutil.fsm.Guard.Guard_Result;
 	
 	
 }

@@ -27,27 +27,27 @@ extern class COMPOUND_TEXT_Encoder extends java.nio.charset.CharsetEncoder
 {
 	@:overload public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function encodeLoop(src : java.nio.CharBuffer, des : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload private function encodeLoop(src : java.nio.CharBuffer, des : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
-	@:overload override private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
+	@:overload private function implFlush(out : java.nio.ByteBuffer) : java.nio.charset.CoderResult;
 	
 	/**
 	* Resets the encoder.
 	* Call this method to reset the encoder to its initial state
 	*/
-	@:overload override private function implReset() : Void;
+	@:overload private function implReset() : Void;
 	
 	/**
 	* Return whether a character is mappable or not
 	* @return true if a character is mappable
 	*/
-	@:overload override public function canEncode(ch : java.StdTypes.Char16) : Bool;
+	@:overload public function canEncode(ch : java.StdTypes.Char16) : Bool;
 	
-	@:overload override private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload private function implOnMalformedInput(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
-	@:overload override private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
+	@:overload private function implOnUnmappableCharacter(newAction : java.nio.charset.CodingErrorAction) : Void;
 	
-	@:overload override private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload private function implReplaceWith(newReplacement : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

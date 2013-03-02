@@ -34,7 +34,7 @@ extern class TypeVariableImpl extends com.sun.tools.apt.mirror.type.TypeMirrorIm
 	* Returns the simple name of this type variable.  Bounds are
 	* not included.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
@@ -44,7 +44,7 @@ extern class TypeVariableImpl extends com.sun.tools.apt.mirror.type.TypeMirrorIm
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

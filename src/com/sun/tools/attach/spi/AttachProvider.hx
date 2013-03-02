@@ -176,7 +176,7 @@ extern class AttachProvider
 	*
 	* @return  A list of the installed attach providers.
 	*/
-	@:overload public static function providers() : java.util.List<AttachProvider>;
+	@:overload public static function providers() : java.util.List<com.sun.tools.attach.spi.AttachProvider>;
 	
 	
 }

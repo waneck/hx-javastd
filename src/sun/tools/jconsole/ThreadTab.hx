@@ -44,7 +44,7 @@ package sun.tools.jconsole;
 	
 	@:overload public function new(vmPanel : sun.tools.jconsole.VMPanel) : Void;
 	
-	@:overload override public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
+	@:overload public function newSwingWorker() : javax.swing.SwingWorker<Dynamic, Dynamic>;
 	
 	@:overload public function valueChanged(ev : javax.swing.event.ListSelectionEvent) : Void;
 	
@@ -62,7 +62,7 @@ package sun.tools.jconsole;
 }
 @:native('sun$tools$jconsole$ThreadTab$ThreadJList') @:internal extern class ThreadTab_ThreadJList extends javax.swing.JList<Dynamic>
 {
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload public function getPreferredSize() : java.awt.Dimension;
 	
 	
 }
@@ -70,9 +70,9 @@ package sun.tools.jconsole;
 {
 	@:overload public function new(prompt : String, columns : Int) : Void;
 	
-	@:overload override public function revalidate() : Void;
+	@:overload public function revalidate() : Void;
 	
-	@:overload override public function getText() : String;
+	@:overload public function getText() : String;
 	
 	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	

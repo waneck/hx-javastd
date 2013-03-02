@@ -30,7 +30,7 @@ extern interface CClassInfoParent
 	*/
 	@:overload public function fullName() : String;
 	
-	@:overload public function accept<T>(visitor : CClassInfoParent_Visitor<T>) : T;
+	@:overload public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
 	
 	/**
 	* Gets the nearest {@link JPackage}.
@@ -57,7 +57,7 @@ extern interface CClassInfoParent
 *
 * Use {@link Model#getPackage} to obtain an instance.
 */
-@:native('com$sun$tools$internal$xjc$model$CClassInfoParent$Package') extern class CClassInfoParent_Package implements CClassInfoParent
+@:native('com$sun$tools$internal$xjc$model$CClassInfoParent$Package') extern class CClassInfoParent_Package implements com.sun.tools.internal.xjc.model.CClassInfoParent
 {
 	public var pkg(default, null) : com.sun.codemodel.internal.JPackage;
 	
@@ -65,7 +65,7 @@ extern interface CClassInfoParent
 	
 	@:overload public function fullName() : String;
 	
-	@:overload public function accept<T>(visitor : CClassInfoParent_Visitor<T>) : T;
+	@:overload public function accept<T>(visitor : com.sun.tools.internal.xjc.model.CClassInfoParent.CClassInfoParent_Visitor<T>) : T;
 	
 	@:overload public function getOwnerPackage() : com.sun.codemodel.internal.JPackage;
 	

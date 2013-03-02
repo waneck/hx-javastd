@@ -236,21 +236,21 @@ package java.util.logging;
 }
 @:native('java$util$logging$FileHandler$MeteredStream') @:internal extern class FileHandler_MeteredStream extends java.io.OutputStream
 {
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
-	@:overload override public function write(buff : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function write(buff : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override public function write(buff : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(buff : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }
 @:native('java$util$logging$FileHandler$InitializationErrorManager') @:internal extern class FileHandler_InitializationErrorManager extends java.util.logging.ErrorManager
 {
-	@:overload override public function error(msg : String, ex : java.lang.Exception, code : Int) : Void;
+	@:overload public function error(msg : String, ex : java.lang.Exception, code : Int) : Void;
 	
 	
 }

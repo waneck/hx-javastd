@@ -32,9 +32,9 @@ package com.sun.tools.internal.xjc.reader.xmlschema;
 	*/
 	@:overload public function new(core : com.sun.tools.internal.xjc.reader.xmlschema.ClassBinder) : Void;
 	
-	@:overload override public function complexType(xs : com.sun.xml.internal.xsom.XSComplexType) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload public function complexType(xs : com.sun.xml.internal.xsom.XSComplexType) : com.sun.tools.internal.xjc.model.CElement;
 	
-	@:overload override public function elementDecl(xs : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.model.CElement;
+	@:overload public function elementDecl(xs : com.sun.xml.internal.xsom.XSElementDecl) : com.sun.tools.internal.xjc.model.CElement;
 	
 	
 }

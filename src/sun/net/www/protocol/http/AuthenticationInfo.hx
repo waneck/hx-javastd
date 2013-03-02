@@ -40,19 +40,19 @@ extern class AuthenticationInfo extends sun.net.www.protocol.http.AuthCacheValue
 	/* AuthCacheValue: */
 	@:transient private var pw : java.net.PasswordAuthentication;
 	
-	@:overload override public function credentials() : java.net.PasswordAuthentication;
+	@:overload public function credentials() : java.net.PasswordAuthentication;
 	
-	@:overload override public function getAuthType() : sun.net.www.protocol.http.AuthCacheValue.AuthCacheValue_Type;
+	@:overload public function getAuthType() : sun.net.www.protocol.http.AuthCacheValue.AuthCacheValue_Type;
 	
-	@:overload override public function getHost() : String;
+	@:overload public function getHost() : String;
 	
-	@:overload override public function getPort() : Int;
+	@:overload public function getPort() : Int;
 	
-	@:overload override public function getRealm() : String;
+	@:overload public function getRealm() : String;
 	
-	@:overload override public function getPath() : String;
+	@:overload public function getPath() : String;
 	
-	@:overload override public function getProtocolScheme() : String;
+	@:overload public function getProtocolScheme() : String;
 	
 	/** Use this constructor only for proxy entries */
 	@:overload public function new(type : java.StdTypes.Char16, authScheme : sun.net.www.protocol.http.AuthScheme, host : String, port : Int, realm : String) : Void;

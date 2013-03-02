@@ -171,7 +171,7 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	* @exception IOException if a communications problem means that a
 	* stub cannot be created.
 	**/
-	@:overload override public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
+	@:overload public function toJMXConnector(env : java.util.Map<String, Dynamic>) : javax.management.remote.JMXConnector;
 	
 	/**
 	* <p>Activates the connector server, that is starts listening for
@@ -288,16 +288,16 @@ extern class RMIConnectorServer extends javax.management.remote.JMXConnectorServ
 	
 	@:overload override public function getAttributes() : java.util.Map<String, Dynamic>;
 	
-	@:overload @:synchronized override public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
+	@:overload @:synchronized public function setMBeanServerForwarder(mbsf : javax.management.remote.MBeanServerForwarder) : Void;
 	
 	/* We repeat the definitions of connection{Opened,Closed,Failed}
 	here so that they are accessible to other classes in this package
 	even though they have protected access.  */
-	@:overload override private function connectionOpened(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload private function connectionOpened(connectionId : String, message : String, userData : Dynamic) : Void;
 	
-	@:overload override private function connectionClosed(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload private function connectionClosed(connectionId : String, message : String, userData : Dynamic) : Void;
 	
-	@:overload override private function connectionFailed(connectionId : String, message : String, userData : Dynamic) : Void;
+	@:overload private function connectionFailed(connectionId : String, message : String, userData : Dynamic) : Void;
 	
 	
 }

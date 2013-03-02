@@ -32,7 +32,7 @@ extern interface PresentationManager
 	* all of the remote interfaces are related by inheritance, then the type
 	* IDs have the implementation class as element 0.
 	*/
-	@:overload public function getClassData(cls : Class<Dynamic>) : PresentationManager_ClassData;
+	@:overload public function getClassData(cls : Class<Dynamic>) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_ClassData;
 	
 	/** Given a particular method, return a DynamicMethodMarshaller
 	* for that method.  This is used for dynamic stubs and ties.
@@ -41,13 +41,13 @@ extern interface PresentationManager
 	
 	/** Return the registered StubFactoryFactory.
 	*/
-	@:overload public function getStubFactoryFactory(isDynamic : Bool) : PresentationManager_StubFactoryFactory;
+	@:overload public function getStubFactoryFactory(isDynamic : Bool) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory;
 	
 	/** Register the StubFactoryFactory.  Note that
 	* a static StubFactoryFactory is always required for IDL.  The
 	* dynamic stubFactoryFactory is optional.
 	*/
-	@:overload public function setStubFactoryFactory(isDynamic : Bool, sff : PresentationManager_StubFactoryFactory) : Void;
+	@:overload public function setStubFactoryFactory(isDynamic : Bool, sff : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactoryFactory) : Void;
 	
 	/** Equivalent to getStubFactoryFactory( true ).getTie( null ).
 	* Provided for compatibility with earlier versions of PresentationManager
@@ -83,7 +83,7 @@ extern interface PresentationManager
 	* @param expectedClass The expected stub type (may be null or unused).
 	* @param classLoader The classLoader to use (may be null).
 	*/
-	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : PresentationManager_StubFactory;
+	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
 	/** Return a Tie for the given class.
 	*/

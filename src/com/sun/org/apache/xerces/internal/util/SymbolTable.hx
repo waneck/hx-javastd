@@ -51,7 +51,7 @@ extern class SymbolTable
 	private static var TABLE_SIZE(default, null) : Int;
 	
 	/** Buckets. */
-	private var fBuckets : java.NativeArray<SymbolTable_Entry>;
+	private var fBuckets : java.NativeArray<com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry>;
 	
 	private var fTableSize : Int;
 	
@@ -142,19 +142,19 @@ extern class SymbolTable
 	public var characters : java.NativeArray<java.StdTypes.Char16>;
 	
 	/** The next entry. */
-	public var next : SymbolTable_Entry;
+	public var next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry;
 	
 	/**
 	* Constructs a new entry from the specified symbol and next entry
 	* reference.
 	*/
-	@:overload public function new(symbol : String, next : SymbolTable_Entry) : Void;
+	@:overload public function new(symbol : String, next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry) : Void;
 	
 	/**
 	* Constructs a new entry from the specified symbol information and
 	* next entry reference.
 	*/
-	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, next : SymbolTable_Entry) : Void;
+	@:overload public function new(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int, next : com.sun.org.apache.xerces.internal.util.SymbolTable.SymbolTable_Entry) : Void;
 	
 	
 }

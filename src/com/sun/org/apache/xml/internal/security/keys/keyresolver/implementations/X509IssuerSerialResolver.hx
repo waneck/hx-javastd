@@ -22,13 +22,13 @@ package com.sun.org.apache.xml.internal.security.keys.keyresolver.implementation
 extern class X509IssuerSerialResolver extends com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolverSpi
 {
 	/** @inheritDoc */
-	@:overload override public function engineLookupAndResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
+	@:overload public function engineLookupAndResolvePublicKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.PublicKey;
 	
 	/** @inheritDoc */
-	@:overload override public function engineLookupResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
+	@:overload public function engineLookupResolveX509Certificate(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : java.security.cert.X509Certificate;
 	
 	/** @inheritDoc */
-	@:overload override public function engineLookupAndResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
+	@:overload public function engineLookupAndResolveSecretKey(element : org.w3c.dom.Element, BaseURI : String, storage : com.sun.org.apache.xml.internal.security.keys.storage.StorageResolver) : javax.crypto.SecretKey;
 	
 	
 }

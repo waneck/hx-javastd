@@ -37,7 +37,7 @@ package java.net;
 	* @since 1.4
 	* @spec JSR-51
 	*/
-	@:require(java4) @:overload @:final override public function getChannel() : java.nio.channels.FileChannel;
+	@:require(java4) @:overload @:final public function getChannel() : java.nio.channels.FileChannel;
 	
 	/**
 	* Reads into a byte array data from the socket.
@@ -46,7 +46,7 @@ package java.net;
 	*          returned when the end of the stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>) : Int;
 	
 	/**
 	* Reads into a byte array <i>b</i> at offset <i>off</i>,
@@ -58,12 +58,12 @@ package java.net;
 	*          returned when the end of the stream is reached.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, length : Int) : Int;
 	
 	/**
 	* Reads a single byte from the socket.
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	/**
 	* Skips n bytes of input.
@@ -71,20 +71,20 @@ package java.net;
 	* @return  the actual number of bytes skipped.
 	* @exception IOException If an I/O error has occurred.
 	*/
-	@:overload override public function skip(numbytes : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(numbytes : haxe.Int64) : haxe.Int64;
 	
 	/**
 	* Returns the number of bytes that can be read without blocking.
 	* @return the number of immediately available bytes
 	*/
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* Overrides finalize, the fd is closed by the Socket.
 	*/
-	@:overload override private function finalize() : Void;
+	@:overload private function finalize() : Void;
 	
 	
 }

@@ -32,7 +32,7 @@ extern class CompilerException extends java.lang.Exception
 	
 	@:overload public function new(message : String) : Void;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

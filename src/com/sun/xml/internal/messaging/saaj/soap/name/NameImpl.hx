@@ -62,7 +62,7 @@ extern class NameImpl implements javax.xml.soap.Name
 	
 	@:overload public static function convertToQName(name : javax.xml.soap.Name) : javax.xml.namespace.QName;
 	
-	@:overload public static function createFromUnqualifiedName(name : String) : NameImpl;
+	@:overload public static function createFromUnqualifiedName(name : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	@:overload public static function createFromTagName(tagName : String) : javax.xml.soap.Name;
 	
@@ -82,7 +82,7 @@ extern class NameImpl implements javax.xml.soap.Name
 	
 	@:overload public static function isQualified(tagName : String) : Bool;
 	
-	@:overload public static function create(name : String, prefix : String, uri : String) : NameImpl;
+	@:overload public static function create(name : String, prefix : String, uri : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	@:overload public static function createQName(prefix : String, localName : String) : String;
 	
@@ -117,52 +117,52 @@ extern class NameImpl implements javax.xml.soap.Name
 	/**
 	* Create a name object for a SOAP1.1 Envelope.
 	*/
-	@:overload public static function createEnvelope1_1Name(prefix : String) : NameImpl;
+	@:overload public static function createEnvelope1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Envelope.
 	*/
-	@:overload public static function createEnvelope1_2Name(prefix : String) : NameImpl;
+	@:overload public static function createEnvelope1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Header.
 	*/
-	@:overload public static function createHeader1_1Name(prefix : String) : NameImpl;
+	@:overload public static function createHeader1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Header.
 	*/
-	@:overload public static function createHeader1_2Name(prefix : String) : NameImpl;
+	@:overload public static function createHeader1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Body.
 	*/
-	@:overload public static function createBody1_1Name(prefix : String) : NameImpl;
+	@:overload public static function createBody1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Body.
 	*/
-	@:overload public static function createBody1_2Name(prefix : String) : NameImpl;
+	@:overload public static function createBody1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Fault.
 	*/
-	@:overload public static function createFault1_1Name(prefix : String) : NameImpl;
+	@:overload public static function createFault1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 NotUnderstood element.
 	*/
-	@:overload public static function createNotUnderstood1_2Name(prefix : String) : NameImpl;
+	@:overload public static function createNotUnderstood1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Upgrade element.
 	*/
-	@:overload public static function createUpgrade1_2Name(prefix : String) : NameImpl;
+	@:overload public static function createUpgrade1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 SupportedEnvelope Upgrade element.
 	*/
-	@:overload public static function createSupportedEnvelope1_2Name(prefix : String) : NameImpl;
+	@:overload public static function createSupportedEnvelope1_2Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2
@@ -170,99 +170,99 @@ extern class NameImpl implements javax.xml.soap.Name
 	*
 	* @param localName Local Name of element
 	*/
-	@:overload public static function createFault1_2Name(localName : String, prefix : String) : NameImpl;
+	@:overload public static function createFault1_2Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.2 Fault/Code or Subcode.
 	*
 	* @param localName Either "Code" or "Subcode"
 	*/
-	@:overload public static function createCodeSubcode1_2Name(prefix : String, localName : String) : NameImpl;
+	@:overload public static function createCodeSubcode1_2Name(prefix : String, localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	/**
 	* Create a name object for a SOAP1.1 Fault Detail.
 	*/
-	@:overload public static function createDetail1_1Name() : NameImpl;
+	@:overload public static function createDetail1_1Name() : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createDetail1_1Name(prefix : String) : NameImpl;
+	@:overload public static function createDetail1_1Name(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createFaultElement1_1Name(localName : String) : NameImpl;
+	@:overload public static function createFaultElement1_1Name(localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createFaultElement1_1Name(localName : String, prefix : String) : NameImpl;
+	@:overload public static function createFaultElement1_1Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createSOAP11Name(string : String) : NameImpl;
+	@:overload public static function createSOAP11Name(string : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createSOAP12Name(string : String) : NameImpl;
+	@:overload public static function createSOAP12Name(string : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createSOAP12Name(localName : String, prefix : String) : NameImpl;
+	@:overload public static function createSOAP12Name(localName : String, prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload public static function createXmlName(localName : String) : NameImpl;
+	@:overload public static function createXmlName(localName : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	@:overload public static function copyElementName(element : org.w3c.dom.Element) : javax.xml.soap.Name;
 	
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$SOAP1_1Name') @:internal extern class NameImpl_SOAP1_1Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$SOAP1_1Name') @:internal extern class NameImpl_SOAP1_1Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Envelope1_1Name') @:internal extern class NameImpl_Envelope1_1Name extends NameImpl_SOAP1_1Name
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Envelope1_1Name') @:internal extern class NameImpl_Envelope1_1Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl.NameImpl_SOAP1_1Name
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Header1_1Name') @:internal extern class NameImpl_Header1_1Name extends NameImpl_SOAP1_1Name
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Header1_1Name') @:internal extern class NameImpl_Header1_1Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl.NameImpl_SOAP1_1Name
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Body1_1Name') @:internal extern class NameImpl_Body1_1Name extends NameImpl_SOAP1_1Name
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Body1_1Name') @:internal extern class NameImpl_Body1_1Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl.NameImpl_SOAP1_1Name
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Fault1_1Name') @:internal extern class NameImpl_Fault1_1Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Fault1_1Name') @:internal extern class NameImpl_Fault1_1Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Detail1_1Name') @:internal extern class NameImpl_Detail1_1Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Detail1_1Name') @:internal extern class NameImpl_Detail1_1Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$FaultElement1_1Name') @:internal extern class NameImpl_FaultElement1_1Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$FaultElement1_1Name') @:internal extern class NameImpl_FaultElement1_1Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$SOAP1_2Name') @:internal extern class NameImpl_SOAP1_2Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$SOAP1_2Name') @:internal extern class NameImpl_SOAP1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Envelope1_2Name') @:internal extern class NameImpl_Envelope1_2Name extends NameImpl_SOAP1_2Name
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Envelope1_2Name') @:internal extern class NameImpl_Envelope1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl.NameImpl_SOAP1_2Name
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Header1_2Name') @:internal extern class NameImpl_Header1_2Name extends NameImpl_SOAP1_2Name
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Header1_2Name') @:internal extern class NameImpl_Header1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl.NameImpl_SOAP1_2Name
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Body1_2Name') @:internal extern class NameImpl_Body1_2Name extends NameImpl_SOAP1_2Name
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Body1_2Name') @:internal extern class NameImpl_Body1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl.NameImpl_SOAP1_2Name
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Fault1_2Name') @:internal extern class NameImpl_Fault1_2Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Fault1_2Name') @:internal extern class NameImpl_Fault1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$NotUnderstood1_2Name') @:internal extern class NameImpl_NotUnderstood1_2Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$NotUnderstood1_2Name') @:internal extern class NameImpl_NotUnderstood1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Upgrade1_2Name') @:internal extern class NameImpl_Upgrade1_2Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$Upgrade1_2Name') @:internal extern class NameImpl_Upgrade1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$SupportedEnvelope1_2Name') @:internal extern class NameImpl_SupportedEnvelope1_2Name extends NameImpl
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$SupportedEnvelope1_2Name') @:internal extern class NameImpl_SupportedEnvelope1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl
 {
 	
 }
-@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$CodeSubcode1_2Name') @:internal extern class NameImpl_CodeSubcode1_2Name extends NameImpl_SOAP1_2Name
+@:native('com$sun$xml$internal$messaging$saaj$soap$name$NameImpl$CodeSubcode1_2Name') @:internal extern class NameImpl_CodeSubcode1_2Name extends com.sun.xml.internal.messaging.saaj.soap.name.NameImpl.NameImpl_SOAP1_2Name
 {
 	
 }

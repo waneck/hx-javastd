@@ -55,7 +55,7 @@ extern class BuiltinLeafInfoImpl<TypeT, ClassDeclT> extends com.sun.xml.internal
 	*
 	* {@link LeafInfo}s are all defined by the spec.
 	*/
-	@:overload public static function createLeaves<TypeT, ClassDeclT>(nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : java.util.Map<TypeT, BuiltinLeafInfoImpl<TypeT, ClassDeclT>>;
+	@:overload public static function createLeaves<TypeT, ClassDeclT>(nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<TypeT, ClassDeclT, Dynamic, Dynamic>) : java.util.Map<TypeT, com.sun.xml.internal.bind.v2.model.impl.BuiltinLeafInfoImpl<TypeT, ClassDeclT>>;
 	
 	
 }

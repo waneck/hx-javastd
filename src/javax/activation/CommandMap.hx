@@ -52,7 +52,7 @@ package javax.activation;
 	*
 	* @return the CommandMap
 	*/
-	@:overload public static function getDefaultCommandMap() : CommandMap;
+	@:overload public static function getDefaultCommandMap() : javax.activation.CommandMap;
 	
 	/**
 	* Set the default CommandMap. Reset the CommandMap to the default by
@@ -62,7 +62,7 @@ package javax.activation;
 	* @exception SecurityException if the caller doesn't have permission
 	*                                  to change the default
 	*/
-	@:overload public static function setDefaultCommandMap(commandMap : CommandMap) : Void;
+	@:overload public static function setDefaultCommandMap(commandMap : javax.activation.CommandMap) : Void;
 	
 	/**
 	* Get the preferred command list from a MIME Type. The actual semantics

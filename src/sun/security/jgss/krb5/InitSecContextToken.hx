@@ -27,7 +27,7 @@ package sun.security.jgss.krb5;
 {
 	@:overload @:final public function getKrbApReq() : sun.security.krb5.KrbApReq;
 	
-	@:overload @:final override public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

@@ -27,9 +27,9 @@ extern class EagerNClass extends com.sun.tools.internal.xjc.model.nav.EagerNType
 {
 	@:overload public function new(type : Class<Dynamic>) : Void;
 	
-	@:overload override public function isBoxedType() : Bool;
+	@:overload public function isBoxedType() : Bool;
 	
-	@:overload override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClass;
+	@:overload public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JClass;
 	
 	@:overload public function isAbstract() : Bool;
 	

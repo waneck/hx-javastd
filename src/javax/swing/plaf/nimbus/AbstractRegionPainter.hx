@@ -57,7 +57,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*
 	* @return a PaintContext associated with this paint operation.
 	*/
-	@:overload @:abstract private function getPaintContext() : AbstractRegionPainter_PaintContext;
+	@:overload @:abstract private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	/**
 	* <p>Configures the given Graphics2D. Often, rendering hints or compositiing rules are
@@ -315,7 +315,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	*             height before redrawing from scratch. Reasonable maxV values may improve painting performance.
 	*             If set too high, then you may get poor looking graphics at higher zoom levels. Must be >= 1.
 	*/
-	@:overload public function new(insets : java.awt.Insets, canvasSize : java.awt.Dimension, inverted : Bool, cacheMode : AbstractRegionPainter_PaintContext_CacheMode, maxH : Float, maxV : Float) : Void;
+	@:overload public function new(insets : java.awt.Insets, canvasSize : java.awt.Dimension, inverted : Bool, cacheMode : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext_CacheMode, maxH : Float, maxV : Float) : Void;
 	
 	
 }

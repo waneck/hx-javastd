@@ -29,9 +29,9 @@ extern interface SOAPOperation extends com.sun.xml.internal.txw2.TypedXmlWriter
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function soapAction(value : String) : SOAPOperation;
+	@:overload public function soapAction(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap.SOAPOperation;
 	
-	@:overload public function style(value : String) : SOAPOperation;
+	@:overload public function style(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.soap.SOAPOperation;
 	
 	
 }

@@ -74,7 +74,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : KeyPairGenerator;
+	@:overload public static function getInstance(algorithm : String) : java.security.KeyPairGenerator;
 	
 	/**
 	* Returns a KeyPairGenerator object that generates public/private
@@ -110,7 +110,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : KeyPairGenerator;
+	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.KeyPairGenerator;
 	
 	/**
 	* Returns a KeyPairGenerator object that generates public/private
@@ -141,7 +141,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : KeyPairGenerator;
+	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.KeyPairGenerator;
 	
 	/**
 	* Returns the provider of this key pair generator object.
@@ -289,7 +289,7 @@ extern class KeyPairGenerator extends java.security.KeyPairGeneratorSpi
 * been interposed in the hierarchy between the API (KeyPairGenerator)
 * and its original parent (Object).
 */
-@:native('java$security$KeyPairGenerator$Delegate') @:internal extern class KeyPairGenerator_Delegate extends KeyPairGenerator
+@:native('java$security$KeyPairGenerator$Delegate') @:internal extern class KeyPairGenerator_Delegate extends java.security.KeyPairGenerator
 {
 	@:overload override public function initialize(keysize : Int, random : java.security.SecureRandom) : Void;
 	

@@ -28,14 +28,14 @@ extern class JobSheets extends javax.print.attribute.EnumSyntax implements javax
 	/**
 	* No job sheets are printed.
 	*/
-	public static var NONE(default, null) : JobSheets;
+	public static var NONE(default, null) : javax.print.attribute.standard.JobSheets;
 	
 	/**
 	* One or more site specific standard job sheets are printed. e.g. a
 	* single start sheet is printed, or both start and end sheets are
 	* printed.
 	*/
-	public static var STANDARD(default, null) : JobSheets;
+	public static var STANDARD(default, null) : javax.print.attribute.standard.JobSheets;
 	
 	/**
 	* Construct a new job sheets enumeration value with the given integer

@@ -72,7 +72,7 @@ extern class StartElementEvent extends com.sun.xml.internal.stream.events.DummyE
 	
 	@:overload public function setNamespaceContext(nc : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

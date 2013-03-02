@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Wildcard extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function processContents(value : String) : Wildcard;
+	@:overload public function processContents(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Wildcard;
 	
-	@:overload public function namespace(value : java.NativeArray<String>) : Wildcard;
+	@:overload public function namespace(value : java.NativeArray<String>) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Wildcard;
 	
-	@:overload public function namespace(value : String) : Wildcard;
+	@:overload public function namespace(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Wildcard;
 	
 	
 }

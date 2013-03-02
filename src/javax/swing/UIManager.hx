@@ -45,7 +45,7 @@ extern class UIManager implements java.io.Serializable
 	* @return an array of <code>LookAndFeelInfo</code> objects
 	* @see #setLookAndFeel
 	*/
-	@:overload public static function getInstalledLookAndFeels() : java.NativeArray<UIManager_LookAndFeelInfo>;
+	@:overload public static function getInstalledLookAndFeels() : java.NativeArray<javax.swing.UIManager.UIManager_LookAndFeelInfo>;
 	
 	/**
 	* Sets the set of available look and feels. While this method does
@@ -59,7 +59,7 @@ extern class UIManager implements java.io.Serializable
 	* @see #getInstalledLookAndFeels
 	* @throws NullPointerException if {@code infos} is {@code null}
 	*/
-	@:overload public static function setInstalledLookAndFeels(infos : java.NativeArray<UIManager_LookAndFeelInfo>) : Void;
+	@:overload public static function setInstalledLookAndFeels(infos : java.NativeArray<javax.swing.UIManager.UIManager_LookAndFeelInfo>) : Void;
 	
 	/**
 	* Adds the specified look and feel to the set of available look
@@ -70,7 +70,7 @@ extern class UIManager implements java.io.Serializable
 	*          look and feel and identifies the class that implements it
 	* @see #setInstalledLookAndFeels
 	*/
-	@:overload public static function installLookAndFeel(info : UIManager_LookAndFeelInfo) : Void;
+	@:overload public static function installLookAndFeel(info : javax.swing.UIManager.UIManager_LookAndFeelInfo) : Void;
 	
 	/**
 	* Adds the specified look and feel to the set of available look

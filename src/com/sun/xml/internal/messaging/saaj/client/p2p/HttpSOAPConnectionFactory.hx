@@ -30,7 +30,7 @@ package com.sun.xml.internal.messaging.saaj.client.p2p;
 */
 extern class HttpSOAPConnectionFactory extends javax.xml.soap.SOAPConnectionFactory
 {
-	@:overload override public function createConnection() : javax.xml.soap.SOAPConnection;
+	@:overload public function createConnection() : javax.xml.soap.SOAPConnection;
 	
 	
 }

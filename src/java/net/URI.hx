@@ -23,7 +23,7 @@ package java.net;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class URI implements java.lang.Comparable<URI> implements java.io.Serializable
+extern class URI implements java.lang.Comparable<java.net.URI> implements java.io.Serializable
 {
 	/**
 	* Constructs a URI by parsing the given string.
@@ -322,7 +322,7 @@ extern class URI implements java.lang.Comparable<URI> implements java.io.Seriali
 	* @throws  IllegalArgumentException
 	*          If the given string violates RFC&nbsp;2396
 	*/
-	@:overload public static function create(str : String) : URI;
+	@:overload public static function create(str : String) : java.net.URI;
 	
 	/**
 	* Attempts to parse this URI's authority component, if defined, into
@@ -371,7 +371,7 @@ extern class URI implements java.lang.Comparable<URI> implements java.io.Seriali
 	*          but cannot be parsed as a server-based authority
 	*          according to RFC&nbsp;2396
 	*/
-	@:overload public function parseServerAuthority() : URI;
+	@:overload public function parseServerAuthority() : java.net.URI;
 	
 	/**
 	* Normalizes this URI's path.
@@ -410,7 +410,7 @@ extern class URI implements java.lang.Comparable<URI> implements java.io.Seriali
 	* @return  A URI equivalent to this URI,
 	*          but whose path is in normal form
 	*/
-	@:overload public function normalize() : URI;
+	@:overload public function normalize() : java.net.URI;
 	
 	/**
 	* Resolves the given URI against this URI.
@@ -466,7 +466,7 @@ extern class URI implements java.lang.Comparable<URI> implements java.io.Seriali
 	* @throws  NullPointerException
 	*          If <tt>uri</tt> is <tt>null</tt>
 	*/
-	@:overload public function resolve(uri : URI) : URI;
+	@:overload public function resolve(uri : java.net.URI) : java.net.URI;
 	
 	/**
 	* Constructs a new URI by parsing the given string and then resolving it
@@ -485,7 +485,7 @@ extern class URI implements java.lang.Comparable<URI> implements java.io.Seriali
 	* @throws  IllegalArgumentException
 	*          If the given string violates RFC&nbsp;2396
 	*/
-	@:overload public function resolve(str : String) : URI;
+	@:overload public function resolve(str : String) : java.net.URI;
 	
 	/**
 	* Relativizes the given URI against this URI.
@@ -513,7 +513,7 @@ extern class URI implements java.lang.Comparable<URI> implements java.io.Seriali
 	* @throws  NullPointerException
 	*          If <tt>uri</tt> is <tt>null</tt>
 	*/
-	@:overload public function relativize(uri : URI) : URI;
+	@:overload public function relativize(uri : java.net.URI) : java.net.URI;
 	
 	/**
 	* Constructs a URL from this URI.
@@ -881,7 +881,7 @@ extern class URI implements java.lang.Comparable<URI> implements java.io.Seriali
 	* @throws  ClassCastException
 	*          If the given object is not a URI
 	*/
-	@:overload public function compareTo(that : URI) : Int;
+	@:overload public function compareTo(that : java.net.URI) : Int;
 	
 	/**
 	* Returns the content of this URI as a string.

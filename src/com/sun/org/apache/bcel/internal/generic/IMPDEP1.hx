@@ -73,7 +73,7 @@ extern class IMPDEP1 extends com.sun.org.apache.bcel.internal.generic.Instructio
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

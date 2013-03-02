@@ -27,9 +27,9 @@ extern class MemberSubmissionWsaServerTube extends com.sun.xml.internal.ws.addre
 {
 	@:overload public function new(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>, wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload public function new(that : MemberSubmissionWsaServerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload public function new(that : com.sun.xml.internal.ws.addressing.v200408.MemberSubmissionWsaServerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : MemberSubmissionWsaServerTube;
+	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.addressing.v200408.MemberSubmissionWsaServerTube;
 	
 	@:overload override private function checkMandatoryHeaders(packet : com.sun.xml.internal.ws.api.message.Packet, foundAction : Bool, foundTo : Bool, foundReplyTo : Bool, foundFaultTo : Bool, foundMessageId : Bool, foundRelatesTo : Bool) : Void;
 	

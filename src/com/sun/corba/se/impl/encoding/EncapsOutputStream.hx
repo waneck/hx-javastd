@@ -33,11 +33,11 @@ extern class EncapsOutputStream extends com.sun.corba.se.impl.encoding.CDROutput
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion, isLittleEndian : Bool) : Void;
 	
-	@:overload override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
+	@:overload public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
-	@:overload override private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
-	@:overload override private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
 	
 }

@@ -34,7 +34,7 @@ extern class PrintingStatus
 	*               using this <code>PrintingStatus</code> dialog
 	* @return a <code>PrintingStatus</code> object
 	*/
-	@:overload public static function createPrintingStatus(parent : java.awt.Component, job : java.awt.print.PrinterJob) : PrintingStatus;
+	@:overload public static function createPrintingStatus(parent : java.awt.Component, job : java.awt.print.PrinterJob) : sun.swing.PrintingStatus;
 	
 	@:overload private function new(parent : java.awt.Component, job : java.awt.print.PrinterJob) : Void;
 	

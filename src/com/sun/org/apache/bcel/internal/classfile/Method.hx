@@ -75,7 +75,7 @@ extern class Method extends com.sun.org.apache.bcel.internal.classfile.FieldOrMe
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : Method) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
 	/**
 	* @param access_flags Access rights of method
@@ -127,7 +127,7 @@ extern class Method extends com.sun.org.apache.bcel.internal.classfile.FieldOrMe
 	/**
 	* @return deep copy of this method
 	*/
-	@:overload @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : Method;
+	@:overload @:final public function copy(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.Method;
 	
 	/**
 	* @return return type of method

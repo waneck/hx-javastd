@@ -44,9 +44,9 @@ extern class PrimitiveEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	
 	@:overload private function new(name : String) : Void;
 	
-	@:overload private function new(that : PrimitiveEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.PrimitiveEntry) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/** Invoke the primitive type generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -54,12 +54,12 @@ extern class PrimitiveEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the primitive type generator.
 	@returns an object which implements the PrimitiveGen interface.
 	@see PrimitiveGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	
 }

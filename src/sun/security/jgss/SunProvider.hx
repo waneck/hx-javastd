@@ -25,7 +25,7 @@ package sun.security.jgss;
 */
 extern class SunProvider extends java.security.Provider
 {
-	public static var INSTANCE(default, null) : SunProvider;
+	public static var INSTANCE(default, null) : sun.security.jgss.SunProvider;
 	
 	@:overload public function new() : Void;
 	

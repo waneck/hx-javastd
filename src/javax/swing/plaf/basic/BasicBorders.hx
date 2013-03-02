@@ -58,7 +58,7 @@ extern class BasicBorders
 * Special thin border for rollover toolbar buttons.
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$plaf$basic$BasicBorders$RolloverButtonBorder') extern class BasicBorders_RolloverButtonBorder extends BasicBorders_ButtonBorder
+@:require(java4) @:native('javax$swing$plaf$basic$BasicBorders$RolloverButtonBorder') extern class BasicBorders_RolloverButtonBorder extends javax.swing.plaf.basic.BasicBorders.BasicBorders_ButtonBorder
 {
 	@:overload public function new(shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
 	
@@ -99,7 +99,7 @@ extern class BasicBorders
 	
 	
 }
-@:native('javax$swing$plaf$basic$BasicBorders$ToggleButtonBorder') extern class BasicBorders_ToggleButtonBorder extends BasicBorders_ButtonBorder
+@:native('javax$swing$plaf$basic$BasicBorders$ToggleButtonBorder') extern class BasicBorders_ToggleButtonBorder extends javax.swing.plaf.basic.BasicBorders.BasicBorders_ButtonBorder
 {
 	@:overload public function new(shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
 	
@@ -109,7 +109,7 @@ extern class BasicBorders
 	
 	
 }
-@:native('javax$swing$plaf$basic$BasicBorders$RadioButtonBorder') extern class BasicBorders_RadioButtonBorder extends BasicBorders_ButtonBorder
+@:native('javax$swing$plaf$basic$BasicBorders$RadioButtonBorder') extern class BasicBorders_RadioButtonBorder extends javax.swing.plaf.basic.BasicBorders.BasicBorders_ButtonBorder
 {
 	@:overload public function new(shadow : java.awt.Color, darkShadow : java.awt.Color, highlight : java.awt.Color, lightHighlight : java.awt.Color) : Void;
 	

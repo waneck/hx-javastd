@@ -51,7 +51,7 @@ extern class PrefixArray extends com.sun.xml.internal.fastinfoset.util.ValueArra
 	
 	@:overload @:final override public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.ValueArray, clear : Bool) : Void;
 	
-	@:overload @:final public function setReadOnlyArray(readOnlyArray : PrefixArray, clear : Bool) : Void;
+	@:overload @:final public function setReadOnlyArray(readOnlyArray : com.sun.xml.internal.fastinfoset.util.PrefixArray, clear : Bool) : Void;
 	
 	@:overload @:final public function getCompleteArray() : java.NativeArray<String>;
 	

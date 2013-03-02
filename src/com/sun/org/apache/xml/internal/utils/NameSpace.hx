@@ -25,7 +25,7 @@ extern class NameSpace implements java.io.Serializable
 {
 	/** Next NameSpace element on the stack.
 	*  @serial             */
-	public var m_next : NameSpace;
+	public var m_next : com.sun.org.apache.xml.internal.utils.NameSpace;
 	
 	/** Prefix of this NameSpace element.
 	*  @serial          */

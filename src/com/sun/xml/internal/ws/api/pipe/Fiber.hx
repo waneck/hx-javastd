@@ -43,9 +43,9 @@ extern class Fiber implements java.lang.Runnable
 	*
 	* @see #runSync(Tube,Packet)
 	*/
-	@:overload public function start(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : Fiber_CompletionCallback) : Void;
+	@:overload public function start(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
 	
-	@:overload public function runAsync(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : Fiber_CompletionCallback) : Void;
+	@:overload public function runAsync(tubeline : com.sun.xml.internal.ws.api.pipe.Tube, request : com.sun.xml.internal.ws.api.message.Packet, completionCallback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
 	
 	/**
 	* Wakes up a suspended fiber.
@@ -231,7 +231,7 @@ extern class Fiber implements java.lang.Runnable
 	* This works like {@link Thread#currentThread()}.
 	* This method only works when invoked from {@link Tube}.
 	*/
-	@:overload public static function current() : Fiber;
+	@:overload public static function current() : com.sun.xml.internal.ws.api.pipe.Fiber;
 	
 	/**
 	* Set this boolean to true to execute fibers sequentially one by one.

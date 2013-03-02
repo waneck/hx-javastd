@@ -32,7 +32,7 @@ package java.io;
 	* Return the FileSystem object representing this platform's local
 	* filesystem.
 	*/
-	@:overload @:native public static function getFileSystem() : FileSystem;
+	@:overload @:native public static function getFileSystem() : java.io.FileSystem;
 	
 	/**
 	* Return the local filesystem's name-separator character.

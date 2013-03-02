@@ -47,11 +47,11 @@ extern class ThreadTreeTool extends javax.swing.JPanel
 	
 	@:overload public function sessionContinue(e : java.util.EventObject) : Void;
 	
-	@:overload override public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
+	@:overload public function threadStart(e : com.sun.tools.example.debug.event.ThreadStartEventSet) : Void;
 	
-	@:overload override public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
+	@:overload public function threadDeath(e : com.sun.tools.example.debug.event.ThreadDeathEventSet) : Void;
 	
-	@:overload override public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
+	@:overload public function vmDisconnect(e : com.sun.tools.example.debug.event.VMDisconnectEventSet) : Void;
 	
 	
 }

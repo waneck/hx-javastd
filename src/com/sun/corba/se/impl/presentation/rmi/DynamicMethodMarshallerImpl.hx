@@ -25,7 +25,7 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class DynamicMethodMarshallerImpl implements com.sun.corba.se.spi.presentation.rmi.DynamicMethodMarshaller
 {
-	@:overload public static function makeReaderWriter(cls : Class<Dynamic>) : DynamicMethodMarshallerImpl_ReaderWriter;
+	@:overload public static function makeReaderWriter(cls : Class<Dynamic>) : com.sun.corba.se.impl.presentation.rmi.DynamicMethodMarshallerImpl.DynamicMethodMarshallerImpl_ReaderWriter;
 	
 	@:overload public function new(method : java.lang.reflect.Method) : Void;
 	
@@ -59,7 +59,7 @@ extern class DynamicMethodMarshallerImpl implements com.sun.corba.se.spi.present
 	
 	
 }
-@:native('com$sun$corba$se$impl$presentation$rmi$DynamicMethodMarshallerImpl$ReaderWriterBase') @:internal extern class DynamicMethodMarshallerImpl_ReaderWriterBase implements DynamicMethodMarshallerImpl_ReaderWriter
+@:native('com$sun$corba$se$impl$presentation$rmi$DynamicMethodMarshallerImpl$ReaderWriterBase') @:internal extern class DynamicMethodMarshallerImpl_ReaderWriterBase implements com.sun.corba.se.impl.presentation.rmi.DynamicMethodMarshallerImpl.DynamicMethodMarshallerImpl_ReaderWriter
 {
 	@:overload public function new(name : String) : Void;
 	

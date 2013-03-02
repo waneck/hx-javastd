@@ -51,7 +51,7 @@ extern class HttpCallerInfo
 	/**
 	* Create a schemed object based on an un-schemed one.
 	*/
-	@:overload public function new(old : HttpCallerInfo, scheme : String) : Void;
+	@:overload public function new(old : sun.net.www.protocol.http.HttpCallerInfo, scheme : String) : Void;
 	
 	/**
 	* Constructor an un-schemed object for site access.

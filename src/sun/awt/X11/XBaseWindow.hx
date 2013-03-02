@@ -33,7 +33,7 @@ extern class XBaseWindow
 	
 	@:overload @:final private function postInit() : Void;
 	
-	private var state_lock : XBaseWindow_StateLock;
+	private var state_lock : sun.awt.X11.XBaseWindow.XBaseWindow_StateLock;
 	
 	/**
 	* Creates window using parameters <code>params</code>
@@ -81,7 +81,7 @@ extern class XBaseWindow
 	
 	@:overload public function getContentWindow() : haxe.Int64;
 	
-	@:overload public function getContentXWindow() : XBaseWindow;
+	@:overload public function getContentXWindow() : sun.awt.X11.XBaseWindow;
 	
 	@:overload public function getBounds() : java.awt.Rectangle;
 	
@@ -152,7 +152,7 @@ extern class XBaseWindow
 	
 	@:overload public function getAbsoluteY() : Int;
 	
-	@:overload public function getParentWindow() : XBaseWindow;
+	@:overload public function getParentWindow() : sun.awt.X11.XBaseWindow;
 	
 	@:overload public function getToplevelXWindow() : sun.awt.X11.XWindowPeer;
 	

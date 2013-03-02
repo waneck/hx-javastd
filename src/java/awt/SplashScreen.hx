@@ -36,7 +36,7 @@ extern class SplashScreen
 	* @return the {@link SplashScreen} instance, or <code>null</code> if there is
 	*         none or it has already been closed
 	*/
-	@:overload public static function getSplashScreen() : SplashScreen;
+	@:overload public static function getSplashScreen() : java.awt.SplashScreen;
 	
 	/**
 	* Changes the splash screen image. The new image is loaded from the

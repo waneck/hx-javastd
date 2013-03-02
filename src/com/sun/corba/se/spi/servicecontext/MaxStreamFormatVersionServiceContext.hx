@@ -27,7 +27,7 @@ package com.sun.corba.se.spi.servicecontext;
 */
 extern class MaxStreamFormatVersionServiceContext extends com.sun.corba.se.spi.servicecontext.ServiceContext
 {
-	public static var singleton(default, null) : MaxStreamFormatVersionServiceContext;
+	public static var singleton(default, null) : com.sun.corba.se.spi.servicecontext.MaxStreamFormatVersionServiceContext;
 	
 	@:overload public function new() : Void;
 	
@@ -37,13 +37,13 @@ extern class MaxStreamFormatVersionServiceContext extends com.sun.corba.se.spi.s
 	
 	public static var SERVICE_CONTEXT_ID(default, null) : Int;
 	
-	@:overload override public function getId() : Int;
+	@:overload public function getId() : Int;
 	
-	@:overload override public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload public function getMaximumStreamFormatVersion() : java.StdTypes.Int8;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

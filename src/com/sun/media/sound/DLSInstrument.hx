@@ -53,15 +53,15 @@ extern class DLSInstrument extends com.sun.media.sound.ModelInstrument
 	
 	@:overload public function getInfo() : com.sun.media.sound.DLSInfo;
 	
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	@:overload public function setName(name : String) : Void;
 	
-	@:overload override public function getPatch() : com.sun.media.sound.ModelPatch;
+	@:overload public function getPatch() : com.sun.media.sound.ModelPatch;
 	
 	@:overload public function setPatch(patch : javax.sound.midi.Patch) : Void;
 	
-	@:overload override public function getData() : Dynamic;
+	@:overload public function getData() : Dynamic;
 	
 	@:overload public function getRegions() : java.util.List<com.sun.media.sound.DLSRegion>;
 	
@@ -69,7 +69,7 @@ extern class DLSInstrument extends com.sun.media.sound.ModelInstrument
 	
 	@:overload public function toString() : String;
 	
-	@:overload override public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
+	@:overload public function getPerformers() : java.NativeArray<com.sun.media.sound.ModelPerformer>;
 	
 	@:overload public function getGuid() : java.NativeArray<java.StdTypes.Int8>;
 	

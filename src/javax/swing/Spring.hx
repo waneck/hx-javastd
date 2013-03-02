@@ -92,7 +92,7 @@ extern class Spring
 	*
 	* @see Spring
 	*/
-	@:overload public static function constant(pref : Int) : Spring;
+	@:overload public static function constant(pref : Int) : javax.swing.Spring;
 	
 	/**
 	* Returns a spring whose <em>minimum</em>, <em>preferred</em>, and
@@ -108,7 +108,7 @@ extern class Spring
 	*
 	* @see Spring
 	*/
-	@:overload public static function constant(min : Int, pref : Int, max : Int) : Spring;
+	@:overload public static function constant(min : Int, pref : Int, max : Int) : javax.swing.Spring;
 	
 	/**
 	* Returns <code>-s</code>: a spring running in the opposite direction to <code>s</code>.
@@ -117,7 +117,7 @@ extern class Spring
 	*
 	* @see Spring
 	*/
-	@:overload public static function minus(s : Spring) : Spring;
+	@:overload public static function minus(s : javax.swing.Spring) : javax.swing.Spring;
 	
 	/**
 	* Returns <code>s1+s2</code>: a spring representing <code>s1</code> and <code>s2</code>
@@ -148,7 +148,7 @@ extern class Spring
 	*
 	* @see Spring
 	*/
-	@:overload public static function sum(s1 : Spring, s2 : Spring) : Spring;
+	@:overload public static function sum(s1 : javax.swing.Spring, s2 : javax.swing.Spring) : javax.swing.Spring;
 	
 	/**
 	* Returns <code>max(s1, s2)</code>: a spring whose value is always greater than (or equal to)
@@ -158,7 +158,7 @@ extern class Spring
 	*         the values of both <code>s1</code> and <code>s2</code>
 	* @see Spring
 	*/
-	@:overload public static function max(s1 : Spring, s2 : Spring) : Spring;
+	@:overload public static function max(s1 : javax.swing.Spring, s2 : javax.swing.Spring) : javax.swing.Spring;
 	
 	/**
 	* Returns a spring whose <em>minimum</em>, <em>preferred</em>, <em>maximum</em>
@@ -178,7 +178,7 @@ extern class Spring
 	* @throws NullPointerException if <code>s</code> is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function scale(s : Spring, factor : Single) : Spring;
+	@:require(java5) @:overload public static function scale(s : javax.swing.Spring, factor : Single) : javax.swing.Spring;
 	
 	/**
 	* Returns a spring whose <em>minimum</em>, <em>preferred</em>, <em>maximum</em>
@@ -196,7 +196,7 @@ extern class Spring
 	* @throws NullPointerException if <code>c</code> is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function width(c : java.awt.Component) : Spring;
+	@:require(java5) @:overload public static function width(c : java.awt.Component) : javax.swing.Spring;
 	
 	/**
 	* Returns a spring whose <em>minimum</em>, <em>preferred</em>, <em>maximum</em>
@@ -214,12 +214,12 @@ extern class Spring
 	* @throws NullPointerException if <code>c</code> is null
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function height(c : java.awt.Component) : Spring;
+	@:require(java5) @:overload public static function height(c : java.awt.Component) : javax.swing.Spring;
 	
 	
 }
 /*pp*/
-@:native('javax$swing$Spring$AbstractSpring') @:internal extern class Spring_AbstractSpring extends Spring
+@:native('javax$swing$Spring$AbstractSpring') @:internal extern class Spring_AbstractSpring extends javax.swing.Spring
 {
 	private var size : Int;
 	
@@ -233,7 +233,7 @@ extern class Spring
 	
 	
 }
-@:native('javax$swing$Spring$StaticSpring') @:internal extern class Spring_StaticSpring extends Spring_AbstractSpring
+@:native('javax$swing$Spring$StaticSpring') @:internal extern class Spring_StaticSpring extends javax.swing.Spring.Spring_AbstractSpring
 {
 	private var min : Int;
 	
@@ -255,9 +255,9 @@ extern class Spring
 	
 	
 }
-@:native('javax$swing$Spring$NegativeSpring') @:internal extern class Spring_NegativeSpring extends Spring
+@:native('javax$swing$Spring$NegativeSpring') @:internal extern class Spring_NegativeSpring extends javax.swing.Spring
 {
-	@:overload public function new(s : Spring) : Void;
+	@:overload public function new(s : javax.swing.Spring) : Void;
 	
 	@:overload override public function getMinimumValue() : Int;
 	
@@ -271,7 +271,7 @@ extern class Spring
 	
 	
 }
-@:native('javax$swing$Spring$ScaleSpring') @:internal extern class Spring_ScaleSpring extends Spring
+@:native('javax$swing$Spring$ScaleSpring') @:internal extern class Spring_ScaleSpring extends javax.swing.Spring
 {
 	@:overload override public function getMinimumValue() : Int;
 	
@@ -286,7 +286,7 @@ extern class Spring
 	
 }
 /*pp*/
-@:native('javax$swing$Spring$WidthSpring') @:internal extern class Spring_WidthSpring extends Spring_AbstractSpring
+@:native('javax$swing$Spring$WidthSpring') @:internal extern class Spring_WidthSpring extends javax.swing.Spring.Spring_AbstractSpring
 {
 	@:overload public function new(c : java.awt.Component) : Void;
 	
@@ -299,7 +299,7 @@ extern class Spring
 	
 }
 /*pp*/
-@:native('javax$swing$Spring$HeightSpring') @:internal extern class Spring_HeightSpring extends Spring_AbstractSpring
+@:native('javax$swing$Spring$HeightSpring') @:internal extern class Spring_HeightSpring extends javax.swing.Spring.Spring_AbstractSpring
 {
 	@:overload public function new(c : java.awt.Component) : Void;
 	
@@ -312,9 +312,9 @@ extern class Spring
 	
 }
 /*pp*/
-@:native('javax$swing$Spring$SpringMap') @:internal extern class Spring_SpringMap extends Spring
+@:native('javax$swing$Spring$SpringMap') @:internal extern class Spring_SpringMap extends javax.swing.Spring
 {
-	@:overload public function new(s : Spring) : Void;
+	@:overload public function new(s : javax.swing.Spring) : Void;
 	
 	@:overload @:abstract private function map(i : Int) : Int;
 	
@@ -333,13 +333,13 @@ extern class Spring
 	
 }
 /*pp*/
-@:native('javax$swing$Spring$CompoundSpring') @:internal extern class Spring_CompoundSpring extends Spring_StaticSpring
+@:native('javax$swing$Spring$CompoundSpring') @:internal extern class Spring_CompoundSpring extends javax.swing.Spring.Spring_StaticSpring
 {
-	private var s1 : Spring;
+	private var s1 : javax.swing.Spring;
 	
-	private var s2 : Spring;
+	private var s2 : javax.swing.Spring;
 	
-	@:overload public function new(s1 : Spring, s2 : Spring) : Void;
+	@:overload public function new(s1 : javax.swing.Spring, s2 : javax.swing.Spring) : Void;
 	
 	@:overload override public function toString() : String;
 	
@@ -357,9 +357,9 @@ extern class Spring
 	
 	
 }
-@:native('javax$swing$Spring$SumSpring') @:internal extern class Spring_SumSpring extends Spring_CompoundSpring
+@:native('javax$swing$Spring$SumSpring') @:internal extern class Spring_SumSpring extends javax.swing.Spring.Spring_CompoundSpring
 {
-	@:overload public function new(s1 : Spring, s2 : Spring) : Void;
+	@:overload public function new(s1 : javax.swing.Spring, s2 : javax.swing.Spring) : Void;
 	
 	@:overload override private function op(x : Int, y : Int) : Int;
 	
@@ -367,9 +367,9 @@ extern class Spring
 	
 	
 }
-@:native('javax$swing$Spring$MaxSpring') @:internal extern class Spring_MaxSpring extends Spring_CompoundSpring
+@:native('javax$swing$Spring$MaxSpring') @:internal extern class Spring_MaxSpring extends javax.swing.Spring.Spring_CompoundSpring
 {
-	@:overload public function new(s1 : Spring, s2 : Spring) : Void;
+	@:overload public function new(s1 : javax.swing.Spring, s2 : javax.swing.Spring) : Void;
 	
 	@:overload override private function op(x : Int, y : Int) : Int;
 	

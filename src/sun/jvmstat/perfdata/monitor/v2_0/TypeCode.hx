@@ -31,27 +31,27 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 */
 @:require(java5) extern class TypeCode
 {
-	public static var BOOLEAN(default, null) : TypeCode;
+	public static var BOOLEAN(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var CHAR(default, null) : TypeCode;
+	public static var CHAR(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var FLOAT(default, null) : TypeCode;
+	public static var FLOAT(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var DOUBLE(default, null) : TypeCode;
+	public static var DOUBLE(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var BYTE(default, null) : TypeCode;
+	public static var BYTE(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var SHORT(default, null) : TypeCode;
+	public static var SHORT(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var INT(default, null) : TypeCode;
+	public static var INT(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var LONG(default, null) : TypeCode;
+	public static var LONG(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var OBJECT(default, null) : TypeCode;
+	public static var OBJECT(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var ARRAY(default, null) : TypeCode;
+	public static var ARRAY(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
-	public static var VOID(default, null) : TypeCode;
+	public static var VOID(default, null) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
 	/**
 	* Convert enumeration value to a String.
@@ -76,7 +76,7 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 	* @throws IllegalArgumentException Thrown if <code>c</code> is not
 	*                                  a valid Java TypeCode.
 	*/
-	@:overload public static function toTypeCode(c : java.StdTypes.Char16) : TypeCode;
+	@:overload public static function toTypeCode(c : java.StdTypes.Char16) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
 	/**
 	* Map a character value to its corresponding TypeCode object.
@@ -88,7 +88,7 @@ package sun.jvmstat.perfdata.monitor.v2_0;
 	* @throws IllegalArgumentException Thrown if <code>v</code> is not
 	*                                  a valid Java TypeCode.
 	*/
-	@:overload public static function toTypeCode(b : java.StdTypes.Int8) : TypeCode;
+	@:overload public static function toTypeCode(b : java.StdTypes.Int8) : sun.jvmstat.perfdata.monitor.v2_0.TypeCode;
 	
 	
 }

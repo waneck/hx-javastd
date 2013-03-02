@@ -31,7 +31,7 @@ package sun.nio.ch;
 	* Creates and returns a file lock table for a channel that is connected to
 	* the a system-wide map of all file locks for the Java virtual machine.
 	*/
-	@:overload public static function newSharedFileLockTable(channel : java.nio.channels.Channel, fd : java.io.FileDescriptor) : FileLockTable;
+	@:overload public static function newSharedFileLockTable(channel : java.nio.channels.Channel, fd : java.io.FileDescriptor) : sun.nio.ch.FileLockTable;
 	
 	/**
 	* Adds a file lock to the table.
@@ -60,7 +60,7 @@ package sun.nio.ch;
 	
 	
 }
-@:internal extern class SharedFileLockTable extends FileLockTable
+@:internal extern class SharedFileLockTable extends sun.nio.ch.FileLockTable
 {
 	@:overload override public function add(fl : java.nio.channels.FileLock) : Void;
 	

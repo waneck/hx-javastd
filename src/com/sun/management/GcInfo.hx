@@ -126,7 +126,7 @@ extern class GcInfo implements javax.management.openmbean.CompositeData implemen
 	* @return a <tt>GcInfo</tt> object represented by <tt>cd</tt>
 	* if <tt>cd</tt> is not <tt>null</tt>; <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : GcInfo;
+	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.GcInfo;
 	
 	@:overload public function containsKey(key : String) : Bool;
 	

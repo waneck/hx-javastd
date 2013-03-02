@@ -234,199 +234,199 @@ extern class TCKind
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_null</code>.
 	*/
-	public static var tk_null(default, null) : TCKind;
+	public static var tk_null(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_void</code>.
 	*/
-	public static var tk_void(default, null) : TCKind;
+	public static var tk_void(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_short</code>.
 	*/
-	public static var tk_short(default, null) : TCKind;
+	public static var tk_short(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_long</code>.
 	*/
-	public static var tk_long(default, null) : TCKind;
+	public static var tk_long(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_ushort</code>.
 	*/
-	public static var tk_ushort(default, null) : TCKind;
+	public static var tk_ushort(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_ulong</code>.
 	*/
-	public static var tk_ulong(default, null) : TCKind;
+	public static var tk_ulong(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_float</code>.
 	*/
-	public static var tk_float(default, null) : TCKind;
+	public static var tk_float(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_double</code>.
 	*/
-	public static var tk_double(default, null) : TCKind;
+	public static var tk_double(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_boolean</code>.
 	*/
-	public static var tk_boolean(default, null) : TCKind;
+	public static var tk_boolean(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_char</code>.
 	*/
-	public static var tk_char(default, null) : TCKind;
+	public static var tk_char(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_octet</code>.
 	*/
-	public static var tk_octet(default, null) : TCKind;
+	public static var tk_octet(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_any</code>.
 	*/
-	public static var tk_any(default, null) : TCKind;
+	public static var tk_any(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_TypeCode</code>.
 	*/
-	public static var tk_TypeCode(default, null) : TCKind;
+	public static var tk_TypeCode(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_Principal</code>.
 	*/
-	public static var tk_Principal(default, null) : TCKind;
+	public static var tk_Principal(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_objref</code>.
 	*/
-	public static var tk_objref(default, null) : TCKind;
+	public static var tk_objref(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_struct</code>.
 	*/
-	public static var tk_struct(default, null) : TCKind;
+	public static var tk_struct(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_union</code>.
 	*/
-	public static var tk_union(default, null) : TCKind;
+	public static var tk_union(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_enum</code>.
 	*/
-	public static var tk_enum(default, null) : TCKind;
+	public static var tk_enum(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_string</code>.
 	*/
-	public static var tk_string(default, null) : TCKind;
+	public static var tk_string(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_sequence</code>.
 	*/
-	public static var tk_sequence(default, null) : TCKind;
+	public static var tk_sequence(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_array</code>.
 	*/
-	public static var tk_array(default, null) : TCKind;
+	public static var tk_array(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_alias</code>.
 	*/
-	public static var tk_alias(default, null) : TCKind;
+	public static var tk_alias(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_except</code>.
 	*/
-	public static var tk_except(default, null) : TCKind;
+	public static var tk_except(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_longlong</code>.
 	*/
-	public static var tk_longlong(default, null) : TCKind;
+	public static var tk_longlong(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_ulonglong</code>.
 	*/
-	public static var tk_ulonglong(default, null) : TCKind;
+	public static var tk_ulonglong(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_longdouble</code>.
 	*/
-	public static var tk_longdouble(default, null) : TCKind;
+	public static var tk_longdouble(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_wchar</code>.
 	*/
-	public static var tk_wchar(default, null) : TCKind;
+	public static var tk_wchar(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_wstring</code>.
 	*/
-	public static var tk_wstring(default, null) : TCKind;
+	public static var tk_wstring(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_fixed</code>.
 	*/
-	public static var tk_fixed(default, null) : TCKind;
+	public static var tk_fixed(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_value</code>.
 	*/
-	public static var tk_value(default, null) : TCKind;
+	public static var tk_value(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_value_box</code>.
 	*/
-	public static var tk_value_box(default, null) : TCKind;
+	public static var tk_value_box(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_native</code>.
 	*/
-	public static var tk_native(default, null) : TCKind;
+	public static var tk_native(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* The <code>TCKind</code> constant whose <code>value</code> field is
 	* initialized with <code>TCKind._tk_abstract_interface</code>.
 	*/
-	public static var tk_abstract_interface(default, null) : TCKind;
+	public static var tk_abstract_interface(default, null) : org.omg.CORBA.TCKind;
 	
 	/**
 	* Retrieves the value of this <code>TCKind</code> instance.
@@ -449,7 +449,7 @@ extern class TCKind
 	* match the <code>_value</code> field of
 	* any <code>TCKind</code> instance
 	*/
-	@:overload public static function from_int(i : Int) : TCKind;
+	@:overload public static function from_int(i : Int) : org.omg.CORBA.TCKind;
 	
 	/**
 	* Creates a new <code>TCKind</code> instance initialized with the given

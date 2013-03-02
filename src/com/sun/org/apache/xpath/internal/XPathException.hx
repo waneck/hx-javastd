@@ -101,14 +101,14 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* objects, as well as this object.
 	* @param s The stream where the dump will be sent to.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Find the most contained message.
 	*
 	* @return The error message of the originating exception.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* Print the the trace of methods from where the error
@@ -116,7 +116,7 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	* objects, as well as this object.
 	* @param s The writer where the dump will be sent to.
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	/**
 	*  Return the embedded exception, if any.
@@ -124,7 +124,7 @@ extern class XPathException extends javax.xml.transform.TransformerException
 	*
 	*  @return The embedded exception, or null if there is none.
 	*/
-	@:overload override public function getException() : java.lang.Throwable;
+	@:overload public function getException() : java.lang.Throwable;
 	
 	
 }

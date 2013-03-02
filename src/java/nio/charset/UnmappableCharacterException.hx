@@ -36,7 +36,7 @@ package java.nio.charset;
 	
 	@:overload public function getInputLength() : Int;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

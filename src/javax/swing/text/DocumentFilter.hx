@@ -74,7 +74,7 @@ package javax.swing.text;
 	*   was not a valid part of the document.  The location in the exception
 	*   is the first bad position encountered.
 	*/
-	@:overload public function remove(fb : DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
+	@:overload public function remove(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int) : Void;
 	
 	/**
 	* Invoked prior to insertion of text into the
@@ -92,7 +92,7 @@ package javax.swing.text;
 	* @exception BadLocationException  the given insert position is not a
 	*   valid position within the document
 	*/
-	@:overload public function insertString(fb : DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload public function insertString(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, string : String, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Invoked prior to replacing a region of text in the
@@ -109,7 +109,7 @@ package javax.swing.text;
 	* @exception BadLocationException  the given insert position is not a
 	*   valid position within the document
 	*/
-	@:overload public function replace(fb : DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
+	@:overload public function replace(fb : javax.swing.text.DocumentFilter.DocumentFilter_FilterBypass, offset : Int, length : Int, text : String, attrs : javax.swing.text.AttributeSet) : Void;
 	
 	
 }

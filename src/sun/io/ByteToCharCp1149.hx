@@ -32,9 +32,9 @@ extern class ByteToCharCp1149 extends sun.io.ByteToCharCp871
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
-	@:overload override private function getUnicode(byteIndex : Int) : java.StdTypes.Char16;
+	@:overload private function getUnicode(byteIndex : Int) : java.StdTypes.Char16;
 	
 	
 }

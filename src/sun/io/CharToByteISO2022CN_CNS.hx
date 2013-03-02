@@ -33,12 +33,12 @@ extern class CharToByteISO2022CN_CNS extends sun.io.CharToByteISO2022
 	/**
 	* returns the maximum number of bytes needed to convert a char
 	*/
-	@:overload override public function getMaxBytesPerChar() : Int;
+	@:overload public function getMaxBytesPerChar() : Int;
 	
 	/**
 	* Return the character set ID
 	*/
-	@:overload override public function getCharacterEncoding() : String;
+	@:overload public function getCharacterEncoding() : String;
 	
 	
 }

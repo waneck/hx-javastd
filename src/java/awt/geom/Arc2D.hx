@@ -188,7 +188,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 	* @param a The <CODE>Arc2D</CODE> to use to set the arc's values.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setArc(a : Arc2D) : Void;
+	@:require(java2) @:overload public function setArc(a : java.awt.geom.Arc2D) : Void;
 	
 	/**
 	* Sets the position, bounds, angular extents, and closure type of
@@ -466,7 +466,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 * This class defines an arc specified in {@code float} precision.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Arc2D$Float') extern class Arc2D_Float extends Arc2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Arc2D$Float') extern class Arc2D_Float extends java.awt.geom.Arc2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the upper-left corner of the framing
@@ -657,7 +657,7 @@ extern class Arc2D extends java.awt.geom.RectangularShape
 * This class defines an arc specified in {@code double} precision.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$Arc2D$Double') extern class Arc2D_Double extends Arc2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$Arc2D$Double') extern class Arc2D_Double extends java.awt.geom.Arc2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the upper-left corner of the framing

@@ -40,7 +40,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override private function startDocumentInternal() : Void;
+	@:overload private function startDocumentInternal() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -244,7 +244,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	* @throws org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload override public function comment(data : String) : Void;
+	@:overload public function comment(data : String) : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -267,12 +267,12 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function entityReference(name : String) : Void;
+	@:overload public function entityReference(name : String) : Void;
 	
 	/**
 	* @see ExtendedContentHandler#addAttribute(String, String, String, String, String)
 	*/
-	@:overload override public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
+	@:overload public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#endCDATA()
@@ -297,7 +297,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	/**
 	* From XSLTC
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload public function addAttribute(name : String, value : String) : Void;
 	
 	/**
 	* Add a unique attribute
@@ -308,7 +308,7 @@ extern class ToTextStream extends com.sun.org.apache.xml.internal.serializer.ToS
 	
 	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
 	@:overload override public function flushPending() : Void;
 	

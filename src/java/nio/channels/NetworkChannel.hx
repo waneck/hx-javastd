@@ -55,7 +55,7 @@ extern interface NetworkChannel extends java.nio.channels.Channel
 	*
 	* @see #getLocalAddress
 	*/
-	@:overload public function bind(local : java.net.SocketAddress) : NetworkChannel;
+	@:overload public function bind(local : java.net.SocketAddress) : java.nio.channels.NetworkChannel;
 	
 	/**
 	* Returns the socket address that this channel's socket is bound to, or
@@ -97,7 +97,7 @@ extern interface NetworkChannel extends java.nio.channels.Channel
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload public function setOption<T>(name : java.net.SocketOption<T>, value : T) : NetworkChannel;
+	@:overload public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.NetworkChannel;
 	
 	/**
 	* Returns the value of a socket option.

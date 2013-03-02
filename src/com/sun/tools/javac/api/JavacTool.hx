@@ -39,7 +39,7 @@ extern class JavacTool implements javax.tools.JavaCompiler
 	* Static factory method for creating new instances of this tool.
 	* @return new instance of this tool
 	*/
-	@:overload public static function create() : JavacTool;
+	@:overload public static function create() : com.sun.tools.javac.api.JavacTool;
 	
 	@:overload public function setOption(name : String, args : java.NativeArray<Dynamic>) : Void;
 	

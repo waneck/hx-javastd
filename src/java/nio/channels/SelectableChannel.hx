@@ -215,7 +215,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	* @throws IOException
 	*         If an I/O error occurs
 	*/
-	@:overload @:abstract public function configureBlocking(block : Bool) : SelectableChannel;
+	@:overload @:abstract public function configureBlocking(block : Bool) : java.nio.channels.SelectableChannel;
 	
 	/**
 	* Tells whether or not every I/O operation on this channel will block

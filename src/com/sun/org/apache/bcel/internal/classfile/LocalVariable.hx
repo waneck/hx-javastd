@@ -69,7 +69,7 @@ extern class LocalVariable implements com.sun.org.apache.bcel.internal.Constants
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : LocalVariable) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LocalVariable) : Void;
 	
 	/**
 	* @param start_pc Range in which the variable
@@ -176,7 +176,7 @@ extern class LocalVariable implements com.sun.org.apache.bcel.internal.Constants
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : LocalVariable;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.LocalVariable;
 	
 	
 }

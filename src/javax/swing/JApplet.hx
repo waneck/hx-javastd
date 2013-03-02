@@ -164,7 +164,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* Just calls <code>paint(g)</code>.  This method was overridden to
 	* prevent an unnecessary call to clear the background.
 	*/
-	@:overload override public function update(g : java.awt.Graphics) : Void;
+	@:overload public function update(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets the menubar for this applet.
@@ -236,7 +236,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* Removes the specified component from the container. If
@@ -250,7 +250,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #add
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function remove(comp : java.awt.Component) : Void;
+	@:overload public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* Sets the <code>LayoutManager</code>.
@@ -263,7 +263,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see #setRootPaneCheckingEnabled
 	* @see javax.swing.RootPaneContainer
 	*/
-	@:overload override public function setLayout(manager : java.awt.LayoutManager) : Void;
+	@:overload public function setLayout(manager : java.awt.LayoutManager) : Void;
 	
 	/**
 	* Returns the rootPane object for this applet.
@@ -359,7 +359,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getGraphics() : java.awt.Graphics;
+	@:require(java6) @:overload public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Repaints the specified rectangle of this component within
@@ -374,7 +374,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @see       RepaintManager
 	* @since     1.6
 	*/
-	@:require(java6) @:overload override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java6) @:overload public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Returns a string representation of this JApplet. This method
@@ -385,7 +385,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	*
 	* @return  a string representation of this JApplet.
 	*/
-	@:overload override private function paramString() : String;
+	@:overload private function paramString() : String;
 	
 	private var accessibleContext : javax.accessibility.AccessibleContext;
 	
@@ -398,7 +398,7 @@ extern class JApplet extends java.applet.Applet implements javax.accessibility.A
 	* @return an AccessibleJApplet that serves as the
 	*         AccessibleContext of this JApplet
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

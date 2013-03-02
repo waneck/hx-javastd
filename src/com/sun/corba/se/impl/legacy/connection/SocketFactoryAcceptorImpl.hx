@@ -30,11 +30,11 @@ extern class SocketFactoryAcceptorImpl extends com.sun.corba.se.impl.transport.S
 	*/
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, port : Int, name : String, type : String) : Void;
 	
-	@:overload override public function initialize() : Bool;
+	@:overload public function initialize() : Bool;
 	
-	@:overload override private function toStringName() : String;
+	@:overload private function toStringName() : String;
 	
-	@:overload override private function dprint(msg : String) : Void;
+	@:overload private function dprint(msg : String) : Void;
 	
 	
 }

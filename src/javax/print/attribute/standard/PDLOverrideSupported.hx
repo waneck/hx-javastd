@@ -30,14 +30,14 @@ extern class PDLOverrideSupported extends javax.print.attribute.EnumSyntax imple
 	* take precedence over embedded instructions in the documents' print
 	* data.
 	*/
-	public static var NOT_ATTEMPTED(default, null) : PDLOverrideSupported;
+	public static var NOT_ATTEMPTED(default, null) : javax.print.attribute.standard.PDLOverrideSupported;
 	
 	/**
 	* The printer attempts to make the external job attribute values take
 	* precedence over embedded instructions in the documents' print data,
 	* however there is no guarantee.
 	*/
-	public static var ATTEMPTED(default, null) : PDLOverrideSupported;
+	public static var ATTEMPTED(default, null) : javax.print.attribute.standard.PDLOverrideSupported;
 	
 	/**
 	* Construct a new PDL override supported enumeration value with the given

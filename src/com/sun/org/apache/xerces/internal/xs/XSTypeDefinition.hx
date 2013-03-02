@@ -32,7 +32,7 @@ extern interface XSTypeDefinition extends com.sun.org.apache.xerces.internal.xs.
 	* {base type definition}: either a simple type definition or a complex
 	* type definition.
 	*/
-	@:overload public function getBaseType() : XSTypeDefinition;
+	@:overload public function getBaseType() : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition;
 	
 	/**
 	* {final}. For a complex type definition it is a subset of {extension,
@@ -74,7 +74,7 @@ extern interface XSTypeDefinition extends com.sun.org.apache.xerces.internal.xs.
 	*   using only derivation methods from the <code>derivationMethod</code>
 	*   .
 	*/
-	@:overload public function derivedFromType(ancestorType : XSTypeDefinition, derivationMethod : java.StdTypes.Int16) : Bool;
+	@:overload public function derivedFromType(ancestorType : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, derivationMethod : java.StdTypes.Int16) : Bool;
 	
 	/**
 	* Convenience method which checks if this type is derived from the given

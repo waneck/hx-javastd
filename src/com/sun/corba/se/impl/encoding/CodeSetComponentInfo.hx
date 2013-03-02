@@ -39,15 +39,15 @@ extern class CodeSetComponentInfo
 	
 	@:overload public function new() : Void;
 	
-	@:overload public function new(charData : CodeSetComponentInfo_CodeSetComponent, wcharData : CodeSetComponentInfo_CodeSetComponent) : Void;
+	@:overload public function new(charData : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent, wcharData : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent) : Void;
 	
 	@:overload public function read(_in : com.sun.corba.se.impl.encoding.MarshalInputStream) : Void;
 	
 	@:overload public function write(out : com.sun.corba.se.impl.encoding.MarshalOutputStream) : Void;
 	
-	@:overload public function getCharComponent() : CodeSetComponentInfo_CodeSetComponent;
+	@:overload public function getCharComponent() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
 	
-	@:overload public function getWCharComponent() : CodeSetComponentInfo_CodeSetComponent;
+	@:overload public function getWCharComponent() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
 	
 	/**
 	* Our default code set scheme is as follows:
@@ -75,7 +75,7 @@ extern class CodeSetComponentInfo
 	* for wchar data.
 	*
 	*/
-	public static var JAVASOFT_DEFAULT_CODESETS(default, null) : CodeSetComponentInfo;
+	public static var JAVASOFT_DEFAULT_CODESETS(default, null) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
 	
 	/**
 	* Creates a CodeSetComponent from a String which contains a comma
@@ -88,12 +88,12 @@ extern class CodeSetComponentInfo
 	*
 	* The numbers can either be decimal or hex.
 	*/
-	@:overload public static function createFromString(str : String) : CodeSetComponentInfo_CodeSetComponent;
+	@:overload public static function createFromString(str : String) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetComponent;
 	
 	/**
 	* Code sets for local cases without a connection.
 	*/
-	public static var LOCAL_CODE_SETS(default, null) : CodeSetComponentInfo_CodeSetContext;
+	public static var LOCAL_CODE_SETS(default, null) : com.sun.corba.se.impl.encoding.CodeSetComponentInfo.CodeSetComponentInfo_CodeSetContext;
 	
 	
 }

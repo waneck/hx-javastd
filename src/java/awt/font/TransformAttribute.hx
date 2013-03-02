@@ -70,7 +70,7 @@ extern class TransformAttribute implements java.io.Serializable
 	* A <code>TransformAttribute</code> representing the identity transform.
 	* @since 1.6
 	*/
-	@:require(java6) public static var IDENTITY(default, null) : TransformAttribute;
+	@:require(java6) public static var IDENTITY(default, null) : java.awt.font.TransformAttribute;
 	
 	/**
 	* @since 1.6

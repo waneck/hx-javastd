@@ -63,7 +63,7 @@ extern class JavahTask implements com.sun.tools.javah.NativeHeaderTool.NativeHea
 {
 	
 }
-@:native('com$sun$tools$javah$JavahTask$HiddenOption') @:internal extern class JavahTask_HiddenOption extends JavahTask_Option
+@:native('com$sun$tools$javah$JavahTask$HiddenOption') @:internal extern class JavahTask_HiddenOption extends com.sun.tools.javah.JavahTask.JavahTask_Option
 {
 	
 }

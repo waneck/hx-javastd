@@ -26,7 +26,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Display the element contents (a lot of when's and an otherwise)
 	*/
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	/**
 	* Translate this Choose element. Generate a test-chain for the various

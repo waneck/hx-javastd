@@ -155,7 +155,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param writer the writer that will generate the output strings.
 	* @param output the output buffer to store the output in.
 	*/
-	@:overload public static function genTagOuput(tagletManager : com.sun.tools.doclets.internal.toolkit.taglets.TagletManager, doc : com.sun.javadoc.Doc, taglets : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>, writer : TagletWriter, output : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput) : Void;
+	@:overload public static function genTagOuput(tagletManager : com.sun.tools.doclets.internal.toolkit.taglets.TagletManager, doc : com.sun.javadoc.Doc, taglets : java.NativeArray<com.sun.tools.doclets.internal.toolkit.taglets.Taglet>, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter, output : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput) : Void;
 	
 	/**
 	* Given an inline tag, return its output.
@@ -166,7 +166,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param tagletWriter The taglet writer to write the output.
 	* @return The output of the inline tag.
 	*/
-	@:overload public static function getInlineTagOuput(tagletManager : com.sun.tools.doclets.internal.toolkit.taglets.TagletManager, holderTag : com.sun.javadoc.Tag, inlineTag : com.sun.javadoc.Tag, tagletWriter : TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public static function getInlineTagOuput(tagletManager : com.sun.tools.doclets.internal.toolkit.taglets.TagletManager, holderTag : com.sun.javadoc.Tag, inlineTag : com.sun.javadoc.Tag, tagletWriter : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	/**
 	* Converts inline tags and text to TagOutput, expanding the

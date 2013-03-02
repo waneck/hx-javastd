@@ -27,45 +27,45 @@ extern class SAAJMessage extends com.sun.xml.internal.ws.api.message.Message
 {
 	@:overload public function new(sm : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload override public function hasHeaders() : Bool;
+	@:overload public function hasHeaders() : Bool;
 	
-	@:overload override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
 	/**
 	* Gets the attachments of this message
 	* (attachments live outside a message.)
 	*/
-	@:overload override public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
+	@:overload public function getAttachments() : com.sun.xml.internal.ws.api.message.AttachmentSet;
 	
 	/**
 	* Optimization hint for the derived class to check
 	* if we may have some attachments.
 	*/
-	@:overload override private function hasAttachments() : Bool;
+	@:overload private function hasAttachments() : Bool;
 	
-	@:overload override public function getPayloadLocalPart() : String;
+	@:overload public function getPayloadLocalPart() : String;
 	
-	@:overload override public function getPayloadNamespaceURI() : String;
+	@:overload public function getPayloadNamespaceURI() : String;
 	
-	@:overload override public function hasPayload() : Bool;
+	@:overload public function hasPayload() : Bool;
 	
-	@:overload override public function readEnvelopeAsSource() : javax.xml.transform.Source;
+	@:overload public function readEnvelopeAsSource() : javax.xml.transform.Source;
 	
-	@:overload override public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
+	@:overload public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
 	
-	@:overload override public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload public function readPayloadAsSource() : javax.xml.transform.Source;
 	
-	@:overload override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
-	@:overload override public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload public function writeTo(writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Creates a copy of a {@link com.sun.xml.internal.ws.api.message.Message}.
@@ -88,7 +88,7 @@ extern class SAAJMessage extends com.sun.xml.internal.ws.api.message.Message
 	* of the data in memory, hence it's best to be done by
 	* the {@link com.sun.xml.internal.ws.api.message.Message} implementation itself.
 	*/
-	@:overload override public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
 	
 }

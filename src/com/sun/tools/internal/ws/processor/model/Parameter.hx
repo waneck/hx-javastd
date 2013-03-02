@@ -49,15 +49,15 @@ extern class Parameter extends com.sun.tools.internal.ws.processor.model.ModelOb
 	
 	@:overload public function setBlock(d : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload public function getLinkedParameter() : Parameter;
+	@:overload public function getLinkedParameter() : com.sun.tools.internal.ws.processor.model.Parameter;
 	
-	@:overload public function setLinkedParameter(p : Parameter) : Void;
+	@:overload public function setLinkedParameter(p : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
 	@:overload public function isEmbedded() : Bool;
 	
 	@:overload public function setEmbedded(b : Bool) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	@:overload public function getParameterIndex() : Int;
 	

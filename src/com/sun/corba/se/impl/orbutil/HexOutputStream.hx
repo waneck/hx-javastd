@@ -37,11 +37,11 @@ extern class HexOutputStream extends java.io.OutputStream
 	* param b The byte to write out.
 	* @exception java.io.IOException I/O error occurred.
 	*/
-	@:overload @:synchronized override public function write(b : Int) : Void;
+	@:overload @:synchronized public function write(b : Int) : Void;
 	
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:synchronized override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:synchronized public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	
 }

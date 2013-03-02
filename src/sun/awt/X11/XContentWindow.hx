@@ -31,7 +31,7 @@ extern class XContentWindow extends sun.awt.X11.XWindow
 	
 	@:overload public function handleResize(bounds : java.awt.Rectangle) : Void;
 	
-	@:overload override public function handleExposeEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function handleExposeEvent(target : java.awt.Component, x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	@:overload override public function toString() : String;
 	

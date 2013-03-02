@@ -183,7 +183,7 @@ extern class CodeSource implements java.io.Serializable
 	* @return true if the specified codesource is implied by this codesource,
 	* false if not.
 	*/
-	@:overload public function implies(codesource : CodeSource) : Bool;
+	@:overload public function implies(codesource : java.security.CodeSource) : Bool;
 	
 	/**
 	* Returns a string describing this CodeSource, telling its

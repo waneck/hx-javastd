@@ -76,11 +76,11 @@ extern class BCELifier extends com.sun.org.apache.bcel.internal.classfile.EmptyV
 	*/
 	@:overload public function start() : Void;
 	
-	@:overload override public function visitJavaClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
+	@:overload public function visitJavaClass(clazz : com.sun.org.apache.bcel.internal.classfile.JavaClass) : Void;
 	
-	@:overload override public function visitField(field : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
+	@:overload public function visitField(field : com.sun.org.apache.bcel.internal.classfile.Field) : Void;
 	
-	@:overload override public function visitMethod(method : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
+	@:overload public function visitMethod(method : com.sun.org.apache.bcel.internal.classfile.Method) : Void;
 	
 	/** Default _main method
 	*/

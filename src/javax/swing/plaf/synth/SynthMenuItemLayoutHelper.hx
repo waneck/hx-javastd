@@ -81,13 +81,13 @@ package javax.swing.plaf.synth;
 	
 	@:overload public function getMaxAccOrArrowWidth() : Int;
 	
-	@:overload private function prepareForLayout(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
+	@:overload override private function prepareForLayout(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
 	@:overload override public function getLTRColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
 	@:overload override public function getRTLColumnAlignment() : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_ColumnAlignment;
 	
-	@:overload private function layoutIconAndTextInLabelRect(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
+	@:overload override private function layoutIconAndTextInLabelRect(lr : sun.swing.MenuItemLayoutHelper.MenuItemLayoutHelper_LayoutResult) : Void;
 	
 	
 }

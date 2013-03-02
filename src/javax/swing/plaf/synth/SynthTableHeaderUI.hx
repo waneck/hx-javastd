@@ -39,27 +39,27 @@ package javax.swing.plaf.synth;
 	* @param h component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(h : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(h : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -73,7 +73,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -84,7 +84,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -108,7 +108,7 @@ package javax.swing.plaf.synth;
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function rolloverColumnUpdated(oldColumn : Int, newColumn : Int) : Void;
+	@:overload private function rolloverColumnUpdated(oldColumn : Int, newColumn : Int) : Void;
 	
 	/**
 	* @inheritDoc
@@ -119,9 +119,9 @@ package javax.swing.plaf.synth;
 }
 @:native('javax$swing$plaf$synth$SynthTableHeaderUI$HeaderRenderer') @:internal extern class SynthTableHeaderUI_HeaderRenderer extends sun.swing.table.DefaultTableCellHeaderRenderer
 {
-	@:overload override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
-	@:overload override public function setBorder(border : javax.swing.border.Border) : Void;
+	@:overload public function setBorder(border : javax.swing.border.Border) : Void;
 	
 	
 }

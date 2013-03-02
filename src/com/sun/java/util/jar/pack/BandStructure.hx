@@ -89,11 +89,11 @@ package com.sun.java.util.jar.pack;
 	/** Given CP indexes, distribute tag-specific indexes to bands. */
 	@:overload private function setBandIndexes() : Void;
 	
-	@:overload private function setBandIndex(b : BandStructure_CPRefBand, which : java.StdTypes.Int8) : Void;
+	@:overload private function setBandIndex(b : com.sun.java.util.jar.pack.BandStructure.BandStructure_CPRefBand, which : java.StdTypes.Int8) : Void;
 	
 	@:overload private function setConstantValueIndex(f : com.sun.java.util.jar.pack.Package.Package_Class_Field) : Void;
 	
-	private var metadataBands : java.NativeArray<BandStructure_MultiBand>;
+	private var metadataBands : java.NativeArray<com.sun.java.util.jar.pack.BandStructure.BandStructure_MultiBand>;
 	
 	public static var ADH_CONTEXT_MASK(default, null) : Int;
 	
@@ -113,7 +113,7 @@ package com.sun.java.util.jar.pack;
 	
 	private var attrClassFileVersionMask : Int;
 	
-	private var attrBandTable : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, java.NativeArray<BandStructure_Band>>;
+	private var attrBandTable : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, java.NativeArray<com.sun.java.util.jar.pack.BandStructure.BandStructure_Band>>;
 	
 	private var attrCodeEmpty(default, null) : com.sun.java.util.jar.pack.Attribute.Attribute_Layout;
 	
@@ -139,19 +139,19 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload private function parseClassFileVersionAttr(attr : com.sun.java.util.jar.pack.Attribute) : java.NativeArray<java.StdTypes.Int16>;
 	
-	private var attrBands : java.NativeArray<BandStructure_MultiBand>;
+	private var attrBands : java.NativeArray<com.sun.java.util.jar.pack.BandStructure.BandStructure_MultiBand>;
 	
 	@:overload private function setAttributeLayoutIndex(def : com.sun.java.util.jar.pack.Attribute.Attribute_Layout, index : Int) : Int;
 	
 	public var shortCodeHeader_h_limit(default, null) : Int;
 	
-	@:overload private function putLabel(bc_label : BandStructure_IntBand, c : com.sun.java.util.jar.pack.Code, pc : Int, targetPC : Int) : Void;
+	@:overload private function putLabel(bc_label : com.sun.java.util.jar.pack.BandStructure.BandStructure_IntBand, c : com.sun.java.util.jar.pack.Code, pc : Int, targetPC : Int) : Void;
 	
-	@:overload private function getLabel(bc_label : BandStructure_IntBand, c : com.sun.java.util.jar.pack.Code, pc : Int) : Int;
+	@:overload private function getLabel(bc_label : com.sun.java.util.jar.pack.BandStructure.BandStructure_IntBand, c : com.sun.java.util.jar.pack.Code, pc : Int) : Int;
 	
-	@:overload private function getCPRefOpBand(bc : Int) : BandStructure_CPRefBand;
+	@:overload private function getCPRefOpBand(bc : Int) : com.sun.java.util.jar.pack.BandStructure.BandStructure_CPRefBand;
 	
-	@:overload private function selfOpRefBand(self_bc : Int) : BandStructure_CPRefBand;
+	@:overload private function selfOpRefBand(self_bc : Int) : com.sun.java.util.jar.pack.BandStructure.BandStructure_CPRefBand;
 	
 	@:overload private static function testBit(flags : Int, bitMask : Int) : Bool;
 	
@@ -206,7 +206,7 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload private function new(name : String, regularCoding : com.sun.java.util.jar.pack.Coding) : Void;
 	
-	@:overload public function init() : BandStructure_Band;
+	@:overload public function init() : com.sun.java.util.jar.pack.BandStructure.BandStructure_Band;
 	
 	/** Return -1 if data buffer not allocated, else max length. */
 	@:overload @:abstract public function capacity() : Int;
@@ -251,7 +251,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$BandStructure$ValueBand') @:internal extern class BandStructure_ValueBand extends BandStructure_Band
+@:native('com$sun$java$util$jar$pack$BandStructure$ValueBand') @:internal extern class BandStructure_ValueBand extends com.sun.java.util.jar.pack.BandStructure.BandStructure_Band
 {
 	@:overload private function new(name : String, regularCoding : com.sun.java.util.jar.pack.Coding) : Void;
 	
@@ -271,7 +271,7 @@ package com.sun.java.util.jar.pack;
 	/** Collect one value, or store one decoded value. */
 	@:overload private function addValue(x : Int) : Void;
 	
-	@:overload override private function chooseBandCodings() : Void;
+	@:overload private function chooseBandCodings() : Void;
 	
 	@:overload override private function computeOutputSize() : haxe.Int64;
 	
@@ -291,7 +291,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$BandStructure$ByteBand') @:internal extern class BandStructure_ByteBand extends BandStructure_Band
+@:native('com$sun$java$util$jar$pack$BandStructure$ByteBand') @:internal extern class BandStructure_ByteBand extends com.sun.java.util.jar.pack.BandStructure.BandStructure_Band
 {
 	@:overload public function new(name : String) : Void;
 	
@@ -307,7 +307,7 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload override private function valuesRemainingForDebug() : Int;
 	
-	@:overload override private function chooseBandCodings() : Void;
+	@:overload private function chooseBandCodings() : Void;
 	
 	@:overload override private function computeOutputSize() : haxe.Int64;
 	
@@ -333,7 +333,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$BandStructure$IntBand') @:internal extern class BandStructure_IntBand extends BandStructure_ValueBand
+@:native('com$sun$java$util$jar$pack$BandStructure$IntBand') @:internal extern class BandStructure_IntBand extends com.sun.java.util.jar.pack.BandStructure.BandStructure_ValueBand
 {
 	@:overload public function new(name : String, regularCoding : com.sun.java.util.jar.pack.Coding) : Void;
 	
@@ -349,7 +349,7 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$BandStructure$CPRefBand') @:internal extern class BandStructure_CPRefBand extends BandStructure_ValueBand
+@:native('com$sun$java$util$jar$pack$BandStructure$CPRefBand') @:internal extern class BandStructure_CPRefBand extends com.sun.java.util.jar.pack.BandStructure.BandStructure_ValueBand
 {
 	@:overload public function new(name : String, regularCoding : com.sun.java.util.jar.pack.Coding, cpTag : java.StdTypes.Int8, nullOK : Bool) : Void;
 	
@@ -376,9 +376,9 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$BandStructure$MultiBand') @:internal extern class BandStructure_MultiBand extends BandStructure_Band
+@:native('com$sun$java$util$jar$pack$BandStructure$MultiBand') @:internal extern class BandStructure_MultiBand extends com.sun.java.util.jar.pack.BandStructure.BandStructure_Band
 {
-	@:overload override public function init() : BandStructure_Band;
+	@:overload override public function init() : com.sun.java.util.jar.pack.BandStructure.BandStructure_Band;
 	
 	@:overload override public function capacity() : Int;
 	
@@ -388,7 +388,7 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload override public function valuesRemainingForDebug() : Int;
 	
-	@:overload override private function chooseBandCodings() : Void;
+	@:overload private function chooseBandCodings() : Void;
 	
 	@:overload override private function computeOutputSize() : haxe.Int64;
 	

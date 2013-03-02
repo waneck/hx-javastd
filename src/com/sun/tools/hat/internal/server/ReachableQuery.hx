@@ -36,7 +36,7 @@ package com.sun.tools.hat.internal.server;
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }

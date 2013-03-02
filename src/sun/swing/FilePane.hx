@@ -57,7 +57,7 @@ extern class FilePane extends javax.swing.JPanel implements java.beans.PropertyC
 	
 	public static var VIEWTYPE_DETAILS(default, null) : Int;
 	
-	@:overload public function new(fileChooserUIAccessor : FilePane_FileChooserUIAccessor) : Void;
+	@:overload public function new(fileChooserUIAccessor : sun.swing.FilePane.FilePane_FileChooserUIAccessor) : Void;
 	
 	@:overload public function uninstallUI() : Void;
 	
@@ -114,9 +114,9 @@ extern class FilePane extends javax.swing.JPanel implements java.beans.PropertyC
 	
 	@:overload public function getViewMenu() : javax.swing.JMenu;
 	
-	@:overload override public function getComponentPopupMenu() : javax.swing.JPopupMenu;
+	@:overload public function getComponentPopupMenu() : javax.swing.JPopupMenu;
 	
-	@:overload private function getMouseHandler() : FilePane_Handler;
+	@:overload private function getMouseHandler() : sun.swing.FilePane.FilePane_Handler;
 	
 	/**
 	* Property to remember whether a directory is currently selected in the UI.
@@ -155,9 +155,9 @@ extern class FilePane extends javax.swing.JPanel implements java.beans.PropertyC
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	@:overload public function tableChanged(e : javax.swing.event.TableModelEvent) : Void;
 	
@@ -167,15 +167,15 @@ extern class FilePane extends javax.swing.JPanel implements java.beans.PropertyC
 }
 @:native('sun$swing$FilePane$DetailsTableModel') @:internal extern class FilePane_DetailsTableModel extends javax.swing.table.AbstractTableModel implements javax.swing.event.ListDataListener
 {
-	@:overload override public function getRowCount() : Int;
+	@:overload public function getRowCount() : Int;
 	
-	@:overload override public function getColumnCount() : Int;
+	@:overload public function getColumnCount() : Int;
 	
-	@:overload override public function getValueAt(row : Int, col : Int) : Dynamic;
+	@:overload public function getValueAt(row : Int, col : Int) : Dynamic;
 	
-	@:overload override public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
+	@:overload public function setValueAt(value : Dynamic, row : Int, col : Int) : Void;
 	
-	@:overload override public function isCellEditable(row : Int, column : Int) : Bool;
+	@:overload public function isCellEditable(row : Int, column : Int) : Bool;
 	
 	@:overload public function contentsChanged(e : javax.swing.event.ListDataEvent) : Void;
 	
@@ -235,11 +235,11 @@ extern class FilePane extends javax.swing.JPanel implements java.beans.PropertyC
 }
 @:native('sun$swing$FilePane$DetailsTableCellRenderer') @:internal extern class FilePane_DetailsTableCellRenderer extends javax.swing.table.DefaultTableCellRenderer
 {
-	@:overload override public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getInsets(i : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getInsets(i : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload override public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
+	@:overload public function getTableCellRendererComponent(table : javax.swing.JTable, value : Dynamic, isSelected : Bool, hasFocus : Bool, row : Int, column : Int) : java.awt.Component;
 	
 	
 }

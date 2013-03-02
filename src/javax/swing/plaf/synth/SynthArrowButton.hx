@@ -27,15 +27,15 @@ package javax.swing.plaf.synth;
 {
 	@:overload public function new(direction : Int) : Void;
 	
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	@:overload public function setDirection(dir : Int) : Void;
 	
 	@:overload public function getDirection() : Int;
 	
-	@:overload override public function setFocusable(focusable : Bool) : Void;
+	@:overload public function setFocusable(focusable : Bool) : Void;
 	
 	
 }

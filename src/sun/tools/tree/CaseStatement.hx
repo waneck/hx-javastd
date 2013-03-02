@@ -33,12 +33,12 @@ extern class CaseStatement extends sun.tools.tree.Statement
 	/**
 	* The cost of inlining this statement
 	*/
-	@:overload override public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
+	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	
 	/**
 	* Print
 	*/
-	@:overload override public function print(out : java.io.PrintStream, indent : Int) : Void;
+	@:overload public function print(out : java.io.PrintStream, indent : Int) : Void;
 	
 	
 }

@@ -44,11 +44,11 @@ extern class ByteOutputStream extends java.io.OutputStream
 	*/
 	@:overload public function write(_in : java.io.InputStream) : Void;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Writes a string as ASCII string.
@@ -81,7 +81,7 @@ extern class ByteOutputStream extends java.io.OutputStream
 	*/
 	@:require(java1) @:overload public function toString() : String;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	@:overload public function getBytes() : java.NativeArray<java.StdTypes.Int8>;
 	

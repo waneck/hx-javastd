@@ -110,7 +110,7 @@ extern class StAXDocumentParser extends com.sun.xml.internal.fastinfoset.Decoder
 	
 	private var _piData : String;
 	
-	private var _nsContext : StAXDocumentParser_NamespaceContextImpl;
+	private var _nsContext : com.sun.xml.internal.fastinfoset.stax.StAXDocumentParser.StAXDocumentParser_NamespaceContextImpl;
 	
 	private var _characterEncodingScheme : String;
 	
@@ -122,9 +122,9 @@ extern class StAXDocumentParser extends com.sun.xml.internal.fastinfoset.Decoder
 	
 	@:overload public function new(s : java.io.InputStream, manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
 	
-	@:overload override public function setInputStream(s : java.io.InputStream) : Void;
+	@:overload public function setInputStream(s : java.io.InputStream) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	@:overload private function resetOnError() : Void;
 	

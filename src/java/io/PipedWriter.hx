@@ -85,7 +85,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedReader) unconnected}, closed
 	*          or an I/O error occurs.
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload public function write(c : Int) : Void;
 	
 	/**
 	* Writes <code>len</code> characters from the specified character array
@@ -104,7 +104,7 @@ package java.io;
 	*          {@link #connect(java.io.PipedReader) unconnected}, closed
 	*          or an I/O error occurs.
 	*/
-	@:overload override public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload public function write(cbuf : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	/**
 	* Flushes this output stream and forces any buffered output characters
@@ -113,7 +113,7 @@ package java.io;
 	*
 	* @exception  IOException  if the pipe is closed, or an I/O error occurs.
 	*/
-	@:overload @:synchronized override public function flush() : Void;
+	@:overload @:synchronized public function flush() : Void;
 	
 	/**
 	* Closes this piped output stream and releases any system resources
@@ -122,7 +122,7 @@ package java.io;
 	*
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

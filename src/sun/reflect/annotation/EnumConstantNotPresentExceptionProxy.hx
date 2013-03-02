@@ -33,7 +33,7 @@ package sun.reflect.annotation;
 {
 	@:overload public function new(enumType : Class<java.lang.Enum<Dynamic>>, constName : String) : Void;
 	
-	@:overload override private function generateException() : java.lang.RuntimeException;
+	@:overload private function generateException() : java.lang.RuntimeException;
 	
 	
 }

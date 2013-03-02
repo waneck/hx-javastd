@@ -38,9 +38,9 @@ extern class LLNI extends com.sun.tools.javah.Gen
 	/* For inner classes */
 	private var doneHandleTypes : java.util.Set<String>;
 	
-	@:overload override private function getIncludes() : String;
+	@:overload private function getIncludes() : String;
 	
-	@:overload override private function write(o : java.io.OutputStream, clazz : javax.lang.model.element.TypeElement) : Void;
+	@:overload private function write(o : java.io.OutputStream, clazz : javax.lang.model.element.TypeElement) : Void;
 	
 	@:overload private function generateDeclsForClass(pw : java.io.PrintWriter, clazz : javax.lang.model.element.TypeElement, cname : String) : Void;
 	
@@ -97,7 +97,7 @@ extern class LLNI extends com.sun.tools.javah.Gen
 	public var className : String;
 	
 	/* Name of the current class. */
-	public var parent : LLNI_FieldDefsRes;
+	public var parent : com.sun.tools.javah.LLNI.LLNI_FieldDefsRes;
 	
 	public var s : String;
 	

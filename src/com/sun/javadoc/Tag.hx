@@ -95,7 +95,7 @@ extern interface Tag
 	* @see ParamTag
 	* @see ThrowsTag
 	*/
-	@:overload public function inlineTags() : java.NativeArray<Tag>;
+	@:overload public function inlineTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the first sentence of the comment as an array of tags.
@@ -121,7 +121,7 @@ extern interface Tag
 	* @return an array of {@link Tag} objects representing the
 	*         first sentence of the comment
 	*/
-	@:overload public function firstSentenceTags() : java.NativeArray<Tag>;
+	@:overload public function firstSentenceTags() : java.NativeArray<com.sun.javadoc.Tag>;
 	
 	/**
 	* Return the source position of this tag.

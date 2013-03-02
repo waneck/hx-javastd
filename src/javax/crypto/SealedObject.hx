@@ -62,7 +62,7 @@ extern class SealedObject implements java.io.Serializable
 	* @param so a SealedObject object
 	* @exception NullPointerException if the given sealed object is null.
 	*/
-	@:overload private function new(so : SealedObject) : Void;
+	@:overload private function new(so : javax.crypto.SealedObject) : Void;
 	
 	/**
 	* Returns the algorithm that was used to seal this object.

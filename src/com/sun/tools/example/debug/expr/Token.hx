@@ -63,7 +63,7 @@ extern class Token
 	* token.  Otherwise, see below for a description of the contents of
 	* this field.
 	*/
-	public var next : Token;
+	public var next : com.sun.tools.example.debug.expr.Token;
 	
 	/**
 	* This field is used to access special tokens that occur prior to this
@@ -77,7 +77,7 @@ extern class Token
 	* immediately follow it (without an intervening regular token).  If there
 	* is no such token, this field is null.
 	*/
-	public var specialToken : Token;
+	public var specialToken : com.sun.tools.example.debug.expr.Token;
 	
 	/**
 	* Returns the image.
@@ -96,7 +96,7 @@ extern class Token
 	* to the following switch statement. Then you can cast matchedToken
 	* variable to the appropriate type and use it in your lexical actions.
 	*/
-	@:overload @:final public static function newToken(ofKind : Int) : Token;
+	@:overload @:final public static function newToken(ofKind : Int) : com.sun.tools.example.debug.expr.Token;
 	
 	
 }

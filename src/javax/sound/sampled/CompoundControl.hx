@@ -51,7 +51,7 @@ package javax.sound.sampled;
 	* Provides a string representation of the control
 	* @return a string description
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }
@@ -69,7 +69,7 @@ package javax.sound.sampled;
 	* Constructs a new compound control type.
 	* @param name  the name of the new compound control type
 	*/
-	@:overload override private function new(name : String) : Void;
+	@:overload private function new(name : String) : Void;
 	
 	
 }

@@ -166,49 +166,49 @@ extern class Activation implements java.io.Serializable
 /**
 * Log record for registering an object.
 */
-@:native('sun$rmi$server$Activation$LogRegisterObject') @:internal extern class Activation_LogRegisterObject extends Activation_LogRecord
+@:native('sun$rmi$server$Activation$LogRegisterObject') @:internal extern class Activation_LogRegisterObject extends sun.rmi.server.Activation.Activation_LogRecord
 {
 	
 }
 /**
 * Log record for unregistering an object.
 */
-@:native('sun$rmi$server$Activation$LogUnregisterObject') @:internal extern class Activation_LogUnregisterObject extends Activation_LogRecord
+@:native('sun$rmi$server$Activation$LogUnregisterObject') @:internal extern class Activation_LogUnregisterObject extends sun.rmi.server.Activation.Activation_LogRecord
 {
 	
 }
 /**
 * Log record for registering a group.
 */
-@:native('sun$rmi$server$Activation$LogRegisterGroup') @:internal extern class Activation_LogRegisterGroup extends Activation_LogRecord
+@:native('sun$rmi$server$Activation$LogRegisterGroup') @:internal extern class Activation_LogRegisterGroup extends sun.rmi.server.Activation.Activation_LogRecord
 {
 	
 }
 /**
 * Log record for udpating an activation desc
 */
-@:native('sun$rmi$server$Activation$LogUpdateDesc') @:internal extern class Activation_LogUpdateDesc extends Activation_LogRecord
+@:native('sun$rmi$server$Activation$LogUpdateDesc') @:internal extern class Activation_LogUpdateDesc extends sun.rmi.server.Activation.Activation_LogRecord
 {
 	
 }
 /**
 * Log record for unregistering a group.
 */
-@:native('sun$rmi$server$Activation$LogUpdateGroupDesc') @:internal extern class Activation_LogUpdateGroupDesc extends Activation_LogRecord
+@:native('sun$rmi$server$Activation$LogUpdateGroupDesc') @:internal extern class Activation_LogUpdateGroupDesc extends sun.rmi.server.Activation.Activation_LogRecord
 {
 	
 }
 /**
 * Log record for unregistering a group.
 */
-@:native('sun$rmi$server$Activation$LogUnregisterGroup') @:internal extern class Activation_LogUnregisterGroup extends Activation_LogRecord
+@:native('sun$rmi$server$Activation$LogUnregisterGroup') @:internal extern class Activation_LogUnregisterGroup extends sun.rmi.server.Activation.Activation_LogRecord
 {
 	
 }
 /**
 * Log record for an active group incarnation
 */
-@:native('sun$rmi$server$Activation$LogGroupIncarnation') @:internal extern class Activation_LogGroupIncarnation extends Activation_LogRecord
+@:native('sun$rmi$server$Activation$LogGroupIncarnation') @:internal extern class Activation_LogGroupIncarnation extends sun.rmi.server.Activation.Activation_LogRecord
 {
 	
 }
@@ -251,43 +251,43 @@ extern class Activation implements java.io.Serializable
 **/
 @:native('sun$rmi$server$Activation$DelayedAcceptServerSocket') @:internal extern class Activation_DelayedAcceptServerSocket extends java.net.ServerSocket
 {
-	@:overload override public function bind(endpoint : java.net.SocketAddress) : Void;
+	@:overload public function bind(endpoint : java.net.SocketAddress) : Void;
 	
-	@:overload override public function bind(endpoint : java.net.SocketAddress, backlog : Int) : Void;
+	@:overload public function bind(endpoint : java.net.SocketAddress, backlog : Int) : Void;
 	
-	@:overload override public function getInetAddress() : java.net.InetAddress;
+	@:overload public function getInetAddress() : java.net.InetAddress;
 	
-	@:overload override public function getLocalPort() : Int;
+	@:overload public function getLocalPort() : Int;
 	
-	@:overload override public function getLocalSocketAddress() : java.net.SocketAddress;
+	@:overload public function getLocalSocketAddress() : java.net.SocketAddress;
 	
 	/**
 	* Delays calling accept on the underlying server socket until the
 	* remote service is bound in the registry.
 	**/
-	@:overload override public function accept() : java.net.Socket;
+	@:overload public function accept() : java.net.Socket;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function getChannel() : java.nio.channels.ServerSocketChannel;
+	@:overload public function getChannel() : java.nio.channels.ServerSocketChannel;
 	
-	@:overload override public function isBound() : Bool;
+	@:overload public function isBound() : Bool;
 	
-	@:overload override public function isClosed() : Bool;
+	@:overload public function isClosed() : Bool;
 	
-	@:overload override public function setSoTimeout(timeout : Int) : Void;
+	@:overload public function setSoTimeout(timeout : Int) : Void;
 	
-	@:overload override public function getSoTimeout() : Int;
+	@:overload public function getSoTimeout() : Int;
 	
-	@:overload override public function setReuseAddress(on : Bool) : Void;
+	@:overload public function setReuseAddress(on : Bool) : Void;
 	
-	@:overload override public function getReuseAddress() : Bool;
+	@:overload public function getReuseAddress() : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override public function setReceiveBufferSize(size : Int) : Void;
+	@:overload public function setReceiveBufferSize(size : Int) : Void;
 	
-	@:overload override public function getReceiveBufferSize() : Int;
+	@:overload public function getReceiveBufferSize() : Int;
 	
 	
 }

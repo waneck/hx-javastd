@@ -244,7 +244,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiableDocAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiableDocAttributeSet extends AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.DocAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiableDocAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiableDocAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.DocAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.DocAttributeSet) : Void;
 	
@@ -253,7 +253,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintRequestAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintRequestAttributeSet extends AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintRequestAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintRequestAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintRequestAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintRequestAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
@@ -262,7 +262,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintJobAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintJobAttributeSet extends AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintJobAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintJobAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintJobAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintJobAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
@@ -271,7 +271,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintServiceAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintServiceAttributeSet extends AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintServiceAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$UnmodifiablePrintServiceAttributeSet') @:internal extern class AttributeSetUtilities_UnmodifiablePrintServiceAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_UnmodifiableAttributeSet implements javax.print.attribute.PrintServiceAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : Void;
 	
@@ -315,7 +315,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedDocAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedDocAttributeSet extends AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.DocAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedDocAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedDocAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.DocAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.DocAttributeSet) : Void;
 	
@@ -324,7 +324,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintRequestAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintRequestAttributeSet extends AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintRequestAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintRequestAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintRequestAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintRequestAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.PrintRequestAttributeSet) : Void;
 	
@@ -333,7 +333,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintJobAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintJobAttributeSet extends AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintJobAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintJobAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintJobAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintJobAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.PrintJobAttributeSet) : Void;
 	
@@ -342,7 +342,7 @@ extern class AttributeSetUtilities
 /**
 * @serial include
 */
-@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintServiceAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintServiceAttributeSet extends AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintServiceAttributeSet implements java.io.Serializable
+@:native('javax$print$attribute$AttributeSetUtilities$SynchronizedPrintServiceAttributeSet') @:internal extern class AttributeSetUtilities_SynchronizedPrintServiceAttributeSet extends javax.print.attribute.AttributeSetUtilities.AttributeSetUtilities_SynchronizedAttributeSet implements javax.print.attribute.PrintServiceAttributeSet implements java.io.Serializable
 {
 	@:overload public function new(attributeSet : javax.print.attribute.PrintServiceAttributeSet) : Void;
 	

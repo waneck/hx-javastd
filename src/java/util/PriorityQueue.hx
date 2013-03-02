@@ -140,7 +140,7 @@ package java.util;
 	* @throws NullPointerException if the specified priority queue or any
 	*         of its elements are null
 	*/
-	@:overload public function new(c : PriorityQueue<E>) : Void;
+	@:overload public function new(c : java.util.PriorityQueue<E>) : Void;
 	
 	/**
 	* Creates a {@code PriorityQueue} containing the elements in the

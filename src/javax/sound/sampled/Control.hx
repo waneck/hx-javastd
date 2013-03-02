@@ -45,13 +45,13 @@ package javax.sound.sampled;
 	* Constructs a Control with the specified type.
 	* @param type the kind of control desired
 	*/
-	@:overload private function new(type : Control_Type) : Void;
+	@:overload private function new(type : javax.sound.sampled.Control.Control_Type) : Void;
 	
 	/**
 	* Obtains the control's type.
 	* @return the control's type.
 	*/
-	@:overload public function getType() : Control_Type;
+	@:overload public function getType() : javax.sound.sampled.Control.Control_Type;
 	
 	/**
 	* Obtains a String describing the control type and its current state.

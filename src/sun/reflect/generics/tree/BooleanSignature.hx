@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class BooleanSignature implements sun.reflect.generics.tree.BaseType
 {
-	@:overload public static function make() : BooleanSignature;
+	@:overload public static function make() : sun.reflect.generics.tree.BooleanSignature;
 	
 	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	

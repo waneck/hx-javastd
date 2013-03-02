@@ -74,9 +74,9 @@ extern class SourceManager
 }
 @:native('com$sun$tools$example$debug$gui$SourceManager$SMClassListener') @:internal extern class SourceManager_SMClassListener extends com.sun.tools.example.debug.event.JDIAdapter implements com.sun.tools.example.debug.event.JDIListener
 {
-	@:overload override public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
+	@:overload public function classPrepare(e : com.sun.tools.example.debug.event.ClassPrepareEventSet) : Void;
 	
-	@:overload override public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
+	@:overload public function classUnload(e : com.sun.tools.example.debug.event.ClassUnloadEventSet) : Void;
 	
 	
 }

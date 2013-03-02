@@ -33,11 +33,11 @@ extern class FillParallelogram extends sun.java2d.loops.GraphicsPrimitive
 	* 1) fill the area between the 4 edges of a parallelogram
 	*    (as specified by an origin and 2 delta vectors)
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : FillParallelogram;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.FillParallelogram;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -54,9 +54,9 @@ extern class FillParallelogram extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$FillParallelogram$TraceFillParallelogram') @:internal extern class FillParallelogram_TraceFillParallelogram extends FillParallelogram
+@:native('sun$java2d$loops$FillParallelogram$TraceFillParallelogram') @:internal extern class FillParallelogram_TraceFillParallelogram extends sun.java2d.loops.FillParallelogram
 {
-	@:overload public function new(target : FillParallelogram) : Void;
+	@:overload public function new(target : sun.java2d.loops.FillParallelogram) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

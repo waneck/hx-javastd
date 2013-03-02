@@ -51,7 +51,7 @@ extern class SSLContext
 	*   {@link SSLContext#getInstance SSLContext.getInstance()} call fails
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function getDefault() : SSLContext;
+	@:require(java6) @:overload @:synchronized public static function getDefault() : javax.net.ssl.SSLContext;
 	
 	/**
 	* Sets the default SSL context. It will be returned by subsequent calls
@@ -65,7 +65,7 @@ extern class SSLContext
 	*          <code>SSLPermission("setDefaultSSLContext")</code>
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:synchronized public static function setDefault(context : SSLContext) : Void;
+	@:require(java6) @:overload @:synchronized public static function setDefault(context : javax.net.ssl.SSLContext) : Void;
 	
 	/**
 	* Returns a <code>SSLContext</code> object that implements the
@@ -96,7 +96,7 @@ extern class SSLContext
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(protocol : String) : SSLContext;
+	@:overload public static function getInstance(protocol : String) : javax.net.ssl.SSLContext;
 	
 	/**
 	* Returns a <code>SSLContext</code> object that implements the
@@ -133,7 +133,7 @@ extern class SSLContext
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(protocol : String, provider : String) : SSLContext;
+	@:overload public static function getInstance(protocol : String, provider : String) : javax.net.ssl.SSLContext;
 	
 	/**
 	* Returns a <code>SSLContext</code> object that implements the
@@ -164,7 +164,7 @@ extern class SSLContext
 	*
 	* @see java.security.Provider
 	*/
-	@:overload public static function getInstance(protocol : String, provider : java.security.Provider) : SSLContext;
+	@:overload public static function getInstance(protocol : String, provider : java.security.Provider) : javax.net.ssl.SSLContext;
 	
 	/**
 	* Returns the protocol name of this <code>SSLContext</code> object.

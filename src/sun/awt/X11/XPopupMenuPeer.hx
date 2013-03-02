@@ -76,23 +76,23 @@ extern class XPopupMenuPeer extends sun.awt.X11.XMenuWindow implements java.awt.
 	* Returns height of menu window's caption.
 	* Can be overriden for popup menus and tear-off menus
 	*/
-	@:overload override private function getCaptionSize() : java.awt.Dimension;
+	@:overload private function getCaptionSize() : java.awt.Dimension;
 	
 	/**
 	* Paints menu window's caption.
 	* Can be overriden for popup menus and tear-off menus.
 	* Default implementation does nothing
 	*/
-	@:overload override private function paintCaption(g : java.awt.Graphics, rect : java.awt.Rectangle) : Void;
+	@:overload private function paintCaption(g : java.awt.Graphics, rect : java.awt.Rectangle) : Void;
 	
 	/************************************************
 	*
 	* Overriden XBaseMenuWindow functions
 	*
 	************************************************/
-	@:overload override private function doDispose() : Void;
+	@:overload private function doDispose() : Void;
 	
-	@:overload override private function handleEvent(event : java.awt.AWTEvent) : Void;
+	@:overload private function handleEvent(event : java.awt.AWTEvent) : Void;
 	
 	/*
 	* In previous version keys were handled in handleKeyPress.

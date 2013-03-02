@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.ior;
 */
 extern class FreezableList extends java.util.AbstractList<Dynamic>
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	@:overload public function new(delegate : java.util.List<Dynamic>, immutable : Bool) : Void;
 	
@@ -41,15 +41,15 @@ extern class FreezableList extends java.util.AbstractList<Dynamic>
 	
 	@:overload override public function size() : Int;
 	
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
-	@:overload override public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload public function set(index : Int, element : Dynamic) : Dynamic;
 	
-	@:overload override public function add(index : Int, element : Dynamic) : Void;
+	@:overload public function add(index : Int, element : Dynamic) : Void;
 	
-	@:overload override public function remove(index : Int) : Dynamic;
+	@:overload public function remove(index : Int) : Dynamic;
 	
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
+	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
 	
 	
 }

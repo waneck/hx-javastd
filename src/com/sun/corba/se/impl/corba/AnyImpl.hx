@@ -47,14 +47,14 @@ extern class AnyImpl extends org.omg.CORBA.Any
 	*
 	* @result          the TypeCode for the element in the Any
 	*/
-	@:overload override public function type() : org.omg.CORBA.TypeCode;
+	@:overload public function type() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* sets the type of the element to be contained in the Any.
 	*
 	* @param tc                the TypeCode for the element in the Any
 	*/
-	@:overload override public function type(tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload public function type(tc : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* checks for equality between Anys.
@@ -69,167 +69,167 @@ extern class AnyImpl extends org.omg.CORBA.Any
 	*
 	* @result          the OutputStream to marshal value of Any into
 	*/
-	@:overload override public function create_output_stream() : org.omg.CORBA.portable.OutputStream;
+	@:overload public function create_output_stream() : org.omg.CORBA.portable.OutputStream;
 	
 	/**
 	* returns an input stream that an Any value can be marshaled out of.
 	*
 	* @result          the InputStream to marshal value of Any out of.
 	*/
-	@:overload override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
+	@:overload public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
-	@:overload override public function read_value(_in : org.omg.CORBA.portable.InputStream, tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload public function read_value(_in : org.omg.CORBA.portable.InputStream, tc : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload override public function write_value(out : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload public function write_value(out : org.omg.CORBA.portable.OutputStream) : Void;
 	
 	/**
 	* takes a streamable and inserts its reference into the any
 	*
 	* @param s         the streamable to insert
 	*/
-	@:overload override public function insert_Streamable(s : org.omg.CORBA.portable.Streamable) : Void;
+	@:overload public function insert_Streamable(s : org.omg.CORBA.portable.Streamable) : Void;
 	
-	@:overload override public function extract_Streamable() : org.omg.CORBA.portable.Streamable;
-	
-	/**
-	* See the description of the <a href="#anyOps">general Any operations.</a>
-	*/
-	@:overload override public function insert_short(s : java.StdTypes.Int16) : Void;
+	@:overload public function extract_Streamable() : org.omg.CORBA.portable.Streamable;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_short() : java.StdTypes.Int16;
+	@:overload public function insert_short(s : java.StdTypes.Int16) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_long(l : Int) : Void;
+	@:overload public function extract_short() : java.StdTypes.Int16;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_long() : Int;
+	@:overload public function insert_long(l : Int) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_ushort(s : java.StdTypes.Int16) : Void;
+	@:overload public function extract_long() : Int;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_ushort() : java.StdTypes.Int16;
+	@:overload public function insert_ushort(s : java.StdTypes.Int16) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_ulong(l : Int) : Void;
+	@:overload public function extract_ushort() : java.StdTypes.Int16;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_ulong() : Int;
+	@:overload public function insert_ulong(l : Int) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_float(f : Single) : Void;
+	@:overload public function extract_ulong() : Int;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_float() : Single;
+	@:overload public function insert_float(f : Single) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_double(d : Float) : Void;
+	@:overload public function extract_float() : Single;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_double() : Float;
+	@:overload public function insert_double(d : Float) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_longlong(l : haxe.Int64) : Void;
+	@:overload public function extract_double() : Float;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_longlong() : haxe.Int64;
+	@:overload public function insert_longlong(l : haxe.Int64) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_ulonglong(l : haxe.Int64) : Void;
+	@:overload public function extract_longlong() : haxe.Int64;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_ulonglong() : haxe.Int64;
+	@:overload public function insert_ulonglong(l : haxe.Int64) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_boolean(b : Bool) : Void;
+	@:overload public function extract_ulonglong() : haxe.Int64;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_boolean() : Bool;
+	@:overload public function insert_boolean(b : Bool) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_char(c : java.StdTypes.Char16) : Void;
+	@:overload public function extract_boolean() : Bool;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_char() : java.StdTypes.Char16;
+	@:overload public function insert_char(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_wchar(c : java.StdTypes.Char16) : Void;
+	@:overload public function extract_char() : java.StdTypes.Char16;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_wchar() : java.StdTypes.Char16;
+	@:overload public function insert_wchar(c : java.StdTypes.Char16) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_octet(b : java.StdTypes.Int8) : Void;
+	@:overload public function extract_wchar() : java.StdTypes.Char16;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_octet() : java.StdTypes.Int8;
+	@:overload public function insert_octet(b : java.StdTypes.Int8) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_string(s : String) : Void;
+	@:overload public function extract_octet() : java.StdTypes.Int8;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_string() : String;
+	@:overload public function insert_string(s : String) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_wstring(s : String) : Void;
+	@:overload public function extract_string() : String;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_wstring() : String;
+	@:overload public function insert_wstring(s : String) : Void;
+	
+	/**
+	* See the description of the <a href="#anyOps">general Any operations.</a>
+	*/
+	@:overload public function extract_wstring() : String;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
@@ -239,43 +239,43 @@ extern class AnyImpl extends org.omg.CORBA.Any
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_any() : org.omg.CORBA.Any;
+	@:overload public function extract_any() : org.omg.CORBA.Any;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_Object(o : org.omg.CORBA.Object) : Void;
+	@:overload public function insert_Object(o : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* A variant of the insertion operation that takes a typecode
 	* argument as well.
 	*/
-	@:overload override public function insert_Object(o : org.omg.CORBA.Object, tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload public function insert_Object(o : org.omg.CORBA.Object, tc : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_Object() : org.omg.CORBA.Object;
+	@:overload public function extract_Object() : org.omg.CORBA.Object;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function insert_TypeCode(tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload public function insert_TypeCode(tc : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* See the description of the <a href="#anyOps">general Any operations.</a>
 	*/
-	@:overload override public function extract_TypeCode() : org.omg.CORBA.TypeCode;
+	@:overload public function extract_TypeCode() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* @deprecated
 	*/
-	@:overload override public function insert_Principal(p : org.omg.CORBA.Principal) : Void;
+	@:overload public function insert_Principal(p : org.omg.CORBA.Principal) : Void;
 	
 	/**
 	* @deprecated
 	*/
-	@:overload override public function extract_Principal() : org.omg.CORBA.Principal;
+	@:overload public function extract_Principal() : org.omg.CORBA.Principal;
 	
 	/**
 	* Note that the Serializable really should be an IDLEntity of
@@ -283,17 +283,17 @@ extern class AnyImpl extends org.omg.CORBA.Any
 	* we accept and will produce RMI repIds with the latest
 	* calculations if given a non-IDLEntity Serializable.
 	*/
-	@:overload override public function extract_Value() : java.io.Serializable;
+	@:overload public function extract_Value() : java.io.Serializable;
 	
-	@:overload override public function insert_Value(v : java.io.Serializable) : Void;
+	@:overload public function insert_Value(v : java.io.Serializable) : Void;
 	
-	@:overload override public function insert_Value(v : java.io.Serializable, t : org.omg.CORBA.TypeCode) : Void;
+	@:overload public function insert_Value(v : java.io.Serializable, t : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload override public function insert_fixed(value : java.math.BigDecimal) : Void;
+	@:overload public function insert_fixed(value : java.math.BigDecimal) : Void;
 	
-	@:overload override public function insert_fixed(value : java.math.BigDecimal, type : org.omg.CORBA.TypeCode) : Void;
+	@:overload public function insert_fixed(value : java.math.BigDecimal, type : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload override public function extract_fixed() : java.math.BigDecimal;
+	@:overload public function extract_fixed() : java.math.BigDecimal;
 	
 	/**
 	* Utility method for insert_Value and Util.writeAny.

@@ -103,9 +103,9 @@ extern class JAXBContextImpl extends com.sun.xml.internal.bind.api.JAXBRIContext
 	/**
 	* True if this JAXBContext has {@link XmlAttachmentRef}.
 	*/
-	@:overload override public function hasSwaRef() : Bool;
+	@:overload public function hasSwaRef() : Bool;
 	
-	@:overload override public function getRuntimeTypeInfoSet() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfoSet;
+	@:overload public function getRuntimeTypeInfoSet() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeTypeInfoSet;
 	
 	/**
 	* Creates a {@link RuntimeTypeInfoSet}.
@@ -221,11 +221,11 @@ extern class JAXBContextImpl extends com.sun.xml.internal.bind.api.JAXBRIContext
 	
 	@:overload override public function createJAXBIntrospector() : javax.xml.bind.JAXBIntrospector;
 	
-	@:overload override public function generateEpisode(output : javax.xml.transform.Result) : Void;
+	@:overload public function generateEpisode(output : javax.xml.transform.Result) : Void;
 	
 	@:overload override public function generateSchema(outputResolver : javax.xml.bind.SchemaOutputResolver) : Void;
 	
-	@:overload override public function getTypeName(tr : com.sun.xml.internal.bind.api.TypeReference) : javax.xml.namespace.QName;
+	@:overload public function getTypeName(tr : com.sun.xml.internal.bind.api.TypeReference) : javax.xml.namespace.QName;
 	
 	/**
 	* Used for testing.
@@ -236,19 +236,19 @@ extern class JAXBContextImpl extends com.sun.xml.internal.bind.api.JAXBRIContext
 	
 	@:overload override public function createBinder() : javax.xml.bind.Binder<org.w3c.dom.Node>;
 	
-	@:overload override public function getElementName(o : Dynamic) : javax.xml.namespace.QName;
+	@:overload public function getElementName(o : Dynamic) : javax.xml.namespace.QName;
 	
-	@:overload override public function getElementName(o : Class<Dynamic>) : javax.xml.namespace.QName;
+	@:overload public function getElementName(o : Class<Dynamic>) : javax.xml.namespace.QName;
 	
-	@:overload override public function createBridge(ref : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
+	@:overload public function createBridge(ref : com.sun.xml.internal.bind.api.TypeReference) : com.sun.xml.internal.bind.api.Bridge<Dynamic>;
 	
-	@:overload override public function createBridgeContext() : com.sun.xml.internal.bind.api.BridgeContext;
+	@:overload public function createBridgeContext() : com.sun.xml.internal.bind.api.BridgeContext;
 	
-	@:overload override public function getElementPropertyAccessor(wrapperBean : Class<Dynamic>, nsUri : String, localName : String) : com.sun.xml.internal.bind.api.RawAccessor<Dynamic, Dynamic>;
+	@:overload public function getElementPropertyAccessor(wrapperBean : Class<Dynamic>, nsUri : String, localName : String) : com.sun.xml.internal.bind.api.RawAccessor<Dynamic, Dynamic>;
 	
-	@:overload override public function getKnownNamespaceURIs() : java.util.List<String>;
+	@:overload public function getKnownNamespaceURIs() : java.util.List<String>;
 	
-	@:overload override public function getBuildId() : String;
+	@:overload public function getBuildId() : String;
 	
 	@:overload public function toString() : String;
 	
@@ -261,7 +261,7 @@ extern class JAXBContextImpl extends com.sun.xml.internal.bind.api.JAXBRIContext
 	/**
 	* Creates a {@link JAXBContextImpl} that includes the specified additional classes.
 	*/
-	@:overload public function createAugmented(clazz : Class<Dynamic>) : JAXBContextImpl;
+	@:overload public function createAugmented(clazz : Class<Dynamic>) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
 	
 }
@@ -269,31 +269,31 @@ extern class JAXBContextImpl extends com.sun.xml.internal.bind.api.JAXBRIContext
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function new(baseImpl : JAXBContextImpl) : Void;
+	@:overload public function new(baseImpl : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl) : Void;
 	
-	@:overload public function setRetainPropertyInfo(val : Bool) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setRetainPropertyInfo(val : Bool) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setSupressAccessorWarnings(val : Bool) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setSupressAccessorWarnings(val : Bool) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setC14NSupport(val : Bool) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setC14NSupport(val : Bool) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setXmlAccessorFactorySupport(val : Bool) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setXmlAccessorFactorySupport(val : Bool) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setDefaultNsUri(val : String) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setDefaultNsUri(val : String) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setAllNillable(val : Bool) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setAllNillable(val : Bool) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setClasses(val : java.NativeArray<Class<Dynamic>>) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setClasses(val : java.NativeArray<Class<Dynamic>>) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setAnnotationReader(val : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setAnnotationReader(val : com.sun.xml.internal.bind.v2.model.annotation.RuntimeAnnotationReader) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setSubclassReplacements(val : java.util.Map<Class<Dynamic>, Class<Dynamic>>) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setSubclassReplacements(val : java.util.Map<Class<Dynamic>, Class<Dynamic>>) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setTypeRefs(val : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setTypeRefs(val : java.util.Collection<com.sun.xml.internal.bind.api.TypeReference>) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function setImprovedXsiTypeHandling(val : Bool) : JAXBContextImpl_JAXBContextBuilder;
+	@:overload public function setImprovedXsiTypeHandling(val : Bool) : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.JAXBContextImpl_JAXBContextBuilder;
 	
-	@:overload public function build() : JAXBContextImpl;
+	@:overload public function build() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
 	
 }

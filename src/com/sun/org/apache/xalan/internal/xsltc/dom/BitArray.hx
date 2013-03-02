@@ -74,14 +74,14 @@ extern class BitArray implements java.io.Externalizable
 	* Merge two bit arrays. This currently only works for nodes from
 	* a single DOM (because there is only one _mask per array).
 	*/
-	@:overload @:final public function merge(other : BitArray) : BitArray;
+	@:overload @:final public function merge(other : com.sun.org.apache.xalan.internal.xsltc.dom.BitArray) : com.sun.org.apache.xalan.internal.xsltc.dom.BitArray;
 	
 	/**
 	* Resizes the bit array - try to avoid using this method!!!
 	*/
 	@:overload @:final public function resize(newSize : Int) : Void;
 	
-	@:overload public function cloneArray() : BitArray;
+	@:overload public function cloneArray() : com.sun.org.apache.xalan.internal.xsltc.dom.BitArray;
 	
 	@:overload public function writeExternal(out : java.io.ObjectOutput) : Void;
 	

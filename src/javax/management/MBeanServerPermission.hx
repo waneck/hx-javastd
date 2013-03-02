@@ -95,11 +95,11 @@ extern class MBeanServerPermission extends java.security.BasicPermission
 }
 @:internal extern class MBeanServerPermissionCollection extends java.security.PermissionCollection
 {
-	@:overload @:synchronized override public function add(permission : java.security.Permission) : Void;
+	@:overload @:synchronized public function add(permission : java.security.Permission) : Void;
 	
-	@:overload @:synchronized override public function implies(permission : java.security.Permission) : Bool;
+	@:overload @:synchronized public function implies(permission : java.security.Permission) : Bool;
 	
-	@:overload @:synchronized override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload @:synchronized public function elements() : java.util.Enumeration<java.security.Permission>;
 	
 	
 }

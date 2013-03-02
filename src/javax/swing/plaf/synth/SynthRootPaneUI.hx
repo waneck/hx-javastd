@@ -31,7 +31,7 @@ extern class SynthRootPaneUI extends javax.swing.plaf.basic.BasicRootPaneUI impl
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
@@ -60,7 +60,7 @@ extern class SynthRootPaneUI extends javax.swing.plaf.basic.BasicRootPaneUI impl
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -71,7 +71,7 @@ extern class SynthRootPaneUI extends javax.swing.plaf.basic.BasicRootPaneUI impl
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.

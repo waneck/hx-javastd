@@ -31,7 +31,7 @@ extern class WindowsTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 	* @param c the text field
 	* @return the UI
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Paints a background for the view.  This will only be
@@ -66,14 +66,14 @@ extern class WindowsTextFieldUI extends javax.swing.plaf.basic.BasicTextFieldUI
 	* caret out into the field by about a quarter of
 	* a field length if not visible.
 	*/
-	@:overload override private function adjustVisibility(r : java.awt.Rectangle) : Void;
+	@:overload private function adjustVisibility(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gets the painter for the Highlighter.
 	*
 	* @return the painter
 	*/
-	@:overload override private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
+	@:overload private function getSelectionPainter() : javax.swing.text.Highlighter.Highlighter_HighlightPainter;
 	
 	
 }

@@ -80,7 +80,7 @@ extern class Signal
 	* @see sun.misc.SignalHandler#SIG_DFL
 	* @see sun.misc.SignalHandler#SIG_IGN
 	*/
-	@:overload @:synchronized public static function handle(sig : Signal, handler : sun.misc.SignalHandler) : sun.misc.SignalHandler;
+	@:overload @:synchronized public static function handle(sig : sun.misc.Signal, handler : sun.misc.SignalHandler) : sun.misc.SignalHandler;
 	
 	/**
 	* Raises a signal in the current process.
@@ -88,7 +88,7 @@ extern class Signal
 	* @param sig a signal
 	* @see sun.misc.Signal#handle(Signal sig, SignalHandler handler)
 	*/
-	@:overload public static function raise(sig : Signal) : Void;
+	@:overload public static function raise(sig : sun.misc.Signal) : Void;
 	
 	
 }

@@ -40,7 +40,7 @@ extern class GenericAttachingConnector extends com.sun.tools.jdi.ConnectorImpl i
 	* Create an instance of this connector. The resulting AttachingConnector
 	* will have address and timeout connector arguments.
 	*/
-	@:overload public static function create(ts : com.sun.jdi.connect.spi.TransportService) : GenericAttachingConnector;
+	@:overload public static function create(ts : com.sun.jdi.connect.spi.TransportService) : com.sun.tools.jdi.GenericAttachingConnector;
 	
 	/**
 	* Attach to a target VM using the specified address and Connector arguments.

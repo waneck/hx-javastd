@@ -27,11 +27,11 @@ package com.sun.xml.internal.ws.message.jaxb;
 {
 	@:overload public function new(attachemnts : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
-	@:overload override public function addMtomAttachment(data : javax.activation.DataHandler, elementNamespace : String, elementLocalName : String) : String;
+	@:overload public function addMtomAttachment(data : javax.activation.DataHandler, elementNamespace : String, elementLocalName : String) : String;
 	
-	@:overload override public function addMtomAttachment(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, mimeType : String, elementNamespace : String, elementLocalName : String) : String;
+	@:overload public function addMtomAttachment(data : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int, mimeType : String, elementNamespace : String, elementLocalName : String) : String;
 	
-	@:overload override public function addSwaRefAttachment(data : javax.activation.DataHandler) : String;
+	@:overload public function addSwaRefAttachment(data : javax.activation.DataHandler) : String;
 	
 	
 }

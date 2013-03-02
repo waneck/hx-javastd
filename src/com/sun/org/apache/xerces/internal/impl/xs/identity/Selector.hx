@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.impl.xs.identity;
 extern class Selector
 {
 	/** XPath. */
-	private var fXPath(default, null) : Selector_XPath;
+	private var fXPath(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath;
 	
 	/** Identity constraint. */
 	private var fIdentityConstraint(default, null) : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
@@ -29,7 +29,7 @@ extern class Selector
 	private var fIDConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;
 	
 	/** Constructs a selector. */
-	@:overload public function new(xpath : Selector_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
+	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath, identityConstraint : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Void;
 	
 	/** Returns the selector XPath. */
 	@:overload public function getXPath() : com.sun.org.apache.xerces.internal.impl.xpath.XPath;
@@ -82,9 +82,9 @@ extern class Selector
 	private var fMatchedDepth : Int;
 	
 	/** Constructs a selector matcher. */
-	@:overload public function new(xpath : Selector_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, initialDepth : Int) : Void;
+	@:overload public function new(xpath : com.sun.org.apache.xerces.internal.impl.xs.identity.Selector.Selector_XPath, activator : com.sun.org.apache.xerces.internal.impl.xs.identity.FieldActivator, initialDepth : Int) : Void;
 	
-	@:overload override public function startDocumentFragment() : Void;
+	@:overload public function startDocumentFragment() : Void;
 	
 	/**
 	* The start of an element. If the document specifies the start element
@@ -95,9 +95,9 @@ extern class Selector
 	* @param attributes The element attributes.
 	*
 	*/
-	@:overload override public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
+	@:overload public function startElement(element : com.sun.org.apache.xerces.internal.xni.QName, attributes : com.sun.org.apache.xerces.internal.xni.XMLAttributes) : Void;
 	
-	@:overload override public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
+	@:overload public function endElement(element : com.sun.org.apache.xerces.internal.xni.QName, type : com.sun.org.apache.xerces.internal.xs.XSTypeDefinition, nillable : Bool, actualValue : Dynamic, valueType : java.StdTypes.Int16, itemValueType : com.sun.org.apache.xerces.internal.xs.ShortList) : Void;
 	
 	/** Returns the identity constraint. */
 	@:overload public function getIdentityConstraint() : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint;

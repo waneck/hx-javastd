@@ -41,24 +41,24 @@ extern class ToTextSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	*/
 	@:overload public function new(handler : org.xml.sax.ContentHandler, encoding : String) : Void;
 	
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	@:overload override public function comment(data : String) : Void;
 	
 	/**
 	* @see Serializer#getOutputFormat()
 	*/
-	@:overload override public function getOutputFormat() : java.util.Properties;
+	@:overload public function getOutputFormat() : java.util.Properties;
 	
 	/**
 	* @see Serializer#getOutputStream()
 	*/
-	@:overload override public function getOutputStream() : java.io.OutputStream;
+	@:overload public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* @see Serializer#getWriter()
 	*/
-	@:overload override public function getWriter() : java.io.Writer;
+	@:overload public function getWriter() : java.io.Writer;
 	
 	/**
 	* Does nothing because
@@ -75,57 +75,57 @@ extern class ToTextSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	/**
 	* @see DOMSerializer#serialize(Node)
 	*/
-	@:overload override public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* @see SerializationHandler#setEscaping(boolean)
 	*/
-	@:overload override public function setEscaping(escape : Bool) : Bool;
+	@:overload public function setEscaping(escape : Bool) : Bool;
 	
 	/**
 	* @see SerializationHandler#setIndent(boolean)
 	*/
-	@:overload override public function setIndent(indent : Bool) : Void;
+	@:overload public function setIndent(indent : Bool) : Void;
 	
 	/**
 	* @see Serializer#setOutputFormat(Properties)
 	*/
-	@:overload override public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	/**
 	* @see Serializer#setOutputStream(OutputStream)
 	*/
-	@:overload override public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* @see Serializer#setWriter(Writer)
 	*/
-	@:overload override public function setWriter(writer : java.io.Writer) : Void;
+	@:overload public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* @see ExtendedContentHandler#addAttribute(String, String, String, String, String)
 	*/
-	@:overload override public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
+	@:overload public function addAttribute(uri : String, localName : String, rawName : String, type : String, value : String, XSLAttribute : Bool) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.DeclHandler#attributeDecl(String, String, String, String, String)
 	*/
-	@:overload override public function attributeDecl(arg0 : String, arg1 : String, arg2 : String, arg3 : String, arg4 : String) : Void;
+	@:overload public function attributeDecl(arg0 : String, arg1 : String, arg2 : String, arg3 : String, arg4 : String) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.DeclHandler#elementDecl(String, String)
 	*/
-	@:overload override public function elementDecl(arg0 : String, arg1 : String) : Void;
+	@:overload public function elementDecl(arg0 : String, arg1 : String) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.DeclHandler#externalEntityDecl(String, String, String)
 	*/
-	@:overload override public function externalEntityDecl(arg0 : String, arg1 : String, arg2 : String) : Void;
+	@:overload public function externalEntityDecl(arg0 : String, arg1 : String, arg2 : String) : Void;
 	
 	/**
 	* @see org.xml.sax.ext.DeclHandler#internalEntityDecl(String, String)
 	*/
-	@:overload override public function internalEntityDecl(arg0 : String, arg1 : String) : Void;
+	@:overload public function internalEntityDecl(arg0 : String, arg1 : String) : Void;
 	
 	/**
 	* @see org.xml.sax.ContentHandler#endPrefixMapping(String)
@@ -146,7 +146,7 @@ extern class ToTextSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	/**
 	* @see org.xml.sax.ContentHandler#setDocumentLocator(Locator)
 	*/
-	@:overload override public function setDocumentLocator(arg0 : org.xml.sax.Locator) : Void;
+	@:overload public function setDocumentLocator(arg0 : org.xml.sax.Locator) : Void;
 	
 	/**
 	* @see org.xml.sax.ContentHandler#skippedEntity(String)
@@ -161,22 +161,22 @@ extern class ToTextSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#endCDATA()
 	*/
-	@:overload override public function endCDATA() : Void;
+	@:overload public function endCDATA() : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#endDTD()
 	*/
-	@:overload override public function endDTD() : Void;
+	@:overload public function endDTD() : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#startCDATA()
 	*/
-	@:overload override public function startCDATA() : Void;
+	@:overload public function startCDATA() : Void;
 	
 	/**
 	* @see org.xml.sax.ext.LexicalHandler#startEntity(String)
 	*/
-	@:overload override public function startEntity(arg0 : String) : Void;
+	@:overload public function startEntity(arg0 : String) : Void;
 	
 	/**
 	* From XSLTC
@@ -206,13 +206,13 @@ extern class ToTextSAXHandler extends com.sun.org.apache.xml.internal.serializer
 	/**
 	* From XSLTC
 	*/
-	@:overload override public function addAttribute(name : String, value : String) : Void;
+	@:overload public function addAttribute(name : String, value : String) : Void;
 	
 	@:overload override public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
 	
 	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload override public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
+	@:overload public function namespaceAfterStartElement(prefix : String, uri : String) : Void;
 	
 	
 }

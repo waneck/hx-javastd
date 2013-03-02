@@ -69,7 +69,7 @@ package sun.misc;
 	* @param jar the JAR file to get the index from.
 	* @exception IOException if an I/O error has occurred.
 	*/
-	@:overload public static function getJarIndex(jar : java.util.jar.JarFile) : JarIndex;
+	@:overload public static function getJarIndex(jar : java.util.jar.JarFile) : sun.misc.JarIndex;
 	
 	/**
 	* Returns the jar index, or <code>null</code> if none.
@@ -77,7 +77,7 @@ package sun.misc;
 	* @param jar the JAR file to get the index from.
 	* @exception IOException if an I/O error has occurred.
 	*/
-	@:overload public static function getJarIndex(jar : java.util.jar.JarFile, metaIndex : sun.misc.MetaIndex) : JarIndex;
+	@:overload public static function getJarIndex(jar : java.util.jar.JarFile, metaIndex : sun.misc.MetaIndex) : sun.misc.JarIndex;
 	
 	/**
 	* Returns the jar files that are defined in this index.
@@ -132,7 +132,7 @@ package sun.misc;
 	*                index.
 	*
 	*/
-	@:overload public function merge(toIndex : JarIndex, path : String) : Void;
+	@:overload public function merge(toIndex : sun.misc.JarIndex, path : String) : Void;
 	
 	
 }

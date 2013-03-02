@@ -60,9 +60,9 @@ extern class InstructionHandle implements java.io.Serializable
 {
 	private var i_position : Int;
 	
-	@:overload @:final public function getNext() : InstructionHandle;
+	@:overload @:final public function getNext() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
-	@:overload @:final public function getPrev() : InstructionHandle;
+	@:overload @:final public function getPrev() : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	@:overload @:final public function getInstruction() : com.sun.org.apache.bcel.internal.generic.Instruction;
 	

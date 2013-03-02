@@ -347,19 +347,19 @@ package java.util;
 	
 	
 }
-@:native('java$util$HashMap$ValueIterator') @:internal extern class HashMap_ValueIterator extends HashMap_HashIterator<Dynamic>
+@:native('java$util$HashMap$ValueIterator') @:internal extern class HashMap_ValueIterator extends java.util.HashMap.HashMap_HashIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$HashMap$KeyIterator') @:internal extern class HashMap_KeyIterator extends HashMap_HashIterator<Dynamic>
+@:native('java$util$HashMap$KeyIterator') @:internal extern class HashMap_KeyIterator extends java.util.HashMap.HashMap_HashIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$HashMap$EntryIterator') @:internal extern class HashMap_EntryIterator extends HashMap_HashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$HashMap$EntryIterator') @:internal extern class HashMap_EntryIterator extends java.util.HashMap.HashMap_HashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	

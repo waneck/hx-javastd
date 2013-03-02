@@ -69,7 +69,7 @@ extern class MotifTextUI
 	* @param e the focus event
 	* @see FocusListener#focusGained
 	*/
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Called when the component containing the caret loses
@@ -79,7 +79,7 @@ extern class MotifTextUI
 	* @param e the focus event
 	* @see FocusListener#focusLost
 	*/
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
 	/**
 	* Damages the area surrounding the caret to cause
@@ -89,7 +89,7 @@ extern class MotifTextUI
 	* @param r  the current location of the caret, does nothing if null
 	* @see #paint
 	*/
-	@:overload override private function damage(r : java.awt.Rectangle) : Void;
+	@:overload private function damage(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Renders the caret as a vertical line.  If this is reimplemented
@@ -101,7 +101,7 @@ extern class MotifTextUI
 	* @param g the graphics context
 	* @see #damage
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

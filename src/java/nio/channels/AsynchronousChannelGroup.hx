@@ -66,7 +66,7 @@ extern class AsynchronousChannelGroup
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function withFixedThreadPool(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : AsynchronousChannelGroup;
+	@:overload public static function withFixedThreadPool(nThreads : Int, threadFactory : java.util.concurrent.ThreadFactory) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Creates an asynchronous channel group with a given thread pool that
@@ -107,7 +107,7 @@ extern class AsynchronousChannelGroup
 	*
 	* @see java.util.concurrent.Executors#newCachedThreadPool
 	*/
-	@:overload public static function withCachedThreadPool(executor : java.util.concurrent.ExecutorService, initialSize : Int) : AsynchronousChannelGroup;
+	@:overload public static function withCachedThreadPool(executor : java.util.concurrent.ExecutorService, initialSize : Int) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Creates an asynchronous channel group with a given thread pool.
@@ -142,7 +142,7 @@ extern class AsynchronousChannelGroup
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function withThreadPool(executor : java.util.concurrent.ExecutorService) : AsynchronousChannelGroup;
+	@:overload public static function withThreadPool(executor : java.util.concurrent.ExecutorService) : java.nio.channels.AsynchronousChannelGroup;
 	
 	/**
 	* Tells whether or not this asynchronous channel group is shutdown.

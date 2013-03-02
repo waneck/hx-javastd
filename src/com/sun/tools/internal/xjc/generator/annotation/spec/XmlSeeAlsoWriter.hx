@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlSeeAlsoWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlSeeAlso>
 {
-	@:overload public function value(value : Class<Dynamic>) : XmlSeeAlsoWriter;
+	@:overload public function value(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSeeAlsoWriter;
 	
-	@:overload public function value(value : com.sun.codemodel.internal.JType) : XmlSeeAlsoWriter;
+	@:overload public function value(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSeeAlsoWriter;
 	
 	
 }

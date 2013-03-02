@@ -27,7 +27,7 @@ extern class Flags
 {
 	@:overload public static function toString(flags : haxe.Int64) : String;
 	
-	@:overload public static function asFlagSet(mask : haxe.Int64) : java.util.EnumSet<Flags_Flag>;
+	@:overload public static function asFlagSet(mask : haxe.Int64) : java.util.EnumSet<com.sun.tools.javac.code.Flags.Flags_Flag>;
 	
 	/* Standard Java flags.
 	*/

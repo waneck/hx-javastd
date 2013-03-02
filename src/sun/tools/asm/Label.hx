@@ -30,7 +30,7 @@ extern class Label extends sun.tools.asm.Instruction
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

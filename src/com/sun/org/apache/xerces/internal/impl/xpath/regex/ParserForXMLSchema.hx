@@ -49,9 +49,9 @@ package com.sun.org.apache.xerces.internal.impl.xpath.regex;
 	* @param useNrage Ignored.
 	* @return This returns no NrageToken.
 	*/
-	@:overload override private function parseCharacterClass(useNrange : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload private function parseCharacterClass(useNrange : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
-	@:overload override private function parseSetOperations() : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
+	@:overload private function parseSetOperations() : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	
 	@:overload @:synchronized private static function getRange(name : String, positive : Bool) : com.sun.org.apache.xerces.internal.impl.xpath.regex.RangeToken;
 	

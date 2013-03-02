@@ -39,7 +39,7 @@ extern interface AMXMBeanInterface
 	/** "go up one level": the MBean containing this one, can be null for root
 	* @return The container of this MBean (null if already at root).
 	*/
-	@:overload public function getParent() : AMXMBeanInterface;
+	@:overload public function getParent() : com.sun.org.glassfish.gmbal.AMXMBeanInterface;
 	
 	/** Containment hierarchy:
 	Get all AMXMBeanInterface contained by this one, in no particular order.
@@ -47,7 +47,7 @@ extern interface AMXMBeanInterface
 	* Note that using an array sidesteps Map/Set/OpenType issues
 	* @return All children of this AMXMBeanInterface MBean.
 	*/
-	@:overload public function getChildren() : java.NativeArray<AMXMBeanInterface>;
+	@:overload public function getChildren() : java.NativeArray<com.sun.org.glassfish.gmbal.AMXMBeanInterface>;
 	
 	
 }

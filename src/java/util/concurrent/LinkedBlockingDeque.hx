@@ -334,7 +334,7 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	*/
 	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Atomically removes all of the elements from this deque.
@@ -394,12 +394,12 @@ extern class LinkedBlockingDeque<E> extends java.util.AbstractQueue<E> implement
 	
 }
 /** Forward iterator */
-@:native('java$util$concurrent$LinkedBlockingDeque$Itr') @:internal extern class LinkedBlockingDeque_Itr extends LinkedBlockingDeque_AbstractItr
+@:native('java$util$concurrent$LinkedBlockingDeque$Itr') @:internal extern class LinkedBlockingDeque_Itr extends java.util.concurrent.LinkedBlockingDeque.LinkedBlockingDeque_AbstractItr
 {
 	
 }
 /** Descending iterator */
-@:native('java$util$concurrent$LinkedBlockingDeque$DescendingItr') @:internal extern class LinkedBlockingDeque_DescendingItr extends LinkedBlockingDeque_AbstractItr
+@:native('java$util$concurrent$LinkedBlockingDeque$DescendingItr') @:internal extern class LinkedBlockingDeque_DescendingItr extends java.util.concurrent.LinkedBlockingDeque.LinkedBlockingDeque_AbstractItr
 {
 	
 }

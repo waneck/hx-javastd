@@ -25,23 +25,23 @@ package sun.management.counter.perf;
 */
 @:internal extern class PerfDataType
 {
-	public static var BOOLEAN(default, null) : PerfDataType;
+	public static var BOOLEAN(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var CHAR(default, null) : PerfDataType;
+	public static var CHAR(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var FLOAT(default, null) : PerfDataType;
+	public static var FLOAT(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var DOUBLE(default, null) : PerfDataType;
+	public static var DOUBLE(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var BYTE(default, null) : PerfDataType;
+	public static var BYTE(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var SHORT(default, null) : PerfDataType;
+	public static var SHORT(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var INT(default, null) : PerfDataType;
+	public static var INT(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var LONG(default, null) : PerfDataType;
+	public static var LONG(default, null) : sun.management.counter.perf.PerfDataType;
 	
-	public static var ILLEGAL(default, null) : PerfDataType;
+	public static var ILLEGAL(default, null) : sun.management.counter.perf.PerfDataType;
 	
 	@:overload public function toString() : String;
 	
@@ -56,7 +56,7 @@ package sun.management.counter.perf;
 	* @param   i  an integer representation of a PerfDataType
 	* @return     The PerfDataType object for <code>i</code>
 	*/
-	@:overload public static function toPerfDataType(type : java.StdTypes.Int8) : PerfDataType;
+	@:overload public static function toPerfDataType(type : java.StdTypes.Int8) : sun.management.counter.perf.PerfDataType;
 	
 	
 }

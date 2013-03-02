@@ -26,23 +26,23 @@ package java.nio;
 //// -- This file was mechanically generated: Do not edit! -- //
 @:internal extern class ByteBufferAsShortBufferRL extends java.nio.ByteBufferAsShortBufferL
 {
-	@:overload override public function slice() : java.nio.ShortBuffer;
+	@:overload public function slice() : java.nio.ShortBuffer;
 	
-	@:overload override public function duplicate() : java.nio.ShortBuffer;
+	@:overload public function duplicate() : java.nio.ShortBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.ShortBuffer;
+	@:overload public function asReadOnlyBuffer() : java.nio.ShortBuffer;
 	
-	@:overload override public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload public function put(x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
+	@:overload public function put(i : Int, x : java.StdTypes.Int16) : java.nio.ShortBuffer;
 	
-	@:overload override public function compact() : java.nio.ShortBuffer;
+	@:overload public function compact() : java.nio.ShortBuffer;
 	
-	@:overload override public function isDirect() : Bool;
+	@:overload public function isDirect() : Bool;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload public function order() : java.nio.ByteOrder;
 	
 	
 }

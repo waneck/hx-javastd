@@ -110,7 +110,7 @@ package sun.awt.X11;
 	
 	@:overload @:abstract public function isDragOverComponent() : Bool;
 	
-	@:overload public function adjustEventForForwarding(xclient : sun.awt.X11.XClientMessageEvent, entry : XDropTargetProtocol_EmbedderRegistryEntry) : Void;
+	@:overload public function adjustEventForForwarding(xclient : sun.awt.X11.XClientMessageEvent, entry : sun.awt.X11.XDropTargetProtocol.XDropTargetProtocol_EmbedderRegistryEntry) : Void;
 	
 	@:overload @:abstract public function forwardEventToEmbedded(embedded : haxe.Int64, ctxt : haxe.Int64, eventID : Int) : Bool;
 	
@@ -122,7 +122,7 @@ package sun.awt.X11;
 	
 	@:overload @:final private function putEmbedderRegistryEntry(embedder : haxe.Int64, overriden : Bool, version : Int, proxy : haxe.Int64) : Void;
 	
-	@:overload @:final private function getEmbedderRegistryEntry(embedder : haxe.Int64) : XDropTargetProtocol_EmbedderRegistryEntry;
+	@:overload @:final private function getEmbedderRegistryEntry(embedder : haxe.Int64) : sun.awt.X11.XDropTargetProtocol.XDropTargetProtocol_EmbedderRegistryEntry;
 	
 	@:overload @:final private function removeEmbedderRegistryEntry(embedder : haxe.Int64) : Void;
 	

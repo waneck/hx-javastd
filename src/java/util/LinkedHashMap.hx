@@ -293,19 +293,19 @@ package java.util;
 	
 	
 }
-@:native('java$util$LinkedHashMap$KeyIterator') @:internal extern class LinkedHashMap_KeyIterator extends LinkedHashMap_LinkedHashIterator<Dynamic>
+@:native('java$util$LinkedHashMap$KeyIterator') @:internal extern class LinkedHashMap_KeyIterator extends java.util.LinkedHashMap.LinkedHashMap_LinkedHashIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$LinkedHashMap$ValueIterator') @:internal extern class LinkedHashMap_ValueIterator extends LinkedHashMap_LinkedHashIterator<Dynamic>
+@:native('java$util$LinkedHashMap$ValueIterator') @:internal extern class LinkedHashMap_ValueIterator extends java.util.LinkedHashMap.LinkedHashMap_LinkedHashIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
 	
 }
-@:native('java$util$LinkedHashMap$EntryIterator') @:internal extern class LinkedHashMap_EntryIterator extends LinkedHashMap_LinkedHashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
+@:native('java$util$LinkedHashMap$EntryIterator') @:internal extern class LinkedHashMap_EntryIterator extends java.util.LinkedHashMap.LinkedHashMap_LinkedHashIterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload override public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	

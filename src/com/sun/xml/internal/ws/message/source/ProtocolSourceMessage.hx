@@ -27,37 +27,37 @@ extern class ProtocolSourceMessage extends com.sun.xml.internal.ws.api.message.M
 {
 	@:overload public function new(source : javax.xml.transform.Source, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : Void;
 	
-	@:overload override public function hasHeaders() : Bool;
+	@:overload public function hasHeaders() : Bool;
 	
-	@:overload override public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
+	@:overload public function getHeaders() : com.sun.xml.internal.ws.api.message.HeaderList;
 	
-	@:overload override public function getPayloadLocalPart() : String;
+	@:overload public function getPayloadLocalPart() : String;
 	
-	@:overload override public function getPayloadNamespaceURI() : String;
+	@:overload public function getPayloadNamespaceURI() : String;
 	
-	@:overload override public function hasPayload() : Bool;
+	@:overload public function hasPayload() : Bool;
 	
-	@:overload override public function readPayloadAsSource() : javax.xml.transform.Source;
+	@:overload public function readPayloadAsSource() : javax.xml.transform.Source;
 	
-	@:overload override public function readPayload() : javax.xml.stream.XMLStreamReader;
+	@:overload public function readPayload() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload public function writePayloadTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload public function writeTo(sw : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function copy() : com.sun.xml.internal.ws.api.message.Message;
+	@:overload public function copy() : com.sun.xml.internal.ws.api.message.Message;
 	
-	@:overload override public function readEnvelopeAsSource() : javax.xml.transform.Source;
+	@:overload public function readEnvelopeAsSource() : javax.xml.transform.Source;
 	
-	@:overload override public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
+	@:overload public function readAsSOAPMessage() : javax.xml.soap.SOAPMessage;
 	
-	@:overload override public function readAsSOAPMessage(packet : com.sun.xml.internal.ws.api.message.Packet, inbound : Bool) : javax.xml.soap.SOAPMessage;
+	@:overload public function readAsSOAPMessage(packet : com.sun.xml.internal.ws.api.message.Packet, inbound : Bool) : javax.xml.soap.SOAPMessage;
 	
-	@:overload override public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
+	@:overload public function readPayloadAsJAXB<T>(unmarshaller : javax.xml.bind.Unmarshaller) : T;
 	
-	@:overload override public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
+	@:overload public function readPayloadAsJAXB<T>(bridge : com.sun.xml.internal.bind.api.Bridge<T>) : T;
 	
-	@:overload override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	
 }

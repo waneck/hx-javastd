@@ -48,7 +48,7 @@ package java.nio.file;
 	*
 	* @return  the event kind
 	*/
-	@:overload public function kind() : WatchEvent_Kind<T>;
+	@:overload public function kind() : java.nio.file.WatchEvent.WatchEvent_Kind<T>;
 	
 	/**
 	* Returns the event count. If the event count is greater than {@code 1}

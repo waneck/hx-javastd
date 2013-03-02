@@ -101,7 +101,7 @@ extern interface AnnotationVisitor
 	*         fully visited before calling other methods on this annotation
 	*         visitor</i>.
 	*/
-	@:overload public function visitAnnotation(name : String, desc : String) : AnnotationVisitor;
+	@:overload public function visitAnnotation(name : String, desc : String) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
 	/**
 	* Visits an array value of the annotation. Note that arrays of primitive
@@ -116,7 +116,7 @@ extern interface AnnotationVisitor
 	*         visitor are ignored. <i>All the array values must be visited
 	*         before calling other methods on this annotation visitor</i>.
 	*/
-	@:overload public function visitArray(name : String) : AnnotationVisitor;
+	@:overload public function visitArray(name : String) : com.sun.xml.internal.ws.org.objectweb.asm.AnnotationVisitor;
 	
 	/**
 	* Visits the end of the annotation.

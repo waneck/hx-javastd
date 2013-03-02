@@ -35,7 +35,7 @@ extern class Statement extends sun.tools.tree.Node
 	/**
 	* An empty statement.  Its costInline is infinite.
 	*/
-	public static var empty(default, null) : Statement;
+	public static var empty(default, null) : sun.tools.tree.Statement;
 	
 	/**
 	* The largest possible interesting inline cost value.
@@ -46,7 +46,7 @@ extern class Statement extends sun.tools.tree.Node
 	* Insert a bit of code at the front of a statement.
 	* Side-effect s2, if it is a CompoundStatement.
 	*/
-	@:overload public static function insertStatement(s1 : Statement, s2 : Statement) : Statement;
+	@:overload public static function insertStatement(s1 : sun.tools.tree.Statement, s2 : sun.tools.tree.Statement) : sun.tools.tree.Statement;
 	
 	/**
 	* Set the label of a statement
@@ -68,12 +68,12 @@ extern class Statement extends sun.tools.tree.Node
 	/**
 	* Inline
 	*/
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Statement;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Statement;
 	
 	/**
 	* Eliminate this statement, which is only possible if it has no label.
 	*/
-	@:overload public function eliminate(env : sun.tools.java.Environment, s : Statement) : Statement;
+	@:overload public function eliminate(env : sun.tools.java.Environment, s : sun.tools.tree.Statement) : sun.tools.tree.Statement;
 	
 	/**
 	* Code
@@ -93,7 +93,7 @@ extern class Statement extends sun.tools.tree.Node
 	/**
 	* Create a copy of the statement for method inlining
 	*/
-	@:overload public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : Statement;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context, valNeeded : Bool) : sun.tools.tree.Statement;
 	
 	@:overload public function costInline(thresh : Int, env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Int;
 	

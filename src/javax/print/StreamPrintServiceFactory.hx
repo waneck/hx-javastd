@@ -47,7 +47,7 @@ extern class StreamPrintServiceFactory
 	* @return - matching factories for stream print service instance,
 	*           empty if no suitable factories could be located.
 	*/
-	@:overload public static function lookupStreamPrintServiceFactories(flavor : javax.print.DocFlavor, outputMimeType : String) : java.NativeArray<StreamPrintServiceFactory>;
+	@:overload public static function lookupStreamPrintServiceFactories(flavor : javax.print.DocFlavor, outputMimeType : String) : java.NativeArray<javax.print.StreamPrintServiceFactory>;
 	
 	/** Queries the factory for the document format that is emitted
 	* by printers obtained from this factory.

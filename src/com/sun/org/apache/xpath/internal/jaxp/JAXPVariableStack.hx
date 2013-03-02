@@ -23,7 +23,7 @@ extern class JAXPVariableStack extends com.sun.org.apache.xpath.internal.Variabl
 {
 	@:overload public function new(resolver : javax.xml.xpath.XPathVariableResolver) : Void;
 	
-	@:overload override public function getVariableOrParam(xctxt : com.sun.org.apache.xpath.internal.XPathContext, qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload public function getVariableOrParam(xctxt : com.sun.org.apache.xpath.internal.XPathContext, qname : com.sun.org.apache.xml.internal.utils.QName) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

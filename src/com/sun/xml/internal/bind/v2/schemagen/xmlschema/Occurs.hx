@@ -25,11 +25,11 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface Occurs extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function minOccurs(value : Int) : Occurs;
+	@:overload public function minOccurs(value : Int) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Occurs;
 	
-	@:overload public function maxOccurs(value : String) : Occurs;
+	@:overload public function maxOccurs(value : String) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Occurs;
 	
-	@:overload public function maxOccurs(value : Int) : Occurs;
+	@:overload public function maxOccurs(value : Int) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.Occurs;
 	
 	
 }

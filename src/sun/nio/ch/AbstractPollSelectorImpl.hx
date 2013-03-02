@@ -36,11 +36,11 @@ package sun.nio.ch;
 	
 	private var totalChannels : Int;
 	
-	@:overload override public function wakeup() : java.nio.channels.Selector;
+	@:overload public function wakeup() : java.nio.channels.Selector;
 	
-	@:overload @:abstract override private function doSelect(timeout : haxe.Int64) : Int;
+	@:overload @:abstract private function doSelect(timeout : haxe.Int64) : Int;
 	
-	@:overload override private function implClose() : Void;
+	@:overload private function implClose() : Void;
 	
 	@:overload @:abstract private function implCloseInterrupt() : Void;
 	
@@ -51,9 +51,9 @@ package sun.nio.ch;
 	*/
 	@:overload private function updateSelectedKeys() : Int;
 	
-	@:overload override private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload override private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
 	
 }

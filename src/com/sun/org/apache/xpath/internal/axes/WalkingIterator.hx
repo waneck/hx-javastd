@@ -45,7 +45,7 @@ extern class WalkingIterator extends com.sun.org.apache.xpath.internal.axes.LocP
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Reset the iterator.

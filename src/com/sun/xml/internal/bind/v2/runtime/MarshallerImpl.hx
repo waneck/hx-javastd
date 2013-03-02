@@ -43,13 +43,13 @@ extern class MarshallerImpl extends javax.xml.bind.helpers.AbstractMarshallerImp
 	*/
 	@:require(java1) @:overload public function marshal(obj : Dynamic, out : java.io.OutputStream, inscopeNamespace : javax.xml.namespace.NamespaceContext) : Void;
 	
-	@:overload override public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLEventWriter) : Void;
+	@:overload public function marshal(obj : Dynamic, writer : javax.xml.stream.XMLEventWriter) : Void;
 	
 	@:overload public function marshal(obj : Dynamic, output : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput) : Void;
 	
-	@:overload override public function marshal(target : Dynamic, result : javax.xml.transform.Result) : Void;
+	@:overload public function marshal(target : Dynamic, result : javax.xml.transform.Result) : Void;
 	
 	/**
 	* Used by {@link BridgeImpl} to write an arbitrary object as a fragment.
@@ -66,30 +66,30 @@ extern class MarshallerImpl extends javax.xml.bind.helpers.AbstractMarshallerImp
 	
 	@:overload public function createWriter(os : java.io.OutputStream, encoding : String) : com.sun.xml.internal.bind.v2.runtime.output.XmlOutput;
 	
-	@:overload override public function getProperty(name : String) : Dynamic;
+	@:overload public function getProperty(name : String) : Dynamic;
 	
-	@:overload override public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload public function setProperty(name : String, value : Dynamic) : Void;
 	
-	@:overload override public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
+	@:overload public function setAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>, adapter : A) : Void;
 	
-	@:overload override public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
+	@:overload public function getAdapter<A : javax.xml.bind.annotation.adapters.XmlAdapter<Dynamic, Dynamic>>(type : Class<A>) : A;
 	
-	@:overload override public function setAttachmentMarshaller(am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
+	@:overload public function setAttachmentMarshaller(am : javax.xml.bind.attachment.AttachmentMarshaller) : Void;
 	
-	@:overload override public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
+	@:overload public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
 	
-	@:overload override public function getSchema() : javax.xml.validation.Schema;
+	@:overload public function getSchema() : javax.xml.validation.Schema;
 	
-	@:overload override public function setSchema(s : javax.xml.validation.Schema) : Void;
+	@:overload public function setSchema(s : javax.xml.validation.Schema) : Void;
 	
 	/**
 	* Default error handling behavior fot {@link Marshaller}.
 	*/
 	@:overload public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
-	@:overload override public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
+	@:overload public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
 	
-	@:overload override public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
+	@:overload public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
 	
 	private static var INDENT_STRING(default, null) : String;
 	

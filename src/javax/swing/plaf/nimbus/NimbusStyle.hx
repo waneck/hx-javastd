@@ -183,7 +183,7 @@ extern class NimbusStyle extends javax.swing.plaf.synth.SynthStyle
 {
 	@:overload public function toString() : String;
 	
-	@:overload public function clone() : NimbusStyle_RuntimeState;
+	@:overload public function clone() : javax.swing.plaf.nimbus.NimbusStyle.NimbusStyle_RuntimeState;
 	
 	
 }

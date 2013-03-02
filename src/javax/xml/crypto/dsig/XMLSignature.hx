@@ -93,7 +93,7 @@ extern interface XMLSignature extends javax.xml.crypto.XMLStructure
 	*
 	* @return the signature value
 	*/
-	@:overload public function getSignatureValue() : XMLSignature_SignatureValue;
+	@:overload public function getSignatureValue() : javax.xml.crypto.dsig.XMLSignature.XMLSignature_SignatureValue;
 	
 	/**
 	* Signs this <code>XMLSignature</code>.

@@ -61,7 +61,7 @@ package com.sun.xml.internal.ws.handler;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$DOMLogicalMessageImpl') @:internal extern class LogicalMessageImpl_DOMLogicalMessageImpl extends LogicalMessageImpl_SourceLogicalMessageImpl
+@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$DOMLogicalMessageImpl') @:internal extern class LogicalMessageImpl_DOMLogicalMessageImpl extends com.sun.xml.internal.ws.handler.LogicalMessageImpl.LogicalMessageImpl_SourceLogicalMessageImpl
 {
 	@:overload public function new(dom : javax.xml.transform.dom.DOMSource) : Void;
 	
@@ -71,7 +71,7 @@ package com.sun.xml.internal.ws.handler;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$EmptyLogicalMessageImpl') @:internal extern class LogicalMessageImpl_EmptyLogicalMessageImpl extends LogicalMessageImpl_ImmutableLM
+@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$EmptyLogicalMessageImpl') @:internal extern class LogicalMessageImpl_EmptyLogicalMessageImpl extends com.sun.xml.internal.ws.handler.LogicalMessageImpl.LogicalMessageImpl_ImmutableLM
 {
 	@:overload public function new() : Void;
 	
@@ -83,7 +83,7 @@ package com.sun.xml.internal.ws.handler;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$JAXBLogicalMessageImpl') @:internal extern class LogicalMessageImpl_JAXBLogicalMessageImpl extends LogicalMessageImpl_ImmutableLM
+@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$JAXBLogicalMessageImpl') @:internal extern class LogicalMessageImpl_JAXBLogicalMessageImpl extends com.sun.xml.internal.ws.handler.LogicalMessageImpl.LogicalMessageImpl_ImmutableLM
 {
 	@:overload public function new(ctxt : javax.xml.bind.JAXBContext, o : Dynamic) : Void;
 	
@@ -95,7 +95,7 @@ package com.sun.xml.internal.ws.handler;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$SourceLogicalMessageImpl') @:internal extern class LogicalMessageImpl_SourceLogicalMessageImpl extends LogicalMessageImpl_ImmutableLM
+@:native('com$sun$xml$internal$ws$handler$LogicalMessageImpl$SourceLogicalMessageImpl') @:internal extern class LogicalMessageImpl_SourceLogicalMessageImpl extends com.sun.xml.internal.ws.handler.LogicalMessageImpl.LogicalMessageImpl_ImmutableLM
 {
 	@:overload public function new(source : javax.xml.transform.Source) : Void;
 	

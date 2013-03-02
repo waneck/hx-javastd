@@ -25,7 +25,7 @@ package javax.swing.plaf.nimbus;
 */
 @:internal extern class LoweredBorder extends javax.swing.plaf.nimbus.AbstractRegionPainter implements javax.swing.border.Border
 {
-	@:overload override private function getExtendedCacheKeys(c : javax.swing.JComponent) : java.NativeArray<Dynamic>;
+	@:overload private function getExtendedCacheKeys(c : javax.swing.JComponent) : java.NativeArray<Dynamic>;
 	
 	/**
 	* Actually performs the painting operation. Subclasses must implement this
@@ -49,7 +49,7 @@ package javax.swing.plaf.nimbus;
 	*               painting the foreground, this value may differ from
 	*               c.getHeight().
 	*/
-	@:overload override private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
+	@:overload private function doPaint(g : java.awt.Graphics2D, c : javax.swing.JComponent, width : Int, height : Int, extendedCacheKeys : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* <p>Gets the PaintContext for this painting operation. This method is
@@ -65,7 +65,7 @@ package javax.swing.plaf.nimbus;
 	*
 	* @return a PaintContext associated with this paint operation.
 	*/
-	@:overload override private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
+	@:overload private function getPaintContext() : javax.swing.plaf.nimbus.AbstractRegionPainter.AbstractRegionPainter_PaintContext;
 	
 	/**
 	* Returns the insets of the border.

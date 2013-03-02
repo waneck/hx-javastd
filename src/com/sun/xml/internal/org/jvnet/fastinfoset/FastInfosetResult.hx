@@ -29,9 +29,9 @@ extern class FastInfosetResult extends javax.xml.transform.sax.SAXResult
 {
 	@:overload public function new(outputStream : java.io.OutputStream) : Void;
 	
-	@:overload override public function getHandler() : org.xml.sax.ContentHandler;
+	@:overload public function getHandler() : org.xml.sax.ContentHandler;
 	
-	@:overload override public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	@:overload public function getOutputStream() : java.io.OutputStream;
 	

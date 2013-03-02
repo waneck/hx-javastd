@@ -49,59 +49,59 @@ extern class StandardGlyphVector extends java.awt.font.GlyphVector
 	* and AA!="GASP" in the FRC - since this only occurs for LCD text we don't
 	* need to check any more precisely what value is in the FRC.
 	*/
-	@:overload public static function getStandardGV(gv : java.awt.font.GlyphVector, info : sun.java2d.loops.FontInfo) : StandardGlyphVector;
+	@:overload public static function getStandardGV(gv : java.awt.font.GlyphVector, info : sun.java2d.loops.FontInfo) : sun.font.StandardGlyphVector;
 	
-	@:overload override public function getFont() : java.awt.Font;
+	@:overload public function getFont() : java.awt.Font;
 	
-	@:overload override public function getFontRenderContext() : java.awt.font.FontRenderContext;
+	@:overload public function getFontRenderContext() : java.awt.font.FontRenderContext;
 	
-	@:overload override public function performDefaultLayout() : Void;
+	@:overload public function performDefaultLayout() : Void;
 	
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload public function getNumGlyphs() : Int;
 	
-	@:overload override public function getGlyphCode(glyphIndex : Int) : Int;
+	@:overload public function getGlyphCode(glyphIndex : Int) : Int;
 	
-	@:overload override public function getGlyphCodes(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload public function getGlyphCodes(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload override public function getGlyphCharIndex(ix : Int) : Int;
+	@:overload public function getGlyphCharIndex(ix : Int) : Int;
 	
-	@:overload override public function getGlyphCharIndices(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload public function getGlyphCharIndices(start : Int, count : Int, result : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
-	@:overload override public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getPixelBounds(renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload public function getPixelBounds(renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload override public function getOutline() : java.awt.Shape;
+	@:overload public function getOutline() : java.awt.Shape;
 	
-	@:overload override public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload override public function getGlyphOutline(ix : Int) : java.awt.Shape;
+	@:overload public function getGlyphOutline(ix : Int) : java.awt.Shape;
 	
-	@:overload override public function getGlyphOutline(ix : Int, x : Single, y : Single) : java.awt.Shape;
+	@:overload public function getGlyphOutline(ix : Int, x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload override public function getGlyphPosition(ix : Int) : java.awt.geom.Point2D;
+	@:overload public function getGlyphPosition(ix : Int) : java.awt.geom.Point2D;
 	
-	@:overload override public function setGlyphPosition(ix : Int, pos : java.awt.geom.Point2D) : Void;
+	@:overload public function setGlyphPosition(ix : Int, pos : java.awt.geom.Point2D) : Void;
 	
-	@:overload override public function getGlyphTransform(ix : Int) : java.awt.geom.AffineTransform;
+	@:overload public function getGlyphTransform(ix : Int) : java.awt.geom.AffineTransform;
 	
-	@:overload override public function setGlyphTransform(ix : Int, newTX : java.awt.geom.AffineTransform) : Void;
+	@:overload public function setGlyphTransform(ix : Int, newTX : java.awt.geom.AffineTransform) : Void;
 	
-	@:overload override public function getLayoutFlags() : Int;
+	@:overload public function getLayoutFlags() : Int;
 	
-	@:overload override public function getGlyphPositions(start : Int, count : Int, result : java.NativeArray<Single>) : java.NativeArray<Single>;
+	@:overload public function getGlyphPositions(start : Int, count : Int, result : java.NativeArray<Single>) : java.NativeArray<Single>;
 	
-	@:overload override public function getGlyphLogicalBounds(ix : Int) : java.awt.Shape;
+	@:overload public function getGlyphLogicalBounds(ix : Int) : java.awt.Shape;
 	
-	@:overload override public function getGlyphVisualBounds(ix : Int) : java.awt.Shape;
+	@:overload public function getGlyphVisualBounds(ix : Int) : java.awt.Shape;
 	
-	@:overload override public function getGlyphPixelBounds(index : Int, renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload public function getGlyphPixelBounds(index : Int, renderFRC : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload override public function getGlyphMetrics(ix : Int) : java.awt.font.GlyphMetrics;
+	@:overload public function getGlyphMetrics(ix : Int) : java.awt.font.GlyphMetrics;
 	
-	@:overload override public function getGlyphJustificationInfo(ix : Int) : java.awt.font.GlyphJustificationInfo;
+	@:overload public function getGlyphJustificationInfo(ix : Int) : java.awt.font.GlyphJustificationInfo;
 	
 	@:overload public function equals(rhs : java.awt.font.GlyphVector) : Bool;
 	
@@ -121,7 +121,7 @@ extern class StandardGlyphVector extends java.awt.font.GlyphVector
 	/**
 	* Sometimes I wish java had covariant return types...
 	*/
-	@:overload public function copy() : StandardGlyphVector;
+	@:overload public function copy() : sun.font.StandardGlyphVector;
 	
 	/**
 	* As a concrete subclass of GlyphVector, this must implement clone.
@@ -225,7 +225,7 @@ extern class StandardGlyphVector extends java.awt.font.GlyphVector
 }
 @:native('sun$font$StandardGlyphVector$GlyphTransformInfo') @:internal extern class StandardGlyphVector_GlyphTransformInfo
 {
-	@:overload public function equals(rhs : StandardGlyphVector_GlyphTransformInfo) : Bool;
+	@:overload public function equals(rhs : sun.font.StandardGlyphVector.StandardGlyphVector_GlyphTransformInfo) : Bool;
 	
 	
 }

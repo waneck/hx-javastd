@@ -54,7 +54,7 @@ extern class DSAKeyValue extends com.sun.org.apache.xml.internal.security.utils.
 	@:overload public function getPublicKey() : java.security.PublicKey;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

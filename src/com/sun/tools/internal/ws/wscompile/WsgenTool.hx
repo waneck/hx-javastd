@@ -31,7 +31,7 @@ extern class WsgenTool implements com.sun.mirror.apt.AnnotationProcessorFactory
 	
 	@:overload public function run(args : java.NativeArray<String>) : Bool;
 	
-	@:overload public function buildModel(endpoint : String, listener : WsgenTool_Listener) : Bool;
+	@:overload public function buildModel(endpoint : String, listener : com.sun.tools.internal.ws.wscompile.WsgenTool.WsgenTool_Listener) : Bool;
 	
 	@:overload private function usage(options : com.sun.tools.internal.ws.wscompile.WsgenOptions) : Void;
 	
@@ -54,18 +54,18 @@ extern class WsgenTool implements com.sun.mirror.apt.AnnotationProcessorFactory
 {
 	@:overload public function wsdl(file : String) : Void;
 	
-	@:overload public function portType() : WsgenTool_ReportOutput_QualifiedName;
+	@:overload public function portType() : com.sun.tools.internal.ws.wscompile.WsgenTool.WsgenTool_ReportOutput_QualifiedName;
 	
-	@:overload public function service() : WsgenTool_ReportOutput_QualifiedName;
+	@:overload public function service() : com.sun.tools.internal.ws.wscompile.WsgenTool.WsgenTool_ReportOutput_QualifiedName;
 	
-	@:overload public function port() : WsgenTool_ReportOutput_QualifiedName;
+	@:overload public function port() : com.sun.tools.internal.ws.wscompile.WsgenTool.WsgenTool_ReportOutput_QualifiedName;
 	
 	/**
 	* Name of the class that has {@link javax.jws.WebService}.
 	*/
 	@:overload public function implClass(name : String) : Void;
 	
-	@:overload public function schema() : WsgenTool_ReportOutput_Schema;
+	@:overload public function schema() : com.sun.tools.internal.ws.wscompile.WsgenTool.WsgenTool_ReportOutput_Schema;
 	
 	
 }
@@ -87,17 +87,17 @@ extern class WsgenTool implements com.sun.mirror.apt.AnnotationProcessorFactory
 }
 @:native('com$sun$tools$internal$ws$wscompile$WsgenTool$Listener') @:internal extern class WsgenTool_Listener extends com.sun.tools.internal.ws.wscompile.WsimportListener
 {
-	@:overload override public function generatedFile(fileName : String) : Void;
+	@:overload public function generatedFile(fileName : String) : Void;
 	
-	@:overload override public function message(msg : String) : Void;
+	@:overload public function message(msg : String) : Void;
 	
-	@:overload override public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

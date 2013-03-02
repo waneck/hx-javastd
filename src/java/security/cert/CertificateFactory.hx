@@ -62,7 +62,7 @@ extern class CertificateFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(type : String) : CertificateFactory;
+	@:overload @:final public static function getInstance(type : String) : java.security.cert.CertificateFactory;
 	
 	/**
 	* Returns a certificate factory object for the specified
@@ -98,7 +98,7 @@ extern class CertificateFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(type : String, provider : String) : CertificateFactory;
+	@:overload @:final public static function getInstance(type : String, provider : String) : java.security.cert.CertificateFactory;
 	
 	/**
 	* Returns a certificate factory object for the specified
@@ -129,7 +129,7 @@ extern class CertificateFactory
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:final public static function getInstance(type : String, provider : java.security.Provider) : CertificateFactory;
+	@:require(java4) @:overload @:final public static function getInstance(type : String, provider : java.security.Provider) : java.security.cert.CertificateFactory;
 	
 	/**
 	* Returns the provider of this certificate factory.

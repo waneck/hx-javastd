@@ -56,7 +56,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	* implemented to multiplex the attributes specified in the
 	* model with a StyleSheet.
 	*/
-	@:overload override public function getAttributes() : javax.swing.text.AttributeSet;
+	@:overload public function getAttributes() : javax.swing.text.AttributeSet;
 	
 	/**
 	* Sets up the paragraph from css attributes instead of
@@ -97,7 +97,7 @@ extern class ParagraphView extends javax.swing.text.ParagraphView
 	*
 	* @return true if the paragraph should be displayed
 	*/
-	@:overload override public function isVisible() : Bool;
+	@:overload public function isVisible() : Bool;
 	
 	/**
 	* Renders using the given rendering surface and area on that

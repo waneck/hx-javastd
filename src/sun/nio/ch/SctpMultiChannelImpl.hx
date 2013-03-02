@@ -30,17 +30,17 @@ extern class SctpMultiChannelImpl extends com.sun.nio.sctp.SctpMultiChannel impl
 {
 	@:overload public function new(provider : java.nio.channels.spi.SelectorProvider) : Void;
 	
-	@:overload override public function bind(local : java.net.SocketAddress, backlog : Int) : com.sun.nio.sctp.SctpMultiChannel;
+	@:overload public function bind(local : java.net.SocketAddress, backlog : Int) : com.sun.nio.sctp.SctpMultiChannel;
 	
-	@:overload override public function bindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpMultiChannel;
+	@:overload public function bindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpMultiChannel;
 	
-	@:overload override public function unbindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpMultiChannel;
+	@:overload public function unbindAddress(address : java.net.InetAddress) : com.sun.nio.sctp.SctpMultiChannel;
 	
-	@:overload override public function associations() : java.util.Set<com.sun.nio.sctp.Association>;
+	@:overload public function associations() : java.util.Set<com.sun.nio.sctp.Association>;
 	
-	@:overload override private function implConfigureBlocking(block : Bool) : Void;
+	@:overload private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload override public function implCloseSelectableChannel() : Void;
+	@:overload public function implCloseSelectableChannel() : Void;
 	
 	@:overload public function getFD() : java.io.FileDescriptor;
 	
@@ -54,27 +54,27 @@ extern class SctpMultiChannelImpl extends com.sun.nio.sctp.SctpMultiChannel impl
 	
 	@:overload public function kill() : Void;
 	
-	@:overload override public function setOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, value : T, association : com.sun.nio.sctp.Association) : com.sun.nio.sctp.SctpMultiChannel;
+	@:overload public function setOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, value : T, association : com.sun.nio.sctp.Association) : com.sun.nio.sctp.SctpMultiChannel;
 	
-	@:overload override public function getOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, association : com.sun.nio.sctp.Association) : T;
+	@:overload public function getOption<T>(name : com.sun.nio.sctp.SctpSocketOption<T>, association : com.sun.nio.sctp.Association) : T;
 	
-	@:overload @:final override public function supportedOptions() : java.util.Set<com.sun.nio.sctp.SctpSocketOption<Dynamic>>;
+	@:overload @:final public function supportedOptions() : java.util.Set<com.sun.nio.sctp.SctpSocketOption<Dynamic>>;
 	
-	@:overload override public function receive<T>(buffer : java.nio.ByteBuffer, attachment : T, handler : com.sun.nio.sctp.NotificationHandler<T>) : com.sun.nio.sctp.MessageInfo;
+	@:overload public function receive<T>(buffer : java.nio.ByteBuffer, attachment : T, handler : com.sun.nio.sctp.NotificationHandler<T>) : com.sun.nio.sctp.MessageInfo;
 	
 	/* TODO: Add support for ttl and isComplete to both 121 12M
 	*       SCTP_EOR not yet supported on reference platforms
 	*       TTL support limited...
 	*/
-	@:overload override public function send(buffer : java.nio.ByteBuffer, messageInfo : com.sun.nio.sctp.MessageInfo) : Int;
+	@:overload public function send(buffer : java.nio.ByteBuffer, messageInfo : com.sun.nio.sctp.MessageInfo) : Int;
 	
-	@:overload override public function shutdown(association : com.sun.nio.sctp.Association) : com.sun.nio.sctp.SctpMultiChannel;
+	@:overload public function shutdown(association : com.sun.nio.sctp.Association) : com.sun.nio.sctp.SctpMultiChannel;
 	
-	@:overload override public function getAllLocalAddresses() : java.util.Set<java.net.SocketAddress>;
+	@:overload public function getAllLocalAddresses() : java.util.Set<java.net.SocketAddress>;
 	
-	@:overload override public function getRemoteAddresses(association : com.sun.nio.sctp.Association) : java.util.Set<java.net.SocketAddress>;
+	@:overload public function getRemoteAddresses(association : com.sun.nio.sctp.Association) : java.util.Set<java.net.SocketAddress>;
 	
-	@:overload override public function branch(association : com.sun.nio.sctp.Association) : com.sun.nio.sctp.SctpChannel;
+	@:overload public function branch(association : com.sun.nio.sctp.Association) : com.sun.nio.sctp.SctpChannel;
 	
 	
 }

@@ -57,7 +57,7 @@ extern class Perf
 	* @see  java.lang.RuntimePermission
 	* @see  #attach
 	*/
-	@:overload public static function getPerf() : Perf;
+	@:overload public static function getPerf() : sun.misc.Perf;
 	
 	/**
 	* Attach to the instrumentation buffer for the specified Java virtual
@@ -311,14 +311,14 @@ extern class Perf
 * @see  java.security.AccessController#doPrivileged(PrivilegedAction)
 * @see  java.lang.RuntimePermission
 */
-@:native('sun$misc$Perf$GetPerfAction') extern class Perf_GetPerfAction implements java.security.PrivilegedAction<Perf>
+@:native('sun$misc$Perf$GetPerfAction') extern class Perf_GetPerfAction implements java.security.PrivilegedAction<sun.misc.Perf>
 {
 	/**
 	* Run the <code>Perf.getPerf()</code> method in a privileged context.
 	*
 	* @see #getPerf
 	*/
-	@:overload public function run() : Perf;
+	@:overload public function run() : sun.misc.Perf;
 	
 	
 }

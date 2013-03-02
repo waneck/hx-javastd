@@ -60,7 +60,7 @@ extern class IdentifierToken
 	* Return defaultWhere if id is null or id.where is missing (0).
 	* Otherwise, return id.where.
 	*/
-	@:native('getWhere') @:overload public static function _getWhere(id : IdentifierToken, defaultWhere : haxe.Int64) : haxe.Int64;
+	@:native('getWhere') @:overload public static function _getWhere(id : sun.tools.java.IdentifierToken, defaultWhere : haxe.Int64) : haxe.Int64;
 	
 	
 }

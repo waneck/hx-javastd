@@ -32,7 +32,7 @@ extern interface Attribute extends java.io.Serializable
 	* @return  Printing attribute class (category), an instance of class
 	*          {@link java.lang.Class java.lang.Class}.
 	*/
-	@:overload public function getCategory() : Class<Attribute>;
+	@:overload public function getCategory() : Class<javax.print.attribute.Attribute>;
 	
 	/**
 	* Get the name of the category of which this attribute value is an

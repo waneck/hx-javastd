@@ -28,19 +28,19 @@ extern class UnsyncBufferedOutputStream extends java.io.OutputStream
 	@:overload public function new(out : java.io.OutputStream) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, len : Int) : Void;
+	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, len : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : Int) : Void;
+	@:overload public function write(arg0 : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

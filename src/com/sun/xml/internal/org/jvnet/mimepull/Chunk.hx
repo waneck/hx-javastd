@@ -34,7 +34,7 @@ package com.sun.xml.internal.org.jvnet.mimepull;
 	* @param buf MIME part partial data
 	* @return created chunk
 	*/
-	@:overload public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : Chunk;
+	@:overload public function createNext(dataHead : com.sun.xml.internal.org.jvnet.mimepull.DataHead, buf : java.nio.ByteBuffer) : com.sun.xml.internal.org.jvnet.mimepull.Chunk;
 	
 	
 }

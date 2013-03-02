@@ -30,7 +30,7 @@ package com.sun.xml.internal.ws.policy;
 */
 extern class PolicyMapExtender extends com.sun.xml.internal.ws.policy.PolicyMapMutator
 {
-	@:overload public static function createPolicyMapExtender() : PolicyMapExtender;
+	@:overload public static function createPolicyMapExtender() : com.sun.xml.internal.ws.policy.PolicyMapExtender;
 	
 	@:overload public function putServiceSubject(key : com.sun.xml.internal.ws.policy.PolicyMapKey, subject : com.sun.xml.internal.ws.policy.PolicySubject) : Void;
 	

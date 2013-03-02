@@ -32,7 +32,7 @@ extern class XRTextRenderer extends sun.java2d.pipe.GlyphListPipe
 {
 	@:overload public function new(buffer : sun.java2d.xr.XRCompositeManager) : Void;
 	
-	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
+	@:overload private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
 	
 }

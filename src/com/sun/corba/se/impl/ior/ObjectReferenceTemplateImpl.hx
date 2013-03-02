@@ -54,9 +54,9 @@ extern class ObjectReferenceTemplateImpl extends com.sun.corba.se.impl.ior.Objec
 	
 	@:overload public function adapter_name() : java.NativeArray<String>;
 	
-	@:overload override public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
+	@:overload public function getIORFactory() : com.sun.corba.se.spi.ior.IORFactory;
 	
-	@:overload override public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
+	@:overload public function getIORTemplateList() : com.sun.corba.se.spi.ior.IORTemplateList;
 	
 	
 }

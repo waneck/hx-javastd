@@ -44,15 +44,15 @@ extern class SoftJitterCorrector extends javax.sound.sampled.AudioInputStream
 	
 	@:overload public function new(s : javax.sound.sampled.AudioInputStream, buffersize : Int, smallbuffersize : Int) : Void;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	@:overload public function fillBuffer() : Void;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	
 }

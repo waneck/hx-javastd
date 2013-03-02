@@ -23,7 +23,7 @@ package java.nio.charset;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Charset implements java.lang.Comparable<Charset>
+extern class Charset implements java.lang.Comparable<java.nio.charset.Charset>
 {
 	/**
 	* Tells whether the named charset is supported. </p>
@@ -62,7 +62,7 @@ extern class Charset implements java.lang.Comparable<Charset>
 	*          If no support for the named charset is available
 	*          in this instance of the Java virtual machine
 	*/
-	@:overload public static function forName(charsetName : String) : Charset;
+	@:overload public static function forName(charsetName : String) : java.nio.charset.Charset;
 	
 	/**
 	* Constructs a sorted map from canonical charset names to charset objects.
@@ -90,7 +90,7 @@ extern class Charset implements java.lang.Comparable<Charset>
 	* @return An immutable, case-insensitive map from canonical charset names
 	*         to charset objects
 	*/
-	@:overload public static function availableCharsets() : java.util.SortedMap<String, Charset>;
+	@:overload public static function availableCharsets() : java.util.SortedMap<String, java.nio.charset.Charset>;
 	
 	/**
 	* Returns the default charset of this Java virtual machine.
@@ -103,7 +103,7 @@ extern class Charset implements java.lang.Comparable<Charset>
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function defaultCharset() : Charset;
+	@:require(java5) @:overload public static function defaultCharset() : java.nio.charset.Charset;
 	
 	/**
 	* Initializes a new charset with the given canonical name and alias
@@ -193,7 +193,7 @@ extern class Charset implements java.lang.Comparable<Charset>
 	*
 	* @return  <tt>true</tt> if the given charset is contained in this charset
 	*/
-	@:overload @:abstract public function contains(cs : Charset) : Bool;
+	@:overload @:abstract public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	/**
 	* Constructs a new decoder for this charset. </p>
@@ -308,7 +308,7 @@ extern class Charset implements java.lang.Comparable<Charset>
 	* @return A negative integer, zero, or a positive integer as this charset
 	*         is less than, equal to, or greater than the specified charset
 	*/
-	@:overload @:final public function compareTo(that : Charset) : Int;
+	@:overload @:final public function compareTo(that : java.nio.charset.Charset) : Int;
 	
 	/**
 	* Computes a hashcode for this charset. </p>

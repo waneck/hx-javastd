@@ -58,7 +58,7 @@ package com.sun.mirror.apt;
 	/**
 	* Return source.
 	*/
-	@:overload override public function getSource() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
+	@:overload public function getSource() : com.sun.mirror.apt.AnnotationProcessorEnvironment;
 	
 	
 }

@@ -50,14 +50,14 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* Tell if this object contains a java String object.
 	*
 	* @return true if this XMLString can return a string without creating one.
 	*/
-	@:overload override public function hasString() : Bool;
+	@:overload public function hasString() : Bool;
 	
 	/**
 	* Since this object is incomplete without the length and the offset, we
@@ -65,14 +65,14 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @return The java String representation of this object.
 	*/
-	@:overload override public function object() : Dynamic;
+	@:overload public function object() : Dynamic;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function str() : String;
+	@:overload public function str() : String;
 	
 	/**
 	* Directly call the
@@ -85,7 +85,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Directly call the
@@ -96,7 +96,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
+	@:overload public function dispatchAsComment(lh : org.xml.sax.ext.LexicalHandler) : Void;
 	
 	/**
 	* Returns the length of this string.
@@ -104,7 +104,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @return  the length of the sequence of characters represented by this
 	*          object.
 	*/
-	@:overload override public function length() : Int;
+	@:overload public function length() : Int;
 	
 	/**
 	* Returns the character at the specified index. An index ranges
@@ -119,7 +119,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*             argument is negative or not less than the length of this
 	*             string.
 	*/
-	@:overload override public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
 	
 	/**
 	* Copies characters from this string into the destination character
@@ -142,7 +142,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*                <code>dst.length</code></ul>
 	* @exception NullPointerException if <code>dst</code> is <code>null</code>
 	*/
-	@:overload override public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
+	@:overload public function getChars(srcBegin : Int, srcEnd : Int, dst : java.NativeArray<java.StdTypes.Char16>, dstBegin : Int) : Void;
 	
 	/**
 	* Compares this string to the specified object.
@@ -158,7 +158,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -169,7 +169,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -180,7 +180,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(anotherString : String) : Bool;
+	@:overload public function equals(anotherString : String) : Bool;
 	
 	/**
 	* Compares this string to the specified object.
@@ -196,7 +196,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @see     java.lang.String#compareTo(java.lang.String)
 	* @see     java.lang.String#equalsIgnoreCase(java.lang.String)
 	*/
-	@:overload override public function equals(obj2 : Dynamic) : Bool;
+	@:overload public function equals(obj2 : Dynamic) : Bool;
 	
 	/**
 	* Compares this <code>String</code> to another <code>String</code>,
@@ -213,7 +213,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @see     java.lang.Character#toLowerCase(char)
 	* @see java.lang.Character#toUpperCase(char)
 	*/
-	@:overload override public function equalsIgnoreCase(anotherString : String) : Bool;
+	@:overload public function equalsIgnoreCase(anotherString : String) : Bool;
 	
 	/**
 	* Compares two strings lexicographically.
@@ -228,7 +228,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @exception java.lang.NullPointerException if <code>anotherString</code>
 	*          is <code>null</code>.
 	*/
-	@:overload override public function compareTo(xstr : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:overload public function compareTo(xstr : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Compares two strings lexicographically, ignoring case considerations.
@@ -249,7 +249,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @see     java.text.Collator#compare(String, String)
 	* @since   1.2
 	*/
-	@:require(java2) @:overload override public function compareToIgnoreCase(xstr : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
+	@:require(java2) @:overload public function compareToIgnoreCase(xstr : com.sun.org.apache.xml.internal.utils.XMLString) : Int;
 	
 	/**
 	* Returns a hashcode for this string. The hashcode for a
@@ -264,7 +264,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @return  a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Tests if this string starts with the specified prefix beginning
@@ -285,7 +285,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @exception java.lang.NullPointerException if <code>prefix</code> is
 	*          <code>null</code>.
 	*/
-	@:overload override public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
+	@:overload public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString, toffset : Int) : Bool;
 	
 	/**
 	* Tests if this string starts with the specified prefix.
@@ -302,7 +302,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*          <code>null</code>.
 	* @since   JDK1. 0
 	*/
-	@:overload override public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
+	@:overload public function startsWith(prefix : com.sun.org.apache.xml.internal.utils.XMLString) : Bool;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -321,7 +321,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*          character sequence represented by this object, or
 	*          <code>-1</code> if the character does not occur.
 	*/
-	@:overload override public function indexOf(ch : Int) : Int;
+	@:overload public function indexOf(ch : Int) : Int;
 	
 	/**
 	* Returns the index within this string of the first occurrence of the
@@ -351,7 +351,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*          than or equal to <code>fromIndex</code>, or <code>-1</code>
 	*          if the character does not occur.
 	*/
-	@:overload override public function indexOf(ch : Int, fromIndex : Int) : Int;
+	@:overload public function indexOf(ch : Int, fromIndex : Int) : Int;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -370,7 +370,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*             <code>beginIndex</code> is negative or larger than the
 	*             length of this <code>String</code> object.
 	*/
-	@:overload override public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function substring(beginIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Returns a new string that is a substring of this string. The
@@ -388,7 +388,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*             <code>beginIndex</code> is larger than
 	*             <code>endIndex</code>.
 	*/
-	@:overload override public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function substring(beginIndex : Int, endIndex : Int) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Concatenates the specified string to the end of this string.
@@ -400,14 +400,14 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @exception java.lang.NullPointerException if <code>str</code> is
 	*          <code>null</code>.
 	*/
-	@:overload override public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function concat(str : String) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Removes white space from both ends of this string.
 	*
 	* @return  this string, with white space removed from the front and end.
 	*/
-	@:overload override public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function trim() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Conditionally trim all leading and trailing whitespace in the specified String.
@@ -423,7 +423,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	* @param   doublePunctuationSpaces    Use double spaces for punctuation?
 	* @return              The trimmed string.
 	*/
-	@:overload override public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function fixWhiteSpace(trimHead : Bool, trimTail : Bool, doublePunctuationSpaces : Bool) : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Convert a string to a double -- Allowed input is in fixed
@@ -441,7 +441,7 @@ extern class XStringForFSB extends com.sun.org.apache.xpath.internal.objects.XSt
 	*
 	* @return A double value representation of the string, or return Double.NaN
 	* if the string can not be converted.  */
-	@:overload override public function toDouble() : Float;
+	@:overload public function toDouble() : Float;
 	
 	
 }

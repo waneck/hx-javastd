@@ -41,7 +41,7 @@ extern class NamespaceBase extends com.sun.xml.internal.fastinfoset.stax.events.
 	
 	@:overload public function getNamespaceURI() : String;
 	
-	@:overload override public function isNamespace() : Bool;
+	@:overload public function isNamespace() : Bool;
 	
 	@:overload public function isDefaultNamespaceDeclaration() : Bool;
 	

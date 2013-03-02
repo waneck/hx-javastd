@@ -38,9 +38,9 @@ extern class MessageBase implements com.sun.corba.se.impl.protocol.giopmsgheader
 	
 	@:overload public static function typeToString(type : java.StdTypes.Int8) : String;
 	
-	@:overload public static function readGIOPMessage(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : MessageBase;
+	@:overload public static function readGIOPMessage(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase;
 	
-	@:overload public static function readGIOPHeader(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : MessageBase;
+	@:overload public static function readGIOPHeader(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection) : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageBase;
 	
 	@:overload public static function readGIOPBody(orb : com.sun.corba.se.spi.orb.ORB, connection : com.sun.corba.se.spi.transport.CorbaConnection, msg : com.sun.corba.se.impl.protocol.giopmsgheaders.Message) : com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 	

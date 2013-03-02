@@ -25,19 +25,19 @@ package sun.security.ssl;
 */
 extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 {
-	@:overload override private function engineInit(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
+	@:overload private function engineInit(km : java.NativeArray<javax.net.ssl.KeyManager>, tm : java.NativeArray<javax.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
-	@:overload override private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
+	@:overload private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
 	
-	@:overload override private function engineCreateSSLEngine() : javax.net.ssl.SSLEngine;
+	@:overload private function engineCreateSSLEngine() : javax.net.ssl.SSLEngine;
 	
-	@:overload override private function engineCreateSSLEngine(host : String, port : Int) : javax.net.ssl.SSLEngine;
+	@:overload private function engineCreateSSLEngine(host : String, port : Int) : javax.net.ssl.SSLEngine;
 	
-	@:overload override private function engineGetClientSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload private function engineGetClientSessionContext() : javax.net.ssl.SSLSessionContext;
 	
-	@:overload override private function engineGetServerSessionContext() : javax.net.ssl.SSLSessionContext;
+	@:overload private function engineGetServerSessionContext() : javax.net.ssl.SSLSessionContext;
 	
 	
 }
@@ -49,7 +49,7 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 *
 * @see SSLContext
 */
-@:native('sun$security$ssl$SSLContextImpl$ConservativeSSLContext') @:internal extern class SSLContextImpl_ConservativeSSLContext extends SSLContextImpl
+@:native('sun$security$ssl$SSLContextImpl$ConservativeSSLContext') @:internal extern class SSLContextImpl_ConservativeSSLContext extends sun.security.ssl.SSLContextImpl
 {
 	
 }
@@ -58,7 +58,7 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 *
 * @see SSLContext
 */
-@:native('sun$security$ssl$SSLContextImpl$DefaultSSLContext') extern class SSLContextImpl_DefaultSSLContext extends SSLContextImpl_ConservativeSSLContext
+@:native('sun$security$ssl$SSLContextImpl$DefaultSSLContext') extern class SSLContextImpl_DefaultSSLContext extends sun.security.ssl.SSLContextImpl.SSLContextImpl_ConservativeSSLContext
 {
 	@:overload public function new() : Void;
 	
@@ -71,7 +71,7 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 *
 * @see SSLContext
 */
-@:native('sun$security$ssl$SSLContextImpl$TLS10Context') extern class SSLContextImpl_TLS10Context extends SSLContextImpl_ConservativeSSLContext
+@:native('sun$security$ssl$SSLContextImpl$TLS10Context') extern class SSLContextImpl_TLS10Context extends sun.security.ssl.SSLContextImpl.SSLContextImpl_ConservativeSSLContext
 {
 	
 }
@@ -80,7 +80,7 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 *
 * @see SSLContext
 */
-@:native('sun$security$ssl$SSLContextImpl$TLS11Context') extern class SSLContextImpl_TLS11Context extends SSLContextImpl
+@:native('sun$security$ssl$SSLContextImpl$TLS11Context') extern class SSLContextImpl_TLS11Context extends sun.security.ssl.SSLContextImpl
 {
 	
 }
@@ -89,7 +89,7 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 *
 * @see SSLContext
 */
-@:native('sun$security$ssl$SSLContextImpl$TLS12Context') extern class SSLContextImpl_TLS12Context extends SSLContextImpl
+@:native('sun$security$ssl$SSLContextImpl$TLS12Context') extern class SSLContextImpl_TLS12Context extends sun.security.ssl.SSLContextImpl
 {
 	
 }
@@ -149,17 +149,17 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 }
 @:internal extern class AbstractKeyManagerWrapper extends javax.net.ssl.X509ExtendedKeyManager
 {
-	@:overload override public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
-	@:overload override public function chooseClientAlias(keyType : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload public function chooseClientAlias(keyType : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
-	@:overload override public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
-	@:overload override public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
-	@:overload override public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
 	
-	@:overload override public function getPrivateKey(alias : String) : java.security.PrivateKey;
+	@:overload public function getPrivateKey(alias : String) : java.security.PrivateKey;
 	
 	
 }
@@ -170,42 +170,42 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	/*
 	* Choose an alias to authenticate the client side of a secure
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function chooseClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload public function chooseClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
 	/*
 	* Choose an alias to authenticate the client side of an
 	* engine given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function chooseEngineClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
+	@:overload public function chooseEngineClientAlias(keyTypes : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
 	
 	/*
 	* Get the matching aliases for authenticating the server side of a secure
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	/*
 	* Choose an alias to authenticate the server side of a secure
 	* socket given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
 	/*
 	* Choose an alias to authenticate the server side of an engine
 	* given the public key type and the list of
 	* certificate issuer authorities recognized by the peer (if any).
 	*/
-	@:overload override public function chooseEngineServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
+	@:overload public function chooseEngineServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, engine : javax.net.ssl.SSLEngine) : String;
 	
 	/**
 	* Returns the certificate chain associated with the given alias.
@@ -215,7 +215,7 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 	* @return the certificate chain (ordered with the user's certificate first
 	* and the root certificate authority last)
 	*/
-	@:overload override public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/*
 	* Returns the key associated with the given alias, using the given
@@ -225,7 +225,7 @@ extern class SSLContextImpl extends javax.net.ssl.SSLContextSpi
 	*
 	* @return the requested key
 	*/
-	@:overload override public function getPrivateKey(alias : String) : java.security.PrivateKey;
+	@:overload public function getPrivateKey(alias : String) : java.security.PrivateKey;
 	
 	
 }

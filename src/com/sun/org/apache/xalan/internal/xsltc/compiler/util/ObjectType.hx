@@ -44,13 +44,13 @@ extern class ObjectType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	
 	@:overload public function getJavaClass() : Class<Dynamic>;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
-	@:overload override public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
+	@:overload public function identicalTo(other : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Bool;
 	
-	@:overload override public function toSignature() : String;
+	@:overload public function toSignature() : String;
 	
-	@:overload override public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload public function toJCType() : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	/**
 	* Translates a void into an object of internal type <code>type</code>.
@@ -59,7 +59,7 @@ extern class ObjectType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	*
 	* @see     com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type#translateTo
 	*/
-	@:overload override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
+	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, type : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type) : Void;
 	
 	/**
 	* Expects an integer on the stack and pushes its string value by calling
@@ -74,16 +74,16 @@ extern class ObjectType extends com.sun.org.apache.xalan.internal.xsltc.compiler
 	* by <code>clazz</code>. This method is used to translate parameters
 	* when external functions are called.
 	*/
-	@:overload override public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
+	@:overload public function translateTo(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
 	
 	/**
 	* Translates an external Java type into an Object type
 	*/
-	@:overload override public function translateFrom(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
+	@:overload public function translateFrom(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator, clazz : Class<Dynamic>) : Void;
 	
-	@:overload override public function LOAD(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function LOAD(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
-	@:overload override public function STORE(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
+	@:overload public function STORE(slot : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	
 	
 }

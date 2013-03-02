@@ -49,7 +49,7 @@ extern class ConfigFile extends javax.security.auth.login.Configuration
 	*          application, or null if this application has no configured
 	*          LoginModules.
 	*/
-	@:overload override public function getAppConfigurationEntry(applicationName : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload public function getAppConfigurationEntry(applicationName : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
 	/**
 	* Refresh and reload the Configuration by re-reading all of the
@@ -60,7 +60,7 @@ extern class ConfigFile extends javax.security.auth.login.Configuration
 	* @exception SecurityException if the caller does not have permission
 	*                          to refresh the Configuration.
 	*/
-	@:overload @:synchronized override public function refresh() : Void;
+	@:overload @:synchronized public function refresh() : Void;
 	
 	
 }

@@ -20,7 +20,7 @@ package com.sun.org.apache.xerces.internal.jaxp;
 */
 @:internal extern class DefaultValidationErrorHandler extends org.xml.sax.helpers.DefaultHandler
 {
-	@:overload override public function error(e : org.xml.sax.SAXParseException) : Void;
+	@:overload public function error(e : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

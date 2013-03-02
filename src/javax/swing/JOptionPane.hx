@@ -1029,7 +1029,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the UI class that implements the
@@ -1039,7 +1039,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Sets the option pane's message-object.
@@ -1378,7 +1378,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	*       expert: true
 	*  description: The AccessibleContext associated with this option pane
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -1416,7 +1416,7 @@ extern class JOptionPane extends javax.swing.JComponent implements javax.accessi
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

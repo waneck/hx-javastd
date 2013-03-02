@@ -205,7 +205,7 @@ extern class CubicCurve2D implements java.awt.Shape implements java.lang.Cloneab
 	* @param c the specified <code>CubicCurve2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setCurve(c : CubicCurve2D) : Void;
+	@:require(java2) @:overload public function setCurve(c : java.awt.geom.CubicCurve2D) : Void;
 	
 	/**
 	* Returns the square of the flatness of the cubic curve specified
@@ -320,7 +320,7 @@ extern class CubicCurve2D implements java.awt.Shape implements java.lang.Cloneab
 	* second half of the subdivided curve
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function subdivide(left : CubicCurve2D, right : CubicCurve2D) : Void;
+	@:require(java2) @:overload public function subdivide(left : java.awt.geom.CubicCurve2D, right : java.awt.geom.CubicCurve2D) : Void;
 	
 	/**
 	* Subdivides the cubic curve specified by the <code>src</code> parameter
@@ -335,7 +335,7 @@ extern class CubicCurve2D implements java.awt.Shape implements java.lang.Cloneab
 	* second half of the subdivided curve
 	* @since 1.2
 	*/
-	@:require(java2) @:native('subdivide') @:overload public static function _subdivide(src : CubicCurve2D, left : CubicCurve2D, right : CubicCurve2D) : Void;
+	@:require(java2) @:native('subdivide') @:overload public static function _subdivide(src : java.awt.geom.CubicCurve2D, left : java.awt.geom.CubicCurve2D, right : java.awt.geom.CubicCurve2D) : Void;
 	
 	/**
 	* Subdivides the cubic curve specified by the coordinates
@@ -547,7 +547,7 @@ extern class CubicCurve2D implements java.awt.Shape implements java.lang.Cloneab
 * {@code float} coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$CubicCurve2D$Float') extern class CubicCurve2D_Float extends CubicCurve2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$CubicCurve2D$Float') extern class CubicCurve2D_Float extends java.awt.geom.CubicCurve2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the start point
@@ -759,7 +759,7 @@ extern class CubicCurve2D implements java.awt.Shape implements java.lang.Cloneab
 * {@code double} coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$CubicCurve2D$Double') extern class CubicCurve2D_Double extends CubicCurve2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$CubicCurve2D$Double') extern class CubicCurve2D_Double extends java.awt.geom.CubicCurve2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of the start point

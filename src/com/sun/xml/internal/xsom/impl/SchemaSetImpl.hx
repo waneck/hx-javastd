@@ -85,11 +85,11 @@ extern class SchemaSetImpl implements com.sun.xml.internal.xsom.XSSchemaSet
 	
 	@:overload public function getAnySimpleType() : com.sun.xml.internal.xsom.XSSimpleType;
 	
-	public var anySimpleType(default, null) : SchemaSetImpl_AnySimpleType;
+	public var anySimpleType(default, null) : com.sun.xml.internal.xsom.impl.SchemaSetImpl.SchemaSetImpl_AnySimpleType;
 	
 	@:overload public function getAnyType() : com.sun.xml.internal.xsom.XSComplexType;
 	
-	public var anyType(default, null) : SchemaSetImpl_AnyType;
+	public var anyType(default, null) : com.sun.xml.internal.xsom.impl.SchemaSetImpl.SchemaSetImpl_AnyType;
 	
 	
 }

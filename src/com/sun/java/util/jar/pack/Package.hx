@@ -39,18 +39,18 @@ package com.sun.java.util.jar.pack;
 	
 	public static var attrDefs(default, null) : java.util.Map<com.sun.java.util.jar.pack.Attribute.Attribute_Layout, com.sun.java.util.jar.pack.Attribute>;
 	
-	@:overload public function getClasses() : java.util.List<Package_Class>;
+	@:overload public function getClasses() : java.util.List<com.sun.java.util.jar.pack.Package.Package_Class>;
 	
-	@:overload public function getFiles() : java.util.List<Package_File>;
+	@:overload public function getFiles() : java.util.List<com.sun.java.util.jar.pack.Package.Package_File>;
 	
-	@:overload public function getClassStubs() : java.util.List<Package_File>;
+	@:overload public function getClassStubs() : java.util.List<com.sun.java.util.jar.pack.Package.Package_File>;
 	
-	@:overload public function getAllInnerClasses() : java.util.List<Package_InnerClass>;
+	@:overload public function getAllInnerClasses() : java.util.List<com.sun.java.util.jar.pack.Package.Package_InnerClass>;
 	
-	@:overload public function setAllInnerClasses(ics : java.util.Collection<Package_InnerClass>) : Void;
+	@:overload public function setAllInnerClasses(ics : java.util.Collection<com.sun.java.util.jar.pack.Package.Package_InnerClass>) : Void;
 	
 	/** Return a global inner class record for the given thisClass. */
-	@:overload public function getGlobalInnerClass(thisClass : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : Package_InnerClass;
+	@:overload public function getGlobalInnerClass(thisClass : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry) : com.sun.java.util.jar.pack.Package.Package_InnerClass;
 	
 	@:overload public function trimToSize() : Void;
 	
@@ -66,19 +66,19 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Package$Class') extern class Package_Class extends com.sun.java.util.jar.pack.Attribute.Attribute_Holder implements java.lang.Comparable<Package_Class>
+@:native('com$sun$java$util$jar$pack$Package$Class') extern class Package_Class extends com.sun.java.util.jar.pack.Attribute.Attribute_Holder implements java.lang.Comparable<com.sun.java.util.jar.pack.Package.Package_Class>
 {
-	@:overload public function getPackage() : Package;
+	@:overload public function getPackage() : com.sun.java.util.jar.pack.Package;
 	
 	@:overload public function getName() : String;
 	
-	@:overload public function compareTo(that : Package_Class) : Int;
+	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Package.Package_Class) : Int;
 	
-	@:overload override private function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
+	@:overload private function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
 	@:overload private function setCPMap(cpMap : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload public function setInnerClasses(ics : java.util.Collection<Package_InnerClass>) : Void;
+	@:overload public function setInnerClasses(ics : java.util.Collection<com.sun.java.util.jar.pack.Package.Package_InnerClass>) : Void;
 	
 	/** Given a global map of ICs (keyed by thisClass),
 	*  compute the subset of its Map.values which are
@@ -89,17 +89,17 @@ package com.sun.java.util.jar.pack;
 	*  The order of the resulting list is consistent
 	*  with that of Package.this.allInnerClasses.
 	*/
-	@:overload public function computeGloballyImpliedICs() : java.util.List<Package_InnerClass>;
+	@:overload public function computeGloballyImpliedICs() : java.util.List<com.sun.java.util.jar.pack.Package.Package_InnerClass>;
 	
-	@:overload override public function trimToSize() : Void;
+	@:overload public function trimToSize() : Void;
 	
-	@:overload override public function strip(attrName : String) : Void;
+	@:overload public function strip(attrName : String) : Void;
 	
-	@:overload override private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
+	@:overload private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
 	@:overload private function visitInnerClassRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
-	@:overload public function initFile(file : Package_File) : Void;
+	@:overload public function initFile(file : com.sun.java.util.jar.pack.Package.Package_File) : Void;
 	
 	@:overload public function maybeChooseFileName() : Void;
 	
@@ -113,11 +113,11 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Package$Class$Member') extern class Package_Class_Member extends com.sun.java.util.jar.pack.Attribute.Attribute_Holder implements java.lang.Comparable<Package_Class_Member>
+@:native('com$sun$java$util$jar$pack$Package$Class$Member') extern class Package_Class_Member extends com.sun.java.util.jar.pack.Attribute.Attribute_Holder implements java.lang.Comparable<com.sun.java.util.jar.pack.Package.Package_Class_Member>
 {
 	@:overload private function new(flags : Int, descriptor : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_DescriptorEntry) : Void;
 	
-	@:overload public function thisClass() : Package_Class;
+	@:overload public function thisClass() : com.sun.java.util.jar.pack.Package.Package_Class;
 	
 	@:overload public function getDescriptor() : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_DescriptorEntry;
 	
@@ -125,9 +125,9 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function getType() : String;
 	
-	@:overload override private function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
+	@:overload private function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
-	@:overload override private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
+	@:overload private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -174,39 +174,39 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Package$Class$Field') extern class Package_Class_Field extends Package_Class_Member
+@:native('com$sun$java$util$jar$pack$Package$Class$Field') extern class Package_Class_Field extends com.sun.java.util.jar.pack.Package.Package_Class_Member
 {
 	@:overload public function new(flags : Int, descriptor : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_DescriptorEntry) : Void;
 	
 	@:overload public function getLiteralTag() : java.StdTypes.Int8;
 	
-	@:overload public function compareTo(o : Package_Class_Member) : Int;
+	@:overload public function compareTo(o : com.sun.java.util.jar.pack.Package.Package_Class_Member) : Int;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Package$Class$Method') extern class Package_Class_Method extends Package_Class_Member
+@:native('com$sun$java$util$jar$pack$Package$Class$Method') extern class Package_Class_Method extends com.sun.java.util.jar.pack.Package.Package_Class_Member
 {
 	@:overload public function new(flags : Int, descriptor : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_DescriptorEntry) : Void;
 	
-	@:overload override public function trimToSize() : Void;
+	@:overload public function trimToSize() : Void;
 	
 	@:overload public function getArgumentSize() : Int;
 	
-	@:overload public function compareTo(o : Package_Class_Member) : Int;
+	@:overload public function compareTo(o : com.sun.java.util.jar.pack.Package.Package_Class_Member) : Int;
 	
-	@:overload override public function strip(attrName : String) : Void;
+	@:overload public function strip(attrName : String) : Void;
 	
 	@:overload override private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Package$File') extern class Package_File implements java.lang.Comparable<Package_File>
+@:native('com$sun$java$util$jar$pack$Package$File') extern class Package_File implements java.lang.Comparable<com.sun.java.util.jar.pack.Package.Package_File>
 {
 	@:overload public function isDirectory() : Bool;
 	
 	@:overload public function isClassStub() : Bool;
 	
-	@:overload public function getStubClass() : Package_Class;
+	@:overload public function getStubClass() : com.sun.java.util.jar.pack.Package.Package_Class;
 	
 	@:overload public function isTrivialClassStub() : Bool;
 	
@@ -214,7 +214,7 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function compareTo(that : Package_File) : Int;
+	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Package.Package_File) : Int;
 	
 	@:overload public function toString() : String;
 	
@@ -238,13 +238,13 @@ package com.sun.java.util.jar.pack;
 	
 	
 }
-@:native('com$sun$java$util$jar$pack$Package$InnerClass') @:internal extern class Package_InnerClass implements java.lang.Comparable<Package_InnerClass>
+@:native('com$sun$java$util$jar$pack$Package$InnerClass') @:internal extern class Package_InnerClass implements java.lang.Comparable<com.sun.java.util.jar.pack.Package.Package_InnerClass>
 {
 	@:overload public function equals(o : Dynamic) : Bool;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function compareTo(that : Package_InnerClass) : Int;
+	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Package.Package_InnerClass) : Int;
 	
 	@:overload private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	

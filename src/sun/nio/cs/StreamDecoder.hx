@@ -27,13 +27,13 @@ package sun.nio.cs;
 */
 extern class StreamDecoder extends java.io.Reader
 {
-	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, charsetName : String) : StreamDecoder;
+	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, charsetName : String) : sun.nio.cs.StreamDecoder;
 	
-	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, cs : java.nio.charset.Charset) : StreamDecoder;
+	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, cs : java.nio.charset.Charset) : sun.nio.cs.StreamDecoder;
 	
-	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, dec : java.nio.charset.CharsetDecoder) : StreamDecoder;
+	@:overload public static function forInputStreamReader(_in : java.io.InputStream, lock : Dynamic, dec : java.nio.charset.CharsetDecoder) : sun.nio.cs.StreamDecoder;
 	
-	@:overload public static function forDecoder(ch : java.nio.channels.ReadableByteChannel, dec : java.nio.charset.CharsetDecoder, minBufferCap : Int) : StreamDecoder;
+	@:overload public static function forDecoder(ch : java.nio.channels.ReadableByteChannel, dec : java.nio.charset.CharsetDecoder, minBufferCap : Int) : sun.nio.cs.StreamDecoder;
 	
 	@:overload public function getEncoding() : String;
 	

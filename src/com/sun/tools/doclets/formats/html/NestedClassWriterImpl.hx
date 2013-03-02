@@ -52,67 +52,67 @@ extern class NestedClassWriterImpl extends com.sun.tools.doclets.formats.html.Ab
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addSummaryLabel(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload public function addSummaryLabel(memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getTableSummary() : String;
+	@:overload public function getTableSummary() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getCaption() : String;
+	@:overload public function getCaption() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getSummaryTableHeader(member : com.sun.javadoc.ProgramElementDoc) : java.NativeArray<String>;
+	@:overload public function getSummaryTableHeader(member : com.sun.javadoc.ProgramElementDoc) : java.NativeArray<String>;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addSummaryAnchor(cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload public function addSummaryAnchor(cd : com.sun.javadoc.ClassDoc, memberTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addInheritedSummaryAnchor(cd : com.sun.javadoc.ClassDoc, inheritedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload public function addInheritedSummaryAnchor(cd : com.sun.javadoc.ClassDoc, inheritedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addInheritedSummaryLabel(cd : com.sun.javadoc.ClassDoc, inheritedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload public function addInheritedSummaryLabel(cd : com.sun.javadoc.ClassDoc, inheritedTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addSummaryLink(context : Int, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addSummaryLink(context : Int, cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, tdSummary : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addInheritedSummaryLink(cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addInheritedSummaryLink(cd : com.sun.javadoc.ClassDoc, member : com.sun.javadoc.ProgramElementDoc, linksTree : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addSummaryType(member : com.sun.javadoc.ProgramElementDoc, tdSummaryType : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addSummaryType(member : com.sun.javadoc.ProgramElementDoc, tdSummaryType : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getDeprecatedLink(member : com.sun.javadoc.ProgramElementDoc) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getDeprecatedLink(member : com.sun.javadoc.ProgramElementDoc) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getNavSummaryLink(cd : com.sun.javadoc.ClassDoc, link : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavSummaryLink(cd : com.sun.javadoc.ClassDoc, link : Bool) : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addNavDetailLink(link : Bool, liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addNavDetailLink(link : Bool, liNav : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

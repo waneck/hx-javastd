@@ -68,12 +68,12 @@ extern class SDDocumentSource
 	/**
 	* Creates {@link SDDocumentSource} from an URL.
 	*/
-	@:overload public static function create(url : java.net.URL) : SDDocumentSource;
+	@:overload public static function create(url : java.net.URL) : com.sun.xml.internal.ws.api.server.SDDocumentSource;
 	
 	/**
 	* Creates a {@link SDDocumentSource} from {@link XMLStreamBuffer}.
 	*/
-	@:overload public static function create(systemId : java.net.URL, xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : SDDocumentSource;
+	@:overload public static function create(systemId : java.net.URL, xsb : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.api.server.SDDocumentSource;
 	
 	
 }

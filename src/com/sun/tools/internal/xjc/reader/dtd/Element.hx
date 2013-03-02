@@ -23,11 +23,11 @@ package com.sun.tools.internal.xjc.reader.dtd;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class Element extends com.sun.tools.internal.xjc.reader.dtd.Term implements java.lang.Comparable<Element>
+@:internal extern class Element extends com.sun.tools.internal.xjc.reader.dtd.Term implements java.lang.Comparable<com.sun.tools.internal.xjc.reader.dtd.Element>
 {
 	@:overload public function new(owner : com.sun.tools.internal.xjc.reader.dtd.TDTDReader, name : String) : Void;
 	
-	@:overload public function compareTo(that : Element) : Int;
+	@:overload public function compareTo(that : com.sun.tools.internal.xjc.reader.dtd.Element) : Int;
 	
 	
 }

@@ -59,9 +59,9 @@ extern class MetalBorders
 }
 @:native('javax$swing$plaf$metal$MetalBorders$Flush3DBorder') extern class MetalBorders_Flush3DBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -69,17 +69,17 @@ extern class MetalBorders
 {
 	private static var borderInsets : java.awt.Insets;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalBorders$InternalFrameBorder') extern class MetalBorders_InternalFrameBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -89,9 +89,9 @@ extern class MetalBorders
 */
 @:require(java4) @:native('javax$swing$plaf$metal$MetalBorders$FrameBorder') @:internal extern class MetalBorders_FrameBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -113,9 +113,9 @@ extern class MetalBorders
 	
 	@:overload private function getInactiveShadow() : java.awt.Color;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -123,7 +123,7 @@ extern class MetalBorders
 * Border for an Error Dialog.
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$plaf$metal$MetalBorders$ErrorDialogBorder') @:internal extern class MetalBorders_ErrorDialogBorder extends MetalBorders_DialogBorder implements javax.swing.plaf.UIResource
+@:require(java4) @:native('javax$swing$plaf$metal$MetalBorders$ErrorDialogBorder') @:internal extern class MetalBorders_ErrorDialogBorder extends javax.swing.plaf.metal.MetalBorders.MetalBorders_DialogBorder implements javax.swing.plaf.UIResource
 {
 	@:overload override private function getActiveBackground() : java.awt.Color;
 	
@@ -134,7 +134,7 @@ extern class MetalBorders
 * JColorChooser..
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$plaf$metal$MetalBorders$QuestionDialogBorder') @:internal extern class MetalBorders_QuestionDialogBorder extends MetalBorders_DialogBorder implements javax.swing.plaf.UIResource
+@:require(java4) @:native('javax$swing$plaf$metal$MetalBorders$QuestionDialogBorder') @:internal extern class MetalBorders_QuestionDialogBorder extends javax.swing.plaf.metal.MetalBorders.MetalBorders_DialogBorder implements javax.swing.plaf.UIResource
 {
 	@:overload override private function getActiveBackground() : java.awt.Color;
 	
@@ -144,7 +144,7 @@ extern class MetalBorders
 * Border for a Warning Dialog.
 * @since 1.4
 */
-@:require(java4) @:native('javax$swing$plaf$metal$MetalBorders$WarningDialogBorder') @:internal extern class MetalBorders_WarningDialogBorder extends MetalBorders_DialogBorder implements javax.swing.plaf.UIResource
+@:require(java4) @:native('javax$swing$plaf$metal$MetalBorders$WarningDialogBorder') @:internal extern class MetalBorders_WarningDialogBorder extends javax.swing.plaf.metal.MetalBorders.MetalBorders_DialogBorder implements javax.swing.plaf.UIResource
 {
 	@:overload override private function getActiveBackground() : java.awt.Color;
 	
@@ -156,17 +156,17 @@ extern class MetalBorders
 */
 @:require(java3) @:native('javax$swing$plaf$metal$MetalBorders$PaletteBorder') extern class MetalBorders_PaletteBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
 @:native('javax$swing$plaf$metal$MetalBorders$OptionDialogBorder') extern class MetalBorders_OptionDialogBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -174,9 +174,9 @@ extern class MetalBorders
 {
 	private static var borderInsets : java.awt.Insets;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -184,9 +184,9 @@ extern class MetalBorders
 {
 	private static var borderInsets : java.awt.Insets;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -194,13 +194,13 @@ extern class MetalBorders
 {
 	private static var borderInsets : java.awt.Insets;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
-@:native('javax$swing$plaf$metal$MetalBorders$RolloverButtonBorder') extern class MetalBorders_RolloverButtonBorder extends MetalBorders_ButtonBorder
+@:native('javax$swing$plaf$metal$MetalBorders$RolloverButtonBorder') extern class MetalBorders_RolloverButtonBorder extends javax.swing.plaf.metal.MetalBorders.MetalBorders_ButtonBorder
 {
 	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
@@ -217,7 +217,7 @@ extern class MetalBorders
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
@@ -225,13 +225,13 @@ extern class MetalBorders
 {
 	private var bumps : javax.swing.plaf.metal.MetalBumps;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, newInsets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
-@:native('javax$swing$plaf$metal$MetalBorders$TextFieldBorder') extern class MetalBorders_TextFieldBorder extends MetalBorders_Flush3DBorder
+@:native('javax$swing$plaf$metal$MetalBorders$TextFieldBorder') extern class MetalBorders_TextFieldBorder extends javax.swing.plaf.metal.MetalBorders.MetalBorders_Flush3DBorder
 {
 	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
@@ -239,16 +239,16 @@ extern class MetalBorders
 }
 @:native('javax$swing$plaf$metal$MetalBorders$ScrollPaneBorder') extern class MetalBorders_ScrollPaneBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }
 /**
 * @since 1.3
 */
-@:require(java3) @:native('javax$swing$plaf$metal$MetalBorders$ToggleButtonBorder') extern class MetalBorders_ToggleButtonBorder extends MetalBorders_ButtonBorder
+@:require(java3) @:native('javax$swing$plaf$metal$MetalBorders$ToggleButtonBorder') extern class MetalBorders_ToggleButtonBorder extends javax.swing.plaf.metal.MetalBorders.MetalBorders_ButtonBorder
 {
 	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
@@ -262,9 +262,9 @@ extern class MetalBorders
 {
 	private var editorBorderInsets : java.awt.Insets;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
 	
 }

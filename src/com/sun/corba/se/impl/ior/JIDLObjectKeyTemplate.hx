@@ -36,7 +36,7 @@ extern class JIDLObjectKeyTemplate extends com.sun.corba.se.impl.ior.NewObjectKe
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, scid : Int, serverid : Int) : Void;
 	
-	@:overload override private function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload private function writeTemplate(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

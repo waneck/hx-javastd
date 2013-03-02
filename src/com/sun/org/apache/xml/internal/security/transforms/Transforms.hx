@@ -160,7 +160,7 @@ extern class Transforms extends com.sun.org.apache.xml.internal.security.utils.S
 	@:overload public function item(i : Int) : com.sun.org.apache.xml.internal.security.transforms.Transform;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

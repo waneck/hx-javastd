@@ -43,7 +43,7 @@ extern class DTraceProviderFactory extends com.sun.tracing.ProviderFactory
 	* methods that do not return null, or that contain arguments that are
 	* not String or integer types.
 	*/
-	@:overload override public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
+	@:overload public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
 	
 	/**
 	* Creates multiple providers at once.

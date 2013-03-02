@@ -43,7 +43,7 @@ extern class ProcessingInstructionEvent extends com.sun.xml.internal.stream.even
 	
 	@:overload public function toString() : String;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

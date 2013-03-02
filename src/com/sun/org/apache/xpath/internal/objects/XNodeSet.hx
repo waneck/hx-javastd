@@ -40,7 +40,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @param val Value of the XNodeSet object
 	*/
-	@:overload public function new(val : XNodeSet) : Void;
+	@:overload public function new(val : com.sun.org.apache.xpath.internal.objects.XNodeSet) : Void;
 	
 	/**
 	* Construct an empty XNodeSet object.  This is used to create a mutable
@@ -60,7 +60,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @return type CLASS_NODESET
 	*/
-	@:overload override public function getType() : Int;
+	@:overload public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -68,7 +68,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @return type string "#NODESET"
 	*/
-	@:overload override public function getTypeString() : String;
+	@:overload public function getTypeString() : String;
 	
 	/**
 	* Get numeric value of the string conversion from a single node.
@@ -85,7 +85,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	* @return numeric value of the string conversion from the
 	* next node in the NodeSetDTM, or NAN if no node was found
 	*/
-	@:overload override public function num() : Float;
+	@:overload public function num() : Float;
 	
 	/**
 	* Cast result object to a number, but allow side effects, such as the
@@ -94,14 +94,14 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	* @return numeric value of the string conversion from the
 	* next node in the NodeSetDTM, or NAN if no node was found
 	*/
-	@:overload override public function numWithSideEffects() : Float;
+	@:overload public function numWithSideEffects() : Float;
 	
 	/**
 	* Cast result object to a boolean.
 	*
 	* @return True if there is a next node in the nodeset
 	*/
-	@:overload override public function bool() : Bool;
+	@:overload public function bool() : Bool;
 	
 	/**
 	* Cast result object to a boolean, but allow side effects, such as the
@@ -109,7 +109,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @return True if there is a next node in the nodeset
 	*/
-	@:overload override public function boolWithSideEffects() : Bool;
+	@:overload public function boolWithSideEffects() : Bool;
 	
 	/**
 	* Get the string conversion from a single node.
@@ -131,21 +131,21 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws org.xml.sax.SAXException
 	*/
-	@:overload override public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload public function dispatchCharactersEvents(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Cast result object to an XMLString.
 	*
 	* @return The document fragment node data or the empty string.
 	*/
-	@:overload override public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
+	@:overload public function xstr() : com.sun.org.apache.xml.internal.utils.XMLString;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* Cast result object to a string.
@@ -153,7 +153,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	* @return the string conversion from the next node in the nodeset
 	* or "" if there is no next node
 	*/
-	@:overload override public function str() : String;
+	@:overload public function str() : String;
 	
 	/**
 	* Return a java object that's closest to the representation
@@ -161,7 +161,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @return The object that this class wraps
 	*/
-	@:overload override public function object() : Dynamic;
+	@:overload public function object() : Dynamic;
 	
 	/**
 	* Cast result object to a nodelist.
@@ -170,7 +170,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function nodeset() : org.w3c.dom.traversal.NodeIterator;
+	@:overload public function nodeset() : org.w3c.dom.traversal.NodeIterator;
 	
 	/**
 	* Cast result object to a nodelist.
@@ -179,7 +179,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function nodelist() : org.w3c.dom.NodeList;
+	@:overload public function nodelist() : org.w3c.dom.NodeList;
 	
 	/**
 	* Return the iterator without cloning, etc.
@@ -193,21 +193,21 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @return The nodeset as a nodelist
 	*/
-	@:overload override public function iter() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
+	@:overload public function iter() : com.sun.org.apache.xml.internal.dtm.DTMIterator;
 	
 	/**
 	* Get a fresh copy of the object.  For use with variables.
 	*
 	* @return A fresh nodelist.
 	*/
-	@:overload override public function getFresh() : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload public function getFresh() : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	/**
 	* Cast result object to a mutableNodeset.
 	*
 	* @return The nodeset as a mutableNodeset
 	*/
-	@:overload override public function mutableNodeset() : com.sun.org.apache.xpath.internal.NodeSetDTM;
+	@:overload public function mutableNodeset() : com.sun.org.apache.xpath.internal.NodeSetDTM;
 	
 	/**
 	* Tell if one object is less than the other.
@@ -219,7 +219,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload public function compare(obj2 : com.sun.org.apache.xpath.internal.objects.XObject, comparator : Comparator) : Bool;
+	@:overload public function compare(obj2 : com.sun.org.apache.xpath.internal.objects.XObject, comparator : com.sun.org.apache.xpath.internal.objects.XNodeSet.Comparator) : Bool;
 	
 	/**
 	* Tell if one object is less than the other.
@@ -230,7 +230,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function lessThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function lessThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is less than or equal to the other.
@@ -241,7 +241,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function lessThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function lessThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is less than the other.
@@ -252,7 +252,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function greaterThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function greaterThan(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if one object is less than the other.
@@ -263,7 +263,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function greaterThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function greaterThanOrEqual(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -274,7 +274,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if two objects are functionally not equal.
@@ -285,7 +285,7 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function notEquals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function notEquals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	
 }
@@ -293,27 +293,27 @@ extern class XNodeSet extends com.sun.org.apache.xpath.internal.axes.NodeSequenc
 {
 	
 }
-@:internal extern class LessThanComparator extends Comparator
+@:internal extern class LessThanComparator extends com.sun.org.apache.xpath.internal.objects.XNodeSet.Comparator
 {
 	
 }
-@:internal extern class LessThanOrEqualComparator extends Comparator
+@:internal extern class LessThanOrEqualComparator extends com.sun.org.apache.xpath.internal.objects.XNodeSet.Comparator
 {
 	
 }
-@:internal extern class GreaterThanComparator extends Comparator
+@:internal extern class GreaterThanComparator extends com.sun.org.apache.xpath.internal.objects.XNodeSet.Comparator
 {
 	
 }
-@:internal extern class GreaterThanOrEqualComparator extends Comparator
+@:internal extern class GreaterThanOrEqualComparator extends com.sun.org.apache.xpath.internal.objects.XNodeSet.Comparator
 {
 	
 }
-@:internal extern class EqualComparator extends Comparator
+@:internal extern class EqualComparator extends com.sun.org.apache.xpath.internal.objects.XNodeSet.Comparator
 {
 	
 }
-@:internal extern class NotEqualComparator extends Comparator
+@:internal extern class NotEqualComparator extends com.sun.org.apache.xpath.internal.objects.XNodeSet.Comparator
 {
 	
 }

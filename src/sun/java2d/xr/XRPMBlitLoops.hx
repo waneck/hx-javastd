@@ -41,7 +41,7 @@ extern class XRPMBlitLoops
 {
 	@:overload public function new(srcType : sun.java2d.loops.SurfaceType, dstType : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }
@@ -82,7 +82,7 @@ extern class XRPMBlitLoops
 }
 @:internal extern class XrSwToPMBlit extends sun.java2d.loops.Blit
 {
-	@:overload override public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
+	@:overload public function Blit(src : sun.java2d.SurfaceData, dst : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, sx : Int, sy : Int, dx : Int, dy : Int, w : Int, h : Int) : Void;
 	
 	
 }

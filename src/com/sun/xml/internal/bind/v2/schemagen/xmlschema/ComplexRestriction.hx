@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface ComplexRestriction extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.AttrDecls extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.TypeDefParticle extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function base(value : javax.xml.namespace.QName) : ComplexRestriction;
+	@:overload public function base(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.ComplexRestriction;
 	
 	
 }

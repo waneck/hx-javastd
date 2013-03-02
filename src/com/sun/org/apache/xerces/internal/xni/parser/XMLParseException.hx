@@ -69,7 +69,7 @@ extern class XMLParseException extends com.sun.org.apache.xerces.internal.xni.XN
 	@:overload public function getCharacterOffset() : Int;
 	
 	/** Returns a string representation of this object. */
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

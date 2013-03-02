@@ -27,7 +27,7 @@ extern class UTF_32LE extends sun.nio.cs.Unicode
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function historicalName() : String;
+	@:overload public function historicalName() : String;
 	
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	

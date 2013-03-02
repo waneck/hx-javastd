@@ -34,7 +34,7 @@ package com.sun.xml.internal.ws.model.wsdl;
 	*/
 	private var extensions(default, null) : java.util.Set<com.sun.xml.internal.ws.api.model.wsdl.WSDLExtension>;
 	
-	private var notUnderstoodExtensions : java.util.List<AbstractExtensibleImpl_UnknownWSDLExtension>;
+	private var notUnderstoodExtensions : java.util.List<com.sun.xml.internal.ws.model.wsdl.AbstractExtensibleImpl.AbstractExtensibleImpl_UnknownWSDLExtension>;
 	
 	@:overload private function new(xsr : javax.xml.stream.XMLStreamReader) : Void;
 	

@@ -37,7 +37,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* The first child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public public function getFirstChild() : Node;
+	@:overload @:public @:public @:public @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Creates a <code>QName</code> whose namespace URI is the one associated
@@ -66,94 +66,11 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	@:require(java3) @:overload @:public @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
 	
 	/**
-	* Tests whether two nodes are equal.
-	* <br>This method tests for equality of nodes, not sameness (i.e.,
-	* whether the two nodes are references to the same object) which can be
-	* tested with <code>Node.isSameNode()</code>. All nodes that are the
-	* same will also be equal, though the reverse may not be true.
-	* <br>Two nodes are equal if and only if the following conditions are
-	* satisfied:
-	* <ul>
-	* <li>The two nodes are of the same type.
-	* </li>
-	* <li>The following string
-	* attributes are equal: <code>nodeName</code>, <code>localName</code>,
-	* <code>namespaceURI</code>, <code>prefix</code>, <code>nodeValue</code>
-	* . This is: they are both <code>null</code>, or they have the same
-	* length and are character for character identical.
-	* </li>
-	* <li>The
-	* <code>attributes</code> <code>NamedNodeMaps</code> are equal. This
-	* is: they are both <code>null</code>, or they have the same length and
-	* for each node that exists in one map there is a node that exists in
-	* the other map and is equal, although not necessarily at the same
-	* index.
-	* </li>
-	* <li>The <code>childNodes</code> <code>NodeLists</code> are equal.
-	* This is: they are both <code>null</code>, or they have the same
-	* length and contain equal nodes at the same index. Note that
-	* normalization can affect equality; to avoid this, nodes should be
-	* normalized before being compared.
-	* </li>
-	* </ul>
-	* <br>For two <code>DocumentType</code> nodes to be equal, the following
-	* conditions must also be satisfied:
-	* <ul>
-	* <li>The following string attributes
-	* are equal: <code>publicId</code>, <code>systemId</code>,
-	* <code>internalSubset</code>.
-	* </li>
-	* <li>The <code>entities</code>
-	* <code>NamedNodeMaps</code> are equal.
-	* </li>
-	* <li>The <code>notations</code>
-	* <code>NamedNodeMaps</code> are equal.
-	* </li>
-	* </ul>
-	* <br>On the other hand, the following do not affect equality: the
-	* <code>ownerDocument</code>, <code>baseURI</code>, and
-	* <code>parentNode</code> attributes, the <code>specified</code>
-	* attribute for <code>Attr</code> nodes, the <code>schemaTypeInfo</code>
-	*  attribute for <code>Attr</code> and <code>Element</code> nodes, the
-	* <code>Text.isElementContentWhitespace</code> attribute for
-	* <code>Text</code> nodes, as well as any user data or event listeners
-	* registered on the nodes.
-	* <p ><b>Note:</b>  As a general rule, anything not mentioned in the
-	* description above is not significant in consideration of equality
-	* checking. Note that future versions of this specification may take
-	* into account more attributes and implementations conform to this
-	* specification are expected to be updated accordingly.
-	* @param arg The node to compare equality with.
-	* @return Returns <code>true</code> if the nodes are equal,
-	*   <code>false</code> otherwise.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public public function isEqualNode(arg : Node) : Bool;
-	
-	/**
 	* Returns whether this node has any children.
 	* @return Returns <code>true</code> if this node has any children,
 	*   <code>false</code> otherwise.
 	*/
 	@:overload @:public @:public @:public @:public public function hasChildNodes() : Bool;
-	
-	/**
-	* Compares the reference node, i.e. the node on which this method is
-	* being called, with a node, i.e. the one passed as a parameter, with
-	* regard to their position in the document and according to the
-	* document order.
-	* @param other The node to compare against the reference node.
-	* @return Returns how the node is positioned relatively to the reference
-	*   node.
-	* @exception DOMException
-	*   NOT_SUPPORTED_ERR: when the compared nodes are from different DOM
-	*   implementations that do not coordinate to return consistent
-	*   implementation-specific results.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public public function compareDocumentPosition(other : Node) : java.StdTypes.Int16;
 	
 	/**
 	* Returns the qname of this <code>SOAPElement</code> object.
@@ -228,42 +145,6 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	@:overload @:public @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
 	
 	/**
-	* Inserts the node <code>newChild</code> before the existing child node
-	* <code>refChild</code>. If <code>refChild</code> is <code>null</code>,
-	* insert <code>newChild</code> at the end of the list of children.
-	* <br>If <code>newChild</code> is a <code>DocumentFragment</code> object,
-	* all of its children are inserted, in the same order, before
-	* <code>refChild</code>. If the <code>newChild</code> is already in the
-	* tree, it is first removed.
-	* <p ><b>Note:</b>  Inserting a node before itself is implementation
-	* dependent.
-	* @param newChild The node to insert.
-	* @param refChild The reference node, i.e., the node before which the
-	*   new node must be inserted.
-	* @return The node being inserted.
-	* @exception DOMException
-	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
-	*   allow children of the type of the <code>newChild</code> node, or if
-	*   the node to insert is one of this node's ancestors or this node
-	*   itself, or if this node is of type <code>Document</code> and the
-	*   DOM application attempts to insert a second
-	*   <code>DocumentType</code> or <code>Element</code> node.
-	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
-	*   from a different document than the one that created this node.
-	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
-	*   if the parent of the node being inserted is readonly.
-	*   <br>NOT_FOUND_ERR: Raised if <code>refChild</code> is not a child of
-	*   this node.
-	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
-	*   this exception might be raised if the DOM implementation doesn't
-	*   support the insertion of a <code>DocumentType</code> or
-	*   <code>Element</code> node.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public public function insertBefore(newChild : Node, refChild : Node) : Node;
-	
-	/**
 	* Associate an object to a key on this node. The object can later be
 	* retrieved from this node by calling <code>getUserData</code> with the
 	* same key.
@@ -287,7 +168,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* tree, or if it has been removed from the tree, this is
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public public function getParentNode() : Node;
+	@:overload @:public @:public @:public @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* Returns whether this node (if it is an element) has any attributes.
@@ -313,7 +194,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	<code>name</code> on this SOAPElement.
 	* @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
 	*/
-	@:overload @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : SOAPElement;
+	@:overload @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Look up the namespace URI associated to the given prefix, starting from
@@ -328,6 +209,39 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @since DOM Level 3
 	*/
 	@:overload @:public @:public @:public @:public public function lookupNamespaceURI(prefix : String) : String;
+	
+	/**
+	* Add a <code>SOAPElement</code> as a child of this
+	* <code>SOAPElement</code> instance. The <code>SOAPElement</code>
+	* is expected to be created by a
+	* <code>SOAPFactory</code>. Callers should not rely on the
+	* element instance being added as is into the XML
+	* tree. Implementations could end up copying the content
+	* of the <code>SOAPElement</code> passed into an instance of
+	* a different <code>SOAPElement</code> implementation. For
+	* instance if <code>addChildElement()</code> is called on a
+	* <code>SOAPHeader</code>, <code>element</code> will be copied
+	* into an instance of a <code>SOAPHeaderElement</code>.
+	*
+	* <P>The fragment rooted in <code>element</code> is either added
+	* as a whole or not at all, if there was an error.
+	*
+	* <P>The fragment rooted in <code>element</code> cannot contain
+	* elements named "Envelope", "Header" or "Body" and in the SOAP
+	* namespace. Any namespace prefixes present in the fragment
+	* should be fully resolved using appropriate namespace
+	* declarations within the fragment itself.
+	*
+	* @param element the <code>SOAPElement</code> to be added as a
+	*                new child
+	*
+	* @exception SOAPException if there was an error in adding this
+	*                          element as a child
+	*
+	* @return an instance representing the new SOAP element that was
+	*         actually added to the tree.
+	*/
+	@:overload @:public @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Removes the attribute with the specified qname.
@@ -417,25 +331,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @exception SOAPException if there is an error in creating the
 	*                          namespace
 	*/
-	@:overload @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : SOAPElement;
-	
-	/**
-	* Removes the child node indicated by <code>oldChild</code> from the list
-	* of children, and returns it.
-	* @param oldChild The node being removed.
-	* @return The node removed.
-	* @exception DOMException
-	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
-	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
-	*   this node.
-	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
-	*   this exception might be raised if the DOM implementation doesn't
-	*   support the removal of the <code>DocumentType</code> child or the
-	*   <code>Element</code> child.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public public function removeChild(oldChild : Node) : Node;
+	@:overload @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -499,7 +395,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public public function addChildElement(localName : String) : SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* A <code>NodeList</code> that contains all children of this node. If
@@ -524,6 +420,23 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	@:overload @:public @:public @:public @:public public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
+	* Compares the reference node, i.e. the node on which this method is
+	* being called, with a node, i.e. the one passed as a parameter, with
+	* regard to their position in the document and according to the
+	* document order.
+	* @param other The node to compare against the reference node.
+	* @return Returns how the node is positioned relatively to the reference
+	*   node.
+	* @exception DOMException
+	*   NOT_SUPPORTED_ERR: when the compared nodes are from different DOM
+	*   implementations that do not coordinate to return consistent
+	*   implementation-specific results.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	
+	/**
 	* Adds an attribute with the specified name and value to this
 	* <code>SOAPElement</code> object.
 	*
@@ -539,7 +452,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @see SOAPElement#addAttribute(Name, String)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	*  Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -632,7 +545,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified name.
@@ -691,6 +604,72 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	@:overload @:public @:public @:public @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
+	* Tests whether two nodes are equal.
+	* <br>This method tests for equality of nodes, not sameness (i.e.,
+	* whether the two nodes are references to the same object) which can be
+	* tested with <code>Node.isSameNode()</code>. All nodes that are the
+	* same will also be equal, though the reverse may not be true.
+	* <br>Two nodes are equal if and only if the following conditions are
+	* satisfied:
+	* <ul>
+	* <li>The two nodes are of the same type.
+	* </li>
+	* <li>The following string
+	* attributes are equal: <code>nodeName</code>, <code>localName</code>,
+	* <code>namespaceURI</code>, <code>prefix</code>, <code>nodeValue</code>
+	* . This is: they are both <code>null</code>, or they have the same
+	* length and are character for character identical.
+	* </li>
+	* <li>The
+	* <code>attributes</code> <code>NamedNodeMaps</code> are equal. This
+	* is: they are both <code>null</code>, or they have the same length and
+	* for each node that exists in one map there is a node that exists in
+	* the other map and is equal, although not necessarily at the same
+	* index.
+	* </li>
+	* <li>The <code>childNodes</code> <code>NodeLists</code> are equal.
+	* This is: they are both <code>null</code>, or they have the same
+	* length and contain equal nodes at the same index. Note that
+	* normalization can affect equality; to avoid this, nodes should be
+	* normalized before being compared.
+	* </li>
+	* </ul>
+	* <br>For two <code>DocumentType</code> nodes to be equal, the following
+	* conditions must also be satisfied:
+	* <ul>
+	* <li>The following string attributes
+	* are equal: <code>publicId</code>, <code>systemId</code>,
+	* <code>internalSubset</code>.
+	* </li>
+	* <li>The <code>entities</code>
+	* <code>NamedNodeMaps</code> are equal.
+	* </li>
+	* <li>The <code>notations</code>
+	* <code>NamedNodeMaps</code> are equal.
+	* </li>
+	* </ul>
+	* <br>On the other hand, the following do not affect equality: the
+	* <code>ownerDocument</code>, <code>baseURI</code>, and
+	* <code>parentNode</code> attributes, the <code>specified</code>
+	* attribute for <code>Attr</code> nodes, the <code>schemaTypeInfo</code>
+	*  attribute for <code>Attr</code> and <code>Element</code> nodes, the
+	* <code>Text.isElementContentWhitespace</code> attribute for
+	* <code>Text</code> nodes, as well as any user data or event listeners
+	* registered on the nodes.
+	* <p ><b>Note:</b>  As a general rule, anything not mentioned in the
+	* description above is not significant in consideration of equality
+	* checking. Note that future versions of this specification may take
+	* into account more attributes and implementations conform to this
+	* specification are expected to be updated accordingly.
+	* @param arg The node to compare equality with.
+	* @return Returns <code>true</code> if the nodes are equal,
+	*   <code>false</code> otherwise.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	
+	/**
 	* Detaches all children of this <code>SOAPElement</code>.
 	* <p>
 	* This method is useful for rolling back the construction of partially
@@ -702,6 +681,23 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @since SAAJ 1.2
 	*/
 	@:require(java2) @:overload @:abstract @:public @:public @:public public function removeContents() : Void;
+	
+	/**
+	* Returns whether this node is the same node as the given one.
+	* <br>This method provides a way to determine whether two
+	* <code>Node</code> references returned by the implementation reference
+	* the same object. When two <code>Node</code> references are references
+	* to the same object, even if through a proxy, the references may be
+	* used completely interchangeably, such that all attributes have the
+	* same values and calling the same DOM method on either reference
+	* always has exactly the same effect.
+	* @param other The node to test against.
+	* @return Returns <code>true</code> if the nodes are the same,
+	*   <code>false</code> otherwise.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Adds a new attribute. If an attribute with that local name and that
@@ -807,13 +803,13 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	*                          <code>SOAPElement</code> object
 	* @see SOAPElement#addChildElement(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* The node immediately following this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public public function getNextSibling() : Node;
+	@:overload @:public @:public @:public @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns a duplicate of this node, i.e., serves as a generic copy
@@ -849,7 +845,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	*   itself (and its attributes, if it is an <code>Element</code>).
 	* @return The duplicate node.
 	*/
-	@:overload @:public @:public @:public @:public public function cloneNode(deep : Bool) : Node;
+	@:overload @:public @:public @:public @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -878,6 +874,42 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @since SAAJ 1.3
 	*/
 	@:require(java3) @:overload @:public @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
+	
+	/**
+	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
+	*  in the list of children, and returns the <code>oldChild</code> node.
+	* <br>If <code>newChild</code> is a <code>DocumentFragment</code> object,
+	* <code>oldChild</code> is replaced by all of the
+	* <code>DocumentFragment</code> children, which are inserted in the
+	* same order. If the <code>newChild</code> is already in the tree, it
+	* is first removed.
+	* <p ><b>Note:</b>  Replacing a node with itself is implementation
+	* dependent.
+	* @param newChild The new node to put in the child list.
+	* @param oldChild The node being replaced in the list.
+	* @return The node replaced.
+	* @exception DOMException
+	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
+	*   allow children of the type of the <code>newChild</code> node, or if
+	*   the node to put in is one of this node's ancestors or this node
+	*   itself, or if this node is of type <code>Document</code> and the
+	*   result of the replacement operation would add a second
+	*   <code>DocumentType</code> or <code>Element</code> on the
+	*   <code>Document</code> node.
+	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
+	*   from a different document than the one that created this node.
+	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node or the parent of
+	*   the new node is readonly.
+	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
+	*   this node.
+	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
+	*   this exception might be raised if the DOM implementation doesn't
+	*   support the replacement of the <code>DocumentType</code> child or
+	*   <code>Element</code> child.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes the specified attribute node. If a default value for the
@@ -963,37 +995,22 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	@:overload @:public @:public @:public @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
-	* Add a <code>SOAPElement</code> as a child of this
-	* <code>SOAPElement</code> instance. The <code>SOAPElement</code>
-	* is expected to be created by a
-	* <code>SOAPFactory</code>. Callers should not rely on the
-	* element instance being added as is into the XML
-	* tree. Implementations could end up copying the content
-	* of the <code>SOAPElement</code> passed into an instance of
-	* a different <code>SOAPElement</code> implementation. For
-	* instance if <code>addChildElement()</code> is called on a
-	* <code>SOAPHeader</code>, <code>element</code> will be copied
-	* into an instance of a <code>SOAPHeaderElement</code>.
+	* Removes the child node indicated by <code>oldChild</code> from the list
+	* of children, and returns it.
+	* @param oldChild The node being removed.
+	* @return The node removed.
+	* @exception DOMException
+	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
+	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
+	*   this node.
+	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
+	*   this exception might be raised if the DOM implementation doesn't
+	*   support the removal of the <code>DocumentType</code> child or the
+	*   <code>Element</code> child.
 	*
-	* <P>The fragment rooted in <code>element</code> is either added
-	* as a whole or not at all, if there was an error.
-	*
-	* <P>The fragment rooted in <code>element</code> cannot contain
-	* elements named "Envelope", "Header" or "Body" and in the SOAP
-	* namespace. Any namespace prefixes present in the fragment
-	* should be fully resolved using appropriate namespace
-	* declarations within the fragment itself.
-	*
-	* @param element the <code>SOAPElement</code> to be added as a
-	*                new child
-	*
-	* @exception SOAPException if there was an error in adding this
-	*                          element as a child
-	*
-	* @return an instance representing the new SOAP element that was
-	*         actually added to the tree.
+	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public public function addChildElement(element : SOAPElement) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if the
@@ -1071,34 +1088,6 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	@:overload @:public @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
 	
 	/**
-	* Adds the node <code>newChild</code> to the end of the list of children
-	* of this node. If the <code>newChild</code> is already in the tree, it
-	* is first removed.
-	* @param newChild The node to add.If it is a
-	*   <code>DocumentFragment</code> object, the entire contents of the
-	*   document fragment are moved into the child list of this node
-	* @return The node added.
-	* @exception DOMException
-	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
-	*   allow children of the type of the <code>newChild</code> node, or if
-	*   the node to append is one of this node's ancestors or this node
-	*   itself, or if this node is of type <code>Document</code> and the
-	*   DOM application attempts to append a second
-	*   <code>DocumentType</code> or <code>Element</code> node.
-	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
-	*   from a different document than the one that created this node.
-	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
-	*   if the previous parent of the node being inserted is readonly.
-	*   <br>NOT_SUPPORTED_ERR: if the <code>newChild</code> node is a child
-	*   of the <code>Document</code> node, this exception might be raised
-	*   if the DOM implementation doesn't support the removal of the
-	*   <code>DocumentType</code> child or <code>Element</code> child.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public public function appendChild(newChild : Node) : Node;
-	
-	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
 	* unspecified. When it is defined to be <code>null</code>, setting it
 	* has no effect, including if the node is read-only.
@@ -1165,7 +1154,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* The node immediately preceding this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public public function getPreviousSibling() : Node;
+	@:overload @:public @:public @:public @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* Returns the name of this <code>SOAPElement</code> object.
@@ -1266,7 +1255,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	*         context of this <code>SOAPElement</code> or  if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public public function addChildElement(localName : String, prefix : String) : SOAPElement;
+	@:overload @:public @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified qname.
@@ -1294,7 +1283,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* @see SOAPElement#addChildElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1357,43 +1346,43 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	*                      attach it as a child to this
 	*                      <code>SOAPElement</code>
 	*/
-	@:overload @:public @:public @:public public function addTextNode(text : String) : SOAPElement;
+	@:overload @:public @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
 	/**
-	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
-	*  in the list of children, and returns the <code>oldChild</code> node.
+	* Inserts the node <code>newChild</code> before the existing child node
+	* <code>refChild</code>. If <code>refChild</code> is <code>null</code>,
+	* insert <code>newChild</code> at the end of the list of children.
 	* <br>If <code>newChild</code> is a <code>DocumentFragment</code> object,
-	* <code>oldChild</code> is replaced by all of the
-	* <code>DocumentFragment</code> children, which are inserted in the
-	* same order. If the <code>newChild</code> is already in the tree, it
-	* is first removed.
-	* <p ><b>Note:</b>  Replacing a node with itself is implementation
+	* all of its children are inserted, in the same order, before
+	* <code>refChild</code>. If the <code>newChild</code> is already in the
+	* tree, it is first removed.
+	* <p ><b>Note:</b>  Inserting a node before itself is implementation
 	* dependent.
-	* @param newChild The new node to put in the child list.
-	* @param oldChild The node being replaced in the list.
-	* @return The node replaced.
+	* @param newChild The node to insert.
+	* @param refChild The reference node, i.e., the node before which the
+	*   new node must be inserted.
+	* @return The node being inserted.
 	* @exception DOMException
 	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
 	*   allow children of the type of the <code>newChild</code> node, or if
-	*   the node to put in is one of this node's ancestors or this node
+	*   the node to insert is one of this node's ancestors or this node
 	*   itself, or if this node is of type <code>Document</code> and the
-	*   result of the replacement operation would add a second
-	*   <code>DocumentType</code> or <code>Element</code> on the
-	*   <code>Document</code> node.
+	*   DOM application attempts to insert a second
+	*   <code>DocumentType</code> or <code>Element</code> node.
 	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
 	*   from a different document than the one that created this node.
-	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node or the parent of
-	*   the new node is readonly.
-	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
+	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
+	*   if the parent of the node being inserted is readonly.
+	*   <br>NOT_FOUND_ERR: Raised if <code>refChild</code> is not a child of
 	*   this node.
 	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
 	*   this exception might be raised if the DOM implementation doesn't
-	*   support the replacement of the <code>DocumentType</code> child or
-	*   <code>Element</code> child.
+	*   support the insertion of a <code>DocumentType</code> or
+	*   <code>Element</code> node.
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public public function replaceChild(newChild : Node, oldChild : Node) : Node;
+	@:overload @:public @:public @:public @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Adds a new attribute. If an attribute with the same local name and
@@ -1471,23 +1460,6 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	@:overload @:public @:public @:public override public function hasAttribute(name : String) : Bool;
 	
 	/**
-	* Returns whether this node is the same node as the given one.
-	* <br>This method provides a way to determine whether two
-	* <code>Node</code> references returned by the implementation reference
-	* the same object. When two <code>Node</code> references are references
-	* to the same object, even if through a proxy, the references may be
-	* used completely interchangeably, such that all attributes have the
-	* same values and calling the same DOM method on either reference
-	* always has exactly the same effect.
-	* @param other The node to test against.
-	* @return Returns <code>true</code> if the nodes are the same,
-	*   <code>false</code> otherwise.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public public function isSameNode(other : Node) : Bool;
-	
-	/**
 	* Returns an <code>Iterator</code> over the namespace prefix
 	* <code>String</code>s visible to this element. The prefixes returned by
 	* this iterator can be passed to the method
@@ -1504,7 +1476,7 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	* The last child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public public function getLastChild() : Node;
+	@:overload @:public @:public @:public @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	*  Tests whether the DOM implementation implements a specific feature and
@@ -1538,6 +1510,34 @@ extern class FaultElementImpl extends com.sun.org.apache.xerces.internal.dom.Ele
 	*         removed successfully; <code>false</code> if it was not
 	*/
 	@:overload @:public @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
+	
+	/**
+	* Adds the node <code>newChild</code> to the end of the list of children
+	* of this node. If the <code>newChild</code> is already in the tree, it
+	* is first removed.
+	* @param newChild The node to add.If it is a
+	*   <code>DocumentFragment</code> object, the entire contents of the
+	*   document fragment are moved into the child list of this node
+	* @return The node added.
+	* @exception DOMException
+	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
+	*   allow children of the type of the <code>newChild</code> node, or if
+	*   the node to append is one of this node's ancestors or this node
+	*   itself, or if this node is of type <code>Document</code> and the
+	*   DOM application attempts to append a second
+	*   <code>DocumentType</code> or <code>Element</code> node.
+	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
+	*   from a different document than the one that created this node.
+	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
+	*   if the previous parent of the node being inserted is readonly.
+	*   <br>NOT_SUPPORTED_ERR: if the <code>newChild</code> node is a child
+	*   of the <code>Document</code> node, this exception might be raised
+	*   if the DOM implementation doesn't support the removal of the
+	*   <code>DocumentType</code> child or <code>Element</code> child.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*  The type information associated with this element.

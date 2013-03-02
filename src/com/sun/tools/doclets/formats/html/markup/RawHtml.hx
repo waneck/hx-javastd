@@ -47,7 +47,7 @@ extern class RawHtml extends com.sun.tools.doclets.internal.toolkit.Content
 	*                              DocletAbortException because it
 	*                              is not supported.
 	*/
-	@:overload public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload override public function addContent(content : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* This method is not supported by the class.

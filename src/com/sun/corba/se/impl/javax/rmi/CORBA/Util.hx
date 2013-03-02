@@ -34,7 +34,7 @@ extern class Util implements javax.rmi.CORBA.UtilDelegate
 {
 	@:overload public function new() : Void;
 	
-	@:overload public static function getInstance() : Util;
+	@:overload public static function getInstance() : com.sun.corba.se.impl.javax.rmi.CORBA.Util;
 	
 	@:overload public static function isInstanceDefined() : Bool;
 	

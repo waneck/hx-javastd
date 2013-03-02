@@ -33,7 +33,7 @@ package com.sun.xml.internal.ws.protocol.soap;
 	
 	@:overload private function new(binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : MUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.protocol.soap.MUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	/**
 	* @param headers HeaderList that needs MU processing

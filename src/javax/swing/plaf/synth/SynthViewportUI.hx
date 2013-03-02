@@ -37,17 +37,17 @@ package javax.swing.plaf.synth;
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Installs defaults for a viewport.
@@ -94,7 +94,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the border. The method is never called,
@@ -119,7 +119,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.

@@ -36,7 +36,7 @@ extern class LogManager
 	/**
 	* Return the global LogManager object.
 	*/
-	@:overload public static function getLogManager() : LogManager;
+	@:overload public static function getLogManager() : java.util.logging.LogManager;
 	
 	/**
 	* Adds an event listener to be invoked when the logging
@@ -226,7 +226,7 @@ extern class LogManager
 {
 	
 }
-@:native('java$util$logging$LogManager$SystemLoggerContext') @:internal extern class LogManager_SystemLoggerContext extends LogManager_LoggerContext
+@:native('java$util$logging$LogManager$SystemLoggerContext') @:internal extern class LogManager_SystemLoggerContext extends java.util.logging.LogManager.LogManager_LoggerContext
 {
 	
 }
@@ -240,13 +240,13 @@ extern class LogManager
 }
 @:native('java$util$logging$LogManager$RootLogger') @:internal extern class LogManager_RootLogger extends java.util.logging.Logger
 {
-	@:overload override public function log(record : java.util.logging.LogRecord) : Void;
+	@:overload public function log(record : java.util.logging.LogRecord) : Void;
 	
-	@:overload override public function addHandler(h : java.util.logging.Handler) : Void;
+	@:overload public function addHandler(h : java.util.logging.Handler) : Void;
 	
-	@:overload override public function removeHandler(h : java.util.logging.Handler) : Void;
+	@:overload public function removeHandler(h : java.util.logging.Handler) : Void;
 	
-	@:overload override public function getHandlers() : java.NativeArray<java.util.logging.Handler>;
+	@:overload public function getHandlers() : java.NativeArray<java.util.logging.Handler>;
 	
 	
 }

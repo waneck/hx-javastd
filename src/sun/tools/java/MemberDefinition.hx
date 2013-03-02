@@ -53,11 +53,11 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	
 	private var innerClass : sun.tools.java.ClassDefinition;
 	
-	private var nextMember : MemberDefinition;
+	private var nextMember : sun.tools.java.MemberDefinition;
 	
-	private var nextMatch : MemberDefinition;
+	private var nextMatch : sun.tools.java.MemberDefinition;
 	
-	private var accessPeer : MemberDefinition;
+	private var accessPeer : sun.tools.java.MemberDefinition;
 	
 	private var superAccessMethod : Bool;
 	
@@ -93,7 +93,7 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* unique then we can end up generating duplicate MethodRef
 	* constant pool entries during code generation.
 	*/
-	@:overload public static function makeProxyMember(field : MemberDefinition, classDef : sun.tools.java.ClassDefinition, env : sun.tools.java.Environment) : MemberDefinition;
+	@:overload public static function makeProxyMember(field : sun.tools.java.MemberDefinition, classDef : sun.tools.java.ClassDefinition, env : sun.tools.java.Environment) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Get the position in the input
@@ -173,16 +173,16 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* Is this a synthetic method which provides access to a
 	* visible private member?
 	*/
-	@:overload public function getAccessMethodTarget() : MemberDefinition;
+	@:overload public function getAccessMethodTarget() : sun.tools.java.MemberDefinition;
 	
-	@:overload public function setAccessMethodTarget(target : MemberDefinition) : Void;
+	@:overload public function setAccessMethodTarget(target : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* If this method is a getter for a private field, return the setter.
 	*/
-	@:overload public function getAccessUpdateMember() : MemberDefinition;
+	@:overload public function getAccessUpdateMember() : sun.tools.java.MemberDefinition;
 	
-	@:overload public function setAccessUpdateMember(updater : MemberDefinition) : Void;
+	@:overload public function setAccessUpdateMember(updater : sun.tools.java.MemberDefinition) : Void;
 	
 	/**
 	* Is this an access method for a field selection or method call
@@ -218,9 +218,9 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	/**
 	* Get the next field or the next match
 	*/
-	@:overload @:final public function getNextMember() : MemberDefinition;
+	@:overload @:final public function getNextMember() : sun.tools.java.MemberDefinition;
 	
-	@:overload @:final public function getNextMatch() : MemberDefinition;
+	@:overload @:final public function getNextMatch() : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Get the field's documentation
@@ -253,12 +253,12 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* Check if a field can reach another field (only considers
 	* forward references, not the access modifiers).
 	*/
-	@:overload @:final public function canReach(env : sun.tools.java.Environment, f : MemberDefinition) : Bool;
+	@:overload @:final public function canReach(env : sun.tools.java.Environment, f : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Convenience method to see if two methods return the same type
 	*/
-	@:overload public function sameReturnType(method : MemberDefinition) : Bool;
+	@:overload public function sameReturnType(method : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Check to see if `this' can override/hide `method'.  Caller is
@@ -274,7 +274,7 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	*       B - void foo() throws e2
 	* </pre>
 	*/
-	@:overload public function checkOverride(env : sun.tools.java.Environment, method : MemberDefinition) : Bool;
+	@:overload public function checkOverride(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Check to see if two method definitions are compatible, that is
@@ -294,7 +294,7 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	*          C
 	* </pre>
 	*/
-	@:overload public function checkMeet(env : sun.tools.java.Environment, method : MemberDefinition, clazz : sun.tools.java.ClassDeclaration) : Bool;
+	@:overload public function checkMeet(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition, clazz : sun.tools.java.ClassDeclaration) : Bool;
 	
 	/**
 	* This method is meant to be used to determine if one of two inherited
@@ -305,7 +305,7 @@ extern class MemberDefinition implements sun.tools.java.Constants
 	* If you call couldOverride() without doing a checkMeet() first, then
 	* you are on your own.
 	*/
-	@:overload public function couldOverride(env : sun.tools.java.Environment, method : MemberDefinition) : Bool;
+	@:overload public function couldOverride(env : sun.tools.java.Environment, method : sun.tools.java.MemberDefinition) : Bool;
 	
 	/**
 	* Checks

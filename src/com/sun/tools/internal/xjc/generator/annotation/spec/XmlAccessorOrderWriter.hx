@@ -25,7 +25,7 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlAccessorOrderWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlAccessorOrder>
 {
-	@:overload public function value(value : javax.xml.bind.annotation.XmlAccessOrder) : XmlAccessorOrderWriter;
+	@:overload public function value(value : javax.xml.bind.annotation.XmlAccessOrder) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlAccessorOrderWriter;
 	
 	
 }

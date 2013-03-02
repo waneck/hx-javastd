@@ -64,7 +64,7 @@ package com.sun.org.apache.bcel.internal.util;
 */
 extern class ClassPath implements java.io.Serializable
 {
-	public static var SYSTEM_CLASS_PATH(default, null) : ClassPath;
+	public static var SYSTEM_CLASS_PATH(default, null) : com.sun.org.apache.bcel.internal.util.ClassPath;
 	
 	/**
 	* Search for classes in given path.
@@ -112,13 +112,13 @@ extern class ClassPath implements java.io.Serializable
 	* @param suffix file name ends with suff, e.g. .java
 	* @return class file for the java class
 	*/
-	@:overload public function getClassFile(name : String, suffix : String) : ClassPath_ClassFile;
+	@:overload public function getClassFile(name : String, suffix : String) : com.sun.org.apache.bcel.internal.util.ClassPath.ClassPath_ClassFile;
 	
 	/**
 	* @param name fully qualified class name, e.g. java.lang.String
 	* @return input stream for class
 	*/
-	@:overload public function getClassFile(name : String) : ClassPath_ClassFile;
+	@:overload public function getClassFile(name : String) : com.sun.org.apache.bcel.internal.util.ClassPath.ClassPath_ClassFile;
 	
 	/**
 	* @param name fully qualified file name, e.g. java/lang/String
@@ -178,13 +178,13 @@ extern class ClassPath implements java.io.Serializable
 	
 	
 }
-@:native('com$sun$org$apache$bcel$internal$util$ClassPath$Dir') @:internal extern class ClassPath_Dir extends ClassPath_PathEntry
+@:native('com$sun$org$apache$bcel$internal$util$ClassPath$Dir') @:internal extern class ClassPath_Dir extends com.sun.org.apache.bcel.internal.util.ClassPath.ClassPath_PathEntry
 {
 	@:overload public function toString() : String;
 	
 	
 }
-@:native('com$sun$org$apache$bcel$internal$util$ClassPath$Zip') @:internal extern class ClassPath_Zip extends ClassPath_PathEntry
+@:native('com$sun$org$apache$bcel$internal$util$ClassPath$Zip') @:internal extern class ClassPath_Zip extends com.sun.org.apache.bcel.internal.util.ClassPath.ClassPath_PathEntry
 {
 	
 }

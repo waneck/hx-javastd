@@ -61,7 +61,7 @@ extern class XMLSignatureFactory
 	*    mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String) : XMLSignatureFactory;
+	@:overload public static function getInstance(mechanismType : String) : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns an <code>XMLSignatureFactory</code> that supports the
@@ -84,7 +84,7 @@ extern class XMLSignatureFactory
 	*   from the specified <code>Provider</code> object
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : java.security.Provider) : XMLSignatureFactory;
+	@:overload public static function getInstance(mechanismType : String, provider : java.security.Provider) : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns an <code>XMLSignatureFactory</code> that supports the
@@ -111,7 +111,7 @@ extern class XMLSignatureFactory
 	*    available from the specified provider
 	* @see Provider
 	*/
-	@:overload public static function getInstance(mechanismType : String, provider : String) : XMLSignatureFactory;
+	@:overload public static function getInstance(mechanismType : String, provider : String) : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns an <code>XMLSignatureFactory</code> that supports the
@@ -134,7 +134,7 @@ extern class XMLSignatureFactory
 	*    mechanism
 	* @see Provider
 	*/
-	@:overload public static function getInstance() : XMLSignatureFactory;
+	@:overload public static function getInstance() : javax.xml.crypto.dsig.XMLSignatureFactory;
 	
 	/**
 	* Returns the type of the XML processing mechanism and representation

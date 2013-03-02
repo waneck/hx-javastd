@@ -61,12 +61,12 @@ extern class RequestContext extends com.sun.xml.internal.ws.api.PropertySet
 	/**
 	* The efficient get method that reads from {@link RequestContext}.
 	*/
-	@:overload override public function get(key : Dynamic) : Dynamic;
+	@:overload public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* The efficient put method that updates {@link RequestContext}.
 	*/
-	@:overload override public function put(key : String, value : Dynamic) : Dynamic;
+	@:overload public function put(key : String, value : Dynamic) : Dynamic;
 	
 	/**
 	* Gets the {@link Map} view of this request context.
@@ -81,9 +81,9 @@ extern class RequestContext extends com.sun.xml.internal.ws.api.PropertySet
 	*/
 	@:overload public function fill(packet : com.sun.xml.internal.ws.api.message.Packet, isAddressingEnabled : Bool) : Void;
 	
-	@:overload public function copy() : RequestContext;
+	@:overload public function copy() : com.sun.xml.internal.ws.client.RequestContext;
 	
-	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
+	@:overload private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

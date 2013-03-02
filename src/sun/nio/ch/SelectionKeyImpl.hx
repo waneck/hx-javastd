@@ -28,15 +28,15 @@ package sun.nio.ch;
 */
 @:internal extern class SelectionKeyImpl extends java.nio.channels.spi.AbstractSelectionKey
 {
-	@:overload override public function channel() : java.nio.channels.SelectableChannel;
+	@:overload public function channel() : java.nio.channels.SelectableChannel;
 	
-	@:overload override public function selector() : java.nio.channels.Selector;
+	@:overload public function selector() : java.nio.channels.Selector;
 	
-	@:overload override public function interestOps() : Int;
+	@:overload public function interestOps() : Int;
 	
-	@:overload override public function interestOps(ops : Int) : java.nio.channels.SelectionKey;
+	@:overload public function interestOps(ops : Int) : java.nio.channels.SelectionKey;
 	
-	@:overload override public function readyOps() : Int;
+	@:overload public function readyOps() : Int;
 	
 	
 }

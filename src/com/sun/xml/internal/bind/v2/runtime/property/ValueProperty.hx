@@ -27,19 +27,19 @@ extern class ValueProperty<BeanT> extends com.sun.xml.internal.bind.v2.runtime.p
 {
 	@:overload public function new(context : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeValuePropertyInfo) : Void;
 	
-	@:overload @:final override public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
+	@:overload @:final public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
 	
-	@:overload override public function serializeURIs(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
+	@:overload public function serializeURIs(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : Void;
 	
-	@:overload override public function hasSerializeURIAction() : Bool;
+	@:overload public function hasSerializeURIAction() : Bool;
 	
-	@:overload override public function buildChildElementUnmarshallers(chainElem : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload public function buildChildElementUnmarshallers(chainElem : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, handlers : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload override public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload override public function reset(o : BeanT) : Void;
+	@:overload public function reset(o : BeanT) : Void;
 	
-	@:overload override public function getIdValue(bean : BeanT) : String;
+	@:overload public function getIdValue(bean : BeanT) : String;
 	
 	
 }

@@ -70,7 +70,7 @@ package javax.imageio.metadata;
 	
 	
 }
-@:internal extern class IIOAttr extends IIOMetadataNode implements org.w3c.dom.Attr
+@:internal extern class IIOAttr extends javax.imageio.metadata.IIODOMException.IIOMetadataNode implements org.w3c.dom.Attr
 {
 	@:overload public function new(owner : org.w3c.dom.Element, name : String, value : String) : Void;
 	

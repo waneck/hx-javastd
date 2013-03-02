@@ -65,7 +65,7 @@ extern class SecretKeyFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : SecretKeyFactory;
+	@:overload @:final public static function getInstance(algorithm : String) : javax.crypto.SecretKeyFactory;
 	
 	/**
 	* Returns a <code>SecretKeyFactory</code> object that converts
@@ -105,7 +105,7 @@ extern class SecretKeyFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : SecretKeyFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.crypto.SecretKeyFactory;
 	
 	/**
 	* Returns a <code>SecretKeyFactory</code> object that converts
@@ -139,7 +139,7 @@ extern class SecretKeyFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : SecretKeyFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.crypto.SecretKeyFactory;
 	
 	/**
 	* Returns the provider of this <code>SecretKeyFactory</code> object.

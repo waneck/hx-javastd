@@ -33,13 +33,13 @@ extern class BindGreen extends com.sun.tools.internal.xjc.reader.xmlschema.Color
 	
 	@:overload override public function attributeDecl(xsAttributeDecl : com.sun.xml.internal.xsom.XSAttributeDecl) : Void;
 	
-	@:overload override public function wildcard(xsWildcard : com.sun.xml.internal.xsom.XSWildcard) : Void;
+	@:overload public function wildcard(xsWildcard : com.sun.xml.internal.xsom.XSWildcard) : Void;
 	
-	@:overload override public function modelGroupDecl(xsModelGroupDecl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
+	@:overload public function modelGroupDecl(xsModelGroupDecl : com.sun.xml.internal.xsom.XSModelGroupDecl) : Void;
 	
-	@:overload override public function modelGroup(xsModelGroup : com.sun.xml.internal.xsom.XSModelGroup) : Void;
+	@:overload public function modelGroup(xsModelGroup : com.sun.xml.internal.xsom.XSModelGroup) : Void;
 	
-	@:overload override public function elementDecl(xsElementDecl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
+	@:overload public function elementDecl(xsElementDecl : com.sun.xml.internal.xsom.XSElementDecl) : Void;
 	
 	@:overload override public function particle(xsParticle : com.sun.xml.internal.xsom.XSParticle) : Void;
 	

@@ -70,7 +70,7 @@ extern class ConstantNameAndType extends com.sun.org.apache.bcel.internal.classf
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantNameAndType) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantNameAndType) : Void;
 	
 	/**
 	* @param name_index Name of field/method

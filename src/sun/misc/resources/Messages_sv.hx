@@ -36,7 +36,7 @@ extern class Messages_sv extends java.util.ListResourceBundle
 	* <p>
 	* @return the contents of this <code>ResourceBundle</code>.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

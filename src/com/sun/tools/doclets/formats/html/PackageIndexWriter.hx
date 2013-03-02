@@ -55,12 +55,12 @@ extern class PackageIndexWriter extends com.sun.tools.doclets.formats.html.Abstr
 	*
 	* @param body the documentation tree to which the index will be added
 	*/
-	@:overload override private function addIndex(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addIndex(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function addPackagesList(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addPackagesList(packages : java.NativeArray<com.sun.javadoc.PackageDoc>, text : String, tableSummary : String, body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds list of packages in the index table. Generate link to each package.
@@ -77,7 +77,7 @@ extern class PackageIndexWriter extends com.sun.tools.doclets.formats.html.Abstr
 	*
 	* @param body the documentation tree to which the overview header will be added
 	*/
-	@:overload override private function addOverviewHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addOverviewHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the overview comment as provided in the file specified by the
@@ -94,7 +94,7 @@ extern class PackageIndexWriter extends com.sun.tools.doclets.formats.html.Abstr
 	*
 	* @param body the documentation tree to which the overview will be added
 	*/
-	@:overload override private function addOverview(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addOverview(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the top text (from the -top option), the upper
@@ -103,7 +103,7 @@ extern class PackageIndexWriter extends com.sun.tools.doclets.formats.html.Abstr
 	*
 	* @body the documentation tree to which the navigation bar header will be added
 	*/
-	@:overload override private function addNavigationBarHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addNavigationBarHeader(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Adds the lower navigation bar and the bottom text
@@ -111,7 +111,7 @@ extern class PackageIndexWriter extends com.sun.tools.doclets.formats.html.Abstr
 	*
 	* @param the documentation tree to which the navigation bar footer will be added
 	*/
-	@:overload override private function addNavigationBarFooter(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addNavigationBarFooter(body : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	
 }

@@ -164,7 +164,7 @@ package java.lang.invoke;
 	/** Create a name for the given class.  The resulting name will be in a resolved state. */
 	@:overload public function new(type : Class<Dynamic>) : Void;
 	
-	@:overload private function clone() : MemberName;
+	@:overload private function clone() : java.lang.invoke.MemberName;
 	
 	/** Create a field or type name from the given components:  Declaring class, name, type, modifiers.
 	*  The declaring class may be supplied as null if this is to be a bare name and type.
@@ -229,7 +229,7 @@ package java.lang.invoke;
 	*  If lookup fails or access is not permitted, null is returned.
 	*  Otherwise a fresh copy of the given member is returned, with modifier bits filled in.
 	*/
-	@:overload public function resolveOrNull(m : MemberName, searchSupers : Bool, lookupClass : Class<Dynamic>) : MemberName;
+	@:overload public function resolveOrNull(m : java.lang.invoke.MemberName, searchSupers : Bool, lookupClass : Class<Dynamic>) : java.lang.invoke.MemberName;
 	
 	/** Produce a resolved version of the given member.
 	*  Super types are searched (for inherited members) if {@code searchSupers} is true.
@@ -237,14 +237,14 @@ package java.lang.invoke;
 	*  If lookup fails or access is not permitted, a {@linkplain ReflectiveOperationException} is thrown.
 	*  Otherwise a fresh copy of the given member is returned, with modifier bits filled in.
 	*/
-	@:overload public function resolveOrFail<NoSuchMemberException : java.lang.ReflectiveOperationException>(m : MemberName, searchSupers : Bool, lookupClass : Class<Dynamic>, nsmClass : Class<NoSuchMemberException>) : MemberName;
+	@:overload public function resolveOrFail<NoSuchMemberException : java.lang.ReflectiveOperationException>(m : java.lang.invoke.MemberName, searchSupers : Bool, lookupClass : Class<Dynamic>, nsmClass : Class<NoSuchMemberException>) : java.lang.invoke.MemberName;
 	
 	/** Return a list of all methods defined by the given class.
 	*  Super types are searched (for inherited members) if {@code searchSupers} is true.
 	*  Access checking is performed on behalf of the given {@code lookupClass}.
 	*  Inaccessible members are not added to the last.
 	*/
-	@:overload public function getMethods(defc : Class<Dynamic>, searchSupers : Bool, lookupClass : Class<Dynamic>) : java.util.List<MemberName>;
+	@:overload public function getMethods(defc : Class<Dynamic>, searchSupers : Bool, lookupClass : Class<Dynamic>) : java.util.List<java.lang.invoke.MemberName>;
 	
 	/** Return a list of matching methods defined by the given class.
 	*  Super types are searched (for inherited members) if {@code searchSupers} is true.
@@ -252,20 +252,20 @@ package java.lang.invoke;
 	*  Access checking is performed on behalf of the given {@code lookupClass}.
 	*  Inaccessible members are not added to the last.
 	*/
-	@:overload public function getMethods(defc : Class<Dynamic>, searchSupers : Bool, name : String, type : java.lang.invoke.MethodType, lookupClass : Class<Dynamic>) : java.util.List<MemberName>;
+	@:overload public function getMethods(defc : Class<Dynamic>, searchSupers : Bool, name : String, type : java.lang.invoke.MethodType, lookupClass : Class<Dynamic>) : java.util.List<java.lang.invoke.MemberName>;
 	
 	/** Return a list of all constructors defined by the given class.
 	*  Access checking is performed on behalf of the given {@code lookupClass}.
 	*  Inaccessible members are not added to the last.
 	*/
-	@:overload public function getConstructors(defc : Class<Dynamic>, lookupClass : Class<Dynamic>) : java.util.List<MemberName>;
+	@:overload public function getConstructors(defc : Class<Dynamic>, lookupClass : Class<Dynamic>) : java.util.List<java.lang.invoke.MemberName>;
 	
 	/** Return a list of all fields defined by the given class.
 	*  Super types are searched (for inherited members) if {@code searchSupers} is true.
 	*  Access checking is performed on behalf of the given {@code lookupClass}.
 	*  Inaccessible members are not added to the last.
 	*/
-	@:overload public function getFields(defc : Class<Dynamic>, searchSupers : Bool, lookupClass : Class<Dynamic>) : java.util.List<MemberName>;
+	@:overload public function getFields(defc : Class<Dynamic>, searchSupers : Bool, lookupClass : Class<Dynamic>) : java.util.List<java.lang.invoke.MemberName>;
 	
 	/** Return a list of all fields defined by the given class.
 	*  Super types are searched (for inherited members) if {@code searchSupers} is true.
@@ -273,14 +273,14 @@ package java.lang.invoke;
 	*  Access checking is performed on behalf of the given {@code lookupClass}.
 	*  Inaccessible members are not added to the last.
 	*/
-	@:overload public function getFields(defc : Class<Dynamic>, searchSupers : Bool, name : String, type : Class<Dynamic>, lookupClass : Class<Dynamic>) : java.util.List<MemberName>;
+	@:overload public function getFields(defc : Class<Dynamic>, searchSupers : Bool, name : String, type : Class<Dynamic>, lookupClass : Class<Dynamic>) : java.util.List<java.lang.invoke.MemberName>;
 	
 	/** Return a list of all nested types defined by the given class.
 	*  Super types are searched (for inherited members) if {@code searchSupers} is true.
 	*  Access checking is performed on behalf of the given {@code lookupClass}.
 	*  Inaccessible members are not added to the last.
 	*/
-	@:overload public function getNestedTypes(defc : Class<Dynamic>, searchSupers : Bool, lookupClass : Class<Dynamic>) : java.util.List<MemberName>;
+	@:overload public function getNestedTypes(defc : Class<Dynamic>, searchSupers : Bool, lookupClass : Class<Dynamic>) : java.util.List<java.lang.invoke.MemberName>;
 	
 	
 }

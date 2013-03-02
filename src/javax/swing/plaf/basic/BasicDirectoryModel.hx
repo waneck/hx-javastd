@@ -55,13 +55,13 @@ extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> 
 	
 	@:overload public function fireContentsChanged() : Void;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
 	@:overload public function contains(o : Dynamic) : Bool;
 	
 	@:overload public function indexOf(o : Dynamic) : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	/**
 	* Obsolete - not used.
@@ -147,7 +147,7 @@ extern class BasicDirectoryModel extends javax.swing.AbstractListModel<Dynamic> 
 	
 	@:overload public function run0() : Void;
 	
-	@:overload public function cancelRunnables(runnables : java.util.Vector<BasicDirectoryModel_DoChangeContents>) : Void;
+	@:overload public function cancelRunnables(runnables : java.util.Vector<javax.swing.plaf.basic.BasicDirectoryModel.BasicDirectoryModel_DoChangeContents>) : Void;
 	
 	@:overload public function cancelRunnables() : Void;
 	

@@ -130,7 +130,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param mgr the specified layout manager
 	* @exception IllegalArgumentException this method is not supported
 	*/
-	@:overload override public function setLayout(mgr : java.awt.LayoutManager) : Void;
+	@:overload public function setLayout(mgr : java.awt.LayoutManager) : Void;
 	
 	/**
 	* A non-{@code null} border, or non-zero insets, isn't supported, to prevent the geometry
@@ -144,7 +144,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param border the {@code Border} to set
 	* @exception IllegalArgumentException this method is not supported
 	*/
-	@:overload override public function setBorder(border : javax.swing.border.Border) : Void;
+	@:overload public function setBorder(border : javax.swing.border.Border) : Void;
 	
 	/**
 	* This method is not supported by {@code JLayer}
@@ -155,17 +155,17 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @see #setView(Component)
 	* @see #setGlassPane(JPanel)
 	*/
-	@:overload override private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
+	@:overload private function addImpl(comp : java.awt.Component, constraints : Dynamic, index : Int) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function remove(comp : java.awt.Component) : Void;
+	@:overload public function remove(comp : java.awt.Component) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function removeAll() : Void;
+	@:overload public function removeAll() : Void;
 	
 	/**
 	* Always returns {@code true} to cause painting to originate from {@code JLayer},
@@ -174,7 +174,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @return true
 	* @see JComponent#isPaintingOrigin()
 	*/
-	@:overload override private function isPaintingOrigin() : Bool;
+	@:overload private function isPaintingOrigin() : Bool;
 	
 	/**
 	* Delegates its functionality to the
@@ -186,21 +186,21 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param w  the width of the region to be painted
 	* @param h  the height of the region to be painted
 	*/
-	@:overload override public function paintImmediately(x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintImmediately(x : Int, y : Int, w : Int, h : Int) : Void;
 	
 	/**
 	* Delegates all painting to the {@link javax.swing.plaf.LayerUI} object.
 	*
 	* @param g the {@code Graphics} to render to
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	/**
 	* This method is empty, because all painting is done by
 	* {@link #paint(Graphics)} and
 	* {@link javax.swing.plaf.LayerUI#update(Graphics, JComponent)} methods
 	*/
-	@:overload override private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* The {@code JLayer} overrides the default implementation of
@@ -213,7 +213,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	*
 	* @return false
 	*/
-	@:overload override public function isOptimizedDrawingEnabled() : Bool;
+	@:overload public function isOptimizedDrawingEnabled() : Bool;
 	
 	/**
 	* {@inheritDoc}
@@ -275,7 +275,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* Delegates its functionality to the {@link javax.swing.plaf.LayerUI#updateUI(JLayer)} method,
 	* if {@code LayerUI} is set.
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the preferred size of the viewport for a view component.
@@ -354,25 +354,25 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload public function addNotify() : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function removeNotify() : Void;
+	@:overload public function removeNotify() : Void;
 	
 	/**
 	* Delegates its functionality to the {@link javax.swing.plaf.LayerUI#doLayout(JLayer)} method,
 	* if {@code LayerUI} is set.
 	*/
-	@:overload override public function doLayout() : Void;
+	@:overload public function doLayout() : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this {@code JLayer}.
 	*
 	* @return the AccessibleContext associated with this {@code JLayer}.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -408,7 +408,7 @@ extern class JLayer<V> extends javax.swing.JComponent implements javax.swing.Scr
 	* @param y the <i>y</i> coordinate of the point
 	* @return true if this component logically contains x,y
 	*/
-	@:overload override public function contains(x : Int, y : Int) : Bool;
+	@:overload public function contains(x : Int, y : Int) : Bool;
 	
 	
 }

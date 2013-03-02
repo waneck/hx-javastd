@@ -75,7 +75,7 @@ public static int genTestSeed() {
 return myself.getByte();
 }
 */
-@:native('sun$security$provider$SeedGenerator$ThreadedSeedGenerator') @:internal extern class SeedGenerator_ThreadedSeedGenerator extends SeedGenerator implements java.lang.Runnable
+@:native('sun$security$provider$SeedGenerator$ThreadedSeedGenerator') @:internal extern class SeedGenerator_ThreadedSeedGenerator extends sun.security.provider.SeedGenerator implements java.lang.Runnable
 {
 	/**
 	* This method does the actual work. It collects random bytes and
@@ -96,7 +96,7 @@ return myself.getByte();
 	
 	
 }
-@:native('sun$security$provider$SeedGenerator$URLSeedGenerator') @:internal extern class SeedGenerator_URLSeedGenerator extends SeedGenerator
+@:native('sun$security$provider$SeedGenerator$URLSeedGenerator') @:internal extern class SeedGenerator_URLSeedGenerator extends sun.security.provider.SeedGenerator
 {
 	
 }

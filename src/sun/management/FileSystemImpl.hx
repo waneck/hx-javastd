@@ -28,9 +28,9 @@ extern class FileSystemImpl extends sun.management.FileSystem
 	/*
 	* Solaris/Linux implementation of sun.management.FileSystem
 	*/
-	@:overload override public function supportsFileSecurity(f : java.io.File) : Bool;
+	@:overload public function supportsFileSecurity(f : java.io.File) : Bool;
 	
-	@:overload override public function isAccessUserOnly(f : java.io.File) : Bool;
+	@:overload public function isAccessUserOnly(f : java.io.File) : Bool;
 	
 	
 }

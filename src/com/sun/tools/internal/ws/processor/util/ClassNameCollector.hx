@@ -36,29 +36,29 @@ extern class ClassNameCollector extends com.sun.tools.internal.ws.processor.mode
 	
 	@:overload public function getConflictingClassNames() : java.util.Set<Dynamic>;
 	
-	@:overload override private function postVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
+	@:overload private function postVisit(model : com.sun.tools.internal.ws.processor.model.Model) : Void;
 	
-	@:overload override private function preVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
+	@:overload private function preVisit(service : com.sun.tools.internal.ws.processor.model.Service) : Void;
 	
 	@:overload private function processPort11x(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload override private function preVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload private function preVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload override private function postVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
+	@:overload private function postVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Void;
 	
-	@:overload override private function shouldVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Bool;
+	@:overload private function shouldVisit(port : com.sun.tools.internal.ws.processor.model.Port) : Bool;
 	
-	@:overload override private function preVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload private function preVisit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
-	@:overload override private function visitBodyBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload private function visitBodyBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload override private function visitHeaderBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload private function visitHeaderBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload override private function visitFaultBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
+	@:overload private function visitFaultBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
 	@:overload private function visitBlock(block : com.sun.tools.internal.ws.processor.model.Block) : Void;
 	
-	@:overload override private function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
+	@:overload private function visit(parameter : com.sun.tools.internal.ws.processor.model.Parameter) : Void;
 	
 	@:overload public function getSeiClassNames() : java.util.Set<String>;
 	

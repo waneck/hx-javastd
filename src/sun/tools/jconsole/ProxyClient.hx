@@ -52,21 +52,21 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 	/**
 	* Gets a proxy client for a given local virtual machine.
 	*/
-	@:overload public static function getProxyClient(lvm : sun.tools.jconsole.LocalVirtualMachine) : ProxyClient;
+	@:overload public static function getProxyClient(lvm : sun.tools.jconsole.LocalVirtualMachine) : sun.tools.jconsole.ProxyClient;
 	
 	@:overload public static function getConnectionName(lvm : sun.tools.jconsole.LocalVirtualMachine) : String;
 	
 	/**
 	* Gets a proxy client for a given JMXServiceURL.
 	*/
-	@:overload public static function getProxyClient(url : String, userName : String, password : String) : ProxyClient;
+	@:overload public static function getProxyClient(url : String, userName : String, password : String) : sun.tools.jconsole.ProxyClient;
 	
 	@:overload public static function getConnectionName(url : String, userName : String) : String;
 	
 	/**
 	* Gets a proxy client for a given "hostname:port".
 	*/
-	@:overload public static function getProxyClient(hostName : String, port : Int, userName : String, password : String) : ProxyClient;
+	@:overload public static function getProxyClient(hostName : String, port : Int, userName : String, password : String) : sun.tools.jconsole.ProxyClient;
 	
 	@:overload public static function getConnectionName(hostName : String, port : Int, userName : String) : String;
 	
@@ -78,7 +78,7 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 	
 	@:overload public function getMBeanServerConnection() : javax.management.MBeanServerConnection;
 	
-	@:overload public function getSnapshotMBeanServerConnection() : ProxyClient_SnapshotMBeanServerConnection;
+	@:overload public function getSnapshotMBeanServerConnection() : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
 	
 	@:overload public function getUrl() : String;
 	
@@ -186,7 +186,7 @@ extern class ProxyClient implements com.sun.tools.jconsole.JConsoleContext
 }
 @:native('sun$tools$jconsole$ProxyClient$Snapshot') extern class ProxyClient_Snapshot
 {
-	@:overload public static function newSnapshot(mbsc : javax.management.MBeanServerConnection) : ProxyClient_SnapshotMBeanServerConnection;
+	@:overload public static function newSnapshot(mbsc : javax.management.MBeanServerConnection) : sun.tools.jconsole.ProxyClient.ProxyClient_SnapshotMBeanServerConnection;
 	
 	
 }

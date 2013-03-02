@@ -25,19 +25,19 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFrameUI
 {
-	@:overload override public function installDefaults() : Void;
+	@:overload public function installDefaults() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallDefaults() : Void;
+	@:overload public function uninstallDefaults() : Void;
 	
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload public function new(w : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override private function createDesktopManager() : javax.swing.DesktopManager;
+	@:overload private function createDesktopManager() : javax.swing.DesktopManager;
 	
-	@:overload override private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
 	
 }
@@ -49,11 +49,11 @@ extern class WindowsInternalFrameUI extends javax.swing.plaf.basic.BasicInternal
 	* @param width the width of the painted border
 	* @param height the height of the painted border
 	*/
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload public function isBorderOpaque() : Bool;
 	
 	
 }

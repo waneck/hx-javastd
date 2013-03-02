@@ -32,7 +32,7 @@ package javax.swing.plaf.synth;
 	*/
 	@:overload public function new(target : java.awt.Container, axis : Int) : Void;
 	
-	@:overload override public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
+	@:overload public function preferredLayoutSize(target : java.awt.Container) : java.awt.Dimension;
 	
 	
 }

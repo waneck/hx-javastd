@@ -66,7 +66,7 @@ package sun.tools.jstat;
 	
 	@:overload public function getPreviousValue() : Dynamic;
 	
-	@:overload override public function printFormat(indentLevel : Int) : Void;
+	@:overload public function printFormat(indentLevel : Int) : Void;
 	
 	@:overload public function getValue() : String;
 	

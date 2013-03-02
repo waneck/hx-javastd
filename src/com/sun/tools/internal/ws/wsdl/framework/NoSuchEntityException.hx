@@ -34,7 +34,7 @@ extern class NoSuchEntityException extends com.sun.tools.internal.ws.wsdl.framew
 	
 	@:overload public function new(id : String) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload public function getDefaultResourceBundleName() : String;
 	
 	
 }

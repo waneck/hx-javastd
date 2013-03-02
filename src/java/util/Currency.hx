@@ -34,7 +34,7 @@ extern class Currency implements java.io.Serializable
 	* @exception IllegalArgumentException if <code>currencyCode</code> is not
 	* a supported ISO 4217 code.
 	*/
-	@:overload public static function getInstance(currencyCode : String) : Currency;
+	@:overload public static function getInstance(currencyCode : String) : java.util.Currency;
 	
 	/**
 	* Returns the <code>Currency</code> instance for the country of the
@@ -57,7 +57,7 @@ extern class Currency implements java.io.Serializable
 	* @exception IllegalArgumentException if the country of the given locale
 	* is not a supported ISO 3166 country code.
 	*/
-	@:overload public static function getInstance(locale : java.util.Locale) : Currency;
+	@:overload public static function getInstance(locale : java.util.Locale) : java.util.Currency;
 	
 	/**
 	* Gets the set of available currencies.  The returned set of currencies
@@ -69,7 +69,7 @@ extern class Currency implements java.io.Serializable
 	*    available in the runtime, the returned set is empty.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public static function getAvailableCurrencies() : java.util.Set<Currency>;
+	@:require(java7) @:overload public static function getAvailableCurrencies() : java.util.Set<java.util.Currency>;
 	
 	/**
 	* Gets the ISO 4217 currency code of this currency.

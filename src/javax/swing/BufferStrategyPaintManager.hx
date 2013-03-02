@@ -110,7 +110,7 @@ package javax.swing;
 	*/
 	@:overload public function dispose() : Void;
 	
-	@:overload override public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
+	@:overload public function componentHidden(e : java.awt.event.ComponentEvent) : Void;
 	
 	@:overload public function windowIconified(e : java.awt.event.WindowEvent) : Void;
 	

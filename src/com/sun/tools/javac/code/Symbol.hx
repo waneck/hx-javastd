@@ -61,7 +61,7 @@ extern class Symbol implements javax.lang.model.element.Element
 	@:overload public function getAnnotationMirrors() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute.Attribute_Compound>;
 	
 	/** Fetch a particular annotation from a symbol. */
-	@:overload public function attribute(anno : Symbol) : com.sun.tools.javac.code.Attribute.Attribute_Compound;
+	@:overload public function attribute(anno : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Attribute.Attribute_Compound;
 	
 	/** The name of this symbol in Utf8 representation.
 	*/
@@ -73,11 +73,11 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	/** The owner of this symbol.
 	*/
-	public var owner : Symbol;
+	public var owner : com.sun.tools.javac.code.Symbol;
 	
 	/** The completer of this symbol.
 	*/
-	public var completer : Symbol_Completer;
+	public var completer : com.sun.tools.javac.code.Symbol.Symbol_Completer;
 	
 	/** A cache for the type erasure of this symbol.
 	*/
@@ -85,14 +85,14 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	/** Construct a symbol with given kind, flags, name, type and owner.
 	*/
-	@:overload public function new(kind : Int, flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : Symbol) : Void;
+	@:overload public function new(kind : Int, flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** Clone this symbol with new owner.
 	*  Legal only for fields and methods.
 	*/
-	@:overload public function clone(newOwner : Symbol) : Symbol;
+	@:overload public function clone(newOwner : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Symbol;
 	
-	@:overload public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	/** The Java source which this symbol represents.
 	*  A description of this symbol; overrides Object.
@@ -105,9 +105,9 @@ extern class Symbol implements javax.lang.model.element.Element
 	* @return null if the symbol is a package or a toplevel class defined in
 	* the default package; otherwise, the owner symbol is returned
 	*/
-	@:overload public function location() : Symbol;
+	@:overload public function location() : com.sun.tools.javac.code.Symbol;
 	
-	@:overload public function location(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload public function location(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
 	/** The symbol's erased type.
 	*/
@@ -177,27 +177,27 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	/** The closest enclosing class of this symbol's declaration.
 	*/
-	@:overload public function enclClass() : Symbol_ClassSymbol;
+	@:overload public function enclClass() : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol;
 	
 	/** The outermost class which indirectly owns this symbol.
 	*/
-	@:overload public function outermostClass() : Symbol_ClassSymbol;
+	@:overload public function outermostClass() : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol;
 	
 	/** The package which indirectly owns this symbol.
 	*/
-	@:overload public function packge() : Symbol_PackageSymbol;
+	@:overload public function packge() : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol;
 	
 	/** Is this symbol a subclass of `base'? Only defined for ClassSymbols.
 	*/
-	@:overload public function isSubClass(base : Symbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload public function isSubClass(base : com.sun.tools.javac.code.Symbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
 	/** Fully check membership: hierarchy, protection, and hiding.
 	*  Does not exclude methods not inherited due to overriding.
 	*/
-	@:overload public function isMemberOf(clazz : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload public function isMemberOf(clazz : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
 	/** Is this symbol the same as or enclosed by the given class? */
-	@:overload public function isEnclosedBy(clazz : Symbol_ClassSymbol) : Bool;
+	@:overload public function isEnclosedBy(clazz : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol) : Bool;
 	
 	/** Is this symbol inherited into a given class?
 	*  PRE: If symbol's owner is a interface,
@@ -206,13 +206,13 @@ extern class Symbol implements javax.lang.model.element.Element
 	*  @param clazz  The class for which we want to establish membership.
 	*                This must be a subclass of the member's owner.
 	*/
-	@:overload public function isInheritedIn(clazz : Symbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload public function isInheritedIn(clazz : com.sun.tools.javac.code.Symbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
 	/** The (variable or method) symbol seen as a member of given
 	*  class type`site' (this might change the symbol's type).
 	*  This is used exclusively for producing diagnostics.
 	*/
-	@:overload public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
 	/** Does this method symbol override `other' symbol, when both are seen as
 	*  members of class `origin'?  It is assumed that _other is a member
@@ -223,7 +223,7 @@ extern class Symbol implements javax.lang.model.element.Element
 	*
 	*  See JLS 8.4.6.1 (without transitivity) and 8.4.6.4
 	*/
-	@:overload public function overrides(_other : Symbol, origin : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool) : Bool;
+	@:overload public function overrides(_other : com.sun.tools.javac.code.Symbol, origin : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool) : Bool;
 	
 	/** Complete the elaboration of this symbol's definition.
 	*/
@@ -235,7 +235,7 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload public function asType() : com.sun.tools.javac.code.Type;
 	
-	@:overload public function getEnclosingElement() : Symbol;
+	@:overload public function getEnclosingElement() : com.sun.tools.javac.code.Symbol;
 	
 	@:overload public function getKind() : javax.lang.model.element.ElementKind;
 	
@@ -248,23 +248,23 @@ extern class Symbol implements javax.lang.model.element.Element
 	*/
 	@:overload public function getAnnotation<A : java.lang.annotation.Annotation>(annoType : Class<A>) : A;
 	
-	@:overload public function getEnclosedElements() : java.util.List<Symbol>;
+	@:overload public function getEnclosedElements() : java.util.List<com.sun.tools.javac.code.Symbol>;
 	
-	@:overload public function getTypeParameters() : com.sun.tools.javac.util.List<Symbol_TypeSymbol>;
+	@:overload public function getTypeParameters() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol>;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Symbol$DelegatedSymbol') extern class Symbol_DelegatedSymbol extends Symbol
+@:native('com$sun$tools$javac$code$Symbol$DelegatedSymbol') extern class Symbol_DelegatedSymbol extends com.sun.tools.javac.code.Symbol
 {
-	private var other : Symbol;
+	private var other : com.sun.tools.javac.code.Symbol;
 	
-	@:overload public function new(other : Symbol) : Void;
+	@:overload public function new(other : com.sun.tools.javac.code.Symbol) : Void;
 	
 	@:overload override public function toString() : String;
 	
-	@:overload override public function location() : Symbol;
+	@:overload override public function location() : com.sun.tools.javac.code.Symbol;
 	
-	@:overload override public function location(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload override public function location(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
 	@:overload override public function erasure(types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Type;
 	
@@ -284,45 +284,45 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload override public function hasOuterInstance() : Bool;
 	
-	@:overload override public function enclClass() : Symbol_ClassSymbol;
+	@:overload override public function enclClass() : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol;
 	
-	@:overload override public function outermostClass() : Symbol_ClassSymbol;
+	@:overload override public function outermostClass() : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol;
 	
-	@:overload override public function packge() : Symbol_PackageSymbol;
+	@:overload override public function packge() : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol;
 	
-	@:overload override public function isSubClass(base : Symbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload override public function isSubClass(base : com.sun.tools.javac.code.Symbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
-	@:overload override public function isMemberOf(clazz : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload override public function isMemberOf(clazz : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
-	@:overload override public function isEnclosedBy(clazz : Symbol_ClassSymbol) : Bool;
+	@:overload override public function isEnclosedBy(clazz : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol) : Bool;
 	
-	@:overload override public function isInheritedIn(clazz : Symbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload override public function isInheritedIn(clazz : com.sun.tools.javac.code.Symbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
-	@:overload override public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload override public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
 	@:overload override public function complete() : Void;
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
 	
-	@:overload override public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload override public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	
 }
 /** A class for type symbols. Type variables are represented by instances
 *  of this class, classes and packages by instances of subclasses.
 */
-@:native('com$sun$tools$javac$code$Symbol$TypeSymbol') extern class Symbol_TypeSymbol extends Symbol implements javax.lang.model.element.TypeParameterElement
+@:native('com$sun$tools$javac$code$Symbol$TypeSymbol') extern class Symbol_TypeSymbol extends com.sun.tools.javac.code.Symbol implements javax.lang.model.element.TypeParameterElement
 {
-	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : Symbol) : Void;
+	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** form a fully qualified name from a name and an owner
 	*/
-	@:overload public static function formFullName(name : com.sun.tools.javac.util.Name, owner : Symbol) : com.sun.tools.javac.util.Name;
+	@:overload public static function formFullName(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.util.Name;
 	
 	/** form a fully qualified name from a name and an owner, after
 	*  converting to flat representation
 	*/
-	@:overload public static function formFlatName(name : com.sun.tools.javac.util.Name, owner : Symbol) : com.sun.tools.javac.util.Name;
+	@:overload public static function formFlatName(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.util.Name;
 	
 	/**
 	* A total ordering between type symbols that refines the
@@ -330,17 +330,17 @@ extern class Symbol implements javax.lang.model.element.Element
 	*
 	* Typevariables always precede other kinds of symbols.
 	*/
-	@:overload @:final public function precedes(that : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload @:final public function precedes(that : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
 	@:overload override public function getKind() : javax.lang.model.element.ElementKind;
 	
-	@:overload override public function getEnclosedElements() : java.util.List<Symbol>;
+	@:overload override public function getEnclosedElements() : java.util.List<com.sun.tools.javac.code.Symbol>;
 	
-	@:overload public function getGenericElement() : Symbol;
+	@:overload public function getGenericElement() : com.sun.tools.javac.code.Symbol;
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
 	
-	@:overload override public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload override public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	@:overload public function getBounds() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
@@ -348,17 +348,17 @@ extern class Symbol implements javax.lang.model.element.Element
 }
 /** A class for package symbols
 */
-@:native('com$sun$tools$javac$code$Symbol$PackageSymbol') extern class Symbol_PackageSymbol extends Symbol_TypeSymbol implements javax.lang.model.element.PackageElement
+@:native('com$sun$tools$javac$code$Symbol$PackageSymbol') extern class Symbol_PackageSymbol extends com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol implements javax.lang.model.element.PackageElement
 {
 	public var members_field : com.sun.tools.javac.code.Scope;
 	
 	public var fullname : com.sun.tools.javac.util.Name;
 	
-	public var package_info : Symbol_ClassSymbol;
+	public var package_info : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol;
 	
-	@:overload public function new(name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : Symbol) : Void;
+	@:overload public function new(name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload public function new(name : com.sun.tools.javac.util.Name, owner : Symbol) : Void;
+	@:overload public function new(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
 	@:overload override public function toString() : String;
 	
@@ -379,17 +379,17 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload override public function getKind() : javax.lang.model.element.ElementKind;
 	
-	@:overload override public function getEnclosingElement() : Symbol;
+	@:overload override public function getEnclosingElement() : com.sun.tools.javac.code.Symbol;
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
 	
-	@:overload override public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload override public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	
 }
 /** A class for class symbols
 */
-@:native('com$sun$tools$javac$code$Symbol$ClassSymbol') extern class Symbol_ClassSymbol extends Symbol_TypeSymbol implements javax.lang.model.element.TypeElement
+@:native('com$sun$tools$javac$code$Symbol$ClassSymbol') extern class Symbol_ClassSymbol extends com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol implements javax.lang.model.element.TypeElement
 {
 	/** a scope for all class members; variables, methods and inner classes
 	*  type parameters are not part of this scope
@@ -419,15 +419,15 @@ extern class Symbol implements javax.lang.model.element.Element
 	/** the list of translated local classes (used for generating
 	* InnerClasses attribute)
 	*/
-	public var trans_local : com.sun.tools.javac.util.List<Symbol_ClassSymbol>;
+	public var trans_local : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol>;
 	
 	/** the constant pool of the class
 	*/
 	public var pool : com.sun.tools.javac.jvm.Pool;
 	
-	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : Symbol) : Void;
+	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, owner : Symbol) : Void;
+	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** The Java source which this symbol represents.
 	*/
@@ -447,7 +447,7 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload override public function flatName() : com.sun.tools.javac.util.Name;
 	
-	@:overload override public function isSubClass(base : Symbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload override public function isSubClass(base : com.sun.tools.javac.code.Symbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
 	/** Complete the elaboration of this symbol's definition.
 	*/
@@ -468,13 +468,13 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
 	
-	@:overload override public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload override public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	
 }
 /** A class for variable symbols
 */
-@:native('com$sun$tools$javac$code$Symbol$VarSymbol') extern class Symbol_VarSymbol extends Symbol implements javax.lang.model.element.VariableElement
+@:native('com$sun$tools$javac$code$Symbol$VarSymbol') extern class Symbol_VarSymbol extends com.sun.tools.javac.code.Symbol implements javax.lang.model.element.VariableElement
 {
 	/** The variable's declaration position.
 	*/
@@ -493,15 +493,15 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	/** Construct a variable symbol, given its flags, name, type and owner.
 	*/
-	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : Symbol) : Void;
+	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** Clone this symbol with new owner.
 	*/
-	@:overload override public function clone(newOwner : Symbol) : Symbol_VarSymbol;
+	@:overload override public function clone(newOwner : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol;
 	
 	@:overload override public function toString() : String;
 	
-	@:overload override public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload override public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
 	@:overload override public function getKind() : javax.lang.model.element.ElementKind;
 	
@@ -519,13 +519,13 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload public function setData(data : Dynamic) : Void;
 	
-	@:overload override public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload override public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	
 }
 /** A class for method symbols.
 */
-@:native('com$sun$tools$javac$code$Symbol$MethodSymbol') extern class Symbol_MethodSymbol extends Symbol implements javax.lang.model.element.ExecutableElement
+@:native('com$sun$tools$javac$code$Symbol$MethodSymbol') extern class Symbol_MethodSymbol extends com.sun.tools.javac.code.Symbol implements javax.lang.model.element.ExecutableElement
 {
 	/** The code of the method. */
 	public var code : com.sun.tools.javac.jvm.Code;
@@ -541,11 +541,11 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	/** Construct a method symbol, given its flags, name, type and owner.
 	*/
-	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : Symbol) : Void;
+	@:overload public function new(flags : haxe.Int64, name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
 	/** Clone this symbol with new owner.
 	*/
-	@:overload override public function clone(newOwner : Symbol) : Symbol_MethodSymbol;
+	@:overload override public function clone(newOwner : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol;
 	
 	/** The Java source which this symbol represents.
 	*/
@@ -555,21 +555,21 @@ extern class Symbol implements javax.lang.model.element.Element
 	*  @param    c       The class whose members are searched for
 	*                    implementations
 	*/
-	@:overload public function implemented(c : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload public function implemented(c : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
-	@:overload public function implementedIn(c : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload public function implementedIn(c : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
 	/** Will the erasure of this method be considered by the VM to
 	*  override the erasure of the other when seen from class `origin'?
 	*/
-	@:overload public function binaryOverrides(_other : Symbol, origin : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
+	@:overload public function binaryOverrides(_other : com.sun.tools.javac.code.Symbol, origin : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types) : Bool;
 	
 	/** The implementation of this (abstract) symbol in class origin,
 	*  from the VM's point of view, null if method does not have an
 	*  implementation in class.
 	*  @param origin   The class of which the implementation is a member.
 	*/
-	@:overload public function binaryImplementation(origin : Symbol_ClassSymbol, types : com.sun.tools.javac.code.Types) : Symbol_MethodSymbol;
+	@:overload public function binaryImplementation(origin : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol;
 	
 	/** Does this symbol override `other' symbol, when both are seen as
 	*  members of class `origin'?  It is assumed that _other is a member
@@ -580,19 +580,19 @@ extern class Symbol implements javax.lang.model.element.Element
 	*
 	*  See JLS 8.4.6.1 (without transitivity) and 8.4.6.4
 	*/
-	@:overload override public function overrides(_other : Symbol, origin : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool) : Bool;
+	@:overload override public function overrides(_other : com.sun.tools.javac.code.Symbol, origin : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool) : Bool;
 	
 	/** The implementation of this (abstract) symbol in class origin;
 	*  null if none exists. Synthetic methods are not considered
 	*  as possible implementations.
 	*/
-	@:overload public function implementation(origin : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool) : Symbol_MethodSymbol;
+	@:overload public function implementation(origin : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool) : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol;
 	
-	@:overload public function implementation(origin : Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool, implFilter : com.sun.tools.javac.util.Filter<Symbol>) : Symbol_MethodSymbol;
+	@:overload public function implementation(origin : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, types : com.sun.tools.javac.code.Types, checkResult : Bool, implFilter : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Symbol>) : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol;
 	
-	@:overload public function params() : com.sun.tools.javac.util.List<Symbol_VarSymbol>;
+	@:overload public function params() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Symbol.Symbol_VarSymbol>;
 	
-	@:overload override public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : Symbol;
+	@:overload override public function asMemberOf(site : com.sun.tools.javac.code.Type, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Symbol;
 	
 	@:overload override public function getKind() : javax.lang.model.element.ElementKind;
 	
@@ -600,13 +600,13 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload public function getDefaultValue() : com.sun.tools.javac.code.Attribute;
 	
-	@:overload public function getParameters() : com.sun.tools.javac.util.List<Symbol_VarSymbol>;
+	@:overload public function getParameters() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Symbol.Symbol_VarSymbol>;
 	
 	@:overload public function isVarArgs() : Bool;
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.element.ElementVisitor<R, P>, p : P) : R;
 	
-	@:overload override public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload override public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	@:overload public function getReturnType() : com.sun.tools.javac.code.Type;
 	
@@ -616,13 +616,13 @@ extern class Symbol implements javax.lang.model.element.Element
 }
 /** A class for predefined operators.
 */
-@:native('com$sun$tools$javac$code$Symbol$OperatorSymbol') extern class Symbol_OperatorSymbol extends Symbol_MethodSymbol
+@:native('com$sun$tools$javac$code$Symbol$OperatorSymbol') extern class Symbol_OperatorSymbol extends com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol
 {
 	public var opcode : Int;
 	
-	@:overload public function new(name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, opcode : Int, owner : Symbol) : Void;
+	@:overload public function new(name : com.sun.tools.javac.util.Name, type : com.sun.tools.javac.code.Type, opcode : Int, owner : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function accept<R, P>(v : Symbol_Visitor<R, P>, p : P) : R;
+	@:overload override public function accept<R, P>(v : com.sun.tools.javac.code.Symbol.Symbol_Visitor<R, P>, p : P) : R;
 	
 	
 }
@@ -630,13 +630,13 @@ extern class Symbol implements javax.lang.model.element.Element
 */
 @:native('com$sun$tools$javac$code$Symbol$Completer') extern interface Symbol_Completer
 {
-	@:overload public function complete(sym : Symbol) : Void;
+	@:overload public function complete(sym : com.sun.tools.javac.code.Symbol) : Void;
 	
 	
 }
 @:native('com$sun$tools$javac$code$Symbol$CompletionFailure') extern class Symbol_CompletionFailure extends java.lang.RuntimeException
 {
-	public var sym : Symbol;
+	public var sym : com.sun.tools.javac.code.Symbol;
 	
 	/** A diagnostic object describing the failure
 	*/
@@ -647,17 +647,17 @@ extern class Symbol implements javax.lang.model.element.Element
 	*/
 	public var errmsg : String;
 	
-	@:overload public function new(sym : Symbol, errmsg : String) : Void;
+	@:overload public function new(sym : com.sun.tools.javac.code.Symbol, errmsg : String) : Void;
 	
-	@:overload public function new(sym : Symbol, diag : com.sun.tools.javac.util.JCDiagnostic) : Void;
+	@:overload public function new(sym : com.sun.tools.javac.code.Symbol, diag : com.sun.tools.javac.util.JCDiagnostic) : Void;
 	
 	@:overload public function getDiagnostic() : com.sun.tools.javac.util.JCDiagnostic;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	@:overload public function getDetailValue() : Dynamic;
 	
-	@:overload public function initCause(cause : java.lang.Throwable) : Symbol_CompletionFailure;
+	@:overload public function initCause(cause : java.lang.Throwable) : com.sun.tools.javac.code.Symbol.Symbol_CompletionFailure;
 	
 	
 }
@@ -677,19 +677,19 @@ extern class Symbol implements javax.lang.model.element.Element
 */
 @:native('com$sun$tools$javac$code$Symbol$Visitor') extern interface Symbol_Visitor<R, P>
 {
-	@:overload public function visitClassSymbol(s : Symbol_ClassSymbol, arg : P) : R;
+	@:overload public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, arg : P) : R;
 	
-	@:overload public function visitMethodSymbol(s : Symbol_MethodSymbol, arg : P) : R;
+	@:overload public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, arg : P) : R;
 	
-	@:overload public function visitPackageSymbol(s : Symbol_PackageSymbol, arg : P) : R;
+	@:overload public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, arg : P) : R;
 	
-	@:overload public function visitOperatorSymbol(s : Symbol_OperatorSymbol, arg : P) : R;
+	@:overload public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, arg : P) : R;
 	
-	@:overload public function visitVarSymbol(s : Symbol_VarSymbol, arg : P) : R;
+	@:overload public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, arg : P) : R;
 	
-	@:overload public function visitTypeSymbol(s : Symbol_TypeSymbol, arg : P) : R;
+	@:overload public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, arg : P) : R;
 	
-	@:overload public function visitSymbol(s : Symbol, arg : P) : R;
+	@:overload public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : P) : R;
 	
 	
 }

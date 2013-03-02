@@ -94,7 +94,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	*/
 	@:overload public function equals(o : Dynamic) : Bool;
 	
-	@:overload public function equals(other : PrincipalName) : Bool;
+	@:overload public function equals(other : sun.security.krb5.PrincipalName) : Bool;
 	
 	/**
 	* Returns the ASN.1 encoding of the
@@ -138,7 +138,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* @return an instance of <code>PrincipalName</code>.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : PrincipalName;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.PrincipalName;
 	
 	@:overload private static function parseName(name : String) : java.NativeArray<String>;
 	
@@ -191,7 +191,7 @@ extern class PrincipalName implements java.lang.Cloneable
 	* @param pname the other <code>PrincipalName</code> object.
 	* @return true if two have identical values, otherwise, return false.
 	*/
-	@:overload public function match(pname : PrincipalName) : Bool;
+	@:overload public function match(pname : sun.security.krb5.PrincipalName) : Bool;
 	
 	/**
 	* Writes data field values of <code>PrincipalName</code> in FCC format to an output stream.

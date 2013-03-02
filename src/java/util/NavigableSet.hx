@@ -176,7 +176,7 @@ package java.util;
 	*
 	* @return a reverse order view of this set
 	*/
-	@:overload public function descendingSet() : NavigableSet<E>;
+	@:overload public function descendingSet() : java.util.NavigableSet<E>;
 	
 	/**
 	* Returns an iterator over the elements in this set, in descending order.
@@ -221,7 +221,7 @@ package java.util;
 	*         has a restricted range, and {@code fromElement} or
 	*         {@code toElement} lies outside the bounds of the range.
 	*/
-	@:overload public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : NavigableSet<E>;
+	@:overload public function subSet(fromElement : E, fromInclusive : Bool, toElement : E, toInclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* Returns a view of the portion of this set whose elements are less than
@@ -250,7 +250,7 @@ package java.util;
 	*         restricted range, and {@code toElement} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function headSet(toElement : E, inclusive : Bool) : NavigableSet<E>;
+	@:overload public function headSet(toElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* Returns a view of the portion of this set whose elements are greater
@@ -279,7 +279,7 @@ package java.util;
 	*         restricted range, and {@code fromElement} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function tailSet(fromElement : E, inclusive : Bool) : NavigableSet<E>;
+	@:overload public function tailSet(fromElement : E, inclusive : Bool) : java.util.NavigableSet<E>;
 	
 	/**
 	* {@inheritDoc}

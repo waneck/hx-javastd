@@ -28,7 +28,7 @@ extern class SourceClass extends sun.tools.java.ClassDefinition
 	/**
 	* Constructor
 	*/
-	@:overload public function new(env : sun.tools.java.Environment, where : haxe.Int64, declaration : sun.tools.java.ClassDeclaration, documentation : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : SourceClass, localName : sun.tools.java.Identifier) : Void;
+	@:overload public function new(env : sun.tools.java.Environment, where : haxe.Int64, declaration : sun.tools.java.ClassDeclaration, documentation : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : sun.tools.javac.SourceClass, localName : sun.tools.java.Identifier) : Void;
 	
 	/**
 	* Return last position in this class.
@@ -82,7 +82,7 @@ extern class SourceClass extends sun.tools.java.ClassDefinition
 	* See if the source file of this class is right.
 	* @see ClassDefinition#noteUsedBy
 	*/
-	@:overload public function noteUsedBy(ref : sun.tools.java.ClassDefinition, where : haxe.Int64, env : sun.tools.java.Environment) : Void;
+	@:overload override public function noteUsedBy(ref : sun.tools.java.ClassDefinition, where : haxe.Int64, env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* Check this class and all its fields.
@@ -121,7 +121,7 @@ extern class SourceClass extends sun.tools.java.ClassDefinition
 	* @param   sup     the named super class or interface (if anonymous)
 	* @param   args    the actual arguments (if anonymous)
 	*/
-	@:overload public function checkLocalClass(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, sup : sun.tools.java.ClassDefinition, args : java.NativeArray<sun.tools.tree.Expression>, argTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.tree.Vset;
+	@:overload override public function checkLocalClass(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, sup : sun.tools.java.ClassDefinition, args : java.NativeArray<sun.tools.tree.Expression>, argTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.tree.Vset;
 	
 	/**
 	* As with checkLocalClass, run the inline phase for a local class.

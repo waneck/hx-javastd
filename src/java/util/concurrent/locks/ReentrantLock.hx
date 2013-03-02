@@ -574,7 +574,7 @@ package java.util.concurrent.locks;
 /**
 * Sync object for non-fair locks
 */
-@:native('java$util$concurrent$locks$ReentrantLock$NonfairSync') @:internal extern class ReentrantLock_NonfairSync extends ReentrantLock_Sync
+@:native('java$util$concurrent$locks$ReentrantLock$NonfairSync') @:internal extern class ReentrantLock_NonfairSync extends java.util.concurrent.locks.ReentrantLock.ReentrantLock_Sync
 {
 	@:overload @:final override private function tryAcquire(acquires : Int) : Bool;
 	
@@ -583,7 +583,7 @@ package java.util.concurrent.locks;
 /**
 * Sync object for fair locks
 */
-@:native('java$util$concurrent$locks$ReentrantLock$FairSync') @:internal extern class ReentrantLock_FairSync extends ReentrantLock_Sync
+@:native('java$util$concurrent$locks$ReentrantLock$FairSync') @:internal extern class ReentrantLock_FairSync extends java.util.concurrent.locks.ReentrantLock.ReentrantLock_Sync
 {
 	/**
 	* Fair version of tryAcquire.  Don't grant access unless

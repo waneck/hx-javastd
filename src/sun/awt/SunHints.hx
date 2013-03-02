@@ -144,7 +144,7 @@ extern class SunHints
 	/**
 	* Rendering hint key and value objects
 	*/
-	public static var KEY_RENDERING(default, null) : SunHints_Key;
+	public static var KEY_RENDERING(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_RENDER_SPEED(default, null) : Dynamic;
 	
@@ -155,7 +155,7 @@ extern class SunHints
 	/**
 	* Antialiasing hint key and value objects
 	*/
-	public static var KEY_ANTIALIASING(default, null) : SunHints_Key;
+	public static var KEY_ANTIALIASING(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_ANTIALIAS_ON(default, null) : Dynamic;
 	
@@ -166,7 +166,7 @@ extern class SunHints
 	/**
 	* Text antialiasing hint key and value objects
 	*/
-	public static var KEY_TEXT_ANTIALIASING(default, null) : SunHints_Key;
+	public static var KEY_TEXT_ANTIALIASING(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_TEXT_ANTIALIAS_ON(default, null) : Dynamic;
 	
@@ -187,7 +187,7 @@ extern class SunHints
 	/**
 	* Font fractional metrics hint key and value objects
 	*/
-	public static var KEY_FRACTIONALMETRICS(default, null) : SunHints_Key;
+	public static var KEY_FRACTIONALMETRICS(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_FRACTIONALMETRICS_ON(default, null) : Dynamic;
 	
@@ -198,7 +198,7 @@ extern class SunHints
 	/**
 	* Dithering hint key and value objects
 	*/
-	public static var KEY_DITHERING(default, null) : SunHints_Key;
+	public static var KEY_DITHERING(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_DITHER_ENABLE(default, null) : Dynamic;
 	
@@ -209,7 +209,7 @@ extern class SunHints
 	/**
 	* Interpolation hint key and value objects
 	*/
-	public static var KEY_INTERPOLATION(default, null) : SunHints_Key;
+	public static var KEY_INTERPOLATION(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_INTERPOLATION_NEAREST_NEIGHBOR(default, null) : Dynamic;
 	
@@ -220,7 +220,7 @@ extern class SunHints
 	/**
 	* Alpha interpolation hint key and value objects
 	*/
-	public static var KEY_ALPHA_INTERPOLATION(default, null) : SunHints_Key;
+	public static var KEY_ALPHA_INTERPOLATION(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_ALPHA_INTERPOLATION_SPEED(default, null) : Dynamic;
 	
@@ -231,7 +231,7 @@ extern class SunHints
 	/**
 	* Color rendering hint key and value objects
 	*/
-	public static var KEY_COLOR_RENDERING(default, null) : SunHints_Key;
+	public static var KEY_COLOR_RENDERING(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_COLOR_RENDER_SPEED(default, null) : Dynamic;
 	
@@ -242,7 +242,7 @@ extern class SunHints
 	/**
 	* Stroke normalization control hint key and value objects
 	*/
-	public static var KEY_STROKE_CONTROL(default, null) : SunHints_Key;
+	public static var KEY_STROKE_CONTROL(default, null) : sun.awt.SunHints.SunHints_Key;
 	
 	public static var VALUE_STROKE_DEFAULT(default, null) : Dynamic;
 	
@@ -293,7 +293,7 @@ extern class SunHints
 	* Returns true if the specified object is a valid value
 	* for this Key.
 	*/
-	@:overload override public function isCompatibleValue(val : Dynamic) : Bool;
+	@:overload public function isCompatibleValue(val : Dynamic) : Bool;
 	
 	
 }
@@ -306,7 +306,7 @@ extern class SunHints
 */
 @:native('sun$awt$SunHints$Value') extern class SunHints_Value
 {
-	@:overload public static function get(keyindex : Int, valueindex : Int) : SunHints_Value;
+	@:overload public static function get(keyindex : Int, valueindex : Int) : sun.awt.SunHints.SunHints_Value;
 	
 	/**
 	* Construct a value using the indicated private index.  Each
@@ -314,7 +314,7 @@ extern class SunHints
 	* indices.  Enforcing the uniqueness of the integer indices
 	* is left to the subclass.
 	*/
-	@:overload public function new(key : SunHints_Key, index : Int, description : String) : Void;
+	@:overload public function new(key : sun.awt.SunHints.SunHints_Key, index : Int, description : String) : Void;
 	
 	/**
 	* Returns the numeric index associated with this Key.  This
@@ -332,7 +332,7 @@ extern class SunHints
 	* Returns true if the specified object is a valid Key
 	* for this Value.
 	*/
-	@:overload @:final public function isCompatibleKey(k : SunHints_Key) : Bool;
+	@:overload @:final public function isCompatibleKey(k : sun.awt.SunHints.SunHints_Key) : Bool;
 	
 	/**
 	* The hash code for all SunHints.Value objects will be the same
@@ -349,7 +349,7 @@ extern class SunHints
 	
 	
 }
-@:native('sun$awt$SunHints$LCDContrastKey') extern class SunHints_LCDContrastKey extends SunHints_Key
+@:native('sun$awt$SunHints$LCDContrastKey') extern class SunHints_LCDContrastKey extends sun.awt.SunHints.SunHints_Key
 {
 	@:overload public function new(privatekey : Int, description : String) : Void;
 	

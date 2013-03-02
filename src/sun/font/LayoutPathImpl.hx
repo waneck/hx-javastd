@@ -52,7 +52,7 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	/**
 	* Return a path representing the path from the origin through the points in order.
 	*/
-	@:overload public static function getPath(etype : LayoutPathImpl_EndType, coords : java.NativeArray<Float>) : LayoutPathImpl;
+	@:overload public static function getPath(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, coords : java.NativeArray<Float>) : sun.font.LayoutPathImpl;
 	
 	
 }
@@ -97,7 +97,7 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	* Automatically build from a list of points represented by pairs of
 	* doubles.  Initial advance is zero.
 	*/
-	@:overload public function build(etype : LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : LayoutPathImpl_SegmentPath;
+	@:overload public function build(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
 	/**
 	* Move to a new point.  If there is no data, this will become the
@@ -121,14 +121,14 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	*/
 	@:overload public function lineTo(x : Float, y : Float) : Void;
 	
-	@:overload public function complete() : LayoutPathImpl_SegmentPath;
+	@:overload public function complete() : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
 	/**
 	* Complete building a SegmentPath.  Once this is called, the builder is restored
 	* to its initial state and information about the previous path is released.  The
 	* end type indicates whether to treat the path as closed, extended, or pinned.
 	*/
-	@:overload public function complete(etype : LayoutPathImpl_EndType) : LayoutPathImpl_SegmentPath;
+	@:overload public function complete(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
 	
 }
@@ -159,9 +159,9 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 * Note: We might want to cache more auxiliary data than the
 * advance, but this seems adequate for now.
 */
-@:native('sun$font$LayoutPathImpl$SegmentPath') extern class LayoutPathImpl_SegmentPath extends LayoutPathImpl
+@:native('sun$font$LayoutPathImpl$SegmentPath') extern class LayoutPathImpl_SegmentPath extends sun.font.LayoutPathImpl
 {
-	@:overload public static function get(etype : LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : LayoutPathImpl_SegmentPath;
+	@:overload public static function get(etype : sun.font.LayoutPathImpl.LayoutPathImpl_EndType, pts : java.NativeArray<Float>) : sun.font.LayoutPathImpl.LayoutPathImpl_SegmentPath;
 	
 	@:overload override public function pathToPoint(location : java.awt.geom.Point2D, preceding : Bool, point : java.awt.geom.Point2D) : Void;
 	
@@ -202,7 +202,7 @@ extern class LayoutPathImpl extends java.awt.font.LayoutPath
 	
 	
 }
-@:native('sun$font$LayoutPathImpl$EmptyPath') extern class LayoutPathImpl_EmptyPath extends LayoutPathImpl
+@:native('sun$font$LayoutPathImpl$EmptyPath') extern class LayoutPathImpl_EmptyPath extends sun.font.LayoutPathImpl
 {
 	@:overload public function new(tx : java.awt.geom.AffineTransform) : Void;
 	

@@ -31,7 +31,7 @@ extern class FuncSubstringAfter extends com.sun.org.apache.xpath.internal.functi
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
+	@:overload public function execute(xctxt : com.sun.org.apache.xpath.internal.XPathContext) : com.sun.org.apache.xpath.internal.objects.XObject;
 	
 	
 }

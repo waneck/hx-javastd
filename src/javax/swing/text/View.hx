@@ -198,7 +198,7 @@ extern class View implements javax.swing.SwingConstants
 	*
 	* @return the parent, or <code>null</code> if none exists
 	*/
-	@:overload public function getParent() : View;
+	@:overload public function getParent() : javax.swing.text.View;
 	
 	/**
 	*  Returns a boolean that indicates whether
@@ -257,7 +257,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param height true if the height preference has changed
 	* @see javax.swing.JComponent#revalidate
 	*/
-	@:overload public function preferenceChanged(child : View, width : Bool, height : Bool) : Void;
+	@:overload public function preferenceChanged(child : javax.swing.text.View, width : Bool, height : Bool) : Void;
 	
 	/**
 	* Determines the desired alignment for this view along an
@@ -299,7 +299,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param parent the new parent, or <code>null</code> if the view is
 	*          being removed from a parent
 	*/
-	@:overload public function setParent(parent : View) : Void;
+	@:overload public function setParent(parent : javax.swing.text.View) : Void;
 	
 	/**
 	* Returns the number of views in this view.  Since
@@ -318,7 +318,7 @@ extern class View implements javax.swing.SwingConstants
 	* @param n the number of the view to get, >= 0 && < getViewCount()
 	* @return the view
 	*/
-	@:overload public function getView(n : Int) : View;
+	@:overload public function getView(n : Int) : javax.swing.text.View;
 	
 	/**
 	* Removes all of the children.  This is a convenience
@@ -344,7 +344,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #replace
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function insert(offs : Int, v : View) : Void;
+	@:require(java3) @:overload public function insert(offs : Int, v : javax.swing.text.View) : Void;
 	
 	/**
 	* Appends a single child view.  This is a convenience
@@ -354,7 +354,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #replace
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function append(v : View) : Void;
+	@:require(java3) @:overload public function append(v : javax.swing.text.View) : Void;
 	
 	/**
 	* Replaces child views.  If there are no views to remove
@@ -374,7 +374,7 @@ extern class View implements javax.swing.SwingConstants
 	*   (useful to remove).
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function replace(offset : Int, length : Int, views : java.NativeArray<View>) : Void;
+	@:require(java3) @:overload public function replace(offset : Int, length : Int, views : java.NativeArray<javax.swing.text.View>) : Void;
 	
 	/**
 	* Returns the child view index representing the given position in
@@ -678,7 +678,7 @@ extern class View implements javax.swing.SwingConstants
 	*  returned.
 	* @see ParagraphView
 	*/
-	@:overload public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : View;
+	@:overload public function breakView(axis : Int, offset : Int, pos : Single, len : Single) : javax.swing.text.View;
 	
 	/**
 	* Creates a view that represents a portion of the element.
@@ -697,7 +697,7 @@ extern class View implements javax.swing.SwingConstants
 	*   support breaking into fragments
 	* @see LabelView
 	*/
-	@:overload public function createFragment(p0 : Int, p1 : Int) : View;
+	@:overload public function createFragment(p0 : Int, p1 : Int) : javax.swing.text.View;
 	
 	/**
 	* Determines how attractive a break opportunity in
@@ -871,7 +871,7 @@ extern class View implements javax.swing.SwingConstants
 	* @see #forwardUpdate
 	* @since 1.3
 	*/
-	@:require(java3) @:overload private function forwardUpdateToView(v : View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
+	@:require(java3) @:overload private function forwardUpdateToView(v : javax.swing.text.View, e : javax.swing.event.DocumentEvent, a : java.awt.Shape, f : javax.swing.text.ViewFactory) : Void;
 	
 	/**
 	* Updates the layout in response to receiving notification of

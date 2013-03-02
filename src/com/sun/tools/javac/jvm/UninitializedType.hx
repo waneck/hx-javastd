@@ -37,9 +37,9 @@ package com.sun.tools.javac.jvm;
 	
 	public static var UNINITIALIZED_OBJECT(default, null) : Int;
 	
-	@:overload public static function uninitializedThis(qtype : com.sun.tools.javac.code.Type) : UninitializedType;
+	@:overload public static function uninitializedThis(qtype : com.sun.tools.javac.code.Type) : com.sun.tools.javac.jvm.UninitializedType;
 	
-	@:overload public static function uninitializedObject(qtype : com.sun.tools.javac.code.Type, offset : Int) : UninitializedType;
+	@:overload public static function uninitializedObject(qtype : com.sun.tools.javac.code.Type, offset : Int) : com.sun.tools.javac.jvm.UninitializedType;
 	
 	public var offset(default, null) : Int;
 	

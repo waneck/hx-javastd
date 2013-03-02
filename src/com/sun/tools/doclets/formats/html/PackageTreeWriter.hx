@@ -91,21 +91,21 @@ extern class PackageTreeWriter extends com.sun.tools.doclets.formats.html.Abstra
 	*
 	* @return a content tree for the link
 	*/
-	@:overload override private function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link for the next package tree file.
 	*
 	* @return a content tree for the link
 	*/
-	@:overload override private function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to the package summary page for the package of this tree.
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

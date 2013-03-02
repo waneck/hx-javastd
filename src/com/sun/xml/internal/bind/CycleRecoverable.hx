@@ -40,7 +40,7 @@ extern interface CycleRecoverable
 	*      just like when your object does not implement {@link CycleRecoverable}
 	*      (IOW, cut the cycle arbitrarily and try to go on.)
 	*/
-	@:overload public function onCycleDetected(context : CycleRecoverable_Context) : Dynamic;
+	@:overload public function onCycleDetected(context : com.sun.xml.internal.bind.CycleRecoverable.CycleRecoverable_Context) : Dynamic;
 	
 	
 }

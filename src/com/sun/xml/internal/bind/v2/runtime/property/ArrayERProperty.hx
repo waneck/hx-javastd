@@ -38,7 +38,7 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	
 	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo, tagName : javax.xml.namespace.QName, isWrapperNillable : Bool) : Void;
 	
-	@:overload @:final override public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
+	@:overload @:final public function serializeBody(o : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, outerPeer : Dynamic) : Void;
 	
 	/**
 	* Serializes the items of the list.
@@ -54,7 +54,7 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	*/
 	@:overload @:abstract private function createBodyUnmarshaller(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload @:final override public function buildChildElementUnmarshallers(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
+	@:overload @:final public function buildChildElementUnmarshallers(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
 	
 }

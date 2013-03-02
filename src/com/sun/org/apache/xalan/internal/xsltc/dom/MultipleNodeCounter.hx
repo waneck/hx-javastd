@@ -35,7 +35,7 @@ extern class MultipleNodeCounter extends com.sun.org.apache.xalan.internal.xsltc
 	
 	
 }
-@:native('com$sun$org$apache$xalan$internal$xsltc$dom$MultipleNodeCounter$DefaultMultipleNodeCounter') @:internal extern class MultipleNodeCounter_DefaultMultipleNodeCounter extends MultipleNodeCounter
+@:native('com$sun$org$apache$xalan$internal$xsltc$dom$MultipleNodeCounter$DefaultMultipleNodeCounter') @:internal extern class MultipleNodeCounter_DefaultMultipleNodeCounter extends com.sun.org.apache.xalan.internal.xsltc.dom.MultipleNodeCounter
 {
 	@:overload public function new(translet : com.sun.org.apache.xalan.internal.xsltc.Translet, document : com.sun.org.apache.xalan.internal.xsltc.DOM, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator) : Void;
 	

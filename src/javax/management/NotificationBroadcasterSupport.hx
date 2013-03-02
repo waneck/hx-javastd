@@ -174,7 +174,7 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 	
 	
 }
-@:native('javax$management$NotificationBroadcasterSupport$WildcardListenerInfo') @:internal extern class NotificationBroadcasterSupport_WildcardListenerInfo extends NotificationBroadcasterSupport_ListenerInfo
+@:native('javax$management$NotificationBroadcasterSupport$WildcardListenerInfo') @:internal extern class NotificationBroadcasterSupport_WildcardListenerInfo extends javax.management.NotificationBroadcasterSupport.NotificationBroadcasterSupport_ListenerInfo
 {
 	@:overload override public function equals(o : Dynamic) : Bool;
 	
@@ -182,7 +182,7 @@ extern class NotificationBroadcasterSupport implements javax.management.Notifica
 }
 @:native('javax$management$NotificationBroadcasterSupport$SendNotifJob') @:internal extern class NotificationBroadcasterSupport_SendNotifJob implements java.lang.Runnable
 {
-	@:overload public function new(notif : javax.management.Notification, listenerInfo : NotificationBroadcasterSupport_ListenerInfo) : Void;
+	@:overload public function new(notif : javax.management.Notification, listenerInfo : javax.management.NotificationBroadcasterSupport.NotificationBroadcasterSupport_ListenerInfo) : Void;
 	
 	@:overload public function run() : Void;
 	

@@ -48,7 +48,7 @@ extern class XMLEventFactory
 	* Create a new instance of the factory
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newInstance() : XMLEventFactory;
+	@:overload public static function newInstance() : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -75,7 +75,7 @@ extern class XMLEventFactory
 	*
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory() : XMLEventFactory;
+	@:overload public static function newFactory() : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* Create a new instance of the factory
@@ -92,7 +92,7 @@ extern class XMLEventFactory
 	*              #newFactory(java.lang.String, java.lang.ClassLoader)}
 	*              method defines no changes in behavior.
 	*/
-	@:overload public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : XMLEventFactory;
+	@:overload public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -109,7 +109,7 @@ extern class XMLEventFactory
 	* @return the factory implementation
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : XMLEventFactory;
+	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLEventFactory;
 	
 	/**
 	* This method allows setting of the Location on each event that

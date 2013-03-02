@@ -98,7 +98,7 @@ extern class PrintServiceLookup
 	* @return <code>true</code> if the new lookup service is newly
 	*         registered; <code>false</code> otherwise.
 	*/
-	@:overload public static function registerServiceProvider(sp : PrintServiceLookup) : Bool;
+	@:overload public static function registerServiceProvider(sp : javax.print.PrintServiceLookup) : Bool;
 	
 	/**
 	* Allows an application to directly register an instance of a

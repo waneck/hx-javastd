@@ -31,7 +31,7 @@ extern class WindowsEditorPaneUI extends javax.swing.plaf.basic.BasicEditorPaneU
 	* @param c the configurable text component
 	* @return the UI
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Creates the object to use for a caret.  By default an

@@ -27,7 +27,7 @@ extern class ClassPathLoader extends java.lang.ClassLoader
 {
 	@:overload public function new(classPath : sun.tools.java.ClassPath) : Void;
 	
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload private function findClass(name : String) : Class<Dynamic>;
 	
 	
 }

@@ -38,27 +38,27 @@ package javax.swing.plaf.synth;
 	* @param x component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Installs the UI defaults.
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload private function installDefaults() : Void;
 	
 	/**
 	* Installs the event listeners for the UI.
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
 	/**
 	* Uninstalls the UI defaults.
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload private function uninstallDefaults() : Void;
 	
 	/**
 	* Uninstalls the event listeners from the UI.
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
@@ -73,12 +73,12 @@ package javax.swing.plaf.synth;
 	/**
 	* Creates the default divider.
 	*/
-	@:overload override public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
+	@:overload public function createDefaultDivider() : javax.swing.plaf.basic.BasicSplitPaneDivider;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function createDefaultNonContinuousLayoutDivider() : java.awt.Component;
+	@:overload private function createDefaultNonContinuousLayoutDivider() : java.awt.Component;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -92,7 +92,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -103,7 +103,7 @@ package javax.swing.plaf.synth;
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component. This implementation does nothing.
@@ -122,7 +122,7 @@ package javax.swing.plaf.synth;
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function finishedPaintingChildren(jc : javax.swing.JSplitPane, g : java.awt.Graphics) : Void;
+	@:overload public function finishedPaintingChildren(jc : javax.swing.JSplitPane, g : java.awt.Graphics) : Void;
 	
 	
 }

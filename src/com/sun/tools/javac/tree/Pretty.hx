@@ -210,7 +210,7 @@ extern class Pretty extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 	
 	@:overload public function visitAnnotation(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation) : Void;
 	
-	@:overload override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
 	
 }

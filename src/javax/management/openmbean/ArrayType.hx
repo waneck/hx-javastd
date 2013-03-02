@@ -303,7 +303,7 @@ extern class ArrayType<T> extends javax.management.openmbean.OpenType<T>
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getArrayType<E>(elementType : javax.management.openmbean.OpenType<E>) : ArrayType<java.NativeArray<E>>;
+	@:require(java6) @:overload public static function getArrayType<E>(elementType : javax.management.openmbean.OpenType<E>) : javax.management.openmbean.ArrayType<java.NativeArray<E>>;
 	
 	/**
 	* Create an {@code ArrayType} instance in a type-safe manner.
@@ -339,7 +339,7 @@ extern class ArrayType<T> extends javax.management.openmbean.OpenType<T>
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getPrimitiveArrayType<T>(arrayClass : Class<T>) : ArrayType<T>;
+	@:require(java6) @:overload public static function getPrimitiveArrayType<T>(arrayClass : Class<T>) : javax.management.openmbean.ArrayType<T>;
 	
 	
 }

@@ -38,9 +38,9 @@ package com.sun.tools.javac.comp;
 */
 extern class Attr extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 {
-	private static var attrKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Attr>;
+	private static var attrKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Attr>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Attr;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Attr;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -230,7 +230,7 @@ extern class Attr extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 }
 @:native('com$sun$tools$javac$comp$Attr$PostAttrAnalyzer') @:internal extern class Attr_PostAttrAnalyzer extends com.sun.tools.javac.tree.TreeScanner
 {
-	@:overload override public function scan(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload public function scan(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
 	@:overload public function visitIdent(that : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
 	

@@ -365,7 +365,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* it's not used.  The default parser is the HotJava parser
 	* using an HTML 3.2 DTD.
 	*/
-	@:overload private function getParser() : HTMLEditorKit_Parser;
+	@:overload private function getParser() : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_Parser;
 	
 	/**
 	* returns the AccessibleContext associated with this editor kit
@@ -477,7 +477,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	* with the results of the parse.  This method should
 	* be implemented to be thread-safe.
 	*/
-	@:overload @:abstract public function parse(r : java.io.Reader, cb : HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
+	@:overload @:abstract public function parse(r : java.io.Reader, cb : javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_ParserCallback, ignoreCharSet : Bool) : Void;
 	
 	
 }
@@ -662,7 +662,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 	/**
 	* @return HTMLEditorKit for <code>e</code>.
 	*/
-	@:overload private function getHTMLEditorKit(e : javax.swing.JEditorPane) : HTMLEditorKit;
+	@:overload private function getHTMLEditorKit(e : javax.swing.JEditorPane) : javax.swing.text.html.HTMLEditorKit;
 	
 	/**
 	* Returns an array of the Elements that contain <code>offset</code>.
@@ -704,7 +704,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 * addTag. These will be checked for if there is no parentTag at
 * offset.
 */
-@:native('javax$swing$text$html$HTMLEditorKit$InsertHTMLTextAction') extern class HTMLEditorKit_InsertHTMLTextAction extends HTMLEditorKit_HTMLTextAction
+@:native('javax$swing$text$html$HTMLEditorKit$InsertHTMLTextAction') extern class HTMLEditorKit_InsertHTMLTextAction extends javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_HTMLTextAction
 {
 	@:overload public function new(name : String, html : String, parentTag : javax.swing.text.html.HTML.HTML_Tag, addTag : javax.swing.text.html.HTML.HTML_Tag) : Void;
 	
@@ -763,7 +763,7 @@ extern class HTMLEditorKit extends javax.swing.text.StyledEditorKit implements j
 * the parent HTML.Tag based on the paragraph element at the selection
 * start.
 */
-@:native('javax$swing$text$html$HTMLEditorKit$InsertHRAction') @:internal extern class HTMLEditorKit_InsertHRAction extends HTMLEditorKit_InsertHTMLTextAction
+@:native('javax$swing$text$html$HTMLEditorKit$InsertHRAction') @:internal extern class HTMLEditorKit_InsertHRAction extends javax.swing.text.html.HTMLEditorKit.HTMLEditorKit_InsertHTMLTextAction
 {
 	/**
 	* Inserts the HTML into the document.

@@ -66,7 +66,7 @@ extern class DOMRetrievalMethod extends org.jcp.xml.dsig.internal.dom.DOMStructu
 	
 	@:overload public function getTransforms() : java.util.List<Dynamic>;
 	
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	@:overload public function getHere() : org.w3c.dom.Node;
 	

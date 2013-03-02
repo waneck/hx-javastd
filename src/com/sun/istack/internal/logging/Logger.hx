@@ -45,7 +45,7 @@ extern class Logger
 	* @return logger instance preconfigured for use with the component
 	* @throws NullPointerException if the componentClass parameter is {@code null}.
 	*/
-	@:overload public static function getLogger(componentClass : Class<Dynamic>) : Logger;
+	@:overload public static function getLogger(componentClass : Class<Dynamic>) : com.sun.istack.internal.logging.Logger;
 	
 	/**
 	* The factory method returns preconfigured Logger wrapper for the class. Since there is no caching implemented,
@@ -63,7 +63,7 @@ extern class Logger
 	*
 	* @see #getLogger(java.lang.Class)
 	*/
-	@:overload public static function getLogger(customLoggerName : String, componentClass : Class<Dynamic>) : Logger;
+	@:overload public static function getLogger(customLoggerName : String, componentClass : Class<Dynamic>) : com.sun.istack.internal.logging.Logger;
 	
 	@:overload public function log(level : java.util.logging.Level, message : String) : Void;
 	

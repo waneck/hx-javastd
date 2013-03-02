@@ -60,7 +60,7 @@ extern class Graphics2D extends java.awt.Graphics
 	*                      or sunk into the surface.
 	* @see         java.awt.Graphics#fill3DRect
 	*/
-	@:overload override public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload public function draw3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Paints a 3-D highlighted rectangle filled with the current color.
@@ -79,7 +79,7 @@ extern class Graphics2D extends java.awt.Graphics
 	*                      or etched into the surface.
 	* @see         java.awt.Graphics#draw3DRect
 	*/
-	@:overload override public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
+	@:overload public function fill3DRect(x : Int, y : Int, width : Int, height : Int, raised : Bool) : Void;
 	
 	/**
 	* Strokes the outline of a <code>Shape</code> using the settings of the
@@ -233,7 +233,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see         java.awt.Graphics#drawChars
 	* @since       JDK1.0
 	*/
-	@:require(java0) @:overload @:abstract override public function drawString(str : String, x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:abstract public function drawString(str : String, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders the text specified by the specified <code>String</code>,
@@ -285,7 +285,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @see #setComposite
 	* @see #setClip
 	*/
-	@:overload @:abstract override public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
+	@:overload @:abstract public function drawString(iterator : java.text.AttributedCharacterIterator, x : Int, y : Int) : Void;
 	
 	/**
 	* Renders the text of the specified iterator applying its attributes
@@ -535,7 +535,7 @@ extern class Graphics2D extends java.awt.Graphics
 	* @param  y the specified y coordinate
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload @:abstract override public function translate(x : Int, y : Int) : Void;
+	@:require(java0) @:overload @:abstract public function translate(x : Int, y : Int) : Void;
 	
 	/**
 	* Concatenates the current

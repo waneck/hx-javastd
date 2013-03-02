@@ -38,13 +38,13 @@ package com.sun.script.javascript;
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function eval(reader : java.io.Reader, ctxt : javax.script.ScriptContext) : Dynamic;
+	@:overload public function eval(reader : java.io.Reader, ctxt : javax.script.ScriptContext) : Dynamic;
 	
-	@:overload override public function eval(script : String, ctxt : javax.script.ScriptContext) : Dynamic;
+	@:overload public function eval(script : String, ctxt : javax.script.ScriptContext) : Dynamic;
 	
-	@:overload override public function getFactory() : javax.script.ScriptEngineFactory;
+	@:overload public function getFactory() : javax.script.ScriptEngineFactory;
 	
-	@:overload override public function createBindings() : javax.script.Bindings;
+	@:overload public function createBindings() : javax.script.Bindings;
 	
 	@:overload public function invokeFunction(name : String, args : java.NativeArray<Dynamic>) : Dynamic;
 	

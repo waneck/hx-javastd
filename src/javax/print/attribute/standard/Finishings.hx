@@ -28,13 +28,13 @@ extern class Finishings extends javax.print.attribute.EnumSyntax implements java
 	/**
 	* Perform no binding.
 	*/
-	public static var NONE(default, null) : Finishings;
+	public static var NONE(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples. The exact number and
 	* placement of the staples is site-defined.
 	*/
-	public static var STAPLE(default, null) : Finishings;
+	public static var STAPLE(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* This value is specified when it is desired to select a non-printed (or
@@ -42,101 +42,101 @@ extern class Finishings extends javax.print.attribute.EnumSyntax implements java
 	* specification of a printed cover (on cover stock medium) by the
 	* document  itself.
 	*/
-	public static var COVER(default, null) : Finishings;
+	public static var COVER(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* This value indicates that a binding is to be applied to the document;
 	* the type and placement of the binding is site-defined.
 	*/
-	public static var BIND(default, null) : Finishings;
+	public static var BIND(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples (wire stitches) along the
 	* middle fold. The exact number and placement of the staples and the
 	* middle fold is implementation- and/or site-defined.
 	*/
-	public static var SADDLE_STITCH(default, null) : Finishings;
+	public static var SADDLE_STITCH(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples (wire stitches) along one
 	* edge. The exact number and placement of the staples is implementation-
 	* and/or site- defined.
 	*/
-	public static var EDGE_STITCH(default, null) : Finishings;
+	public static var EDGE_STITCH(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples in the top left corner.
 	*/
-	public static var STAPLE_TOP_LEFT(default, null) : Finishings;
+	public static var STAPLE_TOP_LEFT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples in the bottom left
 	* corner.
 	*/
-	public static var STAPLE_BOTTOM_LEFT(default, null) : Finishings;
+	public static var STAPLE_BOTTOM_LEFT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples in the top right corner.
 	*/
-	public static var STAPLE_TOP_RIGHT(default, null) : Finishings;
+	public static var STAPLE_TOP_RIGHT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples in the bottom right
 	* corner.
 	*/
-	public static var STAPLE_BOTTOM_RIGHT(default, null) : Finishings;
+	public static var STAPLE_BOTTOM_RIGHT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples (wire stitches) along the
 	* left edge. The exact number and placement of the staples is
 	* implementation- and/or site-defined.
 	*/
-	public static var EDGE_STITCH_LEFT(default, null) : Finishings;
+	public static var EDGE_STITCH_LEFT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples (wire stitches) along the
 	* top edge. The exact number and placement of the staples is
 	* implementation- and/or site-defined.
 	*/
-	public static var EDGE_STITCH_TOP(default, null) : Finishings;
+	public static var EDGE_STITCH_TOP(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples (wire stitches) along the
 	* right edge. The exact number and placement of the staples is
 	* implementation- and/or site-defined.
 	*/
-	public static var EDGE_STITCH_RIGHT(default, null) : Finishings;
+	public static var EDGE_STITCH_RIGHT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with one or more staples (wire stitches) along the
 	* bottom edge. The exact number and placement of the staples is
 	* implementation- and/or site-defined.
 	*/
-	public static var EDGE_STITCH_BOTTOM(default, null) : Finishings;
+	public static var EDGE_STITCH_BOTTOM(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with two staples (wire stitches) along the left
 	* edge assuming a portrait document (see above).
 	*/
-	public static var STAPLE_DUAL_LEFT(default, null) : Finishings;
+	public static var STAPLE_DUAL_LEFT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with two staples (wire stitches) along the top
 	* edge assuming a portrait document (see above).
 	*/
-	public static var STAPLE_DUAL_TOP(default, null) : Finishings;
+	public static var STAPLE_DUAL_TOP(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with two staples (wire stitches) along the right
 	* edge assuming a portrait document (see above).
 	*/
-	public static var STAPLE_DUAL_RIGHT(default, null) : Finishings;
+	public static var STAPLE_DUAL_RIGHT(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Bind the document(s) with two staples (wire stitches) along the bottom
 	* edge assuming a portrait document (see above).
 	*/
-	public static var STAPLE_DUAL_BOTTOM(default, null) : Finishings;
+	public static var STAPLE_DUAL_BOTTOM(default, null) : javax.print.attribute.standard.Finishings;
 	
 	/**
 	* Construct a new finishings binding enumeration value with the given

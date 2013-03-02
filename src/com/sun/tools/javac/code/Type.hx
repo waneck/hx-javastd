@@ -54,7 +54,7 @@ package com.sun.tools.javac.code;
 extern class Type implements javax.lang.model.type.PrimitiveType
 {
 	/** Constant type: no type at all. */
-	public static var noType(default, null) : Type_JCNoType;
+	public static var noType(default, null) : com.sun.tools.javac.code.Type.Type_JCNoType;
 	
 	/** If this switch is turned on, the names of type variables
 	*  and anonymous classes are printed with hashcodes appended.
@@ -84,11 +84,11 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	* By default, this is itself. For ErrorType, a different value
 	* may be provided,
 	*/
-	@:overload public function getModelType() : Type;
+	@:overload public function getModelType() : com.sun.tools.javac.code.Type;
 	
-	@:overload public static function getModelTypes(ts : com.sun.tools.javac.util.List<Type>) : com.sun.tools.javac.util.List<Type>;
+	@:overload public static function getModelTypes(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
 	/** Define a type given its tag and type symbol
 	*/
@@ -96,26 +96,26 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	/** map a type function over all immediate descendants of this type
 	*/
-	@:overload public function map(f : Type_Mapping) : Type;
+	@:overload public function map(f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.code.Type;
 	
 	/** map a type function over a list of types
 	*/
-	@:native('map') @:overload public static function _map(ts : com.sun.tools.javac.util.List<Type>, f : Type_Mapping) : com.sun.tools.javac.util.List<Type>;
+	@:native('map') @:overload public static function _map(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	/** Define a constant type, of the same kind as this type
 	*  and with given constant value
 	*/
-	@:overload public function constType(constValue : Dynamic) : Type;
+	@:overload public function constType(constValue : Dynamic) : com.sun.tools.javac.code.Type;
 	
 	/**
 	* If this is a constant type, return its underlying type.
 	* Otherwise, return the type itself.
 	*/
-	@:overload public function baseType() : Type;
+	@:overload public function baseType() : com.sun.tools.javac.code.Type;
 	
 	/** Return the base types of a list of types.
 	*/
-	@:overload public static function baseTypes(ts : com.sun.tools.javac.util.List<Type>) : com.sun.tools.javac.util.List<Type>;
+	@:overload public static function baseTypes(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	/** The Java source which this type represents.
 	*/
@@ -126,7 +126,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	* represented as a comma-spearated listing of the elements in
 	* that list.
 	*/
-	@:native('toString') @:overload public static function _toString(ts : com.sun.tools.javac.util.List<Type>) : String;
+	@:native('toString') @:overload public static function _toString(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : String;
 	
 	/**
 	* The constant value of this type, converted to String
@@ -154,30 +154,30 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	/** Access methods.
 	*/
-	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<Type>;
+	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload public function getEnclosingType() : Type;
+	@:overload public function getEnclosingType() : com.sun.tools.javac.code.Type;
 	
-	@:overload public function getParameterTypes() : com.sun.tools.javac.util.List<Type>;
+	@:overload public function getParameterTypes() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload public function getReturnType() : Type;
+	@:overload public function getReturnType() : com.sun.tools.javac.code.Type;
 	
-	@:overload public function getThrownTypes() : com.sun.tools.javac.util.List<Type>;
+	@:overload public function getThrownTypes() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload public function getUpperBound() : Type;
+	@:overload public function getUpperBound() : com.sun.tools.javac.code.Type;
 	
-	@:overload public function getLowerBound() : Type;
+	@:overload public function getLowerBound() : com.sun.tools.javac.code.Type;
 	
 	/** Return all parameters of this type and all its outer types in order
 	*  outer (first) to inner (last).
 	*/
-	@:overload public function allparams() : com.sun.tools.javac.util.List<Type>;
+	@:overload public function allparams() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	/** Does this type contain "error" elements?
 	*/
 	@:overload public function isErroneous() : Bool;
 	
-	@:native('isErroneous') @:overload public static function _isErroneous(ts : com.sun.tools.javac.util.List<Type>) : Bool;
+	@:native('isErroneous') @:overload public static function _isErroneous(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Bool;
 	
 	/** Is this type parameterized?
 	*  A class type is parameterized if it has some parameters.
@@ -206,17 +206,17 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	/**
 	* Does this type contain occurrences of type t?
 	*/
-	@:overload public function contains(t : Type) : Bool;
+	@:overload public function contains(t : com.sun.tools.javac.code.Type) : Bool;
 	
-	@:native('contains') @:overload public static function _contains(ts : com.sun.tools.javac.util.List<Type>, t : Type) : Bool;
+	@:native('contains') @:overload public static function _contains(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, t : com.sun.tools.javac.code.Type) : Bool;
 	
 	/** Does this type contain an occurrence of some type in 'ts'?
 	*/
-	@:overload public function containsAny(ts : com.sun.tools.javac.util.List<Type>) : Bool;
+	@:overload public function containsAny(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Bool;
 	
-	@:native('containsAny') @:overload public static function _containsAny(ts1 : com.sun.tools.javac.util.List<Type>, ts2 : com.sun.tools.javac.util.List<Type>) : Bool;
+	@:native('containsAny') @:overload public static function _containsAny(ts1 : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, ts2 : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Bool;
 	
-	@:overload public static function filter(ts : com.sun.tools.javac.util.List<Type>, tf : com.sun.tools.javac.util.Filter<Type>) : com.sun.tools.javac.util.List<Type>;
+	@:overload public static function filter(ts : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, tf : com.sun.tools.javac.util.Filter<com.sun.tools.javac.code.Type>) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	@:overload public function isSuperBound() : Bool;
 	
@@ -224,11 +224,11 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload public function isUnbound() : Bool;
 	
-	@:overload public function withTypeVar(t : Type) : Type;
+	@:overload public function withTypeVar(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.code.Type;
 	
 	/** The underlying method type of this type.
 	*/
-	@:overload public function asMethodType() : Type_MethodType;
+	@:overload public function asMethodType() : com.sun.tools.javac.code.Type.Type_MethodType;
 	
 	/** Complete loading all classes in this type.
 	*/
@@ -248,29 +248,29 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 {
 	@:overload public function new(name : String) : Void;
 	
-	@:overload @:abstract public function apply(t : Type) : Type;
+	@:overload @:abstract public function apply(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.code.Type;
 	
 	@:overload public function toString() : String;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$WildcardType') extern class Type_WildcardType extends Type implements javax.lang.model.type.WildcardType
+@:native('com$sun$tools$javac$code$Type$WildcardType') extern class Type_WildcardType extends com.sun.tools.javac.code.Type implements javax.lang.model.type.WildcardType
 {
-	public var type : Type;
+	public var type : com.sun.tools.javac.code.Type;
 	
 	public var kind : com.sun.tools.javac.code.BoundKind;
 	
-	public var bound : Type_TypeVar;
+	public var bound : com.sun.tools.javac.code.Type.Type_TypeVar;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
-	@:overload public function new(type : Type, kind : com.sun.tools.javac.code.BoundKind, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
+	@:overload public function new(type : com.sun.tools.javac.code.Type, kind : com.sun.tools.javac.code.BoundKind, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
-	@:overload public function new(t : javax.lang.model.type.WildcardType, bound : Type_TypeVar) : Void;
+	@:overload public function new(t : javax.lang.model.type.WildcardType, bound : com.sun.tools.javac.code.Type.Type_TypeVar) : Void;
 	
-	@:overload public function new(type : Type, kind : com.sun.tools.javac.code.BoundKind, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, bound : Type_TypeVar) : Void;
+	@:overload public function new(type : com.sun.tools.javac.code.Type, kind : com.sun.tools.javac.code.BoundKind, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, bound : com.sun.tools.javac.code.Type.Type_TypeVar) : Void;
 	
-	@:overload override public function contains(t : Type) : Bool;
+	@:overload override public function contains(t : com.sun.tools.javac.code.Type) : Bool;
 	
 	@:overload override public function isSuperBound() : Bool;
 	
@@ -278,15 +278,15 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload override public function isUnbound() : Bool;
 	
-	@:overload override public function withTypeVar(t : Type) : Type;
+	@:overload override public function withTypeVar(t : com.sun.tools.javac.code.Type) : com.sun.tools.javac.code.Type;
 	
 	@:overload override public function toString() : String;
 	
-	@:overload override public function map(f : Type_Mapping) : Type;
+	@:overload override public function map(f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function getExtendsBound() : Type;
+	@:overload public function getExtendsBound() : com.sun.tools.javac.code.Type;
 	
-	@:overload public function getSuperBound() : Type;
+	@:overload public function getSuperBound() : com.sun.tools.javac.code.Type;
 	
 	@:overload override public function getKind() : javax.lang.model.type.TypeKind;
 	
@@ -294,49 +294,49 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$ClassType') extern class Type_ClassType extends Type implements javax.lang.model.type.DeclaredType
+@:native('com$sun$tools$javac$code$Type$ClassType') extern class Type_ClassType extends com.sun.tools.javac.code.Type implements javax.lang.model.type.DeclaredType
 {
 	/** The type parameters of this type (to be set once class is loaded).
 	*/
-	public var typarams_field : com.sun.tools.javac.util.List<Type>;
+	public var typarams_field : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	/** A cache variable for the type parameters of this type,
 	*  appended to all parameters of its enclosing class.
 	*  @see #allparams
 	*/
-	public var allparams_field : com.sun.tools.javac.util.List<Type>;
+	public var allparams_field : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	/** The supertype of this class (to be set once class is loaded).
 	*/
-	public var supertype_field : Type;
+	public var supertype_field : com.sun.tools.javac.code.Type;
 	
 	/** The interfaces of this class (to be set once class is loaded).
 	*/
-	public var interfaces_field : com.sun.tools.javac.util.List<Type>;
+	public var interfaces_field : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	/** All the interfaces of this class, including missing ones.
 	*/
-	public var all_interfaces_field : com.sun.tools.javac.util.List<Type>;
+	public var all_interfaces_field : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload public function new(outer : Type, typarams : com.sun.tools.javac.util.List<Type>, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
+	@:overload public function new(outer : com.sun.tools.javac.code.Type, typarams : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
-	@:overload override public function constType(constValue : Dynamic) : Type;
+	@:overload override public function constType(constValue : Dynamic) : com.sun.tools.javac.code.Type;
 	
 	/** The Java source which this type represents.
 	*/
 	@:overload override public function toString() : String;
 	
-	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	@:overload public function hasErasedSupertypes() : Bool;
 	
-	@:overload override public function getEnclosingType() : Type;
+	@:overload override public function getEnclosingType() : com.sun.tools.javac.code.Type;
 	
-	@:overload public function setEnclosingType(outer : Type) : Void;
+	@:overload public function setEnclosingType(outer : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload override public function allparams() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function allparams() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	@:overload override public function isErroneous() : Bool;
 	
@@ -349,9 +349,9 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	*/
 	@:overload override public function isRaw() : Bool;
 	
-	@:overload override public function map(f : Type_Mapping) : Type;
+	@:overload override public function map(f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function contains(elem : Type) : Bool;
+	@:overload override public function contains(elem : com.sun.tools.javac.code.Type) : Bool;
 	
 	@:overload override public function complete() : Void;
 	
@@ -361,19 +361,19 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$ErasedClassType') extern class Type_ErasedClassType extends Type_ClassType
+@:native('com$sun$tools$javac$code$Type$ErasedClassType') extern class Type_ErasedClassType extends com.sun.tools.javac.code.Type.Type_ClassType
 {
-	@:overload public function new(outer : Type, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
+	@:overload public function new(outer : com.sun.tools.javac.code.Type, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
 	@:overload override public function hasErasedSupertypes() : Bool;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$UnionClassType') extern class Type_UnionClassType extends Type_ClassType implements javax.lang.model.type.UnionType
+@:native('com$sun$tools$javac$code$Type$UnionClassType') extern class Type_UnionClassType extends com.sun.tools.javac.code.Type.Type_ClassType implements javax.lang.model.type.UnionType
 {
-	@:overload public function new(ct : Type_ClassType, alternatives : com.sun.tools.javac.util.List<Type>) : Void;
+	@:overload public function new(ct : com.sun.tools.javac.code.Type.Type_ClassType, alternatives : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>) : Void;
 	
-	@:overload public function getLub() : Type;
+	@:overload public function getLub() : com.sun.tools.javac.code.Type;
 	
 	@:overload public function getAlternatives() : java.util.List<javax.lang.model.type.TypeMirror>;
 	
@@ -383,13 +383,13 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$ArrayType') extern class Type_ArrayType extends Type implements javax.lang.model.type.ArrayType
+@:native('com$sun$tools$javac$code$Type$ArrayType') extern class Type_ArrayType extends com.sun.tools.javac.code.Type implements javax.lang.model.type.ArrayType
 {
-	public var elemtype : Type;
+	public var elemtype : com.sun.tools.javac.code.Type;
 	
-	@:overload public function new(elemtype : Type, arrayClass : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
+	@:overload public function new(elemtype : com.sun.tools.javac.code.Type, arrayClass : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
 	@:overload override public function toString() : String;
 	
@@ -399,7 +399,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload public function isVarargs() : Bool;
 	
-	@:overload override public function allparams() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function allparams() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	@:overload override public function isErroneous() : Bool;
 	
@@ -409,13 +409,13 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload public function makeVarargs() : javax.lang.model.type.ArrayType;
 	
-	@:overload override public function map(f : Type_Mapping) : Type;
+	@:overload override public function map(f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function contains(elem : Type) : Bool;
+	@:overload override public function contains(elem : com.sun.tools.javac.code.Type) : Bool;
 	
 	@:overload override public function complete() : Void;
 	
-	@:overload public function getComponentType() : Type;
+	@:overload public function getComponentType() : com.sun.tools.javac.code.Type;
 	
 	@:overload override public function getKind() : javax.lang.model.type.TypeKind;
 	
@@ -423,17 +423,17 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$MethodType') extern class Type_MethodType extends Type implements javax.lang.model.type.ExecutableType
+@:native('com$sun$tools$javac$code$Type$MethodType') extern class Type_MethodType extends com.sun.tools.javac.code.Type implements javax.lang.model.type.ExecutableType
 {
-	public var argtypes : com.sun.tools.javac.util.List<Type>;
+	public var argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	public var restype : Type;
+	public var restype : com.sun.tools.javac.code.Type;
 	
-	public var thrown : com.sun.tools.javac.util.List<Type>;
+	public var thrown : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload public function new(argtypes : com.sun.tools.javac.util.List<Type>, restype : Type, thrown : com.sun.tools.javac.util.List<Type>, methodClass : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
+	@:overload public function new(argtypes : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, restype : com.sun.tools.javac.code.Type, thrown : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, methodClass : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
 	/** The Java source which this type represents.
 	*
@@ -446,23 +446,23 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload override public function hashCode() : Int;
 	
-	@:overload override public function getParameterTypes() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getParameterTypes() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload override public function getReturnType() : Type;
+	@:overload override public function getReturnType() : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function getThrownTypes() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getThrownTypes() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	@:overload override public function isErroneous() : Bool;
 	
-	@:overload override public function map(f : Type_Mapping) : Type;
+	@:overload override public function map(f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function contains(elem : Type) : Bool;
+	@:overload override public function contains(elem : com.sun.tools.javac.code.Type) : Bool;
 	
-	@:overload override public function asMethodType() : Type_MethodType;
+	@:overload override public function asMethodType() : com.sun.tools.javac.code.Type.Type_MethodType;
 	
 	@:overload override public function complete() : Void;
 	
-	@:overload public function getTypeVariables() : com.sun.tools.javac.util.List<Type_TypeVar>;
+	@:overload public function getTypeVariables() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type.Type_TypeVar>;
 	
 	@:overload override public function asElement() : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol;
 	
@@ -472,9 +472,9 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$PackageType') extern class Type_PackageType extends Type implements javax.lang.model.type.NoType
+@:native('com$sun$tools$javac$code$Type$PackageType') extern class Type_PackageType extends com.sun.tools.javac.code.Type implements javax.lang.model.type.NoType
 {
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
 	@:overload override public function toString() : String;
 	
@@ -484,7 +484,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$TypeVar') extern class Type_TypeVar extends Type implements javax.lang.model.type.TypeVariable
+@:native('com$sun$tools$javac$code$Type$TypeVar') extern class Type_TypeVar extends com.sun.tools.javac.code.Type implements javax.lang.model.type.TypeVariable
 {
 	/** The upper bound of this type variable; set from outside.
 	*  Must be nonempty once it is set.
@@ -496,24 +496,24 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	*  itself. Furthermore, the erasure_field of the class
 	*  points to the first class or interface bound.
 	*/
-	public var bound : Type;
+	public var bound : com.sun.tools.javac.code.Type;
 	
 	/** The lower bound of this type variable.
 	*  TypeVars don't normally have a lower bound, so it is normally set
 	*  to syms.botType.
 	*  Subtypes, such as CapturedType, may provide a different value.
 	*/
-	public var lower : Type;
+	public var lower : com.sun.tools.javac.code.Type;
 	
-	@:overload public function new(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol, lower : Type) : Void;
+	@:overload public function new(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol, lower : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload public function new(tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, bound : Type, lower : Type) : Void;
+	@:overload public function new(tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, bound : com.sun.tools.javac.code.Type, lower : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
-	@:overload override public function getUpperBound() : Type;
+	@:overload override public function getUpperBound() : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function getLowerBound() : Type;
+	@:overload override public function getLowerBound() : com.sun.tools.javac.code.Type;
 	
 	@:overload override public function getKind() : javax.lang.model.type.TypeKind;
 	
@@ -527,13 +527,13 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 *  both upper and lower bound.  CapturedType extends TypeVar with
 *  a lower bound.
 */
-@:native('com$sun$tools$javac$code$Type$CapturedType') extern class Type_CapturedType extends Type_TypeVar
+@:native('com$sun$tools$javac$code$Type$CapturedType') extern class Type_CapturedType extends com.sun.tools.javac.code.Type.Type_TypeVar
 {
-	public var wildcard : Type_WildcardType;
+	public var wildcard : com.sun.tools.javac.code.Type.Type_WildcardType;
 	
-	@:overload public function new(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol, upper : Type, lower : Type, wildcard : Type_WildcardType) : Void;
+	@:overload public function new(name : com.sun.tools.javac.util.Name, owner : com.sun.tools.javac.code.Symbol, upper : com.sun.tools.javac.code.Type, lower : com.sun.tools.javac.code.Type, wildcard : com.sun.tools.javac.code.Type.Type_WildcardType) : Void;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
 	@:overload override public function isCaptured() : Bool;
 	
@@ -541,43 +541,43 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$DelegatedType') extern class Type_DelegatedType extends Type
+@:native('com$sun$tools$javac$code$Type$DelegatedType') extern class Type_DelegatedType extends com.sun.tools.javac.code.Type
 {
-	public var qtype : Type;
+	public var qtype : com.sun.tools.javac.code.Type;
 	
-	@:overload public function new(tag : Int, qtype : Type) : Void;
+	@:overload public function new(tag : Int, qtype : com.sun.tools.javac.code.Type) : Void;
 	
 	@:overload override public function toString() : String;
 	
-	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload override public function getEnclosingType() : Type;
+	@:overload override public function getEnclosingType() : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function getParameterTypes() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getParameterTypes() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload override public function getReturnType() : Type;
+	@:overload override public function getReturnType() : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function getThrownTypes() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getThrownTypes() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload override public function allparams() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function allparams() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload override public function getUpperBound() : Type;
+	@:overload override public function getUpperBound() : com.sun.tools.javac.code.Type;
 	
 	@:overload override public function isErroneous() : Bool;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$ForAll') extern class Type_ForAll extends Type_DelegatedType implements javax.lang.model.type.ExecutableType
+@:native('com$sun$tools$javac$code$Type$ForAll') extern class Type_ForAll extends com.sun.tools.javac.code.Type.Type_DelegatedType implements javax.lang.model.type.ExecutableType
 {
-	public var tvars : com.sun.tools.javac.util.List<Type>;
+	public var tvars : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload public function new(tvars : com.sun.tools.javac.util.List<Type>, qtype : Type) : Void;
+	@:overload public function new(tvars : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, qtype : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
 	@:overload override public function toString() : String;
 	
-	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	@:overload override public function isErroneous() : Bool;
 	
@@ -592,7 +592,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	* @return qtype where all occurrences of tvars are replaced
 	* by types in actuals
 	*/
-	@:overload public function inst(actuals : com.sun.tools.javac.util.List<Type>, types : com.sun.tools.javac.code.Types) : Type;
+	@:overload public function inst(actuals : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, types : com.sun.tools.javac.code.Types) : com.sun.tools.javac.code.Type;
 	
 	/**
 	* Get the type-constraints of a given kind for a given type-variable of
@@ -603,17 +603,17 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	* @param ck the constraint kind to be retrieved
 	* @return the list of types specified by the selected constraint
 	*/
-	@:overload public function getConstraints(tv : Type_TypeVar, ck : Type_ForAll_ConstraintKind) : com.sun.tools.javac.util.List<Type>;
+	@:overload public function getConstraints(tv : com.sun.tools.javac.code.Type.Type_TypeVar, ck : com.sun.tools.javac.code.Type.Type_ForAll_ConstraintKind) : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload override public function map(f : Type_Mapping) : Type;
+	@:overload override public function map(f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function contains(elem : Type) : Bool;
+	@:overload override public function contains(elem : com.sun.tools.javac.code.Type) : Bool;
 	
-	@:overload override public function asMethodType() : Type_MethodType;
+	@:overload override public function asMethodType() : com.sun.tools.javac.code.Type.Type_MethodType;
 	
 	@:overload override public function complete() : Void;
 	
-	@:overload public function getTypeVariables() : com.sun.tools.javac.util.List<Type_TypeVar>;
+	@:overload public function getTypeVariables() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type.Type_TypeVar>;
 	
 	@:overload override public function getKind() : javax.lang.model.type.TypeKind;
 	
@@ -649,27 +649,27 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 /** A class for instantiatable variables, for use during type
 *  inference.
 */
-@:native('com$sun$tools$javac$code$Type$UndetVar') extern class Type_UndetVar extends Type_DelegatedType
+@:native('com$sun$tools$javac$code$Type$UndetVar') extern class Type_UndetVar extends com.sun.tools.javac.code.Type.Type_DelegatedType
 {
-	public var lobounds : com.sun.tools.javac.util.List<Type>;
+	public var lobounds : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	public var hibounds : com.sun.tools.javac.util.List<Type>;
+	public var hibounds : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	public var inst : Type;
+	public var inst : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
-	@:overload public function new(origin : Type) : Void;
+	@:overload public function new(origin : com.sun.tools.javac.code.Type) : Void;
 	
 	@:overload override public function toString() : String;
 	
-	@:overload override public function baseType() : Type;
+	@:overload override public function baseType() : com.sun.tools.javac.code.Type;
 	
 	
 }
 /** Represents VOID or NONE.
 */
-@:native('com$sun$tools$javac$code$Type$JCNoType') @:internal extern class Type_JCNoType extends Type implements javax.lang.model.type.NoType
+@:native('com$sun$tools$javac$code$Type$JCNoType') @:internal extern class Type_JCNoType extends com.sun.tools.javac.code.Type implements javax.lang.model.type.NoType
 {
 	@:overload public function new(tag : Int) : Void;
 	
@@ -679,7 +679,7 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$BottomType') @:internal extern class Type_BottomType extends Type implements javax.lang.model.type.NullType
+@:native('com$sun$tools$javac$code$Type$BottomType') @:internal extern class Type_BottomType extends com.sun.tools.javac.code.Type implements javax.lang.model.type.NullType
 {
 	@:overload public function new() : Void;
 	
@@ -687,33 +687,33 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.type.TypeVisitor<R, P>, p : P) : R;
 	
-	@:overload override public function constType(value : Dynamic) : Type;
+	@:overload override public function constType(value : Dynamic) : com.sun.tools.javac.code.Type;
 	
 	@:overload override public function stringValue() : String;
 	
 	
 }
-@:native('com$sun$tools$javac$code$Type$ErrorType') extern class Type_ErrorType extends Type_ClassType implements javax.lang.model.type.ErrorType
+@:native('com$sun$tools$javac$code$Type$ErrorType') extern class Type_ErrorType extends com.sun.tools.javac.code.Type.Type_ClassType implements javax.lang.model.type.ErrorType
 {
-	@:overload public function new(originalType : Type, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
+	@:overload public function new(originalType : com.sun.tools.javac.code.Type, tsym : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : Void;
 	
-	@:overload public function new(c : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, originalType : Type) : Void;
+	@:overload public function new(c : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, originalType : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload public function new(name : com.sun.tools.javac.util.Name, container : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, originalType : Type) : Void;
+	@:overload public function new(name : com.sun.tools.javac.util.Name, container : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, originalType : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload override public function accept<R, S>(v : Type_Visitor<R, S>, s : S) : R;
+	@:overload override public function accept<R, S>(v : com.sun.tools.javac.code.Type.Type_Visitor<R, S>, s : S) : R;
 	
-	@:overload override public function constType(constValue : Dynamic) : Type;
+	@:overload override public function constType(constValue : Dynamic) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function getEnclosingType() : Type;
+	@:overload override public function getEnclosingType() : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function getReturnType() : Type;
+	@:overload override public function getReturnType() : com.sun.tools.javac.code.Type;
 	
-	@:overload public function asSub(sym : com.sun.tools.javac.code.Symbol) : Type;
+	@:overload public function asSub(sym : com.sun.tools.javac.code.Symbol) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function map(f : Type_Mapping) : Type;
+	@:overload override public function map(f : com.sun.tools.javac.code.Type.Type_Mapping) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function isGenType(t : Type) : Bool;
+	@:overload public function isGenType(t : com.sun.tools.javac.code.Type) : Bool;
 	
 	@:overload override public function isErroneous() : Bool;
 	
@@ -721,13 +721,13 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 	
 	@:overload override public function isInterface() : Bool;
 	
-	@:overload override public function allparams() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function allparams() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
-	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<Type>;
+	@:overload override public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>;
 	
 	@:overload override public function getKind() : javax.lang.model.type.TypeKind;
 	
-	@:overload public function getOriginalType() : Type;
+	@:overload public function getOriginalType() : com.sun.tools.javac.code.Type;
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.type.TypeVisitor<R, P>, p : P) : R;
 	
@@ -749,27 +749,27 @@ extern class Type implements javax.lang.model.type.PrimitiveType
 */
 @:native('com$sun$tools$javac$code$Type$Visitor') extern interface Type_Visitor<R, S>
 {
-	@:overload public function visitClassType(t : Type_ClassType, s : S) : R;
+	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, s : S) : R;
 	
-	@:overload public function visitWildcardType(t : Type_WildcardType, s : S) : R;
+	@:overload public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, s : S) : R;
 	
-	@:overload public function visitArrayType(t : Type_ArrayType, s : S) : R;
+	@:overload public function visitArrayType(t : com.sun.tools.javac.code.Type.Type_ArrayType, s : S) : R;
 	
-	@:overload public function visitMethodType(t : Type_MethodType, s : S) : R;
+	@:overload public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, s : S) : R;
 	
-	@:overload public function visitPackageType(t : Type_PackageType, s : S) : R;
+	@:overload public function visitPackageType(t : com.sun.tools.javac.code.Type.Type_PackageType, s : S) : R;
 	
-	@:overload public function visitTypeVar(t : Type_TypeVar, s : S) : R;
+	@:overload public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, s : S) : R;
 	
-	@:overload public function visitCapturedType(t : Type_CapturedType, s : S) : R;
+	@:overload public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, s : S) : R;
 	
-	@:overload public function visitForAll(t : Type_ForAll, s : S) : R;
+	@:overload public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, s : S) : R;
 	
-	@:overload public function visitUndetVar(t : Type_UndetVar, s : S) : R;
+	@:overload public function visitUndetVar(t : com.sun.tools.javac.code.Type.Type_UndetVar, s : S) : R;
 	
-	@:overload public function visitErrorType(t : Type_ErrorType, s : S) : R;
+	@:overload public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, s : S) : R;
 	
-	@:overload public function visitType(t : Type, s : S) : R;
+	@:overload public function visitType(t : com.sun.tools.javac.code.Type, s : S) : R;
 	
 	
 }

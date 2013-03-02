@@ -83,7 +83,7 @@ extern class XMLInputFactory
 	* Create a new instance of the factory.
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newInstance() : XMLInputFactory;
+	@:overload public static function newInstance() : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -110,7 +110,7 @@ extern class XMLInputFactory
 	*
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory() : XMLInputFactory;
+	@:overload public static function newFactory() : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new instance of the factory
@@ -127,7 +127,7 @@ extern class XMLInputFactory
 	*              #newFactory(java.lang.String, java.lang.ClassLoader)} method
 	*              defines no changes in behavior.
 	*/
-	@:overload public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : XMLInputFactory;
+	@:overload public static function newInstance(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new instance of the factory.
@@ -144,7 +144,7 @@ extern class XMLInputFactory
 	* @return the factory implementation
 	* @throws FactoryConfigurationError if an instance of this factory cannot be loaded
 	*/
-	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : XMLInputFactory;
+	@:overload public static function newFactory(factoryId : String, classLoader : java.lang.ClassLoader) : javax.xml.stream.XMLInputFactory;
 	
 	/**
 	* Create a new XMLStreamReader from a reader

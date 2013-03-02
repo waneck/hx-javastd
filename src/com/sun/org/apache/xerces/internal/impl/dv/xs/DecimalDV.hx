@@ -45,7 +45,7 @@ extern class DecimalDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.Typ
 {
 	@:overload public function equals(val : Dynamic) : Bool;
 	
-	@:overload public function compareTo(val : DecimalDV_XDecimal) : Int;
+	@:overload public function compareTo(val : com.sun.org.apache.xerces.internal.impl.dv.xs.DecimalDV.DecimalDV_XDecimal) : Int;
 	
 	@:overload @:synchronized public function toString() : String;
 	

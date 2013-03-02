@@ -29,7 +29,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	*/
 	@:overload public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, right : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern) : Void;
 	
-	@:overload override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	@:overload public function getLeft() : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
 	
@@ -42,7 +42,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	
 	@:overload override public function getPriority() : Float;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	

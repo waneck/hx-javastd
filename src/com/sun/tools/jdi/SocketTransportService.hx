@@ -64,12 +64,12 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 	/**
 	* Stop the listener
 	*/
-	@:overload public function stopListening(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
+	@:overload override public function stopListening(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
 	
 	/**
 	* Accept a connection from a debuggee and handshake with it.
 	*/
-	@:overload public function accept(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
+	@:overload override public function accept(listener : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
 	
 	@:overload public function toString() : String;
 	
@@ -93,13 +93,13 @@ extern class SocketTransportService extends com.sun.jdi.connect.spi.TransportSer
 }
 @:internal extern class SocketConnection extends com.sun.jdi.connect.spi.Connection
 {
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function isOpen() : Bool;
+	@:overload public function isOpen() : Bool;
 	
-	@:overload override public function readPacket() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function readPacket() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function writePacket(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function writePacket(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	
 }

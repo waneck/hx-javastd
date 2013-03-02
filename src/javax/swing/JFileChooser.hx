@@ -1145,7 +1145,7 @@ extern class JFileChooser extends javax.swing.JComponent implements javax.access
 }
 @:native('javax$swing$JFileChooser$WeakPCL') @:internal extern class JFileChooser_WeakPCL implements java.beans.PropertyChangeListener
 {
-	@:overload public function new(jfc : JFileChooser) : Void;
+	@:overload public function new(jfc : javax.swing.JFileChooser) : Void;
 	
 	@:overload public function propertyChange(ev : java.beans.PropertyChangeEvent) : Void;
 	

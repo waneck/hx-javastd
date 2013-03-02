@@ -122,14 +122,14 @@ extern class GeneralSubtrees implements java.lang.Cloneable
 	*          of the same type but did not share the same subtree between
 	*          this and other. Returns null if no such.
 	*/
-	@:overload public function intersect(other : GeneralSubtrees) : GeneralSubtrees;
+	@:overload public function intersect(other : sun.security.x509.GeneralSubtrees) : sun.security.x509.GeneralSubtrees;
 	
 	/**
 	* construct union of this GeneralSubtrees with other.
 	*
 	* @param other GeneralSubtrees to be united with this
 	*/
-	@:overload public function union(other : GeneralSubtrees) : Void;
+	@:overload public function union(other : sun.security.x509.GeneralSubtrees) : Void;
 	
 	/**
 	* reduce this GeneralSubtrees by contents of another.  This function
@@ -139,7 +139,7 @@ extern class GeneralSubtrees implements java.lang.Cloneable
 	*
 	* @param excluded GeneralSubtrees
 	*/
-	@:overload public function reduce(excluded : GeneralSubtrees) : Void;
+	@:overload public function reduce(excluded : sun.security.x509.GeneralSubtrees) : Void;
 	
 	
 }

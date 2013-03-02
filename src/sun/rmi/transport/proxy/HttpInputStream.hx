@@ -42,16 +42,16 @@ package sun.rmi.transport.proxy;
 	* Make sure that this does not exceed the number of bytes remaining
 	* in the proper content of the message.
 	*/
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	/**
 	* Read a byte of data from the stream.  Make sure that one is available
 	* from the proper content of the message, else -1 is returned to
 	* indicate to the user that the end of the stream has been reached.
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	/**
 	* Mark the current position in the stream (for future calls to reset).
@@ -59,20 +59,20 @@ package sun.rmi.transport.proxy;
 	* that a reset method call can recreate our state properly.
 	* @param readlimit how many bytes can be read before mark becomes invalid
 	*/
-	@:overload override public function mark(readlimit : Int) : Void;
+	@:overload public function mark(readlimit : Int) : Void;
 	
 	/**
 	* Repositions the stream to the last marked position.  Make sure to
 	* adjust our position within the proper content accordingly.
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/**
 	* Skips bytes of the stream.  Make sure to adjust our
 	* position within the proper content accordingly.
 	* @param n number of bytes to be skipped
 	*/
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }

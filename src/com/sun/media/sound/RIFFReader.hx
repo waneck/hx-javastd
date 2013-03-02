@@ -31,7 +31,7 @@ extern class RIFFReader extends java.io.InputStream
 	
 	@:overload public function hasNextChunk() : Bool;
 	
-	@:overload public function nextChunk() : RIFFReader;
+	@:overload public function nextChunk() : com.sun.media.sound.RIFFReader;
 	
 	@:overload public function getFormat() : String;
 	
@@ -39,9 +39,9 @@ extern class RIFFReader extends java.io.InputStream
 	
 	@:overload public function getSize() : haxe.Int64;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Int;
 	
 	@:overload @:final public function readFully(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
@@ -49,9 +49,9 @@ extern class RIFFReader extends java.io.InputStream
 	
 	@:overload @:final public function skipBytes(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	@:overload public function finish() : Void;
 	
@@ -71,7 +71,7 @@ extern class RIFFReader extends java.io.InputStream
 	
 	@:overload public function readUnsignedInt() : haxe.Int64;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

@@ -54,7 +54,7 @@ extern class MotifSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPane
 	* overrides to hardcode the size of the divider
 	* PENDING(jeff) - rewrite JSplitPane so that this ins't needed
 	*/
-	@:overload override public function setDividerSize(newSize : Int) : Void;
+	@:overload public function setDividerSize(newSize : Int) : Void;
 	
 	/**
 	* Paints the divider.
@@ -70,7 +70,7 @@ extern class MotifSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPane
 	* Sets the SplitPaneUI that is using the receiver. This is completely
 	* overriden from super to create a different MouseHandler.
 	*/
-	@:overload override public function setBasicSplitPaneUI(newUI : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
+	@:overload public function setBasicSplitPaneUI(newUI : javax.swing.plaf.basic.BasicSplitPaneUI) : Void;
 	
 	
 }
@@ -81,9 +81,9 @@ extern class MotifSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPane
 */
 @:native('com$sun$java$swing$plaf$motif$MotifSplitPaneDivider$MotifMouseHandler') @:internal extern class MotifSplitPaneDivider_MotifMouseHandler extends javax.swing.plaf.basic.BasicSplitPaneDivider.BasicSplitPaneDivider_MouseHandler
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

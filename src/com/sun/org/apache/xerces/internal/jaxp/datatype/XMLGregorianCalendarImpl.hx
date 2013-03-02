@@ -591,7 +591,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	* @throws NullPointerException if <code>lhs</code> or <code>rhs</code>
 	* parameters are null.
 	*/
-	@:overload public function compare(rhs : javax.xml.datatype.XMLGregorianCalendar) : Int;
+	@:overload override public function compare(rhs : javax.xml.datatype.XMLGregorianCalendar) : Int;
 	
 	/**
 	* <p>Normalize this instance to UTC.</p>
@@ -946,7 +946,7 @@ extern class XMLGregorianCalendarImpl extends javax.xml.datatype.XMLGregorianCal
 	*
 	* @see #LEAP_YEAR_DEFAULT
 	*/
-	@:overload public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : javax.xml.datatype.XMLGregorianCalendar) : java.util.GregorianCalendar;
+	@:overload override public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : javax.xml.datatype.XMLGregorianCalendar) : java.util.GregorianCalendar;
 	
 	/**
 	* <p>Returns a <code>java.util.TimeZone</code> for this class.</p>

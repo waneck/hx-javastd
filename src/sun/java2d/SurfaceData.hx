@@ -96,7 +96,7 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	*      a cached copy if appropriate, or the original if not).
 	* </ol>
 	*/
-	@:overload public function getSourceSurfaceData(img : java.awt.Image, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : SurfaceData;
+	@:overload public function getSourceSurfaceData(img : java.awt.Image, txtype : Int, comp : sun.java2d.loops.CompositeType, bgColor : java.awt.Color) : sun.java2d.SurfaceData;
 	
 	/**
 	* This method is called on a destination SurfaceData to choose
@@ -123,20 +123,20 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* always returns the original sourceSD object as the replacement
 	* copy so no caching is ever performed.
 	*/
-	@:overload public function makeProxyFor(srcData : SurfaceData) : sun.java2d.SurfaceDataProxy;
+	@:overload public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
 	
 	/**
 	* Extracts the SurfaceManager from the given Image, and then
 	* returns the SurfaceData object that would best be suited as the
 	* destination surface in some rendering operation.
 	*/
-	@:overload public static function getPrimarySurfaceData(img : java.awt.Image) : SurfaceData;
+	@:overload public static function getPrimarySurfaceData(img : java.awt.Image) : sun.java2d.SurfaceData;
 	
 	/**
 	* Restores the contents of the given Image and then returns the new
 	* SurfaceData object in use by the Image's SurfaceManager.
 	*/
-	@:overload public static function restoreContents(img : java.awt.Image) : SurfaceData;
+	@:overload public static function restoreContents(img : java.awt.Image) : sun.java2d.SurfaceData;
 	
 	@:overload public function getState() : sun.java2d.StateTrackable.StateTrackable_State;
 	
@@ -193,7 +193,7 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* step.  Thus, only window based surfaces really need to deal
 	* with this form of replacement.
 	*/
-	@:overload @:abstract public function getReplacement() : SurfaceData;
+	@:overload @:abstract public function getReplacement() : sun.java2d.SurfaceData;
 	
 	private static var colorPrimitives(default, null) : sun.java2d.pipe.LoopPipe;
 	
@@ -401,7 +401,7 @@ extern class SurfaceData implements java.awt.Transparency implements sun.java2d.
 	* For our purposes null and NullSurfaceData are the same as
 	* they represent a disposed surface.
 	*/
-	@:overload public static function isNull(sd : SurfaceData) : Bool;
+	@:overload public static function isNull(sd : sun.java2d.SurfaceData) : Bool;
 	
 	/**
 	* Performs a copyarea within this surface.  Returns

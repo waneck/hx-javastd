@@ -93,9 +93,9 @@ extern class AppletPanel extends java.awt.Panel implements java.applet.AppletStu
 	
 	@:overload @:abstract private function getSerializedObject() : String;
 	
-	@:overload @:abstract override public function getWidth() : Int;
+	@:overload @:abstract public function getWidth() : Int;
 	
-	@:overload @:abstract override public function getHeight() : Int;
+	@:overload @:abstract public function getHeight() : Int;
 	
 	@:overload @:abstract public function hasInitialFocus() : Bool;
 	
@@ -205,7 +205,7 @@ extern class AppletPanel extends java.awt.Panel implements java.applet.AppletStu
 	*/
 	@:overload public function appletResize(width : Int, height : Int) : Void;
 	
-	@:overload override public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	@:overload public function getApplet() : java.applet.Applet;
 	

@@ -29,7 +29,7 @@ package com.sun.media.sound;
 	* Invoked when there is at least one event in the queue.
 	* Implement this as a callback to process one event.
 	*/
-	@:overload private function processEvent(eventInfo : EventDispatcher_EventInfo) : Void;
+	@:overload private function processEvent(eventInfo : com.sun.media.sound.EventDispatcher.EventDispatcher_EventInfo) : Void;
 	
 	/**
 	* Wait until there is something in the event queue to process.  Then

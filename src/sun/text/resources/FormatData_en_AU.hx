@@ -42,7 +42,7 @@ extern class FormatData_en_AU extends java.util.ListResourceBundle
 	/**
 	* Overrides ListResourceBundle
 	*/
-	@:overload @:final override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:final private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

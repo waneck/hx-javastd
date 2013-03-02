@@ -35,11 +35,11 @@ package com.sun.tools.internal.ws.wsdl.parser;
 	*/
 	@:overload public function new(dom : org.w3c.dom.Document, ltable : com.sun.tools.internal.xjc.reader.internalizer.LocatorTable, outerMostBindings : java.util.Set<Dynamic>) : Void;
 	
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	@:overload public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	

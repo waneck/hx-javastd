@@ -39,7 +39,7 @@ package sun.nio.fs;
 	
 	
 }
-@:native('sun$nio$fs$UnixFileAttributeViews$Posix') @:internal extern class UnixFileAttributeViews_Posix extends UnixFileAttributeViews_Basic implements java.nio.file.attribute.PosixFileAttributeView
+@:native('sun$nio$fs$UnixFileAttributeViews$Posix') @:internal extern class UnixFileAttributeViews_Posix extends sun.nio.fs.UnixFileAttributeViews.UnixFileAttributeViews_Basic implements java.nio.file.attribute.PosixFileAttributeView
 {
 	@:overload override public function name() : String;
 	
@@ -59,7 +59,7 @@ package sun.nio.fs;
 	
 	
 }
-@:native('sun$nio$fs$UnixFileAttributeViews$Unix') @:internal extern class UnixFileAttributeViews_Unix extends UnixFileAttributeViews_Posix
+@:native('sun$nio$fs$UnixFileAttributeViews$Unix') @:internal extern class UnixFileAttributeViews_Unix extends sun.nio.fs.UnixFileAttributeViews.UnixFileAttributeViews_Posix
 {
 	@:overload override public function name() : String;
 	

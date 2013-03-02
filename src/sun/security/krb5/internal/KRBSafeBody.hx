@@ -91,7 +91,7 @@ extern class KRBSafeBody
 	* @return an instance of KRBSafeBody.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : KRBSafeBody;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.KRBSafeBody;
 	
 	
 }

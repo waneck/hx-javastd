@@ -419,9 +419,9 @@ extern class Timer extends javax.management.NotificationBroadcasterSupport imple
 	*  CONSTRUCTORS
 	* ------------------------------------------
 	*/
-	@:overload public function new(listener : Timer, timeout : haxe.Int64) : Void;
+	@:overload public function new(listener : javax.management.timer.Timer, timeout : haxe.Int64) : Void;
 	
-	@:overload public function new(listener : Timer, next : java.util.Date) : Void;
+	@:overload public function new(listener : javax.management.timer.Timer, next : java.util.Date) : Void;
 	
 	/**
 	* This method is called by the timer when it is started.

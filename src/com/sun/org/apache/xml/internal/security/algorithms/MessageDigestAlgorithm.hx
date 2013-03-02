@@ -47,7 +47,7 @@ extern class MessageDigestAlgorithm extends com.sun.org.apache.xml.internal.secu
 	* @return The MessageDigestAlgorithm element to attach in document and to digest
 	* @throws XMLSignatureException
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : MessageDigestAlgorithm;
+	@:overload public static function getInstance(doc : org.w3c.dom.Document, algorithmURI : String) : com.sun.org.apache.xml.internal.security.algorithms.MessageDigestAlgorithm;
 	
 	/**
 	* Returns the actual {@link java.security.MessageDigest} algorithm object

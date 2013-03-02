@@ -35,13 +35,13 @@ extern class Blit extends sun.java2d.loops.GraphicsPrimitive
 	* and the destination surface are the same surface
 	* with overlapping regions of pixels
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Blit;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.Blit;
 	
-	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : Blit;
+	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.Blit;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -58,9 +58,9 @@ extern class Blit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$Blit$AnyBlit') @:internal extern class Blit_AnyBlit extends Blit
+@:native('sun$java2d$loops$Blit$AnyBlit') @:internal extern class Blit_AnyBlit extends sun.java2d.loops.Blit
 {
-	public static var instance : Blit_AnyBlit;
+	public static var instance : sun.java2d.loops.Blit.Blit_AnyBlit;
 	
 	@:overload public function new() : Void;
 	
@@ -68,7 +68,7 @@ extern class Blit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$Blit$GeneralMaskBlit') @:internal extern class Blit_GeneralMaskBlit extends Blit
+@:native('sun$java2d$loops$Blit$GeneralMaskBlit') @:internal extern class Blit_GeneralMaskBlit extends sun.java2d.loops.Blit
 {
 	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -76,19 +76,19 @@ extern class Blit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$Blit$GeneralXorBlit') @:internal extern class Blit_GeneralXorBlit extends Blit implements sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp
+@:native('sun$java2d$loops$Blit$GeneralXorBlit') @:internal extern class Blit_GeneralXorBlit extends sun.java2d.loops.Blit implements sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp
 {
 	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
-	@:overload public function setPrimitives(srcconverter : Blit, dstconverter : Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : Blit) : Void;
+	@:overload public function setPrimitives(srcconverter : sun.java2d.loops.Blit, dstconverter : sun.java2d.loops.Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
 	
 	@:overload @:synchronized override public function Blit(srcData : sun.java2d.SurfaceData, dstData : sun.java2d.SurfaceData, comp : java.awt.Composite, clip : sun.java2d.pipe.Region, srcx : Int, srcy : Int, dstx : Int, dsty : Int, width : Int, height : Int) : Void;
 	
 	
 }
-@:native('sun$java2d$loops$Blit$TraceBlit') @:internal extern class Blit_TraceBlit extends Blit
+@:native('sun$java2d$loops$Blit$TraceBlit') @:internal extern class Blit_TraceBlit extends sun.java2d.loops.Blit
 {
-	@:overload public function new(target : Blit) : Void;
+	@:overload public function new(target : sun.java2d.loops.Blit) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

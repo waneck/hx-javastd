@@ -27,38 +27,38 @@ extern class XInputMethod extends sun.awt.X11InputMethod
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function setInputMethodContext(context : java.awt.im.spi.InputMethodContext) : Void;
+	@:overload public function setInputMethodContext(context : java.awt.im.spi.InputMethodContext) : Void;
 	
-	@:overload override public function notifyClientWindowChange(location : java.awt.Rectangle) : Void;
+	@:overload public function notifyClientWindowChange(location : java.awt.Rectangle) : Void;
 	
-	@:overload override private function openXIM() : Bool;
+	@:overload private function openXIM() : Bool;
 	
-	@:overload override private function createXIC() : Bool;
+	@:overload private function createXIC() : Bool;
 	
-	@:overload override private function setXICFocus(peer : java.awt.peer.ComponentPeer, value : Bool, active : Bool) : Void;
+	@:overload private function setXICFocus(peer : java.awt.peer.ComponentPeer, value : Bool, active : Bool) : Void;
 	
 	@:overload public static function getXICFocus() : haxe.Int64;
 	
 	/* XAWT_HACK  FIX ME!
 	do NOT call client code!
 */
-	@:overload override private function getParent(client : java.awt.Component) : java.awt.Container;
+	@:overload private function getParent(client : java.awt.Component) : java.awt.Container;
 	
 	/**
 	* Returns peer of the given client component. If the given client component
 	* doesn't have peer, peer of the native container of the client is returned.
 	*/
-	@:overload override private function getPeer(client : java.awt.Component) : java.awt.peer.ComponentPeer;
+	@:overload private function getPeer(client : java.awt.Component) : java.awt.peer.ComponentPeer;
 	
 	/*
 	* Subclasses should override disposeImpl() instead of dispose(). Client
 	* code should always invoke dispose(), never disposeImpl().
 	*/
-	@:overload @:synchronized override private function disposeImpl() : Void;
+	@:overload @:synchronized private function disposeImpl() : Void;
 	
-	@:overload override private function awtLock() : Void;
+	@:overload private function awtLock() : Void;
 	
-	@:overload override private function awtUnlock() : Void;
+	@:overload private function awtUnlock() : Void;
 	
 	
 }

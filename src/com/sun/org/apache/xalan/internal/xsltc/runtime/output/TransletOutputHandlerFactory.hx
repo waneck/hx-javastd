@@ -34,9 +34,9 @@ extern class TransletOutputHandlerFactory
 	
 	public static var STAX(default, null) : Int;
 	
-	@:overload public static function newInstance() : TransletOutputHandlerFactory;
+	@:overload public static function newInstance() : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
 	
-	@:overload public static function newInstance(useServicesMechanism : Bool) : TransletOutputHandlerFactory;
+	@:overload public static function newInstance(useServicesMechanism : Bool) : com.sun.org.apache.xalan.internal.xsltc.runtime.output.TransletOutputHandlerFactory;
 	
 	@:overload public function new(useServicesMechanism : Bool) : Void;
 	

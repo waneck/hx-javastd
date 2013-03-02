@@ -29,7 +29,7 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_1;
 */
 extern class Message1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.MessageImpl implements javax.xml.soap.SOAPConstants
 {
-	@:native('log') private static var _log(default, null) : java.util.logging.Logger;
+	private static var log(default, null) : java.util.logging.Logger;
 	
 	@:overload public function new() : Void;
 	
@@ -43,19 +43,19 @@ extern class Message1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.Mes
 	
 	@:overload override public function getSOAPPart() : javax.xml.soap.SOAPPart;
 	
-	@:overload override private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
+	@:overload private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
 	
-	@:overload override public function getAction() : String;
+	@:overload public function getAction() : String;
 	
-	@:overload override public function setAction(type : String) : Void;
+	@:overload public function setAction(type : String) : Void;
 	
-	@:overload override public function getCharset() : String;
+	@:overload public function getCharset() : String;
 	
-	@:overload override public function setCharset(charset : String) : Void;
+	@:overload public function setCharset(charset : String) : Void;
 	
-	@:overload override private function getExpectedContentType() : String;
+	@:overload private function getExpectedContentType() : String;
 	
-	@:overload override private function getExpectedAcceptHeader() : String;
+	@:overload private function getExpectedAcceptHeader() : String;
 	
 	
 }

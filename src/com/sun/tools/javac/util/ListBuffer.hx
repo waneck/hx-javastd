@@ -33,9 +33,9 @@ extern class ListBuffer<A> extends java.util.AbstractQueue<A>
 	*  This code and its internal interfaces are subject to change or
 	*  deletion without notice.</b>
 	*/
-	@:overload public static function lb<T>() : ListBuffer<T>;
+	@:overload public static function lb<T>() : com.sun.tools.javac.util.ListBuffer<T>;
 	
-	@:overload public static function of<T>(x : T) : ListBuffer<T>;
+	@:overload public static function of<T>(x : T) : com.sun.tools.javac.util.ListBuffer<T>;
 	
 	/** The list of elements of this buffer.
 	*/
@@ -75,23 +75,23 @@ extern class ListBuffer<A> extends java.util.AbstractQueue<A>
 	
 	/** Prepend an element to buffer.
 	*/
-	@:overload public function prepend(x : A) : ListBuffer<A>;
+	@:overload public function prepend(x : A) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append an element to buffer.
 	*/
-	@:overload public function append(x : A) : ListBuffer<A>;
+	@:overload public function append(x : A) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append all elements in a list to buffer.
 	*/
-	@:overload public function appendList(xs : com.sun.tools.javac.util.List<A>) : ListBuffer<A>;
+	@:overload public function appendList(xs : com.sun.tools.javac.util.List<A>) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append all elements in a list to buffer.
 	*/
-	@:overload public function appendList(xs : ListBuffer<A>) : ListBuffer<A>;
+	@:overload public function appendList(xs : com.sun.tools.javac.util.ListBuffer<A>) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Append all elements in an array to buffer.
 	*/
-	@:overload public function appendArray(xs : java.NativeArray<A>) : ListBuffer<A>;
+	@:overload public function appendArray(xs : java.NativeArray<A>) : com.sun.tools.javac.util.ListBuffer<A>;
 	
 	/** Convert buffer to a list of all its elements.
 	*/

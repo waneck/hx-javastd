@@ -35,7 +35,7 @@ extern class InputMap implements java.io.Serializable
 	*
 	* @param map  the <code>InputMap</code> that is the parent of this one
 	*/
-	@:overload public function setParent(map : InputMap) : Void;
+	@:overload public function setParent(map : javax.swing.InputMap) : Void;
 	
 	/**
 	* Gets this <code>InputMap</code>'s parent.
@@ -43,7 +43,7 @@ extern class InputMap implements java.io.Serializable
 	* @return map  the <code>InputMap</code> that is the parent of this one,
 	*              or null if this <code>InputMap</code> has no parent
 	*/
-	@:overload public function getParent() : InputMap;
+	@:overload public function getParent() : javax.swing.InputMap;
 	
 	/**
 	* Adds a binding for <code>keyStroke</code> to <code>actionMapKey</code>.

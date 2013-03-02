@@ -36,9 +36,9 @@ extern class SocketFactoryContactInfoImpl extends com.sun.corba.se.impl.transpor
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, contactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList, effectiveTargetIOR : com.sun.corba.se.spi.ior.IOR, addressingDisposition : java.StdTypes.Int16, cookie : com.sun.corba.se.spi.transport.SocketInfo) : Void;
 	
-	@:overload override public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

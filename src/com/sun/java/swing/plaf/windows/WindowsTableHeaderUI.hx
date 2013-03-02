@@ -25,13 +25,13 @@ package com.sun.java.swing.plaf.windows;
 */
 extern class WindowsTableHeaderUI extends javax.swing.plaf.basic.BasicTableHeaderUI
 {
-	@:native('createUI') @:overload public static function _createUI(h : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(h : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
 	
 	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function rolloverColumnUpdated(oldColumn : Int, newColumn : Int) : Void;
+	@:overload private function rolloverColumnUpdated(oldColumn : Int, newColumn : Int) : Void;
 	
 	
 }

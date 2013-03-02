@@ -680,7 +680,7 @@ extern interface Unmarshaller
 	* @param listener  provides unmarshal event callbacks for this {@link Unmarshaller}
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function setListener(listener : Unmarshaller_Listener) : Void;
+	@:require(java0) @:overload public function setListener(listener : javax.xml.bind.Unmarshaller.Unmarshaller_Listener) : Void;
 	
 	/**
 	* <p>Return {@link Listener} registered with this {@link Unmarshaller}.
@@ -688,7 +688,7 @@ extern interface Unmarshaller
 	* @return registered {@link Listener} or <code>null</code> if no Listener is registered with this Unmarshaller.
 	* @since JAXB2.0
 	*/
-	@:require(java0) @:overload public function getListener() : Unmarshaller_Listener;
+	@:require(java0) @:overload public function getListener() : javax.xml.bind.Unmarshaller.Unmarshaller_Listener;
 	
 	
 }

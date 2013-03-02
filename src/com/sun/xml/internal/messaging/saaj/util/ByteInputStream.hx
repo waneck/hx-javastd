@@ -35,7 +35,7 @@ extern class ByteInputStream extends java.io.ByteArrayInputStream
 	
 	@:overload public function getCount() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	@:overload public function setBuf(buf : java.NativeArray<java.StdTypes.Int8>) : Void;
 	

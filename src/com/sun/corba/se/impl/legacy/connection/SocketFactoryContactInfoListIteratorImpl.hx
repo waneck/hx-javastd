@@ -27,11 +27,11 @@ extern class SocketFactoryContactInfoListIteratorImpl extends com.sun.corba.se.i
 {
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, corbaContactInfoList : com.sun.corba.se.spi.transport.CorbaContactInfoList) : Void;
 	
-	@:overload override public function hasNext() : Bool;
+	@:overload public function hasNext() : Bool;
 	
-	@:overload override public function next() : Dynamic;
+	@:overload public function next() : Dynamic;
 	
-	@:overload override public function reportException(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, ex : java.lang.RuntimeException) : Bool;
+	@:overload public function reportException(contactInfo : com.sun.corba.se.pept.transport.ContactInfo, ex : java.lang.RuntimeException) : Bool;
 	
 	
 }

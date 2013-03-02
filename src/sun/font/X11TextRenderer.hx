@@ -33,11 +33,11 @@ extern class X11TextRenderer extends sun.java2d.pipe.GlyphListPipe
 	
 	@:overload override private function drawGlyphList(sg2d : sun.java2d.SunGraphics2D, gl : sun.font.GlyphList) : Void;
 	
-	@:overload public function traceWrap() : X11TextRenderer;
+	@:overload public function traceWrap() : sun.font.X11TextRenderer;
 	
 	
 }
-@:native('sun$font$X11TextRenderer$Tracer') extern class X11TextRenderer_Tracer extends X11TextRenderer
+@:native('sun$font$X11TextRenderer$Tracer') extern class X11TextRenderer_Tracer extends sun.font.X11TextRenderer
 {
 	
 }

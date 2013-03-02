@@ -63,7 +63,7 @@ extern class Terminal extends com.sun.tools.corba.se.idl.constExpr.Expression
 	
 	@:overload private function new(constReference : com.sun.tools.corba.se.idl.ConstEntry) : Void;
 	
-	@:overload override public function evaluate() : Dynamic;
+	@:overload public function evaluate() : Dynamic;
 	
 	
 }

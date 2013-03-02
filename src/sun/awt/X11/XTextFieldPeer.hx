@@ -27,7 +27,7 @@ extern class XTextFieldPeer extends sun.awt.X11.XComponentPeer implements java.a
 {
 	@:overload public function new(target : java.awt.TextField) : Void;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
@@ -37,7 +37,7 @@ extern class XTextFieldPeer extends sun.awt.X11.XComponentPeer implements java.a
 	/**
 	* @see java.awt.peer.ComponentPeer
 	*/
-	@:overload override public function setEnabled(enabled : Bool) : Void;
+	@:overload public function setEnabled(enabled : Bool) : Void;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
@@ -83,11 +83,11 @@ extern class XTextFieldPeer extends sun.awt.X11.XComponentPeer implements java.a
 	*/
 	@:overload public function setEchoCharacter(c : java.StdTypes.Char16) : Void;
 	
-	@:overload override public function setBackground(c : java.awt.Color) : Void;
+	@:overload public function setBackground(c : java.awt.Color) : Void;
 	
-	@:overload override public function setForeground(c : java.awt.Color) : Void;
+	@:overload public function setForeground(c : java.awt.Color) : Void;
 	
-	@:overload override public function setFont(f : java.awt.Font) : Void;
+	@:overload public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* DEPRECATED
@@ -111,45 +111,45 @@ extern class XTextFieldPeer extends sun.awt.X11.XComponentPeer implements java.a
 	*/
 	@:overload public function select(s : Int, e : Int) : Void;
 	
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:overload public function getPreferredSize() : java.awt.Dimension;
 	
 	@:overload public function getPreferredSize(cols : Int) : java.awt.Dimension;
 	
 	@:overload public function getMinimumSize(cols : Int) : java.awt.Dimension;
 	
-	@:overload override public function isFocusable() : Bool;
+	@:overload public function isFocusable() : Bool;
 	
 	@:overload public function action(when : haxe.Int64, modifiers : Int) : Void;
 	
 	@:overload private function disposeImpl() : Void;
 	
-	@:overload override public function repaint() : Void;
+	@:overload public function repaint() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function print(g : java.awt.Graphics) : Void;
+	@:overload public function print(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* DEPRECATED
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* DEPRECATED
 	*/
 	@:overload public function minimumSize(cols : Int) : java.awt.Dimension;
 	
-	@:overload override public function setVisible(b : Bool) : Void;
+	@:overload public function setVisible(b : Bool) : Void;
 	
-	@:overload override public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
+	@:overload public function setBounds(x : Int, y : Int, width : Int, height : Int, op : Int) : Void;
 	
 	@:overload public function getIndexAtPoint(x : Int, y : Int) : Int;
 	
@@ -190,11 +190,11 @@ return;  // Need to write implemetation of this.
 }
 @:native('sun$awt$X11$XTextFieldPeer$XAWTCaret') @:internal extern class XTextFieldPeer_XAWTCaret extends javax.swing.text.DefaultCaret
 {
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function setSelectionVisible(vis : Bool) : Void;
+	@:overload public function setSelectionVisible(vis : Bool) : Void;
 	
 	
 }
@@ -210,15 +210,15 @@ return;  // Need to write implemetation of this.
 	
 	@:overload public function changedUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
-	@:overload override public function getPeer() : java.awt.peer.ComponentPeer;
+	@:overload public function getPeer() : java.awt.peer.ComponentPeer;
 	
 	@:overload public function repaintNow() : Void;
 	
-	@:overload override public function getGraphics() : java.awt.Graphics;
+	@:overload public function getGraphics() : java.awt.Graphics;
 	
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
-	@:overload override public function hasFocus() : Bool;
+	@:overload public function hasFocus() : Bool;
 	
 	@:overload public function processInputMethodEventImpl(e : java.awt.event.InputMethodEvent) : Void;
 	
@@ -226,9 +226,9 @@ return;  // Need to write implemetation of this.
 	
 	@:overload public function processMouseMotionEventImpl(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
-	@:overload override public function setEchoChar(c : java.StdTypes.Char16) : Void;
+	@:overload public function setEchoChar(c : java.StdTypes.Char16) : Void;
 	
 	
 }

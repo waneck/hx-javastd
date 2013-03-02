@@ -28,7 +28,7 @@ extern class AWTAutoShutdown implements java.lang.Runnable
 	/**
 	* Returns reference to a single AWTAutoShutdown instance.
 	*/
-	@:overload public static function getInstance() : AWTAutoShutdown;
+	@:overload public static function getInstance() : sun.awt.AWTAutoShutdown;
 	
 	/**
 	* Notify that the toolkit thread is not waiting for a native event

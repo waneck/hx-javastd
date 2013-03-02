@@ -39,7 +39,7 @@ extern class FontFamily
 	
 	private var familyRank : Int;
 	
-	@:overload public static function getFamily(name : String) : FontFamily;
+	@:overload public static function getFamily(name : String) : sun.font.FontFamily;
 	
 	@:overload public static function getAllFamilyNames() : java.NativeArray<String>;
 	
@@ -63,7 +63,7 @@ extern class FontFamily
 	*/
 	@:overload public function getFont(style : Int) : sun.font.Font2D;
 	
-	@:overload @:synchronized public static function getLocaleFamily(name : String) : FontFamily;
+	@:overload @:synchronized public static function getLocaleFamily(name : String) : sun.font.FontFamily;
 	
 	@:overload public function toString() : String;
 	

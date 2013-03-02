@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class VoidDescriptor implements sun.reflect.generics.tree.ReturnType
 {
-	@:overload public static function make() : VoidDescriptor;
+	@:overload public static function make() : sun.reflect.generics.tree.VoidDescriptor;
 	
 	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	

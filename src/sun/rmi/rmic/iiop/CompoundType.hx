@@ -37,11 +37,11 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	*
 	* @author      Bryan Atsatt
 	*/
-	private var methods : java.NativeArray<CompoundType_Method>;
+	private var methods : java.NativeArray<sun.rmi.rmic.iiop.CompoundType.CompoundType_Method>;
 	
 	private var interfaces : java.NativeArray<sun.rmi.rmic.iiop.InterfaceType>;
 	
-	private var members : java.NativeArray<CompoundType_Member>;
+	private var members : java.NativeArray<sun.rmi.rmic.iiop.CompoundType.CompoundType_Member>;
 	
 	private var classDef : sun.tools.java.ClassDefinition;
 	
@@ -131,7 +131,7 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	* Return signature for this type  (e.g. com.acme.Dynamite
 	* would return "com.acme.Dynamite", byte = "B")
 	*/
-	@:overload override public function getSignature() : String;
+	@:overload public function getSignature() : String;
 	
 	/**
 	* Return the ClassDeclaration for this type.
@@ -160,13 +160,13 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	* Return an array of Type.Method objects representing all
 	* of the methods implemented directly by this type.
 	*/
-	@:overload public function getMethods() : java.NativeArray<CompoundType_Method>;
+	@:overload public function getMethods() : java.NativeArray<sun.rmi.rmic.iiop.CompoundType.CompoundType_Method>;
 	
 	/**
 	* Return an array of Type.Member objects representing all of
 	* the data members directly implemented by this interface.
 	*/
-	@:overload public function getMembers() : java.NativeArray<CompoundType_Member>;
+	@:overload public function getMembers() : java.NativeArray<sun.rmi.rmic.iiop.CompoundType.CompoundType_Member>;
 	
 	/**
 	* Create a CompoundType object for the given class.
@@ -175,17 +175,17 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forCompound(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : CompoundType;
+	@:overload public static function forCompound(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.CompoundType;
 	
 	/**
 	* Release all resources.
 	*/
-	@:overload override private function destroy() : Void;
+	@:overload private function destroy() : Void;
 	
 	/*
 	* Load a Class instance. Return null if fail.
 	*/
-	@:overload override private function loadClass() : Class<Dynamic>;
+	@:overload private function loadClass() : Class<Dynamic>;
 	
 	@:overload private function printExtends(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Bool;
 	
@@ -195,7 +195,7 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	
 	@:overload private function printMethods(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
 	
-	@:overload private function printMethod(it : CompoundType_Method, writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
+	@:overload private function printMethod(it : sun.rmi.rmic.iiop.CompoundType.CompoundType_Method, writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
 	
 	/**
 	* Create a CompoundType instance for the given class. NOTE: This constructor
@@ -227,20 +227,20 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	/*
 	* Check if method is conforming.
 	*/
-	@:overload private function isConformingRemoteMethod(method : CompoundType_Method, quiet : Bool) : Bool;
+	@:overload private function isConformingRemoteMethod(method : sun.rmi.rmic.iiop.CompoundType.CompoundType_Method, quiet : Bool) : Bool;
 	
-	@:overload private function isIDLEntityException(type : sun.rmi.rmic.iiop.Type, method : CompoundType_Method, quiet : Bool) : Bool;
+	@:overload private function isIDLEntityException(type : sun.rmi.rmic.iiop.Type, method : sun.rmi.rmic.iiop.CompoundType.CompoundType_Method, quiet : Bool) : Bool;
 	
 	/**
 	* Convert all invalid types to valid ones.
 	*/
-	@:overload override private function swapInvalidTypes() : Void;
+	@:overload private function swapInvalidTypes() : Void;
 	
 	/*
 	* Add matching types to list. Return true if this type has not
 	* been previously checked, false otherwise.
 	*/
-	@:overload override private function addTypes(typeCodeFilter : Int, checked : java.util.HashSet<Dynamic>, matching : java.util.Vector<Dynamic>) : Bool;
+	@:overload private function addTypes(typeCodeFilter : Int, checked : java.util.HashSet<Dynamic>, matching : java.util.Vector<Dynamic>) : Bool;
 	
 	/*
 	* Update any method from 'currentMethods' which is defined in a
@@ -299,7 +299,7 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	
 	@:overload private static function getVisibilityString(member : sun.tools.java.MemberDefinition) : String;
 	
-	@:overload private function assertNotImpl(type : sun.rmi.rmic.iiop.Type, quiet : Bool, stack : sun.rmi.rmic.iiop.ContextStack, enclosing : CompoundType, dataMember : Bool) : Bool;
+	@:overload private function assertNotImpl(type : sun.rmi.rmic.iiop.Type, quiet : Bool, stack : sun.rmi.rmic.iiop.ContextStack, enclosing : sun.rmi.rmic.iiop.CompoundType, dataMember : Bool) : Bool;
 	
 	
 }
@@ -362,12 +362,12 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	* combined method, which must be only those exceptions
 	* that may thrown by both of the old methods.
 	*/
-	@:overload public function mergeWith(other : CompoundType_Method) : CompoundType_Method;
+	@:overload public function mergeWith(other : sun.rmi.rmic.iiop.CompoundType.CompoundType_Method) : sun.rmi.rmic.iiop.CompoundType.CompoundType_Method;
 	
 	/**
 	* Return the compound type which contains this method.
 	*/
-	@:overload public function getEnclosing() : CompoundType;
+	@:overload public function getEnclosing() : sun.rmi.rmic.iiop.CompoundType;
 	
 	/**
 	* Return the identifier for the class or interface which
@@ -524,7 +524,7 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	* Create a new Method object corresponding to the given
 	* method definition.
 	*/
-	@:overload public function new(enclosing : CompoundType, memberDef : sun.tools.java.MemberDefinition, quiet : Bool, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
+	@:overload public function new(enclosing : sun.rmi.rmic.iiop.CompoundType, memberDef : sun.tools.java.MemberDefinition, quiet : Bool, stack : sun.rmi.rmic.iiop.ContextStack) : Void;
 	
 	/**
 	* Cloning is supported by returning a shallow copy of this object.
@@ -616,9 +616,9 @@ extern class CompoundType extends sun.rmi.rmic.iiop.Type
 	/**
 	* Create a new Member object.
 	*/
-	@:overload public function new(member : sun.tools.java.MemberDefinition, value : String, stack : sun.rmi.rmic.iiop.ContextStack, enclosing : CompoundType) : Void;
+	@:overload public function new(member : sun.tools.java.MemberDefinition, value : String, stack : sun.rmi.rmic.iiop.ContextStack, enclosing : sun.rmi.rmic.iiop.CompoundType) : Void;
 	
-	@:overload public function init(stack : sun.rmi.rmic.iiop.ContextStack, enclosing : CompoundType) : Void;
+	@:overload public function init(stack : sun.rmi.rmic.iiop.ContextStack, enclosing : sun.rmi.rmic.iiop.CompoundType) : Void;
 	
 	@:overload public function setIDLName(name : String) : Void;
 	

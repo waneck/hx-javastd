@@ -47,9 +47,9 @@ extern class JConsoleResources_ja extends sun.tools.jconsole.resources.JConsoleR
 	*
 	* @return the contents of this <code>ResourceBundle</code>.
 	*/
-	@:overload override private function getContents0() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload private function getContents0() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
-	@:overload @:synchronized override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload @:synchronized public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

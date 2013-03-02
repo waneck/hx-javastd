@@ -40,7 +40,7 @@ extern class AppContext
 	/**
 	* Returns a set containing all <code>AppContext</code>s.
 	*/
-	@:overload public static function getAppContexts() : java.util.Set<AppContext>;
+	@:overload public static function getAppContexts() : java.util.Set<sun.awt.AppContext>;
 	
 	public static var DISPOSED_PROPERTY_NAME(default, null) : String;
 	
@@ -59,7 +59,7 @@ extern class AppContext
 	* @see     java.lang.ThreadGroup
 	* @since   1.2
 	*/
-	@:require(java2) @:overload @:final public static function getAppContext() : AppContext;
+	@:require(java2) @:overload @:final public static function getAppContext() : sun.awt.AppContext;
 	
 	/**
 	* Disposes of this AppContext, all of its top-level Frames, and
@@ -213,7 +213,7 @@ extern class AppContext
 }
 @:native('sun$awt$AppContext$PostShutdownEventRunnable') @:internal extern class AppContext_PostShutdownEventRunnable implements java.lang.Runnable
 {
-	@:overload public function new(ac : AppContext) : Void;
+	@:overload public function new(ac : sun.awt.AppContext) : Void;
 	
 	@:overload public function run() : Void;
 	
@@ -221,7 +221,7 @@ extern class AppContext
 }
 @:native('sun$awt$AppContext$CreateThreadAction') @:internal extern class AppContext_CreateThreadAction implements java.security.PrivilegedAction<Dynamic>
 {
-	@:overload public function new(ac : AppContext, r : java.lang.Runnable) : Void;
+	@:overload public function new(ac : sun.awt.AppContext, r : java.lang.Runnable) : Void;
 	
 	@:overload public function run() : Dynamic;
 	

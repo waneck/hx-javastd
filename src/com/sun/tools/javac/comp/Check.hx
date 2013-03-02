@@ -32,9 +32,9 @@ package com.sun.tools.javac.comp;
 */
 extern class Check
 {
-	private static var checkKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Check>;
+	private static var checkKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Check>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Check;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Check;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -124,21 +124,21 @@ extern class Check
 */
 @:native('com$sun$tools$javac$comp$Check$Validator') @:internal extern class Check_Validator extends com.sun.tools.javac.tree.JCTree.JCTree_Visitor
 {
-	@:overload public function visitTypeArray(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayTypeTree) : Void;
+	@:overload override public function visitTypeArray(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayTypeTree) : Void;
 	
-	@:overload public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
+	@:overload override public function visitTypeApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
 	
-	@:overload public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
+	@:overload override public function visitTypeParameter(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
 	
-	@:overload public function visitWildcard(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCWildcard) : Void;
+	@:overload override public function visitWildcard(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCWildcard) : Void;
 	
-	@:overload public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
+	@:overload override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
 	@:overload public function visitSelectInternal(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
 	/** Default visitor method: do nothing.
 	*/
-	@:overload public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
+	@:overload override public function visitTree(tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
 	@:overload public function validateTree(tree : com.sun.tools.javac.tree.JCTree, checkRaw : Bool, isOuter : Bool) : Void;
 	
@@ -148,15 +148,15 @@ extern class Check
 }
 @:native('com$sun$tools$javac$comp$Check$CycleChecker') @:internal extern class Check_CycleChecker extends com.sun.tools.javac.tree.TreeScanner
 {
-	@:overload override public function visitSelect(tree : JCFieldAccess) : Void;
+	@:overload public function visitSelect(tree : JCFieldAccess) : Void;
 	
-	@:overload override public function visitIdent(tree : JCIdent) : Void;
+	@:overload public function visitIdent(tree : JCIdent) : Void;
 	
-	@:overload override public function visitTypeApply(tree : JCTypeApply) : Void;
+	@:overload public function visitTypeApply(tree : JCTypeApply) : Void;
 	
-	@:overload override public function visitTypeArray(tree : JCArrayTypeTree) : Void;
+	@:overload public function visitTypeArray(tree : JCArrayTypeTree) : Void;
 	
-	@:overload override public function visitClassDef(tree : JCClassDecl) : Void;
+	@:overload public function visitClassDef(tree : JCClassDecl) : Void;
 	
 	
 }
@@ -170,7 +170,7 @@ extern class Check
 {
 	@:overload public function new(pos : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition, uncheckedKey : String, found : com.sun.tools.javac.code.Type, expected : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload override public function warn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
+	@:overload public function warn(lint : com.sun.tools.javac.code.Lint.Lint_LintCategory) : Void;
 	
 	
 }

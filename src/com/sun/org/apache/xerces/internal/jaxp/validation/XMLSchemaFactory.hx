@@ -22,7 +22,7 @@ extern class XMLSchemaFactory extends javax.xml.validation.SchemaFactory
 {
 	@:overload public function new() : Void;
 	
-	@:overload public static function newXMLSchemaFactoryNoServiceLoader() : XMLSchemaFactory;
+	@:overload public static function newXMLSchemaFactoryNoServiceLoader() : com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory;
 	
 	/**
 	* <p>Is specified schema supported by this <code>SchemaFactory</code>?</p>
@@ -36,27 +36,27 @@ extern class XMLSchemaFactory extends javax.xml.validation.SchemaFactory
 	* @throws IllegalArgumentException If <code>schemaLanguage.length() == 0</code>
 	*   or <code>schemaLanguage</code> does not specify a <a href="#schemaLanguage">valid</a> schema language.
 	*/
-	@:overload override public function isSchemaLanguageSupported(schemaLanguage : String) : Bool;
+	@:overload public function isSchemaLanguageSupported(schemaLanguage : String) : Bool;
 	
-	@:overload override public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
+	@:overload public function getResourceResolver() : org.w3c.dom.ls.LSResourceResolver;
 	
-	@:overload override public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
+	@:overload public function setResourceResolver(resourceResolver : org.w3c.dom.ls.LSResourceResolver) : Void;
 	
-	@:overload override public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
-	@:overload override public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload public function setErrorHandler(errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload override public function newSchema(schemas : java.NativeArray<javax.xml.transform.Source>) : javax.xml.validation.Schema;
+	@:overload public function newSchema(schemas : java.NativeArray<javax.xml.transform.Source>) : javax.xml.validation.Schema;
 	
-	@:overload override public function newSchema() : javax.xml.validation.Schema;
+	@:overload public function newSchema() : javax.xml.validation.Schema;
 	
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload public function getFeature(name : String) : Bool;
 	
-	@:overload override public function getProperty(name : String) : Dynamic;
+	@:overload public function getProperty(name : String) : Dynamic;
 	
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload override public function setProperty(name : String, object : Dynamic) : Void;
+	@:overload public function setProperty(name : String, object : Dynamic) : Void;
 	
 	
 }

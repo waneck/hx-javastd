@@ -84,7 +84,7 @@ extern class BindInfo implements java.lang.Iterable<com.sun.tools.internal.xjc.r
 	* Merges all the declarations inside the given BindInfo
 	* to this BindInfo.
 	*/
-	@:overload public function absorb(bi : BindInfo) : Void;
+	@:overload public function absorb(bi : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	/** Gets the number of declarations. */
 	@:overload public function size() : Int;
@@ -103,7 +103,7 @@ extern class BindInfo implements java.lang.Iterable<com.sun.tools.internal.xjc.r
 	@:overload public function toCustomizationList() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	/** An instance with the empty contents. */
-	public static var empty(default, null) : BindInfo;
+	public static var empty(default, null) : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo;
 	
 	@:overload public static function getJAXBContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
@@ -120,7 +120,7 @@ extern class BindInfo implements java.lang.Iterable<com.sun.tools.internal.xjc.r
 }
 @:native('com$sun$tools$internal$xjc$reader$xmlschema$bindinfo$BindInfo$AppInfo') @:internal extern class BindInfo_AppInfo
 {
-	@:overload public function addTo(bi : BindInfo) : Void;
+	@:overload public function addTo(bi : com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BindInfo) : Void;
 	
 	
 }

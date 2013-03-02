@@ -118,7 +118,7 @@ extern class UnresolvedPermission extends java.security.Permission implements ja
 	*
 	* @return false.
 	*/
-	@:overload override public function implies(p : java.security.Permission) : Bool;
+	@:overload public function implies(p : java.security.Permission) : Bool;
 	
 	/**
 	* Checks two UnresolvedPermission objects for equality.
@@ -136,14 +136,14 @@ extern class UnresolvedPermission extends java.security.Permission implements ja
 	* type (class) name, permission name, actions, and
 	* certificates as this object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Returns the canonical string representation of the actions,
@@ -155,7 +155,7 @@ extern class UnresolvedPermission extends java.security.Permission implements ja
 	*
 	* @return the empty string "".
 	*/
-	@:overload override public function getActions() : String;
+	@:overload public function getActions() : String;
 	
 	/**
 	* Get the type (class name) of the underlying permission that
@@ -211,7 +211,7 @@ extern class UnresolvedPermission extends java.security.Permission implements ja
 	*
 	* @return information about this UnresolvedPermission.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Returns a new PermissionCollection object for storing
@@ -220,7 +220,7 @@ extern class UnresolvedPermission extends java.security.Permission implements ja
 	* @return a new PermissionCollection object suitable for
 	* storing UnresolvedPermissions.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }

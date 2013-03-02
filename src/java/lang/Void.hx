@@ -37,7 +37,7 @@ package java.lang;
 	* The {@code Class} object representing the pseudo-type corresponding to
 	* the keyword {@code void}.
 	*/
-	public static var TYPE(default, null) : Class<Void>;
+	public static var TYPE(default, null) : Class<java.lang.Void>;
 	
 	
 }

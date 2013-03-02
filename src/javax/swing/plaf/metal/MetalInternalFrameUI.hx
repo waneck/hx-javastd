@@ -35,23 +35,23 @@ extern class MetalInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFr
 	
 	@:overload public function new(b : javax.swing.JInternalFrame) : Void;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload private function installKeyboardActions() : Void;
 	
-	@:overload override private function uninstallKeyboardActions() : Void;
+	@:overload private function uninstallKeyboardActions() : Void;
 	
-	@:overload override private function uninstallComponents() : Void;
+	@:overload private function uninstallComponents() : Void;
 	
-	@:overload override private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload private function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
 	@:overload public function setPalette(isPalette : Bool) : Void;
 	
@@ -64,7 +64,7 @@ extern class MetalInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFr
 	* on the TitlePane.
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function createBorderListener(w : javax.swing.JInternalFrame) : javax.swing.event.MouseInputAdapter;
+	@:require(java6) @:overload private function createBorderListener(w : javax.swing.JInternalFrame) : javax.swing.event.MouseInputAdapter;
 	
 	
 }
@@ -76,7 +76,7 @@ extern class MetalInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFr
 }
 @:native('javax$swing$plaf$metal$MetalInternalFrameUI$BorderListener1') @:internal extern class MetalInternalFrameUI_BorderListener1 extends javax.swing.plaf.basic.BasicInternalFrameUI.BasicInternalFrameUI_BorderListener implements javax.swing.SwingConstants
 {
-	@:overload override public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseClicked(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

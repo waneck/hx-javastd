@@ -351,15 +351,15 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	/** Set position field and return this tree.
 	*/
-	@:overload public function setPos(pos : Int) : JCTree;
+	@:overload public function setPos(pos : Int) : com.sun.tools.javac.tree.JCTree;
 	
 	/** Set type field and return this tree.
 	*/
-	@:overload public function setType(type : com.sun.tools.javac.code.Type) : JCTree;
+	@:overload public function setType(type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.tree.JCTree;
 	
 	/** Visit this tree with a given visitor.
 	*/
-	@:overload @:abstract public function accept(v : JCTree_Visitor) : Void;
+	@:overload @:abstract public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload @:abstract public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -371,20 +371,20 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	*/
 	@:overload public function pos() : com.sun.tools.javac.util.JCDiagnostic.JCDiagnostic_DiagnosticPosition;
 	
-	@:overload public function getTree() : JCTree;
+	@:overload public function getTree() : com.sun.tools.javac.tree.JCTree;
 	
 	@:overload public function getStartPosition() : Int;
 	
 	@:overload public function getPreferredPosition() : Int;
 	
-	@:overload public function getEndPosition(endPosTable : java.util.Map<JCTree, Null<Int>>) : Int;
+	@:overload public function getEndPosition(endPosTable : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>) : Int;
 	
 	/**
 	* Gets the kind of this tree.
 	*
 	* @return the kind of this tree.
 	*/
-	@:overload @:public @:public override public function getKind() : Tree_Kind;
+	@:overload @:public @:public override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	
 }
@@ -405,13 +405,13 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 *                         ranges indexed by the tree nodes they belong to.
 *                         Defined only if option -Xjcov is set.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCCompilationUnit') extern class JCTree_JCCompilationUnit extends JCTree implements com.sun.source.tree.CompilationUnitTree
+@:native('com$sun$tools$javac$tree$JCTree$JCCompilationUnit') extern class JCTree_JCCompilationUnit extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.CompilationUnitTree
 {
-	public var packageAnnotations : com.sun.tools.javac.util.List<JCTree_JCAnnotation>;
+	public var packageAnnotations : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>;
 	
-	public var pid : JCTree_JCExpression;
+	public var pid : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var defs : com.sun.tools.javac.util.List<JCTree>;
+	public var defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	public var sourcefile : javax.tools.JavaFileObject;
 	
@@ -425,27 +425,27 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	public var lineMap : com.sun.tools.javac.util.Position.Position_LineMap;
 	
-	public var docComments : java.util.Map<JCTree, String>;
+	public var docComments : java.util.Map<com.sun.tools.javac.tree.JCTree, String>;
 	
-	public var endPositions : java.util.Map<JCTree, Null<Int>>;
+	public var endPositions : java.util.Map<com.sun.tools.javac.tree.JCTree, Null<Int>>;
 	
-	@:overload private function new(packageAnnotations : com.sun.tools.javac.util.List<JCTree_JCAnnotation>, pid : JCTree_JCExpression, defs : com.sun.tools.javac.util.List<JCTree>, sourcefile : javax.tools.JavaFileObject, packge : PackageSymbol, namedImportScope : ImportScope, starImportScope : StarImportScope) : Void;
+	@:overload private function new(packageAnnotations : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>, pid : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>, sourcefile : javax.tools.JavaFileObject, packge : PackageSymbol, namedImportScope : ImportScope, starImportScope : StarImportScope) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getPackageAnnotations() : com.sun.tools.javac.util.List<JCTree_JCAnnotation>;
+	@:overload public function getPackageAnnotations() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>;
 	
-	@:overload public function getImports() : com.sun.tools.javac.util.List<JCTree_JCImport>;
+	@:overload public function getImports() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCImport>;
 	
-	@:overload public function getPackageName() : JCTree_JCExpression;
+	@:overload public function getPackageName() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload public function getSourceFile() : javax.tools.JavaFileObject;
 	
 	@:overload public function getLineMap() : com.sun.tools.javac.util.Position.Position_LineMap;
 	
-	@:overload public function getTypeDecls() : com.sun.tools.javac.util.List<JCTree>;
+	@:overload public function getTypeDecls() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -457,19 +457,19 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * An import clause.
 * @param qualid    The imported class(es).
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCImport') extern class JCTree_JCImport extends JCTree implements com.sun.source.tree.ImportTree
+@:native('com$sun$tools$javac$tree$JCTree$JCImport') extern class JCTree_JCImport extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.ImportTree
 {
 	public var staticImport : Bool;
 	
-	public var qualid : JCTree;
+	public var qualid : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload private function new(qualid : JCTree, importStatic : Bool) : Void;
+	@:overload private function new(qualid : com.sun.tools.javac.tree.JCTree, importStatic : Bool) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload public function isStatic() : Bool;
 	
-	@:overload public function getQualifiedIdentifier() : JCTree;
+	@:overload public function getQualifiedIdentifier() : com.sun.tools.javac.tree.JCTree;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -479,18 +479,18 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	
 }
-@:native('com$sun$tools$javac$tree$JCTree$JCStatement') extern class JCTree_JCStatement extends JCTree implements com.sun.source.tree.StatementTree
+@:native('com$sun$tools$javac$tree$JCTree$JCStatement') extern class JCTree_JCStatement extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.StatementTree
 {
-	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : JCTree_JCStatement;
+	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload override public function setPos(pos : Int) : JCTree_JCStatement;
+	@:overload override public function setPos(pos : Int) : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
 	/**
 	* Gets the kind of this tree.
 	*
 	* @return the kind of this tree.
 	*/
-	@:overload @:public override public function getKind() : Tree_Kind;
+	@:overload @:public override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	/**
 	* Accept method used to implement the visitor pattern.  The
@@ -503,18 +503,18 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	
 }
-@:native('com$sun$tools$javac$tree$JCTree$JCExpression') extern class JCTree_JCExpression extends JCTree implements com.sun.source.tree.ExpressionTree
+@:native('com$sun$tools$javac$tree$JCTree$JCExpression') extern class JCTree_JCExpression extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.ExpressionTree
 {
-	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : JCTree_JCExpression;
+	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload override public function setPos(pos : Int) : JCTree_JCExpression;
+	@:overload override public function setPos(pos : Int) : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	/**
 	* Gets the kind of this tree.
 	*
 	* @return the kind of this tree.
 	*/
-	@:overload override public function getKind() : Tree_Kind;
+	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	/**
 	* Accept method used to implement the visitor pattern.  The
@@ -537,39 +537,39 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param defs all variables and methods defined in this class
 * @param sym the symbol
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCClassDecl') extern class JCTree_JCClassDecl extends JCTree_JCStatement implements com.sun.source.tree.ClassTree
+@:native('com$sun$tools$javac$tree$JCTree$JCClassDecl') extern class JCTree_JCClassDecl extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.ClassTree
 {
-	public var mods : JCTree_JCModifiers;
+	public var mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers;
 	
 	public var name : com.sun.tools.javac.util.Name;
 	
-	public var typarams : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>;
+	public var typarams : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>;
 	
-	public var extending : JCTree_JCExpression;
+	public var extending : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var implementing : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var implementing : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	public var defs : com.sun.tools.javac.util.List<JCTree>;
+	public var defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	public var sym : ClassSymbol;
 	
-	@:overload private function new(mods : JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, typarams : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>, extending : JCTree_JCExpression, implementing : com.sun.tools.javac.util.List<JCTree_JCExpression>, defs : com.sun.tools.javac.util.List<JCTree>, sym : ClassSymbol) : Void;
+	@:overload private function new(mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, typarams : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>, extending : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, implementing : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>, sym : ClassSymbol) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getModifiers() : JCTree_JCModifiers;
+	@:overload public function getModifiers() : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers;
 	
 	@:overload public function getSimpleName() : com.sun.tools.javac.util.Name;
 	
-	@:overload public function getTypeParameters() : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>;
+	@:overload public function getTypeParameters() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>;
 	
-	@:overload public function getExtendsClause() : JCTree;
+	@:overload public function getExtendsClause() : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getImplementsClause() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getImplementsClause() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload public function getMembers() : com.sun.tools.javac.util.List<JCTree>;
+	@:overload public function getMembers() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -588,47 +588,47 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param stats statements in the method
 * @param sym method symbol
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCMethodDecl') extern class JCTree_JCMethodDecl extends JCTree implements com.sun.source.tree.MethodTree
+@:native('com$sun$tools$javac$tree$JCTree$JCMethodDecl') extern class JCTree_JCMethodDecl extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.MethodTree
 {
-	public var mods : JCTree_JCModifiers;
+	public var mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers;
 	
 	public var name : com.sun.tools.javac.util.Name;
 	
-	public var restype : JCTree_JCExpression;
+	public var restype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var typarams : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>;
+	public var typarams : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>;
 	
-	public var params : com.sun.tools.javac.util.List<JCTree_JCVariableDecl>;
+	public var params : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl>;
 	
-	public var thrown : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var thrown : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	public var body : JCTree_JCBlock;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	public var defaultValue : JCTree_JCExpression;
+	public var defaultValue : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	public var sym : MethodSymbol;
 	
-	@:overload private function new(mods : JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, restype : JCTree_JCExpression, typarams : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>, params : com.sun.tools.javac.util.List<JCTree_JCVariableDecl>, thrown : com.sun.tools.javac.util.List<JCTree_JCExpression>, body : JCTree_JCBlock, defaultValue : JCTree_JCExpression, sym : MethodSymbol) : Void;
+	@:overload private function new(mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, restype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, typarams : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>, params : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl>, thrown : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock, defaultValue : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, sym : MethodSymbol) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getModifiers() : JCTree_JCModifiers;
+	@:overload public function getModifiers() : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers;
 	
 	@:overload public function getName() : com.sun.tools.javac.util.Name;
 	
-	@:overload public function getReturnType() : JCTree;
+	@:overload public function getReturnType() : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getTypeParameters() : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>;
+	@:overload public function getTypeParameters() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>;
 	
-	@:overload public function getParameters() : com.sun.tools.javac.util.List<JCTree_JCVariableDecl>;
+	@:overload public function getParameters() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl>;
 	
-	@:overload public function getThrows() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getThrows() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload public function getBody() : JCTree_JCBlock;
+	@:overload public function getBody() : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	@:overload public function getDefaultValue() : JCTree;
+	@:overload public function getDefaultValue() : com.sun.tools.javac.tree.JCTree;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -644,31 +644,31 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param init variables initial value
 * @param sym symbol
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCVariableDecl') extern class JCTree_JCVariableDecl extends JCTree_JCStatement implements com.sun.source.tree.VariableTree
+@:native('com$sun$tools$javac$tree$JCTree$JCVariableDecl') extern class JCTree_JCVariableDecl extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.VariableTree
 {
-	public var mods : JCTree_JCModifiers;
+	public var mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers;
 	
 	public var name : com.sun.tools.javac.util.Name;
 	
-	public var vartype : JCTree_JCExpression;
+	public var vartype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var init : JCTree_JCExpression;
+	public var init : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	public var sym : VarSymbol;
 	
-	@:overload private function new(mods : JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, vartype : JCTree_JCExpression, init : JCTree_JCExpression, sym : VarSymbol) : Void;
+	@:overload private function new(mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, vartype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, init : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, sym : VarSymbol) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getModifiers() : JCTree_JCModifiers;
+	@:overload public function getModifiers() : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers;
 	
 	@:overload public function getName() : com.sun.tools.javac.util.Name;
 	
-	@:overload public function getType() : JCTree;
+	@:overload public function getType() : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getInitializer() : JCTree_JCExpression;
+	@:overload public function getInitializer() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -679,11 +679,11 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A no-op statement ";".
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCSkip') extern class JCTree_JCSkip extends JCTree_JCStatement implements com.sun.source.tree.EmptyStatementTree
+@:native('com$sun$tools$javac$tree$JCTree$JCSkip') extern class JCTree_JCSkip extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.EmptyStatementTree
 {
 	@:overload private function new() : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -698,22 +698,22 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param stats statements
 * @param flags flags
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCBlock') extern class JCTree_JCBlock extends JCTree_JCStatement implements com.sun.source.tree.BlockTree
+@:native('com$sun$tools$javac$tree$JCTree$JCBlock') extern class JCTree_JCBlock extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.BlockTree
 {
 	public var flags : haxe.Int64;
 	
-	public var stats : com.sun.tools.javac.util.List<JCTree_JCStatement>;
+	public var stats : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>;
 	
 	/** Position of closing brace, optional. */
 	public var endpos : Int;
 	
-	@:overload private function new(flags : haxe.Int64, stats : com.sun.tools.javac.util.List<JCTree_JCStatement>) : Void;
+	@:overload private function new(flags : haxe.Int64, stats : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getStatements() : com.sun.tools.javac.util.List<JCTree_JCStatement>;
+	@:overload public function getStatements() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>;
 	
 	@:overload public function isStatic() : Bool;
 	
@@ -726,21 +726,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A do loop
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCDoWhileLoop') extern class JCTree_JCDoWhileLoop extends JCTree_JCStatement implements com.sun.source.tree.DoWhileLoopTree
+@:native('com$sun$tools$javac$tree$JCTree$JCDoWhileLoop') extern class JCTree_JCDoWhileLoop extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.DoWhileLoopTree
 {
-	public var body : JCTree_JCStatement;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	public var cond : JCTree_JCExpression;
+	public var cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(body : JCTree_JCStatement, cond : JCTree_JCExpression) : Void;
+	@:overload private function new(body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement, cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getCondition() : JCTree_JCExpression;
+	@:overload public function getCondition() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getStatement() : JCTree_JCStatement;
+	@:overload public function getStatement() : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -751,21 +751,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A while loop
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCWhileLoop') extern class JCTree_JCWhileLoop extends JCTree_JCStatement implements com.sun.source.tree.WhileLoopTree
+@:native('com$sun$tools$javac$tree$JCTree$JCWhileLoop') extern class JCTree_JCWhileLoop extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.WhileLoopTree
 {
-	public var cond : JCTree_JCExpression;
+	public var cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var body : JCTree_JCStatement;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload private function new(cond : JCTree_JCExpression, body : JCTree_JCStatement) : Void;
+	@:overload private function new(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getCondition() : JCTree_JCExpression;
+	@:overload public function getCondition() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getStatement() : JCTree_JCStatement;
+	@:overload public function getStatement() : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -776,29 +776,29 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A for loop.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCForLoop') extern class JCTree_JCForLoop extends JCTree_JCStatement implements com.sun.source.tree.ForLoopTree
+@:native('com$sun$tools$javac$tree$JCTree$JCForLoop') extern class JCTree_JCForLoop extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.ForLoopTree
 {
-	public var init : com.sun.tools.javac.util.List<JCTree_JCStatement>;
+	public var init : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>;
 	
-	public var cond : JCTree_JCExpression;
+	public var cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var step : com.sun.tools.javac.util.List<JCTree_JCExpressionStatement>;
+	public var step : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpressionStatement>;
 	
-	public var body : JCTree_JCStatement;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload private function new(init : com.sun.tools.javac.util.List<JCTree_JCStatement>, cond : JCTree_JCExpression, update : com.sun.tools.javac.util.List<JCTree_JCExpressionStatement>, body : JCTree_JCStatement) : Void;
+	@:overload private function new(init : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>, cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, update : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpressionStatement>, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getCondition() : JCTree_JCExpression;
+	@:overload public function getCondition() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getStatement() : JCTree_JCStatement;
+	@:overload public function getStatement() : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload public function getInitializer() : com.sun.tools.javac.util.List<JCTree_JCStatement>;
+	@:overload public function getInitializer() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>;
 	
-	@:overload public function getUpdate() : com.sun.tools.javac.util.List<JCTree_JCExpressionStatement>;
+	@:overload public function getUpdate() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpressionStatement>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -809,25 +809,25 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * The enhanced for loop.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCEnhancedForLoop') extern class JCTree_JCEnhancedForLoop extends JCTree_JCStatement implements com.sun.source.tree.EnhancedForLoopTree
+@:native('com$sun$tools$javac$tree$JCTree$JCEnhancedForLoop') extern class JCTree_JCEnhancedForLoop extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.EnhancedForLoopTree
 {
-	//public var _var : JCTree_JCVariableDecl;
+	//public var _var : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl;
 	
-	public var expr : JCTree_JCExpression;
+	public var expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var body : JCTree_JCStatement;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload private function new(_var : JCTree_JCVariableDecl, expr : JCTree_JCExpression, body : JCTree_JCStatement) : Void;
+	@:overload private function new(_var : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getVariable() : JCTree_JCVariableDecl;
+	@:overload public function getVariable() : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getStatement() : JCTree_JCStatement;
+	@:overload public function getStatement() : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -838,21 +838,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A labelled expression or statement.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCLabeledStatement') extern class JCTree_JCLabeledStatement extends JCTree_JCStatement implements com.sun.source.tree.LabeledStatementTree
+@:native('com$sun$tools$javac$tree$JCTree$JCLabeledStatement') extern class JCTree_JCLabeledStatement extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.LabeledStatementTree
 {
 	public var label : com.sun.tools.javac.util.Name;
 	
-	public var body : JCTree_JCStatement;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload private function new(label : com.sun.tools.javac.util.Name, body : JCTree_JCStatement) : Void;
+	@:overload private function new(label : com.sun.tools.javac.util.Name, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getLabel() : com.sun.tools.javac.util.Name;
 	
-	@:overload public function getStatement() : JCTree_JCStatement;
+	@:overload public function getStatement() : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -863,21 +863,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A "switch ( ) { }" construction.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCSwitch') extern class JCTree_JCSwitch extends JCTree_JCStatement implements com.sun.source.tree.SwitchTree
+@:native('com$sun$tools$javac$tree$JCTree$JCSwitch') extern class JCTree_JCSwitch extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.SwitchTree
 {
-	public var selector : JCTree_JCExpression;
+	public var selector : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var cases : com.sun.tools.javac.util.List<JCTree_JCCase>;
+	public var cases : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCase>;
 	
-	@:overload private function new(selector : JCTree_JCExpression, cases : com.sun.tools.javac.util.List<JCTree_JCCase>) : Void;
+	@:overload private function new(selector : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, cases : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCase>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getCases() : com.sun.tools.javac.util.List<JCTree_JCCase>;
+	@:overload public function getCases() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCase>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -888,21 +888,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A "case  :" of a switch.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCCase') extern class JCTree_JCCase extends JCTree_JCStatement implements com.sun.source.tree.CaseTree
+@:native('com$sun$tools$javac$tree$JCTree$JCCase') extern class JCTree_JCCase extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.CaseTree
 {
-	public var pat : JCTree_JCExpression;
+	public var pat : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var stats : com.sun.tools.javac.util.List<JCTree_JCStatement>;
+	public var stats : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>;
 	
-	@:overload private function new(pat : JCTree_JCExpression, stats : com.sun.tools.javac.util.List<JCTree_JCStatement>) : Void;
+	@:overload private function new(pat : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, stats : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getStatements() : com.sun.tools.javac.util.List<JCTree_JCStatement>;
+	@:overload public function getStatements() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -913,21 +913,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A synchronized block.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCSynchronized') extern class JCTree_JCSynchronized extends JCTree_JCStatement implements com.sun.source.tree.SynchronizedTree
+@:native('com$sun$tools$javac$tree$JCTree$JCSynchronized') extern class JCTree_JCSynchronized extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.SynchronizedTree
 {
-	public var lock : JCTree_JCExpression;
+	public var lock : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var body : JCTree_JCBlock;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	@:overload private function new(lock : JCTree_JCExpression, body : JCTree_JCBlock) : Void;
+	@:overload private function new(lock : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getBlock() : JCTree_JCBlock;
+	@:overload public function getBlock() : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -938,31 +938,31 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A "try { } catch ( ) { } finally { }" block.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCTry') extern class JCTree_JCTry extends JCTree_JCStatement implements com.sun.source.tree.TryTree
+@:native('com$sun$tools$javac$tree$JCTree$JCTry') extern class JCTree_JCTry extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.TryTree
 {
-	public var body : JCTree_JCBlock;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	public var catchers : com.sun.tools.javac.util.List<JCTree_JCCatch>;
+	public var catchers : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCatch>;
 	
-	public var finalizer : JCTree_JCBlock;
+	public var finalizer : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	public var resources : com.sun.tools.javac.util.List<JCTree>;
+	public var resources : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
-	@:overload private function new(resources : com.sun.tools.javac.util.List<JCTree>, body : JCTree_JCBlock, catchers : com.sun.tools.javac.util.List<JCTree_JCCatch>, finalizer : JCTree_JCBlock) : Void;
+	@:overload private function new(resources : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock, catchers : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCatch>, finalizer : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getBlock() : JCTree_JCBlock;
+	@:overload public function getBlock() : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	@:overload public function getCatches() : com.sun.tools.javac.util.List<JCTree_JCCatch>;
+	@:overload public function getCatches() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCatch>;
 	
-	@:overload public function getFinallyBlock() : JCTree_JCBlock;
+	@:overload public function getFinallyBlock() : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
-	@:overload public function getResources() : com.sun.tools.javac.util.List<JCTree>;
+	@:overload public function getResources() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	@:overload override public function getTag() : Int;
 	
@@ -971,21 +971,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A catch block.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCCatch') extern class JCTree_JCCatch extends JCTree implements com.sun.source.tree.CatchTree
+@:native('com$sun$tools$javac$tree$JCTree$JCCatch') extern class JCTree_JCCatch extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.CatchTree
 {
-	public var param : JCTree_JCVariableDecl;
+	public var param : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl;
 	
-	public var body : JCTree_JCBlock;
+	public var body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	@:overload private function new(param : JCTree_JCVariableDecl, body : JCTree_JCBlock) : Void;
+	@:overload private function new(param : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getParameter() : JCTree_JCVariableDecl;
+	@:overload public function getParameter() : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl;
 	
-	@:overload public function getBlock() : JCTree_JCBlock;
+	@:overload public function getBlock() : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -996,25 +996,25 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A ( ) ? ( ) : ( ) conditional expression
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCConditional') extern class JCTree_JCConditional extends JCTree_JCExpression implements com.sun.source.tree.ConditionalExpressionTree
+@:native('com$sun$tools$javac$tree$JCTree$JCConditional') extern class JCTree_JCConditional extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.ConditionalExpressionTree
 {
-	public var cond : JCTree_JCExpression;
+	public var cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var truepart : JCTree_JCExpression;
+	public var truepart : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var falsepart : JCTree_JCExpression;
+	public var falsepart : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(cond : JCTree_JCExpression, truepart : JCTree_JCExpression, falsepart : JCTree_JCExpression) : Void;
+	@:overload private function new(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, truepart : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, falsepart : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getCondition() : JCTree_JCExpression;
+	@:overload public function getCondition() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getTrueExpression() : JCTree_JCExpression;
+	@:overload public function getTrueExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getFalseExpression() : JCTree_JCExpression;
+	@:overload public function getFalseExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1025,25 +1025,25 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * An "if ( ) { } else { }" block
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCIf') extern class JCTree_JCIf extends JCTree_JCStatement implements com.sun.source.tree.IfTree
+@:native('com$sun$tools$javac$tree$JCTree$JCIf') extern class JCTree_JCIf extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.IfTree
 {
-	public var cond : JCTree_JCExpression;
+	public var cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var thenpart : JCTree_JCStatement;
+	public var thenpart : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	public var elsepart : JCTree_JCStatement;
+	public var elsepart : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload private function new(cond : JCTree_JCExpression, thenpart : JCTree_JCStatement, elsepart : JCTree_JCStatement) : Void;
+	@:overload private function new(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, thenpart : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement, elsepart : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getCondition() : JCTree_JCExpression;
+	@:overload public function getCondition() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getThenStatement() : JCTree_JCStatement;
+	@:overload public function getThenStatement() : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
-	@:overload public function getElseStatement() : JCTree_JCStatement;
+	@:overload public function getElseStatement() : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1055,17 +1055,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * an expression statement
 * @param expr expression structure
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCExpressionStatement') extern class JCTree_JCExpressionStatement extends JCTree_JCStatement implements com.sun.source.tree.ExpressionStatementTree
+@:native('com$sun$tools$javac$tree$JCTree$JCExpressionStatement') extern class JCTree_JCExpressionStatement extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.ExpressionStatementTree
 {
-	public var expr : JCTree_JCExpression;
+	public var expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(expr : JCTree_JCExpression) : Void;
+	@:overload private function new(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1076,15 +1076,15 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A break from a loop or switch.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCBreak') extern class JCTree_JCBreak extends JCTree_JCStatement implements com.sun.source.tree.BreakTree
+@:native('com$sun$tools$javac$tree$JCTree$JCBreak') extern class JCTree_JCBreak extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.BreakTree
 {
 	public var label : com.sun.tools.javac.util.Name;
 	
-	public var target : JCTree;
+	public var target : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload private function new(label : com.sun.tools.javac.util.Name, target : JCTree) : Void;
+	@:overload private function new(label : com.sun.tools.javac.util.Name, target : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -1099,15 +1099,15 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A continue of a loop.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCContinue') extern class JCTree_JCContinue extends JCTree_JCStatement implements com.sun.source.tree.ContinueTree
+@:native('com$sun$tools$javac$tree$JCTree$JCContinue') extern class JCTree_JCContinue extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.ContinueTree
 {
 	public var label : com.sun.tools.javac.util.Name;
 	
-	public var target : JCTree;
+	public var target : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload private function new(label : com.sun.tools.javac.util.Name, target : JCTree) : Void;
+	@:overload private function new(label : com.sun.tools.javac.util.Name, target : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -1122,17 +1122,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A return statement.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCReturn') extern class JCTree_JCReturn extends JCTree_JCStatement implements com.sun.source.tree.ReturnTree
+@:native('com$sun$tools$javac$tree$JCTree$JCReturn') extern class JCTree_JCReturn extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.ReturnTree
 {
-	public var expr : JCTree_JCExpression;
+	public var expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(expr : JCTree_JCExpression) : Void;
+	@:overload private function new(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1143,17 +1143,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A throw statement.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCThrow') extern class JCTree_JCThrow extends JCTree_JCStatement implements com.sun.source.tree.ThrowTree
+@:native('com$sun$tools$javac$tree$JCTree$JCThrow') extern class JCTree_JCThrow extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.ThrowTree
 {
-	public var expr : JCTree_JCExpression;
+	public var expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(expr : JCTree) : Void;
+	@:overload private function new(expr : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1164,21 +1164,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * An assert statement.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCAssert') extern class JCTree_JCAssert extends JCTree_JCStatement implements com.sun.source.tree.AssertTree
+@:native('com$sun$tools$javac$tree$JCTree$JCAssert') extern class JCTree_JCAssert extends com.sun.tools.javac.tree.JCTree.JCTree_JCStatement implements com.sun.source.tree.AssertTree
 {
-	public var cond : JCTree_JCExpression;
+	public var cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var detail : JCTree_JCExpression;
+	public var detail : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(cond : JCTree_JCExpression, detail : JCTree_JCExpression) : Void;
+	@:overload private function new(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, detail : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getCondition() : JCTree_JCExpression;
+	@:overload public function getCondition() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getDetail() : JCTree_JCExpression;
+	@:overload public function getDetail() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1189,31 +1189,31 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A method invocation
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCMethodInvocation') extern class JCTree_JCMethodInvocation extends JCTree_JCExpression implements com.sun.source.tree.MethodInvocationTree
+@:native('com$sun$tools$javac$tree$JCTree$JCMethodInvocation') extern class JCTree_JCMethodInvocation extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.MethodInvocationTree
 {
-	public var typeargs : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var typeargs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	public var meth : JCTree_JCExpression;
+	public var meth : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var args : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
 	public var varargsElement : com.sun.tools.javac.code.Type;
 	
-	@:overload private function new(typeargs : com.sun.tools.javac.util.List<JCTree_JCExpression>, meth : JCTree_JCExpression, args : com.sun.tools.javac.util.List<JCTree_JCExpression>) : Void;
+	@:overload private function new(typeargs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, meth : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload public function getMethodSelect() : JCTree_JCExpression;
+	@:overload public function getMethodSelect() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getArguments() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
-	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : JCTree_JCMethodInvocation;
+	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation;
 	
 	@:overload override public function getTag() : Int;
 	
@@ -1222,17 +1222,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A new(...) operation.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCNewClass') extern class JCTree_JCNewClass extends JCTree_JCExpression implements com.sun.source.tree.NewClassTree
+@:native('com$sun$tools$javac$tree$JCTree$JCNewClass') extern class JCTree_JCNewClass extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.NewClassTree
 {
-	public var encl : JCTree_JCExpression;
+	public var encl : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var typeargs : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var typeargs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	public var clazz : JCTree_JCExpression;
+	public var clazz : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var args : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	public var def : JCTree_JCClassDecl;
+	public var def : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl;
 	
 	public var constructor : com.sun.tools.javac.code.Symbol;
 	
@@ -1240,21 +1240,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	public var constructorType : com.sun.tools.javac.code.Type;
 	
-	@:overload private function new(encl : JCTree_JCExpression, typeargs : com.sun.tools.javac.util.List<JCTree_JCExpression>, clazz : JCTree_JCExpression, args : com.sun.tools.javac.util.List<JCTree_JCExpression>, def : JCTree_JCClassDecl) : Void;
+	@:overload private function new(encl : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, typeargs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, clazz : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, def : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getEnclosingExpression() : JCTree_JCExpression;
+	@:overload public function getEnclosingExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload public function getIdentifier() : JCTree_JCExpression;
+	@:overload public function getIdentifier() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getArguments() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload public function getClassBody() : JCTree_JCClassDecl;
+	@:overload public function getClassBody() : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1265,25 +1265,25 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A new[...] operation.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCNewArray') extern class JCTree_JCNewArray extends JCTree_JCExpression implements com.sun.source.tree.NewArrayTree
+@:native('com$sun$tools$javac$tree$JCTree$JCNewArray') extern class JCTree_JCNewArray extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.NewArrayTree
 {
-	public var elemtype : JCTree_JCExpression;
+	public var elemtype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var dims : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var dims : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	public var elems : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var elems : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload private function new(elemtype : JCTree_JCExpression, dims : com.sun.tools.javac.util.List<JCTree_JCExpression>, elems : com.sun.tools.javac.util.List<JCTree_JCExpression>) : Void;
+	@:overload private function new(elemtype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, dims : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, elems : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getType() : JCTree_JCExpression;
+	@:overload public function getType() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getDimensions() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getDimensions() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload public function getInitializers() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getInitializers() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1294,17 +1294,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A parenthesized subexpression ( ... )
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCParens') extern class JCTree_JCParens extends JCTree_JCExpression implements com.sun.source.tree.ParenthesizedTree
+@:native('com$sun$tools$javac$tree$JCTree$JCParens') extern class JCTree_JCParens extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.ParenthesizedTree
 {
-	public var expr : JCTree_JCExpression;
+	public var expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(expr : JCTree_JCExpression) : Void;
+	@:overload private function new(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1315,21 +1315,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A assignment with "=".
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCAssign') extern class JCTree_JCAssign extends JCTree_JCExpression implements com.sun.source.tree.AssignmentTree
+@:native('com$sun$tools$javac$tree$JCTree$JCAssign') extern class JCTree_JCAssign extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.AssignmentTree
 {
-	public var lhs : JCTree_JCExpression;
+	public var lhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var rhs : JCTree_JCExpression;
+	public var rhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(lhs : JCTree_JCExpression, rhs : JCTree_JCExpression) : Void;
+	@:overload private function new(lhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, rhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getVariable() : JCTree_JCExpression;
+	@:overload public function getVariable() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1340,23 +1340,23 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * An assignment with "+=", "|=" ...
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCAssignOp') extern class JCTree_JCAssignOp extends JCTree_JCExpression implements com.sun.source.tree.CompoundAssignmentTree
+@:native('com$sun$tools$javac$tree$JCTree$JCAssignOp') extern class JCTree_JCAssignOp extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.CompoundAssignmentTree
 {
-	public var lhs : JCTree_JCExpression;
+	public var lhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var rhs : JCTree_JCExpression;
+	public var rhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	public var operator : com.sun.tools.javac.code.Symbol;
 	
-	@:overload private function new(opcode : Int, lhs : JCTree, rhs : JCTree, operator : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload private function new(opcode : Int, lhs : com.sun.tools.javac.tree.JCTree, rhs : com.sun.tools.javac.tree.JCTree, operator : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getVariable() : JCTree_JCExpression;
+	@:overload public function getVariable() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload public function getOperator() : com.sun.tools.javac.code.Symbol;
 	
@@ -1369,19 +1369,19 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A unary operation.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCUnary') extern class JCTree_JCUnary extends JCTree_JCExpression implements com.sun.source.tree.UnaryTree
+@:native('com$sun$tools$javac$tree$JCTree$JCUnary') extern class JCTree_JCUnary extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.UnaryTree
 {
-	public var arg : JCTree_JCExpression;
+	public var arg : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	public var operator : com.sun.tools.javac.code.Symbol;
 	
-	@:overload private function new(opcode : Int, arg : JCTree_JCExpression) : Void;
+	@:overload private function new(opcode : Int, arg : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload public function getOperator() : com.sun.tools.javac.code.Symbol;
 	
@@ -1396,23 +1396,23 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A binary operation.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCBinary') extern class JCTree_JCBinary extends JCTree_JCExpression implements com.sun.source.tree.BinaryTree
+@:native('com$sun$tools$javac$tree$JCTree$JCBinary') extern class JCTree_JCBinary extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.BinaryTree
 {
-	public var lhs : JCTree_JCExpression;
+	public var lhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var rhs : JCTree_JCExpression;
+	public var rhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	public var operator : com.sun.tools.javac.code.Symbol;
 	
-	@:overload private function new(opcode : Int, lhs : JCTree_JCExpression, rhs : JCTree_JCExpression, operator : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload private function new(opcode : Int, lhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, rhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, operator : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getLeftOperand() : JCTree_JCExpression;
+	@:overload public function getLeftOperand() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getRightOperand() : JCTree_JCExpression;
+	@:overload public function getRightOperand() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload public function getOperator() : com.sun.tools.javac.code.Symbol;
 	
@@ -1425,21 +1425,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A type cast.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCTypeCast') extern class JCTree_JCTypeCast extends JCTree_JCExpression implements com.sun.source.tree.TypeCastTree
+@:native('com$sun$tools$javac$tree$JCTree$JCTypeCast') extern class JCTree_JCTypeCast extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.TypeCastTree
 {
-	public var clazz : JCTree;
+	public var clazz : com.sun.tools.javac.tree.JCTree;
 	
-	public var expr : JCTree_JCExpression;
+	public var expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(clazz : JCTree, expr : JCTree_JCExpression) : Void;
+	@:overload private function new(clazz : com.sun.tools.javac.tree.JCTree, expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getType() : JCTree;
+	@:overload public function getType() : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1450,21 +1450,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A type test.
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCInstanceOf') extern class JCTree_JCInstanceOf extends JCTree_JCExpression implements com.sun.source.tree.InstanceOfTree
+@:native('com$sun$tools$javac$tree$JCTree$JCInstanceOf') extern class JCTree_JCInstanceOf extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.InstanceOfTree
 {
-	public var expr : JCTree_JCExpression;
+	public var expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var clazz : JCTree;
+	public var clazz : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload private function new(expr : JCTree_JCExpression, clazz : JCTree) : Void;
+	@:overload private function new(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, clazz : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getType() : JCTree;
+	@:overload public function getType() : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1475,21 +1475,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * An array selection
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCArrayAccess') extern class JCTree_JCArrayAccess extends JCTree_JCExpression implements com.sun.source.tree.ArrayAccessTree
+@:native('com$sun$tools$javac$tree$JCTree$JCArrayAccess') extern class JCTree_JCArrayAccess extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.ArrayAccessTree
 {
-	public var indexed : JCTree_JCExpression;
+	public var indexed : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var index : JCTree_JCExpression;
+	public var index : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(indexed : JCTree_JCExpression, index : JCTree_JCExpression) : Void;
+	@:overload private function new(indexed : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, index : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload public function getIndex() : JCTree_JCExpression;
+	@:overload public function getIndex() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1503,21 +1503,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param selector name of field to select thru
 * @param sym symbol of the selected class
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCFieldAccess') extern class JCTree_JCFieldAccess extends JCTree_JCExpression implements com.sun.source.tree.MemberSelectTree
+@:native('com$sun$tools$javac$tree$JCTree$JCFieldAccess') extern class JCTree_JCFieldAccess extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.MemberSelectTree
 {
-	public var selected : JCTree_JCExpression;
+	public var selected : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	public var name : com.sun.tools.javac.util.Name;
 	
 	public var sym : com.sun.tools.javac.code.Symbol;
 	
-	@:overload private function new(selected : JCTree_JCExpression, name : com.sun.tools.javac.util.Name, sym : com.sun.tools.javac.code.Symbol) : Void;
+	@:overload private function new(selected : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, name : com.sun.tools.javac.util.Name, sym : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getExpression() : JCTree_JCExpression;
+	@:overload public function getExpression() : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1532,7 +1532,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param idname the name
 * @param sym the symbol
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCIdent') extern class JCTree_JCIdent extends JCTree_JCExpression implements com.sun.source.tree.IdentifierTree
+@:native('com$sun$tools$javac$tree$JCTree$JCIdent') extern class JCTree_JCIdent extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.IdentifierTree
 {
 	public var name : com.sun.tools.javac.util.Name;
 	
@@ -1540,7 +1540,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload private function new(name : com.sun.tools.javac.util.Name, sym : com.sun.tools.javac.code.Symbol) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -1556,7 +1556,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * A constant value given literally.
 * @param value value representation
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCLiteral') extern class JCTree_JCLiteral extends JCTree_JCExpression implements com.sun.source.tree.LiteralTree
+@:native('com$sun$tools$javac$tree$JCTree$JCLiteral') extern class JCTree_JCLiteral extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.LiteralTree
 {
 	public var typetag : Int;
 	
@@ -1564,7 +1564,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload private function new(typetag : Int, value : Dynamic) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -1572,7 +1572,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
-	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : JCTree_JCLiteral;
+	@:overload override public function setType(type : com.sun.tools.javac.code.Type) : com.sun.tools.javac.tree.JCTree.JCTree_JCLiteral;
 	
 	@:overload override public function getTag() : Int;
 	
@@ -1583,13 +1583,13 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param tag the basic type id
 * @see TypeTags
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCPrimitiveTypeTree') extern class JCTree_JCPrimitiveTypeTree extends JCTree_JCExpression implements com.sun.source.tree.PrimitiveTypeTree
+@:native('com$sun$tools$javac$tree$JCTree$JCPrimitiveTypeTree') extern class JCTree_JCPrimitiveTypeTree extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.PrimitiveTypeTree
 {
 	public var typetag : Int;
 	
 	@:overload private function new(typetag : Int) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -1604,17 +1604,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * An array type, A[]
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCArrayTypeTree') extern class JCTree_JCArrayTypeTree extends JCTree_JCExpression implements com.sun.source.tree.ArrayTypeTree
+@:native('com$sun$tools$javac$tree$JCTree$JCArrayTypeTree') extern class JCTree_JCArrayTypeTree extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.ArrayTypeTree
 {
-	public var elemtype : JCTree_JCExpression;
+	public var elemtype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	@:overload private function new(elemtype : JCTree_JCExpression) : Void;
+	@:overload private function new(elemtype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getType() : JCTree;
+	@:overload public function getType() : com.sun.tools.javac.tree.JCTree;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1625,21 +1625,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A parameterized type, T<...>
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCTypeApply') extern class JCTree_JCTypeApply extends JCTree_JCExpression implements com.sun.source.tree.ParameterizedTypeTree
+@:native('com$sun$tools$javac$tree$JCTree$JCTypeApply') extern class JCTree_JCTypeApply extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.ParameterizedTypeTree
 {
-	public var clazz : JCTree_JCExpression;
+	public var clazz : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression;
 	
-	public var arguments : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var arguments : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload private function new(clazz : JCTree_JCExpression, arguments : com.sun.tools.javac.util.List<JCTree_JCExpression>) : Void;
+	@:overload private function new(clazz : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, arguments : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getType() : JCTree;
+	@:overload public function getType() : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getTypeArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1650,17 +1650,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 /**
 * A union type, T1 | T2 | ... Tn (used in multicatch statements)
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCTypeUnion') extern class JCTree_JCTypeUnion extends JCTree_JCExpression implements com.sun.source.tree.UnionTypeTree
+@:native('com$sun$tools$javac$tree$JCTree$JCTypeUnion') extern class JCTree_JCTypeUnion extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.UnionTypeTree
 {
-	public var alternatives : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var alternatives : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload private function new(components : com.sun.tools.javac.util.List<JCTree_JCExpression>) : Void;
+	@:overload private function new(components : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getTypeAlternatives() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getTypeAlternatives() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1673,21 +1673,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 * @param name name
 * @param bounds bounds
 */
-@:native('com$sun$tools$javac$tree$JCTree$JCTypeParameter') extern class JCTree_JCTypeParameter extends JCTree implements com.sun.source.tree.TypeParameterTree
+@:native('com$sun$tools$javac$tree$JCTree$JCTypeParameter') extern class JCTree_JCTypeParameter extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.TypeParameterTree
 {
 	public var name : com.sun.tools.javac.util.Name;
 	
-	public var bounds : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var bounds : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload private function new(name : com.sun.tools.javac.util.Name, bounds : com.sun.tools.javac.util.List<JCTree_JCExpression>) : Void;
+	@:overload private function new(name : com.sun.tools.javac.util.Name, bounds : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getName() : com.sun.tools.javac.util.Name;
 	
-	@:overload public function getBounds() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getBounds() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1695,19 +1695,19 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	
 }
-@:native('com$sun$tools$javac$tree$JCTree$JCWildcard') extern class JCTree_JCWildcard extends JCTree_JCExpression implements com.sun.source.tree.WildcardTree
+@:native('com$sun$tools$javac$tree$JCTree$JCWildcard') extern class JCTree_JCWildcard extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.WildcardTree
 {
-	public var kind : JCTree_TypeBoundKind;
+	public var kind : com.sun.tools.javac.tree.JCTree.JCTree_TypeBoundKind;
 	
-	public var inner : JCTree;
+	public var inner : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload private function new(kind : JCTree_TypeBoundKind, inner : JCTree) : Void;
+	@:overload private function new(kind : com.sun.tools.javac.tree.JCTree.JCTree_TypeBoundKind, inner : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getBound() : JCTree;
+	@:overload public function getBound() : com.sun.tools.javac.tree.JCTree;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1715,13 +1715,13 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	
 }
-@:native('com$sun$tools$javac$tree$JCTree$TypeBoundKind') extern class JCTree_TypeBoundKind extends JCTree
+@:native('com$sun$tools$javac$tree$JCTree$TypeBoundKind') extern class JCTree_TypeBoundKind extends com.sun.tools.javac.tree.JCTree
 {
 	public var kind : com.sun.tools.javac.code.BoundKind;
 	
 	@:overload private function new(kind : com.sun.tools.javac.code.BoundKind) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -1731,21 +1731,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	
 }
-@:native('com$sun$tools$javac$tree$JCTree$JCAnnotation') extern class JCTree_JCAnnotation extends JCTree_JCExpression implements com.sun.source.tree.AnnotationTree
+@:native('com$sun$tools$javac$tree$JCTree$JCAnnotation') extern class JCTree_JCAnnotation extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.AnnotationTree
 {
-	public var annotationType : JCTree;
+	public var annotationType : com.sun.tools.javac.tree.JCTree;
 	
-	public var args : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	public var args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
-	@:overload private function new(annotationType : JCTree, args : com.sun.tools.javac.util.List<JCTree_JCExpression>) : Void;
+	@:overload private function new(annotationType : com.sun.tools.javac.tree.JCTree, args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getAnnotationType() : JCTree;
+	@:overload public function getAnnotationType() : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload public function getArguments() : com.sun.tools.javac.util.List<JCTree_JCExpression>;
+	@:overload public function getArguments() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1753,21 +1753,21 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	
 }
-@:native('com$sun$tools$javac$tree$JCTree$JCModifiers') extern class JCTree_JCModifiers extends JCTree implements com.sun.source.tree.ModifiersTree
+@:native('com$sun$tools$javac$tree$JCTree$JCModifiers') extern class JCTree_JCModifiers extends com.sun.tools.javac.tree.JCTree implements com.sun.source.tree.ModifiersTree
 {
 	public var flags : haxe.Int64;
 	
-	public var annotations : com.sun.tools.javac.util.List<JCTree_JCAnnotation>;
+	public var annotations : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>;
 	
-	@:overload private function new(flags : haxe.Int64, annotations : com.sun.tools.javac.util.List<JCTree_JCAnnotation>) : Void;
+	@:overload private function new(flags : haxe.Int64, annotations : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	@:overload public function getFlags() : java.util.Set<javax.lang.model.element.Modifier>;
 	
-	@:overload public function getAnnotations() : com.sun.tools.javac.util.List<JCTree_JCAnnotation>;
+	@:overload public function getAnnotations() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1775,17 +1775,17 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 	
 }
-@:native('com$sun$tools$javac$tree$JCTree$JCErroneous') extern class JCTree_JCErroneous extends JCTree_JCExpression implements com.sun.source.tree.ErroneousTree
+@:native('com$sun$tools$javac$tree$JCTree$JCErroneous') extern class JCTree_JCErroneous extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression implements com.sun.source.tree.ErroneousTree
 {
-	public var errs : com.sun.tools.javac.util.List<JCTree>;
+	public var errs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
-	@:overload private function new(errs : com.sun.tools.javac.util.List<JCTree>) : Void;
+	@:overload private function new(errs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
-	@:overload public function getErrorTrees() : com.sun.tools.javac.util.List<JCTree>;
+	@:overload public function getErrorTrees() : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>;
 	
 	@:overload override public function accept<R, D>(v : com.sun.source.tree.TreeVisitor<R, D>, d : D) : R;
 	
@@ -1794,15 +1794,15 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	
 }
 /** (let int x = 3; in x+2) */
-@:native('com$sun$tools$javac$tree$JCTree$LetExpr') extern class JCTree_LetExpr extends JCTree_JCExpression
+@:native('com$sun$tools$javac$tree$JCTree$LetExpr') extern class JCTree_LetExpr extends com.sun.tools.javac.tree.JCTree.JCTree_JCExpression
 {
-	public var defs : com.sun.tools.javac.util.List<JCTree_JCVariableDecl>;
+	public var defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl>;
 	
-	public var expr : JCTree;
+	public var expr : com.sun.tools.javac.tree.JCTree;
 	
-	@:overload private function new(defs : com.sun.tools.javac.util.List<JCTree_JCVariableDecl>, expr : JCTree) : Void;
+	@:overload private function new(defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl>, expr : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function accept(v : JCTree_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.tree.JCTree.JCTree_Visitor) : Void;
 	
 	@:overload override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
@@ -1816,105 +1816,105 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 */
 @:native('com$sun$tools$javac$tree$JCTree$Factory') extern interface JCTree_Factory
 {
-	@:overload public function TopLevel(packageAnnotations : com.sun.tools.javac.util.List<JCTree_JCAnnotation>, pid : JCTree_JCExpression, defs : com.sun.tools.javac.util.List<JCTree>) : JCTree_JCCompilationUnit;
+	@:overload public function TopLevel(packageAnnotations : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>, pid : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit;
 	
-	@:overload public function Import(qualid : JCTree, staticImport : Bool) : JCTree_JCImport;
+	@:overload public function Import(qualid : com.sun.tools.javac.tree.JCTree, staticImport : Bool) : com.sun.tools.javac.tree.JCTree.JCTree_JCImport;
 	
-	@:overload public function ClassDef(mods : JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, typarams : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>, extending : JCTree_JCExpression, implementing : com.sun.tools.javac.util.List<JCTree_JCExpression>, defs : com.sun.tools.javac.util.List<JCTree>) : JCTree_JCClassDecl;
+	@:overload public function ClassDef(mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, typarams : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>, extending : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, implementing : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl;
 	
-	@:overload public function MethodDef(mods : JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, restype : JCTree_JCExpression, typarams : com.sun.tools.javac.util.List<JCTree_JCTypeParameter>, params : com.sun.tools.javac.util.List<JCTree_JCVariableDecl>, thrown : com.sun.tools.javac.util.List<JCTree_JCExpression>, body : JCTree_JCBlock, defaultValue : JCTree_JCExpression) : JCTree_JCMethodDecl;
+	@:overload public function MethodDef(mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, restype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, typarams : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter>, params : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl>, thrown : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock, defaultValue : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl;
 	
-	@:overload public function VarDef(mods : JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, vartype : JCTree_JCExpression, init : JCTree_JCExpression) : JCTree_JCVariableDecl;
+	@:overload public function VarDef(mods : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers, name : com.sun.tools.javac.util.Name, vartype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, init : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl;
 	
-	@:overload public function Skip() : JCTree_JCSkip;
+	@:overload public function Skip() : com.sun.tools.javac.tree.JCTree.JCTree_JCSkip;
 	
-	@:overload public function Block(flags : haxe.Int64, stats : com.sun.tools.javac.util.List<JCTree_JCStatement>) : JCTree_JCBlock;
+	@:overload public function Block(flags : haxe.Int64, stats : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>) : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock;
 	
-	@:overload public function DoLoop(body : JCTree_JCStatement, cond : JCTree_JCExpression) : JCTree_JCDoWhileLoop;
+	@:overload public function DoLoop(body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement, cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCDoWhileLoop;
 	
-	@:overload public function WhileLoop(cond : JCTree_JCExpression, body : JCTree_JCStatement) : JCTree_JCWhileLoop;
+	@:overload public function WhileLoop(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : com.sun.tools.javac.tree.JCTree.JCTree_JCWhileLoop;
 	
-	@:overload public function ForLoop(init : com.sun.tools.javac.util.List<JCTree_JCStatement>, cond : JCTree_JCExpression, step : com.sun.tools.javac.util.List<JCTree_JCExpressionStatement>, body : JCTree_JCStatement) : JCTree_JCForLoop;
+	@:overload public function ForLoop(init : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>, cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, step : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpressionStatement>, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : com.sun.tools.javac.tree.JCTree.JCTree_JCForLoop;
 	
-	@:overload public function ForeachLoop(_var : JCTree_JCVariableDecl, expr : JCTree_JCExpression, body : JCTree_JCStatement) : JCTree_JCEnhancedForLoop;
+	@:overload public function ForeachLoop(_var : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : com.sun.tools.javac.tree.JCTree.JCTree_JCEnhancedForLoop;
 	
-	@:overload public function Labelled(label : com.sun.tools.javac.util.Name, body : JCTree_JCStatement) : JCTree_JCLabeledStatement;
+	@:overload public function Labelled(label : com.sun.tools.javac.util.Name, body : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : com.sun.tools.javac.tree.JCTree.JCTree_JCLabeledStatement;
 	
-	@:overload public function Switch(selector : JCTree_JCExpression, cases : com.sun.tools.javac.util.List<JCTree_JCCase>) : JCTree_JCSwitch;
+	@:overload public function Switch(selector : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, cases : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCase>) : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch;
 	
-	@:overload public function Case(pat : JCTree_JCExpression, stats : com.sun.tools.javac.util.List<JCTree_JCStatement>) : JCTree_JCCase;
+	@:overload public function Case(pat : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, stats : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCStatement>) : com.sun.tools.javac.tree.JCTree.JCTree_JCCase;
 	
-	@:overload public function Synchronized(lock : JCTree_JCExpression, body : JCTree_JCBlock) : JCTree_JCSynchronized;
+	@:overload public function Synchronized(lock : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : com.sun.tools.javac.tree.JCTree.JCTree_JCSynchronized;
 	
-	@:overload public function Try(body : JCTree_JCBlock, catchers : com.sun.tools.javac.util.List<JCTree_JCCatch>, finalizer : JCTree_JCBlock) : JCTree_JCTry;
+	@:overload public function Try(body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock, catchers : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCatch>, finalizer : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : com.sun.tools.javac.tree.JCTree.JCTree_JCTry;
 	
-	@:overload public function Try(resources : com.sun.tools.javac.util.List<JCTree>, body : JCTree_JCBlock, catchers : com.sun.tools.javac.util.List<JCTree_JCCatch>, finalizer : JCTree_JCBlock) : JCTree_JCTry;
+	@:overload public function Try(resources : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock, catchers : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCCatch>, finalizer : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : com.sun.tools.javac.tree.JCTree.JCTree_JCTry;
 	
-	@:overload public function Catch(param : JCTree_JCVariableDecl, body : JCTree_JCBlock) : JCTree_JCCatch;
+	@:overload public function Catch(param : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl, body : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : com.sun.tools.javac.tree.JCTree.JCTree_JCCatch;
 	
-	@:overload public function Conditional(cond : JCTree_JCExpression, thenpart : JCTree_JCExpression, elsepart : JCTree_JCExpression) : JCTree_JCConditional;
+	@:overload public function Conditional(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, thenpart : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, elsepart : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCConditional;
 	
-	@:overload public function If(cond : JCTree_JCExpression, thenpart : JCTree_JCStatement, elsepart : JCTree_JCStatement) : JCTree_JCIf;
+	@:overload public function If(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, thenpart : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement, elsepart : com.sun.tools.javac.tree.JCTree.JCTree_JCStatement) : com.sun.tools.javac.tree.JCTree.JCTree_JCIf;
 	
-	@:overload public function Exec(expr : JCTree_JCExpression) : JCTree_JCExpressionStatement;
+	@:overload public function Exec(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCExpressionStatement;
 	
-	@:overload public function Break(label : com.sun.tools.javac.util.Name) : JCTree_JCBreak;
+	@:overload public function Break(label : com.sun.tools.javac.util.Name) : com.sun.tools.javac.tree.JCTree.JCTree_JCBreak;
 	
-	@:overload public function Continue(label : com.sun.tools.javac.util.Name) : JCTree_JCContinue;
+	@:overload public function Continue(label : com.sun.tools.javac.util.Name) : com.sun.tools.javac.tree.JCTree.JCTree_JCContinue;
 	
-	@:overload public function Return(expr : JCTree_JCExpression) : JCTree_JCReturn;
+	@:overload public function Return(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCReturn;
 	
-	@:overload public function Throw(expr : JCTree) : JCTree_JCThrow;
+	@:overload public function Throw(expr : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.tree.JCTree.JCTree_JCThrow;
 	
-	@:overload public function Assert(cond : JCTree_JCExpression, detail : JCTree_JCExpression) : JCTree_JCAssert;
+	@:overload public function Assert(cond : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, detail : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCAssert;
 	
-	@:overload public function Apply(typeargs : com.sun.tools.javac.util.List<JCTree_JCExpression>, fn : JCTree_JCExpression, args : com.sun.tools.javac.util.List<JCTree_JCExpression>) : JCTree_JCMethodInvocation;
+	@:overload public function Apply(typeargs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, fn : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation;
 	
-	@:overload public function NewClass(encl : JCTree_JCExpression, typeargs : com.sun.tools.javac.util.List<JCTree_JCExpression>, clazz : JCTree_JCExpression, args : com.sun.tools.javac.util.List<JCTree_JCExpression>, def : JCTree_JCClassDecl) : JCTree_JCNewClass;
+	@:overload public function NewClass(encl : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, typeargs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, clazz : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, def : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass;
 	
-	@:overload public function NewArray(elemtype : JCTree_JCExpression, dims : com.sun.tools.javac.util.List<JCTree_JCExpression>, elems : com.sun.tools.javac.util.List<JCTree_JCExpression>) : JCTree_JCNewArray;
+	@:overload public function NewArray(elemtype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, dims : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>, elems : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : com.sun.tools.javac.tree.JCTree.JCTree_JCNewArray;
 	
-	@:overload public function Parens(expr : JCTree_JCExpression) : JCTree_JCParens;
+	@:overload public function Parens(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCParens;
 	
-	@:overload public function Assign(lhs : JCTree_JCExpression, rhs : JCTree_JCExpression) : JCTree_JCAssign;
+	@:overload public function Assign(lhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, rhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCAssign;
 	
-	@:overload public function Assignop(opcode : Int, lhs : JCTree, rhs : JCTree) : JCTree_JCAssignOp;
+	@:overload public function Assignop(opcode : Int, lhs : com.sun.tools.javac.tree.JCTree, rhs : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.tree.JCTree.JCTree_JCAssignOp;
 	
-	@:overload public function Unary(opcode : Int, arg : JCTree_JCExpression) : JCTree_JCUnary;
+	@:overload public function Unary(opcode : Int, arg : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCUnary;
 	
-	@:overload public function Binary(opcode : Int, lhs : JCTree_JCExpression, rhs : JCTree_JCExpression) : JCTree_JCBinary;
+	@:overload public function Binary(opcode : Int, lhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, rhs : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCBinary;
 	
-	@:overload public function TypeCast(expr : JCTree, type : JCTree_JCExpression) : JCTree_JCTypeCast;
+	@:overload public function TypeCast(expr : com.sun.tools.javac.tree.JCTree, type : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeCast;
 	
-	@:overload public function TypeTest(expr : JCTree_JCExpression, clazz : JCTree) : JCTree_JCInstanceOf;
+	@:overload public function TypeTest(expr : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, clazz : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.tree.JCTree.JCTree_JCInstanceOf;
 	
-	@:overload public function Indexed(indexed : JCTree_JCExpression, index : JCTree_JCExpression) : JCTree_JCArrayAccess;
+	@:overload public function Indexed(indexed : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, index : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayAccess;
 	
-	@:overload public function Select(selected : JCTree_JCExpression, selector : com.sun.tools.javac.util.Name) : JCTree_JCFieldAccess;
+	@:overload public function Select(selected : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, selector : com.sun.tools.javac.util.Name) : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess;
 	
-	@:overload public function Ident(idname : com.sun.tools.javac.util.Name) : JCTree_JCIdent;
+	@:overload public function Ident(idname : com.sun.tools.javac.util.Name) : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent;
 	
-	@:overload public function Literal(tag : Int, value : Dynamic) : JCTree_JCLiteral;
+	@:overload public function Literal(tag : Int, value : Dynamic) : com.sun.tools.javac.tree.JCTree.JCTree_JCLiteral;
 	
-	@:overload public function TypeIdent(typetag : Int) : JCTree_JCPrimitiveTypeTree;
+	@:overload public function TypeIdent(typetag : Int) : com.sun.tools.javac.tree.JCTree.JCTree_JCPrimitiveTypeTree;
 	
-	@:overload public function TypeArray(elemtype : JCTree_JCExpression) : JCTree_JCArrayTypeTree;
+	@:overload public function TypeArray(elemtype : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression) : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayTypeTree;
 	
-	@:overload public function TypeApply(clazz : JCTree_JCExpression, arguments : com.sun.tools.javac.util.List<JCTree_JCExpression>) : JCTree_JCTypeApply;
+	@:overload public function TypeApply(clazz : com.sun.tools.javac.tree.JCTree.JCTree_JCExpression, arguments : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply;
 	
-	@:overload public function TypeParameter(name : com.sun.tools.javac.util.Name, bounds : com.sun.tools.javac.util.List<JCTree_JCExpression>) : JCTree_JCTypeParameter;
+	@:overload public function TypeParameter(name : com.sun.tools.javac.util.Name, bounds : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter;
 	
-	@:overload public function Wildcard(kind : JCTree_TypeBoundKind, type : JCTree) : JCTree_JCWildcard;
+	@:overload public function Wildcard(kind : com.sun.tools.javac.tree.JCTree.JCTree_TypeBoundKind, type : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.tree.JCTree.JCTree_JCWildcard;
 	
-	@:overload public function TypeBoundKind(kind : com.sun.tools.javac.code.BoundKind) : JCTree_TypeBoundKind;
+	@:overload public function TypeBoundKind(kind : com.sun.tools.javac.code.BoundKind) : com.sun.tools.javac.tree.JCTree.JCTree_TypeBoundKind;
 	
-	@:overload public function Annotation(annotationType : JCTree, args : com.sun.tools.javac.util.List<JCTree_JCExpression>) : JCTree_JCAnnotation;
+	@:overload public function Annotation(annotationType : com.sun.tools.javac.tree.JCTree, args : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCExpression>) : com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation;
 	
-	@:overload public function Modifiers(flags : haxe.Int64, annotations : com.sun.tools.javac.util.List<JCTree_JCAnnotation>) : JCTree_JCModifiers;
+	@:overload public function Modifiers(flags : haxe.Int64, annotations : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation>) : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers;
 	
-	@:overload public function Erroneous(errs : com.sun.tools.javac.util.List<JCTree>) : JCTree_JCErroneous;
+	@:overload public function Erroneous(errs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree>) : com.sun.tools.javac.tree.JCTree.JCTree_JCErroneous;
 	
-	@:overload public function LetExpr(defs : com.sun.tools.javac.util.List<JCTree_JCVariableDecl>, expr : JCTree) : JCTree_LetExpr;
+	@:overload public function LetExpr(defs : com.sun.tools.javac.util.List<com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl>, expr : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.tree.JCTree.JCTree_LetExpr;
 	
 	
 }
@@ -1922,107 +1922,107 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 */
 @:native('com$sun$tools$javac$tree$JCTree$Visitor') extern class JCTree_Visitor
 {
-	@:overload public function visitTopLevel(that : JCTree_JCCompilationUnit) : Void;
+	@:overload public function visitTopLevel(that : com.sun.tools.javac.tree.JCTree.JCTree_JCCompilationUnit) : Void;
 	
-	@:overload public function visitImport(that : JCTree_JCImport) : Void;
+	@:overload public function visitImport(that : com.sun.tools.javac.tree.JCTree.JCTree_JCImport) : Void;
 	
-	@:overload public function visitClassDef(that : JCTree_JCClassDecl) : Void;
+	@:overload public function visitClassDef(that : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
-	@:overload public function visitMethodDef(that : JCTree_JCMethodDecl) : Void;
+	@:overload public function visitMethodDef(that : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodDecl) : Void;
 	
-	@:overload public function visitVarDef(that : JCTree_JCVariableDecl) : Void;
+	@:overload public function visitVarDef(that : com.sun.tools.javac.tree.JCTree.JCTree_JCVariableDecl) : Void;
 	
-	@:overload public function visitSkip(that : JCTree_JCSkip) : Void;
+	@:overload public function visitSkip(that : com.sun.tools.javac.tree.JCTree.JCTree_JCSkip) : Void;
 	
-	@:overload public function visitBlock(that : JCTree_JCBlock) : Void;
+	@:overload public function visitBlock(that : com.sun.tools.javac.tree.JCTree.JCTree_JCBlock) : Void;
 	
-	@:overload public function visitDoLoop(that : JCTree_JCDoWhileLoop) : Void;
+	@:overload public function visitDoLoop(that : com.sun.tools.javac.tree.JCTree.JCTree_JCDoWhileLoop) : Void;
 	
-	@:overload public function visitWhileLoop(that : JCTree_JCWhileLoop) : Void;
+	@:overload public function visitWhileLoop(that : com.sun.tools.javac.tree.JCTree.JCTree_JCWhileLoop) : Void;
 	
-	@:overload public function visitForLoop(that : JCTree_JCForLoop) : Void;
+	@:overload public function visitForLoop(that : com.sun.tools.javac.tree.JCTree.JCTree_JCForLoop) : Void;
 	
-	@:overload public function visitForeachLoop(that : JCTree_JCEnhancedForLoop) : Void;
+	@:overload public function visitForeachLoop(that : com.sun.tools.javac.tree.JCTree.JCTree_JCEnhancedForLoop) : Void;
 	
-	@:overload public function visitLabelled(that : JCTree_JCLabeledStatement) : Void;
+	@:overload public function visitLabelled(that : com.sun.tools.javac.tree.JCTree.JCTree_JCLabeledStatement) : Void;
 	
-	@:overload public function visitSwitch(that : JCTree_JCSwitch) : Void;
+	@:overload public function visitSwitch(that : com.sun.tools.javac.tree.JCTree.JCTree_JCSwitch) : Void;
 	
-	@:overload public function visitCase(that : JCTree_JCCase) : Void;
+	@:overload public function visitCase(that : com.sun.tools.javac.tree.JCTree.JCTree_JCCase) : Void;
 	
-	@:overload public function visitSynchronized(that : JCTree_JCSynchronized) : Void;
+	@:overload public function visitSynchronized(that : com.sun.tools.javac.tree.JCTree.JCTree_JCSynchronized) : Void;
 	
-	@:overload public function visitTry(that : JCTree_JCTry) : Void;
+	@:overload public function visitTry(that : com.sun.tools.javac.tree.JCTree.JCTree_JCTry) : Void;
 	
-	@:overload public function visitCatch(that : JCTree_JCCatch) : Void;
+	@:overload public function visitCatch(that : com.sun.tools.javac.tree.JCTree.JCTree_JCCatch) : Void;
 	
-	@:overload public function visitConditional(that : JCTree_JCConditional) : Void;
+	@:overload public function visitConditional(that : com.sun.tools.javac.tree.JCTree.JCTree_JCConditional) : Void;
 	
-	@:overload public function visitIf(that : JCTree_JCIf) : Void;
+	@:overload public function visitIf(that : com.sun.tools.javac.tree.JCTree.JCTree_JCIf) : Void;
 	
-	@:overload public function visitExec(that : JCTree_JCExpressionStatement) : Void;
+	@:overload public function visitExec(that : com.sun.tools.javac.tree.JCTree.JCTree_JCExpressionStatement) : Void;
 	
-	@:overload public function visitBreak(that : JCTree_JCBreak) : Void;
+	@:overload public function visitBreak(that : com.sun.tools.javac.tree.JCTree.JCTree_JCBreak) : Void;
 	
-	@:overload public function visitContinue(that : JCTree_JCContinue) : Void;
+	@:overload public function visitContinue(that : com.sun.tools.javac.tree.JCTree.JCTree_JCContinue) : Void;
 	
-	@:overload public function visitReturn(that : JCTree_JCReturn) : Void;
+	@:overload public function visitReturn(that : com.sun.tools.javac.tree.JCTree.JCTree_JCReturn) : Void;
 	
-	@:overload public function visitThrow(that : JCTree_JCThrow) : Void;
+	@:overload public function visitThrow(that : com.sun.tools.javac.tree.JCTree.JCTree_JCThrow) : Void;
 	
-	@:overload public function visitAssert(that : JCTree_JCAssert) : Void;
+	@:overload public function visitAssert(that : com.sun.tools.javac.tree.JCTree.JCTree_JCAssert) : Void;
 	
-	@:overload public function visitApply(that : JCTree_JCMethodInvocation) : Void;
+	@:overload public function visitApply(that : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation) : Void;
 	
-	@:overload public function visitNewClass(that : JCTree_JCNewClass) : Void;
+	@:overload public function visitNewClass(that : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass) : Void;
 	
-	@:overload public function visitNewArray(that : JCTree_JCNewArray) : Void;
+	@:overload public function visitNewArray(that : com.sun.tools.javac.tree.JCTree.JCTree_JCNewArray) : Void;
 	
-	@:overload public function visitParens(that : JCTree_JCParens) : Void;
+	@:overload public function visitParens(that : com.sun.tools.javac.tree.JCTree.JCTree_JCParens) : Void;
 	
-	@:overload public function visitAssign(that : JCTree_JCAssign) : Void;
+	@:overload public function visitAssign(that : com.sun.tools.javac.tree.JCTree.JCTree_JCAssign) : Void;
 	
-	@:overload public function visitAssignop(that : JCTree_JCAssignOp) : Void;
+	@:overload public function visitAssignop(that : com.sun.tools.javac.tree.JCTree.JCTree_JCAssignOp) : Void;
 	
-	@:overload public function visitUnary(that : JCTree_JCUnary) : Void;
+	@:overload public function visitUnary(that : com.sun.tools.javac.tree.JCTree.JCTree_JCUnary) : Void;
 	
-	@:overload public function visitBinary(that : JCTree_JCBinary) : Void;
+	@:overload public function visitBinary(that : com.sun.tools.javac.tree.JCTree.JCTree_JCBinary) : Void;
 	
-	@:overload public function visitTypeCast(that : JCTree_JCTypeCast) : Void;
+	@:overload public function visitTypeCast(that : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeCast) : Void;
 	
-	@:overload public function visitTypeTest(that : JCTree_JCInstanceOf) : Void;
+	@:overload public function visitTypeTest(that : com.sun.tools.javac.tree.JCTree.JCTree_JCInstanceOf) : Void;
 	
-	@:overload public function visitIndexed(that : JCTree_JCArrayAccess) : Void;
+	@:overload public function visitIndexed(that : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayAccess) : Void;
 	
-	@:overload public function visitSelect(that : JCTree_JCFieldAccess) : Void;
+	@:overload public function visitSelect(that : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
-	@:overload public function visitIdent(that : JCTree_JCIdent) : Void;
+	@:overload public function visitIdent(that : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
 	
-	@:overload public function visitLiteral(that : JCTree_JCLiteral) : Void;
+	@:overload public function visitLiteral(that : com.sun.tools.javac.tree.JCTree.JCTree_JCLiteral) : Void;
 	
-	@:overload public function visitTypeIdent(that : JCTree_JCPrimitiveTypeTree) : Void;
+	@:overload public function visitTypeIdent(that : com.sun.tools.javac.tree.JCTree.JCTree_JCPrimitiveTypeTree) : Void;
 	
-	@:overload public function visitTypeArray(that : JCTree_JCArrayTypeTree) : Void;
+	@:overload public function visitTypeArray(that : com.sun.tools.javac.tree.JCTree.JCTree_JCArrayTypeTree) : Void;
 	
-	@:overload public function visitTypeApply(that : JCTree_JCTypeApply) : Void;
+	@:overload public function visitTypeApply(that : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeApply) : Void;
 	
-	@:overload public function visitTypeUnion(that : JCTree_JCTypeUnion) : Void;
+	@:overload public function visitTypeUnion(that : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeUnion) : Void;
 	
-	@:overload public function visitTypeParameter(that : JCTree_JCTypeParameter) : Void;
+	@:overload public function visitTypeParameter(that : com.sun.tools.javac.tree.JCTree.JCTree_JCTypeParameter) : Void;
 	
-	@:overload public function visitWildcard(that : JCTree_JCWildcard) : Void;
+	@:overload public function visitWildcard(that : com.sun.tools.javac.tree.JCTree.JCTree_JCWildcard) : Void;
 	
-	@:overload public function visitTypeBoundKind(that : JCTree_TypeBoundKind) : Void;
+	@:overload public function visitTypeBoundKind(that : com.sun.tools.javac.tree.JCTree.JCTree_TypeBoundKind) : Void;
 	
-	@:overload public function visitAnnotation(that : JCTree_JCAnnotation) : Void;
+	@:overload public function visitAnnotation(that : com.sun.tools.javac.tree.JCTree.JCTree_JCAnnotation) : Void;
 	
-	@:overload public function visitModifiers(that : JCTree_JCModifiers) : Void;
+	@:overload public function visitModifiers(that : com.sun.tools.javac.tree.JCTree.JCTree_JCModifiers) : Void;
 	
-	@:overload public function visitErroneous(that : JCTree_JCErroneous) : Void;
+	@:overload public function visitErroneous(that : com.sun.tools.javac.tree.JCTree.JCTree_JCErroneous) : Void;
 	
-	@:overload public function visitLetExpr(that : JCTree_LetExpr) : Void;
+	@:overload public function visitLetExpr(that : com.sun.tools.javac.tree.JCTree.JCTree_LetExpr) : Void;
 	
-	@:overload public function visitTree(that : JCTree) : Void;
+	@:overload public function visitTree(that : com.sun.tools.javac.tree.JCTree) : Void;
 	
 	
 }

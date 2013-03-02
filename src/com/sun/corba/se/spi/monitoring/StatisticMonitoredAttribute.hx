@@ -71,13 +71,13 @@ extern class StatisticMonitoredAttribute extends com.sun.corba.se.spi.monitoring
 	*  String with the computed statistics based on the samples accumulated in the
 	*  Statistics Accumulator.
 	*/
-	@:overload override public function getValue() : Dynamic;
+	@:overload public function getValue() : Dynamic;
 	
 	/**
 	*  Clears the state on Statistics Accumulator, After this call all samples are
 	*  treated fresh and the old sample computations are disregarded.
 	*/
-	@:overload override public function clearState() : Void;
+	@:overload public function clearState() : Void;
 	
 	/**
 	*  Gets the statistics accumulator associated with StatisticMonitoredAttribute.

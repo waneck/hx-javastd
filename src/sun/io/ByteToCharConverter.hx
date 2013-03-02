@@ -63,13 +63,13 @@ extern class ByteToCharConverter
 	/**
 	* Create an instance of the default ByteToCharConverter subclass.
 	*/
-	@:overload public static function getDefault() : ByteToCharConverter;
+	@:overload public static function getDefault() : sun.io.ByteToCharConverter;
 	
 	/**
 	* Returns appropriate ByteToCharConverter subclass instance.
 	* @param string represents encoding
 	*/
-	@:overload public static function getConverter(encoding : String) : ByteToCharConverter;
+	@:overload public static function getConverter(encoding : String) : sun.io.ByteToCharConverter;
 	
 	/**
 	* Returns the character set id for the conversion

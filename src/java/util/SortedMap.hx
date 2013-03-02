@@ -149,7 +149,7 @@ package java.util;
 	*         range, and {@code fromKey} or {@code toKey} lies
 	*         outside the bounds of the range
 	*/
-	@:overload public function subMap(fromKey : K, toKey : K) : SortedMap<K, V>;
+	@:overload public function subMap(fromKey : K, toKey : K) : java.util.SortedMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys are
@@ -176,7 +176,7 @@ package java.util;
 	*         restricted range, and {@code toKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function headMap(toKey : K) : SortedMap<K, V>;
+	@:overload public function headMap(toKey : K) : java.util.SortedMap<K, V>;
 	
 	/**
 	* Returns a view of the portion of this map whose keys are
@@ -203,7 +203,7 @@ package java.util;
 	*         restricted range, and {@code fromKey} lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function tailMap(fromKey : K) : SortedMap<K, V>;
+	@:overload public function tailMap(fromKey : K) : java.util.SortedMap<K, V>;
 	
 	/**
 	* Returns the first (lowest) key currently in this map.

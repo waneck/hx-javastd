@@ -35,32 +35,32 @@ package com.sun.media.sound;
 	/** Creates a FastShortMessage from this ShortMessage */
 	@:overload public function new(msg : javax.sound.midi.ShortMessage) : Void;
 	
-	@:overload override public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getMessage() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getLength() : Int;
+	@:overload public function getLength() : Int;
 	
-	@:overload override public function setMessage(status : Int) : Void;
+	@:overload public function setMessage(status : Int) : Void;
 	
-	@:overload override public function setMessage(status : Int, data1 : Int, data2 : Int) : Void;
+	@:overload public function setMessage(status : Int, data1 : Int, data2 : Int) : Void;
 	
-	@:overload override public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
+	@:overload public function setMessage(command : Int, channel : Int, data1 : Int, data2 : Int) : Void;
 	
-	@:overload override public function getChannel() : Int;
+	@:overload public function getChannel() : Int;
 	
-	@:overload override public function getCommand() : Int;
+	@:overload public function getCommand() : Int;
 	
-	@:overload override public function getData1() : Int;
+	@:overload public function getData1() : Int;
 	
-	@:overload override public function getData2() : Int;
+	@:overload public function getData2() : Int;
 	
-	@:overload override public function getStatus() : Int;
+	@:overload public function getStatus() : Int;
 	
 	/**
 	* Creates a new object of the same class and with the same contents
 	* as this object.
 	* @return a clone of this instance.
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	
 }

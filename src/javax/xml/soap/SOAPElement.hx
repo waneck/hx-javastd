@@ -41,7 +41,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*                          <code>SOAPElement</code> object
 	* @see SOAPElement#addChildElement(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addChildElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the given
@@ -58,7 +58,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#addChildElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -72,7 +72,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(localName : String) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addChildElement(localName : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -89,7 +89,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*         context of this <code>SOAPElement</code> or  if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the
@@ -107,7 +107,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Add a <code>SOAPElement</code> as a child of this
@@ -140,7 +140,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @return an instance representing the new SOAP element that was
 	*         actually added to the tree.
 	*/
-	@:overload @:public @:public @:public @:public public function addChildElement(element : SOAPElement) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Detaches all children of this <code>SOAPElement</code>.
@@ -168,7 +168,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*                      attach it as a child to this
 	*                      <code>SOAPElement</code>
 	*/
-	@:overload @:public @:public @:public @:public public function addTextNode(text : String) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -185,7 +185,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	<code>name</code> on this SOAPElement.
 	* @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
 	*/
-	@:overload @:public @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Adds an attribute with the specified name and value to this
@@ -203,7 +203,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @see SOAPElement#addAttribute(Name, String)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : SOAPElement;
+	@:require(java3) @:overload @:public @:public @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Adds a namespace declaration with the specified prefix and URI to this
@@ -217,7 +217,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	* @exception SOAPException if there is an error in creating the
 	*                          namespace
 	*/
-	@:overload @:public @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : SOAPElement;
+	@:overload @:public @:public @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified name.
@@ -362,7 +362,7 @@ extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Elemen
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function setElementQName(newName : javax.xml.namespace.QName) : SOAPElement;
+	@:require(java3) @:overload @:public @:public public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Removes the attribute with the specified name.

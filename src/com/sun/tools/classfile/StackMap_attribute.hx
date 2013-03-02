@@ -25,15 +25,15 @@ package com.sun.tools.classfile;
 */
 extern class StackMap_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, entries : java.NativeArray<StackMap_attribute_stack_map_frame>) : Void;
+	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, entries : java.NativeArray<com.sun.tools.classfile.StackMap_attribute.StackMap_attribute_stack_map_frame>) : Void;
 	
-	@:overload public function new(name_index : Int, entries : java.NativeArray<StackMap_attribute_stack_map_frame>) : Void;
+	@:overload public function new(name_index : Int, entries : java.NativeArray<com.sun.tools.classfile.StackMap_attribute.StackMap_attribute_stack_map_frame>) : Void;
 	
 	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var number_of_entries(default, null) : Int;
 	
-	public var entries(default, null) : java.NativeArray<StackMap_attribute_stack_map_frame>;
+	public var entries(default, null) : java.NativeArray<com.sun.tools.classfile.StackMap_attribute.StackMap_attribute_stack_map_frame>;
 	
 	
 }

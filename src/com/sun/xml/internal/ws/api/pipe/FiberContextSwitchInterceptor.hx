@@ -60,7 +60,7 @@ extern interface FiberContextSwitchInterceptor
 	*      The opaque return value from the the {@link Work}. Simply return
 	*      the value from {@link Work#execute(Object)}.
 	*/
-	@:overload public function execute<R, P>(f : com.sun.xml.internal.ws.api.pipe.Fiber, p : P, work : FiberContextSwitchInterceptor_Work<R, P>) : R;
+	@:overload public function execute<R, P>(f : com.sun.xml.internal.ws.api.pipe.Fiber, p : P, work : com.sun.xml.internal.ws.api.pipe.FiberContextSwitchInterceptor.FiberContextSwitchInterceptor_Work<R, P>) : R;
 	
 	
 }

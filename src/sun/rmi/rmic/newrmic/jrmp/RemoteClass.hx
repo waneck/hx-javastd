@@ -58,7 +58,7 @@ package sun.rmi.rmic.newrmic.jrmp;
 	* Cloning is supported by returning a shallow copy of this
 	* object.
 	**/
-	@:overload private function clone() : RemoteClass_Method;
+	@:overload private function clone() : sun.rmi.rmic.newrmic.jrmp.RemoteClass.RemoteClass_Method;
 	
 	
 }

@@ -27,7 +27,7 @@ extern class JPEGImageReaderResources extends java.util.ListResourceBundle
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

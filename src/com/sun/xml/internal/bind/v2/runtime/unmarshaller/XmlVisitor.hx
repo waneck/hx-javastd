@@ -95,7 +95,7 @@ extern interface XmlVisitor
 	* Gets the predictor that can be used for the caller to avoid
 	* calling {@link #text(CharSequence)} unnecessarily.
 	*/
-	@:overload public function getPredictor() : XmlVisitor_TextPredictor;
+	@:overload public function getPredictor() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
 	
 	
 }

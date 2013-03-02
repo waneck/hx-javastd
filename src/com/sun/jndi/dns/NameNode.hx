@@ -30,7 +30,7 @@ package com.sun.jndi.dns;
 	* in a tree.  Should be overridden in a subclass to return an object
 	* of the subclass's type.
 	*/
-	@:overload private function newNameNode(label : String) : NameNode;
+	@:overload private function newNameNode(label : String) : com.sun.jndi.dns.NameNode;
 	
 	
 }

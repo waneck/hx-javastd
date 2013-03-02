@@ -55,7 +55,7 @@ package com.sun.beans.decoder;
 	* @param args  the array of arguments
 	* @return the value of this element
 	*/
-	@:overload override private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
+	@:overload private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
 	
 	
 }

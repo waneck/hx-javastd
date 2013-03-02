@@ -50,12 +50,12 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	*/
 	@:overload public function new(env : com.sun.tools.javadoc.DocEnv, sym : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, documentation : String, tree : com.sun.tools.javac.tree.JCTree) : Void;
 	
-	@:overload override public function setRawCommentText(rawDocumentation : String) : Void;
+	@:overload public function setRawCommentText(rawDocumentation : String) : Void;
 	
 	/**
 	* Do lazy initialization of "documentation" string.
 	*/
-	@:overload override private function documentation() : String;
+	@:overload private function documentation() : String;
 	
 	/**
 	* Add all included classes (including Exceptions and Errors)
@@ -140,7 +140,7 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	/**
 	* Return true if this package is included in the active set.
 	*/
-	@:overload override public function isIncluded() : Bool;
+	@:overload public function isIncluded() : Bool;
 	
 	/**
 	* Get package name.
@@ -149,12 +149,12 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	* name of a package -- package names are always returned in their
 	* uniquely qualified form.
 	*/
-	@:overload override public function name() : String;
+	@:overload public function name() : String;
 	
 	/**
 	* Get package name.
 	*/
-	@:overload override public function qualifiedName() : String;
+	@:overload public function qualifiedName() : String;
 	
 	/**
 	* set doc path for an unzipped directory
@@ -165,7 +165,7 @@ extern class PackageDocImpl extends com.sun.tools.javadoc.DocImpl implements com
 	* Return the source position of the entity, or null if
 	* no position is available.
 	*/
-	@:overload override public function position() : com.sun.javadoc.SourcePosition;
+	@:overload public function position() : com.sun.javadoc.SourcePosition;
 	
 	
 }

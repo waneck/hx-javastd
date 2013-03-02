@@ -138,7 +138,7 @@ extern class Image
 	* @see        java.awt.Image#SCALE_AREA_AVERAGING
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public function getScaledInstance(width : Int, height : Int, hints : Int) : Image;
+	@:require(java1) @:overload public function getScaledInstance(width : Int, height : Int, hints : Int) : java.awt.Image;
 	
 	/**
 	* Use the default image-scaling algorithm.

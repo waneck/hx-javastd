@@ -462,7 +462,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @throws NullPointerException if <code>xmlGregorianCalendar</code> is null.
 	*/
-	@:overload @:abstract public function compare(xmlGregorianCalendar : XMLGregorianCalendar) : Int;
+	@:overload @:abstract public function compare(xmlGregorianCalendar : javax.xml.datatype.XMLGregorianCalendar) : Int;
 	
 	/**
 	* <p>Normalize this instance to UTC.</p>
@@ -472,7 +472,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*
 	* @return <code>this</code> <code>XMLGregorianCalendar</code> normalized to UTC.
 	*/
-	@:overload @:abstract public function normalize() : XMLGregorianCalendar;
+	@:overload @:abstract public function normalize() : javax.xml.datatype.XMLGregorianCalendar;
 	
 	/**
 	* <p>Compares this calendar to the specified object. The result is
@@ -802,7 +802,7 @@ extern class XMLGregorianCalendar implements java.lang.Cloneable
 	*                 just use <code>java.util.GregorianCalendar</code> defaults.
 	* @return a java.util.GregorianCalendar conversion of this instance.
 	*/
-	@:overload @:abstract public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : XMLGregorianCalendar) : java.util.GregorianCalendar;
+	@:overload @:abstract public function toGregorianCalendar(timezone : java.util.TimeZone, aLocale : java.util.Locale, defaults : javax.xml.datatype.XMLGregorianCalendar) : java.util.GregorianCalendar;
 	
 	/**
 	* <p>Returns a <code>java.util.TimeZone</code> for this class.</p>

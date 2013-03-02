@@ -37,7 +37,7 @@ package java.awt;
 	
 	@:overload public function new(msg : String) : Void;
 	
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

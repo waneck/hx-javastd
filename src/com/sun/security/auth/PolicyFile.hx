@@ -152,13 +152,13 @@ extern class PolicyFile extends javax.security.auth.Policy
 }
 @:internal extern class PolicyPermissions extends java.security.PermissionCollection
 {
-	@:overload override public function add(permission : java.security.Permission) : Void;
+	@:overload public function add(permission : java.security.Permission) : Void;
 	
-	@:overload override public function implies(permission : java.security.Permission) : Bool;
+	@:overload public function implies(permission : java.security.Permission) : Bool;
 	
-	@:overload override public function elements() : java.util.Enumeration<java.security.Permission>;
+	@:overload public function elements() : java.util.Enumeration<java.security.Permission>;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

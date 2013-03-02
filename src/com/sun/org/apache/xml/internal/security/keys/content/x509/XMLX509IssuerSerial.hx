@@ -90,7 +90,7 @@ extern class XMLX509IssuerSerial extends com.sun.org.apache.xml.internal.securit
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

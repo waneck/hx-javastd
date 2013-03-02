@@ -44,7 +44,7 @@ extern interface XSIDCDefinition extends com.sun.org.apache.xerces.internal.xs.X
 	* <code>null</code> otherwise. An identity-constraint definition with [
 	* identity-constraint category] equal to key or unique.
 	*/
-	@:overload public function getRefKey() : XSIDCDefinition;
+	@:overload public function getRefKey() : com.sun.org.apache.xerces.internal.xs.XSIDCDefinition;
 	
 	/**
 	* A sequence of [annotations] or an empty  <code>XSObjectList</code>.

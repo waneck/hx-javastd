@@ -42,7 +42,7 @@ extern interface Element<T, C> extends com.sun.xml.internal.bind.v2.model.core.T
 	* @return
 	*      null if no such element exists.
 	*/
-	@:overload public function getSubstitutionHead() : Element<T, C>;
+	@:overload public function getSubstitutionHead() : com.sun.xml.internal.bind.v2.model.core.Element<T, C>;
 	
 	/**
 	* If non-null, this element is only active inside the given scope.

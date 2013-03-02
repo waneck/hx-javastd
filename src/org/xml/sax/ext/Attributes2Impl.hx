@@ -106,7 +106,7 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	*
 	* @see AttributesImpl#setAttributes
 	*/
-	@:overload override public function setAttributes(atts : org.xml.sax.Attributes) : Void;
+	@:overload public function setAttributes(atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Add an attribute to the end of the list, setting its
@@ -119,9 +119,9 @@ extern class Attributes2Impl extends org.xml.sax.helpers.AttributesImpl implemen
 	*
 	* @see AttributesImpl#addAttribute
 	*/
-	@:overload override public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
+	@:overload public function addAttribute(uri : String, localName : String, qName : String, type : String, value : String) : Void;
 	
-	@:overload override public function removeAttribute(index : Int) : Void;
+	@:overload public function removeAttribute(index : Int) : Void;
 	
 	/**
 	* Assign a value to the "declared" flag of a specific attribute.

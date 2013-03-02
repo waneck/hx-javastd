@@ -173,7 +173,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : Writer;
+	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : java.io.Writer;
 	
 	/**
 	* Appends a subsequence of the specified character sequence to this writer.
@@ -211,7 +211,7 @@ package java.io;
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : Writer;
+	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.io.Writer;
 	
 	/**
 	* Appends the specified character to this writer.
@@ -232,7 +232,7 @@ package java.io;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : Writer;
+	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : java.io.Writer;
 	
 	/**
 	* Flushes the stream.  If the stream has saved any characters from the

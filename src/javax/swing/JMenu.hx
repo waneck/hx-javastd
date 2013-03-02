@@ -91,7 +91,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	*
 	* @return true if the menu is selected, else false
 	*/
-	@:overload override public function isSelected() : Bool;
+	@:overload public function isSelected() : Bool;
 	
 	/**
 	* Sets the selection status of the menu.
@@ -103,7 +103,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	*           expert: true
 	*           hidden: true
 	*/
-	@:overload override public function setSelected(b : Bool) : Void;
+	@:overload public function setSelected(b : Bool) : Void;
 	
 	/**
 	* Returns true if the menu's popup window is visible.
@@ -179,7 +179,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	*
 	* @see WinListener
 	*/
-	private var popupListener : JMenu_WinListener;
+	private var popupListener : javax.swing.JMenu.JMenu_WinListener;
 	
 	/**
 	* Sets the location of the popup component.
@@ -481,7 +481,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	*
 	* @see WinListener
 	*/
-	@:overload private function createWinListener(p : javax.swing.JPopupMenu) : JMenu_WinListener;
+	@:overload private function createWinListener(p : javax.swing.JPopupMenu) : javax.swing.JMenu.JMenu_WinListener;
 	
 	/**
 	* Messaged when the menubar selection changes to activate or
@@ -558,7 +558,7 @@ extern class JMenu extends javax.swing.JMenuItem implements javax.accessibility.
 	* @param pressTime  indicates the number of milliseconds the
 	*          button was pressed for
 	*/
-	@:overload override public function doClick(pressTime : Int) : Void;
+	@:overload public function doClick(pressTime : Int) : Void;
 	
 	/**
 	* Returns a string representation of this <code>JMenu</code>. This

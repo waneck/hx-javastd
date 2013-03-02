@@ -32,9 +32,9 @@ extern class IBM949 extends java.nio.charset.Charset implements sun.nio.cs.Histo
 	
 	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
+	@:overload public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
-	@:overload override public function newEncoder() : java.nio.charset.CharsetEncoder;
+	@:overload public function newEncoder() : java.nio.charset.CharsetEncoder;
 	
 	
 }

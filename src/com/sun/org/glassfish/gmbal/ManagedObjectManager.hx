@@ -279,7 +279,7 @@ extern interface ManagedObjectManager extends java.io.Closeable
 	* The tracing is done with INFO-level logger calls.  The logger name is
 	* that package name (com.sun.org.glassfish.gmbal.impl).
 	*/
-	@:overload public function setRegistrationDebug(level : ManagedObjectManager_RegistrationDebugLevel) : Void;
+	@:overload public function setRegistrationDebug(level : com.sun.org.glassfish.gmbal.ManagedObjectManager.ManagedObjectManager_RegistrationDebugLevel) : Void;
 	
 	/** Enable generation of debug log at INFO level for runtime MBean operations
 	* to the com.sun.org.glassfish.gmbal.impl logger.

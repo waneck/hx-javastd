@@ -72,9 +72,9 @@ extern class ParserVocabulary extends com.sun.xml.internal.fastinfoset.vocab.Voc
 	
 	@:overload public function new(v : com.sun.xml.internal.org.jvnet.fastinfoset.Vocabulary) : Void;
 	
-	@:overload public function setInitialVocabulary(initialVocabulary : ParserVocabulary, clear : Bool) : Void;
+	@:overload public function setInitialVocabulary(initialVocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary, clear : Bool) : Void;
 	
-	@:overload public function setReferencedVocabulary(referencedVocabularyURI : String, referencedVocabulary : ParserVocabulary, clear : Bool) : Void;
+	@:overload public function setReferencedVocabulary(referencedVocabularyURI : String, referencedVocabulary : com.sun.xml.internal.fastinfoset.vocab.ParserVocabulary, clear : Bool) : Void;
 	
 	@:overload public function clear() : Void;
 	

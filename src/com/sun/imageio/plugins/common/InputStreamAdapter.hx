@@ -27,9 +27,9 @@ extern class InputStreamAdapter extends java.io.InputStream
 {
 	@:overload public function new(stream : javax.imageio.stream.ImageInputStream) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	
 }

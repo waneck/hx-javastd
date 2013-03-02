@@ -69,7 +69,7 @@ extern class XML11DocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	*
 	* @return Returns the next character on the stream.
 	*/
-	@:overload override private function scanContent(content : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Int;
+	@:overload private function scanContent(content : com.sun.org.apache.xerces.internal.util.XMLStringBuffer) : Int;
 	
 	/**
 	* Scans an attribute value and normalizes whitespace converting all

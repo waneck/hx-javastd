@@ -81,7 +81,7 @@ extern class ACONST_NULL extends com.sun.org.apache.bcel.internal.generic.Instru
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

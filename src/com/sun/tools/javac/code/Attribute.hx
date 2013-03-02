@@ -37,7 +37,7 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 	
 	@:overload public function new(type : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload @:abstract public function accept(v : Attribute_Visitor) : Void;
+	@:overload @:abstract public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function getValue() : Dynamic;
 	
@@ -46,11 +46,11 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 	
 }
 /** The value for an annotation element of primitive type or String. */
-@:native('com$sun$tools$javac$code$Attribute$Constant') extern class Attribute_Constant extends Attribute
+@:native('com$sun$tools$javac$code$Attribute$Constant') extern class Attribute_Constant extends com.sun.tools.javac.code.Attribute
 {
 	public var value(default, null) : Dynamic;
 	
-	@:overload override public function accept(v : Attribute_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function new(type : com.sun.tools.javac.code.Type, value : Dynamic) : Void;
 	
@@ -65,11 +65,11 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 /** The value for an annotation element of type java.lang.Class,
 *  represented as a ClassSymbol.
 */
-@:native('com$sun$tools$javac$code$Attribute$Class') extern class Attribute_Class extends Attribute
+@:native('com$sun$tools$javac$code$Attribute$Class') extern class Attribute_Class extends com.sun.tools.javac.code.Attribute
 {
 	public var type(default, null) : com.sun.tools.javac.code.Type;
 	
-	@:overload override public function accept(v : Attribute_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function new(types : com.sun.tools.javac.code.Types, type : com.sun.tools.javac.code.Type) : Void;
 	
@@ -84,18 +84,18 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 /** A compound annotation element value, the type of which is an
 *  attribute interface.
 */
-@:native('com$sun$tools$javac$code$Attribute$Compound') extern class Attribute_Compound extends Attribute implements javax.lang.model.element.AnnotationMirror
+@:native('com$sun$tools$javac$code$Attribute$Compound') extern class Attribute_Compound extends com.sun.tools.javac.code.Attribute implements javax.lang.model.element.AnnotationMirror
 {
 	/** The attributes values, as pairs.  Each pair contains a
 	*  reference to the accessing method in the attribute interface
 	*  and the value to be returned when that method is called to
 	*  access this attribute.
 	*/
-	public var values(default, null) : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, Attribute>>;
+	public var values(default, null) : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, com.sun.tools.javac.code.Attribute>>;
 	
-	@:overload public function new(type : com.sun.tools.javac.code.Type, values : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, Attribute>>) : Void;
+	@:overload public function new(type : com.sun.tools.javac.code.Type, values : com.sun.tools.javac.util.List<com.sun.tools.javac.util.Pair<MethodSymbol, com.sun.tools.javac.code.Attribute>>) : Void;
 	
-	@:overload override public function accept(v : Attribute_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	/**
 	* Returns a string representation of this annotation.
@@ -107,31 +107,31 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 	*/
 	@:overload public function toString() : String;
 	
-	@:overload public function member(member : com.sun.tools.javac.util.Name) : Attribute;
+	@:overload public function member(member : com.sun.tools.javac.util.Name) : com.sun.tools.javac.code.Attribute;
 	
-	@:overload override public function getValue() : Attribute_Compound;
+	@:overload override public function getValue() : com.sun.tools.javac.code.Attribute.Attribute_Compound;
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
 	@:overload public function getAnnotationType() : javax.lang.model.type.DeclaredType;
 	
-	@:overload public function getElementValues() : java.util.Map<MethodSymbol, Attribute>;
+	@:overload public function getElementValues() : java.util.Map<MethodSymbol, com.sun.tools.javac.code.Attribute>;
 	
 	
 }
 /** The value for an annotation element of an array type.
 */
-@:native('com$sun$tools$javac$code$Attribute$Array') extern class Attribute_Array extends Attribute
+@:native('com$sun$tools$javac$code$Attribute$Array') extern class Attribute_Array extends com.sun.tools.javac.code.Attribute
 {
-	public var values(default, null) : java.NativeArray<Attribute>;
+	public var values(default, null) : java.NativeArray<com.sun.tools.javac.code.Attribute>;
 	
-	@:overload public function new(type : com.sun.tools.javac.code.Type, values : java.NativeArray<Attribute>) : Void;
+	@:overload public function new(type : com.sun.tools.javac.code.Type, values : java.NativeArray<com.sun.tools.javac.code.Attribute>) : Void;
 	
-	@:overload override public function accept(v : Attribute_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function toString() : String;
 	
-	@:overload override public function getValue() : com.sun.tools.javac.util.List<Attribute>;
+	@:overload override public function getValue() : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Attribute>;
 	
 	@:overload override public function accept<R, P>(v : javax.lang.model.element.AnnotationValueVisitor<R, P>, p : P) : R;
 	
@@ -139,13 +139,13 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 }
 /** The value for an annotation element of an enum type.
 */
-@:native('com$sun$tools$javac$code$Attribute$Enum') extern class Attribute_Enum extends Attribute
+@:native('com$sun$tools$javac$code$Attribute$Enum') extern class Attribute_Enum extends com.sun.tools.javac.code.Attribute
 {
 	public var value : VarSymbol;
 	
 	@:overload public function new(type : com.sun.tools.javac.code.Type, value : VarSymbol) : Void;
 	
-	@:overload override public function accept(v : Attribute_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -155,11 +155,11 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 	
 	
 }
-@:native('com$sun$tools$javac$code$Attribute$Error') extern class Attribute_Error extends Attribute
+@:native('com$sun$tools$javac$code$Attribute$Error') extern class Attribute_Error extends com.sun.tools.javac.code.Attribute
 {
 	@:overload public function new(type : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload override public function accept(v : Attribute_Visitor) : Void;
+	@:overload override public function accept(v : com.sun.tools.javac.code.Attribute.Attribute_Visitor) : Void;
 	
 	@:overload public function toString() : String;
 	
@@ -172,17 +172,17 @@ extern class Attribute implements javax.lang.model.element.AnnotationValue
 /** A visitor type for dynamic dispatch on the kind of attribute value. */
 @:native('com$sun$tools$javac$code$Attribute$Visitor') extern interface Attribute_Visitor
 {
-	@:overload public function visitConstant(value : Attribute_Constant) : Void;
+	@:overload public function visitConstant(value : com.sun.tools.javac.code.Attribute.Attribute_Constant) : Void;
 	
-	@:overload public function visitClass(clazz : Attribute_Class) : Void;
+	@:overload public function visitClass(clazz : com.sun.tools.javac.code.Attribute.Attribute_Class) : Void;
 	
-	@:overload public function visitCompound(compound : Attribute_Compound) : Void;
+	@:overload public function visitCompound(compound : com.sun.tools.javac.code.Attribute.Attribute_Compound) : Void;
 	
-	@:overload public function visitArray(array : Attribute_Array) : Void;
+	@:overload public function visitArray(array : com.sun.tools.javac.code.Attribute.Attribute_Array) : Void;
 	
-	@:overload public function visitEnum(e : Attribute_Enum) : Void;
+	@:overload public function visitEnum(e : com.sun.tools.javac.code.Attribute.Attribute_Enum) : Void;
 	
-	@:overload public function visitError(e : Attribute_Error) : Void;
+	@:overload public function visitError(e : com.sun.tools.javac.code.Attribute.Attribute_Error) : Void;
 	
 	
 }

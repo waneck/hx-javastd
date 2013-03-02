@@ -32,7 +32,7 @@ extern class WSDLParseException extends com.sun.xml.internal.ws.util.exception.J
 	
 	@:overload public function new(throwable : java.lang.Throwable) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload public function getDefaultResourceBundleName() : String;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class RSAPrivateCrtKeyImpl extends sun.security.pkcs.PKCS8Key implements 
 	*/
 	@:overload public static function newKey(encoded : java.NativeArray<java.StdTypes.Int8>) : java.security.interfaces.RSAPrivateKey;
 	
-	@:overload override public function getAlgorithm() : String;
+	@:overload public function getAlgorithm() : String;
 	
 	@:overload public function getModulus() : java.math.BigInteger;
 	
@@ -52,9 +52,9 @@ extern class RSAPrivateCrtKeyImpl extends sun.security.pkcs.PKCS8Key implements 
 	/**
 	* Parse the key. Called by PKCS8Key.
 	*/
-	@:overload override private function parseKeyBits() : Void;
+	@:overload private function parseKeyBits() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

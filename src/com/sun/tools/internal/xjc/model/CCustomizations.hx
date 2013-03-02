@@ -51,16 +51,16 @@ extern class CCustomizations extends java.util.ArrayList<com.sun.tools.internal.
 	/**
 	* Convenient singleton instance that represents an empty {@link CCustomizations}.
 	*/
-	public static var EMPTY(default, null) : CCustomizations;
+	public static var EMPTY(default, null) : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	/**
 	* Merges two {@link CCustomizations} objects into one.
 	*/
-	@:overload public static function merge(lhs : CCustomizations, rhs : CCustomizations) : CCustomizations;
+	@:overload public static function merge(lhs : com.sun.tools.internal.xjc.model.CCustomizations, rhs : com.sun.tools.internal.xjc.model.CCustomizations) : com.sun.tools.internal.xjc.model.CCustomizations;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	
 }

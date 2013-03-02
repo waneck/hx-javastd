@@ -37,7 +37,7 @@ extern class CheckedOutputStream extends java.io.FilterOutputStream
 	* @param b the byte to be written
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
 	/**
 	* Writes an array of bytes. Will block until the bytes are
@@ -47,7 +47,7 @@ extern class CheckedOutputStream extends java.io.FilterOutputStream
 	* @param len the number of bytes to be written
 	* @exception IOException if an I/O error has occurred
 	*/
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
 	/**
 	* Returns the Checksum for this output stream.

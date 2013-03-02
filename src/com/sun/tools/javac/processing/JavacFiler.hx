@@ -64,21 +64,21 @@ extern class JavacFiler implements javax.annotation.processing.Filer implements 
 */
 @:native('com$sun$tools$javac$processing$JavacFiler$FilerOutputFileObject') @:internal extern class JavacFiler_FilerOutputFileObject extends javax.tools.ForwardingFileObject<javax.tools.FileObject>
 {
-	@:overload @:synchronized override public function openOutputStream() : java.io.OutputStream;
+	@:overload @:synchronized public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload @:synchronized override public function openWriter() : java.io.Writer;
+	@:overload @:synchronized public function openWriter() : java.io.Writer;
 	
-	@:overload override public function openInputStream() : java.io.InputStream;
+	@:overload public function openInputStream() : java.io.InputStream;
 	
-	@:overload override public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
+	@:overload public function openReader(ignoreEncodingErrors : Bool) : java.io.Reader;
 	
-	@:overload override public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
+	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
-	@:overload override public function delete() : Bool;
+	@:overload public function delete() : Bool;
 	
 	
 }
-@:native('com$sun$tools$javac$processing$JavacFiler$FilerOutputJavaFileObject') @:internal extern class JavacFiler_FilerOutputJavaFileObject extends JavacFiler_FilerOutputFileObject implements javax.tools.JavaFileObject
+@:native('com$sun$tools$javac$processing$JavacFiler$FilerOutputJavaFileObject') @:internal extern class JavacFiler_FilerOutputJavaFileObject extends com.sun.tools.javac.processing.JavacFiler.JavacFiler_FilerOutputFileObject implements javax.tools.JavaFileObject
 {
 	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
@@ -95,15 +95,15 @@ extern class JavacFiler implements javax.annotation.processing.Filer implements 
 */
 @:native('com$sun$tools$javac$processing$JavacFiler$FilerInputFileObject') @:internal extern class JavacFiler_FilerInputFileObject extends javax.tools.ForwardingFileObject<javax.tools.FileObject>
 {
-	@:overload override public function openOutputStream() : java.io.OutputStream;
+	@:overload public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload override public function openWriter() : java.io.Writer;
+	@:overload public function openWriter() : java.io.Writer;
 	
-	@:overload override public function delete() : Bool;
+	@:overload public function delete() : Bool;
 	
 	
 }
-@:native('com$sun$tools$javac$processing$JavacFiler$FilerInputJavaFileObject') @:internal extern class JavacFiler_FilerInputJavaFileObject extends JavacFiler_FilerInputFileObject implements javax.tools.JavaFileObject
+@:native('com$sun$tools$javac$processing$JavacFiler$FilerInputJavaFileObject') @:internal extern class JavacFiler_FilerInputJavaFileObject extends com.sun.tools.javac.processing.JavacFiler.JavacFiler_FilerInputFileObject implements javax.tools.JavaFileObject
 {
 	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	

@@ -89,13 +89,13 @@ extern class CoderResult
 	* has been completely consumed or, if the input buffer is not yet empty,
 	* that additional input is required.  </p>
 	*/
-	public static var UNDERFLOW(default, null) : CoderResult;
+	public static var UNDERFLOW(default, null) : java.nio.charset.CoderResult;
 	
 	/**
 	* Result object indicating overflow, meaning that there is insufficient
 	* room in the output buffer.  </p>
 	*/
-	public static var OVERFLOW(default, null) : CoderResult;
+	public static var OVERFLOW(default, null) : java.nio.charset.CoderResult;
 	
 	/**
 	* Static factory method that returns the unique object describing a
@@ -103,7 +103,7 @@ extern class CoderResult
 	*
 	* @return  The requested coder-result object
 	*/
-	@:overload public static function malformedForLength(length : Int) : CoderResult;
+	@:overload public static function malformedForLength(length : Int) : java.nio.charset.CoderResult;
 	
 	/**
 	* Static factory method that returns the unique result object describing
@@ -111,7 +111,7 @@ extern class CoderResult
 	*
 	* @return  The requested coder-result object
 	*/
-	@:overload public static function unmappableForLength(length : Int) : CoderResult;
+	@:overload public static function unmappableForLength(length : Int) : java.nio.charset.CoderResult;
 	
 	/**
 	* Throws an exception appropriate to the result described by this object.
@@ -137,7 +137,7 @@ extern class CoderResult
 }
 @:native('java$nio$charset$CoderResult$Cache') @:internal extern class CoderResult_Cache
 {
-	@:overload @:abstract private function create(len : Int) : CoderResult;
+	@:overload @:abstract private function create(len : Int) : java.nio.charset.CoderResult;
 	
 	
 }

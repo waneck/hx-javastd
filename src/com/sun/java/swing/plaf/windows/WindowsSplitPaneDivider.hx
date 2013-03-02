@@ -33,7 +33,7 @@ extern class WindowsSplitPaneDivider extends javax.swing.plaf.basic.BasicSplitPa
 	/**
 	* Paints the divider.
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	
 }

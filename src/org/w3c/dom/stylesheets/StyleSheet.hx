@@ -86,7 +86,7 @@ extern interface StyleSheet
 	* style sheet language does not support inclusion, the value of this
 	* attribute is <code>null</code>.
 	*/
-	@:overload public function getParentStyleSheet() : StyleSheet;
+	@:overload public function getParentStyleSheet() : org.w3c.dom.stylesheets.StyleSheet;
 	
 	/**
 	*  If the style sheet is a linked style sheet, the value of its attribute

@@ -58,7 +58,7 @@ extern class EntityDeclarationImpl extends com.sun.xml.internal.stream.events.Du
 	
 	@:overload private function init() : Void;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	
 }

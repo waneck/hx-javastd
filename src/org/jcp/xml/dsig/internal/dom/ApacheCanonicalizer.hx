@@ -37,11 +37,11 @@ extern class ApacheCanonicalizer extends javax.xml.crypto.dsig.TransformService
 	
 	private var transformElem : org.w3c.dom.Element;
 	
-	@:overload @:final override public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
+	@:overload @:final public function getParameterSpec() : java.security.spec.AlgorithmParameterSpec;
 	
-	@:overload override public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload public function init(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
-	@:overload override public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
+	@:overload public function marshalParams(parent : javax.xml.crypto.XMLStructure, context : javax.xml.crypto.XMLCryptoContext) : Void;
 	
 	@:overload public function canonicalize(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
@@ -49,7 +49,7 @@ extern class ApacheCanonicalizer extends javax.xml.crypto.dsig.TransformService
 	
 	@:overload override public function transform(data : javax.xml.crypto.Data, xc : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
-	@:overload @:final override public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:final public function isFeatureSupported(feature : String) : Bool;
 	
 	
 }

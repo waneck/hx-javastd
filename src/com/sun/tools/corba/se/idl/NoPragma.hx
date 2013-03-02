@@ -36,7 +36,7 @@ package com.sun.tools.corba.se.idl;
 //// NOTES:
 @:internal extern class NoPragma extends com.sun.tools.corba.se.idl.PragmaHandler
 {
-	@:overload override public function process(pragma : String, currentToken : String) : Bool;
+	@:overload public function process(pragma : String, currentToken : String) : Bool;
 	
 	
 }

@@ -73,37 +73,37 @@ package java.lang;
 	
 	
 }
-@:native('java$lang$ProcessEnvironment$Variable') @:internal extern class ProcessEnvironment_Variable extends ProcessEnvironment_ExternalData implements java.lang.Comparable<ProcessEnvironment_Variable>
+@:native('java$lang$ProcessEnvironment$Variable') @:internal extern class ProcessEnvironment_Variable extends java.lang.ProcessEnvironment.ProcessEnvironment_ExternalData implements java.lang.Comparable<java.lang.ProcessEnvironment.ProcessEnvironment_Variable>
 {
 	@:overload private function new(str : String, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public static function valueOfQueryOnly(str : Dynamic) : ProcessEnvironment_Variable;
+	@:overload public static function valueOfQueryOnly(str : Dynamic) : java.lang.ProcessEnvironment.ProcessEnvironment_Variable;
 	
-	@:overload public static function valueOfQueryOnly(str : String) : ProcessEnvironment_Variable;
+	@:overload public static function valueOfQueryOnly(str : String) : java.lang.ProcessEnvironment.ProcessEnvironment_Variable;
 	
-	@:overload public static function valueOf(str : String) : ProcessEnvironment_Variable;
+	@:overload public static function valueOf(str : String) : java.lang.ProcessEnvironment.ProcessEnvironment_Variable;
 	
-	@:overload public static function valueOf(bytes : java.NativeArray<java.StdTypes.Int8>) : ProcessEnvironment_Variable;
+	@:overload public static function valueOf(bytes : java.NativeArray<java.StdTypes.Int8>) : java.lang.ProcessEnvironment.ProcessEnvironment_Variable;
 	
-	@:overload public function compareTo(variable : ProcessEnvironment_Variable) : Int;
+	@:overload public function compareTo(variable : java.lang.ProcessEnvironment.ProcessEnvironment_Variable) : Int;
 	
 	@:overload override public function equals(o : Dynamic) : Bool;
 	
 	
 }
-@:native('java$lang$ProcessEnvironment$Value') @:internal extern class ProcessEnvironment_Value extends ProcessEnvironment_ExternalData implements java.lang.Comparable<ProcessEnvironment_Value>
+@:native('java$lang$ProcessEnvironment$Value') @:internal extern class ProcessEnvironment_Value extends java.lang.ProcessEnvironment.ProcessEnvironment_ExternalData implements java.lang.Comparable<java.lang.ProcessEnvironment.ProcessEnvironment_Value>
 {
 	@:overload private function new(str : String, bytes : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload public static function valueOfQueryOnly(str : Dynamic) : ProcessEnvironment_Value;
+	@:overload public static function valueOfQueryOnly(str : Dynamic) : java.lang.ProcessEnvironment.ProcessEnvironment_Value;
 	
-	@:overload public static function valueOfQueryOnly(str : String) : ProcessEnvironment_Value;
+	@:overload public static function valueOfQueryOnly(str : String) : java.lang.ProcessEnvironment.ProcessEnvironment_Value;
 	
-	@:overload public static function valueOf(str : String) : ProcessEnvironment_Value;
+	@:overload public static function valueOf(str : String) : java.lang.ProcessEnvironment.ProcessEnvironment_Value;
 	
-	@:overload public static function valueOf(bytes : java.NativeArray<java.StdTypes.Int8>) : ProcessEnvironment_Value;
+	@:overload public static function valueOf(bytes : java.NativeArray<java.StdTypes.Int8>) : java.lang.ProcessEnvironment.ProcessEnvironment_Value;
 	
-	@:overload public function compareTo(value : ProcessEnvironment_Value) : Int;
+	@:overload public function compareTo(value : java.lang.ProcessEnvironment.ProcessEnvironment_Value) : Int;
 	
 	@:overload override public function equals(o : Dynamic) : Bool;
 	
@@ -111,29 +111,29 @@ package java.lang;
 }
 @:native('java$lang$ProcessEnvironment$StringEnvironment') @:internal extern class ProcessEnvironment_StringEnvironment extends java.util.AbstractMap<String, String>
 {
-	@:overload public function new(m : java.util.Map<ProcessEnvironment_Variable, ProcessEnvironment_Value>) : Void;
+	@:overload public function new(m : java.util.Map<java.lang.ProcessEnvironment.ProcessEnvironment_Variable, java.lang.ProcessEnvironment.ProcessEnvironment_Value>) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
-	@:overload override public function containsKey(key : Dynamic) : Bool;
+	@:overload public function containsKey(key : Dynamic) : Bool;
 	
-	@:overload override public function containsValue(value : Dynamic) : Bool;
+	@:overload public function containsValue(value : Dynamic) : Bool;
 	
-	@:overload override public function get(key : Dynamic) : String;
+	@:overload public function get(key : Dynamic) : String;
 	
 	@:overload public function put(key : String, value : String) : String;
 	
-	@:overload override public function remove(key : Dynamic) : String;
+	@:overload public function remove(key : Dynamic) : String;
 	
-	@:overload override public function keySet() : java.util.Set<String>;
+	@:overload public function keySet() : java.util.Set<String>;
 	
-	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, String>>;
+	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, String>>;
 	
-	@:overload override public function values() : java.util.Collection<String>;
+	@:overload public function values() : java.util.Collection<String>;
 	
 	@:overload public function toEnvironmentBlock(envc : java.NativeArray<Int>) : java.NativeArray<java.StdTypes.Int8>;
 	
@@ -141,7 +141,7 @@ package java.lang;
 }
 @:native('java$lang$ProcessEnvironment$StringEntry') @:internal extern class ProcessEnvironment_StringEntry implements java.util.Map.Map_Entry<String, String>
 {
-	@:overload public function new(e : java.util.Map.Map_Entry<ProcessEnvironment_Variable, ProcessEnvironment_Value>) : Void;
+	@:overload public function new(e : java.util.Map.Map_Entry<java.lang.ProcessEnvironment.ProcessEnvironment_Variable, java.lang.ProcessEnvironment.ProcessEnvironment_Value>) : Void;
 	
 	@:overload public function getKey() : String;
 	
@@ -159,41 +159,41 @@ package java.lang;
 }
 @:native('java$lang$ProcessEnvironment$StringEntrySet') @:internal extern class ProcessEnvironment_StringEntrySet extends java.util.AbstractSet<java.util.Map.Map_Entry<String, String>>
 {
-	@:overload public function new(s : java.util.Set<java.util.Map.Map_Entry<ProcessEnvironment_Variable, ProcessEnvironment_Value>>) : Void;
+	@:overload public function new(s : java.util.Set<java.util.Map.Map_Entry<java.lang.ProcessEnvironment.ProcessEnvironment_Variable, java.lang.ProcessEnvironment.ProcessEnvironment_Value>>) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
-	@:overload override public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<String, String>>;
+	@:overload public function iterator() : java.util.Iterator<java.util.Map.Map_Entry<String, String>>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	
 }
 @:native('java$lang$ProcessEnvironment$StringValues') @:internal extern class ProcessEnvironment_StringValues extends java.util.AbstractCollection<String>
 {
-	@:overload public function new(c : java.util.Collection<ProcessEnvironment_Value>) : Void;
+	@:overload public function new(c : java.util.Collection<java.lang.ProcessEnvironment.ProcessEnvironment_Value>) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
-	@:overload override public function iterator() : java.util.Iterator<String>;
+	@:overload public function iterator() : java.util.Iterator<String>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
 	@:overload public function equals(o : Dynamic) : Bool;
 	
@@ -203,19 +203,19 @@ package java.lang;
 }
 @:native('java$lang$ProcessEnvironment$StringKeySet') @:internal extern class ProcessEnvironment_StringKeySet extends java.util.AbstractSet<String>
 {
-	@:overload public function new(s : java.util.Set<ProcessEnvironment_Variable>) : Void;
+	@:overload public function new(s : java.util.Set<java.lang.ProcessEnvironment.ProcessEnvironment_Variable>) : Void;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
-	@:overload override public function iterator() : java.util.Iterator<String>;
+	@:overload public function iterator() : java.util.Iterator<String>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
 	
 }

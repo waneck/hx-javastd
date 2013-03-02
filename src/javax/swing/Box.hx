@@ -94,7 +94,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*
 	* @return the box
 	*/
-	@:overload public static function createHorizontalBox() : Box;
+	@:overload public static function createHorizontalBox() : javax.swing.Box;
 	
 	/**
 	* Creates a <code>Box</code> that displays its components
@@ -108,7 +108,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*
 	* @return the box
 	*/
-	@:overload public static function createVerticalBox() : Box;
+	@:overload public static function createVerticalBox() : javax.swing.Box;
 	
 	/**
 	* Creates an invisible component that's always the specified size.
@@ -241,7 +241,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @throws NullPointerException if <code>g</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function paintComponent(g : java.awt.Graphics) : Void;
+	@:require(java6) @:overload private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this Box.
@@ -302,7 +302,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	* @throws NullPointerException if <code>g</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override private function paintComponent(g : java.awt.Graphics) : Void;
+	@:require(java6) @:overload private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Gets the AccessibleContext associated with this Box.Filler.

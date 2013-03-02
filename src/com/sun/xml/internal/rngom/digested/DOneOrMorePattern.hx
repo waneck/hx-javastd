@@ -49,9 +49,9 @@ package com.sun.xml.internal.rngom.digested;
 */
 extern class DOneOrMorePattern extends com.sun.xml.internal.rngom.digested.DUnaryPattern
 {
-	@:overload override public function isNullable() : Bool;
+	@:overload public function isNullable() : Bool;
 	
-	@:overload override public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
+	@:overload public function accept(visitor : com.sun.xml.internal.rngom.digested.DPatternVisitor<Dynamic>) : Dynamic;
 	
 	
 }

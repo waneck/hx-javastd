@@ -25,7 +25,7 @@ package sun.security.validator;
 */
 extern class PKIXValidator extends sun.security.validator.Validator
 {
-	@:overload override public function getTrustedCertificates() : java.util.Collection<java.security.cert.X509Certificate>;
+	@:overload public function getTrustedCertificates() : java.util.Collection<java.security.cert.X509Certificate>;
 	
 	/**
 	* Returns the length of the last certification path that is validated by

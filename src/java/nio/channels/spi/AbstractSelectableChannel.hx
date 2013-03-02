@@ -52,11 +52,11 @@ package java.nio.channels.spi;
 	*
 	* @return  The provider that created this channel
 	*/
-	@:overload @:final override public function provider() : java.nio.channels.spi.SelectorProvider;
+	@:overload @:final public function provider() : java.nio.channels.spi.SelectorProvider;
 	
-	@:overload @:final override public function isRegistered() : Bool;
+	@:overload @:final public function isRegistered() : Bool;
 	
-	@:overload @:final override public function keyFor(sel : java.nio.channels.Selector) : java.nio.channels.SelectionKey;
+	@:overload @:final public function keyFor(sel : java.nio.channels.Selector) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Registers this channel with the given selector, returning a selection key.
@@ -84,7 +84,7 @@ package java.nio.channels.spi;
 	*
 	* @throws  IllegalArgumentException {@inheritDoc}
 	*/
-	@:overload @:final override public function register(sel : java.nio.channels.Selector, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
+	@:overload @:final public function register(sel : java.nio.channels.Selector, ops : Int, att : Dynamic) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Closes this channel.
@@ -113,9 +113,9 @@ package java.nio.channels.spi;
 	*/
 	@:overload @:abstract private function implCloseSelectableChannel() : Void;
 	
-	@:overload @:final override public function isBlocking() : Bool;
+	@:overload @:final public function isBlocking() : Bool;
 	
-	@:overload @:final override public function blockingLock() : Dynamic;
+	@:overload @:final public function blockingLock() : Dynamic;
 	
 	/**
 	* Adjusts this channel's blocking mode.
@@ -125,7 +125,7 @@ package java.nio.channels.spi;
 	* implConfigureBlocking} method, while holding the appropriate locks, in
 	* order to change the mode.  </p>
 	*/
-	@:overload @:final override public function configureBlocking(block : Bool) : java.nio.channels.SelectableChannel;
+	@:overload @:final public function configureBlocking(block : Bool) : java.nio.channels.SelectableChannel;
 	
 	/**
 	* Adjusts this channel's blocking mode.

@@ -55,9 +55,9 @@ extern class SingleField extends com.sun.tools.internal.xjc.generator.bean.field
 	*/
 	@:overload private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo, forcePrimitiveAccess : Bool) : Void;
 	
-	@:overload @:final override public function getFieldType() : com.sun.codemodel.internal.JType;
+	@:overload @:final public function getFieldType() : com.sun.codemodel.internal.JType;
 	
-	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	
 }
@@ -65,9 +65,9 @@ extern class SingleField extends com.sun.tools.internal.xjc.generator.bean.field
 {
 	@:overload override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload override public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
+	@:overload public function unsetValues(body : com.sun.codemodel.internal.JBlock) : Void;
 	
-	@:overload override public function hasSetValue() : com.sun.codemodel.internal.JExpression;
+	@:overload public function hasSetValue() : com.sun.codemodel.internal.JExpression;
 	
 	
 }

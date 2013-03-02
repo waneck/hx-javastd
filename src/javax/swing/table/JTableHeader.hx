@@ -234,7 +234,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*                          renderer and, therefore, the proper tip
 	* @return the tool tip for this component
 	*/
-	@:overload override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Returns the look and feel (L&F) object that renders this component.
@@ -259,7 +259,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the suffix used to construct the name of the look and feel
@@ -270,7 +270,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	*  Sets the column model for this table to <code>newModel</code> and registers
@@ -433,7 +433,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	* @return an AccessibleJTableHeader that serves as the
 	*         AccessibleContext of this JTableHeader
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -503,7 +503,7 @@ extern class JTableHeader extends javax.swing.JComponent implements javax.swing.
 	*  Constructs an AccessiblJTableHeaaderEntry
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(c : Int, p : JTableHeader, t : javax.swing.JTable) : Void;
+	@:require(java4) @:overload public function new(c : Int, p : javax.swing.table.JTableHeader, t : javax.swing.JTable) : Void;
 	
 	/**
 	* Get the AccessibleContext associated with this object.

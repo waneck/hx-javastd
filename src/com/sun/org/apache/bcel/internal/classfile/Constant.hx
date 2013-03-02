@@ -100,7 +100,7 @@ extern class Constant implements java.lang.Cloneable implements com.sun.org.apac
 	/**
 	* @return deep copy of this constant
 	*/
-	@:overload public function copy() : Constant;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.Constant;
 	
 	@:overload public function clone() : Dynamic;
 	

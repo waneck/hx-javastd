@@ -250,9 +250,9 @@ extern class PolicyTool
 	
 	public static var CRPE_PANEL_CANCEL(default, null) : Int;
 	
-	public static var PERM_ARRAY : java.util.ArrayList<Perm>;
+	public static var PERM_ARRAY : java.util.ArrayList<sun.security.tools.policytool.PolicyTool.Perm>;
 	
-	public static var PRIN_ARRAY : java.util.ArrayList<Prin>;
+	public static var PRIN_ARRAY : java.util.ArrayList<sun.security.tools.policytool.PolicyTool.Prin>;
 	
 	
 }
@@ -446,15 +446,15 @@ extern class PolicyTool
 	
 	@:overload public function getObject(index : Int) : Dynamic;
 	
-	@:overload override public function add(string : String) : Void;
+	@:overload public function add(string : String) : Void;
 	
 	@:overload public function addTaggedItem(string : String, object : Dynamic) : Void;
 	
-	@:overload override public function replaceItem(string : String, index : Int) : Void;
+	@:overload public function replaceItem(string : String, index : Int) : Void;
 	
 	@:overload public function replaceTaggedItem(string : String, object : Dynamic, index : Int) : Void;
 	
-	@:overload override public function remove(index : Int) : Void;
+	@:overload public function remove(index : Int) : Void;
 	
 	@:overload public function removeTaggedItem(index : Int) : Void;
 	
@@ -473,13 +473,13 @@ extern class PolicyTool
 	
 	
 }
-@:internal extern class KrbPrin extends Prin
+@:internal extern class KrbPrin extends sun.security.tools.policytool.PolicyTool.Prin
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class X500Prin extends Prin
+@:internal extern class X500Prin extends sun.security.tools.policytool.PolicyTool.Prin
 {
 	@:overload public function new() : Void;
 	
@@ -502,145 +502,145 @@ extern class PolicyTool
 	
 	
 }
-@:internal extern class AllPerm extends Perm
+@:internal extern class AllPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class AudioPerm extends Perm
+@:internal extern class AudioPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class AuthPerm extends Perm
+@:internal extern class AuthPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class AWTPerm extends Perm
+@:internal extern class AWTPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class DelegationPerm extends Perm
+@:internal extern class DelegationPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class FilePerm extends Perm
+@:internal extern class FilePerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class InqSecContextPerm extends Perm
+@:internal extern class InqSecContextPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class LogPerm extends Perm
+@:internal extern class LogPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class MgmtPerm extends Perm
+@:internal extern class MgmtPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class MBeanPerm extends Perm
+@:internal extern class MBeanPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class MBeanSvrPerm extends Perm
+@:internal extern class MBeanSvrPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class MBeanTrustPerm extends Perm
+@:internal extern class MBeanTrustPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class NetPerm extends Perm
+@:internal extern class NetPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class PrivCredPerm extends Perm
+@:internal extern class PrivCredPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class PropPerm extends Perm
+@:internal extern class PropPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class ReflectPerm extends Perm
+@:internal extern class ReflectPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class RuntimePerm extends Perm
+@:internal extern class RuntimePerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class SecurityPerm extends Perm
+@:internal extern class SecurityPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class SerialPerm extends Perm
+@:internal extern class SerialPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class ServicePerm extends Perm
+@:internal extern class ServicePerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class SocketPerm extends Perm
+@:internal extern class SocketPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class SQLPerm extends Perm
+@:internal extern class SQLPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class SSLPerm extends Perm
+@:internal extern class SSLPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	
 	
 }
-@:internal extern class SubjDelegPerm extends Perm
+@:internal extern class SubjDelegPerm extends sun.security.tools.policytool.PolicyTool.Perm
 {
 	@:overload public function new() : Void;
 	

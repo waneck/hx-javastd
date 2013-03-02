@@ -46,7 +46,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	*
 	* @return The string this wraps or the empty string if null
 	*/
-	@:overload override public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
+	@:overload public function appendToFsb(fsb : com.sun.org.apache.xml.internal.utils.FastStringBuffer) : Void;
 	
 	/**
 	* Tell if this object contains a java String object.
@@ -68,7 +68,7 @@ extern class XStringForChars extends com.sun.org.apache.xpath.internal.objects.X
 	*
 	* @return The java String representation of this object.
 	*/
-	@:overload override public function object() : Dynamic;
+	@:overload public function object() : Dynamic;
 	
 	/**
 	* Directly call the

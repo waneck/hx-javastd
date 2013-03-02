@@ -29,29 +29,29 @@ package com.sun.tools.javac.file;
 	
 	@:overload public function new(fileManager : com.sun.tools.javac.file.JavacFileManager, name : String, f : java.io.File) : Void;
 	
-	@:overload override public function toUri() : java.net.URI;
+	@:overload public function toUri() : java.net.URI;
 	
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
-	@:overload override public function getShortName() : String;
+	@:overload public function getShortName() : String;
 	
-	@:overload override public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
+	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
-	@:overload override public function openInputStream() : java.io.InputStream;
+	@:overload public function openInputStream() : java.io.InputStream;
 	
-	@:overload override public function openOutputStream() : java.io.OutputStream;
+	@:overload public function openOutputStream() : java.io.OutputStream;
 	
-	@:overload override public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
+	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.nio.CharBuffer;
 	
-	@:overload override public function openWriter() : java.io.Writer;
+	@:overload public function openWriter() : java.io.Writer;
 	
-	@:overload override public function getLastModified() : haxe.Int64;
+	@:overload public function getLastModified() : haxe.Int64;
 	
-	@:overload override public function delete() : Bool;
+	@:overload public function delete() : Bool;
 	
-	@:overload override private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
+	@:overload private function getDecoder(ignoreEncodingErrors : Bool) : java.nio.charset.CharsetDecoder;
 	
-	@:overload override private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
+	@:overload private function inferBinaryName(path : java.lang.Iterable<java.io.File>) : String;
 	
 	@:overload public function isNameCompatible(cn : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
@@ -60,9 +60,9 @@ package com.sun.tools.javac.file;
 	* Two RegularFileObjects are equal if the absolute paths of the underlying
 	* files are equal.
 	*/
-	@:overload override public function equals(other : Dynamic) : Bool;
+	@:overload public function equals(other : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	
 }

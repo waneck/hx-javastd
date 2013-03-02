@@ -41,7 +41,7 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	*
 	* @param v ObjectStack to copy
 	*/
-	@:overload public function new(v : ObjectStack) : Void;
+	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.ObjectStack) : Void;
 	
 	/**
 	* Pushes an item onto the top of this stack.
@@ -116,7 +116,7 @@ extern class ObjectStack extends com.sun.org.apache.xml.internal.utils.ObjectVec
 	*
 	* @return clone of current ObjectStack
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	
 }

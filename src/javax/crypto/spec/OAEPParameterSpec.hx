@@ -28,7 +28,7 @@ extern class OAEPParameterSpec implements java.security.spec.AlgorithmParameterS
 	/**
 	* The OAEP parameter set with all default values.
 	*/
-	public static var DEFAULT(default, null) : OAEPParameterSpec;
+	public static var DEFAULT(default, null) : javax.crypto.spec.OAEPParameterSpec;
 	
 	/**
 	* Constructs a parameter set for OAEP padding as defined in

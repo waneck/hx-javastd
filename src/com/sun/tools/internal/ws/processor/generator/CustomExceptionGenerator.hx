@@ -29,7 +29,7 @@ extern class CustomExceptionGenerator extends com.sun.tools.internal.ws.processo
 	
 	@:overload public function getGenerator(model : com.sun.tools.internal.ws.processor.model.Model, options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver) : com.sun.tools.internal.ws.processor.generator.GeneratorBase;
 	
-	@:overload override public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
+	@:overload public function visit(fault : com.sun.tools.internal.ws.processor.model.Fault) : Void;
 	
 	
 }

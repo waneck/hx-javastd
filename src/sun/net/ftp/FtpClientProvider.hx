@@ -75,7 +75,7 @@ extern class FtpClientProvider
 	*
 	* @return  The system-wide default FtpClientProvider
 	*/
-	@:overload public static function provider() : FtpClientProvider;
+	@:overload public static function provider() : sun.net.ftp.FtpClientProvider;
 	
 	
 }

@@ -89,7 +89,7 @@ extern interface XSComplexType extends com.sun.xml.internal.xsom.XSType extends 
 	* @return null
 	*      if this component has not been redefined.
 	*/
-	@:overload public function getRedefinedBy() : XSComplexType;
+	@:overload public function getRedefinedBy() : com.sun.xml.internal.xsom.XSComplexType;
 	
 	/**
 	* Returns a list of direct subtypes of this complex type. If the type is not subtyped, returns empty list.
@@ -97,7 +97,7 @@ extern interface XSComplexType extends com.sun.xml.internal.xsom.XSType extends 
 	* Note that the complex type may be extended outside of the scope of the schemaset known to XSOM.
 	* @return
 	*/
-	@:overload public function getSubtypes() : java.util.List<XSComplexType>;
+	@:overload public function getSubtypes() : java.util.List<com.sun.xml.internal.xsom.XSComplexType>;
 	
 	/**
 	* Returns a list of element declarations of this type.

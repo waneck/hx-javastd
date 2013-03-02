@@ -55,7 +55,7 @@ extern class Registry
 	* @throws UnsupportedOperationException if the {@code Registry} class is
 	* not supported.
 	*/
-	@:overload public static function getSystemRegistry() : Registry;
+	@:overload public static function getSystemRegistry() : com.sun.servicetag.Registry;
 	
 	/**
 	* Returns {@code true} if the {@code Registry} class is supported on this system.

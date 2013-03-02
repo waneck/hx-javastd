@@ -47,7 +47,7 @@ extern class SelectOptimalEncodingFeature extends javax.xml.ws.WebServiceFeature
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getID() : String;
+	@:overload public function getID() : String;
 	
 	
 }

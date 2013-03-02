@@ -63,19 +63,19 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11PrivateKey') @:internal extern class P11Key_P11PrivateKey extends P11Key implements java.security.PrivateKey
+@:native('sun$security$pkcs11$P11Key$P11PrivateKey') @:internal extern class P11Key_P11PrivateKey extends sun.security.pkcs11.P11Key implements java.security.PrivateKey
 {
 	@:overload override public function getFormat() : String;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11SecretKey') @:internal extern class P11Key_P11SecretKey extends P11Key implements javax.crypto.SecretKey
+@:native('sun$security$pkcs11$P11Key$P11SecretKey') @:internal extern class P11Key_P11SecretKey extends sun.security.pkcs11.P11Key implements javax.crypto.SecretKey
 {
 	@:overload override public function getFormat() : String;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11TlsMasterSecretKey') @:internal extern class P11Key_P11TlsMasterSecretKey extends P11Key_P11SecretKey implements sun.security.internal.interfaces.TlsMasterSecret
+@:native('sun$security$pkcs11$P11Key$P11TlsMasterSecretKey') @:internal extern class P11Key_P11TlsMasterSecretKey extends sun.security.pkcs11.P11Key.P11Key_P11SecretKey implements sun.security.internal.interfaces.TlsMasterSecret
 {
 	@:overload public function getMajorVersion() : Int;
 	
@@ -83,7 +83,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11RSAPrivateKey') @:internal extern class P11Key_P11RSAPrivateKey extends P11Key implements java.security.interfaces.RSAPrivateCrtKey
+@:native('sun$security$pkcs11$P11Key$P11RSAPrivateKey') @:internal extern class P11Key_P11RSAPrivateKey extends sun.security.pkcs11.P11Key implements java.security.interfaces.RSAPrivateCrtKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -107,7 +107,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11RSAPrivateNonCRTKey') @:internal extern class P11Key_P11RSAPrivateNonCRTKey extends P11Key implements java.security.interfaces.RSAPrivateKey
+@:native('sun$security$pkcs11$P11Key$P11RSAPrivateNonCRTKey') @:internal extern class P11Key_P11RSAPrivateNonCRTKey extends sun.security.pkcs11.P11Key implements java.security.interfaces.RSAPrivateKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -119,7 +119,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11RSAPublicKey') @:internal extern class P11Key_P11RSAPublicKey extends P11Key implements java.security.interfaces.RSAPublicKey
+@:native('sun$security$pkcs11$P11Key$P11RSAPublicKey') @:internal extern class P11Key_P11RSAPublicKey extends sun.security.pkcs11.P11Key implements java.security.interfaces.RSAPublicKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -131,7 +131,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11DSAPublicKey') @:internal extern class P11Key_P11DSAPublicKey extends P11Key implements java.security.interfaces.DSAPublicKey
+@:native('sun$security$pkcs11$P11Key$P11DSAPublicKey') @:internal extern class P11Key_P11DSAPublicKey extends sun.security.pkcs11.P11Key implements java.security.interfaces.DSAPublicKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -143,7 +143,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11DSAPrivateKey') @:internal extern class P11Key_P11DSAPrivateKey extends P11Key implements java.security.interfaces.DSAPrivateKey
+@:native('sun$security$pkcs11$P11Key$P11DSAPrivateKey') @:internal extern class P11Key_P11DSAPrivateKey extends sun.security.pkcs11.P11Key implements java.security.interfaces.DSAPrivateKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -155,7 +155,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11DHPrivateKey') @:internal extern class P11Key_P11DHPrivateKey extends P11Key implements javax.crypto.interfaces.DHPrivateKey
+@:native('sun$security$pkcs11$P11Key$P11DHPrivateKey') @:internal extern class P11Key_P11DHPrivateKey extends sun.security.pkcs11.P11Key implements javax.crypto.interfaces.DHPrivateKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -167,7 +167,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11DHPublicKey') @:internal extern class P11Key_P11DHPublicKey extends P11Key implements javax.crypto.interfaces.DHPublicKey
+@:native('sun$security$pkcs11$P11Key$P11DHPublicKey') @:internal extern class P11Key_P11DHPublicKey extends sun.security.pkcs11.P11Key implements javax.crypto.interfaces.DHPublicKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -179,7 +179,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11ECPrivateKey') @:internal extern class P11Key_P11ECPrivateKey extends P11Key implements java.security.interfaces.ECPrivateKey
+@:native('sun$security$pkcs11$P11Key$P11ECPrivateKey') @:internal extern class P11Key_P11ECPrivateKey extends sun.security.pkcs11.P11Key implements java.security.interfaces.ECPrivateKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -191,7 +191,7 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$P11Key$P11ECPublicKey') @:internal extern class P11Key_P11ECPublicKey extends P11Key implements java.security.interfaces.ECPublicKey
+@:native('sun$security$pkcs11$P11Key$P11ECPublicKey') @:internal extern class P11Key_P11ECPublicKey extends sun.security.pkcs11.P11Key implements java.security.interfaces.ECPublicKey
 {
 	@:overload override public function getFormat() : String;
 	
@@ -203,9 +203,9 @@ package sun.security.pkcs11;
 	
 	
 }
-@:internal extern class SessionKeyRef extends java.lang.ref.PhantomReference<P11Key> implements java.lang.Comparable<SessionKeyRef>
+@:internal extern class SessionKeyRef extends java.lang.ref.PhantomReference<sun.security.pkcs11.P11Key> implements java.lang.Comparable<sun.security.pkcs11.P11Key.SessionKeyRef>
 {
-	@:overload public function compareTo(other : SessionKeyRef) : Int;
+	@:overload public function compareTo(other : sun.security.pkcs11.P11Key.SessionKeyRef) : Int;
 	
 	
 }

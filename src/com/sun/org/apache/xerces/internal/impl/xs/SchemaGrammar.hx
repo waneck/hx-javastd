@@ -32,7 +32,7 @@ extern class SchemaGrammar implements com.sun.org.apache.xerces.internal.xni.gra
 	*/
 	@:overload public function new(targetNamespace : String, grammarDesc : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription, symbolTable : com.sun.org.apache.xerces.internal.util.SymbolTable) : Void;
 	
-	@:overload public function new(grammar : SchemaGrammar) : Void;
+	@:overload public function new(grammar : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar) : Void;
 	
 	@:overload public function getGrammarDescription() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
 	
@@ -178,13 +178,13 @@ extern class SchemaGrammar implements com.sun.org.apache.xerces.internal.xni.gra
 	
 	public static var fAnyType(default, null) : com.sun.org.apache.xerces.internal.impl.xs.XSComplexTypeDecl;
 	
-	public static var SG_SchemaNS(default, null) : SchemaGrammar_BuiltinSchemaGrammar;
+	public static var SG_SchemaNS(default, null) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar.SchemaGrammar_BuiltinSchemaGrammar;
 	
 	public static var fAnySimpleType(default, null) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
-	public static var SG_XSI(default, null) : SchemaGrammar_BuiltinSchemaGrammar;
+	public static var SG_XSI(default, null) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar.SchemaGrammar_BuiltinSchemaGrammar;
 	
-	@:overload public static function getS4SGrammar(schemaVersion : java.StdTypes.Int16) : SchemaGrammar;
+	@:overload public static function getS4SGrammar(schemaVersion : java.StdTypes.Int16) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
 	
 	@:overload @:synchronized public function addDocument(document : Dynamic, location : String) : Void;
 	
@@ -297,7 +297,7 @@ extern class SchemaGrammar implements com.sun.org.apache.xerces.internal.xni.gra
 	
 	
 }
-@:native('com$sun$org$apache$xerces$internal$impl$xs$SchemaGrammar$BuiltinSchemaGrammar') extern class SchemaGrammar_BuiltinSchemaGrammar extends SchemaGrammar
+@:native('com$sun$org$apache$xerces$internal$impl$xs$SchemaGrammar$BuiltinSchemaGrammar') extern class SchemaGrammar_BuiltinSchemaGrammar extends com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar
 {
 	/**
 	* Special constructor to create the grammars for the schema namespaces
@@ -359,12 +359,12 @@ extern class SchemaGrammar implements com.sun.org.apache.xerces.internal.xni.gra
 *
 * @author Michael Glavassevich, IBM
 */
-@:native('com$sun$org$apache$xerces$internal$impl$xs$SchemaGrammar$Schema4Annotations') extern class SchemaGrammar_Schema4Annotations extends SchemaGrammar
+@:native('com$sun$org$apache$xerces$internal$impl$xs$SchemaGrammar$Schema4Annotations') extern class SchemaGrammar_Schema4Annotations extends com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar
 {
 	/**
 	* Singleton instance.
 	*/
-	public static var INSTANCE(default, null) : SchemaGrammar_Schema4Annotations;
+	public static var INSTANCE(default, null) : com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar.SchemaGrammar_Schema4Annotations;
 	
 	@:overload override public function getGrammarDescription() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
 	

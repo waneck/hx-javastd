@@ -70,9 +70,9 @@ extern class QNameMap<V>
 	* @param map mappings to be stored in this map.
 	*
 	*/
-	@:overload public function putAll(map : QNameMap<V>) : QNameMap<V>;
+	@:overload public function putAll(map : com.sun.xml.internal.ws.util.QNameMap<V>) : com.sun.xml.internal.ws.util.QNameMap<V>;
 	
-	@:overload public function putAll(map : java.util.Map<javax.xml.namespace.QName, V>) : QNameMap<V>;
+	@:overload public function putAll(map : java.util.Map<javax.xml.namespace.QName, V>) : com.sun.xml.internal.ws.util.QNameMap<V>;
 	
 	/**
 	* Returns one random item in the map.
@@ -81,7 +81,7 @@ extern class QNameMap<V>
 	* <p>
 	* This method is useful to obtain the value from a map that only contains one element.
 	*/
-	@:overload public function getOne() : QNameMap_Entry<V>;
+	@:overload public function getOne() : com.sun.xml.internal.ws.util.QNameMap.QNameMap_Entry<V>;
 	
 	@:overload public function keySet() : java.util.Collection<javax.xml.namespace.QName>;
 	
@@ -94,7 +94,7 @@ extern class QNameMap<V>
 	*/
 	@:overload public function isEmpty() : Bool;
 	
-	@:overload public function entrySet() : java.util.Set<QNameMap_Entry<V>>;
+	@:overload public function entrySet() : java.util.Set<com.sun.xml.internal.ws.util.QNameMap.QNameMap_Entry<V>>;
 	
 	@:overload public function toString() : String;
 	
@@ -116,7 +116,7 @@ extern class QNameMap<V>
 	
 	
 }
-@:native('com$sun$xml$internal$ws$util$QNameMap$ValueIterator') @:internal extern class QNameMap_ValueIterator extends QNameMap_HashIterator<Dynamic>
+@:native('com$sun$xml$internal$ws$util$QNameMap$ValueIterator') @:internal extern class QNameMap_ValueIterator extends com.sun.xml.internal.ws.util.QNameMap.QNameMap_HashIterator<Dynamic>
 {
 	@:overload override public function next() : Dynamic;
 	
@@ -147,21 +147,21 @@ extern class QNameMap<V>
 	
 	
 }
-@:native('com$sun$xml$internal$ws$util$QNameMap$EntryIterator') @:internal extern class QNameMap_EntryIterator extends QNameMap_HashIterator<QNameMap_Entry<Dynamic>>
+@:native('com$sun$xml$internal$ws$util$QNameMap$EntryIterator') @:internal extern class QNameMap_EntryIterator extends com.sun.xml.internal.ws.util.QNameMap.QNameMap_HashIterator<com.sun.xml.internal.ws.util.QNameMap.QNameMap_Entry<Dynamic>>
 {
-	@:overload override public function next() : QNameMap_Entry<Dynamic>;
+	@:overload override public function next() : com.sun.xml.internal.ws.util.QNameMap.QNameMap_Entry<Dynamic>;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$util$QNameMap$EntrySet') @:internal extern class QNameMap_EntrySet extends java.util.AbstractSet<QNameMap_Entry<Dynamic>>
+@:native('com$sun$xml$internal$ws$util$QNameMap$EntrySet') @:internal extern class QNameMap_EntrySet extends java.util.AbstractSet<com.sun.xml.internal.ws.util.QNameMap.QNameMap_Entry<Dynamic>>
 {
-	@:overload override public function iterator() : java.util.Iterator<QNameMap_Entry<Dynamic>>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.ws.util.QNameMap.QNameMap_Entry<Dynamic>>;
 	
-	@:overload override public function contains(o : Dynamic) : Bool;
+	@:overload public function contains(o : Dynamic) : Bool;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	
 }

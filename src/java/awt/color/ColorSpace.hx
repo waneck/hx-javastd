@@ -204,7 +204,7 @@ extern class ColorSpace implements java.io.Serializable
 	*        CS_CIEXYZ, CS_GRAY, or CS_PYCC)
 	* @return the requested <CODE>ColorSpace</CODE> object
 	*/
-	@:overload public static function getInstance(colorspace : Int) : ColorSpace;
+	@:overload public static function getInstance(colorspace : Int) : java.awt.color.ColorSpace;
 	
 	/**
 	* Returns true if the ColorSpace is CS_sRGB.

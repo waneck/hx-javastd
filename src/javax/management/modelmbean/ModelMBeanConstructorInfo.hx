@@ -102,7 +102,7 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	* Creates and returns a new ModelMBeanConstructorInfo which is a duplicate of this ModelMBeanConstructorInfo.
 	*
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Returns a copy of the associated Descriptor.
@@ -142,7 +142,7 @@ extern class ModelMBeanConstructorInfo extends javax.management.MBeanConstructor
 	/**
 	* Returns a string containing the entire contents of the ModelMBeanConstructorInfo in human readable form.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

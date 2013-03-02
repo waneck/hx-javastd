@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.fault;
 */
 @:internal extern class SOAP11Fault extends com.sun.xml.internal.ws.fault.SOAPFaultBuilder
 {
-	@:overload override private function getProtocolException() : java.lang.Throwable;
+	@:overload private function getProtocolException() : java.lang.Throwable;
 	
 	
 }

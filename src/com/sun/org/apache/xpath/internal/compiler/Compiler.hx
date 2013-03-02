@@ -443,7 +443,7 @@ extern class Compiler extends com.sun.org.apache.xpath.internal.compiler.OpMap
 	* @throws TransformerException if the current ErrorListoner determines to
 	*                              throw an exception.
 	*/
-	@:overload override public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function error(msg : String, args : java.NativeArray<Dynamic>) : Void;
 	
 	/**
 	* Get the current namespace context for the xpath.

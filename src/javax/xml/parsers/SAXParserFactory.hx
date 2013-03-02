@@ -88,7 +88,7 @@ extern class SAXParserFactory
 	* @throws FactoryConfigurationError if the implementation is
 	*   not available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance() : SAXParserFactory;
+	@:overload public static function newInstance() : javax.xml.parsers.SAXParserFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>SAXParserFactory</code> from class name.
@@ -124,7 +124,7 @@ extern class SAXParserFactory
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : SAXParserFactory;
+	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.parsers.SAXParserFactory;
 	
 	/**
 	* <p>Creates a new instance of a SAXParser using the currently

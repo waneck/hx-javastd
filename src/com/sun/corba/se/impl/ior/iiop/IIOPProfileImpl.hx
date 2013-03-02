@@ -45,7 +45,7 @@ extern class IIOPProfileImpl extends com.sun.corba.se.spi.ior.IdentifiableBase i
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, profile : org.omg.IOP.TaggedProfile) : Void;
 	
-	@:overload override public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload override public function getId() : Int;
 	

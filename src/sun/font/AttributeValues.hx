@@ -159,29 +159,29 @@ extern class AttributeValues implements java.lang.Cloneable
 	
 	@:overload public function unset(a : sun.font.EAttribute) : Void;
 	
-	@:overload public function set(a : sun.font.EAttribute, src : AttributeValues) : Void;
+	@:overload public function set(a : sun.font.EAttribute, src : sun.font.AttributeValues) : Void;
 	
 	@:overload public function set(a : sun.font.EAttribute, o : Dynamic) : Void;
 	
 	@:overload public function get(a : sun.font.EAttribute) : Dynamic;
 	
-	@:overload public function merge(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : AttributeValues;
+	@:overload public function merge(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : sun.font.AttributeValues;
 	
-	@:overload public function merge(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>, mask : Int) : AttributeValues;
+	@:overload public function merge(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>, mask : Int) : sun.font.AttributeValues;
 	
-	@:overload public function merge(src : AttributeValues) : AttributeValues;
+	@:overload public function merge(src : sun.font.AttributeValues) : sun.font.AttributeValues;
 	
-	@:overload public function merge(src : AttributeValues, mask : Int) : AttributeValues;
+	@:overload public function merge(src : sun.font.AttributeValues, mask : Int) : sun.font.AttributeValues;
 	
-	@:overload public static function fromMap(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : AttributeValues;
+	@:overload public static function fromMap(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : sun.font.AttributeValues;
 	
-	@:overload public static function fromMap(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>, mask : Int) : AttributeValues;
+	@:overload public static function fromMap(map : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>, mask : Int) : sun.font.AttributeValues;
 	
 	@:overload public function toMap(fill : java.util.Map<java.awt.font.TextAttribute, Dynamic>) : java.util.Map<java.awt.font.TextAttribute, Dynamic>;
 	
 	@:overload public static function is16Hashtable(ht : java.util.Hashtable<Dynamic, Dynamic>) : Bool;
 	
-	@:overload public static function fromSerializableHashtable(ht : java.util.Hashtable<Dynamic, Dynamic>) : AttributeValues;
+	@:overload public static function fromSerializableHashtable(ht : java.util.Hashtable<Dynamic, Dynamic>) : sun.font.AttributeValues;
 	
 	@:overload public function toSerializableHashtable() : java.util.Hashtable<Dynamic, Dynamic>;
 	
@@ -189,9 +189,9 @@ extern class AttributeValues implements java.lang.Cloneable
 	
 	@:overload public function equals(rhs : Dynamic) : Bool;
 	
-	@:overload public function equals(rhs : AttributeValues) : Bool;
+	@:overload public function equals(rhs : sun.font.AttributeValues) : Bool;
 	
-	@:overload public function clone() : AttributeValues;
+	@:overload public function clone() : sun.font.AttributeValues;
 	
 	@:overload public function toString() : String;
 	
@@ -203,7 +203,7 @@ extern class AttributeValues implements java.lang.Cloneable
 	* If this has an imHighlight, create copy of this with those attributes
 	* applied to it.  Otherwise return this unchanged.
 	*/
-	@:overload public function applyIMHighlight() : AttributeValues;
+	@:overload public function applyIMHighlight() : sun.font.AttributeValues;
 	
 	@:native('getBaselineTransform') @:overload public static function _getBaselineTransform(map : java.util.Map<Dynamic, Dynamic>) : java.awt.geom.AffineTransform;
 	

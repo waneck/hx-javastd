@@ -38,25 +38,25 @@ package java.nio;
 {
 	@:overload private function new(buf : java.NativeArray<Int>, mark : Int, pos : Int, lim : Int, cap : Int, off : Int) : Void;
 	
-	@:overload override public function slice() : java.nio.IntBuffer;
+	@:overload public function slice() : java.nio.IntBuffer;
 	
-	@:overload override public function duplicate() : java.nio.IntBuffer;
+	@:overload public function duplicate() : java.nio.IntBuffer;
 	
-	@:overload override public function asReadOnlyBuffer() : java.nio.IntBuffer;
+	@:overload public function asReadOnlyBuffer() : java.nio.IntBuffer;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function put(x : Int) : java.nio.IntBuffer;
+	@:overload public function put(x : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function put(i : Int, x : Int) : java.nio.IntBuffer;
+	@:overload public function put(i : Int, x : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
+	@:overload public function put(src : java.NativeArray<Int>, offset : Int, length : Int) : java.nio.IntBuffer;
 	
-	@:overload override public function put(src : java.nio.IntBuffer) : java.nio.IntBuffer;
+	@:overload public function put(src : java.nio.IntBuffer) : java.nio.IntBuffer;
 	
-	@:overload override public function compact() : java.nio.IntBuffer;
+	@:overload public function compact() : java.nio.IntBuffer;
 	
-	@:overload override public function order() : java.nio.ByteOrder;
+	@:overload public function order() : java.nio.ByteOrder;
 	
 	
 }

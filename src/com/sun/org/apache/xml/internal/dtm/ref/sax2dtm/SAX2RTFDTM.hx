@@ -38,7 +38,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	*  @return int Node handle of Document node, or null if this DTM does not
 	*  contain an "active" document.
 	* */
-	@:overload override public function getDocument() : Int;
+	@:overload public function getDocument() : Int;
 	
 	/**
 	* Given a node handle, find the owning document node, using DTM semantics
@@ -51,7 +51,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	* @param nodeHandle the id of the node.
 	* @return int Node handle of owning document
 	*/
-	@:overload override public function getDocumentRoot(nodeHandle : Int) : Int;
+	@:overload public function getDocumentRoot(nodeHandle : Int) : Int;
 	
 	/**
 	* Given a node identifier, find the owning document node.  Unlike the DOM,
@@ -75,7 +75,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#startDocument
 	* */
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of the document.
@@ -89,7 +89,7 @@ extern class SAX2RTFDTM extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.
 	*            wrapping another exception.
 	* @see org.xml.sax.ContentHandler#endDocument
 	* */
-	@:overload override public function endDocument() : Void;
+	@:overload public function endDocument() : Void;
 	
 	/** "Tail-pruning" support for RTFs.
 	*

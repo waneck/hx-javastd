@@ -64,27 +64,27 @@ package javax.swing.plaf.synth;
 	/**
 	* ColorType for the foreground of a region.
 	*/
-	public static var FOREGROUND(default, null) : ColorType;
+	public static var FOREGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the background of a region.
 	*/
-	public static var BACKGROUND(default, null) : ColorType;
+	public static var BACKGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the foreground of a region.
 	*/
-	public static var TEXT_FOREGROUND(default, null) : ColorType;
+	public static var TEXT_FOREGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the background of a region.
 	*/
-	public static var TEXT_BACKGROUND(default, null) : ColorType;
+	public static var TEXT_BACKGROUND(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* ColorType for the focus.
 	*/
-	public static var FOCUS(default, null) : ColorType;
+	public static var FOCUS(default, null) : javax.swing.plaf.synth.ColorType;
 	
 	/**
 	* Maximum number of <code>ColorType</code>s.

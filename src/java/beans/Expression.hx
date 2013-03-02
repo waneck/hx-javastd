@@ -104,7 +104,7 @@ package java.beans;
 	* @see java.lang.reflect.Method
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function execute() : Void;
+	@:require(java7) @:overload public function execute() : Void;
 	
 	/**
 	* If the value property of this instance is not already set,
@@ -150,7 +150,7 @@ package java.beans;
 	/**
 	* Prints the value of this expression using a Java-style syntax.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

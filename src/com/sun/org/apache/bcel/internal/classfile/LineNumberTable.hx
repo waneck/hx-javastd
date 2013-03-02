@@ -71,7 +71,7 @@ extern class LineNumberTable extends com.sun.org.apache.bcel.internal.classfile.
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : LineNumberTable) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.LineNumberTable) : Void;
 	
 	/*
 	* @param name_index Index of name

@@ -34,33 +34,33 @@ extern class AnnotationContext
 {
 	@:overload public function toString() : String;
 	
-	public static var SCHEMA(default, null) : AnnotationContext;
+	public static var SCHEMA(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var NOTATION(default, null) : AnnotationContext;
+	public static var NOTATION(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ELEMENT_DECL(default, null) : AnnotationContext;
+	public static var ELEMENT_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var IDENTITY_CONSTRAINT(default, null) : AnnotationContext;
+	public static var IDENTITY_CONSTRAINT(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var XPATH(default, null) : AnnotationContext;
+	public static var XPATH(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var MODELGROUP_DECL(default, null) : AnnotationContext;
+	public static var MODELGROUP_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var SIMPLETYPE_DECL(default, null) : AnnotationContext;
+	public static var SIMPLETYPE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var COMPLEXTYPE_DECL(default, null) : AnnotationContext;
+	public static var COMPLEXTYPE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var PARTICLE(default, null) : AnnotationContext;
+	public static var PARTICLE(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var MODELGROUP(default, null) : AnnotationContext;
+	public static var MODELGROUP(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ATTRIBUTE_USE(default, null) : AnnotationContext;
+	public static var ATTRIBUTE_USE(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var WILDCARD(default, null) : AnnotationContext;
+	public static var WILDCARD(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ATTRIBUTE_GROUP(default, null) : AnnotationContext;
+	public static var ATTRIBUTE_GROUP(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
-	public static var ATTRIBUTE_DECL(default, null) : AnnotationContext;
+	public static var ATTRIBUTE_DECL(default, null) : com.sun.xml.internal.xsom.parser.AnnotationContext;
 	
 	
 }

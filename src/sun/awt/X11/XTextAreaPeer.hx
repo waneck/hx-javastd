@@ -76,7 +76,7 @@ package sun.awt.X11;
 	
 	@:overload override public function handlesWheelScrolling() : Bool;
 	
-	@:overload override public function handleJavaMouseEvent(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function handleJavaMouseEvent(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* @see java.awt.peer.TextComponentPeer
@@ -190,11 +190,11 @@ package sun.awt.X11;
 }
 @:native('sun$awt$X11$XTextAreaPeer$XAWTCaret') @:internal extern class XTextAreaPeer_XAWTCaret extends javax.swing.text.DefaultCaret
 {
-	@:overload override public function focusGained(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusGained(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function focusLost(e : java.awt.event.FocusEvent) : Void;
+	@:overload public function focusLost(e : java.awt.event.FocusEvent) : Void;
 	
-	@:overload override public function setSelectionVisible(vis : Bool) : Void;
+	@:overload public function setSelectionVisible(vis : Bool) : Void;
 	
 	
 }
@@ -238,7 +238,7 @@ package sun.awt.X11;
 }
 @:native('sun$awt$X11$XTextAreaPeer$AWTTextArea') @:internal extern class XTextAreaPeer_AWTTextArea extends javax.swing.JTextArea implements javax.swing.event.DocumentListener
 {
-	@:overload public function new(text : String, peer : XTextAreaPeer) : Void;
+	@:overload public function new(text : String, peer : sun.awt.X11.XTextAreaPeer) : Void;
 	
 	@:overload public function insertUpdate(e : javax.swing.event.DocumentEvent) : Void;
 	
@@ -258,7 +258,7 @@ package sun.awt.X11;
 	
 	@:overload override public function updateUI() : Void;
 	
-	@:overload override public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
+	@:overload public function setTransferHandler(newHandler : javax.swing.TransferHandler) : Void;
 	
 	
 }

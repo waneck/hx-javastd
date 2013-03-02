@@ -189,7 +189,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* can create an alternative strategy, which might keep
 	* state.
 	*/
-	private var strategy : FlowView_FlowStrategy;
+	private var strategy : javax.swing.text.FlowView.FlowView_FlowStrategy;
 	
 	
 }
@@ -217,7 +217,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*   This value will be null if the view has not yet been displayed.
 	* @see View#insertUpdate
 	*/
-	@:overload public function insertUpdate(fv : FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload public function insertUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification that something was removed from the document
@@ -227,7 +227,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param alloc the current allocation of the view inside of the insets.
 	* @see View#removeUpdate
 	*/
-	@:overload public function removeUpdate(fv : FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload public function removeUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* Gives notification from the document that attributes were changed
@@ -239,13 +239,13 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param alloc  Bounds of the View
 	* @see View#changedUpdate
 	*/
-	@:overload public function changedUpdate(fv : FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
+	@:overload public function changedUpdate(fv : javax.swing.text.FlowView, e : javax.swing.event.DocumentEvent, alloc : java.awt.Rectangle) : Void;
 	
 	/**
 	* This method gives flow strategies access to the logical
 	* view of the FlowView.
 	*/
-	@:overload private function getLogicalView(fv : FlowView) : javax.swing.text.View;
+	@:overload private function getLogicalView(fv : javax.swing.text.FlowView) : javax.swing.text.View;
 	
 	/**
 	* Update the flow on the given FlowView.  By default, this causes
@@ -255,7 +255,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*
 	* @param fv the view to reflow
 	*/
-	@:overload public function layout(fv : FlowView) : Void;
+	@:overload public function layout(fv : javax.swing.text.FlowView) : Void;
 	
 	/**
 	* Creates a row of views that will fit within the
@@ -273,7 +273,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	*   this views element from which to start.
 	* @return the position to start the next row
 	*/
-	@:overload private function layoutRow(fv : FlowView, rowIndex : Int, pos : Int) : Int;
+	@:overload private function layoutRow(fv : javax.swing.text.FlowView, rowIndex : Int, pos : Int) : Int;
 	
 	/**
 	* Adjusts the given row if possible to fit within the
@@ -287,7 +287,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param desiredSpan the current layout span >= 0
 	* @param x the location r starts at.
 	*/
-	@:overload private function adjustRow(fv : FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
+	@:overload private function adjustRow(fv : javax.swing.text.FlowView, rowIndex : Int, desiredSpan : Int, x : Int) : Void;
 	
 	/**
 	* Creates a view that can be used to represent the current piece
@@ -299,7 +299,7 @@ extern class FlowView extends javax.swing.text.BoxView
 	* @param spanLeft the about of span left to fill in the row
 	* @param rowIndex the row the view will be placed into
 	*/
-	@:overload private function createView(fv : FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
+	@:overload private function createView(fv : javax.swing.text.FlowView, startOffset : Int, spanLeft : Int, rowIndex : Int) : javax.swing.text.View;
 	
 	
 }

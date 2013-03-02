@@ -32,7 +32,7 @@ package com.sun.jdi;
 * @author James McIlree
 * @since  1.3
 */
-@:require(java3) extern interface ShortValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<ShortValue>
+@:require(java3) extern interface ShortValue extends com.sun.jdi.PrimitiveValue extends java.lang.Comparable<com.sun.jdi.ShortValue>
 {
 	/**
 	* Returns this ShortValue as a short.

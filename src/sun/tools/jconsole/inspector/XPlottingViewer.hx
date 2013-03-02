@@ -34,7 +34,7 @@ extern class XPlottingViewer extends sun.tools.jconsole.PlotterPanel implements 
 	setBackground(g.getColor());
 	plotter.paintComponent(g);
 	}*/
-	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
+	@:overload public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
 	@:overload public function createPlotter(xmbean : sun.tools.jconsole.inspector.XMBean, attributeName : String, key : String, table : javax.swing.JTable) : sun.tools.jconsole.Plotter;
 	

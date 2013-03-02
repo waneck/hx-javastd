@@ -45,7 +45,7 @@ extern interface MultiDoc
 	* @exception  IOException
 	*     Thrown if an error occurred locating the next document
 	*/
-	@:overload public function next() : MultiDoc;
+	@:overload public function next() : javax.print.MultiDoc;
 	
 	
 }

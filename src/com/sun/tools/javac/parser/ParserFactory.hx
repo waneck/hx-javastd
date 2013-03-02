@@ -26,9 +26,9 @@ package com.sun.tools.javac.parser;
 extern class ParserFactory
 {
 	/** The context key for the parser factory. */
-	private static var parserFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<ParserFactory>;
+	private static var parserFactoryKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.parser.ParserFactory>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : ParserFactory;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.parser.ParserFactory;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	

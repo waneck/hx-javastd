@@ -249,7 +249,7 @@ package java.util;
 	* @return the index of the first occurrence of the specified element in
 	*         this vector, or -1 if this vector does not contain the element
 	*/
-	@:overload override public function indexOf(o : Dynamic) : Int;
+	@:overload public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element in
@@ -280,7 +280,7 @@ package java.util;
 	* @return the index of the last occurrence of the specified element in
 	*         this vector, or -1 if this vector does not contain the element
 	*/
-	@:overload @:synchronized override public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:synchronized public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element in
@@ -488,7 +488,7 @@ package java.util;
 	*            ({@code index < 0 || index >= size()})
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function get(index : Int) : E;
+	@:require(java2) @:overload @:synchronized public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this Vector with the
@@ -501,7 +501,7 @@ package java.util;
 	*         ({@code index < 0 || index >= size()})
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function set(index : Int, element : E) : E;
+	@:require(java2) @:overload @:synchronized public function set(index : Int, element : E) : E;
 	
 	/**
 	* Appends the specified element to the end of this Vector.
@@ -536,7 +536,7 @@ package java.util;
 	*         ({@code index < 0 || index > size()})
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function add(index : Int, element : E) : Void;
+	@:require(java2) @:overload public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this Vector.
@@ -549,7 +549,7 @@ package java.util;
 	* @return element that was removed
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function remove(index : Int) : E;
+	@:require(java2) @:overload @:synchronized public function remove(index : Int) : E;
 	
 	/**
 	* Removes all of the elements from this Vector.  The Vector will
@@ -643,7 +643,7 @@ package java.util;
 	* @throws NullPointerException if the specified collection is null
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:require(java2) @:overload @:synchronized public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Compares the specified Object with this Vector for equality.  Returns
@@ -657,12 +657,12 @@ package java.util;
 	* @param o the Object to be compared for equality with this Vector
 	* @return true if the specified Object is equal to this Vector
 	*/
-	@:overload @:synchronized override public function equals(o : Dynamic) : Bool;
+	@:overload @:synchronized public function equals(o : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this Vector.
 	*/
-	@:overload @:synchronized override public function hashCode() : Int;
+	@:overload @:synchronized public function hashCode() : Int;
 	
 	/**
 	* Returns a string representation of this Vector, containing
@@ -704,7 +704,7 @@ package java.util;
 	* @throws IllegalArgumentException if the endpoint indices are out of order
 	*         {@code (fromIndex > toIndex)}
 	*/
-	@:overload @:synchronized override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:synchronized public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	/**
 	* Removes from this list all of the elements whose index is between
@@ -713,7 +713,7 @@ package java.util;
 	* This call shortens the list by {@code (toIndex - fromIndex)} elements.
 	* (If {@code toIndex==fromIndex}, this operation has no effect.)
 	*/
-	@:overload @:synchronized override private function removeRange(fromIndex : Int, toIndex : Int) : Void;
+	@:overload @:synchronized private function removeRange(fromIndex : Int, toIndex : Int) : Void;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -727,7 +727,7 @@ package java.util;
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:synchronized override public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:synchronized public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -737,7 +737,7 @@ package java.util;
 	*
 	* @see #listIterator(int)
 	*/
-	@:overload @:synchronized override public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:synchronized public function listIterator() : java.util.ListIterator<E>;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.

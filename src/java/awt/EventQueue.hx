@@ -159,7 +159,7 @@ extern class EventQueue
 	* @throws NullPointerException if <code>newEventQueue</code> is <code>null</code>
 	* @since           1.2
 	*/
-	@:require(java2) @:overload public function push(newEventQueue : EventQueue) : Void;
+	@:require(java2) @:overload public function push(newEventQueue : java.awt.EventQueue) : Void;
 	
 	/**
 	* Stops dispatching events using this <code>EventQueue</code>.

@@ -25,24 +25,24 @@ package com.sun.corba.se.impl.encoding;
 */
 extern class BufferManagerWriteStream extends com.sun.corba.se.impl.encoding.BufferManagerWrite
 {
-	@:overload override public function sentFragment() : Bool;
+	@:overload public function sentFragment() : Bool;
 	
 	/**
 	* Returns the correct buffer size for this type of
 	* buffer manager as set in the ORB.
 	*/
-	@:overload override public function getBufferSize() : Int;
+	@:overload public function getBufferSize() : Int;
 	
-	@:overload override public function overflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload public function overflow(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload override public function sendMessage() : Void;
+	@:overload public function sendMessage() : Void;
 	
 	/**
 	* Close the BufferManagerWrite and do any outstanding cleanup.
 	*
 	* No work to do for a BufferManagerWriteStream
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

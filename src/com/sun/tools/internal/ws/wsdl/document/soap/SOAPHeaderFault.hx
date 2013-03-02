@@ -32,7 +32,7 @@ extern class SOAPHeaderFault extends com.sun.tools.internal.ws.wsdl.framework.Ex
 	*/
 	@:overload public function new(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload override public function getElementName() : javax.xml.namespace.QName;
+	@:overload public function getElementName() : javax.xml.namespace.QName;
 	
 	@:overload public function getNamespace() : String;
 	
@@ -58,9 +58,9 @@ extern class SOAPHeaderFault extends com.sun.tools.internal.ws.wsdl.framework.Ex
 	
 	@:overload public function setPart(s : String) : Void;
 	
-	@:overload override public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
+	@:overload public function withAllQNamesDo(action : com.sun.tools.internal.ws.wsdl.framework.QNameAction) : Void;
 	
-	@:overload override public function validateThis() : Void;
+	@:overload public function validateThis() : Void;
 	
 	
 }

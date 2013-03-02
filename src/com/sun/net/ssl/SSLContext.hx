@@ -49,7 +49,7 @@ extern class SSLContext
 	* available in the default provider package or any of the other provider
 	* packages that were searched.
 	*/
-	@:overload public static function getInstance(protocol : String) : SSLContext;
+	@:overload public static function getInstance(protocol : String) : com.sun.net.ssl.SSLContext;
 	
 	/**
 	* Generates a <code>SSLContext</code> object that implements the
@@ -65,7 +65,7 @@ extern class SSLContext
 	* @exception NoSuchProviderException if the specified provider has not
 	* been configured.
 	*/
-	@:overload public static function getInstance(protocol : String, provider : String) : SSLContext;
+	@:overload public static function getInstance(protocol : String, provider : String) : com.sun.net.ssl.SSLContext;
 	
 	/**
 	* Generates a <code>SSLContext</code> object that implements the
@@ -79,7 +79,7 @@ extern class SSLContext
 	* @exception NoSuchAlgorithmException if the specified protocol is not
 	* available from the specified provider.
 	*/
-	@:overload public static function getInstance(protocol : String, provider : java.security.Provider) : SSLContext;
+	@:overload public static function getInstance(protocol : String, provider : java.security.Provider) : com.sun.net.ssl.SSLContext;
 	
 	/**
 	* Returns the protocol name of this <code>SSLContext</code> object.

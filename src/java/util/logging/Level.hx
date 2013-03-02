@@ -29,7 +29,7 @@ extern class Level implements java.io.Serializable
 	* OFF is a special level that can be used to turn off logging.
 	* This level is initialized to <CODE>Integer.MAX_VALUE</CODE>.
 	*/
-	public static var OFF(default, null) : Level;
+	public static var OFF(default, null) : java.util.logging.Level;
 	
 	/**
 	* SEVERE is a message level indicating a serious failure.
@@ -40,7 +40,7 @@ extern class Level implements java.io.Serializable
 	* to end users and to system administrators.
 	* This level is initialized to <CODE>1000</CODE>.
 	*/
-	public static var SEVERE(default, null) : Level;
+	public static var SEVERE(default, null) : java.util.logging.Level;
 	
 	/**
 	* WARNING is a message level indicating a potential problem.
@@ -50,7 +50,7 @@ extern class Level implements java.io.Serializable
 	* indicate potential problems.
 	* This level is initialized to <CODE>900</CODE>.
 	*/
-	public static var WARNING(default, null) : Level;
+	public static var WARNING(default, null) : java.util.logging.Level;
 	
 	/**
 	* INFO is a message level for informational messages.
@@ -61,7 +61,7 @@ extern class Level implements java.io.Serializable
 	* make sense to end users and system administrators.
 	* This level is initialized to <CODE>800</CODE>.
 	*/
-	public static var INFO(default, null) : Level;
+	public static var INFO(default, null) : java.util.logging.Level;
 	
 	/**
 	* CONFIG is a message level for static configuration messages.
@@ -73,7 +73,7 @@ extern class Level implements java.io.Serializable
 	* the graphics depth, the GUI look-and-feel, etc.
 	* This level is initialized to <CODE>700</CODE>.
 	*/
-	public static var CONFIG(default, null) : Level;
+	public static var CONFIG(default, null) : java.util.logging.Level;
 	
 	/**
 	* FINE is a message level providing tracing information.
@@ -94,7 +94,7 @@ extern class Level implements java.io.Serializable
 	* are also worth logging as FINE.
 	* This level is initialized to <CODE>500</CODE>.
 	*/
-	public static var FINE(default, null) : Level;
+	public static var FINE(default, null) : java.util.logging.Level;
 	
 	/**
 	* FINER indicates a fairly detailed tracing message.
@@ -102,19 +102,19 @@ extern class Level implements java.io.Serializable
 	* an exception are traced at this level.
 	* This level is initialized to <CODE>400</CODE>.
 	*/
-	public static var FINER(default, null) : Level;
+	public static var FINER(default, null) : java.util.logging.Level;
 	
 	/**
 	* FINEST indicates a highly detailed tracing message.
 	* This level is initialized to <CODE>300</CODE>.
 	*/
-	public static var FINEST(default, null) : Level;
+	public static var FINEST(default, null) : java.util.logging.Level;
 	
 	/**
 	* ALL indicates that all messages should be logged.
 	* This level is initialized to <CODE>Integer.MIN_VALUE</CODE>.
 	*/
-	public static var ALL(default, null) : Level;
+	public static var ALL(default, null) : java.util.logging.Level;
 	
 	/**
 	* Create a named Level with a given integer value.
@@ -211,7 +211,7 @@ extern class Level implements java.io.Serializable
 	* Passing an integer that does not (e.g., 1) will return a new level name
 	* initialized to that value.
 	*/
-	@:overload @:synchronized public static function parse(name : String) : Level;
+	@:overload @:synchronized public static function parse(name : String) : java.util.logging.Level;
 	
 	/**
 	* Compare two objects for value equality.

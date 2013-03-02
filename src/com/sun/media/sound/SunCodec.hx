@@ -32,27 +32,27 @@ package com.sun.media.sound;
 	
 	/**
 	*/
-	@:overload override public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload public function getSourceEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	*/
-	@:overload override public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload public function getTargetEncodings() : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	*/
-	@:overload @:abstract override public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
+	@:overload @:abstract public function getTargetEncodings(sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat.AudioFormat_Encoding>;
 	
 	/**
 	*/
-	@:overload @:abstract override public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
+	@:overload @:abstract public function getTargetFormats(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceFormat : javax.sound.sampled.AudioFormat) : java.NativeArray<javax.sound.sampled.AudioFormat>;
 	
 	/**
 	*/
-	@:overload @:abstract override public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:abstract public function getAudioInputStream(targetEncoding : javax.sound.sampled.AudioFormat.AudioFormat_Encoding, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	/**
 	*/
-	@:overload @:abstract override public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
+	@:overload @:abstract public function getAudioInputStream(targetFormat : javax.sound.sampled.AudioFormat, sourceStream : javax.sound.sampled.AudioInputStream) : javax.sound.sampled.AudioInputStream;
 	
 	
 }

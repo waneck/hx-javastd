@@ -89,7 +89,7 @@ package java.math;
 * @author  Michael McCloskey
 * @since JDK1.1
 */
-@:require(java1) extern class BigInteger extends java.lang.Number implements java.lang.Comparable<BigInteger>
+@:require(java1) extern class BigInteger extends java.lang.Number implements java.lang.Comparable<java.math.BigInteger>
 {
 	/**
 	* Translates a byte array containing the two's-complement binary
@@ -204,7 +204,7 @@ package java.math;
 	* @see    #bitLength()
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function probablePrime(bitLength : Int, rnd : java.util.Random) : BigInteger;
+	@:require(java4) @:overload public static function probablePrime(bitLength : Int, rnd : java.util.Random) : java.math.BigInteger;
 	
 	/**
 	* Returns the first integer greater than this {@code BigInteger} that
@@ -218,7 +218,7 @@ package java.math;
 	* @throws ArithmeticException {@code this < 0}.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function nextProbablePrime() : BigInteger;
+	@:require(java5) @:overload public function nextProbablePrime() : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is equal to that of the
@@ -229,28 +229,28 @@ package java.math;
 	* @param  val value of the BigInteger to return.
 	* @return a BigInteger with the specified value.
 	*/
-	@:overload public static function valueOf(val : haxe.Int64) : BigInteger;
+	@:overload public static function valueOf(val : haxe.Int64) : java.math.BigInteger;
 	
 	/**
 	* The BigInteger constant zero.
 	*
 	* @since   1.2
 	*/
-	@:require(java2) public static var ZERO(default, null) : BigInteger;
+	@:require(java2) public static var ZERO(default, null) : java.math.BigInteger;
 	
 	/**
 	* The BigInteger constant one.
 	*
 	* @since   1.2
 	*/
-	@:require(java2) public static var ONE(default, null) : BigInteger;
+	@:require(java2) public static var ONE(default, null) : java.math.BigInteger;
 	
 	/**
 	* The BigInteger constant ten.
 	*
 	* @since   1.5
 	*/
-	@:require(java5) public static var TEN(default, null) : BigInteger;
+	@:require(java5) public static var TEN(default, null) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this + val)}.
@@ -258,7 +258,7 @@ package java.math;
 	* @param  val value to be added to this BigInteger.
 	* @return {@code this + val}
 	*/
-	@:overload public function add(val : BigInteger) : BigInteger;
+	@:overload public function add(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this - val)}.
@@ -266,7 +266,7 @@ package java.math;
 	* @param  val value to be subtracted from this BigInteger.
 	* @return {@code this - val}
 	*/
-	@:overload public function subtract(val : BigInteger) : BigInteger;
+	@:overload public function subtract(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this * val)}.
@@ -274,7 +274,7 @@ package java.math;
 	* @param  val value to be multiplied by this BigInteger.
 	* @return {@code this * val}
 	*/
-	@:overload public function multiply(val : BigInteger) : BigInteger;
+	@:overload public function multiply(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this / val)}.
@@ -283,7 +283,7 @@ package java.math;
 	* @return {@code this / val}
 	* @throws ArithmeticException if {@code val} is zero.
 	*/
-	@:overload public function divide(val : BigInteger) : BigInteger;
+	@:overload public function divide(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns an array of two BigIntegers containing {@code (this / val)}
@@ -296,7 +296,7 @@ package java.math;
 	*         is the final element.
 	* @throws ArithmeticException if {@code val} is zero.
 	*/
-	@:overload public function divideAndRemainder(val : BigInteger) : java.NativeArray<BigInteger>;
+	@:overload public function divideAndRemainder(val : java.math.BigInteger) : java.NativeArray<java.math.BigInteger>;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this % val)}.
@@ -306,7 +306,7 @@ package java.math;
 	* @return {@code this % val}
 	* @throws ArithmeticException if {@code val} is zero.
 	*/
-	@:overload public function remainder(val : BigInteger) : BigInteger;
+	@:overload public function remainder(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is <tt>(this<sup>exponent</sup>)</tt>.
@@ -317,7 +317,7 @@ package java.math;
 	* @throws ArithmeticException {@code exponent} is negative.  (This would
 	*         cause the operation to yield a non-integer value.)
 	*/
-	@:overload public function pow(exponent : Int) : BigInteger;
+	@:overload public function pow(exponent : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is the greatest common divisor of
@@ -327,7 +327,7 @@ package java.math;
 	* @param  val value with which the GCD is to be computed.
 	* @return {@code GCD(abs(this), abs(val))}
 	*/
-	@:overload public function gcd(val : BigInteger) : BigInteger;
+	@:overload public function gcd(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is the absolute value of this
@@ -335,14 +335,14 @@ package java.math;
 	*
 	* @return {@code abs(this)}
 	*/
-	@:overload public function abs() : BigInteger;
+	@:overload public function abs() : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (-this)}.
 	*
 	* @return {@code -this}
 	*/
-	@:overload public function negate() : BigInteger;
+	@:overload public function negate() : java.math.BigInteger;
 	
 	/**
 	* Returns the signum function of this BigInteger.
@@ -362,7 +362,7 @@ package java.math;
 	* @throws ArithmeticException {@code m} &le; 0
 	* @see    #remainder
 	*/
-	@:overload public function mod(m : BigInteger) : BigInteger;
+	@:overload public function mod(m : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is
@@ -377,7 +377,7 @@ package java.math;
 	*         prime</i> to {@code m}.
 	* @see    #modInverse
 	*/
-	@:overload public function modPow(exponent : BigInteger, m : BigInteger) : BigInteger;
+	@:overload public function modPow(exponent : java.math.BigInteger, m : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this}<sup>-1</sup> {@code mod m)}.
@@ -388,7 +388,7 @@ package java.math;
 	*         has no multiplicative inverse mod m (that is, this BigInteger
 	*         is not <i>relatively prime</i> to m).
 	*/
-	@:overload public function modInverse(m : BigInteger) : BigInteger;
+	@:overload public function modInverse(m : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this << n)}.
@@ -402,7 +402,7 @@ package java.math;
 	*         Integer.MIN_VALUE}.
 	* @see #shiftRight
 	*/
-	@:overload public function shiftLeft(n : Int) : BigInteger;
+	@:overload public function shiftLeft(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this >> n)}.  Sign
@@ -416,7 +416,7 @@ package java.math;
 	*         Integer.MIN_VALUE}.
 	* @see #shiftLeft
 	*/
-	@:overload public function shiftRight(n : Int) : BigInteger;
+	@:overload public function shiftRight(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this & val)}.  (This
@@ -426,7 +426,7 @@ package java.math;
 	* @param val value to be AND'ed with this BigInteger.
 	* @return {@code this & val}
 	*/
-	@:overload public function and(val : BigInteger) : BigInteger;
+	@:overload public function and(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this | val)}.  (This method
@@ -436,7 +436,7 @@ package java.math;
 	* @param val value to be OR'ed with this BigInteger.
 	* @return {@code this | val}
 	*/
-	@:overload public function or(val : BigInteger) : BigInteger;
+	@:overload public function or(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this ^ val)}.  (This method
@@ -446,7 +446,7 @@ package java.math;
 	* @param val value to be XOR'ed with this BigInteger.
 	* @return {@code this ^ val}
 	*/
-	@:overload public function xor(val : BigInteger) : BigInteger;
+	@:overload public function xor(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (~this)}.  (This method
@@ -455,7 +455,7 @@ package java.math;
 	*
 	* @return {@code ~this}
 	*/
-	@:overload public function not() : BigInteger;
+	@:overload public function not() : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is {@code (this & ~val)}.  This
@@ -467,7 +467,7 @@ package java.math;
 	* @param val value to be complemented and AND'ed with this BigInteger.
 	* @return {@code this & ~val}
 	*/
-	@:overload public function andNot(val : BigInteger) : BigInteger;
+	@:overload public function andNot(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns {@code true} if and only if the designated bit is set.
@@ -487,7 +487,7 @@ package java.math;
 	* @return {@code this | (1<<n)}
 	* @throws ArithmeticException {@code n} is negative.
 	*/
-	@:overload public function setBit(n : Int) : BigInteger;
+	@:overload public function setBit(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is equivalent to this BigInteger
@@ -498,7 +498,7 @@ package java.math;
 	* @return {@code this & ~(1<<n)}
 	* @throws ArithmeticException {@code n} is negative.
 	*/
-	@:overload public function clearBit(n : Int) : BigInteger;
+	@:overload public function clearBit(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns a BigInteger whose value is equivalent to this BigInteger
@@ -509,7 +509,7 @@ package java.math;
 	* @return {@code this ^ (1<<n)}
 	* @throws ArithmeticException {@code n} is negative.
 	*/
-	@:overload public function flipBit(n : Int) : BigInteger;
+	@:overload public function flipBit(n : Int) : java.math.BigInteger;
 	
 	/**
 	* Returns the index of the rightmost (lowest-order) one bit in this
@@ -572,7 +572,7 @@ package java.math;
 	* @return -1, 0 or 1 as this BigInteger is numerically less than, equal
 	*         to, or greater than {@code val}.
 	*/
-	@:overload public function compareTo(val : BigInteger) : Int;
+	@:overload public function compareTo(val : java.math.BigInteger) : Int;
 	
 	/**
 	* Compares this BigInteger with the specified Object for equality.
@@ -590,7 +590,7 @@ package java.math;
 	* @return the BigInteger whose value is the lesser of this BigInteger and
 	*         {@code val}.  If they are equal, either may be returned.
 	*/
-	@:overload public function min(val : BigInteger) : BigInteger;
+	@:overload public function min(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns the maximum of this BigInteger and {@code val}.
@@ -599,7 +599,7 @@ package java.math;
 	* @return the BigInteger whose value is the greater of this and
 	*         {@code val}.  If they are equal, either may be returned.
 	*/
-	@:overload public function max(val : BigInteger) : BigInteger;
+	@:overload public function max(val : java.math.BigInteger) : java.math.BigInteger;
 	
 	/**
 	* Returns the hash code for this BigInteger.

@@ -27,7 +27,7 @@ extern class PSStreamPrintService extends javax.print.StreamPrintService impleme
 {
 	@:overload public function new(out : java.io.OutputStream) : Void;
 	
-	@:overload override public function getOutputFormat() : String;
+	@:overload public function getOutputFormat() : String;
 	
 	@:overload override public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
 	

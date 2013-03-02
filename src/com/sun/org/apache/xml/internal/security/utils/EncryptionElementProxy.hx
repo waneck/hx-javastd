@@ -38,7 +38,7 @@ extern class EncryptionElementProxy extends com.sun.org.apache.xml.internal.secu
 	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload @:final override public function getBaseNamespace() : String;
+	@:overload @:final public function getBaseNamespace() : String;
 	
 	
 }

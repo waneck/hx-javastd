@@ -25,11 +25,11 @@ package sun.tools.jconsole;
 */
 extern class VMPanel extends javax.swing.JTabbedPane implements java.beans.PropertyChangeListener
 {
-	@:overload public static function getTabInfos() : java.NativeArray<VMPanel_TabInfo>;
+	@:overload public static function getTabInfos() : java.NativeArray<sun.tools.jconsole.VMPanel.VMPanel_TabInfo>;
 	
 	@:overload override public function setUI(ui : javax.swing.plaf.TabbedPaneUI) : Void;
 	
-	@:overload override private function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload private function paintComponent(g : java.awt.Graphics) : Void;
 	
 	@:overload override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	

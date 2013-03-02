@@ -36,7 +36,7 @@ extern class BasicSplitPaneDivider extends java.awt.Container implements java.be
 	/**
 	* Handles mouse dragging message to do the actual dragging.
 	*/
-	private var dragger : BasicSplitPaneDivider_DragController;
+	private var dragger : javax.swing.plaf.basic.BasicSplitPaneDivider.BasicSplitPaneDivider_DragController;
 	
 	/**
 	* UI this instance was created from.
@@ -64,7 +64,7 @@ extern class BasicSplitPaneDivider extends java.awt.Container implements java.be
 	* to drag when clicking on the border of the divider, which is not
 	* drawn by the divider.
 	*/
-	private var mouseHandler : BasicSplitPaneDivider_MouseHandler;
+	private var mouseHandler : javax.swing.plaf.basic.BasicSplitPaneDivider.BasicSplitPaneDivider_MouseHandler;
 	
 	/**
 	* Orientation of the JSplitPane.
@@ -225,22 +225,22 @@ extern class BasicSplitPaneDivider extends java.awt.Container implements java.be
 	* Starts the dragging session by creating the appropriate instance
 	* of DragController.
 	*/
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* If dragger is not null it is messaged with completeDrag.
 	*/
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* If dragger is not null it is messaged with continueDrag.
 	*/
-	@:overload override public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	*  Resets the cursor based on the orientation.
 	*/
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse enters a component.
@@ -248,7 +248,7 @@ extern class BasicSplitPaneDivider extends java.awt.Container implements java.be
 	* @param e MouseEvent describing the details of the enter event.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
+	@:require(java5) @:overload public function mouseEntered(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse exits a component.
@@ -256,7 +256,7 @@ extern class BasicSplitPaneDivider extends java.awt.Container implements java.be
 	* @param e MouseEvent describing the details of the exit event.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function mouseExited(e : java.awt.event.MouseEvent) : Void;
+	@:require(java5) @:overload public function mouseExited(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -324,7 +324,7 @@ extern class BasicSplitPaneDivider extends java.awt.Container implements java.be
 * messaged with <code>isValid</code> to insure that dragging can happen
 * (dragging won't be allowed if the two views can not be resized).
 */
-@:native('javax$swing$plaf$basic$BasicSplitPaneDivider$VerticalDragController') extern class BasicSplitPaneDivider_VerticalDragController extends BasicSplitPaneDivider_DragController
+@:native('javax$swing$plaf$basic$BasicSplitPaneDivider$VerticalDragController') extern class BasicSplitPaneDivider_VerticalDragController extends javax.swing.plaf.basic.BasicSplitPaneDivider.BasicSplitPaneDivider_DragController
 {
 	/* DragControllers ivars are now in terms of y, not x. */
 	@:overload private function new(e : java.awt.event.MouseEvent) : Void;

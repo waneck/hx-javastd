@@ -98,9 +98,9 @@ extern interface DOM
 	
 	@:overload public function getNodeHandle(nodeId : Int) : Int;
 	
-	@:overload public function getResultTreeFrag(initialSize : Int, rtfType : Int) : DOM;
+	@:overload public function getResultTreeFrag(initialSize : Int, rtfType : Int) : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
-	@:overload public function getResultTreeFrag(initialSize : Int, rtfType : Int, addToDTMManager : Bool) : DOM;
+	@:overload public function getResultTreeFrag(initialSize : Int, rtfType : Int, addToDTMManager : Bool) : com.sun.org.apache.xalan.internal.xsltc.DOM;
 	
 	@:overload public function getOutputDomBuilder() : com.sun.org.apache.xml.internal.serializer.SerializationHandler;
 	

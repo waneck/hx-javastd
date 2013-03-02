@@ -32,7 +32,7 @@ extern class ServerMessageHandlerTube extends com.sun.xml.internal.ws.handler.Ha
 	
 	@:overload override private function initiateClosing(mc : javax.xml.ws.handler.MessageContext) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
+	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractFilterTubeImpl;
 	
 	
 }

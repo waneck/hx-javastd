@@ -98,7 +98,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>id</code> is <code>null</code>.
 	*/
-	@:overload public static function attach(id : String) : VirtualMachine;
+	@:overload public static function attach(id : String) : com.sun.tools.attach.VirtualMachine;
 	
 	/**
 	* Attaches to a Java virtual machine.
@@ -131,7 +131,7 @@ extern class VirtualMachine
 	* @throws  NullPointerException
 	*          If <code>vmd</code> is <code>null</code>.
 	*/
-	@:overload public static function attach(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : VirtualMachine;
+	@:overload public static function attach(vmd : com.sun.tools.attach.VirtualMachineDescriptor) : com.sun.tools.attach.VirtualMachine;
 	
 	/**
 	* Detach from the virtual machine.

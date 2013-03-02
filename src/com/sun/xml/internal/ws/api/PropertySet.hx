@@ -48,12 +48,12 @@ extern class PropertySet
 	* }
 	* </pre>
 	*/
-	@:overload @:abstract private function getPropertyMap() : PropertySet_PropertyMap;
+	@:overload @:abstract private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	/**
 	* This method parses a class for fields and methods with {@link Property}.
 	*/
-	@:overload private static function parse(clazz : Class<Dynamic>) : PropertySet_PropertyMap;
+	@:overload private static function parse(clazz : Class<Dynamic>) : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	@:overload @:final public function containsKey(key : Dynamic) : Bool;
 	
@@ -135,7 +135,7 @@ extern class PropertySet
 * <p>
 * Just giving it an alias to make the use of this class more fool-proof.
 */
-@:native('com$sun$xml$internal$ws$api$PropertySet$PropertyMap') extern class PropertySet_PropertyMap extends java.util.HashMap<String, PropertySet_Accessor>
+@:native('com$sun$xml$internal$ws$api$PropertySet$PropertyMap') extern class PropertySet_PropertyMap extends java.util.HashMap<String, com.sun.xml.internal.ws.api.PropertySet.PropertySet_Accessor>
 {
 	
 }
@@ -146,39 +146,39 @@ extern class PropertySet
 {
 	@:overload public function getName() : String;
 	
-	@:overload public function hasValue(props : PropertySet) : Bool;
+	@:overload public function hasValue(props : com.sun.xml.internal.ws.api.PropertySet) : Bool;
 	
-	@:overload public function get(props : PropertySet) : Dynamic;
+	@:overload public function get(props : com.sun.xml.internal.ws.api.PropertySet) : Dynamic;
 	
-	@:overload public function set(props : PropertySet, value : Dynamic) : Void;
+	@:overload public function set(props : com.sun.xml.internal.ws.api.PropertySet, value : Dynamic) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$api$PropertySet$FieldAccessor') @:internal extern class PropertySet_FieldAccessor implements PropertySet_Accessor
+@:native('com$sun$xml$internal$ws$api$PropertySet$FieldAccessor') @:internal extern class PropertySet_FieldAccessor implements com.sun.xml.internal.ws.api.PropertySet.PropertySet_Accessor
 {
 	@:overload private function new(f : java.lang.reflect.Field, name : String) : Void;
 	
 	@:overload public function getName() : String;
 	
-	@:overload public function hasValue(props : PropertySet) : Bool;
+	@:overload public function hasValue(props : com.sun.xml.internal.ws.api.PropertySet) : Bool;
 	
-	@:overload public function get(props : PropertySet) : Dynamic;
+	@:overload public function get(props : com.sun.xml.internal.ws.api.PropertySet) : Dynamic;
 	
-	@:overload public function set(props : PropertySet, value : Dynamic) : Void;
+	@:overload public function set(props : com.sun.xml.internal.ws.api.PropertySet, value : Dynamic) : Void;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$api$PropertySet$MethodAccessor') @:internal extern class PropertySet_MethodAccessor implements PropertySet_Accessor
+@:native('com$sun$xml$internal$ws$api$PropertySet$MethodAccessor') @:internal extern class PropertySet_MethodAccessor implements com.sun.xml.internal.ws.api.PropertySet.PropertySet_Accessor
 {
 	@:overload private function new(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method, value : String) : Void;
 	
 	@:overload public function getName() : String;
 	
-	@:overload public function hasValue(props : PropertySet) : Bool;
+	@:overload public function hasValue(props : com.sun.xml.internal.ws.api.PropertySet) : Bool;
 	
-	@:overload public function get(props : PropertySet) : Dynamic;
+	@:overload public function get(props : com.sun.xml.internal.ws.api.PropertySet) : Dynamic;
 	
-	@:overload public function set(props : PropertySet, value : Dynamic) : Void;
+	@:overload public function set(props : com.sun.xml.internal.ws.api.PropertySet, value : Dynamic) : Void;
 	
 	
 }

@@ -38,13 +38,13 @@ extern class BlitBg extends sun.java2d.loops.GraphicsPrimitive
 	* and the destination surface are the same surface
 	* with overlapping regions of pixels
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : BlitBg;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.BlitBg;
 	
-	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : BlitBg;
+	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.BlitBg;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -61,7 +61,7 @@ extern class BlitBg extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$BlitBg$General') @:internal extern class BlitBg_General extends BlitBg
+@:native('sun$java2d$loops$BlitBg$General') @:internal extern class BlitBg_General extends sun.java2d.loops.BlitBg
 {
 	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -69,9 +69,9 @@ extern class BlitBg extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$BlitBg$TraceBlitBg') @:internal extern class BlitBg_TraceBlitBg extends BlitBg
+@:native('sun$java2d$loops$BlitBg$TraceBlitBg') @:internal extern class BlitBg_TraceBlitBg extends sun.java2d.loops.BlitBg
 {
-	@:overload public function new(target : BlitBg) : Void;
+	@:overload public function new(target : sun.java2d.loops.BlitBg) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

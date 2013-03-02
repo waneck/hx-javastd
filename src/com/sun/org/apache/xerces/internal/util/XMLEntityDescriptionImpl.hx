@@ -89,13 +89,13 @@ extern class XMLEntityDescriptionImpl extends com.sun.org.apache.xerces.internal
 	/**
 	* <p>Clears the values.</p>
 	*/
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	/** Returns a hash code for this object. */
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/** Returns a string representation of this object. */
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

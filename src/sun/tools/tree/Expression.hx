@@ -36,14 +36,14 @@ extern class Expression extends sun.tools.tree.Node
 	* occurs within the same class, and thus uses the underlying
 	* field directly.
 	*/
-	@:overload public function getImplementation() : Expression;
+	@:overload public function getImplementation() : sun.tools.tree.Expression;
 	
 	@:overload public function getType() : sun.tools.java.Type;
 	
 	/**
 	* Order the expression based on precedence
 	*/
-	@:overload public function order() : Expression;
+	@:overload public function order() : sun.tools.tree.Expression;
 	
 	/**
 	* Return true if constant, according to JLS 15.27.
@@ -136,7 +136,7 @@ extern class Expression extends sun.tools.tree.Node
 	*/
 	@:overload public function getUpdater(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.FieldUpdater;
 	
-	@:overload public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : Expression) : sun.tools.tree.Vset;
+	@:overload public function checkAssignOp(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, exp : java.util.Hashtable<Dynamic, Dynamic>, outside : sun.tools.tree.Expression) : sun.tools.tree.Vset;
 	
 	/**
 	* Check something that might be an AmbiguousName (refman 6.5.2).
@@ -186,9 +186,9 @@ extern class Expression extends sun.tools.tree.Node
 	* only -- it is 'inline' and 'inlineValue' that drive the simplification
 	* of entire expressions.
 	*/
-	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Expression;
+	//@:overload public function _inline(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
-	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Expression;
+	@:overload public function inlineValue(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Attempt to evaluate this expression.  If this expression
@@ -206,7 +206,7 @@ extern class Expression extends sun.tools.tree.Node
 	*/
 	@:overload private function inlineValueSB(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, buffer : java.lang.StringBuffer) : java.lang.StringBuffer;
 	
-	@:overload public function inlineLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : Expression;
+	@:overload public function inlineLHS(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* The cost of inlining this expression.
@@ -222,12 +222,12 @@ extern class Expression extends sun.tools.tree.Node
 	/**
 	* Check if the first thing is a constructor invocation
 	*/
-	@:overload public function firstConstructor() : Expression;
+	@:overload public function firstConstructor() : sun.tools.tree.Expression;
 	
 	/**
 	* Create a copy of the expression for method inlining
 	*/
-	@:overload public function copyInline(ctx : sun.tools.tree.Context) : Expression;
+	@:overload public function copyInline(ctx : sun.tools.tree.Context) : sun.tools.tree.Expression;
 	
 	/**
 	* Print

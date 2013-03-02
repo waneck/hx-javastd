@@ -28,7 +28,7 @@ extern interface Scope
 	/**
 	* Returns the enclosing scope.
 	*/
-	@:overload public function getEnclosingScope() : Scope;
+	@:overload public function getEnclosingScope() : com.sun.source.tree.Scope;
 	
 	/**
 	* Returns the innermost type element containing the position of this scope

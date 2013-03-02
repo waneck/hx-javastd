@@ -60,7 +60,7 @@ extern class DerInputStream
 	*          on this stream and the newly created stream will be the
 	*          same.
 	*/
-	@:overload public function subStream(len : Int, do_skip : Bool) : DerInputStream;
+	@:overload public function subStream(len : Int, do_skip : Bool) : sun.security.util.DerInputStream;
 	
 	/**
 	* Return what has been written to this DerInputStream

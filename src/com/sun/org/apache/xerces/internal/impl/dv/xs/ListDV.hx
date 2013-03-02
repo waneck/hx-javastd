@@ -46,9 +46,9 @@ extern class ListDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.TypeVa
 	
 	@:overload public function getLength() : Int;
 	
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	@:overload override public function contains(item : Dynamic) : Bool;
 	
@@ -57,7 +57,7 @@ extern class ListDV extends com.sun.org.apache.xerces.internal.impl.dv.xs.TypeVa
 	/*
 	* List methods
 	*/
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
 	@:overload override public function size() : Int;
 	

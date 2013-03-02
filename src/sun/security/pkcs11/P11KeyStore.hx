@@ -42,7 +42,7 @@ package sun.security.pkcs11;
 	* key cannot be found
 	* @exception UnrecoverableKeyException if the key cannot be recovered
 	*/
-	@:overload @:synchronized override public function engineGetKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
+	@:overload @:synchronized public function engineGetKey(alias : String, password : java.NativeArray<java.StdTypes.Char16>) : java.security.Key;
 	
 	/**
 	* Returns the certificate chain associated with the given alias.
@@ -57,7 +57,7 @@ package sun.security.pkcs11;
 	* and the root certificate authority last), or null if the given alias
 	* does not exist or does not contain a certificate chain
 	*/
-	@:overload @:synchronized override public function engineGetCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
+	@:overload @:synchronized public function engineGetCertificateChain(alias : String) : java.NativeArray<java.security.cert.Certificate>;
 	
 	/**
 	* Returns the certificate associated with the given alias.
@@ -80,7 +80,7 @@ package sun.security.pkcs11;
 	* @return the certificate, or null if the given alias does not exist or
 	* does not contain a certificate.
 	*/
-	@:overload @:synchronized override public function engineGetCertificate(alias : String) : java.security.cert.Certificate;
+	@:overload @:synchronized public function engineGetCertificate(alias : String) : java.security.cert.Certificate;
 	
 	/**
 	* Returns the creation date of the entry identified by the given alias.
@@ -90,7 +90,7 @@ package sun.security.pkcs11;
 	* @return the creation date of this entry, or null if the given alias does
 	* not exist
 	*/
-	@:overload override public function engineGetCreationDate(alias : String) : java.util.Date;
+	@:overload public function engineGetCreationDate(alias : String) : java.util.Date;
 	
 	/**
 	* Assigns the given key to the given alias, protecting it with the given
@@ -114,7 +114,7 @@ package sun.security.pkcs11;
 	* @exception KeyStoreException if the given key cannot be protected, or
 	* this operation fails for some other reason
 	*/
-	@:overload @:synchronized override public function engineSetKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload @:synchronized public function engineSetKeyEntry(alias : String, key : java.security.Key, password : java.NativeArray<java.StdTypes.Char16>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given key (that has already been protected) to the given
@@ -137,7 +137,7 @@ package sun.security.pkcs11;
 	*
 	* @exception KeyStoreException if this operation fails.
 	*/
-	@:overload override public function engineSetKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
+	@:overload public function engineSetKeyEntry(alias : String, key : java.NativeArray<java.StdTypes.Int8>, chain : java.NativeArray<java.security.cert.Certificate>) : Void;
 	
 	/**
 	* Assigns the given certificate to the given alias.
@@ -156,7 +156,7 @@ package sun.security.pkcs11;
 	* not identify an entry containing a trusted certificate,
 	* or this operation fails for some other reason.
 	*/
-	@:overload @:synchronized override public function engineSetCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
+	@:overload @:synchronized public function engineSetCertificateEntry(alias : String, cert : java.security.cert.Certificate) : Void;
 	
 	/**
 	* Deletes the entry identified by the given alias from this keystore.
@@ -165,14 +165,14 @@ package sun.security.pkcs11;
 	*
 	* @exception KeyStoreException if the entry cannot be removed.
 	*/
-	@:overload @:synchronized override public function engineDeleteEntry(alias : String) : Void;
+	@:overload @:synchronized public function engineDeleteEntry(alias : String) : Void;
 	
 	/**
 	* Lists all the alias names of this keystore.
 	*
 	* @return enumeration of the alias names
 	*/
-	@:overload @:synchronized override public function engineAliases() : java.util.Enumeration<String>;
+	@:overload @:synchronized public function engineAliases() : java.util.Enumeration<String>;
 	
 	/**
 	* Checks if the given alias exists in this keystore.
@@ -181,14 +181,14 @@ package sun.security.pkcs11;
 	*
 	* @return true if the alias exists, false otherwise
 	*/
-	@:overload @:synchronized override public function engineContainsAlias(alias : String) : Bool;
+	@:overload @:synchronized public function engineContainsAlias(alias : String) : Bool;
 	
 	/**
 	* Retrieves the number of entries in this keystore.
 	*
 	* @return the number of entries in this keystore
 	*/
-	@:overload @:synchronized override public function engineSize() : Int;
+	@:overload @:synchronized public function engineSize() : Int;
 	
 	/**
 	* Returns true if the entry identified by the given alias
@@ -201,7 +201,7 @@ package sun.security.pkcs11;
 	* @return true if the entry identified by the given alias is a
 	* key-related, false otherwise.
 	*/
-	@:overload @:synchronized override public function engineIsKeyEntry(alias : String) : Bool;
+	@:overload @:synchronized public function engineIsKeyEntry(alias : String) : Bool;
 	
 	/**
 	* Returns true if the entry identified by the given alias
@@ -214,7 +214,7 @@ package sun.security.pkcs11;
 	* @return true if the entry identified by the given alias contains a
 	* trusted certificate, false otherwise.
 	*/
-	@:overload @:synchronized override public function engineIsCertificateEntry(alias : String) : Bool;
+	@:overload @:synchronized public function engineIsCertificateEntry(alias : String) : Bool;
 	
 	/**
 	* Returns the (alias) name of the first keystore entry whose certificate
@@ -239,7 +239,7 @@ package sun.security.pkcs11;
 	* @return the alias name of the first entry with matching certificate,
 	* or null if no such entry exists in this keystore.
 	*/
-	@:overload @:synchronized override public function engineGetCertificateAlias(cert : java.security.cert.Certificate) : String;
+	@:overload @:synchronized public function engineGetCertificateAlias(cert : java.security.cert.Certificate) : String;
 	
 	/**
 	* engineStore currently is a No-op.
@@ -248,7 +248,7 @@ package sun.security.pkcs11;
 	* @param stream this must be <code>null</code>
 	* @param password this must be <code>null</code>
 	*/
-	@:overload @:synchronized override public function engineStore(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:synchronized public function engineStore(stream : java.io.OutputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* engineStore currently is a No-op.
@@ -260,7 +260,7 @@ package sun.security.pkcs11;
 	*          <code>KeyStore.LoadStoreParameter</code>
 	*          input is not <code>null</code>
 	*/
-	@:overload @:synchronized override public function engineStore(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
+	@:overload @:synchronized public function engineStore(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Loads the keystore.
@@ -275,7 +275,7 @@ package sun.security.pkcs11;
 	*          CKF_PROTECTED_AUTHENTICATION_PATH and a non-null
 	*          password is given, of if the token login operation failed
 	*/
-	@:overload @:synchronized override public function engineLoad(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
+	@:overload @:synchronized public function engineLoad(stream : java.io.InputStream, password : java.NativeArray<java.StdTypes.Char16>) : Void;
 	
 	/**
 	* Loads the keystore using the given
@@ -300,7 +300,7 @@ package sun.security.pkcs11;
 	*          CKF_PROTECTED_AUTHENTICATION_PATH and the provided password
 	*          is non-null, or if the token login operation fails
 	*/
-	@:overload @:synchronized override public function engineLoad(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
+	@:overload @:synchronized public function engineLoad(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Get a <code>KeyStore.Entry</code> for the specified alias
@@ -319,7 +319,7 @@ package sun.security.pkcs11;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function engineGetEntry(alias : String, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Entry;
+	@:require(java5) @:overload @:synchronized public function engineGetEntry(alias : String, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Entry;
 	
 	/**
 	* Save a <code>KeyStore.Entry</code> under the specified alias.
@@ -343,7 +343,7 @@ package sun.security.pkcs11;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:synchronized override public function engineSetEntry(alias : String, entry : java.security.KeyStore.KeyStore_Entry, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : Void;
+	@:require(java5) @:overload @:synchronized public function engineSetEntry(alias : String, entry : java.security.KeyStore.KeyStore_Entry, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : Void;
 	
 	/**
 	* Determines if the keystore <code>Entry</code> for the specified
@@ -357,7 +357,7 @@ package sun.security.pkcs11;
 	*          <code>alias</code> is an instance or subclass of the
 	*          specified <code>entryClass</code>, false otherwise
 	*/
-	@:overload @:synchronized override public function engineEntryInstanceOf(alias : String, entryClass : Class<java.security.KeyStore.KeyStore_Entry>) : Bool;
+	@:overload @:synchronized public function engineEntryInstanceOf(alias : String, entryClass : Class<java.security.KeyStore.KeyStore_Entry>) : Bool;
 	
 	
 }

@@ -39,7 +39,7 @@ package sun.rmi.transport;
 	* Look up the EndpointEntry for the given Endpoint.  An entry is
 	* created if one does not already exist.
 	*/
-	@:overload public static function lookup(ep : sun.rmi.transport.Endpoint) : DGCClient_EndpointEntry;
+	@:overload public static function lookup(ep : sun.rmi.transport.Endpoint) : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry;
 	
 	/**
 	* Register the LiveRef instances in the supplied list to participate
@@ -105,7 +105,7 @@ package sun.rmi.transport;
 	* This method must ONLY be invoked while synchronized on this
 	* RefEntry's EndpointEntry.
 	*/
-	@:overload public function removeInstanceFromRefSet(phantom : DGCClient_EndpointEntry_RefEntry_PhantomLiveRef) : Void;
+	@:overload public function removeInstanceFromRefSet(phantom : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry_RefEntry_PhantomLiveRef) : Void;
 	
 	/**
 	* Return true if there are no registered LiveRef instances for
@@ -146,7 +146,7 @@ package sun.rmi.transport;
 {
 	@:overload public function new(ref : sun.rmi.transport.LiveRef) : Void;
 	
-	@:overload public function getRefEntry() : DGCClient_EndpointEntry_RefEntry;
+	@:overload public function getRefEntry() : sun.rmi.transport.DGCClient.DGCClient_EndpointEntry_RefEntry;
 	
 	
 }

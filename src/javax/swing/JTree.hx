@@ -183,7 +183,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* Creates a new event and passed it off the
 	* <code>selectionListeners</code>.
 	*/
-	@:transient private var selectionRedirector : JTree_TreeSelectionRedirector;
+	@:transient private var selectionRedirector : javax.swing.JTree.JTree_TreeSelectionRedirector;
 	
 	/**
 	* Editor for the entries.  Default is <code>null</code>
@@ -421,7 +421,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -430,7 +430,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns the current <code>TreeCellRenderer</code>
@@ -837,7 +837,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @see TransferHandler#canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropLocation() : JTree_DropLocation;
+	@:require(java6) @:overload @:final public function getDropLocation() : javax.swing.JTree.JTree_DropLocation;
 	
 	/**
 	* Returns <code>isEditable</code>. This is invoked from the UI before
@@ -866,7 +866,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	* @return a string containing the  tooltip or <code>null</code>
 	*          if <code>event</code> is null
 	*/
-	@:overload override public function getToolTipText(event : java.awt.event.MouseEvent) : String;
+	@:overload public function getToolTipText(event : java.awt.event.MouseEvent) : String;
 	
 	/**
 	* Called by the renderers to convert the specified value to
@@ -2022,7 +2022,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*
 	* @return single instance of {@code EmptySelectionModel}
 	*/
-	@:overload public static function sharedInstance() : JTree_EmptySelectionModel;
+	@:overload public static function sharedInstance() : javax.swing.JTree.JTree_EmptySelectionModel;
 	
 	/**
 	* This is overriden to do nothing; {@code EmptySelectionModel}
@@ -2449,7 +2449,7 @@ extern class JTree extends javax.swing.JComponent implements javax.swing.Scrolla
 	*  Constructs an AccessibleJTreeNode
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public function new(t : JTree, p : javax.swing.tree.TreePath, ap : javax.accessibility.Accessible) : Void;
+	@:require(java4) @:overload public function new(t : javax.swing.JTree, p : javax.swing.tree.TreePath, ap : javax.accessibility.Accessible) : Void;
 	
 	/**
 	* Get the AccessibleContext associated with this tree node.

@@ -32,13 +32,13 @@ extern class XBoolean extends com.sun.org.apache.xpath.internal.objects.XObject
 	* A true boolean object so we don't have to keep creating them.
 	* @xsl.usage internal
 	*/
-	public static var S_TRUE(default, null) : XBoolean;
+	public static var S_TRUE(default, null) : com.sun.org.apache.xpath.internal.objects.XBoolean;
 	
 	/**
 	* A true boolean object so we don't have to keep creating them.
 	* @xsl.usage internal
 	*/
-	public static var S_FALSE(default, null) : XBoolean;
+	public static var S_FALSE(default, null) : com.sun.org.apache.xpath.internal.objects.XBoolean;
 	
 	/**
 	* Construct a XBoolean object.
@@ -59,7 +59,7 @@ extern class XBoolean extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @return type of CLASS_BOOLEAN
 	*/
-	@:overload override public function getType() : Int;
+	@:overload public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -67,28 +67,28 @@ extern class XBoolean extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @return type string "#BOOLEAN"
 	*/
-	@:overload override public function getTypeString() : String;
+	@:overload public function getTypeString() : String;
 	
 	/**
 	* Cast result object to a number.
 	*
 	* @return numeric value of the object value
 	*/
-	@:overload override public function num() : Float;
+	@:overload public function num() : Float;
 	
 	/**
 	* Cast result object to a boolean.
 	*
 	* @return The object value as a boolean
 	*/
-	@:overload override public function bool() : Bool;
+	@:overload public function bool() : Bool;
 	
 	/**
 	* Cast result object to a string.
 	*
 	* @return The object's value as a string
 	*/
-	@:overload override public function str() : String;
+	@:overload public function str() : String;
 	
 	/**
 	* Return a java object that's closest to the representation
@@ -96,7 +96,7 @@ extern class XBoolean extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @return The object's value as a java object
 	*/
-	@:overload override public function object() : Dynamic;
+	@:overload public function object() : Dynamic;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -107,7 +107,7 @@ extern class XBoolean extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	
 }

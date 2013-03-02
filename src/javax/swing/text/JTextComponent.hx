@@ -425,7 +425,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @param bindings the bindings
 	* @param actions the set of actions
 	*/
-	@:overload public static function loadKeymap(map : javax.swing.text.Keymap, bindings : java.NativeArray<JTextComponent_KeyBinding>, actions : java.NativeArray<javax.swing.Action>) : Void;
+	@:overload public static function loadKeymap(map : javax.swing.text.Keymap, bindings : java.NativeArray<javax.swing.text.JTextComponent.JTextComponent_KeyBinding>, actions : java.NativeArray<javax.swing.Action>) : Void;
 	
 	/**
 	* Fetches the current color used to render the
@@ -1961,7 +1961,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 }
 @:native('javax$swing$text$JTextComponent$ComposedTextCaret') @:internal extern class JTextComponent_ComposedTextCaret extends javax.swing.text.DefaultCaret implements java.io.Serializable
 {
-	@:overload override public function install(c : JTextComponent) : Void;
+	@:overload override public function install(c : javax.swing.text.JTextComponent) : Void;
 	
 	@:overload override public function paint(g : java.awt.Graphics) : Void;
 	

@@ -27,9 +27,9 @@ package com.sun.xml.internal.bind.v2.schemagen;
 {
 	@:overload public function new(many : V) : Void;
 	
-	@:overload override public function put(key : K, value : V) : V;
+	@:overload public function put(key : K, value : V) : V;
 	
-	@:overload override public function putAll(map : java.util.Map<K, V>) : Void;
+	@:overload public function putAll(map : java.util.Map<K, V>) : Void;
 	
 	
 }

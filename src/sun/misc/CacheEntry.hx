@@ -25,7 +25,7 @@ package sun.misc;
 */
 @:internal extern class CacheEntry extends sun.misc.Ref
 {
-	@:overload override public function reconstitute() : Dynamic;
+	@:overload public function reconstitute() : Dynamic;
 	
 	
 }
@@ -62,19 +62,19 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	/**
 	* Returns the number of elements contained within the Cache.
 	*/
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	/**
 	* Returns true if the Cache contains no elements.
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
 	/**
 	* Returns an enumeration of the Cache's keys.
 	* @see Cache#elements
 	* @see Enumeration
 	*/
-	@:overload @:synchronized override public function keys() : java.util.Enumeration<Dynamic>;
+	@:overload @:synchronized public function keys() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Returns an enumeration of the elements. Use the Enumeration methods
@@ -82,7 +82,7 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	* @see Cache#keys
 	* @see Enumeration
 	*/
-	@:overload @:synchronized override public function elements() : java.util.Enumeration<Dynamic>;
+	@:overload @:synchronized public function elements() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Gets the object associated with the specified key in the Cache.
@@ -91,7 +91,7 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	*          is not defined in the hash table.
 	* @see Cache#put
 	*/
-	@:overload @:synchronized override public function get(key : Dynamic) : Dynamic;
+	@:overload @:synchronized public function get(key : Dynamic) : Dynamic;
 	
 	/**
 	* Rehashes the contents of the table into a bigger table.
@@ -111,7 +111,7 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	* element is null.
 	* @see Cache#get
 	*/
-	@:overload @:synchronized override public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:synchronized public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes the element corresponding to the key. Does nothing if the
@@ -119,7 +119,7 @@ extern class Cache extends java.util.Dictionary<Dynamic, Dynamic>
 	* @param key the key that needs to be removed
 	* @return the value of key, or null if the key was not found.
 	*/
-	@:overload @:synchronized override public function remove(key : Dynamic) : Dynamic;
+	@:overload @:synchronized public function remove(key : Dynamic) : Dynamic;
 	
 	
 }

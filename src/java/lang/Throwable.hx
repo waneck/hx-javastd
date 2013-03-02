@@ -149,7 +149,7 @@ package java.lang;
 	*         unknown.)
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function new(message : String, cause : Throwable) : Void;
+	@:require(java4) @:overload public function new(message : String, cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new throwable with the specified cause and a detail
@@ -168,7 +168,7 @@ package java.lang;
 	*         unknown.)
 	* @since  1.4
 	*/
-	@:require(java4) @:overload public function new(cause : Throwable) : Void;
+	@:require(java4) @:overload public function new(cause : java.lang.Throwable) : Void;
 	
 	/**
 	* Constructs a new throwable with the specified detail message,
@@ -211,7 +211,7 @@ package java.lang;
 	* @see ArithmeticException
 	* @since 1.7
 	*/
-	@:require(java7) @:overload private function new(message : String, cause : Throwable, enableSuppression : Bool, writableStackTrace : Bool) : Void;
+	@:require(java7) @:overload private function new(message : String, cause : java.lang.Throwable, enableSuppression : Bool, writableStackTrace : Bool) : Void;
 	
 	/**
 	* Returns the detail message string of this throwable.
@@ -253,7 +253,7 @@ package java.lang;
 	*          cause is nonexistent or unknown.
 	* @since 1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function getCause() : Throwable;
+	@:require(java4) @:overload @:synchronized public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Initializes the <i>cause</i> of this throwable to the specified value.
@@ -291,7 +291,7 @@ package java.lang;
 	*         been called on this throwable.
 	* @since  1.4
 	*/
-	@:require(java4) @:overload @:synchronized public function initCause(cause : Throwable) : Throwable;
+	@:require(java4) @:overload @:synchronized public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* Returns a short description of this throwable.
@@ -488,7 +488,7 @@ package java.lang;
 	* @return  a reference to this {@code Throwable} instance.
 	* @see     java.lang.Throwable#printStackTrace()
 	*/
-	@:overload @:synchronized public function fillInStackTrace() : Throwable;
+	@:overload @:synchronized public function fillInStackTrace() : java.lang.Throwable;
 	
 	/**
 	* Provides programmatic access to the stack trace information printed by
@@ -596,7 +596,7 @@ package java.lang;
 	* @throws NullPointerException if {@code exception} is {@code null}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final @:synchronized public function addSuppressed(exception : Throwable) : Void;
+	@:require(java7) @:overload @:final @:synchronized public function addSuppressed(exception : java.lang.Throwable) : Void;
 	
 	/**
 	* Returns an array containing all of the exceptions that were
@@ -613,7 +613,7 @@ package java.lang;
 	*         suppressed to deliver this exception.
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:final @:synchronized public function getSuppressed() : java.NativeArray<Throwable>;
+	@:require(java7) @:overload @:final @:synchronized public function getSuppressed() : java.NativeArray<java.lang.Throwable>;
 	
 	
 }
@@ -648,11 +648,11 @@ package java.lang;
 {
 	
 }
-@:native('java$lang$Throwable$WrappedPrintStream') @:internal extern class Throwable_WrappedPrintStream extends Throwable_PrintStreamOrWriter
+@:native('java$lang$Throwable$WrappedPrintStream') @:internal extern class Throwable_WrappedPrintStream extends java.lang.Throwable.Throwable_PrintStreamOrWriter
 {
 	
 }
-@:native('java$lang$Throwable$WrappedPrintWriter') @:internal extern class Throwable_WrappedPrintWriter extends Throwable_PrintStreamOrWriter
+@:native('java$lang$Throwable$WrappedPrintWriter') @:internal extern class Throwable_WrappedPrintWriter extends java.lang.Throwable.Throwable_PrintStreamOrWriter
 {
 	
 }

@@ -137,7 +137,7 @@ extern class FieldGen extends com.sun.org.apache.bcel.internal.generic.FieldGenO
 	
 	/** @return deep copy of this field
 	*/
-	@:overload public function copy(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : FieldGen;
+	@:overload public function copy(cp : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.FieldGen;
 	
 	
 }

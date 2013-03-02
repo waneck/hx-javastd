@@ -33,15 +33,15 @@ package sun.nio.ch;
 	
 	private var fd1 : Int;
 	
-	@:overload override private function doSelect(timeout : haxe.Int64) : Int;
+	@:overload private function doSelect(timeout : haxe.Int64) : Int;
 	
-	@:overload override private function implClose() : Void;
+	@:overload private function implClose() : Void;
 	
-	@:overload override private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload private function implRegister(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload override private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
+	@:overload private function implDereg(ski : sun.nio.ch.SelectionKeyImpl) : Void;
 	
-	@:overload override public function wakeup() : java.nio.channels.Selector;
+	@:overload public function wakeup() : java.nio.channels.Selector;
 	
 	
 }

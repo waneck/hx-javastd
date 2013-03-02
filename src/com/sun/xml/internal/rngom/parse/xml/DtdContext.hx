@@ -48,7 +48,7 @@ extern class DtdContext implements org.xml.sax.DTDHandler implements org.relaxng
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function new(dc : DtdContext) : Void;
+	@:overload public function new(dc : com.sun.xml.internal.rngom.parse.xml.DtdContext) : Void;
 	
 	@:overload public function notationDecl(name : String, publicId : String, systemId : String) : Void;
 	

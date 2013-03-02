@@ -42,9 +42,9 @@ extern class Multiplicity
 	
 	public var max(default, null) : java.math.BigInteger;
 	
-	@:overload public static function create(min : java.math.BigInteger, max : java.math.BigInteger) : Multiplicity;
+	@:overload public static function create(min : java.math.BigInteger, max : java.math.BigInteger) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public static function create(min : Int, max : Null<Int>) : Multiplicity;
+	@:overload public static function create(min : Int, max : Null<Int>) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	@:overload public function equals(o : Dynamic) : Bool;
 	
@@ -68,7 +68,7 @@ extern class Multiplicity
 	* other object. For example, we say [1,3] includes [1,2] but
 	* [2,4] doesn't include [1,3].
 	*/
-	@:overload public function includes(rhs : Multiplicity) : Bool;
+	@:overload public function includes(rhs : com.sun.tools.internal.xjc.model.Multiplicity) : Bool;
 	
 	/**
 	* Returns the string representation of the 'max' property.
@@ -82,31 +82,31 @@ extern class Multiplicity
 	@:overload public function toString() : String;
 	
 	/** the constant representing the (0,0) multiplicity. */
-	public static var ZERO(default, null) : Multiplicity;
+	public static var ZERO(default, null) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	/** the constant representing the (1,1) multiplicity. */
-	public static var ONE(default, null) : Multiplicity;
+	public static var ONE(default, null) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	/** the constant representing the (0,1) multiplicity. */
-	public static var OPTIONAL(default, null) : Multiplicity;
+	public static var OPTIONAL(default, null) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	/** the constant representing the (0,unbounded) multiplicity. */
-	public static var STAR(default, null) : Multiplicity;
+	public static var STAR(default, null) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	/** the constant representing the (1,unbounded) multiplicity. */
-	public static var PLUS(default, null) : Multiplicity;
+	public static var PLUS(default, null) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public static function choice(lhs : Multiplicity, rhs : Multiplicity) : Multiplicity;
+	@:overload public static function choice(lhs : com.sun.tools.internal.xjc.model.Multiplicity, rhs : com.sun.tools.internal.xjc.model.Multiplicity) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public static function group(lhs : Multiplicity, rhs : Multiplicity) : Multiplicity;
+	@:overload public static function group(lhs : com.sun.tools.internal.xjc.model.Multiplicity, rhs : com.sun.tools.internal.xjc.model.Multiplicity) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public static function multiply(lhs : Multiplicity, rhs : Multiplicity) : Multiplicity;
+	@:overload public static function multiply(lhs : com.sun.tools.internal.xjc.model.Multiplicity, rhs : com.sun.tools.internal.xjc.model.Multiplicity) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public static function oneOrMore(c : Multiplicity) : Multiplicity;
+	@:overload public static function oneOrMore(c : com.sun.tools.internal.xjc.model.Multiplicity) : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public function makeOptional() : Multiplicity;
+	@:overload public function makeOptional() : com.sun.tools.internal.xjc.model.Multiplicity;
 	
-	@:overload public function makeRepeated() : Multiplicity;
+	@:overload public function makeRepeated() : com.sun.tools.internal.xjc.model.Multiplicity;
 	
 	
 }

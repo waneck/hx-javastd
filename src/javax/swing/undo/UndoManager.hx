@@ -261,7 +261,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	* @see #canUndo
 	* @see #editToBeUndone
 	*/
-	@:overload @:synchronized override public function undo() : Void;
+	@:overload @:synchronized public function undo() : Void;
 	
 	/**
 	* Returns true if edits may be undone.  If <code>end</code> has
@@ -273,7 +273,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	* @see CompoundEdit#canUndo
 	* @see #editToBeUndone
 	*/
-	@:overload @:synchronized override public function canUndo() : Bool;
+	@:overload @:synchronized public function canUndo() : Bool;
 	
 	/**
 	* Redoes the appropriate edits.  If <code>end</code> has been
@@ -289,7 +289,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	* @see #canRedo
 	* @see #editToBeRedone
 	*/
-	@:overload @:synchronized override public function redo() : Void;
+	@:overload @:synchronized public function redo() : Void;
 	
 	/**
 	* Returns true if edits may be redone.  If <code>end</code> has
@@ -301,7 +301,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	* @see CompoundEdit#canRedo
 	* @see #editToBeRedone
 	*/
-	@:overload @:synchronized override public function canRedo() : Bool;
+	@:overload @:synchronized public function canRedo() : Bool;
 	
 	/**
 	* Adds an <code>UndoableEdit</code> to this
@@ -317,7 +317,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	* @see CompoundEdit#end
 	* @see CompoundEdit#addEdit
 	*/
-	@:overload @:synchronized override public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
+	@:overload @:synchronized public function addEdit(anEdit : javax.swing.undo.UndoableEdit) : Bool;
 	
 	/**
 	* Turns this <code>UndoManager</code> into a normal
@@ -326,7 +326,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	*
 	* @see CompoundEdit#end
 	*/
-	@:overload @:synchronized override public function end() : Void;
+	@:overload @:synchronized public function end() : Void;
 	
 	/**
 	* Convenience method that returns either
@@ -353,7 +353,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	* @see     #undo
 	* @see     CompoundEdit#getUndoPresentationName
 	*/
-	@:overload @:synchronized override public function getUndoPresentationName() : String;
+	@:overload @:synchronized public function getUndoPresentationName() : String;
 	
 	/**
 	* Returns a description of the redoable form of this edit.
@@ -368,7 +368,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	* @see     #redo
 	* @see     CompoundEdit#getRedoPresentationName
 	*/
-	@:overload @:synchronized override public function getRedoPresentationName() : String;
+	@:overload @:synchronized public function getRedoPresentationName() : String;
 	
 	/**
 	* An <code>UndoableEditListener</code> method. This invokes
@@ -386,7 +386,7 @@ extern class UndoManager extends javax.swing.undo.CompoundEdit implements javax.
 	*
 	* @return a String representation of this object
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

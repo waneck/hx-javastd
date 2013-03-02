@@ -80,11 +80,11 @@ extern class INVOKEINTERFACE extends com.sun.org.apache.bcel.internal.generic.In
 	/**
 	* @return mnemonic for instruction with symbolic references resolved
 	*/
-	@:overload override public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
+	@:overload public function toString(cp : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : String;
 	
-	@:overload override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
-	@:overload override public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:

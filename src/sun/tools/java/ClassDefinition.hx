@@ -50,7 +50,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	
 	private var interfaces : java.NativeArray<sun.tools.java.ClassDeclaration>;
 	
-	private var outerClass : ClassDefinition;
+	private var outerClass : sun.tools.java.ClassDefinition;
 	
 	private var outerMember : sun.tools.java.MemberDefinition;
 	
@@ -155,12 +155,12 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	/**
 	* Get the class' enclosing class (or null if not inner)
 	*/
-	@:overload @:final public function getOuterClass() : ClassDefinition;
+	@:overload @:final public function getOuterClass() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Set the class' enclosing class.  Must be done at most once.
 	*/
-	@:overload @:final private function setOuterClass(outerClass : ClassDefinition) : Void;
+	@:overload @:final private function setOuterClass(outerClass : sun.tools.java.ClassDefinition) : Void;
 	
 	/**
 	* Set the class' enclosing current instance pointer.
@@ -230,7 +230,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	/**
 	* Get the class' top-level enclosing class
 	*/
-	@:overload @:final public function getTopClass() : ClassDefinition;
+	@:overload @:final public function getTopClass() : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Get the class' first field or first match
@@ -263,7 +263,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	
 	@:overload @:final public function inSamePackage(c : sun.tools.java.ClassDeclaration) : Bool;
 	
-	@:overload @:final public function inSamePackage(c : ClassDefinition) : Bool;
+	@:overload @:final public function inSamePackage(c : sun.tools.java.ClassDefinition) : Bool;
 	
 	@:overload @:final public function inSamePackage(packageName : sun.tools.java.Identifier) : Bool;
 	
@@ -310,7 +310,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	/**
 	* Check if this is an enclosing class of another class
 	*/
-	@:overload public function enclosingClassOf(otherClass : ClassDefinition) : Bool;
+	@:overload public function enclosingClassOf(otherClass : sun.tools.java.ClassDefinition) : Bool;
 	
 	/**
 	* Check if this is a sub class of another class
@@ -333,7 +333,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	* This method should only be called on a class after it has been
 	* basicCheck()'ed.
 	*/
-	@:overload public function couldImplement(intDef : ClassDefinition) : Bool;
+	@:overload public function couldImplement(intDef : sun.tools.java.ClassDefinition) : Bool;
 	
 	/**
 	* Check if another class can be accessed from the 'extends' or 'implements'
@@ -396,7 +396,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	* signal an ambiguity even when one of the fields involved was not
 	* accessible.  (bug 4053724)
 	*/
-	@:overload public function getVariable(env : sun.tools.java.Environment, nm : sun.tools.java.Identifier, source : ClassDefinition) : sun.tools.java.MemberDefinition;
+	@:overload public function getVariable(env : sun.tools.java.Environment, nm : sun.tools.java.Identifier, source : sun.tools.java.ClassDefinition) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Tells whether to report a deprecation error for this class.
@@ -407,7 +407,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	* Note that this class is being used somehow by <tt>ref</tt>.
 	* Report deprecation errors, etc.
 	*/
-	@:overload public function noteUsedBy(ref : ClassDefinition, where : haxe.Int64, env : sun.tools.java.Environment) : Void;
+	@:overload public function noteUsedBy(ref : sun.tools.java.ClassDefinition, where : haxe.Int64, env : sun.tools.java.Environment) : Void;
 	
 	/**
 	* Get an inner class.
@@ -428,7 +428,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	*
 	* This mechanism cannot be used to lookup synthetic methods.
 	*/
-	@:overload public function matchMethod(env : sun.tools.java.Environment, accessor : ClassDefinition, methodName : sun.tools.java.Identifier, argumentTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.java.MemberDefinition;
+	@:overload public function matchMethod(env : sun.tools.java.Environment, accessor : sun.tools.java.ClassDefinition, methodName : sun.tools.java.Identifier, argumentTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Lookup a method.  This code implements the method lookup
@@ -436,7 +436,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	*
 	* This mechanism cannot be used to lookup synthetic methods.
 	*/
-	@:overload public function matchMethod(env : sun.tools.java.Environment, accessor : ClassDefinition, methodName : sun.tools.java.Identifier) : sun.tools.java.MemberDefinition;
+	@:overload public function matchMethod(env : sun.tools.java.Environment, accessor : sun.tools.java.ClassDefinition, methodName : sun.tools.java.Identifier) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* A version of matchMethod to be used only for constructors
@@ -466,7 +466,7 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	*/
 	@:overload public function check(env : sun.tools.java.Environment) : Void;
 	
-	@:overload public function checkLocalClass(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, sup : ClassDefinition, args : java.NativeArray<sun.tools.tree.Expression>, argTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.tree.Vset;
+	@:overload public function checkLocalClass(env : sun.tools.java.Environment, ctx : sun.tools.tree.Context, vset : sun.tools.tree.Vset, sup : sun.tools.java.ClassDefinition, args : java.NativeArray<sun.tools.tree.Expression>, argTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.tree.Vset;
 	
 	/**
 	* This method returns an Iterator of all abstract methods
@@ -660,9 +660,9 @@ extern class ClassDefinition implements sun.tools.java.Constants
 	* whose internal names are prefixed by the current class.
 	* The key is the simple internal name, less the prefix.
 	*/
-	@:overload public function getLocalClass(name : String) : ClassDefinition;
+	@:overload public function getLocalClass(name : String) : sun.tools.java.ClassDefinition;
 	
-	@:overload public function addLocalClass(c : ClassDefinition, name : String) : Void;
+	@:overload public function addLocalClass(c : sun.tools.java.ClassDefinition, name : String) : Void;
 	
 	/**
 	* Print for debugging

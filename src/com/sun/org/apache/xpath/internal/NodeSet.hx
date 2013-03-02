@@ -49,7 +49,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param nodelist Set of Nodes to be made members of the new set.
 	*/
-	@:overload public function new(nodelist : NodeSet) : Void;
+	@:overload public function new(nodelist : com.sun.org.apache.xpath.internal.NodeSet) : Void;
 	
 	/**
 	* Create a NodeSet, and copy the members of the
@@ -279,7 +279,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	* @throws RuntimeException thrown if this NodeSet is not of
 	* a mutable type.
 	*/
-	@:overload public function addNodes(ns : NodeSet) : Void;
+	@:overload public function addNodes(ns : com.sun.org.apache.xpath.internal.NodeSet) : Void;
 	
 	/**
 	* Copy NodeList members into this nodelist, adding in
@@ -532,7 +532,7 @@ extern class NodeSet implements org.w3c.dom.NodeList implements org.w3c.dom.trav
 	*
 	* @param nodes NodeVector to append to this list
 	*/
-	@:overload public function appendNodes(nodes : NodeSet) : Void;
+	@:overload public function appendNodes(nodes : com.sun.org.apache.xpath.internal.NodeSet) : Void;
 	
 	/**
 	* Inserts the specified node in this vector at the specified index.

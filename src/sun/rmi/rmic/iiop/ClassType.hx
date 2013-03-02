@@ -35,7 +35,7 @@ extern class ClassType extends sun.rmi.rmic.iiop.CompoundType
 	* Return the parent class of this type. Returns null if this
 	* type is an interface or if there is no parent.
 	*/
-	@:overload override public function getSuperclass() : ClassType;
+	@:overload override public function getSuperclass() : sun.rmi.rmic.iiop.ClassType;
 	
 	/**
 	* Print this type.
@@ -44,7 +44,7 @@ extern class ClassType extends sun.rmi.rmic.iiop.CompoundType
 	* @param useIDLNames If true, print IDL names; otherwise, print java names.
 	* @param globalIDLNames If true and useIDLNames true, prepends "::".
 	*/
-	@:overload override public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
+	@:overload public function print(writer : sun.rmi.rmic.IndentingWriter, useQualifiedNames : Bool, useIDLNames : Bool, globalIDLNames : Bool) : Void;
 	
 	@:overload override private function destroy() : Void;
 	

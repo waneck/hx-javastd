@@ -41,7 +41,7 @@ extern class TypeCodeInputStream extends com.sun.corba.se.impl.encoding.EncapsIn
 	
 	@:overload public function getTopLevelPosition() : Int;
 	
-	@:overload public static function readEncapsulation(is : java.io.InputStream, _orb : org.omg.CORBA.ORB) : TypeCodeInputStream;
+	@:overload public static function readEncapsulation(is : java.io.InputStream, _orb : org.omg.CORBA.ORB) : com.sun.corba.se.impl.encoding.TypeCodeInputStream;
 	
 	@:overload private function makeEncapsulation() : Void;
 	

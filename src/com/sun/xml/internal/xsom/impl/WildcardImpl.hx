@@ -29,9 +29,9 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	
 	@:overload public function getMode() : Int;
 	
-	@:overload public function union(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, rhs : WildcardImpl) : WildcardImpl;
+	@:overload public function union(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, rhs : com.sun.xml.internal.xsom.impl.WildcardImpl) : com.sun.xml.internal.xsom.impl.WildcardImpl;
 	
-	@:overload @:final override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:final public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
 	@:overload @:final public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSTermVisitor) : Void;
 	
@@ -39,7 +39,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	
 	@:overload public function apply<T, P>(_function : com.sun.xml.internal.xsom.visitor.XSTermFunctionWithParam<T, P>, param : P) : T;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
 	@:overload public function isWildcard() : Bool;
 	
@@ -66,7 +66,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	* In case of <code>XSEmpty</code> component, this method
 	* returns null since there is no owner component.
 	*/
-	@:overload override public function getOwnerSchema() : com.sun.xml.internal.xsom.XSSchema;
+	@:overload public function getOwnerSchema() : com.sun.xml.internal.xsom.XSSchema;
 	
 	/**
 	* Evaluates a schema component designator against this schema component
@@ -83,12 +83,12 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	*      null if the SCD didn't match anything. If the SCD matched more than one node,
 	*      the first one will be returned.
 	*/
-	@:overload override public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : XSComponent;
+	@:overload public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.XSComponent;
 	
 	@:overload public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSWildcardFunction<T>) : T;
 	
 	/** Gets the annotation associated to this component, if any. */
-	@:overload override public function getAnnotation() : com.sun.xml.internal.xsom.XSAnnotation;
+	@:overload public function getAnnotation() : com.sun.xml.internal.xsom.XSAnnotation;
 	
 	/**
 	* Gets the {@link SchemaDocument} that indicates which document this component
@@ -101,7 +101,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	*      For all other user-defined
 	*      components this method returns non-null, even if they are local.
 	*/
-	@:overload override public function getSourceDocument() : com.sun.xml.internal.xsom.parser.SchemaDocument;
+	@:overload public function getSourceDocument() : com.sun.xml.internal.xsom.parser.SchemaDocument;
 	
 	/**
 	* Gets the foreign attributes on this schema component.
@@ -119,7 +119,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	* @return
 	*      can be an empty list but never be null.
 	*/
-	@:overload override public function getForeignAttributes() : java.util.List<com.sun.xml.internal.xsom.ForeignAttributes>;
+	@:overload public function getForeignAttributes() : java.util.List<com.sun.xml.internal.xsom.ForeignAttributes>;
 	
 	/**
 	* Gets the foreign attribute of the given name, or null if not found.
@@ -130,14 +130,14 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	*
 	* @see #getForeignAttributes()
 	*/
-	@:overload override public function getForeignAttribute(nsUri : String, localName : String) : String;
+	@:overload public function getForeignAttribute(nsUri : String, localName : String) : String;
 	
 	/**
 	* Gets the locator that indicates the source location where
 	* this component is created from, or null if no information is
 	* available.
 	*/
-	@:overload override public function getLocator() : org.xml.sax.Locator;
+	@:overload public function getLocator() : org.xml.sax.Locator;
 	
 	/** Visitor support. */
 	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSWildcardVisitor) : Void;
@@ -154,7 +154,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	*      null if <tt>createIfNotExist==false</tt> and annotation didn't exist.
 	*      Otherwise non-null.
 	*/
-	@:overload override public function getAnnotation(createIfNotExist : Bool) : com.sun.xml.internal.xsom.XSAnnotation;
+	@:overload public function getAnnotation(createIfNotExist : Bool) : com.sun.xml.internal.xsom.XSAnnotation;
 	
 	/**
 	* Evaluates a schema component designator against this schema component
@@ -170,7 +170,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	* @return
 	*      Can be empty but never null.
 	*/
-	@:overload override public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<XSComponent>;
+	@:overload public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Gets the root schema set that includes this component.
@@ -179,7 +179,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	* In case of <code>XSEmpty</code> component, this method
 	* returns null since there is no owner component.
 	*/
-	@:overload override public function getRoot() : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:overload public function getRoot() : com.sun.xml.internal.xsom.XSSchemaSet;
 	
 	/**
 	* Returns true if the specified namespace URI is valid
@@ -192,7 +192,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$WildcardImpl$Any') extern class WildcardImpl_Any extends WildcardImpl implements com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Any
+@:native('com$sun$xml$internal$xsom$impl$WildcardImpl$Any') extern class WildcardImpl_Any extends com.sun.xml.internal.xsom.impl.WildcardImpl implements com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Any
 {
 	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, _mode : Int) : Void;
 	
@@ -204,7 +204,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$WildcardImpl$Other') extern class WildcardImpl_Other extends WildcardImpl implements com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Other
+@:native('com$sun$xml$internal$xsom$impl$WildcardImpl$Other') extern class WildcardImpl_Other extends com.sun.xml.internal.xsom.impl.WildcardImpl implements com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Other
 {
 	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, otherNamespace : String, _mode : Int) : Void;
 	
@@ -218,7 +218,7 @@ extern class WildcardImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	
 	
 }
-@:native('com$sun$xml$internal$xsom$impl$WildcardImpl$Finite') extern class WildcardImpl_Finite extends WildcardImpl implements com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Union
+@:native('com$sun$xml$internal$xsom$impl$WildcardImpl$Finite') extern class WildcardImpl_Finite extends com.sun.xml.internal.xsom.impl.WildcardImpl implements com.sun.xml.internal.xsom.XSWildcard.XSWildcard_Union
 {
 	@:overload public function new(owner : com.sun.xml.internal.xsom.impl.parser.SchemaDocumentImpl, _annon : com.sun.xml.internal.xsom.impl.AnnotationImpl, _loc : org.xml.sax.Locator, _fa : com.sun.xml.internal.xsom.impl.ForeignAttributesImpl, ns : java.util.Set<String>, _mode : Int) : Void;
 	

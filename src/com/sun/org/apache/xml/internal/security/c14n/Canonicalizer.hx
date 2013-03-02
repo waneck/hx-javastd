@@ -75,7 +75,7 @@ extern class Canonicalizer
 	* @return a Conicicalizer instance ready for the job
 	* @throws InvalidCanonicalizerException
 	*/
-	@:overload @:final public static function getInstance(algorithmURI : String) : Canonicalizer;
+	@:overload @:final public static function getInstance(algorithmURI : String) : com.sun.org.apache.xml.internal.security.c14n.Canonicalizer;
 	
 	/**
 	* Method register

@@ -157,7 +157,7 @@ extern class ActivationGroup extends java.rmi.server.UnicastRemoteObject impleme
 	* @see SecurityManager#checkSetFactory
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:synchronized public static function createGroup(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc, incarnation : haxe.Int64) : ActivationGroup;
+	@:require(java2) @:overload @:synchronized public static function createGroup(id : java.rmi.activation.ActivationGroupID, desc : java.rmi.activation.ActivationGroupDesc, incarnation : haxe.Int64) : java.rmi.activation.ActivationGroup;
 	
 	/**
 	* Returns the current activation group's identifier.  Returns null

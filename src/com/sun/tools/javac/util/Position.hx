@@ -66,7 +66,7 @@ extern class Position
 	* @param   max         Number of characters to read
 	* @param   expandTabs  If true, expand tabs when calculating columns
 	*/
-	@:overload public static function makeLineMap(src : java.NativeArray<java.StdTypes.Char16>, max : Int, expandTabs : Bool) : Position_LineMap;
+	@:overload public static function makeLineMap(src : java.NativeArray<java.StdTypes.Char16>, max : Int, expandTabs : Bool) : com.sun.tools.javac.util.Position.Position_LineMap;
 	
 	/** Encode line and column numbers in an integer as:
 	*  line-number << LINESHIFT + column-number
@@ -158,7 +158,7 @@ extern class Position
 * A LineMap that handles tab expansion correctly.  The cost is
 * an additional bit per character in the source array.
 */
-@:native('com$sun$tools$javac$util$Position$LineTabMapImpl') extern class Position_LineTabMapImpl extends Position_LineMapImpl
+@:native('com$sun$tools$javac$util$Position$LineTabMapImpl') extern class Position_LineTabMapImpl extends com.sun.tools.javac.util.Position.Position_LineMapImpl
 {
 	@:overload public function new(max : Int) : Void;
 	

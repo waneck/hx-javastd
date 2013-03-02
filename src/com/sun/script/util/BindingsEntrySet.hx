@@ -55,7 +55,7 @@ package com.sun.script.util;
 {
 	@:overload public function hasNext() : Bool;
 	
-	@:overload public function next() : BindingsEntrySet_BindingsEntry;
+	@:overload public function next() : com.sun.script.util.BindingsEntrySet.BindingsEntrySet_BindingsEntry;
 	
 	@:overload public function remove() : Void;
 	

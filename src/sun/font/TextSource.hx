@@ -60,7 +60,7 @@ extern class TextSource
 	@:overload @:abstract public function getCoreMetrics() : sun.font.CoreMetrics;
 	
 	/** Get subrange of this TextSource. dir is one of the TextLineComponent constants */
-	@:overload @:abstract public function getSubSource(start : Int, length : Int, dir : Int) : TextSource;
+	@:overload @:abstract public function getSubSource(start : Int, length : Int, dir : Int) : sun.font.TextSource;
 	
 	/** Constant for toString(boolean).  Indicates that toString should not return info
 	outside of the context of this instance. */

@@ -29,7 +29,7 @@ package com.sun.xml.internal.ws.client.sei;
 	* The singleton instance that produces null return value.
 	* Used for operations that doesn't have any output.
 	*/
-	public static var NONE : ResponseBuilder;
+	public static var NONE : com.sun.xml.internal.ws.client.sei.ResponseBuilder;
 	
 	/**
 	* Returns the 'uninitialized' value for the given type.
@@ -68,20 +68,20 @@ package com.sun.xml.internal.ws.client.sei;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$None') @:internal extern class ResponseBuilder_None extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$None') @:internal extern class ResponseBuilder_None extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
 /**
 * {@link ResponseBuilder} that sets the VM uninitialized value to the type.
 */
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$NullSetter') @:internal extern class ResponseBuilder_NullSetter extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$NullSetter') @:internal extern class ResponseBuilder_NullSetter extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
 	@:overload public function new(setter : com.sun.xml.internal.ws.client.sei.ValueSetter, nullValue : Dynamic) : Void;
 	
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
@@ -100,20 +100,20 @@ package com.sun.xml.internal.ws.client.sei;
 * return a value as a return value (and everything else has to go to
 * {@link Holder}s.)
 */
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$Composite') @:internal extern class ResponseBuilder_Composite extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$Composite') @:internal extern class ResponseBuilder_Composite extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
-	@:overload public function new(builders : java.NativeArray<ResponseBuilder>) : Void;
+	@:overload public function new(builders : java.NativeArray<com.sun.xml.internal.ws.client.sei.ResponseBuilder>) : Void;
 	
-	@:overload public function new(builders : java.util.Collection<ResponseBuilder>) : Void;
+	@:overload public function new(builders : java.util.Collection<com.sun.xml.internal.ws.client.sei.ResponseBuilder>) : Void;
 	
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
 /**
 * Reads an Attachment into a Java parameter.
 */
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$AttachmentBuilder') @:internal extern class ResponseBuilder_AttachmentBuilder extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$AttachmentBuilder') @:internal extern class ResponseBuilder_AttachmentBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
 	private var setter(default, null) : com.sun.xml.internal.ws.client.sei.ValueSetter;
 	
@@ -128,44 +128,44 @@ package com.sun.xml.internal.ws.client.sei;
 	*      specifies how the obtained value is set into the argument. Takes
 	*      care of Holder arguments.
 	*/
-	@:overload public static function createAttachmentBuilder(param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.client.sei.ValueSetter) : ResponseBuilder;
+	@:overload public static function createAttachmentBuilder(param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.client.sei.ValueSetter) : com.sun.xml.internal.ws.client.sei.ResponseBuilder;
 	
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$DataHandlerBuilder') @:internal extern class ResponseBuilder_DataHandlerBuilder extends ResponseBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$DataHandlerBuilder') @:internal extern class ResponseBuilder_DataHandlerBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder.ResponseBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$StringBuilder') @:internal extern class ResponseBuilder_StringBuilder extends ResponseBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$StringBuilder') @:internal extern class ResponseBuilder_StringBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder.ResponseBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$ByteArrayBuilder') @:internal extern class ResponseBuilder_ByteArrayBuilder extends ResponseBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$ByteArrayBuilder') @:internal extern class ResponseBuilder_ByteArrayBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder.ResponseBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$SourceBuilder') @:internal extern class ResponseBuilder_SourceBuilder extends ResponseBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$SourceBuilder') @:internal extern class ResponseBuilder_SourceBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder.ResponseBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$ImageBuilder') @:internal extern class ResponseBuilder_ImageBuilder extends ResponseBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$ImageBuilder') @:internal extern class ResponseBuilder_ImageBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder.ResponseBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$InputStreamBuilder') @:internal extern class ResponseBuilder_InputStreamBuilder extends ResponseBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$InputStreamBuilder') @:internal extern class ResponseBuilder_InputStreamBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder.ResponseBuilder_AttachmentBuilder
 {
 	
 }
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$JAXBBuilder') @:internal extern class ResponseBuilder_JAXBBuilder extends ResponseBuilder_AttachmentBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$JAXBBuilder') @:internal extern class ResponseBuilder_JAXBBuilder extends com.sun.xml.internal.ws.client.sei.ResponseBuilder.ResponseBuilder_AttachmentBuilder
 {
 	
 }
 /**
 * Reads a header into a JAXB object.
 */
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$Header') @:internal extern class ResponseBuilder_Header extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$Header') @:internal extern class ResponseBuilder_Header extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
 	/**
 	* @param soapVersion
@@ -181,14 +181,14 @@ package com.sun.xml.internal.ws.client.sei;
 	
 	@:overload public function new(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, param : com.sun.xml.internal.ws.model.ParameterImpl, setter : com.sun.xml.internal.ws.client.sei.ValueSetter) : Void;
 	
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
 /**
 * Reads the whole payload into a single JAXB bean.
 */
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$Body') @:internal extern class ResponseBuilder_Body extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$Body') @:internal extern class ResponseBuilder_Body extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
 	/**
 	* @param bridge
@@ -198,7 +198,7 @@ package com.sun.xml.internal.ws.client.sei;
 	*/
 	@:overload public function new(bridge : com.sun.xml.internal.bind.api.Bridge<Dynamic>, setter : com.sun.xml.internal.ws.client.sei.ValueSetter) : Void;
 	
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
@@ -206,11 +206,11 @@ package com.sun.xml.internal.ws.client.sei;
 * Treats a payload as multiple parts wrapped into one element,
 * and processes all such wrapped parts.
 */
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$DocLit') @:internal extern class ResponseBuilder_DocLit extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$DocLit') @:internal extern class ResponseBuilder_DocLit extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
 	@:overload public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, setterFactory : com.sun.xml.internal.ws.client.sei.ValueSetterFactory) : Void;
 	
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }
@@ -234,11 +234,11 @@ package com.sun.xml.internal.ws.client.sei;
 * Treats a payload as multiple parts wrapped into one element,
 * and processes all such wrapped parts.
 */
-@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$RpcLit') @:internal extern class ResponseBuilder_RpcLit extends ResponseBuilder
+@:native('com$sun$xml$internal$ws$client$sei$ResponseBuilder$RpcLit') @:internal extern class ResponseBuilder_RpcLit extends com.sun.xml.internal.ws.client.sei.ResponseBuilder
 {
 	@:overload public function new(wp : com.sun.xml.internal.ws.model.WrapperParameter, setterFactory : com.sun.xml.internal.ws.client.sei.ValueSetterFactory) : Void;
 	
-	@:overload override public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function readResponse(msg : com.sun.xml.internal.ws.api.message.Message, args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

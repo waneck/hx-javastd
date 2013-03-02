@@ -342,7 +342,7 @@ extern class ScrollPaneLayout implements java.awt.LayoutManager implements javax
 /**
 * The UI resource version of <code>ScrollPaneLayout</code>.
 */
-@:native('javax$swing$ScrollPaneLayout$UIResource') extern class ScrollPaneLayout_UIResource extends ScrollPaneLayout implements javax.swing.plaf.UIResource
+@:native('javax$swing$ScrollPaneLayout$UIResource') extern class ScrollPaneLayout_UIResource extends javax.swing.ScrollPaneLayout implements javax.swing.plaf.UIResource
 {
 	
 }

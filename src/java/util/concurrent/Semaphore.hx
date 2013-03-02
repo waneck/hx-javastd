@@ -574,7 +574,7 @@ package java.util.concurrent;
 /**
 * NonFair version
 */
-@:native('java$util$concurrent$Semaphore$NonfairSync') @:internal extern class Semaphore_NonfairSync extends Semaphore_Sync
+@:native('java$util$concurrent$Semaphore$NonfairSync') @:internal extern class Semaphore_NonfairSync extends java.util.concurrent.Semaphore.Semaphore_Sync
 {
 	@:overload override private function tryAcquireShared(acquires : Int) : Int;
 	
@@ -583,7 +583,7 @@ package java.util.concurrent;
 /**
 * Fair version
 */
-@:native('java$util$concurrent$Semaphore$FairSync') @:internal extern class Semaphore_FairSync extends Semaphore_Sync
+@:native('java$util$concurrent$Semaphore$FairSync') @:internal extern class Semaphore_FairSync extends java.util.concurrent.Semaphore.Semaphore_Sync
 {
 	@:overload override private function tryAcquireShared(acquires : Int) : Int;
 	

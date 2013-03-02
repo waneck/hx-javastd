@@ -25,15 +25,15 @@ package com.sun.tools.classfile;
 */
 extern class LineNumberTable_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, line_number_table : java.NativeArray<LineNumberTable_attribute_Entry>) : Void;
+	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, line_number_table : java.NativeArray<com.sun.tools.classfile.LineNumberTable_attribute.LineNumberTable_attribute_Entry>) : Void;
 	
-	@:overload public function new(name_index : Int, line_number_table : java.NativeArray<LineNumberTable_attribute_Entry>) : Void;
+	@:overload public function new(name_index : Int, line_number_table : java.NativeArray<com.sun.tools.classfile.LineNumberTable_attribute.LineNumberTable_attribute_Entry>) : Void;
 	
-	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var line_number_table_length(default, null) : Int;
 	
-	public var line_number_table(default, null) : java.NativeArray<LineNumberTable_attribute_Entry>;
+	public var line_number_table(default, null) : java.NativeArray<com.sun.tools.classfile.LineNumberTable_attribute.LineNumberTable_attribute_Entry>;
 	
 	
 }

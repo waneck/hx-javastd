@@ -83,7 +83,7 @@ package sun.awt.X11;
 	* Returns a subset of a list which is intersection of this set and set build by mapping <code>mask</code> in
 	* <code>mapping</code>.
 	*/
-	@:overload public function subset(mask : Int, mapping : java.util.Map<Null<Int>, sun.awt.X11.XAtom>) : XAtomList;
+	@:overload public function subset(mask : Int, mapping : java.util.Map<Null<Int>, sun.awt.X11.XAtom>) : sun.awt.X11.XAtomList;
 	
 	/**
 	* Returns iterator for items.
@@ -93,7 +93,7 @@ package sun.awt.X11;
 	/**
 	* Merges without duplicates all the atoms from another list
 	*/
-	@:overload public function addAll(atoms : XAtomList) : Void;
+	@:overload public function addAll(atoms : sun.awt.X11.XAtomList) : Void;
 	
 	@:overload public function toString() : String;
 	

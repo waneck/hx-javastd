@@ -324,13 +324,13 @@ package java.awt;
 	* @see       java.awt.Component#getPreferredSize
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload override public function getPreferredSize() : java.awt.Dimension;
+	@:require(java1) @:overload public function getPreferredSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getPreferredSize()</code>.
 	*/
-	@:overload override public function preferredSize() : java.awt.Dimension;
+	@:overload public function preferredSize() : java.awt.Dimension;
 	
 	/**
 	* Determines the minimum size of a text area with the specified
@@ -357,13 +357,13 @@ package java.awt;
 	* @see       java.awt.Component#getPreferredSize
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:require(java1) @:overload public function getMinimumSize() : java.awt.Dimension;
 	
 	/**
 	* @deprecated As of JDK version 1.1,
 	* replaced by <code>getMinimumSize()</code>.
 	*/
-	@:overload override public function minimumSize() : java.awt.Dimension;
+	@:overload public function minimumSize() : java.awt.Dimension;
 	
 	/**
 	* Returns a string representing the state of this <code>TextArea</code>.

@@ -649,7 +649,7 @@ extern class X509CertImpl extends java.security.cert.X509Certificate implements 
 	* to a X509CertImpl. Does a cast if possible, otherwise reparses
 	* the encoding.
 	*/
-	@:overload public static function toImpl(cert : java.security.cert.X509Certificate) : X509CertImpl;
+	@:overload public static function toImpl(cert : java.security.cert.X509Certificate) : sun.security.x509.X509CertImpl;
 	
 	/**
 	* Utility method to test if a certificate is self-issued. This is

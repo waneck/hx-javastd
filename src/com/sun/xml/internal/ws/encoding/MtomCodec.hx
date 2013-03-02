@@ -38,15 +38,15 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	*
 	* @return A non-null content type for soap11 or soap 1.2 content type
 	*/
-	@:overload override public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload public function getStaticContentType(packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, out : java.io.OutputStream) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload public function encode(packet : com.sun.xml.internal.ws.api.message.Packet, buffer : java.nio.channels.WritableByteChannel) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function copy() : MtomCodec;
+	@:overload public function copy() : com.sun.xml.internal.ws.encoding.MtomCodec;
 	
-	@:overload override private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
+	@:overload private function decode(mpp : com.sun.xml.internal.ws.encoding.MimeMultipartParser, packet : com.sun.xml.internal.ws.api.message.Packet) : Void;
 	
 	
 }
@@ -56,7 +56,7 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 }
 @:native('com$sun$xml$internal$ws$encoding$MtomCodec$MtomStreamWriterImpl') @:internal extern class MtomCodec_MtomStreamWriterImpl extends com.sun.xml.internal.ws.util.xml.XMLStreamWriterFilter implements com.sun.xml.internal.org.jvnet.staxex.XMLStreamWriterEx implements com.sun.xml.internal.ws.streaming.MtomStreamWriter
 {
-	@:overload public function new(w : javax.xml.stream.XMLStreamWriter, out : java.io.OutputStream, mtomAttachments : java.util.List<MtomCodec_ByteArrayBuffer>) : Void;
+	@:overload public function new(w : javax.xml.stream.XMLStreamWriter, out : java.io.OutputStream, mtomAttachments : java.util.List<com.sun.xml.internal.ws.encoding.MtomCodec.MtomCodec_ByteArrayBuffer>) : Void;
 	
 	@:overload public function writeBinary(data : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int, contentType : String) : Void;
 	
@@ -66,7 +66,7 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	
 	@:overload public function writePCDATA(data : java.lang.CharSequence) : Void;
 	
-	@:overload override public function getProperty(name : String) : Dynamic;
+	@:overload public function getProperty(name : String) : Dynamic;
 	
 	/**
 	* JAXBMessage writes envelope directly to the OutputStream(for SJSXP, woodstox).
@@ -75,7 +75,7 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	*/
 	@:overload public function getAttachmentMarshaller() : javax.xml.bind.attachment.AttachmentMarshaller;
 	
-	@:overload override public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
+	@:overload public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
 	
 	
 }
@@ -99,23 +99,23 @@ extern class MtomCodec extends com.sun.xml.internal.ws.encoding.MimeCodec
 	
 	@:overload public function getPCDATA() : java.lang.CharSequence;
 	
-	@:overload override public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
+	@:overload public function getNamespaceContext() : com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx;
 	
 	@:overload public function getElementTextTrim() : String;
 	
-	@:overload override public function getTextLength() : Int;
+	@:overload public function getTextLength() : Int;
 	
-	@:overload override public function getTextStart() : Int;
+	@:overload public function getTextStart() : Int;
 	
-	@:overload override public function getEventType() : Int;
+	@:overload public function getEventType() : Int;
 	
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
-	@:overload override public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
+	@:overload public function getTextCharacters() : java.NativeArray<java.StdTypes.Char16>;
 	
-	@:overload override public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
+	@:overload public function getTextCharacters(sourceStart : Int, target : java.NativeArray<java.StdTypes.Char16>, targetStart : Int, length : Int) : Int;
 	
-	@:overload override public function getText() : String;
+	@:overload public function getText() : String;
 	
 	
 }

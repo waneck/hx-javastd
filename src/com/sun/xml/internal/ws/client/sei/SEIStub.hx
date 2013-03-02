@@ -43,7 +43,7 @@ extern class SEIStub extends com.sun.xml.internal.ws.client.Stub implements java
 	* Nullable when there is no associated WSDL Model
 	* @return
 	*/
-	@:overload override public function getOperationDispatcher() : com.sun.xml.internal.ws.wsdl.OperationDispatcher;
+	@:overload public function getOperationDispatcher() : com.sun.xml.internal.ws.wsdl.OperationDispatcher;
 	
 	@:overload public function invoke(proxy : Dynamic, method : java.lang.reflect.Method, args : java.NativeArray<Dynamic>) : Dynamic;
 	
@@ -51,9 +51,9 @@ extern class SEIStub extends com.sun.xml.internal.ws.client.Stub implements java
 	
 	@:overload @:final public function doProcessAsync(request : com.sun.xml.internal.ws.api.message.Packet, rc : com.sun.xml.internal.ws.client.RequestContext, _callback : com.sun.xml.internal.ws.api.pipe.Fiber.Fiber_CompletionCallback) : Void;
 	
-	@:overload @:final override private function getPortName() : javax.xml.namespace.QName;
+	@:overload @:final private function getPortName() : javax.xml.namespace.QName;
 	
-	@:overload override public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
+	@:overload public function setOutboundHeaders(headers : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

@@ -33,16 +33,16 @@ package com.sun.tools.javac.main;
 */
 extern class RecognizedOptions
 {
-	@:overload public static function getJavacFileManagerOptions(helper : RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
+	@:overload public static function getJavacFileManagerOptions(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
 	
-	@:overload public static function getJavacToolOptions(helper : RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
+	@:overload public static function getJavacToolOptions(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
 	
 	/**
 	* Get all the recognized options.
 	* @param helper an {@code OptionHelper} to help when processing options
 	* @return an array of options
 	*/
-	@:overload public static function getAll(helper : RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
+	@:overload public static function getAll(helper : com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper) : java.NativeArray<com.sun.tools.javac.main.JavacOption.JavacOption_Option>;
 	
 	
 }
@@ -66,7 +66,7 @@ extern class RecognizedOptions
 	
 	
 }
-@:native('com$sun$tools$javac$main$RecognizedOptions$GrumpyHelper') extern class RecognizedOptions_GrumpyHelper implements RecognizedOptions_OptionHelper
+@:native('com$sun$tools$javac$main$RecognizedOptions$GrumpyHelper') extern class RecognizedOptions_GrumpyHelper implements com.sun.tools.javac.main.RecognizedOptions.RecognizedOptions_OptionHelper
 {
 	@:overload public function setOut(out : java.io.PrintWriter) : Void;
 	

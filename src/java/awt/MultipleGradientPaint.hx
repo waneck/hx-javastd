@@ -50,7 +50,7 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	*
 	* @return the enumerated type which specifies cycling behavior
 	*/
-	@:overload @:final public function getCycleMethod() : MultipleGradientPaint_CycleMethod;
+	@:overload @:final public function getCycleMethod() : java.awt.MultipleGradientPaint.MultipleGradientPaint_CycleMethod;
 	
 	/**
 	* Returns the enumerated type which specifies color space for
@@ -59,7 +59,7 @@ extern class MultipleGradientPaint implements java.awt.Paint
 	* @return the enumerated type which specifies color space for
 	* interpolation
 	*/
-	@:overload @:final public function getColorSpace() : MultipleGradientPaint_ColorSpaceType;
+	@:overload @:final public function getColorSpace() : java.awt.MultipleGradientPaint.MultipleGradientPaint_ColorSpaceType;
 	
 	/**
 	* Returns a copy of the transform applied to the gradient.

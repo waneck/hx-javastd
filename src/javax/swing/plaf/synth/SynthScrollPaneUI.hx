@@ -31,7 +31,7 @@ extern class SynthScrollPaneUI extends javax.swing.plaf.basic.BasicScrollPaneUI 
 	* @param x component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -45,7 +45,7 @@ extern class SynthScrollPaneUI extends javax.swing.plaf.basic.BasicScrollPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -56,7 +56,7 @@ extern class SynthScrollPaneUI extends javax.swing.plaf.basic.BasicScrollPaneUI 
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -75,22 +75,22 @@ extern class SynthScrollPaneUI extends javax.swing.plaf.basic.BasicScrollPaneUI 
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults(scrollpane : javax.swing.JScrollPane) : Void;
+	@:overload private function installDefaults(scrollpane : javax.swing.JScrollPane) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners(c : javax.swing.JScrollPane) : Void;
+	@:overload private function installListeners(c : javax.swing.JScrollPane) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults(c : javax.swing.JScrollPane) : Void;
+	@:overload private function uninstallDefaults(c : javax.swing.JScrollPane) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners(c : javax.swing.JComponent) : Void;
+	@:overload private function uninstallListeners(c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
@@ -103,11 +103,11 @@ extern class SynthScrollPaneUI extends javax.swing.plaf.basic.BasicScrollPaneUI 
 }
 @:native('javax$swing$plaf$synth$SynthScrollPaneUI$ViewportBorder') @:internal extern class SynthScrollPaneUI_ViewportBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload public function isBorderOpaque() : Bool;
 	
 	
 }

@@ -80,7 +80,7 @@ extern class TransformerException extends java.lang.Exception
 	*         {@link #TransformerException(String,Throwable)}, or this method has already
 	*         been called on this throwable.
 	*/
-	@:overload @:synchronized public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
+	@:overload @:synchronized override public function initCause(cause : java.lang.Throwable) : java.lang.Throwable;
 	
 	/**
 	* Create a new TransformerException.

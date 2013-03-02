@@ -211,7 +211,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* The first child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getFirstChild() : Node;
+	@:overload @:public @:public @:public @:public @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* Rename an existing node of type <code>ELEMENT_NODE</code> or
@@ -323,42 +323,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	@:overload @:public public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
 	/**
-	* Inserts the node <code>newChild</code> before the existing child node
-	* <code>refChild</code>. If <code>refChild</code> is <code>null</code>,
-	* insert <code>newChild</code> at the end of the list of children.
-	* <br>If <code>newChild</code> is a <code>DocumentFragment</code> object,
-	* all of its children are inserted, in the same order, before
-	* <code>refChild</code>. If the <code>newChild</code> is already in the
-	* tree, it is first removed.
-	* <p ><b>Note:</b>  Inserting a node before itself is implementation
-	* dependent.
-	* @param newChild The node to insert.
-	* @param refChild The reference node, i.e., the node before which the
-	*   new node must be inserted.
-	* @return The node being inserted.
-	* @exception DOMException
-	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
-	*   allow children of the type of the <code>newChild</code> node, or if
-	*   the node to insert is one of this node's ancestors or this node
-	*   itself, or if this node is of type <code>Document</code> and the
-	*   DOM application attempts to insert a second
-	*   <code>DocumentType</code> or <code>Element</code> node.
-	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
-	*   from a different document than the one that created this node.
-	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
-	*   if the parent of the node being inserted is readonly.
-	*   <br>NOT_FOUND_ERR: Raised if <code>refChild</code> is not a child of
-	*   this node.
-	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
-	*   this exception might be raised if the DOM implementation doesn't
-	*   support the insertion of a <code>DocumentType</code> or
-	*   <code>Element</code> node.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function insertBefore(newChild : Node, refChild : Node) : Node;
-	
-	/**
 	* Associate an object to a key on this node. The object can later be
 	* retrieved from this node by calling <code>getUserData</code> with the
 	* same key.
@@ -415,35 +379,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* tree, or if it has been removed from the tree, this is
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getParentNode() : Node;
-	
-	/**
-	* Adds the node <code>newChild</code> to the end of the list of children
-	* of this node. If the <code>newChild</code> is already in the tree, it
-	* is first removed.
-	* @param newChild The node to add.If it is a
-	*   <code>DocumentFragment</code> object, the entire contents of the
-	*   document fragment are moved into the child list of this node
-	* @return The node added.
-	* @exception DOMException
-	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
-	*   allow children of the type of the <code>newChild</code> node, or if
-	*   the node to append is one of this node's ancestors or this node
-	*   itself, or if this node is of type <code>Document</code> and the
-	*   DOM application attempts to append a second
-	*   <code>DocumentType</code> or <code>Element</code> node.
-	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
-	*   from a different document than the one that created this node.
-	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
-	*   if the previous parent of the node being inserted is readonly.
-	*   <br>NOT_SUPPORTED_ERR: if the <code>newChild</code> node is a child
-	*   of the <code>Document</code> node, this exception might be raised
-	*   if the DOM implementation doesn't support the removal of the
-	*   <code>DocumentType</code> child or <code>Element</code> child.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function appendChild(newChild : Node) : Node;
+	@:overload @:public @:public @:public @:public @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* The Document Type Declaration (see <code>DocumentType</code>)
@@ -650,6 +586,23 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	@:overload @:public @:public @:public @:public @:public public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
+	* Compares the reference node, i.e. the node on which this method is
+	* being called, with a node, i.e. the one passed as a parameter, with
+	* regard to their position in the document and according to the
+	* document order.
+	* @param other The node to compare against the reference node.
+	* @return Returns how the node is positioned relatively to the reference
+	*   node.
+	* @exception DOMException
+	*   NOT_SUPPORTED_ERR: when the compared nodes are from different DOM
+	*   implementations that do not coordinate to return consistent
+	*   implementation-specific results.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	
+	/**
 	*  An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the version number of this document. If there is no declaration and if
 	* this document supports the "XML" feature, the value is
 	* <code>"1.0"</code>. If this document does not support the "XML"
@@ -794,78 +747,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	@:overload @:public @:public @:public @:public @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
-	* The <code>Document</code> object associated with this node. This is
-	* also the <code>Document</code> object used to create new nodes. When
-	* this node is a <code>Document</code> or a <code>DocumentType</code>
-	* which is not used with any <code>Document</code> yet, this is
-	* <code>null</code>.
-	*
-	* @since DOM Level 2
-	*/
-	@:overload @:public @:public @:public @:public @:public public function getOwnerDocument() : org.w3c.dom.Document;
-	
-	/**
-	* Creates a <code>Comment</code> node given the specified string.
-	* @param data The data for the node.
-	* @return The new <code>Comment</code> object.
-	*/
-	@:overload @:public public function createComment(data : String) : org.w3c.dom.Comment;
-	
-	/**
-	*  This method checks if the specified <code>namespaceURI</code> is the
-	* default namespace or not.
-	* @param namespaceURI The namespace URI to look for.
-	* @return Returns <code>true</code> if the specified
-	*   <code>namespaceURI</code> is the default namespace,
-	*   <code>false</code> otherwise.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
-	
-	/**
-	* The node immediately following this node. If there is no such node,
-	* this returns <code>null</code>.
-	*/
-	@:overload @:public @:public @:public @:public @:public public function getNextSibling() : Node;
-	
-	/**
-	* Returns a duplicate of this node, i.e., serves as a generic copy
-	* constructor for nodes. The duplicate node has no parent (
-	* <code>parentNode</code> is <code>null</code>) and no user data. User
-	* data associated to the imported node is not carried over. However, if
-	* any <code>UserDataHandlers</code> has been specified along with the
-	* associated data these handlers will be called with the appropriate
-	* parameters before this method returns.
-	* <br>Cloning an <code>Element</code> copies all attributes and their
-	* values, including those generated by the XML processor to represent
-	* defaulted attributes, but this method does not copy any children it
-	* contains unless it is a deep clone. This includes text contained in
-	* an the <code>Element</code> since the text is contained in a child
-	* <code>Text</code> node. Cloning an <code>Attr</code> directly, as
-	* opposed to be cloned as part of an <code>Element</code> cloning
-	* operation, returns a specified attribute (<code>specified</code> is
-	* <code>true</code>). Cloning an <code>Attr</code> always clones its
-	* children, since they represent its value, no matter whether this is a
-	* deep clone or not. Cloning an <code>EntityReference</code>
-	* automatically constructs its subtree if a corresponding
-	* <code>Entity</code> is available, no matter whether this is a deep
-	* clone or not. Cloning any other type of node simply returns a copy of
-	* this node.
-	* <br>Note that cloning an immutable subtree results in a mutable copy,
-	* but the children of an <code>EntityReference</code> clone are readonly
-	* . In addition, clones of unspecified <code>Attr</code> nodes are
-	* specified. And, cloning <code>Document</code>,
-	* <code>DocumentType</code>, <code>Entity</code>, and
-	* <code>Notation</code> nodes is implementation dependent.
-	* @param deep If <code>true</code>, recursively clone the subtree under
-	*   the specified node; if <code>false</code>, clone only the node
-	*   itself (and its attributes, if it is an <code>Element</code>).
-	* @return The duplicate node.
-	*/
-	@:overload @:public @:public @:public @:public @:public public function cloneNode(deep : Bool) : Node;
-	
-	/**
 	* Tests whether two nodes are equal.
 	* <br>This method tests for equality of nodes, not sameness (i.e.,
 	* whether the two nodes are references to the same object) which can be
@@ -929,7 +810,132 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function isEqualNode(arg : Node) : Bool;
+	@:overload @:public @:public @:public @:public @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	
+	/**
+	* Returns whether this node is the same node as the given one.
+	* <br>This method provides a way to determine whether two
+	* <code>Node</code> references returned by the implementation reference
+	* the same object. When two <code>Node</code> references are references
+	* to the same object, even if through a proxy, the references may be
+	* used completely interchangeably, such that all attributes have the
+	* same values and calling the same DOM method on either reference
+	* always has exactly the same effect.
+	* @param other The node to test against.
+	* @return Returns <code>true</code> if the nodes are the same,
+	*   <code>false</code> otherwise.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	
+	/**
+	* The <code>Document</code> object associated with this node. This is
+	* also the <code>Document</code> object used to create new nodes. When
+	* this node is a <code>Document</code> or a <code>DocumentType</code>
+	* which is not used with any <code>Document</code> yet, this is
+	* <code>null</code>.
+	*
+	* @since DOM Level 2
+	*/
+	@:overload @:public @:public @:public @:public @:public public function getOwnerDocument() : org.w3c.dom.Document;
+	
+	/**
+	* Creates a <code>Comment</code> node given the specified string.
+	* @param data The data for the node.
+	* @return The new <code>Comment</code> object.
+	*/
+	@:overload @:public public function createComment(data : String) : org.w3c.dom.Comment;
+	
+	/**
+	*  This method checks if the specified <code>namespaceURI</code> is the
+	* default namespace or not.
+	* @param namespaceURI The namespace URI to look for.
+	* @return Returns <code>true</code> if the specified
+	*   <code>namespaceURI</code> is the default namespace,
+	*   <code>false</code> otherwise.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
+	
+	/**
+	* The node immediately following this node. If there is no such node,
+	* this returns <code>null</code>.
+	*/
+	@:overload @:public @:public @:public @:public @:public public function getNextSibling() : org.w3c.dom.Node;
+	
+	/**
+	* Returns a duplicate of this node, i.e., serves as a generic copy
+	* constructor for nodes. The duplicate node has no parent (
+	* <code>parentNode</code> is <code>null</code>) and no user data. User
+	* data associated to the imported node is not carried over. However, if
+	* any <code>UserDataHandlers</code> has been specified along with the
+	* associated data these handlers will be called with the appropriate
+	* parameters before this method returns.
+	* <br>Cloning an <code>Element</code> copies all attributes and their
+	* values, including those generated by the XML processor to represent
+	* defaulted attributes, but this method does not copy any children it
+	* contains unless it is a deep clone. This includes text contained in
+	* an the <code>Element</code> since the text is contained in a child
+	* <code>Text</code> node. Cloning an <code>Attr</code> directly, as
+	* opposed to be cloned as part of an <code>Element</code> cloning
+	* operation, returns a specified attribute (<code>specified</code> is
+	* <code>true</code>). Cloning an <code>Attr</code> always clones its
+	* children, since they represent its value, no matter whether this is a
+	* deep clone or not. Cloning an <code>EntityReference</code>
+	* automatically constructs its subtree if a corresponding
+	* <code>Entity</code> is available, no matter whether this is a deep
+	* clone or not. Cloning any other type of node simply returns a copy of
+	* this node.
+	* <br>Note that cloning an immutable subtree results in a mutable copy,
+	* but the children of an <code>EntityReference</code> clone are readonly
+	* . In addition, clones of unspecified <code>Attr</code> nodes are
+	* specified. And, cloning <code>Document</code>,
+	* <code>DocumentType</code>, <code>Entity</code>, and
+	* <code>Notation</code> nodes is implementation dependent.
+	* @param deep If <code>true</code>, recursively clone the subtree under
+	*   the specified node; if <code>false</code>, clone only the node
+	*   itself (and its attributes, if it is an <code>Element</code>).
+	* @return The duplicate node.
+	*/
+	@:overload @:public @:public @:public @:public @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	
+	/**
+	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
+	*  in the list of children, and returns the <code>oldChild</code> node.
+	* <br>If <code>newChild</code> is a <code>DocumentFragment</code> object,
+	* <code>oldChild</code> is replaced by all of the
+	* <code>DocumentFragment</code> children, which are inserted in the
+	* same order. If the <code>newChild</code> is already in the tree, it
+	* is first removed.
+	* <p ><b>Note:</b>  Replacing a node with itself is implementation
+	* dependent.
+	* @param newChild The new node to put in the child list.
+	* @param oldChild The node being replaced in the list.
+	* @return The node replaced.
+	* @exception DOMException
+	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
+	*   allow children of the type of the <code>newChild</code> node, or if
+	*   the node to put in is one of this node's ancestors or this node
+	*   itself, or if this node is of type <code>Document</code> and the
+	*   result of the replacement operation would add a second
+	*   <code>DocumentType</code> or <code>Element</code> on the
+	*   <code>Document</code> node.
+	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
+	*   from a different document than the one that created this node.
+	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node or the parent of
+	*   the new node is readonly.
+	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
+	*   this node.
+	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
+	*   this exception might be raised if the DOM implementation doesn't
+	*   support the replacement of the <code>DocumentType</code> child or
+	*   <code>Element</code> child.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Look up the prefix associated to the given namespace URI, starting from
@@ -970,6 +976,24 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   <code>Document.xmlVersion</code> attribute.
 	*/
 	@:overload @:public public function createElement(tagName : String) : org.w3c.dom.Element;
+	
+	/**
+	* Removes the child node indicated by <code>oldChild</code> from the list
+	* of children, and returns it.
+	* @param oldChild The node being removed.
+	* @return The node removed.
+	* @exception DOMException
+	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
+	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
+	*   this node.
+	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
+	*   this exception might be raised if the DOM implementation doesn't
+	*   support the removal of the <code>DocumentType</code> child or the
+	*   <code>Element</code> child.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if the
@@ -1032,23 +1056,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @since DOM Level 3
 	*/
 	@:overload @:public @:public @:public @:public @:public public function setTextContent(textContent : String) : Void;
-	
-	/**
-	* Returns whether this node is the same node as the given one.
-	* <br>This method provides a way to determine whether two
-	* <code>Node</code> references returned by the implementation reference
-	* the same object. When two <code>Node</code> references are references
-	* to the same object, even if through a proxy, the references may be
-	* used completely interchangeably, such that all attributes have the
-	* same values and calling the same DOM method on either reference
-	* always has exactly the same effect.
-	* @param other The node to test against.
-	* @return Returns <code>true</code> if the nodes are the same,
-	*   <code>false</code> otherwise.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function isSameNode(other : Node) : Bool;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1128,43 +1135,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* The node immediately preceding this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getPreviousSibling() : Node;
-	
-	/**
-	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
-	*  in the list of children, and returns the <code>oldChild</code> node.
-	* <br>If <code>newChild</code> is a <code>DocumentFragment</code> object,
-	* <code>oldChild</code> is replaced by all of the
-	* <code>DocumentFragment</code> children, which are inserted in the
-	* same order. If the <code>newChild</code> is already in the tree, it
-	* is first removed.
-	* <p ><b>Note:</b>  Replacing a node with itself is implementation
-	* dependent.
-	* @param newChild The new node to put in the child list.
-	* @param oldChild The node being replaced in the list.
-	* @return The node replaced.
-	* @exception DOMException
-	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
-	*   allow children of the type of the <code>newChild</code> node, or if
-	*   the node to put in is one of this node's ancestors or this node
-	*   itself, or if this node is of type <code>Document</code> and the
-	*   result of the replacement operation would add a second
-	*   <code>DocumentType</code> or <code>Element</code> on the
-	*   <code>Document</code> node.
-	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
-	*   from a different document than the one that created this node.
-	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node or the parent of
-	*   the new node is readonly.
-	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
-	*   this node.
-	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
-	*   this exception might be raised if the DOM implementation doesn't
-	*   support the replacement of the <code>DocumentType</code> child or
-	*   <code>Element</code> child.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function replaceChild(newChild : Node, oldChild : Node) : Node;
+	@:overload @:public @:public @:public @:public @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -1274,24 +1245,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	@:overload @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
 	/**
-	* Removes the child node indicated by <code>oldChild</code> from the list
-	* of children, and returns it.
-	* @param oldChild The node being removed.
-	* @return The node removed.
-	* @exception DOMException
-	*   NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly.
-	*   <br>NOT_FOUND_ERR: Raised if <code>oldChild</code> is not a child of
-	*   this node.
-	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
-	*   this exception might be raised if the DOM implementation doesn't
-	*   support the removal of the <code>DocumentType</code> child or the
-	*   <code>Element</code> child.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function removeChild(oldChild : Node) : Node;
-	
-	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
 	* unspecified. When it is defined to be <code>null</code>, setting it
 	* has no effect, including if the node is read-only.
@@ -1359,6 +1312,42 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	@:overload @:public @:public @:public @:public @:public public function getNamespaceURI() : String;
 	
 	/**
+	* Inserts the node <code>newChild</code> before the existing child node
+	* <code>refChild</code>. If <code>refChild</code> is <code>null</code>,
+	* insert <code>newChild</code> at the end of the list of children.
+	* <br>If <code>newChild</code> is a <code>DocumentFragment</code> object,
+	* all of its children are inserted, in the same order, before
+	* <code>refChild</code>. If the <code>newChild</code> is already in the
+	* tree, it is first removed.
+	* <p ><b>Note:</b>  Inserting a node before itself is implementation
+	* dependent.
+	* @param newChild The node to insert.
+	* @param refChild The reference node, i.e., the node before which the
+	*   new node must be inserted.
+	* @return The node being inserted.
+	* @exception DOMException
+	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
+	*   allow children of the type of the <code>newChild</code> node, or if
+	*   the node to insert is one of this node's ancestors or this node
+	*   itself, or if this node is of type <code>Document</code> and the
+	*   DOM application attempts to insert a second
+	*   <code>DocumentType</code> or <code>Element</code> node.
+	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
+	*   from a different document than the one that created this node.
+	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
+	*   if the parent of the node being inserted is readonly.
+	*   <br>NOT_FOUND_ERR: Raised if <code>refChild</code> is not a child of
+	*   this node.
+	*   <br>NOT_SUPPORTED_ERR: if this node is of type <code>Document</code>,
+	*   this exception might be raised if the DOM implementation doesn't
+	*   support the insertion of a <code>DocumentType</code> or
+	*   <code>Element</code> node.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	
+	/**
 	* Creates an empty <code>DocumentFragment</code> object.
 	* @return A new <code>DocumentFragment</code>.
 	*/
@@ -1376,23 +1365,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	*   <code>Elements</code>.
 	*/
 	@:overload @:public public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
-	
-	/**
-	* Compares the reference node, i.e. the node on which this method is
-	* being called, with a node, i.e. the one passed as a parameter, with
-	* regard to their position in the document and according to the
-	* document order.
-	* @param other The node to compare against the reference node.
-	* @return Returns how the node is positioned relatively to the reference
-	*   node.
-	* @exception DOMException
-	*   NOT_SUPPORTED_ERR: when the compared nodes are from different DOM
-	*   implementations that do not coordinate to return consistent
-	*   implementation-specific results.
-	*
-	* @since DOM Level 3
-	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function compareDocumentPosition(other : Node) : java.StdTypes.Int16;
 	
 	/**
 	* Creates an element of the given qualified name and namespace URI.
@@ -1460,7 +1432,7 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* The last child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public public function getLastChild() : Node;
+	@:overload @:public @:public @:public @:public @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	*  Tests whether the DOM implementation implements a specific feature and
@@ -1646,6 +1618,34 @@ extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Nod
 	* @since DOM Level 3
 	*/
 	@:overload @:public public function normalizeDocument() : Void;
+	
+	/**
+	* Adds the node <code>newChild</code> to the end of the list of children
+	* of this node. If the <code>newChild</code> is already in the tree, it
+	* is first removed.
+	* @param newChild The node to add.If it is a
+	*   <code>DocumentFragment</code> object, the entire contents of the
+	*   document fragment are moved into the child list of this node
+	* @return The node added.
+	* @exception DOMException
+	*   HIERARCHY_REQUEST_ERR: Raised if this node is of a type that does not
+	*   allow children of the type of the <code>newChild</code> node, or if
+	*   the node to append is one of this node's ancestors or this node
+	*   itself, or if this node is of type <code>Document</code> and the
+	*   DOM application attempts to append a second
+	*   <code>DocumentType</code> or <code>Element</code> node.
+	*   <br>WRONG_DOCUMENT_ERR: Raised if <code>newChild</code> was created
+	*   from a different document than the one that created this node.
+	*   <br>NO_MODIFICATION_ALLOWED_ERR: Raised if this node is readonly or
+	*   if the previous parent of the node being inserted is readonly.
+	*   <br>NOT_SUPPORTED_ERR: if the <code>newChild</code> node is a child
+	*   of the <code>Document</code> node, this exception might be raised
+	*   if the DOM implementation doesn't support the removal of the
+	*   <code>DocumentType</code> child or <code>Element</code> child.
+	*
+	* @since DOM Level 3
+	*/
+	@:overload @:public @:public @:public @:public @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*  An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the version number of this document. If there is no declaration and if

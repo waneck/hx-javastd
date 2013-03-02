@@ -83,7 +83,7 @@ extern class LoadInstruction extends com.sun.org.apache.bcel.internal.generic.Lo
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

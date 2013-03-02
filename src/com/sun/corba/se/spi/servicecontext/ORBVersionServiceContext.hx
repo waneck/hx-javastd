@@ -33,13 +33,13 @@ extern class ORBVersionServiceContext extends com.sun.corba.se.spi.servicecontex
 	
 	public static var SERVICE_CONTEXT_ID(default, null) : Int;
 	
-	@:overload override public function getId() : Int;
+	@:overload public function getId() : Int;
 	
-	@:overload override public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload public function getVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

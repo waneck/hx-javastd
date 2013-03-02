@@ -104,7 +104,7 @@ extern class XMLSimpleType
 	@:overload public function setValues(type : java.StdTypes.Int16, name : String, enumeration : java.NativeArray<String>, list : Bool, defaultType : java.StdTypes.Int16, defaultValue : String, nonNormalizedDefaultValue : String) : Void;
 	
 	/** Set values. */
-	@:overload public function setValues(simpleType : XMLSimpleType) : Void;
+	@:overload public function setValues(simpleType : com.sun.xml.internal.stream.dtd.nonvalidating.XMLSimpleType) : Void;
 	
 	/**
 	* clear

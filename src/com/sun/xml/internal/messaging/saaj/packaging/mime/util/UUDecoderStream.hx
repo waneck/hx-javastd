@@ -56,13 +56,13 @@ extern class UUDecoderStream extends java.io.FilterInputStream
 	* @exception  IOException  if an I/O error occurs.
 	* @see        java.io.FilterInputStream#in
 	*/
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(buf : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload public function markSupported() : Bool;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	/**
 	* Get the "name" field from the prefix. This is meant to

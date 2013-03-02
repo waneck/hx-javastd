@@ -34,17 +34,17 @@ extern class Ring
 	/**
 	* A {@link Ring} instance is associated with a thread.
 	*/
-	@:overload public static function get() : Ring;
+	@:overload public static function get() : com.sun.tools.internal.xjc.reader.Ring;
 	
 	/**
 	* Starts a new scope.
 	*/
-	@:overload public static function begin() : Ring;
+	@:overload public static function begin() : com.sun.tools.internal.xjc.reader.Ring;
 	
 	/**
 	* Ends a scope.
 	*/
-	@:overload public static function end(old : Ring) : Void;
+	@:overload public static function end(old : com.sun.tools.internal.xjc.reader.Ring) : Void;
 	
 	
 }

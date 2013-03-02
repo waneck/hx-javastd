@@ -31,13 +31,13 @@ extern class NGCCHandler implements com.sun.tools.internal.jxc.gen.config.NGCCEv
 	* @version $Id: NGCCHandler.java,v 1.9 2002/09/29 02:55:48 okajima Exp $
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload private function new(source : com.sun.tools.internal.jxc.gen.config.NGCCEventSource, parent : NGCCHandler, parentCookie : Int) : Void;
+	@:overload private function new(source : com.sun.tools.internal.jxc.gen.config.NGCCEventSource, parent : com.sun.tools.internal.jxc.gen.config.NGCCHandler, parentCookie : Int) : Void;
 	
 	/**
 	* Parent NGCCHandler, if any.
 	* If this is the root handler, this field will be null.
 	*/
-	private var _parent(default, null) : NGCCHandler;
+	private var _parent(default, null) : com.sun.tools.internal.jxc.gen.config.NGCCHandler;
 	
 	/**
 	* Event source.

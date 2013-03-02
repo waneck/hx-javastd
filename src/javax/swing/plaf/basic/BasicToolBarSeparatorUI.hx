@@ -32,7 +32,7 @@ extern class BasicToolBarSeparatorUI extends javax.swing.plaf.basic.BasicSeparat
 	*
 	* @author Jeff Shapiro
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override private function installDefaults(s : javax.swing.JSeparator) : Void;
 	

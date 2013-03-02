@@ -38,7 +38,7 @@ extern class Desktop
 	* @see #isDesktopSupported()
 	* @see java.awt.GraphicsEnvironment#isHeadless
 	*/
-	@:overload @:synchronized public static function getDesktop() : Desktop;
+	@:overload @:synchronized public static function getDesktop() : java.awt.Desktop;
 	
 	/**
 	* Tests whether this class is supported on the current platform.
@@ -67,7 +67,7 @@ extern class Desktop
 	*         the current platform; <code>false</code> otherwise
 	* @see Desktop.Action
 	*/
-	@:overload public function isSupported(action : Desktop_Action) : Bool;
+	@:overload public function isSupported(action : java.awt.Desktop.Desktop_Action) : Bool;
 	
 	/**
 	* Launches the associated application to open the file.

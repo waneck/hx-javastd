@@ -95,7 +95,7 @@ package java.lang;
 	* @return  the cause of this exception.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload override public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

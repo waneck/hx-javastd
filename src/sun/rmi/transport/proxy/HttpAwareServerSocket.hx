@@ -54,13 +54,13 @@ package sun.rmi.transport.proxy;
 	* the underlying socket's input stream.
 	* @exception IOException IO error when waiting for the connection.
 	*/
-	@:overload override public function accept() : java.net.Socket;
+	@:overload public function accept() : java.net.Socket;
 	
 	/**
 	* Return the implementation address and implementation port of
 	* the HttpAwareServerSocket as a String.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

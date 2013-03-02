@@ -29,7 +29,7 @@ extern class PNGImageWriterSpi extends javax.imageio.spi.ImageWriterSpi
 	
 	@:overload override public function canEncodeImage(type : javax.imageio.ImageTypeSpecifier) : Bool;
 	
-	@:overload override public function getDescription(locale : java.util.Locale) : String;
+	@:overload public function getDescription(locale : java.util.Locale) : String;
 	
 	@:overload override public function createWriterInstance(extension : Dynamic) : javax.imageio.ImageWriter;
 	

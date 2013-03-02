@@ -82,7 +82,7 @@ package java.util.concurrent;
 	* @return <tt>true</tt> (as specified by {@link Collection#add})
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function add(e : E) : Bool;
+	@:overload public function add(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element into this delay queue.
@@ -91,7 +91,7 @@ package java.util.concurrent;
 	* @return <tt>true</tt>
 	* @throws NullPointerException if the specified element is null
 	*/
-	@:overload override public function offer(e : E) : Bool;
+	@:overload public function offer(e : E) : Bool;
 	
 	/**
 	* Inserts the specified element into this delay queue. As the queue is
@@ -121,7 +121,7 @@ package java.util.concurrent;
 	* @return the head of this queue, or <tt>null</tt> if this
 	*         queue has no elements with an expired delay
 	*/
-	@:overload override public function poll() : E;
+	@:overload public function poll() : E;
 	
 	/**
 	* Retrieves and removes the head of this queue, waiting if necessary
@@ -154,9 +154,9 @@ package java.util.concurrent;
 	* @return the head of this queue, or <tt>null</tt> if this
 	*         queue is empty.
 	*/
-	@:overload override public function peek() : E;
+	@:overload public function peek() : E;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	/**
 	* @throws UnsupportedOperationException {@inheritDoc}
@@ -180,7 +180,7 @@ package java.util.concurrent;
 	* Elements with an unexpired delay are not waited for; they are
 	* simply discarded from the queue.
 	*/
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	/**
 	* Always returns <tt>Integer.MAX_VALUE</tt> because
@@ -203,7 +203,7 @@ package java.util.concurrent;
 	*
 	* @return an array containing all of the elements in this queue
 	*/
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this queue; the
@@ -241,13 +241,13 @@ package java.util.concurrent;
 	*         this queue
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Removes a single instance of the specified element from this
 	* queue, if it is present, whether or not it has expired.
 	*/
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an iterator over all the elements (both expired and
@@ -263,7 +263,7 @@ package java.util.concurrent;
 	*
 	* @return an iterator over the elements in this queue
 	*/
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload public function iterator() : java.util.Iterator<E>;
 	
 	
 }

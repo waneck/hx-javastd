@@ -40,9 +40,9 @@ extern class CacheMap<K, V> extends java.util.WeakHashMap<K, V>
 	*/
 	@:overload public function new(nSoftReferences : Int) : Void;
 	
-	@:overload override public function put(key : K, value : V) : V;
+	@:overload public function put(key : K, value : V) : V;
 	
-	@:overload override public function get(key : Dynamic) : V;
+	@:overload public function get(key : Dynamic) : V;
 	
 	
 }

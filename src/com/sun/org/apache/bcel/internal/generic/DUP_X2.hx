@@ -74,7 +74,7 @@ extern class DUP_X2 extends com.sun.org.apache.bcel.internal.generic.StackInstru
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

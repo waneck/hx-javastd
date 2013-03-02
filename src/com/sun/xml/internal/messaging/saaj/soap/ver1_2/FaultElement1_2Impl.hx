@@ -35,9 +35,9 @@ extern class FaultElement1_2Impl extends com.sun.xml.internal.messaging.saaj.soa
 	
 	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, localName : String) : Void;
 	
-	@:overload override private function isStandardFaultElement() : Bool;
+	@:overload private function isStandardFaultElement() : Bool;
 	
-	@:overload override public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	@:overload override public function setEncodingStyle(encodingStyle : String) : Void;
 	

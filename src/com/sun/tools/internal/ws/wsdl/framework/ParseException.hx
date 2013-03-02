@@ -36,7 +36,7 @@ extern class ParseException extends com.sun.xml.internal.ws.util.exception.JAXWS
 	
 	@:overload public function new(throwable : java.lang.Throwable) : Void;
 	
-	@:overload override public function getDefaultResourceBundleName() : String;
+	@:overload public function getDefaultResourceBundleName() : String;
 	
 	
 }

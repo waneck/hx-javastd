@@ -61,7 +61,7 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	*     <cite>The Java&trade; Virtual Machine Specification</cite>
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<Constructor<T>>>;
+	@:require(java5) @:overload public function getTypeParameters() : java.NativeArray<java.lang.reflect.TypeVariable<java.lang.reflect.Constructor<T>>>;
 	
 	/**
 	* Returns an array of {@code Class} objects that represent the formal
@@ -281,12 +281,12 @@ extern class Constructor<T> extends java.lang.reflect.AccessibleObject implement
 	* @throws NullPointerException {@inheritDoc}
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
+	@:require(java5) @:overload public function getAnnotation<T : java.lang.annotation.Annotation>(annotationClass : Class<T>) : T;
 	
 	/**
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
+	@:require(java5) @:overload public function getDeclaredAnnotations() : java.NativeArray<java.lang.annotation.Annotation>;
 	
 	/**
 	* Returns an array of arrays that represent the annotations on the formal

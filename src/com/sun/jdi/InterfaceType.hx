@@ -36,7 +36,7 @@ extern interface InterfaceType extends com.sun.jdi.ReferenceType
 	* @throws ClassNotPreparedException if this class not yet been
 	* prepared.
 	*/
-	@:overload public function superinterfaces() : java.util.List<InterfaceType>;
+	@:overload public function superinterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
 	
 	/**
 	* Gets the currently prepared interfaces which directly extend this
@@ -47,7 +47,7 @@ extern interface InterfaceType extends com.sun.jdi.ReferenceType
 	* an interface extending this interface.
 	* If none exist, returns a zero length List.
 	*/
-	@:overload public function subinterfaces() : java.util.List<InterfaceType>;
+	@:overload public function subinterfaces() : java.util.List<com.sun.jdi.InterfaceType>;
 	
 	/**
 	* Gets the currently prepared classes which directly implement this

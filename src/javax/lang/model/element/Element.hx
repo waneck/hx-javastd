@@ -194,7 +194,7 @@ package javax.lang.model.element;
 	* @return the enclosing element, or {@code null} if there is none
 	* @see Elements#getPackageOf
 	*/
-	@:overload public function getEnclosingElement() : Element;
+	@:overload public function getEnclosingElement() : javax.lang.model.element.Element;
 	
 	/**
 	* Returns the elements that are, loosely speaking, directly
@@ -221,7 +221,7 @@ package javax.lang.model.element;
 	* @jls 8.8.9 Default Constructor
 	* @jls 8.9 Enums
 	*/
-	@:overload public function getEnclosedElements() : java.util.List<Element>;
+	@:overload public function getEnclosedElements() : java.util.List<javax.lang.model.element.Element>;
 	
 	/**
 	* Applies a visitor to this element.

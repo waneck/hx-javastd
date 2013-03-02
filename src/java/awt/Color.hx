@@ -28,145 +28,145 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	/**
 	* The color white.  In the default sRGB space.
 	*/
-	public static var white(default, null) : Color;
+	public static var white(default, null) : java.awt.Color;
 	
 	/**
 	* The color white.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var WHITE(default, null) : Color;
+	@:require(java4) public static var WHITE(default, null) : java.awt.Color;
 	
 	/**
 	* The color light gray.  In the default sRGB space.
 	*/
-	public static var lightGray(default, null) : Color;
+	public static var lightGray(default, null) : java.awt.Color;
 	
 	/**
 	* The color light gray.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var LIGHT_GRAY(default, null) : Color;
+	@:require(java4) public static var LIGHT_GRAY(default, null) : java.awt.Color;
 	
 	/**
 	* The color gray.  In the default sRGB space.
 	*/
-	public static var gray(default, null) : Color;
+	public static var gray(default, null) : java.awt.Color;
 	
 	/**
 	* The color gray.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var GRAY(default, null) : Color;
+	@:require(java4) public static var GRAY(default, null) : java.awt.Color;
 	
 	/**
 	* The color dark gray.  In the default sRGB space.
 	*/
-	public static var darkGray(default, null) : Color;
+	public static var darkGray(default, null) : java.awt.Color;
 	
 	/**
 	* The color dark gray.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var DARK_GRAY(default, null) : Color;
+	@:require(java4) public static var DARK_GRAY(default, null) : java.awt.Color;
 	
 	/**
 	* The color black.  In the default sRGB space.
 	*/
-	public static var black(default, null) : Color;
+	public static var black(default, null) : java.awt.Color;
 	
 	/**
 	* The color black.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BLACK(default, null) : Color;
+	@:require(java4) public static var BLACK(default, null) : java.awt.Color;
 	
 	/**
 	* The color red.  In the default sRGB space.
 	*/
-	public static var red(default, null) : Color;
+	public static var red(default, null) : java.awt.Color;
 	
 	/**
 	* The color red.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var RED(default, null) : Color;
+	@:require(java4) public static var RED(default, null) : java.awt.Color;
 	
 	/**
 	* The color pink.  In the default sRGB space.
 	*/
-	public static var pink(default, null) : Color;
+	public static var pink(default, null) : java.awt.Color;
 	
 	/**
 	* The color pink.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var PINK(default, null) : Color;
+	@:require(java4) public static var PINK(default, null) : java.awt.Color;
 	
 	/**
 	* The color orange.  In the default sRGB space.
 	*/
-	public static var orange(default, null) : Color;
+	public static var orange(default, null) : java.awt.Color;
 	
 	/**
 	* The color orange.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var ORANGE(default, null) : Color;
+	@:require(java4) public static var ORANGE(default, null) : java.awt.Color;
 	
 	/**
 	* The color yellow.  In the default sRGB space.
 	*/
-	public static var yellow(default, null) : Color;
+	public static var yellow(default, null) : java.awt.Color;
 	
 	/**
 	* The color yellow.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var YELLOW(default, null) : Color;
+	@:require(java4) public static var YELLOW(default, null) : java.awt.Color;
 	
 	/**
 	* The color green.  In the default sRGB space.
 	*/
-	public static var green(default, null) : Color;
+	public static var green(default, null) : java.awt.Color;
 	
 	/**
 	* The color green.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var GREEN(default, null) : Color;
+	@:require(java4) public static var GREEN(default, null) : java.awt.Color;
 	
 	/**
 	* The color magenta.  In the default sRGB space.
 	*/
-	public static var magenta(default, null) : Color;
+	public static var magenta(default, null) : java.awt.Color;
 	
 	/**
 	* The color magenta.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var MAGENTA(default, null) : Color;
+	@:require(java4) public static var MAGENTA(default, null) : java.awt.Color;
 	
 	/**
 	* The color cyan.  In the default sRGB space.
 	*/
-	public static var cyan(default, null) : Color;
+	public static var cyan(default, null) : java.awt.Color;
 	
 	/**
 	* The color cyan.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var CYAN(default, null) : Color;
+	@:require(java4) public static var CYAN(default, null) : java.awt.Color;
 	
 	/**
 	* The color blue.  In the default sRGB space.
 	*/
-	public static var blue(default, null) : Color;
+	public static var blue(default, null) : java.awt.Color;
 	
 	/**
 	* The color blue.  In the default sRGB space.
 	* @since 1.4
 	*/
-	@:require(java4) public static var BLUE(default, null) : Color;
+	@:require(java4) public static var BLUE(default, null) : java.awt.Color;
 	
 	/**
 	* Creates an opaque sRGB color with the specified red, green,
@@ -368,7 +368,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see        java.awt.Color#darker
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function brighter() : Color;
+	@:require(java0) @:overload public function brighter() : java.awt.Color;
 	
 	/**
 	* Creates a new <code>Color</code> that is a darker version of this
@@ -388,7 +388,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see        java.awt.Color#brighter
 	* @since      JDK1.0
 	*/
-	@:require(java0) @:overload public function darker() : Color;
+	@:require(java0) @:overload public function darker() : java.awt.Color;
 	
 	/**
 	* Computes the hash code for this <code>Color</code>.
@@ -436,7 +436,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*                      octal, or hexadecimal integer.
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload public static function decode(nm : String) : Color;
+	@:require(java1) @:overload public static function decode(nm : String) : java.awt.Color;
 	
 	/**
 	* Finds a color in the system properties.
@@ -456,7 +456,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see      java.awt.Color#Color(int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public static function getColor(nm : String) : Color;
+	@:require(java0) @:overload public static function getColor(nm : String) : java.awt.Color;
 	
 	/**
 	* Finds a color in the system properties.
@@ -478,7 +478,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see      java.awt.Color#Color(int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public static function getColor(nm : String, v : Color) : Color;
+	@:require(java0) @:overload public static function getColor(nm : String, v : java.awt.Color) : java.awt.Color;
 	
 	/**
 	* Finds a color in the system properties.
@@ -501,7 +501,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	* @see      java.awt.Color#Color(int)
 	* @since    JDK1.0
 	*/
-	@:require(java0) @:overload public static function getColor(nm : String, v : Int) : Color;
+	@:require(java0) @:overload public static function getColor(nm : String, v : Int) : java.awt.Color;
 	
 	/**
 	* Converts the components of a color, as specified by the HSB
@@ -574,7 +574,7 @@ extern class Color implements java.awt.Paint implements java.io.Serializable
 	*                                 saturation, and brightness.
 	* @since   JDK1.0
 	*/
-	@:require(java0) @:overload public static function getHSBColor(h : Single, s : Single, b : Single) : Color;
+	@:require(java0) @:overload public static function getHSBColor(h : Single, s : Single, b : Single) : java.awt.Color;
 	
 	/**
 	* Returns a <code>float</code> array containing the color and alpha

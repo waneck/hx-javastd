@@ -81,7 +81,7 @@ extern interface BIDeclaration
 	* @return
 	*      can be empty but always non-null. read-only.
 	*/
-	@:overload public function getChildren() : java.util.Collection<BIDeclaration>;
+	@:overload public function getChildren() : java.util.Collection<com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIDeclaration>;
 	
 	
 }

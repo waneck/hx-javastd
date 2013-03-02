@@ -139,29 +139,29 @@ package com.sun.java.swing.plaf.gtk;
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKPainter$ListTableFocusBorder') @:internal extern class GTKPainter_ListTableFocusBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload public static function getSelectedCellBorder() : GTKPainter_ListTableFocusBorder;
+	@:overload public static function getSelectedCellBorder() : com.sun.java.swing.plaf.gtk.GTKPainter.GTKPainter_ListTableFocusBorder;
 	
-	@:overload public static function getUnselectedCellBorder() : GTKPainter_ListTableFocusBorder;
+	@:overload public static function getUnselectedCellBorder() : com.sun.java.swing.plaf.gtk.GTKPainter.GTKPainter_ListTableFocusBorder;
 	
-	@:overload public static function getNoFocusCellBorder() : GTKPainter_ListTableFocusBorder;
+	@:overload public static function getNoFocusCellBorder() : com.sun.java.swing.plaf.gtk.GTKPainter.GTKPainter_ListTableFocusBorder;
 	
 	@:overload public function new(selectedCell : Bool, focusedCell : Bool) : Void;
 	
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, i : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, i : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload public function isBorderOpaque() : Bool;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$gtk$GTKPainter$TitledBorder') @:internal extern class GTKPainter_TitledBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, i : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, i : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload public function isBorderOpaque() : Bool;
 	
 	
 }

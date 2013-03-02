@@ -34,7 +34,7 @@ extern class CoreResourceBundleControl extends java.util.ResourceBundle.Resource
 	*
 	* @return the instance of resource bundle control.
 	*/
-	@:overload public static function getRBControlInstance() : CoreResourceBundleControl;
+	@:overload public static function getRBControlInstance() : sun.util.CoreResourceBundleControl;
 	
 	/**
 	* This method is to provide a customized ResourceBundle.Control to speed
@@ -44,7 +44,7 @@ extern class CoreResourceBundleControl extends java.util.ResourceBundle.Resource
 	* @return the instance of resource bundle control if the bundle is JDK's,
 	*    otherwise returns null.
 	*/
-	@:overload public static function getRBControlInstance(bundleName : String) : CoreResourceBundleControl;
+	@:overload public static function getRBControlInstance(bundleName : String) : sun.util.CoreResourceBundleControl;
 	
 	/**
 	* @returns a list of candidate locales to search from.

@@ -81,7 +81,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* @param rr the specified <code>RoundRectangle2D</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setRoundRect(rr : RoundRectangle2D) : Void;
+	@:require(java2) @:overload public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -155,7 +155,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 * corners all specified in <code>float</code> coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$RoundRectangle2D$Float') extern class RoundRectangle2D_Float extends RoundRectangle2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$RoundRectangle2D$Float') extern class RoundRectangle2D_Float extends java.awt.geom.RoundRectangle2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of this <code>RoundRectangle2D</code>.
@@ -302,7 +302,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRoundRect(rr : RoundRectangle2D) : Void;
+	@:require(java2) @:overload override public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -317,7 +317,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 * corners all specified in <code>double</code> coordinates.
 * @since 1.2
 */
-@:require(java2) @:native('java$awt$geom$RoundRectangle2D$Double') extern class RoundRectangle2D_Double extends RoundRectangle2D implements java.io.Serializable
+@:require(java2) @:native('java$awt$geom$RoundRectangle2D$Double') extern class RoundRectangle2D_Double extends java.awt.geom.RoundRectangle2D implements java.io.Serializable
 {
 	/**
 	* The X coordinate of this <code>RoundRectangle2D</code>.
@@ -443,7 +443,7 @@ extern class RoundRectangle2D extends java.awt.geom.RectangularShape
 	* {@inheritDoc}
 	* @since 1.2
 	*/
-	@:require(java2) @:overload override public function setRoundRect(rr : RoundRectangle2D) : Void;
+	@:require(java2) @:overload override public function setRoundRect(rr : java.awt.geom.RoundRectangle2D) : Void;
 	
 	/**
 	* {@inheritDoc}

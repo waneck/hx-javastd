@@ -40,7 +40,7 @@ extern class StAXManager
 	
 	@:overload public function new(context : Int) : Void;
 	
-	@:overload public function new(manager : StAXManager) : Void;
+	@:overload public function new(manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
 	
 	/**
 	* public void reset(){

@@ -29,11 +29,11 @@ extern class DynSequenceImpl extends com.sun.corba.se.impl.dynamicany.DynAnyColl
 	
 	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload override private function initializeComponentsFromAny() : Bool;
+	@:overload private function initializeComponentsFromAny() : Bool;
 	
-	@:overload override private function initializeComponentsFromTypeCode() : Bool;
+	@:overload private function initializeComponentsFromTypeCode() : Bool;
 	
-	@:overload override private function initializeAnyFromComponents() : Bool;
+	@:overload private function initializeAnyFromComponents() : Bool;
 	
 	@:overload public function get_length() : Int;
 	

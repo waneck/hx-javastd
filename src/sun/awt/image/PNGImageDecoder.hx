@@ -65,7 +65,7 @@ extern class PNGImageDecoder extends sun.awt.image.ImageDecoder
 {
 	public var underlyingInputStream : java.io.InputStream;
 	
-	@:overload public function new(owner : PNGImageDecoder, is : java.io.InputStream) : Void;
+	@:overload public function new(owner : sun.awt.image.PNGImageDecoder, is : java.io.InputStream) : Void;
 	
 	@:overload override public function available() : Int;
 	

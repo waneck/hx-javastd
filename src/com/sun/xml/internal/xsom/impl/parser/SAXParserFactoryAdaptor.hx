@@ -27,11 +27,11 @@ extern class SAXParserFactoryAdaptor extends javax.xml.parsers.SAXParserFactory
 {
 	@:overload public function new(_parser : com.sun.xml.internal.xsom.parser.XMLParser) : Void;
 	
-	@:overload override public function newSAXParser() : javax.xml.parsers.SAXParser;
+	@:overload public function newSAXParser() : javax.xml.parsers.SAXParser;
 	
-	@:overload override public function setFeature(name : String, value : Bool) : Void;
+	@:overload public function setFeature(name : String, value : Bool) : Void;
 	
-	@:overload override public function getFeature(name : String) : Bool;
+	@:overload public function getFeature(name : String) : Bool;
 	
 	
 }
@@ -40,17 +40,17 @@ extern class SAXParserFactoryAdaptor extends javax.xml.parsers.SAXParserFactory
 	/**
 	* @deprecated
 	*/
-	@:overload override public function getParser() : org.xml.sax.Parser;
+	@:overload public function getParser() : org.xml.sax.Parser;
 	
-	@:overload override public function getXMLReader() : org.xml.sax.XMLReader;
+	@:overload public function getXMLReader() : org.xml.sax.XMLReader;
 	
-	@:overload override public function isNamespaceAware() : Bool;
+	@:overload public function isNamespaceAware() : Bool;
 	
-	@:overload override public function isValidating() : Bool;
+	@:overload public function isValidating() : Bool;
 	
-	@:overload override public function setProperty(name : String, value : Dynamic) : Void;
+	@:overload public function setProperty(name : String, value : Dynamic) : Void;
 	
-	@:overload override public function getProperty(name : String) : Dynamic;
+	@:overload public function getProperty(name : String) : Dynamic;
 	
 	
 }

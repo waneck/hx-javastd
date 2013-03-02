@@ -30,7 +30,7 @@ extern class TaggedProfileFactoryFinderImpl extends com.sun.corba.se.impl.ior.Id
 	*/
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB) : Void;
 	
-	@:overload override public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
+	@:overload public function handleMissingFactory(id : Int, is : org.omg.CORBA_2_3.portable.InputStream) : com.sun.corba.se.spi.ior.Identifiable;
 	
 	
 }

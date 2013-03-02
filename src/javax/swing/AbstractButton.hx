@@ -1275,9 +1275,9 @@ extern class AbstractButton extends javax.swing.JComponent implements java.awt.I
 	
 	
 }
-@:native('javax$swing$AbstractButton$ButtonActionPropertyChangeListener') @:internal extern class AbstractButton_ButtonActionPropertyChangeListener extends javax.swing.ActionPropertyChangeListener<AbstractButton>
+@:native('javax$swing$AbstractButton$ButtonActionPropertyChangeListener') @:internal extern class AbstractButton_ButtonActionPropertyChangeListener extends javax.swing.ActionPropertyChangeListener<javax.swing.AbstractButton>
 {
-	@:overload private function actionPropertyChanged(button : AbstractButton, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
+	@:overload private function actionPropertyChanged(button : javax.swing.AbstractButton, action : javax.swing.Action, e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

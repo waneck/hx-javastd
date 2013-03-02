@@ -41,7 +41,7 @@ extern class QEncoderStream extends com.sun.xml.internal.messaging.saaj.packagin
 	* @param      c   the <code>byte</code>.
 	* @exception  IOException  if an I/O error occurs.
 	*/
-	@:overload override public function write(c : Int) : Void;
+	@:overload public function write(c : Int) : Void;
 	
 	/**
 	* Returns the length of the encoded version of this byte array.

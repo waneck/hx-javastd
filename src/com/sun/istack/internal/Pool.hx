@@ -48,7 +48,7 @@ extern interface Pool<T>
 * <p>
 * Don't rely on the fact that this class extends from {@link ConcurrentLinkedQueue}.
 */
-@:native('com$sun$istack$internal$Pool$Impl') extern class Pool_Impl<T> implements Pool<T>
+@:native('com$sun$istack$internal$Pool$Impl') extern class Pool_Impl<T> implements com.sun.istack.internal.Pool<T>
 {
 	/**
 	* Gets a new object from the pool.

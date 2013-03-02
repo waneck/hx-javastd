@@ -25,9 +25,9 @@ package sun.nio.ch;
 */
 extern class FileLockImpl extends java.nio.channels.FileLock
 {
-	@:overload override public function isValid() : Bool;
+	@:overload public function isValid() : Bool;
 	
-	@:overload @:synchronized override public function release() : Void;
+	@:overload @:synchronized public function release() : Void;
 	
 	
 }

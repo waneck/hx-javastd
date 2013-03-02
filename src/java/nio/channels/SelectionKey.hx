@@ -106,7 +106,7 @@ extern class SelectionKey
 	* @throws  CancelledKeyException
 	*          If this key has been cancelled
 	*/
-	@:overload @:abstract public function interestOps(ops : Int) : SelectionKey;
+	@:overload @:abstract public function interestOps(ops : Int) : java.nio.channels.SelectionKey;
 	
 	/**
 	* Retrieves this key's ready-operation set.

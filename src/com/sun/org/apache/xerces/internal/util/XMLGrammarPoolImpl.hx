@@ -24,7 +24,7 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	private static var TABLE_SIZE(default, null) : Int;
 	
 	/** Grammars. */
-	private var fGrammars : java.NativeArray<XMLGrammarPoolImpl_Entry>;
+	private var fGrammars : java.NativeArray<com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry>;
 	
 	private var fPoolIsLocked : Bool;
 	
@@ -165,9 +165,9 @@ extern class XMLGrammarPoolImpl implements com.sun.org.apache.xerces.internal.xn
 	
 	public var grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	public var next : XMLGrammarPoolImpl_Entry;
+	public var next : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry;
 	
-	@:overload private function new(hash : Int, desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, next : XMLGrammarPoolImpl_Entry) : Void;
+	@:overload private function new(hash : Int, desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, next : com.sun.org.apache.xerces.internal.util.XMLGrammarPoolImpl.XMLGrammarPoolImpl_Entry) : Void;
 	
 	@:overload private function clear() : Void;
 	

@@ -27,7 +27,7 @@ extern class GnomeFileTypeDetector extends sun.nio.fs.AbstractFileTypeDetector
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function implProbeContentType(obj : java.nio.file.Path) : String;
+	@:overload public function implProbeContentType(obj : java.nio.file.Path) : String;
 	
 	
 }

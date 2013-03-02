@@ -27,21 +27,21 @@ extern class PrintStreamProviderFactory extends com.sun.tracing.ProviderFactory
 {
 	@:overload public function new(stream : java.io.PrintStream) : Void;
 	
-	@:overload override public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
+	@:overload public function createProvider<T : com.sun.tracing.Provider>(cls : Class<T>) : T;
 	
 	
 }
 @:internal extern class PrintStreamProvider extends sun.tracing.ProviderSkeleton
 {
-	@:overload override private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
+	@:overload private function createProbe(m : java.lang.reflect.Method) : sun.tracing.ProbeSkeleton;
 	
 	
 }
 @:internal extern class PrintStreamProbe extends sun.tracing.ProbeSkeleton
 {
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
-	@:overload override public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

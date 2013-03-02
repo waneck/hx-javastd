@@ -28,17 +28,17 @@ extern class PrintQuality extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* Lowest quality available on the printer.
 	*/
-	public static var DRAFT(default, null) : PrintQuality;
+	public static var DRAFT(default, null) : javax.print.attribute.standard.PrintQuality;
 	
 	/**
 	* Normal or intermediate quality on the printer.
 	*/
-	public static var NORMAL(default, null) : PrintQuality;
+	public static var NORMAL(default, null) : javax.print.attribute.standard.PrintQuality;
 	
 	/**
 	* Highest quality available on the printer.
 	*/
-	public static var HIGH(default, null) : PrintQuality;
+	public static var HIGH(default, null) : javax.print.attribute.standard.PrintQuality;
 	
 	/**
 	* Construct a new print quality enumeration value with the given integer

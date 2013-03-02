@@ -146,7 +146,7 @@ package java.util;
 	*         has a restricted range, and <tt>fromElement</tt> or
 	*         <tt>toElement</tt> lies outside the bounds of the range
 	*/
-	@:overload public function subSet(fromElement : E, toElement : E) : SortedSet<E>;
+	@:overload public function subSet(fromElement : E, toElement : E) : java.util.SortedSet<E>;
 	
 	/**
 	* Returns a view of the portion of this set whose elements are
@@ -173,7 +173,7 @@ package java.util;
 	*         restricted range, and <tt>toElement</tt> lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function headSet(toElement : E) : SortedSet<E>;
+	@:overload public function headSet(toElement : E) : java.util.SortedSet<E>;
 	
 	/**
 	* Returns a view of the portion of this set whose elements are
@@ -200,7 +200,7 @@ package java.util;
 	*         restricted range, and <tt>fromElement</tt> lies outside the
 	*         bounds of the range
 	*/
-	@:overload public function tailSet(fromElement : E) : SortedSet<E>;
+	@:overload public function tailSet(fromElement : E) : java.util.SortedSet<E>;
 	
 	/**
 	* Returns the first (lowest) element currently in this set.

@@ -56,7 +56,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*          (<tt>'/'</tt>),  or <tt>parent</tt> is <tt>null</tt> and
 	*          name isn't <tt>""</tt>.
 	*/
-	@:overload private function new(parent : AbstractPreferences, name : String) : Void;
+	@:overload private function new(parent : java.util.prefs.AbstractPreferences, name : String) : Void;
 	
 	/**
 	* Implements the <tt>put</tt> method as per the specification in
@@ -425,7 +425,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*
 	* @return all known unremoved children of this node.
 	*/
-	@:overload @:final private function cachedChildren() : java.NativeArray<AbstractPreferences>;
+	@:overload @:final private function cachedChildren() : java.NativeArray<java.util.prefs.AbstractPreferences>;
 	
 	/**
 	* Implements the <tt>parent</tt> method as per the specification in
@@ -724,7 +724,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*         due to a failure in the backing store, or inability to
 	*         communicate with it.
 	*/
-	@:overload private function getChild(nodeName : String) : AbstractPreferences;
+	@:overload private function getChild(nodeName : String) : java.util.prefs.AbstractPreferences;
 	
 	/**
 	* Returns the named child of this preference node, creating it if it does
@@ -757,7 +757,7 @@ extern class AbstractPreferences extends java.util.prefs.Preferences
 	*        this preference node.
 	* @return The named child node.
 	*/
-	@:overload @:abstract private function childSpi(name : String) : AbstractPreferences;
+	@:overload @:abstract private function childSpi(name : String) : java.util.prefs.AbstractPreferences;
 	
 	/**
 	* Returns the absolute path name of this preferences node.

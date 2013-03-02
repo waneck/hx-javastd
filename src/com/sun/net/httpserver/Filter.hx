@@ -63,7 +63,7 @@ package com.sun.net.httpserver;
 	*          caught, must be rethrown again.
 	* @throws NullPointerException if either exchange or chain are <code>null</code>
 	*/
-	@:overload @:abstract public function doFilter(exchange : com.sun.net.httpserver.HttpExchange, chain : Filter_Chain) : Void;
+	@:overload @:abstract public function doFilter(exchange : com.sun.net.httpserver.HttpExchange, chain : com.sun.net.httpserver.Filter.Filter_Chain) : Void;
 	
 	/**
 	* returns a short description of this Filter
@@ -80,7 +80,7 @@ package com.sun.net.httpserver;
 */
 @:native('com$sun$net$httpserver$Filter$Chain') extern class Filter_Chain
 {
-	@:overload public function new(filters : java.util.List<Filter>, handler : com.sun.net.httpserver.HttpHandler) : Void;
+	@:overload public function new(filters : java.util.List<com.sun.net.httpserver.Filter>, handler : com.sun.net.httpserver.HttpHandler) : Void;
 	
 	/**
 	* calls the next filter in the chain, or else

@@ -75,7 +75,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since     1.2
 	*/
-	@:require(java2) @:overload public function new(owner : Window) : Void;
+	@:require(java2) @:overload public function new(owner : java.awt.Window) : Void;
 	
 	/**
 	* Constructs a new, initially invisible window with the specified owner
@@ -107,7 +107,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see       #isShowing
 	* @since     1.3
 	*/
-	@:require(java3) @:overload public function new(owner : Window, gc : java.awt.GraphicsConfiguration) : Void;
+	@:require(java3) @:overload public function new(owner : java.awt.Window, gc : java.awt.GraphicsConfiguration) : Void;
 	
 	/**
 	* Returns the sequence of images to be displayed as the icon for this window.
@@ -539,14 +539,14 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* Returns the owner of this window.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getOwner() : Window;
+	@:require(java2) @:overload public function getOwner() : java.awt.Window;
 	
 	/**
 	* Return an array containing all the windows this
 	* window currently owns.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getOwnedWindows() : java.NativeArray<Window>;
+	@:require(java2) @:overload public function getOwnedWindows() : java.NativeArray<java.awt.Window>;
 	
 	/**
 	* Returns an array of all {@code Window}s, both owned and ownerless,
@@ -565,7 +565,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getWindows() : java.NativeArray<Window>;
+	@:require(java6) @:overload public static function getWindows() : java.NativeArray<java.awt.Window>;
 	
 	/**
 	* Returns an array of all {@code Window}s created by this application
@@ -585,7 +585,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function getOwnerlessWindows() : java.NativeArray<Window>;
+	@:require(java6) @:overload public static function getOwnerlessWindows() : java.NativeArray<java.awt.Window>;
 	
 	/**
 	* Specifies the modal exclusion type for this window. If a window is modal
@@ -1303,7 +1303,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see    #getType
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function setType(type : Window_Type) : Void;
+	@:require(java7) @:overload public function setType(type : java.awt.Window.Window_Type) : Void;
 	
 	/**
 	* Returns the type of the window.
@@ -1311,7 +1311,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see   #setType
 	* @since 1.7
 	*/
-	@:require(java7) @:overload public function getType() : Window_Type;
+	@:require(java7) @:overload public function getType() : java.awt.Window.Window_Type;
 	
 	/**
 	* Gets the AccessibleContext associated with this Window.
@@ -1402,7 +1402,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function createBufferStrategy(numBuffers : Int) : Void;
+	@:require(java4) @:overload public function createBufferStrategy(numBuffers : Int) : Void;
 	
 	/**
 	* Creates a new strategy for multi-buffering on this component with the
@@ -1424,7 +1424,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #getBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function createBufferStrategy(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
+	@:require(java4) @:overload public function createBufferStrategy(numBuffers : Int, caps : java.awt.BufferCapabilities) : Void;
 	
 	/**
 	* Returns the <code>BufferStrategy</code> used by this component.  This
@@ -1435,7 +1435,7 @@ extern class Window extends java.awt.Container implements javax.accessibility.Ac
 	* @see #createBufferStrategy
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getBufferStrategy() : java.awt.image.BufferStrategy;
+	@:require(java4) @:overload public function getBufferStrategy() : java.awt.image.BufferStrategy;
 	
 	/**
 	* Sets whether this Window should appear at the default location for the

@@ -27,7 +27,7 @@ extern class CReferencePropertyInfo extends com.sun.tools.internal.xjc.model.CPr
 {
 	@:overload public function new(name : String, collection : Bool, required : Bool, isMixed : Bool, source : com.sun.xml.internal.xsom.XSComponent, customizations : com.sun.tools.internal.xjc.model.CCustomizations, locator : org.xml.sax.Locator, dummy : Bool, content : Bool, isMixedExtended : Bool) : Void;
 	
-	@:overload override public function ref() : java.util.Set<com.sun.tools.internal.xjc.model.CTypeInfo>;
+	@:overload public function ref() : java.util.Set<com.sun.tools.internal.xjc.model.CTypeInfo>;
 	
 	@:overload public function getElements() : java.util.Set<com.sun.tools.internal.xjc.model.CElement>;
 	
@@ -48,21 +48,21 @@ extern class CReferencePropertyInfo extends com.sun.tools.internal.xjc.model.CPr
 	* Reference properties refer to elements, and none of the Java primitive type
 	* maps to an element. Thus a reference property is always unboxable.
 	*/
-	@:overload override public function isUnboxable() : Bool;
+	@:overload public function isUnboxable() : Bool;
 	
-	@:overload override public function isOptionalPrimitive() : Bool;
+	@:overload public function isOptionalPrimitive() : Bool;
 	
-	@:overload override public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
+	@:overload public function accept<V>(visitor : com.sun.tools.internal.xjc.model.CPropertyVisitor<V>) : V;
 	
-	@:overload override public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
+	@:overload public function getAdapter() : com.sun.tools.internal.xjc.model.CAdapter;
 	
-	@:overload @:final override public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:final public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	/**
 	* A reference property can never be ID/IDREF because they always point to
 	* other element classes.
 	*/
-	@:overload override public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
+	@:overload public function id() : com.sun.xml.internal.bind.v2.model.core.ID;
 	
 	@:overload public function getWildcard() : com.sun.xml.internal.bind.v2.model.core.WildcardMode;
 	
@@ -70,17 +70,17 @@ extern class CReferencePropertyInfo extends com.sun.tools.internal.xjc.model.CPr
 	
 	@:overload public function getDOMHandler() : com.sun.tools.internal.xjc.model.nav.NClass;
 	
-	@:overload override public function getExpectedMimeType() : javax.activation.MimeType;
+	@:overload public function getExpectedMimeType() : javax.activation.MimeType;
 	
 	@:overload public function isCollectionNillable() : Bool;
 	
 	@:overload public function isCollectionRequired() : Bool;
 	
-	@:overload override public function getSchemaType() : javax.xml.namespace.QName;
+	@:overload public function getSchemaType() : javax.xml.namespace.QName;
 	
 	@:overload public function isRequired() : Bool;
 	
-	@:overload override public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
+	@:overload public function collectElementNames(table : java.util.Map<javax.xml.namespace.QName, com.sun.tools.internal.xjc.model.CPropertyInfo>) : javax.xml.namespace.QName;
 	
 	
 }

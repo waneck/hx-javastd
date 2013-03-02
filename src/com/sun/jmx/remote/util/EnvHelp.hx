@@ -324,9 +324,9 @@ extern class EnvHelp
 }
 @:native('com$sun$jmx$remote$util$EnvHelp$SinkOutputStream') @:internal extern class EnvHelp_SinkOutputStream extends java.io.OutputStream
 {
-	@:overload override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload override public function write(b : Int) : Void;
+	@:overload public function write(b : Int) : Void;
 	
 	
 }

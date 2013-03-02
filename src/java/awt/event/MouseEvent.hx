@@ -301,7 +301,7 @@ extern class MouseEvent extends java.awt.event.InputEvent
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getModifiersEx() : Int;
+	@:overload public function getModifiersEx() : Int;
 	
 	/**
 	* Constructs a <code>MouseEvent</code> object with the

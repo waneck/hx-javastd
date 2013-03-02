@@ -16,15 +16,15 @@ extern class IdUniquenessPolicyValue implements org.omg.CORBA.portable.IDLEntity
 {
 	public static var _UNIQUE_ID(default, null) : Int;
 	
-	public static var UNIQUE_ID(default, null) : IdUniquenessPolicyValue;
+	public static var UNIQUE_ID(default, null) : org.omg.PortableServer.IdUniquenessPolicyValue;
 	
 	public static var _MULTIPLE_ID(default, null) : Int;
 	
-	public static var MULTIPLE_ID(default, null) : IdUniquenessPolicyValue;
+	public static var MULTIPLE_ID(default, null) : org.omg.PortableServer.IdUniquenessPolicyValue;
 	
 	@:overload public function value() : Int;
 	
-	@:overload public static function from_int(value : Int) : IdUniquenessPolicyValue;
+	@:overload public static function from_int(value : Int) : org.omg.PortableServer.IdUniquenessPolicyValue;
 	
 	@:overload private function new(value : Int) : Void;
 	

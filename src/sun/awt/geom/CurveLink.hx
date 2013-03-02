@@ -27,7 +27,7 @@ package sun.awt.geom;
 {
 	@:overload public function new(curve : sun.awt.geom.Curve, ystart : Float, yend : Float, etag : Int) : Void;
 	
-	@:overload public function absorb(link : CurveLink) : Bool;
+	@:overload public function absorb(link : sun.awt.geom.CurveLink) : Bool;
 	
 	@:overload public function absorb(curve : sun.awt.geom.Curve, ystart : Float, yend : Float, etag : Int) : Bool;
 	
@@ -51,9 +51,9 @@ package sun.awt.geom;
 	
 	@:overload public function getEdgeTag() : Int;
 	
-	@:overload public function setNext(link : CurveLink) : Void;
+	@:overload public function setNext(link : sun.awt.geom.CurveLink) : Void;
 	
-	@:overload public function getNext() : CurveLink;
+	@:overload public function getNext() : sun.awt.geom.CurveLink;
 	
 	
 }

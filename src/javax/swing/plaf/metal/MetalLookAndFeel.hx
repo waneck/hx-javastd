@@ -31,7 +31,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return the name of this look and feel
 	*/
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
 	/**
 	* Returns an identifier for this look and feel. This returns
@@ -39,7 +39,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return the identifier of this look and feel
 	*/
-	@:overload override public function getID() : String;
+	@:overload public function getID() : String;
 	
 	/**
 	* Returns a short description of this look and feel. This returns
@@ -47,7 +47,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 
 	* @return a short description for the look and feel
 	*/
-	@:overload override public function getDescription() : String;
+	@:overload public function getDescription() : String;
 	
 	/**
 	* Returns {@code false}; {@code MetalLookAndFeel} is not a native
@@ -55,7 +55,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return {@code false}
 	*/
-	@:overload override public function isNativeLookAndFeel() : Bool;
+	@:overload public function isNativeLookAndFeel() : Bool;
 	
 	/**
 	* Returns {@code true}; {@code MetalLookAndFeel} can be run on
@@ -63,7 +63,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @return {@code true}
 	*/
-	@:overload override public function isSupportedLookAndFeel() : Bool;
+	@:overload public function isSupportedLookAndFeel() : Bool;
 	
 	/**
 	* Returns {@code true}; metal can provide {@code Window}
@@ -76,7 +76,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @see JRootPane#setWindowDecorationStyle
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function getSupportsWindowDecorations() : Bool;
+	@:require(java4) @:overload public function getSupportsWindowDecorations() : Bool;
 	
 	/**
 	* Populates {@code table} with mappings from {@code uiClassID} to
@@ -96,7 +96,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*
 	* @see javax.swing.plaf.basic.BasicLookAndFeel#initClassDefaults
 	*/
-	@:overload override private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initClassDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Populates {@code table} with system colors. The following values are
@@ -191,7 +191,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @param table the {@code UIDefaults} object the values are added to
 	* @throws NullPointerException if {@code table} is {@code null}
 	*/
-	@:overload override private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initSystemColorDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Populates {@code table} with the defaults for metal.
@@ -199,7 +199,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @param table the {@code UIDefaults} to add the values to
 	* @throws NullPointerException if {@code table} is {@code null}
 	*/
-	@:overload override private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
+	@:overload private function initComponentDefaults(table : javax.swing.UIDefaults) : Void;
 	
 	/**
 	* Ensures the current {@code MetalTheme} is {@code non-null}. This is
@@ -224,14 +224,14 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	* @see javax.swing.plaf.basic.BasicLookAndFeel#getDefaults()
 	* @see MetalTheme#addCustomEntriesToTable(UIDefaults)
 	*/
-	@:overload override public function getDefaults() : javax.swing.UIDefaults;
+	@:overload public function getDefaults() : javax.swing.UIDefaults;
 	
 	/**
 	* {@inheritDoc}
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override public function provideErrorFeedback(component : java.awt.Component) : Void;
+	@:require(java4) @:overload public function provideErrorFeedback(component : java.awt.Component) : Void;
 	
 	/**
 	* Set the theme used by <code>MetalLookAndFeel</code>.
@@ -285,7 +285,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*         generated.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:require(java5) @:overload public function getDisabledIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	/**
 	* Returns an <code>Icon</code> for use by disabled
@@ -307,7 +307,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*         be generated.
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function getDisabledSelectedIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
+	@:require(java5) @:overload public function getDisabledSelectedIcon(component : javax.swing.JComponent, icon : javax.swing.Icon) : javax.swing.Icon;
 	
 	/**
 	* Returns the control text font of the current theme. This is a
@@ -750,7 +750,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 	*         guidelines
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getLayoutStyle() : javax.swing.LayoutStyle;
+	@:require(java6) @:overload public function getLayoutStyle() : javax.swing.LayoutStyle;
 	
 	
 }
@@ -784,11 +784,11 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 }
 @:native('javax$swing$plaf$metal$MetalLookAndFeel$MetalLayoutStyle') @:internal extern class MetalLookAndFeel_MetalLayoutStyle extends sun.swing.DefaultLayoutStyle
 {
-	@:overload override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:overload public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
+	@:overload public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	
-	@:overload override private function getButtonGap(source : javax.swing.JComponent, target : javax.swing.JComponent, position : Int, offset : Int) : Int;
+	@:overload private function getButtonGap(source : javax.swing.JComponent, target : javax.swing.JComponent, position : Int, offset : Int) : Int;
 	
 	
 }

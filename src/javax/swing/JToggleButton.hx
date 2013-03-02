@@ -99,7 +99,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns a string that specifies the name of the l&f class
@@ -111,7 +111,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	* @beaninfo
 	*  description: A string that specifies the name of the L&F class
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns a string representation of this JToggleButton. This method
@@ -136,7 +136,7 @@ extern class JToggleButton extends javax.swing.AbstractButton implements javax.a
 	*       expert: true
 	*  description: The AccessibleContext associated with this ToggleButton.
 	*/
-	@:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }

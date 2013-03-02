@@ -37,7 +37,7 @@ package sun.security.jgss.krb5;
 	*/
 	@:overload public function new(context : sun.security.jgss.krb5.Krb5Context, serviceCreds : sun.security.krb5.Credentials, apReq : sun.security.krb5.KrbApReq, is : java.io.InputStream) : Void;
 	
-	@:overload @:final override public function encode() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final public function encode() : java.NativeArray<java.StdTypes.Int8>;
 	
 	
 }

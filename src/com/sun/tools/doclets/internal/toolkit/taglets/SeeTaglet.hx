@@ -45,7 +45,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

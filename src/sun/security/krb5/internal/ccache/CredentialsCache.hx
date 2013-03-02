@@ -29,20 +29,20 @@ package sun.security.krb5.internal.ccache;
 */
 extern class CredentialsCache
 {
-	@:overload public static function getInstance(principal : sun.security.krb5.PrincipalName) : CredentialsCache;
+	@:overload public static function getInstance(principal : sun.security.krb5.PrincipalName) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function getInstance(cache : String) : CredentialsCache;
+	@:overload public static function getInstance(cache : String) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function getInstance(principal : sun.security.krb5.PrincipalName, cache : String) : CredentialsCache;
+	@:overload public static function getInstance(principal : sun.security.krb5.PrincipalName, cache : String) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
 	/**
 	* Gets the default credentials cache.
 	*/
-	@:overload public static function getInstance() : CredentialsCache;
+	@:overload public static function getInstance() : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function create(principal : sun.security.krb5.PrincipalName, name : String) : CredentialsCache;
+	@:overload public static function create(principal : sun.security.krb5.PrincipalName, name : String) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
-	@:overload public static function create(principal : sun.security.krb5.PrincipalName) : CredentialsCache;
+	@:overload public static function create(principal : sun.security.krb5.PrincipalName) : sun.security.krb5.internal.ccache.CredentialsCache;
 	
 	@:overload public static function cacheName() : String;
 	

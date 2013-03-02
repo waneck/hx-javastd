@@ -71,7 +71,7 @@ extern class IdentityConstraint implements com.sun.org.apache.xerces.internal.xs
 	/** Returns a string representation of this object. */
 	@:overload public function toString() : String;
 	
-	@:overload public function equals(id : IdentityConstraint) : Bool;
+	@:overload public function equals(id : com.sun.org.apache.xerces.internal.impl.xs.identity.IdentityConstraint) : Bool;
 	
 	/**
 	* Get the type of the object, i.e ELEMENT_DECLARATION.

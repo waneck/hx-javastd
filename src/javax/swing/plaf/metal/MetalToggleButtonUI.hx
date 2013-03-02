@@ -31,11 +31,11 @@ extern class MetalToggleButtonUI extends javax.swing.plaf.basic.BasicToggleButto
 	
 	private var disabledTextColor : java.awt.Color;
 	
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override public function installDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload public function installDefaults(b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
+	@:overload private function uninstallDefaults(b : javax.swing.AbstractButton) : Void;
 	
 	@:overload private function getSelectColor() : java.awt.Color;
 	
@@ -55,13 +55,13 @@ extern class MetalToggleButtonUI extends javax.swing.plaf.basic.BasicToggleButto
 	* @see javax.swing.plaf.ComponentUI#paint
 	* @since 1.5
 	*/
-	@:require(java5) @:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:require(java5) @:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
+	@:overload private function paintButtonPressed(g : java.awt.Graphics, b : javax.swing.AbstractButton) : Void;
 	
-	@:overload override private function paintText(g : java.awt.Graphics, c : javax.swing.JComponent, textRect : java.awt.Rectangle, text : String) : Void;
+	@:overload private function paintText(g : java.awt.Graphics, c : javax.swing.JComponent, textRect : java.awt.Rectangle, text : String) : Void;
 	
-	@:overload override private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
+	@:overload private function paintFocus(g : java.awt.Graphics, b : javax.swing.AbstractButton, viewRect : java.awt.Rectangle, textRect : java.awt.Rectangle, iconRect : java.awt.Rectangle) : Void;
 	
 	/**
 	* Paints the appropriate icon of the button <code>b</code> in the

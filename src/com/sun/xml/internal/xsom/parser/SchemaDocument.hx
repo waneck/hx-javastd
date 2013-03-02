@@ -67,7 +67,7 @@ extern interface SchemaDocument
 	* @return
 	*      can be empty but never null. read-only.
 	*/
-	@:overload public function getReferencedDocuments() : java.util.Set<SchemaDocument>;
+	@:overload public function getReferencedDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
 	/**
 	* Gets the {@link SchemaDocument}s that are included from this document.
@@ -76,7 +76,7 @@ extern interface SchemaDocument
 	*      can be empty but never null. read-only.
 	*      this set is always a subset of {@link #getReferencedDocuments()}.
 	*/
-	@:overload public function getIncludedDocuments() : java.util.Set<SchemaDocument>;
+	@:overload public function getIncludedDocuments() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
 	/**
 	* Gets the {@link SchemaDocument}s that are imported from this document.
@@ -88,7 +88,7 @@ extern interface SchemaDocument
 	*      can be empty but never null. read-only.
 	*      this set is always a subset of {@link #getReferencedDocuments()}.
 	*/
-	@:overload public function getImportedDocuments(targetNamespace : String) : java.util.Set<SchemaDocument>;
+	@:overload public function getImportedDocuments(targetNamespace : String) : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
 	/**
 	* Returns true if this document includes the given document.
@@ -97,7 +97,7 @@ extern interface SchemaDocument
 	* Note that this method returns false if this document
 	* imports the given document.
 	*/
-	@:overload public function includes(doc : SchemaDocument) : Bool;
+	@:overload public function includes(doc : com.sun.xml.internal.xsom.parser.SchemaDocument) : Bool;
 	
 	/**
 	* Returns true if this document imports the given document.
@@ -106,7 +106,7 @@ extern interface SchemaDocument
 	* Note that this method returns false if this document
 	* includes the given document.
 	*/
-	@:overload public function imports(doc : SchemaDocument) : Bool;
+	@:overload public function imports(doc : com.sun.xml.internal.xsom.parser.SchemaDocument) : Bool;
 	
 	/**
 	* Set of {@link SchemaDocument}s that include/import this document.
@@ -117,7 +117,7 @@ extern interface SchemaDocument
 	* @return
 	*      can be empty but never null. read-only.
 	*/
-	@:overload public function getReferers() : java.util.Set<SchemaDocument>;
+	@:overload public function getReferers() : java.util.Set<com.sun.xml.internal.xsom.parser.SchemaDocument>;
 	
 	
 }

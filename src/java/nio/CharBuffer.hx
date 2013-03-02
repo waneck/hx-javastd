@@ -24,7 +24,7 @@ package java.nio;
 * questions.
 */
 //// -- This file was mechanically generated: Do not edit! -- //
-extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<CharBuffer> implements java.lang.Appendable implements java.lang.CharSequence implements java.lang.Readable
+extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<java.nio.CharBuffer> implements java.lang.Appendable implements java.lang.CharSequence implements java.lang.Readable
 {
 	/**
 	* Allocates a new char buffer.
@@ -43,7 +43,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  IllegalArgumentException
 	*          If the <tt>capacity</tt> is a negative integer
 	*/
-	@:overload public static function allocate(capacity : Int) : CharBuffer;
+	@:overload public static function allocate(capacity : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Wraps a char array into a buffer.
@@ -76,7 +76,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : CharBuffer;
+	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Wraps a char array into a buffer.
@@ -94,7 +94,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @return  The new char buffer
 	*/
-	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Char16>) : CharBuffer;
+	@:overload public static function wrap(array : java.NativeArray<java.StdTypes.Char16>) : java.nio.CharBuffer;
 	
 	/**
 	* Attempts to read characters into the specified character buffer.
@@ -110,7 +110,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws ReadOnlyBufferException if target is a read only buffer
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function read(target : CharBuffer) : Int;
+	@:require(java5) @:overload public function read(target : java.nio.CharBuffer) : Int;
 	
 	/**
 	* Wraps a character sequence into a buffer.
@@ -141,7 +141,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*          If the preconditions on the <tt>start</tt> and <tt>end</tt>
 	*          parameters do not hold
 	*/
-	@:overload public static function wrap(csq : java.lang.CharSequence, start : Int, end : Int) : CharBuffer;
+	@:overload public static function wrap(csq : java.lang.CharSequence, start : Int, end : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Wraps a character sequence into a buffer.
@@ -157,7 +157,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @return  The new character buffer
 	*/
-	@:overload public static function wrap(csq : java.lang.CharSequence) : CharBuffer;
+	@:overload public static function wrap(csq : java.lang.CharSequence) : java.nio.CharBuffer;
 	
 	/**
 	* Creates a new char buffer whose content is a shared subsequence of
@@ -176,7 +176,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @return  The new char buffer
 	*/
-	@:overload @:abstract public function slice() : CharBuffer;
+	@:overload @:abstract public function slice() : java.nio.CharBuffer;
 	
 	/**
 	* Creates a new char buffer that shares this buffer's content.
@@ -193,7 +193,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @return  The new char buffer
 	*/
-	@:overload @:abstract public function duplicate() : CharBuffer;
+	@:overload @:abstract public function duplicate() : java.nio.CharBuffer;
 	
 	/**
 	* Creates a new, read-only char buffer that shares this buffer's
@@ -213,7 +213,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @return  The new, read-only char buffer
 	*/
-	@:overload @:abstract public function asReadOnlyBuffer() : CharBuffer;
+	@:overload @:abstract public function asReadOnlyBuffer() : java.nio.CharBuffer;
 	
 	/**
 	* Relative <i>get</i> method.  Reads the char at this buffer's
@@ -243,7 +243,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(c : java.StdTypes.Char16) : CharBuffer;
+	@:overload @:abstract public function put(c : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
 	/**
 	* Absolute <i>get</i> method.  Reads the char at the given
@@ -281,7 +281,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function put(index : Int, c : java.StdTypes.Char16) : CharBuffer;
+	@:overload @:abstract public function put(index : Int, c : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -332,7 +332,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*          If the preconditions on the <tt>offset</tt> and <tt>length</tt>
 	*          parameters do not hold
 	*/
-	@:overload public function get(dst : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : CharBuffer;
+	@:overload public function get(dst : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Relative bulk <i>get</i> method.
@@ -350,7 +350,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*          If there are fewer than <tt>length</tt> chars
 	*          remaining in this buffer
 	*/
-	@:overload public function get(dst : java.NativeArray<java.StdTypes.Char16>) : CharBuffer;
+	@:overload public function get(dst : java.NativeArray<java.StdTypes.Char16>) : java.nio.CharBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -393,7 +393,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : CharBuffer) : CharBuffer;
+	@:overload public function put(src : java.nio.CharBuffer) : java.nio.CharBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -445,7 +445,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : CharBuffer;
+	@:overload public function put(src : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -466,7 +466,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:final public function put(src : java.NativeArray<java.StdTypes.Char16>) : CharBuffer;
+	@:overload @:final public function put(src : java.NativeArray<java.StdTypes.Char16>) : java.nio.CharBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -520,7 +520,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload public function put(src : String, start : Int, end : Int) : CharBuffer;
+	@:overload public function put(src : String, start : Int, end : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Relative bulk <i>put</i> method&nbsp;&nbsp;<i>(optional operation)</i>.
@@ -540,7 +540,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:final public function put(src : String) : CharBuffer;
+	@:overload @:final public function put(src : String) : java.nio.CharBuffer;
 	
 	/**
 	* Tells whether or not this buffer is backed by an accessible char
@@ -637,7 +637,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws  ReadOnlyBufferException
 	*          If this buffer is read-only
 	*/
-	@:overload @:abstract public function compact() : CharBuffer;
+	@:overload @:abstract public function compact() : java.nio.CharBuffer;
 	
 	/**
 	* Tells whether or not this char buffer is direct. </p>
@@ -718,7 +718,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @return  A negative integer, zero, or a positive integer as this buffer
 	*          is less than, equal to, or greater than the given buffer
 	*/
-	@:overload public function compareTo(that : CharBuffer) : Int;
+	@:overload public function compareTo(that : java.nio.CharBuffer) : Int;
 	
 	/**
 	* Returns a string containing the characters in this buffer.
@@ -790,7 +790,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*          If the preconditions on <tt>start</tt> and <tt>end</tt>
 	*          do not hold
 	*/
-	@:overload @:abstract public function subSequence(start : Int, end : Int) : CharBuffer;
+	@:overload @:abstract public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Appends the specified character sequence  to this
@@ -823,7 +823,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : CharBuffer;
+	@:require(java5) @:overload public function append(csq : java.lang.CharSequence) : java.nio.CharBuffer;
 	
 	/**
 	* Appends a subsequence of the  specified character sequence  to this
@@ -857,7 +857,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : CharBuffer;
+	@:require(java5) @:overload public function append(csq : java.lang.CharSequence, start : Int, end : Int) : java.nio.CharBuffer;
 	
 	/**
 	* Appends the specified char  to this
@@ -882,7 +882,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	*
 	* @since  1.5
 	*/
-	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : CharBuffer;
+	@:require(java5) @:overload public function append(c : java.StdTypes.Char16) : java.nio.CharBuffer;
 	
 	/**
 	* Retrieves this buffer's byte order.

@@ -29,7 +29,7 @@ extern class AudioDevice
 	* The default audio player. This audio player is initialized
 	* automatically.
 	*/
-	public static var device(default, null) : AudioDevice;
+	public static var device(default, null) : sun.audio.AudioDevice;
 	
 	/**
 	*  Open an audio channel.

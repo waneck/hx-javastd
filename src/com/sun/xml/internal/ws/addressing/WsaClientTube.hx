@@ -36,9 +36,9 @@ extern class WsaClientTube extends com.sun.xml.internal.ws.addressing.WsaTube
 	
 	@:overload public function new(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, binding : com.sun.xml.internal.ws.api.WSBinding, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload public function new(that : WsaClientTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload public function new(that : com.sun.xml.internal.ws.addressing.WsaClientTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : WsaClientTube;
+	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.addressing.WsaClientTube;
 	
 	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	

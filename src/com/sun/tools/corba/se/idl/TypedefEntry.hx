@@ -41,7 +41,7 @@ extern class TypedefEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	**/
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : TypedefEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.TypedefEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
@@ -52,7 +52,7 @@ extern class TypedefEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	
 	@:overload public function addArrayInfo(e : com.sun.tools.corba.se.idl.constExpr.Expression) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/** Invoke the typedef generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -60,16 +60,16 @@ extern class TypedefEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
-	@:overload override public function isReferencable() : Bool;
+	@:overload public function isReferencable() : Bool;
 	
-	@:overload override public function isReferencable(value : Bool) : Void;
+	@:overload public function isReferencable(value : Bool) : Void;
 	
 	/** Access the typedef generator.
 	@returns an object which implements the TypedefGen interface.
 	@see TypedefGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	
 }

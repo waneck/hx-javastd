@@ -57,7 +57,7 @@ extern class IntegerArray
 	* Merge two sorted arrays and eliminate duplicates.
 	* Elements of the other IntegerArray must not be changed.
 	*/
-	@:overload public function merge(other : IntegerArray) : Void;
+	@:overload public function merge(other : com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray) : Void;
 	
 	@:overload public function sort() : Void;
 	

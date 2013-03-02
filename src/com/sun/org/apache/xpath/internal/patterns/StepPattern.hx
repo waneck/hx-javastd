@@ -86,7 +86,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @param expr The relative pattern expression.
 	*/
-	@:overload public function setRelativePathPattern(expr : StepPattern) : Void;
+	@:overload public function setRelativePathPattern(expr : com.sun.org.apache.xpath.internal.patterns.StepPattern) : Void;
 	
 	/**
 	* Get the reference to nodetest and predicate for
@@ -95,7 +95,7 @@ extern class StepPattern extends com.sun.org.apache.xpath.internal.patterns.Node
 	*
 	* @return The relative pattern expression.
 	*/
-	@:overload public function getRelativePathPattern() : StepPattern;
+	@:overload public function getRelativePathPattern() : com.sun.org.apache.xpath.internal.patterns.StepPattern;
 	
 	/**
 	* Set the list of predicate expressions for this pattern step.

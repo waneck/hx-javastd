@@ -33,9 +33,9 @@ extern class UnicodeLocaleExtension extends sun.util.locale.Extension
 {
 	public static var SINGLETON(default, null) : java.StdTypes.Char16;
 	
-	public static var CA_JAPANESE(default, null) : UnicodeLocaleExtension;
+	public static var CA_JAPANESE(default, null) : sun.util.locale.UnicodeLocaleExtension;
 	
-	public static var NU_THAI(default, null) : UnicodeLocaleExtension;
+	public static var NU_THAI(default, null) : sun.util.locale.UnicodeLocaleExtension;
 	
 	@:overload public function getUnicodeLocaleAttributes() : java.util.Set<String>;
 	

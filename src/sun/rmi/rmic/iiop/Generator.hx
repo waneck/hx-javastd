@@ -89,7 +89,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* @param alreadyChecked A set of Types which have already been checked.
 	*  Intended to be passed to Type.collectMatching(filter,alreadyChecked).
 	*/
-	@:overload @:abstract private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<Generator_OutputType>;
+	@:overload @:abstract private function getOutputTypesFor(topType : sun.rmi.rmic.iiop.CompoundType, alreadyChecked : java.util.HashSet<Dynamic>) : java.NativeArray<sun.rmi.rmic.iiop.Generator.Generator_OutputType>;
 	
 	/**
 	* Return the file name extension for the given file name (e.g. ".java").
@@ -98,7 +98,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* method to return false.
 	* @param outputType One of the items returned by getOutputTypesFor(...)
 	*/
-	@:overload @:abstract private function getFileNameExtensionFor(outputType : Generator_OutputType) : String;
+	@:overload @:abstract private function getFileNameExtensionFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : String;
 	
 	/**
 	* Write the output for the given OutputFileName into the output stream.
@@ -107,7 +107,7 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	*  Intended to be passed to Type.collectMatching(filter,alreadyChecked).
 	* @param writer The output stream.
 	*/
-	@:overload @:abstract private function writeOutputFor(outputType : Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
+	@:overload @:abstract private function writeOutputFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, alreadyChecked : java.util.HashSet<Dynamic>, writer : sun.rmi.rmic.IndentingWriter) : Void;
 	
 	/**
 	* Return true if a new instance should be created for each
@@ -165,21 +165,21 @@ extern class Generator implements sun.rmi.rmic.Generator implements sun.rmi.rmic
 	* package directory lives in a zip or jar file rather than the
 	* file system), the current user directory is used.
 	*/
-	@:overload private function getFileFor(outputType : Generator_OutputType, destinationDir : java.io.File) : java.io.File;
+	@:overload private function getFileFor(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType, destinationDir : java.io.File) : java.io.File;
 	
 	/**
 	* Return an identifier to use for output.
 	* @param outputType the type for which output is to be generated.
 	* @return the new identifier. This implementation returns the input parameter.
 	*/
-	@:overload private function getOutputId(outputType : Generator_OutputType) : sun.tools.java.Identifier;
+	@:overload private function getOutputId(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : sun.tools.java.Identifier;
 	
 	/**
 	* Return true if the given file should be compiled.
 	* @param outputType One of the items returned by getOutputTypesFor(...) for
 	*   which getFileNameExtensionFor(OutputType) returned ".java".
 	*/
-	@:overload private function compileJavaSourceFile(outputType : Generator_OutputType) : Bool;
+	@:overload private function compileJavaSourceFile(outputType : sun.rmi.rmic.iiop.Generator.Generator_OutputType) : Bool;
 	
 	
 }

@@ -48,7 +48,7 @@ extern class AppletClassLoader extends java.net.URLClassLoader
 	* Override loadClass so that class loading errors can be caught in
 	* order to print better error messages.
 	*/
-	@:overload @:synchronized override public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:synchronized public function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
 	/*
 	* Finds the applet class with the specified name. First searches

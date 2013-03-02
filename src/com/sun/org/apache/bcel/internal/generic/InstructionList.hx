@@ -125,7 +125,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il Instruction list to append to this one
 	* @return instruction handle pointing to the <B>first</B> appended instruction
 	*/
-	@:overload public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload public function append(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append another list after instruction i contained in this list.
@@ -135,7 +135,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il Instruction list to append to this one
 	* @return instruction handle pointing to the <B>first</B> appended instruction
 	*/
-	@:overload public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload public function append(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append another list to this one.
@@ -144,7 +144,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il list to append to end of this list
 	* @return instruction handle of the <B>first</B> appended instruction
 	*/
-	@:overload public function append(il : InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload public function append(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Append an instruction to the end of this list.
@@ -224,7 +224,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il Instruction list to insert
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload public function insert(ih : com.sun.org.apache.bcel.internal.generic.InstructionHandle, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert another list.
@@ -232,7 +232,7 @@ extern class InstructionList implements java.io.Serializable
 	* @param il list to insert before start of this list
 	* @return instruction handle of the first inserted instruction
 	*/
-	@:overload public function insert(il : InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload public function insert(il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert another list before Instruction i contained in this list.
@@ -243,7 +243,7 @@ extern class InstructionList implements java.io.Serializable
 	* @return instruction handle pointing to the first inserted instruction,
 	* i.e., il.getStart()
 	*/
-	@:overload public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
+	@:overload public function insert(i : com.sun.org.apache.bcel.internal.generic.Instruction, il : com.sun.org.apache.bcel.internal.generic.InstructionList) : com.sun.org.apache.bcel.internal.generic.InstructionHandle;
 	
 	/**
 	* Insert an instruction at start of this list.
@@ -430,7 +430,7 @@ extern class InstructionList implements java.io.Serializable
 	/**
 	* @return complete, i.e., deep copy of this list
 	*/
-	@:overload public function copy() : InstructionList;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.generic.InstructionList;
 	
 	/** Replace all references to the old constant pool with references to the new
 	*  constant pool

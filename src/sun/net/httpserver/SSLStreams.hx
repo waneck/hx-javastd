@@ -36,7 +36,7 @@ package sun.net.httpserver;
 	* all of the given user data has been sent and any handshake has been
 	* completed. Caller should check if engine has been closed.
 	*/
-	@:overload public function sendData(src : java.nio.ByteBuffer) : SSLStreams_WrapperResult;
+	@:overload public function sendData(src : java.nio.ByteBuffer) : sun.net.httpserver.SSLStreams.SSLStreams_WrapperResult;
 	
 	/**
 	* read data thru the engine into the given ByteBuffer. If the
@@ -44,7 +44,7 @@ package sun.net.httpserver;
 	* and returned. This call handles handshaking automatically.
 	* Caller should check if engine has been closed.
 	*/
-	@:overload public function recvData(dst : java.nio.ByteBuffer) : SSLStreams_WrapperResult;
+	@:overload public function recvData(dst : java.nio.ByteBuffer) : sun.net.httpserver.SSLStreams.SSLStreams_WrapperResult;
 	
 	
 }

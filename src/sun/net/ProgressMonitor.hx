@@ -28,12 +28,12 @@ extern class ProgressMonitor
 	/**
 	* Return default ProgressMonitor.
 	*/
-	@:overload @:synchronized public static function getDefault() : ProgressMonitor;
+	@:overload @:synchronized public static function getDefault() : sun.net.ProgressMonitor;
 	
 	/**
 	* Change default ProgressMonitor implementation.
 	*/
-	@:overload @:synchronized public static function setDefault(m : ProgressMonitor) : Void;
+	@:overload @:synchronized public static function setDefault(m : sun.net.ProgressMonitor) : Void;
 	
 	/**
 	* Change progress metering policy.

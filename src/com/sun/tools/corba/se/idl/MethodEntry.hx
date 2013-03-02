@@ -42,11 +42,11 @@ extern class MethodEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	**/
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : MethodEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.MethodEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.InterfaceEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/** Invoke the method generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -54,14 +54,14 @@ extern class MethodEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the method generator.
 	@returns an object which implements the MethodGen interface.
 	@see MethodGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
-	@:overload override public function type(newType : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
+	@:overload public function type(newType : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** Add an exception to the exception list. */
 	@:overload public function addException(exception : com.sun.tools.corba.se.idl.ExceptionEntry) : Void;

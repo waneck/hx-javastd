@@ -63,7 +63,7 @@ extern class Unsafe
 	*             <code>checkPropertiesAccess</code> method doesn't allow
 	*             access to the system properties.
 	*/
-	@:overload public static function getUnsafe() : Unsafe;
+	@:overload public static function getUnsafe() : sun.misc.Unsafe;
 	
 	/**
 	* Fetches a value from a given Java variable.

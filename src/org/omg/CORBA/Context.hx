@@ -111,7 +111,7 @@ package org.omg.CORBA;
 	* @return                  the <code>Context</code> object that is the
 	*                    parent of this <code>Context</code> object
 	*/
-	@:overload @:abstract public function parent() : Context;
+	@:overload @:abstract public function parent() : org.omg.CORBA.Context;
 	
 	/**
 	* Creates a <code>Context</code> object with the given string as its
@@ -130,7 +130,7 @@ package org.omg.CORBA;
 	* @return                  the newly-created child <code>Context</code> object
 	*                    initialized with the specified name
 	*/
-	@:overload @:abstract public function create_child(child_ctx_name : String) : Context;
+	@:overload @:abstract public function create_child(child_ctx_name : String) : org.omg.CORBA.Context;
 	
 	/**
 	* Creates a <code>NamedValue</code> object and adds it to this

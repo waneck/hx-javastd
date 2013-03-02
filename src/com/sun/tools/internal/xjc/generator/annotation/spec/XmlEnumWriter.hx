@@ -25,9 +25,9 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlEnumWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlEnum>
 {
-	@:overload public function value(value : Class<Dynamic>) : XmlEnumWriter;
+	@:overload public function value(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlEnumWriter;
 	
-	@:overload public function value(value : com.sun.codemodel.internal.JType) : XmlEnumWriter;
+	@:overload public function value(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlEnumWriter;
 	
 	
 }

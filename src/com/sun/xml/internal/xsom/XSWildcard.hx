@@ -52,14 +52,14 @@ extern interface XSWildcard extends com.sun.xml.internal.xsom.XSComponent extend
 /**
 * <code>##any</code> wildcard.
 */
-@:native('com$sun$xml$internal$xsom$XSWildcard$Any') @:internal extern interface XSWildcard_Any extends XSWildcard
+@:native('com$sun$xml$internal$xsom$XSWildcard$Any') @:internal extern interface XSWildcard_Any extends com.sun.xml.internal.xsom.XSWildcard
 {
 	
 }
 /**
 * <code>##other</code> wildcard.
 */
-@:native('com$sun$xml$internal$xsom$XSWildcard$Other') @:internal extern interface XSWildcard_Other extends XSWildcard
+@:native('com$sun$xml$internal$xsom$XSWildcard$Other') @:internal extern interface XSWildcard_Other extends com.sun.xml.internal.xsom.XSWildcard
 {
 	/**
 	* Gets the namespace URI excluded from this wildcard.
@@ -71,7 +71,7 @@ extern interface XSWildcard extends com.sun.xml.internal.xsom.XSComponent extend
 /**
 * Wildcard of a set of namespace URIs.
 */
-@:native('com$sun$xml$internal$xsom$XSWildcard$Union') @:internal extern interface XSWildcard_Union extends XSWildcard
+@:native('com$sun$xml$internal$xsom$XSWildcard$Union') @:internal extern interface XSWildcard_Union extends com.sun.xml.internal.xsom.XSWildcard
 {
 	/**
 	* Short for <code>getNamespaces().iterator()</code>

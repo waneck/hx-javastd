@@ -37,9 +37,9 @@ extern class XPropertyCache
 {
 	@:overload public static function isCached(window : haxe.Int64, property : sun.awt.X11.XAtom) : Bool;
 	
-	@:overload public static function getCacheEntry(window : haxe.Int64, property : sun.awt.X11.XAtom) : XPropertyCache_PropertyCacheEntry;
+	@:overload public static function getCacheEntry(window : haxe.Int64, property : sun.awt.X11.XAtom) : sun.awt.X11.XPropertyCache.XPropertyCache_PropertyCacheEntry;
 	
-	@:overload public static function storeCache(entry : XPropertyCache_PropertyCacheEntry, window : haxe.Int64, property : sun.awt.X11.XAtom) : Void;
+	@:overload public static function storeCache(entry : sun.awt.X11.XPropertyCache.XPropertyCache_PropertyCacheEntry, window : haxe.Int64, property : sun.awt.X11.XAtom) : Void;
 	
 	@:overload public static function clearCache(window : haxe.Int64) : Void;
 	

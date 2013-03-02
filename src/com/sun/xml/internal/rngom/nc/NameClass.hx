@@ -80,10 +80,10 @@ extern class NameClass implements com.sun.xml.internal.rngom.ast.om.ParsedNameCl
 	* Returns true if the intersection between this name class
 	* and the specified name class is non-empty.
 	*/
-	@:overload @:final public function hasOverlapWith(nc2 : NameClass) : Bool;
+	@:overload @:final public function hasOverlapWith(nc2 : com.sun.xml.internal.rngom.nc.NameClass) : Bool;
 	
 	/** Sigleton instance that represents "anyName". */
-	public static var ANY(default, null) : NameClass;
+	public static var ANY(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
 	
 	/**
 	* Sigleton instance that accepts no name.
@@ -100,7 +100,7 @@ extern class NameClass implements com.sun.xml.internal.rngom.ast.om.ParsedNameCl
 	*  <li>Mark element patterns with &lt;notAllowed/> content model.
 	* </ol>
 	*/
-	public static var NULL(default, null) : NameClass;
+	public static var NULL(default, null) : com.sun.xml.internal.rngom.nc.NameClass;
 	
 	
 }

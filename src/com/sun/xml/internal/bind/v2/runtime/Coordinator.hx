@@ -66,7 +66,7 @@ extern class Coordinator implements org.xml.sax.ErrorHandler implements javax.xm
 	*/
 	@:overload @:final private function popCoordinator() : Void;
 	
-	@:overload public static function _getInstance() : Coordinator;
+	@:overload public static function _getInstance() : com.sun.xml.internal.bind.v2.runtime.Coordinator;
 	
 	/**
 	* Gets the current location. Used for reporting the error source location.

@@ -92,7 +92,7 @@ extern class MotifTreeUI extends javax.swing.plaf.basic.BasicTreeUI
 * version of Swing.  A future release of Swing will provide support for
 * long term persistence.
 */
-@:native('com$sun$java$swing$plaf$motif$MotifTreeUI$MotifCollapsedIcon') extern class MotifTreeUI_MotifCollapsedIcon extends MotifTreeUI_MotifExpandedIcon
+@:native('com$sun$java$swing$plaf$motif$MotifTreeUI$MotifCollapsedIcon') extern class MotifTreeUI_MotifCollapsedIcon extends com.sun.java.swing.plaf.motif.MotifTreeUI.MotifTreeUI_MotifExpandedIcon
 {
 	@:overload public static function createCollapsedIcon() : javax.swing.Icon;
 	

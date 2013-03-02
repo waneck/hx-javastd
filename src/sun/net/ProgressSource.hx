@@ -72,7 +72,7 @@ extern class ProgressSource
 	/**
 	* Return state.
 	*/
-	@:overload public function getState() : ProgressSource_State;
+	@:overload public function getState() : sun.net.ProgressSource.ProgressSource_State;
 	
 	/**
 	* Begin progress tracking.

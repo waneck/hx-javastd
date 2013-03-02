@@ -29,7 +29,7 @@ extern class GLXGraphicsConfig extends sun.awt.X11GraphicsConfig implements sun.
 	
 	@:overload public function createManagedSurface(w : Int, h : Int, transparency : Int) : sun.java2d.SurfaceData;
 	
-	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int) : GLXGraphicsConfig;
+	@:overload public static function getConfig(device : sun.awt.X11GraphicsDevice, visualnum : Int) : sun.java2d.opengl.GLXGraphicsConfig;
 	
 	/**
 	* Returns true if the provided capability bit is present for this config.
@@ -46,7 +46,7 @@ extern class GLXGraphicsConfig extends sun.awt.X11GraphicsConfig implements sun.
 	*/
 	@:overload @:final public function getContext() : sun.java2d.opengl.OGLContext;
 	
-	@:overload override public function createCompatibleImage(width : Int, height : Int) : java.awt.image.BufferedImage;
+	@:overload public function createCompatibleImage(width : Int, height : Int) : java.awt.image.BufferedImage;
 	
 	@:overload override public function getColorModel(transparency : Int) : java.awt.image.ColorModel;
 	
@@ -132,7 +132,7 @@ extern class GLXGraphicsConfig extends sun.awt.X11GraphicsConfig implements sun.
 }
 @:native('sun$java2d$opengl$GLXGraphicsConfig$GLXImageCaps') @:internal extern class GLXGraphicsConfig_GLXImageCaps extends java.awt.ImageCapabilities
 {
-	@:overload override public function isTrueVolatile() : Bool;
+	@:overload public function isTrueVolatile() : Bool;
 	
 	
 }

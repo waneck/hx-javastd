@@ -31,7 +31,7 @@ extern class RawCommandLineLauncher extends com.sun.tools.jdi.AbstractLauncher i
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function launch(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
+	@:overload public function launch(arguments : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>) : com.sun.jdi.VirtualMachine;
 	
 	@:overload override public function name() : String;
 	

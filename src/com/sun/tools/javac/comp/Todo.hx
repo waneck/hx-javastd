@@ -26,10 +26,10 @@ package com.sun.tools.javac.comp;
 extern class Todo extends java.util.AbstractQueue<com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>>
 {
 	/** The context key for the todo list. */
-	private static var todoKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Todo>;
+	private static var todoKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Todo>;
 	
 	/** Get the Todo instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Todo;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Todo;
 	
 	/** Create a new todo list. */
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;

@@ -79,13 +79,13 @@ extern class Attribute
 	
 	public static var Synthetic(default, null) : String;
 	
-	@:overload public static function read(cr : com.sun.tools.classfile.ClassReader) : Attribute;
+	@:overload public static function read(cr : com.sun.tools.classfile.ClassReader) : com.sun.tools.classfile.Attribute;
 	
 	@:overload private function new(name_index : Int, length : Int) : Void;
 	
 	@:overload public function getName(constant_pool : com.sun.tools.classfile.ConstantPool) : String;
 	
-	@:overload @:abstract public function accept<R, D>(visitor : Attribute_Visitor<R, D>, data : D) : R;
+	@:overload @:abstract public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	@:overload public function byteLength() : Int;
 	
@@ -101,7 +101,7 @@ extern class Attribute
 	
 	@:overload public function setCompat(compat : Bool) : Void;
 	
-	@:overload public function createAttribute(cr : com.sun.tools.classfile.ClassReader, name_index : Int, data : java.NativeArray<java.StdTypes.Int8>) : Attribute;
+	@:overload public function createAttribute(cr : com.sun.tools.classfile.ClassReader, name_index : Int, data : java.NativeArray<java.StdTypes.Int8>) : com.sun.tools.classfile.Attribute;
 	
 	@:overload private function init() : Void;
 	

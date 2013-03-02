@@ -53,7 +53,7 @@ extern class RawTypeSetBuilder extends com.sun.xml.internal.rngom.digested.DPatt
 	
 	@:overload override private function isListOfValues() : Bool;
 	
-	@:overload private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
+	@:overload override private function canBeType(parent : com.sun.tools.internal.xjc.reader.RawTypeSet) : com.sun.tools.internal.xjc.reader.RawTypeSet.RawTypeSet_Mode;
 	
 	@:overload override private function toElementRef(prop : com.sun.tools.internal.xjc.model.CReferencePropertyInfo) : Void;
 	

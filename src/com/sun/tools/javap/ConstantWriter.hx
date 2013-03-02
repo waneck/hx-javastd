@@ -33,7 +33,7 @@ package com.sun.tools.javap;
 */
 extern class ConstantWriter extends com.sun.tools.javap.BasicWriter
 {
-	@:overload public static function instance(context : com.sun.tools.javap.Context) : ConstantWriter;
+	@:overload public static function instance(context : com.sun.tools.javap.Context) : com.sun.tools.javap.ConstantWriter;
 	
 	@:overload private function new(context : com.sun.tools.javap.Context) : Void;
 	

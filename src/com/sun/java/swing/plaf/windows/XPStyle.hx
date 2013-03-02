@@ -52,7 +52,7 @@ package com.sun.java.swing.plaf.windows;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$windows$XPStyle$XPStatefulFillBorder') @:internal extern class XPStyle_XPStatefulFillBorder extends XPStyle_XPFillBorder
+@:native('com$sun$java$swing$plaf$windows$XPStyle$XPStatefulFillBorder') @:internal extern class XPStyle_XPStatefulFillBorder extends com.sun.java.swing.plaf.windows.XPStyle.XPStyle_XPFillBorder
 {
 	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	

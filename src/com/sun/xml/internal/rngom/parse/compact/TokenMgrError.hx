@@ -78,7 +78,7 @@ extern class TokenMgrError extends java.lang.Error
 	*
 	* from this method for such cases in the release version of your parser.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/** No arg constructor. */
 	@:overload public function new() : Void;

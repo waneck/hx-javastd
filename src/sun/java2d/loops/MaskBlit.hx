@@ -39,13 +39,13 @@ extern class MaskBlit extends sun.java2d.loops.GraphicsPrimitive
 	* and the destination surface are the same surface
 	* with overlapping regions of pixels
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : MaskBlit;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskBlit;
 	
-	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : MaskBlit;
+	@:overload public static function getFromCache(src : sun.java2d.loops.SurfaceType, comp : sun.java2d.loops.CompositeType, dst : sun.java2d.loops.SurfaceType) : sun.java2d.loops.MaskBlit;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -62,7 +62,7 @@ extern class MaskBlit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$MaskBlit$General') @:internal extern class MaskBlit_General extends MaskBlit implements sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp
+@:native('sun$java2d$loops$MaskBlit$General') @:internal extern class MaskBlit_General extends sun.java2d.loops.MaskBlit implements sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp
 {
 	@:overload public function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -72,9 +72,9 @@ extern class MaskBlit extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$MaskBlit$TraceMaskBlit') @:internal extern class MaskBlit_TraceMaskBlit extends MaskBlit
+@:native('sun$java2d$loops$MaskBlit$TraceMaskBlit') @:internal extern class MaskBlit_TraceMaskBlit extends sun.java2d.loops.MaskBlit
 {
-	@:overload public function new(target : MaskBlit) : Void;
+	@:overload public function new(target : sun.java2d.loops.MaskBlit) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

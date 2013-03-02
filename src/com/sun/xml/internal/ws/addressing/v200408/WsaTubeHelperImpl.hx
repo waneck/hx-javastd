@@ -27,11 +27,11 @@ extern class WsaTubeHelperImpl extends com.sun.xml.internal.ws.addressing.WsaTub
 {
 	@:overload public function new(wsdlPort : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, seiModel : com.sun.xml.internal.ws.api.model.SEIModel, binding : com.sun.xml.internal.ws.api.WSBinding) : Void;
 	
-	@:overload @:final override public function getProblemActionDetail(action : String, element : org.w3c.dom.Element) : Void;
+	@:overload @:final public function getProblemActionDetail(action : String, element : org.w3c.dom.Element) : Void;
 	
-	@:overload @:final override public function getInvalidMapDetail(name : javax.xml.namespace.QName, element : org.w3c.dom.Element) : Void;
+	@:overload @:final public function getInvalidMapDetail(name : javax.xml.namespace.QName, element : org.w3c.dom.Element) : Void;
 	
-	@:overload @:final override public function getMapRequiredDetail(name : javax.xml.namespace.QName, element : org.w3c.dom.Element) : Void;
+	@:overload @:final public function getMapRequiredDetail(name : javax.xml.namespace.QName, element : org.w3c.dom.Element) : Void;
 	
 	
 }

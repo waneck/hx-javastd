@@ -77,7 +77,7 @@ extern class JarSigner
 	* @param args The command-line arguments to jarsigner.
 	* @param zipFile The original source Zip file.
 	*/
-	@:overload public function generateBlock(privateKey : java.security.PrivateKey, sigalg : String, certChain : java.NativeArray<java.security.cert.X509Certificate>, externalSF : Bool, tsaUrl : String, tsaCert : java.security.cert.X509Certificate, signingMechanism : com.sun.jarsigner.ContentSigner, args : java.NativeArray<String>, zipFile : java.util.zip.ZipFile) : SignatureFile_Block;
+	@:overload public function generateBlock(privateKey : java.security.PrivateKey, sigalg : String, certChain : java.NativeArray<java.security.cert.X509Certificate>, externalSF : Bool, tsaUrl : String, tsaCert : java.security.cert.X509Certificate, signingMechanism : com.sun.jarsigner.ContentSigner, args : java.NativeArray<String>, zipFile : java.util.zip.ZipFile) : sun.security.tools.JarSigner.SignatureFile_Block;
 	
 	
 }

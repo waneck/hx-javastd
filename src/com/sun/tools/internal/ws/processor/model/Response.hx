@@ -42,7 +42,7 @@ extern class Response extends com.sun.tools.internal.ws.processor.model.Message
 	
 	@:overload public function setFaultBlocksMap(m : java.util.Map<Dynamic, Dynamic>) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	
 }

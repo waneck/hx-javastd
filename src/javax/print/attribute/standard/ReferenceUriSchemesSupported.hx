@@ -28,42 +28,42 @@ extern class ReferenceUriSchemesSupported extends javax.print.attribute.EnumSynt
 	/**
 	* File Transfer Protocol (FTP).
 	*/
-	public static var FTP(default, null) : ReferenceUriSchemesSupported;
+	public static var FTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* HyperText Transfer Protocol (HTTP).
 	*/
-	public static var HTTP(default, null) : ReferenceUriSchemesSupported;
+	public static var HTTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Secure HyperText Transfer Protocol (HTTPS).
 	*/
-	public static var HTTPS(default, null) : ReferenceUriSchemesSupported;
+	public static var HTTPS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Gopher Protocol.
 	*/
-	public static var GOPHER(default, null) : ReferenceUriSchemesSupported;
+	public static var GOPHER(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* USENET news.
 	*/
-	public static var NEWS(default, null) : ReferenceUriSchemesSupported;
+	public static var NEWS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* USENET news using Network News Transfer Protocol (NNTP).
 	*/
-	public static var NNTP(default, null) : ReferenceUriSchemesSupported;
+	public static var NNTP(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Wide Area Information Server (WAIS) protocol.
 	*/
-	public static var WAIS(default, null) : ReferenceUriSchemesSupported;
+	public static var WAIS(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Host-specific file names.
 	*/
-	public static var FILE(default, null) : ReferenceUriSchemesSupported;
+	public static var FILE(default, null) : javax.print.attribute.standard.ReferenceUriSchemesSupported;
 	
 	/**
 	* Construct a new reference URI scheme enumeration value with the given

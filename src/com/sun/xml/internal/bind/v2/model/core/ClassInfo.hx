@@ -31,7 +31,7 @@ extern interface ClassInfo<T, C> extends com.sun.xml.internal.bind.v2.model.core
 	* @return null
 	*      if this info extends from {@link Object}.
 	*/
-	@:overload public function getBaseClass() : ClassInfo<T, C>;
+	@:overload public function getBaseClass() : com.sun.xml.internal.bind.v2.model.core.ClassInfo<T, C>;
 	
 	/**
 	* Gets the declaration this object is wrapping.

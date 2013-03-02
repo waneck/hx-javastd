@@ -55,7 +55,7 @@ extern class BufferedContext
 	* check to see if the BufferedContext passed to that method is the same
 	* as the one we've cached here.
 	*/
-	private static var currentContext : BufferedContext;
+	private static var currentContext : sun.java2d.pipe.BufferedContext;
 	
 	@:overload private function new(rq : sun.java2d.pipe.RenderQueue) : Void;
 	

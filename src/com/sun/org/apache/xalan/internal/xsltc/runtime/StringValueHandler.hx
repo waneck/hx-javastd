@@ -23,17 +23,17 @@ package com.sun.org.apache.xalan.internal.xsltc.runtime;
 */
 extern class StringValueHandler extends com.sun.org.apache.xml.internal.serializer.EmptySerializer
 {
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
+	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, off : Int, len : Int) : Void;
 	
 	@:overload public function getValue() : String;
 	
-	@:overload override public function characters(characters : String) : Void;
+	@:overload public function characters(characters : String) : Void;
 	
-	@:overload override public function startElement(qname : String) : Void;
+	@:overload public function startElement(qname : String) : Void;
 	
-	@:overload override public function endElement(qname : String) : Void;
+	@:overload public function endElement(qname : String) : Void;
 	
-	@:overload override public function setEscaping(bool : Bool) : Bool;
+	@:overload public function setEscaping(bool : Bool) : Bool;
 	
 	/**
 	* The value of a PI must not contain the substring "?>". Should

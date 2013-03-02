@@ -37,21 +37,21 @@ package sun.net.httpserver;
 	* returns the handler for this context
 	* @return the HttpHandler for this context
 	*/
-	@:overload override public function getHandler() : com.sun.net.httpserver.HttpHandler;
+	@:overload public function getHandler() : com.sun.net.httpserver.HttpHandler;
 	
-	@:overload override public function setHandler(h : com.sun.net.httpserver.HttpHandler) : Void;
+	@:overload public function setHandler(h : com.sun.net.httpserver.HttpHandler) : Void;
 	
 	/**
 	* returns the path this context was created with
 	* @return this context's path
 	*/
-	@:overload override public function getPath() : String;
+	@:overload public function getPath() : String;
 	
 	/**
 	* returns the server this context was created with
 	* @return this context's server
 	*/
-	@:overload override public function getServer() : com.sun.net.httpserver.HttpServer;
+	@:overload public function getServer() : com.sun.net.httpserver.HttpServer;
 	
 	/**
 	* returns the protocol this context was created with
@@ -67,13 +67,13 @@ package sun.net.httpserver;
 	* Every attribute stored in this Map will be visible to
 	* every HttpExchange processed by this context
 	*/
-	@:overload override public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload public function getAttributes() : java.util.Map<String, Dynamic>;
 	
-	@:overload override public function getFilters() : java.util.List<com.sun.net.httpserver.Filter>;
+	@:overload public function getFilters() : java.util.List<com.sun.net.httpserver.Filter>;
 	
 	@:overload public function setAuthenticator(auth : com.sun.net.httpserver.Authenticator) : com.sun.net.httpserver.Authenticator;
 	
-	@:overload override public function getAuthenticator() : com.sun.net.httpserver.Authenticator;
+	@:overload public function getAuthenticator() : com.sun.net.httpserver.Authenticator;
 	
 	
 }

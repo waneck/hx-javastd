@@ -33,7 +33,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload override public function getFactoryMethod() : java.lang.reflect.Method;
 	
-	@:overload @:final override public function getBaseClass() : RuntimeClassInfoImpl;
+	@:overload @:final override public function getBaseClass() : com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl;
 	
 	@:overload override private function createReferenceProperty(seed : com.sun.xml.internal.bind.v2.model.impl.PropertySeed<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Field, java.lang.reflect.Method>) : com.sun.xml.internal.bind.v2.model.impl.ReferencePropertyInfoImpl<Dynamic, Dynamic, Dynamic, Dynamic>;
 	
@@ -49,15 +49,15 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload override public function getProperty(name : String) : com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo;
 	
-	@:overload override public function link() : Void;
+	@:overload public function link() : Void;
 	
 	@:overload public function getAttributeWildcard<B>() : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<B, java.util.Map<javax.xml.namespace.QName, String>>;
 	
 	@:overload public function getTransducer() : com.sun.xml.internal.bind.v2.runtime.Transducer<Dynamic>;
 	
-	@:overload private function createFieldSeed(field : java.lang.reflect.Field) : RuntimeClassInfoImpl_RuntimePropertySeed;
+	@:overload private function createFieldSeed(field : java.lang.reflect.Field) : com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl.RuntimeClassInfoImpl_RuntimePropertySeed;
 	
-	@:overload public function createAccessorSeed(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : RuntimeClassInfoImpl_RuntimePropertySeed;
+	@:overload public function createAccessorSeed(getter : java.lang.reflect.Method, setter : java.lang.reflect.Method) : com.sun.xml.internal.bind.v2.model.impl.RuntimeClassInfoImpl.RuntimeClassInfoImpl_RuntimePropertySeed;
 	
 	@:overload private function checkFieldXmlLocation(f : java.lang.reflect.Field) : Void;
 	

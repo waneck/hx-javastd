@@ -29,7 +29,7 @@ extern class MacSymbol extends java.nio.charset.Charset implements sun.nio.cs.Hi
 	
 	@:overload public function historicalName() : String;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	

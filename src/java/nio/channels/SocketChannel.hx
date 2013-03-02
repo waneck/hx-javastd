@@ -43,7 +43,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:native('open') @:overload public static function _open() : SocketChannel;
+	@:overload public static function open() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Opens a socket channel and connects it to a remote address.
@@ -79,7 +79,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:native('open') @:overload public static function _open(remote : java.net.SocketAddress) : SocketChannel;
+	@:overload public static function open(remote : java.net.SocketAddress) : java.nio.channels.SocketChannel;
 	
 	/**
 	* Returns an operation set identifying this channel's supported
@@ -92,7 +92,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final override public function validOps() : Int;
+	@:overload @:final public function validOps() : Int;
 	
 	/**
 	* @throws  ConnectionPendingException
@@ -105,7 +105,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function bind(local : java.net.SocketAddress) : SocketChannel;
+	@:require(java7) @:overload @:abstract public function bind(local : java.net.SocketAddress) : java.nio.channels.SocketChannel;
 	
 	/**
 	* @throws  UnsupportedOperationException           {@inheritDoc}
@@ -115,7 +115,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : SocketChannel;
+	@:require(java7) @:overload @:abstract public function setOption<T>(name : java.net.SocketOption<T>, value : T) : java.nio.channels.SocketChannel;
 	
 	/**
 	* Shutdown the connection for reading without closing the channel.
@@ -135,7 +135,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function shutdownInput() : SocketChannel;
+	@:require(java7) @:overload @:abstract public function shutdownInput() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Shutdown the connection for writing without closing the channel.
@@ -156,7 +156,7 @@ extern class SocketChannel extends java.nio.channels.spi.AbstractSelectableChann
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:abstract public function shutdownOutput() : SocketChannel;
+	@:require(java7) @:overload @:abstract public function shutdownOutput() : java.nio.channels.SocketChannel;
 	
 	/**
 	* Retrieves a socket associated with this channel.

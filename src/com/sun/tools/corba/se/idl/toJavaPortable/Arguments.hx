@@ -50,7 +50,7 @@ extern class Arguments extends com.sun.tools.corba.se.idl.Arguments
 	/**
 	*
 	**/
-	@:overload override private function parseOtherArgs(args : java.NativeArray<String>, properties : java.util.Properties) : Void;
+	@:overload private function parseOtherArgs(args : java.NativeArray<String>, properties : java.util.Properties) : Void;
 	
 	/**
 	*

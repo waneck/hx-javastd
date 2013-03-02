@@ -37,7 +37,7 @@ extern class JavacScope implements com.sun.source.tree.Scope
 	*/
 	private var env(default, null) : com.sun.tools.javac.comp.Env<com.sun.tools.javac.comp.AttrContext>;
 	
-	@:overload public function getEnclosingScope() : JavacScope;
+	@:overload public function getEnclosingScope() : com.sun.tools.javac.api.JavacScope;
 	
 	@:overload public function getEnclosingClass() : javax.lang.model.element.TypeElement;
 	

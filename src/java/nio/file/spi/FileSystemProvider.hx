@@ -53,7 +53,7 @@ extern class FileSystemProvider
 	* @throws  ServiceConfigurationError
 	*          When an error occurs while loading a service provider
 	*/
-	@:overload public static function installedProviders() : java.util.List<FileSystemProvider>;
+	@:overload public static function installedProviders() : java.util.List<java.nio.file.spi.FileSystemProvider>;
 	
 	/**
 	* Returns the URI scheme that identifies this provider.

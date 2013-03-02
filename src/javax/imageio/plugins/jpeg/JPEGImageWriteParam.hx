@@ -47,7 +47,7 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	* @exception IllegalStateException if the compression mode is not
 	* <code>MODE_EXPLICIT</code>.
 	*/
-	@:overload override public function unsetCompression() : Void;
+	@:overload public function unsetCompression() : Void;
 	
 	/**
 	* Returns <code>false</code> since the JPEG plug-in only supports
@@ -58,11 +58,11 @@ extern class JPEGImageWriteParam extends javax.imageio.ImageWriteParam
 	* @exception IllegalStateException if the compression mode is not
 	* <code>MODE_EXPLICIT</code>.
 	*/
-	@:overload override public function isCompressionLossless() : Bool;
+	@:overload public function isCompressionLossless() : Bool;
 	
-	@:overload override public function getCompressionQualityDescriptions() : java.NativeArray<String>;
+	@:overload public function getCompressionQualityDescriptions() : java.NativeArray<String>;
 	
-	@:overload override public function getCompressionQualityValues() : java.NativeArray<Single>;
+	@:overload public function getCompressionQualityValues() : java.NativeArray<Single>;
 	
 	/**
 	* Returns <code>true</code> if tables are currently set.

@@ -83,7 +83,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function new(enabled : Bool, required : Bool, responses : AddressingFeature_Responses) : Void;
+	@:require(java2) @:overload public function new(enabled : Bool, required : Bool, responses : javax.xml.ws.soap.AddressingFeature.AddressingFeature_Responses) : Void;
 	
 	/**
 	* {@inheritDoc}
@@ -114,7 +114,7 @@ extern class AddressingFeature extends javax.xml.ws.WebServiceFeature
 	*
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public function getResponses() : AddressingFeature_Responses;
+	@:require(java2) @:overload public function getResponses() : javax.xml.ws.soap.AddressingFeature.AddressingFeature_Responses;
 	
 	
 }

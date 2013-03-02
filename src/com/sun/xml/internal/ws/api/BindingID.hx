@@ -157,7 +157,7 @@ extern class BindingID
 	* @throws WebServiceException
 	*      If the binding ID is not understood.
 	*/
-	@:overload public static function parse(lexical : String) : BindingID;
+	@:overload public static function parse(lexical : String) : com.sun.xml.internal.ws.api.BindingID;
 	
 	/**
 	* Figures out the binding from {@link BindingType} annotation.
@@ -166,42 +166,42 @@ extern class BindingID
 	*      default to {@link BindingID#SOAP11_HTTP}, if no such annotation is present.
 	* @see #parse(String)
 	*/
-	@:overload public static function parse(implClass : Class<Dynamic>) : BindingID;
+	@:overload public static function parse(implClass : Class<Dynamic>) : com.sun.xml.internal.ws.api.BindingID;
 	
 	/**
 	* Constant that represents implementation specific SOAP1.2/HTTP which is
 	* used to generate non-standard WSDLs
 	*/
-	public static var X_SOAP12_HTTP(default, null) : BindingID_SOAPHTTPImpl;
+	public static var X_SOAP12_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.2/HTTP.
 	*/
-	public static var SOAP12_HTTP(default, null) : BindingID_SOAPHTTPImpl;
+	public static var SOAP12_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.1/HTTP.
 	*/
-	public static var SOAP11_HTTP(default, null) : BindingID_SOAPHTTPImpl;
+	public static var SOAP11_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.2/HTTP.
 	*/
-	public static var SOAP12_HTTP_MTOM(default, null) : BindingID_SOAPHTTPImpl;
+	public static var SOAP12_HTTP_MTOM(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents SOAP1.1/HTTP.
 	*/
-	public static var SOAP11_HTTP_MTOM(default, null) : BindingID_SOAPHTTPImpl;
+	public static var SOAP11_HTTP_MTOM(default, null) : com.sun.xml.internal.ws.api.BindingID.BindingID_SOAPHTTPImpl;
 	
 	/**
 	* Constant that represents REST.
 	*/
-	public static var XML_HTTP(default, null) : BindingID;
+	public static var XML_HTTP(default, null) : com.sun.xml.internal.ws.api.BindingID;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$api$BindingID$Impl') @:internal extern class BindingID_Impl extends BindingID
+@:native('com$sun$xml$internal$ws$api$BindingID$Impl') @:internal extern class BindingID_Impl extends com.sun.xml.internal.ws.api.BindingID
 {
 	@:overload public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool) : Void;
 	
@@ -216,7 +216,7 @@ extern class BindingID
 /**
 * Internal implementation for SOAP/HTTP.
 */
-@:native('com$sun$xml$internal$ws$api$BindingID$SOAPHTTPImpl') @:internal extern class BindingID_SOAPHTTPImpl extends BindingID_Impl implements java.lang.Cloneable
+@:native('com$sun$xml$internal$ws$api$BindingID$SOAPHTTPImpl') @:internal extern class BindingID_SOAPHTTPImpl extends com.sun.xml.internal.ws.api.BindingID.BindingID_Impl implements java.lang.Cloneable
 {
 	@:overload public function new(version : com.sun.xml.internal.ws.api.SOAPVersion, lexical : String, canGenerateWSDL : Bool) : Void;
 	

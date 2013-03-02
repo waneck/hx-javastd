@@ -102,7 +102,7 @@ extern class XML11NSDocumentScannerImpl extends com.sun.org.apache.xerces.intern
 	* @return True if element is empty. (i.e. It matches
 	*          production [44].
 	*/
-	@:overload override private function scanStartElement() : Bool;
+	@:overload private function scanStartElement() : Bool;
 	
 	/**
 	* Scans the name of an element in a start or empty tag.
@@ -152,18 +152,18 @@ extern class XML11NSDocumentScannerImpl extends com.sun.org.apache.xerces.intern
 	*
 	* @return The element depth.
 	*/
-	@:overload override private function scanEndElement() : Int;
+	@:overload private function scanEndElement() : Int;
 	
-	@:overload override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
+	@:overload public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** Creates a content Driver. */
-	@:overload override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
+	@:overload private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** return the next state on the input
 	*
 	* @return int
 	*/
-	@:overload override public function next() : Int;
+	@:overload public function next() : Int;
 	
 	
 }
@@ -185,7 +185,7 @@ extern class XML11NSDocumentScannerImpl extends com.sun.org.apache.xerces.intern
 	*          Driver. A return value of false indicates that
 	*          the content Driver should continue as normal.
 	*/
-	@:overload override private function scanRootElementHook() : Bool;
+	@:overload private function scanRootElementHook() : Bool;
 	
 	
 }

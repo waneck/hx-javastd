@@ -39,7 +39,7 @@ package com.sun.java.swing.plaf.motif;
 */
 extern class MotifMenuBarUI extends javax.swing.plaf.basic.BasicMenuBarUI
 {
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	
 }

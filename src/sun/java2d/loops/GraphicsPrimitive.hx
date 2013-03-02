@@ -103,9 +103,9 @@ extern class GraphicsPrimitive
 	*/
 	@:overload @:final public function satisfies(signature : String, srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Bool;
 	
-	@:overload @:abstract public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : GraphicsPrimitive;
+	@:overload @:abstract public function makePrimitive(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.GraphicsPrimitive;
 	
-	@:overload @:abstract public function traceWrap() : GraphicsPrimitive;
+	@:overload @:abstract public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	
 	public static var traceflags : Int;
 	
@@ -123,9 +123,9 @@ extern class GraphicsPrimitive
 	
 	@:overload @:synchronized public static function tracePrimitive(prim : Dynamic) : Void;
 	
-	@:overload private function setupGeneralBinaryOp(gbo : GraphicsPrimitive_GeneralBinaryOp) : Void;
+	@:overload private function setupGeneralBinaryOp(gbo : sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralBinaryOp) : Void;
 	
-	@:overload private function setupGeneralUnaryOp(guo : GraphicsPrimitive_GeneralUnaryOp) : Void;
+	@:overload private function setupGeneralUnaryOp(guo : sun.java2d.loops.GraphicsPrimitive.GraphicsPrimitive_GeneralUnaryOp) : Void;
 	
 	@:overload private static function createConverter(srctype : sun.java2d.loops.SurfaceType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.Blit;
 	
@@ -135,7 +135,7 @@ extern class GraphicsPrimitive
 	
 	@:overload private static function convertTo(ob : sun.java2d.loops.Blit, srcImg : sun.java2d.SurfaceData, dstImg : sun.java2d.SurfaceData, clip : sun.java2d.pipe.Region, dstX : Int, dstY : Int, w : Int, h : Int) : Void;
 	
-	@:overload private static function getGeneralOp(primID : Int, comptype : sun.java2d.loops.CompositeType) : GraphicsPrimitive;
+	@:overload private static function getGeneralOp(primID : Int, comptype : sun.java2d.loops.CompositeType) : sun.java2d.loops.GraphicsPrimitive;
 	
 	@:overload public static function simplename(fields : java.NativeArray<java.lang.reflect.Field>, o : Dynamic) : String;
 	
@@ -157,7 +157,7 @@ extern class GraphicsPrimitive
 	* This method allows the setupGeneralBinaryOp method to set
 	* the converters into the General version of the Primitive.
 	*/
-	@:overload public function setPrimitives(srcconverter : sun.java2d.loops.Blit, dstconverter : sun.java2d.loops.Blit, genericop : GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
+	@:overload public function setPrimitives(srcconverter : sun.java2d.loops.Blit, dstconverter : sun.java2d.loops.Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
 	
 	/**
 	* These 4 methods are implemented automatically for any
@@ -183,7 +183,7 @@ extern class GraphicsPrimitive
 	* This method allows the setupGeneralUnaryOp method to set
 	* the converters into the General version of the Primitive.
 	*/
-	@:overload public function setPrimitives(dstconverter : sun.java2d.loops.Blit, genericop : GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
+	@:overload public function setPrimitives(dstconverter : sun.java2d.loops.Blit, genericop : sun.java2d.loops.GraphicsPrimitive, resconverter : sun.java2d.loops.Blit) : Void;
 	
 	/**
 	* These 3 methods are implemented automatically for any

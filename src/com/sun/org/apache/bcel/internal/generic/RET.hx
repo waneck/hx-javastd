@@ -64,12 +64,12 @@ extern class RET extends com.sun.org.apache.bcel.internal.generic.Instruction im
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload public function dump(out : java.io.DataOutputStream) : Void;
 	
 	/**
 	* Read needed data (e.g. index) from file.
 	*/
-	@:overload override private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
+	@:overload private function initFromFile(bytes : com.sun.org.apache.bcel.internal.util.ByteSequence, wide : Bool) : Void;
 	
 	/**
 	* @return index of local variable containg the return address
@@ -84,7 +84,7 @@ extern class RET extends com.sun.org.apache.bcel.internal.generic.Instruction im
 	/**
 	* @return mnemonic for instruction
 	*/
-	@:overload override public function toString(verbose : Bool) : String;
+	@:overload public function toString(verbose : Bool) : String;
 	
 	/** @return return address type
 	*/
@@ -98,7 +98,7 @@ extern class RET extends com.sun.org.apache.bcel.internal.generic.Instruction im
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

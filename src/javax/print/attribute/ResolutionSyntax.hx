@@ -142,7 +142,7 @@ extern class ResolutionSyntax implements java.io.Serializable implements java.la
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>other</CODE> is null.
 	*/
-	@:overload public function lessThanOrEquals(other : ResolutionSyntax) : Bool;
+	@:overload public function lessThanOrEquals(other : javax.print.attribute.ResolutionSyntax) : Bool;
 	
 	/**
 	* Returns whether this resolution attribute is equivalent to the passed in

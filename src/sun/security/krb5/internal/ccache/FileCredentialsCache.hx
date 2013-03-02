@@ -49,9 +49,9 @@ extern class FileCredentialsCache extends sun.security.krb5.internal.ccache.Cred
 	
 	public var primaryRealm : sun.security.krb5.Realm;
 	
-	@:overload @:synchronized public static function acquireInstance(principal : sun.security.krb5.PrincipalName, cache : String) : FileCredentialsCache;
+	@:overload @:synchronized public static function acquireInstance(principal : sun.security.krb5.PrincipalName, cache : String) : sun.security.krb5.internal.ccache.FileCredentialsCache;
 	
-	@:overload public static function acquireInstance() : FileCredentialsCache;
+	@:overload public static function acquireInstance() : sun.security.krb5.internal.ccache.FileCredentialsCache;
 	
 	/**
 	* Updates the credentials list. If the specified credentials for the
@@ -59,30 +59,30 @@ extern class FileCredentialsCache extends sun.security.krb5.internal.ccache.Cred
 	* replace the old credentials with the new one.
 	* @param c the credentials.
 	*/
-	@:overload @:synchronized override public function update(c : sun.security.krb5.Credentials) : Void;
+	@:overload @:synchronized public function update(c : sun.security.krb5.Credentials) : Void;
 	
-	@:overload @:synchronized override public function getPrimaryPrincipal() : sun.security.krb5.PrincipalName;
+	@:overload @:synchronized public function getPrimaryPrincipal() : sun.security.krb5.PrincipalName;
 	
 	/**
 	* Saves the credentials cache file to the disk.
 	*/
-	@:overload @:synchronized override public function save() : Void;
+	@:overload @:synchronized public function save() : Void;
 	
 	/**
 	* Returns the list of credentials entries in the cache file.
 	*/
-	@:overload @:synchronized override public function getCredsList() : java.NativeArray<sun.security.krb5.Credentials>;
+	@:overload @:synchronized public function getCredsList() : java.NativeArray<sun.security.krb5.Credentials>;
 	
-	@:overload override public function getCreds(options : sun.security.krb5.internal.LoginOptions, sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
+	@:overload public function getCreds(options : sun.security.krb5.internal.LoginOptions, sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
 	
 	/**
 	* Gets a credentials for a specified service.
 	* @param sname service principal name.
 	* @param srealm the realm that the service belongs to.
 	*/
-	@:overload override public function getCreds(sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
+	@:overload public function getCreds(sname : sun.security.krb5.PrincipalName, srealm : sun.security.krb5.Realm) : sun.security.krb5.Credentials;
 	
-	@:overload override public function getDefaultCreds() : sun.security.krb5.Credentials;
+	@:overload public function getDefaultCreds() : sun.security.krb5.Credentials;
 	
 	/*
 	* Returns path name of the credentials cache file.

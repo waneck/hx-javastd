@@ -29,7 +29,7 @@ extern class SctpShutdown extends com.sun.nio.sctp.ShutdownNotification implemen
 	
 	@:overload public function setAssociation(association : com.sun.nio.sctp.Association) : Void;
 	
-	@:overload override public function association() : com.sun.nio.sctp.Association;
+	@:overload public function association() : com.sun.nio.sctp.Association;
 	
 	@:overload public function toString() : String;
 	

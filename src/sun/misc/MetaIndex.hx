@@ -25,7 +25,7 @@ package sun.misc;
 */
 extern class MetaIndex
 {
-	@:overload public static function forJar(jar : java.io.File) : MetaIndex;
+	@:overload public static function forJar(jar : java.io.File) : sun.misc.MetaIndex;
 	
 	@:overload @:synchronized public static function registerDirectory(dir : java.io.File) : Void;
 	

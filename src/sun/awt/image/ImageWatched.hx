@@ -25,9 +25,9 @@ package sun.awt.image;
 */
 extern class ImageWatched
 {
-	public static var endlink : ImageWatched_Link;
+	public static var endlink : sun.awt.image.ImageWatched.ImageWatched_Link;
 	
-	public var watcherList : ImageWatched_Link;
+	public var watcherList : sun.awt.image.ImageWatched.ImageWatched_Link;
 	
 	@:overload public function new() : Void;
 	
@@ -71,7 +71,7 @@ extern class ImageWatched
 	* synchronized block so Link.next modifications
 	* will be safe.
 	*/
-	@:overload public function removeWatcher(iw : java.awt.image.ImageObserver) : ImageWatched_Link;
+	@:overload public function removeWatcher(iw : java.awt.image.ImageObserver) : sun.awt.image.ImageWatched.ImageWatched_Link;
 	
 	/*
 	* Deliver the indicated image update information
@@ -90,13 +90,13 @@ extern class ImageWatched
 * Standard Link implementation to manage a Weak Reference
 * to an ImageObserver.
 */
-@:native('sun$awt$image$ImageWatched$WeakLink') extern class ImageWatched_WeakLink extends ImageWatched_Link
+@:native('sun$awt$image$ImageWatched$WeakLink') extern class ImageWatched_WeakLink extends sun.awt.image.ImageWatched.ImageWatched_Link
 {
-	@:overload public function new(obs : java.awt.image.ImageObserver, next : ImageWatched_Link) : Void;
+	@:overload public function new(obs : java.awt.image.ImageObserver, next : sun.awt.image.ImageWatched.ImageWatched_Link) : Void;
 	
 	@:overload override public function isWatcher(iw : java.awt.image.ImageObserver) : Bool;
 	
-	@:overload override public function removeWatcher(iw : java.awt.image.ImageObserver) : ImageWatched_Link;
+	@:overload override public function removeWatcher(iw : java.awt.image.ImageObserver) : sun.awt.image.ImageWatched.ImageWatched_Link;
 	
 	@:overload override public function newInfo(img : java.awt.Image, info : Int, x : Int, y : Int, w : Int, h : Int) : Bool;
 	

@@ -95,7 +95,7 @@ extern class StAXDocumentSerializer extends com.sun.xml.internal.fastinfoset.Enc
 	
 	@:overload public function new(outputStream : java.io.OutputStream, manager : com.sun.xml.internal.fastinfoset.stax.StAXManager) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	@:overload public function writeStartDocument() : Void;
 	

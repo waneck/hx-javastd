@@ -37,9 +37,9 @@ package javax.swing.text.html;
 /*
 * The roow AccessibleContext for the document
 */
-@:native('javax$swing$text$html$AccessibleHTML$RootHTMLAccessibleContext') @:internal extern class AccessibleHTML_RootHTMLAccessibleContext extends AccessibleHTML_HTMLAccessibleContext
+@:native('javax$swing$text$html$AccessibleHTML$RootHTMLAccessibleContext') @:internal extern class AccessibleHTML_RootHTMLAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext
 {
-	@:overload public function new(elementInfo : AccessibleHTML_ElementInfo) : Void;
+	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -56,7 +56,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -68,7 +68,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -88,7 +88,7 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }
@@ -97,9 +97,9 @@ package javax.swing.text.html;
 */
 @:native('javax$swing$text$html$AccessibleHTML$HTMLAccessibleContext') extern class AccessibleHTML_HTMLAccessibleContext extends javax.accessibility.AccessibleContext implements javax.accessibility.Accessible implements javax.accessibility.AccessibleComponent
 {
-	private var elementInfo : AccessibleHTML_ElementInfo;
+	private var elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
-	@:overload public function new(elementInfo : AccessibleHTML_ElementInfo) : Void;
+	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
@@ -110,7 +110,7 @@ package javax.swing.text.html;
 	* of the object
 	* @see AccessibleStateSet
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -122,14 +122,14 @@ package javax.swing.text.html;
 	* @see #getAccessibleChildrenCount
 	* @see #getAccessibleChild
 	*/
-	@:overload override public function getAccessibleIndexInParent() : Int;
+	@:overload public function getAccessibleIndexInParent() : Int;
 	
 	/**
 	* Returns the number of accessible children of the object.
 	*
 	* @return the number of accessible children of the object.
 	*/
-	@:overload override public function getAccessibleChildrenCount() : Int;
+	@:overload public function getAccessibleChildrenCount() : Int;
 	
 	/**
 	* Returns the specified Accessible child of the object.  The Accessible
@@ -141,7 +141,7 @@ package javax.swing.text.html;
 	* @return the Accessible child of the object
 	* @see #getAccessibleChildrenCount
 	*/
-	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
+	@:overload public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the locale of the component. If the component does not have a
@@ -155,9 +155,9 @@ package javax.swing.text.html;
 	* added to a containment hierarchy such that the locale can be
 	* determined from the containing parent.
 	*/
-	@:overload override public function getLocale() : java.util.Locale;
+	@:overload public function getLocale() : java.util.Locale;
 	
-	@:overload override public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
+	@:overload public function getAccessibleComponent() : javax.accessibility.AccessibleComponent;
 	
 	/**
 	* Gets the background color of this object.
@@ -427,7 +427,7 @@ package javax.swing.text.html;
 /*
 * ElementInfo for text
 */
-@:native('javax$swing$text$html$AccessibleHTML$TextElementInfo') @:internal extern class AccessibleHTML_TextElementInfo extends AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
+@:native('javax$swing$text$html$AccessibleHTML$TextElementInfo') @:internal extern class AccessibleHTML_TextElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
 {
 	@:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
@@ -436,11 +436,11 @@ package javax.swing.text.html;
 /*
 * AccessibleContext for text elements
 */
-@:native('javax$swing$text$html$AccessibleHTML$TextElementInfo$TextAccessibleContext') extern class AccessibleHTML_TextElementInfo_TextAccessibleContext extends AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleText
+@:native('javax$swing$text$html$AccessibleHTML$TextElementInfo$TextAccessibleContext') extern class AccessibleHTML_TextElementInfo_TextAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleText
 {
-	@:overload public function new(elementInfo : AccessibleHTML_ElementInfo) : Void;
+	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
-	@:overload override public function getAccessibleText() : javax.accessibility.AccessibleText;
+	@:overload public function getAccessibleText() : javax.accessibility.AccessibleText;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -457,7 +457,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -469,7 +469,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -489,7 +489,7 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Given a point in local coordinates, return the zero-based index
@@ -587,7 +587,7 @@ package javax.swing.text.html;
 /*
 * ElementInfo for images
 */
-@:native('javax$swing$text$html$AccessibleHTML$IconElementInfo') @:internal extern class AccessibleHTML_IconElementInfo extends AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
+@:native('javax$swing$text$html$AccessibleHTML$IconElementInfo') @:internal extern class AccessibleHTML_IconElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
 {
 	@:overload override private function invalidate(first : Bool) : Void;
 	
@@ -598,9 +598,9 @@ package javax.swing.text.html;
 /*
 * AccessibleContext for images
 */
-@:native('javax$swing$text$html$AccessibleHTML$IconElementInfo$IconAccessibleContext') extern class AccessibleHTML_IconElementInfo_IconAccessibleContext extends AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleIcon
+@:native('javax$swing$text$html$AccessibleHTML$IconElementInfo$IconAccessibleContext') extern class AccessibleHTML_IconElementInfo_IconAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleIcon
 {
-	@:overload public function new(elementInfo : AccessibleHTML_ElementInfo) : Void;
+	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -617,7 +617,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -629,7 +629,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -649,9 +649,9 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
-	@:overload override public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
+	@:overload public function getAccessibleIcon() : java.NativeArray<javax.accessibility.AccessibleIcon>;
 	
 	/**
 	* Gets the description of the icon.  This is meant to be a brief
@@ -698,11 +698,11 @@ package javax.swing.text.html;
 * invalidated.  This is because any time one of the child attributes
 * changes the size of the grid may have changed.
 */
-@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo') @:internal extern class AccessibleHTML_TableElementInfo extends AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
+@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo') @:internal extern class AccessibleHTML_TableElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo implements javax.accessibility.Accessible
 {
-	private var caption : AccessibleHTML_ElementInfo;
+	private var caption : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
-	@:overload public function getCaptionInfo() : AccessibleHTML_ElementInfo;
+	@:overload public function getCaptionInfo() : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
 	/**
 	* Overriden to update the grid when validating.
@@ -717,12 +717,12 @@ package javax.swing.text.html;
 	/**
 	* Returns the TableCellElementInfo at the specified index.
 	*/
-	@:overload public function getRow(index : Int) : AccessibleHTML_TableElementInfo_TableRowElementInfo;
+	@:overload public function getRow(index : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableRowElementInfo;
 	
 	/**
 	* Returns the TableCellElementInfo by row and column.
 	*/
-	@:overload public function getCell(r : Int, c : Int) : AccessibleHTML_TableElementInfo_TableCellElementInfo;
+	@:overload public function getCell(r : Int, c : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo;
 	
 	/**
 	* Returns the rowspan of the specified entry.
@@ -751,9 +751,9 @@ package javax.swing.text.html;
 /*
 * AccessibleContext for tables
 */
-@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableAccessibleContext') extern class AccessibleHTML_TableElementInfo_TableAccessibleContext extends AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleTable
+@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableAccessibleContext') extern class AccessibleHTML_TableElementInfo_TableAccessibleContext extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_HTMLAccessibleContext implements javax.accessibility.AccessibleTable
 {
-	@:overload public function new(elementInfo : AccessibleHTML_ElementInfo) : Void;
+	@:overload public function new(elementInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Gets the accessibleName property of this object.  The accessibleName
@@ -770,7 +770,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload public function getAccessibleName() : String;
 	
 	/**
 	* Gets the accessibleDescription property of this object.  If this
@@ -782,7 +782,7 @@ package javax.swing.text.html;
 	*
 	* @see #setAccessibleName
 	*/
-	@:overload override public function getAccessibleDescription() : String;
+	@:overload public function getAccessibleDescription() : String;
 	
 	/**
 	* Gets the role of this object.  The role of the object is the generic
@@ -802,7 +802,7 @@ package javax.swing.text.html;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Gets the 0-based index of this object in its accessible parent.
@@ -835,7 +835,7 @@ package javax.swing.text.html;
 	*/
 	@:overload override public function getAccessibleChild(i : Int) : javax.accessibility.Accessible;
 	
-	@:overload override public function getAccessibleTable() : javax.accessibility.AccessibleTable;
+	@:overload public function getAccessibleTable() : javax.accessibility.AccessibleTable;
 	
 	/**
 	* Returns the caption for the table.
@@ -1065,13 +1065,13 @@ package javax.swing.text.html;
 	*/
 	@:overload public function getAccessibleColumnHeader(c : Int) : String;
 	
-	@:overload public function addRowHeader(cellInfo : AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
+	@:overload public function addRowHeader(cellInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
 	
 	
 }
 @:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableAccessibleContext$AccessibleHeadersTable') extern class AccessibleHTML_TableElementInfo_TableAccessibleContext_AccessibleHeadersTable implements javax.accessibility.AccessibleTable
 {
-	@:overload public function addHeader(cellInfo : AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
+	@:overload public function addHeader(cellInfo : javax.swing.text.html.AccessibleHTML.AccessibleHTML_TableElementInfo_TableCellElementInfo, rowNumber : Int) : Void;
 	
 	/**
 	* Returns the caption for the table.
@@ -1260,7 +1260,7 @@ package javax.swing.text.html;
 /*
 * ElementInfo for table rows
 */
-@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableRowElementInfo') @:internal extern class AccessibleHTML_TableElementInfo_TableRowElementInfo extends AccessibleHTML_ElementInfo
+@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableRowElementInfo') @:internal extern class AccessibleHTML_TableElementInfo_TableRowElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo
 {
 	@:overload private function loadChildren(e : javax.swing.text.Element) : Void;
 	
@@ -1287,7 +1287,7 @@ package javax.swing.text.html;
 * TableCellElementInfo is used to represents the cells of
 * the table.
 */
-@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableCellElementInfo') @:internal extern class AccessibleHTML_TableElementInfo_TableCellElementInfo extends AccessibleHTML_ElementInfo
+@:native('javax$swing$text$html$AccessibleHTML$TableElementInfo$TableCellElementInfo') @:internal extern class AccessibleHTML_TableElementInfo_TableCellElementInfo extends javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo
 {
 	/*
 	* Returns whether this table cell is a header
@@ -1356,19 +1356,19 @@ package javax.swing.text.html;
 	/**
 	* Returns the parent of this Element, or null for the root.
 	*/
-	@:overload public function getParent() : AccessibleHTML_ElementInfo;
+	@:overload public function getParent() : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
 	/**
 	* Returns the index of the specified child, or -1 if
 	* <code>child</code> isn't a valid child.
 	*/
-	@:overload public function indexOf(child : AccessibleHTML_ElementInfo) : Int;
+	@:overload public function indexOf(child : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Int;
 	
 	/**
 	* Returns the child ElementInfo at <code>index</code>, or null
 	* if <code>index</code> isn't a valid index.
 	*/
-	@:overload public function getChild(index : Int) : AccessibleHTML_ElementInfo;
+	@:overload public function getChild(index : Int) : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo;
 	
 	/**
 	* Returns the number of children the ElementInfo contains.
@@ -1378,7 +1378,7 @@ package javax.swing.text.html;
 	/**
 	* Adds a new child to this ElementInfo.
 	*/
-	@:overload private function addChild(child : AccessibleHTML_ElementInfo) : Void;
+	@:overload private function addChild(child : javax.swing.text.html.AccessibleHTML.AccessibleHTML_ElementInfo) : Void;
 	
 	/**
 	* Returns the View corresponding to this ElementInfo, or null

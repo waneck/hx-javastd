@@ -44,7 +44,7 @@ extern class DeferredTextImpl extends com.sun.org.apache.xerces.internal.dom.Tex
 	@:overload public function getNodeIndex() : Int;
 	
 	/** Synchronizes the underlying data. */
-	@:overload override private function synchronizeData() : Void;
+	@:overload private function synchronizeData() : Void;
 	
 	
 }

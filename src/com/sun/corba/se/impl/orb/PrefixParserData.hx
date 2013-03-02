@@ -27,9 +27,9 @@ extern class PrefixParserData extends com.sun.corba.se.impl.orb.ParserDataBase
 {
 	@:overload public function new(propertyName : String, operation : com.sun.corba.se.spi.orb.Operation, fieldName : String, defaultValue : Dynamic, testValue : Dynamic, testData : java.NativeArray<com.sun.corba.se.spi.orb.StringPair>, componentType : Class<Dynamic>) : Void;
 	
-	@:overload override public function addToParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
+	@:overload public function addToParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
 	
-	@:overload override public function addToProperties(props : java.util.Properties) : Void;
+	@:overload public function addToProperties(props : java.util.Properties) : Void;
 	
 	
 }

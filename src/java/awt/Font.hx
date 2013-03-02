@@ -405,7 +405,7 @@ extern class Font implements java.io.Serializable
 	* @throws NullPointerException if <code>font</code> is null
 	* @since 1.6
 	*/
-	@:require(java6) @:overload private function new(font : Font) : Void;
+	@:require(java6) @:overload private function new(font : java.awt.Font) : Void;
 	
 	/**
 	* Returns a <code>Font</code> appropriate to the attributes.
@@ -423,7 +423,7 @@ extern class Font implements java.io.Serializable
 	* @since 1.2
 	* @see java.awt.font.TextAttribute
 	*/
-	@:require(java2) @:overload public static function getFont(attributes : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : Font;
+	@:require(java2) @:overload public static function getFont(attributes : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : java.awt.Font;
 	
 	/**
 	* Returns a new <code>Font</code> using the specified font type
@@ -453,7 +453,7 @@ extern class Font implements java.io.Serializable
 	* @see GraphicsEnvironment#registerFont(Font)
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public static function createFont(fontFormat : Int, fontStream : java.io.InputStream) : Font;
+	@:require(java3) @:overload public static function createFont(fontFormat : Int, fontStream : java.io.InputStream) : java.awt.Font;
 	
 	/**
 	* Returns a new <code>Font</code> using the specified font type
@@ -489,7 +489,7 @@ extern class Font implements java.io.Serializable
 	* @see GraphicsEnvironment#registerFont(Font)
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public static function createFont(fontFormat : Int, fontFile : java.io.File) : Font;
+	@:require(java5) @:overload public static function createFont(fontFormat : Int, fontFile : java.io.File) : java.awt.Font;
 	
 	/**
 	* Returns a copy of the transform associated with this
@@ -711,7 +711,7 @@ extern class Font implements java.io.Serializable
 	* @since 1.2
 	* @see #decode(String)
 	*/
-	@:require(java2) @:overload public static function getFont(nm : String) : Font;
+	@:require(java2) @:overload public static function getFont(nm : String) : java.awt.Font;
 	
 	/**
 	* Returns the <code>Font</code> that the <code>str</code>
@@ -786,7 +786,7 @@ extern class Font implements java.io.Serializable
 	* @see #getFamily
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public static function decode(str : String) : Font;
+	@:require(java1) @:overload public static function decode(str : String) : java.awt.Font;
 	
 	/**
 	* Gets the specified <code>Font</code> from the system properties
@@ -808,7 +808,7 @@ extern class Font implements java.io.Serializable
 	* @throws NullPointerException if nm is null.
 	* @see #decode(String)
 	*/
-	@:overload public static function getFont(nm : String, font : Font) : Font;
+	@:overload public static function getFont(nm : String, font : java.awt.Font) : java.awt.Font;
 	
 	/**
 	* Returns a hashcode for this <code>Font</code>.
@@ -899,7 +899,7 @@ extern class Font implements java.io.Serializable
 	* @return a new <code>Font</code> object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deriveFont(style : Int, size : Single) : Font;
+	@:require(java2) @:overload public function deriveFont(style : Int, size : Single) : java.awt.Font;
 	
 	/**
 	* Creates a new <code>Font</code> object by replicating this
@@ -912,7 +912,7 @@ extern class Font implements java.io.Serializable
 	*         <code>null</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deriveFont(style : Int, trans : java.awt.geom.AffineTransform) : Font;
+	@:require(java2) @:overload public function deriveFont(style : Int, trans : java.awt.geom.AffineTransform) : java.awt.Font;
 	
 	/**
 	* Creates a new <code>Font</code> object by replicating the current
@@ -921,7 +921,7 @@ extern class Font implements java.io.Serializable
 	* @return a new <code>Font</code> object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deriveFont(size : Single) : Font;
+	@:require(java2) @:overload public function deriveFont(size : Single) : java.awt.Font;
 	
 	/**
 	* Creates a new <code>Font</code> object by replicating the current
@@ -933,7 +933,7 @@ extern class Font implements java.io.Serializable
 	*         <code>null</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deriveFont(trans : java.awt.geom.AffineTransform) : Font;
+	@:require(java2) @:overload public function deriveFont(trans : java.awt.geom.AffineTransform) : java.awt.Font;
 	
 	/**
 	* Creates a new <code>Font</code> object by replicating the current
@@ -942,7 +942,7 @@ extern class Font implements java.io.Serializable
 	* @return a new <code>Font</code> object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deriveFont(style : Int) : Font;
+	@:require(java2) @:overload public function deriveFont(style : Int) : java.awt.Font;
 	
 	/**
 	* Creates a new <code>Font</code> object by replicating the current
@@ -954,7 +954,7 @@ extern class Font implements java.io.Serializable
 	* @return a new <code>Font</code> object.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function deriveFont(attributes : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : Font;
+	@:require(java2) @:overload public function deriveFont(attributes : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>) : java.awt.Font;
 	
 	/**
 	* Checks if this <code>Font</code> has a glyph for the specified
@@ -1375,13 +1375,13 @@ extern class Font implements java.io.Serializable
 }
 @:native('java$awt$Font$FontAccessImpl') @:internal extern class Font_FontAccessImpl extends sun.font.FontAccess
 {
-	@:overload override public function getFont2D(font : Font) : sun.font.Font2D;
+	@:overload public function getFont2D(font : java.awt.Font) : sun.font.Font2D;
 	
-	@:overload override public function setFont2D(font : Font, handle : sun.font.Font2DHandle) : Void;
+	@:overload public function setFont2D(font : java.awt.Font, handle : sun.font.Font2DHandle) : Void;
 	
-	@:overload override public function setCreatedFont(font : Font) : Void;
+	@:overload public function setCreatedFont(font : java.awt.Font) : Void;
 	
-	@:overload override public function isCreatedFont(font : Font) : Bool;
+	@:overload public function isCreatedFont(font : java.awt.Font) : Bool;
 	
 	
 }

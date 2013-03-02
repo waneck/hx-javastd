@@ -37,7 +37,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* @param   cl class for which to get the descriptor
 	* @return  the class descriptor for the specified class
 	*/
-	@:overload public static function lookup(cl : Class<Dynamic>) : ObjectStreamClass;
+	@:overload public static function lookup(cl : Class<Dynamic>) : java.io.ObjectStreamClass;
 	
 	/**
 	* Returns the descriptor for any class, regardless of whether it
@@ -47,7 +47,7 @@ extern class ObjectStreamClass implements java.io.Serializable
 	* @return       the class descriptor for the specified class
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function lookupAny(cl : Class<Dynamic>) : ObjectStreamClass;
+	@:require(java6) @:overload public static function lookupAny(cl : Class<Dynamic>) : java.io.ObjectStreamClass;
 	
 	/**
 	* Returns the name of the class described by this descriptor.

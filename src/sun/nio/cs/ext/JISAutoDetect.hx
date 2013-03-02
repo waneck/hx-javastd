@@ -27,7 +27,7 @@ extern class JISAutoDetect extends java.nio.charset.Charset implements sun.nio.c
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function canEncode() : Bool;
 	

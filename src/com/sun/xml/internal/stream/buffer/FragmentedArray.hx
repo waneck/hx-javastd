@@ -27,9 +27,9 @@ package com.sun.xml.internal.stream.buffer;
 {
 	private var _item : T;
 	
-	private var _next : FragmentedArray<T>;
+	private var _next : com.sun.xml.internal.stream.buffer.FragmentedArray<T>;
 	
-	private var _previous : FragmentedArray<T>;
+	private var _previous : com.sun.xml.internal.stream.buffer.FragmentedArray<T>;
 	
 	
 }

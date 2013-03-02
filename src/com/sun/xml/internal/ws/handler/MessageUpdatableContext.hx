@@ -83,37 +83,5 @@ extern class MessageUpdatableContext implements javax.xml.ws.handler.MessageCont
 	*/
 	@:overload public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
-	/**
-	* Sets the scope of a property.
-	*
-	* @param name Name of the property associated with the
-	*             <code>MessageContext</code>
-	* @param scope Desired scope of the property
-	* @throws java.lang.IllegalArgumentException if an illegal
-	*             property name is specified
-	*/
-	@:overload @:public public function setScope(name : String, scope : MessageContext_Scope) : Void;
-	
-	/**
-	* Copies all of the mappings from the specified map to this map
-	* (optional operation).  The effect of this call is equivalent to that
-	* of calling {@link #put(Object,Object) put(k, v)} on this map once
-	* for each mapping from key <tt>k</tt> to value <tt>v</tt> in the
-	* specified map.  The behavior of this operation is undefined if the
-	* specified map is modified while the operation is in progress.
-	*
-	* @param m mappings to be stored in this map
-	* @throws UnsupportedOperationException if the <tt>putAll</tt> operation
-	*         is not supported by this map
-	* @throws ClassCastException if the class of a key or value in the
-	*         specified map prevents it from being stored in this map
-	* @throws NullPointerException if the specified map is null, or if
-	*         this map does not permit null keys or values, and the
-	*         specified map contains null keys or values
-	* @throws IllegalArgumentException if some property of a key or value in
-	*         the specified map prevents it from being stored in this map
-	*/
-	@:overload public function putAll(m : Map<Dynamic, Dynamic>) : Void;
-	
 	
 }

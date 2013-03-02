@@ -25,7 +25,7 @@ package sun.tools.java;
 */
 extern class Environment implements sun.tools.java.Constants
 {
-	@:overload public function new(env : Environment, source : Dynamic) : Void;
+	@:overload public function new(env : sun.tools.java.Environment, source : Dynamic) : Void;
 	
 	@:overload public function new() : Void;
 	
@@ -183,12 +183,12 @@ extern class Environment implements sun.tools.java.Constants
 	/**
 	* Create a new class.
 	*/
-	@:overload public function makeClassDefinition(origEnv : Environment, where : haxe.Int64, name : sun.tools.java.IdentifierToken, doc : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
+	@:overload public function makeClassDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, name : sun.tools.java.IdentifierToken, doc : String, modifiers : Int, superClass : sun.tools.java.IdentifierToken, interfaces : java.NativeArray<sun.tools.java.IdentifierToken>, outerClass : sun.tools.java.ClassDefinition) : sun.tools.java.ClassDefinition;
 	
 	/**
 	* Create a new field.
 	*/
-	@:overload public function makeMemberDefinition(origEnv : Environment, where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, doc : String, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, argNames : java.NativeArray<sun.tools.java.IdentifierToken>, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : Dynamic) : sun.tools.java.MemberDefinition;
+	@:overload public function makeMemberDefinition(origEnv : sun.tools.java.Environment, where : haxe.Int64, clazz : sun.tools.java.ClassDefinition, doc : String, modifiers : Int, type : sun.tools.java.Type, name : sun.tools.java.Identifier, argNames : java.NativeArray<sun.tools.java.IdentifierToken>, expIds : java.NativeArray<sun.tools.java.IdentifierToken>, value : Dynamic) : sun.tools.java.MemberDefinition;
 	
 	/**
 	* Returns true if the given method is applicable to the given arguments

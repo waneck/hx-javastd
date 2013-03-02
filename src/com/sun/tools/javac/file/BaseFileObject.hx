@@ -99,7 +99,7 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	*
 	* @return the kind
 	*/
-	@:overload public function getKind() : JavaFileObject_Kind;
+	@:overload public function getKind() : javax.tools.JavaFileObject.JavaFileObject_Kind;
 	
 	/**
 	* Gets the character content of this file object, if available.
@@ -118,6 +118,18 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	@:overload public function getCharContent(ignoreEncodingErrors : Bool) : java.lang.CharSequence;
 	
 	/**
+	* Gets an InputStream for this file object.
+	*
+	* @return an InputStream
+	* @throws IllegalStateException if this file object was
+	* opened for writing and does not support reading
+	* @throws UnsupportedOperationException if this kind of file
+	* object does not support byte access
+	* @throws IOException if an I/O error occurred
+	*/
+	@:overload public function openInputStream() : java.io.InputStream;
+	
+	/**
 	* Checks if this file object is compatible with the specified
 	* simple name and kind.  A simple name is a single identifier
 	* (not qualified) as defined in
@@ -129,19 +141,7 @@ extern class BaseFileObject implements javax.tools.JavaFileObject
 	* @return {@code true} if this file object is compatible; false
 	* otherwise
 	*/
-	@:overload public function isNameCompatible(simpleName : String, kind : JavaFileObject_Kind) : Bool;
-	
-	/**
-	* Gets an InputStream for this file object.
-	*
-	* @return an InputStream
-	* @throws IllegalStateException if this file object was
-	* opened for writing and does not support reading
-	* @throws UnsupportedOperationException if this kind of file
-	* object does not support byte access
-	* @throws IOException if an I/O error occurred
-	*/
-	@:overload public function openInputStream() : java.io.InputStream;
+	@:overload public function isNameCompatible(simpleName : String, kind : javax.tools.JavaFileObject.JavaFileObject_Kind) : Bool;
 	
 	/**
 	* Returns a URI identifying this file object.

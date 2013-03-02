@@ -27,7 +27,7 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	private static var ZERO_LENGTH_GRAMMAR_ARRAY(default, null) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
 	/** Grammars. */
-	private var fGrammars : java.NativeArray<SoftReferenceGrammarPool_Entry>;
+	private var fGrammars : java.NativeArray<com.sun.org.apache.xerces.internal.jaxp.validation.SoftReferenceGrammarPool.SoftReferenceGrammarPool_Entry>;
 	
 	/** Flag indicating whether this pool is locked */
 	private var fPoolIsLocked : Bool;
@@ -171,15 +171,15 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	
 	public var bucket : Int;
 	
-	public var prev : SoftReferenceGrammarPool_Entry;
+	public var prev : com.sun.org.apache.xerces.internal.jaxp.validation.SoftReferenceGrammarPool.SoftReferenceGrammarPool_Entry;
 	
-	public var next : SoftReferenceGrammarPool_Entry;
+	public var next : com.sun.org.apache.xerces.internal.jaxp.validation.SoftReferenceGrammarPool.SoftReferenceGrammarPool_Entry;
 	
 	public var desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription;
 	
-	public var grammar : SoftReferenceGrammarPool_SoftGrammarReference;
+	public var grammar : com.sun.org.apache.xerces.internal.jaxp.validation.SoftReferenceGrammarPool.SoftReferenceGrammarPool_SoftGrammarReference;
 	
-	@:overload private function new(hash : Int, bucket : Int, desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, next : SoftReferenceGrammarPool_Entry, queue : java.lang.ref.ReferenceQueue<Dynamic>) : Void;
+	@:overload private function new(hash : Int, bucket : Int, desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, next : com.sun.org.apache.xerces.internal.jaxp.validation.SoftReferenceGrammarPool.SoftReferenceGrammarPool_Entry, queue : java.lang.ref.ReferenceQueue<Dynamic>) : Void;
 	
 	@:overload private function clear() : Void;
 	
@@ -191,9 +191,9 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 */
 @:native('com$sun$org$apache$xerces$internal$jaxp$validation$SoftReferenceGrammarPool$SoftGrammarReference') @:internal extern class SoftReferenceGrammarPool_SoftGrammarReference extends java.lang.ref.SoftReference<Dynamic>
 {
-	public var entry : SoftReferenceGrammarPool_Entry;
+	public var entry : com.sun.org.apache.xerces.internal.jaxp.validation.SoftReferenceGrammarPool.SoftReferenceGrammarPool_Entry;
 	
-	@:overload private function new(entry : SoftReferenceGrammarPool_Entry, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, queue : java.lang.ref.ReferenceQueue<Dynamic>) : Void;
+	@:overload private function new(entry : com.sun.org.apache.xerces.internal.jaxp.validation.SoftReferenceGrammarPool.SoftReferenceGrammarPool_Entry, grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar, queue : java.lang.ref.ReferenceQueue<Dynamic>) : Void;
 	
 	
 }

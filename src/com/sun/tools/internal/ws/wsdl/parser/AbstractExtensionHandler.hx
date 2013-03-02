@@ -25,9 +25,9 @@ package com.sun.tools.internal.ws.wsdl.parser;
 */
 extern class AbstractExtensionHandler extends com.sun.tools.internal.ws.api.wsdl.TWSDLExtensionHandler
 {
-	@:overload public function new(extensionHandlerMap : java.util.Map<String, AbstractExtensionHandler>) : Void;
+	@:overload public function new(extensionHandlerMap : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>) : Void;
 	
-	@:overload public function getExtensionHandlers() : java.util.Map<String, AbstractExtensionHandler>;
+	@:overload public function getExtensionHandlers() : java.util.Map<String, com.sun.tools.internal.ws.wsdl.parser.AbstractExtensionHandler>;
 	
 	/**
 	* Callback that gets called by the WSDL parser or any other extension handler on finding an extensibility element
@@ -38,7 +38,7 @@ extern class AbstractExtensionHandler extends com.sun.tools.internal.ws.api.wsdl
 	* @return false if there was some error during the extension handling otherwise returns true. If returned false
 	*         then the WSDL parser can abort if the wsdl extensibility element had <code>required</code> attribute set to true
 	*/
-	@:overload override public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
+	@:overload public function doHandleExtension(context : com.sun.tools.internal.ws.api.wsdl.TWSDLParserContext, parent : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible, e : org.w3c.dom.Element) : Bool;
 	
 	/**
 	* Callback for <code>wsdl:mime</code>

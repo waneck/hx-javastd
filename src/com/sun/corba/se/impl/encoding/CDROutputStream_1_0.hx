@@ -193,7 +193,7 @@ extern class CDROutputStream_1_0 extends com.sun.corba.se.impl.encoding.CDROutpu
 	@:overload override public function _truncatable_ids() : java.NativeArray<String>;
 	
 	/* for debugging */
-	@:overload override public function printBuffer() : Void;
+	@:overload public function printBuffer() : Void;
 	
 	@:native('printBuffer') @:overload public static function _printBuffer(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	

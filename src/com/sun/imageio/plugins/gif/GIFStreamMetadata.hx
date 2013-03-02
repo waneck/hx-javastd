@@ -69,9 +69,9 @@ extern class GIFStreamMetadata extends com.sun.imageio.plugins.gif.GIFMetadata
 	
 	@:overload override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload override private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
+	@:overload private function mergeNativeTree(root : org.w3c.dom.Node) : Void;
 	
-	@:overload override private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
+	@:overload private function mergeStandardTree(root : org.w3c.dom.Node) : Void;
 	
 	@:overload override public function reset() : Void;
 	

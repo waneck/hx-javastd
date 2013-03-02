@@ -51,7 +51,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param writer a {@link TagletWriter} Taglet writer.
 	* @return the string representation of this <code>Tag</code>.
 	*/
-	@:overload override public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public function getTagletOutput(tag : com.sun.javadoc.Tag, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

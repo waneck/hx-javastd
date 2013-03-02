@@ -25,7 +25,7 @@ package sun.font;
 */
 extern class CompositeStrike extends sun.font.FontStrike
 {
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload public function getNumGlyphs() : Int;
 	
 	
 }

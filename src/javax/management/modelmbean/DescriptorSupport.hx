@@ -63,7 +63,7 @@ extern class DescriptorSupport implements javax.management.Descriptor
 	* constructed descriptor. If it is null or contains no descriptor
 	* fields, an empty Descriptor will be created.
 	*/
-	@:overload public function new(inDescr : DescriptorSupport) : Void;
+	@:overload public function new(inDescr : javax.management.modelmbean.DescriptorSupport) : Void;
 	
 	/* At some stage we should rewrite this code to be cleverer.  Using
 	a StringTokenizer as we do means, first, that we accept a lot of

@@ -74,7 +74,7 @@ extern class Code
 	/** Construct a code object, given the settings of the fatcode,
 	*  debugging info switches and the CharacterRangeTable.
 	*/
-	@:overload public function new(meth : MethodSymbol, fatcode : Bool, lineMap : com.sun.tools.javac.util.Position.Position_LineMap, varDebugInfo : Bool, stackMap : Code_StackMapFormat, debugCode : Bool, crt : com.sun.tools.javac.jvm.CRTable, syms : com.sun.tools.javac.code.Symtab, types : com.sun.tools.javac.code.Types, pool : com.sun.tools.javac.jvm.Pool) : Void;
+	@:overload public function new(meth : MethodSymbol, fatcode : Bool, lineMap : com.sun.tools.javac.util.Position.Position_LineMap, varDebugInfo : Bool, stackMap : com.sun.tools.javac.jvm.Code.Code_StackMapFormat, debugCode : Bool, crt : com.sun.tools.javac.jvm.CRTable, syms : com.sun.tools.javac.code.Symtab, types : com.sun.tools.javac.code.Types, pool : com.sun.tools.javac.jvm.Pool) : Void;
 	
 	/** Given a type, return its type code (used implicitly in the
 	*  JVM architecture).
@@ -192,12 +192,12 @@ extern class Code
 	/** Declare an entry point with initial state;
 	*  return current code pointer
 	*/
-	@:overload public function entryPoint(state : Code_State) : Int;
+	@:overload public function entryPoint(state : com.sun.tools.javac.jvm.Code.Code_State) : Int;
 	
 	/** Declare an entry point with initial state plus a pushed value;
 	*  return current code pointer
 	*/
-	@:overload public function entryPoint(state : Code_State, pushed : com.sun.tools.javac.code.Type) : Int;
+	@:overload public function entryPoint(state : com.sun.tools.javac.jvm.Code.Code_State, pushed : com.sun.tools.javac.code.Type) : Int;
 	
 	/** Emit a stack map entry.  */
 	@:overload public function emitStackMap() : Void;
@@ -214,15 +214,15 @@ extern class Code
 	/** Emit a branch with given opcode; return its chain.
 	*  branch differs from jump in that jsr is treated as no-op.
 	*/
-	@:overload public function branch(opcode : Int) : Code_Chain;
+	@:overload public function branch(opcode : Int) : com.sun.tools.javac.jvm.Code.Code_Chain;
 	
 	/** Resolve chain to point to given target.
 	*/
-	@:overload public function resolve(chain : Code_Chain, target : Int) : Void;
+	@:overload public function resolve(chain : com.sun.tools.javac.jvm.Code.Code_Chain, target : Int) : Void;
 	
 	/** Resolve chain to point to current code pointer.
 	*/
-	@:overload public function resolve(chain : Code_Chain) : Void;
+	@:overload public function resolve(chain : com.sun.tools.javac.jvm.Code.Code_Chain) : Void;
 	
 	/** Resolve any pending jumps.
 	*/
@@ -230,7 +230,7 @@ extern class Code
 	
 	/** Merge the jumps in of two chains into one.
 	*/
-	@:overload public static function mergeChains(chain1 : Code_Chain, chain2 : Code_Chain) : Code_Chain;
+	@:overload public static function mergeChains(chain1 : com.sun.tools.javac.jvm.Code.Code_Chain, chain2 : com.sun.tools.javac.jvm.Code.Code_Chain) : com.sun.tools.javac.jvm.Code.Code_Chain;
 	
 	/** Add a catch clause to code.
 	*/
@@ -298,12 +298,12 @@ extern class Code
 	
 	/** The next jump in the list.
 	*/
-	public var next(default, null) : Code_Chain;
+	public var next(default, null) : com.sun.tools.javac.jvm.Code.Code_Chain;
 	
 	/** Construct a chain from its jump position, stacksize, previous
 	*  chain, and machine state.
 	*/
-	@:overload public function new(pc : Int, next : Code_Chain, state : Code_State) : Void;
+	@:overload public function new(pc : Int, next : com.sun.tools.javac.jvm.Code.Code_Chain, state : com.sun.tools.javac.jvm.Code.Code_State) : Void;
 	
 	
 }
@@ -317,7 +317,7 @@ extern class Code
 /** A live range of a local variable. */
 @:native('com$sun$tools$javac$jvm$Code$LocalVar') @:internal extern class Code_LocalVar
 {
-	@:overload public function dup() : Code_LocalVar;
+	@:overload public function dup() : com.sun.tools.javac.jvm.Code.Code_LocalVar;
 	
 	@:overload public function toString() : String;
 	

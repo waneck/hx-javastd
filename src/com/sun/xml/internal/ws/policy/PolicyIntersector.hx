@@ -30,14 +30,14 @@ extern class PolicyIntersector
 	*
 	* @return policy intersector instance.
 	*/
-	@:overload public static function createStrictPolicyIntersector() : PolicyIntersector;
+	@:overload public static function createStrictPolicyIntersector() : com.sun.xml.internal.ws.policy.PolicyIntersector;
 	
 	/**
 	* Returns a strict policy intersector that can be used to intersect group of policies.
 	*
 	* @return policy intersector instance.
 	*/
-	@:overload public static function createLaxPolicyIntersector() : PolicyIntersector;
+	@:overload public static function createLaxPolicyIntersector() : com.sun.xml.internal.ws.policy.PolicyIntersector;
 	
 	/**
 	* Performs intersection on the input collection of policies and returns the resulting (intersected) policy. If input policy

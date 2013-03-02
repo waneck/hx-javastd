@@ -40,7 +40,7 @@ package javax.swing.plaf.metal;
 	/**
 	* Returns the <code>JRootPane</code> this was created for.
 	*/
-	@:overload override public function getRootPane() : javax.swing.JRootPane;
+	@:overload public function getRootPane() : javax.swing.JRootPane;
 	
 	@:overload override public function addNotify() : Void;
 	
@@ -55,7 +55,7 @@ package javax.swing.plaf.metal;
 	/**
 	* Renders the TitlePane.
 	*/
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	
 }
@@ -147,9 +147,9 @@ package javax.swing.plaf.metal;
 */
 @:native('javax$swing$plaf$metal$MetalTitlePane$WindowHandler') @:internal extern class MetalTitlePane_WindowHandler extends java.awt.event.WindowAdapter
 {
-	@:overload override public function windowActivated(ev : java.awt.event.WindowEvent) : Void;
+	@:overload public function windowActivated(ev : java.awt.event.WindowEvent) : Void;
 	
-	@:overload override public function windowDeactivated(ev : java.awt.event.WindowEvent) : Void;
+	@:overload public function windowDeactivated(ev : java.awt.event.WindowEvent) : Void;
 	
 	
 }

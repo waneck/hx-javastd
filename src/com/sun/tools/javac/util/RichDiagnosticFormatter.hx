@@ -46,10 +46,10 @@ package com.sun.tools.javac.util;
 extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.ForwardingDiagnosticFormatter<com.sun.tools.javac.util.JCDiagnostic, com.sun.tools.javac.util.AbstractDiagnosticFormatter>
 {
 	/* name simplifier used by this formatter */
-	private var nameSimplifier : RichDiagnosticFormatter_ClassNameSimplifier;
+	private var nameSimplifier : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_ClassNameSimplifier;
 	
 	/** Get the DiagnosticFormatter instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : RichDiagnosticFormatter;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.RichDiagnosticFormatter;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -59,13 +59,13 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 	* Sets the type/symbol printer used by this formatter.
 	* @param printer the rich printer to be set
 	*/
-	@:overload private function setRichPrinter(printer : RichDiagnosticFormatter_RichPrinter) : Void;
+	@:overload private function setRichPrinter(printer : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichPrinter) : Void;
 	
 	/**
 	* Gets the type/symbol printer used by this formatter.
 	* @return type/symbol rich printer
 	*/
-	@:overload private function getRichPrinter() : RichDiagnosticFormatter_RichPrinter;
+	@:overload private function getRichPrinter() : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichPrinter;
 	
 	/**
 	* Preprocess a given diagnostic by looking both into its arguments and into
@@ -109,7 +109,7 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 	
 	private var symbolPreprocessor : com.sun.tools.javac.code.Types.Types_DefaultSymbolVisitor<java.lang.Void, java.lang.Void>;
 	
-	@:overload override public function getConfiguration() : RichDiagnosticFormatter_RichConfiguration;
+	@:overload override public function getConfiguration() : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration;
 	
 	
 }
@@ -182,7 +182,7 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 @:native('com$sun$tools$javac$util$RichDiagnosticFormatter$RichConfiguration') extern class RichDiagnosticFormatter_RichConfiguration extends com.sun.tools.javac.util.ForwardingDiagnosticFormatter.ForwardingDiagnosticFormatter_ForwardingConfiguration
 {
 	/** set of enabled rich formatter's features */
-	private var features : java.util.EnumSet<RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
+	private var features : java.util.EnumSet<com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
 	
 	@:overload public function new(options : com.sun.tools.javac.util.Options, formatter : com.sun.tools.javac.util.AbstractDiagnosticFormatter) : Void;
 	
@@ -190,25 +190,25 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 	* Returns a list of all the features supported by the rich formatter.
 	* @return list of supported features
 	*/
-	@:overload public function getAvailableFeatures() : java.NativeArray<RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
+	@:overload public function getAvailableFeatures() : java.NativeArray<com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature>;
 	
 	/**
 	* Enable a specific feature on this rich formatter.
 	* @param feature feature to be enabled
 	*/
-	@:overload public function enable(feature : RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
+	@:overload public function enable(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
 	
 	/**
 	* Disable a specific feature on this rich formatter.
 	* @param feature feature to be disabled
 	*/
-	@:overload public function disable(feature : RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
+	@:overload public function disable(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Void;
 	
 	/**
 	* Is a given feature enabled on this formatter?
 	* @param feature feature to be tested
 	*/
-	@:overload public function isEnabled(feature : RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Bool;
+	@:overload public function isEnabled(feature : com.sun.tools.javac.util.RichDiagnosticFormatter.RichDiagnosticFormatter_RichConfiguration_RichFormatterFeature) : Bool;
 	
 	
 }

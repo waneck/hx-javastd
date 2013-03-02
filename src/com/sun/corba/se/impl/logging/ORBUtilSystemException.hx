@@ -7,9 +7,9 @@ extern class ORBUtilSystemException extends com.sun.corba.se.spi.logging.LogWrap
 {
 	@:overload public function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : ORBUtilSystemException;
+	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
-	@:overload public static function get(logDomain : String) : ORBUtilSystemException;
+	@:overload public static function get(logDomain : String) : com.sun.corba.se.impl.logging.ORBUtilSystemException;
 	
 	public static var ADAPTER_ID_NOT_AVAILABLE(default, null) : Int;
 	

@@ -93,7 +93,7 @@ extern class InstanceResolver<T>
 	* Creates a {@link InstanceResolver} implementation that always
 	* returns the specified singleton instance.
 	*/
-	@:overload public static function createSingleton<T>(singleton : T) : InstanceResolver<T>;
+	@:overload public static function createSingleton<T>(singleton : T) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
 	/**
 	* @deprecated
@@ -101,18 +101,18 @@ extern class InstanceResolver<T>
 	*      with this signature. Please do not use this. Will be removed
 	*      after the next GF integration.
 	*/
-	@:overload public static function createDefault<T>(clazz : Class<T>, bool : Bool) : InstanceResolver<T>;
+	@:overload public static function createDefault<T>(clazz : Class<T>, bool : Bool) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
 	/**
 	* Creates a default {@link InstanceResolver} that serves the given class.
 	*/
-	@:overload public static function createDefault<T>(clazz : Class<T>) : InstanceResolver<T>;
+	@:overload public static function createDefault<T>(clazz : Class<T>) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
 	/**
 	* Checks for {@link InstanceResolverAnnotation} and creates an instance resolver from it if any.
 	* Otherwise null.
 	*/
-	@:overload public static function createFromInstanceResolverAnnotation<T>(clazz : Class<T>) : InstanceResolver<T>;
+	@:overload public static function createFromInstanceResolverAnnotation<T>(clazz : Class<T>) : com.sun.xml.internal.ws.api.server.InstanceResolver<T>;
 	
 	@:overload private static function createNewInstance<T>(cl : Class<T>) : T;
 	

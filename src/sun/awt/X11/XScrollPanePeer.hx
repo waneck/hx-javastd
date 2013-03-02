@@ -39,9 +39,9 @@ package sun.awt.X11;
 	
 	@:overload override public function getContentWindow() : haxe.Int64;
 	
-	@:overload override public function setBounds(x : Int, y : Int, w : Int, h : Int, op : Int) : Void;
+	@:overload public function setBounds(x : Int, y : Int, w : Int, h : Int, op : Int) : Void;
 	
-	@:overload override public function getInsets() : java.awt.Insets;
+	@:overload public function getInsets() : java.awt.Insets;
 	
 	@:overload public function getHScrollbarHeight() : Int;
 	
@@ -55,7 +55,7 @@ package sun.awt.X11;
 	
 	@:overload public function setScrollPosition(x : Int, y : Int) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	@:overload public function repaintScrollbarRequest(sb : sun.awt.X11.XScrollbar) : Void;
 	
@@ -64,7 +64,7 @@ package sun.awt.X11;
 	*/
 	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
-	@:overload override public function handleEvent(e : java.awt.AWTEvent) : Void;
+	@:overload public function handleEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	*
@@ -77,7 +77,7 @@ package sun.awt.X11;
 	* MouseEvent.MOUSE_EXITED
 	* MouseEvent.MOUSE_DRAGGED
 	*/
-	@:overload override public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* return value from the scrollbar
@@ -89,7 +89,7 @@ package sun.awt.X11;
 	* ToDo(aim): needs to query native motif for more accurate size and
 	* color information.
 	*/
-	@:overload override public function print(g : java.awt.Graphics) : Void;
+	@:overload public function print(g : java.awt.Graphics) : Void;
 	
 	
 }

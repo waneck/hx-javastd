@@ -54,7 +54,7 @@ extern interface WSDLBoundOperation extends com.sun.xml.internal.ws.api.model.ws
 	*
 	* @return Anonymous value of the operation
 	*/
-	@:overload public function getAnonymous() : WSDLBoundOperation_ANONYMOUS;
+	@:overload public function getAnonymous() : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation.WSDLBoundOperation_ANONYMOUS;
 	
 	/**
 	* Gets {@link WSDLPart} for the given wsdl:input or wsdl:output part

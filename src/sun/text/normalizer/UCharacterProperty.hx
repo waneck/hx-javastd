@@ -131,7 +131,7 @@ extern class UCharacterProperty
 	* Loads the property data and initialize the UCharacterProperty instance.
 	* @throws MissingResourceException when data is missing or data has been corrupted
 	*/
-	@:overload public static function getInstance() : UCharacterProperty;
+	@:overload public static function getInstance() : sun.text.normalizer.UCharacterProperty;
 	
 	/**
 	* Checks if the argument c is to be treated as a white space in ICU

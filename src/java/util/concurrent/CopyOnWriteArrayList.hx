@@ -498,25 +498,25 @@ extern class CopyOnWriteArrayList<E> implements java.util.List<E> implements jav
 */
 @:native('java$util$concurrent$CopyOnWriteArrayList$COWSubList') @:internal extern class CopyOnWriteArrayList_COWSubList<E> extends java.util.AbstractList<E> implements java.util.RandomAccess
 {
-	@:overload override public function set(index : Int, element : E) : E;
+	@:overload public function set(index : Int, element : E) : E;
 	
-	@:overload override public function get(index : Int) : E;
+	@:overload public function get(index : Int) : E;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function add(index : Int, element : E) : Void;
+	@:overload public function add(index : Int, element : E) : Void;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
-	@:overload override public function remove(index : Int) : E;
+	@:overload public function remove(index : Int) : E;
 	
-	@:overload override public function remove(o : Dynamic) : Bool;
+	@:overload public function remove(o : Dynamic) : Bool;
 	
-	@:overload override public function iterator() : java.util.Iterator<E>;
+	@:overload public function iterator() : java.util.Iterator<E>;
 	
-	@:overload override public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }

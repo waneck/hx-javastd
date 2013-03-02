@@ -63,30 +63,6 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	@:overload override public function size() : Int;
 	
 	/**
-	* Retains only the elements in this collection that are contained in the
-	* specified collection (optional operation).  In other words, removes from
-	* this collection all of its elements that are not contained in the
-	* specified collection.
-	*
-	* @param c collection containing elements to be retained in this collection
-	* @return <tt>true</tt> if this collection changed as a result of the call
-	* @throws UnsupportedOperationException if the <tt>retainAll</tt> operation
-	*         is not supported by this collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in this collection are incompatible with the specified
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if this collection contains one or more
-	*         null elements and the specified collection does not permit null
-	*         elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #remove(Object)
-	* @see #contains(Object)
-	*/
-	@:overload @:public @:public public function retainAll(c : Collection<Dynamic>) : Bool;
-	
-	/**
 	* Returns <tt>true</tt> if this list contains all of the elements of the
 	* specified collection.
 	*
@@ -169,32 +145,6 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	@:overload override public function get(index : Int) : Dynamic;
 	
 	/**
-	* Adds all of the elements in the specified collection to this collection
-	* (optional operation).  The behavior of this operation is undefined if
-	* the specified collection is modified while the operation is in progress.
-	* (This implies that the behavior of this call is undefined if the
-	* specified collection is this collection, and this collection is
-	* nonempty.)
-	*
-	* @param c collection containing elements to be added to this collection
-	* @return <tt>true</tt> if this collection changed as a result of the call
-	* @throws UnsupportedOperationException if the <tt>addAll</tt> operation
-	*         is not supported by this collection
-	* @throws ClassCastException if the class of an element of the specified
-	*         collection prevents it from being added to this collection
-	* @throws NullPointerException if the specified collection contains a
-	*         null element and this collection does not permit null elements,
-	*         or if the specified collection is null
-	* @throws IllegalArgumentException if some property of an element of the
-	*         specified collection prevents it from being added to this
-	*         collection
-	* @throws IllegalStateException if not all the elements can be added at
-	*         this time due to insertion restrictions
-	* @see #add(Object)
-	*/
-	@:overload @:public public function addAll(c : Collection<Dynamic>) : Bool;
-	
-	/**
 	* Removes the first occurrence of the specified element from this list,
 	* if it is present (optional operation).  If this list does not contain
 	* the element, it is unchanged.  More formally, removes the element with
@@ -230,14 +180,14 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* identifier id.  It is not possible to modify the list through this
 	* iterator.
 	*/
-	@:overload override public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
+	@:overload public function iteratorById(id : Int) : java.util.Iterator<Dynamic>;
 	
 	/** Return true if temp is equivalent to this template.  Equivalence
 	* means that in some sense an invocation on a profile created by this
 	* template has the same results as an invocation on a profile
 	* created from temp.  Equivalence may be weaker than equality.
 	*/
-	@:overload public function isEquivalent(temp : TaggedProfileTemplate) : Bool;
+	@:overload public function isEquivalent(temp : com.sun.corba.se.spi.ior.TaggedProfileTemplate) : Bool;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -256,7 +206,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload override public function lastIndexOf(o : Dynamic) : Int;
+	@:overload public function lastIndexOf(o : Dynamic) : Int;
 	
 	/** Write the profile create( oktemp, id ) to the OutputStream os.
 	*/
@@ -296,7 +246,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload override public function indexOf(o : Dynamic) : Int;
+	@:overload public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -363,31 +313,6 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
-	* Removes all of this collection's elements that are also contained in the
-	* specified collection (optional operation).  After this call returns,
-	* this collection will contain no elements in common with the specified
-	* collection.
-	*
-	* @param c collection containing elements to be removed from this collection
-	* @return <tt>true</tt> if this collection changed as a result of the
-	*         call
-	* @throws UnsupportedOperationException if the <tt>removeAll</tt> method
-	*         is not supported by this collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in this collection are incompatible with the specified
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if this collection contains one or more
-	*         null elements and the specified collection does not support
-	*         null elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null
-	* @see #remove(Object)
-	* @see #contains(Object)
-	*/
-	@:overload @:public @:public public function removeAll(c : Collection<Dynamic>) : Bool;
-	
-	/**
 	* Inserts all of the elements in the specified collection into this
 	* list at the specified position (optional operation).  Shifts the
 	* element currently at that position (if any) and any subsequent
@@ -414,7 +339,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -431,7 +356,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index > size()})
 	*/
-	@:overload override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -481,7 +406,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	* @return a list iterator over the elements in this list (in proper
 	*         sequence)
 	*/
-	@:overload override public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload public function listIterator() : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Returns a view of the portion of this list between the specified
@@ -517,7 +442,7 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
 	*         fromIndex &gt; toIndex</tt>)
 	*/
-	@:overload override public function subList(fromIndex : Int, toIndex : Int) : List<Dynamic>;
+	@:overload override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
 	
 	@:overload public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
@@ -560,26 +485,6 @@ extern class TaggedProfileTemplateBase extends com.sun.corba.se.spi.ior.Identifi
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
 	@:overload override public function remove(index : Int) : Dynamic;
-	
-	/**
-	* Returns <tt>true</tt> if this collection contains all of the elements
-	* in the specified collection.
-	*
-	* @param  c collection to be checked for containment in this collection
-	* @return <tt>true</tt> if this collection contains all of the elements
-	*         in the specified collection
-	* @throws ClassCastException if the types of one or more elements
-	*         in the specified collection are incompatible with this
-	*         collection
-	*         (<a href="#optional-restrictions">optional</a>)
-	* @throws NullPointerException if the specified collection contains one
-	*         or more null elements and this collection does not permit null
-	*         elements
-	*         (<a href="#optional-restrictions">optional</a>),
-	*         or if the specified collection is null.
-	* @see    #contains(Object)
-	*/
-	@:overload @:public @:public public function containsAll(c : Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.

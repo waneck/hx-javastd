@@ -67,13 +67,13 @@ extern class CMLeaf extends com.sun.org.apache.xerces.internal.impl.dtd.models.C
 	/** Constructs a content model leaf. */
 	@:overload public function new(element : com.sun.org.apache.xerces.internal.xni.QName) : Void;
 	
-	@:overload override public function isNullable() : Bool;
+	@:overload public function isNullable() : Bool;
 	
 	@:overload public function toString() : String;
 	
-	@:overload override private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload private function calcFirstPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
-	@:overload override private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
+	@:overload private function calcLastPos(toSet : com.sun.org.apache.xerces.internal.impl.dtd.models.CMStateSet) : Void;
 	
 	
 }

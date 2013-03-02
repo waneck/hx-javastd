@@ -236,25 +236,25 @@ package java.util.concurrent;
 	*         executor has been shut down
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload override public function execute(command : java.lang.Runnable) : Void;
+	@:overload public function execute(command : java.lang.Runnable) : Void;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload override public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
+	@:overload public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload override public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
+	@:overload public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
 	
 	/**
 	* @throws RejectedExecutionException {@inheritDoc}
 	* @throws NullPointerException       {@inheritDoc}
 	*/
-	@:overload override public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
+	@:overload public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
 	
 	/**
 	* Sets the policy on whether to continue executing existing
@@ -349,7 +349,7 @@ package java.util.concurrent;
 	*
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload override public function shutdown() : Void;
+	@:overload public function shutdown() : Void;
 	
 	/**
 	* Attempts to stop all actively executing tasks, halts the
@@ -372,7 +372,7 @@ package java.util.concurrent;
 	*         zero-delay {@code ScheduledFuture}.
 	* @throws SecurityException {@inheritDoc}
 	*/
-	@:overload override public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
 	/**
 	* Returns the task queue used by this executor.  Each element of
@@ -385,7 +385,7 @@ package java.util.concurrent;
 	*
 	* @return the task queue
 	*/
-	@:overload override public function getQueue() : java.util.concurrent.BlockingQueue<java.lang.Runnable>;
+	@:overload public function getQueue() : java.util.concurrent.BlockingQueue<java.lang.Runnable>;
 	
 	
 }
@@ -402,12 +402,12 @@ package java.util.concurrent;
 	*/
 	@:overload public function isPeriodic() : Bool;
 	
-	@:overload override public function cancel(mayInterruptIfRunning : Bool) : Bool;
+	@:overload public function cancel(mayInterruptIfRunning : Bool) : Bool;
 	
 	/**
 	* Overrides FutureTask version so as to reset/requeue if periodic.
 	*/
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }
@@ -418,17 +418,17 @@ package java.util.concurrent;
 */
 @:native('java$util$concurrent$ScheduledThreadPoolExecutor$DelayedWorkQueue') @:internal extern class ScheduledThreadPoolExecutor_DelayedWorkQueue extends java.util.AbstractQueue<java.lang.Runnable> implements java.util.concurrent.BlockingQueue<java.lang.Runnable>
 {
-	@:overload override public function contains(x : Dynamic) : Bool;
+	@:overload public function contains(x : Dynamic) : Bool;
 	
-	@:overload override public function remove(x : Dynamic) : Bool;
+	@:overload public function remove(x : Dynamic) : Bool;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
 	@:overload public function remainingCapacity() : Int;
 	
-	@:overload override public function peek() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
+	@:overload public function peek() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
 	@:overload public function offer(x : java.lang.Runnable) : Bool;
 	
@@ -438,23 +438,23 @@ package java.util.concurrent;
 	
 	@:overload public function offer(e : java.lang.Runnable, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
-	@:overload override public function poll() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
+	@:overload public function poll() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
 	@:overload public function take() : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
 	@:overload public function poll(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.RunnableScheduledFuture<Dynamic>;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	@:overload public function drainTo(c : java.util.Collection<java.lang.Runnable>) : Int;
 	
 	@:overload public function drainTo(c : java.util.Collection<java.lang.Runnable>, maxElements : Int) : Int;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function iterator() : java.util.Iterator<java.lang.Runnable>;
+	@:overload public function iterator() : java.util.Iterator<java.lang.Runnable>;
 	
 	
 }

@@ -48,9 +48,9 @@ extern class CDROutputObject extends com.sun.corba.se.spi.encoding.CorbaOutputOb
 	
 	@:overload public function getConnection() : com.sun.corba.se.spi.transport.CorbaConnection;
 	
-	@:overload @:final override public function getByteBufferWithInfo() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
+	@:overload @:final public function getByteBufferWithInfo() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
 	
-	@:overload @:final override public function setByteBufferWithInfo(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload @:final public function setByteBufferWithInfo(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
 	/**
 	* Override the default CDR factory behavior to get the
@@ -61,9 +61,9 @@ extern class CDROutputObject extends com.sun.corba.se.spi.encoding.CorbaOutputOb
 	* In the local case, there is no Connection, so use the
 	* local code sets.
 	*/
-	@:overload override private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload private function createCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
-	@:overload override private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
+	@:overload private function createWCharCTBConverter() : com.sun.corba.se.impl.encoding.CodeSetConversion.CodeSetConversion_CTBConverter;
 	
 	@:overload private function dprint(msg : String) : Void;
 	

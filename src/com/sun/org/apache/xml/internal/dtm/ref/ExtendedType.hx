@@ -73,7 +73,7 @@ extern class ExtendedType
 	* @param other The other ExtendedType object to test for equality
 	* @return true if the two ExtendedType objects are equal.
 	*/
-	@:overload public function equals(other : ExtendedType) : Bool;
+	@:overload public function equals(other : com.sun.org.apache.xml.internal.dtm.ref.ExtendedType) : Bool;
 	
 	/**
 	* Return the node type

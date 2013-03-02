@@ -56,7 +56,7 @@ extern class DOMSignatureProperty extends org.jcp.xml.dsig.internal.dom.DOMStruc
 	
 	@:overload public function getTarget() : String;
 	
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	@:overload public function equals(o : Dynamic) : Bool;
 	

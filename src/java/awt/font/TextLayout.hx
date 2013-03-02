@@ -47,7 +47,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* the same, a hit on the leading edge of a character is stronger
 	* than a hit on the trailing edge of a character.
 	*/
-	public static var DEFAULT_CARET_POLICY(default, null) : TextLayout_CaretPolicy;
+	public static var DEFAULT_CARET_POLICY(default, null) : java.awt.font.TextLayout.TextLayout_CaretPolicy;
 	
 	/**
 	* Constructs a <code>TextLayout</code> from a <code>String</code>
@@ -123,7 +123,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @exception Error if this layout has already been justified, an Error is
 	* thrown.
 	*/
-	@:overload public function getJustifiedLayout(justificationWidth : Single) : TextLayout;
+	@:overload public function getJustifiedLayout(justificationWidth : Single) : java.awt.font.TextLayout;
 	
 	/**
 	* Justify this layout.  Overridden by subclassers to control justification
@@ -359,7 +359,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* right (bottom) of the caret of the provided hit, or <code>null</code>.
 	*/
-	@:overload public function getNextRightHit(offset : Int, policy : TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
+	@:overload public function getNextRightHit(offset : Int, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit for the next caret to the right (bottom); if no
@@ -401,7 +401,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* @return a hit whose caret appears at the next position to the
 	* left (top) of the caret of the provided hit, or <code>null</code>.
 	*/
-	@:overload public function getNextLeftHit(offset : Int, policy : TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
+	@:overload public function getNextLeftHit(offset : Int, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.awt.font.TextHitInfo;
 	
 	/**
 	* Returns the hit for the next caret to the left (top); if no
@@ -467,7 +467,7 @@ extern class TextLayout implements java.lang.Cloneable
 	* otherwise it is <code>null</code>. The returned shapes
 	* are in standard coordinates.
 	*/
-	@:overload public function getCaretShapes(offset : Int, bounds : java.awt.geom.Rectangle2D, policy : TextLayout_CaretPolicy) : java.NativeArray<java.awt.Shape>;
+	@:overload public function getCaretShapes(offset : Int, bounds : java.awt.geom.Rectangle2D, policy : java.awt.font.TextLayout.TextLayout_CaretPolicy) : java.NativeArray<java.awt.Shape>;
 	
 	/**
 	* Returns two paths corresponding to the strong and weak caret.
@@ -684,7 +684,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*      equals this <code>TextLayout</code>.
 	*
 	*/
-	@:overload public function equals(rhs : TextLayout) : Bool;
+	@:overload public function equals(rhs : java.awt.font.TextLayout) : Bool;
 	
 	/**
 	* Returns debugging information for this <code>TextLayout</code>.
@@ -780,7 +780,7 @@ extern class TextLayout implements java.lang.Cloneable
 	*        (or an equivalent <code>TextHitInfo</code>), indicating the
 	*        strong caret.
 	*/
-	@:overload public function getStrongCaret(hit1 : java.awt.font.TextHitInfo, hit2 : java.awt.font.TextHitInfo, layout : TextLayout) : java.awt.font.TextHitInfo;
+	@:overload public function getStrongCaret(hit1 : java.awt.font.TextHitInfo, hit2 : java.awt.font.TextHitInfo, layout : java.awt.font.TextLayout) : java.awt.font.TextHitInfo;
 	
 	
 }

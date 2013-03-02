@@ -50,7 +50,7 @@ package sun.security.jgss.krb5;
 	
 	@:overload public function encode(outToken : java.NativeArray<java.StdTypes.Int8>, offset : Int) : Int;
 	
-	@:overload override public function encode(os : java.io.OutputStream) : Void;
+	@:overload public function encode(os : java.io.OutputStream) : Void;
 	
 	
 }

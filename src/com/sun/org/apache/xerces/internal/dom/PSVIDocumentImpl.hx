@@ -62,22 +62,22 @@ extern class PSVIDocumentImpl extends com.sun.org.apache.xerces.internal.dom.Doc
 	/**
 	* Create an element with PSVI information
 	*/
-	@:overload override public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
 	/**
 	* Create an element with PSVI information
 	*/
-	@:overload override public function createElementNS(namespaceURI : String, qualifiedName : String, localpart : String) : org.w3c.dom.Element;
+	@:overload public function createElementNS(namespaceURI : String, qualifiedName : String, localpart : String) : org.w3c.dom.Element;
 	
 	/**
 	* Create an attribute with PSVI information
 	*/
-	@:overload override public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Create an attribute with PSVI information
 	*/
-	@:overload override public function createAttributeNS(namespaceURI : String, qualifiedName : String, localName : String) : org.w3c.dom.Attr;
+	@:overload public function createAttributeNS(namespaceURI : String, qualifiedName : String, localName : String) : org.w3c.dom.Attr;
 	
 	/**
 	*
@@ -85,7 +85,7 @@ extern class PSVIDocumentImpl extends com.sun.org.apache.xerces.internal.dom.Doc
 	* invoked.
 	* @since DOM Level 3
 	*/
-	@:overload override public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	
 }

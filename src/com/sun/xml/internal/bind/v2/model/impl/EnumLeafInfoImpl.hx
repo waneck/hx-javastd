@@ -74,7 +74,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload public function getConstants() : java.lang.Iterable<com.sun.xml.internal.bind.v2.model.impl.EnumConstantImpl<T, C, F, M>>;
 	
-	@:overload override public function link() : Void;
+	@:overload public function link() : Void;
 	
 	/**
 	* No substitution.

@@ -27,7 +27,7 @@ package sun.reflect;
 afterward, switches to bytecode-based implementation */
 @:internal extern class NativeConstructorAccessorImpl extends sun.reflect.ConstructorAccessorImpl
 {
-	@:overload override public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
+	@:overload public function newInstance(args : java.NativeArray<Dynamic>) : Dynamic;
 	
 	
 }

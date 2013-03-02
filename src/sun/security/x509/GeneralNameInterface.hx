@@ -62,7 +62,7 @@ extern interface GeneralNameInterface
 	* @throws UnsupportedOperationException if name is same type, but comparison operations are
 	*          not supported for this name type.
 	*/
-	@:overload public function constrains(inputName : GeneralNameInterface) : Int;
+	@:overload public function constrains(inputName : sun.security.x509.GeneralNameInterface) : Int;
 	
 	/**
 	* Return subtree depth of this name for purposes of determining

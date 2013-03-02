@@ -27,9 +27,9 @@ package sun.java2d.opengl;
 {
 	@:overload private function new(srcType : sun.java2d.loops.SurfaceType, compType : sun.java2d.loops.CompositeType) : Void;
 	
-	@:overload @:native override private function maskFill(x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:native private function maskFill(x : Int, y : Int, w : Int, h : Int, maskoff : Int, maskscan : Int, masklen : Int, mask : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload override private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite, ctxflags : Int) : Void;
+	@:overload private function validateContext(sg2d : sun.java2d.SunGraphics2D, comp : java.awt.Composite, ctxflags : Int) : Void;
 	
 	
 }

@@ -52,7 +52,7 @@ extern interface MonitoredObject
 	* <p>
 	* </p>
 	*/
-	@:overload public function addChild(m : MonitoredObject) : Void;
+	@:overload public function addChild(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
 	
 	/**
 	* <p>
@@ -78,7 +78,7 @@ extern interface MonitoredObject
 	* @param name of the ChildMonitored Object
 	* </p>
 	*/
-	@:overload public function getChild(name : String) : MonitoredObject;
+	@:overload public function getChild(name : String) : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
 	/**
 	* <p>
@@ -99,7 +99,7 @@ extern interface MonitoredObject
 	* <p>
 	* </p>
 	*/
-	@:overload public function setParent(m : MonitoredObject) : Void;
+	@:overload public function setParent(m : com.sun.corba.se.spi.monitoring.MonitoredObject) : Void;
 	
 	/**
 	* <p>
@@ -111,7 +111,7 @@ extern interface MonitoredObject
 	* @return a MonitoredObject which is a Parent of this Monitored Object instance
 	* </p>
 	*/
-	@:overload public function getParent() : MonitoredObject;
+	@:overload public function getParent() : com.sun.corba.se.spi.monitoring.MonitoredObject;
 	
 	/**
 	* <p>

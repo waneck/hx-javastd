@@ -22,7 +22,7 @@ package com.sun.org.apache.xml.internal.security.algorithms.implementations;
 extern class SignatureECDSA extends com.sun.org.apache.xml.internal.security.algorithms.SignatureAlgorithmSpi
 {
 	/** @inheritDoc */
-	@:overload @:abstract override public function engineGetURI() : String;
+	@:overload @:abstract public function engineGetURI() : String;
 	
 	/**
 	* Constructor SignatureRSA
@@ -32,43 +32,43 @@ extern class SignatureECDSA extends com.sun.org.apache.xml.internal.security.alg
 	@:overload public function new() : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload private function engineSetParameter(params : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
+	@:overload private function engineVerify(signature : java.NativeArray<java.StdTypes.Int8>) : Bool;
 	
 	/** @inheritDoc */
-	@:overload override private function engineInitVerify(publicKey : java.security.Key) : Void;
+	@:overload private function engineInitVerify(publicKey : java.security.Key) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function engineSign() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/** @inheritDoc */
-	@:overload override private function engineInitSign(privateKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
+	@:overload private function engineInitSign(privateKey : java.security.Key, secureRandom : java.security.SecureRandom) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineInitSign(privateKey : java.security.Key) : Void;
+	@:overload private function engineInitSign(privateKey : java.security.Key) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload private function engineUpdate(input : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineUpdate(input : java.StdTypes.Int8) : Void;
+	@:overload private function engineUpdate(input : java.StdTypes.Int8) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
+	@:overload private function engineUpdate(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, len : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineGetJCEAlgorithmString() : String;
+	@:overload private function engineGetJCEAlgorithmString() : String;
 	
 	/** @inheritDoc */
-	@:overload override private function engineGetJCEProviderName() : String;
+	@:overload private function engineGetJCEProviderName() : String;
 	
 	/** @inheritDoc */
-	@:overload override private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
+	@:overload private function engineSetHMACOutputLength(HMACOutputLength : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
+	@:overload private function engineInitSign(signingKey : java.security.Key, algorithmParameterSpec : java.security.spec.AlgorithmParameterSpec) : Void;
 	
 	
 }
@@ -78,7 +78,7 @@ extern class SignatureECDSA extends com.sun.org.apache.xml.internal.security.alg
 * @author $Author: mullan $
 * @version $Revision: 1.2 $
 */
-@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$SignatureECDSA$SignatureECDSASHA1') extern class SignatureECDSA_SignatureECDSASHA1 extends SignatureECDSA
+@:native('com$sun$org$apache$xml$internal$security$algorithms$implementations$SignatureECDSA$SignatureECDSASHA1') extern class SignatureECDSA_SignatureECDSASHA1 extends com.sun.org.apache.xml.internal.security.algorithms.implementations.SignatureECDSA
 {
 	/**
 	* Constructor SignatureRSASHA1

@@ -62,7 +62,7 @@ exception statement from your version.
 	* line.
 	* @return description of the line
 	*/
-	@:overload override public function getLineInfo() : Line_Info;
+	@:overload override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Opens the line, indicating that it should acquire any required

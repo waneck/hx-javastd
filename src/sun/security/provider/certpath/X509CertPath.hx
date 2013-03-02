@@ -67,7 +67,7 @@ extern class X509CertPath extends java.security.cert.CertPath
 	* @return the encoded bytes
 	* @exception CertificateEncodingException if an encoding error occurs
 	*/
-	@:overload override public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getEncoded() : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the encoded form of this certification path, using the
@@ -78,7 +78,7 @@ extern class X509CertPath extends java.security.cert.CertPath
 	* @exception CertificateEncodingException if an encoding error occurs or
 	*   the encoding requested is not supported
 	*/
-	@:overload override public function getEncoded(encoding : String) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getEncoded(encoding : String) : java.NativeArray<java.StdTypes.Int8>;
 	
 	/**
 	* Returns the encodings supported by this certification path, with the
@@ -100,7 +100,7 @@ extern class X509CertPath extends java.security.cert.CertPath
 	* @return an <code>Iterator</code> over the names of the supported
 	*         encodings (as Strings)
 	*/
-	@:overload override public function getEncodings() : java.util.Iterator<String>;
+	@:overload public function getEncodings() : java.util.Iterator<String>;
 	
 	/**
 	* Returns the list of certificates in this certification path.
@@ -109,7 +109,7 @@ extern class X509CertPath extends java.security.cert.CertPath
 	* @return an immutable <code>List</code> of <code>X509Certificate</code>s
 	*         (may be empty, but not null)
 	*/
-	@:overload override public function getCertificates() : java.util.List<java.security.cert.X509Certificate>;
+	@:overload public function getCertificates() : java.util.List<java.security.cert.X509Certificate>;
 	
 	
 }

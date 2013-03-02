@@ -31,10 +31,10 @@ extern class Apt extends com.sun.tools.javac.util.ListBuffer<com.sun.tools.javac
 	@:overload public function getClassFileNames() : java.util.Set<String>;
 	
 	/** The context key for the todo list. */
-	private static var aptKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Apt>;
+	private static var aptKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.apt.comp.Apt>;
 	
 	/** Get the Apt instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Apt;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.comp.Apt;
 	
 	/** Create a new apt list. */
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;

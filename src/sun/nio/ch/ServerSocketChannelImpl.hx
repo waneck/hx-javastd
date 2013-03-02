@@ -43,9 +43,9 @@ package sun.nio.ch;
 	
 	@:overload override public function accept() : java.nio.channels.SocketChannel;
 	
-	@:overload override private function implConfigureBlocking(block : Bool) : Void;
+	@:overload private function implConfigureBlocking(block : Bool) : Void;
 	
-	@:overload override private function implCloseSelectableChannel() : Void;
+	@:overload private function implCloseSelectableChannel() : Void;
 	
 	@:overload public function kill() : Void;
 	

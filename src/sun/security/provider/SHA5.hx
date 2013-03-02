@@ -47,7 +47,7 @@ package sun.security.provider;
 /**
 * SHA-512 implementation class.
 */
-@:native('sun$security$provider$SHA5$SHA512') extern class SHA5_SHA512 extends SHA5
+@:native('sun$security$provider$SHA5$SHA512') extern class SHA5_SHA512 extends sun.security.provider.SHA5
 {
 	@:overload public function new() : Void;
 	
@@ -58,7 +58,7 @@ package sun.security.provider;
 /**
 * SHA-384 implementation class.
 */
-@:native('sun$security$provider$SHA5$SHA384') extern class SHA5_SHA384 extends SHA5
+@:native('sun$security$provider$SHA5$SHA384') extern class SHA5_SHA384 extends sun.security.provider.SHA5
 {
 	@:overload public function new() : Void;
 	

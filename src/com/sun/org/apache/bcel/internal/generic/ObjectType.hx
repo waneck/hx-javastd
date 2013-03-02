@@ -87,12 +87,12 @@ extern class ObjectType extends com.sun.org.apache.bcel.internal.generic.Referen
 	*/
 	@:overload public function referencesInterface() : Bool;
 	
-	@:overload public function subclassOf(superclass : ObjectType) : Bool;
+	@:overload public function subclassOf(superclass : com.sun.org.apache.bcel.internal.generic.ObjectType) : Bool;
 	
 	/**
 	* Java Virtual Machine Specification edition 2, 5.4.4 Access Control
 	*/
-	@:overload public function accessibleTo(accessor : ObjectType) : Bool;
+	@:overload public function accessibleTo(accessor : com.sun.org.apache.bcel.internal.generic.ObjectType) : Bool;
 	
 	
 }

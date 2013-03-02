@@ -338,7 +338,7 @@ extern class DropTarget implements java.awt.dnd.DropTargetListener implements ja
 	* @param c the <code>Component</code>
 	* @param p the <code>Point</code>
 	*/
-	@:overload private function createDropTargetAutoScroller(c : java.awt.Component, p : java.awt.Point) : DropTarget_DropTargetAutoScroller;
+	@:overload private function createDropTargetAutoScroller(c : java.awt.Component, p : java.awt.Point) : java.awt.dnd.DropTarget.DropTarget_DropTargetAutoScroller;
 	
 	/**
 	* initialize autoscrolling

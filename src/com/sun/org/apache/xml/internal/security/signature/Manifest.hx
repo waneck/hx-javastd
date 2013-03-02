@@ -214,7 +214,7 @@ extern class Manifest extends com.sun.org.apache.xml.internal.security.utils.Sig
 	*
 	* @inheritDoc
 	*/
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

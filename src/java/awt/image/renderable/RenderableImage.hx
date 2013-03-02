@@ -63,7 +63,7 @@ extern interface RenderableImage
 	*
 	* @return a (possibly empty) Vector of RenderableImages, or null.
 	*/
-	@:overload public function getSources() : java.util.Vector<RenderableImage>;
+	@:overload public function getSources() : java.util.Vector<java.awt.image.renderable.RenderableImage>;
 	
 	/**
 	* Gets a property from the property set of this image.

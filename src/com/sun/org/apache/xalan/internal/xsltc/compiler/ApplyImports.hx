@@ -23,7 +23,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class ApplyImports extends com.sun.org.apache.xalan.internal.xsltc.compiler.Instruction
 {
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	/**
 	* Returns true if this <xsl:apply-imports/> element has parameters
@@ -33,18 +33,18 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Parse the attributes and contents of an <xsl:apply-imports/> element.
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	/**
 	* Type-check the attributes/contents of an <xsl:apply-imports/> element.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* Translate call-template. A parameter frame is pushed only if
 	* some template in the stylesheet uses parameters.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	
 }

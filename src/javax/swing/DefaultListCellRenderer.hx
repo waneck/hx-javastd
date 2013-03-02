@@ -173,7 +173,7 @@ extern class DefaultListCellRenderer extends javax.swing.JLabel implements javax
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$DefaultListCellRenderer$UIResource') extern class DefaultListCellRenderer_UIResource extends DefaultListCellRenderer implements javax.swing.plaf.UIResource
+@:native('javax$swing$DefaultListCellRenderer$UIResource') extern class DefaultListCellRenderer_UIResource extends javax.swing.DefaultListCellRenderer implements javax.swing.plaf.UIResource
 {
 	
 }

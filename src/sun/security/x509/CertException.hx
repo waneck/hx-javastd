@@ -106,12 +106,12 @@ extern class CertException extends java.lang.SecurityException
 	/**
 	* Returns a string describing the certificate exception.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Returns a string describing the certificate exception.
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	
 }

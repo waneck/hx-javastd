@@ -31,7 +31,7 @@ extern class SJIS extends java.nio.charset.Charset implements sun.nio.cs.Histori
 	
 	@:overload public function historicalName() : String;
 	
-	@:overload public function contains(cs : java.nio.charset.Charset) : Bool;
+	@:overload override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
 	@:overload override public function newDecoder() : java.nio.charset.CharsetDecoder;
 	
@@ -43,9 +43,9 @@ extern class SJIS extends java.nio.charset.Charset implements sun.nio.cs.Histori
 {
 	@:overload private function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function decodeSingle(b : Int) : java.StdTypes.Char16;
+	@:overload private function decodeSingle(b : Int) : java.StdTypes.Char16;
 	
-	@:overload override private function decodeDouble(c1 : Int, c2 : Int) : java.StdTypes.Char16;
+	@:overload private function decodeDouble(c1 : Int, c2 : Int) : java.StdTypes.Char16;
 	
 	@:overload override public function decodeLoop(src : java.nio.ByteBuffer, dst : java.nio.CharBuffer) : java.nio.charset.CoderResult;
 	

@@ -63,7 +63,7 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* from the Document interface, this is null.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function getNamespaceURI() : String;
+	@:overload public function getNamespaceURI() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -75,7 +75,7 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	*
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function getPrefix() : String;
+	@:overload public function getPrefix() : String;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -92,7 +92,7 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* @exception DOMException
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function setPrefix(prefix : String) : Void;
+	@:overload public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Introduced in DOM Level 2. <p>
@@ -100,12 +100,12 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* Returns the local part of the qualified name of this node.
 	* @since WD-DOM-Level-2-19990923
 	*/
-	@:overload override public function getLocalName() : String;
+	@:overload public function getLocalName() : String;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeName()
 	*/
-	@:overload override public function getTypeName() : String;
+	@:overload public function getTypeName() : String;
 	
 	/**
 	* Introduced in DOM Level 3. <p>
@@ -122,12 +122,12 @@ extern class AttrNSImpl extends com.sun.org.apache.xerces.internal.dom.AttrImpl
 	* @return boolean True if the type is derived by restriciton for the
 	*         reference type
 	*/
-	@:overload override public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
+	@:overload public function isDerivedFrom(typeNamespaceArg : String, typeNameArg : String, derivationMethod : Int) : Bool;
 	
 	/**
 	* @see org.w3c.dom.TypeInfo#getTypeNamespace()
 	*/
-	@:overload override public function getTypeNamespace() : String;
+	@:overload public function getTypeNamespace() : String;
 	
 	
 }

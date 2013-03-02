@@ -27,7 +27,7 @@ extern class XEmbedChildProxy extends java.awt.Component
 {
 	@:overload public function new(container : sun.awt.X11.XEmbeddingContainer, handle : haxe.Int64) : Void;
 	
-	@:overload override public function addNotify() : Void;
+	@:overload public function addNotify() : Void;
 	
 	
 }

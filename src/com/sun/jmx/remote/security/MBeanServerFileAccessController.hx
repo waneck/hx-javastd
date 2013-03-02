@@ -120,25 +120,25 @@ extern class MBeanServerFileAccessController extends com.sun.jmx.remote.security
 	* Check if the caller can do read operations. This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload override public function checkRead() : Void;
+	@:overload public function checkRead() : Void;
 	
 	/**
 	* Check if the caller can do write operations.  This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload override public function checkWrite() : Void;
+	@:overload public function checkWrite() : Void;
 	
 	/**
 	* Check if the caller can create MBeans or instances of the given class.
 	* This method does nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload override public function checkCreate(className : String) : Void;
+	@:overload public function checkCreate(className : String) : Void;
 	
 	/**
 	* Check if the caller can do unregister operations.  This method does
 	* nothing if so, otherwise throws SecurityException.
 	*/
-	@:overload override public function checkUnregister(name : javax.management.ObjectName) : Void;
+	@:overload public function checkUnregister(name : javax.management.ObjectName) : Void;
 	
 	/**
 	* <p>Refresh the set of username/access level entries.</p>

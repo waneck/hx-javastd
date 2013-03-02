@@ -56,7 +56,7 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	* @return A 3-element <CODE>float</CODE> array containing the x, y,
 	* and z components of the profile's <CODE>mediaWhitePointTag</CODE>.
 	*/
-	@:overload override public function getMediaWhitePoint() : java.NativeArray<Single>;
+	@:overload public function getMediaWhitePoint() : java.NativeArray<Single>;
 	
 	/**
 	* Returns a 3x3 <CODE>float</CODE> matrix constructed from the
@@ -97,7 +97,7 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	* @exception ProfileDataException if the profile does not specify
 	*            the corresponding TRC as a single gamma value.
 	*/
-	@:overload override public function getGamma(component : Int) : Single;
+	@:overload public function getGamma(component : Int) : Single;
 	
 	/**
 	* Returns the TRC for a particular component as an array.
@@ -129,7 +129,7 @@ extern class ICC_ProfileRGB extends java.awt.color.ICC_Profile
 	* @exception ProfileDataException if the profile does not specify
 	*            the corresponding TRC as a table.
 	*/
-	@:overload override public function getTRC(component : Int) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload public function getTRC(component : Int) : java.NativeArray<java.StdTypes.Int16>;
 	
 	
 }

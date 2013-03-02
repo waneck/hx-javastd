@@ -36,7 +36,7 @@ extern class VMOption
 	*
 	* @throws NullPointerException if the name or value is <tt>null</tt>
 	*/
-	@:overload public function new(name : String, value : String, writeable : Bool, origin : VMOption_Origin) : Void;
+	@:overload public function new(name : String, value : String, writeable : Bool, origin : com.sun.management.VMOption.VMOption_Origin) : Void;
 	
 	/**
 	* Returns the name of this VM option.
@@ -60,7 +60,7 @@ extern class VMOption
 	*
 	* @return where the value of this VM option came from.
 	*/
-	@:overload public function getOrigin() : VMOption_Origin;
+	@:overload public function getOrigin() : com.sun.management.VMOption.VMOption_Origin;
 	
 	/**
 	* Tests if this VM option is writeable.  If this VM option is writeable,
@@ -114,7 +114,7 @@ extern class VMOption
 	*         if <tt>cd</tt> is not <tt>null</tt>;
 	*         <tt>null</tt> otherwise.
 	*/
-	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : VMOption;
+	@:overload public static function from(cd : javax.management.openmbean.CompositeData) : com.sun.management.VMOption;
 	
 	
 }

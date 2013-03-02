@@ -34,15 +34,15 @@ package javax.swing;
 */
 @:internal extern class LegacyGlueFocusTraversalPolicy extends java.awt.FocusTraversalPolicy implements java.io.Serializable
 {
-	@:overload override public function getComponentAfter(focusCycleRoot : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload public function getComponentAfter(focusCycleRoot : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
-	@:overload override public function getComponentBefore(focusCycleRoot : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
+	@:overload public function getComponentBefore(focusCycleRoot : java.awt.Container, aComponent : java.awt.Component) : java.awt.Component;
 	
-	@:overload override public function getFirstComponent(focusCycleRoot : java.awt.Container) : java.awt.Component;
+	@:overload public function getFirstComponent(focusCycleRoot : java.awt.Container) : java.awt.Component;
 	
-	@:overload override public function getLastComponent(focusCycleRoot : java.awt.Container) : java.awt.Component;
+	@:overload public function getLastComponent(focusCycleRoot : java.awt.Container) : java.awt.Component;
 	
-	@:overload override public function getDefaultComponent(focusCycleRoot : java.awt.Container) : java.awt.Component;
+	@:overload public function getDefaultComponent(focusCycleRoot : java.awt.Container) : java.awt.Component;
 	
 	
 }

@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface AttributeType extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleTypeHost extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function type(value : javax.xml.namespace.QName) : AttributeType;
+	@:overload public function type(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.AttributeType;
 	
 	
 }

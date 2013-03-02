@@ -48,7 +48,7 @@ extern class AbstractMultiInstanceResolver<T> extends com.sun.xml.internal.ws.se
 	*/
 	@:overload @:final private function create() : T;
 	
-	@:overload override public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
+	@:overload public function start(wsc : com.sun.xml.internal.ws.api.server.WSWebServiceContext, endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : Void;
 	
 	@:overload @:final private function dispose(instance : T) : Void;
 	

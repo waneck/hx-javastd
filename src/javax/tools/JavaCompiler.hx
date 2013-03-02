@@ -60,7 +60,7 @@ extern interface JavaCompiler extends javax.tools.Tool extends javax.tools.Optio
 	* compilation units are of other kind than
 	* {@linkplain JavaFileObject.Kind#SOURCE source}
 	*/
-	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>, compilationUnits : java.lang.Iterable<javax.tools.JavaFileObject>) : JavaCompiler_CompilationTask;
+	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>, compilationUnits : java.lang.Iterable<javax.tools.JavaFileObject>) : javax.tools.JavaCompiler.JavaCompiler_CompilationTask;
 	
 	/**
 	* Gets a new instance of the standard file manager implementation

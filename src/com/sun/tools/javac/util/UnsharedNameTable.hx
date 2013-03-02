@@ -50,15 +50,15 @@ extern class UnsharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 	
 	@:overload public function new(names : com.sun.tools.javac.util.Names) : Void;
 	
-	@:overload override public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload override public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	
 }
-@:native('com$sun$tools$javac$util$UnsharedNameTable$HashEntry') @:internal extern class UnsharedNameTable_HashEntry extends java.lang.ref.WeakReference<UnsharedNameTable_NameImpl>
+@:native('com$sun$tools$javac$util$UnsharedNameTable$HashEntry') @:internal extern class UnsharedNameTable_HashEntry extends java.lang.ref.WeakReference<com.sun.tools.javac.util.UnsharedNameTable.UnsharedNameTable_NameImpl>
 {
 	
 }

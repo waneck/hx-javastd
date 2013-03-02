@@ -37,10 +37,10 @@ package com.sun.tools.javac.code;
 extern class Symtab
 {
 	/** The context key for the symbol table. */
-	private static var symtabKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Symtab>;
+	private static var symtabKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.code.Symtab>;
 	
 	/** Get the symbol table instance. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Symtab;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.code.Symtab;
 	
 	/** Builtin types.
 	*/

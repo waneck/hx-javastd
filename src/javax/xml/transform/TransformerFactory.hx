@@ -91,7 +91,7 @@ package javax.xml.transform;
 	* @throws TransformerFactoryConfigurationError Thrown if the implementation
 	*    is not available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance() : TransformerFactory;
+	@:overload public static function newInstance() : javax.xml.transform.TransformerFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>TransformerFactory</code> from factory class name.
@@ -128,7 +128,7 @@ package javax.xml.transform;
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : TransformerFactory;
+	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.transform.TransformerFactory;
 	
 	/**
 	* <p>Process the <code>Source</code> into a <code>Transformer</code>

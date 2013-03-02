@@ -74,7 +74,7 @@ extern class Synthetic extends com.sun.org.apache.bcel.internal.classfile.Attrib
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : Synthetic) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.Synthetic) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to CONSTANT_Utf8, which

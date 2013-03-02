@@ -28,22 +28,22 @@ extern class MGF1ParameterSpec implements java.security.spec.AlgorithmParameterS
 	/**
 	* The MGF1ParameterSpec which uses "SHA-1" message digest.
 	*/
-	public static var SHA1(default, null) : MGF1ParameterSpec;
+	public static var SHA1(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* The MGF1ParameterSpec which uses "SHA-256" message digest.
 	*/
-	public static var SHA256(default, null) : MGF1ParameterSpec;
+	public static var SHA256(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* The MGF1ParameterSpec which uses "SHA-384" message digest.
 	*/
-	public static var SHA384(default, null) : MGF1ParameterSpec;
+	public static var SHA384(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* The MGF1ParameterSpec which uses SHA-512 message digest.
 	*/
-	public static var SHA512(default, null) : MGF1ParameterSpec;
+	public static var SHA512(default, null) : java.security.spec.MGF1ParameterSpec;
 	
 	/**
 	* Constructs a parameter set for mask generation function MGF1

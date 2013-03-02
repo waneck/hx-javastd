@@ -61,7 +61,7 @@ extern class XTable extends javax.swing.JTable
 	
 	@:overload public function isReadWrite(row : Int) : Bool;
 	
-	@:overload override public function isCellEditable(row : Int, col : Int) : Bool;
+	@:overload public function isCellEditable(row : Int, col : Int) : Bool;
 	
 	@:overload public function isCellDroppable(row : Int, col : Int) : Bool;
 	
@@ -71,9 +71,9 @@ extern class XTable extends javax.swing.JTable
 	* This method sets read write rows to be blue, and other rows to be their
 	* default rendered colour.
 	*/
-	@:overload override public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
+	@:overload public function getCellRenderer(row : Int, column : Int) : javax.swing.table.TableCellRenderer;
 	
-	@:overload override public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
+	@:overload public function prepareRenderer(renderer : javax.swing.table.TableCellRenderer, row : Int, column : Int) : java.awt.Component;
 	
 	
 }

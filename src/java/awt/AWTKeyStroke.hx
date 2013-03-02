@@ -101,7 +101,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @param keyChar the character value for a keyboard key
 	* @return an <code>AWTKeyStroke</code> object for that key
 	*/
-	@:overload public static function getAWTKeyStroke(keyChar : java.StdTypes.Char16) : AWTKeyStroke;
+	@:overload public static function getAWTKeyStroke(keyChar : java.StdTypes.Char16) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns a shared instance of an {@code AWTKeyStroke}
@@ -140,7 +140,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	*
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getAWTKeyStroke(keyChar : Null<java.StdTypes.Char16>, modifiers : Int) : AWTKeyStroke;
+	@:overload public static function getAWTKeyStroke(keyChar : Null<java.StdTypes.Char16>, modifiers : Int) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns a shared instance of an <code>AWTKeyStroke</code>,
@@ -186,7 +186,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @see java.awt.event.KeyEvent
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getAWTKeyStroke(keyCode : Int, modifiers : Int, onKeyRelease : Bool) : AWTKeyStroke;
+	@:overload public static function getAWTKeyStroke(keyCode : Int, modifiers : Int, onKeyRelease : Bool) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns a shared instance of an <code>AWTKeyStroke</code>,
@@ -227,7 +227,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @see java.awt.event.KeyEvent
 	* @see java.awt.event.InputEvent
 	*/
-	@:overload public static function getAWTKeyStroke(keyCode : Int, modifiers : Int) : AWTKeyStroke;
+	@:overload public static function getAWTKeyStroke(keyCode : Int, modifiers : Int) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns an <code>AWTKeyStroke</code> which represents the
@@ -243,7 +243,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @throws NullPointerException if <code>anEvent</code> is null
 	* @return the <code>AWTKeyStroke</code> that precipitated the event
 	*/
-	@:overload public static function getAWTKeyStrokeForEvent(anEvent : java.awt.event.KeyEvent) : AWTKeyStroke;
+	@:overload public static function getAWTKeyStrokeForEvent(anEvent : java.awt.event.KeyEvent) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Parses a string and returns an <code>AWTKeyStroke</code>.
@@ -272,7 +272,7 @@ extern class AWTKeyStroke implements java.io.Serializable
 	* @throws IllegalArgumentException if <code>s</code> is <code>null</code>,
 	*        or is formatted incorrectly
 	*/
-	@:overload public static function getAWTKeyStroke(s : String) : AWTKeyStroke;
+	@:overload public static function getAWTKeyStroke(s : String) : java.awt.AWTKeyStroke;
 	
 	/**
 	* Returns the character for this <code>AWTKeyStroke</code>.

@@ -140,7 +140,7 @@ package javax.swing.plaf.nimbus;
 }
 @:native('javax$swing$plaf$nimbus$NimbusDefaults$ColorTree$Node') @:internal extern class NimbusDefaults_ColorTree_Node
 {
-	@:overload public function set(color : java.awt.Color, parent : NimbusDefaults_ColorTree_Node) : Void;
+	@:overload public function set(color : java.awt.Color, parent : javax.swing.plaf.nimbus.NimbusDefaults.NimbusDefaults_ColorTree_Node) : Void;
 	
 	@:overload public function update() : Void;
 	

@@ -88,7 +88,7 @@ extern class DocumentBuilderFactory
 	* @throws FactoryConfigurationError if the implementation is not
 	*   available or cannot be instantiated.
 	*/
-	@:overload public static function newInstance() : DocumentBuilderFactory;
+	@:overload public static function newInstance() : javax.xml.parsers.DocumentBuilderFactory;
 	
 	/**
 	* <p>Obtain a new instance of a <code>DocumentBuilderFactory</code> from class name.
@@ -124,7 +124,7 @@ extern class DocumentBuilderFactory
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : DocumentBuilderFactory;
+	@:require(java6) @:overload public static function newInstance(factoryClassName : String, classLoader : java.lang.ClassLoader) : javax.xml.parsers.DocumentBuilderFactory;
 	
 	/**
 	* Creates a new instance of a {@link javax.xml.parsers.DocumentBuilder}

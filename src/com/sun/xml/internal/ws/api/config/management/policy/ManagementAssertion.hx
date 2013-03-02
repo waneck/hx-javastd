@@ -48,7 +48,7 @@ extern class ManagementAssertion extends com.sun.xml.internal.ws.policy.SimpleAs
 	* @return An instance of ManagementAssertion or null.
 	* @throws WebServiceException If computing the effective policy of the endpoint scope failed.
 	*/
-	@:overload private static function getAssertion<T : ManagementAssertion>(name : javax.xml.namespace.QName, policyMap : com.sun.xml.internal.ws.policy.PolicyMap, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, type : Class<T>) : T;
+	@:overload private static function getAssertion<T : com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion>(name : javax.xml.namespace.QName, policyMap : com.sun.xml.internal.ws.policy.PolicyMap, serviceName : javax.xml.namespace.QName, portName : javax.xml.namespace.QName, type : Class<T>) : T;
 	
 	/**
 	* Create a new ManagementAssertion instance.
@@ -88,7 +88,7 @@ extern class ManagementAssertion extends com.sun.xml.internal.ws.policy.SimpleAs
 	*
 	* @return The value of the monitoring attribute.
 	*/
-	@:overload public function monitoringAttribute() : ManagementAssertion_Setting;
+	@:overload public function monitoringAttribute() : com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion.ManagementAssertion_Setting;
 	
 	
 }

@@ -69,7 +69,7 @@ extern class AsynchronousChannelProvider
 	*
 	* @return  The system-wide default AsynchronousChannel provider
 	*/
-	@:overload public static function provider() : AsynchronousChannelProvider;
+	@:overload public static function provider() : java.nio.channels.spi.AsynchronousChannelProvider;
 	
 	/**
 	* Constructs a new asynchronous channel group with a fixed thread pool.

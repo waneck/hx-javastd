@@ -28,7 +28,7 @@ extern class BinaryAttribute implements sun.tools.java.Constants
 	/**
 	* Load a list of attributes
 	*/
-	@:overload public static function load(_in : java.io.DataInputStream, cpool : sun.tools.java.BinaryConstantPool, mask : Int) : BinaryAttribute;
+	@:overload public static function load(_in : java.io.DataInputStream, cpool : sun.tools.java.BinaryConstantPool, mask : Int) : sun.tools.java.BinaryAttribute;
 	
 	/**
 	* Accessors
@@ -37,7 +37,7 @@ extern class BinaryAttribute implements sun.tools.java.Constants
 	
 	@:overload public function getData() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public function getNextAttribute() : BinaryAttribute;
+	@:overload public function getNextAttribute() : sun.tools.java.BinaryAttribute;
 	
 	
 }

@@ -45,9 +45,9 @@ extern class Crossings
 	
 	@:overload @:abstract public function covers(ystart : Float, yend : Float) : Bool;
 	
-	@:overload public static function findCrossings(curves : java.util.Vector<Dynamic>, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Crossings;
+	@:overload public static function findCrossings(curves : java.util.Vector<Dynamic>, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : sun.awt.geom.Crossings;
 	
-	@:overload public static function findCrossings(pi : java.awt.geom.PathIterator, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Crossings;
+	@:overload public static function findCrossings(pi : java.awt.geom.PathIterator, xlo : Float, ylo : Float, xhi : Float, yhi : Float) : sun.awt.geom.Crossings;
 	
 	@:overload public function accumulateLine(x0 : Float, y0 : Float, x1 : Float, y1 : Float) : Bool;
 	
@@ -59,7 +59,7 @@ extern class Crossings
 	
 	
 }
-@:native('sun$awt$geom$Crossings$EvenOdd') extern class Crossings_EvenOdd extends Crossings
+@:native('sun$awt$geom$Crossings$EvenOdd') extern class Crossings_EvenOdd extends sun.awt.geom.Crossings
 {
 	@:overload public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
 	
@@ -69,7 +69,7 @@ extern class Crossings
 	
 	
 }
-@:native('sun$awt$geom$Crossings$NonZero') extern class Crossings_NonZero extends Crossings
+@:native('sun$awt$geom$Crossings$NonZero') extern class Crossings_NonZero extends sun.awt.geom.Crossings
 {
 	@:overload public function new(xlo : Float, ylo : Float, xhi : Float, yhi : Float) : Void;
 	

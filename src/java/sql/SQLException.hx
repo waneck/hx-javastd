@@ -162,7 +162,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	*         <code>null</code> if there are none
 	* @see #setNextException
 	*/
-	@:overload public function getNextException() : SQLException;
+	@:overload public function getNextException() : java.sql.SQLException;
 	
 	/**
 	* Adds an <code>SQLException</code> object to the end of the chain.
@@ -171,7 +171,7 @@ extern class SQLException extends java.lang.Exception implements java.lang.Itera
 	*            the <code>SQLException</code> chain
 	* @see #getNextException
 	*/
-	@:overload public function setNextException(ex : SQLException) : Void;
+	@:overload public function setNextException(ex : java.sql.SQLException) : Void;
 	
 	/**
 	* Returns an iterator over the chained SQLExceptions.  The iterator will

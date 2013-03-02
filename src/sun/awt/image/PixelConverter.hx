@@ -31,7 +31,7 @@ extern class PixelConverter
 	* conversions directly.  We use the ColorModel object to assist
 	* us in these cases.
 	*/
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	private var alphaMask : Int;
 	
@@ -67,9 +67,9 @@ extern class PixelConverter
 *   pixels[1] = g;
 *   pixels[2] = r;    // high order byte of an Xrgb pixel
 */
-@:native('sun$awt$image$PixelConverter$Rgbx') extern class PixelConverter_Rgbx extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Rgbx') extern class PixelConverter_Rgbx extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -77,9 +77,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Xrgb') extern class PixelConverter_Xrgb extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Xrgb') extern class PixelConverter_Xrgb extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -87,9 +87,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Argb') extern class PixelConverter_Argb extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Argb') extern class PixelConverter_Argb extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -97,9 +97,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Ushort565Rgb') extern class PixelConverter_Ushort565Rgb extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Ushort565Rgb') extern class PixelConverter_Ushort565Rgb extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -107,9 +107,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Ushort555Rgbx') extern class PixelConverter_Ushort555Rgbx extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Ushort555Rgbx') extern class PixelConverter_Ushort555Rgbx extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -117,9 +117,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Ushort555Rgb') extern class PixelConverter_Ushort555Rgb extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Ushort555Rgb') extern class PixelConverter_Ushort555Rgb extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -127,9 +127,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Ushort4444Argb') extern class PixelConverter_Ushort4444Argb extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Ushort4444Argb') extern class PixelConverter_Ushort4444Argb extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -137,9 +137,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Xbgr') extern class PixelConverter_Xbgr extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Xbgr') extern class PixelConverter_Xbgr extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -147,9 +147,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Bgrx') extern class PixelConverter_Bgrx extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Bgrx') extern class PixelConverter_Bgrx extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -157,9 +157,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$Rgba') extern class PixelConverter_Rgba extends PixelConverter
+@:native('sun$awt$image$PixelConverter$Rgba') extern class PixelConverter_Rgba extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -167,9 +167,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$RgbaPre') extern class PixelConverter_RgbaPre extends PixelConverter
+@:native('sun$awt$image$PixelConverter$RgbaPre') extern class PixelConverter_RgbaPre extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -177,9 +177,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$ArgbPre') extern class PixelConverter_ArgbPre extends PixelConverter
+@:native('sun$awt$image$PixelConverter$ArgbPre') extern class PixelConverter_ArgbPre extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -187,9 +187,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$ArgbBm') extern class PixelConverter_ArgbBm extends PixelConverter
+@:native('sun$awt$image$PixelConverter$ArgbBm') extern class PixelConverter_ArgbBm extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -197,9 +197,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$ByteGray') extern class PixelConverter_ByteGray extends PixelConverter
+@:native('sun$awt$image$PixelConverter$ByteGray') extern class PixelConverter_ByteGray extends sun.awt.image.PixelConverter
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	
@@ -207,9 +207,9 @@ extern class PixelConverter
 	
 	
 }
-@:native('sun$awt$image$PixelConverter$UshortGray') extern class PixelConverter_UshortGray extends PixelConverter_ByteGray
+@:native('sun$awt$image$PixelConverter$UshortGray') extern class PixelConverter_UshortGray extends sun.awt.image.PixelConverter.PixelConverter_ByteGray
 {
-	public static var instance(default, null) : PixelConverter;
+	public static var instance(default, null) : sun.awt.image.PixelConverter;
 	
 	@:overload override public function rgbToPixel(rgb : Int, cm : java.awt.image.ColorModel) : Int;
 	

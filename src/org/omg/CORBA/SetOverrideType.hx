@@ -59,12 +59,12 @@ package org.omg.CORBA;
 	/**
 	* The <code>SetOverrideType</code> constant for the enum value SET_OVERRIDE.
 	*/
-	public static var SET_OVERRIDE(default, null) : SetOverrideType;
+	public static var SET_OVERRIDE(default, null) : org.omg.CORBA.SetOverrideType;
 	
 	/**
 	* The <code>SetOverrideType</code> constant for the enum value ADD_OVERRIDE.
 	*/
-	public static var ADD_OVERRIDE(default, null) : SetOverrideType;
+	public static var ADD_OVERRIDE(default, null) : org.omg.CORBA.SetOverrideType;
 	
 	/**
 	* Retrieves the value of this <code>SetOverrideType</code> instance.
@@ -86,7 +86,7 @@ package org.omg.CORBA;
 	*       match the value of
 	*       any <code>SetOverrideType</code> instance
 	*/
-	@:overload public static function from_int(i : Int) : SetOverrideType;
+	@:overload public static function from_int(i : Int) : org.omg.CORBA.SetOverrideType;
 	
 	/**
 	* Constructs a <code>SetOverrideType</code> instance from an

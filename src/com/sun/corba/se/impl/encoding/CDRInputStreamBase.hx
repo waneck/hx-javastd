@@ -163,7 +163,7 @@ package com.sun.corba.se.impl.encoding;
 	
 	@:overload override public function markSupported() : Bool;
 	
-	@:overload @:abstract public function dup() : CDRInputStreamBase;
+	@:overload @:abstract public function dup() : com.sun.corba.se.impl.encoding.CDRInputStreamBase;
 	
 	@:overload @:abstract public function read_fixed(digits : java.StdTypes.Int16, scale : java.StdTypes.Int16) : java.math.BigDecimal;
 	

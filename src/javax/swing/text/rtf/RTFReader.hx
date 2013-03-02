@@ -74,7 +74,7 @@ package javax.swing.text.rtf;
 	*/
 	@:overload override public function endgroup() : Void;
 	
-	@:overload private function setRTFDestination(newDestination : RTFReader_Destination) : Void;
+	@:overload private function setRTFDestination(newDestination : javax.swing.text.rtf.RTFReader.RTFReader_Destination) : Void;
 	
 	/** Called by the user when there is no more input (<i>i.e.</i>,
 	* at the end of the RTF file.)
@@ -153,7 +153,7 @@ package javax.swing.text.rtf;
 /** This data-sink class is used to implement ignored destinations
 *  (e.g. {\*\blegga blah blah blah} )
 *  It accepts all keywords and text but does nothing with them. */
-@:native('javax$swing$text$rtf$RTFReader$DiscardingDestination') @:internal extern class RTFReader_DiscardingDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$DiscardingDestination') @:internal extern class RTFReader_DiscardingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	@:overload public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
@@ -173,7 +173,7 @@ package javax.swing.text.rtf;
 }
 /** Reads the fonttbl group, inserting fonts into the RTFReader's
 *  fontTable dictionary. */
-@:native('javax$swing$text$rtf$RTFReader$FonttblDestination') @:internal extern class RTFReader_FonttblDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$FonttblDestination') @:internal extern class RTFReader_FonttblDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	@:overload public function handleBinaryBlob(data : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
@@ -196,7 +196,7 @@ package javax.swing.text.rtf;
 }
 /** Reads the colortbl group. Upon end-of-group, the RTFReader's
 *  color table is set to an array containing the read colors. */
-@:native('javax$swing$text$rtf$RTFReader$ColortblDestination') @:internal extern class RTFReader_ColortblDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$ColortblDestination') @:internal extern class RTFReader_ColortblDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	@:overload public function new() : Void;
 	
@@ -221,7 +221,7 @@ package javax.swing.text.rtf;
 }
 /** Handles the stylesheet keyword. Styles are read and sorted
 *  into the three style arrays in the RTFReader. */
-@:native('javax$swing$text$rtf$RTFReader$StylesheetDestination') @:internal extern class RTFReader_StylesheetDestination extends RTFReader_DiscardingDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$StylesheetDestination') @:internal extern class RTFReader_StylesheetDestination extends javax.swing.text.rtf.RTFReader.RTFReader_DiscardingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	@:overload public function new() : Void;
 	
@@ -232,7 +232,7 @@ package javax.swing.text.rtf;
 	
 }
 /** This subclass handles an individual style */
-@:native('javax$swing$text$rtf$RTFReader$StylesheetDestination$StyleDefiningDestination') @:internal extern class RTFReader_StylesheetDestination_StyleDefiningDestination extends RTFReader_AttributeTrackingDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$StylesheetDestination$StyleDefiningDestination') @:internal extern class RTFReader_StylesheetDestination_StyleDefiningDestination extends javax.swing.text.rtf.RTFReader.RTFReader_AttributeTrackingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	public var styleName : String;
 	
@@ -254,7 +254,7 @@ package javax.swing.text.rtf;
 }
 /** Handles the info group. Currently no info keywords are recognized
 *  so this is a subclass of DiscardingDestination. */
-@:native('javax$swing$text$rtf$RTFReader$InfoDestination') @:internal extern class RTFReader_InfoDestination extends RTFReader_DiscardingDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$InfoDestination') @:internal extern class RTFReader_InfoDestination extends javax.swing.text.rtf.RTFReader.RTFReader_DiscardingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	
 }
@@ -263,7 +263,7 @@ package javax.swing.text.rtf;
 *  in internal form and can produce acceptable AttributeSets for the
 *  current character, paragraph, and section attributes. It is up
 *  to the subclasses to determine what is done with the actual text. */
-@:native('javax$swing$text$rtf$RTFReader$AttributeTrackingDestination') @:internal extern class RTFReader_AttributeTrackingDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$AttributeTrackingDestination') @:internal extern class RTFReader_AttributeTrackingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	@:overload public function new() : Void;
 	
@@ -327,7 +327,7 @@ package javax.swing.text.rtf;
 *  <dt>endSection()<dd>to end the current section
 *  </dl>
 */
-@:native('javax$swing$text$rtf$RTFReader$TextHandlingDestination') @:internal extern class RTFReader_TextHandlingDestination extends RTFReader_AttributeTrackingDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$TextHandlingDestination') @:internal extern class RTFReader_TextHandlingDestination extends javax.swing.text.rtf.RTFReader.RTFReader_AttributeTrackingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
 	@:overload public function new() : Void;
 	
@@ -348,13 +348,13 @@ package javax.swing.text.rtf;
 *  StyledDocument given by the <code>target</code> ivar of the
 *  containing RTFReader.
 */
-@:native('javax$swing$text$rtf$RTFReader$DocumentDestination') @:internal extern class RTFReader_DocumentDestination extends RTFReader_TextHandlingDestination implements RTFReader_Destination
+@:native('javax$swing$text$rtf$RTFReader$DocumentDestination') @:internal extern class RTFReader_DocumentDestination extends javax.swing.text.rtf.RTFReader.RTFReader_TextHandlingDestination implements javax.swing.text.rtf.RTFReader.RTFReader_Destination
 {
-	@:overload override public function deliverText(text : String, characterAttributes : javax.swing.text.AttributeSet) : Void;
+	@:overload public function deliverText(text : String, characterAttributes : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload override public function finishParagraph(pgfAttributes : javax.swing.text.AttributeSet, chrAttributes : javax.swing.text.AttributeSet) : Void;
+	@:overload public function finishParagraph(pgfAttributes : javax.swing.text.AttributeSet, chrAttributes : javax.swing.text.AttributeSet) : Void;
 	
-	@:overload override public function endSection() : Void;
+	@:overload public function endSection() : Void;
 	
 	
 }

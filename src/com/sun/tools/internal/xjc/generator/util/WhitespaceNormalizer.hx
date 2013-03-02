@@ -45,13 +45,13 @@ extern class WhitespaceNormalizer
 	* @exception    IllegalArgumentException
 	*        when the specified method is invalid.
 	*/
-	@:overload public static function parse(method : String) : WhitespaceNormalizer;
+	@:overload public static function parse(method : String) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
-	public static var PRESERVE(default, null) : WhitespaceNormalizer;
+	public static var PRESERVE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
-	public static var REPLACE(default, null) : WhitespaceNormalizer;
+	public static var REPLACE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
-	public static var COLLAPSE(default, null) : WhitespaceNormalizer;
+	public static var COLLAPSE(default, null) : com.sun.tools.internal.xjc.generator.util.WhitespaceNormalizer;
 	
 	
 }

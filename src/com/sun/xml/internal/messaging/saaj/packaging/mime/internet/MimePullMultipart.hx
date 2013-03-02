@@ -33,7 +33,7 @@ extern class MimePullMultipart extends com.sun.xml.internal.messaging.saaj.packa
 	
 	@:overload public function parseAll() : Void;
 	
-	@:overload override private function parse() : Void;
+	@:overload private function parse() : Void;
 	
 	
 }

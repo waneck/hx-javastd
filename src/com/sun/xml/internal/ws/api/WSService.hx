@@ -89,7 +89,7 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws WebServiceException If any error in creation of the
 	*                    specified service.
 	**/
-	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName) : WSService;
+	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.WSService;
 	
 	/**
 	* Create a <code>Service</code> instance.
@@ -98,23 +98,23 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws WebServiceException If any error in creation of the
 	*                    specified service
 	*/
-	@:overload public static function create(serviceName : javax.xml.namespace.QName) : WSService;
+	@:overload public static function create(serviceName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.WSService;
 	
 	/**
 	* Creates a service with a dummy service name.
 	*/
-	@:overload public static function create() : WSService;
+	@:overload public static function create() : com.sun.xml.internal.ws.api.WSService;
 	
 	/**
 	* To create a {@link Service}, we need to go through the API that doesn't let us
 	* pass parameters, so as a hack we use thread local.
 	*/
-	private static var INIT_PARAMS(default, null) : java.lang.ThreadLocal<WSService_InitParams>;
+	private static var INIT_PARAMS(default, null) : java.lang.ThreadLocal<com.sun.xml.internal.ws.api.WSService.WSService_InitParams>;
 	
 	/**
 	* Used as a immutable constant so that we can avoid null check.
 	*/
-	private static var EMPTY_PARAMS(default, null) : WSService_InitParams;
+	private static var EMPTY_PARAMS(default, null) : com.sun.xml.internal.ws.api.WSService.WSService_InitParams;
 	
 	/**
 	* Creates a {@link Service} instance.
@@ -133,7 +133,7 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws WebServiceException
 	*          If any error in creation of the specified service.
 	**/
-	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, properties : WSService_InitParams) : javax.xml.ws.Service;
+	@:overload public static function create(wsdlDocumentLocation : java.net.URL, serviceName : javax.xml.namespace.QName, properties : com.sun.xml.internal.ws.api.WSService.WSService_InitParams) : javax.xml.ws.Service;
 	
 	/**
 	* Obtains the {@link WSService} that's encapsulated inside a {@link Service}.
@@ -141,7 +141,7 @@ extern class WSService extends javax.xml.ws.spi.ServiceDelegate
 	* @throws IllegalArgumentException
 	*      if the given service object is not from the JAX-WS RI.
 	*/
-	@:overload public static function unwrap(svc : javax.xml.ws.Service) : WSService;
+	@:overload public static function unwrap(svc : javax.xml.ws.Service) : com.sun.xml.internal.ws.api.WSService;
 	
 	
 }

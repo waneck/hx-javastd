@@ -31,12 +31,12 @@ extern class HandlerTube extends com.sun.xml.internal.ws.api.pipe.helper.Abstrac
 	
 	@:overload public function new(next : com.sun.xml.internal.ws.api.pipe.Tube, port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
 	
-	@:overload public function new(next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : HandlerTube) : Void;
+	@:overload public function new(next : com.sun.xml.internal.ws.api.pipe.Tube, cousinTube : com.sun.xml.internal.ws.handler.HandlerTube) : Void;
 	
 	/**
 	* Copy constructor for {@link Tube#copy(TubeCloner)}.
 	*/
-	@:overload private function new(that : HandlerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.handler.HandlerTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	

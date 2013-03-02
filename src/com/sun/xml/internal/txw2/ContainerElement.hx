@@ -25,7 +25,7 @@ package com.sun.xml.internal.txw2;
 */
 @:internal extern class ContainerElement implements java.lang.reflect.InvocationHandler implements com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function new(document : com.sun.xml.internal.txw2.Document, parent : ContainerElement, nsUri : String, localName : String) : Void;
+	@:overload public function new(document : com.sun.xml.internal.txw2.Document, parent : com.sun.xml.internal.txw2.ContainerElement, nsUri : String, localName : String) : Void;
 	
 	@:overload public function getDocument() : com.sun.xml.internal.txw2.Document;
 	

@@ -29,7 +29,7 @@ extern class ByteToCharMS950_HKSCS extends sun.io.ByteToCharDBCS_ASCII
 	
 	@:overload public function new() : Void;
 	
-	@:overload override private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
+	@:overload private function decodeDouble(byte1 : Int, byte2 : Int) : java.StdTypes.Char16;
 	
 	
 }

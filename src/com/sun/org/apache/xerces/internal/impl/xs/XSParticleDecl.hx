@@ -53,7 +53,7 @@ extern class XSParticleDecl implements com.sun.org.apache.xerces.internal.xs.XSP
 	
 	public var fAnnotations : com.sun.org.apache.xerces.internal.xs.XSObjectList;
 	
-	@:overload public function makeClone() : XSParticleDecl;
+	@:overload public function makeClone() : com.sun.org.apache.xerces.internal.impl.xs.XSParticleDecl;
 	
 	/**
 	* 3.9.6 Schema Component Constraint: Particle Emptiable

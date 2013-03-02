@@ -33,13 +33,13 @@ extern class SerializerFactory
 	* Register a serializer factory, keyed by the given
 	* method string.
 	*/
-	@:overload public static function registerSerializerFactory(factory : SerializerFactory) : Void;
+	@:overload public static function registerSerializerFactory(factory : com.sun.org.apache.xml.internal.serialize.SerializerFactory) : Void;
 	
 	/**
 	* Register a serializer factory, keyed by the given
 	* method string.
 	*/
-	@:overload public static function getSerializerFactory(method : String) : SerializerFactory;
+	@:overload public static function getSerializerFactory(method : String) : com.sun.org.apache.xml.internal.serialize.SerializerFactory;
 	
 	/**
 	* Returns the method supported by this factory and used to register

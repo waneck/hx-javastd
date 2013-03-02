@@ -29,11 +29,11 @@ package sun.awt.im;
 	
 	
 }
-@:internal extern class JInputMethodPopupMenu extends InputMethodPopupMenu
+@:internal extern class JInputMethodPopupMenu extends sun.awt.im.InputMethodPopupMenu
 {
 	
 }
-@:internal extern class AWTInputMethodPopupMenu extends InputMethodPopupMenu
+@:internal extern class AWTInputMethodPopupMenu extends sun.awt.im.InputMethodPopupMenu
 {
 	
 }

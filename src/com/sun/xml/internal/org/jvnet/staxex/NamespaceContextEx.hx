@@ -23,7 +23,7 @@ package com.sun.xml.internal.org.jvnet.staxex;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern interface NamespaceContextEx extends javax.xml.namespace.NamespaceContext extends java.lang.Iterable<NamespaceContextEx_Binding>
+extern interface NamespaceContextEx extends javax.xml.namespace.NamespaceContext extends java.lang.Iterable<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>
 {
 	/**
 	* Iterates all the in-scope namespace bindings.
@@ -51,7 +51,7 @@ extern interface NamespaceContextEx extends javax.xml.namespace.NamespaceContext
 	* @return
 	*      may return an empty iterator, but never null.
 	*/
-	@:overload public function iterator() : java.util.Iterator<NamespaceContextEx_Binding>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.xml.internal.org.jvnet.staxex.NamespaceContextEx.NamespaceContextEx_Binding>;
 	
 	
 }

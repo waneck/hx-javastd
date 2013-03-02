@@ -100,16 +100,16 @@ extern class SecurityConstants
 {
 	@:overload public function new(name : String) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }
 /**
 * Permission factory used when AWT is not present.
 */
-@:native('sun$security$util$SecurityConstants$FakeAWTPermissionFactory') @:internal extern class SecurityConstants_FakeAWTPermissionFactory implements sun.security.util.PermissionFactory<SecurityConstants_FakeAWTPermission>
+@:native('sun$security$util$SecurityConstants$FakeAWTPermissionFactory') @:internal extern class SecurityConstants_FakeAWTPermissionFactory implements sun.security.util.PermissionFactory<sun.security.util.SecurityConstants.SecurityConstants_FakeAWTPermission>
 {
-	@:overload public function newPermission(name : String) : SecurityConstants_FakeAWTPermission;
+	@:overload public function newPermission(name : String) : sun.security.util.SecurityConstants.SecurityConstants_FakeAWTPermission;
 	
 	
 }

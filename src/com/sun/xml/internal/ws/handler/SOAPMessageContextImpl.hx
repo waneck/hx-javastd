@@ -31,7 +31,7 @@ package com.sun.xml.internal.ws.handler;
 	
 	@:overload public function setMessage(soapMsg : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload override private function updateMessage() : Void;
+	@:overload private function updateMessage() : Void;
 	
 	@:overload public function getHeaders(header : javax.xml.namespace.QName, jaxbContext : javax.xml.bind.JAXBContext, allRoles : Bool) : java.NativeArray<Dynamic>;
 	

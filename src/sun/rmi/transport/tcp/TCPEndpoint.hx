@@ -44,9 +44,9 @@ extern class TCPEndpoint implements sun.rmi.transport.Endpoint
 	* If port number is 0, it returns shared default endpoint object
 	* whose host name and port may or may not have been determined.
 	*/
-	@:overload public static function getLocalEndpoint(port : Int) : TCPEndpoint;
+	@:overload public static function getLocalEndpoint(port : Int) : sun.rmi.transport.tcp.TCPEndpoint;
 	
-	@:overload public static function getLocalEndpoint(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : TCPEndpoint;
+	@:overload public static function getLocalEndpoint(port : Int, csf : java.rmi.server.RMIClientSocketFactory, ssf : java.rmi.server.RMIServerSocketFactory) : sun.rmi.transport.tcp.TCPEndpoint;
 	
 	/**
 	* Returns transport for making connections to remote endpoints;
@@ -129,7 +129,7 @@ extern class TCPEndpoint implements sun.rmi.transport.Endpoint
 	* @param in the input stream
 	* @exception IOException If id could not be read (due to stream failure)
 	*/
-	@:overload public static function read(_in : java.io.ObjectInput) : TCPEndpoint;
+	@:overload public static function read(_in : java.io.ObjectInput) : sun.rmi.transport.tcp.TCPEndpoint;
 	
 	/**
 	* Write endpoint to output stream in older format used by
@@ -141,7 +141,7 @@ extern class TCPEndpoint implements sun.rmi.transport.Endpoint
 	* Create a new endpoint from input stream data.
 	* @param in the input stream
 	*/
-	@:overload public static function readHostPortFormat(_in : java.io.DataInput) : TCPEndpoint;
+	@:overload public static function readHostPortFormat(_in : java.io.DataInput) : sun.rmi.transport.tcp.TCPEndpoint;
 	
 	
 }

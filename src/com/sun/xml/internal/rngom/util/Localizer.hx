@@ -48,7 +48,7 @@ extern class Localizer
 {
 	@:overload public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload public function new(parent : Localizer, cls : Class<Dynamic>) : Void;
+	@:overload public function new(parent : com.sun.xml.internal.rngom.util.Localizer, cls : Class<Dynamic>) : Void;
 	
 	@:overload public function message(key : String) : String;
 	

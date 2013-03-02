@@ -78,7 +78,7 @@ package java.rmi.server;
 	*
 	* @return the detail message
 	*/
-	@:overload override public function getMessage() : String;
+	@:overload public function getMessage() : String;
 	
 	/**
 	* Returns the cause of this exception.  This method returns the value
@@ -87,7 +87,7 @@ package java.rmi.server;
 	* @return  the cause, which may be <tt>null</tt>.
 	* @since   1.4
 	*/
-	@:require(java4) @:overload override public function getCause() : java.lang.Throwable;
+	@:require(java4) @:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

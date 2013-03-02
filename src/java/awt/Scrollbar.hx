@@ -278,7 +278,7 @@ package java.awt;
 	* the appearance of the <code>Scrollbar</code> without changing any of its
 	* functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload public function addNotify() : Void;
 	
 	/**
 	* Returns the orientation of this scroll bar.
@@ -700,7 +700,7 @@ package java.awt;
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this scroll bar. If the event is an
@@ -717,7 +717,7 @@ package java.awt;
 	* @see          java.awt.Scrollbar#processAdjustmentEvent
 	* @since        JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes adjustment events occurring on this
@@ -754,7 +754,7 @@ package java.awt;
 	*
 	* @return      the parameter string of this scroll bar
 	*/
-	@:overload override private function paramString() : String;
+	@:overload private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -767,7 +767,7 @@ package java.awt;
 	*         <code>AccessibleContext</code> of this <code>ScrollBar</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -787,7 +787,7 @@ package java.awt;
 	*     containing the current state of the object
 	* @see AccessibleState
 	*/
-	@:overload override public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
+	@:overload public function getAccessibleStateSet() : javax.accessibility.AccessibleStateSet;
 	
 	/**
 	* Get the role of this object.
@@ -795,7 +795,7 @@ package java.awt;
 	* @return an instance of <code>AccessibleRole</code>
 	*     describing the role of the object
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Get the <code>AccessibleValue</code> associated with this
@@ -806,7 +806,7 @@ package java.awt;
 	*
 	* @return this object
 	*/
-	@:overload override public function getAccessibleValue() : javax.accessibility.AccessibleValue;
+	@:overload public function getAccessibleValue() : javax.accessibility.AccessibleValue;
 	
 	/**
 	* Get the accessible value of this object.

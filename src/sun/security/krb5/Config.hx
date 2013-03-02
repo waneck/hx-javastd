@@ -38,7 +38,7 @@ extern class Config
 	* instance. Possible causes would be either of java.security.krb5.realm or
 	* java.security.krb5.kdc not specified, error reading configuration file.
 	*/
-	@:overload @:synchronized public static function getInstance() : Config;
+	@:overload @:synchronized public static function getInstance() : sun.security.krb5.Config;
 	
 	/**
 	* Refresh and reload the Configuration. This could involve,

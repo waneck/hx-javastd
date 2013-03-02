@@ -178,19 +178,6 @@ extern class AbstractMarshallerImpl implements javax.xml.bind.Marshaller
 	@:overload public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
 	
 	/**
-	* <p>
-	* Register marshal event callback {@link Listener} with this {@link Marshaller}.
-	*
-	* <p>
-	* There is only one Listener per Marshaller. Setting a Listener replaces the previous set Listener.
-	* One can unregister current Listener by setting listener to <tt>null</tt>.
-	*
-	* @param listener an instance of a class that implements {@link Listener}
-	* @since JAXB2.0
-	*/
-	@:require(java0) @:overload public function setListener(listener : Marshaller_Listener) : Void;
-	
-	/**
 	* Marshal the content tree rooted at <tt>jaxbElement</tt> into the specified
 	* <tt>javax.xml.transform.Result</tt>.
 	*

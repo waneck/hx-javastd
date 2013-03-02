@@ -29,7 +29,7 @@ extern class MonitorInfoCompositeData extends sun.management.LazyCompositeData
 	
 	@:overload public static function toCompositeData(mi : java.lang.management.MonitorInfo) : javax.management.openmbean.CompositeData;
 	
-	@:overload override private function getCompositeData() : javax.management.openmbean.CompositeData;
+	@:overload private function getCompositeData() : javax.management.openmbean.CompositeData;
 	
 	@:overload public static function getClassName(cd : javax.management.openmbean.CompositeData) : String;
 	

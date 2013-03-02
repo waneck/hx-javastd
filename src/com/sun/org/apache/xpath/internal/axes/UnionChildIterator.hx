@@ -59,7 +59,7 @@ extern class UnionChildIterator extends com.sun.org.apache.xpath.internal.axes.C
 	* @return  a constant to determine whether the node is accepted,
 	*   rejected, or skipped, as defined  above .
 	*/
-	@:overload override public function acceptNode(n : Int) : java.StdTypes.Int16;
+	@:overload public function acceptNode(n : Int) : java.StdTypes.Int16;
 	
 	
 }

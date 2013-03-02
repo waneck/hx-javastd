@@ -73,7 +73,7 @@ extern class ExceptionTable extends com.sun.org.apache.bcel.internal.classfile.A
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use copy() for a physical copy.
 	*/
-	@:overload public function new(c : ExceptionTable) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ExceptionTable) : Void;
 	
 	/**
 	* @param name_index Index in constant pool

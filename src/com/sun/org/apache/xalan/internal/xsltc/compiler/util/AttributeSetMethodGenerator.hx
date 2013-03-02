@@ -30,7 +30,7 @@ extern class AttributeSetMethodGenerator extends com.sun.org.apache.xalan.intern
 	
 	@:overload public function new(methodName : String, classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator) : Void;
 	
-	@:overload override public function getLocalIndex(name : String) : Int;
+	@:overload public function getLocalIndex(name : String) : Int;
 	
 	@:overload public function loadParameter(index : Int) : com.sun.org.apache.bcel.internal.generic.Instruction;
 	

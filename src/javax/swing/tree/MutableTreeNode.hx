@@ -40,7 +40,7 @@ extern interface MutableTreeNode extends javax.swing.tree.TreeNode
 	* Adds <code>child</code> to the receiver at <code>index</code>.
 	* <code>child</code> will be messaged with <code>setParent</code>.
 	*/
-	@:overload public function insert(child : MutableTreeNode, index : Int) : Void;
+	@:overload public function insert(child : javax.swing.tree.MutableTreeNode, index : Int) : Void;
 	
 	/**
 	* Removes the child at <code>index</code> from the receiver.
@@ -51,7 +51,7 @@ extern interface MutableTreeNode extends javax.swing.tree.TreeNode
 	* Removes <code>node</code> from the receiver. <code>setParent</code>
 	* will be messaged on <code>node</code>.
 	*/
-	@:overload public function remove(node : MutableTreeNode) : Void;
+	@:overload public function remove(node : javax.swing.tree.MutableTreeNode) : Void;
 	
 	/**
 	* Resets the user object of the receiver to <code>object</code>.
@@ -66,7 +66,7 @@ extern interface MutableTreeNode extends javax.swing.tree.TreeNode
 	/**
 	* Sets the parent of the receiver to <code>newParent</code>.
 	*/
-	@:overload public function setParent(newParent : MutableTreeNode) : Void;
+	@:overload public function setParent(newParent : javax.swing.tree.MutableTreeNode) : Void;
 	
 	
 }

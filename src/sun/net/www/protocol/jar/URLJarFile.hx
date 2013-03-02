@@ -35,7 +35,7 @@ extern class URLJarFile extends java.util.jar.JarFile
 	* Changed modifier from private to public in order to be able
 	* to instantiate URLJarFile from sun.plugin package.
 	*/
-	@:overload public function new(file : java.io.File, closeController : URLJarFile_URLJarFileCloseController) : Void;
+	@:overload public function new(file : java.io.File, closeController : sun.net.www.protocol.jar.URLJarFile.URLJarFile_URLJarFileCloseController) : Void;
 	
 	/*
 	* close the jar file.
@@ -53,7 +53,7 @@ extern class URLJarFile extends java.util.jar.JarFile
 	*/
 	@:overload override public function getEntry(name : String) : java.util.zip.ZipEntry;
 	
-	@:overload override public function getManifest() : java.util.jar.Manifest;
+	@:overload public function getManifest() : java.util.jar.Manifest;
 	
 	/* If close controller is set the notify the controller about the pending close */
 	@:overload override public function close() : Void;
@@ -68,11 +68,11 @@ extern class URLJarFile extends java.util.jar.JarFile
 }
 @:native('sun$net$www$protocol$jar$URLJarFile$URLJarFileEntry') @:internal extern class URLJarFile_URLJarFileEntry extends java.util.jar.JarEntry
 {
-	@:overload override public function getAttributes() : java.util.jar.Attributes;
+	@:overload public function getAttributes() : java.util.jar.Attributes;
 	
-	@:overload override public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
-	@:overload override public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
+	@:overload public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
 	
 	
 }

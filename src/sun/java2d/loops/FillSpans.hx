@@ -34,11 +34,11 @@ extern class FillSpans extends sun.java2d.loops.GraphicsPrimitive
 	* 1) draw solid color onto destination surface
 	* 2) rectangular areas to fill come from SpanIterator
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : FillSpans;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.FillSpans;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -55,9 +55,9 @@ extern class FillSpans extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$FillSpans$TraceFillSpans') @:internal extern class FillSpans_TraceFillSpans extends FillSpans
+@:native('sun$java2d$loops$FillSpans$TraceFillSpans') @:internal extern class FillSpans_TraceFillSpans extends sun.java2d.loops.FillSpans
 {
-	@:overload public function new(target : FillSpans) : Void;
+	@:overload public function new(target : sun.java2d.loops.FillSpans) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

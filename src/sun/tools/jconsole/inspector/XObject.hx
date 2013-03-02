@@ -33,7 +33,7 @@ displayed/manipulated as a GUI object.
 */
 extern class XObject extends javax.swing.JLabel
 {
-	public static var NULL_OBJECT(default, null) : XObject;
+	public static var NULL_OBJECT(default, null) : sun.tools.jconsole.inspector.XObject;
 	
 	@:overload public function new(object : Dynamic, icon : javax.swing.Icon) : Void;
 	

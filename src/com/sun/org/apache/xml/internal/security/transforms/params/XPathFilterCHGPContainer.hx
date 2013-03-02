@@ -43,7 +43,7 @@ extern class XPathFilterCHGPContainer extends com.sun.org.apache.xml.internal.se
 	* @param exclude
 	* @return the created object
 	*/
-	@:overload public static function getInstance(doc : org.w3c.dom.Document, includeSlashPolicy : Bool, includeButSearch : String, excludeButSearch : String, exclude : String) : XPathFilterCHGPContainer;
+	@:overload public static function getInstance(doc : org.w3c.dom.Document, includeSlashPolicy : Bool, includeButSearch : String, excludeButSearch : String, exclude : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPathFilterCHGPContainer;
 	
 	/**
 	* Creates a XPathFilterCHGPContainer from an existing Element; needed for verification.
@@ -54,7 +54,7 @@ extern class XPathFilterCHGPContainer extends com.sun.org.apache.xml.internal.se
 	* @throws XMLSecurityException
 	* @return the created object.
 	*/
-	@:overload public static function getInstance(element : org.w3c.dom.Element, BaseURI : String) : XPathFilterCHGPContainer;
+	@:overload public static function getInstance(element : org.w3c.dom.Element, BaseURI : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPathFilterCHGPContainer;
 	
 	/**
 	* Method getIncludeButSearch
@@ -110,14 +110,14 @@ extern class XPathFilterCHGPContainer extends com.sun.org.apache.xml.internal.se
 	*
 	* @inheritDoc
 	*/
-	@:overload @:final override public function getBaseLocalName() : String;
+	@:overload @:final public function getBaseLocalName() : String;
 	
 	/**
 	* Method getBaseNamespace
 	*
 	* @inheritDoc
 	*/
-	@:overload @:final override public function getBaseNamespace() : String;
+	@:overload @:final public function getBaseNamespace() : String;
 	
 	
 }

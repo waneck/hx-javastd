@@ -67,14 +67,14 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @param origin          The Point that specifies the origin.
 	* @param parent          The parent (if any) of this raster.
 	*/
-	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : ShortInterleavedRaster) : Void;
+	@:overload public function new(sampleModel : java.awt.image.SampleModel, dataBuffer : java.awt.image.DataBuffer, aRegion : java.awt.Rectangle, origin : java.awt.Point, parent : sun.awt.image.ShortInterleavedRaster) : Void;
 	
 	/**
 	* Returns a copy of the data offsets array. For each band the data offset
 	* is the index into the band's data array, of the first sample of the
 	* band.
 	*/
-	@:overload override public function getDataOffsets() : java.NativeArray<Int>;
+	@:overload public function getDataOffsets() : java.NativeArray<Int>;
 	
 	/**
 	* Returns the data offset for the specified band.  The data offset
@@ -82,24 +82,24 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* of the first scanline is stored.
 	* @param band  The band whose offset is returned.
 	*/
-	@:overload override public function getDataOffset(band : Int) : Int;
+	@:overload public function getDataOffset(band : Int) : Int;
 	
 	/**
 	* Returns the scanline stride -- the number of data array elements between
 	* a given sample and the same sample in the same column of the next row.
 	*/
-	@:overload override public function getScanlineStride() : Int;
+	@:overload public function getScanlineStride() : Int;
 	
 	/**
 	* Returns pixel stride -- the number of data array elements  between two
 	* samples for the same band on the same scanline.
 	*/
-	@:overload override public function getPixelStride() : Int;
+	@:overload public function getPixelStride() : Int;
 	
 	/**
 	* Returns a reference to the data array.
 	*/
-	@:overload override public function getDataStorage() : java.NativeArray<java.StdTypes.Int16>;
+	@:overload public function getDataStorage() : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Returns the data elements for all bands at the specified
@@ -117,7 +117,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @return         An object reference to an array of type defined by
 	*                 getTransferType() with the request pixel data.
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, obj : Dynamic) : Dynamic;
+	@:overload public function getDataElements(x : Int, y : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns an array  of data elements from the specified rectangular
@@ -145,7 +145,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @return         An object reference to an array of type defined by
 	*                 getTransferType() with the request pixel data.
 	*/
-	@:overload override public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Dynamic;
+	@:overload public function getDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Dynamic;
 	
 	/**
 	* Returns a short integer array of data elements from the
@@ -166,7 +166,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	*                 at the specified location are returned in this array.
 	* @return         Data array with data elements for all bands.
 	*/
-	@:overload override public function getShortData(x : Int, y : Int, w : Int, h : Int, band : Int, outData : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload public function getShortData(x : Int, y : Int, w : Int, h : Int, band : Int, outData : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Returns a short integer array  of data elements from the
@@ -189,7 +189,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	*                 at the specified location are returned in this array.
 	* @return         Data array with data elements for all bands.
 	*/
-	@:overload override public function getShortData(x : Int, y : Int, w : Int, h : Int, outData : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
+	@:overload public function getShortData(x : Int, y : Int, w : Int, h : Int, outData : java.NativeArray<java.StdTypes.Int16>) : java.NativeArray<java.StdTypes.Int16>;
 	
 	/**
 	* Stores the data elements for all bands at the specified location.
@@ -203,7 +203,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	*                 getTransferType() and length getNumDataElements()
 	*                 containing the pixel data to place at x,y.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, obj : Dynamic) : Void;
+	@:overload public function setDataElements(x : Int, y : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Stores the Raster data at the specified location.
@@ -213,7 +213,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @param y          The Y coordinate of the pixel location.
 	* @param inRaster   Raster of data to place at x,y location.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
+	@:overload public function setDataElements(x : Int, y : Int, inRaster : java.awt.image.Raster) : Void;
 	
 	/**
 	* Stores an array of data elements into the specified rectangular
@@ -237,7 +237,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	*                 containing the pixel data to place between x,y and
 	*                 x+h, y+h.
 	*/
-	@:overload override public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Void;
+	@:overload public function setDataElements(x : Int, y : Int, w : Int, h : Int, obj : Dynamic) : Void;
 	
 	/**
 	* Stores a short integer array of data elements into the
@@ -257,7 +257,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @param band     The band to set.
 	* @param inData   The data elements to be stored.
 	*/
-	@:overload override public function putShortData(x : Int, y : Int, w : Int, h : Int, band : Int, inData : java.NativeArray<java.StdTypes.Int16>) : Void;
+	@:overload public function putShortData(x : Int, y : Int, w : Int, h : Int, band : Int, inData : java.NativeArray<java.StdTypes.Int16>) : Void;
 	
 	/**
 	* Stores a short integer array of data elements into the
@@ -276,7 +276,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @param h        Height of the pixel rectangle.
 	* @param inData   The data elements to be stored.
 	*/
-	@:overload override public function putShortData(x : Int, y : Int, w : Int, h : Int, inData : java.NativeArray<java.StdTypes.Int16>) : Void;
+	@:overload public function putShortData(x : Int, y : Int, w : Int, h : Int, inData : java.NativeArray<java.StdTypes.Int16>) : Void;
 	
 	/**
 	* Creates a subraster given a region of the raster.  The x and y
@@ -297,7 +297,7 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @exception RasterFormatException
 	*            if the specified bounding box is outside of the parent raster.
 	*/
-	@:overload override public function createChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
+	@:overload public function createChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.Raster;
 	
 	/**
 	* Creates a Writable subRaster given a region of the Raster. The x and y
@@ -318,13 +318,13 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* @exception RasterFormatException
 	*            if the specified bounding box is outside of the parent Raster.
 	*/
-	@:overload override public function createWritableChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
+	@:overload public function createWritableChild(x : Int, y : Int, width : Int, height : Int, x0 : Int, y0 : Int, bandList : java.NativeArray<Int>) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster with the same layout but using a different
 	* width and height, and with new zeroed data arrays.
 	*/
-	@:overload override public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
+	@:overload public function createCompatibleWritableRaster(w : Int, h : Int) : java.awt.image.WritableRaster;
 	
 	/**
 	* Creates a Raster with the same layout and the same
@@ -332,9 +332,9 @@ extern class ShortInterleavedRaster extends sun.awt.image.ShortComponentRaster
 	* the Raster is a subRaster, this will call
 	* createCompatibleRaster(width, height).
 	*/
-	@:overload override public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
+	@:overload public function createCompatibleWritableRaster() : java.awt.image.WritableRaster;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

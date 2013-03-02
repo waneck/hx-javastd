@@ -374,7 +374,7 @@ extern class DerValue
 	*
 	* @param other the object being compared with this one
 	*/
-	@:overload public function equals(other : DerValue) : Bool;
+	@:overload public function equals(other : sun.security.util.DerValue) : Bool;
 	
 	/**
 	* Returns a printable representation of the value.

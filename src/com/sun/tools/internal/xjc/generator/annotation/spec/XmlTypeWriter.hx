@@ -25,17 +25,17 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlTypeWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlType>
 {
-	@:overload public function name(value : String) : XmlTypeWriter;
+	@:overload public function name(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlTypeWriter;
 	
-	@:overload public function namespace(value : String) : XmlTypeWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlTypeWriter;
 	
-	@:overload public function propOrder(value : String) : XmlTypeWriter;
+	@:overload public function propOrder(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlTypeWriter;
 	
-	@:overload public function factoryClass(value : Class<Dynamic>) : XmlTypeWriter;
+	@:overload public function factoryClass(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlTypeWriter;
 	
-	@:overload public function factoryClass(value : com.sun.codemodel.internal.JType) : XmlTypeWriter;
+	@:overload public function factoryClass(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlTypeWriter;
 	
-	@:overload public function factoryMethod(value : String) : XmlTypeWriter;
+	@:overload public function factoryMethod(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlTypeWriter;
 	
 	
 }

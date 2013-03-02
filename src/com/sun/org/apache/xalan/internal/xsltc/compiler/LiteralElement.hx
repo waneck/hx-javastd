@@ -31,7 +31,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	/**
 	* Displays the contents of this literal element
 	*/
-	@:overload override public function display(indent : Int) : Void;
+	@:overload public function display(indent : Int) : Void;
 	
 	/**
 	* Method used to keep track of what namespaces that are references by
@@ -54,7 +54,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Type-check the contents of this element. The element itself does not
 	* need any type checking as it leaves nothign on the JVM's stack.
 	*/
-	@:overload override public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
+	@:overload public function typeCheck(stable : com.sun.org.apache.xalan.internal.xsltc.compiler.SymbolTable) : com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type;
 	
 	/**
 	* This method starts at a given node, traverses all namespace mappings,
@@ -67,9 +67,9 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* Determines the final QName for the element and its attributes.
 	* Registers all namespaces that are used by the element/attributes
 	*/
-	@:overload override public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function parseContents(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
-	@:overload override private function contextDependent() : Bool;
+	@:overload private function contextDependent() : Bool;
 	
 	/**
 	* Compiles code that emits the literal element to the output handler,
@@ -78,7 +78,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 	* value of an attribute may depend on a variable, variables must be
 	* compiled first.
 	*/
-	@:overload override public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
+	@:overload public function translate(classGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.ClassGenerator, methodGen : com.sun.org.apache.xalan.internal.xsltc.compiler.util.MethodGenerator) : Void;
 	
 	/**
 	* Return the ElemDesc object for an HTML element.

@@ -27,13 +27,13 @@ extern class PolicySpiFile extends java.security.PolicySpi
 {
 	@:overload public function new(params : java.security.Policy.Policy_Parameters) : Void;
 	
-	@:overload override private function engineGetPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
+	@:overload private function engineGetPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	
-	@:overload override private function engineGetPermissions(d : java.security.ProtectionDomain) : java.security.PermissionCollection;
+	@:overload private function engineGetPermissions(d : java.security.ProtectionDomain) : java.security.PermissionCollection;
 	
-	@:overload override private function engineImplies(d : java.security.ProtectionDomain, p : java.security.Permission) : Bool;
+	@:overload private function engineImplies(d : java.security.ProtectionDomain, p : java.security.Permission) : Bool;
 	
-	@:overload override private function engineRefresh() : Void;
+	@:overload private function engineRefresh() : Void;
 	
 	
 }

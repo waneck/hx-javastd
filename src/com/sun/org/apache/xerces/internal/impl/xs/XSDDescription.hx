@@ -187,7 +187,7 @@ extern class XSDDescription extends com.sun.org.apache.xerces.internal.util.XMLR
 	*/
 	@:overload public function reset() : Void;
 	
-	@:overload public function makeClone() : XSDDescription;
+	@:overload public function makeClone() : com.sun.org.apache.xerces.internal.impl.xs.XSDDescription;
 	
 	
 }

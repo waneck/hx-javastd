@@ -25,7 +25,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 {
 	@:overload public function new(left : com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern, right : com.sun.org.apache.xalan.internal.xsltc.compiler.RelativePathPattern) : Void;
 	
-	@:overload override public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
+	@:overload public function setParser(parser : com.sun.org.apache.xalan.internal.xsltc.compiler.Parser) : Void;
 	
 	@:overload override public function isWildcard() : Bool;
 	

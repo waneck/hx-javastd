@@ -834,7 +834,7 @@ extern class SampleModel
 	*          data as this <code>SampleModel</code>, but with a
 	*          different size.
 	*/
-	@:overload @:abstract public function createCompatibleSampleModel(w : Int, h : Int) : SampleModel;
+	@:overload @:abstract public function createCompatibleSampleModel(w : Int, h : Int) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a new SampleModel
@@ -844,7 +844,7 @@ extern class SampleModel
 	* @return a <code>SampleModel</code> with a subset of bands of this
 	*         <code>SampleModel</code>.
 	*/
-	@:overload @:abstract public function createSubsetSampleModel(bands : java.NativeArray<Int>) : SampleModel;
+	@:overload @:abstract public function createSubsetSampleModel(bands : java.NativeArray<Int>) : java.awt.image.SampleModel;
 	
 	/**
 	* Creates a DataBuffer that corresponds to this SampleModel.

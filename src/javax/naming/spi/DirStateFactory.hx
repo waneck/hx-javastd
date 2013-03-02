@@ -83,7 +83,7 @@ extern interface DirStateFactory extends javax.naming.spi.StateFactory
 	*
 	* @see DirectoryManager#getStateToBind
 	*/
-	@:overload public function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, inAttrs : javax.naming.directory.Attributes) : DirStateFactory_Result;
+	@:overload public function getStateToBind(obj : Dynamic, name : javax.naming.Name, nameCtx : javax.naming.Context, environment : java.util.Hashtable<Dynamic, Dynamic>, inAttrs : javax.naming.directory.Attributes) : javax.naming.spi.DirStateFactory.DirStateFactory_Result;
 	
 	
 }

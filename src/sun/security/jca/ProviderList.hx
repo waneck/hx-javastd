@@ -25,13 +25,13 @@ package sun.security.jca;
 */
 extern class ProviderList
 {
-	@:overload public static function add(providerList : ProviderList, p : java.security.Provider) : ProviderList;
+	@:overload public static function add(providerList : sun.security.jca.ProviderList, p : java.security.Provider) : sun.security.jca.ProviderList;
 	
-	@:overload public static function insertAt(providerList : ProviderList, p : java.security.Provider, position : Int) : ProviderList;
+	@:overload public static function insertAt(providerList : sun.security.jca.ProviderList, p : java.security.Provider, position : Int) : sun.security.jca.ProviderList;
 	
-	@:overload public static function remove(providerList : ProviderList, name : String) : ProviderList;
+	@:overload public static function remove(providerList : sun.security.jca.ProviderList, name : String) : sun.security.jca.ProviderList;
 	
-	@:overload public static function newList(providers : java.NativeArray<java.security.Provider>) : ProviderList;
+	@:overload public static function newList(providers : java.NativeArray<java.security.Provider>) : sun.security.jca.ProviderList;
 	
 	@:overload public function size() : Int;
 	
@@ -91,13 +91,13 @@ extern class ProviderList
 */
 @:native('sun$security$jca$ProviderList$ServiceList') @:internal extern class ProviderList_ServiceList extends java.util.AbstractList<java.security.Provider.Provider_Service>
 {
-	@:overload override public function get(index : Int) : java.security.Provider.Provider_Service;
+	@:overload public function get(index : Int) : java.security.Provider.Provider_Service;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
-	@:overload override public function iterator() : java.util.Iterator<java.security.Provider.Provider_Service>;
+	@:overload public function iterator() : java.util.Iterator<java.security.Provider.Provider_Service>;
 	
 	
 }

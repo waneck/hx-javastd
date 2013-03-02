@@ -61,7 +61,7 @@ extern class AttributeImpl extends com.sun.xml.internal.stream.events.DummyEvent
 	
 	@:overload public function isSpecified() : Bool;
 	
-	@:overload override private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
+	@:overload private function writeAsEncodedUnicodeEx(writer : java.io.Writer) : Void;
 	
 	@:overload private function init() : Void;
 	

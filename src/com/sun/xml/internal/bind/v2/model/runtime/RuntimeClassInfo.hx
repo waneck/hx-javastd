@@ -28,7 +28,7 @@ extern interface RuntimeClassInfo extends com.sun.xml.internal.bind.v2.model.cor
 	/**
 	* @author Kohsuke Kawaguchi (kk@kohsuke.org)
 	*/
-	@:overload public function getBaseClass() : RuntimeClassInfo;
+	@:overload public function getBaseClass() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeClassInfo;
 	
 	@:overload public function getProperties() : java.util.List<com.sun.xml.internal.bind.v2.model.runtime.RuntimePropertyInfo>;
 	

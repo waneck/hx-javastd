@@ -112,7 +112,7 @@ extern class AbstractTreeWriter extends com.sun.tools.doclets.formats.html.HtmlD
 	*
 	* @return a content tree for the tree label
 	*/
-	@:overload override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	
 }

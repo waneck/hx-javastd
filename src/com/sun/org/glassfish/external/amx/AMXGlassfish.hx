@@ -31,7 +31,7 @@ extern class AMXGlassfish
 	public static var DEFAULT_JMX_DOMAIN(default, null) : String;
 	
 	/** Default domain support */
-	public static var DEFAULT(default, null) : AMXGlassfish;
+	public static var DEFAULT(default, null) : com.sun.org.glassfish.external.amx.AMXGlassfish;
 	
 	/** Anything other than {@link #DEFAULT} is not supported in Glassfish V3 */
 	@:overload public function new(jmxDomain : String) : Void;
@@ -129,7 +129,7 @@ extern class AMXGlassfish
 {
 	@:overload public function new(conn : javax.management.MBeanServerConnection) : Void;
 	
-	@:overload override public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }
@@ -144,7 +144,7 @@ boot AMX and then take other dependent actions.
 {
 	@:overload public function new(conn : javax.management.MBeanServerConnection) : Void;
 	
-	@:overload override public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
+	@:overload public function mbeanRegistered(objectName : javax.management.ObjectName, listener : com.sun.org.glassfish.external.amx.MBeanListener<Dynamic>) : Void;
 	
 	
 }

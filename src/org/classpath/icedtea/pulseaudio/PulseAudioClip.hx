@@ -39,11 +39,11 @@ extern class PulseAudioClip extends org.classpath.icedtea.pulseaudio.PulseAudioD
 {
 	public static var DEFAULT_CLIP_NAME(default, null) : String;
 	
-	@:overload override private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
+	@:overload private function connectLine(bufferSize : Int, masterStream : org.classpath.icedtea.pulseaudio.Stream) : Void;
 	
 	@:overload override public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/*
 	* 
@@ -86,11 +86,11 @@ extern class PulseAudioClip extends org.classpath.icedtea.pulseaudio.PulseAudioD
 	
 	@:overload public function setMicrosecondPosition(microseconds : haxe.Int64) : Void;
 	
-	@:overload override public function start() : Void;
+	@:overload public function start() : Void;
 	
-	@:overload override public function stop() : Void;
+	@:overload public function stop() : Void;
 	
-	@:overload override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	
 }

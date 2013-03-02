@@ -75,7 +75,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$MaskErrorAction') @:internal extern class OperationFactory_MaskErrorAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$MaskErrorAction') @:internal extern class OperationFactory_MaskErrorAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload public function new(op : com.sun.corba.se.spi.orb.Operation) : Void;
 	
@@ -85,7 +85,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$IndexAction') @:internal extern class OperationFactory_IndexAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$IndexAction') @:internal extern class OperationFactory_IndexAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload public function new(index : Int) : Void;
 	
@@ -95,7 +95,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$SuffixAction') @:internal extern class OperationFactory_SuffixAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$SuffixAction') @:internal extern class OperationFactory_SuffixAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -103,7 +103,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$ValueAction') @:internal extern class OperationFactory_ValueAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$ValueAction') @:internal extern class OperationFactory_ValueAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -111,7 +111,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$IdentityAction') @:internal extern class OperationFactory_IdentityAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$IdentityAction') @:internal extern class OperationFactory_IdentityAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -119,7 +119,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$BooleanAction') @:internal extern class OperationFactory_BooleanAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$BooleanAction') @:internal extern class OperationFactory_BooleanAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -127,7 +127,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$IntegerAction') @:internal extern class OperationFactory_IntegerAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$IntegerAction') @:internal extern class OperationFactory_IntegerAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -135,7 +135,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$StringAction') @:internal extern class OperationFactory_StringAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$StringAction') @:internal extern class OperationFactory_StringAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -143,7 +143,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$ClassAction') @:internal extern class OperationFactory_ClassAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$ClassAction') @:internal extern class OperationFactory_ClassAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -151,7 +151,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$SetFlagAction') @:internal extern class OperationFactory_SetFlagAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$SetFlagAction') @:internal extern class OperationFactory_SetFlagAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -159,7 +159,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$URLAction') @:internal extern class OperationFactory_URLAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$URLAction') @:internal extern class OperationFactory_URLAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -167,7 +167,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$IntegerRangeAction') @:internal extern class OperationFactory_IntegerRangeAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$IntegerRangeAction') @:internal extern class OperationFactory_IntegerRangeAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -175,7 +175,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$ListAction') @:internal extern class OperationFactory_ListAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$ListAction') @:internal extern class OperationFactory_ListAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -183,7 +183,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$SequenceAction') @:internal extern class OperationFactory_SequenceAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$SequenceAction') @:internal extern class OperationFactory_SequenceAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -191,7 +191,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$ComposeAction') @:internal extern class OperationFactory_ComposeAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$ComposeAction') @:internal extern class OperationFactory_ComposeAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -199,7 +199,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$MapAction') @:internal extern class OperationFactory_MapAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$MapAction') @:internal extern class OperationFactory_MapAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	
@@ -207,7 +207,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$MapSequenceAction') @:internal extern class OperationFactory_MapSequenceAction extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$MapSequenceAction') @:internal extern class OperationFactory_MapSequenceAction extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload public function new(op : java.NativeArray<com.sun.corba.se.spi.orb.Operation>) : Void;
 	
@@ -217,7 +217,7 @@ extern class OperationFactory
 	
 	
 }
-@:native('com$sun$corba$se$spi$orb$OperationFactory$ConvertIntegerToShort') @:internal extern class OperationFactory_ConvertIntegerToShort extends OperationFactory_OperationBase
+@:native('com$sun$corba$se$spi$orb$OperationFactory$ConvertIntegerToShort') @:internal extern class OperationFactory_ConvertIntegerToShort extends com.sun.corba.se.spi.orb.OperationFactory.OperationFactory_OperationBase
 {
 	@:overload override public function operate(value : Dynamic) : Dynamic;
 	

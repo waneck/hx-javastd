@@ -151,7 +151,7 @@ extern class ToolTipManager extends java.awt.event.MouseAdapter implements java.
 	*
 	* @return a shared <code>ToolTipManager</code> object
 	*/
-	@:overload public static function sharedInstance() : ToolTipManager;
+	@:overload public static function sharedInstance() : javax.swing.ToolTipManager;
 	
 	/**
 	* Registers a component for tooltip management.
@@ -180,7 +180,7 @@ extern class ToolTipManager extends java.awt.event.MouseAdapter implements java.
 	*
 	*  @param event  the event in question
 	*/
-	@:overload override public function mouseEntered(event : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseEntered(event : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	*  Called when the mouse exits the region of a component.
@@ -188,7 +188,7 @@ extern class ToolTipManager extends java.awt.event.MouseAdapter implements java.
 	*
 	*  @param event  the event in question
 	*/
-	@:overload override public function mouseExited(event : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseExited(event : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	*  Called when the mouse is pressed.
@@ -196,7 +196,7 @@ extern class ToolTipManager extends java.awt.event.MouseAdapter implements java.
 	*
 	*  @param event  the event in question
 	*/
-	@:overload override public function mousePressed(event : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(event : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	*  Called when the mouse is pressed and dragged.
@@ -204,7 +204,7 @@ extern class ToolTipManager extends java.awt.event.MouseAdapter implements java.
 	*
 	*  @param event  the event in question
 	*/
-	@:overload override public function mouseDragged(event : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseDragged(event : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	*  Called when the mouse is moved.
@@ -212,7 +212,7 @@ extern class ToolTipManager extends java.awt.event.MouseAdapter implements java.
 	*
 	*  @param event  the event in question
 	*/
-	@:overload override public function mouseMoved(event : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseMoved(event : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -244,7 +244,7 @@ extern class ToolTipManager extends java.awt.event.MouseAdapter implements java.
 */
 @:native('javax$swing$ToolTipManager$MoveBeforeEnterListener') @:internal extern class ToolTipManager_MoveBeforeEnterListener extends java.awt.event.MouseMotionAdapter
 {
-	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

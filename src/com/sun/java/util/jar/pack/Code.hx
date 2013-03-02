@@ -37,11 +37,11 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function getPackage() : com.sun.java.util.jar.pack.Package;
 	
-	@:overload override public function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
+	@:overload public function getCPMap() : java.NativeArray<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>;
 	
-	@:overload override public function trimToSize() : Void;
+	@:overload public function trimToSize() : Void;
 	
-	@:overload override private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
+	@:overload private function visitRefs(mode : Int, refs : java.util.Collection<com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Entry>) : Void;
 	
 	/** Encode the given BCI as an instruction boundary number.
 	*  For completeness, irregular (non-boundary) BCIs are

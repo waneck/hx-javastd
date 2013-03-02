@@ -110,13 +110,13 @@ package javax.swing.colorchooser;
 }
 @:native('javax$swing$colorchooser$DefaultSwatchChooserPanel$RecentSwatchListener') @:internal extern class DefaultSwatchChooserPanel_RecentSwatchListener extends java.awt.event.MouseAdapter implements java.io.Serializable
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
 @:native('javax$swing$colorchooser$DefaultSwatchChooserPanel$MainSwatchListener') @:internal extern class DefaultSwatchChooserPanel_MainSwatchListener extends java.awt.event.MouseAdapter implements java.io.Serializable
 {
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }
@@ -132,23 +132,23 @@ package javax.swing.colorchooser;
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function isFocusTraversable() : Bool;
+	@:overload public function isFocusTraversable() : Bool;
 	
 	@:overload private function initValues() : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	@:overload override public function getPreferredSize() : java.awt.Dimension;
 	
 	@:overload private function initColors() : Void;
 	
-	@:overload override public function getToolTipText(e : java.awt.event.MouseEvent) : String;
+	@:overload public function getToolTipText(e : java.awt.event.MouseEvent) : String;
 	
 	@:overload public function getColorForLocation(x : Int, y : Int) : java.awt.Color;
 	
 	
 }
-@:internal extern class RecentSwatchPanel extends SwatchPanel
+@:internal extern class RecentSwatchPanel extends javax.swing.colorchooser.DefaultSwatchChooserPanel.SwatchPanel
 {
 	@:overload override private function initValues() : Void;
 	
@@ -158,7 +158,7 @@ package javax.swing.colorchooser;
 	
 	
 }
-@:internal extern class MainSwatchPanel extends SwatchPanel
+@:internal extern class MainSwatchPanel extends javax.swing.colorchooser.DefaultSwatchChooserPanel.SwatchPanel
 {
 	@:overload override private function initValues() : Void;
 	

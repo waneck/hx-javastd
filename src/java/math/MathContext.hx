@@ -58,7 +58,7 @@ package java.math;
 	*  precision=0 roundingMode=HALF_UP
 	*  </code>
 	*/
-	public static var UNLIMITED(default, null) : MathContext;
+	public static var UNLIMITED(default, null) : java.math.MathContext;
 	
 	/**
 	*  A {@code MathContext} object with a precision setting
@@ -66,7 +66,7 @@ package java.math;
 	*  rounding mode of {@link RoundingMode#HALF_EVEN HALF_EVEN}, the
 	*  IEEE 754R default.
 	*/
-	public static var DECIMAL32(default, null) : MathContext;
+	public static var DECIMAL32(default, null) : java.math.MathContext;
 	
 	/**
 	*  A {@code MathContext} object with a precision setting
@@ -74,7 +74,7 @@ package java.math;
 	*  rounding mode of {@link RoundingMode#HALF_EVEN HALF_EVEN}, the
 	*  IEEE 754R default.
 	*/
-	public static var DECIMAL64(default, null) : MathContext;
+	public static var DECIMAL64(default, null) : java.math.MathContext;
 	
 	/**
 	*  A {@code MathContext} object with a precision setting
@@ -82,7 +82,7 @@ package java.math;
 	*  rounding mode of {@link RoundingMode#HALF_EVEN HALF_EVEN}, the
 	*  IEEE 754R default.
 	*/
-	public static var DECIMAL128(default, null) : MathContext;
+	public static var DECIMAL128(default, null) : java.math.MathContext;
 	
 	/**
 	* Constructs a new {@code MathContext} with the specified

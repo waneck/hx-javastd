@@ -71,7 +71,7 @@ extern class SourceFile extends com.sun.org.apache.bcel.internal.classfile.Attri
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : SourceFile) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.SourceFile) : Void;
 	
 	/**
 	* @param name_index Index in constant pool to CONSTANT_Utf8, which

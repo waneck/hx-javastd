@@ -59,15 +59,15 @@ package sun.security.ssl;
 	
 	
 }
-@:native('sun$security$ssl$SSLAlgorithmConstraints$TLSDisabledAlgConstraints') @:internal extern class SSLAlgorithmConstraints_TLSDisabledAlgConstraints extends SSLAlgorithmConstraints_BasicDisabledAlgConstraints
+@:native('sun$security$ssl$SSLAlgorithmConstraints$TLSDisabledAlgConstraints') @:internal extern class SSLAlgorithmConstraints_TLSDisabledAlgConstraints extends sun.security.ssl.SSLAlgorithmConstraints.SSLAlgorithmConstraints_BasicDisabledAlgConstraints
 {
-	@:overload override private function decomposes(algorithm : String) : java.util.Set<String>;
+	@:overload private function decomposes(algorithm : String) : java.util.Set<String>;
 	
 	
 }
-@:native('sun$security$ssl$SSLAlgorithmConstraints$X509DisabledAlgConstraints') @:internal extern class SSLAlgorithmConstraints_X509DisabledAlgConstraints extends SSLAlgorithmConstraints_BasicDisabledAlgConstraints
+@:native('sun$security$ssl$SSLAlgorithmConstraints$X509DisabledAlgConstraints') @:internal extern class SSLAlgorithmConstraints_X509DisabledAlgConstraints extends sun.security.ssl.SSLAlgorithmConstraints.SSLAlgorithmConstraints_BasicDisabledAlgConstraints
 {
-	@:overload override private function decomposes(algorithm : String) : java.util.Set<String>;
+	@:overload private function decomposes(algorithm : String) : java.util.Set<String>;
 	
 	
 }

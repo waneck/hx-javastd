@@ -93,7 +93,7 @@ extern class DeferredDocumentImpl extends com.sun.org.apache.xerces.internal.dom
 	* using DOMs retrieved from several different sources, potentially
 	* with different underlying representations.
 	*/
-	@:overload override public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/** Creates a document node in the table. */
 	@:overload public function createDeferredDocument() : Int;
@@ -341,7 +341,7 @@ extern class DeferredDocumentImpl extends com.sun.org.apache.xerces.internal.dom
 	@:overload public function getNodeIndex() : Int;
 	
 	/** Synchronizes the node's data. */
-	@:overload override private function synchronizeData() : Void;
+	@:overload private function synchronizeData() : Void;
 	
 	/**
 	* Synchronizes the node's children with the internal structure.
@@ -349,7 +349,7 @@ extern class DeferredDocumentImpl extends com.sun.org.apache.xerces.internal.dom
 	* the two structures in sync. The problem gets worse when
 	* editing the tree -- this makes it a lot easier.
 	*/
-	@:overload override private function synchronizeChildren() : Void;
+	@:overload private function synchronizeChildren() : Void;
 	
 	/**
 	* Synchronizes the node's children with the internal structure.

@@ -34,15 +34,15 @@ package com.sun.tools.javac.comp;
 */
 extern class Annotate
 {
-	private static var annotateKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Annotate>;
+	private static var annotateKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Annotate>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Annotate;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Annotate;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
-	@:overload public function later(a : Annotate_Annotator) : Void;
+	@:overload public function later(a : com.sun.tools.javac.comp.Annotate.Annotate_Annotator) : Void;
 	
-	@:overload public function earlier(a : Annotate_Annotator) : Void;
+	@:overload public function earlier(a : com.sun.tools.javac.comp.Annotate.Annotate_Annotator) : Void;
 	
 	/** Called when the Enter phase starts. */
 	@:overload public function enterStart() : Void;

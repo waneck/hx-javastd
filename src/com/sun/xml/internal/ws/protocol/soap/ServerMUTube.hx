@@ -27,7 +27,7 @@ extern class ServerMUTube extends com.sun.xml.internal.ws.protocol.soap.MUTube
 {
 	@:overload public function new(tubeContext : com.sun.xml.internal.ws.api.pipe.ServerTubeAssemblerContext, next : com.sun.xml.internal.ws.api.pipe.Tube) : Void;
 	
-	@:overload private function new(that : ServerMUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.protocol.soap.ServerMUTube, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	/**
 	* Do MU Header Processing on incoming message (request)
@@ -39,7 +39,7 @@ extern class ServerMUTube extends com.sun.xml.internal.ws.protocol.soap.MUTube
 	*/
 	@:overload override public function processRequest(request : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
-	@:overload override public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : ServerMUTube;
+	@:overload public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.protocol.soap.ServerMUTube;
 	
 	
 }

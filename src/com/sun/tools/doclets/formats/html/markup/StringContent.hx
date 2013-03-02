@@ -58,22 +58,22 @@ extern class StringContent extends com.sun.tools.doclets.internal.toolkit.Conten
 	*
 	* @param strContent string content to be added
 	*/
-	@:overload override public function addContent(strContent : String) : Void;
+	@:overload public function addContent(strContent : String) : Void;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function isEmpty() : Bool;
+	@:overload public function isEmpty() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function write(contentBuilder : java.lang.StringBuilder) : Void;
+	@:overload public function write(contentBuilder : java.lang.StringBuilder) : Void;
 	
 	
 }

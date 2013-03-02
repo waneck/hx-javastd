@@ -90,7 +90,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -99,7 +99,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns the model object that handles single selections.
@@ -225,7 +225,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* @see JComponent#paint
 	* @see JComponent#setBorder
 	*/
-	@:overload override private function paintBorder(g : java.awt.Graphics) : Void;
+	@:overload private function paintBorder(g : java.awt.Graphics) : Void;
 	
 	/**
 	* Sets the margin between the menubar's border and
@@ -317,7 +317,7 @@ extern class JMenuBar extends javax.swing.JComponent implements javax.accessibil
 	* Subclassed to check all the child menus.
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
+	@:require(java3) @:overload private function processKeyBinding(ks : javax.swing.KeyStroke, e : java.awt.event.KeyEvent, condition : Int, pressed : Bool) : Bool;
 	
 	/**
 	* Overrides <code>JComponent.addNotify</code> to register this

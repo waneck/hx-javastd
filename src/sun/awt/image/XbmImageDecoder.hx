@@ -45,7 +45,7 @@ extern class XbmImageDecoder extends sun.awt.image.ImageDecoder
 	/**
 	* produce an image from the stream.
 	*/
-	@:overload override public function produceImage() : Void;
+	@:overload public function produceImage() : Void;
 	
 	
 }

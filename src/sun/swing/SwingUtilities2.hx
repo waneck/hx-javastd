@@ -73,7 +73,7 @@ extern class SwingUtilities2
 	* @return Whether or not text should be drawn antialiased for the
 	*         specified component.
 	*/
-	@:overload public static function drawTextAntialiased(c : javax.swing.JComponent) : SwingUtilities2_AATextInfo;
+	@:overload public static function drawTextAntialiased(c : javax.swing.JComponent) : sun.swing.SwingUtilities2.SwingUtilities2_AATextInfo;
 	
 	/**
 	* Returns the left side bearing of the first character of string. The
@@ -458,7 +458,7 @@ extern class SwingUtilities2
 	* @throws NullPointerException if {@code rect} or {@code p} are
 	*         {@code null}
 	*/
-	@:overload public static function liesInHorizontal(rect : java.awt.Rectangle, p : java.awt.Point, ltr : Bool, three : Bool) : SwingUtilities2_Section;
+	@:overload public static function liesInHorizontal(rect : java.awt.Rectangle, p : java.awt.Point, ltr : Bool, three : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_Section;
 	
 	/**
 	* This method divides a rectangle into two or three sections along
@@ -478,7 +478,7 @@ extern class SwingUtilities2
 	* @throws NullPointerException if {@code rect} or {@code p} are
 	*         {@code null}
 	*/
-	@:overload public static function liesInVertical(rect : java.awt.Rectangle, p : java.awt.Point, three : Bool) : SwingUtilities2_Section;
+	@:overload public static function liesInVertical(rect : java.awt.Rectangle, p : java.awt.Point, three : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_Section;
 	
 	/**
 	* Maps the index of the column in the view at
@@ -520,7 +520,7 @@ extern class SwingUtilities2
 */
 @:native('sun$swing$SwingUtilities2$AATextInfo') extern class SwingUtilities2_AATextInfo
 {
-	@:overload public static function getAATextInfo(lafCondition : Bool) : SwingUtilities2_AATextInfo;
+	@:overload public static function getAATextInfo(lafCondition : Bool) : sun.swing.SwingUtilities2.SwingUtilities2_AATextInfo;
 	
 	/* These are rarely constructed objects, and only when a complete
 	* UI is being updated, so the cost of the tests here is minimal

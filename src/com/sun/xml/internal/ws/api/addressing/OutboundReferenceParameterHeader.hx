@@ -25,19 +25,19 @@ package com.sun.xml.internal.ws.api.addressing;
 */
 @:internal extern class OutboundReferenceParameterHeader extends com.sun.xml.internal.ws.message.AbstractHeaderImpl
 {
-	@:overload override public function getNamespaceURI() : String;
+	@:overload public function getNamespaceURI() : String;
 	
-	@:overload override public function getLocalPart() : String;
+	@:overload public function getLocalPart() : String;
 	
-	@:overload override public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload public function getAttribute(nsUri : String, localName : String) : String;
 	
-	@:overload override public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
-	@:overload override public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
-	@:overload override public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
-	@:overload override public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	
 }

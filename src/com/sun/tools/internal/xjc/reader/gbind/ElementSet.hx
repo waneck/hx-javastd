@@ -36,7 +36,7 @@ package com.sun.tools.internal.xjc.reader.gbind;
 	*
 	* (Erring on the other side is NG)
 	*/
-	@:overload public function contains(rhs : ElementSet) : Bool;
+	@:overload public function contains(rhs : com.sun.tools.internal.xjc.reader.gbind.ElementSet) : Bool;
 	
 	
 }

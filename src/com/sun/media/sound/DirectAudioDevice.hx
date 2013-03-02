@@ -34,17 +34,17 @@ package com.sun.media.sound;
 */
 @:internal extern class DirectAudioDevice extends com.sun.media.sound.AbstractMixer
 {
-	@:overload override public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
+	@:overload public function getLine(info : javax.sound.sampled.Line.Line_Info) : javax.sound.sampled.Line;
 	
-	@:overload override public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
+	@:overload public function getMaxLines(info : javax.sound.sampled.Line.Line_Info) : Int;
 	
-	@:overload override private function implOpen() : Void;
+	@:overload private function implOpen() : Void;
 	
-	@:overload override private function implClose() : Void;
+	@:overload private function implClose() : Void;
 	
-	@:overload override private function implStart() : Void;
+	@:overload private function implStart() : Void;
 	
-	@:overload override private function implStop() : Void;
+	@:overload private function implStop() : Void;
 	
 	@:overload private static function getSignOrEndianChangedFormat(format : javax.sound.sampled.AudioFormat) : javax.sound.sampled.AudioFormat;
 	
@@ -101,15 +101,15 @@ package com.sun.media.sound;
 	
 	private var lockNative(default, null) : Dynamic;
 	
-	@:overload private function new(info : javax.sound.sampled.DataLine.DataLine_Info, mixer : DirectAudioDevice, format : javax.sound.sampled.AudioFormat, bufferSize : Int, mixerIndex : Int, deviceID : Int, isSource : Bool) : Void;
+	@:overload private function new(info : javax.sound.sampled.DataLine.DataLine_Info, mixer : com.sun.media.sound.DirectAudioDevice, format : javax.sound.sampled.AudioFormat, bufferSize : Int, mixerIndex : Int, deviceID : Int, isSource : Bool) : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
-	@:overload override public function drain() : Void;
+	@:overload public function drain() : Void;
 	
-	@:overload override public function flush() : Void;
+	@:overload public function flush() : Void;
 	
-	@:overload override public function getLongFramePosition() : haxe.Int64;
+	@:overload public function getLongFramePosition() : haxe.Int64;
 	
 	/*
 	* write() belongs into SourceDataLine and Clip,
@@ -126,39 +126,39 @@ package com.sun.media.sound;
 }
 @:native('com$sun$media$sound$DirectAudioDevice$DirectDL$Gain') extern class DirectAudioDevice_DirectDL_Gain extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload public function setValue(newValue : Single) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$DirectAudioDevice$DirectDL$Mute') @:internal extern class DirectAudioDevice_DirectDL_Mute extends javax.sound.sampled.BooleanControl
 {
-	@:overload override public function setValue(newValue : Bool) : Void;
+	@:overload public function setValue(newValue : Bool) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$DirectAudioDevice$DirectDL$Balance') @:internal extern class DirectAudioDevice_DirectDL_Balance extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload public function setValue(newValue : Single) : Void;
 	
 	
 }
 @:native('com$sun$media$sound$DirectAudioDevice$DirectDL$Pan') @:internal extern class DirectAudioDevice_DirectDL_Pan extends javax.sound.sampled.FloatControl
 {
-	@:overload override public function setValue(newValue : Single) : Void;
+	@:overload public function setValue(newValue : Single) : Void;
 	
 	
 }
 /**
 * Private inner class representing a SourceDataLine
 */
-@:native('com$sun$media$sound$DirectAudioDevice$DirectSDL') @:internal extern class DirectAudioDevice_DirectSDL extends DirectAudioDevice_DirectDL implements javax.sound.sampled.SourceDataLine
+@:native('com$sun$media$sound$DirectAudioDevice$DirectSDL') @:internal extern class DirectAudioDevice_DirectSDL extends com.sun.media.sound.DirectAudioDevice.DirectAudioDevice_DirectDL implements javax.sound.sampled.SourceDataLine
 {
 	
 }
 /**
 * Private inner class representing a TargetDataLine
 */
-@:native('com$sun$media$sound$DirectAudioDevice$DirectTDL') @:internal extern class DirectAudioDevice_DirectTDL extends DirectAudioDevice_DirectDL implements javax.sound.sampled.TargetDataLine
+@:native('com$sun$media$sound$DirectAudioDevice$DirectTDL') @:internal extern class DirectAudioDevice_DirectTDL extends com.sun.media.sound.DirectAudioDevice.DirectAudioDevice_DirectDL implements javax.sound.sampled.TargetDataLine
 {
 	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
@@ -168,7 +168,7 @@ package com.sun.media.sound;
 * Private inner class representing a Clip
 * This clip is realized in software only
 */
-@:native('com$sun$media$sound$DirectAudioDevice$DirectClip') @:internal extern class DirectAudioDevice_DirectClip extends DirectAudioDevice_DirectDL implements javax.sound.sampled.Clip implements java.lang.Runnable implements com.sun.media.sound.AutoClosingClip
+@:native('com$sun$media$sound$DirectAudioDevice$DirectClip') @:internal extern class DirectAudioDevice_DirectClip extends com.sun.media.sound.DirectAudioDevice.DirectAudioDevice_DirectDL implements javax.sound.sampled.Clip implements java.lang.Runnable implements com.sun.media.sound.AutoClosingClip
 {
 	@:overload public function open(format : javax.sound.sampled.AudioFormat, data : java.NativeArray<java.StdTypes.Int8>, offset : Int, bufferSize : Int) : Void;
 	

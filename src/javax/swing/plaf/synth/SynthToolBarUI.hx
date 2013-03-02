@@ -31,37 +31,37 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults() : Void;
+	@:overload private function installDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installListeners() : Void;
+	@:overload private function installListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload private function uninstallDefaults() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installComponents() : Void;
+	@:overload private function installComponents() : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallComponents() : Void;
+	@:overload private function uninstallComponents() : Void;
 	
 	/**
 	* Creates a {@code LayoutManager} to use with the toolbar.
@@ -87,7 +87,7 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -98,7 +98,7 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* @inheritDoc
@@ -110,21 +110,21 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	* property of the {@code JToolBar} class is not used
 	* in the Synth Look and Feel.
 	*/
-	@:overload override private function setBorderToNonRollover(c : java.awt.Component) : Void;
+	@:overload private function setBorderToNonRollover(c : java.awt.Component) : Void;
 	
 	/**
 	* This implementation does nothing, because the {@code rollover}
 	* property of the {@code JToolBar} class is not used
 	* in the Synth Look and Feel.
 	*/
-	@:overload override private function setBorderToRollover(c : java.awt.Component) : Void;
+	@:overload private function setBorderToRollover(c : java.awt.Component) : Void;
 	
 	/**
 	* This implementation does nothing, because the {@code rollover}
 	* property of the {@code JToolBar} class is not used
 	* in the Synth Look and Feel.
 	*/
-	@:overload override private function setBorderToNormal(c : java.awt.Component) : Void;
+	@:overload private function setBorderToNormal(c : java.awt.Component) : Void;
 	
 	/**
 	* Paints the toolbar.
@@ -147,7 +147,7 @@ extern class SynthToolBarUI extends javax.swing.plaf.basic.BasicToolBarUI implem
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function paintDragWindow(g : java.awt.Graphics) : Void;
+	@:overload private function paintDragWindow(g : java.awt.Graphics) : Void;
 	
 	/**
 	* @inheritDoc

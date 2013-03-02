@@ -31,7 +31,7 @@ extern class PGPData extends com.sun.org.apache.xml.internal.security.utils.Sign
 	@:overload public function new(element : org.w3c.dom.Element, BaseURI : String) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

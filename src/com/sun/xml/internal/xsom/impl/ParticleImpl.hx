@@ -62,7 +62,7 @@ extern class ParticleImpl extends com.sun.xml.internal.xsom.impl.ComponentImpl i
 	*
 	* REVISIT: is this a good design?
 	*/
-	@:overload override public function getForeignAttributes() : java.util.List<Dynamic>;
+	@:overload public function getForeignAttributes() : java.util.List<Dynamic>;
 	
 	
 }

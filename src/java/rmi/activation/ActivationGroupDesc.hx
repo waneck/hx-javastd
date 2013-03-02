@@ -44,7 +44,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* another process (or <code>null</code>).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(overrides : java.util.Properties, cmd : ActivationGroupDesc_CommandEnvironment) : Void;
+	@:require(java2) @:overload public function new(overrides : java.util.Properties, cmd : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment) : Void;
 	
 	/**
 	* Specifies an alternate group implementation and execution
@@ -64,7 +64,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* another process (or <code>null</code>).
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, overrides : java.util.Properties, cmd : ActivationGroupDesc_CommandEnvironment) : Void;
+	@:require(java2) @:overload public function new(className : String, location : String, data : java.rmi.MarshalledObject<Dynamic>, overrides : java.util.Properties, cmd : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment) : Void;
 	
 	/**
 	* Returns the group's class name (possibly <code>null</code>).  A
@@ -101,7 +101,7 @@ extern class ActivationGroupDesc implements java.io.Serializable
 	* @return the command-environment object, or <code>null</code>
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function getCommandEnvironment() : ActivationGroupDesc_CommandEnvironment;
+	@:require(java2) @:overload public function getCommandEnvironment() : java.rmi.activation.ActivationGroupDesc.ActivationGroupDesc_CommandEnvironment;
 	
 	/**
 	* Compares two activation group descriptors for content equality.

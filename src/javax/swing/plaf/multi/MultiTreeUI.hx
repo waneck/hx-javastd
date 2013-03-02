@@ -46,7 +46,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getPathBounds(a : javax.swing.JTree, b : javax.swing.tree.TreePath) : java.awt.Rectangle;
+	@:overload public function getPathBounds(a : javax.swing.JTree, b : javax.swing.tree.TreePath) : java.awt.Rectangle;
 	
 	/**
 	* Invokes the <code>getPathForRow</code> method on each UI handled by this object.
@@ -54,7 +54,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getPathForRow(a : javax.swing.JTree, b : Int) : javax.swing.tree.TreePath;
+	@:overload public function getPathForRow(a : javax.swing.JTree, b : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Invokes the <code>getRowForPath</code> method on each UI handled by this object.
@@ -62,7 +62,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getRowForPath(a : javax.swing.JTree, b : javax.swing.tree.TreePath) : Int;
+	@:overload public function getRowForPath(a : javax.swing.JTree, b : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Invokes the <code>getRowCount</code> method on each UI handled by this object.
@@ -70,7 +70,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getRowCount(a : javax.swing.JTree) : Int;
+	@:overload public function getRowCount(a : javax.swing.JTree) : Int;
 	
 	/**
 	* Invokes the <code>getClosestPathForLocation</code> method on each UI handled by this object.
@@ -78,7 +78,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getClosestPathForLocation(a : javax.swing.JTree, b : Int, c : Int) : javax.swing.tree.TreePath;
+	@:overload public function getClosestPathForLocation(a : javax.swing.JTree, b : Int, c : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Invokes the <code>isEditing</code> method on each UI handled by this object.
@@ -86,7 +86,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function isEditing(a : javax.swing.JTree) : Bool;
+	@:overload public function isEditing(a : javax.swing.JTree) : Bool;
 	
 	/**
 	* Invokes the <code>stopEditing</code> method on each UI handled by this object.
@@ -94,17 +94,17 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function stopEditing(a : javax.swing.JTree) : Bool;
+	@:overload public function stopEditing(a : javax.swing.JTree) : Bool;
 	
 	/**
 	* Invokes the <code>cancelEditing</code> method on each UI handled by this object.
 	*/
-	@:overload override public function cancelEditing(a : javax.swing.JTree) : Void;
+	@:overload public function cancelEditing(a : javax.swing.JTree) : Void;
 	
 	/**
 	* Invokes the <code>startEditingAtPath</code> method on each UI handled by this object.
 	*/
-	@:overload override public function startEditingAtPath(a : javax.swing.JTree, b : javax.swing.tree.TreePath) : Void;
+	@:overload public function startEditingAtPath(a : javax.swing.JTree, b : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Invokes the <code>getEditingPath</code> method on each UI handled by this object.
@@ -112,7 +112,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getEditingPath(a : javax.swing.JTree) : javax.swing.tree.TreePath;
+	@:overload public function getEditingPath(a : javax.swing.JTree) : javax.swing.tree.TreePath;
 	
 	/**
 	* Invokes the <code>contains</code> method on each UI handled by this object.
@@ -120,34 +120,34 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function contains(a : javax.swing.JComponent, b : Int, c : Int) : Bool;
+	@:overload public function contains(a : javax.swing.JComponent, b : Int, c : Int) : Bool;
 	
 	/**
 	* Invokes the <code>update</code> method on each UI handled by this object.
 	*/
-	@:overload override public function update(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
+	@:overload public function update(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
 	
 	/**
 	* Returns a multiplexing UI instance if any of the auxiliary
 	* <code>LookAndFeel</code>s supports this UI.  Otherwise, just returns the
 	* UI object obtained from the default <code>LookAndFeel</code>.
 	*/
-	@:native('createUI') @:overload public static function _createUI(a : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(a : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Invokes the <code>installUI</code> method on each UI handled by this object.
 	*/
-	@:overload override public function installUI(a : javax.swing.JComponent) : Void;
+	@:overload public function installUI(a : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invokes the <code>uninstallUI</code> method on each UI handled by this object.
 	*/
-	@:overload override public function uninstallUI(a : javax.swing.JComponent) : Void;
+	@:overload public function uninstallUI(a : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invokes the <code>paint</code> method on each UI handled by this object.
 	*/
-	@:overload override public function paint(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
+	@:overload public function paint(a : java.awt.Graphics, b : javax.swing.JComponent) : Void;
 	
 	/**
 	* Invokes the <code>getPreferredSize</code> method on each UI handled by this object.
@@ -155,7 +155,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getPreferredSize(a : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(a : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Invokes the <code>getMinimumSize</code> method on each UI handled by this object.
@@ -163,7 +163,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getMinimumSize(a : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(a : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Invokes the <code>getMaximumSize</code> method on each UI handled by this object.
@@ -171,7 +171,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getMaximumSize(a : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(a : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Invokes the <code>getAccessibleChildrenCount</code> method on each UI handled by this object.
@@ -179,7 +179,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getAccessibleChildrenCount(a : javax.swing.JComponent) : Int;
+	@:overload public function getAccessibleChildrenCount(a : javax.swing.JComponent) : Int;
 	
 	/**
 	* Invokes the <code>getAccessibleChild</code> method on each UI handled by this object.
@@ -187,7 +187,7 @@ extern class MultiTreeUI extends javax.swing.plaf.TreeUI
 	* @return the value obtained from the first UI, which is
 	* the UI obtained from the default <code>LookAndFeel</code>
 	*/
-	@:overload override public function getAccessibleChild(a : javax.swing.JComponent, b : Int) : javax.accessibility.Accessible;
+	@:overload public function getAccessibleChild(a : javax.swing.JComponent, b : Int) : javax.accessibility.Accessible;
 	
 	
 }

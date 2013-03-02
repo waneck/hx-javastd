@@ -28,12 +28,12 @@ extern class PrinterIsAcceptingJobs extends javax.print.attribute.EnumSyntax imp
 	/**
 	* The printer is currently rejecting any jobs sent to it.
 	*/
-	public static var NOT_ACCEPTING_JOBS(default, null) : PrinterIsAcceptingJobs;
+	public static var NOT_ACCEPTING_JOBS(default, null) : javax.print.attribute.standard.PrinterIsAcceptingJobs;
 	
 	/**
 	* The printer is currently acccepting jobs.
 	*/
-	public static var ACCEPTING_JOBS(default, null) : PrinterIsAcceptingJobs;
+	public static var ACCEPTING_JOBS(default, null) : javax.print.attribute.standard.PrinterIsAcceptingJobs;
 	
 	/**
 	* Construct a new printer is accepting jobs enumeration value with the

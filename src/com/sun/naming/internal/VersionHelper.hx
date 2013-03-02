@@ -39,7 +39,7 @@ extern class VersionHelper
 	
 	public static var CONTROL_FACTORIES(default, null) : Int;
 	
-	@:overload public static function getVersionHelper() : VersionHelper;
+	@:overload public static function getVersionHelper() : com.sun.naming.internal.VersionHelper;
 	
 	@:overload @:abstract public function loadClass(className : String) : Class<Dynamic>;
 	

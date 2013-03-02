@@ -69,9 +69,9 @@ extern class JSR extends com.sun.org.apache.bcel.internal.generic.JsrInstruction
 	* Dump instruction as byte code to stream out.
 	* @param out Output stream
 	*/
-	@:overload override public function dump(out : java.io.DataOutputStream) : Void;
+	@:overload public function dump(out : java.io.DataOutputStream) : Void;
 	
-	@:overload override private function updatePosition(offset : Int, max_offset : Int) : Int;
+	@:overload private function updatePosition(offset : Int, max_offset : Int) : Int;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -81,7 +81,7 @@ extern class JSR extends com.sun.org.apache.bcel.internal.generic.JsrInstruction
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

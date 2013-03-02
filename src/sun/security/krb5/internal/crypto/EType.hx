@@ -30,7 +30,7 @@ package sun.security.krb5.internal.crypto;
 */
 extern class EType
 {
-	@:overload public static function getInstance(eTypeConst : Int) : EType;
+	@:overload public static function getInstance(eTypeConst : Int) : sun.security.krb5.internal.crypto.EType;
 	
 	@:overload @:abstract public function eType() : Int;
 	

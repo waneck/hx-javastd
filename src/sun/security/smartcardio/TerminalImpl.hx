@@ -31,15 +31,15 @@ package sun.security.smartcardio;
 */
 @:require(java6) @:internal extern class TerminalImpl extends javax.smartcardio.CardTerminal
 {
-	@:overload override public function getName() : String;
+	@:overload public function getName() : String;
 	
-	@:overload @:synchronized override public function connect(protocol : String) : javax.smartcardio.Card;
+	@:overload @:synchronized public function connect(protocol : String) : javax.smartcardio.Card;
 	
-	@:overload override public function isCardPresent() : Bool;
+	@:overload public function isCardPresent() : Bool;
 	
-	@:overload override public function waitForCardPresent(timeout : haxe.Int64) : Bool;
+	@:overload public function waitForCardPresent(timeout : haxe.Int64) : Bool;
 	
-	@:overload override public function waitForCardAbsent(timeout : haxe.Int64) : Bool;
+	@:overload public function waitForCardAbsent(timeout : haxe.Int64) : Bool;
 	
 	@:overload public function toString() : String;
 	

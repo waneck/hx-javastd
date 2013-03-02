@@ -61,7 +61,7 @@ package javax.swing.text.html;
 	* @return the offset and span for each child view in the
 	*  offsets and spans parameters
 	*/
-	@:overload override private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
+	@:overload private function layoutMajorAxis(targetSpan : Int, axis : Int, offsets : java.NativeArray<Int>, spans : java.NativeArray<Int>) : Void;
 	
 	@:overload private function getChildRequests(targetSpan : Int, axis : Int) : java.NativeArray<javax.swing.SizeRequirements>;
 	

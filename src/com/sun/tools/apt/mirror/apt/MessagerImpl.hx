@@ -25,7 +25,7 @@ package com.sun.tools.apt.mirror.apt;
 */
 extern class MessagerImpl implements com.sun.mirror.apt.Messager
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : MessagerImpl;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.apt.MessagerImpl;
 	
 	/**
 	* {@inheritDoc}

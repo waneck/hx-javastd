@@ -39,23 +39,23 @@ extern class SAX2StAXEventWriter extends com.sun.org.apache.xalan.internal.xsltc
 	
 	@:overload public function setEventFactory(factory : javax.xml.stream.XMLEventFactory) : Void;
 	
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload public function endDocument() : Void;
 	
-	@:overload override public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(uri : String, localName : String, qName : String, attributes : org.xml.sax.Attributes) : Void;
 	
-	@:overload override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload public function endElement(uri : String, localName : String, qName : String) : Void;
 	
-	@:overload override public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload override public function endCDATA() : Void;
+	@:overload public function endCDATA() : Void;
 	
 	@:overload private function createStartEvents(attributes : org.xml.sax.Attributes, events : java.NativeArray<java.util.Collection<Dynamic>>) : Void;
 	

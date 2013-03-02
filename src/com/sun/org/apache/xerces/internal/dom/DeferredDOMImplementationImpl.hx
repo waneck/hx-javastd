@@ -21,7 +21,7 @@ package com.sun.org.apache.xerces.internal.dom;
 extern class DeferredDOMImplementationImpl extends com.sun.org.apache.xerces.internal.dom.DOMImplementationImpl
 {
 	/** NON-DOM: Obtain and return the single shared object */
-	@:native('getDOMImplementation') @:overload public static function _getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload public static function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
 	
 }

@@ -31,13 +31,13 @@ extern class SendingContextServiceContext extends com.sun.corba.se.spi.serviceco
 	
 	public static var SERVICE_CONTEXT_ID(default, null) : Int;
 	
-	@:overload override public function getId() : Int;
+	@:overload public function getId() : Int;
 	
-	@:overload override public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function writeData(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	@:overload public function getIOR() : com.sun.corba.se.spi.ior.IOR;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

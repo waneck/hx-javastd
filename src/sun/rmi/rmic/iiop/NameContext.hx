@@ -35,7 +35,7 @@ package sun.rmi.rmic.iiop;
 	* Get a context for the given name. Name may be null, in
 	* which case this method will return the default context.
 	*/
-	@:overload @:synchronized public static function forName(name : String, allowCollisions : Bool, env : sun.rmi.rmic.iiop.BatchEnvironment) : NameContext;
+	@:overload @:synchronized public static function forName(name : String, allowCollisions : Bool, env : sun.rmi.rmic.iiop.BatchEnvironment) : sun.rmi.rmic.iiop.NameContext;
 	
 	/**
 	* Construct a context.

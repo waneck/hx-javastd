@@ -158,7 +158,7 @@ extern class WSDLModelerBase implements com.sun.tools.internal.ws.processor.mode
 	
 	public static var MESSAGE_HAS_MIME_MULTIPART_RELATED_BINDING(default, null) : String;
 	
-	private var info : WSDLModelerBase_ProcessSOAPOperationInfo;
+	private var info : com.sun.tools.internal.ws.processor.modeler.wsdl.WSDLModelerBase.WSDLModelerBase_ProcessSOAPOperationInfo;
 	
 	private var _javaExceptions : java.util.Map<String, com.sun.tools.internal.ws.processor.model.java.JavaException>;
 	

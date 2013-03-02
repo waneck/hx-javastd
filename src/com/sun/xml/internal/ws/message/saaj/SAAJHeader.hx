@@ -32,7 +32,7 @@ extern class SAAJHeader extends com.sun.xml.internal.ws.message.DOMHeader<javax.
 	*/
 	@:overload public function new(header : javax.xml.soap.SOAPHeaderElement) : Void;
 	
-	@:overload override public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
+	@:overload public function getRole(soapVersion : com.sun.xml.internal.ws.api.SOAPVersion) : String;
 	
 	
 }

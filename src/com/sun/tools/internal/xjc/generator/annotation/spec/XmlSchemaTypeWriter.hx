@@ -25,13 +25,13 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlSchemaTypeWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlSchemaType>
 {
-	@:overload public function name(value : String) : XmlSchemaTypeWriter;
+	@:overload public function name(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaTypeWriter;
 	
-	@:overload public function type(value : Class<Dynamic>) : XmlSchemaTypeWriter;
+	@:overload public function type(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaTypeWriter;
 	
-	@:overload public function type(value : com.sun.codemodel.internal.JType) : XmlSchemaTypeWriter;
+	@:overload public function type(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaTypeWriter;
 	
-	@:overload public function namespace(value : String) : XmlSchemaTypeWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlSchemaTypeWriter;
 	
 	
 }

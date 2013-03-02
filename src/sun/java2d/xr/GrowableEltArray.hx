@@ -51,7 +51,7 @@ extern class GrowableEltArray extends sun.java2d.xr.GrowableIntArray
 	
 	@:overload public function getGlyphs() : sun.java2d.xr.GrowableIntArray;
 	
-	@:overload override public function clear() : Void;
+	@:overload public function clear() : Void;
 	
 	
 }

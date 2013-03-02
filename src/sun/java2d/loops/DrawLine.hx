@@ -34,11 +34,11 @@ extern class DrawLine extends sun.java2d.loops.GraphicsPrimitive
 	*   2) must accept output area [x, y, dx, dy]
 	*      from within the surface description data for clip rect
 	*/
-	@:native('methodSignature') public static var _methodSignature(default, null) : String;
+	public static var methodSignature(default, null) : String;
 	
 	public static var primTypeID(default, null) : Int;
 	
-	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : DrawLine;
+	@:overload public static function locate(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : sun.java2d.loops.DrawLine;
 	
 	@:overload private function new(srctype : sun.java2d.loops.SurfaceType, comptype : sun.java2d.loops.CompositeType, dsttype : sun.java2d.loops.SurfaceType) : Void;
 	
@@ -55,9 +55,9 @@ extern class DrawLine extends sun.java2d.loops.GraphicsPrimitive
 	
 	
 }
-@:native('sun$java2d$loops$DrawLine$TraceDrawLine') @:internal extern class DrawLine_TraceDrawLine extends DrawLine
+@:native('sun$java2d$loops$DrawLine$TraceDrawLine') @:internal extern class DrawLine_TraceDrawLine extends sun.java2d.loops.DrawLine
 {
-	@:overload public function new(target : DrawLine) : Void;
+	@:overload public function new(target : sun.java2d.loops.DrawLine) : Void;
 	
 	@:overload override public function traceWrap() : sun.java2d.loops.GraphicsPrimitive;
 	

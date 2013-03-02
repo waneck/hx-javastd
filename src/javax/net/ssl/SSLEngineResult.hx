@@ -65,14 +65,14 @@ package javax.net.ssl;
 	*          arguments are null, or if <<code>bytesConsumed</code> or
 	*          <code>bytesProduced</code> is negative.
 	*/
-	@:overload public function new(status : SSLEngineResult_Status, handshakeStatus : SSLEngineResult_HandshakeStatus, bytesConsumed : Int, bytesProduced : Int) : Void;
+	@:overload public function new(status : javax.net.ssl.SSLEngineResult.SSLEngineResult_Status, handshakeStatus : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus, bytesConsumed : Int, bytesProduced : Int) : Void;
 	
 	/**
 	* Gets the return value of this <code>SSLEngine</code> operation.
 	*
 	* @return  the return value
 	*/
-	@:overload @:final public function getStatus() : SSLEngineResult_Status;
+	@:overload @:final public function getStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_Status;
 	
 	/**
 	* Gets the handshake status of this <code>SSLEngine</code>
@@ -80,7 +80,7 @@ package javax.net.ssl;
 	*
 	* @return  the handshake status
 	*/
-	@:overload @:final public function getHandshakeStatus() : SSLEngineResult_HandshakeStatus;
+	@:overload @:final public function getHandshakeStatus() : javax.net.ssl.SSLEngineResult.SSLEngineResult_HandshakeStatus;
 	
 	/**
 	* Returns the number of bytes consumed from the input buffer.

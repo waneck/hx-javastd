@@ -23,15 +23,15 @@ package com.sun.tools.javac.comp;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Env<A> implements java.lang.Iterable<Env<A>>
+extern class Env<A> implements java.lang.Iterable<com.sun.tools.javac.comp.Env<A>>
 {
 	/** The next enclosing environment.
 	*/
-	public var next : Env<A>;
+	public var next : com.sun.tools.javac.comp.Env<A>;
 	
 	/** The environment enclosing the current class.
 	*/
-	public var outer : Env<A>;
+	public var outer : com.sun.tools.javac.comp.Env<A>;
 	
 	/** The tree with which this environment is associated.
 	*/
@@ -65,25 +65,25 @@ extern class Env<A> implements java.lang.Iterable<Env<A>>
 	/** Duplicate this environment, updating with given tree and info,
 	*  and copying all other fields.
 	*/
-	@:overload public function dup(tree : com.sun.tools.javac.tree.JCTree, info : A) : Env<A>;
+	@:overload public function dup(tree : com.sun.tools.javac.tree.JCTree, info : A) : com.sun.tools.javac.comp.Env<A>;
 	
 	/** Duplicate this environment into a given Environment,
 	*  using its tree and info, and copying all other fields.
 	*/
-	@:overload public function dupto(that : Env<A>) : Env<A>;
+	@:overload public function dupto(that : com.sun.tools.javac.comp.Env<A>) : com.sun.tools.javac.comp.Env<A>;
 	
 	/** Duplicate this environment, updating with given tree,
 	*  and copying all other fields.
 	*/
-	@:overload public function dup(tree : com.sun.tools.javac.tree.JCTree) : Env<A>;
+	@:overload public function dup(tree : com.sun.tools.javac.tree.JCTree) : com.sun.tools.javac.comp.Env<A>;
 	
 	/** Return closest enclosing environment which points to a tree with given tag.
 	*/
-	@:overload public function enclosing(tag : Int) : Env<A>;
+	@:overload public function enclosing(tag : Int) : com.sun.tools.javac.comp.Env<A>;
 	
 	@:overload public function toString() : String;
 	
-	@:overload public function iterator() : java.util.Iterator<Env<A>>;
+	@:overload public function iterator() : java.util.Iterator<com.sun.tools.javac.comp.Env<A>>;
 	
 	
 }

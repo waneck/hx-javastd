@@ -46,7 +46,7 @@ extern class TransientNamingContext extends com.sun.corba.se.impl.naming.cosnami
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:final override public function Bind(n : org.omg.CosNaming.NameComponent, obj : org.omg.CORBA.Object, bt : org.omg.CosNaming.BindingType) : Void;
+	@:overload @:final public function Bind(n : org.omg.CosNaming.NameComponent, obj : org.omg.CORBA.Object, bt : org.omg.CosNaming.BindingType) : Void;
 	
 	/**
 	* Resolves the supplied name to an object reference and returns
@@ -61,7 +61,7 @@ extern class TransientNamingContext extends com.sun.corba.se.impl.naming.cosnami
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:final override public function Resolve(n : org.omg.CosNaming.NameComponent, bth : org.omg.CosNaming.BindingTypeHolder) : org.omg.CORBA.Object;
+	@:overload @:final public function Resolve(n : org.omg.CosNaming.NameComponent, bth : org.omg.CosNaming.BindingTypeHolder) : org.omg.CORBA.Object;
 	
 	/**
 	* Deletes the binding with the supplied name. It creates a
@@ -73,7 +73,7 @@ extern class TransientNamingContext extends com.sun.corba.se.impl.naming.cosnami
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:final override public function Unbind(n : org.omg.CosNaming.NameComponent) : org.omg.CORBA.Object;
+	@:overload @:final public function Unbind(n : org.omg.CosNaming.NameComponent) : org.omg.CORBA.Object;
 	
 	/**
 	* List the contents of this NamingContext. It creates a new
@@ -86,7 +86,7 @@ extern class TransientNamingContext extends com.sun.corba.se.impl.naming.cosnami
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:final override public function List(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
+	@:overload @:final public function List(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
 	
 	/**
 	* Create a new NamingContext. It creates a new TransientNamingContext
@@ -96,21 +96,21 @@ extern class TransientNamingContext extends com.sun.corba.se.impl.naming.cosnami
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:final override public function NewContext() : org.omg.CosNaming.NamingContext;
+	@:overload @:final public function NewContext() : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* Destroys this NamingContext by disconnecting from the ORB.
 	* @exception org.omg.CORBA.SystemException One of a fixed set of CORBA
 	* system exceptions.
 	*/
-	@:overload @:final override public function Destroy() : Void;
+	@:overload @:final public function Destroy() : Void;
 	
 	/**
 	* Return whether this NamingContext contains any bindings. It forwards
 	* this request to the hash table.
 	* @return true if this NamingContext contains no bindings.
 	*/
-	@:overload @:final override public function IsEmpty() : Bool;
+	@:overload @:final public function IsEmpty() : Bool;
 	
 	/**
 	* The local root naming context.

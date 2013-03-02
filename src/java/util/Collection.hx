@@ -304,7 +304,7 @@ package java.util;
 	*         or if the specified collection is null.
 	* @see    #contains(Object)
 	*/
-	@:overload public function containsAll(c : Collection<Dynamic>) : Bool;
+	@:overload public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Adds all of the elements in the specified collection to this collection
@@ -330,7 +330,7 @@ package java.util;
 	*         this time due to insertion restrictions
 	* @see #add(Object)
 	*/
-	@:overload public function addAll(c : Collection<E>) : Bool;
+	@:overload public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes all of this collection's elements that are also contained in the
@@ -355,7 +355,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload public function removeAll(c : Collection<Dynamic>) : Bool;
+	@:overload public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this collection that are contained in the
@@ -379,7 +379,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload public function retainAll(c : Collection<Dynamic>) : Bool;
+	@:overload public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes all of the elements from this collection (optional operation).

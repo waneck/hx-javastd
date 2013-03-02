@@ -34,22 +34,22 @@ extern class Variability implements java.io.Serializable
 	/**
 	* An invalid Variablity value.
 	*/
-	public static var INVALID(default, null) : Variability;
+	public static var INVALID(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Variability attribute representing Constant counters.
 	*/
-	public static var CONSTANT(default, null) : Variability;
+	public static var CONSTANT(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Variability attribute representing a Monotonically changing counters.
 	*/
-	public static var MONOTONIC(default, null) : Variability;
+	public static var MONOTONIC(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Variability attribute representing Variable counters.
 	*/
-	public static var VARIABLE(default, null) : Variability;
+	public static var VARIABLE(default, null) : sun.management.counter.Variability;
 	
 	/**
 	* Returns a string describing this Variability attribute.
@@ -75,7 +75,7 @@ extern class Variability implements java.io.Serializable
 	*                       <code>value</code> or {@link Variability#INVALID}
 	*                       if out of range.
 	*/
-	@:overload public static function toVariability(value : Int) : Variability;
+	@:overload public static function toVariability(value : Int) : sun.management.counter.Variability;
 	
 	
 }

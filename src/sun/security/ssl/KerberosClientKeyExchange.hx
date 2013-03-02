@@ -31,11 +31,11 @@ extern class KerberosClientKeyExchange extends sun.security.ssl.HandshakeMessage
 	
 	@:overload public function new(protocolVersion : sun.security.ssl.ProtocolVersion, clientVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom, input : sun.security.ssl.HandshakeInStream, serverKeys : java.NativeArray<javax.crypto.SecretKey>) : Void;
 	
-	@:overload override public function messageLength() : Int;
+	@:overload public function messageLength() : Int;
 	
-	@:overload override public function send(s : sun.security.ssl.HandshakeOutStream) : Void;
+	@:overload public function send(s : sun.security.ssl.HandshakeOutStream) : Void;
 	
-	@:overload override public function print(p : java.io.PrintStream) : Void;
+	@:overload public function print(p : java.io.PrintStream) : Void;
 	
 	@:overload public function init(serverName : String, isLoopback : Bool, acc : java.security.AccessControlContext, protocolVersion : sun.security.ssl.ProtocolVersion, rand : java.security.SecureRandom) : Void;
 	

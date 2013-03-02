@@ -35,7 +35,7 @@ extern class SoftSynthesizer implements com.sun.media.sound.AudioSynthesizer imp
 	
 	private static var info(default, null) : javax.sound.midi.MidiDevice.MidiDevice_Info;
 	
-	private var weakstream : SoftSynthesizer_WeakAudioStream;
+	private var weakstream : com.sun.media.sound.SoftSynthesizer.SoftSynthesizer_WeakAudioStream;
 	
 	private var control_mutex : Dynamic;
 	
@@ -160,17 +160,17 @@ extern class SoftSynthesizer implements com.sun.media.sound.AudioSynthesizer imp
 	
 	@:overload public function setInputStream(stream : javax.sound.sampled.AudioInputStream) : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	@:overload public function new(stream : javax.sound.sampled.AudioInputStream) : Void;
 	
 	@:overload public function getAudioInputStream() : javax.sound.sampled.AudioInputStream;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

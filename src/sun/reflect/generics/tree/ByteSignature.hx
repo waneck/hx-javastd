@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class ByteSignature implements sun.reflect.generics.tree.BaseType
 {
-	@:overload public static function make() : ByteSignature;
+	@:overload public static function make() : sun.reflect.generics.tree.ByteSignature;
 	
 	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	

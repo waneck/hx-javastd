@@ -71,7 +71,7 @@ extern class AlgorithmParameters
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String) : AlgorithmParameters;
+	@:overload public static function getInstance(algorithm : String) : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns a parameter object for the specified algorithm.
@@ -110,7 +110,7 @@ extern class AlgorithmParameters
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(algorithm : String, provider : String) : AlgorithmParameters;
+	@:overload public static function getInstance(algorithm : String, provider : String) : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns a parameter object for the specified algorithm.
@@ -144,7 +144,7 @@ extern class AlgorithmParameters
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : AlgorithmParameters;
+	@:require(java4) @:overload public static function getInstance(algorithm : String, provider : java.security.Provider) : java.security.AlgorithmParameters;
 	
 	/**
 	* Returns the provider of this parameter object.

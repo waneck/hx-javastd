@@ -46,9 +46,9 @@ extern class MethodUtil extends java.security.SecureClassLoader
 	*/
 	@:overload public static function invoke(m : java.lang.reflect.Method, obj : Dynamic, params : java.NativeArray<Dynamic>) : Dynamic;
 	
-	@:overload @:synchronized override private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
+	@:overload @:synchronized private function loadClass(name : String, resolve : Bool) : Class<Dynamic>;
 	
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload private function findClass(name : String) : Class<Dynamic>;
 	
 	@:overload override private function getPermissions(codesource : java.security.CodeSource) : java.security.PermissionCollection;
 	

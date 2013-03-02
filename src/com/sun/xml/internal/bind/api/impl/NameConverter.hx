@@ -75,7 +75,7 @@ extern interface NameConverter
 	
 	
 }
-@:native('com$sun$xml$internal$bind$api$impl$NameConverter$Standard') @:internal extern class NameConverter_Standard extends com.sun.xml.internal.bind.api.impl.NameUtil implements NameConverter
+@:native('com$sun$xml$internal$bind$api$impl$NameConverter$Standard') @:internal extern class NameConverter_Standard extends com.sun.xml.internal.bind.api.impl.NameUtil implements com.sun.xml.internal.bind.api.impl.NameConverter
 {
 	@:overload public function toClassName(s : String) : String;
 	
@@ -85,7 +85,7 @@ extern interface NameConverter
 	
 	@:overload public function toPropertyName(s : String) : String;
 	
-	@:overload override public function toConstantName(token : String) : String;
+	@:overload public function toConstantName(token : String) : String;
 	
 	/**
 	* Computes a Java package name from a namespace URI,

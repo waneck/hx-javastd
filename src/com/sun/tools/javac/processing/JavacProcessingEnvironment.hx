@@ -139,9 +139,9 @@ extern class JavacProcessingEnvironment implements javax.annotation.processing.P
 * discovered processors then fails over to the service provider
 * mechanism if additional queries are made.
 */
-@:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$DiscoveredProcessors') @:internal extern class JavacProcessingEnvironment_DiscoveredProcessors implements java.lang.Iterable<JavacProcessingEnvironment_ProcessorState>
+@:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$DiscoveredProcessors') @:internal extern class JavacProcessingEnvironment_DiscoveredProcessors implements java.lang.Iterable<com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_ProcessorState>
 {
-	@:overload public function iterator() : JavacProcessingEnvironment_DiscoveredProcessors_ProcessorStateIterator;
+	@:overload public function iterator() : com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_DiscoveredProcessors_ProcessorStateIterator;
 	
 	/**
 	* Free jar files, etc. if using a service loader.
@@ -150,9 +150,9 @@ extern class JavacProcessingEnvironment implements javax.annotation.processing.P
 	
 	
 }
-@:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$DiscoveredProcessors$ProcessorStateIterator') @:internal extern class JavacProcessingEnvironment_DiscoveredProcessors_ProcessorStateIterator implements java.util.Iterator<JavacProcessingEnvironment_ProcessorState>
+@:native('com$sun$tools$javac$processing$JavacProcessingEnvironment$DiscoveredProcessors$ProcessorStateIterator') @:internal extern class JavacProcessingEnvironment_DiscoveredProcessors_ProcessorStateIterator implements java.util.Iterator<com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_ProcessorState>
 {
-	@:overload public function next() : JavacProcessingEnvironment_ProcessorState;
+	@:overload public function next() : com.sun.tools.javac.processing.JavacProcessingEnvironment.JavacProcessingEnvironment_ProcessorState;
 	
 	@:overload public function hasNext() : Bool;
 	

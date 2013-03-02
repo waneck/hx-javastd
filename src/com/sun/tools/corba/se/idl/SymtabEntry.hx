@@ -84,9 +84,9 @@ extern class SymtabEntry
 	@:overload private function typeName(typeName : String) : Void;
 	
 	/** @return the type entry of this entry */
-	@:overload public function type() : SymtabEntry;
+	@:overload public function type() : com.sun.tools.corba.se.idl.SymtabEntry;
 	
-	@:overload public function type(newType : SymtabEntry) : Void;
+	@:overload public function type(newType : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** The file name in which this entry was defined. */
 	@:overload public function sourceFile() : com.sun.tools.corba.se.idl.IncludeEntry;
@@ -96,11 +96,11 @@ extern class SymtabEntry
 	
 	/** This must be either an InterfaceEntry or a ModuleEntry.
 	It can be nothing else. */
-	@:overload public function container() : SymtabEntry;
+	@:overload public function container() : com.sun.tools.corba.se.idl.SymtabEntry;
 	
 	/** This must be either an InterfaceEntry or a ModuleEntry.
 	It can be nothing else. */
-	@:overload public function container(newContainer : SymtabEntry) : Void;
+	@:overload public function container(newContainer : com.sun.tools.corba.se.idl.SymtabEntry) : Void;
 	
 	/** @return the repository ID for this entry. */
 	@:overload public function repositoryID() : com.sun.tools.corba.se.idl.RepositoryID;

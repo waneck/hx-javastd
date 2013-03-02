@@ -222,13 +222,13 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* @param e  the mouse wheel event
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent) : Void;
+	@:require(java4) @:overload private function processMouseWheelEvent(e : java.awt.event.MouseWheelEvent) : Void;
 	
 	/**
 	* If wheel scrolling is enabled, we return true for MouseWheelEvents
 	* @since 1.4
 	*/
-	@:require(java4) @:overload override private function eventTypeEnabled(type : Int) : Bool;
+	@:require(java4) @:overload private function eventTypeEnabled(type : Int) : Bool;
 	
 	/**
 	* Enables/disables scrolling in response to movement of the mouse wheel.
@@ -263,7 +263,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	*         AccessibleContext of this ScrollPane
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -292,7 +292,7 @@ extern class ScrollPane extends java.awt.Container implements javax.accessibilit
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

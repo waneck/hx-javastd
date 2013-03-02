@@ -26,10 +26,10 @@ package com.sun.tools.javac.util;
 extern class JavacMessages implements com.sun.tools.javac.api.Messages
 {
 	/** The context key for the JavacMessages object. */
-	public static var messagesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<JavacMessages>;
+	public static var messagesKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.util.JavacMessages>;
 	
 	/** Get the JavacMessages instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : JavacMessages;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.JavacMessages;
 	
 	@:overload public function getCurrentLocale() : java.util.Locale;
 	

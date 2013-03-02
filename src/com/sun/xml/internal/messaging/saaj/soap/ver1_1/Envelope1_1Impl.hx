@@ -31,9 +31,9 @@ extern class Envelope1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.im
 {
 	@:overload public function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
-	@:overload override private function getBodyName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload private function getBodyName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
-	@:overload override private function getHeaderName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
+	@:overload private function getHeaderName(prefix : String) : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl;
 	
 	
 }

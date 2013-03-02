@@ -25,19 +25,19 @@ extern class ClonedNodeListIterator extends com.sun.org.apache.xml.internal.dtm.
 {
 	@:overload public function new(source : com.sun.org.apache.xalan.internal.xsltc.dom.CachedNodeListIterator) : Void;
 	
-	@:overload override public function setRestartable(isRestartable : Bool) : Void;
+	@:overload public function setRestartable(isRestartable : Bool) : Void;
 	
 	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	@:overload override public function next() : Int;
 	
-	@:overload override public function getPosition() : Int;
+	@:overload public function getPosition() : Int;
 	
-	@:overload override public function getNodeByPosition(pos : Int) : Int;
+	@:overload public function getNodeByPosition(pos : Int) : Int;
 	
-	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	@:overload override public function setMark() : Void;
 	

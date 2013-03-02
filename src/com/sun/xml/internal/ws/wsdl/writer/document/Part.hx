@@ -29,11 +29,11 @@ extern interface Part extends com.sun.xml.internal.txw2.TypedXmlWriter extends c
 	*
 	* @author WS Development Team
 	*/
-	@:overload public function element(value : javax.xml.namespace.QName) : Part;
+	@:overload public function element(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.Part;
 	
-	@:overload public function type(value : javax.xml.namespace.QName) : Part;
+	@:overload public function type(value : javax.xml.namespace.QName) : com.sun.xml.internal.ws.wsdl.writer.document.Part;
 	
-	@:overload public function name(value : String) : Part;
+	@:overload public function name(value : String) : com.sun.xml.internal.ws.wsdl.writer.document.Part;
 	
 	
 }

@@ -70,7 +70,7 @@ extern class ImageRepresentation extends sun.awt.image.ImageWatched implements j
 	
 	@:overload public function imageComplete(status : Int) : Void;
 	
-	@:overload @:synchronized override public function notifyWatcherListEmpty() : Void;
+	@:overload @:synchronized public function notifyWatcherListEmpty() : Void;
 	
 	@:overload public function prepare(iw : java.awt.image.ImageObserver) : Bool;
 	

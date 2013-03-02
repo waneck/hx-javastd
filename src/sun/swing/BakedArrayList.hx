@@ -52,9 +52,9 @@ extern class BakedArrayList extends java.util.ArrayList<Dynamic>
 	*/
 	@:overload public function cacheHashCode() : Void;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
-	@:overload override public function equals(o : Dynamic) : Bool;
+	@:overload public function equals(o : Dynamic) : Bool;
 	
 	
 }

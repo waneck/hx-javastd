@@ -35,7 +35,7 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	
 	@:overload @:native public function nativeLoadSystemColors(systemColors : java.NativeArray<Int>) : Void;
 	
-	@:overload override public function loadSystemColors(systemColors : java.NativeArray<Int>) : Void;
+	@:overload public function loadSystemColors(systemColors : java.NativeArray<Int>) : Void;
 	
 	@:overload public static function getDisplay() : haxe.Int64;
 	
@@ -47,7 +47,7 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	
 	@:overload override public function createFrame(target : java.awt.Frame) : java.awt.peer.FramePeer;
 	
-	@:overload public function addXEventListener(listener : XToolkit_XEventListener) : Void;
+	@:overload public function addXEventListener(listener : sun.awt.X11.XToolkit.XToolkit_XEventListener) : Void;
 	
 	@:overload public function run() : Void;
 	
@@ -66,7 +66,7 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	* not set, we try to calculate the insets ourselves using
 	* getScreenInsetsManually method.
 	*/
-	@:overload override public function getScreenInsets(gc : java.awt.GraphicsConfiguration) : java.awt.Insets;
+	@:overload public function getScreenInsets(gc : java.awt.GraphicsConfiguration) : java.awt.Insets;
 	
 	/*
 	@Override
@@ -90,22 +90,22 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	* automatically.  The setter method for this property is
 	* irrelevant on X.
 	*/
-	@:overload override public function setDynamicLayout(b : Bool) : Void;
+	@:overload public function setDynamicLayout(b : Bool) : Void;
 	
-	@:overload override private function isDynamicLayoutSet() : Bool;
+	@:overload private function isDynamicLayoutSet() : Bool;
 	
 	/* Called from isDynamicLayoutActive() and from
 	* lazilyLoadDynamicLayoutSupportedProperty()
 	*/
 	@:overload private function isDynamicLayoutSupported() : Bool;
 	
-	@:overload override public function isDynamicLayoutActive() : Bool;
+	@:overload public function isDynamicLayoutActive() : Bool;
 	
 	@:overload override public function getFontPeer(name : String, style : Int) : java.awt.peer.FontPeer;
 	
 	@:overload override public function createDragSourceContextPeer(dge : java.awt.dnd.DragGestureEvent) : java.awt.dnd.peer.DragSourceContextPeer;
 	
-	@:overload override public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(recognizerClass : Class<T>, ds : java.awt.dnd.DragSource, c : java.awt.Component, srcActions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
+	@:overload public function createDragGestureRecognizer<T : java.awt.dnd.DragGestureRecognizer>(recognizerClass : Class<T>, ds : java.awt.dnd.DragSource, c : java.awt.Component, srcActions : Int, dgl : java.awt.dnd.DragGestureListener) : T;
 	
 	@:overload override public function createCheckboxMenuItem(target : java.awt.CheckboxMenuItem) : java.awt.peer.CheckboxMenuItemPeer;
 	
@@ -158,7 +158,7 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	/**
 	* Returns a new custom cursor.
 	*/
-	@:overload override public function createCustomCursor(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : java.awt.Cursor;
+	@:overload public function createCustomCursor(cursor : java.awt.Image, hotSpot : java.awt.Point, name : String) : java.awt.Cursor;
 	
 	@:overload override public function createTrayIcon(target : java.awt.TrayIcon) : java.awt.peer.TrayIconPeer;
 	
@@ -169,42 +169,42 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	/**
 	* Returns the supported cursor size
 	*/
-	@:overload override public function getBestCursorSize(preferredWidth : Int, preferredHeight : Int) : java.awt.Dimension;
+	@:overload public function getBestCursorSize(preferredWidth : Int, preferredHeight : Int) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumCursorColors() : Int;
+	@:overload public function getMaximumCursorColors() : Int;
 	
-	@:overload override public function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<Dynamic, Dynamic>;
+	@:overload public function mapInputMethodHighlight(highlight : java.awt.im.InputMethodHighlight) : java.util.Map<Dynamic, Dynamic>;
 	
-	@:overload override public function getLockingKeyState(key : Int) : Bool;
+	@:overload public function getLockingKeyState(key : Int) : Bool;
 	
-	@:overload override public function getSystemClipboard() : java.awt.datatransfer.Clipboard;
+	@:overload public function getSystemClipboard() : java.awt.datatransfer.Clipboard;
 	
-	@:overload override public function getSystemSelection() : java.awt.datatransfer.Clipboard;
+	@:overload public function getSystemSelection() : java.awt.datatransfer.Clipboard;
 	
-	@:overload override public function beep() : Void;
+	@:overload public function beep() : Void;
 	
-	@:overload override public function getPrintJob(frame : java.awt.Frame, doctitle : String, props : java.util.Properties) : java.awt.PrintJob;
+	@:overload public function getPrintJob(frame : java.awt.Frame, doctitle : String, props : java.util.Properties) : java.awt.PrintJob;
 	
-	@:overload override public function getPrintJob(frame : java.awt.Frame, doctitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : java.awt.PrintJob;
+	@:overload public function getPrintJob(frame : java.awt.Frame, doctitle : String, jobAttributes : java.awt.JobAttributes, pageAttributes : java.awt.PageAttributes) : java.awt.PrintJob;
 	
-	@:overload override public function getScreenResolution() : Int;
+	@:overload public function getScreenResolution() : Int;
 	
-	@:overload override public function getColorModel() : java.awt.image.ColorModel;
+	@:overload public function getColorModel() : java.awt.image.ColorModel;
 	
 	/**
 	* Returns a new input method adapter descriptor for native input methods.
 	*/
-	@:overload override public function getInputMethodAdapterDescriptor() : java.awt.im.spi.InputMethodDescriptor;
+	@:overload public function getInputMethodAdapterDescriptor() : java.awt.im.spi.InputMethodDescriptor;
 	
-	@:overload override public function isFrameStateSupported(state : Int) : Bool;
+	@:overload public function isFrameStateSupported(state : Int) : Bool;
 	
-	@:overload override private function initializeDesktopProperties() : Void;
+	@:overload private function initializeDesktopProperties() : Void;
 	
 	@:overload override public function getNumberOfButtons() : Int;
 	
 	@:overload override private function lazilyLoadDesktopProperty(name : String) : Dynamic;
 	
-	@:overload @:synchronized override public function addPropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
+	@:overload @:synchronized public function addPropertyChangeListener(name : String, pcl : java.beans.PropertyChangeListener) : Void;
 	
 	/**
 	* @see sun.awt.SunToolkit#needsXEmbedImpl
@@ -215,7 +215,7 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	
 	@:overload override public function isModalExclusionTypeSupported(exclusionType : java.awt.Dialog.Dialog_ModalExclusionType) : Bool;
 	
-	@:overload override public function isAlwaysOnTopSupported() : Bool;
+	@:overload public function isAlwaysOnTopSupported() : Bool;
 	
 	@:overload override public function useBufferPerWindow() : Bool;
 	
@@ -239,9 +239,9 @@ extern class XToolkit extends sun.awt.UNIXToolkit implements java.lang.Runnable
 	*/
 	@:overload override public function isDesktopSupported() : Bool;
 	
-	@:overload override public function createDesktopPeer(target : java.awt.Desktop) : java.awt.peer.DesktopPeer;
+	@:overload public function createDesktopPeer(target : java.awt.Desktop) : java.awt.peer.DesktopPeer;
 	
-	@:overload override public function areExtraMouseButtonsEnabled() : Bool;
+	@:overload public function areExtraMouseButtonsEnabled() : Bool;
 	
 	@:overload override public function isWindowOpacitySupported() : Bool;
 	

@@ -25,17 +25,17 @@ extern interface ExpressionNode extends javax.xml.transform.SourceLocator
 {
 	/** This pair of methods are used to inform the node of its
 	parent. */
-	@:overload public function exprSetParent(n : ExpressionNode) : Void;
+	@:overload public function exprSetParent(n : com.sun.org.apache.xpath.internal.ExpressionNode) : Void;
 	
-	@:overload public function exprGetParent() : ExpressionNode;
+	@:overload public function exprGetParent() : com.sun.org.apache.xpath.internal.ExpressionNode;
 	
 	/** This method tells the node to add its argument to the node's
 	list of children.  */
-	@:overload public function exprAddChild(n : ExpressionNode, i : Int) : Void;
+	@:overload public function exprAddChild(n : com.sun.org.apache.xpath.internal.ExpressionNode, i : Int) : Void;
 	
 	/** This method returns a child node.  The children are numbered
 	from zero, left to right. */
-	@:overload public function exprGetChild(i : Int) : ExpressionNode;
+	@:overload public function exprGetChild(i : Int) : com.sun.org.apache.xpath.internal.ExpressionNode;
 	
 	/** Return the number of children the node has. */
 	@:overload public function exprGetNumChildren() : Int;

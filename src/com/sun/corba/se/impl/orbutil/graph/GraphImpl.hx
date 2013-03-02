@@ -30,11 +30,11 @@ extern class GraphImpl extends java.util.AbstractSet<Dynamic> implements com.sun
 	@:overload public function new(coll : java.util.Collection<Dynamic>) : Void;
 	
 	/***********************************************************************************/
-	@:overload override public function add(obj : Dynamic) : Bool;
+	@:overload public function add(obj : Dynamic) : Bool;
 	
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	/***********************************************************************************/
 	@:overload public function getNodeData(node : com.sun.corba.se.impl.orbutil.graph.Node) : com.sun.corba.se.impl.orbutil.graph.NodeData;

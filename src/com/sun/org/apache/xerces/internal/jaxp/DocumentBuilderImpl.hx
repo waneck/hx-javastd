@@ -25,29 +25,29 @@ extern class DocumentBuilderImpl extends javax.xml.parsers.DocumentBuilder imple
 	* one to get a DOM Level 2 DOMImplementation object and then use DOM
 	* Level 2 methods to create a DOM Document object.
 	*/
-	@:overload override public function newDocument() : org.w3c.dom.Document;
+	@:overload public function newDocument() : org.w3c.dom.Document;
 	
-	@:overload override public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload public function getDOMImplementation() : org.w3c.dom.DOMImplementation;
 	
-	@:overload override public function parse(is : org.xml.sax.InputSource) : org.w3c.dom.Document;
+	@:overload public function parse(is : org.xml.sax.InputSource) : org.w3c.dom.Document;
 	
-	@:overload override public function isNamespaceAware() : Bool;
+	@:overload public function isNamespaceAware() : Bool;
 	
-	@:overload override public function isValidating() : Bool;
+	@:overload public function isValidating() : Bool;
 	
 	/**
 	* Gets the XInclude processing mode for this parser
 	* @return the state of XInclude processing mode
 	*/
-	@:overload override public function isXIncludeAware() : Bool;
+	@:overload public function isXIncludeAware() : Bool;
 	
-	@:overload override public function setEntityResolver(er : org.xml.sax.EntityResolver) : Void;
+	@:overload public function setEntityResolver(er : org.xml.sax.EntityResolver) : Void;
 	
-	@:overload override public function setErrorHandler(eh : org.xml.sax.ErrorHandler) : Void;
+	@:overload public function setErrorHandler(eh : org.xml.sax.ErrorHandler) : Void;
 	
-	@:overload override public function getSchema() : javax.xml.validation.Schema;
+	@:overload public function getSchema() : javax.xml.validation.Schema;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	
 }

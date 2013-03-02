@@ -191,7 +191,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @param buffer Contains current formatted value, receiver should
 	*        NOT modify it.
 	*/
-	@:overload public function formatted(attr : Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload public function formatted(attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
 	/**
 	* Notified when a particular region of the String is formatted.
@@ -204,7 +204,7 @@ extern class Format implements java.io.Serializable implements java.lang.Cloneab
 	* @param buffer Contains current formatted value, receiver should
 	*        NOT modify it.
 	*/
-	@:overload public function formatted(fieldID : Int, attr : Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
+	@:overload public function formatted(fieldID : Int, attr : java.text.Format.Format_Field, value : Dynamic, start : Int, end : Int, buffer : java.lang.StringBuffer) : Void;
 	
 	
 }

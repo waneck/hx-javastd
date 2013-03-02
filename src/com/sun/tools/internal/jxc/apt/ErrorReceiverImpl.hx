@@ -31,13 +31,13 @@ package com.sun.tools.internal.jxc.apt;
 	
 	@:overload public function new(env : com.sun.mirror.apt.AnnotationProcessorEnvironment) : Void;
 	
-	@:overload override public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
-	@:overload override public function info(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload public function info(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

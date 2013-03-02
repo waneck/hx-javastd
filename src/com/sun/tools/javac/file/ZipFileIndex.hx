@@ -80,7 +80,7 @@ extern class ZipFileIndex
 * ----------------------------------------------------------------------------*/
 @:native('com$sun$tools$javac$file$ZipFileIndex$ZipDirectory') @:internal extern class ZipFileIndex_ZipDirectory
 {
-	@:overload public function new(zipRandomFile : java.io.RandomAccessFile, start : haxe.Int64, end : haxe.Int64, index : ZipFileIndex) : Void;
+	@:overload public function new(zipRandomFile : java.io.RandomAccessFile, start : haxe.Int64, end : haxe.Int64, index : com.sun.tools.javac.file.ZipFileIndex) : Void;
 	
 	
 }
@@ -91,9 +91,9 @@ extern class ZipFileIndex
 {
 	
 }
-@:native('com$sun$tools$javac$file$ZipFileIndex$Entry') @:internal extern class ZipFileIndex_Entry implements java.lang.Comparable<ZipFileIndex_Entry>
+@:native('com$sun$tools$javac$file$ZipFileIndex$Entry') @:internal extern class ZipFileIndex_Entry implements java.lang.Comparable<com.sun.tools.javac.file.ZipFileIndex.ZipFileIndex_Entry>
 {
-	public static var EMPTY_ARRAY(default, null) : java.NativeArray<ZipFileIndex_Entry>;
+	public static var EMPTY_ARRAY(default, null) : java.NativeArray<com.sun.tools.javac.file.ZipFileIndex.ZipFileIndex_Entry>;
 	
 	@:overload public function new(path : com.sun.tools.javac.file.RelativePath) : Void;
 	
@@ -107,7 +107,7 @@ extern class ZipFileIndex
 	
 	@:overload public function isDirectory() : Bool;
 	
-	@:overload public function compareTo(other : ZipFileIndex_Entry) : Int;
+	@:overload public function compareTo(other : com.sun.tools.javac.file.ZipFileIndex.ZipFileIndex_Entry) : Int;
 	
 	@:overload public function equals(o : Dynamic) : Bool;
 	

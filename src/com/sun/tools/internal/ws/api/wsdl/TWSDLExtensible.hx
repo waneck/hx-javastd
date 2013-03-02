@@ -65,7 +65,7 @@ extern interface TWSDLExtensible
 	*
 	* @return null if the {@link TWSDLExtensible} has no parent, root of wsdl document - wsdl:definition.
 	*/
-	@:overload public function getParent() : TWSDLExtensible;
+	@:overload public function getParent() : com.sun.tools.internal.ws.api.wsdl.TWSDLExtensible;
 	
 	
 }

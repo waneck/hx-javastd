@@ -33,11 +33,11 @@ extern class IIOPOutputStream extends com.sun.corba.se.impl.io.OutputStreamHook
 {
 	@:overload public function new() : Void;
 	
-	@:overload override private function beginOptionalCustomData() : Void;
+	@:overload private function beginOptionalCustomData() : Void;
 	
 	@:overload @:final public function setOrbStream(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
-	@:overload @:final override public function getOrbStream() : org.omg.CORBA_2_3.portable.OutputStream;
+	@:overload @:final public function getOrbStream() : org.omg.CORBA_2_3.portable.OutputStream;
 	
 	@:overload @:final public function increaseRecursionDepth() : Void;
 	
@@ -48,7 +48,7 @@ extern class IIOPOutputStream extends com.sun.corba.se.impl.io.OutputStreamHook
 	* in ObjectOutputStream.
 	* @since     JDK1.1.6
 	*/
-	@:require(java1) @:overload @:final override public function writeObjectOverride(obj : Dynamic) : Void;
+	@:require(java1) @:overload @:final public function writeObjectOverride(obj : Dynamic) : Void;
 	
 	/**
 	* Override the actions of the final method "writeObject()"
@@ -62,7 +62,7 @@ extern class IIOPOutputStream extends com.sun.corba.se.impl.io.OutputStreamHook
 	* in ObjectOutputStream.
 	* @since     JDK1.1.6
 	*/
-	@:require(java1) @:overload @:final override public function defaultWriteObjectDelegate() : Void;
+	@:require(java1) @:overload @:final public function defaultWriteObjectDelegate() : Void;
 	
 	/**
 	* Override the actions of the final method "enableReplaceObject()"
@@ -72,15 +72,15 @@ extern class IIOPOutputStream extends com.sun.corba.se.impl.io.OutputStreamHook
 	@:require(java1) @:overload @:final public function enableReplaceObjectDelegate(enable : Bool) : Bool;
 	
 	/* throws SecurityException */
-	@:overload @:final override private function annotateClass(cl : Class<Dynamic>) : Void;
+	@:overload @:final private function annotateClass(cl : Class<Dynamic>) : Void;
 	
-	@:overload @:final override public function close() : Void;
+	@:overload @:final public function close() : Void;
 	
-	@:overload @:final override private function drain() : Void;
+	@:overload @:final private function drain() : Void;
 	
-	@:overload @:final override public function flush() : Void;
+	@:overload @:final public function flush() : Void;
 	
-	@:overload @:final override private function replaceObject(obj : Dynamic) : Dynamic;
+	@:overload @:final private function replaceObject(obj : Dynamic) : Dynamic;
 	
 	/**
 	* Reset will disregard the state of any objects already written
@@ -92,35 +92,35 @@ extern class IIOPOutputStream extends com.sun.corba.se.impl.io.OutputStreamHook
 	* will be written to the stream again.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:final override public function reset() : Void;
+	@:require(java1) @:overload @:final public function reset() : Void;
 	
-	@:overload @:final override public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload @:final public function write(b : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
-	@:overload @:final override public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
+	@:overload @:final public function write(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Void;
 	
-	@:overload @:final override public function write(data : Int) : Void;
+	@:overload @:final public function write(data : Int) : Void;
 	
-	@:overload @:final override public function writeBoolean(data : Bool) : Void;
+	@:overload @:final public function writeBoolean(data : Bool) : Void;
 	
-	@:overload @:final override public function writeByte(data : Int) : Void;
+	@:overload @:final public function writeByte(data : Int) : Void;
 	
-	@:overload @:final override public function writeBytes(data : String) : Void;
+	@:overload @:final public function writeBytes(data : String) : Void;
 	
-	@:overload @:final override public function writeChar(data : Int) : Void;
+	@:overload @:final public function writeChar(data : Int) : Void;
 	
-	@:overload @:final override public function writeChars(data : String) : Void;
+	@:overload @:final public function writeChars(data : String) : Void;
 	
-	@:overload @:final override public function writeDouble(data : Float) : Void;
+	@:overload @:final public function writeDouble(data : Float) : Void;
 	
-	@:overload @:final override public function writeFloat(data : Single) : Void;
+	@:overload @:final public function writeFloat(data : Single) : Void;
 	
-	@:overload @:final override public function writeInt(data : Int) : Void;
+	@:overload @:final public function writeInt(data : Int) : Void;
 	
-	@:overload @:final override public function writeLong(data : haxe.Int64) : Void;
+	@:overload @:final public function writeLong(data : haxe.Int64) : Void;
 	
-	@:overload @:final override public function writeShort(data : Int) : Void;
+	@:overload @:final public function writeShort(data : Int) : Void;
 	
-	@:overload @:final override private function writeStreamHeader() : Void;
+	@:overload @:final private function writeStreamHeader() : Void;
 	
 	/**
 	* Helper method for correcting the Kestrel bug 4367783 (dealing
@@ -130,7 +130,7 @@ extern class IIOPOutputStream extends com.sun.corba.se.impl.io.OutputStreamHook
 	*/
 	@:overload private function internalWriteUTF(stream : org.omg.CORBA.portable.OutputStream, data : String) : Void;
 	
-	@:overload @:final override public function writeUTF(data : String) : Void;
+	@:overload @:final public function writeUTF(data : String) : Void;
 	
 	
 }

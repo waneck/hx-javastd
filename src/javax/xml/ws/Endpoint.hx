@@ -50,7 +50,7 @@ extern class Endpoint
 	* @return The newly created endpoint.
 	*
 	**/
-	@:overload public static function create(implementor : Dynamic) : Endpoint;
+	@:overload public static function create(implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint with the specified implementor object and web
@@ -73,7 +73,7 @@ extern class Endpoint
 	* @since JAX-WS 2.2
 	*
 	*/
-	@:require(java2) @:overload public static function create(implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Endpoint;
+	@:require(java2) @:overload public static function create(implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint with the specified binding type and
@@ -92,7 +92,7 @@ extern class Endpoint
 	* @return The newly created endpoint.
 	*
 	**/
-	@:overload public static function create(bindingId : String, implementor : Dynamic) : Endpoint;
+	@:overload public static function create(bindingId : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates an endpoint with the specified binding type,
@@ -115,7 +115,7 @@ extern class Endpoint
 	* @return The newly created endpoint.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:overload public static function create(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Endpoint;
+	@:require(java2) @:overload public static function create(bindingId : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Returns the binding for this endpoint.
@@ -181,7 +181,7 @@ extern class Endpoint
 	*          <code>WebServicePermission("publishEndpoint")</code> permission.
 	*
 	**/
-	@:native('publish') @:overload public static function _publish(address : String, implementor : Dynamic) : Endpoint;
+	@:native('publish') @:overload public static function _publish(address : String, implementor : Dynamic) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Creates and publishes an endpoint for the specified implementor
@@ -211,7 +211,7 @@ extern class Endpoint
 	*          <code>WebServicePermission("publishEndpoint")</code> permission.
 	* @since JAX-WS 2.2
 	*/
-	@:require(java2) @:native('publish') @:overload public static function _publish(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : Endpoint;
+	@:require(java2) @:native('publish') @:overload public static function _publish(address : String, implementor : Dynamic, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Endpoint;
 	
 	/**
 	* Publishes this endpoint at the provided server context.

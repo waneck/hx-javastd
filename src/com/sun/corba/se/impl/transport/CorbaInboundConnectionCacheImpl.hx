@@ -38,13 +38,13 @@ extern class CorbaInboundConnectionCacheImpl extends com.sun.corba.se.impl.trans
 	
 	@:overload public function remove(connection : com.sun.corba.se.pept.transport.Connection) : Void;
 	
-	@:overload override public function values() : java.util.Collection<Dynamic>;
+	@:overload public function values() : java.util.Collection<Dynamic>;
 	
-	@:overload override private function backingStore() : Dynamic;
+	@:overload private function backingStore() : Dynamic;
 	
-	@:overload override private function registerWithMonitoring() : Void;
+	@:overload private function registerWithMonitoring() : Void;
 	
-	@:overload override private function dprint(msg : String) : Void;
+	@:overload private function dprint(msg : String) : Void;
 	
 	
 }

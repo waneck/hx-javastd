@@ -36,9 +36,9 @@ extern class SharedCDRClientRequestDispatcherImpl extends com.sun.corba.se.impl.
 	* It implements RMI delegate as well as our internal ClientRequestDispatcher
 	* interface.
 	*/
-	@:overload override public function marshalingComplete(self : Dynamic, outputObject : com.sun.corba.se.pept.encoding.OutputObject) : com.sun.corba.se.pept.encoding.InputObject;
+	@:overload public function marshalingComplete(self : Dynamic, outputObject : com.sun.corba.se.pept.encoding.OutputObject) : com.sun.corba.se.pept.encoding.InputObject;
 	
-	@:overload override private function dprint(msg : String) : Void;
+	@:overload private function dprint(msg : String) : Void;
 	
 	
 }

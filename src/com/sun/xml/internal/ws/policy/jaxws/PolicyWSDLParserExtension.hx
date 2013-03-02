@@ -30,63 +30,63 @@ extern class PolicyWSDLParserExtension extends com.sun.xml.internal.ws.api.wsdl.
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function portElements(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function portElements(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function portAttributes(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function portAttributes(port : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function serviceElements(service : com.sun.xml.internal.ws.api.model.wsdl.WSDLService, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function serviceElements(service : com.sun.xml.internal.ws.api.model.wsdl.WSDLService, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function serviceAttributes(service : com.sun.xml.internal.ws.api.model.wsdl.WSDLService, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function serviceAttributes(service : com.sun.xml.internal.ws.api.model.wsdl.WSDLService, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function definitionsElements(reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function definitionsElements(reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function bindingElements(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function bindingElements(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function bindingAttributes(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function bindingAttributes(binding : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundPortType, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function portTypeElements(portType : com.sun.xml.internal.ws.api.model.wsdl.WSDLPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function portTypeElements(portType : com.sun.xml.internal.ws.api.model.wsdl.WSDLPortType, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function portTypeAttributes(portType : com.sun.xml.internal.ws.api.model.wsdl.WSDLPortType, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function portTypeAttributes(portType : com.sun.xml.internal.ws.api.model.wsdl.WSDLPortType, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function portTypeOperationElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function portTypeOperationElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function portTypeOperationAttributes(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function portTypeOperationAttributes(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function bindingOperationElements(boundOperation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function bindingOperationElements(boundOperation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function bindingOperationAttributes(boundOperation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function bindingOperationAttributes(boundOperation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function messageElements(msg : com.sun.xml.internal.ws.api.model.wsdl.WSDLMessage, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function messageElements(msg : com.sun.xml.internal.ws.api.model.wsdl.WSDLMessage, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function messageAttributes(msg : com.sun.xml.internal.ws.api.model.wsdl.WSDLMessage, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function messageAttributes(msg : com.sun.xml.internal.ws.api.model.wsdl.WSDLMessage, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function portTypeOperationInputElements(input : com.sun.xml.internal.ws.api.model.wsdl.WSDLInput, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function portTypeOperationInputElements(input : com.sun.xml.internal.ws.api.model.wsdl.WSDLInput, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function portTypeOperationInputAttributes(input : com.sun.xml.internal.ws.api.model.wsdl.WSDLInput, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function portTypeOperationInputAttributes(input : com.sun.xml.internal.ws.api.model.wsdl.WSDLInput, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function portTypeOperationOutputElements(output : com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function portTypeOperationOutputElements(output : com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function portTypeOperationOutputAttributes(output : com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function portTypeOperationOutputAttributes(output : com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function portTypeOperationFaultElements(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function portTypeOperationFaultElements(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function portTypeOperationFaultAttributes(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function portTypeOperationFaultAttributes(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLFault, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function bindingOperationInputElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function bindingOperationInputElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function bindingOperationInputAttributes(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function bindingOperationInputAttributes(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function bindingOperationOutputElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function bindingOperationOutputElements(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function bindingOperationOutputAttributes(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function bindingOperationOutputAttributes(operation : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundOperation, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function bindingOperationFaultElements(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault, reader : javax.xml.stream.XMLStreamReader) : Bool;
+	@:overload public function bindingOperationFaultElements(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault, reader : javax.xml.stream.XMLStreamReader) : Bool;
 	
-	@:overload override public function bindingOperationFaultAttributes(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault, reader : javax.xml.stream.XMLStreamReader) : Void;
+	@:overload public function bindingOperationFaultAttributes(fault : com.sun.xml.internal.ws.api.model.wsdl.WSDLBoundFault, reader : javax.xml.stream.XMLStreamReader) : Void;
 	
-	@:overload override public function finished(context : com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtensionContext) : Void;
+	@:overload public function finished(context : com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtensionContext) : Void;
 	
-	@:overload override public function postFinished(context : com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtensionContext) : Void;
+	@:overload public function postFinished(context : com.sun.xml.internal.ws.api.wsdl.parser.WSDLParserExtensionContext) : Void;
 	
 	
 }

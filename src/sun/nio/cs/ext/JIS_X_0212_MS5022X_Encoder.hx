@@ -27,9 +27,9 @@ package sun.nio.cs.ext;
 {
 	@:overload public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
+	@:overload private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
 	
-	@:overload override private function encodeDouble(ch : java.StdTypes.Char16) : Int;
+	@:overload private function encodeDouble(ch : java.StdTypes.Char16) : Int;
 	
 	
 }

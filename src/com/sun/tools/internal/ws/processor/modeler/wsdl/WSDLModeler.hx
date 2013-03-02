@@ -27,7 +27,7 @@ extern class WSDLModeler extends com.sun.tools.internal.ws.processor.modeler.wsd
 {
 	@:overload public function new(options : com.sun.tools.internal.ws.wscompile.WsimportOptions, receiver : com.sun.tools.internal.ws.wscompile.ErrorReceiver, forest : com.sun.tools.internal.ws.wsdl.parser.MetadataFinder) : Void;
 	
-	@:overload override public function buildModel() : com.sun.tools.internal.ws.processor.model.Model;
+	@:overload public function buildModel() : com.sun.tools.internal.ws.processor.model.Model;
 	
 	/* (non-Javadoc)
 	* @see WSDLModelerBase#processService(Service, Model, WSDLDocument)
@@ -44,7 +44,7 @@ extern class WSDLModeler extends com.sun.tools.internal.ws.processor.modeler.wsd
 	*/
 	@:overload private function processSOAPOperation() : com.sun.tools.internal.ws.wsdl.document.Operation;
 	
-	@:overload private function processLiteralSOAPOperation(styleAndUse : WSDLModeler_StyleAndUse) : com.sun.tools.internal.ws.wsdl.document.Operation;
+	@:overload private function processLiteralSOAPOperation(styleAndUse : com.sun.tools.internal.ws.processor.modeler.wsdl.WSDLModeler.WSDLModeler_StyleAndUse) : com.sun.tools.internal.ws.wsdl.document.Operation;
 	
 	@:overload private function getAsyncOperationName(operation : com.sun.tools.internal.ws.wsdl.document.Operation) : String;
 	
@@ -54,11 +54,11 @@ extern class WSDLModeler extends com.sun.tools.internal.ws.processor.modeler.wsd
 	
 	@:overload private function handleLiteralSOAPFault(response : com.sun.tools.internal.ws.processor.model.Response, duplicateNames : java.util.Set<Dynamic>) : Void;
 	
-	@:overload private function setMessagePartsBinding(styleAndUse : WSDLModeler_StyleAndUse) : Bool;
+	@:overload private function setMessagePartsBinding(styleAndUse : com.sun.tools.internal.ws.processor.modeler.wsdl.WSDLModeler.WSDLModeler_StyleAndUse) : Bool;
 	
-	@:overload private function setMessagePartsBinding(body : com.sun.tools.internal.ws.wsdl.document.soap.SOAPBody, message : com.sun.tools.internal.ws.wsdl.document.Message, styleAndUse : WSDLModeler_StyleAndUse, isInput : Bool) : Bool;
+	@:overload private function setMessagePartsBinding(body : com.sun.tools.internal.ws.wsdl.document.soap.SOAPBody, message : com.sun.tools.internal.ws.wsdl.document.Message, styleAndUse : com.sun.tools.internal.ws.processor.modeler.wsdl.WSDLModeler.WSDLModeler_StyleAndUse, isInput : Bool) : Bool;
 	
-	@:overload override private function isConflictingPortClassName(name : String) : Bool;
+	@:overload private function isConflictingPortClassName(name : String) : Bool;
 	
 	@:overload private function isUnwrappable() : Bool;
 	
@@ -99,9 +99,9 @@ extern class WSDLModeler extends com.sun.tools.internal.ws.processor.modeler.wsd
 	*/
 	@:overload private function getClassName(port : com.sun.tools.internal.ws.wsdl.document.Port, suffix : String) : String;
 	
-	@:overload override private function isConflictingServiceClassName(name : String) : Bool;
+	@:overload private function isConflictingServiceClassName(name : String) : Bool;
 	
-	@:overload override private function isConflictingExceptionClassName(name : String) : Bool;
+	@:overload private function isConflictingExceptionClassName(name : String) : Bool;
 	
 	@:overload private function getJAXBModelBuilder() : com.sun.tools.internal.ws.processor.modeler.wsdl.JAXBModelBuilder;
 	

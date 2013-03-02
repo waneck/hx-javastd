@@ -32,49 +32,49 @@ extern class ContentHandlerToXMLStreamWriter extends org.xml.sax.helpers.Default
 	*
 	* @see org.xml.sax.ContentHandler#endDocument()
 	*/
-	@:overload override public function endDocument() : Void;
+	@:overload public function endDocument() : Void;
 	
 	/*
 	* (non-Javadoc)
 	*
 	* @see org.xml.sax.ContentHandler#startDocument()
 	*/
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
 	/*
 	* (non-Javadoc)
 	*
 	* @see org.xml.sax.ContentHandler#characters(char[], int, int)
 	*/
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/*
 	* (non-Javadoc)
 	*
 	* @see org.xml.sax.ContentHandler#ignorableWhitespace(char[], int, int)
 	*/
-	@:overload override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/*
 	* (non-Javadoc)
 	*
 	* @see org.xml.sax.ContentHandler#endPrefixMapping(java.lang.String)
 	*/
-	@:overload override public function endPrefixMapping(prefix : String) : Void;
+	@:overload public function endPrefixMapping(prefix : String) : Void;
 	
 	/*
 	* (non-Javadoc)
 	*
 	* @see org.xml.sax.ContentHandler#skippedEntity(java.lang.String)
 	*/
-	@:overload override public function skippedEntity(name : String) : Void;
+	@:overload public function skippedEntity(name : String) : Void;
 	
 	/*
 	* (non-Javadoc)
 	*
 	* @see org.xml.sax.ContentHandler#setDocumentLocator(org.xml.sax.Locator)
 	*/
-	@:overload override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/*
 	* (non-Javadoc)
@@ -82,7 +82,7 @@ extern class ContentHandlerToXMLStreamWriter extends org.xml.sax.helpers.Default
 	* @see org.xml.sax.ContentHandler#processingInstruction(java.lang.String,
 	*      java.lang.String)
 	*/
-	@:overload override public function processingInstruction(target : String, data : String) : Void;
+	@:overload public function processingInstruction(target : String, data : String) : Void;
 	
 	/*
 	* (non-Javadoc)
@@ -90,7 +90,7 @@ extern class ContentHandlerToXMLStreamWriter extends org.xml.sax.helpers.Default
 	* @see org.xml.sax.ContentHandler#startPrefixMapping(java.lang.String,
 	*      java.lang.String)
 	*/
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/*
 	* (non-Javadoc)
@@ -98,7 +98,7 @@ extern class ContentHandlerToXMLStreamWriter extends org.xml.sax.helpers.Default
 	* @see org.xml.sax.ContentHandler#endElement(java.lang.String,
 	*      java.lang.String, java.lang.String)
 	*/
-	@:overload override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
 	/*
 	* (non-Javadoc)
@@ -106,7 +106,7 @@ extern class ContentHandlerToXMLStreamWriter extends org.xml.sax.helpers.Default
 	* @see org.xml.sax.ContentHandler#startElement(java.lang.String,
 	*      java.lang.String, java.lang.String, org.xml.sax.Attributes)
 	*/
-	@:overload override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	
 }

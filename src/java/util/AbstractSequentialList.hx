@@ -80,7 +80,7 @@ package java.util;
 	*
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload override public function get(index : Int) : E;
+	@:overload public function get(index : Int) : E;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -101,7 +101,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload override public function set(index : Int, element : E) : E;
+	@:overload public function set(index : Int, element : E) : E;
 	
 	/**
 	* Inserts the specified element at the specified position in this list
@@ -123,7 +123,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload override public function add(index : Int, element : E) : Void;
+	@:overload public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list (optional
@@ -142,7 +142,7 @@ package java.util;
 	* @throws UnsupportedOperationException {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload override public function remove(index : Int) : E;
+	@:overload public function remove(index : Int) : E;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -173,7 +173,7 @@ package java.util;
 	* @throws IllegalArgumentException      {@inheritDoc}
 	* @throws IndexOutOfBoundsException     {@inheritDoc}
 	*/
-	@:overload override public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this list (in proper
@@ -195,7 +195,7 @@ package java.util;
 	*         sequence)
 	* @throws IndexOutOfBoundsException {@inheritDoc}
 	*/
-	@:overload @:abstract override public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:abstract public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	
 }

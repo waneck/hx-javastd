@@ -27,10 +27,10 @@ extern class DeferredElementDefinitionImpl extends com.sun.org.apache.xerces.int
 	@:overload public function getNodeIndex() : Int;
 	
 	/** Synchronizes the data (name and value) for fast nodes. */
-	@:overload override private function synchronizeData() : Void;
+	@:overload private function synchronizeData() : Void;
 	
 	/** Synchronizes the default attribute values. */
-	@:overload override private function synchronizeChildren() : Void;
+	@:overload private function synchronizeChildren() : Void;
 	
 	
 }

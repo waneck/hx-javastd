@@ -30,7 +30,7 @@ extern class DefaultLookup
 	* <code>AppContext</code>. Null implies the UIManager should be
 	* used.
 	*/
-	@:overload public static function setDefaultLookup(lookup : DefaultLookup) : Void;
+	@:overload public static function setDefaultLookup(lookup : sun.swing.DefaultLookup) : Void;
 	
 	@:overload public static function get(c : javax.swing.JComponent, ui : javax.swing.plaf.ComponentUI, key : String) : Dynamic;
 	

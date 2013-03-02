@@ -36,9 +36,9 @@ extern class RMIIIOPServerImpl extends javax.management.remote.rmi.RMIServerImpl
 	*/
 	@:overload public function new(env : java.util.Map<String, Dynamic>) : Void;
 	
-	@:overload override private function export() : Void;
+	@:overload private function export() : Void;
 	
-	@:overload override private function getProtocol() : String;
+	@:overload private function getProtocol() : String;
 	
 	/**
 	* <p>Returns an IIOP stub.</p>
@@ -48,7 +48,7 @@ extern class RMIIIOPServerImpl extends javax.management.remote.rmi.RMIServerImpl
 	* @exception IOException if the stub cannot be created - e.g the
 	*            RMIIIOPServerImpl has not been exported yet.
 	**/
-	@:overload override public function toStub() : java.rmi.Remote;
+	@:overload public function toStub() : java.rmi.Remote;
 	
 	/**
 	* <p>Creates a new client connection as an RMI object exported
@@ -66,9 +66,9 @@ extern class RMIIIOPServerImpl extends javax.management.remote.rmi.RMIServerImpl
 	* @exception IOException if the new client object cannot be
 	* created or exported.
 	*/
-	@:overload override private function makeClient(connectionId : String, subject : javax.security.auth.Subject) : javax.management.remote.rmi.RMIConnection;
+	@:overload private function makeClient(connectionId : String, subject : javax.security.auth.Subject) : javax.management.remote.rmi.RMIConnection;
 	
-	@:overload override private function closeClient(client : javax.management.remote.rmi.RMIConnection) : Void;
+	@:overload private function closeClient(client : javax.management.remote.rmi.RMIConnection) : Void;
 	
 	/**
 	* <p>Called by {@link #close()} to close the connector server by
@@ -78,7 +78,7 @@ extern class RMIIIOPServerImpl extends javax.management.remote.rmi.RMIServerImpl
 	* @exception IOException if the attempt to close the connector
 	* server failed.
 	*/
-	@:overload override private function closeServer() : Void;
+	@:overload private function closeServer() : Void;
 	
 	
 }

@@ -50,7 +50,7 @@ extern class GeneralNames
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload public function add(name : sun.security.x509.GeneralName) : GeneralNames;
+	@:overload public function add(name : sun.security.x509.GeneralName) : sun.security.x509.GeneralNames;
 	
 	@:overload public function get(index : Int) : sun.security.x509.GeneralName;
 	

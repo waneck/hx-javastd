@@ -38,27 +38,27 @@ package com.sun.tools.example.debug.expr;
 	
 	
 }
-@:native('com$sun$tools$example$debug$expr$LValue$LValueLocal') @:internal extern class LValue_LValueLocal extends LValue
+@:native('com$sun$tools$example$debug$expr$LValue$LValueLocal') @:internal extern class LValue_LValueLocal extends com.sun.tools.example.debug.expr.LValue
 {
 	
 }
-@:native('com$sun$tools$example$debug$expr$LValue$LValueInstanceMember') @:internal extern class LValue_LValueInstanceMember extends LValue
+@:native('com$sun$tools$example$debug$expr$LValue$LValueInstanceMember') @:internal extern class LValue_LValueInstanceMember extends com.sun.tools.example.debug.expr.LValue
 {
 	
 }
-@:native('com$sun$tools$example$debug$expr$LValue$LValueStaticMember') @:internal extern class LValue_LValueStaticMember extends LValue
+@:native('com$sun$tools$example$debug$expr$LValue$LValueStaticMember') @:internal extern class LValue_LValueStaticMember extends com.sun.tools.example.debug.expr.LValue
 {
 	
 }
-@:native('com$sun$tools$example$debug$expr$LValue$LValueArrayLength') @:internal extern class LValue_LValueArrayLength extends LValue
+@:native('com$sun$tools$example$debug$expr$LValue$LValueArrayLength') @:internal extern class LValue_LValueArrayLength extends com.sun.tools.example.debug.expr.LValue
 {
 	
 }
-@:native('com$sun$tools$example$debug$expr$LValue$LValueArrayElement') @:internal extern class LValue_LValueArrayElement extends LValue
+@:native('com$sun$tools$example$debug$expr$LValue$LValueArrayElement') @:internal extern class LValue_LValueArrayElement extends com.sun.tools.example.debug.expr.LValue
 {
 	
 }
-@:native('com$sun$tools$example$debug$expr$LValue$LValueConstant') @:internal extern class LValue_LValueConstant extends LValue
+@:native('com$sun$tools$example$debug$expr$LValue$LValueConstant') @:internal extern class LValue_LValueConstant extends com.sun.tools.example.debug.expr.LValue
 {
 	
 }

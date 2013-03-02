@@ -106,18 +106,6 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	*/
 	@:overload @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	/**
-	* Used to get a
-	* {@link com.sun.corba.se.pept.protocol.MessageMeidator MessageMediator}
-	* to hold internal data for a message to be sent using the specific
-	* encoding, protocol, transport combination represented by this
-	* <code>ContactInfo</code>.
-	*
-	* @return
-	* {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
-	*/
-	@:overload @:public public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
-	
 	@:overload @:public public function getMonitoringName() : String;
 	
 	/**

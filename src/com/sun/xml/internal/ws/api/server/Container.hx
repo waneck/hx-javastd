@@ -86,7 +86,7 @@ extern class Container
 	* Constant that represents a "no {@link Container}",
 	* which always returns null from {@link #getSPI(Class)}.
 	*/
-	public static var NONE(default, null) : Container;
+	public static var NONE(default, null) : com.sun.xml.internal.ws.api.server.Container;
 	
 	
 }

@@ -36,17 +36,17 @@ package com.sun.tools.doclets.formats.html;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload private function getOutputInstance() : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getClassLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload private function getClassLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getTypeParameterLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, typeParam : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
+	@:overload private function getTypeParameterLink(linkInfo : com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo, typeParam : com.sun.javadoc.Type) : com.sun.tools.doclets.internal.toolkit.util.links.LinkOutput;
 	
 	
 }

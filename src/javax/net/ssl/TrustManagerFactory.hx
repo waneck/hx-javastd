@@ -90,7 +90,7 @@ extern class TrustManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String) : TrustManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String) : javax.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Returns a <code>TrustManagerFactory</code> object that acts as a
@@ -126,7 +126,7 @@ extern class TrustManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : String) : TrustManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : String) : javax.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Returns a <code>TrustManagerFactory</code> object that acts as a
@@ -156,7 +156,7 @@ extern class TrustManagerFactory
 	*
 	* @see java.security.Provider
 	*/
-	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : TrustManagerFactory;
+	@:overload @:final public static function getInstance(algorithm : String, provider : java.security.Provider) : javax.net.ssl.TrustManagerFactory;
 	
 	/**
 	* Returns the provider of this <code>TrustManagerFactory</code> object.

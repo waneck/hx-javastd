@@ -36,7 +36,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @see <a href="package-summary.html#unimpl"><code>CORBA</code> package
 	*      comments for unimplemented features</a>
 	*/
-	@:overload @:abstract public function equal(a : Any) : Bool;
+	@:overload @:abstract public function equal(a : org.omg.CORBA.Any) : Bool;
 	
 	/**
 	* Returns type information for the element contained in this
@@ -366,7 +366,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	*              contains something other than an <code>Any</code> object or the
 	*              <code>value</code> field has not yet been set
 	*/
-	@:overload @:abstract public function extract_any() : Any;
+	@:overload @:abstract public function extract_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Inserts the given <code>Any</code> object
@@ -375,7 +375,7 @@ extern class Any implements org.omg.CORBA.portable.IDLEntity
 	* @param a         the <code>Any</code> object to insert into this
 	*                <code>Any</code> object
 	*/
-	@:overload @:abstract public function insert_any(a : Any) : Void;
+	@:overload @:abstract public function insert_any(a : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Extracts the <code>org.omg.CORBA.Object</code> in this

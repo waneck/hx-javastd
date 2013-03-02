@@ -48,7 +48,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	* @param classDoc the class whoses members are being documented.
 	* @param writer the doclet specific writer.
 	*/
-	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ConstructorWriter) : ConstructorBuilder;
+	@:overload public static function getInstance(configuration : com.sun.tools.doclets.internal.toolkit.Configuration, classDoc : com.sun.javadoc.ClassDoc, writer : com.sun.tools.doclets.internal.toolkit.ConstructorWriter) : com.sun.tools.doclets.internal.toolkit.builders.ConstructorBuilder;
 	
 	/**
 	* {@inheritDoc}
@@ -58,7 +58,7 @@ package com.sun.tools.doclets.internal.toolkit.builders;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function hasMembersToDocument() : Bool;
+	@:overload public function hasMembersToDocument() : Bool;
 	
 	/**
 	* Returns a list of constructors that will be documented for the given class.

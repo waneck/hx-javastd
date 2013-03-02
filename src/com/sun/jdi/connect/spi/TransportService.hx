@@ -44,7 +44,7 @@ extern class TransportService
 	*
 	* @return  the transport service capabilities
 	*/
-	@:overload @:abstract public function capabilities() : TransportService_Capabilities;
+	@:overload @:abstract public function capabilities() : com.sun.jdi.connect.spi.TransportService.TransportService_Capabilities;
 	
 	/**
 	* Attaches to the specified address.
@@ -130,7 +130,7 @@ extern class TransportService
 	* @throws  IllegalArgumentException
 	*          If the specific address is invalid
 	*/
-	@:overload @:abstract public function startListening(address : String) : TransportService_ListenKey;
+	@:overload @:abstract public function startListening(address : String) : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Listens on an address choosen by the transport service.
@@ -145,7 +145,7 @@ extern class TransportService
 	* @throws  IOException
 	*          If an I/O error occurs.
 	*/
-	@:overload @:abstract public function startListening() : TransportService_ListenKey;
+	@:overload @:abstract public function startListening() : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey;
 	
 	/**
 	* Stop listening for inbound connections.
@@ -169,7 +169,7 @@ extern class TransportService
 	* @throws  IOException
 	*          If an I/O error occurs.
 	*/
-	@:overload @:abstract public function stopListening(listenKey : TransportService_ListenKey) : Void;
+	@:overload @:abstract public function stopListening(listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey) : Void;
 	
 	/**
 	* Accept a connection from a target VM.
@@ -241,7 +241,7 @@ extern class TransportService
 	*
 	* @see TransportService.Capabilities#supportsAcceptTimeout()
 	*/
-	@:overload @:abstract public function accept(listenKey : TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
+	@:overload @:abstract public function accept(listenKey : com.sun.jdi.connect.spi.TransportService.TransportService_ListenKey, acceptTimeout : haxe.Int64, handshakeTimeout : haxe.Int64) : com.sun.jdi.connect.spi.Connection;
 	
 	
 }

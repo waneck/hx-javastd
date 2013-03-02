@@ -25,9 +25,9 @@ package sun.tracing.dtrace;
 */
 @:internal extern class DTraceProbe extends sun.tracing.ProbeSkeleton
 {
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
-	@:overload override public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
+	@:overload public function uncheckedTrigger(args : java.NativeArray<Dynamic>) : Void;
 	
 	
 }

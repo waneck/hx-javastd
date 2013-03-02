@@ -41,7 +41,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	*
 	* @return an Output object representing the documentation that was found.
 	*/
-	@:overload public static function search(input : DocFinder_Input) : DocFinder_Output;
+	@:overload public static function search(input : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input) : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Output;
 	
 	
 }
@@ -102,7 +102,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 	
 	@:overload public function new(method : com.sun.javadoc.MethodDoc, isFirstSentence : Bool) : Void;
 	
-	@:overload public function copy() : DocFinder_Input;
+	@:overload public function copy() : com.sun.tools.doclets.internal.toolkit.util.DocFinder.DocFinder_Input;
 	
 	
 }

@@ -36,7 +36,7 @@ extern class Quick implements java.lang.annotation.Annotation implements com.sun
 	* Factory method to create a new instance of the same kind.
 	* A {@link Quick} object also works as a factory of itself
 	*/
-	@:overload @:abstract private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : Quick;
+	@:overload @:abstract private function newInstance(upstream : com.sun.xml.internal.bind.v2.model.annotation.Locatable, core : java.lang.annotation.Annotation) : com.sun.xml.internal.bind.v2.model.annotation.Quick;
 	
 	@:overload @:final public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
@@ -47,7 +47,7 @@ extern class Quick implements java.lang.annotation.Annotation implements com.sun
 	/**
 	* Returns the annotation type of this annotation.
 	*/
-	@:overload public function annotationType() : Class<Annotation>;
+	@:overload public function annotationType() : Class<java.lang.annotation.Annotation>;
 	
 	
 }

@@ -69,7 +69,7 @@ extern class ConstantString extends com.sun.org.apache.bcel.internal.classfile.C
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantString) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantString) : Void;
 	
 	/**
 	* @param string_index Index of Constant_Utf8 in constant pool

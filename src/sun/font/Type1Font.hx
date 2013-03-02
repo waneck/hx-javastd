@@ -43,17 +43,17 @@ extern class Type1Font extends sun.font.FileFont
 	
 	@:overload override private function close() : Void;
 	
-	@:overload @:synchronized override public function readBlock(offset : Int, length : Int) : java.nio.ByteBuffer;
+	@:overload @:synchronized public function readBlock(offset : Int, length : Int) : java.nio.ByteBuffer;
 	
 	@:overload public function getFileSize() : Int;
 	
-	@:overload override public function getPostscriptName() : String;
+	@:overload public function getPostscriptName() : String;
 	
 	@:overload @:synchronized override private function getScaler() : sun.font.FontScaler;
 	
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload public function getNumGlyphs() : Int;
 	
-	@:overload override public function getMissingGlyphCode() : Int;
+	@:overload public function getMissingGlyphCode() : Int;
 	
 	@:overload public function getGlyphCode(charCode : java.StdTypes.Char16) : Int;
 	

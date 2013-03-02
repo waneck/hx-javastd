@@ -76,7 +76,7 @@ extern class DOMReference extends org.jcp.xml.dsig.internal.dom.DOMStructure imp
 	
 	@:overload public function getCalculatedDigestValue() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
+	@:overload public function marshal(parent : org.w3c.dom.Node, dsPrefix : String, context : javax.xml.crypto.dom.DOMCryptoContext) : Void;
 	
 	@:overload public function digest(signContext : javax.xml.crypto.dsig.XMLSignContext) : Void;
 	

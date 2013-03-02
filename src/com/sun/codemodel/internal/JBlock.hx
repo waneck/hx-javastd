@@ -120,9 +120,9 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	* @param exp
 	*        Right hand side expression
 	*/
-	@:overload public function assign(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : JBlock;
+	@:overload public function assign(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JBlock;
 	
-	@:overload public function assignPlus(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : JBlock;
+	@:overload public function assignPlus(lhs : com.sun.codemodel.internal.JAssignmentTarget, exp : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Creates an invocation statement and adds it to this block.
@@ -185,7 +185,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	*
 	* @return This block
 	*/
-	@:overload public function add(s : com.sun.codemodel.internal.JStatement) : JBlock;
+	@:overload public function add(s : com.sun.codemodel.internal.JStatement) : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Create an If statement and add it to this block
@@ -268,7 +268,7 @@ extern class JBlock implements com.sun.codemodel.internal.JGenerable implements 
 	/**
 	* Create a sub-block and add it to this block
 	*/
-	@:overload public function block() : JBlock;
+	@:overload public function block() : com.sun.codemodel.internal.JBlock;
 	
 	/**
 	* Creates a "literal" statement directly.

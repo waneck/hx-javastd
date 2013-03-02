@@ -78,7 +78,7 @@ extern class NodeSortRecord
 	/**
 	*
 	*/
-	@:overload @:final public function compareDocOrder(other : NodeSortRecord) : Int;
+	@:overload @:final public function compareDocOrder(other : com.sun.org.apache.xalan.internal.xsltc.dom.NodeSortRecord) : Int;
 	
 	/**
 	* Compare this sort element to another. The first level is checked first,
@@ -87,7 +87,7 @@ extern class NodeSortRecord
 	*
 	* !!!!MUST OPTIMISE - THIS IS REALLY, REALLY SLOW!!!!
 	*/
-	@:overload public function compareTo(other : NodeSortRecord) : Int;
+	@:overload public function compareTo(other : com.sun.org.apache.xalan.internal.xsltc.dom.NodeSortRecord) : Int;
 	
 	/**
 	* Returns the array of Collators used for text comparisons in this object.

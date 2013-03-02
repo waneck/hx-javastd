@@ -159,7 +159,7 @@ extern class Curve
 	
 	@:overload @:final public function getDirection() : Int;
 	
-	@:overload @:final public function getWithDirection(direction : Int) : Curve;
+	@:overload @:final public function getWithDirection(direction : Int) : sun.awt.geom.Curve;
 	
 	@:overload public static function round(v : Float) : Float;
 	
@@ -219,17 +219,17 @@ extern class Curve
 	
 	@:overload @:abstract public function enlarge(r : java.awt.geom.Rectangle2D) : Void;
 	
-	@:overload public function getSubCurve(ystart : Float, yend : Float) : Curve;
+	@:overload public function getSubCurve(ystart : Float, yend : Float) : sun.awt.geom.Curve;
 	
-	@:overload @:abstract public function getReversedCurve() : Curve;
+	@:overload @:abstract public function getReversedCurve() : sun.awt.geom.Curve;
 	
-	@:overload @:abstract public function getSubCurve(ystart : Float, yend : Float, dir : Int) : Curve;
+	@:overload @:abstract public function getSubCurve(ystart : Float, yend : Float, dir : Int) : sun.awt.geom.Curve;
 	
-	@:overload public function compareTo(that : Curve, yrange : java.NativeArray<Float>) : Int;
+	@:overload public function compareTo(that : sun.awt.geom.Curve, yrange : java.NativeArray<Float>) : Int;
 	
 	public static var TMIN(default, null) : Float;
 	
-	@:overload public function findIntersect(that : Curve, yrange : java.NativeArray<Float>, ymin : Float, slevel : Int, tlevel : Int, s0 : Float, xs0 : Float, ys0 : Float, s1 : Float, xs1 : Float, ys1 : Float, t0 : Float, xt0 : Float, yt0 : Float, t1 : Float, xt1 : Float, yt1 : Float) : Bool;
+	@:overload public function findIntersect(that : sun.awt.geom.Curve, yrange : java.NativeArray<Float>, ymin : Float, slevel : Int, tlevel : Int, s0 : Float, xs0 : Float, ys0 : Float, s1 : Float, xs1 : Float, ys1 : Float, t0 : Float, xt0 : Float, yt0 : Float, t1 : Float, xt1 : Float, yt1 : Float) : Bool;
 	
 	@:overload public function refineTforY(t0 : Float, yt0 : Float, y0 : Float) : Float;
 	

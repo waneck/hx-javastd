@@ -32,7 +32,7 @@ extern class ResolverConfiguration
 	*
 	* @return the resolver configuration
 	*/
-	@:overload public static function open() : ResolverConfiguration;
+	@:overload public static function open() : sun.net.dns.ResolverConfiguration;
 	
 	/**
 	* Returns a list corresponding to the domain search path. The
@@ -59,7 +59,7 @@ extern class ResolverConfiguration
 	*
 	* @return options for the resolver
 	*/
-	@:overload @:abstract public function options() : ResolverConfiguration_Options;
+	@:overload @:abstract public function options() : sun.net.dns.ResolverConfiguration.ResolverConfiguration_Options;
 	
 	
 }

@@ -35,19 +35,19 @@ package sun.java2d.xr;
 	
 	
 }
-@:native('sun$java2d$xr$XRPaints$XRGradient') @:internal extern class XRPaints_XRGradient extends XRPaints
+@:native('sun$java2d$xr$XRPaints$XRGradient') @:internal extern class XRPaints_XRGradient extends sun.java2d.xr.XRPaints
 {
 	
 }
-@:native('sun$java2d$xr$XRPaints$XRLinearGradient') @:internal extern class XRPaints_XRLinearGradient extends XRPaints
+@:native('sun$java2d$xr$XRPaints$XRLinearGradient') @:internal extern class XRPaints_XRLinearGradient extends sun.java2d.xr.XRPaints
 {
 	
 }
-@:native('sun$java2d$xr$XRPaints$XRRadialGradient') @:internal extern class XRPaints_XRRadialGradient extends XRPaints
+@:native('sun$java2d$xr$XRPaints$XRRadialGradient') @:internal extern class XRPaints_XRRadialGradient extends sun.java2d.xr.XRPaints
 {
 	
 }
-@:native('sun$java2d$xr$XRPaints$XRTexture') @:internal extern class XRPaints_XRTexture extends XRPaints
+@:native('sun$java2d$xr$XRPaints$XRTexture') @:internal extern class XRPaints_XRTexture extends sun.java2d.xr.XRPaints
 {
 	
 }

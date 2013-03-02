@@ -35,10 +35,10 @@ package com.sun.tools.javac.util;
 extern class Options
 {
 	/** The context key for the options. */
-	public static var optionsKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Options>;
+	public static var optionsKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.util.Options>;
 	
 	/** Get the Options instance for this context. */
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Options;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.util.Options;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -97,7 +97,7 @@ extern class Options
 	
 	@:overload public function put(name : com.sun.tools.javac.main.OptionName, value : String) : Void;
 	
-	@:overload public function putAll(options : Options) : Void;
+	@:overload public function putAll(options : com.sun.tools.javac.util.Options) : Void;
 	
 	@:overload public function remove(name : String) : Void;
 	

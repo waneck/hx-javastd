@@ -70,7 +70,7 @@ extern class ConstantValue extends com.sun.org.apache.bcel.internal.classfile.At
 	* Initialize from another object. Note that both objects use the same
 	* references (shallow copy). Use clone() for a physical copy.
 	*/
-	@:overload public function new(c : ConstantValue) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantValue) : Void;
 	
 	/**
 	* @param name_index Name index in constant pool

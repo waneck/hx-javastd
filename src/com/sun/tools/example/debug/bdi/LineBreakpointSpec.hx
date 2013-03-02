@@ -38,7 +38,7 @@ extern class LineBreakpointSpec extends com.sun.tools.example.debug.bdi.Breakpoi
 	
 	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function errorMessageFor(e : java.lang.Exception) : String;
+	@:overload public function errorMessageFor(e : java.lang.Exception) : String;
 	
 	@:overload public function toString() : String;
 	

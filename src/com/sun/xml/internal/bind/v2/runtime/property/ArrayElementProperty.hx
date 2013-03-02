@@ -32,7 +32,7 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	
 	@:overload private function new(grammar : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl, prop : com.sun.xml.internal.bind.v2.model.runtime.RuntimeElementPropertyInfo) : Void;
 	
-	@:overload override public function wrapUp() : Void;
+	@:overload public function wrapUp() : Void;
 	
 	@:overload override private function serializeListBody(beanT : BeanT, w : com.sun.xml.internal.bind.v2.runtime.XMLSerializer, list : ListT) : Void;
 	
@@ -43,9 +43,9 @@ package com.sun.xml.internal.bind.v2.runtime.property;
 	
 	@:overload override public function createBodyUnmarshaller(chain : com.sun.xml.internal.bind.v2.runtime.property.UnmarshallerChain, loaders : com.sun.xml.internal.bind.v2.util.QNameMap<com.sun.xml.internal.bind.v2.runtime.unmarshaller.ChildLoader>) : Void;
 	
-	@:overload @:final override public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:final public function getKind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
-	@:overload override public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
+	@:overload public function getElementPropertyAccessor(nsUri : String, localName : String) : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<Dynamic, Dynamic>;
 	
 	
 }

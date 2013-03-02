@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.policy.jaxws;
 */
 @:internal extern class BuilderHandlerServiceScope extends com.sun.xml.internal.ws.policy.jaxws.BuilderHandler
 {
-	@:overload override private function doPopulate(policyMapExtender : com.sun.xml.internal.ws.policy.PolicyMapExtender) : Void;
+	@:overload private function doPopulate(policyMapExtender : com.sun.xml.internal.ws.policy.PolicyMapExtender) : Void;
 	
 	@:overload public function toString() : String;
 	

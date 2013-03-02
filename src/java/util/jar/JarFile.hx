@@ -158,11 +158,11 @@ extern class JarFile extends java.util.zip.ZipFile
 }
 @:native('java$util$jar$JarFile$JarFileEntry') @:internal extern class JarFile_JarFileEntry extends java.util.jar.JarEntry
 {
-	@:overload override public function getAttributes() : java.util.jar.Attributes;
+	@:overload public function getAttributes() : java.util.jar.Attributes;
 	
-	@:overload override public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
+	@:overload public function getCertificates() : java.NativeArray<java.security.cert.Certificate>;
 	
-	@:overload override public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
+	@:overload public function getCodeSigners() : java.NativeArray<java.security.CodeSigner>;
 	
 	
 }

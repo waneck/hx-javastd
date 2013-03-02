@@ -123,7 +123,7 @@ extern class Checksum
 	* @return an instance of Checksum.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : Checksum;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.Checksum;
 	
 	/**
 	* Returns the raw bytes of the checksum, not in ASN.1 encoded form.

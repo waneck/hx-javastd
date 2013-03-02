@@ -51,7 +51,7 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	
 	@:overload public function getJAXBContext() : com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl;
 	
-	@:overload public function getCurrentState() : UnmarshallingContext_State;
+	@:overload public function getCurrentState() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State;
 	
 	/**
 	* On top of {@link JAXBContextImpl#selectRootLoader(State, TagName)},
@@ -60,7 +60,7 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	* @throws SAXException
 	*      if {@link ValidationEventHandler} reported a failure.
 	*/
-	@:overload public function selectRootLoader(state : UnmarshallingContext_State, tag : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
+	@:overload public function selectRootLoader(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, tag : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader;
 	
 	@:overload public function clearStates() : Void;
 	
@@ -86,7 +86,7 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	*/
 	@:overload public function getPredictor() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.XmlVisitor.XmlVisitor_TextPredictor;
 	
-	@:overload public function getContext() : UnmarshallingContext;
+	@:overload public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
 	/**
 	* Gets the result of the unmarshalling
@@ -292,7 +292,7 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	* When called from within the realm of the unmarshaller, this method
 	* returns the current {@link UnmarshallingContext} in charge.
 	*/
-	@:overload public static function getInstance() : UnmarshallingContext;
+	@:overload public static function getInstance() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
 	/**
 	* Allows to access elements which are expected in current state.
@@ -386,14 +386,14 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	*
 	* {@link State} objects form a doubly linked list.
 	*/
-	public var prev : UnmarshallingContext_State;
+	public var prev : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State;
 	
 	public var nil : Bool;
 	
 	/**
 	* Gets the context.
 	*/
-	@:overload public function getContext() : UnmarshallingContext;
+	@:overload public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	
 	
 }
@@ -418,11 +418,11 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	* Receives the root element and determines how to start
 	* unmarshalling.
 	*/
-	@:overload public function childElement(state : UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload override public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
+	@:overload public function getExpectedChildElements() : java.util.Collection<javax.xml.namespace.QName>;
 	
-	@:overload public function receive(state : UnmarshallingContext_State, o : Dynamic) : Void;
+	@:overload public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
 	
 	
 }
@@ -436,9 +436,9 @@ extern class UnmarshallingContext extends com.sun.xml.internal.bind.v2.runtime.C
 	* Receives the root element and determines how to start
 	* unmarshalling.
 	*/
-	@:overload public function childElement(state : UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload public function childElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
-	@:overload public function receive(state : UnmarshallingContext_State, o : Dynamic) : Void;
+	@:overload public function receive(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Void;
 	
 	
 }

@@ -25,9 +25,9 @@ package javax.swing;
 */
 @:internal extern class KeyboardManager
 {
-	@:overload public static function getCurrentManager() : KeyboardManager;
+	@:overload public static function getCurrentManager() : javax.swing.KeyboardManager;
 	
-	@:overload public static function setCurrentManager(km : KeyboardManager) : Void;
+	@:overload public static function setCurrentManager(km : javax.swing.KeyboardManager) : Void;
 	
 	/**
 	* register keystrokes here which are for the WHEN_IN_FOCUSED_WINDOW

@@ -57,7 +57,7 @@ extern class NGCCRuntimeEx extends com.sun.tools.internal.jxc.gen.config.NGCCRun
 	*/
 	@:overload public function getExcludePatterns(excludeContent : java.util.List<Dynamic>) : java.util.List<Dynamic>;
 	
-	@:overload override private function unexpectedX(token : String) : Void;
+	@:overload private function unexpectedX(token : String) : Void;
 	
 	
 }

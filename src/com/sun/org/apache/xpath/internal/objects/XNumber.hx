@@ -42,7 +42,7 @@ extern class XNumber extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @return node type CLASS_NUMBER
 	*/
-	@:overload override public function getType() : Int;
+	@:overload public function getType() : Int;
 	
 	/**
 	* Given a request type, return the equivalent string.
@@ -50,14 +50,14 @@ extern class XNumber extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @return type string "#NUMBER"
 	*/
-	@:overload override public function getTypeString() : String;
+	@:overload public function getTypeString() : String;
 	
 	/**
 	* Cast result object to a number.
 	*
 	* @return the value of the XNumber object
 	*/
-	@:overload override public function num() : Float;
+	@:overload public function num() : Float;
 	
 	/**
 	* Evaluate expression to a number.
@@ -73,7 +73,7 @@ extern class XNumber extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @return false if the value is NaN or equal to 0.0
 	*/
-	@:overload override public function bool() : Bool;
+	@:overload public function bool() : Bool;
 	
 	/**
 	* Cast result object to a string.
@@ -81,7 +81,7 @@ extern class XNumber extends com.sun.org.apache.xpath.internal.objects.XObject
 	* @return "NaN" if the number is NaN, Infinity or -Infinity if
 	* the number is infinite or the string value of the number.
 	*/
-	@:overload override public function str() : String;
+	@:overload public function str() : String;
 	
 	/**
 	* Return a java object that's closest to the representation
@@ -89,7 +89,7 @@ extern class XNumber extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @return The value of this XNumber as a Double object
 	*/
-	@:overload override public function object() : Dynamic;
+	@:overload public function object() : Dynamic;
 	
 	/**
 	* Tell if two objects are functionally equal.
@@ -100,7 +100,7 @@ extern class XNumber extends com.sun.org.apache.xpath.internal.objects.XObject
 	*
 	* @throws javax.xml.transform.TransformerException
 	*/
-	@:overload override public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
+	@:overload public function equals(obj2 : com.sun.org.apache.xpath.internal.objects.XObject) : Bool;
 	
 	/**
 	* Tell if this expression returns a stable number that will not change during

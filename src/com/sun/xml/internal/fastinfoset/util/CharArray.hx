@@ -47,7 +47,7 @@ extern class CharArray implements java.lang.CharSequence
 	
 	@:native('hashCode') @:overload @:final public static function _hashCode(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Int;
 	
-	@:overload @:final public function equalsCharArray(cha : CharArray) : Bool;
+	@:overload @:final public function equalsCharArray(cha : com.sun.xml.internal.fastinfoset.util.CharArray) : Bool;
 	
 	@:overload @:final public function equalsCharArray(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Bool;
 	

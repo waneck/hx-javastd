@@ -159,7 +159,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @return the next <code>SQLException</code> in the chain; <code>null</code> if none
 	* @see #setNextWarning
 	*/
-	@:overload public function getNextWarning() : SQLWarning;
+	@:overload public function getNextWarning() : java.sql.SQLWarning;
 	
 	/**
 	* Adds a <code>SQLWarning</code> object to the end of the chain.
@@ -167,7 +167,7 @@ extern class SQLWarning extends java.sql.SQLException
 	* @param w the new end of the <code>SQLException</code> chain
 	* @see #getNextWarning
 	*/
-	@:overload public function setNextWarning(w : SQLWarning) : Void;
+	@:overload public function setNextWarning(w : java.sql.SQLWarning) : Void;
 	
 	
 }

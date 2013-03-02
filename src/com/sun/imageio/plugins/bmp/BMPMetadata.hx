@@ -25,7 +25,7 @@ package com.sun.imageio.plugins.bmp;
 */
 extern class BMPMetadata extends javax.imageio.metadata.IIOMetadata implements com.sun.imageio.plugins.bmp.BMPConstants
 {
-	@:native('nativeMetadataFormatName') public static var _nativeMetadataFormatName(default, null) : String;
+	public static var nativeMetadataFormatName(default, null) : String;
 	
 	public var bmpVersion : String;
 	
@@ -97,23 +97,23 @@ extern class BMPMetadata extends javax.imageio.metadata.IIOMetadata implements c
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
-	@:overload override private function getStandardChromaNode() : IIOMetadataNode;
+	@:overload private function getStandardChromaNode() : IIOMetadataNode;
 	
-	@:overload override private function getStandardCompressionNode() : IIOMetadataNode;
+	@:overload private function getStandardCompressionNode() : IIOMetadataNode;
 	
-	@:overload override private function getStandardDataNode() : IIOMetadataNode;
+	@:overload private function getStandardDataNode() : IIOMetadataNode;
 	
-	@:overload override private function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload private function getStandardDimensionNode() : IIOMetadataNode;
 	
-	@:overload override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	
 }

@@ -55,14 +55,14 @@ package java.nio.channels;
 	*
 	* @return  This pipe's source channel
 	*/
-	@:overload @:abstract public function source() : Pipe_SourceChannel;
+	@:overload @:abstract public function source() : java.nio.channels.Pipe.Pipe_SourceChannel;
 	
 	/**
 	* Returns this pipe's sink channel.  </p>
 	*
 	* @return  This pipe's sink channel
 	*/
-	@:overload @:abstract public function sink() : Pipe_SinkChannel;
+	@:overload @:abstract public function sink() : java.nio.channels.Pipe.Pipe_SinkChannel;
 	
 	/**
 	* Opens a pipe.
@@ -77,7 +77,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload public static function open() : Pipe;
+	@:overload public static function open() : java.nio.channels.Pipe;
 	
 	
 }
@@ -102,7 +102,7 @@ package java.nio.channels;
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final override public function validOps() : Int;
+	@:overload @:final public function validOps() : Int;
 	
 	/**
 	* Reads a sequence of bytes from this channel into a subsequence of the
@@ -319,7 +319,7 @@ package java.nio.channels;
 	*
 	* @return  The valid-operation set
 	*/
-	@:overload @:final override public function validOps() : Int;
+	@:overload @:final public function validOps() : Int;
 	
 	/**
 	* Writes a sequence of bytes to this channel from a subsequence of the

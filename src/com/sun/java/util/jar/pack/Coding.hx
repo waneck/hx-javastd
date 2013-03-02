@@ -29,7 +29,7 @@ package com.sun.java.util.jar.pack;
 * varying degrees of length variability, and varying amounts of signed-ness.
 * @author John Rose
 */
-@:internal extern class Coding implements java.lang.Comparable<Coding> implements com.sun.java.util.jar.pack.CodingMethod implements com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric
+@:internal extern class Coding implements java.lang.Comparable<com.sun.java.util.jar.pack.Coding> implements com.sun.java.util.jar.pack.CodingMethod implements com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric
 {
 	/** Largest int representable by (B,H,S) in up to nMax bytes. */
 	@:overload public static function codeMax(B : Int, H : Int, S : Int, nMax : Int) : Int;
@@ -58,9 +58,9 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function hashCode() : Int;
 	
-	@:overload public static function of(B : Int, H : Int) : Coding;
+	@:overload public static function of(B : Int, H : Int) : com.sun.java.util.jar.pack.Coding;
 	
-	@:overload public static function of(B : Int, H : Int, S : Int) : Coding;
+	@:overload public static function of(B : Int, H : Int, S : Int) : com.sun.java.util.jar.pack.Coding;
 	
 	@:overload public function canRepresentValue(x : Int) : Bool;
 	
@@ -114,10 +114,10 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function byteMax(b : Int) : Int;
 	
-	@:overload public function compareTo(that : Coding) : Int;
+	@:overload public function compareTo(that : com.sun.java.util.jar.pack.Coding) : Int;
 	
 	/** Heuristic measure of the difference between two codings. */
-	@:overload public function distanceFrom(that : Coding) : Int;
+	@:overload public function distanceFrom(that : com.sun.java.util.jar.pack.Coding) : Int;
 	
 	@:overload public function getBitLength(value : Int) : Float;
 	
@@ -130,9 +130,9 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function getLength(values : java.NativeArray<Int>, start : Int, end : Int) : Int;
 	
-	@:overload public function getMetaCoding(dflt : Coding) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getMetaCoding(dflt : com.sun.java.util.jar.pack.Coding) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload public static function parseMetaCoding(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, dflt : Coding, res : java.NativeArray<com.sun.java.util.jar.pack.CodingMethod>) : Int;
+	@:overload public static function parseMetaCoding(bytes : java.NativeArray<java.StdTypes.Int8>, pos : Int, dflt : com.sun.java.util.jar.pack.Coding, res : java.NativeArray<com.sun.java.util.jar.pack.CodingMethod>) : Int;
 	
 	@:overload public function keyString() : String;
 	

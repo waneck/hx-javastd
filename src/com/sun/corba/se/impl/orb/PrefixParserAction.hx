@@ -33,7 +33,7 @@ extern class PrefixParserAction extends com.sun.corba.se.impl.orb.ParserActionBa
 	* which forms the result of apply.  Returns null if there are no
 	* matches.
 	*/
-	@:overload override public function apply(props : java.util.Properties) : Dynamic;
+	@:overload public function apply(props : java.util.Properties) : Dynamic;
 	
 	
 }

@@ -27,7 +27,7 @@ package com.sun.org.apache.xalan.internal.xsltc.compiler;
 */
 @:internal extern class ArgumentList
 {
-	@:overload public function new(arg : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, rest : ArgumentList) : Void;
+	@:overload public function new(arg : com.sun.org.apache.xalan.internal.xsltc.compiler.Expression, rest : com.sun.org.apache.xalan.internal.xsltc.compiler.ArgumentList) : Void;
 	
 	@:overload public function toString() : String;
 	

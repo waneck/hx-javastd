@@ -27,7 +27,7 @@ extern class PolicySourceModelContext
 {
 	@:overload public function addModel(modelUri : java.net.URI, model : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModel) : Void;
 	
-	@:overload public static function createContext() : PolicySourceModelContext;
+	@:overload public static function createContext() : com.sun.xml.internal.ws.policy.sourcemodel.PolicySourceModelContext;
 	
 	@:overload public function containsModel(modelUri : java.net.URI) : Bool;
 	

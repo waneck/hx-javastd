@@ -36,7 +36,7 @@ extern class JMXServerErrorException extends java.io.IOException
 	*/
 	@:overload public function new(s : String, err : java.lang.Error) : Void;
 	
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

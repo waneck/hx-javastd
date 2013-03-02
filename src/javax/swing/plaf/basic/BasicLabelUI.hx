@@ -31,7 +31,7 @@ extern class BasicLabelUI extends javax.swing.plaf.LabelUI implements java.beans
 	* overrides the <code>createUI</code> method, and place that class
 	* name in defaults table under the key "LabelUI".
 	*/
-	private static var labelUI : BasicLabelUI;
+	private static var labelUI : javax.swing.plaf.basic.BasicLabelUI;
 	
 	/**
 	* Forwards the call to SwingUtilities.layoutCompoundLabel().

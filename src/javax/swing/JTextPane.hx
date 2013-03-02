@@ -104,7 +104,7 @@ extern class JTextPane extends javax.swing.JEditorPane
 	*   be narrowed to a <code>StyledDocument</code> which is the
 	*   required type of model for this text component
 	*/
-	@:overload override public function setDocument(doc : javax.swing.text.Document) : Void;
+	@:overload public function setDocument(doc : javax.swing.text.Document) : Void;
 	
 	/**
 	* Associates the editor with a text document.

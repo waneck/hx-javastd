@@ -91,7 +91,7 @@ extern class MULTIANEWARRAY extends com.sun.org.apache.bcel.internal.generic.CPI
 	* constant pool entry they reference.
 	* @return Number of words consumed from stack by this instruction
 	*/
-	@:overload override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	@:overload public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
@@ -105,7 +105,7 @@ extern class MULTIANEWARRAY extends com.sun.org.apache.bcel.internal.generic.CPI
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

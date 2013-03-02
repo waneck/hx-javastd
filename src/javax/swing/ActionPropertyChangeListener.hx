@@ -48,7 +48,7 @@ package javax.swing;
 }
 @:native('javax$swing$ActionPropertyChangeListener$OwnedWeakReference') @:internal extern class ActionPropertyChangeListener_OwnedWeakReference<U> extends java.lang.ref.WeakReference<U>
 {
-	@:overload public function getOwner() : ActionPropertyChangeListener<Dynamic>;
+	@:overload public function getOwner() : javax.swing.ActionPropertyChangeListener<Dynamic>;
 	
 	
 }

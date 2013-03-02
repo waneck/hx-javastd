@@ -569,7 +569,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getGraphics() : java.awt.Graphics;
+	@:require(java6) @:overload public function getGraphics() : java.awt.Graphics;
 	
 	/**
 	* Repaints the specified rectangle of this component within
@@ -584,7 +584,7 @@ extern class JFrame extends java.awt.Frame implements javax.swing.WindowConstant
 	* @see       RepaintManager
 	* @since     1.6
 	*/
-	@:require(java6) @:overload override public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:require(java6) @:overload public function repaint(time : haxe.Int64, x : Int, y : Int, width : Int, height : Int) : Void;
 	
 	/**
 	* Provides a hint as to whether or not newly created <code>JFrame</code>s

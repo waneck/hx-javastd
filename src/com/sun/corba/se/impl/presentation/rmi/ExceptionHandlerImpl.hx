@@ -33,7 +33,7 @@ extern class ExceptionHandlerImpl implements com.sun.corba.se.impl.presentation.
 	
 	@:overload public function readException(ae : org.omg.CORBA.portable.ApplicationException) : java.lang.Exception;
 	
-	@:overload public function getRMIExceptionRW(cls : Class<Dynamic>) : ExceptionHandlerImpl_ExceptionRW;
+	@:overload public function getRMIExceptionRW(cls : Class<Dynamic>) : com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRW;
 	
 	
 }
@@ -49,7 +49,7 @@ extern class ExceptionHandlerImpl implements com.sun.corba.se.impl.presentation.
 	
 	
 }
-@:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWBase') extern class ExceptionHandlerImpl_ExceptionRWBase implements ExceptionHandlerImpl_ExceptionRW
+@:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWBase') extern class ExceptionHandlerImpl_ExceptionRWBase implements com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRW
 {
 	@:overload public function new(cls : Class<Dynamic>) : Void;
 	
@@ -59,7 +59,7 @@ extern class ExceptionHandlerImpl implements com.sun.corba.se.impl.presentation.
 	
 	
 }
-@:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWIDLImpl') extern class ExceptionHandlerImpl_ExceptionRWIDLImpl extends ExceptionHandlerImpl_ExceptionRWBase
+@:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWIDLImpl') extern class ExceptionHandlerImpl_ExceptionRWIDLImpl extends com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRWBase
 {
 	@:overload public function new(cls : Class<Dynamic>) : Void;
 	
@@ -69,7 +69,7 @@ extern class ExceptionHandlerImpl implements com.sun.corba.se.impl.presentation.
 	
 	
 }
-@:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWRMIImpl') extern class ExceptionHandlerImpl_ExceptionRWRMIImpl extends ExceptionHandlerImpl_ExceptionRWBase
+@:native('com$sun$corba$se$impl$presentation$rmi$ExceptionHandlerImpl$ExceptionRWRMIImpl') extern class ExceptionHandlerImpl_ExceptionRWRMIImpl extends com.sun.corba.se.impl.presentation.rmi.ExceptionHandlerImpl.ExceptionHandlerImpl_ExceptionRWBase
 {
 	@:overload public function new(cls : Class<Dynamic>) : Void;
 	

@@ -32,9 +32,9 @@ extern class MotifMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 	* @author Georges Saab
 	* @author Rich Schiavi
 	*/
-	@:native('createUI') @:overload public static function _createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(x : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
-	@:overload override private function createChangeListener(c : javax.swing.JComponent) : javax.swing.event.ChangeListener;
+	@:overload private function createChangeListener(c : javax.swing.JComponent) : javax.swing.event.ChangeListener;
 	
 	@:overload override private function createMouseInputListener(c : javax.swing.JComponent) : javax.swing.event.MouseInputListener;
 	
@@ -42,9 +42,9 @@ extern class MotifMenuUI extends javax.swing.plaf.basic.BasicMenuUI
 }
 @:native('com$sun$java$swing$plaf$motif$MotifMenuUI$MotifChangeHandler') extern class MotifMenuUI_MotifChangeHandler extends javax.swing.plaf.basic.BasicMenuUI.BasicMenuUI_ChangeHandler
 {
-	@:overload public function new(m : javax.swing.JMenu, ui : MotifMenuUI) : Void;
+	@:overload public function new(m : javax.swing.JMenu, ui : com.sun.java.swing.plaf.motif.MotifMenuUI) : Void;
 	
-	@:overload override public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
+	@:overload public function stateChanged(e : javax.swing.event.ChangeEvent) : Void;
 	
 	
 }

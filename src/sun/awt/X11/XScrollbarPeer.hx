@@ -25,19 +25,19 @@ package sun.awt.X11;
 */
 @:internal extern class XScrollbarPeer extends sun.awt.X11.XComponentPeer implements java.awt.peer.ScrollbarPeer implements sun.awt.X11.XScrollbarClient
 {
-	@:overload override public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
+	@:overload public function preInit(params : sun.awt.X11.XCreateWindowParams) : Void;
 	
 	/**
 	* Compute the minimum size for the scrollbar.
 	*/
-	@:overload override public function getMinimumSize() : java.awt.Dimension;
+	@:overload public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override public function repaint() : Void;
+	@:overload public function repaint() : Void;
 	
 	/**
 	* Paint the scrollbar.
 	*/
-	@:overload override public function paint(g : java.awt.Graphics) : Void;
+	@:overload public function paint(g : java.awt.Graphics) : Void;
 	
 	@:overload public function repaintScrollbarRequest(sb : sun.awt.X11.XScrollbar) : Void;
 	
@@ -57,9 +57,9 @@ package sun.awt.X11;
 	* MouseEvent.MOUSE_EXITED
 	* MouseEvent.MOUSE_DRAGGED
 	*/
-	@:overload override public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
+	@:overload public function handleJavaMouseEvent(mouseEvent : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function handleJavaKeyEvent(event : java.awt.event.KeyEvent) : Void;
+	@:overload public function handleJavaKeyEvent(event : java.awt.event.KeyEvent) : Void;
 	
 	@:overload public function setValue(value : Int) : Void;
 	
@@ -69,7 +69,7 @@ package sun.awt.X11;
 	
 	@:overload public function setPageIncrement(p : Int) : Void;
 	
-	@:overload override public function layout() : Void;
+	@:overload public function layout() : Void;
 	
 	
 }

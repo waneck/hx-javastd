@@ -42,7 +42,7 @@ extern class AptEnv
 	
 	public var declMaker : com.sun.tools.apt.mirror.declaration.DeclarationMaker;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : AptEnv;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.AptEnv;
 	
 	/**
 	* Does a symbol have a given flag?  Forces symbol completion.

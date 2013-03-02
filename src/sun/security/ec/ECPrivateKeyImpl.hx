@@ -37,7 +37,7 @@ extern class ECPrivateKeyImpl extends sun.security.pkcs.PKCS8Key implements java
 	*/
 	@:overload public function new(s : java.math.BigInteger, params : java.security.spec.ECParameterSpec) : Void;
 	
-	@:overload override public function getAlgorithm() : String;
+	@:overload public function getAlgorithm() : String;
 	
 	@:overload public function getS() : java.math.BigInteger;
 	
@@ -46,9 +46,9 @@ extern class ECPrivateKeyImpl extends sun.security.pkcs.PKCS8Key implements java
 	/**
 	* Parse the key. Called by PKCS8Key.
 	*/
-	@:overload override private function parseKeyBits() : Void;
+	@:overload private function parseKeyBits() : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

@@ -338,7 +338,7 @@ extern class Duration
 	*
 	* @see #subtract(Duration)
 	*/
-	@:overload @:abstract public function add(rhs : Duration) : Duration;
+	@:overload @:abstract public function add(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* Adds this duration to a {@link Calendar} object.
@@ -453,7 +453,7 @@ extern class Duration
 	*
 	* @see #add(Duration)
 	*/
-	@:overload public function subtract(rhs : Duration) : Duration;
+	@:overload public function subtract(rhs : javax.xml.datatype.Duration) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Computes a new duration whose value is <code>factor</code> times
@@ -471,7 +471,7 @@ extern class Duration
 	*
 	* @see #multiply(BigDecimal)
 	*/
-	@:overload public function multiply(factor : Int) : Duration;
+	@:overload public function multiply(factor : Int) : javax.xml.datatype.Duration;
 	
 	/**
 	* Computes a new duration whose value is <code>factor</code> times
@@ -520,7 +520,7 @@ extern class Duration
 	* <code>null</code>.
 	*
 	*/
-	@:overload @:abstract public function multiply(factor : java.math.BigDecimal) : Duration;
+	@:overload @:abstract public function multiply(factor : java.math.BigDecimal) : javax.xml.datatype.Duration;
 	
 	/**
 	* Returns a new <code>Duration</code> object whose
@@ -534,7 +534,7 @@ extern class Duration
 	* @return
 	*      always return a non-null valid <code>Duration</code> object.
 	*/
-	@:overload @:abstract public function negate() : Duration;
+	@:overload @:abstract public function negate() : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Converts the years and months fields into the days field
@@ -566,7 +566,7 @@ extern class Duration
 	*
 	* @throws NullPointerException If the startTimeInstant parameter is null.
 	*/
-	@:overload @:abstract public function normalizeWith(startTimeInstant : java.util.Calendar) : Duration;
+	@:overload @:abstract public function normalizeWith(startTimeInstant : java.util.Calendar) : javax.xml.datatype.Duration;
 	
 	/**
 	* <p>Partial order relation comparison with this <code>Duration</code> instance.</p>
@@ -598,7 +598,7 @@ extern class Duration
 	* @see #isShorterThan(Duration)
 	* @see #isLongerThan(Duration)
 	*/
-	@:overload @:abstract public function compare(duration : Duration) : Int;
+	@:overload @:abstract public function compare(duration : javax.xml.datatype.Duration) : Int;
 	
 	/**
 	* <p>Checks if this duration object is strictly longer than
@@ -626,7 +626,7 @@ extern class Duration
 	* @see #isShorterThan(Duration)
 	* @see #compare(Duration duration)
 	*/
-	@:overload public function isLongerThan(duration : Duration) : Bool;
+	@:overload public function isLongerThan(duration : javax.xml.datatype.Duration) : Bool;
 	
 	/**
 	* <p>Checks if this duration object is strictly shorter than
@@ -646,7 +646,7 @@ extern class Duration
 	* @see #isLongerThan(Duration duration)
 	* @see #compare(Duration duration)
 	*/
-	@:overload public function isShorterThan(duration : Duration) : Bool;
+	@:overload public function isShorterThan(duration : javax.xml.datatype.Duration) : Bool;
 	
 	/**
 	* <p>Checks if this duration object has the same duration

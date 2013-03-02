@@ -44,11 +44,11 @@ extern class StreamingDataHandler extends com.sun.xml.internal.org.jvnet.staxex.
 	*
 	* @author Jitendra Kotamraju
 	*/
-	@:overload override public function new(o : Dynamic, s : String) : Void;
+	@:overload public function new(o : Dynamic, s : String) : Void;
 	
-	@:overload override public function new(url : java.net.URL) : Void;
+	@:overload public function new(url : java.net.URL) : Void;
 	
-	@:overload override public function new(dataSource : javax.activation.DataSource) : Void;
+	@:overload public function new(dataSource : javax.activation.DataSource) : Void;
 	
 	
 }

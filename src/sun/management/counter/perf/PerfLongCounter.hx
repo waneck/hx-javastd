@@ -25,7 +25,7 @@ package sun.management.counter.perf;
 */
 extern class PerfLongCounter extends sun.management.counter.AbstractCounter implements sun.management.counter.LongCounter
 {
-	@:overload override public function getValue() : Dynamic;
+	@:overload public function getValue() : Dynamic;
 	
 	/**
 	* Get the value of this Long performance counter

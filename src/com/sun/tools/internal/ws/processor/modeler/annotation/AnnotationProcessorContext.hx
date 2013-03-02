@@ -28,13 +28,13 @@ extern class AnnotationProcessorContext
 	/** Creates a new instance of AnnotationProcessorContext */
 	@:overload public function new() : Void;
 	
-	@:overload public function addSEIContext(seiName : String, seiContext : AnnotationProcessorContext_SEIContext) : Void;
+	@:overload public function addSEIContext(seiName : String, seiContext : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext) : Void;
 	
-	@:overload public function getSEIContext(seiName : String) : AnnotationProcessorContext_SEIContext;
+	@:overload public function getSEIContext(seiName : String) : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext;
 	
-	@:overload public function getSEIContext(d : com.sun.mirror.declaration.TypeDeclaration) : AnnotationProcessorContext_SEIContext;
+	@:overload public function getSEIContext(d : com.sun.mirror.declaration.TypeDeclaration) : com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext;
 	
-	@:overload public function getSEIContexts() : java.util.Collection<AnnotationProcessorContext_SEIContext>;
+	@:overload public function getSEIContexts() : java.util.Collection<com.sun.tools.internal.ws.processor.modeler.annotation.AnnotationProcessorContext.AnnotationProcessorContext_SEIContext>;
 	
 	@:overload public function getRound() : Int;
 	

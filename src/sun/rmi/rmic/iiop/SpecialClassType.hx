@@ -38,12 +38,12 @@ extern class SpecialClassType extends sun.rmi.rmic.iiop.ClassType
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forSpecial(theClass : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : SpecialClassType;
+	@:overload public static function forSpecial(theClass : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.SpecialClassType;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload override public function getTypeDescription() : String;
+	@:overload public function getTypeDescription() : String;
 	
 	
 }

@@ -31,7 +31,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param data the content
 	*/
-	@:overload private function new(data : AbstractDocument_Content) : Void;
+	@:overload private function new(data : javax.swing.text.AbstractDocument.AbstractDocument_Content) : Void;
 	
 	/**
 	* Constructs a new <code>AbstractDocument</code>, wrapped around some
@@ -40,7 +40,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param data the content
 	* @param context the attribute context
 	*/
-	@:overload private function new(data : AbstractDocument_Content, context : AbstractDocument_AttributeContext) : Void;
+	@:overload private function new(data : javax.swing.text.AbstractDocument.AbstractDocument_Content, context : javax.swing.text.AbstractDocument.AbstractDocument_AttributeContext) : Void;
 	
 	/**
 	* Supports managing a set of properties. Callers
@@ -499,7 +499,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the context
 	*/
-	@:overload @:final private function getAttributeContext() : AbstractDocument_AttributeContext;
+	@:overload @:final private function getAttributeContext() : javax.swing.text.AbstractDocument.AbstractDocument_AttributeContext;
 	
 	/**
 	* Updates document structure as a result of text insertion.  This
@@ -510,7 +510,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	* @param chng a description of the change
 	* @param attr the attributes for the change
 	*/
-	@:overload private function insertUpdate(chng : AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Updates any document structure as a result of text removal.  This
@@ -521,7 +521,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param chng a description of the change
 	*/
-	@:overload private function removeUpdate(chng : AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload private function removeUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Updates any document structure as a result of text removal.  This
@@ -532,7 +532,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @param chng a description of the change
 	*/
-	@:overload private function postRemoveUpdate(chng : AbstractDocument_DefaultDocumentEvent) : Void;
+	@:overload private function postRemoveUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent) : Void;
 	
 	/**
 	* Gives a diagnostic dump.
@@ -546,7 +546,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*
 	* @return the content
 	*/
-	@:overload @:final private function getContent() : AbstractDocument_Content;
+	@:overload @:final private function getContent() : javax.swing.text.AbstractDocument.AbstractDocument_Content;
 	
 	/**
 	* Creates a document leaf element.
@@ -1143,13 +1143,6 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 	*/
 	@:overload @:abstract public function children() : java.util.Enumeration<Dynamic>;
 	
-	/**
-	* Returns the index of <code>node</code> in the receivers children.
-	* If the receiver does not contain <code>node</code>, -1 will be
-	* returned.
-	*/
-	@:overload public function getIndex(node : TreeNode) : Int;
-	
 	
 }
 /**
@@ -1164,7 +1157,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$text$AbstractDocument$BranchElement') extern class AbstractDocument_BranchElement extends AbstractDocument_AbstractElement
+@:native('javax$swing$text$AbstractDocument$BranchElement') extern class AbstractDocument_BranchElement extends javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement
 {
 	/**
 	* Constructs a composite element that initially contains
@@ -1283,7 +1276,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 *
 * @see     Element
 */
-@:native('javax$swing$text$AbstractDocument$LeafElement') extern class AbstractDocument_LeafElement extends AbstractDocument_AbstractElement
+@:native('javax$swing$text$AbstractDocument$LeafElement') extern class AbstractDocument_LeafElement extends javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement
 {
 	/**
 	* Constructs an element that represents content within the
@@ -1375,7 +1368,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 * The root element is the only element in the bidi element structure
 * which contains children.
 */
-@:native('javax$swing$text$AbstractDocument$BidiRootElement') @:internal extern class AbstractDocument_BidiRootElement extends AbstractDocument_BranchElement
+@:native('javax$swing$text$AbstractDocument$BidiRootElement') @:internal extern class AbstractDocument_BidiRootElement extends javax.swing.text.AbstractDocument.AbstractDocument_BranchElement
 {
 	/**
 	* Gets the name of the element.
@@ -1388,7 +1381,7 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 /**
 * Represents an element of the bidirectional element structure.
 */
-@:native('javax$swing$text$AbstractDocument$BidiElement') @:internal extern class AbstractDocument_BidiElement extends AbstractDocument_LeafElement
+@:native('javax$swing$text$AbstractDocument$BidiElement') @:internal extern class AbstractDocument_BidiElement extends javax.swing.text.AbstractDocument.AbstractDocument_LeafElement
 {
 	/**
 	* Gets the name of the element.
@@ -1534,9 +1527,9 @@ extern class AbstractDocument implements javax.swing.text.Document implements ja
 */
 @:native('javax$swing$text$AbstractDocument$UndoRedoDocumentEvent') @:internal extern class AbstractDocument_UndoRedoDocumentEvent implements javax.swing.event.DocumentEvent
 {
-	@:overload public function new(src : AbstractDocument_DefaultDocumentEvent, isUndo : Bool) : Void;
+	@:overload public function new(src : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, isUndo : Bool) : Void;
 	
-	@:overload public function getSource() : AbstractDocument_DefaultDocumentEvent;
+	@:overload public function getSource() : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent;
 	
 	@:overload public function getOffset() : Int;
 	

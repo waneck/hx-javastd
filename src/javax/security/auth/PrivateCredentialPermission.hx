@@ -117,14 +117,14 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	*          has the same credential class as this object,
 	*          and has the same Principals as this object.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Returns the hash code value for this object.
 	*
 	* @return a hash code value for this object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Returns the "canonical string representation" of the actions.
@@ -134,7 +134,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	*
 	* @return the actions (always returns "read").
 	*/
-	@:overload override public function getActions() : String;
+	@:overload public function getActions() : String;
 	
 	/**
 	* Return a homogeneous collection of PrivateCredentialPermissions
@@ -146,7 +146,7 @@ extern class PrivateCredentialPermission extends java.security.Permission
 	*
 	* @return null in all cases.
 	*/
-	@:overload override public function newPermissionCollection() : java.security.PermissionCollection;
+	@:overload public function newPermissionCollection() : java.security.PermissionCollection;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class FI_StAX_SAX_Or_XML_SAX_SAXEvent extends com.sun.xml.internal.fastin
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function parse(document : java.io.InputStream, events : java.io.OutputStream) : Void;
+	@:overload public function parse(document : java.io.InputStream, events : java.io.OutputStream) : Void;
 	
 	@:overload public static function main(args : java.NativeArray<String>) : Void;
 	

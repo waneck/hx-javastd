@@ -128,7 +128,7 @@ extern class ZipOutputStream extends java.util.zip.DeflaterOutputStream implemen
 	* @exception ZipException if a ZIP file error has occurred
 	* @exception IOException if an I/O exception has occurred
 	*/
-	@:overload override public function finish() : Void;
+	@:overload public function finish() : Void;
 	
 	/**
 	* Closes the ZIP output stream as well as the stream being filtered.

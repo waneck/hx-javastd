@@ -29,135 +29,135 @@ extern class IDLJavaSerializationOutputStream extends com.sun.corba.se.impl.enco
 	
 	@:overload public function new(encodingVersion : java.StdTypes.Int8) : Void;
 	
-	@:overload override public function init(orb : org.omg.CORBA.ORB, littleEndian : Bool, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite, streamFormatVersion : java.StdTypes.Int8, usePooledByteBuffers : Bool) : Void;
+	@:overload public function init(orb : org.omg.CORBA.ORB, littleEndian : Bool, bufferManager : com.sun.corba.se.impl.encoding.BufferManagerWrite, streamFormatVersion : java.StdTypes.Int8, usePooledByteBuffers : Bool) : Void;
 	
-	@:overload @:final override public function write_boolean(value : Bool) : Void;
+	@:overload @:final public function write_boolean(value : Bool) : Void;
 	
-	@:overload @:final override public function write_char(value : java.StdTypes.Char16) : Void;
+	@:overload @:final public function write_char(value : java.StdTypes.Char16) : Void;
 	
-	@:overload @:final override public function write_wchar(value : java.StdTypes.Char16) : Void;
+	@:overload @:final public function write_wchar(value : java.StdTypes.Char16) : Void;
 	
-	@:overload @:final override public function write_octet(value : java.StdTypes.Int8) : Void;
+	@:overload @:final public function write_octet(value : java.StdTypes.Int8) : Void;
 	
-	@:overload @:final override public function write_short(value : java.StdTypes.Int16) : Void;
+	@:overload @:final public function write_short(value : java.StdTypes.Int16) : Void;
 	
-	@:overload @:final override public function write_ushort(value : java.StdTypes.Int16) : Void;
+	@:overload @:final public function write_ushort(value : java.StdTypes.Int16) : Void;
 	
-	@:overload @:final override public function write_long(value : Int) : Void;
+	@:overload @:final public function write_long(value : Int) : Void;
 	
-	@:overload @:final override public function write_ulong(value : Int) : Void;
+	@:overload @:final public function write_ulong(value : Int) : Void;
 	
-	@:overload @:final override public function write_longlong(value : haxe.Int64) : Void;
+	@:overload @:final public function write_longlong(value : haxe.Int64) : Void;
 	
-	@:overload @:final override public function write_ulonglong(value : haxe.Int64) : Void;
+	@:overload @:final public function write_ulonglong(value : haxe.Int64) : Void;
 	
-	@:overload @:final override public function write_float(value : Single) : Void;
+	@:overload @:final public function write_float(value : Single) : Void;
 	
-	@:overload @:final override public function write_double(value : Float) : Void;
+	@:overload @:final public function write_double(value : Float) : Void;
 	
-	@:overload @:final override public function write_string(value : String) : Void;
+	@:overload @:final public function write_string(value : String) : Void;
 	
-	@:overload @:final override public function write_wstring(value : String) : Void;
+	@:overload @:final public function write_wstring(value : String) : Void;
 	
-	@:overload @:final override public function write_boolean_array(value : java.NativeArray<Bool>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_boolean_array(value : java.NativeArray<Bool>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_char_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_char_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_wchar_array(value : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_octet_array(value : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_octet_array(value : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_short_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_short_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_ushort_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_ushort_array(value : java.NativeArray<java.StdTypes.Int16>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_long_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_long_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_ulong_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_ulong_array(value : java.NativeArray<Int>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_longlong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_longlong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_ulonglong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_ulonglong_array(value : java.NativeArray<haxe.Int64>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_float_array(value : java.NativeArray<Single>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_float_array(value : java.NativeArray<Single>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_double_array(value : java.NativeArray<Float>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_double_array(value : java.NativeArray<Float>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function write_Object(value : org.omg.CORBA.Object) : Void;
+	@:overload @:final public function write_Object(value : org.omg.CORBA.Object) : Void;
 	
-	@:overload @:final override public function write_TypeCode(tc : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:final public function write_TypeCode(tc : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload @:final override public function write_any(any : org.omg.CORBA.Any) : Void;
+	@:overload @:final public function write_any(any : org.omg.CORBA.Any) : Void;
 	
-	@:overload @:final override public function write_Principal(p : org.omg.CORBA.Principal) : Void;
+	@:overload @:final public function write_Principal(p : org.omg.CORBA.Principal) : Void;
 	
-	@:overload @:final override public function write_fixed(bigDecimal : java.math.BigDecimal) : Void;
+	@:overload @:final public function write_fixed(bigDecimal : java.math.BigDecimal) : Void;
 	
-	@:overload @:final override public function orb() : org.omg.CORBA.ORB;
+	@:overload @:final public function orb() : org.omg.CORBA.ORB;
 	
-	@:overload @:final override public function write_value(value : java.io.Serializable) : Void;
+	@:overload @:final public function write_value(value : java.io.Serializable) : Void;
 	
-	@:overload @:final override public function write_value(value : java.io.Serializable, clz : Class<Dynamic>) : Void;
+	@:overload @:final public function write_value(value : java.io.Serializable, clz : Class<Dynamic>) : Void;
 	
-	@:overload @:final override public function write_value(value : java.io.Serializable, repository_id : String) : Void;
+	@:overload @:final public function write_value(value : java.io.Serializable, repository_id : String) : Void;
 	
-	@:overload @:final override public function write_value(value : java.io.Serializable, factory : org.omg.CORBA.portable.BoxedValueHelper) : Void;
+	@:overload @:final public function write_value(value : java.io.Serializable, factory : org.omg.CORBA.portable.BoxedValueHelper) : Void;
 	
-	@:overload @:final override public function write_abstract_interface(obj : Dynamic) : Void;
+	@:overload @:final public function write_abstract_interface(obj : Dynamic) : Void;
 	
-	@:overload @:final override public function start_block() : Void;
+	@:overload @:final public function start_block() : Void;
 	
-	@:overload @:final override public function end_block() : Void;
+	@:overload @:final public function end_block() : Void;
 	
-	@:overload @:final override public function putEndian() : Void;
+	@:overload @:final public function putEndian() : Void;
 	
-	@:overload override public function writeTo(s : java.io.OutputStream) : Void;
+	@:overload public function writeTo(s : java.io.OutputStream) : Void;
 	
-	@:overload @:final override public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload @:final public function toByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload @:final override public function write_Abstract(value : Dynamic) : Void;
+	@:overload @:final public function write_Abstract(value : Dynamic) : Void;
 	
-	@:overload @:final override public function write_Value(value : java.io.Serializable) : Void;
+	@:overload @:final public function write_Value(value : java.io.Serializable) : Void;
 	
-	@:overload @:final override public function write_any_array(value : java.NativeArray<org.omg.CORBA.Any>, offset : Int, length : Int) : Void;
+	@:overload @:final public function write_any_array(value : java.NativeArray<org.omg.CORBA.Any>, offset : Int, length : Int) : Void;
 	
-	@:overload @:final override public function _truncatable_ids() : java.NativeArray<String>;
+	@:overload @:final public function _truncatable_ids() : java.NativeArray<String>;
 	
-	@:overload @:final override public function getSize() : Int;
+	@:overload @:final public function getSize() : Int;
 	
-	@:overload @:final override public function getIndex() : Int;
+	@:overload @:final public function getIndex() : Int;
 	
 	@:overload private function getRealIndex(index : Int) : Int;
 	
-	@:overload @:final override public function setIndex(value : Int) : Void;
+	@:overload @:final public function setIndex(value : Int) : Void;
 	
-	@:overload @:final override public function getByteBuffer() : java.nio.ByteBuffer;
+	@:overload @:final public function getByteBuffer() : java.nio.ByteBuffer;
 	
-	@:overload @:final override public function setByteBuffer(byteBuffer : java.nio.ByteBuffer) : Void;
+	@:overload @:final public function setByteBuffer(byteBuffer : java.nio.ByteBuffer) : Void;
 	
-	@:overload @:final override public function isLittleEndian() : Bool;
+	@:overload @:final public function isLittleEndian() : Bool;
 	
-	@:overload override public function getByteBufferWithInfo() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
+	@:overload public function getByteBufferWithInfo() : com.sun.corba.se.impl.encoding.ByteBufferWithInfo;
 	
-	@:overload override public function setByteBufferWithInfo(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
+	@:overload public function setByteBufferWithInfo(bbwi : com.sun.corba.se.impl.encoding.ByteBufferWithInfo) : Void;
 	
-	@:overload @:final override public function getBufferManager() : com.sun.corba.se.impl.encoding.BufferManagerWrite;
+	@:overload @:final public function getBufferManager() : com.sun.corba.se.impl.encoding.BufferManagerWrite;
 	
-	@:overload @:final override public function write_fixed(bigDecimal : java.math.BigDecimal, digits : java.StdTypes.Int16, scale : java.StdTypes.Int16) : Void;
+	@:overload @:final public function write_fixed(bigDecimal : java.math.BigDecimal, digits : java.StdTypes.Int16, scale : java.StdTypes.Int16) : Void;
 	
-	@:overload @:final override public function writeOctetSequenceTo(s : org.omg.CORBA.portable.OutputStream) : Void;
+	@:overload @:final public function writeOctetSequenceTo(s : org.omg.CORBA.portable.OutputStream) : Void;
 	
-	@:overload @:final override public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
+	@:overload @:final public function getGIOPVersion() : com.sun.corba.se.spi.ior.iiop.GIOPVersion;
 	
-	@:overload @:final override public function writeIndirection(tag : Int, posIndirectedTo : Int) : Void;
+	@:overload @:final public function writeIndirection(tag : Int, posIndirectedTo : Int) : Void;
 	
-	@:overload override public function alignOnBoundary(octetBoundary : Int) : Void;
+	@:overload public function alignOnBoundary(octetBoundary : Int) : Void;
 	
-	@:overload override public function setHeaderPadding(headerPadding : Bool) : Void;
+	@:overload public function setHeaderPadding(headerPadding : Bool) : Void;
 	
-	@:overload override public function start_value(rep_id : String) : Void;
+	@:overload public function start_value(rep_id : String) : Void;
 	
-	@:overload override public function end_value() : Void;
+	@:overload public function end_value() : Void;
 	
 	
 }
@@ -171,7 +171,7 @@ extern class IDLJavaSerializationOutputStream extends com.sun.corba.se.impl.enco
 	* Checks for objects that are instances of java.rmi.Remote
 	* that need to be serialized as proxy (Stub) objects.
 	*/
-	@:overload @:final override private function replaceObject(obj : Dynamic) : Dynamic;
+	@:overload @:final private function replaceObject(obj : Dynamic) : Dynamic;
 	
 	
 }

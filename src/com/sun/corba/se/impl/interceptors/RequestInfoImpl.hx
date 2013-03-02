@@ -428,24 +428,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return a duplicate of this object reference or this object reference
 	*         itself
 	*/
-	@:overload @:public @:public override public function _duplicate() : Object;
-	
-	/**
-	* Determines whether the two object references are equivalent,
-	* so far as the ORB can easily determine. Two object references are equivalent
-	* if they are identical. Two distinct object references which in fact refer to
-	* the same object are also equivalent. However, ORBs are not required
-	* to attempt determination of whether two distinct object references
-	* refer to the same object, since such determination could be impractically
-	* expensive.
-	* @param other the other object reference with which to check for equivalence
-	* @return <code>true</code> if this object reference is known to be
-	*         equivalent to the given object reference.
-	*         Note that <code>false</code> indicates only that the two
-	*         object references are distinct, not necessarily that
-	*         they reference distinct objects.
-	*/
-	@:overload @:public @:public @:public override public function _is_equivalent(other : Object) : Bool;
+	@:overload @:public @:public override public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns a new <code>Object</code> with the given policies
@@ -463,7 +446,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return a new <code>Object</code> with the given policies replacing
 	*         or added to those in this <code>Object</code>
 	*/
-	@:overload @:public @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : Object;
+	@:overload @:public @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns the <code>Policy</code> object of the specified type
@@ -498,7 +481,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*         which provides type information about the object referred to by
 	*         this object reference
 	*/
-	@:overload @:public @:public override public function _get_interface_def() : Object;
+	@:overload @:public @:public override public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns an ORB-internal identifier for this object reference.
@@ -515,6 +498,23 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return the ORB-internal hash identifier for this object reference
 	*/
 	@:overload @:public @:public override public function _hash(maximum : Int) : Int;
+	
+	/**
+	* Determines whether the two object references are equivalent,
+	* so far as the ORB can easily determine. Two object references are equivalent
+	* if they are identical. Two distinct object references which in fact refer to
+	* the same object are also equivalent. However, ORBs are not required
+	* to attempt determination of whether two distinct object references
+	* refer to the same object, since such determination could be impractically
+	* expensive.
+	* @param other the other object reference with which to check for equivalence
+	* @return <code>true</code> if this object reference is known to be
+	*         equivalent to the given object reference.
+	*         Note that <code>false</code> indicates only that the two
+	*         object references are distinct, not necessarily that
+	*         they reference distinct objects.
+	*/
+	@:overload @:public @:public override public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Retrieves the <code>DomainManagers</code> of this object.

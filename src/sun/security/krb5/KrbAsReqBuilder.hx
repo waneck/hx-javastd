@@ -93,7 +93,7 @@ extern class KrbAsReqBuilder
 	* @throws Asn1Exception
 	* @throws IOException
 	*/
-	@:overload public function action() : KrbAsReqBuilder;
+	@:overload public function action() : sun.security.krb5.KrbAsReqBuilder;
 	
 	/**
 	* Gets Credentials object after action

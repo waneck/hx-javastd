@@ -51,7 +51,7 @@ extern class SystemTray
 	* @see SecurityManager#checkPermission
 	* @see AWTPermission
 	*/
-	@:overload public static function getSystemTray() : SystemTray;
+	@:overload public static function getSystemTray() : java.awt.SystemTray;
 	
 	/**
 	* Returns whether the system tray is supported on the current

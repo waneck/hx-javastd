@@ -240,7 +240,7 @@ extern interface AttributeSet
 	*
 	* @see #add(Attribute)
 	*/
-	@:overload public function addAll(attributes : AttributeSet) : Bool;
+	@:overload public function addAll(attributes : javax.print.attribute.AttributeSet) : Bool;
 	
 	/**
 	* Returns the number of attributes in this attribute set. If this

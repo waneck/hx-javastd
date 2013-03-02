@@ -75,7 +75,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* The icon that is displayed when this internal frame is iconified.
 	* @see #iconable
 	*/
-	private var desktopIcon : JInternalFrame_JDesktopIcon;
+	private var desktopIcon : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
 	
 	/** Bound property name. */
 	public static var CONTENT_PANE_PROPERTY(default, null) : String;
@@ -812,7 +812,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	*           bound: true
 	*     description: The icon shown when this internal frame is minimized.
 	*/
-	@:overload public function setDesktopIcon(d : JInternalFrame_JDesktopIcon) : Void;
+	@:overload public function setDesktopIcon(d : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon) : Void;
 	
 	/**
 	* Returns the <code>JDesktopIcon</code> used when this
@@ -821,7 +821,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>JDesktopIcon</code> displayed on the desktop
 	* @see #setDesktopIcon
 	*/
-	@:overload public function getDesktopIcon() : JInternalFrame_JDesktopIcon;
+	@:overload public function getDesktopIcon() : javax.swing.JInternalFrame.JInternalFrame_JDesktopIcon;
 	
 	/**
 	* If the <code>JInternalFrame</code> is not in maximized state, returns
@@ -1275,7 +1275,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param f  the <code>JInternalFrame</code>
 	*              for which the icon is created
 	*/
-	@:overload public function new(f : JInternalFrame) : Void;
+	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Returns the look-and-feel object that renders this component.
@@ -1300,7 +1300,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @return the <code>JInternalFrame</code> with which this icon
 	*              is associated
 	*/
-	@:overload public function getInternalFrame() : JInternalFrame;
+	@:overload public function getInternalFrame() : javax.swing.JInternalFrame;
 	
 	/**
 	* Sets the <code>JInternalFrame</code> with which this
@@ -1309,7 +1309,7 @@ extern class JInternalFrame extends javax.swing.JComponent implements javax.acce
 	* @param f  the <code>JInternalFrame</code> with which this icon
 	*              is associated
 	*/
-	@:overload public function setInternalFrame(f : JInternalFrame) : Void;
+	@:overload public function setInternalFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/**
 	* Convenience method to ask the icon for the <code>Desktop</code>

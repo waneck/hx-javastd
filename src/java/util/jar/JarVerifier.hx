@@ -84,13 +84,13 @@ package java.util.jar;
 }
 @:native('java$util$jar$JarVerifier$VerifierStream') @:internal extern class JarVerifier_VerifierStream extends java.io.InputStream
 {
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
 	
 }
@@ -106,7 +106,7 @@ package java.util.jar;
 	* No CodeSigner<->Certificate[] conversion is required.
 	* We use these assumptions to optimize equality comparisons.
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	
 }

@@ -59,7 +59,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	*               <code>width</code> and
 	*               <code>height</code> values
 	*/
-	@:overload public function new(d : Dimension) : Void;
+	@:overload public function new(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Constructs a <code>Dimension</code> and initializes
@@ -106,7 +106,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @see      java.awt.Component#getSize
 	* @since    1.1
 	*/
-	@:require(java1) @:overload public function getSize() : Dimension;
+	@:require(java1) @:overload public function getSize() : java.awt.Dimension;
 	
 	/**
 	* Sets the size of this <code>Dimension</code> object to the specified size.
@@ -117,7 +117,7 @@ extern class Dimension extends java.awt.geom.Dimension2D implements java.io.Seri
 	* @see      java.awt.Component#setSize
 	* @since    1.1
 	*/
-	@:require(java1) @:overload public function setSize(d : Dimension) : Void;
+	@:require(java1) @:overload public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Sets the size of this <code>Dimension</code> object

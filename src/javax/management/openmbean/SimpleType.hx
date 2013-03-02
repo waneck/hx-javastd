@@ -31,85 +31,85 @@ extern class SimpleType<T> extends javax.management.openmbean.OpenType<T>
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Void</code>.
 	*/
-	public static var VOID(default, null) : SimpleType<java.lang.Void>;
+	public static var VOID(default, null) : javax.management.openmbean.SimpleType<java.lang.Void>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Boolean</code>.
 	*/
-	public static var BOOLEAN(default, null) : SimpleType<Null<Bool>>;
+	public static var BOOLEAN(default, null) : javax.management.openmbean.SimpleType<Null<Bool>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Character</code>.
 	*/
-	public static var CHARACTER(default, null) : SimpleType<Null<java.StdTypes.Char16>>;
+	public static var CHARACTER(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Char16>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Byte</code>.
 	*/
-	public static var BYTE(default, null) : SimpleType<Null<java.StdTypes.Int8>>;
+	public static var BYTE(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Int8>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Short</code>.
 	*/
-	public static var SHORT(default, null) : SimpleType<Null<java.StdTypes.Int16>>;
+	public static var SHORT(default, null) : javax.management.openmbean.SimpleType<Null<java.StdTypes.Int16>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Integer</code>.
 	*/
-	public static var INTEGER(default, null) : SimpleType<Null<Int>>;
+	public static var INTEGER(default, null) : javax.management.openmbean.SimpleType<Null<Int>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Long</code>.
 	*/
-	public static var LONG(default, null) : SimpleType<Null<haxe.Int64>>;
+	public static var LONG(default, null) : javax.management.openmbean.SimpleType<Null<haxe.Int64>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Float</code>.
 	*/
-	public static var FLOAT(default, null) : SimpleType<java.lang.Float>;
+	public static var FLOAT(default, null) : javax.management.openmbean.SimpleType<java.lang.Float>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.Double</code>.
 	*/
-	public static var DOUBLE(default, null) : SimpleType<Null<Float>>;
+	public static var DOUBLE(default, null) : javax.management.openmbean.SimpleType<Null<Float>>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.lang.String</code>.
 	*/
-	public static var STRING(default, null) : SimpleType<String>;
+	public static var STRING(default, null) : javax.management.openmbean.SimpleType<String>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.math.BigDecimal</code>.
 	*/
-	public static var BIGDECIMAL(default, null) : SimpleType<java.math.BigDecimal>;
+	public static var BIGDECIMAL(default, null) : javax.management.openmbean.SimpleType<java.math.BigDecimal>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.math.BigInteger</code>.
 	*/
-	public static var BIGINTEGER(default, null) : SimpleType<java.math.BigInteger>;
+	public static var BIGINTEGER(default, null) : javax.management.openmbean.SimpleType<java.math.BigInteger>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>java.util.Date</code>.
 	*/
-	public static var DATE(default, null) : SimpleType<java.util.Date>;
+	public static var DATE(default, null) : javax.management.openmbean.SimpleType<java.util.Date>;
 	
 	/**
 	* The <code>SimpleType</code> instance describing values whose
 	* Java class name is <code>javax.management.ObjectName</code>.
 	*/
-	public static var OBJECTNAME(default, null) : SimpleType<javax.management.ObjectName>;
+	public static var OBJECTNAME(default, null) : javax.management.openmbean.SimpleType<javax.management.ObjectName>;
 	
 	/**
 	* Tests whether <var>obj</var> is a value for this

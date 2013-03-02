@@ -53,7 +53,7 @@ extern class DriverResource extends java.util.ListResourceBundle
 	
 	public static var BAD_SPEC(default, null) : String;
 	
-	@:overload override private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload private function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

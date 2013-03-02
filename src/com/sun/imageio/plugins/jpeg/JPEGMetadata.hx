@@ -27,25 +27,25 @@ extern class JPEGMetadata extends javax.imageio.metadata.IIOMetadata implements 
 {
 	@:overload private function clone() : Dynamic;
 	
-	@:overload override public function getAsTree(formatName : String) : org.w3c.dom.Node;
+	@:overload public function getAsTree(formatName : String) : org.w3c.dom.Node;
 	
-	@:overload override private function getStandardChromaNode() : IIOMetadataNode;
+	@:overload private function getStandardChromaNode() : IIOMetadataNode;
 	
-	@:overload override private function getStandardCompressionNode() : IIOMetadataNode;
+	@:overload private function getStandardCompressionNode() : IIOMetadataNode;
 	
-	@:overload override private function getStandardDimensionNode() : IIOMetadataNode;
+	@:overload private function getStandardDimensionNode() : IIOMetadataNode;
 	
-	@:overload override private function getStandardTextNode() : IIOMetadataNode;
+	@:overload private function getStandardTextNode() : IIOMetadataNode;
 	
-	@:overload override private function getStandardTransparencyNode() : IIOMetadataNode;
+	@:overload private function getStandardTransparencyNode() : IIOMetadataNode;
 	
-	@:overload override public function isReadOnly() : Bool;
+	@:overload public function isReadOnly() : Bool;
 	
-	@:overload override public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload public function mergeTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
+	@:overload public function setFromTree(formatName : String, root : org.w3c.dom.Node) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	@:overload public function print() : Void;
 	

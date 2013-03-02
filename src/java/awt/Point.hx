@@ -60,7 +60,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @param       p a point
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function new(p : Point) : Void;
+	@:require(java1) @:overload public function new(p : java.awt.Point) : Void;
 	
 	/**
 	* Constructs and initializes a point at the specified
@@ -93,7 +93,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @see         java.awt.Point#setLocation(int, int)
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function getLocation() : Point;
+	@:require(java1) @:overload public function getLocation() : java.awt.Point;
 	
 	/**
 	* Sets the location of the point to the specified location.
@@ -104,7 +104,7 @@ extern class Point extends java.awt.geom.Point2D implements java.io.Serializable
 	* @see         java.awt.Point#getLocation
 	* @since       1.1
 	*/
-	@:require(java1) @:overload public function setLocation(p : Point) : Void;
+	@:require(java1) @:overload public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Changes the point to have the specified location.

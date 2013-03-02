@@ -99,13 +99,13 @@ extern class ContextStack
 	* Push a new element on the stack.
 	* @return the new element.
 	*/
-	@:overload public function push(element : sun.rmi.rmic.iiop.ContextElement) : TypeContext;
+	@:overload public function push(element : sun.rmi.rmic.iiop.ContextElement) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Pop an element from the stack.
 	* @return the new current element or null if top.
 	*/
-	@:overload public function pop(wasValid : Bool) : TypeContext;
+	@:overload public function pop(wasValid : Bool) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Get the current size.
@@ -115,12 +115,12 @@ extern class ContextStack
 	/**
 	* Get a specific context.
 	*/
-	@:overload public function getContext(index : Int) : TypeContext;
+	@:overload public function getContext(index : Int) : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Get the current top context.
 	*/
-	@:overload public function getContext() : TypeContext;
+	@:overload public function getContext() : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Is parent context a value type?
@@ -130,7 +130,7 @@ extern class ContextStack
 	/**
 	* Get parent context. Null if none.
 	*/
-	@:overload public function getParentContext() : TypeContext;
+	@:overload public function getParentContext() : sun.rmi.rmic.iiop.ContextStack.TypeContext;
 	
 	/**
 	* Get a string for the context name...

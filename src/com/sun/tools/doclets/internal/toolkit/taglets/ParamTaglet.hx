@@ -48,32 +48,32 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function inField() : Bool;
+	@:overload public function inField() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function inMethod() : Bool;
+	@:overload public function inMethod() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function inOverview() : Bool;
+	@:overload public function inOverview() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function inPackage() : Bool;
+	@:overload public function inPackage() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function inType() : Bool;
+	@:overload public function inType() : Bool;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function isInlineTag() : Bool;
+	@:overload public function isInlineTag() : Bool;
 	
 	/**
 	* Given an array of <code>ParamTag</code>s,return its string representation.
@@ -81,7 +81,7 @@ package com.sun.tools.doclets.internal.toolkit.taglets;
 	* @param writer the TagletWriter that will write this tag.
 	* @return the TagletOutput representation of these <code>ParamTag</code>s.
 	*/
-	@:overload override public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
+	@:overload public function getTagletOutput(holder : com.sun.javadoc.Doc, writer : com.sun.tools.doclets.internal.toolkit.taglets.TagletWriter) : com.sun.tools.doclets.internal.toolkit.taglets.TagletOutput;
 	
 	
 }

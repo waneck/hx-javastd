@@ -537,7 +537,7 @@ package java.util;
 	*         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
 	*         fromIndex &gt; toIndex</tt>)
 	*/
-	@:overload public function subList(fromIndex : Int, toIndex : Int) : List<E>;
+	@:overload public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }

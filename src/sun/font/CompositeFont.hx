@@ -29,7 +29,7 @@ extern class CompositeFont extends sun.font.Font2D
 	
 	@:overload public function isExcludedChar(slot : Int, charcode : Int) : Bool;
 	
-	@:overload override public function getStyleMetrics(pointSize : Single, metrics : java.NativeArray<Single>, offset : Int) : Void;
+	@:overload public function getStyleMetrics(pointSize : Single, metrics : java.NativeArray<Single>, offset : Int) : Void;
 	
 	@:overload public function getNumSlots() : Int;
 	
@@ -47,19 +47,19 @@ extern class CompositeFont extends sun.font.Font2D
 	* These may not be valid. This validates them substituting the missing
 	* glyph elsewhere.
 	*/
-	@:overload override private function getValidatedGlyphCode(glyphCode : Int) : Int;
+	@:overload private function getValidatedGlyphCode(glyphCode : Int) : Int;
 	
-	@:overload override public function getMapper() : sun.font.CharToGlyphMapper;
+	@:overload public function getMapper() : sun.font.CharToGlyphMapper;
 	
-	@:overload override public function hasSupplementaryChars() : Bool;
+	@:overload public function hasSupplementaryChars() : Bool;
 	
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload public function getNumGlyphs() : Int;
 	
-	@:overload override public function getMissingGlyphCode() : Int;
+	@:overload public function getMissingGlyphCode() : Int;
 	
-	@:overload override public function canDisplay(c : java.StdTypes.Char16) : Bool;
+	@:overload public function canDisplay(c : java.StdTypes.Char16) : Bool;
 	
-	@:overload override public function useAAForPtSize(ptsize : Int) : Bool;
+	@:overload public function useAAForPtSize(ptsize : Int) : Bool;
 	
 	@:overload public function toString() : String;
 	

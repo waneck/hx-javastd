@@ -39,7 +39,7 @@ extern class FileDescriptor
 	*
 	* @see     java.lang.System#in
 	*/
-	@:native('in') public static var _in(default, null) : FileDescriptor;
+	@:native('in') public static var _in(default, null) : java.io.FileDescriptor;
 	
 	/**
 	* A handle to the standard output stream. Usually, this file
@@ -47,7 +47,7 @@ extern class FileDescriptor
 	* known as <code>System.out</code>.
 	* @see     java.lang.System#out
 	*/
-	public static var out(default, null) : FileDescriptor;
+	public static var out(default, null) : java.io.FileDescriptor;
 	
 	/**
 	* A handle to the standard error stream. Usually, this file
@@ -56,7 +56,7 @@ extern class FileDescriptor
 	*
 	* @see     java.lang.System#err
 	*/
-	public static var err(default, null) : FileDescriptor;
+	public static var err(default, null) : java.io.FileDescriptor;
 	
 	/**
 	* Tests if this file descriptor object is valid.

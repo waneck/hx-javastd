@@ -34,7 +34,7 @@ extern class XSLTCDTMManager extends com.sun.org.apache.xml.internal.dtm.ref.DTM
 	* This static method creates a new factory instance.
 	* The current implementation just returns a new XSLTCDTMManager instance.
 	*/
-	@:native('newInstance') @:overload public static function _newInstance() : XSLTCDTMManager;
+	@:overload public static function newInstance() : com.sun.org.apache.xalan.internal.xsltc.dom.XSLTCDTMManager;
 	
 	/**
 	* Look up the class that provides the XSLTC DTM Manager service.

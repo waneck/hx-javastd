@@ -28,7 +28,7 @@ extern interface JavaSecurityProtectionDomainAccess
 	/**
 	* Returns the ProtectionDomainCache.
 	*/
-	@:overload public function getProtectionDomainCache() : JavaSecurityProtectionDomainAccess_ProtectionDomainCache;
+	@:overload public function getProtectionDomainCache() : sun.misc.JavaSecurityProtectionDomainAccess.JavaSecurityProtectionDomainAccess_ProtectionDomainCache;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class PSSParameterSpec implements java.security.spec.AlgorithmParameterSp
 	* The PSS parameter set with all default values.
 	* @since 1.5
 	*/
-	@:require(java5) public static var DEFAULT(default, null) : PSSParameterSpec;
+	@:require(java5) public static var DEFAULT(default, null) : java.security.spec.PSSParameterSpec;
 	
 	/**
 	* Creates a new <code>PSSParameterSpec</code> as defined in

@@ -58,7 +58,7 @@ package javax.management;
 	*
 	* @return the wrapped {@link Error}.
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

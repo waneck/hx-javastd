@@ -25,7 +25,7 @@ package sun.net;
 */
 extern class SocksProxy extends java.net.Proxy
 {
-	@:overload public static function create(addr : java.net.SocketAddress, version : Int) : SocksProxy;
+	@:overload public static function create(addr : java.net.SocketAddress, version : Int) : sun.net.SocksProxy;
 	
 	@:overload public function protocolVersion() : Int;
 	

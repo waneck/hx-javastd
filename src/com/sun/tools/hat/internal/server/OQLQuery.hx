@@ -37,7 +37,7 @@ package com.sun.tools.hat.internal.server;
 	*/
 	@:overload public function new(engine : com.sun.tools.hat.internal.oql.OQLEngine) : Void;
 	
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }

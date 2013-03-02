@@ -31,7 +31,7 @@ extern class EncapsInputStream extends com.sun.corba.se.impl.encoding.CDRInputSt
 	
 	@:overload public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int) : Void;
 	
-	@:overload public function new(eis : EncapsInputStream) : Void;
+	@:overload public function new(eis : com.sun.corba.se.impl.encoding.EncapsInputStream) : Void;
 	
 	@:overload public function new(orb : org.omg.CORBA.ORB, data : java.NativeArray<java.StdTypes.Int8>, size : Int, version : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Void;
 	

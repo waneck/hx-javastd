@@ -5,7 +5,7 @@ extern class FSInfo
 	*  @param context the context
 	*  @return the Paths instance for this context
 	*/
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : FSInfo;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.file.FSInfo;
 	
 	@:overload private function new() : Void;
 	

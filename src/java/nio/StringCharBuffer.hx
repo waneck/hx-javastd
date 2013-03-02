@@ -42,7 +42,7 @@ package java.nio;
 	
 	@:overload @:final override public function compact() : java.nio.CharBuffer;
 	
-	@:overload @:final override public function isReadOnly() : Bool;
+	@:overload @:final public function isReadOnly() : Bool;
 	
 	@:overload @:final override public function subSequence(start : Int, end : Int) : java.nio.CharBuffer;
 	

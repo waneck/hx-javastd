@@ -79,13 +79,13 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	*/
 	private var navigateKey2 : javax.swing.KeyStroke;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function uninstallUI(c : javax.swing.JComponent) : Void;
+	@:overload public function uninstallUI(c : javax.swing.JComponent) : Void;
 	
 	@:overload private function installDefaults() : Void;
 	
@@ -123,13 +123,13 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 	
 	@:overload private function uninstallKeyboardActions() : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* Returns the <code>PropertyChangeListener</code> to install on
@@ -172,7 +172,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 {
 	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
 	
 }
@@ -183,7 +183,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 {
 	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
 	
 }
@@ -194,7 +194,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 {
 	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
 	
 }
@@ -205,7 +205,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 {
 	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
 	
 }
@@ -216,7 +216,7 @@ extern class BasicDesktopPaneUI extends javax.swing.plaf.DesktopPaneUI
 {
 	@:overload override public function actionPerformed(evt : java.awt.event.ActionEvent) : Void;
 	
-	@:overload override public function isEnabled() : Bool;
+	@:overload public function isEnabled() : Bool;
 	
 	
 }

@@ -32,7 +32,7 @@ package sun.java2d.xr;
 */
 extern class XRCompositeManager
 {
-	@:overload @:synchronized public static function getInstance(surface : sun.java2d.xr.XRSurfaceData) : XRCompositeManager;
+	@:overload @:synchronized public static function getInstance(surface : sun.java2d.xr.XRSurfaceData) : sun.java2d.xr.XRCompositeManager;
 	
 	@:overload public function initResources(surface : sun.java2d.xr.XRSurfaceData) : Void;
 	

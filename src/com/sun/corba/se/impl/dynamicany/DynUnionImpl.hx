@@ -29,9 +29,9 @@ extern class DynUnionImpl extends com.sun.corba.se.impl.dynamicany.DynAnyConstru
 	
 	@:overload private function new(orb : com.sun.corba.se.spi.orb.ORB, typeCode : org.omg.CORBA.TypeCode) : Void;
 	
-	@:overload override private function initializeComponentsFromAny() : Bool;
+	@:overload private function initializeComponentsFromAny() : Bool;
 	
-	@:overload override private function initializeComponentsFromTypeCode() : Bool;
+	@:overload private function initializeComponentsFromTypeCode() : Bool;
 	
 	@:overload override private function clearData() : Void;
 	

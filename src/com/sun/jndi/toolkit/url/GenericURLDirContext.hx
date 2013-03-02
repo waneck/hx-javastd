@@ -118,7 +118,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          if object did not supply all mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function bind(name : String, obj : Dynamic) : Void;
+	@:overload public function bind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Retrieves the full name of this context within its own namespace.
@@ -139,7 +139,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getNameInNamespace() : String;
+	@:require(java3) @:overload public function getNameInNamespace() : String;
 	
 	/**
 	* Binds a name to an object, overwriting any existing binding.
@@ -165,7 +165,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          javax.naming.directory.Attributes)
 	* @see javax.naming.directory.DirContext
 	*/
-	@:overload override public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload public function rebind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Destroys the named context and removes it from the namespace.
@@ -200,7 +200,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*
 	* @see #destroySubcontext(String)
 	*/
-	@:overload override public function destroySubcontext(name : javax.naming.Name) : Void;
+	@:overload public function destroySubcontext(name : javax.naming.Name) : Void;
 	
 	/**
 	* Creates and binds a new context.
@@ -216,7 +216,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function createSubcontext(name : String) : Context;
+	@:overload public function createSubcontext(name : String) : javax.naming.Context;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -230,7 +230,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @return  the composition of <code>prefix</code> and <code>name</code>
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function composeName(name : String, prefix : String) : String;
+	@:overload public function composeName(name : String, prefix : String) : String;
 	
 	/**
 	* Retrieves the named object.
@@ -240,7 +240,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @return  the object bound to <tt>name</tt>
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function lookup(name : String) : Dynamic;
+	@:overload public function lookup(name : String) : Dynamic;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -261,7 +261,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #listBindings(Name)
 	* @see NameClassPair
 	*/
-	@:overload override public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload public function list(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -275,7 +275,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          enumeration is of type <tt>NameClassPair</tt>.
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
+	@:overload public function list(name : String) : javax.naming.NamingEnumeration<javax.naming.NameClassPair>;
 	
 	/**
 	* Retrieves the environment in effect for this context.
@@ -292,7 +292,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #addToEnvironment(String, Object)
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload override public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Closes this context.
@@ -305,7 +305,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	/**
 	* Binds a name to an object.
@@ -326,7 +326,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see javax.naming.directory.DirContext#bind(Name, Object,
 	*          javax.naming.directory.Attributes)
 	*/
-	@:overload override public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
+	@:overload public function bind(name : javax.naming.Name, obj : Dynamic) : Void;
 	
 	/**
 	* Retrieves the named object, following links except
@@ -342,7 +342,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*
 	* @see #lookupLink(String)
 	*/
-	@:overload override public function lookupLink(name : javax.naming.Name) : Dynamic;
+	@:overload public function lookupLink(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Retrieves the parser associated with the named context.
@@ -354,7 +354,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          components
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function getNameParser(name : String) : javax.naming.NameParser;
+	@:overload public function getNameParser(name : String) : javax.naming.NameParser;
 	
 	/**
 	* Unbinds the named object.
@@ -377,7 +377,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @throws  NamingException if a naming exception is encountered
 	* @see #unbind(String)
 	*/
-	@:overload override public function unbind(name : javax.naming.Name) : Void;
+	@:overload public function unbind(name : javax.naming.Name) : Void;
 	
 	/**
 	* Unbinds the named object.
@@ -388,7 +388,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @throws  NameNotFoundException if an intermediate context does not exist
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function unbind(name : String) : Void;
+	@:overload public function unbind(name : String) : Void;
 	
 	/**
 	* Creates and binds a new context.
@@ -410,7 +410,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #createSubcontext(String)
 	* @see javax.naming.directory.DirContext#createSubcontext
 	*/
-	@:overload override public function createSubcontext(name : javax.naming.Name) : Context;
+	@:overload public function createSubcontext(name : javax.naming.Name) : javax.naming.Context;
 	
 	/**
 	* Retrieves the parser associated with the named context.
@@ -431,7 +431,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #getNameParser(String)
 	* @see CompoundName
 	*/
-	@:overload override public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
+	@:overload public function getNameParser(name : javax.naming.Name) : javax.naming.NameParser;
 	
 	/**
 	* Adds a new environment property to the environment of this
@@ -449,7 +449,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #getEnvironment()
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload override public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
 	/**
 	* Binds a new name to the object bound to an old name, and unbinds
@@ -469,7 +469,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #bind(Name, Object)
 	* @see #rebind(Name, Object)
 	*/
-	@:overload override public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
+	@:overload public function rename(oldName : javax.naming.Name, newName : javax.naming.Name) : Void;
 	
 	/**
 	* Destroys the named context and removes it from the namespace.
@@ -483,7 +483,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @throws  ContextNotEmptyException if the named context is not empty
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function destroySubcontext(name : String) : Void;
+	@:overload public function destroySubcontext(name : String) : Void;
 	
 	/**
 	* Binds a new name to the object bound to an old name, and unbinds
@@ -497,7 +497,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @throws  NameAlreadyBoundException if <tt>newName</tt> is already bound
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function rename(oldName : String, newName : String) : Void;
+	@:overload public function rename(oldName : String, newName : String) : Void;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -518,7 +518,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #list(Name)
 	* @see Binding
 	*/
-	@:overload override public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload public function listBindings(name : javax.naming.Name) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
 	/**
 	* Retrieves the named object, following links except
@@ -531,7 +531,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          terminal link (if any)
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function lookupLink(name : String) : Dynamic;
+	@:overload public function lookupLink(name : String) : Dynamic;
 	
 	/**
 	* Composes the name of this context with a name relative to
@@ -567,7 +567,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*
 	* @see #composeName(String, String)
 	*/
-	@:overload override public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
+	@:overload public function composeName(name : javax.naming.Name, prefix : javax.naming.Name) : javax.naming.Name;
 	
 	/**
 	* Enumerates the names bound in the named context, along with the
@@ -581,7 +581,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          <tt>Binding</tt>.
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
+	@:overload public function listBindings(name : String) : javax.naming.NamingEnumeration<javax.naming.Binding>;
 	
 	/**
 	* Binds a name to an object, overwriting any existing binding.
@@ -595,7 +595,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	*          if object did not supply all mandatory attributes
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload override public function rebind(name : String, obj : Dynamic) : Void;
+	@:overload public function rebind(name : String, obj : Dynamic) : Void;
 	
 	/**
 	* Retrieves the named object.
@@ -612,7 +612,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #lookup(String)
 	* @see #lookupLink(Name)
 	*/
-	@:overload override public function lookup(name : javax.naming.Name) : Dynamic;
+	@:overload public function lookup(name : javax.naming.Name) : Dynamic;
 	
 	/**
 	* Removes an environment property from the environment of this
@@ -628,7 +628,7 @@ extern class GenericURLDirContext extends com.sun.jndi.toolkit.url.GenericURLCon
 	* @see #getEnvironment()
 	* @see #addToEnvironment(String, Object)
 	*/
-	@:overload override public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload public function removeFromEnvironment(propName : String) : Dynamic;
 	
 	
 }

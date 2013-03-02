@@ -200,14 +200,14 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function addStyleSheet(ss : StyleSheet) : Void;
+	@:require(java3) @:overload public function addStyleSheet(ss : javax.swing.text.html.StyleSheet) : Void;
 	
 	/**
 	* Removes the StyleSheet <code>ss</code> from those of the receiver.
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function removeStyleSheet(ss : StyleSheet) : Void;
+	@:require(java3) @:overload public function removeStyleSheet(ss : javax.swing.text.html.StyleSheet) : Void;
 	
 	/**
 	* Returns an array of the linked StyleSheets. Will return null
@@ -215,7 +215,7 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload public function getStyleSheets() : java.NativeArray<StyleSheet>;
+	@:require(java3) @:overload public function getStyleSheets() : java.NativeArray<javax.swing.text.html.StyleSheet>;
 	
 	/**
 	* Imports a style sheet from <code>url</code>. The resulting rules
@@ -383,13 +383,13 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 	* Fetches the box formatter to use for the given set
 	* of CSS attributes.
 	*/
-	@:overload public function getBoxPainter(a : javax.swing.text.AttributeSet) : StyleSheet_BoxPainter;
+	@:overload public function getBoxPainter(a : javax.swing.text.AttributeSet) : javax.swing.text.html.StyleSheet.StyleSheet_BoxPainter;
 	
 	/**
 	* Fetches the list formatter to use for the given set
 	* of CSS attributes.
 	*/
-	@:overload public function getListPainter(a : javax.swing.text.AttributeSet) : StyleSheet_ListPainter;
+	@:overload public function getListPainter(a : javax.swing.text.AttributeSet) : javax.swing.text.html.StyleSheet.StyleSheet_ListPainter;
 	
 	/**
 	* Sets the base font size, with valid values between 1 and 7.
@@ -702,13 +702,13 @@ extern class StyleSheet extends javax.swing.text.StyleContext
 	*<code>selector</code>, and <code>create</code> is true, a new
 	* one will be created.
 	*/
-	@:overload public function getChildSelectorMapping(selector : String, create : Bool) : StyleSheet_SelectorMapping;
+	@:overload public function getChildSelectorMapping(selector : String, create : Bool) : javax.swing.text.html.StyleSheet.StyleSheet_SelectorMapping;
 	
 	/**
 	* Creates a child <code>SelectorMapping</code> with the specified
 	* <code>specificity</code>.
 	*/
-	@:overload private function createChildSelectorMapping(specificity : Int) : StyleSheet_SelectorMapping;
+	@:overload private function createChildSelectorMapping(specificity : Int) : javax.swing.text.html.StyleSheet.StyleSheet_SelectorMapping;
 	
 	/**
 	* Returns the specificity for the child selector

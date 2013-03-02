@@ -382,7 +382,7 @@ extern class Executors
 /**
 * Thread factory capturing access control context and class loader
 */
-@:native('java$util$concurrent$Executors$PrivilegedThreadFactory') @:internal extern class Executors_PrivilegedThreadFactory extends Executors_DefaultThreadFactory
+@:native('java$util$concurrent$Executors$PrivilegedThreadFactory') @:internal extern class Executors_PrivilegedThreadFactory extends java.util.concurrent.Executors.Executors_DefaultThreadFactory
 {
 	@:overload override public function newThread(r : java.lang.Runnable) : java.lang.Thread;
 	
@@ -394,35 +394,35 @@ extern class Executors
 */
 @:native('java$util$concurrent$Executors$DelegatedExecutorService') @:internal extern class Executors_DelegatedExecutorService extends java.util.concurrent.AbstractExecutorService
 {
-	@:overload override public function execute(command : java.lang.Runnable) : Void;
+	@:overload public function execute(command : java.lang.Runnable) : Void;
 	
-	@:overload override public function shutdown() : Void;
+	@:overload public function shutdown() : Void;
 	
-	@:overload override public function shutdownNow() : java.util.List<java.lang.Runnable>;
+	@:overload public function shutdownNow() : java.util.List<java.lang.Runnable>;
 	
-	@:overload override public function isShutdown() : Bool;
+	@:overload public function isShutdown() : Bool;
 	
-	@:overload override public function isTerminated() : Bool;
+	@:overload public function isTerminated() : Bool;
 	
-	@:overload override public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
+	@:overload public function awaitTermination(timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : Bool;
 	
-	@:overload override public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
+	@:overload public function submit(task : java.lang.Runnable) : java.util.concurrent.Future<Dynamic>;
 	
-	@:overload override public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
+	@:overload public function submit<T>(task : java.util.concurrent.Callable<T>) : java.util.concurrent.Future<T>;
 	
-	@:overload override public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
+	@:overload public function submit<T>(task : java.lang.Runnable, result : T) : java.util.concurrent.Future<T>;
 	
-	@:overload override public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
+	@:overload public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : java.util.List<java.util.concurrent.Future<T>>;
 	
-	@:overload override public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.List<java.util.concurrent.Future<T>>;
+	@:overload public function invokeAll<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.List<java.util.concurrent.Future<T>>;
 	
-	@:overload override public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : T;
+	@:overload public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>) : T;
 	
-	@:overload override public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
+	@:overload public function invokeAny<T>(tasks : java.util.Collection<java.util.concurrent.Callable<T>>, timeout : haxe.Int64, unit : java.util.concurrent.TimeUnit) : T;
 	
 	
 }
-@:native('java$util$concurrent$Executors$FinalizableDelegatedExecutorService') @:internal extern class Executors_FinalizableDelegatedExecutorService extends Executors_DelegatedExecutorService
+@:native('java$util$concurrent$Executors$FinalizableDelegatedExecutorService') @:internal extern class Executors_FinalizableDelegatedExecutorService extends java.util.concurrent.Executors.Executors_DelegatedExecutorService
 {
 	@:overload private function finalize() : Void;
 	
@@ -432,7 +432,7 @@ extern class Executors
 * A wrapper class that exposes only the ScheduledExecutorService
 * methods of a ScheduledExecutorService implementation.
 */
-@:native('java$util$concurrent$Executors$DelegatedScheduledExecutorService') @:internal extern class Executors_DelegatedScheduledExecutorService extends Executors_DelegatedExecutorService implements java.util.concurrent.ScheduledExecutorService
+@:native('java$util$concurrent$Executors$DelegatedScheduledExecutorService') @:internal extern class Executors_DelegatedScheduledExecutorService extends java.util.concurrent.Executors.Executors_DelegatedExecutorService implements java.util.concurrent.ScheduledExecutorService
 {
 	@:overload public function schedule(command : java.lang.Runnable, delay : haxe.Int64, unit : java.util.concurrent.TimeUnit) : java.util.concurrent.ScheduledFuture<Dynamic>;
 	

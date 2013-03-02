@@ -276,7 +276,7 @@ extern class ServiceRegistry
 	* @exception IllegalArgumentException if there is no category
 	* corresponding to <code>category</code>.
 	*/
-	@:overload public function getServiceProviders<T>(category : Class<T>, filter : ServiceRegistry_Filter, useOrdering : Bool) : java.util.Iterator<T>;
+	@:overload public function getServiceProviders<T>(category : Class<T>, filter : javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter, useOrdering : Bool) : java.util.Iterator<T>;
 	
 	/**
 	* Returns the currently registered service provider object that
@@ -410,7 +410,7 @@ extern class ServiceRegistry
 }
 @:internal extern class SubRegistry
 {
-	@:overload public function new(registry : ServiceRegistry, category : Class<Dynamic>) : Void;
+	@:overload public function new(registry : javax.imageio.spi.ServiceRegistry, category : Class<Dynamic>) : Void;
 	
 	@:overload public function registerServiceProvider(provider : Dynamic) : Bool;
 	
@@ -439,7 +439,7 @@ extern class ServiceRegistry
 }
 @:internal extern class FilterIterator<T> implements java.util.Iterator<T>
 {
-	@:overload public function new(iter : java.util.Iterator<T>, filter : ServiceRegistry_Filter) : Void;
+	@:overload public function new(iter : java.util.Iterator<T>, filter : javax.imageio.spi.ServiceRegistry.ServiceRegistry_Filter) : Void;
 	
 	@:overload public function hasNext() : Bool;
 	

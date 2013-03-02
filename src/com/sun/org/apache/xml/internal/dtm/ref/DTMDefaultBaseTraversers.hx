@@ -98,7 +98,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 /**
 * Implements traversal of the Ancestor access, in reverse document order.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$AncestorOrSelfTraverser') @:internal extern class DTMDefaultBaseTraversers_AncestorOrSelfTraverser extends DTMDefaultBaseTraversers_AncestorTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$AncestorOrSelfTraverser') @:internal extern class DTMDefaultBaseTraversers_AncestorOrSelfTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_AncestorTraverser
 {
 	/**
 	* By the nature of the stateless traversal, the context node can not be
@@ -289,7 +289,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 /**
 * Implements traversal of the Ancestor access, in reverse document order.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantTraverser extends DTMDefaultBaseTraversers_IndexedDTMAxisTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_IndexedDTMAxisTraverser
 {
 	/**
 	* Get the first potential identity that can be returned.  This should
@@ -390,7 +390,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 /**
 * Implements traversal of the Ancestor access, in reverse document order.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantOrSelfTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantOrSelfTraverser extends DTMDefaultBaseTraversers_DescendantTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantOrSelfTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantOrSelfTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_DescendantTraverser
 {
 	/**
 	* Get the first potential identity that can be returned, which is the
@@ -418,7 +418,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 /**
 * Implements traversal of the entire subtree, including the root node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$AllFromNodeTraverser') @:internal extern class DTMDefaultBaseTraversers_AllFromNodeTraverser extends DTMDefaultBaseTraversers_DescendantOrSelfTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$AllFromNodeTraverser') @:internal extern class DTMDefaultBaseTraversers_AllFromNodeTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_DescendantOrSelfTraverser
 {
 	/**
 	* Traverse to the next node after the current node.
@@ -435,7 +435,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 /**
 * Implements traversal of the following access, in document order.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$FollowingTraverser') @:internal extern class DTMDefaultBaseTraversers_FollowingTraverser extends DTMDefaultBaseTraversers_DescendantTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$FollowingTraverser') @:internal extern class DTMDefaultBaseTraversers_FollowingTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_DescendantTraverser
 {
 	/**
 	* Get the first of the following.
@@ -783,7 +783,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 /**
 * Implements traversal of the Ancestor access, in reverse document order.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$AllFromRootTraverser') @:internal extern class DTMDefaultBaseTraversers_AllFromRootTraverser extends DTMDefaultBaseTraversers_AllFromNodeTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$AllFromRootTraverser') @:internal extern class DTMDefaultBaseTraversers_AllFromRootTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_AllFromNodeTraverser
 {
 	/**
 	* Return the root.
@@ -831,7 +831,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 /**
 * Implements traversal of the Self axis.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$RootTraverser') @:internal extern class DTMDefaultBaseTraversers_RootTraverser extends DTMDefaultBaseTraversers_AllFromRootTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$RootTraverser') @:internal extern class DTMDefaultBaseTraversers_RootTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_AllFromRootTraverser
 {
 	/**
 	* Return the root if it matches the expanded type ID,
@@ -872,7 +872,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 * A non-xpath axis, returns all nodes that aren't namespaces or attributes,
 * from and including the root.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantOrSelfFromRootTraverser extends DTMDefaultBaseTraversers_DescendantTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantOrSelfFromRootTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantOrSelfFromRootTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_DescendantTraverser
 {
 	/**
 	* Get the first potential identity that can be returned, which is the axis
@@ -922,7 +922,7 @@ extern class DTMDefaultBaseTraversers extends com.sun.org.apache.xml.internal.dt
 * A non-xpath axis, returns all nodes that aren't namespaces or attributes,
 * from but not including the root.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantFromRootTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantFromRootTraverser extends DTMDefaultBaseTraversers_DescendantTraverser
+@:native('com$sun$org$apache$xml$internal$dtm$ref$DTMDefaultBaseTraversers$DescendantFromRootTraverser') @:internal extern class DTMDefaultBaseTraversers_DescendantFromRootTraverser extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseTraversers.DTMDefaultBaseTraversers_DescendantTraverser
 {
 	/**
 	* Get the first potential identity that can be returned, which is the axis

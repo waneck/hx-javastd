@@ -189,7 +189,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param targetChild the child to create the Child on behalf of
 	* @param peer        the peer if the tragetChild and the peer are related by an implementation of BeanContextProxy
 	*/
-	@:overload private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : BeanContextSupport_BCSChild;
+	@:overload private function createBCSChild(targetChild : Dynamic, peer : Dynamic) : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild;
 	
 	/**
 	* Adds/nests a child within this <tt>BeanContext</tt>.
@@ -406,7 +406,7 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* @param child the newly deserialized child
 	* @param bcsc the newly deserialized BCSChild
 	*/
-	@:overload private function childDeserializedHook(child : Dynamic, bcsc : BeanContextSupport_BCSChild) : Void;
+	@:overload private function childDeserializedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* Used by writeObject to serialize a Collection.
@@ -477,14 +477,14 @@ extern class BeanContextSupport extends java.beans.beancontext.BeanContextChildS
 	* after the child has been added and before the event notification has
 	* occurred. The method is called with the child synchronized.
 	*/
-	@:overload private function childJustAddedHook(child : Dynamic, bcsc : BeanContextSupport_BCSChild) : Void;
+	@:overload private function childJustAddedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* subclasses may override this method to simply extend remove() semantics
 	* after the child has been removed and before the event notification has
 	* occurred. The method is called with the child synchronized.
 	*/
-	@:overload private function childJustRemovedHook(child : Dynamic, bcsc : BeanContextSupport_BCSChild) : Void;
+	@:overload private function childJustRemovedHook(child : Dynamic, bcsc : java.beans.beancontext.BeanContextSupport.BeanContextSupport_BCSChild) : Void;
 	
 	/**
 	* Gets the Component (if any) associated with the specified child.

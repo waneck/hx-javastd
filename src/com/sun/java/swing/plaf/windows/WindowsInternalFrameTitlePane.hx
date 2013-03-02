@@ -27,45 +27,45 @@ extern class WindowsInternalFrameTitlePane extends javax.swing.plaf.basic.BasicI
 {
 	@:overload public function new(f : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override private function addSubComponents() : Void;
+	@:overload private function addSubComponents() : Void;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload private function installDefaults() : Void;
 	
-	@:overload override private function uninstallListeners() : Void;
+	@:overload private function uninstallListeners() : Void;
 	
-	@:overload override private function createButtons() : Void;
+	@:overload private function createButtons() : Void;
 	
-	@:overload override private function setButtonIcons() : Void;
+	@:overload private function setButtonIcons() : Void;
 	
-	@:overload override public function paintComponent(g : java.awt.Graphics) : Void;
+	@:overload public function paintComponent(g : java.awt.Graphics) : Void;
 	
 	@:overload override public function getPreferredSize() : java.awt.Dimension;
 	
 	@:overload override public function getMinimumSize() : java.awt.Dimension;
 	
-	@:overload override private function paintTitleBackground(g : java.awt.Graphics) : Void;
+	@:overload private function paintTitleBackground(g : java.awt.Graphics) : Void;
 	
-	@:overload override private function assembleSystemMenu() : Void;
+	@:overload private function assembleSystemMenu() : Void;
 	
 	@:overload private function addSystemMenuItems(menu : javax.swing.JPopupMenu) : Void;
 	
-	@:overload override private function showSystemMenu() : Void;
+	@:overload private function showSystemMenu() : Void;
 	
-	@:overload override private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
+	@:overload private function createPropertyChangeListener() : java.beans.PropertyChangeListener;
 	
-	@:overload override private function createLayout() : java.awt.LayoutManager;
+	@:overload private function createLayout() : java.awt.LayoutManager;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsInternalFrameTitlePane$WindowsTitlePaneLayout') extern class WindowsInternalFrameTitlePane_WindowsTitlePaneLayout extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_TitlePaneLayout
 {
-	@:overload override public function layoutContainer(c : java.awt.Container) : Void;
+	@:overload public function layoutContainer(c : java.awt.Container) : Void;
 	
 	
 }
 @:native('com$sun$java$swing$plaf$windows$WindowsInternalFrameTitlePane$WindowsPropertyChangeHandler') extern class WindowsInternalFrameTitlePane_WindowsPropertyChangeHandler extends javax.swing.plaf.basic.BasicInternalFrameTitlePane.BasicInternalFrameTitlePane_PropertyChangeHandler
 {
-	@:overload override public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
+	@:overload public function propertyChange(evt : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

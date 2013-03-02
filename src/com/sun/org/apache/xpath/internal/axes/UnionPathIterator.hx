@@ -95,7 +95,7 @@ extern class UnionPathIterator extends com.sun.org.apache.xpath.internal.axes.Lo
 	*
 	* @throws CloneNotSupportedException
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Create a new location path iterator.

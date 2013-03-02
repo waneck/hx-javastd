@@ -27,7 +27,7 @@ extern class StubFactoryStaticImpl extends com.sun.corba.se.impl.presentation.rm
 {
 	@:overload public function new(cls : Class<Dynamic>) : Void;
 	
-	@:overload override public function makeStub() : org.omg.CORBA.Object;
+	@:overload public function makeStub() : org.omg.CORBA.Object;
 	
 	
 }

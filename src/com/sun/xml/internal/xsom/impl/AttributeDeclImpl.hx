@@ -33,9 +33,9 @@ extern class AttributeDeclImpl extends com.sun.xml.internal.xsom.impl.Declaratio
 	
 	@:overload public function getFixedValue() : com.sun.xml.internal.xsom.XmlString;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
 	@:overload public function getAttribute() : com.sun.xml.internal.xsom.XSAttributeDecl;
 	

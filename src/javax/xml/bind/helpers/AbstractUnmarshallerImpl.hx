@@ -223,18 +223,5 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	*/
 	@:overload @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
 	
-	/**
-	* <p>
-	* Register unmarshal event callback {@link Listener} with this {@link Unmarshaller}.
-	*
-	* <p>
-	* There is only one Listener per Unmarshaller. Setting a Listener replaces the previous set Listener.
-	* One can unregister current Listener by setting listener to <tt>null</tt>.
-	*
-	* @param listener  provides unmarshal event callbacks for this {@link Unmarshaller}
-	* @since JAXB2.0
-	*/
-	@:require(java0) @:overload @:public public function setListener(listener : Unmarshaller_Listener) : Void;
-	
 	
 }

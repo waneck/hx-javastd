@@ -34,7 +34,7 @@ package com.sun.tools.doclets.internal.toolkit.util;
 */
 extern class TaggedMethodFinder extends com.sun.tools.doclets.internal.toolkit.util.MethodFinder
 {
-	@:overload override public function isCorrectMethod(method : com.sun.javadoc.MethodDoc) : Bool;
+	@:overload public function isCorrectMethod(method : com.sun.javadoc.MethodDoc) : Bool;
 	
 	
 }

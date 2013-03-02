@@ -183,7 +183,7 @@ package javax.swing.text;
 	* @param ftf JFormattedTextField to format for, may be null indicating
 	*            uninstall from current JFormattedTextField.
 	*/
-	@:overload override public function install(ftf : javax.swing.JFormattedTextField) : Void;
+	@:overload public function install(ftf : javax.swing.JFormattedTextField) : Void;
 	
 	/**
 	* Returns a String representation of the Object <code>value</code>.
@@ -193,7 +193,7 @@ package javax.swing.text;
 	* @param value Value to convert
 	* @return String representation of value
 	*/
-	@:overload override public function valueToString(value : Dynamic) : String;
+	@:overload public function valueToString(value : Dynamic) : String;
 	
 	/**
 	* Returns the <code>Object</code> representation of the
@@ -203,7 +203,7 @@ package javax.swing.text;
 	* @return <code>Object</code> representation of text
 	* @throws ParseException if there is an error in the conversion
 	*/
-	@:overload override public function stringToValue(text : String) : Dynamic;
+	@:overload public function stringToValue(text : String) : Dynamic;
 	
 	/**
 	* Returns the <code>Format.Field</code> constants associated with
@@ -222,13 +222,13 @@ package javax.swing.text;
 	*
 	* @return copy of the DefaultFormatter
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* If <code>getSupportsIncrement</code> returns true, this returns
 	* two Actions suitable for incrementing/decrementing the value.
 	*/
-	@:overload override private function getActions() : java.NativeArray<javax.swing.Action>;
+	@:overload private function getActions() : java.NativeArray<javax.swing.Action>;
 	
 	
 }

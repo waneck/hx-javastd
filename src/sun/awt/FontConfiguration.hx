@@ -262,7 +262,7 @@ extern class FontConfiguration
 	@:overload public function getVersion() : String;
 	
 	/* subclass support */
-	@:overload private static function getFontConfiguration() : FontConfiguration;
+	@:overload private static function getFontConfiguration() : sun.awt.FontConfiguration;
 	
 	@:overload private function setFontConfiguration() : Void;
 	

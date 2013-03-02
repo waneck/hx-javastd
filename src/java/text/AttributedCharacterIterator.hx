@@ -39,13 +39,13 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* Returns the index of the first character of the run
 	* with respect to the given {@code attribute} containing the current character.
 	*/
-	@:overload public function getRunStart(attribute : AttributedCharacterIterator_Attribute) : Int;
+	@:overload public function getRunStart(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
 	
 	/**
 	* Returns the index of the first character of the run
 	* with respect to the given {@code attributes} containing the current character.
 	*/
-	@:overload public function getRunStart(attributes : java.util.Set<AttributedCharacterIterator_Attribute>) : Int;
+	@:overload public function getRunStart(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns the index of the first character following the run
@@ -61,32 +61,32 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* Returns the index of the first character following the run
 	* with respect to the given {@code attribute} containing the current character.
 	*/
-	@:overload public function getRunLimit(attribute : AttributedCharacterIterator_Attribute) : Int;
+	@:overload public function getRunLimit(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Int;
 	
 	/**
 	* Returns the index of the first character following the run
 	* with respect to the given {@code attributes} containing the current character.
 	*/
-	@:overload public function getRunLimit(attributes : java.util.Set<AttributedCharacterIterator_Attribute>) : Int;
+	@:overload public function getRunLimit(attributes : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>) : Int;
 	
 	/**
 	* Returns a map with the attributes defined on the current
 	* character.
 	*/
-	@:overload public function getAttributes() : java.util.Map<AttributedCharacterIterator_Attribute, Dynamic>;
+	@:overload public function getAttributes() : java.util.Map<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute, Dynamic>;
 	
 	/**
 	* Returns the value of the named {@code attribute} for the current character.
 	* Returns {@code null} if the {@code attribute} is not defined.
 	*/
-	@:overload public function getAttribute(attribute : AttributedCharacterIterator_Attribute) : Dynamic;
+	@:overload public function getAttribute(attribute : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute) : Dynamic;
 	
 	/**
 	* Returns the keys of all attributes defined on the
 	* iterator's text range. The set is empty if no
 	* attributes are defined.
 	*/
-	@:overload public function getAllAttributeKeys() : java.util.Set<AttributedCharacterIterator_Attribute>;
+	@:overload public function getAllAttributeKeys() : java.util.Set<java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute>;
 	
 	
 }
@@ -139,7 +139,7 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* <p> Values are instances of {@link java.util.Locale Locale}.
 	* @see java.util.Locale
 	*/
-	public static var LANGUAGE(default, null) : AttributedCharacterIterator_Attribute;
+	public static var LANGUAGE(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
 	
 	/**
 	* Attribute key for the reading of some text. In languages where the written form
@@ -150,7 +150,7 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* @see Annotation
 	* @see java.lang.String
 	*/
-	public static var READING(default, null) : AttributedCharacterIterator_Attribute;
+	public static var READING(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
 	
 	/**
 	* Attribute key for input method segments. Input methods often break
@@ -158,7 +158,7 @@ extern interface AttributedCharacterIterator extends java.text.CharacterIterator
 	* <p>Values are instances of {@link Annotation} holding a {@code null} reference.
 	* @see Annotation
 	*/
-	public static var INPUT_METHOD_SEGMENT(default, null) : AttributedCharacterIterator_Attribute;
+	public static var INPUT_METHOD_SEGMENT(default, null) : java.text.AttributedCharacterIterator.AttributedCharacterIterator_Attribute;
 	
 	
 }

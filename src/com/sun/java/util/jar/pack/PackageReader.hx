@@ -31,7 +31,7 @@ package com.sun.java.util.jar.pack;
 */
 @:internal extern class PackageReader extends com.sun.java.util.jar.pack.BandStructure
 {
-	@:overload override private function getCPIndex(tag : java.StdTypes.Int8) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
+	@:overload private function getCPIndex(tag : java.StdTypes.Int8) : com.sun.java.util.jar.pack.ConstantPool.ConstantPool_Index;
 	
 	
 }
@@ -51,11 +51,11 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function getReadLimit() : haxe.Int64;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload public function read(b : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
-	@:overload override public function skip(n : haxe.Int64) : haxe.Int64;
+	@:overload public function skip(n : haxe.Int64) : haxe.Int64;
 	
 	
 }

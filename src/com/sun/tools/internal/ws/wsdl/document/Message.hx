@@ -42,7 +42,7 @@ extern class Message extends com.sun.tools.internal.ws.wsdl.framework.GlobalEnti
 	
 	@:overload public function numParts() : Int;
 	
-	@:overload override public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
+	@:overload public function getKind() : com.sun.tools.internal.ws.wsdl.framework.Kind;
 	
 	@:overload override public function getElementName() : javax.xml.namespace.QName;
 	

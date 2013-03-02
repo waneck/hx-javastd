@@ -25,7 +25,7 @@ package com.sun.xml.internal.bind.v2.schemagen.xmlschema;
 */
 extern interface List extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.Annotated extends com.sun.xml.internal.bind.v2.schemagen.xmlschema.SimpleTypeHost extends com.sun.xml.internal.txw2.TypedXmlWriter
 {
-	@:overload public function itemType(value : javax.xml.namespace.QName) : List;
+	@:overload public function itemType(value : javax.xml.namespace.QName) : com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 	
 	
 }

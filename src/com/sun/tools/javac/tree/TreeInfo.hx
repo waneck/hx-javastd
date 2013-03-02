@@ -32,9 +32,9 @@ package com.sun.tools.javac.tree;
 */
 extern class TreeInfo
 {
-	private static var treeInfoKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<TreeInfo>;
+	private static var treeInfoKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.tree.TreeInfo>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : TreeInfo;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.tree.TreeInfo;
 	
 	/** Return name of operator with given tree tag.
 	*/

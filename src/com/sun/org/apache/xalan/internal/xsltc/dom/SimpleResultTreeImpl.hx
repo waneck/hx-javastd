@@ -144,15 +144,15 @@ extern class SimpleResultTreeImpl extends com.sun.org.apache.xml.internal.serial
 	* setEscaping interfaces. A simple RTF does not have element
 	* nodes. We do not need to touch startElement and endElement.
 	*/
-	@:overload override public function startDocument() : Void;
+	@:overload public function startDocument() : Void;
 	
-	@:overload override public function endDocument() : Void;
+	@:overload public function endDocument() : Void;
 	
-	@:overload override public function characters(str : String) : Void;
+	@:overload public function characters(str : String) : Void;
 	
-	@:overload override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
+	@:overload public function characters(ch : java.NativeArray<java.StdTypes.Char16>, offset : Int, length : Int) : Void;
 	
-	@:overload override public function setEscaping(escape : Bool) : Bool;
+	@:overload public function setEscaping(escape : Bool) : Bool;
 	
 	/**
 	* The DTM interfaces are not used in this class. Implementing the DTM

@@ -57,7 +57,7 @@ package javax.swing.plaf.metal;
 	* @param c the JRootPane the RootPaneUI will be created for
 	* @return the RootPaneUI implementation for the passed in JRootPane
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Invokes supers implementation of <code>installUI</code> to install

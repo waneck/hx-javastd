@@ -91,9 +91,9 @@ extern class BasicDesktopIconUI extends javax.swing.plaf.DesktopIconUI
 */
 @:native('javax$swing$plaf$basic$BasicDesktopIconUI$MouseInputHandler') extern class BasicDesktopIconUI_MouseInputHandler extends javax.swing.event.MouseInputAdapter
 {
-	@:overload override public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mouseReleased(e : java.awt.event.MouseEvent) : Void;
 	
-	@:overload override public function mousePressed(e : java.awt.event.MouseEvent) : Void;
+	@:overload public function mousePressed(e : java.awt.event.MouseEvent) : Void;
 	
 	@:overload override public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	

@@ -274,17 +274,17 @@ extern class BasicListUI extends javax.swing.plaf.ListUI
 	* {@inheritDoc}
 	* @throws NullPointerException {@inheritDoc}
 	*/
-	@:overload override public function locationToIndex(list : javax.swing.JList<Dynamic>, location : java.awt.Point) : Int;
+	@:overload public function locationToIndex(list : javax.swing.JList<Dynamic>, location : java.awt.Point) : Int;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function indexToLocation(list : javax.swing.JList<Dynamic>, index : Int) : java.awt.Point;
+	@:overload public function indexToLocation(list : javax.swing.JList<Dynamic>, index : Int) : java.awt.Point;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getCellBounds(list : javax.swing.JList<Dynamic>, index1 : Int, index2 : Int) : java.awt.Rectangle;
+	@:overload public function getCellBounds(list : javax.swing.JList<Dynamic>, index1 : Int, index2 : Int) : java.awt.Rectangle;
 	
 	/**
 	* Returns the height of the specified row based on the current layout.

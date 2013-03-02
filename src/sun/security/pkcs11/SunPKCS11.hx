@@ -67,7 +67,7 @@ package sun.security.pkcs11;
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload override public function login(subject : javax.security.auth.Subject, handler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload public function login(subject : javax.security.auth.Subject, handler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	/**
 	* Log out from this provider
@@ -78,7 +78,7 @@ package sun.security.pkcs11;
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload override public function logout() : Void;
+	@:overload public function logout() : Void;
 	
 	/**
 	* Set a <code>CallbackHandler</code>
@@ -103,7 +103,7 @@ package sun.security.pkcs11;
 	*  where <i>name</i> is the value returned by
 	*  this provider's <code>getName</code> method
 	*/
-	@:overload override public function setCallbackHandler(handler : javax.security.auth.callback.CallbackHandler) : Void;
+	@:overload public function setCallbackHandler(handler : javax.security.auth.callback.CallbackHandler) : Void;
 	
 	
 }
@@ -121,13 +121,13 @@ package sun.security.pkcs11;
 }
 @:native('sun$security$pkcs11$SunPKCS11$P11Service') @:internal extern class SunPKCS11_P11Service extends java.security.Provider.Provider_Service
 {
-	@:overload override public function newInstance(param : Dynamic) : Dynamic;
+	@:overload public function newInstance(param : Dynamic) : Dynamic;
 	
 	@:overload public function newInstance0(param : Dynamic) : Dynamic;
 	
-	@:overload override public function supportsParameter(param : Dynamic) : Bool;
+	@:overload public function supportsParameter(param : Dynamic) : Bool;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

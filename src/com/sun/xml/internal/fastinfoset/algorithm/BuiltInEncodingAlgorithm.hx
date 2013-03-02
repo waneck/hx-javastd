@@ -35,7 +35,7 @@ extern class BuiltInEncodingAlgorithm implements com.sun.xml.internal.org.jvnet.
 	
 	@:overload @:abstract public function encodeToBytes(array : Dynamic, astart : Int, alength : Int, b : java.NativeArray<java.StdTypes.Int8>, start : Int) : Void;
 	
-	@:overload public function matchWhiteSpaceDelimnatedWords(cb : java.nio.CharBuffer, wl : BuiltInEncodingAlgorithm_WordListener) : Void;
+	@:overload public function matchWhiteSpaceDelimnatedWords(cb : java.nio.CharBuffer, wl : com.sun.xml.internal.fastinfoset.algorithm.BuiltInEncodingAlgorithm.BuiltInEncodingAlgorithm_WordListener) : Void;
 	
 	@:overload public function removeWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : java.lang.StringBuffer;
 	

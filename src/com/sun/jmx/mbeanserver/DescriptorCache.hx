@@ -25,7 +25,7 @@ package com.sun.jmx.mbeanserver;
 */
 extern class DescriptorCache
 {
-	@:overload public static function getInstance(proof : javax.management.JMX) : DescriptorCache;
+	@:overload public static function getInstance(proof : javax.management.JMX) : com.sun.jmx.mbeanserver.DescriptorCache;
 	
 	@:overload public function get(descriptor : javax.management.ImmutableDescriptor) : javax.management.ImmutableDescriptor;
 	

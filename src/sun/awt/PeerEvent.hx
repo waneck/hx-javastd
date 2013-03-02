@@ -37,7 +37,7 @@ extern class PeerEvent extends java.awt.event.InvocationEvent
 	
 	@:overload public function getFlags() : haxe.Int64;
 	
-	@:overload public function coalesceEvents(newEvent : PeerEvent) : PeerEvent;
+	@:overload public function coalesceEvents(newEvent : sun.awt.PeerEvent) : sun.awt.PeerEvent;
 	
 	
 }

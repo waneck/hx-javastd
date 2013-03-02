@@ -273,7 +273,7 @@ extern class QName implements java.io.Serializable
 	*
 	* @return a QName object
 	*/
-	@:overload public static function getQNameFromString(name : String) : QName;
+	@:overload public static function getQNameFromString(name : String) : com.sun.org.apache.xml.internal.utils.QName;
 	
 	/**
 	* This function tells if a raw attribute name is a

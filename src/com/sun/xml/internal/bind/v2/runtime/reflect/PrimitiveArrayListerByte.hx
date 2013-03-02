@@ -23,17 +23,17 @@ package com.sun.xml.internal.bind.v2.runtime.reflect;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class PrimitiveArrayListerByte<BeanT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, java.NativeArray<java.StdTypes.Int8>, Null<java.StdTypes.Int8>, PrimitiveArrayListerByte_ByteArrayPack>
+@:internal extern class PrimitiveArrayListerByte<BeanT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, java.NativeArray<java.StdTypes.Int8>, Null<java.StdTypes.Int8>, com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerByte.PrimitiveArrayListerByte_ByteArrayPack>
 {
 	@:overload public function iterator(objects : java.NativeArray<java.StdTypes.Int8>, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<Null<java.StdTypes.Int8>>;
 	
-	@:overload override public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<java.StdTypes.Int8>>) : PrimitiveArrayListerByte_ByteArrayPack;
+	@:overload public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<java.StdTypes.Int8>>) : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerByte.PrimitiveArrayListerByte_ByteArrayPack;
 	
-	@:overload public function addToPack(objects : PrimitiveArrayListerByte_ByteArrayPack, o : Null<java.StdTypes.Int8>) : Void;
+	@:overload public function addToPack(objects : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerByte.PrimitiveArrayListerByte_ByteArrayPack, o : Null<java.StdTypes.Int8>) : Void;
 	
-	@:overload public function endPacking(pack : PrimitiveArrayListerByte_ByteArrayPack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<java.StdTypes.Int8>>) : Void;
+	@:overload public function endPacking(pack : com.sun.xml.internal.bind.v2.runtime.reflect.PrimitiveArrayListerByte.PrimitiveArrayListerByte_ByteArrayPack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<java.StdTypes.Int8>>) : Void;
 	
-	@:overload override public function reset(o : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<java.StdTypes.Int8>>) : Void;
+	@:overload public function reset(o : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<java.StdTypes.Int8>>) : Void;
 	
 	
 }

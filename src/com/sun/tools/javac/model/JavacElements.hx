@@ -25,7 +25,7 @@ package com.sun.tools.javac.model;
 */
 extern class JavacElements implements javax.lang.model.util.Elements
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : JavacElements;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.model.JavacElements;
 	
 	/**
 	* Public for use only by JavacProcessingEnvironment

@@ -29,7 +29,7 @@ extern class AccessibleResourceBundle extends java.util.ListResourceBundle
 	* Returns the mapping between the programmatic keys and the
 	* localized display strings.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

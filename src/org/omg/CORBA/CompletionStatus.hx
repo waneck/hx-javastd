@@ -60,19 +60,19 @@ package org.omg.CORBA;
 	* An instance of <code>CompletionStatus</code> initialized with
 	* the constant <code>_COMPLETED_YES</code>.
 	*/
-	public static var COMPLETED_YES(default, null) : CompletionStatus;
+	public static var COMPLETED_YES(default, null) : org.omg.CORBA.CompletionStatus;
 	
 	/**
 	* An instance of <code>CompletionStatus</code> initialized with
 	* the constant <code>_COMPLETED_NO</code>.
 	*/
-	public static var COMPLETED_NO(default, null) : CompletionStatus;
+	public static var COMPLETED_NO(default, null) : org.omg.CORBA.CompletionStatus;
 	
 	/**
 	* An instance of <code>CompletionStatus</code> initialized with
 	* the constant <code>_COMPLETED_MAYBE</code>.
 	*/
-	public static var COMPLETED_MAYBE(default, null) : CompletionStatus;
+	public static var COMPLETED_MAYBE(default, null) : org.omg.CORBA.CompletionStatus;
 	
 	/**
 	* Retrieves the value of this <code>CompletionStatus</code> object.
@@ -98,7 +98,7 @@ package org.omg.CORBA;
 	* @exception org.omg.CORBA.BAD_PARAM  if the argument given is not one of the
 	*            <code>int</code> constants defined in <code>CompletionStatus</code>
 	*/
-	@:overload public static function from_int(i : Int) : CompletionStatus;
+	@:overload public static function from_int(i : Int) : org.omg.CORBA.CompletionStatus;
 	
 	
 }

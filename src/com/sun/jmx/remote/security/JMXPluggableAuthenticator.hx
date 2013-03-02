@@ -94,12 +94,12 @@ extern class JMXPluggableAuthenticator implements javax.management.remote.JMXAut
 	/**
 	* Gets the JAAS configuration for file-based authentication
 	*/
-	@:overload override public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
+	@:overload public function getAppConfigurationEntry(name : String) : java.NativeArray<javax.security.auth.login.AppConfigurationEntry>;
 	
 	/**
 	* Refreshes the configuration.
 	*/
-	@:overload override public function refresh() : Void;
+	@:overload public function refresh() : Void;
 	
 	
 }

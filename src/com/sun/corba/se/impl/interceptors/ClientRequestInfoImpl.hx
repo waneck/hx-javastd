@@ -117,62 +117,62 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function request_id() : Int;
+	@:overload public function request_id() : Int;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function operation() : String;
+	@:overload public function operation() : String;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
+	@:overload public function arguments() : java.NativeArray<org.omg.Dynamic.Parameter>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
+	@:overload public function exceptions() : java.NativeArray<org.omg.CORBA.TypeCode>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function contexts() : java.NativeArray<String>;
+	@:overload public function contexts() : java.NativeArray<String>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function operation_context() : java.NativeArray<String>;
+	@:overload public function operation_context() : java.NativeArray<String>;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function result() : org.omg.CORBA.Any;
+	@:overload public function result() : org.omg.CORBA.Any;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function response_expected() : Bool;
+	@:overload public function response_expected() : Bool;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function forward_reference() : org.omg.CORBA.Object;
+	@:overload public function forward_reference() : org.omg.CORBA.Object;
 	
 	@:overload private function setLocatedIOR(ior : com.sun.corba.se.spi.ior.IOR) : Void;
 	
 	/**
 	* See RequestInfoImpl for javadoc.
 	*/
-	@:overload override public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload public function get_request_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
 	/**
 	* does not contain an etry for that ID, BAD_PARAM with a minor code of
 	* TBD_BP is raised.
 	*/
-	@:overload override public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
+	@:overload public function get_reply_service_context(id : Int) : org.omg.IOP.ServiceContext;
 	
-	@:overload override public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
+	@:overload public function connection() : com.sun.corba.se.spi.legacy.connection.Connection;
 	
 	/*
 	**********************************************************************
@@ -184,7 +184,7 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	* Overridden from RequestInfoImpl.  Calls the super class, then
 	* sets the ending point call depending on the reply status.
 	*/
-	@:overload override private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
+	@:overload private function setReplyStatus(replyStatus : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets DII request object in the RequestInfoObject.
@@ -216,14 +216,14 @@ extern class ClientRequestInfoImpl extends com.sun.corba.se.impl.interceptors.Re
 	/**
 	* Overridden from RequestInfoImpl.
 	*/
-	@:overload override private function setException(exception : java.lang.Exception) : Void;
+	@:overload private function setException(exception : java.lang.Exception) : Void;
 	
 	@:overload private function getIsOneWay() : Bool;
 	
 	/**
 	* See description for RequestInfoImpl.checkAccess
 	*/
-	@:overload override private function checkAccess(methodID : Int) : Void;
+	@:overload private function checkAccess(methodID : Int) : Void;
 	
 	
 }

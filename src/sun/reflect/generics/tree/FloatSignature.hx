@@ -25,7 +25,7 @@ package sun.reflect.generics.tree;
 */
 extern class FloatSignature implements sun.reflect.generics.tree.BaseType
 {
-	@:overload public static function make() : FloatSignature;
+	@:overload public static function make() : sun.reflect.generics.tree.FloatSignature;
 	
 	@:overload public function accept(v : sun.reflect.generics.visitor.TypeTreeVisitor<Dynamic>) : Void;
 	

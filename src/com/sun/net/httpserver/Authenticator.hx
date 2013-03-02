@@ -49,7 +49,7 @@ extern class Authenticator
 	* given HttpExchange. The response code to be returned must be provided
 	* in the Retry object. Retry may occur multiple times.
 	*/
-	@:overload @:abstract public function authenticate(exch : com.sun.net.httpserver.HttpExchange) : Authenticator_Result;
+	@:overload @:abstract public function authenticate(exch : com.sun.net.httpserver.HttpExchange) : com.sun.net.httpserver.Authenticator.Authenticator_Result;
 	
 	
 }
@@ -64,7 +64,7 @@ extern class Authenticator
 * Indicates an authentication failure. The authentication
 * attempt has completed.
 */
-@:native('com$sun$net$httpserver$Authenticator$Failure') extern class Authenticator_Failure extends Authenticator_Result
+@:native('com$sun$net$httpserver$Authenticator$Failure') extern class Authenticator_Failure extends com.sun.net.httpserver.Authenticator.Authenticator_Result
 {
 	@:overload public function new(responseCode : Int) : Void;
 	
@@ -80,7 +80,7 @@ extern class Authenticator
 * authenticated user principal can be acquired by calling
 * getPrincipal().
 */
-@:native('com$sun$net$httpserver$Authenticator$Success') extern class Authenticator_Success extends Authenticator_Result
+@:native('com$sun$net$httpserver$Authenticator$Success') extern class Authenticator_Success extends com.sun.net.httpserver.Authenticator.Authenticator_Result
 {
 	@:overload public function new(p : com.sun.net.httpserver.HttpPrincipal) : Void;
 	
@@ -98,7 +98,7 @@ extern class Authenticator
 * set any necessary response headers in the given HttpExchange
 * before returning this Retry object.
 */
-@:native('com$sun$net$httpserver$Authenticator$Retry') extern class Authenticator_Retry extends Authenticator_Result
+@:native('com$sun$net$httpserver$Authenticator$Retry') extern class Authenticator_Retry extends com.sun.net.httpserver.Authenticator.Authenticator_Result
 {
 	@:overload public function new(responseCode : Int) : Void;
 	

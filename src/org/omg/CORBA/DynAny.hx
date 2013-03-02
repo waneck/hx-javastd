@@ -50,7 +50,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	* @throws Invalid if the source <code>DynAny</code> is
 	*            invalid
 	*/
-	@:overload public function assign(dyn_any : DynAny) : Void;
+	@:overload public function assign(dyn_any : org.omg.CORBA.DynAny) : Void;
 	
 	/**
 	* Make a <code>DynAny</code> object from an <code>Any</code>
@@ -93,7 +93,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*
 	* @return a copy of this <code>DynAny</code> object
 	*/
-	@:overload public function copy() : DynAny;
+	@:overload public function copy() : org.omg.CORBA.DynAny;
 	
 	/**
 	* Inserts the given <code>boolean</code> as the value for this
@@ -631,7 +631,7 @@ extern interface DynAny extends org.omg.CORBA.Object
 	*         used to retrieve or set the value of the component currently
 	*         accessed
 	*/
-	@:overload public function current_component() : DynAny;
+	@:overload public function current_component() : org.omg.CORBA.DynAny;
 	
 	/**
 	* Moves to the next component of this <code>DynAny</code> object.

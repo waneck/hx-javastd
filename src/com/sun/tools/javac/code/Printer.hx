@@ -60,7 +60,7 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	* @param messages Messages class to be used for i18n
 	* @return printer visitor instance
 	*/
-	@:overload public static function createStandardPrinter(messages : com.sun.tools.javac.api.Messages) : Printer;
+	@:overload public static function createStandardPrinter(messages : com.sun.tools.javac.api.Messages) : com.sun.tools.javac.code.Printer;
 	
 	/**
 	* Get a localized string representation for all the types in the input list.
@@ -157,19 +157,19 @@ extern class Printer implements com.sun.tools.javac.code.Type.Type_Visitor<Strin
 	
 	@:overload public function visitSymbol(s : com.sun.tools.javac.code.Symbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassSymbol(s : Symbol_ClassSymbol, arg : Dynamic) : Dynamic;
+	@:overload public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitTypeSymbol(s : Symbol_TypeSymbol, arg : Dynamic) : Dynamic;
+	@:overload public function visitPackageSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_PackageSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitOperatorSymbol(s : Symbol_OperatorSymbol, arg : Dynamic) : Dynamic;
+	@:overload public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitVarSymbol(s : Symbol_VarSymbol, arg : Dynamic) : Dynamic;
+	@:overload public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitPackageSymbol(s : Symbol_PackageSymbol, arg : Dynamic) : Dynamic;
+	@:overload public function visitOperatorSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_OperatorSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitSymbol(s : Symbol, arg : Dynamic) : Dynamic;
+	@:overload public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, arg : Dynamic) : Dynamic;
 	
-	@:overload public function visitMethodSymbol(s : Symbol_MethodSymbol, arg : Dynamic) : Dynamic;
+	@:overload public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : Dynamic) : Dynamic;
 	
 	
 }

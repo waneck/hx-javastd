@@ -38,7 +38,7 @@ extern class FieldRepository extends sun.reflect.generics.repository.AbstractRep
 	* @return a <tt>FieldRepository</tt> that manages the generic type
 	* information represented in the signature <tt>rawSig</tt>
 	*/
-	@:overload public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : FieldRepository;
+	@:overload public static function make(rawSig : String, f : sun.reflect.generics.factory.GenericsFactory) : sun.reflect.generics.repository.FieldRepository;
 	
 	/*
 	* When queried for a particular piece of type information, the

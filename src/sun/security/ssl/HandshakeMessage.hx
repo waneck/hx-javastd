@@ -36,7 +36,7 @@ extern class HandshakeMessage
 * Server can ask the client to initiate a new handshake, e.g. to change
 * session parameters after a connection has been (re)established.
 */
-@:native('sun$security$ssl$HandshakeMessage$HelloRequest') @:internal extern class HandshakeMessage_HelloRequest extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$HelloRequest') @:internal extern class HandshakeMessage_HelloRequest extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -51,7 +51,7 @@ extern class HandshakeMessage
 * Until we know how to parse it, we will just read what we know
 * about, and let our caller handle the jumps over unknown data.
 */
-@:native('sun$security$ssl$HandshakeMessage$ClientHello') @:internal extern class HandshakeMessage_ClientHello extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$ClientHello') @:internal extern class HandshakeMessage_ClientHello extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -62,7 +62,7 @@ extern class HandshakeMessage
 * client supports.  Then it sends the basic session descriptive parameters
 * back to the client.
 */
-@:native('sun$security$ssl$HandshakeMessage$ServerHello') @:internal extern class HandshakeMessage_ServerHello extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$ServerHello') @:internal extern class HandshakeMessage_ServerHello extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -79,7 +79,7 @@ extern class HandshakeMessage
 * Up to 2^48 bytes of certificate may be sent, in records of at most 2^14
 * bytes each ... up to 2^32 records sent on the output stream.
 */
-@:native('sun$security$ssl$HandshakeMessage$CertificateMsg') @:internal extern class HandshakeMessage_CertificateMsg extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$CertificateMsg') @:internal extern class HandshakeMessage_CertificateMsg extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -119,7 +119,7 @@ extern class HandshakeMessage
 * exchange the premaster secret.  That's how RSA_EXPORT often works,
 * as well as how the DHE_* flavors work.
 */
-@:native('sun$security$ssl$HandshakeMessage$ServerKeyExchange') @:internal extern class HandshakeMessage_ServerKeyExchange extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$ServerKeyExchange') @:internal extern class HandshakeMessage_ServerKeyExchange extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -131,7 +131,7 @@ extern class HandshakeMessage
 * This is never used when keys are 512 bits or smaller, and isn't used
 * on "US Domestic" ciphers in any case.
 */
-@:native('sun$security$ssl$HandshakeMessage$RSA_ServerKeyExchange') @:internal extern class HandshakeMessage_RSA_ServerKeyExchange extends HandshakeMessage_ServerKeyExchange
+@:native('sun$security$ssl$HandshakeMessage$RSA_ServerKeyExchange') @:internal extern class HandshakeMessage_RSA_ServerKeyExchange extends sun.security.ssl.HandshakeMessage.HandshakeMessage_ServerKeyExchange
 {
 	
 }
@@ -149,7 +149,7 @@ extern class HandshakeMessage
 * perhaps eventually each deserves its own class.  Notably, this has
 * basic support for DH_anon and its DHE_DSS and DHE_RSA signed variants.
 */
-@:native('sun$security$ssl$HandshakeMessage$DH_ServerKeyExchange') @:internal extern class HandshakeMessage_DH_ServerKeyExchange extends HandshakeMessage_ServerKeyExchange
+@:native('sun$security$ssl$HandshakeMessage$DH_ServerKeyExchange') @:internal extern class HandshakeMessage_DH_ServerKeyExchange extends sun.security.ssl.HandshakeMessage.HandshakeMessage_ServerKeyExchange
 {
 	
 }
@@ -160,7 +160,7 @@ extern class HandshakeMessage
 *
 * We support named curves only, no explicitly encoded curves.
 */
-@:native('sun$security$ssl$HandshakeMessage$ECDH_ServerKeyExchange') @:internal extern class HandshakeMessage_ECDH_ServerKeyExchange extends HandshakeMessage_ServerKeyExchange
+@:native('sun$security$ssl$HandshakeMessage$ECDH_ServerKeyExchange') @:internal extern class HandshakeMessage_ECDH_ServerKeyExchange extends sun.security.ssl.HandshakeMessage.HandshakeMessage_ServerKeyExchange
 {
 	
 }
@@ -189,7 +189,7 @@ extern class HandshakeMessage
 *     } CertificateRequest;
 *
 */
-@:native('sun$security$ssl$HandshakeMessage$CertificateRequest') @:internal extern class HandshakeMessage_CertificateRequest extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$CertificateRequest') @:internal extern class HandshakeMessage_CertificateRequest extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -201,7 +201,7 @@ extern class HandshakeMessage
 * client certificate request) it sends this message to flag that it's
 * done that part of the handshake.
 */
-@:native('sun$security$ssl$HandshakeMessage$ServerHelloDone') @:internal extern class HandshakeMessage_ServerHelloDone extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$ServerHelloDone') @:internal extern class HandshakeMessage_ServerHelloDone extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -211,7 +211,7 @@ extern class HandshakeMessage
 * Sent after client sends signature-capable certificates (e.g. not
 * Diffie-Hellman) to verify.
 */
-@:native('sun$security$ssl$HandshakeMessage$CertificateVerify') @:internal extern class HandshakeMessage_CertificateVerify extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$CertificateVerify') @:internal extern class HandshakeMessage_CertificateVerify extends sun.security.ssl.HandshakeMessage
 {
 	
 }
@@ -230,7 +230,7 @@ extern class HandshakeMessage
 * some non-default cipher suite has already been set up on this connection
 * connection (e.g. a previous handshake arranged one).
 */
-@:native('sun$security$ssl$HandshakeMessage$Finished') @:internal extern class HandshakeMessage_Finished extends HandshakeMessage
+@:native('sun$security$ssl$HandshakeMessage$Finished') @:internal extern class HandshakeMessage_Finished extends sun.security.ssl.HandshakeMessage
 {
 	
 }

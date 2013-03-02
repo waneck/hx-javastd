@@ -25,19 +25,19 @@ package com.sun.tools.internal.xjc.generator.annotation.spec;
 */
 extern interface XmlElementDeclWriter extends com.sun.codemodel.internal.JAnnotationWriter<javax.xml.bind.annotation.XmlElementDecl>
 {
-	@:overload public function name(value : String) : XmlElementDeclWriter;
+	@:overload public function name(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementDeclWriter;
 	
-	@:overload public function scope(value : Class<Dynamic>) : XmlElementDeclWriter;
+	@:overload public function scope(value : Class<Dynamic>) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementDeclWriter;
 	
-	@:overload public function scope(value : com.sun.codemodel.internal.JType) : XmlElementDeclWriter;
+	@:overload public function scope(value : com.sun.codemodel.internal.JType) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementDeclWriter;
 	
-	@:overload public function namespace(value : String) : XmlElementDeclWriter;
+	@:overload public function namespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementDeclWriter;
 	
-	@:overload public function defaultValue(value : String) : XmlElementDeclWriter;
+	@:overload public function defaultValue(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementDeclWriter;
 	
-	@:overload public function substitutionHeadNamespace(value : String) : XmlElementDeclWriter;
+	@:overload public function substitutionHeadNamespace(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementDeclWriter;
 	
-	@:overload public function substitutionHeadName(value : String) : XmlElementDeclWriter;
+	@:overload public function substitutionHeadName(value : String) : com.sun.tools.internal.xjc.generator.annotation.spec.XmlElementDeclWriter;
 	
 	
 }

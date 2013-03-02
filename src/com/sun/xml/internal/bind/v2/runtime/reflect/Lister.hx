@@ -76,14 +76,14 @@ extern class Lister<BeanT, PropT, ItemT, PackT>
 	* @param adapter
 	*      adapter to be used for individual items. can be null.
 	*/
-	@:overload public static function create<BeanT, PropT, ItemT, PackT>(fieldType : java.lang.reflect.Type, idness : com.sun.xml.internal.bind.v2.model.core.ID, adapter : com.sun.xml.internal.bind.v2.model.core.Adapter<java.lang.reflect.Type, Class<Dynamic>>) : Lister<BeanT, PropT, ItemT, PackT>;
+	@:overload public static function create<BeanT, PropT, ItemT, PackT>(fieldType : java.lang.reflect.Type, idness : com.sun.xml.internal.bind.v2.model.core.ID, adapter : com.sun.xml.internal.bind.v2.model.core.Adapter<java.lang.reflect.Type, Class<Dynamic>>) : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, ItemT, PackT>;
 	
 	/**
 	* Gets the special {@link Lister} used to recover from an error.
 	*/
-	@:overload public static function getErrorInstance<A, B, C, D>() : Lister<A, B, C, D>;
+	@:overload public static function getErrorInstance<A, B, C, D>() : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<A, B, C, D>;
 	
-	public static var ERROR(default, null) : Lister<Dynamic, Dynamic, Dynamic, Dynamic>;
+	public static var ERROR(default, null) : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<Dynamic, Dynamic, Dynamic, Dynamic>;
 	
 	
 }
@@ -94,17 +94,17 @@ extern class Lister<BeanT, PropT, ItemT, PackT>
 * Array packing is slower, but we expect this to be used less frequently than
 * the {@link CollectionLister}.
 */
-@:native('com$sun$xml$internal$bind$v2$runtime$reflect$Lister$ArrayLister') @:internal extern class Lister_ArrayLister<BeanT, ItemT> extends Lister<BeanT, java.NativeArray<ItemT>, ItemT, Lister_IDREFS_Pack<ItemT>>
+@:native('com$sun$xml$internal$bind$v2$runtime$reflect$Lister$ArrayLister') @:internal extern class Lister_ArrayLister<BeanT, ItemT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, java.NativeArray<ItemT>, ItemT, com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack<ItemT>>
 {
 	@:overload public function new(itemType : Class<ItemT>) : Void;
 	
 	@:overload public function iterator(objects : java.NativeArray<ItemT>, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<ItemT>;
 	
-	@:overload override public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<ItemT>>) : Lister_IDREFS_Pack;
+	@:overload override public function startPacking(current : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<ItemT>>) : com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack;
 	
-	@:overload public function addToPack(objects : Lister_IDREFS_Pack<ItemT>, o : ItemT) : Void;
+	@:overload public function addToPack(objects : com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack<ItemT>, o : ItemT) : Void;
 	
-	@:overload public function endPacking(pack : Lister_IDREFS_Pack<ItemT>, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<ItemT>>) : Void;
+	@:overload public function endPacking(pack : com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack<ItemT>, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<ItemT>>) : Void;
 	
 	@:overload override public function reset(o : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, java.NativeArray<ItemT>>) : Void;
 	
@@ -121,7 +121,7 @@ extern class Lister<BeanT, PropT, ItemT, PackT>
 /**
 * {@link Lister} for a collection
 */
-@:native('com$sun$xml$internal$bind$v2$runtime$reflect$Lister$CollectionLister') extern class Lister_CollectionLister<BeanT, T> extends Lister<BeanT, T, Dynamic, T>
+@:native('com$sun$xml$internal$bind$v2$runtime$reflect$Lister$CollectionLister') extern class Lister_CollectionLister<BeanT, T> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, T, Dynamic, T>
 {
 	@:overload public function new(implClass : Class<T>) : Void;
 	
@@ -140,17 +140,17 @@ extern class Lister<BeanT, PropT, ItemT, PackT>
 /**
 * {@link Lister} for IDREFS.
 */
-@:native('com$sun$xml$internal$bind$v2$runtime$reflect$Lister$IDREFS') @:internal extern class Lister_IDREFS<BeanT, PropT> extends Lister<BeanT, PropT, String, Lister_IDREFS<BeanT, PropT>, Lister_IDREFS_Pack>
+@:native('com$sun$xml$internal$bind$v2$runtime$reflect$Lister$IDREFS') @:internal extern class Lister_IDREFS<BeanT, PropT> extends com.sun.xml.internal.bind.v2.runtime.reflect.Lister<BeanT, PropT, String, com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS<BeanT, PropT>, com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack>
 {
-	@:overload public function new(core : Lister<Dynamic, Dynamic, Dynamic, Dynamic>, itemType : Class<Dynamic>) : Void;
+	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.reflect.Lister<Dynamic, Dynamic, Dynamic, Dynamic>, itemType : Class<Dynamic>) : Void;
 	
 	@:overload override public function iterator(prop : PropT, context : com.sun.xml.internal.bind.v2.runtime.XMLSerializer) : com.sun.xml.internal.bind.v2.runtime.reflect.ListIterator<String>;
 	
-	@:overload override public function startPacking(bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Lister_IDREFS_Pack;
+	@:overload override public function startPacking(bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack;
 	
-	@:overload public function addToPack(pack : Lister_IDREFS_Pack, item : String) : Void;
+	@:overload public function addToPack(pack : com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack, item : String) : Void;
 	
-	@:overload public function endPacking(pack : Lister_IDREFS_Pack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
+	@:overload public function endPacking(pack : com.sun.xml.internal.bind.v2.runtime.reflect.Lister.Lister_IDREFS_Pack, bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
 	
 	@:overload override public function reset(bean : BeanT, acc : com.sun.xml.internal.bind.v2.runtime.reflect.Accessor<BeanT, PropT>) : Void;
 	

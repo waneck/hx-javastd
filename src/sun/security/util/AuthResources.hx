@@ -42,7 +42,7 @@ extern class AuthResources extends java.util.ListResourceBundle
 	*
 	* @return the contents of this <code>ResourceBundle</code>.
 	*/
-	@:overload override public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
+	@:overload public function getContents() : java.NativeArray<java.NativeArray<Dynamic>>;
 	
 	
 }

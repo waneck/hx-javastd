@@ -80,7 +80,7 @@ package sun.security.provider.certpath;
 	* @return <code>true</code> if the <code>Certificate</code> should be
 	*         selected, <code>false</code> otherwise
 	*/
-	@:overload override public function match(cert : java.security.cert.Certificate) : Bool;
+	@:overload public function match(cert : java.security.cert.Certificate) : Bool;
 	
 	/**
 	* Return a printable representation of the <code>CertSelector</code>.
@@ -88,7 +88,7 @@ package sun.security.provider.certpath;
 	* @return a <code>String</code> describing the contents of the
 	*         <code>CertSelector</code>
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

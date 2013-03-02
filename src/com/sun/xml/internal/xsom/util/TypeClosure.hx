@@ -32,7 +32,7 @@ extern class TypeClosure extends com.sun.xml.internal.xsom.util.TypeSet
 	*
 	* transitive closure variation on the contains method.
 	*/
-	@:overload override public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
+	@:overload public function contains(type : com.sun.xml.internal.xsom.XSType) : Bool;
 	
 	
 }

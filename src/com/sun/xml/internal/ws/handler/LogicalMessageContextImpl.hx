@@ -29,7 +29,7 @@ package com.sun.xml.internal.ws.handler;
 	
 	@:overload public function getMessage() : javax.xml.ws.LogicalMessage;
 	
-	@:overload override private function updateMessage() : Void;
+	@:overload private function updateMessage() : Void;
 	
 	
 }

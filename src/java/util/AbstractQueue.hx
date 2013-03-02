@@ -224,7 +224,7 @@ package java.util;
 	*         or if the specified collection is null.
 	* @see    #contains(Object)
 	*/
-	@:overload @:public public function containsAll(c : Collection<Dynamic>) : Bool;
+	@:overload override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this collection that are contained in the
@@ -248,7 +248,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload @:public public function retainAll(c : Collection<Dynamic>) : Bool;
+	@:overload override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes all of this collection's elements that are also contained in the
@@ -273,7 +273,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload @:public public function removeAll(c : Collection<Dynamic>) : Bool;
+	@:overload override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Inserts the specified element into this queue if it is possible to do

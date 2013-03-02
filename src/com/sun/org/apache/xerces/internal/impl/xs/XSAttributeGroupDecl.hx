@@ -64,7 +64,7 @@ extern class XSAttributeGroupDecl implements com.sun.org.apache.xerces.internal.
 	* @param typeName the name of the type containing this attribute group, used for error reporting purposes
 	* @param baseGroup the XSAttributeGroupDecl that is the base we are checking against
 	*/
-	@:overload public function validRestrictionOf(typeName : String, baseGroup : XSAttributeGroupDecl) : java.NativeArray<Dynamic>;
+	@:overload public function validRestrictionOf(typeName : String, baseGroup : com.sun.org.apache.xerces.internal.impl.xs.XSAttributeGroupDecl) : java.NativeArray<Dynamic>;
 	
 	@:overload public function reset() : Void;
 	

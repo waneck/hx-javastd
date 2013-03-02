@@ -55,35 +55,35 @@ extern class AnnotationTypeWriterImpl extends com.sun.tools.doclets.formats.html
 	*
 	* @return a content tree for the package link
 	*/
-	@:overload override private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkPackage() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the class link.
 	*
 	* @return a content tree for the class link
 	*/
-	@:overload override private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkClass() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get the class use link.
 	*
 	* @return a content tree for the class use link
 	*/
-	@:overload override private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkClassUse() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to previous class.
 	*
 	* @return a content tree for the previous class link
 	*/
-	@:overload override public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload public function getNavLinkPrevious() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Get link to next class.
 	*
 	* @return a content tree for the next class link
 	*/
-	@:overload override public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload public function getNavLinkNext() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* {@inheritDoc}
@@ -143,14 +143,14 @@ extern class AnnotationTypeWriterImpl extends com.sun.tools.doclets.formats.html
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
+	@:overload private function getNavLinkTree() : com.sun.tools.doclets.internal.toolkit.Content;
 	
 	/**
 	* Add summary details to the navigation bar.
 	*
 	* @param subDiv the content tree to which the summary detail links will be added
 	*/
-	@:overload override private function addSummaryDetailLinks(subDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
+	@:overload private function addSummaryDetailLinks(subDiv : com.sun.tools.doclets.internal.toolkit.Content) : Void;
 	
 	/**
 	* Get summary links for navigation bar.

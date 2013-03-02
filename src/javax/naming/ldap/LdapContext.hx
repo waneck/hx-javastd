@@ -63,7 +63,7 @@ extern interface LdapContext extends javax.naming.directory.DirContext
 	* the new instance.
 	* @see InitialLdapContext
 	*/
-	@:overload public function newInstance(requestControls : java.NativeArray<javax.naming.ldap.Control>) : LdapContext;
+	@:overload public function newInstance(requestControls : java.NativeArray<javax.naming.ldap.Control>) : javax.naming.ldap.LdapContext;
 	
 	/**
 	* Reconnects to the LDAP server using the supplied controls and

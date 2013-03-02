@@ -211,7 +211,7 @@ package java.security;
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(type : String) : KeyStore;
+	@:overload public static function getInstance(type : String) : java.security.KeyStore;
 	
 	/**
 	* Returns a keystore object of the specified type.
@@ -246,7 +246,7 @@ package java.security;
 	*
 	* @see Provider
 	*/
-	@:overload public static function getInstance(type : String, provider : String) : KeyStore;
+	@:overload public static function getInstance(type : String, provider : String) : java.security.KeyStore;
 	
 	/**
 	* Returns a keystore object of the specified type.
@@ -276,7 +276,7 @@ package java.security;
 	*
 	* @since 1.4
 	*/
-	@:require(java4) @:overload public static function getInstance(type : String, provider : java.security.Provider) : KeyStore;
+	@:require(java4) @:overload public static function getInstance(type : String, provider : java.security.Provider) : java.security.KeyStore;
 	
 	/**
 	* Returns the default keystore type as specified in the Java security
@@ -606,7 +606,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function store(param : KeyStore_LoadStoreParameter) : Void;
+	@:require(java5) @:overload @:final public function store(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Loads this KeyStore from the given input stream.
@@ -669,7 +669,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function load(param : KeyStore_LoadStoreParameter) : Void;
+	@:require(java5) @:overload @:final public function load(param : java.security.KeyStore.KeyStore_LoadStoreParameter) : Void;
 	
 	/**
 	* Gets a keystore <code>Entry</code> for the specified alias
@@ -699,7 +699,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function getEntry(alias : String, protParam : KeyStore_ProtectionParameter) : KeyStore_Entry;
+	@:require(java5) @:overload @:final public function getEntry(alias : String, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Entry;
 	
 	/**
 	* Saves a keystore <code>Entry</code> under the specified alias.
@@ -725,7 +725,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function setEntry(alias : String, entry : KeyStore_Entry, protParam : KeyStore_ProtectionParameter) : Void;
+	@:require(java5) @:overload @:final public function setEntry(alias : String, entry : java.security.KeyStore.KeyStore_Entry, protParam : java.security.KeyStore.KeyStore_ProtectionParameter) : Void;
 	
 	/**
 	* Determines if the keystore <code>Entry</code> for the specified
@@ -747,7 +747,7 @@ package java.security;
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:final public function entryInstanceOf(alias : String, entryClass : Class<KeyStore_Entry>) : Bool;
+	@:require(java5) @:overload @:final public function entryInstanceOf(alias : String, entryClass : Class<java.security.KeyStore.KeyStore_Entry>) : Bool;
 	
 	
 }
@@ -767,7 +767,7 @@ package java.security;
 	*
 	* @return the parameter used to protect keystore data, or null
 	*/
-	@:overload public function getProtectionParameter() : KeyStore_ProtectionParameter;
+	@:overload public function getProtectionParameter() : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	
 }
@@ -792,7 +792,7 @@ package java.security;
 *
 * @since 1.5
 */
-@:require(java5) @:native('java$security$KeyStore$PasswordProtection') extern class KeyStore_PasswordProtection implements KeyStore_ProtectionParameter implements javax.security.auth.Destroyable
+@:require(java5) @:native('java$security$KeyStore$PasswordProtection') extern class KeyStore_PasswordProtection implements java.security.KeyStore.KeyStore_ProtectionParameter implements javax.security.auth.Destroyable
 {
 	/**
 	* Creates a password parameter.
@@ -841,7 +841,7 @@ package java.security;
 *
 * @since 1.5
 */
-@:require(java5) @:native('java$security$KeyStore$CallbackHandlerProtection') extern class KeyStore_CallbackHandlerProtection implements KeyStore_ProtectionParameter
+@:require(java5) @:native('java$security$KeyStore$CallbackHandlerProtection') extern class KeyStore_CallbackHandlerProtection implements java.security.KeyStore.KeyStore_ProtectionParameter
 {
 	/**
 	* Constructs a new CallbackHandlerProtection from a
@@ -876,7 +876,7 @@ package java.security;
 *
 * @since 1.5
 */
-@:require(java5) @:native('java$security$KeyStore$PrivateKeyEntry') extern class KeyStore_PrivateKeyEntry implements KeyStore_Entry
+@:require(java5) @:native('java$security$KeyStore$PrivateKeyEntry') extern class KeyStore_PrivateKeyEntry implements java.security.KeyStore.KeyStore_Entry
 {
 	/**
 	* Constructs a <code>PrivateKeyEntry</code> with a
@@ -949,7 +949,7 @@ package java.security;
 *
 * @since 1.5
 */
-@:require(java5) @:native('java$security$KeyStore$SecretKeyEntry') extern class KeyStore_SecretKeyEntry implements KeyStore_Entry
+@:require(java5) @:native('java$security$KeyStore$SecretKeyEntry') extern class KeyStore_SecretKeyEntry implements java.security.KeyStore.KeyStore_Entry
 {
 	/**
 	* Constructs a <code>SecretKeyEntry</code> with a
@@ -983,7 +983,7 @@ package java.security;
 *
 * @since 1.5
 */
-@:require(java5) @:native('java$security$KeyStore$TrustedCertificateEntry') extern class KeyStore_TrustedCertificateEntry implements KeyStore_Entry
+@:require(java5) @:native('java$security$KeyStore$TrustedCertificateEntry') extern class KeyStore_TrustedCertificateEntry implements java.security.KeyStore.KeyStore_Entry
 {
 	/**
 	* Constructs a <code>TrustedCertificateEntry</code> with a
@@ -1040,7 +1040,7 @@ package java.security;
 	*   operation, for example if the KeyStore could not be
 	*   instantiated or loaded
 	*/
-	@:overload @:abstract public function getKeyStore() : KeyStore;
+	@:overload @:abstract public function getKeyStore() : java.security.KeyStore;
 	
 	/**
 	* Returns the ProtectionParameters that should be used to obtain
@@ -1057,7 +1057,7 @@ package java.security;
 	* @throws IllegalStateException if the getKeyStore method has
 	*   not been invoked prior to calling this method
 	*/
-	@:overload @:abstract public function getProtectionParameter(alias : String) : KeyStore_ProtectionParameter;
+	@:overload @:abstract public function getProtectionParameter(alias : String) : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	/**
 	* Returns a new Builder that encapsulates the given KeyStore.
@@ -1078,7 +1078,7 @@ package java.security;
 	* @throws IllegalArgumentException if the keyStore has not been
 	*   initialized
 	*/
-	@:overload public static function newInstance(keyStore : KeyStore, protectionParameter : KeyStore_ProtectionParameter) : KeyStore_Builder;
+	@:overload public static function newInstance(keyStore : java.security.KeyStore, protectionParameter : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
 	
 	/**
 	* Returns a new Builder object.
@@ -1123,7 +1123,7 @@ package java.security;
 	*   of either PasswordProtection or CallbackHandlerProtection; or
 	*   if file does not exist or does not refer to a normal file
 	*/
-	@:overload public static function newInstance(type : String, provider : java.security.Provider, file : java.io.File, protection : KeyStore_ProtectionParameter) : KeyStore_Builder;
+	@:overload public static function newInstance(type : String, provider : java.security.Provider, file : java.io.File, protection : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
 	
 	/**
 	* Returns a new Builder object.
@@ -1152,21 +1152,21 @@ package java.security;
 	* @param protection the ProtectionParameter securing the Keystore
 	* @throws NullPointerException if type or protection is null
 	*/
-	@:overload public static function newInstance(type : String, provider : java.security.Provider, protection : KeyStore_ProtectionParameter) : KeyStore_Builder;
+	@:overload public static function newInstance(type : String, provider : java.security.Provider, protection : java.security.KeyStore.KeyStore_ProtectionParameter) : java.security.KeyStore.KeyStore_Builder;
 	
 	
 }
-@:native('java$security$KeyStore$Builder$FileBuilder') @:internal extern class KeyStore_Builder_FileBuilder extends KeyStore_Builder
+@:native('java$security$KeyStore$Builder$FileBuilder') @:internal extern class KeyStore_Builder_FileBuilder extends java.security.KeyStore.KeyStore_Builder
 {
-	@:overload @:synchronized override public function getKeyStore() : KeyStore;
+	@:overload @:synchronized override public function getKeyStore() : java.security.KeyStore;
 	
-	@:overload @:synchronized override public function getProtectionParameter(alias : String) : KeyStore_ProtectionParameter;
+	@:overload @:synchronized override public function getProtectionParameter(alias : String) : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	
 }
-@:native('java$security$KeyStore$SimpleLoadStoreParameter') @:internal extern class KeyStore_SimpleLoadStoreParameter implements KeyStore_LoadStoreParameter
+@:native('java$security$KeyStore$SimpleLoadStoreParameter') @:internal extern class KeyStore_SimpleLoadStoreParameter implements java.security.KeyStore.KeyStore_LoadStoreParameter
 {
-	@:overload public function getProtectionParameter() : KeyStore_ProtectionParameter;
+	@:overload public function getProtectionParameter() : java.security.KeyStore.KeyStore_ProtectionParameter;
 	
 	
 }

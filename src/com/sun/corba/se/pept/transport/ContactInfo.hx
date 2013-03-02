@@ -144,7 +144,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.protocol.MessageMediator MessageMediator}
 	*/
-	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload public function createMessageMediator(broker : com.sun.corba.se.pept.broker.Broker, contactInfo : com.sun.corba.se.pept.transport.ContactInfo, connection : com.sun.corba.se.pept.transport.Connection, methodName : String, isOneWay : Bool) : com.sun.corba.se.pept.protocol.MessageMediator;
 	
 	/**
 	* Used to get a

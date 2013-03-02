@@ -333,7 +333,7 @@ extern class DataHandler implements java.awt.datatransfer.Transferable
 	/**
 	* The constructor.
 	*/
-	@:overload public function new(dh : DataHandler) : Void;
+	@:overload public function new(dh : javax.activation.DataHandler) : Void;
 	
 	/**
 	* Returns an <code>InputStream</code> representing this object.

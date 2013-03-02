@@ -38,13 +38,13 @@ extern class ProcessPath
 	
 	public static var PH_MODE_FILL_CLIP(default, null) : Int;
 	
-	public static var noopEndSubPathHandler : ProcessPath_EndSubPathHandler;
+	public static var noopEndSubPathHandler : sun.java2d.loops.ProcessPath.ProcessPath_EndSubPathHandler;
 	
-	@:overload public static function fillPath(dhnd : ProcessPath_DrawHandler, p2df : java.awt.geom.Path2D.Path2D_Float, transX : Int, transY : Int) : Bool;
+	@:overload public static function fillPath(dhnd : sun.java2d.loops.ProcessPath.ProcessPath_DrawHandler, p2df : java.awt.geom.Path2D.Path2D_Float, transX : Int, transY : Int) : Bool;
 	
-	@:overload public static function drawPath(dhnd : ProcessPath_DrawHandler, endSubPath : ProcessPath_EndSubPathHandler, p2df : java.awt.geom.Path2D.Path2D_Float, transX : Int, transY : Int) : Bool;
+	@:overload public static function drawPath(dhnd : sun.java2d.loops.ProcessPath.ProcessPath_DrawHandler, endSubPath : sun.java2d.loops.ProcessPath.ProcessPath_EndSubPathHandler, p2df : java.awt.geom.Path2D.Path2D_Float, transX : Int, transY : Int) : Bool;
 	
-	@:overload public static function drawPath(dhnd : ProcessPath_DrawHandler, p2df : java.awt.geom.Path2D.Path2D_Float, transX : Int, transY : Int) : Bool;
+	@:overload public static function drawPath(dhnd : sun.java2d.loops.ProcessPath.ProcessPath_DrawHandler, p2df : java.awt.geom.Path2D.Path2D_Float, transX : Int, transY : Int) : Bool;
 	
 	/* Following constants are used for providing open boundaries of the
 	* intervals
@@ -100,9 +100,9 @@ extern class ProcessPath
 	
 	
 }
-@:native('sun$java2d$loops$ProcessPath$ProcessHandler') extern class ProcessPath_ProcessHandler implements ProcessPath_EndSubPathHandler
+@:native('sun$java2d$loops$ProcessPath$ProcessHandler') extern class ProcessPath_ProcessHandler implements sun.java2d.loops.ProcessPath.ProcessPath_EndSubPathHandler
 {
-	@:overload public function new(dhnd : ProcessPath_DrawHandler, clipMode : Int) : Void;
+	@:overload public function new(dhnd : sun.java2d.loops.ProcessPath.ProcessPath_DrawHandler, clipMode : Int) : Void;
 	
 	@:overload @:abstract public function processFixedLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int, pixelInfo : java.NativeArray<Int>, checkBounds : Bool, endSubPath : Bool) : Void;
 	
@@ -110,9 +110,9 @@ extern class ProcessPath
 	
 	
 }
-@:native('sun$java2d$loops$ProcessPath$DrawProcessHandler') @:internal extern class ProcessPath_DrawProcessHandler extends ProcessPath_ProcessHandler
+@:native('sun$java2d$loops$ProcessPath$DrawProcessHandler') @:internal extern class ProcessPath_DrawProcessHandler extends sun.java2d.loops.ProcessPath.ProcessPath_ProcessHandler
 {
-	@:overload public function new(dhnd : ProcessPath_DrawHandler, processESP : ProcessPath_EndSubPathHandler) : Void;
+	@:overload public function new(dhnd : sun.java2d.loops.ProcessPath.ProcessPath_DrawHandler, processESP : sun.java2d.loops.ProcessPath.ProcessPath_EndSubPathHandler) : Void;
 	
 	@:overload override public function processEndSubPath() : Void;
 	
@@ -152,13 +152,13 @@ extern class ProcessPath
 	
 	public var lastPoint : Bool;
 	
-	public var prev : ProcessPath_Point;
+	public var prev : sun.java2d.loops.ProcessPath.ProcessPath_Point;
 	
-	public var next : ProcessPath_Point;
+	public var next : sun.java2d.loops.ProcessPath.ProcessPath_Point;
 	
-	public var nextByY : ProcessPath_Point;
+	public var nextByY : sun.java2d.loops.ProcessPath.ProcessPath_Point;
 	
-	public var edge : ProcessPath_Edge;
+	public var edge : sun.java2d.loops.ProcessPath.ProcessPath_Edge;
 	
 	@:overload public function new(x : Int, y : Int, lastPoint : Bool) : Void;
 	
@@ -166,7 +166,7 @@ extern class ProcessPath
 }
 @:native('sun$java2d$loops$ProcessPath$Edge') @:internal extern class ProcessPath_Edge
 {
-	@:overload public function new(p : ProcessPath_Point, x : Int, dx : Int, dir : Int) : Void;
+	@:overload public function new(p : sun.java2d.loops.ProcessPath.ProcessPath_Point, x : Int, dx : Int, dir : Int) : Void;
 	
 	
 }
@@ -197,9 +197,9 @@ extern class ProcessPath
 {
 	@:overload public function isEmpty() : Bool;
 	
-	@:overload public function insert(pnt : ProcessPath_Point, cy : Int) : Void;
+	@:overload public function insert(pnt : sun.java2d.loops.ProcessPath.ProcessPath_Point, cy : Int) : Void;
 	
-	@:overload public function delete(e : ProcessPath_Edge) : Void;
+	@:overload public function delete(e : sun.java2d.loops.ProcessPath.ProcessPath_Edge) : Void;
 	
 	/**
 	* Bubble sorting in the ascending order of the linked list.  This
@@ -215,7 +215,7 @@ extern class ProcessPath
 	
 	
 }
-@:native('sun$java2d$loops$ProcessPath$FillProcessHandler') @:internal extern class ProcessPath_FillProcessHandler extends ProcessPath_ProcessHandler
+@:native('sun$java2d$loops$ProcessPath$FillProcessHandler') @:internal extern class ProcessPath_FillProcessHandler extends sun.java2d.loops.ProcessPath.ProcessPath_ProcessHandler
 {
 	/* Note: For more easy reading of the code below each java version of
 	* the macros from the ProcessPath.c preceded by the commented

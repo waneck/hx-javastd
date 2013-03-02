@@ -52,7 +52,7 @@ extern class PatternBuilder
 	
 	@:overload public function new() : Void;
 	
-	@:overload public function new(parent : PatternBuilder) : Void;
+	@:overload public function new(parent : com.sun.xml.internal.rngom.binary.PatternBuilder) : Void;
 	
 	
 }

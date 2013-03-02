@@ -51,7 +51,7 @@ extern class BinaryCode implements sun.tools.java.Constants
 	/**
 	* Load a binary class
 	*/
-	@:overload public static function load(bf : sun.tools.java.BinaryMember, cpool : sun.tools.java.BinaryConstantPool, env : sun.tools.java.Environment) : BinaryCode;
+	@:overload public static function load(bf : sun.tools.java.BinaryMember, cpool : sun.tools.java.BinaryConstantPool, env : sun.tools.java.Environment) : sun.tools.java.BinaryCode;
 	
 	
 }

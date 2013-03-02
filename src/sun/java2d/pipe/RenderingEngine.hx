@@ -51,7 +51,7 @@ extern class RenderingEngine
 	* @return an instance of {@code RenderingEngine}
 	* @since 1.7
 	*/
-	@:require(java7) @:overload @:synchronized public static function getInstance() : RenderingEngine;
+	@:require(java7) @:overload @:synchronized public static function getInstance() : sun.java2d.pipe.RenderingEngine;
 	
 	/**
 	* Create a widened path as specified by the parameters.
@@ -228,9 +228,9 @@ extern class RenderingEngine
 	
 	
 }
-@:native('sun$java2d$pipe$RenderingEngine$Tracer') @:internal extern class RenderingEngine_Tracer extends RenderingEngine
+@:native('sun$java2d$pipe$RenderingEngine$Tracer') @:internal extern class RenderingEngine_Tracer extends sun.java2d.pipe.RenderingEngine
 {
-	@:overload public function new(target : RenderingEngine) : Void;
+	@:overload public function new(target : sun.java2d.pipe.RenderingEngine) : Void;
 	
 	@:overload override public function createStrokedShape(src : java.awt.Shape, width : Single, caps : Int, join : Int, miterlimit : Single, dashes : java.NativeArray<Single>, dashphase : Single) : java.awt.Shape;
 	

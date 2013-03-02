@@ -46,7 +46,7 @@ extern class CloseableURLClassLoader extends java.net.URLClassLoader implements 
 	* @throws java.io.IOException if the jar files cannot be found for any
 	* reson, or if closing the jar file itself causes an IOException.
 	*/
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

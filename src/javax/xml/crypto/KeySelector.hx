@@ -59,7 +59,7 @@ extern class KeySelector
 	* @throws ClassCastException if the data type of <code>method</code>
 	*    is not supported by this key selector
 	*/
-	@:overload @:abstract public function select(keyInfo : javax.xml.crypto.dsig.keyinfo.KeyInfo, purpose : KeySelector_Purpose, method : javax.xml.crypto.AlgorithmMethod, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.KeySelectorResult;
+	@:overload @:abstract public function select(keyInfo : javax.xml.crypto.dsig.keyinfo.KeyInfo, purpose : javax.xml.crypto.KeySelector.KeySelector_Purpose, method : javax.xml.crypto.AlgorithmMethod, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.KeySelectorResult;
 	
 	/**
 	* Returns a <code>KeySelector</code> that always selects the specified
@@ -69,7 +69,7 @@ extern class KeySelector
 	* @return a key selector that always selects the specified key
 	* @throws NullPointerException if <code>key</code> is <code>null</code>
 	*/
-	@:overload public static function singletonKeySelector(key : java.security.Key) : KeySelector;
+	@:overload public static function singletonKeySelector(key : java.security.Key) : javax.xml.crypto.KeySelector;
 	
 	
 }
@@ -89,28 +89,28 @@ extern class KeySelector
 	/**
 	* A key for signing.
 	*/
-	public static var SIGN(default, null) : KeySelector_Purpose;
+	public static var SIGN(default, null) : javax.xml.crypto.KeySelector.KeySelector_Purpose;
 	
 	/**
 	* A key for verifying.
 	*/
-	public static var VERIFY(default, null) : KeySelector_Purpose;
+	public static var VERIFY(default, null) : javax.xml.crypto.KeySelector.KeySelector_Purpose;
 	
 	/**
 	* A key for encrypting.
 	*/
-	public static var ENCRYPT(default, null) : KeySelector_Purpose;
+	public static var ENCRYPT(default, null) : javax.xml.crypto.KeySelector.KeySelector_Purpose;
 	
 	/**
 	* A key for decrypting.
 	*/
-	public static var DECRYPT(default, null) : KeySelector_Purpose;
+	public static var DECRYPT(default, null) : javax.xml.crypto.KeySelector.KeySelector_Purpose;
 	
 	
 }
-@:native('javax$xml$crypto$KeySelector$SingletonKeySelector') @:internal extern class KeySelector_SingletonKeySelector extends KeySelector
+@:native('javax$xml$crypto$KeySelector$SingletonKeySelector') @:internal extern class KeySelector_SingletonKeySelector extends javax.xml.crypto.KeySelector
 {
-	@:overload override public function select(keyInfo : javax.xml.crypto.dsig.keyinfo.KeyInfo, purpose : KeySelector_Purpose, method : javax.xml.crypto.AlgorithmMethod, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.KeySelectorResult;
+	@:overload override public function select(keyInfo : javax.xml.crypto.dsig.keyinfo.KeyInfo, purpose : javax.xml.crypto.KeySelector.KeySelector_Purpose, method : javax.xml.crypto.AlgorithmMethod, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.KeySelectorResult;
 	
 	
 }

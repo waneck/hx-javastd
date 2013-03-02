@@ -25,7 +25,7 @@ package com.sun.jndi.dns;
 */
 @:internal extern class ZoneNode extends com.sun.jndi.dns.NameNode
 {
-	@:overload override private function newNameNode(label : String) : com.sun.jndi.dns.NameNode;
+	@:overload private function newNameNode(label : String) : com.sun.jndi.dns.NameNode;
 	
 	
 }

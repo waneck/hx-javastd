@@ -36,22 +36,22 @@ extern class XClipboard extends sun.awt.datatransfer.SunClipboard implements sun
 	*/
 	@:overload public function ownershipChanged(isOwner : Bool) : Void;
 	
-	@:overload @:synchronized override private function setContentsNative(contents : java.awt.datatransfer.Transferable) : Void;
+	@:overload @:synchronized private function setContentsNative(contents : java.awt.datatransfer.Transferable) : Void;
 	
-	@:overload override public function getID() : haxe.Int64;
+	@:overload public function getID() : haxe.Int64;
 	
-	@:overload @:synchronized override public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
+	@:overload @:synchronized public function getContents(requestor : Dynamic) : java.awt.datatransfer.Transferable;
 	
 	/* Caller is synchronized on this. */
-	@:overload override private function clearNativeContext() : Void;
+	@:overload private function clearNativeContext() : Void;
 	
-	@:overload override private function getClipboardFormats() : java.NativeArray<haxe.Int64>;
+	@:overload private function getClipboardFormats() : java.NativeArray<haxe.Int64>;
 	
-	@:overload override private function getClipboardData(format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
+	@:overload private function getClipboardData(format : haxe.Int64) : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override private function registerClipboardViewerChecked() : Void;
+	@:overload private function registerClipboardViewerChecked() : Void;
 	
-	@:overload override private function unregisterClipboardViewerChecked() : Void;
+	@:overload private function unregisterClipboardViewerChecked() : Void;
 	
 	
 }

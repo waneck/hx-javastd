@@ -63,7 +63,7 @@ extern class Model extends com.sun.tools.internal.ws.processor.model.ModelObject
 	/* serialization */
 	@:overload public function setExtraTypesSet(s : java.util.Set<com.sun.tools.internal.ws.processor.model.AbstractType>) : Void;
 	
-	@:overload override public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
+	@:overload public function accept(visitor : com.sun.tools.internal.ws.processor.model.ModelVisitor) : Void;
 	
 	/**
 	* @return the source version

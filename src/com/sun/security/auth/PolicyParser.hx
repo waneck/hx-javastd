@@ -46,11 +46,11 @@ package com.sun.security.auth;
 	*/
 	@:overload public function read(policy : java.io.Reader) : Void;
 	
-	@:overload public function add(ge : PolicyParser_GrantEntry) : Void;
+	@:overload public function add(ge : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Void;
 	
-	@:overload public function replace(origGe : PolicyParser_GrantEntry, newGe : PolicyParser_GrantEntry) : Void;
+	@:overload public function replace(origGe : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry, newGe : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Void;
 	
-	@:overload public function remove(ge : PolicyParser_GrantEntry) : Bool;
+	@:overload public function remove(ge : com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry) : Bool;
 	
 	/**
 	* Returns the (possibly expanded) keystore location, or null if the
@@ -70,7 +70,7 @@ package com.sun.security.auth;
 	* should use the Enumeration methods on the returned object
 	* to fetch the elements sequentially.
 	*/
-	@:overload public function grantElements() : java.util.Enumeration<PolicyParser_GrantEntry>;
+	@:overload public function grantElements() : java.util.Enumeration<com.sun.security.auth.PolicyParser.PolicyParser_GrantEntry>;
 	
 	/**
 	* write out the policy
@@ -116,24 +116,24 @@ package com.sun.security.auth;
 	
 	public var codeBase : String;
 	
-	public var principals : java.util.LinkedList<PolicyParser_PrincipalEntry>;
+	public var principals : java.util.LinkedList<com.sun.security.auth.PolicyParser.PolicyParser_PrincipalEntry>;
 	
-	public var permissionEntries : java.util.Vector<PolicyParser_PermissionEntry>;
+	public var permissionEntries : java.util.Vector<com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry>;
 	
 	@:overload public function new() : Void;
 	
 	@:overload public function new(signedBy : String, codeBase : String) : Void;
 	
-	@:overload public function add(pe : PolicyParser_PermissionEntry) : Void;
+	@:overload public function add(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Void;
 	
-	@:overload public function remove(pe : PolicyParser_PermissionEntry) : Bool;
+	@:overload public function remove(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Bool;
 	
-	@:overload public function contains(pe : PolicyParser_PermissionEntry) : Bool;
+	@:overload public function contains(pe : com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry) : Bool;
 	
 	/**
 	* Enumerate all the permission entries in this GrantEntry.
 	*/
-	@:overload public function permissionElements() : java.util.Enumeration<PolicyParser_PermissionEntry>;
+	@:overload public function permissionElements() : java.util.Enumeration<com.sun.security.auth.PolicyParser.PolicyParser_PermissionEntry>;
 	
 	@:overload public function write(out : java.io.PrintWriter) : Void;
 	

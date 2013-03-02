@@ -69,7 +69,7 @@ extern class ServiceInterceptor
 	/**
 	* Aggregates multiple interceptors into one facade.
 	*/
-	@:overload public static function aggregate(interceptors : java.NativeArray<ServiceInterceptor>) : ServiceInterceptor;
+	@:overload public static function aggregate(interceptors : java.NativeArray<com.sun.xml.internal.ws.api.client.ServiceInterceptor>) : com.sun.xml.internal.ws.api.client.ServiceInterceptor;
 	
 	
 }

@@ -29,7 +29,7 @@ extern class DummyScope implements sun.reflect.generics.scope.Scope
 	* Factory method. Enforces the singleton pattern - only one
 	* instance of this class ever exists.
 	*/
-	@:overload public static function make() : DummyScope;
+	@:overload public static function make() : sun.reflect.generics.scope.DummyScope;
 	
 	/**
 	* Lookup a type variable in the scope, using its name. Always returns

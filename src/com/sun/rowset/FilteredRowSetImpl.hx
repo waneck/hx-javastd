@@ -70,7 +70,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @return true if over the valid row in the rowset; false if over the last
 	* row
 	*/
-	@:overload override private function internalNext() : Bool;
+	@:overload private function internalNext() : Bool;
 	
 	/**
 	* Over-riding <code>internalPrevious()</code> implementation. This method
@@ -82,7 +82,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @return true if over the valid row in the rowset; false if over the last
 	* row
 	*/
-	@:overload override private function internalPrevious() : Bool;
+	@:overload private function internalPrevious() : Bool;
 	
 	/**
 	* Over-riding <code>internalFirst()</code> implementation. This method
@@ -94,7 +94,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @return true if over the valid row in the rowset; false if over the last
 	* row
 	*/
-	@:overload override private function internalFirst() : Bool;
+	@:overload private function internalFirst() : Bool;
 	
 	/**
 	* Over-riding <code>internalLast()</code> implementation. This method
@@ -106,7 +106,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @return true if over the valid row in the rowset; false if over the last
 	* row
 	*/
-	@:overload override private function internalLast() : Bool;
+	@:overload private function internalLast() : Bool;
 	
 	/**
 	* Moves the cursor the specified number of rows from the current
@@ -161,7 +161,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*         otherwise
 	* @throws SQLException if the rowset is type <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload override public function relative(rows : Int) : Bool;
+	@:overload public function relative(rows : Int) : Bool;
 	
 	/**
 	* Moves this <code>CachedRowSetImpl</code> object's cursor to the row number
@@ -210,7 +210,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @throws SQLException if the given cursor position is <code>0</code> or the
 	*            type of this rowset is <code>ResultSet.TYPE_FORWARD_ONLY</code>
 	*/
-	@:overload override public function absolute(rows : Int) : Bool;
+	@:overload public function absolute(rows : Int) : Bool;
 	
 	/**
 	* Moves the cursor for this <code>CachedRowSetImpl</code> object
@@ -238,7 +238,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @throws SQLException if this <code>CachedRowSetImpl</code> object is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function moveToInsertRow() : Void;
+	@:overload public function moveToInsertRow() : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -263,7 +263,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateInt(columnIndex : Int, x : Int) : Void;
+	@:overload public function updateInt(columnIndex : Int, x : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -287,7 +287,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateInt(columnName : String, x : Int) : Void;
+	@:overload public function updateInt(columnName : String, x : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -312,7 +312,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBoolean(columnIndex : Int, x : Bool) : Void;
+	@:overload public function updateBoolean(columnIndex : Int, x : Bool) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -336,7 +336,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBoolean(columnName : String, x : Bool) : Void;
+	@:overload public function updateBoolean(columnName : String, x : Bool) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -361,7 +361,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
+	@:overload public function updateByte(columnIndex : Int, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -385,7 +385,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
+	@:overload public function updateByte(columnName : String, x : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -410,7 +410,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
+	@:overload public function updateShort(columnIndex : Int, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -434,7 +434,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
+	@:overload public function updateShort(columnName : String, x : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -459,7 +459,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
+	@:overload public function updateLong(columnIndex : Int, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -483,7 +483,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateLong(columnName : String, x : haxe.Int64) : Void;
+	@:overload public function updateLong(columnName : String, x : haxe.Int64) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -508,7 +508,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateFloat(columnIndex : Int, x : Single) : Void;
+	@:overload public function updateFloat(columnIndex : Int, x : Single) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -532,7 +532,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateFloat(columnName : String, x : Single) : Void;
+	@:overload public function updateFloat(columnName : String, x : Single) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -557,7 +557,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateDouble(columnIndex : Int, x : Float) : Void;
+	@:overload public function updateDouble(columnIndex : Int, x : Float) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -581,7 +581,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateDouble(columnName : String, x : Float) : Void;
+	@:overload public function updateDouble(columnName : String, x : Float) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -606,7 +606,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
+	@:overload public function updateBigDecimal(columnIndex : Int, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -630,7 +630,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
+	@:overload public function updateBigDecimal(columnName : String, x : java.math.BigDecimal) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -658,7 +658,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateString(columnIndex : Int, x : String) : Void;
+	@:overload public function updateString(columnIndex : Int, x : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -682,7 +682,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateString(columnName : String, x : String) : Void;
+	@:overload public function updateString(columnName : String, x : String) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -707,7 +707,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function updateBytes(columnIndex : Int, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -731,7 +731,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function updateBytes(columnName : String, x : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -757,7 +757,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            an SQL <code>DATE</code> or <code>TIMESTAMP</code>, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
+	@:overload public function updateDate(columnIndex : Int, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -783,7 +783,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateDate(columnName : String, x : java.sql.Date) : Void;
+	@:overload public function updateDate(columnName : String, x : java.sql.Date) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -809,7 +809,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            an SQL <code>TIME</code> or <code>TIMESTAMP</code>, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
+	@:overload public function updateTime(columnIndex : Int, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -835,7 +835,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateTime(columnName : String, x : java.sql.Time) : Void;
+	@:overload public function updateTime(columnName : String, x : java.sql.Time) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -862,7 +862,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            <code>TIMESTAMP</code>, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
+	@:overload public function updateTimestamp(columnIndex : Int, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -891,7 +891,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            <code>TIME</code>, or <code>TIMESTAMP</code>, or (4) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
+	@:overload public function updateTimestamp(columnName : String, x : java.sql.Timestamp) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -914,7 +914,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @param length the number of one-byte ASCII characters in the stream
 	* @throws SQLException if this method is invoked
 	*/
-	@:overload override public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload public function updateAsciiStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -935,7 +935,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	* @param x the new column value
 	* @param length the number of one-byte ASCII characters in the stream
 	*/
-	@:overload override public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload public function updateAsciiStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -965,7 +965,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            character type, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
+	@:overload public function updateCharacterStream(columnIndex : Int, x : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -994,7 +994,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            in the stream is not a binary or character type, or (4) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateCharacterStream(columnName : String, reader : java.io.Reader, length : Int) : Void;
+	@:overload public function updateCharacterStream(columnName : String, reader : java.io.Reader, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1022,7 +1022,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, (3) the data in the stream is not binary, or
 	*            (4) this rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
+	@:overload public function updateBinaryStream(columnIndex : Int, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1050,7 +1050,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            in the stream is not binary, or (4) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
+	@:overload public function updateBinaryStream(columnName : String, x : java.io.InputStream, length : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1075,7 +1075,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateObject(columnIndex : Int, x : Dynamic) : Void;
+	@:overload public function updateObject(columnIndex : Int, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1099,7 +1099,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateObject(columnName : String, x : Dynamic) : Void;
+	@:overload public function updateObject(columnName : String, x : Dynamic) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1129,7 +1129,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            insert row, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
+	@:overload public function updateObject(columnIndex : Int, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Sets the designated column in either the current row or the insert
@@ -1158,7 +1158,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            one of this rowset's rows or its insert row, or (3) this
 	*            rowset is <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
+	@:overload public function updateObject(columnName : String, x : Dynamic, scale : Int) : Void;
 	
 	/**
 	* Inserts the contents of this <code>CachedRowSetImpl</code> object's insert
@@ -1175,7 +1175,7 @@ extern class FilteredRowSetImpl extends com.sun.rowset.WebRowSetImpl implements 
 	*            row has not been given a value, or (3) this rowset is
 	*            <code>ResultSet.CONCUR_READ_ONLY</code>
 	*/
-	@:overload override public function insertRow() : Void;
+	@:overload public function insertRow() : Void;
 	
 	
 }

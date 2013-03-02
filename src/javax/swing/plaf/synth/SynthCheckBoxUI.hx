@@ -31,12 +31,12 @@ extern class SynthCheckBoxUI extends javax.swing.plaf.synth.SynthRadioButtonUI
 	* @param b component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(b : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function getPropertyPrefix() : String;
+	@:overload private function getPropertyPrefix() : String;
 	
 	/**
 	* @inheritDoc

@@ -23,7 +23,7 @@ package com.sun.xml.internal.bind.v2.runtime;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Name implements java.lang.Comparable<Name>
+extern class Name implements java.lang.Comparable<com.sun.xml.internal.bind.v2.runtime.Name>
 {
 	/**
 	* Namespace URI. interned.
@@ -61,7 +61,7 @@ extern class Name implements java.lang.Comparable<Name>
 	
 	@:overload public function equals(nsUri : String, localName : String) : Bool;
 	
-	@:overload public function compareTo(that : Name) : Int;
+	@:overload public function compareTo(that : com.sun.xml.internal.bind.v2.runtime.Name) : Int;
 	
 	
 }

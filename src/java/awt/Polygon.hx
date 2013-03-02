@@ -303,7 +303,7 @@ extern class Polygon implements java.awt.Shape implements java.io.Serializable
 }
 @:native('java$awt$Polygon$PolygonPathIterator') @:internal extern class Polygon_PolygonPathIterator implements java.awt.geom.PathIterator
 {
-	@:overload public function new(pg : Polygon, at : java.awt.geom.AffineTransform) : Void;
+	@:overload public function new(pg : java.awt.Polygon, at : java.awt.geom.AffineTransform) : Void;
 	
 	/**
 	* Returns the winding rule for determining the interior of the

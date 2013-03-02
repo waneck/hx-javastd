@@ -32,7 +32,7 @@ extern class BasicCheckBoxMenuItemUI extends javax.swing.plaf.basic.BasicMenuIte
 	* @author David Karlton
 	* @author Arnaud Weber
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override private function getPropertyPrefix() : String;
 	

@@ -47,7 +47,7 @@ extern class OSFCodeSetRegistry
 	* 8-bit encoding required for GIOP 1.0, and used as the char set
 	* when nothing else is specified.
 	*/
-	public static var ISO_8859_1(default, null) : OSFCodeSetRegistry_Entry;
+	public static var ISO_8859_1(default, null) : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry;
 	
 	/**
 	* Fallback wchar code set.
@@ -56,14 +56,14 @@ extern class OSFCodeSetRegistry
 	* doesn't have to have a byte order marker.  Unfortunately, this has to be
 	* a special case for compatibility.
 	*/
-	public static var UTF_16(default, null) : OSFCodeSetRegistry_Entry;
+	public static var UTF_16(default, null) : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry;
 	
 	/**
 	* Fallback char code set.  Also the code set for char data
 	* in encapsulations.  However, since CORBA says chars are
 	* only one octet, it is really the same as Latin-1.
 	*/
-	public static var UTF_8(default, null) : OSFCodeSetRegistry_Entry;
+	public static var UTF_8(default, null) : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry;
 	
 	/*
 	* At least in JDK 1.3, UCS-2 isn't one of the mandatory Java character
@@ -76,7 +76,7 @@ extern class OSFCodeSetRegistry
 	* If a foreign ORB actually tries to speak UCS2 with us, it probably
 	* won't work!  Beware!
 	*/
-	public static var UCS_2(default, null) : OSFCodeSetRegistry_Entry;
+	public static var UCS_2(default, null) : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry;
 	
 	/**
 	* This is the encoding older JavaSoft ORBs advertised as their
@@ -84,13 +84,13 @@ extern class OSFCodeSetRegistry
 	* the Java char.  This is a 7-bit encoding, so they
 	* were really sending ISO8859-1.
 	*/
-	public static var ISO_646(default, null) : OSFCodeSetRegistry_Entry;
+	public static var ISO_646(default, null) : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry;
 	
 	/**
 	* Given an OSF registry value, return the corresponding Entry.
 	* Returns null if an Entry for that value is unavailable.
 	*/
-	@:overload public static function lookupEntry(encodingValue : Int) : OSFCodeSetRegistry_Entry;
+	@:overload public static function lookupEntry(encodingValue : Int) : com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.OSFCodeSetRegistry_Entry;
 	
 	
 }

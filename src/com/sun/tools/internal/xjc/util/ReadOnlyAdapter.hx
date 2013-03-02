@@ -30,7 +30,7 @@ extern class ReadOnlyAdapter<OnTheWire, InMemory> extends javax.xml.bind.annotat
 	*
 	* @author Kohsuke Kawaguchi
 	*/
-	@:overload @:final override public function marshal(onTheWire : InMemory) : OnTheWire;
+	@:overload @:final public function marshal(onTheWire : InMemory) : OnTheWire;
 	
 	
 }

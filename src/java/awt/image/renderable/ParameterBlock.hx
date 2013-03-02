@@ -80,7 +80,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing the specified
 	*         <code>source</code>.
 	*/
-	@:overload public function addSource(source : Dynamic) : ParameterBlock;
+	@:overload public function addSource(source : Dynamic) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Returns a source as a general Object.  The caller must cast it into
@@ -107,7 +107,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	*         <code>index</code>.
 	* @see #getSource(int)
 	*/
-	@:overload public function setSource(source : Dynamic, index : Int) : ParameterBlock;
+	@:overload public function setSource(source : Dynamic, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Returns a source as a <code>RenderedImage</code>.  This method is
@@ -189,7 +189,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(obj : Dynamic) : ParameterBlock;
+	@:overload public function add(obj : Dynamic) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Adds a Byte to the list of parameters.
@@ -198,7 +198,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(b : java.StdTypes.Int8) : ParameterBlock;
+	@:overload public function add(b : java.StdTypes.Int8) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Adds a Character to the list of parameters.
@@ -207,7 +207,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(c : java.StdTypes.Char16) : ParameterBlock;
+	@:overload public function add(c : java.StdTypes.Char16) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Adds a Short to the list of parameters.
@@ -216,7 +216,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(s : java.StdTypes.Int16) : ParameterBlock;
+	@:overload public function add(s : java.StdTypes.Int16) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Adds a Integer to the list of parameters.
@@ -225,7 +225,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(i : Int) : ParameterBlock;
+	@:overload public function add(i : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Adds a Long to the list of parameters.
@@ -234,7 +234,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(l : haxe.Int64) : ParameterBlock;
+	@:overload public function add(l : haxe.Int64) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Adds a Float to the list of parameters.
@@ -243,7 +243,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(f : Single) : ParameterBlock;
+	@:overload public function add(f : Single) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Adds a Double to the list of parameters.
@@ -252,7 +252,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*         the specified parameter.
 	*/
-	@:overload public function add(d : Float) : ParameterBlock;
+	@:overload public function add(d : Float) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters.
@@ -266,7 +266,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(obj : Dynamic, index : Int) : ParameterBlock;
+	@:overload public function set(obj : Dynamic, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters with a Byte.
@@ -280,7 +280,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(b : java.StdTypes.Int8, index : Int) : ParameterBlock;
+	@:overload public function set(b : java.StdTypes.Int8, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters with a Character.
@@ -294,7 +294,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(c : java.StdTypes.Char16, index : Int) : ParameterBlock;
+	@:overload public function set(c : java.StdTypes.Char16, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters with a Short.
@@ -308,7 +308,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(s : java.StdTypes.Int16, index : Int) : ParameterBlock;
+	@:overload public function set(s : java.StdTypes.Int16, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters with an Integer.
@@ -322,7 +322,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(i : Int, index : Int) : ParameterBlock;
+	@:overload public function set(i : Int, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters with a Long.
@@ -336,7 +336,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(l : haxe.Int64, index : Int) : ParameterBlock;
+	@:overload public function set(l : haxe.Int64, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters with a Float.
@@ -350,7 +350,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(f : Single, index : Int) : ParameterBlock;
+	@:overload public function set(f : Single, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Replaces an Object in the list of parameters with a Double.
@@ -364,7 +364,7 @@ extern class ParameterBlock implements java.lang.Cloneable implements java.io.Se
 	* @return a new <code>ParameterBlock</code> containing
 	*        the specified parameter.
 	*/
-	@:overload public function set(d : Float, index : Int) : ParameterBlock;
+	@:overload public function set(d : Float, index : Int) : java.awt.image.renderable.ParameterBlock;
 	
 	/**
 	* Gets a parameter as an object.

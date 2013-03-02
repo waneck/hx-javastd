@@ -49,13 +49,13 @@ extern class CharacterRangeTable_attribute extends com.sun.tools.classfile.Attri
 	
 	public static var CRT_BRANCH_FALSE(default, null) : Int;
 	
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, character_range_table : java.NativeArray<CharacterRangeTable_attribute_Entry>) : Void;
+	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, character_range_table : java.NativeArray<com.sun.tools.classfile.CharacterRangeTable_attribute.CharacterRangeTable_attribute_Entry>) : Void;
 	
-	@:overload public function new(name_index : Int, character_range_table : java.NativeArray<CharacterRangeTable_attribute_Entry>) : Void;
+	@:overload public function new(name_index : Int, character_range_table : java.NativeArray<com.sun.tools.classfile.CharacterRangeTable_attribute.CharacterRangeTable_attribute_Entry>) : Void;
 	
 	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
-	public var character_range_table(default, null) : java.NativeArray<CharacterRangeTable_attribute_Entry>;
+	public var character_range_table(default, null) : java.NativeArray<com.sun.tools.classfile.CharacterRangeTable_attribute.CharacterRangeTable_attribute_Entry>;
 	
 	
 }

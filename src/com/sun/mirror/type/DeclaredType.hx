@@ -46,7 +46,7 @@ extern interface DeclaredType extends com.sun.mirror.type.ReferenceType
 	* @return the type that contains this type,
 	* or <tt>null</tt> if this is a top-level type
 	*/
-	@:overload public function getContainingType() : DeclaredType;
+	@:overload public function getContainingType() : com.sun.mirror.type.DeclaredType;
 	
 	/**
 	* Returns (in order) the actual type arguments of this type.

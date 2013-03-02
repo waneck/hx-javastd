@@ -25,7 +25,7 @@ package sun.swing.plaf.synth;
 */
 extern class SynthFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserUI implements javax.swing.plaf.synth.SynthUI
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload public function new(b : javax.swing.JFileChooser) : Void;
 	
@@ -41,7 +41,7 @@ extern class SynthFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload override private function installListeners(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload @:abstract override private function createActionMap() : javax.swing.ActionMap;
+	@:overload @:abstract private function createActionMap() : javax.swing.ActionMap;
 	
 	@:overload override private function installDefaults(fc : javax.swing.JFileChooser) : Void;
 	
@@ -49,11 +49,11 @@ extern class SynthFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload override private function installIcons(fc : javax.swing.JFileChooser) : Void;
 	
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	@:overload public function paintBorder(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics, x : Int, y : Int, w : Int, h : Int) : Void;
 	
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	@:overload private function paint(context : javax.swing.plaf.synth.SynthContext, g : java.awt.Graphics) : Void;
 	
@@ -127,11 +127,11 @@ extern class SynthFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 }
 @:native('sun$swing$plaf$synth$SynthFileChooserUI$UIBorder') @:internal extern class SynthFileChooserUI_UIBorder extends javax.swing.border.AbstractBorder implements javax.swing.plaf.UIResource
 {
-	@:overload override public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
+	@:overload public function paintBorder(c : java.awt.Component, g : java.awt.Graphics, x : Int, y : Int, width : Int, height : Int) : Void;
 	
-	@:overload override public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
+	@:overload public function getBorderInsets(c : java.awt.Component, insets : java.awt.Insets) : java.awt.Insets;
 	
-	@:overload override public function isBorderOpaque() : Bool;
+	@:overload public function isBorderOpaque() : Bool;
 	
 	
 }

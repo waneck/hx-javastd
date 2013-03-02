@@ -114,9 +114,9 @@ extern class Imports implements sun.tools.java.Constants
 }
 @:internal extern class ImportEnvironment extends sun.tools.java.Environment
 {
-	@:overload override public function resolve(nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
+	@:overload public function resolve(nm : sun.tools.java.Identifier) : sun.tools.java.Identifier;
 	
-	@:overload override public function getImports() : Imports;
+	@:overload public function getImports() : sun.tools.java.Imports;
 	
 	
 }

@@ -67,14 +67,14 @@ extern class JConsole extends javax.swing.JFrame implements java.awt.event.Actio
 }
 @:native('sun$tools$jconsole$JConsole$FixedJRootPane') @:internal extern class JConsole_FixedJRootPane extends javax.swing.JRootPane
 {
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* The revalidate method seems to be the only one that gets
 	* called whenever there is a change of L&F or change of theme
 	* in Windows L&F and GTK L&F.
 	*/
-	@:overload override public function revalidate() : Void;
+	@:overload public function revalidate() : Void;
 	
 	
 }

@@ -35,7 +35,7 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	
 	public static var kValueTypeCode(default, null) : org.omg.CORBA.TypeCode;
 	
-	@:overload override private function getStreamFormatVersion() : java.StdTypes.Int8;
+	@:overload private function getStreamFormatVersion() : java.StdTypes.Int8;
 	
 	@:overload public static function setTestFVDFlag(val : Bool) : Void;
 	
@@ -46,7 +46,7 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	
 	@:overload @:final public function setOrbStream(os : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	
-	@:overload @:final override public function getOrbStream() : org.omg.CORBA_2_3.portable.InputStream;
+	@:overload @:final public function getOrbStream() : org.omg.CORBA_2_3.portable.InputStream;
 	
 	@:overload @:final public function setSender(cb : com.sun.org.omg.SendingContext.CodeBase) : Void;
 	
@@ -131,7 +131,7 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	*              objects.
 	* @since     JDK1.1
 	*/
-	@:require(java1) @:overload @:final override public function defaultReadObjectDelegate() : Void;
+	@:require(java1) @:overload @:final public function defaultReadObjectDelegate() : Void;
 	
 	/**
 	* Override the actions of the final method "enableResolveObject()"
@@ -151,11 +151,11 @@ extern class IIOPInputStream extends com.sun.corba.se.impl.io.InputStreamHook
 	@:require(java1) @:overload @:final public function enableResolveObjectDelegate(enable : Bool) : Bool;
 	
 	/* throws SecurityException */
-	@:overload @:final override public function mark(readAheadLimit : Int) : Void;
+	@:overload @:final public function mark(readAheadLimit : Int) : Void;
 	
-	@:overload @:final override public function markSupported() : Bool;
+	@:overload @:final public function markSupported() : Bool;
 	
-	@:overload @:final override public function reset() : Void;
+	@:overload @:final public function reset() : Void;
 	
 	@:overload @:final override public function available() : Int;
 	

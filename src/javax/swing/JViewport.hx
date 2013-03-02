@@ -460,7 +460,7 @@ extern class JViewport extends javax.swing.JComponent implements javax.accessibi
 	* Creates a listener for the view.
 	* @return a <code>ViewListener</code>
 	*/
-	@:overload private function createViewListener() : JViewport_ViewListener;
+	@:overload private function createViewListener() : javax.swing.JViewport.JViewport_ViewListener;
 	
 	/**
 	* Subclassers can override this to install a different

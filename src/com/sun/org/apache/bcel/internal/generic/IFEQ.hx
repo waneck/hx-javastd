@@ -70,7 +70,7 @@ extern class IFEQ extends com.sun.org.apache.bcel.internal.generic.IfInstruction
 	/**
 	* @return negation of instruction, e.g. IFEQ.negate() == IFNE
 	*/
-	@:overload override public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
+	@:overload public function negate() : com.sun.org.apache.bcel.internal.generic.IfInstruction;
 	
 	/**
 	* Call corresponding visitor method(s). The order is:
@@ -80,7 +80,7 @@ extern class IFEQ extends com.sun.org.apache.bcel.internal.generic.IfInstruction
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

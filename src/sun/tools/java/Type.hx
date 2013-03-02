@@ -42,41 +42,41 @@ extern class Type implements sun.tools.java.Constants
 	/*
 	* Predefined types.
 	*/
-	public static var noArgs(default, null) : java.NativeArray<Type>;
+	public static var noArgs(default, null) : java.NativeArray<sun.tools.java.Type>;
 	
-	public static var tError(default, null) : Type;
+	public static var tError(default, null) : sun.tools.java.Type;
 	
-	public static var tPackage(default, null) : Type;
+	public static var tPackage(default, null) : sun.tools.java.Type;
 	
-	public static var tNull(default, null) : Type;
+	public static var tNull(default, null) : sun.tools.java.Type;
 	
-	public static var tVoid(default, null) : Type;
+	public static var tVoid(default, null) : sun.tools.java.Type;
 	
-	public static var tBoolean(default, null) : Type;
+	public static var tBoolean(default, null) : sun.tools.java.Type;
 	
-	public static var tByte(default, null) : Type;
+	public static var tByte(default, null) : sun.tools.java.Type;
 	
-	public static var tChar(default, null) : Type;
+	public static var tChar(default, null) : sun.tools.java.Type;
 	
-	public static var tShort(default, null) : Type;
+	public static var tShort(default, null) : sun.tools.java.Type;
 	
-	public static var tInt(default, null) : Type;
+	public static var tInt(default, null) : sun.tools.java.Type;
 	
-	public static var tFloat(default, null) : Type;
+	public static var tFloat(default, null) : sun.tools.java.Type;
 	
-	public static var tLong(default, null) : Type;
+	public static var tLong(default, null) : sun.tools.java.Type;
 	
-	public static var tDouble(default, null) : Type;
+	public static var tDouble(default, null) : sun.tools.java.Type;
 	
-	public static var tObject(default, null) : Type;
+	public static var tObject(default, null) : sun.tools.java.Type;
 	
-	public static var tClassDesc(default, null) : Type;
+	public static var tClassDesc(default, null) : sun.tools.java.Type;
 	
-	public static var tString(default, null) : Type;
+	public static var tString(default, null) : sun.tools.java.Type;
 	
-	public static var tCloneable(default, null) : Type;
+	public static var tCloneable(default, null) : sun.tools.java.Type;
 	
-	public static var tSerializable(default, null) : Type;
+	public static var tSerializable(default, null) : sun.tools.java.Type;
 	
 	/**
 	* Create a type given a typecode and a type signature.
@@ -124,13 +124,13 @@ extern class Type implements sun.tools.java.Constants
 	/**
 	* Create an array type.
 	*/
-	@:overload @:synchronized public static function tArray(elem : Type) : Type;
+	@:overload @:synchronized public static function tArray(elem : sun.tools.java.Type) : sun.tools.java.Type;
 	
 	/**
 	* Return the element type of an array type. Only works
 	* for array types.
 	*/
-	@:overload public function getElementType() : Type;
+	@:overload public function getElementType() : sun.tools.java.Type;
 	
 	/**
 	* Return the array dimension. Only works for
@@ -142,7 +142,7 @@ extern class Type implements sun.tools.java.Constants
 	* Create a class type.
 	* @arg className the fully qualified class name
 	*/
-	@:overload @:synchronized public static function tClass(className : sun.tools.java.Identifier) : Type;
+	@:overload @:synchronized public static function tClass(className : sun.tools.java.Identifier) : sun.tools.java.Type;
 	
 	/**
 	* Return the ClassName. Only works on class types.
@@ -161,35 +161,35 @@ extern class Type implements sun.tools.java.Constants
 	/**
 	* Create a method type with no arguments.
 	*/
-	@:overload @:synchronized public static function tMethod(ret : Type) : Type;
+	@:overload @:synchronized public static function tMethod(ret : sun.tools.java.Type) : sun.tools.java.Type;
 	
 	/**
 	* Create a method type with arguments.
 	*/
-	@:overload @:synchronized public static function tMethod(returnType : Type, argTypes : java.NativeArray<Type>) : Type;
+	@:overload @:synchronized public static function tMethod(returnType : sun.tools.java.Type, argTypes : java.NativeArray<sun.tools.java.Type>) : sun.tools.java.Type;
 	
 	/**
 	* Return the return type. Only works for method types.
 	*/
-	@:overload public function getReturnType() : Type;
+	@:overload public function getReturnType() : sun.tools.java.Type;
 	
 	/**
 	* Return the argument types. Only works for method types.
 	*/
-	@:overload public function getArgumentTypes() : java.NativeArray<Type>;
+	@:overload public function getArgumentTypes() : java.NativeArray<sun.tools.java.Type>;
 	
 	/**
 	* Create a Type from an Java type signature.
 	* @exception CompilerError invalid type signature.
 	*/
-	@:overload @:synchronized public static function tType(sig : String) : Type;
+	@:overload @:synchronized public static function tType(sig : String) : sun.tools.java.Type;
 	
 	/**
 	* Check if the type arguments are the same.
 	* @return true if both types are method types and the
 	* argument types are identical.
 	*/
-	@:overload public function equalArguments(t : Type) : Bool;
+	@:overload public function equalArguments(t : sun.tools.java.Type) : Bool;
 	
 	/**
 	* Return the amount of space this type takes up on the

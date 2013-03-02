@@ -111,19 +111,19 @@ package com.sun.xml.internal.dtdparser;
 	
 	
 }
-@:native('com$sun$xml$internal$dtdparser$XmlReader$Utf8Reader') @:internal extern class XmlReader_Utf8Reader extends XmlReader_BaseReader
+@:native('com$sun$xml$internal$dtdparser$XmlReader$Utf8Reader') @:internal extern class XmlReader_Utf8Reader extends com.sun.xml.internal.dtdparser.XmlReader.XmlReader_BaseReader
 {
 	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
 	
 	
 }
-@:native('com$sun$xml$internal$dtdparser$XmlReader$AsciiReader') @:internal extern class XmlReader_AsciiReader extends XmlReader_BaseReader
+@:native('com$sun$xml$internal$dtdparser$XmlReader$AsciiReader') @:internal extern class XmlReader_AsciiReader extends com.sun.xml.internal.dtdparser.XmlReader.XmlReader_BaseReader
 {
 	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
 	
 	
 }
-@:native('com$sun$xml$internal$dtdparser$XmlReader$Iso8859_1Reader') @:internal extern class XmlReader_Iso8859_1Reader extends XmlReader_BaseReader
+@:native('com$sun$xml$internal$dtdparser$XmlReader$Iso8859_1Reader') @:internal extern class XmlReader_Iso8859_1Reader extends com.sun.xml.internal.dtdparser.XmlReader.XmlReader_BaseReader
 {
 	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Char16>, offset : Int, len : Int) : Int;
 	

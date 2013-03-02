@@ -25,21 +25,21 @@ package sun.nio.ch;
 */
 @:internal extern class MembershipKeyImpl extends java.nio.channels.MembershipKey
 {
-	@:overload override public function isValid() : Bool;
+	@:overload public function isValid() : Bool;
 	
-	@:overload override public function drop() : Void;
+	@:overload public function drop() : Void;
 	
-	@:overload override public function channel() : java.nio.channels.MulticastChannel;
+	@:overload public function channel() : java.nio.channels.MulticastChannel;
 	
-	@:overload override public function group() : java.net.InetAddress;
+	@:overload public function group() : java.net.InetAddress;
 	
-	@:overload override public function networkInterface() : java.net.NetworkInterface;
+	@:overload public function networkInterface() : java.net.NetworkInterface;
 	
-	@:overload override public function sourceAddress() : java.net.InetAddress;
+	@:overload public function sourceAddress() : java.net.InetAddress;
 	
-	@:overload override public function block(toBlock : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload public function block(toBlock : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
-	@:overload override public function unblock(toUnblock : java.net.InetAddress) : java.nio.channels.MembershipKey;
+	@:overload public function unblock(toUnblock : java.net.InetAddress) : java.nio.channels.MembershipKey;
 	
 	@:overload public function toString() : String;
 	
@@ -48,14 +48,14 @@ package sun.nio.ch;
 /**
 * MembershipKey will additional context for IPv4 membership
 */
-@:native('sun$nio$ch$MembershipKeyImpl$Type4') @:internal extern class MembershipKeyImpl_Type4 extends MembershipKeyImpl
+@:native('sun$nio$ch$MembershipKeyImpl$Type4') @:internal extern class MembershipKeyImpl_Type4 extends sun.nio.ch.MembershipKeyImpl
 {
 	
 }
 /**
 * MembershipKey will additional context for IPv6 membership
 */
-@:native('sun$nio$ch$MembershipKeyImpl$Type6') @:internal extern class MembershipKeyImpl_Type6 extends MembershipKeyImpl
+@:native('sun$nio$ch$MembershipKeyImpl$Type6') @:internal extern class MembershipKeyImpl_Type6 extends sun.nio.ch.MembershipKeyImpl
 {
 	
 }

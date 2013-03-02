@@ -130,7 +130,7 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	
 	@:overload private function new(gc : sun.java2d.opengl.OGLGraphicsConfig, cm : java.awt.image.ColorModel, type : Int) : Void;
 	
-	@:overload public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
+	@:overload override public function makeProxyFor(srcData : sun.java2d.SurfaceData) : sun.java2d.SurfaceDataProxy;
 	
 	/**
 	* Initializes the appropriate OpenGL offscreen surface based on the value

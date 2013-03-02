@@ -29,7 +29,7 @@ extern class ClassScope extends sun.reflect.generics.scope.AbstractScope<Class<D
 	* Overrides the abstract method in the superclass.
 	* @return the enclosing scope
 	*/
-	@:overload override private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
+	@:overload private function computeEnclosingScope() : sun.reflect.generics.scope.Scope;
 	
 	/**
 	* Factory method. Takes a <tt>Class</tt> object and creates a
@@ -37,7 +37,7 @@ extern class ClassScope extends sun.reflect.generics.scope.AbstractScope<Class<D
 	* @param c - a Class whose scope we want to obtain
 	* @return The type-variable scope for the class c
 	*/
-	@:overload public static function make(c : Class<Dynamic>) : ClassScope;
+	@:overload public static function make(c : Class<Dynamic>) : sun.reflect.generics.scope.ClassScope;
 	
 	
 }

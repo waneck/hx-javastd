@@ -59,7 +59,7 @@ extern class JulesAATileGenerator implements sun.java2d.pipe.AATileGenerator
 	
 	@:overload public function getTileCount() : Int;
 	
-	@:overload public function getTrapContainer(index : Int) : TileTrapContainer;
+	@:overload public function getTrapContainer(index : Int) : sun.java2d.jules.JulesAATileGenerator.TileTrapContainer;
 	
 	
 }

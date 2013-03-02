@@ -43,7 +43,7 @@ extern class ProblemActionHeader extends com.sun.xml.internal.ws.message.Abstrac
 	
 	@:overload override public function getLocalPart() : String;
 	
-	@:overload override public function getAttribute(nsUri : String, localName : String) : String;
+	@:overload public function getAttribute(nsUri : String, localName : String) : String;
 	
 	@:overload override public function readHeader() : javax.xml.stream.XMLStreamReader;
 	

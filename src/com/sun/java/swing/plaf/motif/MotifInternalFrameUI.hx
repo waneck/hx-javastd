@@ -47,35 +47,35 @@ extern class MotifInternalFrameUI extends javax.swing.plaf.basic.BasicInternalFr
 	*/
 	private var closeMenuKey : javax.swing.KeyStroke;
 	
-	@:native('createUI') @:overload public static function _createUI(w : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(w : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload public function new(w : javax.swing.JInternalFrame) : Void;
 	
-	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
+	@:overload public function installUI(c : javax.swing.JComponent) : Void;
 	
-	@:overload override private function installDefaults() : Void;
+	@:overload private function installDefaults() : Void;
 	
-	@:overload override private function installKeyboardActions() : Void;
+	@:overload private function installKeyboardActions() : Void;
 	
-	@:overload override private function uninstallDefaults() : Void;
+	@:overload private function uninstallDefaults() : Void;
 	
-	@:overload override public function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
+	@:overload public function createNorthPane(w : javax.swing.JInternalFrame) : javax.swing.JComponent;
 	
-	@:overload override public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override private function uninstallKeyboardActions() : Void;
+	@:overload private function uninstallKeyboardActions() : Void;
 	
-	@:overload override private function setupMenuOpenKey() : Void;
+	@:overload private function setupMenuOpenKey() : Void;
 	
-	@:overload override private function setupMenuCloseKey() : Void;
+	@:overload private function setupMenuCloseKey() : Void;
 	
 	/** This method is called when the frame becomes selected.
 	*/
-	@:overload override private function activateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload private function activateFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	/** This method is called when the frame is no longer selected.
 	*/
-	@:overload override private function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
+	@:overload private function deactivateFrame(f : javax.swing.JInternalFrame) : Void;
 	
 	
 }

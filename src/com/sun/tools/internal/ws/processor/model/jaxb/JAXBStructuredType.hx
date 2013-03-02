@@ -52,14 +52,14 @@ extern class JAXBStructuredType extends com.sun.tools.internal.ws.processor.mode
 	/* serialization */
 	@:overload public function setElementMembersList(l : java.util.List<Dynamic>) : Void;
 	
-	@:overload public function addSubtype(type : JAXBStructuredType) : Void;
+	@:overload public function addSubtype(type : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType) : Void;
 	
 	@:overload public function getSubtypes() : java.util.Iterator<Dynamic>;
 	
 	/* (non-Javadoc)
 	* @see JAXBType#isUnwrapped()
 	*/
-	@:overload override public function isUnwrapped() : Bool;
+	@:overload public function isUnwrapped() : Bool;
 	
 	/* serialization */
 	@:overload public function getSubtypesSet() : java.util.Set<Dynamic>;
@@ -67,9 +67,9 @@ extern class JAXBStructuredType extends com.sun.tools.internal.ws.processor.mode
 	/* serialization */
 	@:overload public function setSubtypesSet(s : java.util.Set<Dynamic>) : Void;
 	
-	@:overload public function setParentType(parent : JAXBStructuredType) : Void;
+	@:overload public function setParentType(parent : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType) : Void;
 	
-	@:overload public function getParentType() : JAXBStructuredType;
+	@:overload public function getParentType() : com.sun.tools.internal.ws.processor.model.jaxb.JAXBStructuredType;
 	
 	
 }

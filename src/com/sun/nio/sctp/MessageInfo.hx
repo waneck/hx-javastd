@@ -57,7 +57,7 @@ extern class MessageInfo
 	* @throws  IllegalArgumentException
 	*          If the streamNumber is negative or greater than {@code 65536}
 	*/
-	@:overload public static function createOutgoing(address : java.net.SocketAddress, streamNumber : Int) : MessageInfo;
+	@:overload public static function createOutgoing(address : java.net.SocketAddress, streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Creates a {@code MessageInfo} instance suitable for use when
@@ -87,7 +87,7 @@ extern class MessageInfo
 	*          If {@code association} is {@code null}, or the streamNumber is
 	*          negative or greater than {@code 65536}
 	*/
-	@:overload public static function createOutgoing(association : com.sun.nio.sctp.Association, address : java.net.SocketAddress, streamNumber : Int) : MessageInfo;
+	@:overload public static function createOutgoing(association : com.sun.nio.sctp.Association, address : java.net.SocketAddress, streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Returns the source socket address if the message has been received,
@@ -154,7 +154,7 @@ extern class MessageInfo
 	*
 	* @see  MessageInfo#isComplete()
 	*/
-	@:overload @:abstract public function complete(complete : Bool) : MessageInfo;
+	@:overload @:abstract public function complete(complete : Bool) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Tells whether or not the message is unordered. For received messages
@@ -178,7 +178,7 @@ extern class MessageInfo
 	*
 	* @see  MessageInfo#isUnordered()
 	*/
-	@:overload @:abstract public function unordered(unordered : Bool) : MessageInfo;
+	@:overload @:abstract public function unordered(unordered : Bool) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Returns the payload protocol Identifier.
@@ -205,7 +205,7 @@ extern class MessageInfo
 	*
 	* @see  MessageInfo#payloadProtocolID()
 	*/
-	@:overload @:abstract public function payloadProtocolID(ppid : Int) : MessageInfo;
+	@:overload @:abstract public function payloadProtocolID(ppid : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* Returns the stream number that the message was received on, if the
@@ -227,7 +227,7 @@ extern class MessageInfo
 	*
 	* @return  This MessageInfo
 	*/
-	@:overload @:abstract public function streamNumber(streamNumber : Int) : MessageInfo;
+	@:overload @:abstract public function streamNumber(streamNumber : Int) : com.sun.nio.sctp.MessageInfo;
 	
 	/**
 	* The time period that the sending side may expire the message if it has
@@ -251,7 +251,7 @@ extern class MessageInfo
 	*
 	* @see MessageInfo#timeToLive()
 	*/
-	@:overload @:abstract public function timeToLive(millis : haxe.Int64) : MessageInfo;
+	@:overload @:abstract public function timeToLive(millis : haxe.Int64) : com.sun.nio.sctp.MessageInfo;
 	
 	
 }

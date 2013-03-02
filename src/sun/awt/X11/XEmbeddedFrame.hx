@@ -38,18 +38,18 @@ extern class XEmbeddedFrame extends sun.awt.EmbeddedFrame
 	/*
 	* The method shouldn't be called in case of active XEmbed.
 	*/
-	@:overload override public function traverseIn(direction : Bool) : Bool;
+	@:overload public function traverseIn(direction : Bool) : Bool;
 	
-	@:overload override private function traverseOut(direction : Bool) : Bool;
+	@:overload private function traverseOut(direction : Bool) : Bool;
 	
 	/*
 	* The method shouldn't be called in case of active XEmbed.
 	*/
-	@:overload override public function synthesizeWindowActivation(doActivate : Bool) : Void;
+	@:overload public function synthesizeWindowActivation(doActivate : Bool) : Void;
 	
-	@:overload override public function registerAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
+	@:overload public function registerAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
 	
-	@:overload override public function unregisterAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
+	@:overload public function unregisterAccelerator(stroke : java.awt.AWTKeyStroke) : Void;
 	
 	
 }

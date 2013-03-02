@@ -25,7 +25,7 @@ package com.sun.xml.internal.ws.model;
 */
 extern class AbstractWrapperBeanGenerator<T, C, M, A>
 {
-	@:overload private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, Dynamic, M>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, M>, factory : AbstractWrapperBeanGenerator_BeanMemberFactory<T, A>) : Void;
+	@:overload private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<T, C, Dynamic, M>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<T, C, Dynamic, M>, factory : com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<T, A>) : Void;
 	
 	@:overload @:abstract private function getSafeType(type : T) : T;
 	

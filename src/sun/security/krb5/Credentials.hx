@@ -88,7 +88,7 @@ extern class Credentials
 	*/
 	@:overload public function resetDelegate() : Void;
 	
-	@:overload public function renew() : Credentials;
+	@:overload public function renew() : sun.security.krb5.Credentials;
 	
 	/**
 	* Returns a TGT for the given client principal from a ticket cache.
@@ -101,7 +101,7 @@ extern class Credentials
 	* @returns the TGT credentials or null if none were found. If the tgt
 	* expired, it is the responsibility of the caller to determine this.
 	*/
-	@:overload public static function acquireTGTFromCache(princ : sun.security.krb5.PrincipalName, ticketCache : String) : Credentials;
+	@:overload public static function acquireTGTFromCache(princ : sun.security.krb5.PrincipalName, ticketCache : String) : sun.security.krb5.Credentials;
 	
 	/**
 	* Acquires default credentials.
@@ -117,7 +117,7 @@ extern class Credentials
 	* @return a <code>KrbCreds</code> object if the credential is found,
 	* otherwise return null.
 	*/
-	@:overload @:synchronized public static function acquireDefaultCreds() : Credentials;
+	@:overload @:synchronized public static function acquireDefaultCreds() : sun.security.krb5.Credentials;
 	
 	/**
 	* Acquires credentials for a specified service using initial credential.
@@ -136,7 +136,7 @@ extern class Credentials
 	* @exception KrbException if an error occurs specific to Kerberos
 	* @return a <code>Credentials</code> object.
 	*/
-	@:overload public static function acquireServiceCreds(service : String, ccreds : Credentials) : Credentials;
+	@:overload public static function acquireServiceCreds(service : String, ccreds : sun.security.krb5.Credentials) : sun.security.krb5.Credentials;
 	
 	@:overload public function getCache() : sun.security.krb5.internal.ccache.CredentialsCache;
 	
@@ -145,7 +145,7 @@ extern class Credentials
 	/*
 	* Prints out debug info.
 	*/
-	@:overload public static function printDebug(c : Credentials) : Void;
+	@:overload public static function printDebug(c : sun.security.krb5.Credentials) : Void;
 	
 	@:overload public function toString() : String;
 	

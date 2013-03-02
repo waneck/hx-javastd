@@ -315,7 +315,7 @@ package com.sun.security.sasl.digest;
 *
 * @author Jonathan Bruce
 */
-@:native('com$sun$security$sasl$digest$DigestMD5Base$DigestPrivacy') @:internal extern class DigestMD5Base_DigestPrivacy extends DigestMD5Base_DigestIntegrity implements com.sun.security.sasl.digest.SecurityCtx
+@:native('com$sun$security$sasl$digest$DigestMD5Base$DigestPrivacy') @:internal extern class DigestMD5Base_DigestPrivacy extends com.sun.security.sasl.digest.DigestMD5Base.DigestMD5Base_DigestIntegrity implements com.sun.security.sasl.digest.SecurityCtx
 {
 	/**
 	* Encrypt out-going message.

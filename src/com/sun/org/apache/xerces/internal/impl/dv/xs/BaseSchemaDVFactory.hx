@@ -36,7 +36,7 @@ extern class BaseSchemaDVFactory extends com.sun.org.apache.xerces.internal.impl
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload override public function createTypeRestriction(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, base : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload public function createTypeRestriction(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, base : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* Create a new simple type which is derived by list from another simple
@@ -49,7 +49,7 @@ extern class BaseSchemaDVFactory extends com.sun.org.apache.xerces.internal.impl
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload override public function createTypeList(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload public function createTypeList(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, itemType : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	/**
 	* Create a new simple type which is derived by union from a list of other
@@ -62,7 +62,7 @@ extern class BaseSchemaDVFactory extends com.sun.org.apache.xerces.internal.impl
 	* @param annotations       set of annotations
 	* @return                  the newly created simple type
 	*/
-	@:overload override public function createTypeUnion(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
+	@:overload public function createTypeUnion(name : String, targetNamespace : String, finalSet : java.StdTypes.Int16, memberTypes : java.NativeArray<com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType>, annotations : com.sun.org.apache.xerces.internal.xs.XSObjectList) : com.sun.org.apache.xerces.internal.impl.dv.XSSimpleType;
 	
 	@:overload public function setDeclPool(declPool : com.sun.org.apache.xerces.internal.impl.xs.XSDeclarationPool) : Void;
 	

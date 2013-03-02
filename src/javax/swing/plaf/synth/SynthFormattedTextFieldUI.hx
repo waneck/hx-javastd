@@ -31,7 +31,7 @@ extern class SynthFormattedTextFieldUI extends javax.swing.plaf.synth.SynthTextF
 	* @param c the formatted text field
 	* @return the UI
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* Fetches the name used as a key to lookup properties through the

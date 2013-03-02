@@ -45,7 +45,7 @@ extern class VSyncedBSManager
 * An instance of the manager which allows any buffer strategy to be
 * v-synced.
 */
-@:native('sun$awt$image$VSyncedBSManager$NoLimitVSyncBSMgr') @:internal extern class VSyncedBSManager_NoLimitVSyncBSMgr extends VSyncedBSManager
+@:native('sun$awt$image$VSyncedBSManager$NoLimitVSyncBSMgr') @:internal extern class VSyncedBSManager_NoLimitVSyncBSMgr extends sun.awt.image.VSyncedBSManager
 {
 	
 }
@@ -53,11 +53,11 @@ extern class VSyncedBSManager
 * An instance of the manager which allows only one buffer strategy to
 * be v-synced at any give moment in the vm.
 */
-@:native('sun$awt$image$VSyncedBSManager$SingleVSyncedBSMgr') @:internal extern class VSyncedBSManager_SingleVSyncedBSMgr extends VSyncedBSManager
+@:native('sun$awt$image$VSyncedBSManager$SingleVSyncedBSMgr') @:internal extern class VSyncedBSManager_SingleVSyncedBSMgr extends sun.awt.image.VSyncedBSManager
 {
-	@:overload @:synchronized override public function checkAllowed(bs : java.awt.image.BufferStrategy) : Bool;
+	@:overload @:synchronized public function checkAllowed(bs : java.awt.image.BufferStrategy) : Bool;
 	
-	@:overload @:synchronized override public function relinquishVsync(bs : java.awt.image.BufferStrategy) : Void;
+	@:overload @:synchronized public function relinquishVsync(bs : java.awt.image.BufferStrategy) : Void;
 	
 	
 }

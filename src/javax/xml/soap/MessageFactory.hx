@@ -48,7 +48,7 @@ extern class MessageFactory
 	*            <code>MessageFactory</code>.
 	* @see SAAJMetaFactory
 	*/
-	@:overload public static function newInstance() : MessageFactory;
+	@:overload public static function newInstance() : javax.xml.soap.MessageFactory;
 	
 	/**
 	* Creates a new <code>MessageFactory</code> object that is an instance
@@ -74,7 +74,7 @@ extern class MessageFactory
 	* @see SAAJMetaFactory
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload public static function newInstance(protocol : String) : MessageFactory;
+	@:require(java3) @:overload public static function newInstance(protocol : String) : javax.xml.soap.MessageFactory;
 	
 	/**
 	* Creates a new <code>SOAPMessage</code> object with the default

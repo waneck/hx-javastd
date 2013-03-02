@@ -31,7 +31,7 @@ package com.sun.xml.internal.xsom;
 */
 extern interface XSModelGroup extends com.sun.xml.internal.xsom.XSComponent extends com.sun.xml.internal.xsom.XSTerm extends java.lang.Iterable<com.sun.xml.internal.xsom.XSParticle>
 {
-	@:overload public function getCompositor() : XSModelGroup_Compositor;
+	@:overload public function getCompositor() : com.sun.xml.internal.xsom.XSModelGroup.XSModelGroup_Compositor;
 	
 	/**
 	* Gets <i>i</i>-ith child.

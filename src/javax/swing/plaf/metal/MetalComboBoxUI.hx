@@ -41,7 +41,7 @@ package javax.swing.plaf.metal;
 */
 extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 {
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
@@ -96,7 +96,7 @@ extern class MetalComboBoxUI extends javax.swing.plaf.basic.BasicComboBoxUI
 	
 	@:overload override private function createLayoutManager() : java.awt.LayoutManager;
 	
-	@:overload public function layoutComboBox(parent : java.awt.Container, manager : MetalComboBoxUI_MetalComboBoxLayoutManager) : Void;
+	@:overload public function layoutComboBox(parent : java.awt.Container, manager : javax.swing.plaf.metal.MetalComboBoxUI.MetalComboBoxUI_MetalComboBoxLayoutManager) : Void;
 	
 	/**
 	* As of Java 2 platform v1.4 this method is no

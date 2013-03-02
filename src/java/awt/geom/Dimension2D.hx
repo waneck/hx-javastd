@@ -88,7 +88,7 @@ package java.awt.geom;
 	* object
 	* @since 1.2
 	*/
-	@:require(java2) @:overload public function setSize(d : Dimension2D) : Void;
+	@:require(java2) @:overload public function setSize(d : java.awt.geom.Dimension2D) : Void;
 	
 	/**
 	* Creates a new object of the same class as this object.

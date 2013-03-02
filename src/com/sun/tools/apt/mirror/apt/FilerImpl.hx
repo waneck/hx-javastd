@@ -28,7 +28,7 @@ package com.sun.tools.apt.mirror.apt;
 */
 extern class FilerImpl implements com.sun.mirror.apt.Filer
 {
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : FilerImpl;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.apt.mirror.apt.FilerImpl;
 	
 	@:overload public function flush() : Void;
 	

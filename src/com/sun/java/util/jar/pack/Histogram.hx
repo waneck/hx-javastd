@@ -96,13 +96,13 @@ package com.sun.java.util.jar.pack;
 	
 	@:overload public function getRowBitLength(rn : Int) : Float;
 	
-	@:overload public function getBitMetric() : Histogram_BitMetric;
+	@:overload public function getBitMetric() : com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric;
 	
 	/** bit-length is negative entropy:  -H(matrix). */
 	@:overload public function getBitLength() : Float;
 	
 	/** bit-length in to another coding (cross-entropy) */
-	@:overload public function getBitLength(len : Histogram_BitMetric) : Float;
+	@:overload public function getBitLength(len : com.sun.java.util.jar.pack.Histogram.Histogram_BitMetric) : Float;
 	
 	/** Sort rows and columns.
 	*  Merge adjacent rows with the same key element [0].
@@ -124,7 +124,7 @@ package com.sun.java.util.jar.pack;
 	*/
 	@:overload public function print(name : String, histTitles : java.NativeArray<String>, out : java.io.PrintStream) : Void;
 	
-	@:overload public static function makeByteHistogram(bytes : java.io.InputStream) : Histogram;
+	@:overload public static function makeByteHistogram(bytes : java.io.InputStream) : com.sun.java.util.jar.pack.Histogram;
 	
 	
 }

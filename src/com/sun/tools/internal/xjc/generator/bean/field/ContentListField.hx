@@ -33,11 +33,11 @@ extern class ContentListField extends com.sun.tools.internal.xjc.generator.bean.
 	*/
 	@:overload private function new(context : com.sun.tools.internal.xjc.generator.bean.ClassOutlineImpl, prop : com.sun.tools.internal.xjc.model.CPropertyInfo, coreList : com.sun.codemodel.internal.JClass) : Void;
 	
-	@:overload @:final override private function getCoreListType() : com.sun.codemodel.internal.JClass;
+	@:overload @:final private function getCoreListType() : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function generateAccessors() : Void;
+	@:overload public function generateAccessors() : Void;
 	
-	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
+	@:overload public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
 	
 	@:overload override private function getType(aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
@@ -47,9 +47,9 @@ extern class ContentListField extends com.sun.tools.internal.xjc.generator.bean.
 {
 	@:overload override private function new($target : com.sun.codemodel.internal.JExpression) : Void;
 	
-	@:overload override public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
-	@:overload override public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	
 }

@@ -35,11 +35,11 @@ package com.sun.tools.hat.internal.model;
 */
 extern class ReferenceChain
 {
-	@:overload public function new(obj : com.sun.tools.hat.internal.model.JavaHeapObject, next : ReferenceChain) : Void;
+	@:overload public function new(obj : com.sun.tools.hat.internal.model.JavaHeapObject, next : com.sun.tools.hat.internal.model.ReferenceChain) : Void;
 	
 	@:overload public function getObj() : com.sun.tools.hat.internal.model.JavaHeapObject;
 	
-	@:overload public function getNext() : ReferenceChain;
+	@:overload public function getNext() : com.sun.tools.hat.internal.model.ReferenceChain;
 	
 	@:overload public function getDepth() : Int;
 	

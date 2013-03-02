@@ -92,7 +92,7 @@ extern class DOMForest
 	* The client of this class can feed SAX events into the handler
 	* to parse a document into this DOM forest.
 	*/
-	@:overload public function getParserHandler(systemId : String, root : Bool) : DOMForest_Handler;
+	@:overload public function getParserHandler(systemId : String, root : Bool) : com.sun.tools.internal.xjc.reader.internalizer.DOMForest.DOMForest_Handler;
 	
 	/**
 	* Parses the given document and add it to the DOM forest.
@@ -188,7 +188,7 @@ extern class DOMForest
 	
 	
 }
-@:native('com$sun$tools$internal$xjc$reader$internalizer$DOMForest$HandlerImpl') @:internal extern class DOMForest_HandlerImpl extends org.xml.sax.helpers.XMLFilterImpl implements DOMForest_Handler
+@:native('com$sun$tools$internal$xjc$reader$internalizer$DOMForest$HandlerImpl') @:internal extern class DOMForest_HandlerImpl extends org.xml.sax.helpers.XMLFilterImpl implements com.sun.tools.internal.xjc.reader.internalizer.DOMForest.DOMForest_Handler
 {
 	/**
 	* Receive notification of the beginning of a document.

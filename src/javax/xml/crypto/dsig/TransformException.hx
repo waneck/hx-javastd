@@ -76,13 +76,13 @@ extern class TransformException extends java.lang.Exception
 	* @return the cause of this <code>TransformException</code> or
 	*         <code>null</code> if the cause is nonexistent or unknown.
 	*/
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	/**
 	* Prints this <code>TransformException</code>, its backtrace and
 	* the cause's backtrace to the standard error stream.
 	*/
-	@:overload override public function printStackTrace() : Void;
+	@:overload public function printStackTrace() : Void;
 	
 	/**
 	* Prints this <code>TransformException</code>, its backtrace and
@@ -90,7 +90,7 @@ extern class TransformException extends java.lang.Exception
 	*
 	* @param s <code>PrintStream</code> to use for output
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintStream) : Void;
+	@:overload public function printStackTrace(s : java.io.PrintStream) : Void;
 	
 	/**
 	* Prints this <code>TransformException</code>, its backtrace and
@@ -98,7 +98,7 @@ extern class TransformException extends java.lang.Exception
 	*
 	* @param s <code>PrintWriter</code> to use for output
 	*/
-	@:overload override public function printStackTrace(s : java.io.PrintWriter) : Void;
+	@:overload public function printStackTrace(s : java.io.PrintWriter) : Void;
 	
 	
 }

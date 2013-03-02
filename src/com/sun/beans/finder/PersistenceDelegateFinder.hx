@@ -29,7 +29,7 @@ extern class PersistenceDelegateFinder extends com.sun.beans.finder.InstanceFind
 	
 	@:overload public function register(type : Class<Dynamic>, delegate : java.beans.PersistenceDelegate) : Void;
 	
-	@:overload override public function find(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
+	@:overload public function find(type : Class<Dynamic>) : java.beans.PersistenceDelegate;
 	
 	
 }

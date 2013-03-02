@@ -43,15 +43,15 @@ extern class StandardMBeanSupport extends com.sun.jmx.mbeanserver.MBeanSupport<j
 	*/
 	@:overload public function new<T>(resource : T, mbeanInterfaceType : Class<T>) : Void;
 	
-	@:overload override public function register(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
+	@:overload public function register(mbs : javax.management.MBeanServer, name : javax.management.ObjectName) : Void;
 	
-	@:overload override public function unregister() : Void;
+	@:overload public function unregister() : Void;
 	
 	/* Standard MBeans that are NotificationBroadcasters can return a different
 	* MBeanNotificationInfo[] every time getMBeanInfo() is called, so we have
 	* to reconstruct this MBeanInfo if necessary.
 	*/
-	@:overload override public function getMBeanInfo() : javax.management.MBeanInfo;
+	@:overload public function getMBeanInfo() : javax.management.MBeanInfo;
 	
 	
 }

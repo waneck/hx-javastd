@@ -36,7 +36,7 @@ extern class SafePolicyReader
 	* @param baseUrl The system id of the document read by the reader.
 	* @return The policy that was read from the XML stream.
 	*/
-	@:overload public function readPolicyElement(reader : javax.xml.stream.XMLStreamReader, baseUrl : String) : SafePolicyReader_PolicyRecord;
+	@:overload public function readPolicyElement(reader : javax.xml.stream.XMLStreamReader, baseUrl : String) : com.sun.xml.internal.ws.policy.jaxws.SafePolicyReader.SafePolicyReader_PolicyRecord;
 	
 	@:overload public function getUrlsRead() : java.util.Set<String>;
 	

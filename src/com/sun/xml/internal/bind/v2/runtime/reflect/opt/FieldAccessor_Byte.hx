@@ -35,9 +35,9 @@ extern class FieldAccessor_Byte extends com.sun.xml.internal.bind.v2.runtime.ref
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload override public function get(bean : Dynamic) : Dynamic;
+	@:overload public function get(bean : Dynamic) : Dynamic;
 	
-	@:overload override public function set(bean : Dynamic, value : Dynamic) : Void;
+	@:overload public function set(bean : Dynamic, value : Dynamic) : Void;
 	
 	
 }

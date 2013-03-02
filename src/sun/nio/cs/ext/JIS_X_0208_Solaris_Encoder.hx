@@ -29,7 +29,7 @@ extern class JIS_X_0208_Solaris_Encoder extends sun.nio.cs.ext.DoubleByteEncoder
 {
 	@:overload public function new(cs : java.nio.charset.Charset) : Void;
 	
-	@:overload override private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
+	@:overload private function encodeSingle(inputChar : java.StdTypes.Char16) : Int;
 	
 	/**
 	* These accessors are temporarily supplied while sun.io

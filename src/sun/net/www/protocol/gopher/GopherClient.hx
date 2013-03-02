@@ -64,7 +64,7 @@ extern class GopherClient extends sun.net.NetworkClient implements java.lang.Run
 }
 @:internal extern class GopherInputStream extends java.io.FilterInputStream
 {
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

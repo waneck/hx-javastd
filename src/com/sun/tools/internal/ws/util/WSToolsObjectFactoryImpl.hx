@@ -30,9 +30,9 @@ extern class WSToolsObjectFactoryImpl extends com.sun.tools.internal.ws.spi.WSTo
 	*
 	* @author JAX-WS Development Team
 	*/
-	@:overload override public function wsimport(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
+	@:overload public function wsimport(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
 	
-	@:overload override public function wsgen(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
+	@:overload public function wsgen(logStream : java.io.OutputStream, container : com.sun.xml.internal.ws.api.server.Container, args : java.NativeArray<String>) : Bool;
 	
 	
 }

@@ -38,7 +38,7 @@ extern class XBaseMenuWindow extends sun.awt.X11.XWindow
 	/**
 	* Returns parent menu window (not the X-heirarchy parent window)
 	*/
-	@:overload @:abstract private function getParentMenuWindow() : XBaseMenuWindow;
+	@:overload @:abstract private function getParentMenuWindow() : sun.awt.X11.XBaseMenuWindow;
 	
 	/**
 	* Performs mapping of items in window.
@@ -48,7 +48,7 @@ extern class XBaseMenuWindow extends sun.awt.X11.XWindow
 	* This function should return default menu data
 	* if errors occur
 	*/
-	@:overload @:abstract private function map() : XBaseMenuWindow_MappingData;
+	@:overload @:abstract private function map() : sun.awt.X11.XBaseMenuWindow.XBaseMenuWindow_MappingData;
 	
 	/**
 	* Calculates placement of submenu window
@@ -102,7 +102,7 @@ extern class XBaseMenuWindow extends sun.awt.X11.XWindow
 	/**
 	* Invokes disposal procedure on eventHandlerThread
 	*/
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	/**
 	* Performs disposal of menu window.

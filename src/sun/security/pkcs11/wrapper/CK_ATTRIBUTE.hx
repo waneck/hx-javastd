@@ -60,37 +60,37 @@ package sun.security.pkcs11.wrapper;
 */
 extern class CK_ATTRIBUTE
 {
-	public static var TOKEN_FALSE(default, null) : CK_ATTRIBUTE;
+	public static var TOKEN_FALSE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var SENSITIVE_FALSE(default, null) : CK_ATTRIBUTE;
+	public static var SENSITIVE_FALSE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var EXTRACTABLE_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var EXTRACTABLE_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var ENCRYPT_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var ENCRYPT_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var DECRYPT_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var DECRYPT_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var WRAP_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var WRAP_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var UNWRAP_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var UNWRAP_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var SIGN_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var SIGN_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var VERIFY_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var VERIFY_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var SIGN_RECOVER_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var SIGN_RECOVER_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var VERIFY_RECOVER_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var VERIFY_RECOVER_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var DERIVE_TRUE(default, null) : CK_ATTRIBUTE;
+	public static var DERIVE_TRUE(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var ENCRYPT_NULL(default, null) : CK_ATTRIBUTE;
+	public static var ENCRYPT_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var DECRYPT_NULL(default, null) : CK_ATTRIBUTE;
+	public static var DECRYPT_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var WRAP_NULL(default, null) : CK_ATTRIBUTE;
+	public static var WRAP_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
-	public static var UNWRAP_NULL(default, null) : CK_ATTRIBUTE;
+	public static var UNWRAP_NULL(default, null) : sun.security.pkcs11.wrapper.CK_ATTRIBUTE;
 	
 	@:overload public function new() : Void;
 	

@@ -74,7 +74,7 @@ package com.sun.beans.decoder;
 	* @return the value of this element
 	* @throws Exception if calculation is failed
 	*/
-	@:overload @:final override private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
+	@:overload @:final private function getValueObject(type : Class<Dynamic>, args : java.NativeArray<Dynamic>) : com.sun.beans.decoder.ValueObject;
 	
 	
 }

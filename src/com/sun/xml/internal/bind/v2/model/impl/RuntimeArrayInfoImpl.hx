@@ -27,7 +27,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 {
 	@:overload override public function getType() : Class<Dynamic>;
 	
-	@:overload override public function getItemType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
+	@:overload public function getItemType() : com.sun.xml.internal.bind.v2.model.runtime.RuntimeNonElement;
 	
 	@:overload public function getTransducer<V>() : com.sun.xml.internal.bind.v2.runtime.Transducer<V>;
 	

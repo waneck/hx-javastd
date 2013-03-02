@@ -72,7 +72,7 @@ extern class APOptions extends sun.security.krb5.internal.util.KerberosFlags
 	* @exception IOException if an I/O error occurs while reading encoded data.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : APOptions;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.APOptions;
 	
 	
 }

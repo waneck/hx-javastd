@@ -52,7 +52,7 @@ extern interface NativeHeaderTool extends javax.tools.Tool extends javax.tools.O
 	* compilation units are of other kind than
 	* {@linkplain JavaFileObject.Kind#SOURCE source}
 	*/
-	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : NativeHeaderTool_NativeHeaderTask;
+	@:overload public function getTask(out : java.io.Writer, fileManager : javax.tools.JavaFileManager, diagnosticListener : javax.tools.DiagnosticListener<javax.tools.JavaFileObject>, options : java.lang.Iterable<String>, classes : java.lang.Iterable<String>) : com.sun.tools.javah.NativeHeaderTool.NativeHeaderTool_NativeHeaderTask;
 	
 	/**
 	* Gets a new instance of the standard file manager implementation

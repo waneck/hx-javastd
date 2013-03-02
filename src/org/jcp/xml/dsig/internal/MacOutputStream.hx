@@ -24,13 +24,13 @@ extern class MacOutputStream extends java.io.ByteArrayOutputStream
 	@:overload public function new(mac : javax.crypto.Mac) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
+	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : Int) : Void;
+	@:overload public function write(arg0 : Int) : Void;
 	
 	/** @inheritDoc */
-	@:overload override public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
+	@:overload public function write(arg0 : java.NativeArray<java.StdTypes.Int8>, arg1 : Int, arg2 : Int) : Void;
 	
 	
 }

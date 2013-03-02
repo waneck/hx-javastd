@@ -107,7 +107,7 @@ extern class IINC extends com.sun.org.apache.bcel.internal.generic.LocalVariable
 	*
 	* @param v Visitor object
 	*/
-	@:overload override public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
+	@:overload public function accept(v : com.sun.org.apache.bcel.internal.generic.Visitor) : Void;
 	
 	
 }

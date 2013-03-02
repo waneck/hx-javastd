@@ -208,14 +208,14 @@ extern class Timer
 	* The timer must not already be in the queue.
 	* Assumes the caller has the TimerThread monitor.
 	*/
-	@:overload private static function enqueue(timer : Timer) : Void;
+	@:overload private static function enqueue(timer : sun.misc.Timer) : Void;
 	
 	/*
 	* If the timer is not in the queue, returns false;
 	* otherwise removes the timer from the timer queue and returns true.
 	* Assumes the caller has the TimerThread monitor.
 	*/
-	@:overload private static function dequeue(timer : Timer) : Bool;
+	@:overload private static function dequeue(timer : sun.misc.Timer) : Bool;
 	
 	/*
 	* Inserts the timer back into the queue.  This method
@@ -224,7 +224,7 @@ extern class Timer
 	* the sleepUntil field.
 	* Assumes the caller has the TimerThread and Timer monitor.
 	*/
-	@:overload private static function requeue(timer : Timer) : Void;
+	@:overload private static function requeue(timer : sun.misc.Timer) : Void;
 	
 	
 }
@@ -236,7 +236,7 @@ extern class Timer
 	* is available, otherwise, a new thread is created.
 	* The thread handle is returned.
 	*/
-	@:overload @:synchronized private static function call(timer : Timer, sleepUntil : haxe.Int64) : TimerTickThread;
+	@:overload @:synchronized private static function call(timer : sun.misc.Timer, sleepUntil : haxe.Int64) : sun.misc.Timer.TimerTickThread;
 	
 	@:overload override public function run() : Void;
 	

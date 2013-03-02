@@ -25,13 +25,13 @@ package sun.tools.serialver;
 */
 extern class SerialVer extends java.applet.Applet
 {
-	@:overload @:synchronized override public function init() : Void;
+	@:overload @:synchronized public function init() : Void;
 	
-	@:overload override public function start() : Void;
+	@:overload public function start() : Void;
 	
-	@:overload override public function action(ev : java.awt.Event, obj : Dynamic) : Bool;
+	@:overload public function action(ev : java.awt.Event, obj : Dynamic) : Bool;
 	
-	@:overload override public function handleEvent(ev : java.awt.Event) : Bool;
+	@:overload public function handleEvent(ev : java.awt.Event) : Bool;
 	
 	@:overload public static function main(args : java.NativeArray<String>) : Void;
 	
@@ -47,12 +47,12 @@ extern class SerialVer extends java.applet.Applet
 	/*
 	* Handle a window destroy event by exiting.
 	*/
-	@:overload override public function handleEvent(e : java.awt.Event) : Bool;
+	@:overload public function handleEvent(e : java.awt.Event) : Bool;
 	
 	/*
 	* Handle an Exit event by exiting.
 	*/
-	@:overload override public function action(ev : java.awt.Event, obj : Dynamic) : Bool;
+	@:overload public function action(ev : java.awt.Event, obj : Dynamic) : Bool;
 	
 	
 }

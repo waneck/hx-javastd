@@ -53,7 +53,7 @@ extern class MotifFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload override public function createPropertyChangeListener(fc : javax.swing.JFileChooser) : java.beans.PropertyChangeListener;
 	
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	@:overload override public function installUI(c : javax.swing.JComponent) : Void;
 	
@@ -75,17 +75,17 @@ extern class MotifFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload private function createDirectoryList() : javax.swing.JScrollPane;
 	
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMinimumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(x : javax.swing.JComponent) : java.awt.Dimension;
 	
-	@:overload override public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(x : javax.swing.JComponent) : java.awt.Dimension;
 	
 	@:overload private function align(c : javax.swing.JComponent) : Void;
 	
-	@:overload private function createFilterComboBoxModel() : MotifFileChooserUI_FilterComboBoxModel;
+	@:overload private function createFilterComboBoxModel() : com.sun.java.swing.plaf.motif.MotifFileChooserUI.MotifFileChooserUI_FilterComboBoxModel;
 	
-	@:overload private function createFilterComboBoxRenderer() : MotifFileChooserUI_FilterComboBoxRenderer;
+	@:overload private function createFilterComboBoxRenderer() : com.sun.java.swing.plaf.motif.MotifFileChooserUI.MotifFileChooserUI_FilterComboBoxRenderer;
 	
 	@:overload override private function getApproveButton(fc : javax.swing.JFileChooser) : javax.swing.JButton;
 	
@@ -107,9 +107,9 @@ extern class MotifFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
@@ -125,13 +125,13 @@ extern class MotifFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
 	@:overload public function contains(o : Dynamic) : Bool;
 	
 	@:overload public function indexOf(o : Dynamic) : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	@:overload public function intervalAdded(e : javax.swing.event.ListDataEvent) : Void;
 	
@@ -167,9 +167,9 @@ extern class MotifFileChooserUI extends javax.swing.plaf.basic.BasicFileChooserU
 	
 	@:overload public function getSelectedItem() : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
 	
 }

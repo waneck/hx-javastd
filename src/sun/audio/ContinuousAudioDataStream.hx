@@ -46,9 +46,9 @@ extern class ContinuousAudioDataStream extends sun.audio.AudioDataStream
 	*/
 	@:overload public function new(data : sun.audio.AudioData) : Void;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
-	@:overload override public function read(ab : java.NativeArray<java.StdTypes.Int8>, i1 : Int, j : Int) : Int;
+	@:overload public function read(ab : java.NativeArray<java.StdTypes.Int8>, i1 : Int, j : Int) : Int;
 	
 	
 }

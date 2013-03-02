@@ -98,7 +98,7 @@ extern class JOp
 	
 	
 }
-@:native('com$sun$codemodel$internal$JOp$TightUnaryOp') @:internal extern class JOp_TightUnaryOp extends JOp_UnaryOp
+@:native('com$sun$codemodel$internal$JOp$TightUnaryOp') @:internal extern class JOp_TightUnaryOp extends com.sun.codemodel.internal.JOp.JOp_UnaryOp
 {
 	@:overload override public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	

@@ -50,7 +50,7 @@ package com.sun.tools.jdi;
 	* @return the map associating argument names with argument
 	* information and default value.
 	*/
-	@:overload override public function defaultArguments() : java.util.Map<String, Connector_Argument>;
+	@:overload override public function defaultArguments() : java.util.Map<String, com.sun.jdi.connect.Connector.Connector_Argument>;
 	
 	
 }

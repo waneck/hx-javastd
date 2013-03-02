@@ -33,15 +33,15 @@ extern class NativeFont extends sun.font.PhysicalFont
 	
 	@:overload public static function fontExists(xlfd : String) : Bool;
 	
-	@:overload override public function getMapper() : sun.font.CharToGlyphMapper;
+	@:overload public function getMapper() : sun.font.CharToGlyphMapper;
 	
 	@:overload public function getMaxCharBounds(frc : java.awt.font.FontRenderContext) : java.awt.geom.Rectangle2D;
 	
-	@:overload override public function getGlyphOutline(pScalerContext : haxe.Int64, glyphCode : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
+	@:overload public function getGlyphOutline(pScalerContext : haxe.Int64, glyphCode : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
 	
-	@:overload override public function getGlyphVectorOutline(pScalerContext : haxe.Int64, glyphs : java.NativeArray<Int>, numGlyphs : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
+	@:overload public function getGlyphVectorOutline(pScalerContext : haxe.Int64, glyphs : java.NativeArray<Int>, numGlyphs : Int, x : Single, y : Single) : java.awt.geom.GeneralPath;
 	
-	@:overload override public function getNumGlyphs() : Int;
+	@:overload public function getNumGlyphs() : Int;
 	
 	@:overload public function toString() : String;
 	

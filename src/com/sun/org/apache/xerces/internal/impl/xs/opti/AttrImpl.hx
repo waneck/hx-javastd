@@ -82,11 +82,11 @@ extern class AttrImpl extends com.sun.org.apache.xerces.internal.impl.xs.opti.No
 	
 	@:overload public function getValue() : String;
 	
-	@:overload override public function getNodeValue() : String;
+	@:overload public function getNodeValue() : String;
 	
 	@:overload public function getOwnerElement() : org.w3c.dom.Element;
 	
-	@:overload override public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	@:overload public function setValue(value : String) : Void;
 	

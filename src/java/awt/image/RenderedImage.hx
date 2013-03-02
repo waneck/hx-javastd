@@ -42,7 +42,7 @@ extern interface RenderedImage
 	* no immediate sources.
 	* @return a Vector of <code>RenderedImage</code> objects.
 	*/
-	@:overload public function getSources() : java.util.Vector<RenderedImage>;
+	@:overload public function getSources() : java.util.Vector<java.awt.image.RenderedImage>;
 	
 	/**
 	* Gets a property from the property set of this image.  The set of

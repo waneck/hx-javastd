@@ -39,14 +39,14 @@ extern class SAXInputSource extends com.sun.org.apache.xerces.internal.xni.parse
 	*
 	* @param publicId The new public identifier.
 	*/
-	@:overload override public function setPublicId(publicId : String) : Void;
+	@:overload public function setPublicId(publicId : String) : Void;
 	
 	/**
 	* Sets the system identifier.
 	*
 	* @param systemId The new system identifier.
 	*/
-	@:overload override public function setSystemId(systemId : String) : Void;
+	@:overload public function setSystemId(systemId : String) : Void;
 	
 	/**
 	* Sets the byte stream. If the byte stream is not already opened
@@ -57,7 +57,7 @@ extern class SAXInputSource extends com.sun.org.apache.xerces.internal.xni.parse
 	*
 	* @param byteStream The new byte stream.
 	*/
-	@:overload override public function setByteStream(byteStream : java.io.InputStream) : Void;
+	@:overload public function setByteStream(byteStream : java.io.InputStream) : Void;
 	
 	/**
 	* Sets the character stream. If the character stream is not already
@@ -70,14 +70,14 @@ extern class SAXInputSource extends com.sun.org.apache.xerces.internal.xni.parse
 	*
 	* @see #setEncoding
 	*/
-	@:overload override public function setCharacterStream(charStream : java.io.Reader) : Void;
+	@:overload public function setCharacterStream(charStream : java.io.Reader) : Void;
 	
 	/**
 	* Sets the encoding of the stream.
 	*
 	* @param encoding The new encoding.
 	*/
-	@:overload override public function setEncoding(encoding : String) : Void;
+	@:overload public function setEncoding(encoding : String) : Void;
 	
 	
 }

@@ -106,7 +106,7 @@ package java.awt;
 	* modify the appearance of the label without changing its
 	* functionality.
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload public function addNotify() : Void;
 	
 	/**
 	* Gets the current alignment of this label. Possible values are
@@ -154,7 +154,7 @@ package java.awt;
 	*
 	* @return     the parameter string of this label
 	*/
-	@:overload override private function paramString() : String;
+	@:overload private function paramString() : String;
 	
 	/**
 	* Gets the AccessibleContext associated with this Label.
@@ -166,7 +166,7 @@ package java.awt;
 	*         AccessibleContext of this Label
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -187,7 +187,7 @@ package java.awt;
 	* object does not have a name
 	* @see AccessibleContext#setAccessibleName
 	*/
-	@:overload override public function getAccessibleName() : String;
+	@:overload public function getAccessibleName() : String;
 	
 	/**
 	* Get the role of this object.
@@ -195,7 +195,7 @@ package java.awt;
 	* @return an instance of AccessibleRole describing the role of the object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

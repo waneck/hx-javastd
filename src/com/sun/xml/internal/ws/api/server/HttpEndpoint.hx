@@ -32,7 +32,7 @@ extern class HttpEndpoint
 	* @param endpoint that needs to be deployed at http server
 	* @return transport object for the endpoint
 	*/
-	@:overload public static function create(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : HttpEndpoint;
+	@:overload public static function create(endpoint : com.sun.xml.internal.ws.api.server.WSEndpoint<Dynamic>) : com.sun.xml.internal.ws.api.server.HttpEndpoint;
 	
 	/**
 	* Publishes this endpoint at a localhost's http address.

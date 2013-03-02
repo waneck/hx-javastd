@@ -89,7 +89,7 @@ extern class HttpServerProvider
 	*
 	* @return  The system-wide default HttpServerProvider
 	*/
-	@:overload public static function provider() : HttpServerProvider;
+	@:overload public static function provider() : com.sun.net.httpserver.spi.HttpServerProvider;
 	
 	
 }

@@ -77,7 +77,7 @@ extern class ElementBeanInfoImpl extends com.sun.xml.internal.bind.v2.runtime.Ja
 {
 	@:overload public function new(core : com.sun.xml.internal.bind.v2.runtime.unmarshaller.Loader) : Void;
 	
-	@:overload @:final override public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
+	@:overload @:final public function startElement(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, ea : com.sun.xml.internal.bind.v2.runtime.unmarshaller.TagName) : Void;
 	
 	@:overload public function intercept(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, o : Dynamic) : Dynamic;
 	

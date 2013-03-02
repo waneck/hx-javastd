@@ -40,9 +40,9 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	/*
 	* XSGrammarPoolContainer methods
 	*/
-	@:overload override public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
-	@:overload override public function isFullyComposed() : Bool;
+	@:overload public function isFullyComposed() : Bool;
 	
 	
 }

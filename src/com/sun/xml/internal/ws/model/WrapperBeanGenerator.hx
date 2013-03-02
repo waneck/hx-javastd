@@ -27,9 +27,9 @@ extern class WrapperBeanGenerator
 {
 	
 }
-@:native('com$sun$xml$internal$ws$model$WrapperBeanGenerator$RuntimeWrapperBeanGenerator') @:internal extern class WrapperBeanGenerator_RuntimeWrapperBeanGenerator extends com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Method, WrapperBeanGenerator_Field>
+@:native('com$sun$xml$internal$ws$model$WrapperBeanGenerator$RuntimeWrapperBeanGenerator') @:internal extern class WrapperBeanGenerator_RuntimeWrapperBeanGenerator extends com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator<java.lang.reflect.Type, Class<Dynamic>, java.lang.reflect.Method, com.sun.xml.internal.ws.model.WrapperBeanGenerator.WrapperBeanGenerator_Field>
 {
-	@:overload private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<java.lang.reflect.Type, Class<Dynamic>, Dynamic, java.lang.reflect.Method>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<java.lang.reflect.Type, Class<Dynamic>, Dynamic, java.lang.reflect.Method>, beanMemberFactory : com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<java.lang.reflect.Type, WrapperBeanGenerator_Field>) : Void;
+	@:overload private function new(annReader : com.sun.xml.internal.bind.v2.model.annotation.AnnotationReader<java.lang.reflect.Type, Class<Dynamic>, Dynamic, java.lang.reflect.Method>, nav : com.sun.xml.internal.bind.v2.model.nav.Navigator<java.lang.reflect.Type, Class<Dynamic>, Dynamic, java.lang.reflect.Method>, beanMemberFactory : com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<java.lang.reflect.Type, com.sun.xml.internal.ws.model.WrapperBeanGenerator.WrapperBeanGenerator_Field>) : Void;
 	
 	@:overload private function getSafeType(type : java.lang.reflect.Type) : java.lang.reflect.Type;
 	
@@ -39,15 +39,15 @@ extern class WrapperBeanGenerator
 	
 	
 }
-@:native('com$sun$xml$internal$ws$model$WrapperBeanGenerator$FieldFactory') @:internal extern class WrapperBeanGenerator_FieldFactory implements com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<java.lang.reflect.Type, WrapperBeanGenerator_Field>
+@:native('com$sun$xml$internal$ws$model$WrapperBeanGenerator$FieldFactory') @:internal extern class WrapperBeanGenerator_FieldFactory implements com.sun.xml.internal.ws.model.AbstractWrapperBeanGenerator.AbstractWrapperBeanGenerator_BeanMemberFactory<java.lang.reflect.Type, com.sun.xml.internal.ws.model.WrapperBeanGenerator.WrapperBeanGenerator_Field>
 {
-	@:overload public function createWrapperBeanMember(paramType : java.lang.reflect.Type, paramName : String, jaxb : java.util.List<java.lang.annotation.Annotation>) : WrapperBeanGenerator_Field;
+	@:overload public function createWrapperBeanMember(paramType : java.lang.reflect.Type, paramName : String, jaxb : java.util.List<java.lang.annotation.Annotation>) : com.sun.xml.internal.ws.model.WrapperBeanGenerator.WrapperBeanGenerator_Field;
 	
 	
 }
-@:native('com$sun$xml$internal$ws$model$WrapperBeanGenerator$Field') @:internal extern class WrapperBeanGenerator_Field implements java.lang.Comparable<WrapperBeanGenerator_Field>
+@:native('com$sun$xml$internal$ws$model$WrapperBeanGenerator$Field') @:internal extern class WrapperBeanGenerator_Field implements java.lang.Comparable<com.sun.xml.internal.ws.model.WrapperBeanGenerator.WrapperBeanGenerator_Field>
 {
-	@:overload public function compareTo(o : WrapperBeanGenerator_Field) : Int;
+	@:overload public function compareTo(o : com.sun.xml.internal.ws.model.WrapperBeanGenerator.WrapperBeanGenerator_Field) : Int;
 	
 	
 }

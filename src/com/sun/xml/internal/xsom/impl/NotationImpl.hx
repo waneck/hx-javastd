@@ -36,9 +36,9 @@ extern class NotationImpl extends com.sun.xml.internal.xsom.impl.DeclarationImpl
 	
 	@:overload public function getSystemId() : String;
 	
-	@:overload override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
-	@:overload override public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
+	@:overload public function apply(_function : com.sun.xml.internal.xsom.visitor.XSFunction<Dynamic>) : Dynamic;
 	
 	
 }

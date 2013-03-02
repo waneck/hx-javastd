@@ -33,9 +33,9 @@ package com.sun.tools.javac.comp;
 */
 extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 {
-	private static var lowerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Lower>;
+	private static var lowerKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Lower>;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Lower;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Lower;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -150,7 +150,7 @@ extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 {
 	/** All encountered class defs are entered into classdefs table.
 	*/
-	@:overload public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
+	@:overload override public function visitClassDef(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCClassDecl) : Void;
 	
 	
 }
@@ -163,23 +163,23 @@ extern class Lower extends com.sun.tools.javac.tree.TreeTranslator
 	/** If tree refers to a variable in owner of local class, add it to
 	*  free variables list.
 	*/
-	@:overload public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
+	@:overload override public function visitIdent(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCIdent) : Void;
 	
 	/** If tree refers to a class instance creation expression
 	*  add all free variables of the freshly created class.
 	*/
-	@:overload public function visitNewClass(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass) : Void;
+	@:overload override public function visitNewClass(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCNewClass) : Void;
 	
 	/** If tree refers to a qualified this or super expression
 	*  for anything but the current class, add the outer this
 	*  stack as a free variable.
 	*/
-	@:overload public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
+	@:overload override public function visitSelect(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCFieldAccess) : Void;
 	
 	/** If tree refers to a superclass constructor call,
 	*  add all free variables of the superclass.
 	*/
-	@:overload public function visitApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation) : Void;
+	@:overload override public function visitApply(tree : com.sun.tools.javac.tree.JCTree.JCTree_JCMethodInvocation) : Void;
 	
 	
 }

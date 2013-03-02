@@ -70,7 +70,7 @@ extern class MenuShortcut implements java.io.Serializable
 	* <code>false</code> otherwise.
 	* @since JDK1.1
 	*/
-	@:require(java1) @:overload public function equals(s : MenuShortcut) : Bool;
+	@:require(java1) @:overload public function equals(s : java.awt.MenuShortcut) : Bool;
 	
 	/**
 	* Returns whether this MenuShortcut is the same as another:

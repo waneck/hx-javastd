@@ -104,7 +104,7 @@ extern class StackMapType implements java.lang.Cloneable
 	/**
 	* @return deep copy of this object
 	*/
-	@:overload public function copy() : StackMapType;
+	@:overload public function copy() : com.sun.org.apache.bcel.internal.classfile.StackMapType;
 	
 	/**
 	* @return Constant pool used by this object.

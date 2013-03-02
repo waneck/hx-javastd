@@ -7,9 +7,9 @@ extern class ActivationSystemException extends com.sun.corba.se.spi.logging.LogW
 {
 	@:overload public function new(logger : java.util.logging.Logger) : Void;
 	
-	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : ActivationSystemException;
+	@:overload public static function get(orb : com.sun.corba.se.spi.orb.ORB, logDomain : String) : com.sun.corba.se.impl.logging.ActivationSystemException;
 	
-	@:overload public static function get(logDomain : String) : ActivationSystemException;
+	@:overload public static function get(logDomain : String) : com.sun.corba.se.impl.logging.ActivationSystemException;
 	
 	public static var CANNOT_READ_REPOSITORY_DB(default, null) : Int;
 	

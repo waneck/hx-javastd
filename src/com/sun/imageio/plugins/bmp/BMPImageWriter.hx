@@ -30,23 +30,23 @@ extern class BMPImageWriter extends javax.imageio.ImageWriter implements com.sun
 	*/
 	@:overload public function new(originator : javax.imageio.spi.ImageWriterSpi) : Void;
 	
-	@:overload override public function setOutput(output : Dynamic) : Void;
+	@:overload public function setOutput(output : Dynamic) : Void;
 	
-	@:overload override public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
+	@:overload public function getDefaultWriteParam() : javax.imageio.ImageWriteParam;
 	
-	@:overload override public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload public function getDefaultStreamMetadata(param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload public function getDefaultImageMetadata(imageType : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload public function convertStreamMetadata(inData : javax.imageio.metadata.IIOMetadata, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function convertImageMetadata(metadata : javax.imageio.metadata.IIOMetadata, type : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
+	@:overload public function convertImageMetadata(metadata : javax.imageio.metadata.IIOMetadata, type : javax.imageio.ImageTypeSpecifier, param : javax.imageio.ImageWriteParam) : javax.imageio.metadata.IIOMetadata;
 	
-	@:overload override public function canWriteRasters() : Bool;
+	@:overload public function canWriteRasters() : Bool;
 	
-	@:overload override public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
+	@:overload public function write(streamMetadata : javax.imageio.metadata.IIOMetadata, image : javax.imageio.IIOImage, param : javax.imageio.ImageWriteParam) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/*
 	* Returns preferred compression type for given image.

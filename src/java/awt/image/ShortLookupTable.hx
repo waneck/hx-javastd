@@ -92,7 +92,7 @@ extern class ShortLookupTable extends java.awt.image.LookupTable
 	*            zero or greater than or equal to the length of the
 	*            lookup table for any band.
 	*/
-	@:overload override public function lookupPixel(src : java.NativeArray<Int>, dst : java.NativeArray<Int>) : java.NativeArray<Int>;
+	@:overload public function lookupPixel(src : java.NativeArray<Int>, dst : java.NativeArray<Int>) : java.NativeArray<Int>;
 	
 	/**
 	* Returns an array of samples of a pixel, translated with the lookup

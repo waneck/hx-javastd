@@ -43,7 +43,7 @@ package javax.management;
 	/**
 	* Returns the string representing the object.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

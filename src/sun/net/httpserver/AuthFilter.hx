@@ -36,7 +36,7 @@ extern class AuthFilter extends com.sun.net.httpserver.Filter
 	/**
 	* The filter's implementation, which is invoked by the server
 	*/
-	@:overload public function doFilter(t : com.sun.net.httpserver.HttpExchange, chain : com.sun.net.httpserver.Filter.Filter_Chain) : Void;
+	@:overload override public function doFilter(t : com.sun.net.httpserver.HttpExchange, chain : com.sun.net.httpserver.Filter.Filter_Chain) : Void;
 	
 	
 }

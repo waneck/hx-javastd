@@ -110,7 +110,7 @@ package javax.swing.text;
 	*
 	* @param format NumberFormat instance used to dictate legal values
 	*/
-	@:overload override public function setFormat(format : java.text.Format) : Void;
+	@:overload public function setFormat(format : java.text.Format) : Void;
 	
 	
 }

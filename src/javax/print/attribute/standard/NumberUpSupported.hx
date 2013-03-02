@@ -91,7 +91,7 @@ extern class NumberUpSupported extends javax.print.attribute.SetOfIntegerSyntax 
 	* @return  True if <CODE>object</CODE> is equivalent to this number up
 	*          supported attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

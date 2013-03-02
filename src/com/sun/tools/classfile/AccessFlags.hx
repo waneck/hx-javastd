@@ -73,7 +73,7 @@ extern class AccessFlags
 	
 	@:overload public function new(flags : Int) : Void;
 	
-	@:overload public function ignore(mask : Int) : AccessFlags;
+	@:overload public function ignore(mask : Int) : com.sun.tools.classfile.AccessFlags;
 	
 	@:overload public function is(mask : Int) : Bool;
 	

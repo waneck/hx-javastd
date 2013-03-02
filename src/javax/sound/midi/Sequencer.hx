@@ -303,7 +303,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see SyncMode#MIDI_TIME_CODE
 	* @see #getMasterSyncMode
 	*/
-	@:overload public function setMasterSyncMode(sync : Sequencer_SyncMode) : Void;
+	@:overload public function setMasterSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
 	
 	/**
 	* Obtains the current master synchronization mode for this sequencer.
@@ -313,7 +313,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setMasterSyncMode(Sequencer.SyncMode)
 	* @see #getMasterSyncModes
 	*/
-	@:overload public function getMasterSyncMode() : Sequencer_SyncMode;
+	@:overload public function getMasterSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* Obtains the set of master synchronization modes supported by this
@@ -327,7 +327,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #getMasterSyncMode
 	* @see #setMasterSyncMode(Sequencer.SyncMode)
 	*/
-	@:overload public function getMasterSyncModes() : java.NativeArray<Sequencer_SyncMode>;
+	@:overload public function getMasterSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
 	
 	/**
 	* Sets the slave synchronization mode for the sequencer.
@@ -343,7 +343,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see SyncMode#NO_SYNC
 	* @see #getSlaveSyncModes
 	*/
-	@:overload public function setSlaveSyncMode(sync : Sequencer_SyncMode) : Void;
+	@:overload public function setSlaveSyncMode(sync : javax.sound.midi.Sequencer.Sequencer_SyncMode) : Void;
 	
 	/**
 	* Obtains the current slave synchronization mode for this sequencer.
@@ -353,7 +353,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see #setSlaveSyncMode(Sequencer.SyncMode)
 	* @see #getSlaveSyncModes
 	*/
-	@:overload public function getSlaveSyncMode() : Sequencer_SyncMode;
+	@:overload public function getSlaveSyncMode() : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* Obtains the set of slave synchronization modes supported by the sequencer.
@@ -364,7 +364,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* @see SyncMode#MIDI_TIME_CODE
 	* @see SyncMode#NO_SYNC
 	*/
-	@:overload public function getSlaveSyncModes() : java.NativeArray<Sequencer_SyncMode>;
+	@:overload public function getSlaveSyncModes() : java.NativeArray<javax.sound.midi.Sequencer.Sequencer_SyncMode>;
 	
 	/**
 	* Sets the mute state for a track.  This method may fail for a number
@@ -708,7 +708,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* its timing information from its internal clock.  This is not
 	* a legal slave sync mode.
 	*/
-	public static var INTERNAL_CLOCK(default, null) : Sequencer_SyncMode;
+	public static var INTERNAL_CLOCK(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* A master or slave synchronization mode that specifies the
@@ -721,7 +721,7 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* messages to its receiver.  MIDI clock messages are sent at a rate
 	* of 24 per quarter note.
 	*/
-	public static var MIDI_SYNC(default, null) : Sequencer_SyncMode;
+	public static var MIDI_SYNC(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* A master or slave synchronization mode that specifies the
@@ -735,14 +735,14 @@ extern interface Sequencer extends javax.sound.midi.MidiDevice
 	* messages to its receiver.  (See the MIDI 1.0 Detailed
 	* Specification for a description of MIDI Time Code.)
 	*/
-	public static var MIDI_TIME_CODE(default, null) : Sequencer_SyncMode;
+	public static var MIDI_TIME_CODE(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	/**
 	* A slave synchronization mode indicating that no timing information
 	* should be sent to the receiver.  This is not a legal master sync
 	* mode.
 	*/
-	public static var NO_SYNC(default, null) : Sequencer_SyncMode;
+	public static var NO_SYNC(default, null) : javax.sound.midi.Sequencer.Sequencer_SyncMode;
 	
 	
 }

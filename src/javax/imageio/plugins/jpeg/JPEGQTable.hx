@@ -31,7 +31,7 @@ extern class JPEGQTable
 	* these values produce "good" quality output.
 	* @see #K1Div2Luminance
 	*/
-	public static var K1Luminance(default, null) : JPEGQTable;
+	public static var K1Luminance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* The sample luminance quantization table given in the JPEG
@@ -42,7 +42,7 @@ extern class JPEGQTable
 	* tables and quality settings are used.
 	* @see #K1Luminance
 	*/
-	public static var K1Div2Luminance(default, null) : JPEGQTable;
+	public static var K1Div2Luminance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* The sample chrominance quantization table given in the JPEG
@@ -50,7 +50,7 @@ extern class JPEGQTable
 	* these values produce "good" quality output.
 	* @see #K2Div2Chrominance
 	*/
-	public static var K2Chrominance(default, null) : JPEGQTable;
+	public static var K2Chrominance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* The sample chrominance quantization table given in the JPEG
@@ -61,7 +61,7 @@ extern class JPEGQTable
 	* tables and quality settings are used.
 	* @see #K2Chrominance
 	*/
-	public static var K2Div2Chrominance(default, null) : JPEGQTable;
+	public static var K2Div2Chrominance(default, null) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* Constructs a quantization table from the argument, which must
@@ -94,7 +94,7 @@ extern class JPEGQTable
 	* @return a new quantization table that is a linear multiple
 	* of the current table.
 	*/
-	@:overload public function getScaledInstance(scaleFactor : Single, forceBaseline : Bool) : JPEGQTable;
+	@:overload public function getScaledInstance(scaleFactor : Single, forceBaseline : Bool) : javax.imageio.plugins.jpeg.JPEGQTable;
 	
 	/**
 	* Returns a {@code String} representing this quantization table.

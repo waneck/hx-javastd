@@ -31,7 +31,7 @@ extern class SynthEditorPaneUI extends javax.swing.plaf.basic.BasicEditorPaneUI 
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc

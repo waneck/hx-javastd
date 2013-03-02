@@ -63,7 +63,7 @@ package java.util;
 *
 * @since   1.5
 */
-@:require(java5) extern class UUID implements java.io.Serializable implements java.lang.Comparable<UUID>
+@:require(java5) extern class UUID implements java.io.Serializable implements java.lang.Comparable<java.util.UUID>
 {
 	/**
 	* Constructs a new {@code UUID} using the specified data.  {@code
@@ -87,7 +87,7 @@ package java.util;
 	*
 	* @return  A randomly generated {@code UUID}
 	*/
-	@:overload public static function randomUUID() : UUID;
+	@:overload public static function randomUUID() : java.util.UUID;
 	
 	/**
 	* Static factory to retrieve a type 3 (name based) {@code UUID} based on
@@ -98,7 +98,7 @@ package java.util;
 	*
 	* @return  A {@code UUID} generated from the specified array
 	*/
-	@:overload public static function nameUUIDFromBytes(name : java.NativeArray<java.StdTypes.Int8>) : UUID;
+	@:overload public static function nameUUIDFromBytes(name : java.NativeArray<java.StdTypes.Int8>) : java.util.UUID;
 	
 	/**
 	* Creates a {@code UUID} from the string standard representation as
@@ -114,7 +114,7 @@ package java.util;
 	*          described in {@link #toString}
 	*
 	*/
-	@:overload public static function fromString(name : String) : UUID;
+	@:overload public static function fromString(name : String) : java.util.UUID;
 	
 	/**
 	* Returns the least significant 64 bits of this UUID's 128 bit value.
@@ -277,7 +277,7 @@ package java.util;
 	*          greater than {@code val}
 	*
 	*/
-	@:overload public function compareTo(val : UUID) : Int;
+	@:overload public function compareTo(val : java.util.UUID) : Int;
 	
 	
 }

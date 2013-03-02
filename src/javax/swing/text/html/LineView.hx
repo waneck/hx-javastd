@@ -44,7 +44,7 @@ package javax.swing.text.html;
 	* Preformatted lines are not suppressed if they
 	* have only whitespace, so they are always visible.
 	*/
-	@:overload override public function isVisible() : Bool;
+	@:overload public function isVisible() : Bool;
 	
 	/**
 	* Determines the minimum span for this view along an
@@ -56,7 +56,7 @@ package javax.swing.text.html;
 	* @return  the minimum span the view can be rendered into
 	* @see View#getPreferredSpan
 	*/
-	@:overload override public function getMinimumSpan(axis : Int) : Single;
+	@:overload public function getMinimumSpan(axis : Int) : Single;
 	
 	/**
 	* Gets the resize weight for the specified axis.
@@ -64,7 +64,7 @@ package javax.swing.text.html;
 	* @param axis may be either X_AXIS or Y_AXIS
 	* @return the weight
 	*/
-	@:overload override public function getResizeWeight(axis : Int) : Int;
+	@:overload public function getResizeWeight(axis : Int) : Int;
 	
 	/**
 	* Gets the alignment for an axis.

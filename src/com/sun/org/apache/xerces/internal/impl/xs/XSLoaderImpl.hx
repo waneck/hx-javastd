@@ -118,15 +118,15 @@ extern class XSLoaderImpl implements com.sun.org.apache.xerces.internal.xs.XSLoa
 {
 	@:overload public function new() : Void;
 	
-	@:overload override public function putGrammar(grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar) : Void;
+	@:overload public function putGrammar(grammar : com.sun.org.apache.xerces.internal.xni.grammars.Grammar) : Void;
 	
-	@:overload override public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
+	@:overload public function containsGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : Bool;
 	
-	@:overload override public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload public function getGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload override public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
+	@:overload public function retrieveGrammar(desc : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarDescription) : com.sun.org.apache.xerces.internal.xni.grammars.Grammar;
 	
-	@:overload override public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
+	@:overload public function retrieveInitialGrammarSet(grammarType : String) : java.NativeArray<com.sun.org.apache.xerces.internal.xni.grammars.Grammar>;
 	
 	
 }

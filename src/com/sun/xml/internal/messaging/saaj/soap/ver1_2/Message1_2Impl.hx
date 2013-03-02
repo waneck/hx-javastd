@@ -41,11 +41,11 @@ extern class Message1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.Mes
 	
 	@:overload override public function getSOAPPart() : javax.xml.soap.SOAPPart;
 	
-	@:overload override private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
+	@:overload private function isCorrectSoapVersion(contentTypeId : Int) : Bool;
 	
-	@:overload override private function getExpectedContentType() : String;
+	@:overload private function getExpectedContentType() : String;
 	
-	@:overload override private function getExpectedAcceptHeader() : String;
+	@:overload private function getExpectedAcceptHeader() : String;
 	
 	
 }

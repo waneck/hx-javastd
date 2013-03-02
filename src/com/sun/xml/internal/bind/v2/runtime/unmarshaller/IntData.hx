@@ -29,11 +29,11 @@ extern class IntData extends com.sun.xml.internal.bind.v2.runtime.output.Pcdata
 	
 	@:overload override public function toString() : String;
 	
-	@:overload override public function length() : Int;
+	@:overload public function length() : Int;
 	
-	@:overload override public function charAt(index : Int) : java.StdTypes.Char16;
+	@:overload public function charAt(index : Int) : java.StdTypes.Char16;
 	
-	@:overload override public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
+	@:overload public function subSequence(start : Int, end : Int) : java.lang.CharSequence;
 	
 	@:overload override public function writeTo(output : com.sun.xml.internal.bind.v2.runtime.output.UTF8XmlOutput) : Void;
 	

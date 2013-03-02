@@ -95,7 +95,7 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* the range that can be stored by double. This will never be
 	* a practical limitation.
 	*/
-	@:overload override public function format(number : haxe.Int64, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload public function format(number : haxe.Int64, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Returns pattern with formatted double.
@@ -103,7 +103,7 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* @param toAppendTo where text is appended.
 	* @param status ignore no useful status is returned.
 	*/
-	@:overload override public function format(number : Float, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
+	@:overload public function format(number : Float, toAppendTo : java.lang.StringBuffer, status : java.text.FieldPosition) : java.lang.StringBuffer;
 	
 	/**
 	* Parses a Number from the input text.
@@ -117,7 +117,7 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	* first index of the character that caused the parse to fail.
 	* @return A Number representing the value of the number parsed.
 	*/
-	@:overload override public function parse(text : String, status : java.text.ParsePosition) : java.lang.Number;
+	@:overload public function parse(text : String, status : java.text.ParsePosition) : java.lang.Number;
 	
 	/**
 	* Finds the least double greater than d.
@@ -137,17 +137,17 @@ extern class ChoiceFormat extends java.text.NumberFormat
 	/**
 	* Overrides Cloneable
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/**
 	* Generates a hash code for the message format object.
 	*/
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	/**
 	* Equality comparision between two
 	*/
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
 	/**
 	* Finds the least double greater than d (if positive == true),

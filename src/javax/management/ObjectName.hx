@@ -23,7 +23,7 @@ package javax.management;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class ObjectName implements java.lang.Comparable<ObjectName> implements javax.management.QueryExp
+extern class ObjectName implements java.lang.Comparable<javax.management.ObjectName> implements javax.management.QueryExp
 {
 	/**
 	* <p>Return an instance of ObjectName that can be used anywhere
@@ -43,7 +43,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 	* is null.
 	*
 	*/
-	@:overload public static function getInstance(name : String) : ObjectName;
+	@:overload public static function getInstance(name : String) : javax.management.ObjectName;
 	
 	/**
 	* <p>Return an instance of ObjectName that can be used anywhere
@@ -67,7 +67,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 	* @exception NullPointerException One of the parameters is null.
 	*
 	*/
-	@:overload public static function getInstance(domain : String, key : String, value : String) : ObjectName;
+	@:overload public static function getInstance(domain : String, key : String, value : String) : javax.management.ObjectName;
 	
 	/**
 	* <p>Return an instance of ObjectName that can be used anywhere
@@ -94,7 +94,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 	* @exception NullPointerException One of the parameters is null.
 	*
 	*/
-	@:overload public static function getInstance(domain : String, table : java.util.Hashtable<String, String>) : ObjectName;
+	@:overload public static function getInstance(domain : String, table : java.util.Hashtable<String, String>) : javax.management.ObjectName;
 	
 	/**
 	* <p>Return an instance of ObjectName that can be used anywhere
@@ -125,7 +125,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 	* @exception NullPointerException The <code>name</code> is null.
 	*
 	*/
-	@:overload public static function getInstance(name : ObjectName) : ObjectName;
+	@:overload public static function getInstance(name : javax.management.ObjectName) : javax.management.ObjectName;
 	
 	/**
 	* Construct an object name from the given string.
@@ -418,7 +418,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 	*
 	* @since 1.6
 	*/
-	@:require(java6) public static var WILDCARD(default, null) : ObjectName;
+	@:require(java6) public static var WILDCARD(default, null) : javax.management.ObjectName;
 	
 	/**
 	* <p>Test whether this ObjectName, which may be a pattern,
@@ -437,7 +437,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 	* @exception NullPointerException if <code>name</code> is null.
 	*
 	*/
-	@:overload public function apply(name : ObjectName) : Bool;
+	@:overload public function apply(name : javax.management.ObjectName) : Bool;
 	
 	/* Method inherited from QueryExp, no implementation needed here
 	because ObjectName is not relative to an MBeanServer and does
@@ -488,7 +488,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 	*
 	* @since 1.6
 	*/
-	@:require(java6) @:overload public function compareTo(name : ObjectName) : Int;
+	@:require(java6) @:overload public function compareTo(name : javax.management.ObjectName) : Int;
 	
 	
 }
@@ -503,7 +503,7 @@ extern class ObjectName implements java.lang.Comparable<ObjectName> implements j
 /**
 * Marker class for value pattern property.
 */
-@:native('javax$management$ObjectName$PatternProperty') @:internal extern class ObjectName_PatternProperty extends ObjectName_Property
+@:native('javax$management$ObjectName$PatternProperty') @:internal extern class ObjectName_PatternProperty extends javax.management.ObjectName.ObjectName_Property
 {
 	
 }

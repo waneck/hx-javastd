@@ -55,7 +55,7 @@ extern class TypeCodeImpl extends org.omg.CORBA.TypeCode
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, creationKind : Int, digits : java.StdTypes.Int16, scale : java.StdTypes.Int16) : Void;
 	
-	@:overload private static function convertToNative(orb : com.sun.corba.se.spi.orb.ORB, tc : org.omg.CORBA.TypeCode) : TypeCodeImpl;
+	@:overload private static function convertToNative(orb : com.sun.corba.se.spi.orb.ORB, tc : org.omg.CORBA.TypeCode) : com.sun.corba.se.impl.corba.TypeCodeImpl;
 	
 	@:overload public static function newOutputStream(orb : com.sun.corba.se.spi.orb.ORB) : com.sun.corba.se.impl.encoding.CDROutputStream;
 	
@@ -67,41 +67,41 @@ extern class TypeCodeImpl extends org.omg.CORBA.TypeCode
 	*/
 	@:overload public function equivalent(tc : org.omg.CORBA.TypeCode) : Bool;
 	
-	@:overload override public function get_compact_typecode() : org.omg.CORBA.TypeCode;
+	@:overload public function get_compact_typecode() : org.omg.CORBA.TypeCode;
 	
-	@:overload override public function kind() : org.omg.CORBA.TCKind;
+	@:overload public function kind() : org.omg.CORBA.TCKind;
 	
 	@:overload public function is_recursive() : Bool;
 	
-	@:overload override public function id() : String;
+	@:overload public function id() : String;
 	
-	@:overload override public function name() : String;
+	@:overload public function name() : String;
 	
-	@:overload override public function member_count() : Int;
+	@:overload public function member_count() : Int;
 	
-	@:overload override public function member_name(index : Int) : String;
+	@:overload public function member_name(index : Int) : String;
 	
-	@:overload override public function member_type(index : Int) : org.omg.CORBA.TypeCode;
+	@:overload public function member_type(index : Int) : org.omg.CORBA.TypeCode;
 	
-	@:overload override public function member_label(index : Int) : org.omg.CORBA.Any;
+	@:overload public function member_label(index : Int) : org.omg.CORBA.Any;
 	
-	@:overload override public function discriminator_type() : org.omg.CORBA.TypeCode;
+	@:overload public function discriminator_type() : org.omg.CORBA.TypeCode;
 	
-	@:overload override public function default_index() : Int;
+	@:overload public function default_index() : Int;
 	
-	@:overload override public function length() : Int;
+	@:overload public function length() : Int;
 	
-	@:overload override public function content_type() : org.omg.CORBA.TypeCode;
+	@:overload public function content_type() : org.omg.CORBA.TypeCode;
 	
-	@:overload override public function fixed_digits() : java.StdTypes.Int16;
+	@:overload public function fixed_digits() : java.StdTypes.Int16;
 	
-	@:overload override public function fixed_scale() : java.StdTypes.Int16;
+	@:overload public function fixed_scale() : java.StdTypes.Int16;
 	
-	@:overload override public function member_visibility(index : Int) : java.StdTypes.Int16;
+	@:overload public function member_visibility(index : Int) : java.StdTypes.Int16;
 	
-	@:overload override public function type_modifier() : java.StdTypes.Int16;
+	@:overload public function type_modifier() : java.StdTypes.Int16;
 	
-	@:overload override public function concrete_base_type() : org.omg.CORBA.TypeCode;
+	@:overload public function concrete_base_type() : org.omg.CORBA.TypeCode;
 	
 	@:overload public function read_value(is : org.omg.CORBA_2_3.portable.InputStream) : Void;
 	

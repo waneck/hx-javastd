@@ -51,27 +51,27 @@ extern class SAXDocumentSerializer extends com.sun.xml.internal.fastinfoset.Enco
 	
 	@:overload public function new() : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
-	@:overload @:final override public function startDocument() : Void;
+	@:overload @:final public function startDocument() : Void;
 	
-	@:overload @:final override public function endDocument() : Void;
+	@:overload @:final public function endDocument() : Void;
 	
-	@:overload override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
-	@:overload @:final override public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:final public function startElement(namespaceURI : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
-	@:overload @:final override public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
+	@:overload @:final public function endElement(namespaceURI : String, localName : String, qName : String) : Void;
 	
-	@:overload @:final override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:final public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:final public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
-	@:overload @:final override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:final public function processingInstruction(target : String, data : String) : Void;
 	
-	@:overload @:final override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:final public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
-	@:overload @:final override public function skippedEntity(name : String) : Void;
+	@:overload @:final public function skippedEntity(name : String) : Void;
 	
 	@:overload @:final public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	

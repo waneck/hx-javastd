@@ -32,7 +32,7 @@ extern class SocketFactoryContactInfoListImpl extends com.sun.corba.se.impl.tran
 	
 	@:overload public function new(orb : com.sun.corba.se.spi.orb.ORB, targetIOR : com.sun.corba.se.spi.ior.IOR) : Void;
 	
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload public function iterator() : java.util.Iterator<Dynamic>;
 	
 	
 }

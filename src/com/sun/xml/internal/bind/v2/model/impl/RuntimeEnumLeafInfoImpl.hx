@@ -36,7 +36,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	
 	@:overload public function isDefault() : Bool;
 	
-	@:overload override public function getClazz() : Class<Dynamic>;
+	@:overload public function getClazz() : Class<Dynamic>;
 	
 	@:overload public function useNamespace() : Bool;
 	

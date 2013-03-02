@@ -48,15 +48,15 @@ extern class MemberSubmissionEndpointReference extends javax.xml.ws.EndpointRefe
 	*/
 	@:overload public function toWSDLSource() : javax.xml.transform.Source;
 	
-	public var addr : MemberSubmissionEndpointReference_Address;
+	public var addr : com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.MemberSubmissionEndpointReference_Address;
 	
-	public var referenceProperties : MemberSubmissionEndpointReference_Elements;
+	public var referenceProperties : com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.MemberSubmissionEndpointReference_Elements;
 	
-	public var referenceParameters : MemberSubmissionEndpointReference_Elements;
+	public var referenceParameters : com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.MemberSubmissionEndpointReference_Elements;
 	
-	public var portTypeName : MemberSubmissionEndpointReference_AttributedQName;
+	public var portTypeName : com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.MemberSubmissionEndpointReference_AttributedQName;
 	
-	public var serviceName : MemberSubmissionEndpointReference_ServiceNameType;
+	public var serviceName : com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.MemberSubmissionEndpointReference_ServiceNameType;
 	
 	public var attributes : java.util.Map<javax.xml.namespace.QName, String>;
 	
@@ -94,7 +94,7 @@ extern class MemberSubmissionEndpointReference extends javax.xml.ws.EndpointRefe
 	
 	
 }
-@:native('com$sun$xml$internal$ws$developer$MemberSubmissionEndpointReference$ServiceNameType') extern class MemberSubmissionEndpointReference_ServiceNameType extends MemberSubmissionEndpointReference_AttributedQName
+@:native('com$sun$xml$internal$ws$developer$MemberSubmissionEndpointReference$ServiceNameType') extern class MemberSubmissionEndpointReference_ServiceNameType extends com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.MemberSubmissionEndpointReference_AttributedQName
 {
 	@:overload public function new() : Void;
 	

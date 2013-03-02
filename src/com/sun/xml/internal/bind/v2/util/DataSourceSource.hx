@@ -29,13 +29,13 @@ extern class DataSourceSource extends javax.xml.transform.stream.StreamSource
 	
 	@:overload public function new(source : javax.activation.DataSource) : Void;
 	
-	@:overload override public function setReader(reader : java.io.Reader) : Void;
+	@:overload public function setReader(reader : java.io.Reader) : Void;
 	
-	@:overload override public function setInputStream(inputStream : java.io.InputStream) : Void;
+	@:overload public function setInputStream(inputStream : java.io.InputStream) : Void;
 	
-	@:overload override public function getReader() : java.io.Reader;
+	@:overload public function getReader() : java.io.Reader;
 	
-	@:overload override public function getInputStream() : java.io.InputStream;
+	@:overload public function getInputStream() : java.io.InputStream;
 	
 	@:overload public function getDataSource() : javax.activation.DataSource;
 	

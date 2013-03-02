@@ -37,18 +37,18 @@ extern class EndPosParser extends com.sun.tools.javac.parser.JavacParser
 	@:overload public function new(fac : com.sun.tools.javac.parser.ParserFactory, S : com.sun.tools.javac.parser.Lexer, keepDocComments : Bool, keepLineMap : Bool) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload override private function storeEnd(tree : com.sun.tools.javac.tree.JCTree, endpos : Int) : Void;
+	@:overload private function storeEnd(tree : com.sun.tools.javac.tree.JCTree, endpos : Int) : Void;
 	
 	/** {@inheritDoc} */
-	@:overload override private function to<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
+	@:overload private function to<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
 	
 	/** {@inheritDoc} */
-	@:overload override private function toP<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
+	@:overload private function toP<T : com.sun.tools.javac.tree.JCTree>(t : T) : T;
 	
-	@:overload override public function parseCompilationUnit() : JCCompilationUnit;
+	@:overload public function parseCompilationUnit() : JCCompilationUnit;
 	
 	/** {@inheritDoc} */
-	@:overload override public function getEndPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
+	@:overload public function getEndPos(tree : com.sun.tools.javac.tree.JCTree) : Int;
 	
 	
 }

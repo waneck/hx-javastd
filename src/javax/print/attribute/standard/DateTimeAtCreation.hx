@@ -55,7 +55,7 @@ extern class DateTimeAtCreation extends javax.print.attribute.DateTimeSyntax imp
 	* @return  True if <CODE>object</CODE> is equivalent to this date-time
 	*          at creation attribute, false otherwise.
 	*/
-	@:overload override public function equals(object : Dynamic) : Bool;
+	@:overload public function equals(object : Dynamic) : Bool;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

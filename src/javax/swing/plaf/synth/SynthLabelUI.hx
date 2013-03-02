@@ -31,17 +31,17 @@ extern class SynthLabelUI extends javax.swing.plaf.basic.BasicLabelUI implements
 	* @param c component to create UI object for
 	* @return the UI object
 	*/
-	@:native('createUI') @:overload public static function _createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
+	@:overload public static function createUI(c : javax.swing.JComponent) : javax.swing.plaf.ComponentUI;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function installDefaults(c : javax.swing.JLabel) : Void;
+	@:overload private function installDefaults(c : javax.swing.JLabel) : Void;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override private function uninstallDefaults(c : javax.swing.JLabel) : Void;
+	@:overload private function uninstallDefaults(c : javax.swing.JLabel) : Void;
 	
 	/**
 	* @inheritDoc
@@ -51,7 +51,7 @@ extern class SynthLabelUI extends javax.swing.plaf.basic.BasicLabelUI implements
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
+	@:overload public function getBaseline(c : javax.swing.JComponent, width : Int, height : Int) : Int;
 	
 	/**
 	* Notifies this UI delegate to repaint the specified component.
@@ -65,7 +65,7 @@ extern class SynthLabelUI extends javax.swing.plaf.basic.BasicLabelUI implements
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function update(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component according to the Look and Feel.
@@ -76,7 +76,7 @@ extern class SynthLabelUI extends javax.swing.plaf.basic.BasicLabelUI implements
 	* @param c the component being painted
 	* @see #paint(SynthContext,Graphics)
 	*/
-	@:overload override public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
+	@:overload public function paint(g : java.awt.Graphics, c : javax.swing.JComponent) : Void;
 	
 	/**
 	* Paints the specified component.
@@ -95,22 +95,22 @@ extern class SynthLabelUI extends javax.swing.plaf.basic.BasicLabelUI implements
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getPreferredSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMinimumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
+	@:overload public function getMaximumSize(c : javax.swing.JComponent) : java.awt.Dimension;
 	
 	/**
 	* @inheritDoc
 	*/
-	@:overload override public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
+	@:overload public function propertyChange(e : java.beans.PropertyChangeEvent) : Void;
 	
 	
 }

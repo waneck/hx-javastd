@@ -29,7 +29,7 @@ package com.sun.codemodel.internal;
 	
 	@:overload override public function name() : String;
 	
-	@:overload override public function fullName() : String;
+	@:overload public function fullName() : String;
 	
 	@:overload override public function _package() : com.sun.codemodel.internal.JPackage;
 	

@@ -34,19 +34,19 @@ package sun.nio.fs;
 /**
 * WatchKey implementation
 */
-@:native('sun$nio$fs$SolarisWatchService$SolarisWatchKey') @:internal extern class SolarisWatchService_SolarisWatchKey extends sun.nio.fs.AbstractWatchKey implements SolarisWatchService_DirectoryNode
+@:native('sun$nio$fs$SolarisWatchService$SolarisWatchKey') @:internal extern class SolarisWatchService_SolarisWatchKey extends sun.nio.fs.AbstractWatchKey implements sun.nio.fs.SolarisWatchService.SolarisWatchService_DirectoryNode
 {
 	@:overload public function object() : haxe.Int64;
 	
-	@:overload override public function isValid() : Bool;
+	@:overload public function isValid() : Bool;
 	
-	@:overload override public function cancel() : Void;
+	@:overload public function cancel() : Void;
 	
-	@:overload public function addChild(name : java.nio.file.Path, node : SolarisWatchService_EntryNode) : Void;
+	@:overload public function addChild(name : java.nio.file.Path, node : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode) : Void;
 	
 	@:overload public function removeChild(name : java.nio.file.Path) : Void;
 	
-	@:overload public function getChild(name : java.nio.file.Path) : SolarisWatchService_EntryNode;
+	@:overload public function getChild(name : java.nio.file.Path) : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode;
 	
 	
 }
@@ -59,7 +59,7 @@ package sun.nio.fs;
 	* Poller main loop. Blocks on port_getn waiting for events and then
 	* processes them.
 	*/
-	@:overload override public function run() : Void;
+	@:overload public function run() : Void;
 	
 	
 }
@@ -75,20 +75,20 @@ package sun.nio.fs;
 /**
 * A directory node with a map of the entries in the directory
 */
-@:native('sun$nio$fs$SolarisWatchService$DirectoryNode') @:internal extern interface SolarisWatchService_DirectoryNode extends SolarisWatchService_Node
+@:native('sun$nio$fs$SolarisWatchService$DirectoryNode') @:internal extern interface SolarisWatchService_DirectoryNode extends sun.nio.fs.SolarisWatchService.SolarisWatchService_Node
 {
-	@:overload public function addChild(name : java.nio.file.Path, node : SolarisWatchService_EntryNode) : Void;
+	@:overload public function addChild(name : java.nio.file.Path, node : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode) : Void;
 	
 	@:overload public function removeChild(name : java.nio.file.Path) : Void;
 	
-	@:overload public function getChild(name : java.nio.file.Path) : SolarisWatchService_EntryNode;
+	@:overload public function getChild(name : java.nio.file.Path) : sun.nio.fs.SolarisWatchService.SolarisWatchService_EntryNode;
 	
 	
 }
 /**
 * An implementation of a node that is an entry in a directory.
 */
-@:native('sun$nio$fs$SolarisWatchService$EntryNode') @:internal extern class SolarisWatchService_EntryNode implements SolarisWatchService_Node
+@:native('sun$nio$fs$SolarisWatchService$EntryNode') @:internal extern class SolarisWatchService_EntryNode implements sun.nio.fs.SolarisWatchService.SolarisWatchService_Node
 {
 	@:overload public function object() : haxe.Int64;
 	

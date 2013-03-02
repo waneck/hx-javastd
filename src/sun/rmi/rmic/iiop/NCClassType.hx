@@ -38,12 +38,12 @@ extern class NCClassType extends sun.rmi.rmic.iiop.ClassType
 	* return value will be null, and errors will have been reported to the
 	* supplied BatchEnvironment.
 	*/
-	@:overload public static function forNCClass(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : NCClassType;
+	@:overload public static function forNCClass(classDef : sun.tools.java.ClassDefinition, stack : sun.rmi.rmic.iiop.ContextStack) : sun.rmi.rmic.iiop.NCClassType;
 	
 	/**
 	* Return a string describing this type.
 	*/
-	@:overload override public function getTypeDescription() : String;
+	@:overload public function getTypeDescription() : String;
 	
 	
 }

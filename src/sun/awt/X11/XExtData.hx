@@ -4,9 +4,9 @@ extern class XExtData extends sun.awt.X11.XWrapperBase
 {
 	@:overload public static function getSize() : Int;
 	
-	@:overload override public function getDataSize() : Int;
+	@:overload public function getDataSize() : Int;
 	
-	@:overload override public function getPData() : haxe.Int64;
+	@:overload public function getPData() : haxe.Int64;
 	
 	@:overload public function new(addr : haxe.Int64) : Void;
 	
@@ -18,7 +18,7 @@ extern class XExtData extends sun.awt.X11.XWrapperBase
 	
 	@:overload public function set_number(v : Int) : Void;
 	
-	@:overload public function get_next(index : Int) : XExtData;
+	@:overload public function get_next(index : Int) : sun.awt.X11.XExtData;
 	
 	@:overload public function get_next() : haxe.Int64;
 	

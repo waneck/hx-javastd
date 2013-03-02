@@ -27,7 +27,7 @@ package sun.font;
 {
 	
 }
-@:internal extern class DelegateStrike extends NativeStrike
+@:internal extern class DelegateStrike extends sun.font.NativeStrike
 {
 	
 }

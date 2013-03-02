@@ -25,7 +25,7 @@ package com.sun.tools.javac.util;
 */
 extern class SharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 {
-	@:overload @:synchronized public static function create(names : com.sun.tools.javac.util.Names) : SharedNameTable;
+	@:overload @:synchronized public static function create(names : com.sun.tools.javac.util.Names) : com.sun.tools.javac.util.SharedNameTable;
 	
 	/** The shared byte array holding all encountered names.
 	*/
@@ -41,11 +41,11 @@ extern class SharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 	
 	@:overload public function new(names : com.sun.tools.javac.util.Names) : Void;
 	
-	@:overload override public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload public function fromChars(cs : java.NativeArray<java.StdTypes.Char16>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload override public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
+	@:overload public function fromUtf(cs : java.NativeArray<java.StdTypes.Int8>, start : Int, len : Int) : com.sun.tools.javac.util.Name;
 	
-	@:overload override public function dispose() : Void;
+	@:overload public function dispose() : Void;
 	
 	
 }

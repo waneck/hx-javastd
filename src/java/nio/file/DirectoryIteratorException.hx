@@ -42,7 +42,7 @@ extern class DirectoryIteratorException extends java.util.ConcurrentModification
 	*
 	* @return  the cause
 	*/
-	@:overload override public function getCause() : java.io.IOException;
+	@:overload public function getCause() : java.io.IOException;
 	
 	
 }

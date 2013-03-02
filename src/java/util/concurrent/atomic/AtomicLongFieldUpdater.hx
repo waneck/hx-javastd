@@ -65,7 +65,7 @@ package java.util.concurrent.atomic;
 	* @throws RuntimeException with a nested reflection-based
 	* exception if the class does not hold field or is the wrong type.
 	*/
-	@:overload public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : AtomicLongFieldUpdater<U>;
+	@:overload public static function newUpdater<U>(tclass : Class<U>, fieldName : String) : java.util.concurrent.atomic.AtomicLongFieldUpdater<U>;
 	
 	/**
 	* Protected do-nothing constructor for use by subclasses.
@@ -205,7 +205,7 @@ package java.util.concurrent.atomic;
 	
 	
 }
-@:native('java$util$concurrent$atomic$AtomicLongFieldUpdater$CASUpdater') @:internal extern class AtomicLongFieldUpdater_CASUpdater<T> extends AtomicLongFieldUpdater<T>
+@:native('java$util$concurrent$atomic$AtomicLongFieldUpdater$CASUpdater') @:internal extern class AtomicLongFieldUpdater_CASUpdater<T> extends java.util.concurrent.atomic.AtomicLongFieldUpdater<T>
 {
 	@:overload override public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	
@@ -219,7 +219,7 @@ package java.util.concurrent.atomic;
 	
 	
 }
-@:native('java$util$concurrent$atomic$AtomicLongFieldUpdater$LockedUpdater') @:internal extern class AtomicLongFieldUpdater_LockedUpdater<T> extends AtomicLongFieldUpdater<T>
+@:native('java$util$concurrent$atomic$AtomicLongFieldUpdater$LockedUpdater') @:internal extern class AtomicLongFieldUpdater_LockedUpdater<T> extends java.util.concurrent.atomic.AtomicLongFieldUpdater<T>
 {
 	@:overload override public function compareAndSet(obj : T, expect : haxe.Int64, update : haxe.Int64) : Bool;
 	

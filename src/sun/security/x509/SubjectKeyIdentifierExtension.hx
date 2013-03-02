@@ -87,7 +87,7 @@ extern class SubjectKeyIdentifierExtension extends java.security.cert.Extension 
 	* @param out the OutputStream to write the extension to.
 	* @exception IOException on encoding errors.
 	*/
-	@:overload override public function encode(out : java.io.OutputStream) : Void;
+	@:overload public function encode(out : java.io.OutputStream) : Void;
 	
 	/**
 	* Set the attribute value.

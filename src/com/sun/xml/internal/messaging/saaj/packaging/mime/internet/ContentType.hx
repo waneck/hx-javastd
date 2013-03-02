@@ -60,7 +60,7 @@ extern class ContentType
 	*/
 	@:overload public function new(s : String) : Void;
 	
-	@:overload public function copy() : ContentType;
+	@:overload public function copy() : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType;
 	
 	/**
 	* Return the primary type.
@@ -152,7 +152,7 @@ extern class ContentType
 	*
 	* @param   cType to compare this against
 	*/
-	@:overload public function match(cType : ContentType) : Bool;
+	@:overload public function match(cType : com.sun.xml.internal.messaging.saaj.packaging.mime.internet.ContentType) : Bool;
 	
 	/**
 	* Match with the specified content-type string. This method

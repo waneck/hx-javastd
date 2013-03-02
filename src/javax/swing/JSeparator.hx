@@ -66,7 +66,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	*
 	* @see JComponent#updateUI
 	*/
-	@:overload override public function updateUI() : Void;
+	@:overload public function updateUI() : Void;
 	
 	/**
 	* Returns the name of the L&F class that renders this component.
@@ -75,7 +75,7 @@ extern class JSeparator extends javax.swing.JComponent implements javax.swing.Sw
 	* @see JComponent#getUIClassID
 	* @see UIDefaults#getUI
 	*/
-	@:overload override public function getUIClassID() : String;
+	@:overload public function getUIClassID() : String;
 	
 	/**
 	* Returns the orientation of this separator.

@@ -29,7 +29,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	* <p>This is the Namespace URI that is automatically mapped
 	* to the "xml" prefix.</p>
 	*/
-	@:native('XMLNS') public static var _XMLNS(default, null) : String;
+	public static var XMLNS(default, null) : String;
 	
 	/**
 	* Create a new Namespace support object.
@@ -42,7 +42,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	* <p>It is necessary to invoke this method before reusing the
 	* Namespace support object for a new session.</p>
 	*/
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	/**
 	* Start a new Namespace context.
@@ -58,7 +58,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	*
 	* @see #popContext
 	*/
-	@:overload override public function pushContext() : Void;
+	@:overload public function pushContext() : Void;
 	
 	/**
 	* Revert to the previous Namespace context.
@@ -73,7 +73,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	*
 	* @see #pushContext
 	*/
-	@:overload override public function popContext() : Void;
+	@:overload public function popContext() : Void;
 	
 	/**
 	* Declare a Namespace prefix.
@@ -103,7 +103,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	* @see #getURI
 	* @see #getPrefix
 	*/
-	@:overload override public function declarePrefix(prefix : String, uri : String) : Bool;
+	@:overload public function declarePrefix(prefix : String, uri : String) : Bool;
 	
 	/**
 	* Process a raw XML 1.0 name.
@@ -143,7 +143,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	*        is an undeclared prefix.
 	* @see #declarePrefix
 	* @see java.lang.String#intern */
-	@:overload override public function processName(qName : String, parts : java.NativeArray<String>, isAttribute : Bool) : java.NativeArray<String>;
+	@:overload public function processName(qName : String, parts : java.NativeArray<String>, isAttribute : Bool) : java.NativeArray<String>;
 	
 	/**
 	* Look up a prefix and get the currently-mapped Namespace URI.
@@ -157,7 +157,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	* @see #getPrefix
 	* @see #getPrefixes
 	*/
-	@:overload override public function getURI(prefix : String) : String;
+	@:overload public function getURI(prefix : String) : String;
 	
 	/**
 	* Return an enumeration of all prefixes currently declared.
@@ -172,7 +172,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	* @see #getDeclaredPrefixes
 	* @see #getURI
 	*/
-	@:overload override public function getPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload public function getPrefixes() : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Return one of the prefixes mapped to a Namespace URI.
@@ -192,7 +192,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	*         the default Namespace.
 	* @see #getPrefixes(java.lang.String)
 	* @see #getURI */
-	@:overload override public function getPrefix(uri : String) : String;
+	@:overload public function getPrefix(uri : String) : String;
 	
 	/**
 	* Return an enumeration of all prefixes currently declared for a URI.
@@ -214,7 +214,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	* @see #getPrefix
 	* @see #getDeclaredPrefixes
 	* @see #getURI */
-	@:overload override public function getPrefixes(uri : String) : java.util.Enumeration<Dynamic>;
+	@:overload public function getPrefixes(uri : String) : java.util.Enumeration<Dynamic>;
 	
 	/**
 	* Return an enumeration of all prefixes declared in this context.
@@ -228,7 +228,7 @@ extern class NamespaceSupport2 extends org.xml.sax.helpers.NamespaceSupport
 	* @see #getPrefixes
 	* @see #getURI
 	*/
-	@:overload override public function getDeclaredPrefixes() : java.util.Enumeration<Dynamic>;
+	@:overload public function getDeclaredPrefixes() : java.util.Enumeration<Dynamic>;
 	
 	
 }

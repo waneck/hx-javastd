@@ -81,7 +81,7 @@ package java.awt;
 	* @see     java.awt.Toolkit#createChoice(java.awt.Choice)
 	* @see     java.awt.Component#getToolkit()
 	*/
-	@:overload override public function addNotify() : Void;
+	@:overload public function addNotify() : Void;
 	
 	/**
 	* Returns the number of items in this <code>Choice</code> menu.
@@ -327,7 +327,7 @@ package java.awt;
 	* @see #getItemListeners
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
+	@:require(java3) @:overload public function getListeners<T : java.util.EventListener>(listenerType : Class<T>) : java.NativeArray<T>;
 	
 	/**
 	* Processes events on this choice. If the event is an
@@ -343,7 +343,7 @@ package java.awt;
 	* @see        #processItemEvent
 	* @since      JDK1.1
 	*/
-	@:require(java1) @:overload override private function processEvent(e : java.awt.AWTEvent) : Void;
+	@:require(java1) @:overload private function processEvent(e : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Processes item events occurring on this <code>Choice</code>
@@ -380,7 +380,7 @@ package java.awt;
 	*
 	* @return    the parameter string of this <code>Choice</code> menu
 	*/
-	@:overload override private function paramString() : String;
+	@:overload private function paramString() : String;
 	
 	/**
 	* Gets the <code>AccessibleContext</code> associated with this
@@ -393,7 +393,7 @@ package java.awt;
 	*         <code>AccessibleContext</code> of this <code>Choice</code>
 	* @since 1.3
 	*/
-	@:require(java3) @:overload override public function getAccessibleContext() : javax.accessibility.AccessibleContext;
+	@:require(java3) @:overload public function getAccessibleContext() : javax.accessibility.AccessibleContext;
 	
 	
 }
@@ -416,7 +416,7 @@ package java.awt;
 	* @return this object
 	* @see AccessibleAction
 	*/
-	@:overload override public function getAccessibleAction() : javax.accessibility.AccessibleAction;
+	@:overload public function getAccessibleAction() : javax.accessibility.AccessibleAction;
 	
 	/**
 	* Get the role of this object.
@@ -425,7 +425,7 @@ package java.awt;
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	/**
 	* Returns the number of accessible actions available in this object

@@ -25,15 +25,15 @@ package com.sun.tools.classfile;
 */
 extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 {
-	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, entries : java.NativeArray<StackMapTable_attribute_stack_map_frame>) : Void;
+	@:overload public function new(constant_pool : com.sun.tools.classfile.ConstantPool, entries : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame>) : Void;
 	
-	@:overload public function new(name_index : Int, entries : java.NativeArray<StackMapTable_attribute_stack_map_frame>) : Void;
+	@:overload public function new(name_index : Int, entries : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame>) : Void;
 	
-	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
+	@:overload override public function accept<R, D>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, D>, data : D) : R;
 	
 	public var number_of_entries(default, null) : Int;
 	
-	public var entries(default, null) : java.NativeArray<StackMapTable_attribute_stack_map_frame>;
+	public var entries(default, null) : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame>;
 	
 	
 }
@@ -65,73 +65,61 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 }
 @:native('com$sun$tools$classfile$StackMapTable_attribute$stack_map_frame$Visitor') extern interface StackMapTable_attribute_stack_map_frame_Visitor<R, P>
 {
-	@:overload public function visit_same_frame(frame : StackMapTable_attribute_same_frame, p : P) : R;
+	@:overload public function visit_same_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame, p : P) : R;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame(frame : StackMapTable_attribute_same_locals_1_stack_item_frame, p : P) : R;
+	@:overload public function visit_same_locals_1_stack_item_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame, p : P) : R;
 	
-	@:overload public function visit_same_locals_1_stack_item_frame_extended(frame : StackMapTable_attribute_same_locals_1_stack_item_frame_extended, p : P) : R;
+	@:overload public function visit_same_locals_1_stack_item_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_locals_1_stack_item_frame_extended, p : P) : R;
 	
-	@:overload public function visit_chop_frame(frame : StackMapTable_attribute_chop_frame, p : P) : R;
+	@:overload public function visit_chop_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_chop_frame, p : P) : R;
 	
-	@:overload public function visit_same_frame_extended(frame : StackMapTable_attribute_same_frame_extended, p : P) : R;
+	@:overload public function visit_same_frame_extended(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_same_frame_extended, p : P) : R;
 	
-	@:overload public function visit_append_frame(frame : StackMapTable_attribute_append_frame, p : P) : R;
+	@:overload public function visit_append_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_append_frame, p : P) : R;
 	
-	@:overload public function visit_full_frame(frame : StackMapTable_attribute_full_frame, p : P) : R;
+	@:overload public function visit_full_frame(frame : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_full_frame, p : P) : R;
 	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$same_frame') extern class StackMapTable_attribute_same_frame extends StackMapTable_attribute_stack_map_frame
+@:native('com$sun$tools$classfile$StackMapTable_attribute$same_frame') extern class StackMapTable_attribute_same_frame extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame
 {
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$same_locals_1_stack_item_frame') extern class StackMapTable_attribute_same_locals_1_stack_item_frame extends StackMapTable_attribute_stack_map_frame
+@:native('com$sun$tools$classfile$StackMapTable_attribute$same_locals_1_stack_item_frame') extern class StackMapTable_attribute_same_locals_1_stack_item_frame extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame
 {
 	@:overload override public function length() : Int;
 	
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
-	public var stack(default, null) : java.NativeArray<StackMapTable_attribute_verification_type_info>;
+	public var stack(default, null) : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_verification_type_info>;
 	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$same_locals_1_stack_item_frame_extended') extern class StackMapTable_attribute_same_locals_1_stack_item_frame_extended extends StackMapTable_attribute_stack_map_frame
+@:native('com$sun$tools$classfile$StackMapTable_attribute$same_locals_1_stack_item_frame_extended') extern class StackMapTable_attribute_same_locals_1_stack_item_frame_extended extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame
 {
 	@:overload override public function length() : Int;
 	
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
-	
-	@:overload override public function getOffsetDelta() : Int;
-	
-	public var offset_delta(default, null) : Int;
-	
-	public var stack(default, null) : java.NativeArray<StackMapTable_attribute_verification_type_info>;
-	
-	
-}
-@:native('com$sun$tools$classfile$StackMapTable_attribute$chop_frame') extern class StackMapTable_attribute_chop_frame extends StackMapTable_attribute_stack_map_frame
-{
-	@:overload override public function length() : Int;
-	
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
 	public var offset_delta(default, null) : Int;
 	
+	public var stack(default, null) : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_verification_type_info>;
+	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$same_frame_extended') extern class StackMapTable_attribute_same_frame_extended extends StackMapTable_attribute_stack_map_frame
+@:native('com$sun$tools$classfile$StackMapTable_attribute$chop_frame') extern class StackMapTable_attribute_chop_frame extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame
 {
 	@:overload override public function length() : Int;
 	
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -139,25 +127,37 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$append_frame') extern class StackMapTable_attribute_append_frame extends StackMapTable_attribute_stack_map_frame
+@:native('com$sun$tools$classfile$StackMapTable_attribute$same_frame_extended') extern class StackMapTable_attribute_same_frame_extended extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame
 {
 	@:overload override public function length() : Int;
 	
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
 	public var offset_delta(default, null) : Int;
 	
-	public var locals(default, null) : java.NativeArray<StackMapTable_attribute_verification_type_info>;
-	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$full_frame') extern class StackMapTable_attribute_full_frame extends StackMapTable_attribute_stack_map_frame
+@:native('com$sun$tools$classfile$StackMapTable_attribute$append_frame') extern class StackMapTable_attribute_append_frame extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame
 {
 	@:overload override public function length() : Int;
 	
-	@:overload public function accept<R, D>(visitor : StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
+	
+	@:overload override public function getOffsetDelta() : Int;
+	
+	public var offset_delta(default, null) : Int;
+	
+	public var locals(default, null) : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_verification_type_info>;
+	
+	
+}
+@:native('com$sun$tools$classfile$StackMapTable_attribute$full_frame') extern class StackMapTable_attribute_full_frame extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame
+{
+	@:overload override public function length() : Int;
+	
+	@:overload public function accept<R, D>(visitor : com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_stack_map_frame_Visitor<R, D>, data : D) : R;
 	
 	@:overload override public function getOffsetDelta() : Int;
 	
@@ -165,11 +165,11 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 	
 	public var number_of_locals(default, null) : Int;
 	
-	public var locals(default, null) : java.NativeArray<StackMapTable_attribute_verification_type_info>;
+	public var locals(default, null) : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_verification_type_info>;
 	
 	public var number_of_stack_items(default, null) : Int;
 	
-	public var stack(default, null) : java.NativeArray<StackMapTable_attribute_verification_type_info>;
+	public var stack(default, null) : java.NativeArray<com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_verification_type_info>;
 	
 	
 }
@@ -201,7 +201,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$Object_variable_info') extern class StackMapTable_attribute_Object_variable_info extends StackMapTable_attribute_verification_type_info
+@:native('com$sun$tools$classfile$StackMapTable_attribute$Object_variable_info') extern class StackMapTable_attribute_Object_variable_info extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_verification_type_info
 {
 	@:overload override public function length() : Int;
 	
@@ -209,7 +209,7 @@ extern class StackMapTable_attribute extends com.sun.tools.classfile.Attribute
 	
 	
 }
-@:native('com$sun$tools$classfile$StackMapTable_attribute$Uninitialized_variable_info') extern class StackMapTable_attribute_Uninitialized_variable_info extends StackMapTable_attribute_verification_type_info
+@:native('com$sun$tools$classfile$StackMapTable_attribute$Uninitialized_variable_info') extern class StackMapTable_attribute_Uninitialized_variable_info extends com.sun.tools.classfile.StackMapTable_attribute.StackMapTable_attribute_verification_type_info
 {
 	@:overload override public function length() : Int;
 	

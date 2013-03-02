@@ -34,7 +34,7 @@ extern class XPath2FilterContainer04 extends com.sun.org.apache.xml.internal.sec
 	* @param xpath2filter
 	* @return the instance
 	*/
-	@:overload public static function newInstanceIntersect(doc : org.w3c.dom.Document, xpath2filter : String) : XPath2FilterContainer04;
+	@:overload public static function newInstanceIntersect(doc : org.w3c.dom.Document, xpath2filter : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer04;
 	
 	/**
 	* Creates a new XPath2FilterContainer04 with the filter type "subtract".
@@ -43,7 +43,7 @@ extern class XPath2FilterContainer04 extends com.sun.org.apache.xml.internal.sec
 	* @param xpath2filter
 	* @return the instance
 	*/
-	@:overload public static function newInstanceSubtract(doc : org.w3c.dom.Document, xpath2filter : String) : XPath2FilterContainer04;
+	@:overload public static function newInstanceSubtract(doc : org.w3c.dom.Document, xpath2filter : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer04;
 	
 	/**
 	* Creates a new XPath2FilterContainer04 with the filter type "union".
@@ -52,7 +52,7 @@ extern class XPath2FilterContainer04 extends com.sun.org.apache.xml.internal.sec
 	* @param xpath2filter
 	* @return the instance
 	*/
-	@:overload public static function newInstanceUnion(doc : org.w3c.dom.Document, xpath2filter : String) : XPath2FilterContainer04;
+	@:overload public static function newInstanceUnion(doc : org.w3c.dom.Document, xpath2filter : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer04;
 	
 	/**
 	* Creates a XPath2FilterContainer04 from an existing Element; needed for verification.
@@ -63,7 +63,7 @@ extern class XPath2FilterContainer04 extends com.sun.org.apache.xml.internal.sec
 	*
 	* @throws XMLSecurityException
 	*/
-	@:overload public static function newInstance(element : org.w3c.dom.Element, BaseURI : String) : XPath2FilterContainer04;
+	@:overload public static function newInstance(element : org.w3c.dom.Element, BaseURI : String) : com.sun.org.apache.xml.internal.security.transforms.params.XPath2FilterContainer04;
 	
 	/**
 	* Returns <code>true</code> if the <code>Filter</code> attribute has value "intersect".

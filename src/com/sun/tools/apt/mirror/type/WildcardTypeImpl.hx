@@ -35,7 +35,7 @@ extern class WildcardTypeImpl extends com.sun.tools.apt.mirror.type.TypeMirrorIm
 	* and any "extends" or "super" clause.
 	* Delimiting brackets are not included.  Class names are qualified.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* {@inheritDoc}
@@ -50,7 +50,7 @@ extern class WildcardTypeImpl extends com.sun.tools.apt.mirror.type.TypeMirrorIm
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

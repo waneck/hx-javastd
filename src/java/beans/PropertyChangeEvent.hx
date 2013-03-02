@@ -103,7 +103,7 @@ extern class PropertyChangeEvent extends java.util.EventObject
 	*
 	* @since 1.7
 	*/
-	@:require(java7) @:overload override public function toString() : String;
+	@:require(java7) @:overload public function toString() : String;
 	
 	
 }

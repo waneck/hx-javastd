@@ -197,7 +197,7 @@ extern class SwitchPoint
 	* @throws NullPointerException if the {@code switchPoints} array reference is null
 	*                              or the array contains a null
 	*/
-	@:overload public static function invalidateAll(switchPoints : java.NativeArray<SwitchPoint>) : Void;
+	@:overload public static function invalidateAll(switchPoints : java.NativeArray<java.lang.invoke.SwitchPoint>) : Void;
 	
 	
 }

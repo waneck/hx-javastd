@@ -33,7 +33,7 @@ extern class AbstractTubeImpl implements com.sun.xml.internal.ws.api.pipe.Tube i
 	/**
 	* Copy constructor.
 	*/
-	@:overload private function new(that : AbstractTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
+	@:overload private function new(that : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl, cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : Void;
 	
 	@:overload @:final private function doInvoke(next : com.sun.xml.internal.ws.api.pipe.Tube, packet : com.sun.xml.internal.ws.api.message.Packet) : com.sun.xml.internal.ws.api.pipe.NextAction;
 	
@@ -57,9 +57,9 @@ extern class AbstractTubeImpl implements com.sun.xml.internal.ws.api.pipe.Tube i
 	* Needs to be implemented by the derived class, but we can't make it abstract
 	* without upsetting javac.
 	*/
-	@:overload @:final public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : AbstractTubeImpl;
+	@:overload @:final public function copy(cloner : com.sun.xml.internal.ws.api.pipe.PipeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	
-	@:overload @:abstract public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : AbstractTubeImpl;
+	@:overload @:abstract public function copy(cloner : com.sun.xml.internal.ws.api.pipe.TubeCloner) : com.sun.xml.internal.ws.api.pipe.helper.AbstractTubeImpl;
 	
 	/**
 	* Acts on a request and perform some protocol specific operation.

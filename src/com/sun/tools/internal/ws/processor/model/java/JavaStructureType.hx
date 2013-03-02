@@ -51,11 +51,11 @@ extern class JavaStructureType extends com.sun.tools.internal.ws.processor.model
 	
 	@:overload public function setAbstract(isAbstract : Bool) : Void;
 	
-	@:overload public function getSuperclass() : JavaStructureType;
+	@:overload public function getSuperclass() : com.sun.tools.internal.ws.processor.model.java.JavaStructureType;
 	
-	@:overload public function setSuperclass(superclassType : JavaStructureType) : Void;
+	@:overload public function setSuperclass(superclassType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
 	
-	@:overload public function addSubclass(subclassType : JavaStructureType) : Void;
+	@:overload public function addSubclass(subclassType : com.sun.tools.internal.ws.processor.model.java.JavaStructureType) : Void;
 	
 	@:overload public function getSubclasses() : java.util.Iterator<Dynamic>;
 	

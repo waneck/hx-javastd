@@ -72,43 +72,43 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	/**
 	* All built-in leaves.
 	*/
-	public static var LEAVES(default, null) : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, CBuiltinLeafInfo>;
+	public static var LEAVES(default, null) : java.util.Map<com.sun.tools.internal.xjc.model.nav.NType, com.sun.tools.internal.xjc.model.CBuiltinLeafInfo>;
 	
-	public static var ANYTYPE(default, null) : CBuiltinLeafInfo;
+	public static var ANYTYPE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var STRING(default, null) : CBuiltinLeafInfo;
+	public static var STRING(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BOOLEAN(default, null) : CBuiltinLeafInfo;
+	public static var BOOLEAN(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var INT(default, null) : CBuiltinLeafInfo;
+	public static var INT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var LONG(default, null) : CBuiltinLeafInfo;
+	public static var LONG(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BYTE(default, null) : CBuiltinLeafInfo;
+	public static var BYTE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var SHORT(default, null) : CBuiltinLeafInfo;
+	public static var SHORT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var FLOAT(default, null) : CBuiltinLeafInfo;
+	public static var FLOAT(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var DOUBLE(default, null) : CBuiltinLeafInfo;
+	public static var DOUBLE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var QNAME(default, null) : CBuiltinLeafInfo;
+	public static var QNAME(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var CALENDAR(default, null) : CBuiltinLeafInfo;
+	public static var CALENDAR(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var DURATION(default, null) : CBuiltinLeafInfo;
+	public static var DURATION(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BIG_INTEGER(default, null) : CBuiltinLeafInfo;
+	public static var BIG_INTEGER(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BIG_DECIMAL(default, null) : CBuiltinLeafInfo;
+	public static var BIG_DECIMAL(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var BASE64_BYTE_ARRAY(default, null) : CBuiltinLeafInfo;
+	public static var BASE64_BYTE_ARRAY(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var DATA_HANDLER(default, null) : CBuiltinLeafInfo;
+	public static var DATA_HANDLER(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var IMAGE(default, null) : CBuiltinLeafInfo;
+	public static var IMAGE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
-	public static var XML_SOURCE(default, null) : CBuiltinLeafInfo;
+	public static var XML_SOURCE(default, null) : com.sun.tools.internal.xjc.model.CBuiltinLeafInfo;
 	
 	public static var HEXBIN_BYTE_ARRAY(default, null) : com.sun.tools.internal.xjc.model.TypeUse;
 	
@@ -160,14 +160,14 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	/**
 	* True if this type is a valid target from a property annotated with {@link XmlIDREF}.
 	*/
-	@:overload override public function canBeReferencedByIDREF() : Bool;
+	@:overload public function canBeReferencedByIDREF() : Bool;
 	
 	/**
 	* Gets the location object that this object points to.
 	*
 	* This operation could be inefficient and costly.
 	*/
-	@:overload override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* Gets the primary XML type ANYTYPE_NAME of the class.
@@ -179,13 +179,13 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      null if the object doesn't have an explicit type ANYTYPE_NAME (AKA anonymous.)
 	*/
-	@:overload override public function getTypeName() : javax.xml.namespace.QName;
+	@:overload public function getTypeName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns true if this {@link NonElement} maps to text in XML,
 	* without any attribute nor child elements.
 	*/
-	@:overload override public function isSimpleType() : Bool;
+	@:overload public function isSimpleType() : Bool;
 	
 	/**
 	* Gets the upstream {@link Location} information.
@@ -193,7 +193,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      can be null.
 	*/
-	@:overload override public function getUpstream() : Locatable;
+	@:overload public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
 	/**
 	* Gets the underlying Java type that object represents.
@@ -201,7 +201,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      always non-null.
 	*/
-	@:overload override public function getType() : Dynamic;
+	@:overload public function getType() : Dynamic;
 	
 	/**
 	* Gets the list of customizations attached to this model component.
@@ -220,7 +220,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 * {@link CBuiltinLeafInfo} for Java classes that have
 * the spec defined built-in binding semantics.
 */
-@:native('com$sun$tools$internal$xjc$model$CBuiltinLeafInfo$Builtin') @:internal extern class CBuiltinLeafInfo_Builtin extends CBuiltinLeafInfo
+@:native('com$sun$tools$internal$xjc$model$CBuiltinLeafInfo$Builtin') @:internal extern class CBuiltinLeafInfo_Builtin extends com.sun.tools.internal.xjc.model.CBuiltinLeafInfo
 {
 	@:overload private function new(c : Class<Dynamic>, typeName : String) : Void;
 	
@@ -233,7 +233,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	
 	
 }
-@:native('com$sun$tools$internal$xjc$model$CBuiltinLeafInfo$NoConstantBuiltin') @:internal extern class CBuiltinLeafInfo_NoConstantBuiltin extends CBuiltinLeafInfo_Builtin
+@:native('com$sun$tools$internal$xjc$model$CBuiltinLeafInfo$NoConstantBuiltin') @:internal extern class CBuiltinLeafInfo_NoConstantBuiltin extends com.sun.tools.internal.xjc.model.CBuiltinLeafInfo.CBuiltinLeafInfo_Builtin
 {
 	@:overload public function new(c : Class<Dynamic>, typeName : String) : Void;
 	

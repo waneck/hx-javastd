@@ -31,7 +31,7 @@ extern interface XMLEventAllocator
 	* This method creates an instance of the XMLEventAllocator. This
 	* allows the XMLInputFactory to allocate a new instance per reader.
 	*/
-	@:overload public function newInstance() : XMLEventAllocator;
+	@:overload public function newInstance() : javax.xml.stream.util.XMLEventAllocator;
 	
 	/**
 	* This method allocates an event given the current

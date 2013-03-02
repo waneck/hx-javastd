@@ -37,11 +37,11 @@ extern class PositionDataInputStream extends java.io.DataInputStream
 	*/
 	@:overload public function new(_in : java.io.InputStream) : Void;
 	
-	@:overload override public function markSupported() : Bool;
+	@:overload public function markSupported() : Bool;
 	
-	@:overload override public function mark(readLimit : Int) : Void;
+	@:overload public function mark(readLimit : Int) : Void;
 	
-	@:overload override public function reset() : Void;
+	@:overload public function reset() : Void;
 	
 	@:overload public function position() : haxe.Int64;
 	

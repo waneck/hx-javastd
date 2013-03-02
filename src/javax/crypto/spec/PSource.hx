@@ -51,12 +51,12 @@ extern class PSource
 *
 * @since 1.5
 */
-@:require(java5) @:native('javax$crypto$spec$PSource$PSpecified') extern class PSource_PSpecified extends PSource
+@:require(java5) @:native('javax$crypto$spec$PSource$PSpecified') extern class PSource_PSpecified extends javax.crypto.spec.PSource
 {
 	/**
 	* The encoding input P whose value equals byte[0].
 	*/
-	public static var DEFAULT(default, null) : PSource_PSpecified;
+	public static var DEFAULT(default, null) : javax.crypto.spec.PSource.PSource_PSpecified;
 	
 	/**
 	* Constructs the source explicitly with the specified

@@ -64,7 +64,7 @@ extern class AuthorizationData implements java.lang.Cloneable
 	* @return an instance of AuthorizationData.
 	*
 	*/
-	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : AuthorizationData;
+	@:overload public static function parse(data : sun.security.util.DerInputStream, explicitTag : java.StdTypes.Int8, optional : Bool) : sun.security.krb5.internal.AuthorizationData;
 	
 	/**
 	* Writes <code>AuthorizationData</code> data fields to a output stream.

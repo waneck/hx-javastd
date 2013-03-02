@@ -471,7 +471,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*
 	* @return  This formatter
 	*/
-	@:overload public function format(format : String, args : java.NativeArray<Dynamic>) : Formatter;
+	@:overload public function format(format : String, args : java.NativeArray<Dynamic>) : java.util.Formatter;
 	
 	/**
 	* Writes a formatted string to this object's destination using the
@@ -508,7 +508,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	*
 	* @return  This formatter
 	*/
-	@:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : Formatter;
+	@:overload public function format(l : java.util.Locale, format : String, args : java.NativeArray<Dynamic>) : java.util.Formatter;
 	
 	
 }
@@ -520,7 +520,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	
 	
 }
-@:native('java$util$Formatter$FixedString') @:internal extern class Formatter_FixedString implements Formatter_FormatString
+@:native('java$util$Formatter$FixedString') @:internal extern class Formatter_FixedString implements java.util.Formatter.Formatter_FormatString
 {
 	@:overload public function index() : Int;
 	
@@ -537,7 +537,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 	
 }
 
-@:native('java$util$Formatter$FormatSpecifier') @:internal extern class Formatter_FormatSpecifier implements Formatter_FormatString
+@:native('java$util$Formatter$FormatSpecifier') @:internal extern class Formatter_FormatSpecifier implements java.util.Formatter.Formatter_FormatString
 {
 	@:overload public function index() : Int;
 	
@@ -549,7 +549,7 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 }
 @:native('java$util$Formatter$FormatSpecifier$BigDecimalLayout') @:internal extern class Formatter_FormatSpecifier_BigDecimalLayout
 {
-	@:overload public function new(intVal : java.math.BigInteger, scale : Int, form : Formatter_BigDecimalLayoutForm) : Void;
+	@:overload public function new(intVal : java.math.BigInteger, scale : Int, form : java.util.Formatter.Formatter_BigDecimalLayoutForm) : Void;
 	
 	@:overload public function hasDot() : Bool;
 	
@@ -567,15 +567,15 @@ extern class Formatter implements java.io.Closeable implements java.io.Flushable
 {
 	@:overload public function valueOf() : Int;
 	
-	@:overload public function contains(f : Formatter_Flags) : Bool;
+	@:overload public function contains(f : java.util.Formatter.Formatter_Flags) : Bool;
 	
-	@:overload public function dup() : Formatter_Flags;
+	@:overload public function dup() : java.util.Formatter.Formatter_Flags;
 	
-	@:overload public function remove(f : Formatter_Flags) : Formatter_Flags;
+	@:overload public function remove(f : java.util.Formatter.Formatter_Flags) : java.util.Formatter.Formatter_Flags;
 	
-	@:overload public static function parse(s : String) : Formatter_Flags;
+	@:overload public static function parse(s : String) : java.util.Formatter.Formatter_Flags;
 	
-	@:native('toString') @:overload public static function _toString(f : Formatter_Flags) : String;
+	@:native('toString') @:overload public static function _toString(f : java.util.Formatter.Formatter_Flags) : String;
 	
 	@:overload public function toString() : String;
 	

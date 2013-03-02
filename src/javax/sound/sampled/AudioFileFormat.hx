@@ -37,7 +37,7 @@ extern class AudioFileFormat
 	*
 	* @see #getType
 	*/
-	@:overload private function new(type : AudioFileFormat_Type, byteLength : Int, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
+	@:overload private function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, byteLength : Int, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
 	
 	/**
 	* Constructs an audio file format object.
@@ -47,7 +47,7 @@ extern class AudioFileFormat
 	* @param format the format of the audio data contained in the file
 	* @param frameLength the audio data length in sample frames, or <code>AudioSystem.NOT_SPECIFIED</code>
 	*/
-	@:overload public function new(type : AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
+	@:overload public function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int) : Void;
 	
 	/**
 	* Construct an audio file format object with a set of
@@ -65,7 +65,7 @@ extern class AudioFileFormat
 	*
 	* @since 1.5
 	*/
-	@:require(java5) @:overload public function new(type : AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int, properties : java.util.Map<String, Dynamic>) : Void;
+	@:require(java5) @:overload public function new(type : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type, format : javax.sound.sampled.AudioFormat, frameLength : Int, properties : java.util.Map<String, Dynamic>) : Void;
 	
 	/**
 	* Obtains the audio file type, such as <code>WAVE</code> or <code>AU</code>.
@@ -77,7 +77,7 @@ extern class AudioFileFormat
 	* @see Type#AIFC
 	* @see Type#SND
 	*/
-	@:overload public function getType() : AudioFileFormat_Type;
+	@:overload public function getType() : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Obtains the size in bytes of the entire audio file (not just its audio data).
@@ -149,27 +149,27 @@ extern class AudioFileFormat
 	/**
 	* Specifies a WAVE file.
 	*/
-	public static var WAVE(default, null) : AudioFileFormat_Type;
+	public static var WAVE(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies an AU file.
 	*/
-	public static var AU(default, null) : AudioFileFormat_Type;
+	public static var AU(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies an AIFF file.
 	*/
-	public static var AIFF(default, null) : AudioFileFormat_Type;
+	public static var AIFF(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies an AIFF-C file.
 	*/
-	public static var AIFC(default, null) : AudioFileFormat_Type;
+	public static var AIFC(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Specifies a SND file.
 	*/
-	public static var SND(default, null) : AudioFileFormat_Type;
+	public static var SND(default, null) : javax.sound.sampled.AudioFileFormat.AudioFileFormat_Type;
 	
 	/**
 	* Constructs a file type.

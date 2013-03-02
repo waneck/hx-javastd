@@ -94,7 +94,7 @@ extern class Console implements java.io.Flushable
 	*
 	* @return  This console
 	*/
-	@:overload public function format(fmt : String, args : java.NativeArray<Dynamic>) : Console;
+	@:overload public function format(fmt : String, args : java.NativeArray<Dynamic>) : java.io.Console;
 	
 	/**
 	* A convenience method to write a formatted string to this console's
@@ -130,7 +130,7 @@ extern class Console implements java.io.Flushable
 	*
 	* @return  This console
 	*/
-	@:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : Console;
+	@:overload public function printf(format : String, args : java.NativeArray<Dynamic>) : java.io.Console;
 	
 	/**
 	* Provides a formatted prompt, then reads a single line of text from the

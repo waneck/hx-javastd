@@ -48,7 +48,7 @@ extern class UBiDiProps
 {
 	@:overload public function new() : Void;
 	
-	@:overload @:final @:synchronized public static function getSingleton() : UBiDiProps;
+	@:overload @:final @:synchronized public static function getSingleton() : sun.text.normalizer.UBiDiProps;
 	
 	/**
 	* Get a singleton dummy object, one that works with no real data.
@@ -56,7 +56,7 @@ extern class UBiDiProps
 	* Using the dummy can reduce checks for available data after an initial failure.
 	* Port of ucase_getDummy().
 	*/
-	@:overload @:final @:synchronized public static function getDummy() : UBiDiProps;
+	@:overload @:final @:synchronized public static function getDummy() : sun.text.normalizer.UBiDiProps;
 	
 	@:overload @:final public function getClass(c : Int) : Int;
 	

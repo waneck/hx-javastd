@@ -32,9 +32,9 @@ package com.sun.tools.example.debug.gui;
 */
 extern class MonitorListModel extends javax.swing.AbstractListModel<Dynamic>
 {
-	@:overload override public function getElementAt(index : Int) : Dynamic;
+	@:overload public function getElementAt(index : Int) : Dynamic;
 	
-	@:overload override public function getSize() : Int;
+	@:overload public function getSize() : Int;
 	
 	@:overload public function add(expr : String) : Void;
 	

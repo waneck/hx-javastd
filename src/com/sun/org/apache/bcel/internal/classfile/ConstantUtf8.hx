@@ -69,7 +69,7 @@ extern class ConstantUtf8 extends com.sun.org.apache.bcel.internal.classfile.Con
 	/**
 	* Initialize from another object.
 	*/
-	@:overload public function new(c : ConstantUtf8) : Void;
+	@:overload public function new(c : com.sun.org.apache.bcel.internal.classfile.ConstantUtf8) : Void;
 	
 	/**
 	* @param bytes Data

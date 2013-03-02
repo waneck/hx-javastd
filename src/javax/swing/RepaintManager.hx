@@ -33,7 +33,7 @@ extern class RepaintManager
 	*          depending on the Component
 	* @return the RepaintManager object
 	*/
-	@:overload public static function currentManager(c : java.awt.Component) : RepaintManager;
+	@:overload public static function currentManager(c : java.awt.Component) : javax.swing.RepaintManager;
 	
 	/**
 	* Return the RepaintManager for the calling thread given a JComponent.
@@ -45,7 +45,7 @@ extern class RepaintManager
 	* @param c a JComponent -- unused
 	* @return the RepaintManager object
 	*/
-	@:overload public static function currentManager(c : javax.swing.JComponent) : RepaintManager;
+	@:overload public static function currentManager(c : javax.swing.JComponent) : javax.swing.RepaintManager;
 	
 	/**
 	* Set the RepaintManager that should be used for the calling
@@ -53,7 +53,7 @@ extern class RepaintManager
 	* for the calling thread's thread group.
 	* @param aRepaintManager  the RepaintManager object to use
 	*/
-	@:overload public static function setCurrentManager(aRepaintManager : RepaintManager) : Void;
+	@:overload public static function setCurrentManager(aRepaintManager : javax.swing.RepaintManager) : Void;
 	
 	/**
 	* Create a new RepaintManager instance. You rarely call this constructor.
@@ -240,7 +240,7 @@ extern class RepaintManager
 	/**
 	* RepaintManager the PaintManager has been installed on.
 	*/
-	private var repaintManager : RepaintManager;
+	private var repaintManager : javax.swing.RepaintManager;
 	
 	/**
 	* Paints a region of a component

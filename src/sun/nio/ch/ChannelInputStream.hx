@@ -39,15 +39,15 @@ package sun.nio.ch;
 	
 	@:overload public function new(ch : java.nio.channels.ReadableByteChannel) : Void;
 	
-	@:overload @:synchronized override public function read() : Int;
+	@:overload @:synchronized public function read() : Int;
 	
-	@:overload @:synchronized override public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
+	@:overload @:synchronized public function read(bs : java.NativeArray<java.StdTypes.Int8>, off : Int, len : Int) : Int;
 	
 	@:overload private function read(bb : java.nio.ByteBuffer) : Int;
 	
-	@:overload override public function available() : Int;
+	@:overload public function available() : Int;
 	
-	@:overload override public function close() : Void;
+	@:overload public function close() : Void;
 	
 	
 }

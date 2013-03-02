@@ -480,7 +480,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	* to a X509CRLImpl. Does a cast if possible, otherwise reparses
 	* the encoding.
 	*/
-	@:overload public static function toImpl(crl : java.security.cert.X509CRL) : X509CRLImpl;
+	@:overload public static function toImpl(crl : java.security.cert.X509CRL) : sun.security.x509.X509CRLImpl;
 	
 	@:overload public function derEncode(out : java.io.OutputStream) : Void;
 	
@@ -489,7 +489,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 /**
 * Immutable X.509 Certificate Issuer DN and serial number pair
 */
-@:native('sun$security$x509$X509CRLImpl$X509IssuerSerial') @:internal extern class X509CRLImpl_X509IssuerSerial implements java.lang.Comparable<X509CRLImpl_X509IssuerSerial>
+@:native('sun$security$x509$X509CRLImpl$X509IssuerSerial') @:internal extern class X509CRLImpl_X509IssuerSerial implements java.lang.Comparable<sun.security.x509.X509CRLImpl.X509CRLImpl_X509IssuerSerial>
 {
 	/**
 	* Compares this X509Serial with another and returns true if they
@@ -507,7 +507,7 @@ extern class X509CRLImpl extends java.security.cert.X509CRL implements sun.secur
 	*/
 	@:overload public function hashCode() : Int;
 	
-	@:overload public function compareTo(another : X509CRLImpl_X509IssuerSerial) : Int;
+	@:overload public function compareTo(another : sun.security.x509.X509CRLImpl.X509CRLImpl_X509IssuerSerial) : Int;
 	
 	
 }

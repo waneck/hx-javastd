@@ -198,7 +198,7 @@ extern class LinkedBlockingQueue<E> extends java.util.AbstractQueue<E> implement
 	*/
 	@:overload override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Atomically removes all of the elements from this queue.

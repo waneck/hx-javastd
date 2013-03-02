@@ -33,10 +33,10 @@ extern class NativeEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	
-	@:overload private function new(that : NativeEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.NativeEntry) : Void;
 	
 	/** This is a shallow copy clone. */
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	/** Invoke the constant generator.
 	@param symbolTable the symbol table is a hash table whose key is
@@ -44,12 +44,12 @@ extern class NativeEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 	a subclass of SymtabEntry.
 	@param stream the stream to which the generator should sent its output.
 	@see SymtabEntry */
-	@:overload override public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
+	@:overload public function generate(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, stream : java.io.PrintWriter) : Void;
 	
 	/** Access the constant generator.
 	@returns an object which implements the ConstGen interface.
 	@see ConstGen */
-	@:overload override public function generator() : com.sun.tools.corba.se.idl.Generator;
+	@:overload public function generator() : com.sun.tools.corba.se.idl.Generator;
 	
 	
 }

@@ -89,7 +89,7 @@ extern class RetrievalMethod extends com.sun.org.apache.xml.internal.security.ut
 	@:overload public function getTransforms() : com.sun.org.apache.xml.internal.security.transforms.Transforms;
 	
 	/** @inheritDoc */
-	@:overload override public function getBaseLocalName() : String;
+	@:overload public function getBaseLocalName() : String;
 	
 	
 }

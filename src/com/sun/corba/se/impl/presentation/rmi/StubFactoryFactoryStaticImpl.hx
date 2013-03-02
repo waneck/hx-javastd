@@ -25,11 +25,11 @@ package com.sun.corba.se.impl.presentation.rmi;
 */
 extern class StubFactoryFactoryStaticImpl extends com.sun.corba.se.impl.presentation.rmi.StubFactoryFactoryBase
 {
-	@:overload override public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
+	@:overload public function createStubFactory(className : String, isIDLStub : Bool, remoteCodeBase : String, expectedClass : Class<Dynamic>, classLoader : java.lang.ClassLoader) : com.sun.corba.se.spi.presentation.rmi.PresentationManager.PresentationManager_StubFactory;
 	
-	@:overload override public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
+	@:overload public function getTie(cls : Class<Dynamic>) : javax.rmi.CORBA.Tie;
 	
-	@:overload override public function createsDynamicStubs() : Bool;
+	@:overload public function createsDynamicStubs() : Bool;
 	
 	
 }

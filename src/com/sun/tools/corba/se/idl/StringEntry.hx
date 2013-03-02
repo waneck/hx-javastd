@@ -38,7 +38,7 @@ extern class StringEntry extends com.sun.tools.corba.se.idl.SymtabEntry
 {
 	@:overload private function new() : Void;
 	
-	@:overload private function new(that : StringEntry) : Void;
+	@:overload private function new(that : com.sun.tools.corba.se.idl.StringEntry) : Void;
 	
 	@:overload private function new(that : com.sun.tools.corba.se.idl.SymtabEntry, clone : com.sun.tools.corba.se.idl.IDLID) : Void;
 	

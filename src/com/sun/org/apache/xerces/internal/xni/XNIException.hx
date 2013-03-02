@@ -59,7 +59,7 @@ extern class XNIException extends java.lang.RuntimeException
 	/** Returns the wrapped exception. */
 	@:overload public function getException() : java.lang.Exception;
 	
-	@:overload override public function getCause() : java.lang.Throwable;
+	@:overload public function getCause() : java.lang.Throwable;
 	
 	
 }

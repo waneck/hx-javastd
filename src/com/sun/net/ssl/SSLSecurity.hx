@@ -44,9 +44,9 @@ package com.sun.net.ssl;
 {
 	@:overload private function engineInit(kma : java.NativeArray<com.sun.net.ssl.KeyManager>, tma : java.NativeArray<com.sun.net.ssl.TrustManager>, sr : java.security.SecureRandom) : Void;
 	
-	@:overload override private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
+	@:overload private function engineGetSocketFactory() : javax.net.ssl.SSLSocketFactory;
 	
-	@:overload override private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
+	@:overload private function engineGetServerSocketFactory() : javax.net.ssl.SSLServerSocketFactory;
 	
 	
 }

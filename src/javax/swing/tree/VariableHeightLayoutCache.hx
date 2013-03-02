@@ -35,7 +35,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*        bound: true
 	*  description: The TreeModel that will provide the data.
 	*/
-	@:overload override public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
+	@:overload public function setModel(newModel : javax.swing.tree.TreeModel) : Void;
 	
 	/**
 	* Determines whether or not the root node from
@@ -48,7 +48,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*  description: Whether or not the root node
 	*               from the TreeModel is visible.
 	*/
-	@:overload override public function setRootVisible(rootVisible : Bool) : Void;
+	@:overload public function setRootVisible(rootVisible : Bool) : Void;
 	
 	/**
 	* Sets the height of each cell.  If the specified value
@@ -60,7 +60,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*        bound: true
 	*  description: The height of each cell.
 	*/
-	@:overload override public function setRowHeight(rowHeight : Int) : Void;
+	@:overload public function setRowHeight(rowHeight : Int) : Void;
 	
 	/**
 	* Sets the renderer that is responsible for drawing nodes in the tree.
@@ -74,13 +74,13 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* @param path the <code>TreePath</code> of interest
 	* @param isExpanded true if the path should be expanded, otherwise false
 	*/
-	@:overload override public function setExpandedState(path : javax.swing.tree.TreePath, isExpanded : Bool) : Void;
+	@:overload public function setExpandedState(path : javax.swing.tree.TreePath, isExpanded : Bool) : Void;
 	
 	/**
 	* Returns true if the path is expanded, and visible.
 	* @return true if the path is expanded and visible, otherwise false
 	*/
-	@:overload override public function getExpandedState(path : javax.swing.tree.TreePath) : Bool;
+	@:overload public function getExpandedState(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Returns the <code>Rectangle</code> enclosing the label portion
@@ -91,7 +91,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* @return the bounds of the enclosing rectangle or <code>null</code>
 	*    if the node could not be ascertained
 	*/
-	@:overload override public function getBounds(path : javax.swing.tree.TreePath, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
+	@:overload public function getBounds(path : javax.swing.tree.TreePath, placeIn : java.awt.Rectangle) : java.awt.Rectangle;
 	
 	/**
 	* Returns the path for <code>row</code>.  If <code>row</code>
@@ -101,7 +101,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* @return the path for <code>row</code>, or <code>null</code>
 	* if <code>row</code> is not visible
 	*/
-	@:overload override public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
+	@:overload public function getPathForRow(row : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns the row where the last item identified in path is visible.
@@ -111,13 +111,13 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* @param path the <code>TreePath</code> of interest
 	* @return the row where the last item in path is visible
 	*/
-	@:overload override public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
+	@:overload public function getRowForPath(path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Returns the number of visible rows.
 	* @return the number of visible rows
 	*/
-	@:overload override public function getRowCount() : Int;
+	@:overload public function getRowCount() : Int;
 	
 	/**
 	* Instructs the <code>LayoutCache</code> that the bounds for
@@ -125,13 +125,13 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*
 	* @param path the <code>TreePath</code> which is now invalid
 	*/
-	@:overload override public function invalidatePathBounds(path : javax.swing.tree.TreePath) : Void;
+	@:overload public function invalidatePathBounds(path : javax.swing.tree.TreePath) : Void;
 	
 	/**
 	* Returns the preferred height.
 	* @return the preferred height
 	*/
-	@:overload override public function getPreferredHeight() : Int;
+	@:overload public function getPreferredHeight() : Int;
 	
 	/**
 	* Returns the preferred width and height for the region in
@@ -139,7 +139,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*
 	* @param bounds  the region being queried
 	*/
-	@:overload override public function getPreferredWidth(bounds : java.awt.Rectangle) : Int;
+	@:overload public function getPreferredWidth(bounds : java.awt.Rectangle) : Int;
 	
 	/**
 	* Returns the path to the node that is closest to x,y.  If
@@ -153,7 +153,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* @param y  the y-coordinate
 	* @return the path to the node that is closest to x, y
 	*/
-	@:overload override public function getPathClosestTo(x : Int, y : Int) : javax.swing.tree.TreePath;
+	@:overload public function getPathClosestTo(x : Int, y : Int) : javax.swing.tree.TreePath;
 	
 	/**
 	* Returns an <code>Enumerator</code> that increments over the visible paths
@@ -164,19 +164,19 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* @return an <code>Enumerator</code> that increments over the visible
 	*     paths
 	*/
-	@:overload override public function getVisiblePathsFrom(path : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
+	@:overload public function getVisiblePathsFrom(path : javax.swing.tree.TreePath) : java.util.Enumeration<javax.swing.tree.TreePath>;
 	
 	/**
 	* Returns the number of visible children for <code>path</code>.
 	* @return the number of visible children for <code>path</code>
 	*/
-	@:overload override public function getVisibleChildCount(path : javax.swing.tree.TreePath) : Int;
+	@:overload public function getVisibleChildCount(path : javax.swing.tree.TreePath) : Int;
 	
 	/**
 	* Informs the <code>TreeState</code> that it needs to recalculate
 	* all the sizes it is referencing.
 	*/
-	@:overload override public function invalidateSizes() : Void;
+	@:overload public function invalidateSizes() : Void;
 	
 	/**
 	* Returns true if the value identified by <code>path</code> is
@@ -184,7 +184,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* @return true if the value identified by <code>path</code> is
 	*    currently expanded
 	*/
-	@:overload override public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
+	@:overload public function isExpanded(path : javax.swing.tree.TreePath) : Bool;
 	
 	/**
 	* Invoked after a node (or a set of siblings) has changed in some
@@ -202,7 +202,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*
 	* @param e the <code>TreeModelEvent</code> of interest
 	*/
-	@:overload override public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeNodesChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Invoked after nodes have been inserted into the tree.
@@ -213,7 +213,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*
 	* @param e the <code>TreeModelEvent</code> of interest
 	*/
-	@:overload override public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeNodesInserted(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Invoked after nodes have been removed from the tree.  Note that
@@ -228,7 +228,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*
 	* @param e the <code>TreeModelEvent</code> of interest
 	*/
-	@:overload override public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeNodesRemoved(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	/**
 	* Invoked after the tree has drastically changed structure from a
@@ -242,7 +242,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	*
 	* @param e the <code>TreeModelEvent</code> of interest
 	*/
-	@:overload override public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
+	@:overload public function treeStructureChanged(e : javax.swing.event.TreeModelEvent) : Void;
 	
 	
 }
@@ -350,7 +350,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	* Returns the last visible node that is a child of this
 	* instance.
 	*/
-	@:overload public function getLastVisibleNode() : VariableHeightLayoutCache_TreeStateNode;
+	@:overload public function getLastVisibleNode() : javax.swing.tree.VariableHeightLayoutCache.VariableHeightLayoutCache_TreeStateNode;
 	
 	/**
 	* Returns true if the receiver is currently visible.
@@ -489,7 +489,7 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 @:native('javax$swing$tree$VariableHeightLayoutCache$VisibleTreeStateNodeEnumeration') @:internal extern class VariableHeightLayoutCache_VisibleTreeStateNodeEnumeration implements java.util.Enumeration<javax.swing.tree.TreePath>
 {
 	/** Parent thats children are being enumerated. */
-	private var parent : VariableHeightLayoutCache_TreeStateNode;
+	private var parent : javax.swing.tree.VariableHeightLayoutCache.VariableHeightLayoutCache_TreeStateNode;
 	
 	/** Index of next child. An index of -1 signifies parent should be
 	* visibled next. */
@@ -498,9 +498,9 @@ extern class VariableHeightLayoutCache extends javax.swing.tree.AbstractLayoutCa
 	/** Number of children in parent. */
 	private var childCount : Int;
 	
-	@:overload private function new(node : VariableHeightLayoutCache_TreeStateNode) : Void;
+	@:overload private function new(node : javax.swing.tree.VariableHeightLayoutCache.VariableHeightLayoutCache_TreeStateNode) : Void;
 	
-	@:overload private function new(parent : VariableHeightLayoutCache_TreeStateNode, startIndex : Int) : Void;
+	@:overload private function new(parent : javax.swing.tree.VariableHeightLayoutCache.VariableHeightLayoutCache_TreeStateNode, startIndex : Int) : Void;
 	
 	/**
 	* @return true if more visible nodes.

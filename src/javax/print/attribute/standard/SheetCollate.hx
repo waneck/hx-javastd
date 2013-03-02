@@ -29,13 +29,13 @@ extern class SheetCollate extends javax.print.attribute.EnumSyntax implements ja
 	* Sheets within a document appear in uncollated order when multiple
 	* copies are printed.
 	*/
-	public static var UNCOLLATED(default, null) : SheetCollate;
+	public static var UNCOLLATED(default, null) : javax.print.attribute.standard.SheetCollate;
 	
 	/**
 	* Sheets within a document appear in collated order when multiple copies
 	* are printed.
 	*/
-	public static var COLLATED(default, null) : SheetCollate;
+	public static var COLLATED(default, null) : javax.print.attribute.standard.SheetCollate;
 	
 	/**
 	* Construct a new sheet collate enumeration value with the given integer
@@ -48,12 +48,12 @@ extern class SheetCollate extends javax.print.attribute.EnumSyntax implements ja
 	/**
 	* Returns the string table for class SheetCollate.
 	*/
-	@:overload override private function getStringTable() : java.NativeArray<String>;
+	@:overload private function getStringTable() : java.NativeArray<String>;
 	
 	/**
 	* Returns the enumeration value table for class SheetCollate.
 	*/
-	@:overload override private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
+	@:overload private function getEnumValueTable() : java.NativeArray<javax.print.attribute.EnumSyntax>;
 	
 	/**
 	* Get the printing attribute class which is to be used as the "category"

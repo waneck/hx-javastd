@@ -141,7 +141,7 @@ extern class XmlSchemaGenerator<T, C, F, M>
 /**
 * {@link ElementDeclaration} that refers to a {@link NonElement}.
 */
-@:native('com$sun$xml$internal$bind$v2$schemagen$XmlSchemaGenerator$Namespace$ElementWithType') @:internal extern class XmlSchemaGenerator_Namespace_ElementWithType extends XmlSchemaGenerator_Namespace_ElementDeclaration
+@:native('com$sun$xml$internal$bind$v2$schemagen$XmlSchemaGenerator$Namespace$ElementWithType') @:internal extern class XmlSchemaGenerator_Namespace_ElementWithType extends com.sun.xml.internal.bind.v2.schemagen.XmlSchemaGenerator.XmlSchemaGenerator_Namespace_ElementDeclaration
 {
 	@:overload public function new(nillable : Bool, type : com.sun.xml.internal.bind.v2.model.core.NonElement<Dynamic, Dynamic>) : Void;
 	

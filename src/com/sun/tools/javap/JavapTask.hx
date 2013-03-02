@@ -51,9 +51,9 @@ extern class JavapTask implements com.sun.tools.javap.DisassemblerTool.Disassemb
 	
 	@:overload private function open(className : String) : javax.tools.JavaFileObject;
 	
-	@:overload public function read(fo : javax.tools.JavaFileObject) : JavapTask_ClassFileInfo;
+	@:overload public function read(fo : javax.tools.JavaFileObject) : com.sun.tools.javap.JavapTask.JavapTask_ClassFileInfo;
 	
-	@:overload public function write(info : JavapTask_ClassFileInfo) : Void;
+	@:overload public function write(info : com.sun.tools.javap.JavapTask.JavapTask_ClassFileInfo) : Void;
 	
 	@:overload private function setClassFile(classFile : com.sun.tools.classfile.ClassFile) : Void;
 	
@@ -114,9 +114,9 @@ extern class JavapTask implements com.sun.tools.javap.DisassemblerTool.Disassemb
 }
 @:native('com$sun$tools$javap$JavapTask$SizeInputStream') @:internal extern class JavapTask_SizeInputStream extends java.io.FilterInputStream
 {
-	@:overload override public function read(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
+	@:overload public function read(buf : java.NativeArray<java.StdTypes.Int8>, offset : Int, length : Int) : Int;
 	
-	@:overload override public function read() : Int;
+	@:overload public function read() : Int;
 	
 	
 }

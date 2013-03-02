@@ -38,7 +38,7 @@ extern interface XSElementDecl extends com.sun.xml.internal.xsom.XSDeclaration e
 	* Gets the substitution head of this element, if any.
 	* Otherwise null.
 	*/
-	@:overload public function getSubstAffiliation() : XSElementDecl;
+	@:overload public function getSubstAffiliation() : com.sun.xml.internal.xsom.XSElementDecl;
 	
 	/**
 	* Returns all the {@link XSIdentityConstraint}s in this element decl.
@@ -93,7 +93,7 @@ extern interface XSElementDecl extends com.sun.xml.internal.xsom.XSDeclaration e
 	*      inefficient when working with a large schema. Use
 	*      {@link #getSubstitutables()} instead.
 	*/
-	@:overload public function listSubstitutables() : java.NativeArray<XSElementDecl>;
+	@:overload public function listSubstitutables() : java.NativeArray<com.sun.xml.internal.xsom.XSElementDecl>;
 	
 	/**
 	* Returns the element declarations that can substitute
@@ -114,7 +114,7 @@ extern interface XSElementDecl extends com.sun.xml.internal.xsom.XSDeclaration e
 	*      nun-null unmodifiable list.
 	*      The returned list always contains this element decl itself.
 	*/
-	@:overload public function getSubstitutables() : java.util.Set<XSElementDecl>;
+	@:overload public function getSubstitutables() : java.util.Set<com.sun.xml.internal.xsom.XSElementDecl>;
 	
 	/**
 	* Returns true if this element declaration can be validly substituted
@@ -123,7 +123,7 @@ extern interface XSElementDecl extends com.sun.xml.internal.xsom.XSDeclaration e
 	* <p>
 	* Just a short cut of <tt>getSubstitutables().contain(e);</tt>
 	*/
-	@:overload public function canBeSubstitutedBy(e : XSElementDecl) : Bool;
+	@:overload public function canBeSubstitutedBy(e : com.sun.xml.internal.xsom.XSElementDecl) : Bool;
 	
 	@:overload public function getDefaultValue() : com.sun.xml.internal.xsom.XmlString;
 	

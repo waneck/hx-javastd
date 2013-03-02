@@ -25,9 +25,9 @@ package com.sun.corba.se.impl.ior;
 */
 extern class IORTemplateImpl extends com.sun.corba.se.spi.ior.IdentifiableContainerBase implements com.sun.corba.se.spi.ior.IORTemplate
 {
-	@:overload override public function equals(obj : Dynamic) : Bool;
+	@:overload public function equals(obj : Dynamic) : Bool;
 	
-	@:overload override public function hashCode() : Int;
+	@:overload public function hashCode() : Int;
 	
 	@:overload public function getObjectKeyTemplate() : com.sun.corba.se.spi.ior.ObjectKeyTemplate;
 	
@@ -41,7 +41,7 @@ extern class IORTemplateImpl extends com.sun.corba.se.spi.ior.IdentifiableContai
 	* modified.  This overrides the method inherited from
 	* FreezableList through IdentifiableContainerBase.
 	*/
-	@:overload override public function makeImmutable() : Void;
+	@:overload public function makeImmutable() : Void;
 	
 	@:overload public function write(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	

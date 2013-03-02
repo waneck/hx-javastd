@@ -28,12 +28,12 @@ extern class AnnotationTypeImpl extends com.sun.tools.apt.mirror.type.InterfaceT
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function getDeclaration() : com.sun.mirror.declaration.AnnotationTypeDeclaration;
+	@:overload public function getDeclaration() : com.sun.mirror.declaration.AnnotationTypeDeclaration;
 	
 	/**
 	* {@inheritDoc}
 	*/
-	@:overload override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

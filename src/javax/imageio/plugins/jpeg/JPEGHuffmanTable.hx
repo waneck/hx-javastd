@@ -28,22 +28,22 @@ extern class JPEGHuffmanTable
 	/**
 	* The standard DC luminance Huffman table.
 	*/
-	public static var StdDCLuminance(default, null) : JPEGHuffmanTable;
+	public static var StdDCLuminance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* The standard DC chrominance Huffman table.
 	*/
-	public static var StdDCChrominance(default, null) : JPEGHuffmanTable;
+	public static var StdDCChrominance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* The standard AC luminance Huffman table.
 	*/
-	public static var StdACLuminance(default, null) : JPEGHuffmanTable;
+	public static var StdACLuminance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* The standard AC chrominance Huffman table.
 	*/
-	public static var StdACChrominance(default, null) : JPEGHuffmanTable;
+	public static var StdACChrominance(default, null) : javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 	
 	/**
 	* Creates a Huffman table and initializes it. The input arrays are copied.

@@ -27,7 +27,7 @@ extern class LeafPropertyLoader extends com.sun.xml.internal.bind.v2.runtime.unm
 {
 	@:overload public function new(xacc : com.sun.xml.internal.bind.v2.runtime.reflect.TransducedAccessor<Dynamic>) : Void;
 	
-	@:overload override public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
+	@:overload public function text(state : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext.UnmarshallingContext_State, text : java.lang.CharSequence) : Void;
 	
 	
 }

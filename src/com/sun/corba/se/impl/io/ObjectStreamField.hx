@@ -63,7 +63,7 @@ extern class ObjectStreamField implements java.lang.Comparable<Dynamic>
 	* The match if they have the same primitive types.
 	* or if they are both objects and the object types match.
 	*/
-	@:overload public function typeEquals(other : ObjectStreamField) : Bool;
+	@:overload public function typeEquals(other : com.sun.corba.se.impl.io.ObjectStreamField) : Bool;
 	
 	/* Returns the signature of the Field.
 	*

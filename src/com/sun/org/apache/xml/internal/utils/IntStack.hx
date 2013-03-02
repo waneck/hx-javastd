@@ -41,7 +41,7 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	*
 	* @param v IntStack to copy
 	*/
-	@:overload public function new(v : IntStack) : Void;
+	@:overload public function new(v : com.sun.org.apache.xml.internal.utils.IntStack) : Void;
 	
 	/**
 	* Pushes an item onto the top of this stack.
@@ -116,7 +116,7 @@ extern class IntStack extends com.sun.org.apache.xml.internal.utils.IntVector
 	*
 	* @return clone of current IntStack
 	*/
-	@:overload override public function clone() : Dynamic;
+	@:overload public function clone() : Dynamic;
 	
 	
 }

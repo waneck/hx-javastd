@@ -35,9 +35,9 @@ extern interface LocatorEx extends org.xml.sax.Locator
 /**
 * Immutable snapshot of a {@link LocatorEx}
 */
-@:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$LocatorEx$Snapshot') extern class LocatorEx_Snapshot implements LocatorEx implements javax.xml.bind.ValidationEventLocator
+@:native('com$sun$xml$internal$bind$v2$runtime$unmarshaller$LocatorEx$Snapshot') extern class LocatorEx_Snapshot implements com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx implements javax.xml.bind.ValidationEventLocator
 {
-	@:overload public function new(loc : LocatorEx) : Void;
+	@:overload public function new(loc : com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx) : Void;
 	
 	@:overload public function getObject() : Dynamic;
 	

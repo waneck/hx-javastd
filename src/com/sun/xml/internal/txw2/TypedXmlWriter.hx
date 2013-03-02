@@ -187,7 +187,7 @@ extern interface TypedXmlWriter
 	*
 	* @see #_element(String, String, Class)
 	*/
-	@:overload public function _element<T : TypedXmlWriter>(localName : String, contentModel : Class<T>) : T;
+	@:overload public function _element<T : com.sun.xml.internal.txw2.TypedXmlWriter>(localName : String, contentModel : Class<T>) : T;
 	
 	/**
 	* Appends a new child element.
@@ -207,7 +207,7 @@ extern interface TypedXmlWriter
 	*      always return non-null {@link TypedXmlWriter} that can be used
 	*      to write the contents of the newly created child element.
 	*/
-	@:overload public function _element<T : TypedXmlWriter>(nsUri : String, localName : String, contentModel : Class<T>) : T;
+	@:overload public function _element<T : com.sun.xml.internal.txw2.TypedXmlWriter>(nsUri : String, localName : String, contentModel : Class<T>) : T;
 	
 	/**
 	* Appends a new child element.
@@ -217,7 +217,7 @@ extern interface TypedXmlWriter
 	*
 	* @see #_element(String, String, Class)
 	*/
-	@:overload public function _element<T : TypedXmlWriter>(tagName : javax.xml.namespace.QName, contentModel : Class<T>) : T;
+	@:overload public function _element<T : com.sun.xml.internal.txw2.TypedXmlWriter>(tagName : javax.xml.namespace.QName, contentModel : Class<T>) : T;
 	
 	/**
 	* Appends a new child element.
@@ -229,7 +229,7 @@ extern interface TypedXmlWriter
 	*
 	* @see #_element(String, String, Class)
 	*/
-	@:overload public function _element<T : TypedXmlWriter>(contentModel : Class<T>) : T;
+	@:overload public function _element<T : com.sun.xml.internal.txw2.TypedXmlWriter>(contentModel : Class<T>) : T;
 	
 	/**
 	* Returns a different interface for this typed XML Writer.
@@ -246,7 +246,7 @@ extern interface TypedXmlWriter
 	* @return
 	*      always return non-null.
 	*/
-	@:overload public function _cast<T : TypedXmlWriter>(targetInterface : Class<T>) : T;
+	@:overload public function _cast<T : com.sun.xml.internal.txw2.TypedXmlWriter>(targetInterface : Class<T>) : T;
 	
 	
 }

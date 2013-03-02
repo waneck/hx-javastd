@@ -119,7 +119,7 @@ extern class Driver
 @:native('com$sun$tools$internal$xjc$Driver$OptionsEx') @:internal extern class Driver_OptionsEx extends com.sun.tools.internal.xjc.Options
 {
 	/** Operation mode. */
-	private var mode : Driver_Mode;
+	private var mode : com.sun.tools.internal.xjc.Driver.Driver_Mode;
 	
 	/** A switch that determines the behavior in the BGM mode. */
 	public var noNS : Bool;

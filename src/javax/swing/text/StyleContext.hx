@@ -31,7 +31,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	*
 	* @return the context
 	*/
-	@:overload @:final public static function getDefaultStyleContext() : StyleContext;
+	@:overload @:final public static function getDefaultStyleContext() : javax.swing.text.StyleContext;
 	
 	/**
 	* Creates a new StyleContext object.
@@ -277,7 +277,7 @@ extern class StyleContext implements java.io.Serializable implements javax.swing
 	* @param a The set of attributes to be represented in the
 	*  the compact form.
 	*/
-	@:overload private function createSmallAttributeSet(a : javax.swing.text.AttributeSet) : StyleContext_SmallAttributeSet;
+	@:overload private function createSmallAttributeSet(a : javax.swing.text.AttributeSet) : javax.swing.text.StyleContext.StyleContext_SmallAttributeSet;
 	
 	/**
 	* Create a large set of attributes that should trade off

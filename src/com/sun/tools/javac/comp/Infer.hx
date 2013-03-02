@@ -32,12 +32,12 @@ package com.sun.tools.javac.comp;
 */
 extern class Infer
 {
-	private static var inferKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<Infer>;
+	private static var inferKey(default, null) : com.sun.tools.javac.util.Context.Context_Key<com.sun.tools.javac.comp.Infer>;
 	
 	/** A value for prototypes that admit any type, including polymorphic ones. */
 	public static var anyPoly(default, null) : com.sun.tools.javac.code.Type;
 	
-	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : Infer;
+	@:overload public static function instance(context : com.sun.tools.javac.util.Context) : com.sun.tools.javac.comp.Infer;
 	
 	@:overload private function new(context : com.sun.tools.javac.util.Context) : Void;
 	
@@ -60,11 +60,11 @@ extern class Infer
 {
 	
 }
-@:native('com$sun$tools$javac$comp$Infer$NoInstanceException') extern class Infer_NoInstanceException extends Infer_InferenceException
+@:native('com$sun$tools$javac$comp$Infer$NoInstanceException') extern class Infer_NoInstanceException extends com.sun.tools.javac.comp.Infer.Infer_InferenceException
 {
 	
 }
-@:native('com$sun$tools$javac$comp$Infer$InvalidInstanceException') extern class Infer_InvalidInstanceException extends Infer_InferenceException
+@:native('com$sun$tools$javac$comp$Infer$InvalidInstanceException') extern class Infer_InvalidInstanceException extends com.sun.tools.javac.comp.Infer.Infer_InferenceException
 {
 	
 }

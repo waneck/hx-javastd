@@ -135,9 +135,9 @@ package javax.print;
 */
 @:native('javax$print$MimeType$ParameterMapEntrySet') @:internal extern class MimeType_ParameterMapEntrySet extends java.util.AbstractSet<Dynamic>
 {
-	@:overload override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload public function iterator() : java.util.Iterator<Dynamic>;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
 	
 }
@@ -146,7 +146,7 @@ package javax.print;
 */
 @:native('javax$print$MimeType$ParameterMap') @:internal extern class MimeType_ParameterMap extends java.util.AbstractMap<Dynamic, Dynamic>
 {
-	@:overload override public function entrySet() : java.util.Set<Dynamic>;
+	@:overload public function entrySet() : java.util.Set<Dynamic>;
 	
 	
 }

@@ -41,7 +41,7 @@ extern class LocateReplyMessage_1_2 extends com.sun.corba.se.impl.protocol.giopm
 	
 	@:overload public static function isValidReplyStatus(replyStatus : Int) : Void;
 	
-	//@:overload override public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
+	//@:overload public function _callback(handler : com.sun.corba.se.impl.protocol.giopmsgheaders.MessageHandler) : Void;
 	
 	
 }

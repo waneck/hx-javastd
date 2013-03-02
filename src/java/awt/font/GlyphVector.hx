@@ -477,7 +477,7 @@ extern class GlyphVector implements java.lang.Cloneable
 	*   <code>GlyphVector</code> equals this <code>GlyphVector</code>;
 	*   <code>false</code> otherwise.
 	*/
-	@:overload @:abstract public function equals(set : GlyphVector) : Bool;
+	@:overload @:abstract public function equals(set : java.awt.font.GlyphVector) : Bool;
 	
 	
 }

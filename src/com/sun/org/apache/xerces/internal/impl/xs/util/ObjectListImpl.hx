@@ -24,26 +24,26 @@ extern class ObjectListImpl extends java.util.AbstractList<Dynamic> implements c
 	/**
 	* An immutable empty list.
 	*/
-	public static var EMPTY_LIST(default, null) : ObjectListImpl;
+	public static var EMPTY_LIST(default, null) : com.sun.org.apache.xerces.internal.impl.xs.util.ObjectListImpl;
 	
 	@:overload public function new(array : java.NativeArray<Dynamic>, length : Int) : Void;
 	
 	@:overload public function getLength() : Int;
 	
-	@:overload override public function contains(item : Dynamic) : Bool;
+	@:overload public function contains(item : Dynamic) : Bool;
 	
 	@:overload public function item(index : Int) : Dynamic;
 	
 	/*
 	* List methods
 	*/
-	@:overload override public function get(index : Int) : Dynamic;
+	@:overload public function get(index : Int) : Dynamic;
 	
-	@:overload override public function size() : Int;
+	@:overload public function size() : Int;
 	
-	@:overload override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload public function toArray() : java.NativeArray<Dynamic>;
 	
-	@:overload override public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
+	@:overload public function toArray(a : java.NativeArray<Dynamic>) : java.NativeArray<Dynamic>;
 	
 	
 }

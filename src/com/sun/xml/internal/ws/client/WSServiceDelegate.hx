@@ -33,35 +33,35 @@ extern class WSServiceDelegate extends com.sun.xml.internal.ws.api.WSService
 	*/
 	@:overload public function new(wsdl : javax.xml.transform.Source, serviceName : javax.xml.namespace.QName, serviceClass : Class<javax.xml.ws.Service>) : Void;
 	
-	@:overload override public function getExecutor() : java.util.concurrent.Executor;
+	@:overload public function getExecutor() : java.util.concurrent.Executor;
 	
-	@:overload override public function setExecutor(executor : java.util.concurrent.Executor) : Void;
+	@:overload public function setExecutor(executor : java.util.concurrent.Executor) : Void;
 	
-	@:overload override public function getHandlerResolver() : javax.xml.ws.handler.HandlerResolver;
+	@:overload public function getHandlerResolver() : javax.xml.ws.handler.HandlerResolver;
 	
-	@:overload override public function setHandlerResolver(resolver : javax.xml.ws.handler.HandlerResolver) : Void;
+	@:overload public function setHandlerResolver(resolver : javax.xml.ws.handler.HandlerResolver) : Void;
 	
-	@:overload override public function getPort<T>(portName : javax.xml.namespace.QName, portInterface : Class<T>) : T;
+	@:overload public function getPort<T>(portName : javax.xml.namespace.QName, portInterface : Class<T>) : T;
 	
-	@:overload override public function getPort<T>(portName : javax.xml.namespace.QName, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:overload public function getPort<T>(portName : javax.xml.namespace.QName, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
-	@:overload override public function getPort<T>(epr : javax.xml.ws.EndpointReference, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:overload public function getPort<T>(epr : javax.xml.ws.EndpointReference, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
-	@:overload override public function getPort<T>(wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:overload public function getPort<T>(wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
-	@:overload override public function getPort<T>(portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
+	@:overload public function getPort<T>(portInterface : Class<T>, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : T;
 	
-	@:overload override public function getPort<T>(portInterface : Class<T>) : T;
+	@:overload public function getPort<T>(portInterface : Class<T>) : T;
 	
-	@:overload override public function addPort(portName : javax.xml.namespace.QName, bindingId : String, endpointAddress : String) : Void;
+	@:overload public function addPort(portName : javax.xml.namespace.QName, bindingId : String, endpointAddress : String) : Void;
 	
-	@:overload override public function createDispatch<T>(portName : javax.xml.namespace.QName, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<T>;
+	@:overload public function createDispatch<T>(portName : javax.xml.namespace.QName, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<T>;
 	
-	@:overload override public function createDispatch<T>(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:overload public function createDispatch<T>(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
-	@:overload override public function createDispatch<T>(portName : javax.xml.namespace.QName, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:overload public function createDispatch<T>(portName : javax.xml.namespace.QName, aClass : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
-	@:overload override public function createDispatch<T>(endpointReference : javax.xml.ws.EndpointReference, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
+	@:overload public function createDispatch<T>(endpointReference : javax.xml.ws.EndpointReference, type : Class<T>, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<T>;
 	
 	/**
 	* Obtains {@link PortInfo} for the given name, with error check.
@@ -70,23 +70,23 @@ extern class WSServiceDelegate extends com.sun.xml.internal.ws.api.WSService
 	
 	@:overload public function getEndpointAddress(qName : javax.xml.namespace.QName) : com.sun.xml.internal.ws.api.EndpointAddress;
 	
-	@:overload override public function createDispatch(portName : javax.xml.namespace.QName, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload public function createDispatch(portName : javax.xml.namespace.QName, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode) : javax.xml.ws.Dispatch<Dynamic>;
 	
-	@:overload override public function createDispatch(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload public function createDispatch(portName : javax.xml.namespace.QName, wsepr : com.sun.xml.internal.ws.api.addressing.WSEndpointReference, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
-	@:overload override public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
+	@:overload public function getContainer() : com.sun.xml.internal.ws.api.server.Container;
 	
-	@:overload override public function createDispatch(portName : javax.xml.namespace.QName, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload public function createDispatch(portName : javax.xml.namespace.QName, jaxbContext : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
-	@:overload override public function createDispatch(endpointReference : javax.xml.ws.EndpointReference, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
+	@:overload public function createDispatch(endpointReference : javax.xml.ws.EndpointReference, context : javax.xml.bind.JAXBContext, mode : javax.xml.ws.Service.Service_Mode, features : java.NativeArray<javax.xml.ws.WebServiceFeature>) : javax.xml.ws.Dispatch<Dynamic>;
 	
-	@:overload override public function getServiceName() : javax.xml.namespace.QName;
+	@:overload public function getServiceName() : javax.xml.namespace.QName;
 	
 	@:overload private function getServiceClass() : Class<Dynamic>;
 	
-	@:overload override public function getPorts() : java.util.Iterator<javax.xml.namespace.QName>;
+	@:overload public function getPorts() : java.util.Iterator<javax.xml.namespace.QName>;
 	
-	@:overload override public function getWSDLDocumentLocation() : java.net.URL;
+	@:overload public function getWSDLDocumentLocation() : java.net.URL;
 	
 	@:overload public function getWsdlService() : com.sun.xml.internal.ws.model.wsdl.WSDLServiceImpl;
 	

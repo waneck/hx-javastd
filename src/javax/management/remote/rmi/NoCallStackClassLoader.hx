@@ -34,7 +34,7 @@ package javax.management.remote.rmi;
 	* if it is one of the classes whose byte code we have, or
 	* delegate the load if it is one of the referenced classes.
 	*/
-	@:overload override private function findClass(name : String) : Class<Dynamic>;
+	@:overload private function findClass(name : String) : Class<Dynamic>;
 	
 	/**
 	* <p>Construct a <code>byte[]</code> using the characters of the
