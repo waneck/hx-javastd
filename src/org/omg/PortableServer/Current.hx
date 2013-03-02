@@ -23,7 +23,7 @@ package org.omg.PortableServer;
 	 * the POA and ObjectId that identify the object on 
 	 * which that operation was invoked.
 	 */
-extern interface Current extends org.omg.PortableServer.CurrentOperations extends org.omg.CORBA.Current extends org.omg.CORBA.portable.IDLEntity
+extern interface Current extends org.omg.CORBA.CurrentOperations extends org.omg.CORBA.Current extends org.omg.CORBA.portable.IDLEntity
 {
 	
 }

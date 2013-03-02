@@ -321,7 +321,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 * This class implements accessibility support for the
 * <code>Box.Filler</code> class.
 */
-@:native('javax$swing$Box$Filler$AccessibleBoxFiller') extern class Box_Filler_AccessibleBoxFiller extends AccessibleAWTComponent
+@:native('javax$swing$Box$Filler$AccessibleBoxFiller') extern class Box_Filler_AccessibleBoxFiller extends java.awt.Component.Component_AccessibleAWTComponent
 {
 	/**
 	* Gets the role of this object.
@@ -330,7 +330,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*   the object (AccessibleRole.FILLER)
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }
@@ -338,7 +338,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 * This class implements accessibility support for the
 * <code>Box</code> class.
 */
-@:native('javax$swing$Box$AccessibleBox') extern class Box_AccessibleBox extends AccessibleAWTContainer
+@:native('javax$swing$Box$AccessibleBox') extern class Box_AccessibleBox extends java.awt.Container.Container_AccessibleAWTContainer
 {
 	/**
 	* Gets the role of this object.
@@ -347,7 +347,7 @@ extern class Box extends javax.swing.JComponent implements javax.accessibility.A
 	*   object (AccessibleRole.FILLER)
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

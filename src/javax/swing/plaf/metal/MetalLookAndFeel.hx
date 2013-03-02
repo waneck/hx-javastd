@@ -784,7 +784,7 @@ extern class MetalLookAndFeel extends javax.swing.plaf.basic.BasicLookAndFeel
 }
 @:native('javax$swing$plaf$metal$MetalLookAndFeel$MetalLayoutStyle') @:internal extern class MetalLookAndFeel_MetalLayoutStyle extends sun.swing.DefaultLayoutStyle
 {
-	@:overload public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:overload override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
 	@:overload override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	

@@ -23,7 +23,7 @@ package javax.xml.soap;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern interface SOAPElement extends javax.xml.soap.Node extends org.w3c.dom.Element
+extern interface SOAPElement extends org.w3c.dom.Node extends org.w3c.dom.Element
 {
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the

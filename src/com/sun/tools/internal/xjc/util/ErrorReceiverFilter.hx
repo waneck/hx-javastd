@@ -35,9 +35,9 @@ extern class ErrorReceiverFilter extends com.sun.tools.internal.xjc.ErrorReceive
 	*/
 	@:overload public function new() : Void;
 	
-	@:overload public function new(h : com.sun.tools.internal.xjc.api.ErrorListener) : Void;
+	@:overload public function new(h : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
-	@:overload public function setErrorReceiver(handler : com.sun.tools.internal.xjc.api.ErrorListener) : Void;
+	@:overload public function setErrorReceiver(handler : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
 	@:overload @:final public function hadError() : Bool;
 	

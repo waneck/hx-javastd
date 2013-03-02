@@ -23,7 +23,7 @@ package com.sun.xml.internal.ws.encoding;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class DataSourceStreamingDataHandler extends com.sun.xml.internal.ws.developer.StreamingDataHandler
+extern class DataSourceStreamingDataHandler extends com.sun.xml.internal.org.jvnet.staxex.StreamingDataHandler
 {
 	/**
 	* @author Jitendra Kotamraju

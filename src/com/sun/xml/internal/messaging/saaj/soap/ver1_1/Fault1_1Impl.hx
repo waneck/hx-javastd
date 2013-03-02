@@ -29,7 +29,7 @@ package com.sun.xml.internal.messaging.saaj.soap.ver1_1;
 */
 extern class Fault1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.FaultImpl
 {
-	@:native('log') private static var _log(default, null) : java.util.logging.Logger;
+	private static var log(default, null) : java.util.logging.Logger;
 	
 	@:overload public function new(ownerDocument : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, prefix : String) : Void;
 	
@@ -89,7 +89,7 @@ extern class Fault1_1Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.
 	
 	@:overload override private function getDefaultFaultCode() : javax.xml.namespace.QName;
 	
-	@:overload override public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
+	@:overload public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
 	@:overload override private function createSOAPFaultElement(qname : javax.xml.namespace.QName) : com.sun.xml.internal.messaging.saaj.soap.impl.FaultElementImpl;
 	

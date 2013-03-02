@@ -150,7 +150,7 @@ extern class Resolve
 	
 	@:overload override public function toString() : String;
 	
-	@:overload public function access(name : com.sun.tools.javac.util.Name, location : TypeSymbol) : com.sun.tools.javac.code.Symbol;
+	@:overload override public function access(name : com.sun.tools.javac.util.Name, location : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol) : com.sun.tools.javac.code.Symbol;
 	
 	
 }
@@ -171,7 +171,7 @@ extern class Resolve
 {
 	@:overload override public function toString() : String;
 	
-	@:overload override public function access(name : com.sun.tools.javac.util.Name, location : TypeSymbol) : com.sun.tools.javac.code.Symbol;
+	@:overload public function access(name : com.sun.tools.javac.util.Name, location : TypeSymbol) : com.sun.tools.javac.code.Symbol;
 	
 	
 }

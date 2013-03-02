@@ -119,15 +119,15 @@ package sun.security.pkcs11;
 	
 	
 }
-@:native('sun$security$pkcs11$SunPKCS11$P11Service') @:internal extern class SunPKCS11_P11Service extends Service
+@:native('sun$security$pkcs11$SunPKCS11$P11Service') @:internal extern class SunPKCS11_P11Service extends java.security.Provider.Provider_Service
 {
-	@:overload public function newInstance(param : Dynamic) : Dynamic;
+	@:overload override public function newInstance(param : Dynamic) : Dynamic;
 	
 	@:overload public function newInstance0(param : Dynamic) : Dynamic;
 	
-	@:overload public function supportsParameter(param : Dynamic) : Bool;
+	@:overload override public function supportsParameter(param : Dynamic) : Bool;
 	
-	@:overload public function toString() : String;
+	@:overload override public function toString() : String;
 	
 	
 }

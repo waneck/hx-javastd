@@ -199,17 +199,17 @@ extern class FilePane extends javax.swing.JPanel implements java.beans.PropertyC
 	
 	
 }
-@:native('sun$swing$FilePane$DetailsTableRowSorter$SorterModelWrapper') @:internal extern class FilePane_DetailsTableRowSorter_SorterModelWrapper extends ModelWrapper<javax.swing.table.TableModel, Null<Int>>
+@:native('sun$swing$FilePane$DetailsTableRowSorter$SorterModelWrapper') @:internal extern class FilePane_DetailsTableRowSorter_SorterModelWrapper extends javax.swing.DefaultRowSorter.DefaultRowSorter_ModelWrapper<javax.swing.table.TableModel, Null<Int>>
 {
-	@:overload public function getModel() : javax.swing.table.TableModel;
+	@:overload override public function getModel() : javax.swing.table.TableModel;
 	
-	@:overload public function getColumnCount() : Int;
+	@:overload override public function getColumnCount() : Int;
 	
-	@:overload public function getRowCount() : Int;
+	@:overload override public function getRowCount() : Int;
 	
-	@:overload public function getValueAt(row : Int, column : Int) : Dynamic;
+	@:overload override public function getValueAt(row : Int, column : Int) : Dynamic;
 	
-	@:overload public function getIdentifier(row : Int) : Null<Int>;
+	@:overload override public function getIdentifier(row : Int) : Null<Int>;
 	
 	
 }

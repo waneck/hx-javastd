@@ -43,7 +43,7 @@ extern class ResponseContext extends java.util.AbstractMap<String, Dynamic>
 	
 	@:overload override public function clear() : Void;
 	
-	@:overload override public function entrySet() : java.util.Set<Entry<String, Dynamic>>;
+	@:overload override public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
 	
 }

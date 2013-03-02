@@ -40,7 +40,7 @@ package java.awt.image;
 * @see ShortLookupTable
 * @see LookupOp
 */
-extern class LookupTable extends Dynamic
+extern class LookupTable
 {
 	/**
 	* Constructs a new LookupTable from the number of components and an offset

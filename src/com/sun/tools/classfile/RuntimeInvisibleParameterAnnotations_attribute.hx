@@ -29,7 +29,7 @@ extern class RuntimeInvisibleParameterAnnotations_attribute extends com.sun.tool
 	
 	@:overload public function new(name_index : Int, parameter_annotations : java.NativeArray<java.NativeArray<com.sun.tools.classfile.Annotation>>) : Void;
 	
-	@:overload public function accept<R, P>(visitor : Visitor<R, P>, p : P) : R;
+	@:overload public function accept<R, P>(visitor : com.sun.tools.classfile.Attribute.Attribute_Visitor<R, P>, p : P) : R;
 	
 	
 }

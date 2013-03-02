@@ -46,7 +46,7 @@ package sun.security.x509;
 * @see Extension
 * @see CertAttrSet
 */
-extern class AuthorityKeyIdentifierExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class AuthorityKeyIdentifierExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Identifier for this attribute, to be used with the
@@ -90,7 +90,7 @@ extern class AuthorityKeyIdentifierExtension extends sun.security.x509.Extension
 	/**
 	* Return the object as a string.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Write the extension to the OutputStream.

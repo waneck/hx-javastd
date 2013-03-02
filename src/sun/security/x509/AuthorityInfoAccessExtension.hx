@@ -23,7 +23,7 @@ package sun.security.x509;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class AuthorityInfoAccessExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class AuthorityInfoAccessExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Identifier for this attribute, to be used with the
@@ -98,7 +98,7 @@ extern class AuthorityInfoAccessExtension extends sun.security.x509.Extension im
 	/**
 	* Return the extension as user readable string.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

@@ -23,7 +23,7 @@ package com.sun.xml.internal.ws.client;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class SEIPortInfo extends com.sun.xml.internal.ws.client.PortInfo
+@:internal extern class SEIPortInfo extends javax.xml.ws.handler.PortInfo
 {
 	/**
 	* {@link PortInfo} that has {@link SEIModel}.
@@ -42,7 +42,7 @@ package com.sun.xml.internal.ws.client;
 	
 	@:overload public function new(owner : com.sun.xml.internal.ws.client.WSServiceDelegate, sei : Class<Dynamic>, model : com.sun.xml.internal.ws.model.SOAPSEIModel, portModel : com.sun.xml.internal.ws.api.model.wsdl.WSDLPort) : Void;
 	
-	@:overload override public function createBinding(webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>, portInterface : Class<Dynamic>) : com.sun.xml.internal.ws.binding.BindingImpl;
+	@:overload public function createBinding(webServiceFeatures : java.NativeArray<javax.xml.ws.WebServiceFeature>, portInterface : Class<Dynamic>) : com.sun.xml.internal.ws.binding.BindingImpl;
 	
 	
 }

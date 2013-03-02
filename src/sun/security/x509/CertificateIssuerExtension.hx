@@ -23,7 +23,7 @@ package sun.security.x509;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class CertificateIssuerExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class CertificateIssuerExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Attribute names.
@@ -76,7 +76,7 @@ extern class CertificateIssuerExtension extends sun.security.x509.Extension impl
 	/**
 	* Returns a printable representation of the certificate issuer.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Write the extension to the OutputStream.

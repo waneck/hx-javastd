@@ -23,7 +23,7 @@ package com.sun.xml.internal.ws.encoding;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class MIMEPartStreamingDataHandler extends com.sun.xml.internal.ws.developer.StreamingDataHandler
+extern class MIMEPartStreamingDataHandler extends com.sun.xml.internal.org.jvnet.staxex.StreamingDataHandler
 {
 	@:overload public function new(part : com.sun.xml.internal.org.jvnet.mimepull.MIMEPart) : Void;
 	

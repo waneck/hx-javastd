@@ -587,7 +587,7 @@ package javax.swing;
 	* @see javax.swing.JComponent#getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior() : BaselineResizeBehavior;
+	@:require(java6) @:overload override public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	
 }

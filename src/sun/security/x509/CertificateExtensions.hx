@@ -157,11 +157,11 @@ extern class CertificateExtensions implements sun.security.x509.CertAttrSet<sun.
 	
 	
 }
-@:internal extern class UnparseableExtension extends sun.security.x509.Extension
+@:internal extern class UnparseableExtension extends java.security.cert.Extension
 {
-	@:overload public function new(ext : sun.security.x509.Extension, why : java.lang.Throwable) : Void;
+	@:overload public function new(ext : java.security.cert.Extension, why : java.lang.Throwable) : Void;
 	
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	
 }

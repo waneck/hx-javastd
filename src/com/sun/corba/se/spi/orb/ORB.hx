@@ -229,9 +229,13 @@ extern class ORB extends com.sun.corba.se.org.omg.CORBA.ORB implements com.sun.c
 	
 	@:overload public function releaseOrDecrementInvocationInfo() : Void;
 	
+	@:overload public function getTypeCodeForClass(c : Class<Dynamic>) : com.sun.corba.se.impl.corba.TypeCodeImpl;
+	
 	@:overload public function getInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
 	
 	@:overload @:abstract public function getTransportManager() : com.sun.corba.se.pept.transport.TransportManager;
+	
+	@:overload public function setTypeCodeForClass(c : Class<Dynamic>, tcimpl : com.sun.corba.se.impl.corba.TypeCodeImpl) : Void;
 	
 	
 }

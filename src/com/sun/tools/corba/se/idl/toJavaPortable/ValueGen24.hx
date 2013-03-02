@@ -37,7 +37,7 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 //// -D62023 <klr> Update for Java 2.4 RTF
 //// -D62794.1 <klr> Don't include operations inherited from abstract valuetypes
 //// -D62794.1 <scn> Don't include operations inherited from supported interfaces
-extern class ValueGen24 extends com.sun.tools.corba.se.idl.toJavaPortable.ValueGen
+extern class ValueGen24 extends com.sun.tools.corba.se.idl.ValueGen
 {
 	/**
 	* Public zero-argument constructor.
@@ -47,56 +47,56 @@ extern class ValueGen24 extends com.sun.tools.corba.se.idl.toJavaPortable.ValueG
 	/**
 	* <d62023> - delete constructor; helper is abstract
 	**/
-	@:overload override private function writeConstructor() : Void;
+	@:overload private function writeConstructor() : Void;
 	
 	/**
 	* <d62023> - delete write_value from non-boxed helpers
 	*          - delete _write from non-boxed helpers
 	**/
-	@:overload override public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023>
 	**/
-	@:overload override public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023> - suppress initializers from mapped value; now generated in
 	*    the Helper class and Factory class
 	**/
-	@:overload override private function writeInitializers() : Void;
+	@:overload private function writeInitializers() : Void;
 	
 	/**
 	* <d62023> - Goes in mapped class, not Helper
 	**/
-	@:overload override private function writeTruncatable() : Void;
+	@:overload private function writeTruncatable() : Void;
 	
 	/**
 	* <d62023> CustomMarshal -> CustomValue for custom valuetypes
 	*          mapped class is abstract
 	**/
-	@:overload override private function writeHeading() : Void;
+	@:overload private function writeHeading() : Void;
 	
 	/**
 	* <d62023> - private state maps to protected, not default
 	**/
-	@:overload override private function writeMembers() : Void;
+	@:overload private function writeMembers() : Void;
 	
 	/**
 	* <d62023> Methods need to be abstract
 	*          writeStreamable
 	**/
-	@:overload override private function writeMethods() : Void;
+	@:overload private function writeMethods() : Void;
 	
 	/**
 	* <d62023> Call super._read()
 	**/
-	@:overload override public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload public function read(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
 	/**
 	* <d62023> Call super._write()
 	**/
-	@:overload override public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
 	/**
 	* <62023> - generate factory interface and default factory

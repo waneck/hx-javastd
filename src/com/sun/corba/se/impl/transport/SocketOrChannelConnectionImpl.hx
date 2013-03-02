@@ -164,7 +164,7 @@ extern class SocketOrChannelConnectionImpl extends com.sun.corba.se.impl.transpo
 	
 	@:overload override public function getInterestOps() : Int;
 	
-	@:overload override public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload override public function getConnection() : com.sun.corba.se.spi.legacy.connection.Connection;
 	
 	@:overload public function getName() : String;
 	

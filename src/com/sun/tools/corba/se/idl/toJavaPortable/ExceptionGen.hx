@@ -34,7 +34,7 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 *
 */
 //// NOTES:
-extern class ExceptionGen extends com.sun.tools.corba.se.idl.toJavaPortable.StructGen implements com.sun.tools.corba.se.idl.ExceptionGen
+extern class ExceptionGen extends com.sun.tools.corba.se.idl.StructGen implements com.sun.tools.corba.se.idl.ExceptionGen
 {
 	/**
 	* Public zero-argument constructor.

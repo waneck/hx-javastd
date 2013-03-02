@@ -109,17 +109,17 @@ package com.sun.java.swing.plaf.gtk;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$GTKFileView') @:internal extern class GTKFileChooserUI_GTKFileView extends BasicFileView
+@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$GTKFileView') @:internal extern class GTKFileChooserUI_GTKFileView extends javax.swing.plaf.basic.BasicFileChooserUI.BasicFileChooserUI_BasicFileView
 {
 	@:overload public function new() : Void;
 	
-	@:overload public function clearIconCache() : Void;
+	@:overload override public function clearIconCache() : Void;
 	
-	@:overload public function getCachedIcon(f : java.io.File) : javax.swing.Icon;
+	@:overload override public function getCachedIcon(f : java.io.File) : javax.swing.Icon;
 	
-	@:overload public function cacheIcon(f : java.io.File, i : javax.swing.Icon) : Void;
+	@:overload override public function cacheIcon(f : java.io.File, i : javax.swing.Icon) : Void;
 	
-	@:overload public function getIcon(f : java.io.File) : javax.swing.Icon;
+	@:overload override public function getIcon(f : java.io.File) : javax.swing.Icon;
 	
 	
 }
@@ -244,9 +244,9 @@ package com.sun.java.swing.plaf.gtk;
 	
 	
 }
-@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$GTKApproveSelectionAction') @:internal extern class GTKFileChooserUI_GTKApproveSelectionAction extends ApproveSelectionAction
+@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$GTKApproveSelectionAction') @:internal extern class GTKFileChooserUI_GTKApproveSelectionAction extends javax.swing.plaf.basic.BasicFileChooserUI.BasicFileChooserUI_ApproveSelectionAction
 {
-	@:overload public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload override public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }
@@ -264,7 +264,7 @@ package com.sun.java.swing.plaf.gtk;
 /**
 * Render different filters
 */
-@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$FilterComboBoxRenderer') extern class GTKFileChooserUI_FilterComboBoxRenderer extends javax.swing.DefaultListCellRenderer implements javax.swing.DefaultListCellRenderer.DefaultListCellRenderer_UIResource
+@:native('com$sun$java$swing$plaf$gtk$GTKFileChooserUI$FilterComboBoxRenderer') extern class GTKFileChooserUI_FilterComboBoxRenderer extends javax.swing.DefaultListCellRenderer implements javax.swing.plaf.UIResource
 {
 	@:overload override public function getName() : String;
 	

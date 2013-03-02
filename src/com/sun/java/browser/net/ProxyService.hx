@@ -23,7 +23,7 @@ package com.sun.java.browser.net;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class ProxyService extends Dynamic
+extern class ProxyService
 {
 	@:overload public static function setProvider(p : com.sun.java.browser.net.ProxyServiceProvider) : Void;
 	

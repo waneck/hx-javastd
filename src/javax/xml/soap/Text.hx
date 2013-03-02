@@ -28,7 +28,7 @@ package javax.xml.soap;
 * may represent text that is content or text that is a comment.
 *
 */
-extern interface Text extends javax.xml.soap.Node extends org.w3c.dom.Text
+extern interface Text extends org.w3c.dom.Node extends org.w3c.dom.Text
 {
 	/**
 	* Retrieves whether this <code>Text</code> object represents a comment.

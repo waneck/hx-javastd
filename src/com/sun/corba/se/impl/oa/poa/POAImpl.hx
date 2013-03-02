@@ -226,7 +226,7 @@ extern class POAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implement
 	
 	@:overload override public function getState() : java.StdTypes.Int16;
 	
-	@:overload override public function getInterfaces(servant : Dynamic, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload public function getInterfaces(servant : Dynamic, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	@:overload override private function getObjectCopierFactory() : com.sun.corba.se.spi.copyobject.ObjectCopierFactory;
 	

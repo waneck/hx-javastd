@@ -23,7 +23,7 @@ package sun.swing.table;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class DefaultTableCellHeaderRenderer extends javax.swing.table.DefaultTableCellRenderer implements javax.swing.table.DefaultTableCellRenderer.DefaultTableCellRenderer_UIResource
+extern class DefaultTableCellHeaderRenderer extends javax.swing.table.DefaultTableCellRenderer implements javax.swing.plaf.UIResource
 {
 	@:overload public function new() : Void;
 	

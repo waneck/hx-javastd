@@ -166,7 +166,7 @@ extern class ClassValue<T>
 *  Gives a fully serialized "true state" for each pair (ClassValue cv, Class type).
 *  Also manages an unserialized fast-path cache.
 */
-@:native('java$lang$ClassValue$ClassValueMap') @:internal extern class ClassValue_ClassValueMap extends java.util.WeakHashMap<ClassValue_Identity, java.util.WeakHashMap.WeakHashMap_Entry<Dynamic>>
+@:native('java$lang$ClassValue$ClassValueMap') @:internal extern class ClassValue_ClassValueMap extends java.util.WeakHashMap<ClassValue_Identity, java.util.Map.Map_Entry<Dynamic>>
 {
 	
 }

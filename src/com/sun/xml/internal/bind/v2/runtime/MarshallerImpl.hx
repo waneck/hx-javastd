@@ -87,9 +87,9 @@ extern class MarshallerImpl extends javax.xml.bind.helpers.AbstractMarshallerImp
 	*/
 	@:overload public function handleEvent(event : javax.xml.bind.ValidationEvent) : Bool;
 	
-	@:overload override public function getListener() : Listener;
+	@:overload override public function getListener() : javax.xml.bind.Marshaller.Marshaller_Listener;
 	
-	@:overload public function setListener(listener : Listener) : Void;
+	@:overload override public function setListener(listener : javax.xml.bind.Marshaller.Marshaller_Listener) : Void;
 	
 	private static var INDENT_STRING(default, null) : String;
 	

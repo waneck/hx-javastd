@@ -138,7 +138,7 @@ extern class ElementImpl extends com.sun.org.apache.xerces.internal.dom.ElementN
 	
 	@:overload private function convertToSoapElement(element : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
 	
-	@:overload private static function replaceElementWithSOAPElement(element : org.w3c.dom.Element, copy : ElementImpl) : javax.xml.soap.SOAPElement;
+	@:overload private static function replaceElementWithSOAPElement(element : org.w3c.dom.Element, copy : com.sun.org.apache.xerces.internal.dom.ElementImpl) : javax.xml.soap.SOAPElement;
 	
 	@:overload private function getChildElementNodes() : java.util.Iterator<Dynamic>;
 	

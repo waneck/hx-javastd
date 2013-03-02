@@ -36,7 +36,7 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 //// NOTES:
 //// -D62023   <klr> New file to implement CORBA 2.4 RTF
 //// -D62794   <klr> Fix problem with no-arg create functions
-extern class MethodGen24 extends com.sun.tools.corba.se.idl.toJavaPortable.MethodGen
+extern class MethodGen24 extends com.sun.tools.corba.se.idl.MethodGen
 {
 	/**
 	* Public zero-argument constructor.
@@ -73,12 +73,12 @@ extern class MethodGen24 extends com.sun.tools.corba.se.idl.toJavaPortable.Metho
 	/**
 	* <d62023> - remove all valueInitializer junk
 	**/
-	@:overload override private function writeMethodSignature() : Void;
+	@:overload private function writeMethodSignature() : Void;
 	
 	/**
 	* <d62023> - delete method templates for valuetypes
 	**/
-	@:overload override private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	
 }

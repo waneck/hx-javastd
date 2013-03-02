@@ -69,7 +69,7 @@ extern class GC
 * thread, if it exists, waits on this lock for notification that the
 * latency target has changed.
 */
-@:native('sun$misc$GC$LatencyLock') @:internal extern class GC_LatencyLock extends Dynamic
+@:native('sun$misc$GC$LatencyLock') @:internal extern class GC_LatencyLock
 {
 	
 }

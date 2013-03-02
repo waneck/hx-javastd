@@ -34,7 +34,7 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 *
 */
 //// NOTES:
-extern class AttributeGen extends com.sun.tools.corba.se.idl.toJavaPortable.MethodGen implements com.sun.tools.corba.se.idl.AttributeGen
+extern class AttributeGen extends com.sun.tools.corba.se.idl.MethodGen implements com.sun.tools.corba.se.idl.AttributeGen
 {
 	/**
 	* Public zero-argument constructor.
@@ -50,22 +50,22 @@ extern class AttributeGen extends com.sun.tools.corba.se.idl.toJavaPortable.Meth
 	/**
 	*
 	**/
-	@:overload override private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	*
 	**/
-	@:overload override private function stub(className : String, isAbstract : Bool, symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload private function stub(className : String, isAbstract : Bool, symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload override private function skeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload private function skeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*
 	**/
-	@:overload override private function dispatchSkeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
+	@:overload private function dispatchSkeleton(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter, index : Int) : Void;
 	
 	/**
 	*

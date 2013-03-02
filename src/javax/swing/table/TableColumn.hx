@@ -23,7 +23,7 @@ package javax.swing.table;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class TableColumn extends Dynamic implements java.io.Serializable
+extern class TableColumn implements java.io.Serializable
 {
 	/*
 	* Warning: The value of this constant, "columWidth" is wrong as the

@@ -23,7 +23,7 @@ package javax.xml.soap;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class SOAPPart implements org.w3c.dom.Document implements javax.xml.soap.Node
+extern class SOAPPart implements org.w3c.dom.Document implements org.w3c.dom.Node
 {
 	/**
 	* Gets the <code>SOAPEnvelope</code> object associated with this
@@ -212,21 +212,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements javax.xml.soap.
 	* <code>null</code>.
 	*/
 	@:overload @:public @:public @:public @:public @:public public function getFirstChild() : Node;
-	
-	/**
-	* Returns the parent element of this <code>Node</code> object.
-	* This method can throw an <code>UnsupportedOperationException</code>
-	* if the tree is not kept in memory.
-	*
-	* @return the <code>SOAPElement</code> object that is the parent of
-	*         this <code>Node</code> object or <code>null</code> if this
-	*         <code>Node</code> object is root
-	*
-	* @exception UnsupportedOperationException if the whole tree is not
-	*            kept in memory
-	* @see #setParentElement
-	*/
-	@:overload @:public @:public @:public @:public @:public public function getParentElement() : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Rename an existing node of type <code>ELEMENT_NODE</code> or
@@ -720,17 +705,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements javax.xml.soap.
 	@:overload @:public @:public @:public @:public @:public public function normalize() : Void;
 	
 	/**
-	* Notifies the implementation that this <code>Node</code>
-	* object is no longer being used by the application and that the
-	* implementation is free to reuse this object for nodes that may
-	* be created later.
-	* <P>
-	* Calling the method <code>recycleNode</code> implies that the method
-	* <code>detachNode</code> has been called previously.
-	*/
-	@:overload @:public @:public @:public @:public @:public public function recycleNode() : Void;
-	
-	/**
 	*  Attempts to adopt a node from another document to this document. If
 	* supported, it changes the <code>ownerDocument</code> of the source
 	* node, its children, as well as the attached attribute nodes if there
@@ -996,23 +970,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements javax.xml.soap.
 	*   <code>Document.xmlVersion</code> attribute.
 	*/
 	@:overload @:public public function createElement(tagName : String) : org.w3c.dom.Element;
-	
-	/**
-	* Returns the value of this node if this is a <code>Text</code> node or the
-	* value of the immediate child of this node otherwise.
-	* If there is an immediate child of this <code>Node</code> that it is a
-	* <code>Text</code> node then it's value will be returned. If there is
-	* more than one <code>Text</code> node then the value of the first
-	* <code>Text</code> Node will be returned.
-	* Otherwise <code>null</code> is returned.
-	*
-	* @return a <code>String</code> with the text of this node if this is a
-	*          <code>Text</code> node or the text contained by the first
-	*          immediate child of this <code>Node</code> object that is a
-	*          <code>Text</code> object if such a child exists;
-	*          <code>null</code> otherwise.
-	*/
-	@:overload @:public @:public @:public @:public @:public public function getValue() : String;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if the
@@ -1317,11 +1274,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements javax.xml.soap.
 	@:overload @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
 	/**
-	* Removes this <code>Node</code> object from the tree.
-	*/
-	@:overload @:public @:public @:public @:public @:public public function detachNode() : Void;
-	
-	/**
 	* Removes the child node indicated by <code>oldChild</code> from the list
 	* of children, and returns it.
 	* @param oldChild The node being removed.
@@ -1383,22 +1335,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements javax.xml.soap.
 	@:overload @:public public function getXmlStandalone() : Bool;
 	
 	/**
-	* If this is a Text node then this method will set its value,
-	* otherwise it sets the value of  the immediate (Text) child of this node.
-	* The value of the immediate child of this node can be set only if, there is
-	* one child node and that node is a <code>Text</code> node, or if
-	* there are no children in which case a child <code>Text</code> node will be
-	* created.
-	*
-	* @exception IllegalStateException if the node is not a <code>Text</code>
-	*              node and either has more than one child node or has a child
-	*              node that is not a <code>Text</code> node.
-	*
-	* @since SAAJ 1.2
-	*/
-	@:require(java2) @:overload @:public @:public @:public @:public @:public public function setValue(value : String) : Void;
-	
-	/**
 	* The name of this node, depending on its type; see the table above.
 	*/
 	@:overload @:public @:public @:public @:public @:public public function getNodeName() : String;
@@ -1427,19 +1363,6 @@ extern class SOAPPart implements org.w3c.dom.Document implements javax.xml.soap.
 	* @return A new <code>DocumentFragment</code>.
 	*/
 	@:overload @:public public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
-	
-	/**
-	* Sets the parent of this <code>Node</code> object to the given
-	* <code>SOAPElement</code> object.
-	*
-	* @param parent the <code>SOAPElement</code> object to be set as
-	*       the parent of this <code>Node</code> object
-	*
-	* @exception SOAPException if there is a problem in setting the
-	*                          parent to the given element
-	* @see #getParentElement
-	*/
-	@:overload @:public @:public public function setParentElement(parent : javax.xml.soap.SOAPElement) : Void;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the <code>Elements</code> in

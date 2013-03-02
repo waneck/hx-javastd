@@ -98,7 +98,7 @@ extern interface ObjectAdapter
 	
 	/** Return the most derived interface for the given servant and objectId.
 	*/
-	@:overload public function getInterfaces(servant : Dynamic, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	
 }

@@ -23,7 +23,7 @@ package com.sun.corba.se.impl.presentation.rmi;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class DynamicStubImpl extends org.omg.CORBA_2_3.portable.ObjectImpl implements com.sun.corba.se.spi.presentation.rmi.DynamicStub implements java.io.Serializable
+extern class DynamicStubImpl extends org.omg.CORBA.portable.ObjectImpl implements com.sun.corba.se.spi.presentation.rmi.DynamicStub implements java.io.Serializable
 {
 	@:overload public function setSelf(self : com.sun.corba.se.spi.presentation.rmi.DynamicStub) : Void;
 	
@@ -47,7 +47,7 @@ extern class DynamicStubImpl extends org.omg.CORBA_2_3.portable.ObjectImpl imple
 	
 	@:overload public function request(operation : String, responseExpected : Bool) : org.omg.CORBA.portable.OutputStream;
 	
-	@:overload public function readResolve() : Dynamic;
+	@:overload public function readResolve() : org.omg.CORBA.Object;
 	
 	
 }

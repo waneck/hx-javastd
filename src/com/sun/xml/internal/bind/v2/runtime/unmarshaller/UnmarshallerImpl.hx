@@ -125,9 +125,9 @@ extern class UnmarshallerImpl extends javax.xml.bind.helpers.AbstractUnmarshalle
 	
 	@:overload public function getBeanInfo<T>(clazz : Class<T>) : com.sun.xml.internal.bind.v2.runtime.JaxBeanInfo<T>;
 	
-	@:overload override public function getListener() : Listener;
+	@:overload override public function getListener() : javax.xml.bind.Unmarshaller.Unmarshaller_Listener;
 	
-	@:overload public function setListener(listener : Listener) : Void;
+	@:overload override public function setListener(listener : javax.xml.bind.Unmarshaller.Unmarshaller_Listener) : Void;
 	
 	@:overload public function getContext() : com.sun.xml.internal.bind.v2.runtime.unmarshaller.UnmarshallingContext;
 	

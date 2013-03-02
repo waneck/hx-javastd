@@ -42,7 +42,7 @@ package sun.security.x509;
 * @see CertAttrSet
 * @see Extension
 */
-extern class BasicConstraintsExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class BasicConstraintsExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Identifier for this attribute, to be used with the
@@ -90,7 +90,7 @@ extern class BasicConstraintsExtension extends sun.security.x509.Extension imple
 	/**
 	* Return user readable form of extension.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Encode this extension value to the output stream.

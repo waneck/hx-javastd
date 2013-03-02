@@ -28,7 +28,7 @@ package sun.net.www.protocol.file;
 * @author      James Gosling
 * @author      Steven B. Byrne
 */
-extern class FileURLConnection extends sun.net.www.URLConnection
+extern class FileURLConnection extends java.net.URLConnection
 {
 	@:overload private function new(u : java.net.URL, file : java.io.File) : Void;
 	
@@ -50,7 +50,7 @@ extern class FileURLConnection extends sun.net.www.URLConnection
 	
 	@:overload override public function getHeaderFieldKey(n : Int) : String;
 	
-	@:overload override public function getProperties() : sun.net.www.MessageHeader;
+	@:overload public function getProperties() : sun.net.www.MessageHeader;
 	
 	@:overload override public function getLastModified() : haxe.Int64;
 	

@@ -23,7 +23,7 @@ package sun.net.www.protocol.https;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class AbstractDelegateHttpsURLConnection extends sun.net.www.protocol.http.HttpURLConnection
+extern class AbstractDelegateHttpsURLConnection extends java.net.HttpURLConnection
 {
 	/**
 	* HTTPS URL connection support.
@@ -50,7 +50,7 @@ extern class AbstractDelegateHttpsURLConnection extends sun.net.www.protocol.htt
 	*
 	* @param url the URL being accessed
 	*/
-	@:overload override public function setNewClient(url : java.net.URL) : Void;
+	@:overload public function setNewClient(url : java.net.URL) : Void;
 	
 	/**
 	* Obtain a HttpClient object. Use the cached copy if specified.
@@ -63,7 +63,7 @@ extern class AbstractDelegateHttpsURLConnection extends sun.net.www.protocol.htt
 	* @param useCache  whether the cached connection should be used
 	*        if present
 	*/
-	@:overload override public function setNewClient(url : java.net.URL, useCache : Bool) : Void;
+	@:overload public function setNewClient(url : java.net.URL, useCache : Bool) : Void;
 	
 	/**
 	* Create a new HttpClient object, set up so that it uses
@@ -78,7 +78,7 @@ extern class AbstractDelegateHttpsURLConnection extends sun.net.www.protocol.htt
 	* @param proxyHost the proxy host to use
 	* @param proxyPort the proxy port to use
 	*/
-	@:overload override public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
+	@:overload public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int) : Void;
 	
 	/**
 	* Obtain a HttpClient object, set up so that it uses per-instance
@@ -95,9 +95,9 @@ extern class AbstractDelegateHttpsURLConnection extends sun.net.www.protocol.htt
 	* @param useCache  whether the cached connection should be used
 	*        if present
 	*/
-	@:overload override public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
+	@:overload public function setProxiedClient(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
 	
-	@:overload override private function proxiedConnect(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
+	@:overload private function proxiedConnect(url : java.net.URL, proxyHost : String, proxyPort : Int, useCache : Bool) : Void;
 	
 	/**
 	* Used by subclass to access "connected" variable.
@@ -115,9 +115,9 @@ extern class AbstractDelegateHttpsURLConnection extends sun.net.www.protocol.htt
 	*/
 	@:overload override public function connect() : Void;
 	
-	@:overload override private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int) : sun.net.www.http.HttpClient;
+	@:overload private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int) : sun.net.www.http.HttpClient;
 	
-	@:overload override private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int, useCache : Bool) : sun.net.www.http.HttpClient;
+	@:overload private function getNewHttpClient(url : java.net.URL, p : java.net.Proxy, connectTimeout : Int, useCache : Bool) : sun.net.www.http.HttpClient;
 	
 	/**
 	* Returns the cipher suite in use on this connection.

@@ -37,7 +37,7 @@ package javax.swing.text.rtf;
 * @see LTTextAcceptor
 * @see java.io.OutputStream
 */
-@:internal extern class RTFGenerator extends Dynamic
+@:internal extern class RTFGenerator
 {
 	/** The default color, used for text without an explicit color
 	*  attribute. */

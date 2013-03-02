@@ -239,17 +239,17 @@ extern class SOAPPartImpl extends javax.xml.soap.SOAPPart implements com.sun.xml
 	
 	@:overload override public function getUserData(key : String) : Dynamic;
 	
-	@:overload override public function recycleNode() : Void;
+	@:overload public function recycleNode() : Void;
 	
-	@:overload override public function getValue() : String;
+	@:overload public function getValue() : String;
 	
-	@:overload override public function setValue(value : String) : Void;
+	@:overload public function setValue(value : String) : Void;
 	
-	@:overload override public function setParentElement(parent : javax.xml.soap.SOAPElement) : Void;
+	@:overload public function setParentElement(parent : javax.xml.soap.SOAPElement) : Void;
 	
-	@:overload override public function getParentElement() : javax.xml.soap.SOAPElement;
+	@:overload public function getParentElement() : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function detachNode() : Void;
+	@:overload public function detachNode() : Void;
 	
 	@:overload public function getSourceCharsetEncoding() : String;
 	

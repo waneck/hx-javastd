@@ -55,7 +55,7 @@ package com.sun.org.apache.xml.internal.serializer;
 *
 * @xsl.usage internal
 */
-@:native('com$sun$org$apache$xml$internal$serializer$CharInfo$CharKey') @:internal extern class CharInfo_CharKey extends Dynamic
+@:native('com$sun$org$apache$xml$internal$serializer$CharInfo$CharKey') @:internal extern class CharInfo_CharKey
 {
 	/**
 	* Constructor CharKey

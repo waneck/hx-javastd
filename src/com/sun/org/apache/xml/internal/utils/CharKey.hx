@@ -26,7 +26,7 @@ package com.sun.org.apache.xml.internal.utils;
 * hashtables.  You can set the char, then use it as a key.
 * @xsl.usage internal
 */
-extern class CharKey extends Dynamic
+extern class CharKey
 {
 	/**
 	* Constructor CharKey

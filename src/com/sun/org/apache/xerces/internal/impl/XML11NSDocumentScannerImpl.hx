@@ -157,7 +157,7 @@ extern class XML11NSDocumentScannerImpl extends com.sun.org.apache.xerces.intern
 	@:overload override public function reset(componentManager : com.sun.org.apache.xerces.internal.xni.parser.XMLComponentManager) : Void;
 	
 	/** Creates a content Driver. */
-	@:overload override private function createContentDriver() : Driver;
+	@:overload override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	/** return the next state on the input
 	*
@@ -170,7 +170,7 @@ extern class XML11NSDocumentScannerImpl extends com.sun.org.apache.xerces.intern
 /**
 * Driver to handle content scanning.
 */
-@:native('com$sun$org$apache$xerces$internal$impl$XML11NSDocumentScannerImpl$NS11ContentDriver') extern class XML11NSDocumentScannerImpl_NS11ContentDriver extends ContentDriver
+@:native('com$sun$org$apache$xerces$internal$impl$XML11NSDocumentScannerImpl$NS11ContentDriver') extern class XML11NSDocumentScannerImpl_NS11ContentDriver extends com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.XMLDocumentScannerImpl_ContentDriver
 {
 	/**
 	* Scan for root element hook. This method is a hook for
@@ -185,7 +185,7 @@ extern class XML11NSDocumentScannerImpl extends com.sun.org.apache.xerces.intern
 	*          Driver. A return value of false indicates that
 	*          the content Driver should continue as normal.
 	*/
-	@:overload private function scanRootElementHook() : Bool;
+	@:overload override private function scanRootElementHook() : Bool;
 	
 	
 }

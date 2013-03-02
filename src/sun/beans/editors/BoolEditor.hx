@@ -26,7 +26,7 @@ package sun.beans.editors;
 /**
 * FOR BACKWARD COMPATIBILITY ONLY - DO NOT USE.
 */
-extern class BoolEditor extends sun.beans.editors.BooleanEditor
+extern class BoolEditor extends com.sun.beans.editors.BooleanEditor
 {
 	
 }

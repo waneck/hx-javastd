@@ -379,7 +379,7 @@ extern class ConcurrentHashMap<K, V> extends java.util.AbstractMap<K, V> impleme
 	
 	
 }
-@:native('java$util$concurrent$ConcurrentHashMap$EntryIterator') @:internal extern class ConcurrentHashMap_EntryIterator extends ConcurrentHashMap_HashIterator implements java.util.Iterator<Entry<Dynamic, Dynamic>>
+@:native('java$util$concurrent$ConcurrentHashMap$EntryIterator') @:internal extern class ConcurrentHashMap_EntryIterator extends ConcurrentHashMap_HashIterator implements java.util.Iterator<java.util.Map.Map_Entry<Dynamic, Dynamic>>
 {
 	@:overload public function next() : java.util.Map.Map_Entry<Dynamic, Dynamic>;
 	

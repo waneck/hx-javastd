@@ -21,7 +21,7 @@ package com.sun.org.apache.xml.internal.serializer;
 /*
 * $Id: EncodingInfo.java,v 1.2.4.2 2005/09/15 12:01:24 suresh_emailid Exp $
 */
-extern class EncodingInfo extends Dynamic
+extern class EncodingInfo
 {
 	/**
 	* This is not a public API. It returns true if the

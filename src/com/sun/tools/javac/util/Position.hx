@@ -126,7 +126,7 @@ extern class Position
 	
 	
 }
-@:native('com$sun$tools$javac$util$Position$LineMapImpl') @:internal extern class Position_LineMapImpl implements Position_LineMap
+@:native('com$sun$tools$javac$util$Position$LineMapImpl') @:internal extern class Position_LineMapImpl implements com.sun.source.tree.LineMap
 {
 	private var startPosition : java.NativeArray<Int>;
 	

@@ -35,13 +35,13 @@ extern class TypeCodeInputStream extends com.sun.corba.se.impl.encoding.EncapsIn
 	
 	@:overload public function getTypeCodeAtPosition(position : Int) : com.sun.corba.se.impl.corba.TypeCodeImpl;
 	
-	@:overload public function setEnclosingInputStream(enclosure : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload public function setEnclosingInputStream(enclosure : java.io.InputStream) : Void;
 	
 	@:overload public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeReader;
 	
 	@:overload public function getTopLevelPosition() : Int;
 	
-	@:overload public static function readEncapsulation(is : org.omg.CORBA_2_3.portable.InputStream, _orb : org.omg.CORBA.ORB) : TypeCodeInputStream;
+	@:overload public static function readEncapsulation(is : java.io.InputStream, _orb : org.omg.CORBA.ORB) : TypeCodeInputStream;
 	
 	@:overload private function makeEncapsulation() : Void;
 	

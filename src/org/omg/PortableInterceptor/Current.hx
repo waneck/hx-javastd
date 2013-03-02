@@ -22,7 +22,7 @@ package org.omg.PortableInterceptor;
 * <code>resolve_initial_references</code>, but that is the Interceptor's 
 * thread scope PICurrent.
 */
-extern interface Current extends org.omg.PortableInterceptor.CurrentOperations extends org.omg.CORBA.Current extends org.omg.CORBA.portable.IDLEntity
+extern interface Current extends org.omg.CORBA.CurrentOperations extends org.omg.CORBA.Current extends org.omg.CORBA.portable.IDLEntity
 {
 	
 }

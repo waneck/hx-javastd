@@ -38,7 +38,7 @@ extern class DynArrayImpl extends com.sun.corba.se.impl.dynamicany.DynAnyCollect
 	throws org.omg.DynamicAny.DynAnyPackage.TypeMismatch,
 	org.omg.DynamicAny.DynAnyPackage.InvalidValue;
 */
-	@:overload override private function checkValue(value : java.NativeArray<Dynamic>) : Void;
+	@:overload override private function checkValue(value : java.NativeArray<org.omg.CORBA.Object>) : Void;
 	
 	
 }

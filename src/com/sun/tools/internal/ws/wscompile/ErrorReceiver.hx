@@ -23,7 +23,7 @@ package com.sun.tools.internal.ws.wscompile;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class ErrorReceiver implements org.xml.sax.ErrorHandler implements com.sun.tools.internal.xjc.api.ErrorListener
+extern class ErrorReceiver implements org.xml.sax.ErrorHandler implements com.sun.xml.internal.bind.api.ErrorListener
 {
 	/**
 	* @param loc

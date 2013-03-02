@@ -35,7 +35,7 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 */
 //// NOTES:
 //// -D62023  <klr> Update for Java 2.4 RTF
-extern class ValueBoxGen24 extends com.sun.tools.corba.se.idl.toJavaPortable.ValueBoxGen
+extern class ValueBoxGen24 extends com.sun.tools.corba.se.idl.ValueBoxGen
 {
 	/**
 	* Public zero-argument constructor.
@@ -45,22 +45,22 @@ extern class ValueBoxGen24 extends com.sun.tools.corba.se.idl.toJavaPortable.Val
 	/**
 	* <d62023> - Move from helper to mapped class
 	**/
-	@:overload override private function writeTruncatable() : Void;
+	@:overload private function writeTruncatable() : Void;
 	
 	/**
 	* <d62023>
 	**/
-	@:overload override public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload public function helperRead(entryName : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023>
 	**/
-	@:overload override public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
+	@:overload public function helperWrite(entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Void;
 	
 	/**
 	* <d62023>
 	**/
-	@:overload override public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
+	@:overload public function write(index : Int, indent : String, name : String, entry : com.sun.tools.corba.se.idl.SymtabEntry, stream : java.io.PrintWriter) : Int;
 	
 	
 }

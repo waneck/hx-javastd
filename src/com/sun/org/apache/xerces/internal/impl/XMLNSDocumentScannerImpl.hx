@@ -98,7 +98,7 @@ extern class XMLNSDocumentScannerImpl extends com.sun.org.apache.xerces.internal
 	@:overload private function scanAttribute(attributes : com.sun.org.apache.xerces.internal.util.XMLAttributesImpl) : Void;
 	
 	/** Creates a content driver. */
-	@:overload override private function createContentDriver() : Driver;
+	@:overload override private function createContentDriver() : com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.XMLDocumentFragmentScannerImpl_Driver;
 	
 	
 }

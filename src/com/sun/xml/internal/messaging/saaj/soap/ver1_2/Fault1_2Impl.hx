@@ -99,7 +99,7 @@ extern class Fault1_2Impl extends com.sun.xml.internal.messaging.saaj.soap.impl.
 	
 	@:overload override public function addTextNode(text : String) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
+	@:overload public function addChildElement(element : javax.xml.soap.SOAPElement) : javax.xml.soap.SOAPElement;
 	
 	@:overload override private function isStandardFaultElement(localName : String) : Bool;
 	

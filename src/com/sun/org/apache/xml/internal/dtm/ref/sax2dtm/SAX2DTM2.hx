@@ -482,7 +482,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 /**
 * Iterator that returns all immediate children of a given node
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$ChildrenIterator') extern class SAX2DTM2_ChildrenIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$ChildrenIterator') extern class SAX2DTM2_ChildrenIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Setting start to END should 'close' the iterator,
@@ -496,7 +496,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
@@ -504,7 +504,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return The next node handle in the iteration, or END if no more
 	* are available.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
@@ -513,7 +513,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 * this delivers only a single node; if you want all the ancestors,
 * see AncestorIterator.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$ParentIterator') extern class SAX2DTM2_ParentIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$ParentIterator') extern class SAX2DTM2_ParentIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -523,7 +523,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set the node type of the parent that we're looking for.
@@ -543,7 +543,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
@@ -553,7 +553,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 * of a basic child iterator, but a specialised iterator is used
 * for efficiency (both speed and size of translet).
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedChildrenIterator') extern class SAX2DTM2_TypedChildrenIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedChildrenIterator') extern class SAX2DTM2_TypedChildrenIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor TypedChildrenIterator
@@ -571,19 +571,19 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	/**
 	* Return the node at the given position.
 	*/
-	@:overload public function getNodeByPosition(position : Int) : Int;
+	@:overload override public function getNodeByPosition(position : Int) : Int;
 	
 	
 }
@@ -591,7 +591,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 * Iterator that returns the namespace nodes as defined by the XPath data model
 * for a given node, filtered by extended type ID.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedRootIterator') extern class SAX2DTM2_TypedRootIterator extends RootIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedRootIterator') extern class SAX2DTM2_TypedRootIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_RootIterator
 {
 	/**
 	* Constructor TypedRootIterator
@@ -605,14 +605,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
 /**
 * Iterator that returns all siblings of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$FollowingSiblingIterator') extern class SAX2DTM2_FollowingSiblingIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$FollowingSiblingIterator') extern class SAX2DTM2_FollowingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -622,21 +622,21 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
 /**
 * Iterator that returns all following siblings of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedFollowingSiblingIterator') extern class SAX2DTM2_TypedFollowingSiblingIterator extends SAX2DTM2_FollowingSiblingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedFollowingSiblingIterator') extern class SAX2DTM2_TypedFollowingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_FollowingSiblingIterator
 {
 	/**
 	* Constructor TypedFollowingSiblingIterator
@@ -658,7 +658,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 /**
 * Iterator that returns attribute nodes (of what nodes?)
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$AttributeIterator') extern class SAX2DTM2_AttributeIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$AttributeIterator') extern class SAX2DTM2_AttributeIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -668,21 +668,21 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
 /**
 * Iterator that returns attribute nodes of a given type
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedAttributeIterator') extern class SAX2DTM2_TypedAttributeIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedAttributeIterator') extern class SAX2DTM2_TypedAttributeIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor TypedAttributeIterator
@@ -700,21 +700,21 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
 /**
 * Iterator that returns preceding siblings of a given node
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$PrecedingSiblingIterator') extern class SAX2DTM2_PrecedingSiblingIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$PrecedingSiblingIterator') extern class SAX2DTM2_PrecedingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* The node identity of _startNode for this iterator
@@ -726,7 +726,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return true.
 	*/
-	@:overload public function isReverse() : Bool;
+	@:overload override public function isReverse() : Bool;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -736,14 +736,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
@@ -751,7 +751,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 * Iterator that returns preceding siblings of a given type for
 * a given node
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedPrecedingSiblingIterator') extern class SAX2DTM2_TypedPrecedingSiblingIterator extends SAX2DTM2_PrecedingSiblingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedPrecedingSiblingIterator') extern class SAX2DTM2_TypedPrecedingSiblingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_PrecedingSiblingIterator
 {
 	/**
 	* Constructor TypedPrecedingSiblingIterator
@@ -771,7 +771,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	/**
 	* Return the index of the last node in this iterator.
 	*/
-	@:overload public function getLast() : Int;
+	@:overload override public function getLast() : Int;
 	
 	
 }
@@ -780,7 +780,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 * This includes the node set {root+1, start-1}, but excludes
 * all ancestors, attributes, and namespace nodes.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$PrecedingIterator') extern class SAX2DTM2_PrecedingIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$PrecedingIterator') extern class SAX2DTM2_PrecedingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* The stack of start node + ancestors up to the root of the tree,
@@ -798,14 +798,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return true since this iterator is a reversed axis.
 	*/
-	@:overload public function isReverse() : Bool;
+	@:overload override public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator.   The cloned iterator is not reset.
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -815,14 +815,14 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -830,11 +830,11 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function setMark() : Void;
+	@:overload override public function setMark() : Void;
 	
-	@:overload public function gotoMark() : Void;
+	@:overload override public function gotoMark() : Void;
 	
 	
 }
@@ -843,7 +843,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 * given node. This includes the node set {root+1, start-1}, but
 * excludes all ancestors.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedPrecedingIterator') extern class SAX2DTM2_TypedPrecedingIterator extends SAX2DTM2_PrecedingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedPrecedingIterator') extern class SAX2DTM2_TypedPrecedingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_PrecedingIterator
 {
 	/**
 	* Constructor TypedPrecedingIterator
@@ -865,7 +865,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 /**
 * Iterator that returns following nodes of for a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$FollowingIterator') extern class SAX2DTM2_FollowingIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$FollowingIterator') extern class SAX2DTM2_FollowingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	@:overload public function new() : Void;
 	
@@ -877,21 +877,21 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
 /**
 * Iterator that returns following nodes of a given type for a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedFollowingIterator') extern class SAX2DTM2_TypedFollowingIterator extends SAX2DTM2_FollowingIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedFollowingIterator') extern class SAX2DTM2_TypedFollowingIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_FollowingIterator
 {
 	/**
 	* Constructor TypedFollowingIterator
@@ -914,7 +914,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 * Iterator that returns the ancestors of a given node in document
 * order.  (NOTE!  This was changed from the XSLTC code!)
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$AncestorIterator') extern class SAX2DTM2_AncestorIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$AncestorIterator') extern class SAX2DTM2_AncestorIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Get start to END should 'close' the iterator,
@@ -922,21 +922,21 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The root node of the iteration.
 	*/
-	@:overload public function getStartNode() : Int;
+	@:overload override public function getStartNode() : Int;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return true since this iterator is a reversed axis.
 	*/
-	@:overload @:final public function isReverse() : Bool;
+	@:overload @:final override public function isReverse() : Bool;
 	
 	/**
 	* Returns a deep copy of this iterator.  The cloned iterator is not reset.
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -946,7 +946,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -954,25 +954,25 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	* @return A DTMAxisIterator, which may or may not be the same as this
 	*         iterator.
 	*/
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
-	@:overload public function setMark() : Void;
+	@:overload override public function setMark() : Void;
 	
-	@:overload public function gotoMark() : Void;
+	@:overload override public function gotoMark() : Void;
 	
 	
 }
 /**
 * Typed iterator that returns the ancestors of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedAncestorIterator') extern class SAX2DTM2_TypedAncestorIterator extends SAX2DTM2_AncestorIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedAncestorIterator') extern class SAX2DTM2_TypedAncestorIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_AncestorIterator
 {
 	/**
 	* Constructor TypedAncestorIterator
@@ -995,20 +995,20 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	/**
 	* Return the node at the given position.
 	*/
-	@:overload public function getNodeByPosition(position : Int) : Int;
+	@:overload override public function getNodeByPosition(position : Int) : Int;
 	
 	/**
 	* Returns the position of the last node within the iteration, as
 	* defined by XPath.
 	*/
-	@:overload public function getLast() : Int;
+	@:overload override public function getLast() : Int;
 	
 	
 }
 /**
 * Iterator that returns the descendants of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$DescendantIterator') extern class SAX2DTM2_DescendantIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$DescendantIterator') extern class SAX2DTM2_DescendantIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Set start to END should 'close' the iterator,
@@ -1018,7 +1018,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Tell if this node identity is a descendant.  Assumes that
@@ -1041,20 +1041,20 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	/**
 	* Reset.
 	*
 	*/
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	
 }
 /**
 * Typed iterator that returns the descendants of a given node.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedDescendantIterator') extern class SAX2DTM2_TypedDescendantIterator extends SAX2DTM2_DescendantIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedDescendantIterator') extern class SAX2DTM2_TypedDescendantIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_DescendantIterator
 {
 	/**
 	* Constructor TypedDescendantIterator
@@ -1076,7 +1076,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 /**
 * Iterator that returns a given node only if it is of a given type.
 */
-@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedSingletonIterator') extern class SAX2DTM2_TypedSingletonIterator extends SingletonIterator
+@:native('com$sun$org$apache$xml$internal$dtm$ref$sax2dtm$SAX2DTM2$TypedSingletonIterator') extern class SAX2DTM2_TypedSingletonIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_SingletonIterator
 {
 	/**
 	* Constructor TypedSingletonIterator
@@ -1091,7 +1091,7 @@ extern class SAX2DTM2 extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SA
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }

@@ -39,7 +39,7 @@ extern class MessageUpdatableContext implements javax.xml.ws.handler.MessageCont
 	
 	@:overload public function containsValue(obj : Dynamic) : Bool;
 	
-	@:overload public function entrySet() : java.util.Set<Entry<String, Dynamic>>;
+	@:overload public function entrySet() : java.util.Set<java.util.Map.Map_Entry<String, Dynamic>>;
 	
 	@:overload public function get(obj : Dynamic) : Dynamic;
 	

@@ -43,7 +43,7 @@ extern class TOAImpl extends com.sun.corba.se.spi.oa.ObjectAdapterBase implement
 	
 	/** Return the most derived interface for the given servant and objectId.
 	*/
-	@:overload override public function getInterfaces(servant : Dynamic, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload override public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	@:overload override public function getEffectivePolicy(type : Int) : org.omg.CORBA.Policy;
 	

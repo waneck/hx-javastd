@@ -23,7 +23,7 @@ package com.sun.tools.internal.xjc;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class XJCListener implements com.sun.tools.internal.xjc.api.ErrorListener
+extern class XJCListener implements com.sun.xml.internal.bind.api.ErrorListener
 {
 	/**
 	* @deprecated
@@ -104,8 +104,9 @@ extern class XJCListener implements com.sun.tools.internal.xjc.api.ErrorListener
 	* to abort the processing. It merely receives errors.
 	*
 	* @author Kohsuke Kawaguchi (kohsuke.kawaguchi@sun.com)
+	* @since 2.1 EA2
 	*/
-	@:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:require(java1) @:overload public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
 	@:overload public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	

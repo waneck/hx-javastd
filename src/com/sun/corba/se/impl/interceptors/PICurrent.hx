@@ -23,7 +23,7 @@ package com.sun.corba.se.impl.interceptors;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class PICurrent extends org.omg.CORBA.LocalObject implements org.omg.PortableInterceptor.Current
+extern class PICurrent extends org.omg.CORBA.LocalObject implements org.omg.CORBA.Current
 {
 	/**
 	* This method sets the slot data at the given slot id (index) in the

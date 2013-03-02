@@ -50,7 +50,7 @@ package javax.management;
 *
 * @since 1.5
 */
-@:require(java5) extern class Query extends Dynamic
+@:require(java5) extern class Query
 {
 	/**
 	* A code representing the {@link Query#gt} query.  This is chiefly

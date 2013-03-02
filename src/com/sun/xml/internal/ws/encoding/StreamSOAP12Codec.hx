@@ -23,7 +23,7 @@ package com.sun.xml.internal.ws.encoding;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class StreamSOAP12Codec extends com.sun.xml.internal.ws.encoding.StreamSOAPCodec
+@:internal extern class StreamSOAP12Codec extends com.sun.xml.internal.ws.api.pipe.StreamSOAPCodec
 {
 	/**
 	* {@link StreamSOAPCodec} for SOAP 1.2.
@@ -36,15 +36,15 @@ package com.sun.xml.internal.ws.encoding;
 	
 	@:overload override public function getMimeType() : String;
 	
-	@:overload @:final override private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
+	@:overload @:final private function createHeader(reader : javax.xml.stream.XMLStreamReader, mark : com.sun.xml.internal.stream.buffer.XMLStreamBuffer) : com.sun.xml.internal.ws.message.stream.StreamHeader;
 	
 	public static var defaultContentType(default, null) : com.sun.xml.internal.ws.encoding.ContentTypeImpl;
 	
-	@:overload override private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
+	@:overload private function getContentType(soapAction : String) : com.sun.xml.internal.ws.api.pipe.ContentType;
 	
-	@:overload override public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
+	@:overload public function decode(_in : java.io.InputStream, contentType : String, packet : com.sun.xml.internal.ws.api.message.Packet, att : com.sun.xml.internal.ws.api.message.AttachmentSet) : Void;
 	
-	@:overload override private function getExpectedContentTypes() : java.util.List<String>;
+	@:overload private function getExpectedContentTypes() : java.util.List<String>;
 	
 	
 }

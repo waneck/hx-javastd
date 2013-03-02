@@ -38,7 +38,7 @@ extern interface Codec
 	*      null if the MIME type can't be determined by the <code>Codec</code>
 	*      implementation. Otherwise the MIME type is returned.
 	*/
-	@:overload @:public public function getMimeType() : String;
+	@:overload public function getMimeType() : String;
 	
 	/**
 	* If the MIME content-type of the encoding is known statically

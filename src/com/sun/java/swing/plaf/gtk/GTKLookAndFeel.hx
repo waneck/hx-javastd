@@ -85,7 +85,7 @@ extern class GTKLookAndFeel extends javax.swing.plaf.synth.SynthLookAndFeel
 */
 @:native('com$sun$java$swing$plaf$gtk$GTKLookAndFeel$GnomeLayoutStyle') @:internal extern class GTKLookAndFeel_GnomeLayoutStyle extends sun.swing.DefaultLayoutStyle
 {
-	@:overload public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
+	@:overload override public function getPreferredGap(component1 : javax.swing.JComponent, component2 : javax.swing.JComponent, type : javax.swing.LayoutStyle.LayoutStyle_ComponentPlacement, position : Int, parent : java.awt.Container) : Int;
 	
 	@:overload override public function getContainerGap(component : javax.swing.JComponent, position : Int, parent : java.awt.Container) : Int;
 	

@@ -31,7 +31,7 @@ extern class TypeCodeOutputStream extends com.sun.corba.se.impl.encoding.EncapsO
 	
 	@:overload override public function create_input_stream() : org.omg.CORBA.portable.InputStream;
 	
-	@:overload public function setEnclosingOutputStream(enclosure : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload public function setEnclosingOutputStream(enclosure : java.io.OutputStream) : Void;
 	
 	/*
 	public boolean isEncapsulatedIn(TypeCodeOutputStream outerEnclosure) {
@@ -59,7 +59,7 @@ extern class TypeCodeOutputStream extends com.sun.corba.se.impl.encoding.EncapsO
 	
 	@:overload private function makeEncapsulation() : Void;
 	
-	@:overload public static function wrapOutputStream(os : org.omg.CORBA_2_3.portable.OutputStream) : TypeCodeOutputStream;
+	@:overload public static function wrapOutputStream(os : java.io.OutputStream) : TypeCodeOutputStream;
 	
 	@:overload public function getPosition() : Int;
 	

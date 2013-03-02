@@ -31,7 +31,7 @@ package com.sun.jdi;
 * @author Gordon Hirsch
 * @since  1.3
 */
-@:require(java3) extern class Bootstrap extends Dynamic
+@:require(java3) extern class Bootstrap
 {
 	/**
 	* Returns the virtual machine manager.

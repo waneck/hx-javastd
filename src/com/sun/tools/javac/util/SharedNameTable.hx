@@ -49,17 +49,17 @@ extern class SharedNameTable extends com.sun.tools.javac.util.Name.Name_Table
 	
 	
 }
-@:native('com$sun$tools$javac$util$SharedNameTable$NameImpl') @:internal extern class SharedNameTable_NameImpl extends com.sun.tools.javac.util.Name
+@:native('com$sun$tools$javac$util$SharedNameTable$NameImpl') @:internal extern class SharedNameTable_NameImpl extends javax.lang.model.element.Name
 {
-	@:overload override public function getIndex() : Int;
+	@:overload public function getIndex() : Int;
 	
-	@:overload override public function getByteLength() : Int;
+	@:overload public function getByteLength() : Int;
 	
-	@:overload override public function getByteAt(i : Int) : java.StdTypes.Int8;
+	@:overload public function getByteAt(i : Int) : java.StdTypes.Int8;
 	
-	@:overload override public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
+	@:overload public function getByteArray() : java.NativeArray<java.StdTypes.Int8>;
 	
-	@:overload override public function getByteOffset() : Int;
+	@:overload public function getByteOffset() : Int;
 	
 	/** Return the hash value of this name.
 	*/

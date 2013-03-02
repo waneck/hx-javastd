@@ -110,7 +110,7 @@ extern class HttpURLConnection extends java.net.HttpURLConnection
 	/**
 	* opens a stream allowing redirects only to the same host.
 	*/
-	@:overload public static function openConnectionCheckRedirects(c : sun.net.www.URLConnection) : java.io.InputStream;
+	@:overload public static function openConnectionCheckRedirects(c : java.net.URLConnection) : java.io.InputStream;
 	
 	@:overload override public function connect() : Void;
 	

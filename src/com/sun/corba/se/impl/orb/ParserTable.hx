@@ -95,7 +95,7 @@ extern class ParserTable
 }
 @:native('com$sun$corba$se$impl$orb$ParserTable$TestORBInitializer1') extern class ParserTable_TestORBInitializer1 extends org.omg.CORBA.LocalObject implements org.omg.PortableInterceptor.ORBInitializer
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload public function equals(other : org.omg.CORBA.Object) : Bool;
 	
 	@:overload public function pre_init(info : org.omg.PortableInterceptor.ORBInitInfo) : Void;
 	
@@ -105,7 +105,7 @@ extern class ParserTable
 }
 @:native('com$sun$corba$se$impl$orb$ParserTable$TestORBInitializer2') extern class ParserTable_TestORBInitializer2 extends org.omg.CORBA.LocalObject implements org.omg.PortableInterceptor.ORBInitializer
 {
-	@:overload public function equals(other : Dynamic) : Bool;
+	@:overload public function equals(other : org.omg.CORBA.Object) : Bool;
 	
 	@:overload public function pre_init(info : org.omg.PortableInterceptor.ORBInitInfo) : Void;
 	

@@ -156,23 +156,23 @@ extern class RichDiagnosticFormatter extends com.sun.tools.javac.util.Forwarding
 {
 	@:overload override public function localize(locale : java.util.Locale, key : String, args : java.NativeArray<Dynamic>) : String;
 	
-	@:overload public function capturedVarId(t : CapturedType, locale : java.util.Locale) : String;
+	@:overload override public function capturedVarId(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
 	@:overload override public function visitType(t : com.sun.tools.javac.code.Type, locale : java.util.Locale) : String;
 	
-	@:overload public function visitCapturedType(t : CapturedType, locale : java.util.Locale) : String;
+	@:overload override public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassType(t : ClassType, locale : java.util.Locale) : String;
+	@:overload override public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, locale : java.util.Locale) : String;
 	
-	@:overload private function className(t : ClassType, longform : Bool, locale : java.util.Locale) : String;
+	@:overload override private function className(t : com.sun.tools.javac.code.Type.Type_ClassType, longform : Bool, locale : java.util.Locale) : String;
 	
-	@:overload public function visitTypeVar(t : TypeVar, locale : java.util.Locale) : String;
+	@:overload override public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, locale : java.util.Locale) : String;
 	
 	@:overload override private function printMethodArgs(args : com.sun.tools.javac.util.List<com.sun.tools.javac.code.Type>, varArgs : Bool, locale : java.util.Locale) : String;
 	
-	@:overload public function visitClassSymbol(s : ClassSymbol, locale : java.util.Locale) : String;
+	@:overload override public function visitClassSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_ClassSymbol, locale : java.util.Locale) : String;
 	
-	@:overload public function visitMethodSymbol(s : MethodSymbol, locale : java.util.Locale) : String;
+	@:overload override public function visitMethodSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_MethodSymbol, locale : java.util.Locale) : String;
 	
 	
 }

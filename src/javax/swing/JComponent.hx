@@ -1221,7 +1221,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getBaseline(int, int)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload override public function getBaselineResizeBehavior() : BaselineResizeBehavior;
+	@:require(java6) @:overload override public function getBaselineResizeBehavior() : java.awt.Component.Component_BaselineResizeBehavior;
 	
 	/**
 	* In release 1.4, the focus subsystem was rearchitected.

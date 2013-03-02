@@ -395,7 +395,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 * Iterator that returns the namespace nodes as defined by the XPath data
 * model for a given node, filtered by extended type ID.
 */
-@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$TypedNamespaceIterator') extern class SAXImpl_TypedNamespaceIterator extends NamespaceIterator
+@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$TypedNamespaceIterator') extern class SAXImpl_TypedNamespaceIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_NamespaceIterator
 {
 	/**
 	* Constructor TypedChildrenIterator
@@ -410,7 +410,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
@@ -418,25 +418,25 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 * This is a specialised iterator for predicates comparing node or
 * attribute values to variable or parameter values.
 */
-@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NodeValueIterator') @:internal extern class SAXImpl_NodeValueIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NodeValueIterator') @:internal extern class SAXImpl_NodeValueIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	@:overload public function new(source : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, returnType : Int, value : String, op : Bool) : Void;
 	
-	@:overload public function isReverse() : Bool;
+	@:overload override public function isReverse() : Bool;
 	
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function setRestartable(isRestartable : Bool) : Void;
+	@:overload override public function setRestartable(isRestartable : Bool) : Void;
 	
-	@:overload public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function reset() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
-	@:overload public function setMark() : Void;
+	@:overload override public function setMark() : Void;
 	
-	@:overload public function gotoMark() : Void;
+	@:overload override public function gotoMark() : Void;
 	
 	
 }
@@ -445,7 +445,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 * a wild card for the local name of the node, i.e., node tests of the
 * form <axis>::<prefix>:*
 */
-@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NamespaceWildcardIterator') extern class SAXImpl_NamespaceWildcardIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NamespaceWildcardIterator') extern class SAXImpl_NamespaceWildcardIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* The namespace type index.
@@ -474,14 +474,14 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	/**
 	* Returns a deep copy of this iterator.  The cloned iterator is not
@@ -489,18 +489,18 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return a deep copy of this iterator.
 	*/
-	@:overload public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function cloneIterator() : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* True if this iterator has a reversed axis.
 	*
 	* @return <code>true</code> if this iterator is a reversed axis.
 	*/
-	@:overload public function isReverse() : Bool;
+	@:overload override public function isReverse() : Bool;
 	
-	@:overload public function setMark() : Void;
+	@:overload override public function setMark() : Void;
 	
-	@:overload public function gotoMark() : Void;
+	@:overload override public function gotoMark() : Void;
 	
 	
 }
@@ -510,7 +510,7 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 * filter on top of a basic child iterator, but a specialised
 * iterator is used for efficiency (both speed and size of translet).
 */
-@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NamespaceChildrenIterator') extern class SAXImpl_NamespaceChildrenIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NamespaceChildrenIterator') extern class SAXImpl_NamespaceChildrenIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor NamespaceChildrenIterator
@@ -528,21 +528,21 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }
 /**
 * Iterator that returns attributes within a given namespace for a node.
 */
-@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NamespaceAttributeIterator') extern class SAXImpl_NamespaceAttributeIterator extends InternalAxisIteratorBase
+@:native('com$sun$org$apache$xalan$internal$xsltc$dom$SAXImpl$NamespaceAttributeIterator') extern class SAXImpl_NamespaceAttributeIterator extends com.sun.org.apache.xml.internal.dtm.ref.DTMDefaultBaseIterators.DTMDefaultBaseIterators_InternalAxisIteratorBase
 {
 	/**
 	* Constructor NamespaceAttributeIterator
@@ -560,14 +560,14 @@ extern class SAXImpl extends com.sun.org.apache.xml.internal.dtm.ref.sax2dtm.SAX
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload override public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get the next node in the iteration.
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload public function next() : Int;
+	@:overload override public function next() : Int;
 	
 	
 }

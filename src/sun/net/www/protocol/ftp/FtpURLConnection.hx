@@ -26,7 +26,7 @@ package sun.net.www.protocol.ftp;
 /**
 * FTP stream opener.
 */
-extern class FtpURLConnection extends sun.net.www.URLConnection
+extern class FtpURLConnection extends java.net.URLConnection
 {
 	/**
 	* Creates an FtpURLConnection from a URL.

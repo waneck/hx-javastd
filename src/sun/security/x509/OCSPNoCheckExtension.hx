@@ -43,7 +43,7 @@ package sun.security.x509;
 * @see Extension
 * @see CertAttrSet
 */
-extern class OCSPNoCheckExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class OCSPNoCheckExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Identifier for this attribute, to be used with the

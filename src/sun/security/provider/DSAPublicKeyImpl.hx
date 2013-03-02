@@ -23,7 +23,7 @@ package sun.security.provider;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class DSAPublicKeyImpl extends sun.security.provider.DSAPublicKey
+extern class DSAPublicKeyImpl extends java.security.interfaces.DSAPublicKey
 {
 	/**
 	* Make a DSA public key out of a public key and three parameters.

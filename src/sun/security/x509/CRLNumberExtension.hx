@@ -36,7 +36,7 @@ package sun.security.x509;
 * @see Extension
 * @see CertAttrSet
 */
-extern class CRLNumberExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class CRLNumberExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Attribute name.
@@ -99,7 +99,7 @@ extern class CRLNumberExtension extends sun.security.x509.Extension implements s
 	/**
 	* Returns a printable representation of the CRLNumberExtension.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.

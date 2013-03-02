@@ -179,7 +179,7 @@ extern class XBaseWindow
 	
 }
 
-@:native('sun$awt$X11$XBaseWindow$StateLock') @:internal extern class XBaseWindow_StateLock extends Dynamic
+@:native('sun$awt$X11$XBaseWindow$StateLock') @:internal extern class XBaseWindow_StateLock
 {
 	
 }

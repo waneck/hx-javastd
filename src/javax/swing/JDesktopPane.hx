@@ -259,7 +259,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 * has been added to the <code>java.beans</code> package.
 * Please see {@link java.beans.XMLEncoder}.
 */
-@:native('javax$swing$JDesktopPane$AccessibleJDesktopPane') extern class JDesktopPane_AccessibleJDesktopPane extends AccessibleJComponent
+@:native('javax$swing$JDesktopPane$AccessibleJDesktopPane') extern class JDesktopPane_AccessibleJDesktopPane extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
 	/**
 	* Get the role of this object.
@@ -268,7 +268,7 @@ extern class JDesktopPane extends javax.swing.JLayeredPane implements javax.acce
 	* object
 	* @see AccessibleRole
 	*/
-	@:overload public function getAccessibleRole() : javax.accessibility.AccessibleRole;
+	@:overload override public function getAccessibleRole() : javax.accessibility.AccessibleRole;
 	
 	
 }

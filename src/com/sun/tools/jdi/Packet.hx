@@ -23,7 +23,7 @@ package com.sun.tools.jdi;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class Packet extends Dynamic
+extern class Packet
 {
 	public static var NoFlags(default, null) : java.StdTypes.Int16;
 	

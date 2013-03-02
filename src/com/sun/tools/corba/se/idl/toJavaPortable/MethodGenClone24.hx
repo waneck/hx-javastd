@@ -40,7 +40,7 @@ package com.sun.tools.corba.se.idl.toJavaPortable;
 //// to inject the changes made in MethodGen24 between AttributeGen
 //// and AttributeGen24. When the AttributeGen24 changes are merged, this
 //// class should be deleted.
-extern class MethodGenClone24 extends com.sun.tools.corba.se.idl.toJavaPortable.AttributeGen
+extern class MethodGenClone24 extends com.sun.tools.corba.se.idl.AttributeGen
 {
 	/**
 	* Public zero-argument constructor.
@@ -55,7 +55,7 @@ extern class MethodGenClone24 extends com.sun.tools.corba.se.idl.toJavaPortable.
 	/**
 	* <d62023> - delete method templates for valuetypes
 	**/
-	@:overload override private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
+	@:overload private function interfaceMethod(symbolTable : java.util.Hashtable<Dynamic, Dynamic>, m : com.sun.tools.corba.se.idl.MethodEntry, stream : java.io.PrintWriter) : Void;
 	
 	
 }

@@ -29,9 +29,9 @@ package com.sun.corba.se.impl.orb;
 * Copyright IBM Corp. 1998 1999  All Rights Reserved
 *
 */
-extern class ORBSingleton extends com.sun.corba.se.spi.orb.ORB
+extern class ORBSingleton extends org.omg.CORBA.ORB
 {
-	@:overload override public function set_parameters(props : java.util.Properties) : Void;
+	@:overload public function set_parameters(props : java.util.Properties) : Void;
 	
 	@:overload override private function set_parameters(app : java.applet.Applet, props : java.util.Properties) : Void;
 	
@@ -104,7 +104,7 @@ extern class ORBSingleton extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload override public function resolve_initial_references(identifier : String) : org.omg.CORBA.Object;
 	
-	@:overload override public function register_initial_reference(id : String, obj : org.omg.CORBA.Object) : Void;
+	@:overload public function register_initial_reference(id : String, obj : org.omg.CORBA.Object) : Void;
 	
 	@:overload override public function send_multiple_requests_oneway(req : java.NativeArray<org.omg.CORBA.Request>) : Void;
 	
@@ -138,29 +138,29 @@ extern class ORBSingleton extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload override public function perform_work() : Void;
 	
-	@:overload override public function register_value_factory(repositoryID : String, factory : org.omg.CORBA.portable.ValueFactory) : org.omg.CORBA.portable.ValueFactory;
+	@:overload public function register_value_factory(repositoryID : String, factory : org.omg.CORBA.portable.ValueFactory) : org.omg.CORBA.portable.ValueFactory;
 	
-	@:overload override public function unregister_value_factory(repositoryID : String) : Void;
+	@:overload public function unregister_value_factory(repositoryID : String) : Void;
 	
-	@:overload override public function lookup_value_factory(repositoryID : String) : org.omg.CORBA.portable.ValueFactory;
+	@:overload public function lookup_value_factory(repositoryID : String) : org.omg.CORBA.portable.ValueFactory;
 	
-	@:overload override public function getTransportManager() : com.sun.corba.se.pept.transport.TransportManager;
+	@:overload public function getTransportManager() : com.sun.corba.se.pept.transport.TransportManager;
 	
-	@:overload override public function getCorbaTransportManager() : com.sun.corba.se.spi.transport.CorbaTransportManager;
+	@:overload public function getCorbaTransportManager() : com.sun.corba.se.spi.transport.CorbaTransportManager;
 	
-	@:overload override public function getLegacyServerSocketManager() : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketManager;
+	@:overload public function getLegacyServerSocketManager() : com.sun.corba.se.spi.legacy.connection.LegacyServerSocketManager;
 	
-	@:overload override public function getRequestDispatcherRegistry() : com.sun.corba.se.spi.protocol.RequestDispatcherRegistry;
+	@:overload public function getRequestDispatcherRegistry() : com.sun.corba.se.spi.protocol.RequestDispatcherRegistry;
 	
 	/**
 	* Return the service context registry
 	*/
-	@:overload override public function getServiceContextRegistry() : com.sun.corba.se.spi.servicecontext.ServiceContextRegistry;
+	@:overload public function getServiceContextRegistry() : com.sun.corba.se.spi.servicecontext.ServiceContextRegistry;
 	
 	/**
 	* Get the transient server ID
 	*/
-	@:overload override public function getTransientServerId() : Int;
+	@:overload public function getTransientServerId() : Int;
 	
 	/**
 	* Return the bootstrap naming port specified in the ORBInitialPort param.
@@ -178,16 +178,16 @@ extern class ORBSingleton extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload public function getCodeSetComponentInfo() : com.sun.corba.se.impl.encoding.CodeSetComponentInfo;
 	
-	@:overload override public function isLocalHost(host : String) : Bool;
+	@:overload public function isLocalHost(host : String) : Bool;
 	
-	@:overload override public function isLocalServerId(subcontractId : Int, serverId : Int) : Bool;
+	@:overload public function isLocalServerId(subcontractId : Int, serverId : Int) : Bool;
 	
 	/*
 	* Things from corba.ORB.
 	*/
-	@:overload override public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
+	@:overload public function getORBVersion() : com.sun.corba.se.spi.orb.ORBVersion;
 	
-	@:overload override public function setORBVersion(verObj : com.sun.corba.se.spi.orb.ORBVersion) : Void;
+	@:overload public function setORBVersion(verObj : com.sun.corba.se.spi.orb.ORBVersion) : Void;
 	
 	@:overload public function getAppletHost() : String;
 	
@@ -203,7 +203,7 @@ extern class ORBSingleton extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload public function getGIOPBuffMgrStrategy(gv : com.sun.corba.se.spi.ior.iiop.GIOPVersion) : Int;
 	
-	@:overload override public function getFVDCodeBaseIOR() : com.sun.corba.se.spi.ior.IOR;
+	@:overload public function getFVDCodeBaseIOR() : com.sun.corba.se.spi.ior.IOR;
 	
 	@:overload override public function create_policy(type : Int, val : org.omg.CORBA.Any) : org.omg.CORBA.Policy;
 	
@@ -211,87 +211,87 @@ extern class ORBSingleton extends com.sun.corba.se.spi.orb.ORB
 	
 	@:overload public function setPersistentServerId(id : Int) : Void;
 	
-	@:overload override public function getTypeCodeForClass(c : Class<Dynamic>) : com.sun.corba.se.impl.corba.TypeCodeImpl;
+	@:overload public function getTypeCodeForClass(c : Class<Dynamic>) : com.sun.corba.se.impl.corba.TypeCodeImpl;
 	
-	@:overload override public function setTypeCodeForClass(c : Class<Dynamic>, tcimpl : com.sun.corba.se.impl.corba.TypeCodeImpl) : Void;
+	@:overload public function setTypeCodeForClass(c : Class<Dynamic>, tcimpl : com.sun.corba.se.impl.corba.TypeCodeImpl) : Void;
 	
 	@:overload public function alwaysSendCodeSetServiceContext() : Bool;
 	
-	@:overload override public function isDuringDispatch() : Bool;
+	@:overload public function isDuringDispatch() : Bool;
 	
-	@:overload override public function notifyORB() : Void;
+	@:overload public function notifyORB() : Void;
 	
-	@:overload override public function getPIHandler() : com.sun.corba.se.spi.protocol.PIHandler;
+	@:overload public function getPIHandler() : com.sun.corba.se.spi.protocol.PIHandler;
 	
-	@:overload override public function checkShutdownState() : Void;
+	@:overload public function checkShutdownState() : Void;
 	
-	@:overload override public function startingDispatch() : Void;
+	@:overload public function startingDispatch() : Void;
 	
-	@:overload override public function finishedDispatch() : Void;
+	@:overload public function finishedDispatch() : Void;
 	
 	@:overload public function registerInitialReference(id : String, closure : com.sun.corba.se.spi.orbutil.closure.Closure) : Void;
 	
-	@:overload override public function getORBData() : com.sun.corba.se.spi.orb.ORBData;
+	@:overload public function getORBData() : com.sun.corba.se.spi.orb.ORBData;
 	
-	@:overload override public function setClientDelegateFactory(factory : com.sun.corba.se.spi.protocol.ClientDelegateFactory) : Void;
+	@:overload public function setClientDelegateFactory(factory : com.sun.corba.se.spi.protocol.ClientDelegateFactory) : Void;
 	
-	@:overload override public function getClientDelegateFactory() : com.sun.corba.se.spi.protocol.ClientDelegateFactory;
+	@:overload public function getClientDelegateFactory() : com.sun.corba.se.spi.protocol.ClientDelegateFactory;
 	
-	@:overload override public function setCorbaContactInfoListFactory(factory : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory) : Void;
+	@:overload public function setCorbaContactInfoListFactory(factory : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory) : Void;
 	
-	@:overload override public function getCorbaContactInfoListFactory() : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
+	@:overload public function getCorbaContactInfoListFactory() : com.sun.corba.se.spi.transport.CorbaContactInfoListFactory;
 	
-	@:overload override public function getURLOperation() : com.sun.corba.se.spi.orb.Operation;
+	@:overload public function getURLOperation() : com.sun.corba.se.spi.orb.Operation;
 	
-	@:overload override public function setINSDelegate(sdel : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher) : Void;
+	@:overload public function setINSDelegate(sdel : com.sun.corba.se.spi.protocol.CorbaServerRequestDispatcher) : Void;
 	
-	@:overload override public function getTaggedComponentFactoryFinder() : com.sun.corba.se.spi.ior.TaggedComponentFactoryFinder;
+	@:overload public function getTaggedComponentFactoryFinder() : com.sun.corba.se.spi.ior.TaggedComponentFactoryFinder;
 	
-	@:overload override public function getTaggedProfileFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
+	@:overload public function getTaggedProfileFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
 	
-	@:overload override public function getTaggedProfileTemplateFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
+	@:overload public function getTaggedProfileTemplateFactoryFinder() : com.sun.corba.se.spi.ior.IdentifiableFactoryFinder;
 	
-	@:overload override public function getObjectKeyFactory() : com.sun.corba.se.spi.ior.ObjectKeyFactory;
+	@:overload public function getObjectKeyFactory() : com.sun.corba.se.spi.ior.ObjectKeyFactory;
 	
-	@:overload override public function setObjectKeyFactory(factory : com.sun.corba.se.spi.ior.ObjectKeyFactory) : Void;
+	@:overload public function setObjectKeyFactory(factory : com.sun.corba.se.spi.ior.ObjectKeyFactory) : Void;
 	
-	@:overload override public function handleBadServerId(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
+	@:overload public function handleBadServerId(okey : com.sun.corba.se.spi.ior.ObjectKey) : Void;
 	
-	@:overload override public function peekInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
+	@:overload public function peekInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
 	
-	@:overload override public function pushInvocationInfo(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
+	@:overload public function pushInvocationInfo(info : com.sun.corba.se.spi.oa.OAInvocationInfo) : Void;
 	
-	@:overload override public function popInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
+	@:overload public function popInvocationInfo() : com.sun.corba.se.spi.oa.OAInvocationInfo;
 	
-	@:overload override public function createOrIncrementInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
+	@:overload public function createOrIncrementInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
 	
-	@:overload override public function releaseOrDecrementInvocationInfo() : Void;
+	@:overload public function releaseOrDecrementInvocationInfo() : Void;
 	
-	@:overload override public function getInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
+	@:overload public function getInvocationInfo() : com.sun.corba.se.pept.protocol.ClientInvocationInfo;
 	
 	@:overload public function getConnectionCache(contactInfo : com.sun.corba.se.pept.transport.ContactInfo) : com.sun.corba.se.pept.transport.ConnectionCache;
 	
-	@:overload override public function setResolver(resolver : com.sun.corba.se.spi.resolver.Resolver) : Void;
+	@:overload public function setResolver(resolver : com.sun.corba.se.spi.resolver.Resolver) : Void;
 	
-	@:overload override public function getResolver() : com.sun.corba.se.spi.resolver.Resolver;
+	@:overload public function getResolver() : com.sun.corba.se.spi.resolver.Resolver;
 	
-	@:overload override public function setLocalResolver(resolver : com.sun.corba.se.spi.resolver.LocalResolver) : Void;
+	@:overload public function setLocalResolver(resolver : com.sun.corba.se.spi.resolver.LocalResolver) : Void;
 	
-	@:overload override public function getLocalResolver() : com.sun.corba.se.spi.resolver.LocalResolver;
+	@:overload public function getLocalResolver() : com.sun.corba.se.spi.resolver.LocalResolver;
 	
-	@:overload override public function setURLOperation(stringToObject : com.sun.corba.se.spi.orb.Operation) : Void;
+	@:overload public function setURLOperation(stringToObject : com.sun.corba.se.spi.orb.Operation) : Void;
 	
-	@:overload override public function setBadServerIdHandler(handler : com.sun.corba.se.impl.oa.poa.BadServerIdHandler) : Void;
+	@:overload public function setBadServerIdHandler(handler : com.sun.corba.se.impl.oa.poa.BadServerIdHandler) : Void;
 	
-	@:overload override public function initBadServerIdHandler() : Void;
+	@:overload public function initBadServerIdHandler() : Void;
 	
 	@:overload public function getSelector(x : Int) : com.sun.corba.se.pept.transport.Selector;
 	
-	@:overload override public function setThreadPoolManager(mgr : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager) : Void;
+	@:overload public function setThreadPoolManager(mgr : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager) : Void;
 	
-	@:overload override public function getThreadPoolManager() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager;
+	@:overload public function getThreadPoolManager() : com.sun.corba.se.spi.orbutil.threadpool.ThreadPoolManager;
 	
-	@:overload override public function getCopierManager() : com.sun.corba.se.spi.copyobject.CopierManager;
+	@:overload public function getCopierManager() : com.sun.corba.se.spi.copyobject.CopierManager;
 	
 	
 }

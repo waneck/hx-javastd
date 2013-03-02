@@ -36,7 +36,7 @@ package com.sun.tools.corba.se.idl.som.cff;
 *
 * @author      Larry K. Raper
 */
-extern class FileLocator extends Dynamic
+extern class FileLocator
 {
 	/**
 	* locateClassFile returns a DataInputStream with mark/reset

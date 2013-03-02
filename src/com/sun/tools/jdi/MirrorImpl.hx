@@ -23,7 +23,7 @@ package com.sun.tools.jdi;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class MirrorImpl extends Dynamic implements com.sun.jdi.Mirror
+@:internal extern class MirrorImpl implements com.sun.jdi.Mirror
 {
 	private var vm : com.sun.tools.jdi.VirtualMachineImpl;
 	

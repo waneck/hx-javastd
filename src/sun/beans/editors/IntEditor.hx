@@ -26,7 +26,7 @@ package sun.beans.editors;
 /**
 * FOR BACKWARD COMPATIBILITY ONLY - DO NOT USE.
 */
-extern class IntEditor extends sun.beans.editors.IntegerEditor
+extern class IntEditor extends com.sun.beans.editors.IntegerEditor
 {
 	
 }

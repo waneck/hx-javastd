@@ -121,7 +121,7 @@ extern class WrapperInputStream extends org.omg.CORBA_2_3.portable.InputStream i
 	
 	@:overload public function getTypeCodeAtPosition(position : Int) : com.sun.corba.se.impl.corba.TypeCodeImpl;
 	
-	@:overload public function setEnclosingInputStream(enclosure : org.omg.CORBA_2_3.portable.InputStream) : Void;
+	@:overload public function setEnclosingInputStream(enclosure : java.io.InputStream) : Void;
 	
 	@:overload public function getTopLevelStream() : com.sun.corba.se.impl.encoding.TypeCodeReader;
 	

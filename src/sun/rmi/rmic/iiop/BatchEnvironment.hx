@@ -29,7 +29,7 @@ package sun.rmi.rmic.iiop;
 * Copyright IBM Corp. 1998 1999  All Rights Reserved
 *
 */
-extern class BatchEnvironment extends sun.rmi.rmic.BatchEnvironment implements sun.rmi.rmic.iiop.Constants
+extern class BatchEnvironment extends sun.rmi.rmic.BatchEnvironment implements sun.tools.java.Constants
 {
 	/**
 	* Create a BatchEnvironment for rmic with the given class path,

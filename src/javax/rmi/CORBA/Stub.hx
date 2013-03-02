@@ -29,7 +29,7 @@ package javax.rmi.CORBA;
 * Copyright IBM Corp. 1998 1999  All Rights Reserved
 *
 */
-extern class Stub extends org.omg.CORBA_2_3.portable.ObjectImpl implements java.io.Serializable
+extern class Stub extends org.omg.CORBA.portable.ObjectImpl implements java.io.Serializable
 {
 	/**
 	* Returns a hash code value for the object which is the same for all stubs

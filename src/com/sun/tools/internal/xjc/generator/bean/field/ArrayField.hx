@@ -33,7 +33,7 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	
 	@:overload override private function getCoreListType() : com.sun.codemodel.internal.JClass;
 	
-	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractListField.AbstractListField_Accessor;
+	@:overload override public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.generator.bean.field.AbstractField.AbstractField_Accessor;
 	
 	/**
 	* Case from {@link #exposedType} to array of {@link #implType} .

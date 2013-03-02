@@ -23,7 +23,7 @@ package com.sun.xml.internal.messaging.saaj.soap.impl;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.ElementImpl implements javax.xml.soap.SOAPBody
+extern class BodyImpl extends com.sun.org.apache.xerces.internal.dom.ElementImpl implements javax.xml.soap.SOAPBody
 {
 	@:overload private function new(ownerDoc : com.sun.xml.internal.messaging.saaj.soap.SOAPDocumentImpl, bodyName : com.sun.xml.internal.messaging.saaj.soap.name.NameImpl) : Void;
 	
@@ -59,17 +59,17 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	
 	@:overload public function addBodyElement(qname : javax.xml.namespace.QName) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload override public function setParentElement(element : javax.xml.soap.SOAPElement) : Void;
+	@:overload public function setParentElement(element : javax.xml.soap.SOAPElement) : Void;
 	
-	@:overload override private function addElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
+	@:overload private function addElement(name : javax.xml.soap.Name) : javax.xml.soap.SOAPElement;
 	
-	@:overload override private function addElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload private function addElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	@:overload public function addDocument(document : org.w3c.dom.Document) : javax.xml.soap.SOAPBodyElement;
 	
-	@:overload override private function convertToSoapElement(element : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
+	@:overload private function convertToSoapElement(element : org.w3c.dom.Element) : javax.xml.soap.SOAPElement;
 	
-	@:overload override public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
+	@:overload public function setElementQName(newName : javax.xml.namespace.QName) : javax.xml.soap.SOAPElement;
 	
 	@:overload public function extractContentAsDocument() : org.w3c.dom.Document;
 	
@@ -78,21 +78,6 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* <code>null</code>.
 	*/
 	@:overload @:public @:public @:public override public function getFirstChild() : Node;
-	
-	/**
-	* Returns the parent element of this <code>Node</code> object.
-	* This method can throw an <code>UnsupportedOperationException</code>
-	* if the tree is not kept in memory.
-	*
-	* @return the <code>SOAPElement</code> object that is the parent of
-	*         this <code>Node</code> object or <code>null</code> if this
-	*         <code>Node</code> object is root
-	*
-	* @exception UnsupportedOperationException if the whole tree is not
-	*            kept in memory
-	* @see #setParentElement
-	*/
-	@:overload @:public @:public override public function getParentElement() : javax.xml.soap.SOAPElement;
 	
 	/**
 	* Creates a <code>QName</code> whose namespace URI is the one associated
@@ -118,7 +103,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public public function createQName(localName : String, prefix : String) : javax.xml.namespace.QName;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -218,7 +203,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#getElementName()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function getElementQName() : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public @:public public function getElementQName() : javax.xml.namespace.QName;
 	
 	/**
 	* Retrieves an attribute value by name.
@@ -258,7 +243,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*         removed successfully; <code>false</code> if it was not
 	* @see SOAPElement#removeAttribute(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public override public function removeAttribute(name : javax.xml.soap.Name) : Bool;
+	@:overload @:public @:public public function removeAttribute(name : javax.xml.soap.Name) : Bool;
 	
 	/**
 	* Returns an <code>Iterator</code> over all the immediate child
@@ -280,7 +265,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @return an iterator with the content of this <code>SOAPElement</code>
 	*         object
 	*/
-	@:overload @:public @:public override public function getChildElements() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public public function getChildElements() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Inserts the node <code>newChild</code> before the existing child node
@@ -368,7 +353,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	<code>name</code> on this SOAPElement.
 	* @see SOAPElement#addAttribute(javax.xml.namespace.QName, String)
 	*/
-	@:overload @:public @:public override public function addAttribute(name : javax.xml.soap.Name, value : String) : SOAPElement;
+	@:overload @:public @:public public function addAttribute(name : javax.xml.soap.Name, value : String) : SOAPElement;
 	
 	/**
 	* Look up the namespace URI associated to the given prefix, starting from
@@ -394,7 +379,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#removeAttribute(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
+	@:require(java3) @:overload @:public @:public public function removeAttribute(qname : javax.xml.namespace.QName) : Bool;
 	
 	/**
 	* Removes an attribute by local name and namespace URI. If a default
@@ -472,7 +457,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @exception SOAPException if there is an error in creating the
 	*                          namespace
 	*/
-	@:overload @:public @:public override public function addNamespaceDeclaration(prefix : String, uri : String) : SOAPElement;
+	@:overload @:public @:public public function addNamespaceDeclaration(prefix : String, uri : String) : SOAPElement;
 	
 	/**
 	* Removes the child node indicated by <code>oldChild</code> from the list
@@ -554,7 +539,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public override public function addChildElement(localName : String) : SOAPElement;
+	@:overload @:public @:public public function addChildElement(localName : String) : SOAPElement;
 	
 	/**
 	* A <code>NodeList</code> that contains all children of this node. If
@@ -594,7 +579,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#addAttribute(Name, String)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function addAttribute(qname : javax.xml.namespace.QName, value : String) : SOAPElement;
+	@:require(java3) @:overload @:public @:public public function addAttribute(qname : javax.xml.namespace.QName, value : String) : SOAPElement;
 	
 	/**
 	*  Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -620,17 +605,6 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @since DOM Level 3
 	*/
 	@:overload @:public @:public @:public override public function normalize() : Void;
-	
-	/**
-	* Notifies the implementation that this <code>Node</code>
-	* object is no longer being used by the application and that the
-	* implementation is free to reuse this object for nodes that may
-	* be created later.
-	* <P>
-	* Calling the method <code>recycleNode</code> implies that the method
-	* <code>detachNode</code> has been called previously.
-	*/
-	@:overload @:public @:public override public function recycleNode() : Void;
 	
 	/**
 	* Retrieves an attribute value by local name and namespace URI.
@@ -659,7 +633,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @return an iterator over the namespace prefixes in this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public override public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public public function getNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	*  If the parameter <code>isId</code> is <code>true</code>, this method
@@ -698,7 +672,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @exception SOAPException if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public override public function addChildElement(localName : String, prefix : String, uri : String) : SOAPElement;
+	@:overload @:public @:public public function addChildElement(localName : String, prefix : String, uri : String) : SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified name.
@@ -708,7 +682,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*         attribute, Null if there is no such attribute
 	* @see SOAPElement#getAttributeValue(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public override public function getAttributeValue(name : javax.xml.soap.Name) : String;
+	@:overload @:public @:public public function getAttributeValue(name : javax.xml.soap.Name) : String;
 	
 	/**
 	* Retrieves an <code>Attr</code> node by local name and namespace URI.
@@ -748,7 +722,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*
 	* @see #setEncodingStyle
 	*/
-	@:overload @:public @:public override public function getEncodingStyle() : String;
+	@:overload @:public @:public public function getEncodingStyle() : String;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the attributes of this node (if
@@ -767,7 +741,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:abstract @:public @:public override public function removeContents() : Void;
+	@:require(java2) @:overload @:abstract @:public @:public public function removeContents() : Void;
 	
 	/**
 	* Adds a new attribute. If an attribute with that local name and that
@@ -808,7 +782,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#getAllAttributes()
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public public function getAllAttributesAsQNames() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* The <code>Document</code> object associated with this node. This is
@@ -873,7 +847,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*                          <code>SOAPElement</code> object
 	* @see SOAPElement#addChildElement(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public override public function addChildElement(name : javax.xml.soap.Name) : SOAPElement;
+	@:overload @:public @:public public function addChildElement(name : javax.xml.soap.Name) : SOAPElement;
 	
 	/**
 	* The node immediately following this node. If there is no such node,
@@ -943,7 +917,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#getChildElements(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public @:public public function getChildElements(qname : javax.xml.namespace.QName) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Removes the specified attribute node. If a default value for the
@@ -1011,7 +985,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*         specified name
 	* @see SOAPElement#getChildElements(javax.xml.namespace.QName)
 	*/
-	@:overload @:public @:public override public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public public function getChildElements(name : javax.xml.soap.Name) : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Look up the prefix associated to the given namespace URI, starting from
@@ -1027,23 +1001,6 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @since DOM Level 3
 	*/
 	@:overload @:public @:public @:public override public function lookupPrefix(namespaceURI : String) : String;
-	
-	/**
-	* Returns the value of this node if this is a <code>Text</code> node or the
-	* value of the immediate child of this node otherwise.
-	* If there is an immediate child of this <code>Node</code> that it is a
-	* <code>Text</code> node then it's value will be returned. If there is
-	* more than one <code>Text</code> node then the value of the first
-	* <code>Text</code> Node will be returned.
-	* Otherwise <code>null</code> is returned.
-	*
-	* @return a <code>String</code> with the text of this node if this is a
-	*          <code>Text</code> node or the text contained by the first
-	*          immediate child of this <code>Node</code> object that is a
-	*          <code>Text</code> object if such a child exists;
-	*          <code>null</code> otherwise.
-	*/
-	@:overload @:public @:public override public function getValue() : String;
 	
 	/**
 	* Add a <code>SOAPElement</code> as a child of this
@@ -1151,7 +1108,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#getAllAttributesAsQNames()
 	* @return an iterator over the names of the attributes
 	*/
-	@:overload @:public @:public override public function getAllAttributes() : java.util.Iterator<Dynamic>;
+	@:overload @:public @:public public function getAllAttributes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Adds the node <code>newChild</code> to the end of the list of children
@@ -1256,7 +1213,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @return a <code>Name</code> object with the name of this
 	*         <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public override public function getElementName() : javax.xml.soap.Name;
+	@:overload @:public @:public public function getElementName() : javax.xml.soap.Name;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -1349,7 +1306,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*         context of this <code>SOAPElement</code> or  if there is an error in creating the
 	*                          <code>SOAPElement</code> object
 	*/
-	@:overload @:public @:public override public function addChildElement(localName : String, prefix : String) : SOAPElement;
+	@:overload @:public @:public public function addChildElement(localName : String, prefix : String) : SOAPElement;
 	
 	/**
 	* Returns the value of the attribute with the specified qname.
@@ -1360,12 +1317,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#getAttributeValue(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
-	
-	/**
-	* Removes this <code>Node</code> object from the tree.
-	*/
-	@:overload @:public @:public override public function detachNode() : Void;
+	@:require(java3) @:overload @:public @:public public function getAttributeValue(qname : javax.xml.namespace.QName) : String;
 	
 	/**
 	* Creates a new <code>SOAPElement</code> object initialized with the given
@@ -1382,7 +1334,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @see SOAPElement#addChildElement(Name)
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public override public function addChildElement(qname : javax.xml.namespace.QName) : SOAPElement;
+	@:require(java3) @:overload @:public @:public public function addChildElement(qname : javax.xml.namespace.QName) : SOAPElement;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -1407,22 +1359,6 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @since DOM Level 2
 	*/
 	@:overload @:public @:public @:public override public function getPrefix() : String;
-	
-	/**
-	* If this is a Text node then this method will set its value,
-	* otherwise it sets the value of  the immediate (Text) child of this node.
-	* The value of the immediate child of this node can be set only if, there is
-	* one child node and that node is a <code>Text</code> node, or if
-	* there are no children in which case a child <code>Text</code> node will be
-	* created.
-	*
-	* @exception IllegalStateException if the node is not a <code>Text</code>
-	*              node and either has more than one child node or has a child
-	*              node that is not a <code>Text</code> node.
-	*
-	* @since SAAJ 1.2
-	*/
-	@:require(java2) @:overload @:public @:public override public function setValue(value : String) : Void;
 	
 	/**
 	* The name of this node, depending on its type; see the table above.
@@ -1461,7 +1397,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*                      attach it as a child to this
 	*                      <code>SOAPElement</code>
 	*/
-	@:overload @:public @:public override public function addTextNode(text : String) : SOAPElement;
+	@:overload @:public @:public public function addTextNode(text : String) : SOAPElement;
 	
 	/**
 	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
@@ -1560,7 +1496,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @return a <code>String</code> with the uri of the namespace that has
 	*        the given prefix
 	*/
-	@:overload @:public @:public override public function getNamespaceURI(prefix : String) : String;
+	@:overload @:public @:public public function getNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Returns <code>true</code> when an attribute with a given name is
@@ -1602,7 +1538,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public @:public override public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
+	@:require(java2) @:overload @:public @:public public function getVisibleNamespacePrefixes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* The last child of this node. If there is no such node, this returns
@@ -1641,7 +1577,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @return <code>true</code> if the namespace declaration was
 	*         removed successfully; <code>false</code> if it was not
 	*/
-	@:overload @:public @:public override public function removeNamespaceDeclaration(prefix : String) : Bool;
+	@:overload @:public @:public public function removeNamespaceDeclaration(prefix : String) : Bool;
 	
 	/**
 	*  The type information associated with this element.
@@ -1660,7 +1596,7 @@ extern class BodyImpl extends com.sun.xml.internal.messaging.saaj.soap.impl.Elem
 	* @exception SOAPException if setting the encodingStyle is invalid for this SOAPElement.
 	* @see #getEncodingStyle
 	*/
-	@:overload @:public @:public override public function setEncodingStyle(encodingStyle : String) : Void;
+	@:overload @:public @:public public function setEncodingStyle(encodingStyle : String) : Void;
 	
 	
 }

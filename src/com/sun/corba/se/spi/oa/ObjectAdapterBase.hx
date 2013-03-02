@@ -77,7 +77,7 @@ extern class ObjectAdapterBase extends org.omg.CORBA.LocalObject implements com.
 	
 	@:overload public function makeInvocationInfo(objectId : java.NativeArray<java.StdTypes.Int8>) : com.sun.corba.se.spi.oa.OAInvocationInfo;
 	
-	@:overload @:abstract public function getInterfaces(servant : Dynamic, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
+	@:overload @:abstract public function getInterfaces(servant : org.omg.CORBA.Object, objectId : java.NativeArray<java.StdTypes.Int8>) : java.NativeArray<String>;
 	
 	
 }

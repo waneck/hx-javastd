@@ -23,7 +23,7 @@ package sun.management;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-@:internal extern class GarbageCollectorImpl extends sun.management.MemoryManagerImpl implements com.sun.management.GarbageCollectorMXBean
+@:internal extern class GarbageCollectorImpl extends sun.management.MemoryManagerImpl implements java.lang.management.GarbageCollectorMXBean
 {
 	@:overload @:native public function getCollectionCount() : haxe.Int64;
 	

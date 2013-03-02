@@ -21,7 +21,7 @@ package com.sun.org.apache.xml.internal.serializer;
 /*
 * $Id: Encodings.java,v 1.3 2005/09/28 13:49:04 pvedula Exp $
 */
-extern class Encodings extends Dynamic
+extern class Encodings
 {
 	/**
 	* Returns the last printable character for an unspecified

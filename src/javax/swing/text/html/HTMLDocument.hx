@@ -52,7 +52,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param c  the container for the content
 	* @param styles the styles
 	*/
-	@:overload public function new(c : Content, styles : javax.swing.text.html.StyleSheet) : Void;
+	@:overload public function new(c : javax.swing.text.AbstractDocument.AbstractDocument_Content, styles : javax.swing.text.html.StyleSheet) : Void;
 	
 	/**
 	* Fetches the reader for the parser to use when loading the document
@@ -137,7 +137,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @param chng a description of the document change
 	* @param attr the attributes
 	*/
-	@:overload private function insertUpdate(chng : DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
+	@:overload override private function insertUpdate(chng : javax.swing.text.AbstractDocument.AbstractDocument_DefaultDocumentEvent, attr : javax.swing.text.AttributeSet) : Void;
 	
 	/**
 	* Replaces the contents of the document with the given
@@ -215,7 +215,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the element base
 	*/
-	@:overload override private function createDefaultRoot() : AbstractElement;
+	@:overload override private function createDefaultRoot() : javax.swing.text.AbstractDocument.AbstractDocument_AbstractElement;
 	
 	/**
 	* Sets the number of tokens to buffer before trying to update
@@ -1348,7 +1348,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 * a set of HTML character level attributes assigned to
 * it.
 */
-@:native('javax$swing$text$html$HTMLDocument$RunElement') extern class HTMLDocument_RunElement extends LeafElement
+@:native('javax$swing$text$html$HTMLDocument$RunElement') extern class HTMLDocument_RunElement extends javax.swing.text.AbstractDocument.AbstractDocument_LeafElement
 {
 	/**
 	* Constructs an element that represents content within the
@@ -1367,7 +1367,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the name, null if none
 	*/
-	@:overload public function getName() : String;
+	@:overload override public function getName() : String;
 	
 	/**
 	* Gets the resolving parent.  HTML attributes are not inherited
@@ -1376,7 +1376,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return null, there are none
 	* @see AttributeSet#getResolveParent
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload override public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }
@@ -1384,7 +1384,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 * An element that represents a structural <em>block</em> of
 * HTML.
 */
-@:native('javax$swing$text$html$HTMLDocument$BlockElement') extern class HTMLDocument_BlockElement extends BranchElement
+@:native('javax$swing$text$html$HTMLDocument$BlockElement') extern class HTMLDocument_BlockElement extends javax.swing.text.AbstractDocument.AbstractDocument_BranchElement
 {
 	/**
 	* Constructs a composite element that initially contains
@@ -1401,7 +1401,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	*
 	* @return the name, null if none
 	*/
-	@:overload public function getName() : String;
+	@:overload override public function getName() : String;
 	
 	/**
 	* Gets the resolving parent.  HTML attributes are not inherited
@@ -1410,7 +1410,7 @@ extern class HTMLDocument extends javax.swing.text.DefaultStyledDocument
 	* @return null, there are none
 	* @see AttributeSet#getResolveParent
 	*/
-	@:overload public function getResolveParent() : javax.swing.text.AttributeSet;
+	@:overload override public function getResolveParent() : javax.swing.text.AttributeSet;
 	
 	
 }

@@ -90,7 +90,7 @@ extern class ManagementFactoryHelper
 {
 	
 }
-@:native('sun$management$ManagementFactoryHelper$PlatformLoggingImpl') @:internal extern class ManagementFactoryHelper_PlatformLoggingImpl implements ManagementFactoryHelper_LoggingMXBean
+@:native('sun$management$ManagementFactoryHelper$PlatformLoggingImpl') @:internal extern class ManagementFactoryHelper_PlatformLoggingImpl implements java.util.logging.LoggingMXBean
 {
 	@:overload public function getObjectName() : javax.management.ObjectName;
 	

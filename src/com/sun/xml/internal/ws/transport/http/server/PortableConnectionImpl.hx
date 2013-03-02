@@ -77,7 +77,7 @@ package com.sun.xml.internal.ws.transport.http.server;
 	
 	@:overload override public function setContentLengthResponseHeader(value : Int) : Void;
 	
-	@:overload override private function getPropertyMap() : PropertyMap;
+	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }

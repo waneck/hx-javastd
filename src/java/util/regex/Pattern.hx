@@ -389,7 +389,7 @@ extern class Pattern implements java.io.Serializable
 * method as appropriate. This class is an accepting node, so its match()
 * always returns true.
 */
-@:native('java$util$regex$Pattern$Node') @:internal extern class Pattern_Node extends Dynamic
+@:native('java$util$regex$Pattern$Node') @:internal extern class Pattern_Node
 {
 	
 }

@@ -23,7 +23,7 @@ package sun.net.www.protocol.mailto;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class MailToURLConnection extends sun.net.www.URLConnection
+extern class MailToURLConnection extends java.net.URLConnection
 {
 	@:overload override public function connect() : Void;
 	

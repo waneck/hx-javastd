@@ -39,9 +39,9 @@ extern class PlotterPanel extends sun.tools.jconsole.BorderedComponent
 	
 	
 }
-@:native('sun$tools$jconsole$PlotterPanel$AccessiblePlotterPanel') extern class PlotterPanel_AccessiblePlotterPanel extends AccessibleJComponent
+@:native('sun$tools$jconsole$PlotterPanel$AccessiblePlotterPanel') extern class PlotterPanel_AccessiblePlotterPanel extends javax.swing.JComponent.JComponent_AccessibleJComponent
 {
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	
 }

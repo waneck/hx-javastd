@@ -26,7 +26,7 @@ package com.sun.tools.internal.xjc;
 /*
 * Use is subject to the license terms.
 */
-extern class ErrorReceiver implements org.xml.sax.ErrorHandler implements com.sun.tools.internal.xjc.api.ErrorListener
+extern class ErrorReceiver implements org.xml.sax.ErrorHandler implements com.sun.xml.internal.bind.api.ErrorListener
 {
 	/**
 	* @param loc

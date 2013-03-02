@@ -23,7 +23,7 @@ package javax.swing.tree;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class TreePath extends Dynamic implements java.io.Serializable
+extern class TreePath implements java.io.Serializable
 {
 	/**
 	* Creates a {@code TreePath} from an array. The array uniquely

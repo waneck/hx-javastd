@@ -77,7 +77,7 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 }
 @:native('com$sun$tools$javac$util$BasicDiagnosticFormatter$BasicConfiguration') extern class BasicDiagnosticFormatter_BasicConfiguration extends com.sun.tools.javac.util.AbstractDiagnosticFormatter.AbstractDiagnosticFormatter_SimpleConfiguration
 {
-	private var indentationLevels : java.util.Map<DiagnosticPart, Null<Int>>;
+	private var indentationLevels : java.util.Map<com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, Null<Int>>;
 	
 	private var availableFormats : java.util.Map<BasicDiagnosticFormatter_BasicConfiguration_BasicFormatKind, String>;
 	
@@ -93,7 +93,7 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	* to be retrieved
 	* @return the amount of spaces used for the specified indentation kind
 	*/
-	@:overload public function getIndentation(diagPart : DiagnosticPart) : Int;
+	@:overload public function getIndentation(diagPart : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart) : Int;
 	
 	/**
 	* Set the indentation level for various element of a given diagnostic -
@@ -102,7 +102,7 @@ extern class BasicDiagnosticFormatter extends com.sun.tools.javac.util.AbstractD
 	* @param indentationKind kind of indentation to be set
 	* @param nSpaces amount of spaces for the specified diagnostic part
 	*/
-	@:overload public function setIndentation(diagPart : DiagnosticPart, nSpaces : Int) : Void;
+	@:overload public function setIndentation(diagPart : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_Configuration_DiagnosticPart, nSpaces : Int) : Void;
 	
 	/**
 	* Set the source line positioning used by this formatter

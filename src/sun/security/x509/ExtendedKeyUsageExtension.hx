@@ -23,7 +23,7 @@ package sun.security.x509;
 * or visit www.oracle.com if you need additional information or have any
 * questions.
 */
-extern class ExtendedKeyUsageExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class ExtendedKeyUsageExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Identifier for this attribute, to be used with the
@@ -68,7 +68,7 @@ extern class ExtendedKeyUsageExtension extends sun.security.x509.Extension imple
 	/**
 	* Return the extension as user readable string.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.

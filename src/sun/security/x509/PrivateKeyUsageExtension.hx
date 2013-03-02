@@ -45,7 +45,7 @@ package sun.security.x509;
 * @see Extension
 * @see CertAttrSet
 */
-extern class PrivateKeyUsageExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class PrivateKeyUsageExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Identifier for this attribute, to be used with the
@@ -86,7 +86,7 @@ extern class PrivateKeyUsageExtension extends sun.security.x509.Extension implem
 	/**
 	* Return the printable string.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Verify that that the current time is within the validity period.

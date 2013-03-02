@@ -55,7 +55,7 @@ extern class SchemaCompilerImpl extends com.sun.tools.internal.xjc.ErrorReceiver
 	
 	@:overload public function bind() : com.sun.tools.internal.xjc.api.impl.s2j.JAXBModelImpl;
 	
-	@:overload public function setErrorListener(errorListener : com.sun.tools.internal.xjc.api.ErrorListener) : Void;
+	@:overload public function setErrorListener(errorListener : com.sun.xml.internal.bind.api.ErrorListener) : Void;
 	
 	@:overload override public function info(exception : org.xml.sax.SAXParseException) : Void;
 	

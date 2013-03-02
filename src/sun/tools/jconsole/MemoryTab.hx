@@ -95,9 +95,9 @@ package sun.tools.jconsole;
 	
 	
 }
-@:native('sun$tools$jconsole$MemoryTab$PoolChart$AccessiblePoolChart') extern class MemoryTab_PoolChart_AccessiblePoolChart extends AccessibleJPanel
+@:native('sun$tools$jconsole$MemoryTab$PoolChart$AccessiblePoolChart') extern class MemoryTab_PoolChart_AccessiblePoolChart extends javax.swing.JPanel.JPanel_AccessibleJPanel
 {
-	@:overload public function getAccessibleName() : String;
+	@:overload override public function getAccessibleName() : String;
 	
 	
 }

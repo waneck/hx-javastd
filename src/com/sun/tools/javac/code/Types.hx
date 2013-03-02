@@ -611,9 +611,9 @@ extern class Types
 	/** members closure visitor methods **/
 	@:overload public function visitType(t : com.sun.tools.javac.code.Type, skipInterface : Null<Bool>) : CompoundScope;
 	
-	@:overload public function visitClassType(t : ClassType, skipInterface : Null<Bool>) : CompoundScope;
+	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, skipInterface : Null<Bool>) : CompoundScope;
 	
-	@:overload public function visitTypeVar(t : TypeVar, skipInterface : Null<Bool>) : CompoundScope;
+	@:overload public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, skipInterface : Null<Bool>) : CompoundScope;
 	
 	
 }
@@ -629,11 +629,11 @@ extern class Types
 	
 	@:overload public function visitType(t : com.sun.tools.javac.code.Type, s : com.sun.tools.javac.code.Type) : Null<Bool>;
 	
-	@:overload public function visitMethodType(t : MethodType, s : com.sun.tools.javac.code.Type) : Null<Bool>;
+	@:overload public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, s : com.sun.tools.javac.code.Type) : Null<Bool>;
 	
-	@:overload public function visitForAll(t : ForAll, s : com.sun.tools.javac.code.Type) : Null<Bool>;
+	@:overload public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, s : com.sun.tools.javac.code.Type) : Null<Bool>;
 	
-	@:overload public function visitErrorType(t : ErrorType, s : com.sun.tools.javac.code.Type) : Null<Bool>;
+	@:overload public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, s : com.sun.tools.javac.code.Type) : Null<Bool>;
 	
 	
 }
@@ -643,19 +643,19 @@ extern class Types
 	
 	@:overload public function visitType(t : com.sun.tools.javac.code.Type, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitMethodType(t : MethodType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitMethodType(t : com.sun.tools.javac.code.Type.Type_MethodType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitTypeVar(t : TypeVar, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitClassType(t : ClassType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitWildcardType(t : WildcardType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitArrayType(t : ArrayType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitArrayType(t : com.sun.tools.javac.code.Type.Type_ArrayType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitForAll(t : ForAll, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitForAll(t : com.sun.tools.javac.code.Type.Type_ForAll, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitErrorType(t : ErrorType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, ignored : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
 	
 }
@@ -671,13 +671,13 @@ extern class Types
 {
 	@:overload public function adapt(source : com.sun.tools.javac.code.Type, target : com.sun.tools.javac.code.Type) : Void;
 	
-	@:overload public function visitClassType(source : ClassType, target : com.sun.tools.javac.code.Type) : java.lang.Void;
+	@:overload public function visitClassType(source : com.sun.tools.javac.code.Type.Type_ClassType, target : com.sun.tools.javac.code.Type) : java.lang.Void;
 	
-	@:overload public function visitArrayType(source : ArrayType, target : com.sun.tools.javac.code.Type) : java.lang.Void;
+	@:overload public function visitArrayType(source : com.sun.tools.javac.code.Type.Type_ArrayType, target : com.sun.tools.javac.code.Type) : java.lang.Void;
 	
-	@:overload public function visitWildcardType(source : WildcardType, target : com.sun.tools.javac.code.Type) : java.lang.Void;
+	@:overload public function visitWildcardType(source : com.sun.tools.javac.code.Type.Type_WildcardType, target : com.sun.tools.javac.code.Type) : java.lang.Void;
 	
-	@:overload public function visitTypeVar(source : TypeVar, target : com.sun.tools.javac.code.Type) : java.lang.Void;
+	@:overload public function visitTypeVar(source : com.sun.tools.javac.code.Type.Type_TypeVar, target : com.sun.tools.javac.code.Type) : java.lang.Void;
 	
 	@:overload public function visitType(source : com.sun.tools.javac.code.Type, target : com.sun.tools.javac.code.Type) : java.lang.Void;
 	
@@ -689,15 +689,15 @@ extern class Types
 }
 @:native('com$sun$tools$javac$code$Types$Rewriter') @:internal extern class Types_Rewriter extends Types_UnaryVisitor<com.sun.tools.javac.code.Type>
 {
-	@:overload public function visitClassType(t : ClassType, s : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitClassType(t : com.sun.tools.javac.code.Type.Type_ClassType, s : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
 	@:overload public function visitType(t : com.sun.tools.javac.code.Type, s : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitCapturedType(t : CapturedType, s : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitCapturedType(t : com.sun.tools.javac.code.Type.Type_CapturedType, s : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitTypeVar(t : TypeVar, s : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitTypeVar(t : com.sun.tools.javac.code.Type.Type_TypeVar, s : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
-	@:overload public function visitWildcardType(t : WildcardType, s : java.lang.Void) : com.sun.tools.javac.code.Type;
+	@:overload public function visitWildcardType(t : com.sun.tools.javac.code.Type.Type_WildcardType, s : java.lang.Void) : com.sun.tools.javac.code.Type;
 	
 	
 }

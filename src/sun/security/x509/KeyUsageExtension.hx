@@ -37,7 +37,7 @@ package sun.security.x509;
 * @see Extension
 * @see CertAttrSet
 */
-extern class KeyUsageExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class KeyUsageExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Identifier for this attribute, to be used with the
@@ -127,7 +127,7 @@ extern class KeyUsageExtension extends sun.security.x509.Extension implements su
 	/**
 	* Returns a printable representation of the KeyUsage.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.

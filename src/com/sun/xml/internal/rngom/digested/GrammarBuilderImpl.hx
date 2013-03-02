@@ -61,7 +61,7 @@ package com.sun.xml.internal.rngom.digested;
 	
 	@:overload public function endDiv(loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
-	@:overload public function define(name : String, combine : Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
+	@:overload public function define(name : String, combine : com.sun.xml.internal.rngom.ast.builder.GrammarSection.GrammarSection_Combine, pattern : com.sun.xml.internal.rngom.ast.om.ParsedPattern, loc : com.sun.xml.internal.rngom.ast.om.Location, anno : com.sun.xml.internal.rngom.ast.builder.Annotations<Dynamic, Dynamic, Dynamic>) : Void;
 	
 	@:overload public function topLevelAnnotation(ea : com.sun.xml.internal.rngom.ast.om.ParsedElementAnnotation) : Void;
 	

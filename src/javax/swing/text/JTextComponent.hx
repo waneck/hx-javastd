@@ -345,7 +345,7 @@ extern class JTextComponent extends javax.swing.JComponent implements javax.swin
 	* @see TransferHandler#canImport(TransferHandler.TransferSupport)
 	* @since 1.6
 	*/
-	@:require(java6) @:overload @:final public function getDropLocation() : JTextComponent_DropLocation;
+	@:require(java6) @:overload @:final public function getDropLocation() : javax.swing.TransferHandler.TransferHandler_DropLocation;
 	
 	/**
 	* Fetches the keymap currently active in this text

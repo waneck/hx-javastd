@@ -1035,7 +1035,7 @@ extern class BasicTreeUI extends javax.swing.plaf.TreeUI
 * the destination it is constructed with. It is assumed all the
 * events are currently target at source.
 */
-@:native('javax$swing$plaf$basic$BasicTreeUI$MouseInputHandler') extern class BasicTreeUI_MouseInputHandler extends Dynamic implements javax.swing.event.MouseInputListener
+@:native('javax$swing$plaf$basic$BasicTreeUI$MouseInputHandler') extern class BasicTreeUI_MouseInputHandler implements javax.swing.event.MouseInputListener
 {
 	/** Source that events are coming from. */
 	private var source : java.awt.Component;

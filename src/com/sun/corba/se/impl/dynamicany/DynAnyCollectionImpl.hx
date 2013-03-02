@@ -37,7 +37,7 @@ package com.sun.corba.se.impl.dynamicany;
 	
 	@:overload public function get_elements() : java.NativeArray<org.omg.CORBA.Any>;
 	
-	@:overload @:abstract private function checkValue(value : java.NativeArray<Dynamic>) : Void;
+	@:overload @:abstract private function checkValue(value : java.NativeArray<org.omg.CORBA.Object>) : Void;
 	
 	@:overload public function set_elements(value : java.NativeArray<org.omg.CORBA.Any>) : Void;
 	

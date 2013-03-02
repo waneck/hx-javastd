@@ -48,7 +48,7 @@ package sun.security.x509;
 *
 * @author Sean Mullan
 */
-extern class InvalidityDateExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class InvalidityDateExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Attribute name and Reason codes
@@ -101,7 +101,7 @@ extern class InvalidityDateExtension extends sun.security.x509.Extension impleme
 	/**
 	* Returns a printable representation of the Invalidity Date.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.

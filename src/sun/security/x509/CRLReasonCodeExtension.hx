@@ -51,7 +51,7 @@ package sun.security.x509;
 * @see Extension
 * @see CertAttrSet
 */
-extern class CRLReasonCodeExtension extends sun.security.x509.Extension implements sun.security.x509.CertAttrSet<String>
+extern class CRLReasonCodeExtension extends java.security.cert.Extension implements sun.security.x509.CertAttrSet<String>
 {
 	/**
 	* Attribute name and Reason codes
@@ -124,7 +124,7 @@ extern class CRLReasonCodeExtension extends sun.security.x509.Extension implemen
 	/**
 	* Returns a printable representation of the Reason code.
 	*/
-	@:overload override public function toString() : String;
+	@:overload public function toString() : String;
 	
 	/**
 	* Write the extension to the DerOutputStream.

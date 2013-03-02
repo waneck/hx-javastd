@@ -457,7 +457,7 @@ extern class Packet extends com.sun.xml.internal.ws.api.DistributedPropertySet
 	*/
 	@:overload public function setResponseMessage(request : Packet, responseMessage : com.sun.xml.internal.ws.api.message.Message, addressingVersion : com.sun.xml.internal.ws.api.addressing.AddressingVersion, soapVersion : com.sun.xml.internal.ws.api.SOAPVersion, action : String) : Void;
 	
-	@:overload override private function getPropertyMap() : PropertyMap;
+	@:overload override private function getPropertyMap() : com.sun.xml.internal.ws.api.PropertySet.PropertySet_PropertyMap;
 	
 	
 }
